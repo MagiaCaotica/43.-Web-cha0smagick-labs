@@ -126,6 +126,57 @@
             margin-top: 2rem;
             border-top: 2px solid #444;
         }
+
+        /* Contact Section Styles */
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .contact-btn {
+            background-color: #333;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: 1px solid #555;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-btn:hover {
+            background-color: #8A2BE2;
+            border-color: #8A2BE2;
+            transform: translateY(-2px);
+            color: #fff;
+        }
+
+        .contact-btn.special {
+            border-color: #ffd700;
+            color: #ffd700;
+        }
+
+        .contact-btn.special:hover {
+            background-color: #ffd700;
+            color: #000;
+        }
+
+        .ads-info {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #888;
+            text-align: center;
+        }
+
+        .ads-info a {
+            color: #aaa;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -139,6 +190,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#products">Products and Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
 
@@ -158,6 +210,20 @@
             <div id="apps-grid" class="apps-grid">
                 <!-- Cards are generated dynamically here -->
             </div>
+        </section>
+
+        <section id="contact">
+            <h3>Contact Us & Community</h3>
+            <p>Join the coven, explore our rituals, and stay updated with the latest in Cybermancy.</p>
+            <div class="contact-links">
+                <a href="https://magiadelcaospractica.com" target="_blank" class="contact-btn">🌐 Web Oficial</a>
+                <a href="mailto:magiacaoticapractica@gmail.com" class="contact-btn">📧 Email</a>
+                <a href="https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA/join" target="_blank" class="contact-btn">📺 YouTube Membership</a>
+                <a href="https://t.me/magiacaotica" target="_blank" class="contact-btn">📢 Telegram Channel</a>
+                <a href="https://t.me/magiacaoticacoven" target="_blank" class="contact-btn">💬 Telegram Coven</a>
+                <a href="https://bit.ly/4lGEo9z" target="_blank" class="contact-btn special">🌟 Abundance Ritual</a>
+            </div>
+            <p class="ads-info">For advertising inquiries: <a href="mailto:magiacaoticapractica@gmail.com">magiacaoticapractica@gmail.com</a></p>
         </section>
     </main>
 
