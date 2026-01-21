@@ -5,7 +5,7 @@ const appsData = [
         url: "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal",
         status: "available",
         description: "Generate custom Goetian seals for digital invocation rituals. An essential tool for modern cybermancy.",
-        image: "assets/images/goetian-seals.jpg",
+        image: "assets/Images/GSG.png",
         detailedDescription: `
             <h3>Unlock Your Inner Power: Manifest Your Dreams with Custom Sigils!</h3>
             <p>Ready to turn your desires into reality?</p>

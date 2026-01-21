@@ -117,6 +117,29 @@
             gap: 1.5rem;
         }
 
+        /* App Card Styling */
+        .app-card {
+            background-color: #333;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            overflow: hidden; /* Evita que el contenido se salga */
+        }
+
+        .app-image {
+            max-width: 100%; /* La imagen nunca será más ancha que la tarjeta */
+            height: auto;    /* Mantiene la proporción correcta */
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        /* Specific adjustment for GSG logo */
+        .img-goetian-seals {
+            max-width: 80%;
+        }
+
         /* Footer Styling */
         footer {
             background-color: #111;
