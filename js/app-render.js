@@ -107,9 +107,29 @@ function renderLanguageGadget() {
     header.insertBefore(gadget, header.firstChild);
 }
 
+// Function to initialize the visitor counter
+function initVisitorCounter() {
+    const counterElement = document.getElementById('visitor-count');
+    if (!counterElement) return;
+
+    // Simulate a persistent counter using localStorage
+    // Start with a "cool" number if it's the first visit (e.g., 12,000+)
+    let count = localStorage.getItem('chaos_visit_count');
+    
+    if (!count) {
+        count = Math.floor(Math.random() * 5000) + 12000;
+    } else {
+        count = parseInt(count) + 1;
+    }
+
+    localStorage.setItem('chaos_visit_count', count);
+    counterElement.textContent = count.toString().padStart(6, '0');
+}
+
 // Execute the appropriate function based on the page
 document.addEventListener('DOMContentLoaded', () => {
     renderLanguageGadget(); // Render language gadget on all pages
+    initVisitorCounter();   // Initialize visitor counter
     if (document.getElementById('apps-grid')) {
         renderAppsGrid();
     } else if (document.getElementById('app-details')) {
