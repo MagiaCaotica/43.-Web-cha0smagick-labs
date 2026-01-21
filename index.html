@@ -41,6 +41,9 @@
             text-align: center;
             border-bottom: 1px solid #1a1a1a;
             background-image: radial-gradient(circle at center, #111 0%, #050505 70%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         header h1 {
@@ -59,6 +62,43 @@
             font-size: 0.85rem;
             letter-spacing: 3px;
             text-transform: uppercase;
+        }
+
+        /* Header Layout with Banners */
+        .header-main-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .header-title-group {
+            flex-shrink: 0;
+            padding: 0 1rem;
+        }
+
+        .header-banner {
+            width: 252px;
+            height: 252px;
+            flex-shrink: 0;
+            object-fit: contain;
+            border-radius: 12px;
+            opacity: 0.6;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .header-banner:hover {
+            opacity: 1;
+            border-color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .header-banner {
+                display: none;
+            }
         }
 
         /* Navigation Bar */
@@ -308,8 +348,14 @@
 </head>
 <body>
     <header>
-        <h1>Cha0smagick Labs</h1>
-        <p>Cybermancy • Techno-Sorcery • Cyberpaganism</p>
+        <div class="header-main-row">
+            <img src="assets/images/Banner.png" alt="Cybermancy Banner Left" class="header-banner">
+            <div class="header-title-group">
+                <h1>Cha0smagick Labs</h1>
+                <p>Cybermancy • Techno-Sorcery • Cyberpaganism</p>
+            </div>
+            <img src="assets/images/Banner.png" alt="Cybermancy Banner Right" class="header-banner">
+        </div>
     </header>
 
     <nav>
