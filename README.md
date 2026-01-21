@@ -2,6 +2,8 @@
 
 Static website for Cha0smagick Labs, blending occultism and technology.
 
+https://magiacaotica.github.io/43.-Web-cha0smagick-labs/
+
 ## Structure
 
 - `index.html`: Main page.
