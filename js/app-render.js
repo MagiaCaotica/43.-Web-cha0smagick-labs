@@ -113,16 +113,16 @@ function initVisitorCounter() {
     if (!counterElement) return;
 
     // Simulate a persistent counter using localStorage
-    // Start with a "cool" number if it's the first visit (e.g., 12,000+)
-    let count = localStorage.getItem('chaos_visit_count');
+    // Reset counter to start from 1 (real visit count simulation)
+    let count = localStorage.getItem('chaos_visit_count_v2');
     
     if (!count) {
-        count = Math.floor(Math.random() * 5000) + 12000;
+        count = 1;
     } else {
         count = parseInt(count) + 1;
     }
 
-    localStorage.setItem('chaos_visit_count', count);
+    localStorage.setItem('chaos_visit_count_v2', count);
     counterElement.textContent = count.toString().padStart(6, '0');
 }
 
