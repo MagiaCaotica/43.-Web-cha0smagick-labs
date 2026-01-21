@@ -65,8 +65,51 @@ function renderAppDetails() {
     }
 }
 
+// Function to render the language gadget dynamically on all pages
+function renderLanguageGadget() {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    // Prevent duplicate rendering
+    if (document.querySelector('.language-gadget')) return;
+
+    const gadget = document.createElement('div');
+    gadget.className = 'language-gadget';
+
+    const languages = [
+        { code: 'en', name: 'English', flag: 'gb' },
+        { code: 'es', name: 'Spanish', flag: 'es' },
+        { code: 'fr', name: 'French', flag: 'fr' },
+        { code: 'de', name: 'German', flag: 'de' },
+        { code: 'it', name: 'Italian', flag: 'it' },
+        { code: 'nl', name: 'Dutch', flag: 'nl' },
+        { code: 'ru', name: 'Russian', flag: 'ru' },
+        { code: 'pt', name: 'Portuguese', flag: 'br' },
+        { code: 'ja', name: 'Japanese', flag: 'jp' },
+        { code: 'ko', name: 'Korean', flag: 'kr' },
+        { code: 'ar', name: 'Arabic', flag: 'sa' },
+        { code: 'zh-CN', name: 'Chinese', flag: 'cn' }
+    ];
+
+    let html = '';
+    languages.forEach(lang => {
+        // English is active by default on the source site
+        const isActive = lang.code === 'en' ? 'active' : '';
+        // Use window.location.href to translate the current page
+        const url = lang.code === 'en' ? '#' : `https://translate.google.com/translate?sl=en&tl=${lang.code}&u=${encodeURIComponent(window.location.href)}`;
+        const onclick = lang.code === 'en' ? 'window.location.reload(); return false;' : `window.open('${url}'); return false;`;
+
+        html += `<a href="#" onclick="${onclick}" title="${lang.name}" class="lang-link ${isActive}"><img src="https://flagcdn.com/w20/${lang.flag}.png" alt="${lang.name}" class="lang-flag"></a>`;
+    });
+
+    gadget.innerHTML = html;
+    // Insert at the top of the header
+    header.insertBefore(gadget, header.firstChild);
+}
+
 // Execute the appropriate function based on the page
 document.addEventListener('DOMContentLoaded', () => {
+    renderLanguageGadget(); // Render language gadget on all pages
     if (document.getElementById('apps-grid')) {
         renderAppsGrid();
     } else if (document.getElementById('app-details')) {

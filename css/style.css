@@ -42,7 +42,6 @@ header {
     margin-bottom: 2rem;
     text-align: center;
     background: var(--bg-card);
-    position: relative; /* Necesario para posicionar las banderas */
 }
 
 header h1 {
@@ -56,31 +55,30 @@ header h1 {
 
 /* Language Gadget Styles */
 .language-gadget {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     display: flex;
-    gap: 8px;
+    justify-content: center; /* Centrado */
+    gap: 10px;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    max-width: 350px;
+    margin-bottom: 1.5rem; /* Separación del título */
+    width: 100%;
     z-index: 10;
 }
 
 .lang-flag {
-    width: 24px;
-    height: 18px; /* Proporción estándar */
-    border-radius: 4px; /* Bordes redondeados */
+    width: 16px; /* Mucho más pequeñas */
+    height: 12px;
+    border-radius: 2px;
     cursor: pointer;
-    filter: grayscale(100%) opacity(0.4); /* Gris y sutil por defecto */
+    filter: grayscale(100%) opacity(0.5); /* Gris por defecto */
     transition: all 0.3s ease;
     object-fit: cover;
 }
 
-.lang-flag:hover {
-    filter: grayscale(0%) opacity(1); /* Color total al pasar el mouse */
-    transform: scale(1.1);
-    box-shadow: 0 0 8px var(--accent-color); /* Brillo sutil */
+.lang-link:hover .lang-flag,
+.lang-link.active .lang-flag {
+    filter: grayscale(0%) opacity(1); /* Color al hover o si está activo */
+    transform: scale(1.2);
+    box-shadow: 0 0 5px var(--accent-color);
 }
 
 nav ul {
