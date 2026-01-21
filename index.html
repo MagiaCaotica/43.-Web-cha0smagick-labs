@@ -146,7 +146,7 @@
         /* App Card Styling */
         .app-card {
             background-color: #0a0a0a;
-            padding: 2.5rem;
+            padding: 0;
             border: 1px solid #1a1a1a;
             border-radius: 0; /* Perfectly square for brutalist/noir feel */
             text-align: left; /* More corporate */
@@ -154,12 +154,21 @@
             transition: border-color 0.4s ease, transform 0.4s ease;
             overflow: hidden;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         .app-card:hover {
             transform: translateY(-3px);
             border-color: #555; /* Subtle highlight */
             box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .app-card h4 {
@@ -177,24 +186,28 @@
             color: #666;
         }
 
+        .card-image-wrapper {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            border-bottom: 1px solid #1a1a1a;
+            background-color: #050505;
+        }
+
         .app-image {
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
-            margin-bottom: 2rem;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-bottom: 0;
             filter: grayscale(100%) contrast(1.1); /* Noir style */
-            transition: filter 0.4s ease;
+            transition: filter 0.4s ease, transform 0.4s ease;
             opacity: 0.8;
         }
 
         .app-card:hover .app-image {
             filter: grayscale(0%) contrast(1);
             opacity: 1;
-        }
-
-        /* Specific adjustment for GSG logo */
-        .img-goetian-seals {
-            max-width: 80%;
+            transform: scale(1.05);
         }
 
         /* Status Badges */
