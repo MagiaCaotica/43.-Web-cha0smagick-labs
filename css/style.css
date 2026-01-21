@@ -1,0 +1,572 @@
+/* Import fonts - Enhanced for Cyberpunk */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Share+Tech+Mono&display=swap');
+
+/* CSS Variables for Enhanced Cyber-Occultism / Cyberpunk theme */
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #0d0d0d;
+    --bg-accent: #1a1a1a;
+    --bg-matrix: rgba(0, 255, 0, 0.05);
+    --text-primary: #ffffff;
+    --text-secondary: #00ff00;
+    --text-accent: #ff0080;
+    --accent-violet: #8a2be2;
+    --accent-cyan: #00ffff;
+    --accent-magenta: #ff00ff;
+    --accent-red: #ff0000;
+    --accent-green: #00ff00;
+    --glow-violet: 0 0 20px rgba(138, 43, 226, 0.8), 0 0 40px rgba(138, 43, 226, 0.4);
+    --glow-cyan: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.4);
+    --glow-magenta: 0 0 20px rgba(255, 0, 255, 0.8), 0 0 40px rgba(255, 0, 255, 0.4);
+    --glow-red: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4);
+    --glow-green: 0 0 20px rgba(0, 255, 0, 0.8), 0 0 40px rgba(0, 255, 0, 0.4);
+    --font-title: 'Orbitron', monospace;
+    --font-body: 'Share Tech Mono', monospace;
+    --font-cinzel: 'Cinzel', serif;
+    --transition: all 0.3s ease;
+    --border-radius: 0px; /* Sharp edges for cyberpunk */
+}
+
+/* Keyframes for Cyberpunk Animations */
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: var(--glow-cyan); }
+    50% { box-shadow: var(--glow-magenta); }
+}
+
+@keyframes matrix-rain {
+    0% { transform: translateY(-100vh); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes scan-line {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+}
+
+/* Reset and base - Cyberpunk style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: linear-gradient(45deg, var(--bg-primary), var(--bg-secondary), var(--bg-accent));
+    background-size: 400% 400%;
+    animation: gradient-shift 10s ease infinite;
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        var(--bg-matrix) 2px,
+        var(--bg-matrix) 4px
+    );
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: var(--glow-cyan);
+}
+
+a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    transition: var(--transition);
+    text-shadow: 0 0 5px var(--accent-cyan);
+}
+
+a:hover {
+    color: var(--accent-magenta);
+    text-shadow: var(--glow-magenta);
+    animation: glitch 0.3s;
+}
+
+/* Header - Cyberpunk Interface */
+header {
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-accent));
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-cyan);
+    box-shadow: var(--glow-cyan);
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    animation: scan-line 3s infinite;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--accent-cyan);
+    text-shadow: var(--glow-cyan);
+    margin-bottom: 0.5rem;
+    animation: pulse-glow 2s infinite;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    text-shadow: 0 0 10px var(--text-secondary);
+}
+
+/* Navigation Bar */
+nav {
+    background: var(--bg-secondary);
+    border-top: 2px solid var(--accent-cyan);
+    border-bottom: 2px solid var(--accent-magenta);
+    box-shadow: var(--glow-cyan);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    color: var(--accent-cyan);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+nav a:hover::before {
+    left: 100%;
+}
+
+nav a:hover {
+    color: var(--accent-magenta);
+    text-shadow: var(--glow-magenta);
+    animation: glitch 0.3s;
+}
+
+/* Main */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Hero section - Techno-Sorcerer Welcome */
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.hero::before {
+    content: '>';
+    position: absolute;
+    top: -20px;
+    left: 10%;
+    color: var(--accent-green);
+    font-size: 2rem;
+    text-shadow: var(--glow-green);
+    animation: matrix-rain 5s infinite;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: var(--accent-magenta);
+    text-shadow: var(--glow-magenta);
+    margin-bottom: 1rem;
+    border: 2px solid var(--accent-magenta);
+    padding: 1rem;
+    display: inline-block;
+    animation: pulse-glow 3s infinite;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+    text-shadow: 0 0 5px var(--text-secondary);
+}
+
+/* CEO Bio - Digital Grimoire */
+.ceo-bio {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border: 2px solid var(--accent-violet);
+    margin-bottom: 4rem;
+    box-shadow: var(--glow-violet);
+    position: relative;
+    overflow: hidden;
+}
+
+.ceo-bio::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 10px,
+        var(--accent-red) 10px,
+        var(--accent-red) 12px
+    );
+    opacity: 0.1;
+}
+
+.ceo-bio h3 {
+    color: var(--accent-violet);
+    text-shadow: var(--glow-violet);
+    margin-bottom: 1rem;
+    font-family: var(--font-cinzel);
+}
+
+.ceo-bio p {
+    color: var(--text-secondary);
+    text-shadow: 0 0 5px var(--text-secondary);
+}
+
+/* Apps Grid - Cybernetic Arsenal */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.app-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--accent-cyan);
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.app-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.app-card:hover::before {
+    left: 100%;
+}
+
+.app-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: var(--glow-magenta);
+    border-color: var(--accent-magenta);
+    animation: glitch 0.5s;
+}
+
+.app-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: scale-down;
+    border: 1px solid var(--accent-green);
+    margin-bottom: 1rem;
+    filter: brightness(0.8) contrast(1.2);
+    transition: filter 0.3s;
+}
+
+.app-card:hover img {
+    filter: brightness(1.2) contrast(1.5);
+}
+
+/* Specific image sizes for reduced apps */
+.img-norse-rune-oracle,
+.img-iching-oracle,
+.img-chaos-sigil-generator {
+    height: 140px; /* 30% reduction from 200px */
+}
+
+.app-card h4 {
+    color: var(--accent-cyan);
+    text-shadow: var(--glow-cyan);
+    margin-bottom: 0.5rem;
+}
+
+.app-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 3px var(--text-secondary);
+}
+
+.app-card .status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px;
+}
+
+.status.available {
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    box-shadow: var(--glow-cyan);
+}
+
+.status.coming-soon {
+    background: rgba(255, 0, 255, 0.1);
+    color: var(--accent-magenta);
+    border-color: var(--accent-magenta);
+    box-shadow: var(--glow-magenta);
+}
+
+/* Footer - System Status */
+footer {
+    background: var(--bg-secondary);
+    text-align: center;
+    padding: 2rem;
+    border-top: 3px solid var(--accent-red);
+    box-shadow: var(--glow-red);
+    position: relative;
+}
+
+footer::before {
+    content: 'SYSTEM ONLINE';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: var(--accent-green);
+    font-size: 0.8rem;
+    text-shadow: var(--glow-green);
+    animation: pulse-glow 1s infinite;
+}
+
+footer p {
+    color: var(--text-secondary);
+    text-shadow: 0 0 5px var(--text-secondary);
+}
+
+/* Responsive - Adaptive Cyber Interface */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .apps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero::before {
+        display: none;
+    }
+}
+
+/* App Details Page - Holographic Display */
+.app-details {
+    text-align: center;
+    position: relative;
+}
+
+.app-details::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse-glow 4s infinite;
+    z-index: -1;
+}
+
+.app-details img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid var(--accent-cyan);
+    margin-bottom: 2rem;
+    box-shadow: var(--glow-cyan);
+    filter: brightness(0.9) contrast(1.3);
+}
+
+.app-details h2 {
+    color: var(--accent-violet);
+    text-shadow: var(--glow-violet);
+    margin-bottom: 1rem;
+    animation: pulse-glow 2.5s infinite;
+}
+
+.app-details p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--text-secondary);
+    text-shadow: 0 0 5px var(--text-secondary);
+}
+
+.app-details .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(255, 0, 255, 0.1);
+    color: var(--accent-magenta);
+    border: 2px solid var(--accent-magenta);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: var(--transition);
+    text-shadow: var(--glow-magenta);
+    position: relative;
+    overflow: hidden;
+}
+
+.app-details .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.app-details .cta-button:hover::before {
+    left: 100%;
+}
+
+.app-details .cta-button:hover {
+    background: rgba(255, 0, 255, 0.2);
+    box-shadow: var(--glow-magenta);
+    animation: glitch 0.3s;
+}
+
+/* Detailed App Info Section */
+.app-detailed-info {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border: 2px solid var(--accent-green);
+    box-shadow: var(--glow-green);
+    position: relative;
+    overflow: hidden;
+}
+
+.app-detailed-info::before {
+    content: '>>>';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--accent-green);
+    font-size: 1.5rem;
+    text-shadow: var(--glow-green);
+    animation: matrix-rain 3s infinite;
+}
+
+.app-detailed-info h3, .app-detailed-info h4 {
+    color: var(--accent-cyan);
+    text-shadow: var(--glow-cyan);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.app-detailed-info p {
+    color: var(--text-secondary);
+    text-shadow: 0 0 3px var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.app-detailed-info ul, .app-detailed-info ol {
+    color: var(--text-secondary);
+    text-shadow: 0 0 3px var(--text-secondary);
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.app-detailed-info li {
+    margin-bottom: 0.5rem;
+}
+
+.app-detailed-info strong {
+    color: var(--accent-magenta);
+    text-shadow: var(--glow-magenta);
+}
