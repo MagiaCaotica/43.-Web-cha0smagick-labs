@@ -11,10 +11,17 @@ function renderAppsGrid() {
         card.onclick = () => window.location.href = `pages/app-details.html?id=${app.id}`;
 
         card.innerHTML = `
-            <img src="${app.image}" alt="${app.name}" loading="lazy" class="app-image img-${app.id.replace(/-/g, '-')}">
-            <h4>${app.name}</h4>
-            <p>${app.description}</p>
-            <span class="status ${app.status}">${app.status === 'available' ? 'Available' : 'Coming Soon'}</span>
+            <div class="card-image-wrapper">
+                <img src="${app.image}" alt="${app.name}" loading="lazy" class="app-image img-${app.id.replace(/-/g, '-')}">
+            </div>
+            <div class="card-content">
+                <h4>${app.name}</h4>
+                <p>${app.description}</p>
+                <div class="card-footer">
+                    <span class="status-indicator ${app.status}"></span>
+                    <span class="status-text">${app.status === 'available' ? 'Available' : 'Coming Soon'}</span>
+                </div>
+            </div>
         `;
 
         grid.appendChild(card);
@@ -41,10 +48,14 @@ function renderAppDetails() {
     if (!detailsContainer) return;
 
     detailsContainer.innerHTML = `
-        <img src="../${app.image}" alt="${app.name}" loading="lazy">
-        <h2>${app.name}</h2>
-        <p>${app.description}</p>
-        ${app.url ? `<a href="${app.url}" class="cta-button" target="_blank">Download on Google Play</a>` : '<p class="cta-button">Coming Soon</p>'}
+        <div class="detail-header-layout">
+            <img src="../${app.image}" alt="${app.name}" loading="lazy" class="detail-main-image">
+            <div class="detail-header-info">
+                <h2>${app.name}</h2>
+                <p class="lead-text">${app.description}</p>
+                ${app.url ? `<a href="${app.url}" class="cta-button primary" target="_blank">Download on Google Play</a>` : '<button class="cta-button disabled">Coming Soon</button>'}
+            </div>
+        </div>
     `;
 
     // Render detailed description if available
