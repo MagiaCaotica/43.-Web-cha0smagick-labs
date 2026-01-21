@@ -41,10 +41,9 @@ function renderAppDetails() {
     if (!detailsContainer) return;
 
     detailsContainer.innerHTML = `
-        <img src="${app.image}" alt="${app.name}" loading="lazy">
+        <img src="../${app.image}" alt="${app.name}" loading="lazy">
         <h2>${app.name}</h2>
         <p>${app.description}</p>
-        <span class="status ${app.status}">${app.status === 'available' ? 'Available' : 'Coming Soon'}</span>
         ${app.url ? `<a href="${app.url}" class="cta-button" target="_blank">Download on Google Play</a>` : '<p class="cta-button">Coming Soon</p>'}
     `;
 
