@@ -25,40 +25,51 @@
     <style>
         /* Basic Reset & Professional Font */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a1a; /* Dark background */
-            color: #f0f0f0; /* Light text */
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            background-color: #030303; /* Noir Black */
+            color: #a0a0a0; /* Muted Silver */
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.8; /* More breathing room for professional look */
         }
 
         /* Header Styling */
         header {
-            background-color: #111;
-            color: #fff;
-            padding: 2rem 1rem;
+            background-color: #050505;
+            color: #dcdcdc;
+            padding: 4rem 1rem;
             text-align: center;
-            border-bottom: 2px solid #444;
+            border-bottom: 1px solid #1a1a1a;
+            background-image: radial-gradient(circle at center, #111 0%, #050505 70%);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
-            letter-spacing: 2px;
+            font-size: 3rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 200;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
         }
 
         header p {
-            margin: 0.5rem 0 0;
-            color: #aaa;
-            font-style: italic;
+            margin: 1rem 0 0;
+            color: #777;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
         /* Navigation Bar */
         nav {
-            background-color: #222;
-            padding: 1rem 0;
-            border-bottom: 1px solid #444;
+            background-color: rgba(5, 5, 5, 0.9);
+            padding: 0;
+            border-bottom: 1px solid #1a1a1a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
         }
 
         nav ul {
@@ -67,72 +78,118 @@
             margin: 0;
             display: flex;
             justify-content: center;
+            background: transparent;
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0;
         }
 
         nav ul li a {
-            color: #f0f0f0;
+            display: block;
+            color: #666;
             text-decoration: none;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px; /* Rounded borders for nav links */
-            transition: background-color 0.3s, color 0.3s;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 1.2rem 2rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
 
         nav ul li a:hover {
-            background-color: #8A2BE2; /* A mystical purple for accent */
             color: #fff;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid #fff;
         }
 
         /* Main Content & Sections */
         main {
-            padding: 2rem 1rem;
+            padding: 5rem 1rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         section {
-            background-color: #252525; /* Card-like background for sections */
-            margin-bottom: 2rem;
-            padding: 2rem;
-            border-radius: 8px; /* Rounded borders for sections */
-            border: 1px solid #333;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background-color: transparent;
+            margin-bottom: 6rem;
+            padding: 0;
+            border: none;
+            box-shadow: none;
         }
 
         section h2, section h3 {
-            color: #fff;
-            border-bottom: 2px solid #8A2BE2;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
+            color: #f0f0f0;
+            font-weight: 200;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-left: 2px solid #444; /* Subtle steel marker */
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: none;
+        }
+
+        section p {
+            color: #999;
+            max-width: 800px;
+            font-size: 1rem;
+            margin-left: 0; /* Align with title */
         }
 
         /* App Grid Layout */
         .apps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 3rem; /* More space for organized feel */
         }
 
         /* App Card Styling */
         .app-card {
-            background-color: #333;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
+            background-color: #0a0a0a;
+            padding: 2.5rem;
+            border: 1px solid #1a1a1a;
+            border-radius: 0; /* Perfectly square for brutalist/noir feel */
+            text-align: left; /* More corporate */
             cursor: pointer;
-            transition: transform 0.3s ease;
-            overflow: hidden; /* Evita que el contenido se salga */
+            transition: border-color 0.4s ease, transform 0.4s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .app-card:hover {
+            transform: translateY(-3px);
+            border-color: #555; /* Subtle highlight */
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .app-card h4 {
+            color: #e0e0e0;
+            margin-top: 0;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        
+        .app-card p {
+            font-size: 0.9rem;
+            color: #666;
         }
 
         .app-image {
-            max-width: 100%; /* La imagen nunca será más ancha que la tarjeta */
-            height: auto;    /* Mantiene la proporción correcta */
+            max-width: 100%;
+            height: auto;
             object-fit: contain;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            filter: grayscale(100%) contrast(1.1); /* Noir style */
+            transition: filter 0.4s ease;
+            opacity: 0.8;
+        }
+
+        .app-card:hover .app-image {
+            filter: grayscale(0%) contrast(1);
+            opacity: 1;
         }
 
         /* Specific adjustment for GSG logo */
@@ -140,65 +197,99 @@
             max-width: 80%;
         }
 
+        /* Status Badges */
+        .status {
+            display: inline-block;
+            padding: 4px 8px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 0;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+        .status.available {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+        .status.coming-soon {
+            background-color: transparent;
+            color: #555;
+            border: 1px solid #333;
+        }
+
         /* Footer Styling */
         footer {
-            background-color: #111;
-            color: #aaa;
+            background-color: #030303;
+            color: #444;
             text-align: center;
-            padding: 1.5rem 1rem;
-            margin-top: 2rem;
-            border-top: 2px solid #444;
+            padding: 4rem 1rem;
+            border-top: 1px solid #111;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         /* Contact Section Styles */
         .contact-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 1.5rem;
+            gap: 1.5rem;
+            justify-content: flex-start; /* Align left for business look */
+            margin-top: 2rem;
         }
 
         .contact-btn {
-            background-color: #333;
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 5px;
+            background-color: transparent;
+            color: #aaa;
+            padding: 12px 30px;
+            border-radius: 0;
             text-decoration: none;
-            border: 1px solid #555;
+            border: 1px solid #333;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .contact-btn:hover {
-            background-color: #8A2BE2;
-            border-color: #8A2BE2;
-            transform: translateY(-2px);
-            color: #fff;
+            background-color: #fff;
+            border-color: #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            color: #000;
         }
 
         .contact-btn.special {
-            border-color: #ffd700;
-            color: #ffd700;
+            border-color: #78909c; /* Steel Blue */
+            color: #78909c;
         }
 
         .contact-btn.special:hover {
-            background-color: #ffd700;
+            background-color: #78909c;
             color: #000;
         }
 
         .ads-info {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #888;
-            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #444;
+            text-align: left;
+            border-top: 1px solid #111;
+            padding-top: 1rem;
         }
 
         .ads-info a {
-            color: #aaa;
-            text-decoration: underline;
+            color: #777;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .ads-info a:hover {
+            color: #fff;
         }
     </style>
 </head>
