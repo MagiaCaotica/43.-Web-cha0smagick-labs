@@ -5,7 +5,10 @@ function renderAppsGrid() {
     const grid = document.getElementById('apps-grid');
     if (!grid) return;
 
-    appsData.forEach(app => {
+    // Create a copy and shuffle it randomly (Chaos sort)
+    const shuffledApps = [...appsData].sort(() => Math.random() - 0.5);
+
+    shuffledApps.forEach(app => {
         const card = document.createElement('div');
         card.className = 'app-card';
         card.onclick = () => window.location.href = `pages/app-details.html?id=${app.id}`;
