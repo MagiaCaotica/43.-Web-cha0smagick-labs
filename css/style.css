@@ -86,6 +86,7 @@ nav ul {
     justify-content: center;
     list-style: none;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -104,7 +105,7 @@ nav a:hover {
 /* Grid Layout */
 #apps-grid, .apps-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     padding: 2rem;
     max-width: 1400px;
@@ -288,6 +289,13 @@ nav a:hover {
     
     #app-detailed-info {
         padding: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+    nav ul {
+        gap: 1rem;
     }
 }
 
