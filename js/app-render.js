@@ -69,7 +69,14 @@ function renderBooksSection() {
     booksGrid.id = 'books-grid';
     
     if (typeof booksData !== 'undefined') {
-        booksData.forEach(book => {
+        // Sort books by price (low to high)
+        const sortedBooks = [...booksData].sort((a, b) => {
+            const priceA = parseFloat(a.price.replace(/[^0-9.]/g, ''));
+            const priceB = parseFloat(b.price.replace(/[^0-9.]/g, ''));
+            return priceA - priceB;
+        });
+
+        sortedBooks.forEach(book => {
             const card = document.createElement('div');
             card.className = 'app-card';
             card.onclick = () => window.location.href = `pages/app-details.html?id=${book.id}`;
