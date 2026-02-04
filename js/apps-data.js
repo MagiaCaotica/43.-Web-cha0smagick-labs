@@ -2,6 +2,7 @@ const appsData = [
     {
         id: "goetian-seals",
         name: "Goetian Seals Generator",
+        price: "$3.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal",
         status: "available",
         description: "Generate custom Goetian seals for digital invocation rituals. An essential tool for modern cybermancy.",
@@ -43,6 +44,7 @@ const appsData = [
     {
         id: "norse-rune-oracle",
         name: "Norse Rune Oracle",
+        price: "$3.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.japps.norse_oracle",
         status: "available",
         description: "Consult the Norse rune oracle for spiritual guidance in the digital age.",
@@ -85,6 +87,7 @@ const appsData = [
     {
         id: "lunar-phase-calculator",
         name: "Lunar Phase Calculator",
+        price: "$3.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.lunarapp.app",
         status: "available",
         description: "Calculate precise lunar phases to synchronize your magical practices with the moon's cycles.",
@@ -111,6 +114,7 @@ const appsData = [
     {
         id: "iching-oracle",
         name: "I Ching Oracle",
+        price: "$3.99 USD",
         url: null,
         status: "coming-soon",
         description: "The ancient Chinese oracle adapted for techno-sorcery. Coming soon.",
@@ -144,6 +148,7 @@ const appsData = [
     {
         id: "chaos-sigil-generator",
         name: "Magick Chaos Sigil Generator",
+        price: "$3.99 USD",
         url: null,
         status: "coming-soon",
         description: "Create unique chaotic sigils to manifest your intentions in cyberspace.",
@@ -180,6 +185,7 @@ const booksData = [
     {
         id: "manual-activacion-servidores-magicos-pdf",
         name: "Magical Servitors Manual",
+        price: "$9.99 USD",
         type: "book",
         status: "available",
         image: "assets/images/servidores.png",
@@ -213,6 +219,7 @@ const booksData = [
     {
         id: "tratado-runas-cazadoras-caos-pdf",
         name: "Treatise of Chaos Hunter Runes",
+        price: "$19.99 USD",
         type: "book",
         status: "available",
         image: "assets/images/runascazadoras.png",
@@ -251,6 +258,7 @@ const booksData = [
     {
         id: "ouija-cazadora-pdf",
         name: "Ouija Cazadora: Chaos Magic Guide",
+        price: "$3.99 USD",
         type: "book",
         status: "available",
         image: "assets/images/ouijacazadora.png",
@@ -283,6 +291,7 @@ const booksData = [
     {
         id: "liber-lvpinux-pdf",
         name: "Liber Lvpinux: Lycanthropic Path",
+        price: "$39.99 USD",
         type: "book",
         status: "available",
         image: "assets/images/liber.png",
