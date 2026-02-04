@@ -279,5 +279,46 @@ const booksData = [
             
             <p><strong>Master the board. Command the spirits. Own your reality.</strong></p>
         `
+    },
+    {
+        id: "liber-lvpinux-pdf",
+        name: "Liber Lvpinux: Lycanthropic Path",
+        type: "book",
+        status: "available",
+        image: "assets/images/liber.png",
+        description: "An operative and esoteric guide exploring lycanthropy as a path of spiritual empowerment and psychic metamorphosis.",
+        hotmartLink: "https://pay.hotmart.com/O104271155J?checkoutMode=2",
+        seo: {
+            title: "Liber Lvpinux: Lycanthropic Transformation and Chaos Magic",
+            description: "Discover Liber Lvpinux by Frater Alekos. A grimoire on lycanthropy, chaos magic, and the path of the animagus. Download the PDF guide here."
+        },
+        detailedDescription: `
+            <h1>Liber Lvpinux: The Path of Lycanthropic Transformation and Chaos Magic</h1>
+            <p>Is it possible to transcend the limits of the human form and connect with the primal force of the beast? <strong>Liber Lvpinux</strong> is much more than a treatise on mythology; it is an operative and esoteric guide that explores lycanthropy not as a curse, but as a path of spiritual empowerment and psychic metamorphosis.</p>
+            <p>Written by <strong>Frater Alekos</strong>, this unique grimoire fuses the flexibility of Chaos Magic with ancestral traditions to offer a detailed map towards the "feralization" of the self. Through its pages, the reader is led on a journey traversing history, psychology, and the darkest ritual practice.</p>
+            
+            <h2>What secrets does Liber Lvpinux reveal?</h2>
+            <ul>
+                <li><strong>Occult Foundations:</strong> A deep exploration of the magical bases allowing connection with the wolf archetype.</li>
+                <li><strong>Global Perspective:</strong> An analysis of lycanthropy in world cultures, from Palo Mayombe traditions and Bantu roots in Africa, to American shamanism and European legends.</li>
+                <li><strong>The Way of the Animagus:</strong> Instructions on how to use lycanthropy as a spiritual path to reclaim instinctive power and absolute freedom.</li>
+                <li><strong>Transformation Rituals:</strong> The manual details complex processes such as the use of arcane elixirs, chants of reversal, and work with the Mirror of Reflection (specifically obsidian) for identity management.</li>
+                <li><strong>Nganga Management:</strong> Connection with cosmic powers and spirits assisting in the process of change and purification.</li>
+            </ul>
+            
+            <h2>What you will find in this volume:</h2>
+            <ul>
+                <li><strong>Lycanthropy as Psychic Technology:</strong> How to break the veils of time and space to invoke the force of reverse transformation.</li>
+                <li><strong>Safe Practice:</strong> Methods of purification, mineral salt baths, and sacred petals to cleanse the self after working with intense energies.</li>
+                <li><strong>Chaotic Philosophy:</strong> The use of will and gnosis to restore the magician's true identity after communion with the wild.</li>
+            </ul>
+            
+            <h3>Ideal for:</h3>
+            <p>Advanced practitioners of Chaos Magic, scholars of dark shamanism, followers of the Left Hand Path, and any seeker interested in the frontiers of human identity.</p>
+            
+            <p><strong>Warning:</strong> This text deals with forces of human nature that demand respect and determination. It is not just a reading book; it is an invitation to observe your own reflection in the obsidian mirror and discover what lies beyond the skin.</p>
+            
+            <p><strong>Are you ready to unleash the inner beast? Acquire Liber Lvpinux and master the art of transformation.</strong></p>
+        `
     }
 ];
