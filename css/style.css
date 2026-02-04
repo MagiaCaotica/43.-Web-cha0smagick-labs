@@ -178,6 +178,7 @@ nav a:hover {
 /* Footer de la tarjeta (Status) */
 .card-footer {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
     font-family: var(--font-mono);
@@ -185,6 +186,12 @@ nav a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: auto;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .status-indicator {
@@ -205,6 +212,13 @@ nav a:hover {
 
 .status-text {
     color: var(--text-secondary);
+}
+
+.card-price {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-shadow: 0 0 10px var(--accent-dim);
 }
 
 /* Detalles de la App (Página de detalles) */
@@ -239,6 +253,15 @@ nav a:hover {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     max-width: 600px;
+}
+
+.detail-price {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
 }
 
 .cta-button {

@@ -21,8 +21,11 @@ function renderAppsGrid() {
                 <h4>${app.name}</h4>
                 <p>${app.description}</p>
                 <div class="card-footer">
-                    <span class="status-indicator ${app.status}"></span>
-                    <span class="status-text">${app.status === 'available' ? 'Available' : 'Coming Soon'}</span>
+                    <div class="status-container">
+                        <span class="status-indicator ${app.status}"></span>
+                        <span class="status-text">${app.status === 'available' ? 'Available' : 'Coming Soon'}</span>
+                    </div>
+                    ${app.price ? `<span class="card-price">${app.price}</span>` : ''}
                 </div>
             </div>
         `;
@@ -79,8 +82,11 @@ function renderBooksSection() {
                     <h4>${book.name}</h4>
                     <p>${book.description}</p>
                     <div class="card-footer">
-                        <span class="status-indicator ${book.status}"></span>
-                        <span class="status-text">${book.status === 'available' ? 'Available' : 'Coming Soon'}</span>
+                        <div class="status-container">
+                            <span class="status-indicator ${book.status}"></span>
+                            <span class="status-text">${book.status === 'available' ? 'Available' : 'Coming Soon'}</span>
+                        </div>
+                        ${book.price ? `<span class="card-price">${book.price}</span>` : ''}
                     </div>
                 </div>
             `;
@@ -162,6 +168,7 @@ function renderAppDetails() {
             <div class="detail-header-info">
                 <h2>${item.name}</h2>
                 <p class="lead-text">${item.description}</p>
+                ${item.price ? `<div class="detail-price">${item.price}</div>` : ''}
                 ${actionButton}
             </div>
         </div>
