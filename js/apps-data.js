@@ -247,5 +247,37 @@ const booksData = [
             
             <p><strong>Don't limit yourself to interpreting the future. With the Chaos Hunter Runes, you hold the spiritual technology to write it. Acquire your copy today and start hunting your own results.</strong></p>
         `
+    },
+    {
+        id: "ouija-cazadora-pdf",
+        name: "Ouija Cazadora: Chaos Magic Guide",
+        type: "book",
+        status: "available",
+        image: "assets/images/ouijacazadora.png",
+        description: "A profound exploration of psychic technology designed to transform the Ouija board into a high-precision ritual instrument.",
+        hotmartLink: "https://pay.hotmart.com/B104271332D?checkoutMode=2",
+        seo: {
+            title: "Ouija Cazadora: Chaos Magic Guide to the Oracular Manual",
+            description: "Master the Ouija board with Chaos Magic. A practical guide by Zener de Cydonia and Frater Alekos for safe and effective rituals."
+        },
+        detailedDescription: `
+            <h1>Ouija Cazadora: A Chaos Magic Guide to the Oracular Manual</h1>
+            <p>Step beyond the myths and fears of the most misunderstood tool in the occult world. <strong>Ouija Cazadora (The Chaos Hunter Ouija)</strong> is not just a manual; it is a profound exploration of psychic technology designed to transform the Ouija board from a "parlor game" into a high-precision ritual instrument.</p>
+            <p>Edited by <strong>Frater Alekos</strong> and written by <strong>Zener de Cydonia</strong>, this manual approaches the Ouija from the pragmatic and results-oriented perspective of Chaos Magic. Forget the Hollywood tropes—this guide focuses on "purifying" the practice, stripping away the dogma, and empowering the practitioner to command the experience with safety and intent.</p>
+            
+            <h2>What will you discover in this manual?</h2>
+            <ul>
+                <li><strong>The Science of the Oracle:</strong> Understand the historical roots and the psychological mechanisms that make the Ouija a powerful bridge to the subconscious and the astral plane.</li>
+                <li><strong>The Shadow Grimoire (Grimorio de las Sombras):</strong> A dedicated section for those without previous knowledge, featuring specific rituals to open and close sessions safely.</li>
+                <li><strong>Chaos Correspondence Systems:</strong> Learn how to interpret messages using three distinct alphabets: Phoenician, Germanic Futhark, and Theban runes.</li>
+                <li><strong>Numerical Divination:</strong> A deep dive into the meaning of numbers from a Chinese and numerological perspective to add layers of precision to your readings.</li>
+                <li><strong>Construction & Protection:</strong> Practical instructions on how to create your own "Hunter" board and the essential steps to cleanse the space from unwanted energies.</li>
+            </ul>
+            
+            <h2>Why choose this guide?</h2>
+            <p>Most books on the Ouija are either filled with superstition or debunking skepticism. <strong>Ouija Cazadora</strong> occupies the middle ground of the "Chaos Hunter": it respects the power of the tool while providing the technical "software" to master it. Whether you are looking for spiritual guidance, creative inspiration, or a direct link to your own "servants," this PDF provides the roadmap.</p>
+            
+            <p><strong>Master the board. Command the spirits. Own your reality.</strong></p>
+        `
     }
 ];
