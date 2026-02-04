@@ -209,5 +209,43 @@ const booksData = [
             <h3>Advantages of Applied Chaos Magick</h3>
             <p>Unlike other systems, Chaos Magick is pragmatic. This manual does not ask you to believe in external deities, but in the power of your own psyche. It is a direct guide, no filler, ideal for the modern practitioner who values their time and seeks tangible results.</p>
         `
+    },
+    {
+        id: "tratado-runas-cazadoras-caos-pdf",
+        name: "Treatise of Chaos Hunter Runes",
+        type: "book",
+        status: "available",
+        image: "assets/images/runascazadoras.png",
+        description: "A disruptive magical system designed by Zener of Cydonia and Frater Alekos. The Alphabet of Desire for the New Age.",
+        hotmartLink: "https://pay.hotmart.com/F104270966V?checkoutMode=2",
+        seo: {
+            title: "Chaos Hunter Runes Treatise: The Alphabet of Desire",
+            description: "Discover the Chaos Hunter Runes, a disruptive magical system by Zener of Cydonia. Master the 64 runic servitors and the Magic Chess Matrix."
+        },
+        detailedDescription: `
+            <h1>Treatise of Chaos Hunter Runes: The Alphabet of Desire for the New Age</h1>
+            <p>Do you feel that traditional runic systems do not fit the speed and flexibility of the modern world? The <strong>Treatise of Chaos Hunter Runes</strong> is not simply another book on divination; it is the presentation of a disruptive magical system, designed from scratch by <strong>Zener of Cydonia</strong> and edited by <strong>Frater Alekos</strong>, for those seeking to master the forces of chaos.</p>
+            <p>This 44-page treatise is born from a bold premise: the creation of a proprietary system of correspondences that avoids the risks of altering ancient traditions (like the Futhark), offering instead a flexible, potent "alphabet of desire" adapted to the contemporary psyche.</p>
+            
+            <h2>What makes this system unique in the world?</h2>
+            <ul>
+                <li><strong>The Magic Chess Matrix:</strong> Unlike any other oracle, this system uses the strategic structure of chess to organize its 64 runic servitors. Each piece (King, Queen, Rook, Bishop, Knight, and Pawn) becomes an archetype of power with specific functions.</li>
+                <li><strong>64 Pre-determined Servitors:</strong> The book functions as a grimoire of entities ready to be used. You will learn to work with the "King Rune" for personal dominion or the "Pawn Rune" for versatility and defense.</li>
+                <li><strong>Cultural Synchronism:</strong> The manual masterfully integrates pre-Hispanic figures and ancient totems (such as the Guardians of the Sphinx and beings from New World mythology) for those who prefer totemic forms more familiar to their environment.</li>
+                <li><strong>Real Activation Practice:</strong> Includes detailed methods for the physical creation of the runes, energetic charging, and ritual closing to ensure a safe and effective practice.</li>
+            </ul>
+            
+            <h2>What you will discover inside:</h2>
+            <ul>
+                <li><strong>Foundations of Chaos:</strong> Why rigid systems fail and how the flexibility of the Hunter Runes allows you to mold reality to your will.</li>
+                <li><strong>Power Correspondences:</strong> An exhaustive guide to the meanings of each rune according to its position in the matrix.</li>
+                <li><strong>User Manual:</strong> Step-by-step instructions to consult the oracle and use the runes as engines of manifestation.</li>
+            </ul>
+            
+            <h3>Ideal for:</h3>
+            <p>Practitioners of Chaos Magic, esotericism enthusiasts looking for original author tools, and collectors of unique oracular systems.</p>
+            
+            <p><strong>Don't limit yourself to interpreting the future. With the Chaos Hunter Runes, you hold the spiritual technology to write it. Acquire your copy today and start hunting your own results.</strong></p>
+        `
     }
 ];
