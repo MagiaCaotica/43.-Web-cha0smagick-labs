@@ -31,6 +31,84 @@ function renderAppsGrid() {
     });
 }
 
+// Function to render the books section
+function renderBooksSection() {
+    const grid = document.getElementById('apps-grid');
+    if (!grid) return;
+    
+    // Prevent duplicate rendering
+    if (document.getElementById('books-section')) return;
+
+    const section = document.createElement('div');
+    section.id = 'books-section';
+    section.style.maxWidth = '1400px';
+    section.style.margin = '0 auto';
+    section.style.padding = '0 2rem 3rem';
+    
+    // Title
+    const title = document.createElement('h2');
+    title.textContent = 'Books for Sale';
+    title.style.fontFamily = 'var(--font-mono)';
+    title.style.color = 'var(--text-primary)';
+    title.style.textTransform = 'uppercase';
+    title.style.letterSpacing = '2px';
+    title.style.fontSize = '1.5rem';
+    title.style.marginBottom = '2rem';
+    title.style.borderTop = '1px solid var(--border-color)';
+    title.style.paddingTop = '2rem';
+    title.style.textAlign = 'center';
+    
+    section.appendChild(title);
+
+    // Grid
+    const booksGrid = document.createElement('div');
+    booksGrid.className = 'apps-grid'; // Reuse existing grid class
+    booksGrid.id = 'books-grid';
+    
+    if (typeof booksData !== 'undefined') {
+        booksData.forEach(book => {
+            const card = document.createElement('div');
+            card.className = 'app-card';
+            card.onclick = () => window.location.href = `pages/app-details.html?id=${book.id}`;
+
+            card.innerHTML = `
+                <div class="card-image-wrapper">
+                    <img src="${book.image}" alt="${book.name}" loading="lazy" class="app-image">
+                </div>
+                <div class="card-content">
+                    <h4>${book.name}</h4>
+                    <p>${book.description}</p>
+                    <div class="card-footer">
+                        <span class="status-indicator ${book.status}"></span>
+                        <span class="status-text">${book.status === 'available' ? 'Available' : 'Coming Soon'}</span>
+                    </div>
+                </div>
+            `;
+            booksGrid.appendChild(card);
+        });
+    }
+
+    section.appendChild(booksGrid);
+    // Insert after apps-grid
+    grid.parentNode.insertBefore(section, grid.nextSibling);
+}
+
+// Helper to load Hotmart Widget
+function loadHotmartWidget() {
+    if (document.getElementById('hotmart-widget-script')) return;
+    
+    const script = document.createElement('script');
+    script.id = 'hotmart-widget-script';
+    script.src = 'https://static.hotmart.com/checkout/widget.min.js';
+    document.head.appendChild(script);
+
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css';
+    document.head.appendChild(link);
+}
+
 // Function to render details of a specific app
 function renderAppDetails() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -41,30 +119,58 @@ function renderAppDetails() {
         return;
     }
 
-    const app = appsData.find(a => a.id === appId);
-    if (!app) {
-        document.body.innerHTML = '<h1>App not found</h1>';
+    // Search in appsData first, then booksData
+    let item = appsData.find(a => a.id === appId);
+    if (!item && typeof booksData !== 'undefined') {
+        item = booksData.find(b => b.id === appId);
+    }
+
+    if (!item) {
+        document.body.innerHTML = '<h1>Item not found</h1>';
         return;
+    }
+
+    // Update SEO (Title & Meta Description)
+    if (item.seo) {
+        document.title = item.seo.title;
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (!metaDesc) {
+            metaDesc = document.createElement('meta');
+            metaDesc.name = 'description';
+            document.head.appendChild(metaDesc);
+        }
+        metaDesc.setAttribute('content', item.seo.description);
     }
 
     const detailsContainer = document.getElementById('app-details');
     if (!detailsContainer) return;
 
+    // Determine Action Button (App Download or Hotmart Buy)
+    let actionButton = '';
+    if (item.hotmartLink) {
+        actionButton = `<a onclick="return false;" href="${item.hotmartLink}" class="hotmart-fb hotmart__button-checkout"><img src='https://static.hotmart.com/img/btn-buy-green.png' alt="Comprar"></a>`;
+        loadHotmartWidget();
+    } else if (item.url) {
+        actionButton = `<a href="${item.url}" class="cta-button primary" target="_blank">Download on Google Play</a>`;
+    } else {
+        actionButton = '<button class="cta-button disabled">Coming Soon</button>';
+    }
+
     detailsContainer.innerHTML = `
         <div class="detail-header-layout">
-            <img src="../${app.image}" alt="${app.name}" loading="lazy" class="detail-main-image">
+            <img src="../${item.image}" alt="${item.name}" loading="lazy" class="detail-main-image">
             <div class="detail-header-info">
-                <h2>${app.name}</h2>
-                <p class="lead-text">${app.description}</p>
-                ${app.url ? `<a href="${app.url}" class="cta-button primary" target="_blank">Download on Google Play</a>` : '<button class="cta-button disabled">Coming Soon</button>'}
+                <h2>${item.name}</h2>
+                <p class="lead-text">${item.description}</p>
+                ${actionButton}
             </div>
         </div>
     `;
 
     // Render detailed description if available
     const detailedContainer = document.getElementById('app-detailed-info');
-    if (detailedContainer && app.detailedDescription) {
-        detailedContainer.innerHTML = app.detailedDescription;
+    if (detailedContainer && item.detailedDescription) {
+        detailedContainer.innerHTML = item.detailedDescription;
     }
 }
 
@@ -135,6 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initVisitorCounter();   // Initialize visitor counter
     if (document.getElementById('apps-grid')) {
         renderAppsGrid();
+        renderBooksSection();
     } else if (document.getElementById('app-details')) {
         renderAppDetails();
     }

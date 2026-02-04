@@ -175,3 +175,39 @@ const appsData = [
         `
     }
 ];
+
+const booksData = [
+    {
+        id: "manual-activacion-servidores-magicos-pdf",
+        name: "Magical Servitors Manual",
+        type: "book",
+        status: "available",
+        image: "assets/images/servidores.png",
+        description: "Learn how to create and activate magical servitors with Chaos Magick. Practical guide by Frater Alekos.",
+        hotmartLink: "https://pay.hotmart.com/D104270399P?checkoutMode=2",
+        seo: {
+            title: "Magical Servitors Manual: Activation and Design Guide",
+            description: "Learn how to create and activate magical servitors with Chaos Magick. Practical guide by Frater Alekos to manifest real results. Download the PDF here!"
+        },
+        detailedDescription: `
+            <h1>Magical Servitors: The Ultimate Manual for Creation and Activation</h1>
+            <p>Looking for an effective way to influence your reality without obsolete rituals? Chaos Magick offers the most powerful tool of modern esotericism: magical servitors. In this practical PDF manual, you will discover how to design custom "spiritual software" to achieve your personal goals.</p>
+            
+            <h2>What is a Magical Servitor and why do you need this Manual?</h2>
+            <p>A magical servitor is an entity created by the magician to execute a specific task: from attracting prosperity to providing protection. However, the most common mistake is not knowing how to activate them correctly.</p>
+            <p>This book by Frater Alekos focuses on activation technology, ensuring your creations have the necessary energy to function autonomously and safely.</p>
+            
+            <h2>Featured Content of the Magical Servitors PDF</h2>
+            <p>Key topics covered in this guide:</p>
+            <ul>
+                <li><strong>Sigil and Servitor Design:</strong> How to structure intention and physical form.</li>
+                <li><strong>Activation Methods in Gnosis:</strong> Techniques to charge your entities with pure will.</li>
+                <li><strong>Maintenance and Feeding:</strong> How to prevent a servitor from depleting or becoming unstable.</li>
+                <li><strong>Difference between Servitors and Egregores:</strong> Understand the hierarchy of thought forms.</li>
+            </ul>
+            
+            <h3>Advantages of Applied Chaos Magick</h3>
+            <p>Unlike other systems, Chaos Magick is pragmatic. This manual does not ask you to believe in external deities, but in the power of your own psyche. It is a direct guide, no filler, ideal for the modern practitioner who values their time and seeks tangible results.</p>
+        `
+    }
+];
