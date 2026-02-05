@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-username.github.io/cha0smagick-labs/sitemap.xml
+Sitemap: https://magiacaotica.github.io/43.-Web-cha0smagick-labs/sitemap.xml

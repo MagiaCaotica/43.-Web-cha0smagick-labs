@@ -153,6 +153,14 @@ function renderAppDetails() {
             document.head.appendChild(metaDesc);
         }
         metaDesc.setAttribute('content', item.seo.description);
+
+        let metaKeywords = document.querySelector('meta[name="keywords"]');
+        if (!metaKeywords) {
+            metaKeywords = document.createElement('meta');
+            metaKeywords.name = 'keywords';
+            document.head.appendChild(metaKeywords);
+        }
+        metaKeywords.setAttribute('content', item.seo.keywords || '');
     }
 
     const detailsContainer = document.getElementById('app-details');

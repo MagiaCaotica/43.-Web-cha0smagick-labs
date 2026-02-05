@@ -9,7 +9,8 @@ const appsData = [
         image: "assets/images/GSG.png",
         seo: {
             title: "Goetian Seals Generator | Digital Sigil Creator for Chaos Magick",
-            description: "Create powerful Goetian seals and custom sigils with the #1 Chaos Magick App. Manifest desires using our digital sigil generator and cybermancy tools."
+            description: "Create powerful Goetian seals and custom sigils with the #1 Chaos Magick App. Manifest desires using our digital sigil generator and cybermancy tools.",
+            keywords: "goetian seals, sigil generator, chaos magick, cybermancy, digital sigil, manifestation app, occult tools"
         },
         detailedDescription: `
             <h3>Unlock Your Inner Power: Manifest Your Dreams with Custom Sigils!</h3>
@@ -55,7 +56,8 @@ const appsData = [
         image: "assets/images/norse-rune.png",
         seo: {
             title: "Norse Rune Oracle | Viking Runes Reading App & Divination",
-            description: "Consult the Elder Futhark with the Norse Rune Oracle. Accurate digital rune readings, daily guidance, and Viking wisdom for modern life."
+            description: "Consult the Elder Futhark with the Norse Rune Oracle. Accurate digital rune readings, daily guidance, and Viking wisdom for modern life.",
+            keywords: "norse runes, viking runes, rune reading, divination app, elder futhark, spiritual guidance, oracle app"
         },
         detailedDescription: `
             <h3>Discover Ancient Norse Secrets: Your Ultimate Rune Reading App for Guidance, Clarity, and Empowerment!</h3>
@@ -102,7 +104,8 @@ const appsData = [
         image: "assets/images/lunar-phase.png",
         seo: {
             title: "Lunar Phase Calculator | Moon Magic & Biodynamic Gardening App",
-            description: "Track moon phases for magic rituals and biodynamic gardening. Synchronize your practice with the Lunar Phase Calculator app."
+            description: "Track moon phases for magic rituals and biodynamic gardening. Synchronize your practice with the Lunar Phase Calculator app.",
+            keywords: "lunar phase, moon magic, biodynamic gardening, moon calendar, astrology app, wellness, ritual timing"
         },
         detailedDescription: `
             <h3>Discover the Secrets of the Moon: The Ultimate App for Tracking Lunar Phases and Aligning with Life</h3>
@@ -133,7 +136,8 @@ const appsData = [
         image: "assets/images/iching.png",
         seo: {
             title: "I Ching Oracle | Digital Book of Changes & Divination App",
-            description: "Consult the ancient Chinese I Ching Oracle digitally. Accurate hexagram casting for guidance and divination in the digital age."
+            description: "Consult the ancient Chinese I Ching Oracle digitally. Accurate hexagram casting for guidance and divination in the digital age.",
+            keywords: "i ching, book of changes, chinese oracle, divination app, hexagram, taoist philosophy, digital oracle"
         },
         detailedDescription: `
             <h3>Unlock the Ancient Wisdom of the I Ching and Find Answers to Your Life's Deepest Questions with the Most Accurate Digital Oracle.</h3>
@@ -171,7 +175,8 @@ const appsData = [
         image: "assets/images/chaos-sigil.png",
         seo: {
             title: "Magick Chaos Sigil Generator | Austin Osman Spare Style Tool",
-            description: "Create unique chaotic sigils using cryptographic entropy. A digital tool for Austin Osman Spare style sigilization and cybermancy."
+            description: "Create unique chaotic sigils using cryptographic entropy. A digital tool for Austin Osman Spare style sigilization and cybermancy.",
+            keywords: "chaos magick, sigil generator, austin osman spare, sigilization, cybermancy, thought forms, magick app"
         },
         detailedDescription: `
             <h3>Transform Your Will into Reality with the Ultimate Tool for Modern Cybermancy.</h3>
@@ -213,7 +218,8 @@ const booksData = [
         hotmartLink: "https://pay.hotmart.com/D104270399P?checkoutMode=2",
         seo: {
             title: "Magical Servitors Manual: Activation and Design Guide",
-            description: "Learn how to create and activate magical servitors with Chaos Magick. Practical guide by Frater Alekos to manifest real results. Download the PDF here!"
+            description: "Learn how to create and activate magical servitors with Chaos Magick. Practical guide by Frater Alekos to manifest real results. Download the PDF here!",
+            keywords: "magical servitors, chaos magick, thought forms, egregores, sigil magic, practical occultism, frater alekos"
         },
         detailedDescription: `
             <h1>Magical Servitors: The Ultimate Manual for Creation and Activation</h1>
@@ -247,7 +253,8 @@ const booksData = [
         hotmartLink: "https://pay.hotmart.com/F104270966V?checkoutMode=2",
         seo: {
             title: "Chaos Hunter Runes Treatise: The Alphabet of Desire",
-            description: "Discover the Chaos Hunter Runes, a disruptive magical system by Zener of Cydonia. Master the 64 runic servitors and the Magic Chess Matrix."
+            description: "Discover the Chaos Hunter Runes, a disruptive magical system by Zener of Cydonia. Master the 64 runic servitors and the Magic Chess Matrix.",
+            keywords: "chaos hunter runes, chaos magick, runic system, zener of cydonia, oracular system, alphabet of desire, magic chess"
         },
         detailedDescription: `
             <h1>Treatise of Chaos Hunter Runes: The Alphabet of Desire for the New Age</h1>
@@ -286,7 +293,8 @@ const booksData = [
         hotmartLink: "https://pay.hotmart.com/B104271332D?checkoutMode=2",
         seo: {
             title: "Ouija Cazadora: Chaos Magic Guide to the Oracular Manual",
-            description: "Master the Ouija board with Chaos Magic. A practical guide by Zener de Cydonia and Frater Alekos for safe and effective rituals."
+            description: "Master the Ouija board with Chaos Magic. A practical guide by Zener de Cydonia and Frater Alekos for safe and effective rituals.",
+            keywords: "ouija board, chaos magic, zener de cydonia, oracular manual, spirit board, divination, safe ritual"
         },
         detailedDescription: `
             <h1>Ouija Cazadora: A Chaos Magic Guide to the Oracular Manual</h1>
@@ -319,7 +327,8 @@ const booksData = [
         hotmartLink: "https://pay.hotmart.com/O104271155J?checkoutMode=2",
         seo: {
             title: "Liber Lvpinux: Lycanthropic Transformation and Chaos Magic",
-            description: "Discover Liber Lvpinux by Frater Alekos. A grimoire on lycanthropy, chaos magic, and the path of the animagus. Download the PDF guide here."
+            description: "Discover Liber Lvpinux by Frater Alekos. A grimoire on lycanthropy, chaos magic, and the path of the animagus. Download the PDF guide here.",
+            keywords: "liber lvpinux, lycanthropy, chaos magic, frater alekos, animagus, spiritual transformation, left hand path, grimoire"
         },
         detailedDescription: `
             <h1>Liber Lvpinux: The Path of Lycanthropic Transformation and Chaos Magic</h1>
