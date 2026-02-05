@@ -42,6 +42,9 @@ header {
     margin-bottom: 2rem;
     text-align: center;
     background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header h1 {
@@ -51,6 +54,22 @@ header h1 {
     letter-spacing: 2px;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+}
+
+/* Estilos Responsivos para Logo y Subtítulo */
+header img:not(.lang-flag) {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    object-fit: contain;
+}
+
+header p {
+    max-width: 90%;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.4;
+    color: var(--text-secondary);
 }
 
 /* Language Gadget Styles */
@@ -300,6 +319,10 @@ nav a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+
     .detail-header-layout {
         flex-direction: column;
         align-items: center;
@@ -317,6 +340,11 @@ nav a:hover {
     header h1 {
         font-size: 1.2rem;
     }
+    
+    header p {
+        font-size: 0.85rem;
+    }
+
     nav ul {
         gap: 1rem;
     }
