@@ -15,7 +15,7 @@ function renderAppsGrid() {
 
         card.innerHTML = `
             <div class="card-image-wrapper">
-                <img src="${app.image}" alt="${app.name}" loading="lazy" class="app-image img-${app.id.replace(/-/g, '-')}">
+                <img src="${app.image}" alt="${app.name}" loading="lazy" width="300" height="220" class="app-image img-${app.id.replace(/-/g, '-')}">
             </div>
             <div class="card-content">
                 <h4>${app.name}</h4>
@@ -83,7 +83,7 @@ function renderBooksSection() {
 
             card.innerHTML = `
                 <div class="card-image-wrapper">
-                    <img src="${book.image}" alt="${book.name}" loading="lazy" class="app-image">
+                    <img src="${book.image}" alt="${book.name}" loading="lazy" width="300" height="220" class="app-image">
                 </div>
                 <div class="card-content">
                     <h4>${book.name}</h4>
