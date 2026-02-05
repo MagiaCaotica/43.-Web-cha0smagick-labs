@@ -7,6 +7,10 @@ const appsData = [
         status: "available",
         description: "Generate custom Goetian seals for digital invocation rituals. An essential tool for modern cybermancy.",
         image: "assets/images/GSG.png",
+        seo: {
+            title: "Goetian Seals Generator | Digital Sigil Creator for Chaos Magick",
+            description: "Create powerful Goetian seals and custom sigils with the #1 Chaos Magick App. Manifest desires using our digital sigil generator and cybermancy tools."
+        },
         detailedDescription: `
             <h3>Unlock Your Inner Power: Manifest Your Dreams with Custom Sigils!</h3>
             <p>Ready to turn your desires into reality?</p>
@@ -49,6 +53,10 @@ const appsData = [
         status: "available",
         description: "Consult the Norse rune oracle for spiritual guidance in the digital age.",
         image: "assets/images/norse-rune.png",
+        seo: {
+            title: "Norse Rune Oracle | Viking Runes Reading App & Divination",
+            description: "Consult the Elder Futhark with the Norse Rune Oracle. Accurate digital rune readings, daily guidance, and Viking wisdom for modern life."
+        },
         detailedDescription: `
             <h3>Discover Ancient Norse Secrets: Your Ultimate Rune Reading App for Guidance, Clarity, and Empowerment!</h3>
             <p>Have you ever wondered what the mystical runes of the Vikings could reveal about your life? Imagine accessing timeless wisdom to navigate love, career, wealth, and more, right from your phone! Introducing Norse Rune Oracle, the top-rated rune reading app on Google Play, designed for both beginners and experts. Discover deep insights with the Elder Futhark runes and transform your daily decisions into empowering actions!</p>
@@ -92,6 +100,10 @@ const appsData = [
         status: "available",
         description: "Calculate precise lunar phases to synchronize your magical practices with the moon's cycles.",
         image: "assets/images/lunar-phase.png",
+        seo: {
+            title: "Lunar Phase Calculator | Moon Magic & Biodynamic Gardening App",
+            description: "Track moon phases for magic rituals and biodynamic gardening. Synchronize your practice with the Lunar Phase Calculator app."
+        },
         detailedDescription: `
             <h3>Discover the Secrets of the Moon: The Ultimate App for Tracking Lunar Phases and Aligning with Life</h3>
             <p>Discover the power of the cosmos with the Lunar Phase Calculator: the #1 app for tracking lunar phases, enhancing wellness, revitalizing your garden, and uncovering lunar magic. Perfect for astronomy enthusiasts, self-care advocates, and gardening lovers seeking precise and practical information to live in harmony with the universe.</p>
@@ -119,6 +131,10 @@ const appsData = [
         status: "coming-soon",
         description: "The ancient Chinese oracle adapted for techno-sorcery. Coming soon.",
         image: "assets/images/iching.png",
+        seo: {
+            title: "I Ching Oracle | Digital Book of Changes & Divination App",
+            description: "Consult the ancient Chinese I Ching Oracle digitally. Accurate hexagram casting for guidance and divination in the digital age."
+        },
         detailedDescription: `
             <h3>Unlock the Ancient Wisdom of the I Ching and Find Answers to Your Life's Deepest Questions with the Most Accurate Digital Oracle.</h3>
             <p>The I Ching Oracle (Book of Changes) is a must-have tool for those seeking guidance, clarity, and a deeper understanding of their present and future. Based on the 3,000-year-old Chinese divination system, this app seamlessly blends ancestral tradition with a modern, fluid interface.</p>
@@ -153,6 +169,10 @@ const appsData = [
         status: "coming-soon",
         description: "Create unique chaotic sigils to manifest your intentions in cyberspace.",
         image: "assets/images/chaos-sigil.png",
+        seo: {
+            title: "Magick Chaos Sigil Generator | Austin Osman Spare Style Tool",
+            description: "Create unique chaotic sigils using cryptographic entropy. A digital tool for Austin Osman Spare style sigilization and cybermancy."
+        },
         detailedDescription: `
             <h3>Transform Your Will into Reality with the Ultimate Tool for Modern Cybermancy.</h3>
             <p>Magickal Seals Generator (also known as Chaos Sigilizer) creates a digital bridge between your conscious intent and your deep subconscious. Fusing the ancient esoteric techniques of Austin Osman Spare and Goetic magic with state-of-the-art technology, this app is designed for the serious occultist, the modern witch, and the chaos magician.</p>
