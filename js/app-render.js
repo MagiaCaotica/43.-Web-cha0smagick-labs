@@ -9,9 +9,9 @@ function renderAppsGrid() {
     const shuffledApps = [...appsData].sort(() => Math.random() - 0.5);
 
     shuffledApps.forEach(app => {
-        const card = document.createElement('div');
+        const card = document.createElement('a');
         card.className = 'app-card';
-        card.onclick = () => window.location.href = `pages/app-details.html?id=${app.id}`;
+        card.href = `pages/app-details.html?id=${app.id}`;
 
         card.innerHTML = `
             <div class="card-image-wrapper">
@@ -77,9 +77,9 @@ function renderBooksSection() {
         });
 
         sortedBooks.forEach(book => {
-            const card = document.createElement('div');
+            const card = document.createElement('a');
             card.className = 'app-card';
-            card.onclick = () => window.location.href = `pages/app-details.html?id=${book.id}`;
+            card.href = `pages/app-details.html?id=${book.id}`;
 
             card.innerHTML = `
                 <div class="card-image-wrapper">
