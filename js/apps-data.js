@@ -130,9 +130,9 @@ const appsData = [
         id: "iching-oracle",
         name: "I Ching Oracle",
         price: "$3.99 USD",
-        url: null,
-        status: "coming-soon",
-        description: "The ancient Chinese oracle adapted for techno-sorcery. Coming soon.",
+        url: "https://play.google.com/store/apps/details?id=com.app.ichingoracle",
+        status: "available",
+        description: "The ancient Chinese oracle adapted for techno-sorcery.",
         image: "assets/images/iching.png",
         seo: {
             title: "I Ching Oracle | Digital Book of Changes & Divination App",
