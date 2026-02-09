@@ -169,8 +169,8 @@ const appsData = [
         id: "chaos-sigil-generator",
         name: "Magick Chaos Sigil Generator",
         price: "$3.99 USD",
-        url: null,
-        status: "coming-soon",
+        url: "https://play.google.com/store/apps/details?id=com.app.goetiansealsgeneratorapp",
+        status: "available",
         description: "Create unique chaotic sigils to manifest your intentions in cyberspace.",
         image: "assets/images/chaos-sigil.png",
         seo: {
