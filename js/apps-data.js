@@ -10,7 +10,7 @@ const appsData = [
         seo: {
             title: "Goetian Seals Generator | Digital Sigil Creator for Chaos Magick",
             description: "Create powerful Goetian seals and custom sigils with the #1 Chaos Magick App. Manifest desires using our digital sigil generator and cybermancy tools.",
-            keywords: "goetian seals, sigil generator, chaos magick, cybermancy, digital sigil, manifestation app, occult tools"
+            keywords: "goetian seals, sigil generator, chaos magick, cybermancy, digital sigil, manifestation app, occult tools, app sigilos, generador sigilos, magia del caos app, technomagia"
         },
         detailedDescription: `
             <h3>Unlock Your Inner Power: Manifest Your Dreams with Custom Sigils!</h3>
@@ -176,7 +176,7 @@ const appsData = [
         seo: {
             title: "Magick Chaos Sigil Generator | Austin Osman Spare Style Tool",
             description: "Create unique chaotic sigils using cryptographic entropy. A digital tool for Austin Osman Spare style sigilization and cybermancy.",
-            keywords: "chaos magick, sigil generator, austin osman spare, sigilization, cybermancy, thought forms, magick app"
+            keywords: "chaos magick, sigil generator, austin osman spare, sigilization, cybermancy, thought forms, magick app, app sigilos, generador sigilos, magia del caos app, technomagia"
         },
         detailedDescription: `
             <h3>Transform Your Will into Reality with the Ultimate Tool for Modern Cybermancy.</h3>

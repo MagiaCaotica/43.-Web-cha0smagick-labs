@@ -106,6 +106,20 @@ function renderBooksSection() {
     grid.parentNode.insertBefore(section, grid.nextSibling);
 }
 
+// Helper to inject JSON-LD Schema
+function injectSchema(schema) {
+    // Remove existing schema
+    const existingSchema = document.querySelector('script[type="application/ld+json"]');
+    if (existingSchema) {
+        existingSchema.remove();
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema, null, 2);
+    document.head.appendChild(script);
+}
+
 // Helper to load Hotmart Widget
 function loadHotmartWidget() {
     if (document.getElementById('hotmart-widget-script')) return;
@@ -162,6 +176,63 @@ function renderAppDetails() {
         }
         metaKeywords.setAttribute('content', item.seo.keywords || '');
     }
+
+    // Generate and Inject Schema.org Markup
+    let schema = {};
+    const absoluteImageUrl = `https://magiacaotica.github.io/43.-Web-cha0smagick-labs/${item.image.replace('../', '')}`;
+    const itemUrl = window.location.href;
+
+    if (item.type === 'book') {
+        schema = {
+            "@context": "https://schema.org",
+            "@type": "Book",
+            "name": item.name,
+            "description": item.seo.description,
+            "image": absoluteImageUrl,
+            "url": itemUrl,
+            "author": {
+                "@type": "Person",
+                "name": "Frater Alekos" // Extracted from descriptions
+            },
+            "workExample": [{
+                "@type": "Book",
+                "bookEdition": "Digital PDF",
+                "bookFormat": "https://schema.org/EBook",
+                "potentialAction": {
+                    "@type": "BuyAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": item.hotmartLink,
+                        "actionPlatform": [
+                            "http://schema.org/DesktopWebPlatform",
+                            "http://schema.org/IOSPlatform",
+                            "http://schema.org/AndroidPlatform"
+                        ]
+                    },
+                    "price": item.price.match(/[\d.]+/)[0],
+                    "priceCurrency": "USD"
+                }
+            }]
+        };
+    } else { // It's an app
+        schema = {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": item.name,
+            "operatingSystem": "ANDROID",
+            "applicationCategory": "Lifestyle",
+            "image": absoluteImageUrl,
+            "description": item.seo.description,
+            "url": item.url,
+            "downloadUrl": item.url,
+            "offers": {
+                "@type": "Offer",
+                "price": item.price ? item.price.match(/[\d.]+/)[0] : "0.00",
+                "priceCurrency": "USD"
+            }
+        };
+    }
+    injectSchema(schema);
 
     const detailsContainer = document.getElementById('app-details');
     if (!detailsContainer) return;
@@ -238,6 +309,38 @@ function renderLanguageGadget() {
     header.insertBefore(gadget, header.firstChild);
 }
 
+// Function to render ItemList schema for the main page
+function renderItemListSchema() {
+    let allItems = [...appsData];
+    if (typeof booksData !== 'undefined') {
+        allItems = [...allItems, ...booksData];
+    }
+
+    const itemList = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Cha0smagick Labs Products",
+        "description": "Apps and books on Chaos Magick, sigils, and technomancy.",
+        "itemListElement": allItems.map((item, index) => {
+            const itemType = item.type === 'book' ? 'Book' : 'SoftwareApplication';
+            const absoluteImageUrl = `https://magiacaotica.github.io/43.-Web-cha0smagick-labs/${item.image}`;
+            const itemUrl = `https://magiacaotica.github.io/43.-Web-cha0smagick-labs/pages/app-details.html?id=${item.id}`;
+            
+            return {
+                "@type": "ListItem",
+                "position": index + 1,
+                "item": {
+                    "@type": itemType,
+                    "name": item.name,
+                    "url": itemUrl,
+                    "image": absoluteImageUrl
+                }
+            };
+        })
+    };
+    injectSchema(itemList);
+}
+
 // Function to initialize the visitor counter
 function initVisitorCounter() {
     const counterElement = document.getElementById('visitor-count');
@@ -264,6 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('apps-grid')) {
         renderAppsGrid();
         renderBooksSection();
+        renderItemListSchema(); // Add schema for the main page
     } else if (document.getElementById('app-details')) {
         renderAppDetails();
     }
