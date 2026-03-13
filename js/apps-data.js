@@ -203,6 +203,53 @@ const appsData = [
             
             <h3>Download Magickal Seals Generator Today and Begin Your Practice of Digital Sorcery.</h3>
         `
+    },
+    {
+        id: "unofficial-rider-waite-tarot",
+        name: "Unofficial Rider Waite Tarot",
+        price: "$9.99 USD",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite",
+        status: "available",
+        description: "A feature-packed offline Tarot encyclopedia and reader based on the iconic Rider-Waite deck.",
+        image: "assets/images/tarotbutton.png",
+        seo: {
+            title: "Unofficial Rider Waite Tarot | Offline Tarot Reader & Encyclopedia",
+            description: "Explore the Rider-Waite tarot with this offline app. Full deck, spreads, meanings, and multilingual support for modern divination.",
+            keywords: "tarot reader, rider waite, tarot app, offline tarot, tarot encyclopedia, divination tool, tarot spreads, chaos magick"
+        },
+        detailedDescription: `
+            <h3>Discover the Unofficial Rider Waite Tarot: Your Offline Encyclopedia and Reader</h3>
+            <p>The Unofficial Rider Waite Tarot app is a feature-packed offline tarot encyclopedia and reader based on the iconic Rider-Waite deck. It features the complete deck (Major Arcana and four suits) with high-quality illustrations and multilingual support, allowing you to explore meanings, symbolism, and card spreads without an internet connection. Designed for both beginners and experienced readers, it invites you to draw cards, interpret insights, and deepen your connection with tarot tradition.</p>
+            
+            <h4>Key Features</h4>
+            <ul>
+                <li><strong>Complete Rider Waite Tarot Deck:</strong> Explore the Major Arcana and the suits of Cups, Pentacles, Swords, and Wands. Card names adapt to your language, and illustrations are organized for quick navigation and study.</li>
+                <li><strong>Extensive Card Meanings & Symbolism:</strong> Each card includes upright and reversed interpretations, concise keywords, and symbolic notes to deepen your understanding of the arcana.</li>
+                <li><strong>Interactive Readings & Spreads:</strong> Perform readings with multiple spreads, including Card of the Day, Past-Present-Future, Grand Cross, and Celtic Cross. Input a question and generate structured insights that you can save to your history.</li>
+                <li><strong>Encyclopedia & Search:</strong> A built-in tarot encyclopedia with searchable card entries, easy navigation, and terminology adapted to different languages to enhance learning and retention.</li>
+                <li><strong>Multilingual Compatibility:</strong> Translate and view content in English, Spanish, French, German, Italian, Hindi, and Chinese (EN/ES/FR/DE/IT/HI/ZH), with names, explanations, and labels adapted to your language.</li>
+                <li><strong>Customization & Design:</strong> Choose from multiple card backs and enjoy a modern, crystal-clear UI based on Compose, with gradients and subtle details for a premium experience.</li>
+                <li><strong>Reading History & Revisits:</strong> Save past readings to consult guidance later and easily review previous layouts to reflect on your experience.</li>
+                <li><strong>Privacy by Design:</strong> All data and the deck are loaded locally on the app, ensuring a private and offline experience.</li>
+            </ul>
+            
+            <h4>Why You'll Love It</h4>
+            <ul>
+                <li><strong>Faithful Practice:</strong> Learn and practice with a presentation faithful to Rider Waite, without distractions or ads.</li>
+                <li><strong>Insightful Spreads:</strong> Quick access to selected spreads and reliable interpretations that favor meditation, study, and decision-making.</li>
+                <li><strong>Premium UI:</strong> An attractive and practical user interface that prioritizes readability, accessibility, and a contemplative tarot experience.</li>
+                <li><strong>Global Learning:</strong> Enriched content with various languages allows you to learn tarot in multiple languages, expanding your global practice.</li>
+            </ul>
+
+            <h4>Who Is It For?</h4>
+            <ul>
+                <li>Tarot enthusiasts seeking a faithful Rider Waite experience with detailed card meanings and symbolism.</li>
+                <li>Students and readers looking for structured spreads (Daily, Past-Present-Future, Grand Cross, Celtic Cross) and a searchable encyclopedia.</li>
+                <li>Curious minds seeking to study tarot in their preferred language and deepen their practice privately on their device.</li>
+            </ul>
+            
+            <h3>Download the Unofficial Rider Waite Tarot App now and start your mindful, language-rich tarot practice.</h3>
+        `
     }
 ];
 
