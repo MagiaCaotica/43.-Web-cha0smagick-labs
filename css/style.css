@@ -456,3 +456,51 @@ nav a:hover {
     border-radius: 4px;
     box-shadow: 0 0 10px var(--accent-dim);
 }
+
+/* Estilos para el porcentaje de descuento */
+.discount-badge {
+    background-color: #ff0000;
+    color: #ffff00;
+    font-size: 0.5em;
+    padding: 2px 5px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+    display: inline-block;
+    animation: discountPulse 1.5s infinite ease-in-out;
+    text-shadow: none;
+}
+
+/* Estilos para la información del autor */
+.author-info {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+
+/* Estilos para la información del idioma */
+.language-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.lang-flag-mini {
+    width: 18px;
+    height: 12px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+@keyframes discountPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
