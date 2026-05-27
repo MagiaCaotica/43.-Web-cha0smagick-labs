@@ -25,7 +25,7 @@ function renderAppsGrid() {
                         <span class="status-indicator ${app.status}"></span>
                         <span class="status-text">${app.status === 'available' ? 'Available' : 'Coming Soon'}</span>
                     </div>
-                    ${app.price ? `<span class="card-price">${app.price}</span>` : ''}
+                    ${app.price ? `<span class="card-price">${app.price.replace(/(\(.*?\))/, '<span class="discount-badge">$1</span>')}</span>` : ''}
                 </div>
             </div>
         `;
@@ -70,9 +70,10 @@ function renderBooksSection() {
     
     if (typeof booksData !== 'undefined') {
         // Sort books by price (low to high)
+        // Note: We use match to extract only the numerical price for sorting
         const sortedBooks = [...booksData].sort((a, b) => {
-            const priceA = parseFloat(a.price.replace(/[^0-9.]/g, ''));
-            const priceB = parseFloat(b.price.replace(/[^0-9.]/g, ''));
+            const priceA = parseFloat(a.price.match(/[\d.]+/)?.[0] || 0);
+            const priceB = parseFloat(b.price.match(/[\d.]+/)?.[0] || 0);
             return priceA - priceB;
         });
 
@@ -88,12 +89,18 @@ function renderBooksSection() {
                 <div class="card-content">
                     <h4>${book.name}</h4>
                     <p>${book.description}</p>
+                    ${book.author ? `<div class="author-info">AUTHOR: ${book.author}</div>` : ''}
+                    ${book.language ? `
+                    <div class="language-info">
+                        <span>LANGUAGE: ${book.language}</span>
+                        <img src="https://flagcdn.com/w20/${book.languageFlag}.png" alt="${book.language}" class="lang-flag-mini">
+                    </div>` : ''}
                     <div class="card-footer">
                         <div class="status-container">
                             <span class="status-indicator ${book.status}"></span>
                             <span class="status-text">${book.status === 'available' ? 'Available' : 'Coming Soon'}</span>
                         </div>
-                        ${book.price ? `<span class="card-price">${book.price}</span>` : ''}
+                        ${book.price ? `<span class="card-price">${book.price.replace(/(\(.*?\))/, '<span class="discount-badge">$1</span>')}</span>` : ''}
                     </div>
                 </div>
             `;
@@ -254,7 +261,13 @@ function renderAppDetails() {
             <div class="detail-header-info">
                 <h2>${item.name}</h2>
                 <p class="lead-text">${item.description}</p>
-                ${item.price ? `<div class="detail-price">${item.price}</div>` : ''}
+                ${item.author ? `<div class="author-info">AUTHOR: ${item.author}</div>` : ''}
+                ${item.language ? `
+                <div class="language-info">
+                    <span>LANGUAGE: ${item.language}</span>
+                    <img src="https://flagcdn.com/w20/${item.languageFlag}.png" alt="${item.language}" class="lang-flag-mini">
+                </div>` : ''}
+                ${item.price ? `<div class="detail-price">${item.price.replace(/(\(.*?\))/, '<span class="discount-badge">$1</span>')}</div>` : ''}
                 ${actionButton}
             </div>
         </div>
