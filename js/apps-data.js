@@ -1,49 +1,40 @@
 const appsData = [
     {
-        id: "goetian-seals",
-        name: "Goetian Seals Generator",
+        id: "arcana-goetia",
+        name: "Arcana Goetia: Ritual & Sigils",
         price: "$3.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal",
         status: "available",
-        description: "Generate custom Goetian seals for digital invocation rituals. An essential tool for modern cybermancy.",
+        description: "Goetic Grimoire: Custom sigil generator and ritual guide for modern occultism. 🗝️",
         image: "assets/images/GSG.png",
         seo: {
-            title: "Goetian Seals Generator | Digital Sigil Creator for Chaos Magick",
-            description: "Create powerful Goetian seals and custom sigils with the #1 Chaos Magick App. Manifest desires using our digital sigil generator and cybermancy tools.",
-            keywords: "goetian seals, sigil generator, chaos magick, cybermancy, digital sigil, manifestation app, occult tools, app sigilos, generador sigilos, magia del caos app, technomagia"
+            title: "Arcana Goetia: Ritual & Sigils | Digital Goetic Grimoire & Sigil Generator",
+            description: "Connect with timeless forces using Arcana Goetia, the ultimate digital companion for modern chaos magic. Create custom sigils and explore the Lemegeton lore.",
+            keywords: "Magic, Occult, Goetia, Solomon, Grimoire, sigils, chaos magic, ritual tools, Lemegeton, sigillum, invocation"
         },
         detailedDescription: `
-            <h3>Unlock Your Inner Power: Manifest Your Dreams with Custom Sigils!</h3>
-            <p>Ready to turn your desires into reality?</p>
-            <p>Discover The Sigil Engine: the #1 app for creating sigils for modern manifestors, chaos magicians, and spiritual seekers. It's not just a manifestation tool; it's your personal gateway to crafting powerful, unique sigils that harness your intention to shape your destiny. Whether you're manifesting love, wealth, success, or personal growth, our app empowers you to become the master of your universe. Join thousands who are already controlling their future: download it now and start manifesting today!</p>
+            <h3>Unlock Ancient Wisdom: Your Digital Gateway to the Goetia</h3>
+            <p>Looking to deepen your connection with the ancient wisdom of the Goetia? Connect with timeless forces using the ultimate digital companion for modern chaos magic and occult practitioners.</p>
+            <p><strong>Arcana Goetia</strong> blends the ancient traditions of the Lemegeton with cutting-edge technology, designed to be the essential tool for your rituals and meditative practice.</p>
             
-            <h4>Why Choose The Sigil Engine for Sigil Creation and Manifestation?</h4>
+            <h4>Key Features:</h4>
             <ul>
-                <li><strong>Power Your Intentions:</strong> Unlike generic magic apps, The Sigil Engine turns your precise goals into custom sigils, blending ancient sigil craftsmanship with cutting-edge technology for real results.</li>
-                <li><strong>Proven Manifestation Method:</strong> Backed by chaos magic principles, this app guides you to define, create, charge, and activate sigils that resonate with your energy; no spirits required, just your unbreakable will.</li>
-                <li><strong>Privacy-First Design:</strong> The fully offline sigil generator ensures your deepest desires stay secret. No data sharing or internet: your magic, your rules.</li>
+                <li><strong>Goetic Sigil Generator:</strong> Create precise, high-quality, and customizable sigils based on the 72 spirits of Solomon. Designs are ready to be integrated into your manifestation work.</li>
+                <li><strong>Deep Lore Grimoire:</strong> Access an exhaustive database featuring ranks, hierarchies, astrological correspondences, and detailed attributes for every entity.</li>
+                <li><strong>Safety & Guidance:</strong> Whether you are an initiate or an expert, our structured guides help you navigate the art of invocation and meditation with the necessary respect, focus, and intent.</li>
+                <li><strong>Immersive Altar Interface:</strong> A clean, evocative visual environment designed to help you maintain deep focus during your spiritual sessions.</li>
             </ul>
             
-            <h4>Master the Art of Sigil Magic in 4 Simple Steps:</h4>
-            <ol>
-                <li><strong>Create Your Intention:</strong> Input your clear, affirmative goal, like "attract abundance" or "find true love", and watch it become the foundation of your power.</li>
-                <li><strong>Generate Unique Sigils:</strong> Tap to instantly create a unique sigil design. Our advanced algorithm distills your words into stunning mystical symbols, crafted exclusively for you.</li>
-                <li><strong>Charge with Energy:</strong> Dive into our interactive canvas to trace, energize, and infuse personal power into your sigil. Feel the magic ignite as you focus your intention!</li>
-                <li><strong>Manifest and Record:</strong> Save your charged sigil as wallpaper, meditation aid, or altar piece. Record results in your digital grimoire to refine your practice and celebrate victories.</li>
-            </ol>
-            
-            <h4>Essential Features for Aspiring Mages and Manifestors:</h4>
+            <h4>Why Choose Arcana Goetia?</h4>
             <ul>
-                <li>Advanced Sigil Generator: Turn any intention into beautiful high-resolution sigils with a magical, aesthetic touch, perfect for witches, sorcerers, and self-empowerment enthusiasts.</li>
-                <li>Interactive Activation Tools: Trace and charge sigils on-screen, turning digital creation into a potent ritual experience.</li>
-                <li>Personal Digital Grimoire: Record your sigils, intentions, and results in a secure, searchable gallery; build your book of shadows anywhere.</li>
-                <li>Sigil Gallery and Export: Collect and export your creations in HD for printing, sharing (if desired), or daily reminders.</li>
-                <li>Offline Functionality: Create sigils wherever and whenever, no wifi, no worries. Ideal for discreet manifestation practices.</li>
-                <li>User-Friendly Interface: Intuitive design for both beginners and professionals, making sigil magic accessible and fun.</li>
+                <li><strong>Historical Accuracy:</strong> Carefully curated information sourced from the most influential mystical texts of the Solomonic tradition.</li>
+                <li><strong>Chaos Magic Efficiency:</strong> Rapid and aesthetic design tools that bridge the gap between technology and traditional magical practice.</li>
+                <li><strong>100% Offline Library:</strong> Your digital grimoire is always at your fingertips, regardless of internet connectivity.</li>
+                <li><strong>Continuous Evolution:</strong> We are constantly expanding our library of entities and ritual support tools to assist your spiritual development.</li>
             </ul>
             
-            <h3>Stop Dreaming, Start Manifesting!</h3>
-            <p>In a world full of generic goal-setting apps, The Sigil Engine stands out as the ultimate tool for sigil creation and manifestation. Users rave: "It transformed my life! My sigils brought real changes!". Ready to awaken your inner sorcerer? Download The Sigil Engine FREE today and forge the reality you've always desired. Your power awaits: what will you manifest first?</p>
+            <h3>Awaken hidden knowledge.</h3>
+            <p>Download <strong>Arcana Goetia</strong> today and transform your device into a gateway of ancient wisdom. 🗝️</p>
         `
     },
     {
