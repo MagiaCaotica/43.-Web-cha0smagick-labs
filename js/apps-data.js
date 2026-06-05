@@ -12,6 +12,11 @@ const appsData = [
             description: "Command the 72 spirits of Solomon with Arcana Goetia. Digital sigil generator, complete Lemegeton lore, and guided invocation—all offline. Download the ultimate Goetic grimoire app.",
             keywords: "goetia app, solomon sigils, lemegeton grimoire, goetic magic, sigil generator, occult app, chaos magic, invocation, 72 spirits, ritual tool"
         },
+        screenshots: [
+            "../assets/images/go1.PNG",
+            "../assets/images/go2.PNG",
+            "../assets/images/go3.PNG"
+        ],
         detailedDescription: `
             <h3>What If You Could Command the 72 Spirits of Solomon from Your Pocket?</h3>
             <p>Every occult practitioner knows the frustration: grimoires buried in archaic language, sigils that take hours to draw by hand, and no reliable way to access the wisdom of the Goetia when you need it most. <strong>Arcana Goetia</strong> shatters those barriers. It is the first digital grimoire that puts the complete Lemegeton—sigils, hierarchies, planetary correspondences, and invocation guides—directly into your hands, ready to use at the speed of thought.</p>
@@ -124,6 +129,11 @@ const appsData = [
             description: "Track lunar phases for magic rituals, biodynamic gardening, and wellness timing. Precision moon data, guided rituals, and stunning live visualization. Download the moon phase app.",
             keywords: "lunar phase calculator, moon phases, moon magic, biodynamic gardening, moon calendar, astrology app, wellness, ritual timing, lunar data"
         },
+        screenshots: [
+            "../assets/images/moon1.PNG",
+            "../assets/images/moon2.PNG",
+            "../assets/images/moon3.PNG"
+        ],
         detailedDescription: `
             <h3>Are You Living in Sync with the Moon? Start Today.</h3>
             <p>Most people live by the sun alone—but the moon governs the tides, the growth of plants, the rhythms of the body, and the flow of energy. The <strong>Lunar Phase Calculator</strong> is the only app that brings together astronomy, wellness, biodynamic gardening, and lunar magic in one stunning, precision-crafted tool. Whether you are planning a ritual, planting a garden, scheduling a haircut, or simply wanting to feel more connected to the cosmos, this app gives you the exact data and guidance you need—when you need it.</p>
@@ -177,6 +187,12 @@ const appsData = [
             description: "Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams with full interpretations, reading history, and multilingual support. Download the most accurate I Ching app.",
             keywords: "i ching, book of changes, i ching app, chinese oracle, hexagram, divination app, taoist philosophy, three coin method, digital oracle"
         },
+        screenshots: [
+            "../assets/images/ching1.PNG",
+            "../assets/images/ching2.PNG",
+            "../assets/images/ching3.PNG",
+            "../assets/images/ching4.PNG"
+        ],
         detailedDescription: `
             <h3>For 3,000 Years, the I Ching Has Guided Emperors, Philosophers, and Seekers. Now It Fits in Your Pocket.</h3>
             <p>The Book of Changes is not just an oracle—it is a philosophical mirror that reflects the patterns of the universe. Every hexagram is a constellation of wisdom, revealing where you are, where you are heading, and how to navigate the change that is always present. <strong>I Ching Oracle</strong> brings this ancient Chinese divination system to life with a state-of-the-art simulation of the traditional three-coin method, a complete library of all 64 hexagrams, and a beautiful, distraction-free interface built with Jetpack Compose.</p>
@@ -301,6 +317,11 @@ const appsData = [
             description: "Full Rider-Waite tarot deck offline. 6 spreads, upright & reversed meanings, searchable encyclopedia, and 7 languages. The most complete free tarot app for Android.",
             keywords: "rider waite tarot, tarot app, offline tarot, tarot reader, tarot encyclopedia, tarot spreads, celtic cross, divination app, tarot learning"
         },
+        screenshots: [
+            "../assets/images/ta1.png",
+            "../assets/images/ta2.png",
+            "../assets/images/ta3.png"
+        ],
         detailedDescription: `
             <h3>The Full Rider-Waite Tarot in Your Pocket—No Internet, No Ads, No Distractions.</h3>
             <p>The Rider-Waite deck is the most iconic tarot system in the world—a visual language of archetypes that has guided readers for over a century. The <strong>Unofficial Rider Waite Tarot</strong> brings every card, every symbol, and every spread to your device in a premium, offline experience designed for deep contemplation. No ads. No subscriptions. No internet required. Just you, the cards, and the wisdom they hold.</p>
