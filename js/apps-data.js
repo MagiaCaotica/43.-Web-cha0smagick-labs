@@ -238,6 +238,12 @@ const appsData = [
             description: "Create unique cryptographic sigils from your intentions. Supports Runic, Egyptian, Hebrew, Arabic, Greek & Cyrillic alphabets plus Planetary Kameas. The ultimate chaos magick sigil app.",
             keywords: "chaos magick, sigil generator, austin osman spare, sigilization, cybermancy, cryptographic sigil, planetary kameas, occult app, technomancy, sigil maker"
         },
+        screenshots: [
+            "../assets/images/msg1.PNG",
+            "../assets/images/msg2.PNG",
+            "../assets/images/msg3.PNG",
+            "../assets/images/msg4.PNG"
+        ],
         detailedDescription: `
             <h3>Your Will. Encoded. Sealed. Unleashed.</h3>
             <p>Every act of magick begins with a single step: encoding your desire into a symbol so potent that the universe has no choice but to respond. The <strong>Magick Chaos Sigil Generator</strong> (also known as Chaos Sigilizer) is the most advanced digital sigil engine ever created—a cybernetic ritual tool that fuses the esoteric techniques of Austin Osman Spare with cryptographic entropy and ancient occult alphabets. Your phone becomes a black mirror. The code becomes your spell. The result is pure magick.</p>
