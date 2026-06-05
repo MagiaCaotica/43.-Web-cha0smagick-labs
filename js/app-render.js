@@ -259,6 +259,18 @@ function renderAppDetails() {
         actionButton += ` <a href="${item.onlineUrl}" class="cta-button secondary" target="_blank" style="margin-left: 10px;">use it for free</a>`;
     }
 
+    let screenshotsHtml = '';
+    if (item.screenshots && item.screenshots.length > 0) {
+        const imgs = item.screenshots.map(src =>
+            `<img src="${src}" alt="${item.name} screenshot" loading="lazy" class="screenshot-item">`
+        ).join('');
+        screenshotsHtml = `
+            <div class="screenshot-gallery">
+                <div class="screenshot-grid">${imgs}</div>
+            </div>
+        `;
+    }
+
     detailsContainer.innerHTML = `
         <div class="detail-header-layout">
             <img src="../${item.image}" alt="${item.name}" loading="lazy" class="detail-main-image">
@@ -275,6 +287,7 @@ function renderAppDetails() {
                 ${actionButton}
             </div>
         </div>
+        ${screenshotsHtml}
     `;
 
     // Render detailed description if available
