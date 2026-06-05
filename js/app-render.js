@@ -255,6 +255,10 @@ function renderAppDetails() {
         actionButton = '<button class="cta-button disabled">Coming Soon</button>';
     }
 
+    if (item.onlineUrl) {
+        actionButton += ` <a href="${item.onlineUrl}" class="cta-button secondary" target="_blank" style="margin-left: 10px;">Use it Online for free</a>`;
+    }
+
     detailsContainer.innerHTML = `
         <div class="detail-header-layout">
             <img src="../${item.image}" alt="${item.name}" loading="lazy" class="detail-main-image">
