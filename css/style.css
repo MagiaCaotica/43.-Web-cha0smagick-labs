@@ -299,10 +299,32 @@ nav a:hover {
     cursor: pointer;
 }
 
+.cta-button.primary {
+    background-color: #01875f; /* Verde oficial de Google Play */
+    color: #ffffff;
+    border: none;
+    padding: 0.85rem 2rem;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(1, 135, 95, 0.4);
+    animation: playStorePulse 2s infinite;
+}
+
 .cta-button:hover {
     background: var(--accent-color);
     color: var(--bg-main);
     box-shadow: 0 0 15px var(--accent-dim);
+}
+
+.cta-button.primary:hover {
+    background-color: #01a374;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+@keyframes playStorePulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(1, 135, 95, 0.7); }
+    70% { transform: scale(1.03); box-shadow: 0 0 0 12px rgba(1, 135, 95, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(1, 135, 95, 0); }
 }
 
 .cta-button.disabled {
