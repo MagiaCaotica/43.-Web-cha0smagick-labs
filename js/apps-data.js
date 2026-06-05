@@ -5,36 +5,49 @@ const appsData = [
         price: "$3.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal",
         status: "available",
-        description: "Goetic Grimoire: Custom sigil generator and ritual guide for modern occultism. 🗝️",
+        description: "Command the 72 spirits of Solomon with precision sigils, lore, and guided rituals—all offline. 🗝️",
         image: "assets/images/GSG.png",
         seo: {
-            title: "Arcana Goetia: Ritual & Sigils | Digital Goetic Grimoire & Sigil Generator",
-            description: "Connect with timeless forces using Arcana Goetia, the ultimate digital companion for modern chaos magic. Create custom sigils and explore the Lemegeton lore.",
-            keywords: "Magic, Occult, Goetia, Solomon, Grimoire, sigils, chaos magic, ritual tools, Lemegeton, sigillum, invocation"
+            title: "Arcana Goetia: Ritual & Sigils | Goetic Grimoire & Sigil Generator App",
+            description: "Command the 72 spirits of Solomon with Arcana Goetia. Digital sigil generator, complete Lemegeton lore, and guided invocation—all offline. Download the ultimate Goetic grimoire app.",
+            keywords: "goetia app, solomon sigils, lemegeton grimoire, goetic magic, sigil generator, occult app, chaos magic, invocation, 72 spirits, ritual tool"
         },
         detailedDescription: `
-            <h3>Unlock Ancient Wisdom: Your Digital Gateway to the Goetia</h3>
-            <p>Looking to deepen your connection with the ancient wisdom of the Goetia? Connect with timeless forces using the ultimate digital companion for modern chaos magic and occult practitioners.</p>
-            <p><strong>Arcana Goetia</strong> blends the ancient traditions of the Lemegeton with cutting-edge technology, designed to be the essential tool for your rituals and meditative practice.</p>
+            <h3>What If You Could Command the 72 Spirits of Solomon from Your Pocket?</h3>
+            <p>Every occult practitioner knows the frustration: grimoires buried in archaic language, sigils that take hours to draw by hand, and no reliable way to access the wisdom of the Goetia when you need it most. <strong>Arcana Goetia</strong> shatters those barriers. It is the first digital grimoire that puts the complete Lemegeton—sigils, hierarchies, planetary correspondences, and invocation guides—directly into your hands, ready to use at the speed of thought.</p>
+            <p>Whether you are a seasoned chaos magician or an initiate taking your first steps into Solomonic tradition, this app is your ritual engine. No internet required. No clutter. Just pure, focused power.</p>
             
-            <h4>Key Features:</h4>
+            <h4>🔮 Key Features That Set Arcana Goetia Apart</h4>
             <ul>
-                <li><strong>Goetic Sigil Generator:</strong> Create precise, high-quality, and customizable sigils based on the 72 spirits of Solomon. Designs are ready to be integrated into your manifestation work.</li>
-                <li><strong>Deep Lore Grimoire:</strong> Access an exhaustive database featuring ranks, hierarchies, astrological correspondences, and detailed attributes for every entity.</li>
-                <li><strong>Safety & Guidance:</strong> Whether you are an initiate or an expert, our structured guides help you navigate the art of invocation and meditation with the necessary respect, focus, and intent.</li>
-                <li><strong>Immersive Altar Interface:</strong> A clean, evocative visual environment designed to help you maintain deep focus during your spiritual sessions.</li>
+                <li><strong>Goetic Sigil Generator:</strong> Generate razor-sharp, customizable sigils for all 72 spirits of Solomon in seconds. Each sigil is mathematically precise and ready for charging, banishing, or integrating into talismanic work.</li>
+                <li><strong>Complete Lore Grimoire:</strong> Explore an exhaustive database of each spirit—rank, planetary hour, elemental correspondence, Psalm verses for evocation, and historical context sourced directly from the Lesser Key of Solomon.</li>
+                <li><strong>Built-in Invocation Guidance:</strong> Structured ritual frameworks help both beginners and adepts navigate evocation with respect, safety, and laser-focused intent. No more guesswork.</li>
+                <li><strong>Minimalist Altar Interface:</strong> A dark, immersive visual environment designed to hold your concentration during ritual. No distractions. No ads. Just you and the sigil.</li>
+                <li><strong>100% Offline:</strong> Your entire digital grimoire travels with you—no Wi-Fi, no data, no excuses. Perfect for remote ritual work or travel.</li>
             </ul>
             
-            <h4>Why Choose Arcana Goetia?</h4>
+            <h4>📖 Who Is Arcana Goetia For?</h4>
             <ul>
-                <li><strong>Historical Accuracy:</strong> Carefully curated information sourced from the most influential mystical texts of the Solomonic tradition.</li>
-                <li><strong>Chaos Magic Efficiency:</strong> Rapid and aesthetic design tools that bridge the gap between technology and traditional magical practice.</li>
-                <li><strong>100% Offline Library:</strong> Your digital grimoire is always at your fingertips, regardless of internet connectivity.</li>
-                <li><strong>Continuous Evolution:</strong> We are constantly expanding our library of entities and ritual support tools to assist your spiritual development.</li>
+                <li><strong>Chaos Magicians</strong> who want rapid, aesthetic sigil tools that bridge technology with traditional practice.</li>
+                <li><strong>Solomonic Practitioners</strong> seeking a portable, accurate reference to the 72 spirits, their seals, and their correspondences.</li>
+                <li><strong>Occult Beginners</strong> who need a safe, guided entry into Goetic magic without the overwhelm of archaic texts.</li>
             </ul>
             
-            <h3>Awaken hidden knowledge.</h3>
-            <p>Download <strong>Arcana Goetia</strong> today and transform your device into a gateway of ancient wisdom. 🗝️</p>
+            <h4>❓ Frequently Asked Questions</h4>
+            <p><strong>Is this app suitable for beginners?</strong><br>Yes. The app includes structured guidance and safety protocols for those new to Goetic magic, while offering enough depth for advanced practitioners.</p>
+            <p><strong>Does it require an internet connection?</strong><br>No. All content—sigil generator, grimoire, and guides—works completely offline. Your practice stays private.</p>
+            <p><strong>Are the sigils historically accurate?</strong><br>Absolutely. Every seal is sourced from the most authoritative Solomonic texts and rendered with precision for ritual use.</p>
+            
+            <h4>🌟 Why Arcana Goetia Is the Goetic App You Need</h4>
+            <ul>
+                <li><strong>Historical Fidelity:</strong> Every correspondence, rank, and seal is verified against canonical Solomonic grimoires—no fluff, no invention.</li>
+                <li><strong>Built for Modern Practice:</strong> Rapid sigil generation and intuitive navigation mean you spend less time searching and more time doing.</li>
+                <li><strong>Always Expanding:</strong> We continuously add spirits, ritual tools, and reference material based on practitioner feedback.</li>
+                <li><strong>Your Privacy Matters:</strong> No accounts, no tracking, no cloud. Everything stays on your device.</li>
+            </ul>
+            
+            <h3>Your Digital Gateway to the Goetia Awaits.</h3>
+            <p>Stop wrestling with PDFs and faded photocopies. Download <strong>Arcana Goetia</strong> now and transform your phone into a temple of ancient wisdom. 🗝️</p>
         `
     },
     {
@@ -42,47 +55,60 @@ const appsData = [
         name: "Norse Rune Oracle",
         price: "$3.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.japps.norse_oracle",
+        onlineUrl: "https://www.magiadelcaospractica.com/2024/09/Descubre%20el%20Oraculo%20Runico%20Vikingo%20Online%20Gratis.html",
         status: "available",
-        description: "Consult the Norse rune oracle for spiritual guidance in the digital age.",
+        description: "Unlock Viking wisdom with 12+ rune spreads for love, wealth, protection, and daily guidance. 🔮",
         image: "assets/images/norse-rune.png",
         seo: {
-            title: "Norse Rune Oracle | Viking Runes Reading App & Divination",
-            description: "Consult the Elder Futhark with the Norse Rune Oracle. Accurate digital rune readings, daily guidance, and Viking wisdom for modern life.",
-            keywords: "norse runes, viking runes, rune reading, divination app, elder futhark, spiritual guidance, oracle app"
+            title: "Norse Rune Oracle | Elder Futhark Rune Reading & Divination App",
+            description: "Get accurate rune readings with the Norse Rune Oracle. 12+ spreads for love, wealth, protection & daily guidance. Authentic Elder Futhark divination app for beginners and experts.",
+            keywords: "norse runes, viking runes, rune reading app, elder futhark, divination, rune oracle, viking wisdom, spiritual guidance"
         },
         detailedDescription: `
-            <h3>Discover Ancient Norse Secrets: Your Ultimate Rune Reading App for Guidance, Clarity, and Empowerment!</h3>
-            <p>Have you ever wondered what the mystical runes of the Vikings could reveal about your life? Imagine accessing timeless wisdom to navigate love, career, wealth, and more, right from your phone! Introducing Norse Rune Oracle, the top-rated rune reading app on Google Play, designed for both beginners and experts. Discover deep insights with the Elder Futhark runes and transform your daily decisions into empowering actions!</p>
-            <p>What are you waiting for? Download it now and start your journey toward self-discovery! Thousands of people already find clarity every day!</p>
+            <h3>What Do the Ancient Runes Say About Your Future? Find Out Instantly.</h3>
+            <p>Every day you face decisions—about love, money, career, your path forward. What if you could hold a thousand years of Viking wisdom in your hand and get clarity in seconds? The <strong>Norse Rune Oracle</strong> puts the full power of the Elder Futhark at your fingertips. Whether you are a seasoned rune reader or picking up a rune stone for the first time, this app transforms your phone into a living oracle.</p>
+            <p>Thousands of users already get daily guidance. Now it's your turn.</p>
             
-            <h4>🔮 KEY FEATURES THAT SET US APART</h4>
+            <h4>🔮 Powerful Features for Real Guidance</h4>
             <ul>
-                <li><strong>🌟 Daily Rune Inspiration:</strong> Start your morning with a personalized Rune of the Day! A quick draw offers cosmic guidance, helping you tackle challenges, spot opportunities, and stay focused. Perfect for busy seekers craving instant wisdom.</li>
-                <li><strong>📜 Advanced Rune Casts and Custom Spreads:</strong> Dive deeper with professional casts tailored to your questions. From simple one-rune draws to complex layouts, explore:
+                <li><strong>🌟 Daily Rune Inspiration:</strong> Pull a Rune of the Day every morning and receive instant cosmic guidance. Start each day with purpose, clarity, and direction—even when life feels chaotic.</li>
+                <li><strong>📜 12+ Advanced Casting Spreads:</strong> Go beyond the basics with professional-grade spreads designed for every life situation:
                     <ul>
-                        <li><em>Odin's Rune:</em> Direct answers to urgent dilemmas.</li>
-                        <li><em>The Three Norns Cast:</em> Unravel your Past, Present, and Future.</li>
-                        <li><em>The Vision:</em> Problem analysis, steps to take, and outcomes.</li>
-                        <li><em>Love Reading (Two Columns):</em> Insights on relationships, self-understanding, and couple dynamics.</li>
-                        <li><em>Wealth Cast (Fehu):</em> Financial health, growth strategies, and advice to overcome obstacles.</li>
-                        <li><em>Protection Cast (Algiz):</em> Detect threats, harness your inner strength, and protect what's yours.</li>
-                        <li><em>Luck Cast (Gebo):</em> Attract fortune by uncovering sources of luck.</li>
+                        <li><em>Odin's Rune:</em> Fast, direct answers for urgent questions.</li>
+                        <li><em>The Three Norns:</em> Reveal your Past, Present, and Future in one reading.</li>
+                        <li><em>Love Reading:</em> Understand relationship dynamics, self-worth, and partnership potential.</li>
+                        <li><em>Wealth Cast (Fehu):</em> Financial clarity, growth strategies, and abundance advice.</li>
+                        <li><em>Protection Cast (Algiz):</em> Detect blockages, strengthen boundaries, and shield your energy.</li>
+                        <li><em>Luck Cast (Gebo):</em> Uncover hidden opportunities and attract fortune.</li>
                     </ul>
-                    Plus advanced options like The Five Paths, St. Andrew's Cross, and more! Ideal for love runes, professional divination, or personal growth.</li>
-                <li><strong>✨ Intuitive and Guided Readings:</strong> First, set your intention: Focus your mind and write your question for a truly connected experience. Our app enhances accuracy by combining rituals with rune magic, making every reading meaningful and precise.</li>
-                <li><strong>📖 Extensive Rune Library:</strong> Master the 24 runes of the Elder Futhark with detailed profiles. Learn keywords, historical tradition, symbolic meanings, and upright/reversed interpretations. Use it as your rune learning tool or quick reference during casts.</li>
-                <li><strong>🌙 Striking and Immersive Interface:</strong> Step into a serene, mystical world with elegant designs, smooth animations, and a distraction-free environment. Feel ancestral energy come alive: it's like holding sacred stones in your hand!</li>
+                    Plus advanced layouts: The Vision, Five Paths, St. Andrew's Cross, and more.</li>
+                <li><strong>✨ Intention-Focused Readings:</strong> Write your question, set your intent, and let the app's algorithm deliver a deeply personal, accurate interpretation every time.</li>
+                <li><strong>📖 Complete Elder Futhark Library:</strong> Master all 24 runes with detailed profiles—historical meaning, symbolic interpretation, upright and reversed positions, and practical applications for modern life.</li>
+                <li><strong>🌙 Immersive Norse Atmosphere:</strong> Elegant animations, a dark mystical interface, and sound design that transports you to a Viking-age grove. No distractions. Just you and the runes.</li>
             </ul>
             
-            <h4>WHY NORSE RUNE ORACLE IS YOUR MUST-HAVE APP?</h4>
+            <h4>📖 Who Is the Norse Rune Oracle For?</h4>
             <ul>
-                <li><strong>Authentic Norse Roots:</strong> Backed by historical mythology for genuine, reliable interpretations—no fluff, just authentic rune wisdom.</li>
-                <li><strong>Versatile for Every Area of Life:</strong> From romance and finances to protection and luck, cover it all with versatile casts.</li>
-                <li><strong>Easy to Use:</strong> Simple navigation lets anyone cast runes like a pro, no prior knowledge needed!</li>
-                <li><strong>Empower Your Destiny:</strong> Runes don't define a fixed fate; they're tools for introspection, meditation, and proactive decision-making. Build confidence, foster growth, and shape your future.</li>
+                <li><strong>Beginners</strong> who want a guided, intuitive introduction to rune divination.</li>
+                <li><strong>Experienced Readers</strong> looking for a portable, feature-rich casting tool with multiple spreads.</li>
+                <li><strong>Spiritual Seekers</strong> who want daily guidance, introspection, and a deeper connection to Norse tradition.</li>
             </ul>
             
-            <h3>Ready to harness Viking power in modern life? Join the community of empowered users uncovering hidden potentials daily. Don't miss out! Download Norse Rune Oracle for FREE today and let the runes guide your path to success and serenity. What secrets will they reveal?</h3>
+            <h4>❓ Frequently Asked Questions</h4>
+            <p><strong>Do I need prior knowledge of runes to use this app?</strong><br>Not at all. The app includes a complete rune library and guided interpretations, making it perfect for beginners while still offering depth for experts.</p>
+            <p><strong>Can I use it for specific questions about love or money?</strong><br>Yes. The app features dedicated spreads for love, wealth, protection, and luck, each tailored to give you precise, actionable insights.</p>
+            <p><strong>Is my reading history private?</strong><br>Absolutely. All readings are stored locally on your device. No accounts, no cloud, no data collection.</p>
+            
+            <h4>🌟 Why Choose Norse Rune Oracle?</h4>
+            <ul>
+                <li><strong>Authentic Norse Foundation:</strong> Every interpretation is rooted in historical Eddaic and saga sources—no New Age fluff, just genuine rune wisdom.</li>
+                <li><strong>Cover Every Area of Life:</strong> Love, career, finances, protection, spiritual growth—there is a spread for every question you carry.</li>
+                <li><strong>Works Offline:</strong> No internet? No problem. All features work without a connection. Your practice stays private and always available.</li>
+                <li><strong>Beautiful, Focused Design:</strong> An interface built for contemplation, not distraction. Premium aesthetics meet practical functionality.</li>
+            </ul>
+            
+            <h3>The Runes Are Calling. Will You Answer?</h3>
+            <p>Stop wondering and start knowing. Download <strong>Norse Rune Oracle</strong> now and let the Elder Futhark illuminate your path—today and every day. What secrets will they reveal to you? 🔮</p>
         `
     },
     {
@@ -91,30 +117,50 @@ const appsData = [
         price: "$3.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.lunarapp.app",
         status: "available",
-        description: "Calculate precise lunar phases to synchronize your magical practices with the moon's cycles.",
+        description: "Track moon phases for magic, wellness, and biodynamic gardening with stunning real-time visuals. 🌕",
         image: "assets/images/lunar-phase.png",
         seo: {
-            title: "Lunar Phase Calculator | Moon Magic & Biodynamic Gardening App",
-            description: "Track moon phases for magic rituals and biodynamic gardening. Synchronize your practice with the Lunar Phase Calculator app.",
-            keywords: "lunar phase, moon magic, biodynamic gardening, moon calendar, astrology app, wellness, ritual timing"
+            title: "Lunar Phase Calculator | Moon Phases for Magic, Gardening & Wellness",
+            description: "Track lunar phases for magic rituals, biodynamic gardening, and wellness timing. Precision moon data, guided rituals, and stunning live visualization. Download the moon phase app.",
+            keywords: "lunar phase calculator, moon phases, moon magic, biodynamic gardening, moon calendar, astrology app, wellness, ritual timing, lunar data"
         },
         detailedDescription: `
-            <h3>Discover the Secrets of the Moon: The Ultimate App for Tracking Lunar Phases and Aligning with Life</h3>
-            <p>Discover the power of the cosmos with the Lunar Phase Calculator: the #1 app for tracking lunar phases, enhancing wellness, revitalizing your garden, and uncovering lunar magic. Perfect for astronomy enthusiasts, self-care advocates, and gardening lovers seeking precise and practical information to live in harmony with the universe.</p>
-            <p>Tired of generic moon apps? Dive into the world with real-time lunar phase images, expert tips, and celestial data that will transform your daily routine. Whether you're planning a haircut, planting seeds, or manifesting your dreams, align your life with the moon's natural energy for better results and inner peace.</p>
-            <p>Enjoy stunning live moon visualization from the start, showing the current phase, name, and date. Our ultra-modern interface, powered by Jetpack Compose technology, features easy-to-navigate tabs for seamless exploration.</p>
+            <h3>Are You Living in Sync with the Moon? Start Today.</h3>
+            <p>Most people live by the sun alone—but the moon governs the tides, the growth of plants, the rhythms of the body, and the flow of energy. The <strong>Lunar Phase Calculator</strong> is the only app that brings together astronomy, wellness, biodynamic gardening, and lunar magic in one stunning, precision-crafted tool. Whether you are planning a ritual, planting a garden, scheduling a haircut, or simply wanting to feel more connected to the cosmos, this app gives you the exact data and guidance you need—when you need it.</p>
+            <p>Powered by Jetpack Compose for a silky-smooth experience, the Lunar Phase Calculator delivers real-time lunar data with breathtaking visuals. Join thousands of users who have already aligned their lives with the moon.</p>
             
-            <h4>🌕 Key Features: Enhance Your Lunar Lifestyle</h4>
+            <h4>🌕 Everything the Moon Can Do for You</h4>
             <ul>
-                <li><strong>✨ Wellness Boost:</strong> Sync your self-care with lunar cycles for maximum impact. Receive personalized tips on the best times to get a haircut, skincare routines that enhance your results, and nutritional advice to nourish your body at the perfect rhythm.</li>
-                <li><strong>🔭 Astronomy Hub:</strong> Precision at your fingertips! Track exact moonrise and moonset times, Earth-Moon distance in km, and upcoming new moon/full moon dates with millimeter accuracy: ideal for astronomers and planners.</li>
-                <li><strong>🌱 Garden Mastery:</strong> Master the secrets of biodynamic gardening. Discover the best phases for planting, transplanting, pruning, harvesting, and more to grow healthier plants and abundant crops effortlessly.</li>
-                <li><strong>🔮 Lunar Magic:</strong> Awaken your spiritual side. Explore the mystical meanings of each phase and access guided rituals for manifestation, reflection, and release: perfect for witches, yogis, and energy workers.</li>
+                <li><strong>✨ Wellness Timing:</strong> Know the best lunar phases for haircuts, skincare, detox, and nutrition. Your body responds to the moon—why not work with it instead of against it?</li>
+                <li><strong>🔭 Precision Astronomy:</strong> Track moonrise, moonset, Earth-Moon distance, and upcoming New Moon / Full Moon dates with millimeter accuracy. Perfect for astronomers, photographers, and planners.</li>
+                <li><strong>🌱 Biodynamic Gardening:</strong> Plant, transplant, prune, and harvest at the optimal lunar moment. Healthier plants, bigger yields, less effort—backed by generations of agricultural wisdom.</li>
+                <li><strong>🔮 Lunar Magic & Rituals:</strong> Each phase carries a unique energy. Access guided rituals for manifestation (New Moon), reflection (Full Moon), release (Waning), and intention-setting (Waxing). Designed for witches, energy workers, and spiritual seekers.</li>
+                <li><strong>🖥️ Stunning Live Visualization:</strong> Watch the current phase animate in real time with a clean, modern interface built with Jetpack Compose. Swipe between tabs for instant access to everything.</li>
             </ul>
             
-            <p>Based on precise astronomical algorithms and a rich database of wellness, gardening, and esoteric wisdom, the Lunar Phase Calculator is your comprehensive guide to a more conscious and connected life. Join thousands aligning with the stars. What are you waiting for?</p>
+            <h4>📖 Who Needs the Lunar Phase Calculator?</h4>
+            <ul>
+                <li><strong>Witches & Magical Practitioners</strong> who time their rituals and spellwork to the moon's phases.</li>
+                <li><strong>Gardeners & Farmers</strong> who follow biodynamic principles for healthier, more abundant crops.</li>
+                <li><strong>Wellness Enthusiasts</strong> who want to sync self-care routines with natural cycles.</li>
+                <li><strong>Astronomy Lovers</strong> who need accurate lunar data at a glance.</li>
+            </ul>
             
-            <h3>Download the Lunar Phase Calculator NOW and transform your world with cosmic synergy! 🚀</h3>
+            <h4>❓ Frequently Asked Questions</h4>
+            <p><strong>How accurate is the lunar data?</strong><br>Extremely. Our app uses precise astronomical algorithms to calculate moonrise, moonset, phase percentage, and Earth-Moon distance with professional-grade accuracy.</p>
+            <p><strong>Can this app help me with gardening?</strong><br>Absolutely. The biodynamic gardening section gives you phase-specific recommendations for planting, transplanting, pruning, and harvesting based on lunar cycles.</p>
+            <p><strong>Is it suitable for magical practice?</strong><br>Yes. The Lunar Magic section includes phase meanings and guided rituals for manifestation, reflection, and energetic release, tailored to each lunar phase.</p>
+            
+            <h4>🌟 Why Lunar Phase Calculator Is the Moon App You Will Keep</h4>
+            <ul>
+                <li><strong>All-in-One:</strong> Astronomy, wellness, gardening, and magic—no need for four separate apps.</li>
+                <li><strong>Beautiful & Fast:</strong> Modern Compose UI with smooth animations and real-time visualization.</li>
+                <li><strong>Works Offline:</strong> All data calculated locally. No internet required, no ads, no tracking.</li>
+                <li><strong>Privacy First:</strong> No accounts, no cloud sync, no data collection. Your lunar practice is yours alone.</li>
+            </ul>
+            
+            <h3>Stop Guessing. Start Aligning.</h3>
+            <p>Download the <strong>Lunar Phase Calculator</strong> now and discover what it feels like to live in harmony with the cosmos. Your moon-synced life starts today. 🌕🚀</p>
         `
     },
     {
@@ -122,38 +168,60 @@ const appsData = [
         name: "I Ching Oracle",
         price: "$3.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.app.ichingoracle",
+        onlineUrl: "https://www.magiadelcaospractica.com/2024/09/software-de-i-ching-gratuito-online.html",
         status: "available",
-        description: "The ancient Chinese oracle adapted for techno-sorcery.",
+        description: "Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams, multilingual, and totally private. 📜",
         image: "assets/images/iching.png",
         seo: {
-            title: "I Ching Oracle | Digital Book of Changes & Divination App",
-            description: "Consult the ancient Chinese I Ching Oracle digitally. Accurate hexagram casting for guidance and divination in the digital age.",
-            keywords: "i ching, book of changes, chinese oracle, divination app, hexagram, taoist philosophy, digital oracle"
+            title: "I Ching Oracle | Book of Changes & Chinese Divination App",
+            description: "Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams with full interpretations, reading history, and multilingual support. Download the most accurate I Ching app.",
+            keywords: "i ching, book of changes, i ching app, chinese oracle, hexagram, divination app, taoist philosophy, three coin method, digital oracle"
         },
         detailedDescription: `
-            <h3>Unlock the Ancient Wisdom of the I Ching and Find Answers to Your Life's Deepest Questions with the Most Accurate Digital Oracle.</h3>
-            <p>The I Ching Oracle (Book of Changes) is a must-have tool for those seeking guidance, clarity, and a deeper understanding of their present and future. Based on the 3,000-year-old Chinese divination system, this app seamlessly blends ancestral tradition with a modern, fluid interface.</p>
+            <h3>For 3,000 Years, the I Ching Has Guided Emperors, Philosophers, and Seekers. Now It Fits in Your Pocket.</h3>
+            <p>The Book of Changes is not just an oracle—it is a philosophical mirror that reflects the patterns of the universe. Every hexagram is a constellation of wisdom, revealing where you are, where you are heading, and how to navigate the change that is always present. <strong>I Ching Oracle</strong> brings this ancient Chinese divination system to life with a state-of-the-art simulation of the traditional three-coin method, a complete library of all 64 hexagrams, and a beautiful, distraction-free interface built with Jetpack Compose.</p>
+            <p>Whether you are facing a crossroads in love, career, or personal growth, the I Ching offers clarity. This app delivers it with elegance and precision.</p>
             
-            <h4>🔮 How It Works</h4>
-            <p>Our app uses an advanced logic engine that accurately simulates the traditional three-coin method. When you cast your query, the system carefully calculates each of the six lines (Yin or Yang, old or young) to build your Original Hexagram.</p>
-            <p>If your reading results in changing lines, the system automatically generates the Transformed Hexagram, revealing not only your current situation but also the future trends and shifts.</p>
+            <h4>🔮 How the I Ching Oracle Works</h4>
+            <p>Cast your question and our advanced logic engine simulates the three-coin method exactly as it has been practiced for millennia. Each of the six lines is calculated as Yin or Yang, old or young, building your Original Hexagram line by line. If changing lines appear, the app automatically generates the Transformed Hexagram—showing you not only your current situation but the direction of change itself.</p>
+            <p>No guesswork. No ambiguity. Just the ancient oracle, faithfully rendered in code.</p>
             
-            <h4>✨ Key Features:</h4>
+            <h4>✨ Key Features</h4>
             <ul>
-                <li><strong>64 Detailed Hexagrams:</strong> Access a complete database with the profound meanings behind every symbol.</li>
-                <li><strong>Accurate Simulation:</strong> An algorithm strictly faithful to the traditional Chinese consultation system.</li>
-                <li><strong>Reading History:</strong> Save your readings and personal reflections locally and privately on your device.</li>
-                <li><strong>Educational Guide:</strong> New to the oracle? Learn how to interpret the I Ching with our built-in learning section.</li>
-                <li><strong>Premium Design:</strong> Elegant and minimalist UI built with Jetpack Compose for intuitive navigation.</li>
-                <li><strong>Total Privacy:</strong> Your data and queries are stored locally; your privacy is our priority.</li>
+                <li><strong>64 Complete Hexagrams:</strong> Every symbol with its full meaning, judgment, and line-by-line interpretation.</li>
+                <li><strong>Authentic Three-Coin Algorithm:</strong> Strictly faithful to tradition—each cast is mathematically accurate and spiritually meaningful.</li>
+                <li><strong>Reading History:</strong> All readings saved locally on your device. Revisit past consultations and track your growth over time.</li>
+                <li><strong>Built-in Learning Guide:</strong> New to the I Ching? The app includes a complete educational section to help you understand hexagrams, lines, and interpretation.</li>
+                <li><strong>Premium Jetpack Compose Design:</strong> Elegant, minimalist, and fluid. The interface fades into the background so the wisdom can speak.</li>
+                <li><strong>Total Privacy:</strong> Every query stays on your device. No accounts, no cloud, no tracking.</li>
             </ul>
             
-            <h4>🌍 Multilingual Support:</h4>
-            <p>The I Ching is universal. Our app is fully localized in English, Spanish, French, German, and Italian. No matter where you are, the wisdom of the Book of Changes is at your fingertips.</p>
+            <h4>🌍 Available in 5 Languages</h4>
+            <p>The I Ching is universal. Our app speaks English, Spanish, French, German, and Italian—so the wisdom of the Book of Changes is always at your fingertips, no matter where you are.</p>
             
-            <p>Whether you are looking for daily meditation, a serious divination tool, or an exploration of Taoist philosophy, I Ching Oracle is your perfect companion on the path of self-discovery.</p>
+            <h4>📖 Who Is the I Ching Oracle For?</h4>
+            <ul>
+                <li><strong>Spiritual Seekers</strong> looking for daily guidance and a deeper connection to Taoist philosophy.</li>
+                <li><strong>Serious Divination Practitioners</strong> who need an accurate, traditional casting method in digital form.</li>
+                <li><strong>Philosophers & Meditators</strong> who use the hexagrams as a contemplative tool for self-reflection.</li>
+            </ul>
             
-            <h3>Download Now and Start Deciphering the Changes in Your Destiny.</h3>
+            <h4>❓ Frequently Asked Questions</h4>
+            <p><strong>How is the hexagram generated?</strong><br>The app uses a precise digital simulation of the traditional three-coin method. Each line is calculated individually to ensure an authentic, randomized result every time.</p>
+            <p><strong>Can I save and revisit my readings?</strong><br>Yes. Your complete reading history is stored privately on your device. You can review past hexagrams and reflections whenever you wish.</p>
+            <p><strong>Do I need prior knowledge of the I Ching?</strong><br>Not at all. The app includes a full educational guide that explains hexagrams, changing lines, and interpretation—perfect for beginners and enriching for experts.</p>
+            <p><strong>Does the app work offline?</strong><br>Yes. All features work without an internet connection. Your practice stays private and always accessible.</p>
+            
+            <h4>🌟 Why I Ching Oracle Is the Best Digital Book of Changes</h4>
+            <ul>
+                <li><strong>Faithful to Tradition:</strong> Every algorithm and interpretation is rooted in classical I Ching sources.</li>
+                <li><strong>Beautiful & Minimal:</strong> A premium Compose UI that prioritizes focus, not flash.</li>
+                <li><strong>Multilingual:</strong> Full support for EN, ES, FR, DE, IT—share the oracle in your native tongue.</li>
+                <li><strong>Private & Offline:</strong> No accounts, no data collection, no internet needed. Just you and the hexagrams.</li>
+            </ul>
+            
+            <h3>The Answer Is Already Within You. Let the I Ching Reveal It.</h3>
+            <p>Download <strong>I Ching Oracle</strong> now and start deciphering the changes in your destiny—one hexagram at a time. 📜</p>
         `
     },
     {
@@ -163,37 +231,55 @@ const appsData = [
         url: "https://play.google.com/store/apps/details?id=com.app.goetiansealsgeneratorapp",
         onlineUrl: "https://www.magiadelcaospractica.com/2024/09/Generador%20de%20Sigilos%20Goeticos%20Online%20Gratuito.html",
         status: "available",
-        description: "Create unique chaotic sigils to manifest your intentions in cyberspace.",
+        description: "Encode your Will into unique cryptographic sigils using ancient alphabets and planetary magic squares. ⚡",
         image: "assets/images/chaos-sigil.png",
         seo: {
-            title: "Magick Chaos Sigil Generator | Austin Osman Spare Style Tool",
-            description: "Create unique chaotic sigils using cryptographic entropy. A digital tool for Austin Osman Spare style sigilization and cybermancy.",
-            keywords: "chaos magick, sigil generator, austin osman spare, sigilization, cybermancy, thought forms, magick app, app sigilos, generador sigilos, magia del caos app, technomagia"
+            title: "Magick Chaos Sigil Generator | Cryptographic Sigil Tool for Chaos Magick",
+            description: "Create unique cryptographic sigils from your intentions. Supports Runic, Egyptian, Hebrew, Arabic, Greek & Cyrillic alphabets plus Planetary Kameas. The ultimate chaos magick sigil app.",
+            keywords: "chaos magick, sigil generator, austin osman spare, sigilization, cybermancy, cryptographic sigil, planetary kameas, occult app, technomancy, sigil maker"
         },
         detailedDescription: `
-            <h3>Transform Your Will into Reality with the Ultimate Tool for Modern Cybermancy.</h3>
-            <p>Magickal Seals Generator (also known as Chaos Sigilizer) creates a digital bridge between your conscious intent and your deep subconscious. Fusing the ancient esoteric techniques of Austin Osman Spare and Goetic magic with state-of-the-art technology, this app is designed for the serious occultist, the modern witch, and the chaos magician.</p>
-            <p>Your phone is the black mirror of the 21st century. Turn it into a powerful ritual altar.</p>
+            <h3>Your Will. Encoded. Sealed. Unleashed.</h3>
+            <p>Every act of magick begins with a single step: encoding your desire into a symbol so potent that the universe has no choice but to respond. The <strong>Magick Chaos Sigil Generator</strong> (also known as Chaos Sigilizer) is the most advanced digital sigil engine ever created—a cybernetic ritual tool that fuses the esoteric techniques of Austin Osman Spare with cryptographic entropy and ancient occult alphabets. Your phone becomes a black mirror. The code becomes your spell. The result is pure magick.</p>
+            <p>This is not a drawing app. This is a ritual engine.</p>
             
-            <h4>🔮 What is Magickal Seals Generator?</h4>
-            <p>This is not just a drawing app; it is a ritual engine. It utilizes cryptographic entropy to generate unique sacred geometries based specifically on your written intentions. Because the algorithms use true randomness derived from your input, every seal produced is a mathematical anomaly—a unique manifestation of your Will that can never be repeated.</p>
+            <h4>🔮 What Makes This Sigil Generator Different?</h4>
+            <p>Unlike basic sigil makers, the Chaos Sigil Generator uses cryptographic entropy derived from your own written intention to generate unique sacred geometries. Because true randomness is sourced from your input, every sigil created is a mathematical anomaly—a one-of-a-kind manifestation of your Will that can never be replicated. Combined with support for ancient alphabets and Planetary Kameas, this is the most powerful mobile sigil tool available.</p>
             
-            <h4>⚡ Key Features:</h4>
+            <h4>⚡ Key Features for the Modern Occultist</h4>
             <ul>
-                <li><strong>Advanced Sigil Creation:</strong> Transform text into power. Choose from multiple tracing methods, including the classic "Wheel" and "Mantra" styles, to visualize your desire.</li>
-                <li><strong>Ancient Occult Alphabets:</strong> Infuse your sigils with historical power. The app supports Runic (Futhark), Egyptian Hieroglyphs, Hebrew, Arabic, Greek, and Cyrillic scripts.</li>
-                <li><strong>Planetary Kameas:</strong> Integrate the astrological power of Planetary Squares (Kameas) to structure your design and align it with specific cosmic energies.</li>
-                <li><strong>Cryptographic Entropy:</strong> We use advanced data randomization to ensure your sigil is a true, unique chaotic creation, perfect for Cybermancy.</li>
-                <li><strong>Immersive Ritual Environment:</strong> Experience a focused UI designed with "Celestial Gold" vectors on a "Deep Obsidian" background to minimize distraction and maximize focus.</li>
-                <li><strong>Ritual Consolidation:</strong> Seal your intent with a "Visual Flash" ritual effect and save the final result directly to your device's gallery.</li>
-                <li><strong>Multilingual Occultism:</strong> Fully localized support and tutorials in English, Spanish, German, Italian, and French.</li>
+                <li><strong>Advanced Sigil Creation:</strong> Transform any intention into a visual sigil using multiple tracing methods, including the classic Wheel and Mantra styles. The algorithm handles the geometry so you can focus on intent.</li>
+                <li><strong>6 Ancient Occult Alphabets:</strong> Infuse your sigils with historical power—Runic (Futhark), Egyptian Hieroglyphs, Hebrew, Arabic, Greek, and Cyrillic. Each alphabet carries its own vibrational signature.</li>
+                <li><strong>Planetary Kameas (Magic Squares):</strong> Structure your sigil within the astrological power of Saturn, Jupiter, Mars, Sun, Venus, Mercury, or the Moon to align it with specific cosmic forces.</li>
+                <li><strong>Cryptographic Entropy Engine:</strong> True randomization based on your input ensures every sigil is a unique chaotic creation—perfect for cybermancy and chaos magick.</li>
+                <li><strong>Ritual Environment UI:</strong> Celestial Gold vectors on Deep Obsidian background—a focused, minimal interface designed to hold gnosis without distraction.</li>
+                <li><strong>Visual Flash Ritual:</strong> Seal your sigil with a one-click gnostic burst and save it directly to your gallery. The ritual is complete.</li>
+                <li><strong>5 Languages:</strong> Fully localized in EN, ES, DE, IT, FR—the tools of chaos speak every tongue.</li>
             </ul>
             
-            <h4>🌟 Why Use This App?</h4>
-            <p>Whether you are practicing Chaos Magick, exploring Sigilization, or working with Thought Forms, this app simplifies the complex mathematical process of seal construction. It allows you to focus purely on the intent, letting the machine handle the geometry.</p>
-            <p>The screen is your canvas. The code is your spell. The result is Magick.</p>
+            <h4>📖 Who Is This For?</h4>
+            <ul>
+                <li><strong>Chaos Magicians</strong> practicing sigilization, cybermancy, and thought-form creation.</li>
+                <li><strong>Witches & Occultists</strong> who want to combine traditional alphabets with modern cryptographic power.</li>
+                <li><strong>Technomancers</strong> who see the screen as a portal and code as a spell.</li>
+            </ul>
             
-            <h3>Download Magickal Seals Generator Today and Begin Your Practice of Digital Sorcery.</h3>
+            <h4>❓ Frequently Asked Questions</h4>
+            <p><strong>How is the sigil generated?</strong><br>You write your intention. The app uses cryptographic entropy derived from your text to create a unique geometric seal. Every sigil is mathematically one-of-a-kind.</p>
+            <p><strong>Can I use traditional occult alphabets?</strong><br>Yes. The app supports Runic, Egyptian Hieroglyphs, Hebrew, Arabic, Greek, and Cyrillic scripts, each adding its own layer of symbolic power.</p>
+            <p><strong>What are Planetary Kameas?</strong><br>They are magic squares associated with the seven classical planets. Integrating them into your sigil aligns your intent with specific astrological energies.</p>
+            <p><strong>Is this suitable for beginners?</strong><br>Absolutely. While the technology is advanced, the interface is intuitive. The app includes tutorials in multiple languages to guide you from first sigil to master work.</p>
+            
+            <h4>🌟 Why Choose the Chaos Sigil Generator?</h4>
+            <ul>
+                <li><strong>True Cryptographic Randomness:</strong> Every sigil is a unique, unrepeatable product of your Will.</li>
+                <li><strong>Ancient Alphabets + Modern Tech:</strong> The only app combining Futhark, Hieroglyphs, Hebrew, Arabic, Greek, and Cyrillic with cryptographic entropy.</li>
+                <li><strong>Ritual-Focused Design:</strong> The interface is built for gnosis—dark, minimal, and distraction-free.</li>
+                <li><strong>100% Offline:</strong> All processing happens on your device. Your intentions stay private.</li>
+            </ul>
+            
+            <h3>What Will You Manifest?</h3>
+            <p>Download the <strong>Magick Chaos Sigil Generator</strong> now and encode your Will into reality. Your screen is the canvas. The code is the spell. The result is magick. ⚡</p>
         `
     },
     {
@@ -202,45 +288,55 @@ const appsData = [
         price: "$9.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite",
         status: "available",
-        description: "A feature-packed offline Tarot encyclopedia and reader based on the iconic Rider-Waite deck.",
+        description: "Full Rider-Waite deck offline with 6 spreads, encyclopedia, and 7-language support. Your pocket tarot teacher. 🃏",
         image: "assets/images/tarotbutton.png",
         seo: {
-            title: "Unofficial Rider Waite Tarot | Offline Tarot Reader & Encyclopedia",
-            description: "Explore the Rider-Waite tarot with this offline app. Full deck, spreads, meanings, and multilingual support for modern divination.",
-            keywords: "tarot reader, rider waite, tarot app, offline tarot, tarot encyclopedia, divination tool, tarot spreads, chaos magick"
+            title: "Unofficial Rider Waite Tarot | Offline Tarot Reader & Encyclopedia App",
+            description: "Full Rider-Waite tarot deck offline. 6 spreads, upright & reversed meanings, searchable encyclopedia, and 7 languages. The most complete free tarot app for Android.",
+            keywords: "rider waite tarot, tarot app, offline tarot, tarot reader, tarot encyclopedia, tarot spreads, celtic cross, divination app, tarot learning"
         },
         detailedDescription: `
-            <h3>Discover the Unofficial Rider Waite Tarot: Your Offline Encyclopedia and Reader</h3>
-            <p>The Unofficial Rider Waite Tarot app is a feature-packed offline tarot encyclopedia and reader based on the iconic Rider-Waite deck. It features the complete deck (Major Arcana and four suits) with high-quality illustrations and multilingual support, allowing you to explore meanings, symbolism, and card spreads without an internet connection. Designed for both beginners and experienced readers, it invites you to draw cards, interpret insights, and deepen your connection with tarot tradition.</p>
+            <h3>The Full Rider-Waite Tarot in Your Pocket—No Internet, No Ads, No Distractions.</h3>
+            <p>The Rider-Waite deck is the most iconic tarot system in the world—a visual language of archetypes that has guided readers for over a century. The <strong>Unofficial Rider Waite Tarot</strong> brings every card, every symbol, and every spread to your device in a premium, offline experience designed for deep contemplation. No ads. No subscriptions. No internet required. Just you, the cards, and the wisdom they hold.</p>
+            <p>Whether you are a beginner learning the Major Arcana or a seasoned reader performing Celtic Cross spreads, this app is the most complete Rider-Waite tarot tool on Android—period.</p>
             
-            <h4>Key Features</h4>
+            <h4>🃏 Complete Deck, Complete Wisdom</h4>
             <ul>
-                <li><strong>Complete Rider Waite Tarot Deck:</strong> Explore the Major Arcana and the suits of Cups, Pentacles, Swords, and Wands. Card names adapt to your language, and illustrations are organized for quick navigation and study.</li>
-                <li><strong>Extensive Card Meanings & Symbolism:</strong> Each card includes upright and reversed interpretations, concise keywords, and symbolic notes to deepen your understanding of the arcana.</li>
-                <li><strong>Interactive Readings & Spreads:</strong> Perform readings with multiple spreads, including Card of the Day, Past-Present-Future, Grand Cross, and Celtic Cross. Input a question and generate structured insights that you can save to your history.</li>
-                <li><strong>Encyclopedia & Search:</strong> A built-in tarot encyclopedia with searchable card entries, easy navigation, and terminology adapted to different languages to enhance learning and retention.</li>
-                <li><strong>Multilingual Compatibility:</strong> Translate and view content in English, Spanish, French, German, Italian, Hindi, and Chinese (EN/ES/FR/DE/IT/HI/ZH), with names, explanations, and labels adapted to your language.</li>
-                <li><strong>Customization & Design:</strong> Choose from multiple card backs and enjoy a modern, crystal-clear UI based on Compose, with gradients and subtle details for a premium experience.</li>
-                <li><strong>Reading History & Revisits:</strong> Save past readings to consult guidance later and easily review previous layouts to reflect on your experience.</li>
-                <li><strong>Privacy by Design:</strong> All data and the deck are loaded locally on the app, ensuring a private and offline experience.</li>
+                <li><strong>Full 78-Card Rider-Waite Deck:</strong> Major Arcana and the four suits—Cups, Pentacles, Swords, Wands. Every card rendered in high-quality illustration with names adapted to your language.</li>
+                <li><strong>Upright & Reversed Meanings:</strong> Each card includes detailed upright and reversed interpretations, keywords, and symbolic breakdowns. Build your understanding card by card.</li>
+                <li><strong>6 Professional Spreads:</strong> Card of the Day, Past-Present-Future, Grand Cross, Celtic Cross, and more. Enter a question, draw cards, and receive structured insights instantly.</li>
+                <li><strong>Searchable Encyclopedia:</strong> A built-in tarot encyclopedia with fast search, cross-referenced symbolism, and multilingual terminology. Learn at your own pace.</li>
+                <li><strong>Reading History:</strong> Every reading is saved locally. Revisit past spreads, track your growth, and reflect on how the cards spoke to you.</li>
+                <li><strong>Customizable Card Backs:</strong> Choose from multiple card back designs to personalize your experience.</li>
             </ul>
             
-            <h4>Why You'll Love It</h4>
+            <h4>🌍 Available in 7 Languages</h4>
+            <p>English, Spanish, French, German, Italian, Hindi, and Chinese (EN/ES/FR/DE/IT/HI/ZH). Card names, explanations, and interface labels adapt to your language so you can learn tarot in the tongue that speaks to your soul.</p>
+            
+            <h4>📖 Who Is This Tarot App For?</h4>
             <ul>
-                <li><strong>Faithful Practice:</strong> Learn and practice with a presentation faithful to Rider Waite, without distractions or ads.</li>
-                <li><strong>Insightful Spreads:</strong> Quick access to selected spreads and reliable interpretations that favor meditation, study, and decision-making.</li>
-                <li><strong>Premium UI:</strong> An attractive and practical user interface that prioritizes readability, accessibility, and a contemplative tarot experience.</li>
-                <li><strong>Global Learning:</strong> Enriched content with various languages allows you to learn tarot in multiple languages, expanding your global practice.</li>
-            </ul>
-
-            <h4>Who Is It For?</h4>
-            <ul>
-                <li>Tarot enthusiasts seeking a faithful Rider Waite experience with detailed card meanings and symbolism.</li>
-                <li>Students and readers looking for structured spreads (Daily, Past-Present-Future, Grand Cross, Celtic Cross) and a searchable encyclopedia.</li>
-                <li>Curious minds seeking to study tarot in their preferred language and deepen their practice privately on their device.</li>
+                <li><strong>Tarot Beginners</strong> who want to learn the Rider-Waite system with clear meanings and guided spreads.</li>
+                <li><strong>Experienced Readers</strong> who need a reliable, portable deck with multiple spread options and reading history.</li>
+                <li><strong>Multilingual Seekers</strong> who want to study tarot across languages and deepen their global practice.</li>
             </ul>
             
-            <h3>Download the Unofficial Rider Waite Tarot App now and start your mindful, language-rich tarot practice.</h3>
+            <h4>❓ Frequently Asked Questions</h4>
+            <p><strong>Does this app require an internet connection?</strong><br>No. The entire deck, encyclopedia, and all features work completely offline. Your practice stays private and accessible anywhere.</p>
+            <p><strong>What spreads are available?</strong><br>The app includes Card of the Day, Past-Present-Future, Grand Cross, and Celtic Cross, among others—each designed for different types of questions and depth levels.</p>
+            <p><strong>Can I save my readings?</strong><br>Yes. All readings are saved to your local history so you can revisit, reflect, and track your evolving relationship with the cards.</p>
+            <p><strong>Is this the official Rider-Waite deck?</strong><br>This is an unofficial tribute featuring high-quality illustrations inspired by the Rider-Waite tradition, built for educational and divinatory purposes.</p>
+            
+            <h4>🌟 Why This Is the Tarot App You Have Been Searching For</h4>
+            <ul>
+                <li><strong>Fully Offline:</strong> No internet, no ads, no distractions. Pure tarot.</li>
+                <li><strong>7 Languages:</strong> The most multilingual tarot app available—learn and read in EN, ES, FR, DE, IT, HI, ZH.</li>
+                <li><strong>Premium Compose UI:</strong> Clean, modern, and contemplative. The design fades away so the cards can speak.</li>
+                <li><strong>Complete Learning System:</strong> Encyclopedia + spreads + history = everything you need to grow as a reader.</li>
+                <li><strong>Your Privacy Is Sacred:</strong> All data stays on your device. No accounts, no cloud, no tracking.</li>
+            </ul>
+            
+            <h3>The Cards Are Ready. Are You?</h3>
+            <p>Download the <strong>Unofficial Rider Waite Tarot</strong> now and begin your mindful, language-rich tarot practice. The answers you seek are already in the symbols. 🃏</p>
         `
     }
 ];

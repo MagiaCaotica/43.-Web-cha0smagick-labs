@@ -256,7 +256,7 @@ function renderAppDetails() {
     }
 
     if (item.onlineUrl) {
-        actionButton += ` <a href="${item.onlineUrl}" class="cta-button secondary" target="_blank" style="margin-left: 10px;">Use it Online for free</a>`;
+        actionButton += ` <a href="${item.onlineUrl}" class="cta-button secondary" target="_blank" style="margin-left: 10px;">use it for free</a>`;
     }
 
     detailsContainer.innerHTML = `
