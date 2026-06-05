@@ -69,6 +69,12 @@ const appsData = [
             description: "Get accurate rune readings with the Norse Rune Oracle. 12+ spreads for love, wealth, protection & daily guidance. Authentic Elder Futhark divination app for beginners and experts.",
             keywords: "norse runes, viking runes, rune reading app, elder futhark, divination, rune oracle, viking wisdom, spiritual guidance"
         },
+        screenshots: [
+            "../assets/images/nr1.PNG",
+            "../assets/images/nr2.PNG",
+            "../assets/images/nr3.PNG",
+            "../assets/images/nr4.PNG"
+        ],
         detailedDescription: `
             <h3>What Do the Ancient Runes Say About Your Future? Find Out Instantly.</h3>
             <p>Every day you face decisions—about love, money, career, your path forward. What if you could hold a thousand years of Viking wisdom in your hand and get clarity in seconds? The <strong>Norse Rune Oracle</strong> puts the full power of the Elder Futhark at your fingertips. Whether you are a seasoned rune reader or picking up a rune stone for the first time, this app transforms your phone into a living oracle.</p>
