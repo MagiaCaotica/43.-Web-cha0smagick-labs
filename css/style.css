@@ -573,3 +573,269 @@ nav a:hover {
         max-width: 90px;
     }
 }
+
+/* Breadcrumb Navigation for SEO */
+.breadcrumb-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+}
+
+.breadcrumb-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-list li {
+    color: var(--text-secondary);
+}
+
+.breadcrumb-list li::before {
+    content: "›";
+    margin-right: 0.5rem;
+    color: var(--accent-color);
+}
+
+.breadcrumb-list li:first-child::before {
+    content: none;
+}
+
+.breadcrumb-list a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.breadcrumb-list a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Section */
+#faq-section {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+#faq-section h2 {
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--accent-color);
+}
+
+.faq-item h3 {
+    color: var(--accent-color);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-mono);
+    text-transform: none;
+    letter-spacing: 0.5px;
+    border-left: none;
+    padding-left: 0;
+}
+
+.faq-item div[itemprop="text"] {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* Features Grid Section */
+#features {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+#features h2 {
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-item {
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.feature-item:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.feature-item h3 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-mono);
+    border-left: none;
+    padding-left: 0;
+    letter-spacing: 1px;
+}
+
+.feature-item p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Enhanced Footer */
+footer {
+    background-color: var(--bg-main);
+    border-top: 1px solid var(--border-color);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-social li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a,
+.footer-social a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--accent-color);
+}
+
+/* Author Expertise Section (EEAT) */
+#author-expertise {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+#author-expertise h2 {
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.author-bio {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.author-credentials p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.author-credentials p:last-child {
+    margin-bottom: 1.5rem;
+}
+
+.author-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .faq-item {
+        padding: 1rem;
+    }
+    
+    #faq-section,
+    #features {
+        padding: 1.5rem 1rem;
+    }
+
+    .author-links {
+        flex-direction: column;
+    }
+
+    .author-links .contact-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

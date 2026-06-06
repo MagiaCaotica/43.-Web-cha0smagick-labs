@@ -9,8 +9,8 @@ const appsData = [
         image: "assets/images/GSG.png",
         seo: {
             title: "Arcana Goetia: Ritual & Sigils | Goetic Grimoire & Sigil Generator App",
-            description: "Command the 72 spirits of Solomon with Arcana Goetia. Digital sigil generator, complete Lemegeton lore, and guided invocation—all offline. Download the ultimate Goetic grimoire app.",
-            keywords: "goetia app, solomon sigils, lemegeton grimoire, goetic magic, sigil generator, occult app, chaos magic, invocation, 72 spirits, ritual tool"
+            description: "Command the 72 spirits of Solomon with Arcana Goetia. Digital sigil generator, complete Lemegeton lore, and guided invocation—all offline. Download the ultimate Goetic grimoire app. Buy esoteric tools for Android.",
+            keywords: "goetia app, solomon sigils, lemegeton grimoire, goetic magic, sigil generator, occult app, chaos magic, invocation, 72 spirits, ritual tool, buy esoteric, android occult app, chaos magick app, digital sigil, goetic grimoire"
         },
         screenshots: [
             "../assets/images/go1.PNG",
@@ -66,8 +66,8 @@ const appsData = [
         image: "assets/images/norse-rune.png",
         seo: {
             title: "Norse Rune Oracle | Elder Futhark Rune Reading & Divination App",
-            description: "Get accurate rune readings with the Norse Rune Oracle. 12+ spreads for love, wealth, protection & daily guidance. Authentic Elder Futhark divination app for beginners and experts.",
-            keywords: "norse runes, viking runes, rune reading app, elder futhark, divination, rune oracle, viking wisdom, spiritual guidance"
+            description: "Get accurate rune readings with the Norse Rune Oracle. 12+ spreads for love, wealth, protection & daily guidance. Authentic Elder Futhark divination app for Android. Norse magic & divination.",
+            keywords: "norse runes, viking runes, rune reading app, elder futhark, divination, rune oracle, viking wisdom, spiritual guidance, norse divination, buy esoteric, chaos magick app, android occult app"
         },
         screenshots: [
             "../assets/images/nr1.PNG",
@@ -132,8 +132,8 @@ const appsData = [
         image: "assets/images/lunar-phase.png",
         seo: {
             title: "Lunar Phase Calculator | Moon Phases for Magic, Gardening & Wellness",
-            description: "Track lunar phases for magic rituals, biodynamic gardening, and wellness timing. Precision moon data, guided rituals, and stunning live visualization. Download the moon phase app.",
-            keywords: "lunar phase calculator, moon phases, moon magic, biodynamic gardening, moon calendar, astrology app, wellness, ritual timing, lunar data"
+            description: "Track lunar phases for magic rituals, biodynamic gardening, and wellness timing. Precision moon data, guided rituals, and stunning live visualization. Download the moon phase app for Android.",
+            keywords: "lunar phase calculator, moon phases, moon magic, biodynamic gardening, moon calendar, astrology app, wellness, ritual timing, lunar data, lunar magic app, buy esoteric, android occult app"
         },
         screenshots: [
             "../assets/images/moon1.PNG",
@@ -190,8 +190,8 @@ const appsData = [
         image: "assets/images/iching.png",
         seo: {
             title: "I Ching Oracle | Book of Changes & Chinese Divination App",
-            description: "Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams with full interpretations, reading history, and multilingual support. Download the most accurate I Ching app.",
-            keywords: "i ching, book of changes, i ching app, chinese oracle, hexagram, divination app, taoist philosophy, three coin method, digital oracle"
+            description: "Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams with full interpretations, reading history, and multilingual support. Download the most accurate I Ching app for Android.",
+            keywords: "i ching, book of changes, i ching app, chinese oracle, hexagram, divination app, taoist philosophy, three coin method, digital oracle, buy esoteric, android occult app, chaos magick"
         },
         screenshots: [
             "../assets/images/ching1.PNG",
@@ -257,8 +257,8 @@ const appsData = [
         image: "assets/images/chaos-sigil.png",
         seo: {
             title: "Magick Chaos Sigil Generator | Cryptographic Sigil Tool for Chaos Magick",
-            description: "Create unique cryptographic sigils from your intentions. Supports Runic, Egyptian, Hebrew, Arabic, Greek & Cyrillic alphabets plus Planetary Kameas. The ultimate chaos magick sigil app.",
-            keywords: "chaos magick, sigil generator, austin osman spare, sigilization, cybermancy, cryptographic sigil, planetary kameas, occult app, technomancy, sigil maker"
+            description: "Create unique cryptographic sigils from your intentions. Supports Runic, Egyptian, Hebrew, Arabic, Greek & Cyrillic alphabets plus Planetary Kameas. The ultimate chaos magick sigil app for Android.",
+            keywords: "chaos magick, sigil generator, austin osman spare, sigilization, cybermancy, cryptographic sigil, planetary kameas, occult app, technomancy, sigil maker, digital sigil generator, buy esoteric, android occult app"
         },
         screenshots: [
             "../assets/images/msg1.PNG",
@@ -321,7 +321,7 @@ const appsData = [
         seo: {
             title: "Unofficial Rider Waite Tarot | Offline Tarot Reader & Encyclopedia App",
             description: "Full Rider-Waite tarot deck offline. 6 spreads, upright & reversed meanings, searchable encyclopedia, and 7 languages. The most complete free tarot app for Android.",
-            keywords: "rider waite tarot, tarot app, offline tarot, tarot reader, tarot encyclopedia, tarot spreads, celtic cross, divination app, tarot learning"
+            keywords: "rider waite tarot, tarot app, offline tarot, tarot reader, tarot encyclopedia, tarot spreads, celtic cross, divination app, tarot learning, tarot reading app, buy esoteric, android occult app"
         },
         screenshots: [
             "../assets/images/ta1.png",
@@ -388,9 +388,9 @@ const booksData = [
         description: "Learn how to create and activate magical servitors with Chaos Magick. Practical guide by Frater Alekos.",
         hotmartLink: "https://pay.hotmart.com/D104270399P?checkoutMode=2",
         seo: {
-            title: "Magical Servitors Manual: Activation and Design Guide",
-            description: "Learn how to create and activate magical servitors with Chaos Magick. Practical guide by Frater Alekos to manifest real results. Download the PDF here!",
-            keywords: "magical servitors, chaos magick, thought forms, egregores, sigil magic, practical occultism, frater alekos"
+            title: "Magical Servitors Manual: Activation and Design Guide | Chaos Magick PDF",
+            description: "Learn how to create and activate magical servitors with Chaos Magick. Practical guide by Frater Alekos to manifest real results. Download the PDF here. Buy esoteric books online.",
+            keywords: "magical servitors, chaos magick, thought forms, egregores, sigil magic, practical occultism, frater alekos, buy esoteric books, chaos magick pdf, digital grimoire"
         },
         detailedDescription: `
             <h1>Magical Servitors: The Ultimate Manual for Creation and Activation</h1>
@@ -426,9 +426,9 @@ const booksData = [
         description: "A disruptive magical system designed by Zener of Cydonia and Frater Alekos. The Alphabet of Desire for the New Age.",
         hotmartLink: "https://pay.hotmart.com/F104270966V?checkoutMode=2",
         seo: {
-            title: "Chaos Hunter Runes Treatise: The Alphabet of Desire",
-            description: "Discover the Chaos Hunter Runes, a disruptive magical system by Zener of Cydonia. Master the 64 runic servitors and the Magic Chess Matrix.",
-            keywords: "chaos hunter runes, chaos magick, runic system, zener of cydonia, oracular system, alphabet of desire, magic chess"
+            title: "Chaos Hunter Runes Treatise: The Alphabet of Desire | PDF",
+            description: "Discover the Chaos Hunter Runes, a disruptive magical system by Zener of Cydonia. Master the 64 runic servitors and the Magic Chess Matrix. Buy esoteric books and chaos magick PDF.",
+            keywords: "chaos hunter runes, chaos magick, runic system, zener of cydonia, oracular system, alphabet of desire, magic chess, buy esoteric books, chaos magick pdf, digital grimoire"
         },
         detailedDescription: `
             <h1>Treatise of Chaos Hunter Runes: The Alphabet of Desire for the New Age</h1>
@@ -469,9 +469,9 @@ const booksData = [
         description: "A profound exploration of psychic technology designed to transform the Ouija board into a high-precision ritual instrument.",
         hotmartLink: "https://pay.hotmart.com/B104271332D?checkoutMode=2",
         seo: {
-            title: "Ouija Cazadora: Chaos Magic Guide to the Oracular Manual",
-            description: "Master the Ouija board with Chaos Magic. A practical guide by Zener de Cydonia and Frater Alekos for safe and effective rituals.",
-            keywords: "ouija board, chaos magic, zener de cydonia, oracular manual, spirit board, divination, safe ritual"
+            title: "Ouija Cazadora: Chaos Magic Guide to the Oracular Manual | PDF",
+            description: "Master the ouija board with Chaos Magic. A practical guide by Zener de Cydonia and Frater Alekos for safe and effective rituals. Download the oracular manual PDF. Buy esoteric books.",
+            keywords: "ouija board, chaos magic, zener de cydonia, oracular manual, spirit board, divination, safe ritual, buy esoteric books, chaos magick pdf, digital grimoire"
         },
         detailedDescription: `
             <h1>Ouija Cazadora: A Chaos Magic Guide to the Oracular Manual</h1>
@@ -506,9 +506,9 @@ const booksData = [
         description: "An operative and esoteric guide exploring lycanthropy as a path of spiritual empowerment and psychic metamorphosis.",
         hotmartLink: "https://pay.hotmart.com/O104271155J?checkoutMode=2",
         seo: {
-            title: "Liber Lvpinux: Lycanthropic Transformation and Chaos Magic",
-            description: "Discover Liber Lvpinux by Frater Alekos. A grimoire on lycanthropy, chaos magic, and the path of the animagus. Download the PDF guide here.",
-            keywords: "liber lvpinux, lycanthropy, chaos magic, frater alekos, animagus, spiritual transformation, left hand path, grimoire"
+            title: "Liber Lvpinux: Lycanthropic Transformation and Chaos Magic | PDF",
+            description: "Discover Liber Lvpinux by Frater Alekos. A grimoire on lycanthropy, chaos magic and the path of the animagus. Download the PDF guide. Buy esoteric books and digital grimoires.",
+            keywords: "liber lvpinux, lycanthropy, chaos magic, frater alekos, animagus, spiritual transformation, left hand path, grimoire, buy esoteric books, chaos magick pdf, digital grimoire"
         },
         detailedDescription: `
             <h1>Liber Lvpinux: The Path of Lycanthropic Transformation and Chaos Magic</h1>

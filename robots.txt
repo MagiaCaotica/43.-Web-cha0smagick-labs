@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /assets/
 
-Sitemap: https://magiacaotica.github.io/43.-Web-cha0smagick-labs/sitemap.xml
+Sitemap: https://cha0smagicklabs.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 10
+
+# 404 page
+User-agent: *
+Disallow: /404.html

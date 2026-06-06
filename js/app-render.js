@@ -1,4 +1,5 @@
-// app-render.js - Script for dynamically rendering apps
+// app-render.js - Script for dynamically rendering apps with SEO & GEO optimization
+// Optimized for: magia del caos, comprar esoterico, app android esoterica, sigilos digitales
 
 // Function to render the apps grid on the home page
 function renderAppsGrid() {
@@ -164,9 +165,12 @@ function renderAppDetails() {
         return;
     }
 
-    // Update SEO (Title & Meta Description)
+    const baseUrl = 'https://cha0smagicklabs.com';
+
+    // Update SEO (Title, Meta Description, Open Graph, Canonical)
     if (item.seo) {
         document.title = item.seo.title;
+        
         let metaDesc = document.querySelector('meta[name="description"]');
         if (!metaDesc) {
             metaDesc = document.createElement('meta');
@@ -182,61 +186,100 @@ function renderAppDetails() {
             document.head.appendChild(metaKeywords);
         }
         metaKeywords.setAttribute('content', item.seo.keywords || '');
+
+        // Update OG tags for social sharing
+        let ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', item.seo.title);
+        
+        let ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', item.seo.description);
+
+        let ogImage = document.querySelector('meta[property="og:image"]');
+        if (ogImage) ogImage.setAttribute('content', `${baseUrl}/${item.image.replace('../', '')}`);
+
+        let ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute('content', window.location.href);
+
+        // Update canonical
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute('href', window.location.href);
     }
 
-    // Generate and Inject Schema.org Markup
+    // Generate and Inject Schema.org Markup (GEO-optimized with complete data)
     let schema = {};
-    const absoluteImageUrl = `https://magiacaotica.github.io/43.-Web-cha0smagick-labs/${item.image.replace('../', '')}`;
+    const absoluteImageUrl = `${baseUrl}/${item.image.replace('../', '')}`;
     const itemUrl = window.location.href;
 
     if (item.type === 'book') {
         schema = {
             "@context": "https://schema.org",
             "@type": "Book",
+            "@id": itemUrl,
             "name": item.name,
             "description": item.seo.description,
             "image": absoluteImageUrl,
             "url": itemUrl,
             "author": {
                 "@type": "Person",
-                "name": "Frater Alekos" // Extracted from descriptions
+                "name": item.author || "Frater Alekos",
+                "knowsAbout": ["Chaos Magick", "Cybermancy", "Occultism", "Esotericism"]
             },
-            "workExample": [{
-                "@type": "Book",
-                "bookEdition": "Digital PDF",
-                "bookFormat": "https://schema.org/EBook",
-                "potentialAction": {
-                    "@type": "BuyAction",
-                    "target": {
-                        "@type": "EntryPoint",
-                        "urlTemplate": item.hotmartLink,
-                        "actionPlatform": [
-                            "http://schema.org/DesktopWebPlatform",
-                            "http://schema.org/IOSPlatform",
-                            "http://schema.org/AndroidPlatform"
-                        ]
-                    },
-                    "price": item.price.match(/[\d.]+/)[0],
-                    "priceCurrency": "USD"
+            "inLanguage": item.language === "Spanish" ? "es" : "en",
+            "bookFormat": "https://schema.org/EBook",
+            "offers": {
+                "@type": "Offer",
+                "url": item.hotmartLink,
+                "price": item.price ? item.price.match(/[\d.]+/)[0] : "3.99",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "priceValidUntil": "2027-12-31"
+            },
+            "potentialAction": {
+                "@type": "BuyAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": item.hotmartLink,
+                    "actionPlatform": [
+                        "http://schema.org/DesktopWebPlatform",
+                        "http://schema.org/IOSPlatform",
+                        "http://schema.org/AndroidPlatform"
+                    ]
                 }
-            }]
+            }
         };
-    } else { // It's an app
+    } else { // It's an app (SoftwareApplication with complete GEO data)
         schema = {
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
+            "@id": itemUrl,
             "name": item.name,
-            "operatingSystem": "ANDROID",
-            "applicationCategory": "Lifestyle",
+            "operatingSystem": "Android",
+            "applicationCategory": "LifestyleApplication",
+            "applicationSubCategory": "Esoteric Application",
             "image": absoluteImageUrl,
             "description": item.seo.description,
             "url": item.url,
             "downloadUrl": item.url,
+            "softwareVersion": "1.0",
+            "installUrl": item.url,
             "offers": {
                 "@type": "Offer",
                 "price": item.price ? item.price.match(/[\d.]+/)[0] : "0.00",
-                "priceCurrency": "USD"
-            }
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "priceValidUntil": "2027-12-31"
+            },
+            "author": {
+                "@type": "Organization",
+                "name": "Cha0smagick Labs",
+                "url": baseUrl
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Cha0smagick Labs"
+            },
+            "requirements": "Android 6.0+",
+            "featureList": item.seo.keywords ? item.seo.keywords.split(", ") : []
         };
     }
     injectSchema(schema);
@@ -339,22 +382,26 @@ function renderLanguageGadget() {
     header.insertBefore(gadget, header.firstChild);
 }
 
-// Function to render ItemList schema for the main page
+// Function to render ItemList + Product schema for main page (GEO optimization)
 function renderItemListSchema() {
     let allItems = [...appsData];
     if (typeof booksData !== 'undefined') {
         allItems = [...allItems, ...booksData];
     }
 
+    const baseUrl = 'https://cha0smagicklabs.com';
+
     const itemList = {
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": "Cha0smagick Labs Products",
-        "description": "Apps and books on Chaos Magick, sigils, and technomancy.",
+        "name": "Cha0smagick Labs - Apps de Magia del Caos",
+        "description": "Colección de apps esotéricas para Android y libros PDF sobre magia del caos, sigilos digitales, runas y tecnomancia.",
+        "url": baseUrl + "/",
+        "numberOfItems": allItems.length,
         "itemListElement": allItems.map((item, index) => {
             const itemType = item.type === 'book' ? 'Book' : 'SoftwareApplication';
-            const absoluteImageUrl = `https://magiacaotica.github.io/43.-Web-cha0smagick-labs/${item.image}`;
-            const itemUrl = `https://magiacaotica.github.io/43.-Web-cha0smagick-labs/pages/app-details.html?id=${item.id}`;
+            const absoluteImageUrl = `${baseUrl}/${item.image}`;
+            const itemUrl = `${baseUrl}/pages/app-details.html?id=${item.id}`;
             
             return {
                 "@type": "ListItem",
@@ -363,7 +410,23 @@ function renderItemListSchema() {
                     "@type": itemType,
                     "name": item.name,
                     "url": itemUrl,
-                    "image": absoluteImageUrl
+                    "image": absoluteImageUrl,
+                    "description": item.description,
+                    ...(item.type === 'book' ? {
+                        "author": {
+                            "@type": "Person",
+                            "name": item.author || "Frater Alek0s"
+                        }
+                    } : {
+                        "operatingSystem": "Android",
+                        "applicationCategory": "LifestyleApplication",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": item.price ? item.price.match(/[\d.]+/)[0] : "0.00",
+                            "priceCurrency": "USD",
+                            "availability": "https://schema.org/InStock"
+                        }
+                    })
                 }
             };
         })
