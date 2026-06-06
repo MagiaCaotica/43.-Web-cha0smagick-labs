@@ -1,0 +1,12 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Assets caching
+/assets/*
+  Cache-Control: max-age=31536000
+
+# HTML caching
+/*.html
+  Cache-Control: max-age=3600
