@@ -318,7 +318,7 @@ function renderAppDetails() {
         <div class="detail-header-layout">
             <img src="../${item.image}" alt="${item.name}" loading="lazy" class="detail-main-image">
             <div class="detail-header-info">
-                <h2>${item.name}</h2>
+                <h2>${item.name}${item.id === 'psi-gym' ? ' <span class="discount-badge">¡NUEVO!</span>' : ''}</h2>
                 <p class="lead-text">${item.description}</p>
                 ${item.author ? `<div class="author-info">AUTHOR: ${item.author}</div>` : ''}
                 ${item.language ? `
