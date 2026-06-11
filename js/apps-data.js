@@ -1,5 +1,60 @@
 const appsData = [
     {
+        id: "psi-gym",
+        name: "PSI GYM: Zener Cards & ESP",
+        price: "$3.99 USD",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards",
+        status: "available",
+        description: "Train your intuition and extrasensory perception with professional Zener cards and advanced statistical tracking. 👁️",
+        image: "assets/images/zener.png",
+        seo: {
+            title: "PSI GYM | Zener Cards & ESP Training App for Intuition",
+            description: "Enhance your psychic abilities with PSI GYM. Professional Zener card training, ESP testing, and real-time statistical analysis. The ultimate intuition trainer for Android. Download now.",
+            keywords: "zener cards, esp training, psychic trainer, intuition app, extrasensory perception, parapsychology tool, psi training, remote viewing, clairvoyance practice, buy esoteric app, chaos magick app, psychic abilities, telepathy trainer"
+        },
+        screenshots: [
+            "../assets/images/z1.png",
+            "../assets/images/z2.png",
+            "../assets/images/z3.png"
+        ],
+        detailedDescription: `
+            <h3>Can You Predict the Unknown? Unlock Your Latent Psychic Potential.</h3>
+            <p>We all have gut feelings, but few know how to sharpen them into a reliable tool. <strong>PSI GYM</strong> is a professional-grade ESP (Extrasensory Perception) training environment designed to take intuition out of the realm of "luck" and into the realm of skill. Using the world-standard Zener card system—Circle, Cross, Waves, Square, and Star—this app provides a rigorous, distraction-free laboratory for your mind.</p>
+            <p>Whether you are a student of parapsychology, a chaos magician working on gnosis, or simply curious about the limits of your consciousness, PSI GYM offers the data and the discipline you need to grow.</p>
+            
+            <h4>👁️ Professional ESP Training Features</h4>
+            <ul>
+                <li><strong>Classic Zener Card Engine:</strong> Practice with the iconic 25-card deck (5 of each symbol). Our algorithm ensures true randomness, providing a valid baseline for statistical testing.</li>
+                <li><strong>Advanced Statistical Tracking:</strong> Don't just guess—measure. Track your hit rates, probability deviations, and historical performance to identify your "psychic streaks."</li>
+                <li><strong>Multiple Training Modes:</strong> Choose between "Open Deck" for learning and "Blind Testing" for serious verification of your intuitive accuracy.</li>
+                <li><strong>Minimalist Gnostic Interface:</strong> A clean, dark UI designed to minimize sensory interference and help you reach the focused state of mind necessary for ESP work.</li>
+                <li><strong>100% Offline & Private:</strong> Your training data and results stay on your device. No cloud tracking, no accounts—just you and the cards.</li>
+            </ul>
+            
+            <h4>📖 Who Is PSI GYM For?</h4>
+            <ul>
+                <li><strong>Psychic Seekers</strong> who want a structured way to practice clairvoyance and precognition.</li>
+                <li><strong>Chaos Magicians</strong> using Zener cards as a tool for achieving and verifying altered states of consciousness (Gnosis).</li>
+                <li><strong>Parapsychology Enthusiasts</strong> looking for a portable, accurate version of the famous Duke University experiments.</li>
+            </ul>
+            
+            <h4>❓ Frequently Asked Questions</h4>
+            <p><strong>Are Zener cards effective for training intuition?</strong><br>Yes. By isolating symbols and providing immediate feedback, Zener cards help you recognize the "feeling" of a correct intuitive hit versus a logical guess.</p>
+            <p><strong>How does the statistical tracking work?</strong><br>The app compares your actual results against the mathematical probability of chance (20%). This allows you to see if you are performing consistently above the average.</p>
+            <p><strong>Is this app suitable for beginners?</strong><br>Absolutely. PSI GYM is designed to be intuitive and easy to use, providing a professional environment for both beginners and advanced practitioners.</p>
+            
+            <h4>🌟 Why PSI GYM Is Your Essential Intuition Lab</h4>
+            <ul>
+                <li><strong>Scientific Foundation:</strong> Based on the proven methodology developed by Karl Zener and J.B. Rhine.</li>
+                <li><strong>Mobile Laboratory:</strong> Turn any moment into a training session—commutes, breaks, or dedicated ritual time.</li>
+                <li><strong>No Distractions:</strong> No ads, no social features, no fluff. Just pure psychic training.</li>
+            </ul>
+            
+            <h3>The Portal to Your Intuition Is Open. Are You Ready to Enter?</h3>
+            <p>Stop wondering if you have "the gift" and start training it. Download <strong>PSI GYM</strong> now and see what your mind is truly capable of. 👁️⚡</p>
+        `
+    },
+    {
         id: "arcana-goetia",
         name: "Arcana Goetia: Ritual & Sigils",
         price: "$3.99 USD",
