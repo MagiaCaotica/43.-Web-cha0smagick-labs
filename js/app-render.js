@@ -19,7 +19,7 @@ function renderAppsGrid() {
                 <img src="${app.image}" alt="${app.name}" loading="lazy" width="300" height="220" class="app-image img-${app.id.replace(/-/g, '-')}">
             </div>
             <div class="card-content">
-                <h4>${app.name}</h4>
+                <h4>${app.name}${app.id === 'psi-gym' ? ' <span class="discount-badge">¡NUEVO!</span>' : ''}</h4>
                 <p>${app.description}</p>
                 <div class="card-footer">
                     <div class="status-container">
@@ -453,10 +453,24 @@ function initVisitorCounter() {
     counterElement.textContent = count.toString().padStart(6, '0');
 }
 
+// Function to initialize collapsible sections
+function initCollapsibleSections() {
+    const toggles = document.querySelectorAll('.section-toggle');
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const section = toggle.closest('.collapsible-section');
+            if (section) {
+                section.classList.toggle('active');
+            }
+        });
+    });
+}
+
 // Execute the appropriate function based on the page
 document.addEventListener('DOMContentLoaded', () => {
     renderLanguageGadget(); // Render language gadget on all pages
     initVisitorCounter();   // Initialize visitor counter
+    initCollapsibleSections(); // Initialize toggles
     if (document.getElementById('apps-grid')) {
         renderAppsGrid();
         renderBooksSection();
