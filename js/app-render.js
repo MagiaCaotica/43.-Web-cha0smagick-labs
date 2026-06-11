@@ -6,17 +6,19 @@ function renderAppsGrid() {
     const grid = document.getElementById('apps-grid');
     if (!grid) return;
 
+    const fragment = document.createDocumentFragment();
     // Create a copy and shuffle it randomly (Chaos sort)
     const shuffledApps = [...appsData].sort(() => Math.random() - 0.5);
 
-    shuffledApps.forEach(app => {
+    shuffledApps.forEach((app, index) => {
         const card = document.createElement('a');
         card.className = 'app-card';
         card.href = `pages/app-details.html?id=${app.id}`;
 
+        const loadingStrategy = index < 4 ? 'fetchpriority="high"' : 'loading="lazy"';
         card.innerHTML = `
             <div class="card-image-wrapper">
-                <img src="${app.image}" alt="${app.name}" loading="lazy" width="300" height="220" class="app-image img-${app.id.replace(/-/g, '-')}">
+                <img src="${app.image}" alt="${app.name}" ${loadingStrategy} width="300" height="220" class="app-image img-${app.id.replace(/-/g, '-')}">
             </div>
             <div class="card-content">
                 <h4>${app.name}${app.id === 'psi-gym' ? ' <span class="discount-badge">¡NUEVO!</span>' : ''}</h4>
@@ -31,8 +33,9 @@ function renderAppsGrid() {
             </div>
         `;
 
-        grid.appendChild(card);
+        fragment.appendChild(card);
     });
+    grid.appendChild(fragment);
 }
 
 // Function to render the books section
@@ -45,12 +48,14 @@ function renderBooksSection() {
 
     const section = document.createElement('div');
     section.id = 'books-section';
+    section.className = 'collapsible-section';
     section.style.maxWidth = '1400px';
     section.style.margin = '0 auto';
     section.style.padding = '0 2rem 3rem';
     
     // Title
     const title = document.createElement('h2');
+    title.className = 'section-toggle';
     title.textContent = 'Books for Sale';
     title.style.fontFamily = 'var(--font-mono)';
     title.style.color = 'var(--text-primary)';
@@ -65,6 +70,9 @@ function renderBooksSection() {
     section.appendChild(title);
 
     // Grid
+    const contentWrapper = document.createElement('div');
+    contentWrapper.className = 'collapsible-content';
+
     const booksGrid = document.createElement('div');
     booksGrid.className = 'apps-grid'; // Reuse existing grid class
     booksGrid.id = 'books-grid';
@@ -78,6 +86,7 @@ function renderBooksSection() {
             return priceA - priceB;
         });
 
+        const fragment = document.createDocumentFragment();
         sortedBooks.forEach(book => {
             const card = document.createElement('a');
             card.className = 'app-card';
@@ -105,13 +114,17 @@ function renderBooksSection() {
                     </div>
                 </div>
             `;
-            booksGrid.appendChild(card);
+            fragment.appendChild(card);
         });
+        booksGrid.appendChild(fragment);
     }
 
-    section.appendChild(booksGrid);
-    // Insert after apps-grid
-    grid.parentNode.insertBefore(section, grid.nextSibling);
+    contentWrapper.appendChild(booksGrid);
+    section.appendChild(contentWrapper);
+    
+    // Insert after the apps section (Cybermancy)
+    const appsSection = grid.closest('.collapsible-section') || grid;
+    appsSection.parentNode.insertBefore(section, appsSection.nextSibling);
 }
 
 // Helper to inject JSON-LD Schema
@@ -468,14 +481,43 @@ function initCollapsibleSections() {
 
 // Execute the appropriate function based on the page
 document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('apps-grid');
+    const detailsView = document.getElementById('app-details');
+
     renderLanguageGadget(); // Render language gadget on all pages
     initVisitorCounter();   // Initialize visitor counter
-    initCollapsibleSections(); // Initialize toggles
-    if (document.getElementById('apps-grid')) {
+    
+    // Transformación dinámica de secciones estáticas existentes en secciones colapsables
+    // Secciones objetivo: Cybermancy (Apps), About Us y Contact Us
+    const sectionsToCollapse = ['Cybermancy', 'About Us', 'Contact Us'];
+    
+    sectionsToCollapse.forEach(titleText => {
+        const h2 = Array.from(document.querySelectorAll('h2, h3')).find(h => 
+            h.textContent.toLowerCase().includes(titleText.toLowerCase())
+        );
+        
+        if (h2 && h2.parentElement && !h2.parentElement.classList.contains('collapsible-section')) {
+            const section = h2.parentElement;
+            section.classList.add('collapsible-section');
+            h2.classList.add('section-toggle');
+            
+            const content = document.createElement('div');
+            content.className = 'collapsible-content';
+            
+            // Mueve todos los elementos hermanos después del H2 al contenedor colapsable
+            while (h2.nextSibling) {
+                content.appendChild(h2.nextSibling);
+            }
+            section.appendChild(content);
+        }
+    });
+
+    if (grid) {
         renderAppsGrid();
         renderBooksSection();
-        renderItemListSchema(); // Add schema for the main page
-    } else if (document.getElementById('app-details')) {
+        setTimeout(renderItemListSchema, 100); // Defer non-critical SEO task
+    } else if (detailsView) {
         renderAppDetails();
     }
+    initCollapsibleSections(); // Initialize toggles after dynamic content is rendered
 });
