@@ -11,11 +11,16 @@ function renderAppsGrid() {
     const shuffledApps = [...appsData].sort(() => Math.random() - 0.5);
 
     shuffledApps.forEach((app, index) => {
-        const card = document.createElement('a');
+        const card = document.createElement('div');
         card.className = 'app-card';
-        card.href = `pages/app-details.html?id=${app.id}`;
+        card.addEventListener('click', (e) => {
+            if (!e.target.closest('.google-play-btn')) {
+                window.location.href = `pages/app-details.html?id=${app.id}`;
+            }
+        });
 
         const loadingStrategy = index < 4 ? 'fetchpriority="high"' : 'loading="lazy"';
+        const googlePlayBtn = app.url ? `<a href="${app.url}" class="cta-button primary google-play-btn" target="_blank" onclick="event.stopPropagation()">Download on Google Play</a>` : '';
         card.innerHTML = `
             <div class="card-image-wrapper">
                 <img src="${app.image}" alt="${app.name}" ${loadingStrategy} width="300" height="220" class="app-image img-${app.id.replace(/-/g, '-')}">
@@ -30,6 +35,7 @@ function renderAppsGrid() {
                     </div>
                     ${app.price ? `<span class="card-price">${app.price.replace(/(\(.*?\))/, '<span class="discount-badge">$1</span>')}</span>` : ''}
                 </div>
+                ${googlePlayBtn}
             </div>
         `;
 
@@ -327,6 +333,8 @@ function renderAppDetails() {
         `;
     }
 
+    const centeredActionButton = actionButton ? `<div class="cta-centered-wrapper">${actionButton}</div>` : '';
+
     detailsContainer.innerHTML = `
         <div class="detail-header-layout">
             <img src="../${item.image}" alt="${item.name}" loading="lazy" class="detail-main-image">
@@ -340,16 +348,16 @@ function renderAppDetails() {
                     <img src="https://flagcdn.com/w20/${item.languageFlag}.png" alt="${item.language}" class="lang-flag-mini">
                 </div>` : ''}
                 ${item.price ? `<div class="detail-price">${item.price.replace(/(\(.*?\))/, '<span class="discount-badge">$1</span>')}</div>` : ''}
-                ${actionButton}
             </div>
         </div>
+        ${centeredActionButton}
         ${screenshotsHtml}
     `;
 
     // Render detailed description if available
     const detailedContainer = document.getElementById('app-detailed-info');
     if (detailedContainer && item.detailedDescription) {
-        detailedContainer.innerHTML = item.detailedDescription;
+        detailedContainer.innerHTML = item.detailedDescription + centeredActionButton;
     }
 }
 
