@@ -675,8 +675,51 @@
     <footer itemscope itemtype="https://schema.org/WPFooter">
         <div class="footer-parallel-container">
             <div class="footer-left-side">
-                <div class="map-wrapper">
-                    <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=a&t=n&d=U600mkYyjnXucg1kTmKnUH5nokSrVr-IWPD9akBU-r0&co=000000'></script>
+                <div class="map-wrapper" id="map-wrapper">
+                    <div id="map-fallback" class="map-fallback">
+                        <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" class="world-map-svg">
+                            <rect width="400" height="200" fill="#0a0a0b"/>
+                            <ellipse cx="200" cy="100" rx="160" ry="80" fill="none" stroke="#27272a" stroke-width="0.5"/>
+                            <ellipse cx="200" cy="100" rx="120" ry="80" fill="none" stroke="#27272a" stroke-width="0.3"/>
+                            <ellipse cx="200" cy="100" rx="80" ry="80" fill="none" stroke="#27272a" stroke-width="0.3"/>
+                            <ellipse cx="200" cy="100" rx="40" ry="80" fill="none" stroke="#27272a" stroke-width="0.3"/>
+                            <line x1="40" y1="100" x2="360" y2="100" stroke="#27272a" stroke-width="0.3"/>
+                            <line x1="200" y1="20" x2="200" y2="180" stroke="#27272a" stroke-width="0.3"/>
+                            <circle cx="90" cy="65" r="2" fill="#c5a059" opacity="0.4"/>
+                            <circle cx="120" cy="80" r="1.5" fill="#c5a059" opacity="0.3"/>
+                            <circle cx="280" cy="70" r="2" fill="#c5a059" opacity="0.4"/>
+                            <circle cx="310" cy="110" r="1.5" fill="#c5a059" opacity="0.3"/>
+                            <circle cx="160" cy="90" r="1" fill="#c5a059" opacity="0.5"/>
+                            <circle cx="240" cy="120" r="1.5" fill="#c5a059" opacity="0.3"/>
+                            <circle cx="80" cy="130" r="1" fill="#c5a059" opacity="0.3"/>
+                            <circle cx="320" cy="85" r="1" fill="#c5a059" opacity="0.4"/>
+                            <circle cx="180" cy="140" r="1" fill="#c5a059" opacity="0.25"/>
+                            <circle cx="260" cy="60" r="1.5" fill="#c5a059" opacity="0.35"/>
+                            <circle cx="140" cy="50" r="1" fill="#c5a059" opacity="0.3"/>
+                            <circle cx="340" cy="130" r="1" fill="#c5a059" opacity="0.3"/>
+                            <circle cx="60" cy="100" r="1" fill="#c5a059" opacity="0.3"/>
+                            <circle cx="220" cy="75" r="1.5" fill="#c5a059" opacity="0.35"/>
+                            <text x="200" y="195" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">VISITOR MAP</text>
+                        </svg>
+                    </div>
+                    <script>
+                        (function() {
+                            var wrapper = document.getElementById('map-wrapper');
+                            if (!wrapper) return;
+                            var script = document.createElement('script');
+                            script.type = 'text/javascript';
+                            script.id = 'mapmyvisitors';
+                            script.src = 'https://mapmyvisitors.com/map.js?cl=ffffff&w=a&t=n&d=U600mkYyjnXucg1kTmKnUH5nokSrVr-IWPD9akBU-r0&co=000000';
+                            script.onload = function() {
+                                var fallback = document.getElementById('map-fallback');
+                                if (fallback) fallback.style.display = 'none';
+                            };
+                            script.onerror = function() {
+                                console.warn('MapMyVisitors widget failed to load');
+                            };
+                            wrapper.appendChild(script);
+                        })();
+                    </script>
                 </div>
                 <div class="visitor-counter">
                     <span class="counter-label">Number of Ascended Ones:</span>
