@@ -6,7 +6,6 @@
     <meta name="theme-color" content="#050505">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Cha0smagick Labs - Frater Alek0s">
-    <meta name="google-site-verification" content="REEMPLAZAR_CON_TU_CODIGO_DE_VERIFICACION">
     
     <title>I Ching Oracle | Book of Changes &amp; Chinese Divination App</title>
     <meta name="description" content="Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams with full interpretations, reading history, and multilingual support. Download the most...">
@@ -35,6 +34,9 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://*.basemaps.cartocdn.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="../css/style.css">
@@ -153,7 +155,10 @@
     <main>
         <section class="app-details">
             <div class="detail-header-layout">
-                <img src="../assets/images/iching.webp" alt="I Ching Oracle" loading="eager" class="detail-main-image" width="120" height="120">
+                <picture>
+    <source srcset="../assets/images/iching.webp" type="image/webp">
+    <img src="../assets/images/iching.png" alt="I Ching Oracle" loading="eager" class="detail-main-image" width="120" height="120">
+</picture>
                 <div class="detail-header-info">
                     <h2>I Ching Oracle</h2>
                     <p class="lead-text">Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams, multilingual, and totally private.</p>
@@ -195,7 +200,10 @@
         <div class="apps-grid">
             <a href="psi-gym.html" class="app-card">
                 <div class="card-image-wrapper">
-                    <img src="../assets/images/zener.webp" alt="PSI GYM: Zener Cards & ESP" loading="lazy" width="300" height="220" class="app-image">
+                    <picture>
+    <source srcset="../assets/images/zener.webp" type="image/webp">
+    <img src="../assets/images/zener.png" alt="PSI GYM: Zener Cards & ESP" loading="lazy" class="app-image" width="300" height="220">
+</picture>
                 </div>
                 <div class="card-content">
                     <h4>PSI GYM: Zener Cards & ESP</h4>
@@ -213,7 +221,10 @@
         
             <a href="arcana-goetia.html" class="app-card">
                 <div class="card-image-wrapper">
-                    <img src="../assets/images/GSG.webp" alt="Arcana Goetia: Ritual & Sigils" loading="lazy" width="300" height="220" class="app-image">
+                    <picture>
+    <source srcset="../assets/images/GSG.webp" type="image/webp">
+    <img src="../assets/images/GSG.png" alt="Arcana Goetia: Ritual & Sigils" loading="lazy" class="app-image" width="300" height="220">
+</picture>
                 </div>
                 <div class="card-content">
                     <h4>Arcana Goetia: Ritual & Sigils</h4>
@@ -231,7 +242,10 @@
         
             <a href="norse-rune-oracle.html" class="app-card">
                 <div class="card-image-wrapper">
-                    <img src="../assets/images/norse-rune.webp" alt="Norse Rune Oracle" loading="lazy" width="300" height="220" class="app-image">
+                    <picture>
+    <source srcset="../assets/images/norse-rune.webp" type="image/webp">
+    <img src="../assets/images/norse-rune.png" alt="Norse Rune Oracle" loading="lazy" class="app-image" width="300" height="220">
+</picture>
                 </div>
                 <div class="card-content">
                     <h4>Norse Rune Oracle</h4>
@@ -350,5 +364,12 @@
         window.addEventListener('resize', function() { map.invalidateSize(); });
     });
     </script>
+<div id="google_translate_element" style="position:fixed;bottom:1rem;right:1rem;z-index:9999;"></div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
