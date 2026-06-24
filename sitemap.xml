@@ -7,20 +7,7 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    <!-- About Page -->
-    <url>
-        <loc>https://cha0smagicklabs.com/pages/about.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
     <!-- App Pages (Clean URLs) -->
-    <url>
-        <loc>https://cha0smagicklabs.com/apps/psi-gym.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
     <url>
         <loc>https://cha0smagicklabs.com/apps/arcana-goetia.html</loc>
         <lastmod>2026-06-24</lastmod>
@@ -28,13 +15,13 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/apps/norse-rune-oracle.html</loc>
+        <loc>https://cha0smagicklabs.com/apps/chaos-sigil-generator.html</loc>
         <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/apps/lunar-phase-calculator.html</loc>
+        <loc>https://cha0smagicklabs.com/apps/dream-machine.html</loc>
         <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -45,25 +32,19 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/apps/chaos-sigil-generator.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/apps/dream-machine.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
     <!-- Book Pages -->
+    <url>
+        <loc>https://cha0smagicklabs.com/apps/liber-lvpinux-pdf.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/apps/lunar-phase-calculator.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <url>
         <loc>https://cha0smagicklabs.com/apps/manual-activacion-servidores-magicos-pdf.html</loc>
         <lastmod>2026-06-24</lastmod>
@@ -71,10 +52,10 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/apps/tratado-runas-cazadoras-caos-pdf.html</loc>
+        <loc>https://cha0smagicklabs.com/apps/norse-rune-oracle.html</loc>
         <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>https://cha0smagicklabs.com/apps/ouija-cazadora-pdf.html</loc>
@@ -83,10 +64,152 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/apps/liber-lvpinux-pdf.html</loc>
+        <loc>https://cha0smagicklabs.com/apps/psi-gym.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/apps/tratado-runas-cazadoras-caos-pdf.html</loc>
         <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Top-Level Pages -->
+    <url>
+        <loc>https://cha0smagicklabs.com/best-occult-apps-android.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <!-- Blog Pages -->
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/bindrune-wealth-protection-fehu-algiz-othala.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/chaos-magick-beginners-complete-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/cryptographic-sigil-programming-code.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/digital-sigil-magic-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/goetic-magic-beginners-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/how-to-charge-sigil-correctly.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/i-ching-digital-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/i-ching-three-coin-probability-distribution.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/index.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/lucid-dreaming-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/lunar-phase-magic-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/norse-runes-beginners-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/rider-waite-tarot-beginners-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/sigil-vs-servitor-differences.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/zener-cards-esp-training-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/zener-cards-probability-statistical-significance.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- Top-Level Pages -->
+    <url>
+        <loc>https://cha0smagicklabs.com/complete-chaos-magick-bundle.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/glossary.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <!-- About Page -->
+    <url>
+        <loc>https://cha0smagicklabs.com/pages/about.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/privacy-policy.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
     </url>
     <!-- Free Tools Hub -->
     <url>
@@ -102,7 +225,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/tools/viking-runes.html</loc>
+        <loc>https://cha0smagicklabs.com/tools/lunar-phase.html</loc>
         <lastmod>2026-06-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -114,70 +237,9 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/tools/lunar-phase.html</loc>
+        <loc>https://cha0smagicklabs.com/tools/viking-runes.html</loc>
         <lastmod>2026-06-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <!-- Blog Pages -->
-    <url>
-        <loc>https://cha0smagicklabs.com/blog/index.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/blog/zener-cards-esp-training-guide.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/blog/digital-sigil-magic-guide.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/blog/norse-runes-beginners-guide.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/blog/i-ching-digital-guide.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/blog/lucid-dreaming-guide.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/privacy-policy.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/blog/goetic-magic-beginners-guide.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/blog/lunar-phase-magic-guide.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/blog/rider-waite-tarot-beginners-guide.html</loc>
-        <lastmod>2026-06-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
     </url>
 </urlset>

@@ -989,3 +989,39 @@ footer a:hover { color: var(--accent-white); }
 .mt-2 { margin-top:2rem; }
 .mb-1 { margin-bottom:1rem; }
 .mb-2 { margin-bottom:2rem; }
+
+/* ========================================================================
+   TOOL FUNNEL — Conversion Elements for Free Tool Pages
+   ======================================================================== */
+.compare-table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.9rem; }
+.compare-table th, .compare-table td { padding:0.75rem 1rem; border:1px solid #333; text-align:left; }
+.compare-table th { background:#1a1a1a; color:#ffd700; font-weight:600; }
+.compare-table td:first-child { font-weight:500; color:#ccc; }
+.compare-table .check { color:#3DDC84; font-size:1.1rem; }
+.compare-table .cross { color:#ff4444; font-size:1.1rem; }
+.compare-table .highlight-row { background:rgba(255,215,0,0.05); }
+
+.funnel-testimonial { background:#1a1a1a; border-left:3px solid #ffd700; padding:1.2rem; margin:1.5rem 0; border-radius:0 8px 8px 0; }
+.funnel-testimonial p { margin:0; font-size:0.9rem; color:#ccc; font-style:italic; }
+.funnel-testimonial .author { font-size:0.8rem; color:#888; margin-top:0.5rem; font-style:normal; }
+
+.funnel-faq details { background:#0a0a0a; border:1px solid #222; border-radius:8px; margin:0.5rem 0; padding:0; overflow:hidden; }
+.funnel-faq summary { padding:0.8rem 1rem; cursor:pointer; font-weight:500; color:#ddd; font-size:0.9rem; background:#111; }
+.funnel-faq summary:hover { background:#1a1a1a; }
+.funnel-faq .faq-answer { padding:0.8rem 1rem; font-size:0.85rem; color:#999; border-top:1px solid #222; }
+
+.sticky-conversion-bar { position:fixed; bottom:0; left:0; right:0; background:rgba(5,5,5,0.97); border-top:1px solid #333; padding:0.7rem 1.5rem; z-index:99999; display:flex; flex-wrap:wrap; align-items:center; gap:0.8rem; justify-content:center; backdrop-filter:blur(10px); }
+.sticky-conversion-bar .price-tag { font-family:var(--font-mono); color:#ffd700; font-size:1.2rem; font-weight:600; white-space:nowrap; }
+.sticky-conversion-bar .sticky-cta { background:#ffd700; color:#050505; border:none; padding:0.5rem 1.2rem; border-radius:4px; font-weight:600; cursor:pointer; font-size:0.85rem; text-decoration:none; white-space:nowrap; transition:transform 0.2s; }
+.sticky-conversion-bar .sticky-cta:hover { transform:scale(1.05); }
+.sticky-conversion-bar .sticky-text { font-size:0.8rem; color:#aaa; white-space:nowrap; }
+
+.funnel-urgency { display:inline-block; background:#ff4444; color:#fff; padding:0.2rem 0.6rem; border-radius:3px; font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-left:0.5rem; }
+
+@media (max-width:600px) {
+  .sticky-conversion-bar { padding:0.5rem 1rem; gap:0.5rem; }
+  .sticky-conversion-bar .sticky-text { font-size:0.7rem; }
+  .sticky-conversion-bar .price-tag { font-size:1rem; }
+  .compare-table { font-size:0.8rem; }
+  .compare-table th, .compare-table td { padding:0.5rem; }
+}
