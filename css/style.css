@@ -180,6 +180,66 @@ section p {
   margin-left: 0;
 }
 
+/* Homepage-specific sections */
+
+/* Hero — top intro section */
+section.hero {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 4rem;
+}
+section.hero h1 {
+  color: var(--accent-light);
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  border: none;
+  padding: 0;
+}
+section.hero p {
+  color: var(--text-secondary);
+  max-width: 750px;
+  margin: 1rem auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* CEO Bio / About section */
+section.ceo-bio {
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 4rem;
+}
+section.ceo-bio p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+section.ceo-bio a,
+a.inline-link {
+  color: var(--accent-gold);
+  text-decoration: underline;
+}
+section.ceo-bio a:hover,
+a.inline-link:hover {
+  color: var(--accent-light);
+}
+
+/* Apps section */
+section.apps-section {
+  margin-bottom: 4rem;
+}
+section.apps-section p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
 /* ========================================================================
    APPS GRID (Homepage + others)
    ======================================================================== */
