@@ -6,10 +6,10 @@ const appsData = [
         url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards",
         status: "available",
         description: "Train your intuition and extrasensory perception with professional Zener cards and advanced statistical tracking. 👁️",
-        image: "assets/images/zener.png",
+        image: "assets/images/zener.webp",
         seo: {
             title: "PSI GYM | Zener Cards & ESP Training App for Intuition",
-            description: "Enhance your psychic abilities with PSI GYM. Professional Zener card training, ESP testing, and real-time statistical analysis. The ultimate intuition trainer for Android. Download now.",
+            description: "Enhance your psychic abilities with PSI GYM. Professional Zener card training, ESP testing & statistical analysis. The ultimate intuition trainer for Android. Buy now.",
             keywords: "zener cards, esp training, psychic trainer, intuition app, extrasensory perception, parapsychology tool, psi training, remote viewing, clairvoyance practice, buy esoteric app, chaos magick app, psychic abilities, telepathy trainer"
         },
         screenshots: [
@@ -61,7 +61,7 @@ const appsData = [
         url: "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal",
         status: "available",
         description: "Command the 72 spirits of Solomon with precision sigils, lore, and guided rituals—all offline. 🗝️",
-        image: "assets/images/GSG.png",
+        image: "assets/images/GSG.webp",
         seo: {
             title: "Arcana Goetia: Ritual & Sigils | Goetic Grimoire & Sigil Generator App",
             description: "Command the 72 spirits of Solomon with Arcana Goetia. Digital sigil generator, complete Lemegeton lore, and guided invocation—all offline. Download the ultimate Goetic grimoire app. Buy esoteric tools for Android.",
@@ -118,7 +118,7 @@ const appsData = [
         onlineUrl: "https://www.magiadelcaospractica.com/2024/09/Descubre%20el%20Oraculo%20Runico%20Vikingo%20Online%20Gratis.html",
         status: "available",
         description: "Unlock Viking wisdom with 12+ rune spreads for love, wealth, protection, and daily guidance. 🔮",
-        image: "assets/images/norse-rune.png",
+        image: "assets/images/norse-rune.webp",
         seo: {
             title: "Norse Rune Oracle | Elder Futhark Rune Reading & Divination App",
             description: "Get accurate rune readings with the Norse Rune Oracle. 12+ spreads for love, wealth, protection & daily guidance. Authentic Elder Futhark divination app for Android. Norse magic & divination.",
@@ -184,7 +184,7 @@ const appsData = [
         url: "https://play.google.com/store/apps/details?id=com.lunarapp.app",
         status: "available",
         description: "Track moon phases for magic, wellness, and biodynamic gardening with stunning real-time visuals. 🌕",
-        image: "assets/images/lunar-phase.png",
+        image: "assets/images/lunar-phase.webp",
         seo: {
             title: "Lunar Phase Calculator | Moon Phases for Magic, Gardening & Wellness",
             description: "Track lunar phases for magic rituals, biodynamic gardening, and wellness timing. Precision moon data, guided rituals, and stunning live visualization. Download the moon phase app for Android.",
@@ -242,7 +242,7 @@ const appsData = [
         onlineUrl: "https://www.magiadelcaospractica.com/2024/09/software-de-i-ching-gratuito-online.html",
         status: "available",
         description: "Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams, multilingual, and totally private. 📜",
-        image: "assets/images/iching.png",
+        image: "assets/images/iching.webp",
         seo: {
             title: "I Ching Oracle | Book of Changes & Chinese Divination App",
             description: "Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams with full interpretations, reading history, and multilingual support. Download the most accurate I Ching app for Android.",
@@ -309,7 +309,7 @@ const appsData = [
         onlineUrl: "https://www.magiadelcaospractica.com/2024/09/Generador%20de%20Sigilos%20Goeticos%20Online%20Gratuito.html",
         status: "available",
         description: "Encode your Will into unique cryptographic sigils using ancient alphabets and planetary magic squares. ⚡",
-        image: "assets/images/chaos-sigil.png",
+        image: "assets/images/chaos-sigil.webp",
         seo: {
             title: "Magick Chaos Sigil Generator | Cryptographic Sigil Tool for Chaos Magick",
             description: "Create unique cryptographic sigils from your intentions. Supports Runic, Egyptian, Hebrew, Arabic, Greek & Cyrillic alphabets plus Planetary Kameas. The ultimate chaos magick sigil app for Android.",
@@ -372,7 +372,7 @@ const appsData = [
         url: "https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite",
         status: "available",
         description: "Full Rider-Waite deck offline with 6 spreads, encyclopedia, and 7-language support. Your pocket tarot teacher. 🃏",
-        image: "assets/images/tarotbutton.png",
+        image: "assets/images/tarotbutton.webp",
         seo: {
             title: "Unofficial Rider Waite Tarot | Offline Tarot Reader & Encyclopedia App",
             description: "Full Rider-Waite tarot deck offline. 6 spreads, upright & reversed meanings, searchable encyclopedia, and 7 languages. The most complete free tarot app for Android.",
@@ -434,7 +434,7 @@ const appsData = [
         url: "https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine",
         status: "available",
         description: "Master the art of lucid dreaming with induction protocols, dream journal, reality checks, and binaural beats. 🌙",
-        image: "assets/images/lucid.png",
+        image: "assets/images/lucid.webp",
         seo: {
             title: "Dream Machine: Lucid Dreaming App | Induction, Journal & Reality Checks",
             description: "Train your mind to wake within the dream. Lucid dreaming induction, dream journal, reality checks, binaural beats and MILD/WILD techniques. Download the ultimate lucid dream app for Android.",

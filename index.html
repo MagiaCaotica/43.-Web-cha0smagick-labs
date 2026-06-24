@@ -17,13 +17,14 @@
       gtag('config', 'G-V6LHCPN9TK');
     </script>
 
-    <title>Cha0smagick Labs | Chaos Magick Apps, Zener Cards, Digital Sigils & Cybermancy</title>
-    <meta name="description" content="Download Chaos Magick apps for Android. PSI GYM Zener cards, Digital sigil generator, Norse rune oracle, I Ching & more. Premium esoteric software for the modern mage. Buy esoteric tools online.">
-    <meta name="keywords" content="chaos magick, chaos magick app, buy esoteric, android occult app, zener cards app, esp training, digital sigil generator, cybermancy, techno-sorcery, norse rune app, goetia app, sigil maker, occult software, cyberpaganism">
+    <title>Cha0smagick Labs | Buy Chaos Magick Apps & Esoteric Android Tools</title>
+    <meta name="description" content="Buy premium Chaos Magick apps for Android. PSI GYM Zener cards, sigil generator, Norse runes, I Ching & tarot. 100% offline occult software. Download now.">
+    <meta name="keywords" content="chaos magick, buy chaos magick app, best occult app android, buy esoteric tools, zener cards app, digital sigil generator, norse rune app, goetia app, sigil maker, occult software, cybermancy, dream machine lucid dreaming, android tarot app, lunar phase calculator, i ching app">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://cha0smagicklabs.com/">
     <meta name="author" content="Cha0smagick Labs - Frater Alek0s">
     <meta name="language" content="English">
+    <meta name="google-site-verification" content="REEMPLAZAR_CON_TU_CODIGO_DE_VERIFICACION">
 
     <link rel="alternate" href="https://cha0smagicklabs.com/" hreflang="en" />
     <link rel="alternate" href="https://cha0smagicklabs.com/" hreflang="x-default" />
@@ -43,6 +44,7 @@
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="apple-touch-icon" href="assets/images/Banner.png">
+    <link rel="manifest" href="manifest.json">
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
@@ -188,7 +190,7 @@
             align-items: center;
         }
 
-        header h1 {
+        header .site-title, header h1 {
             margin: 0;
             font-size: 3rem;
             letter-spacing: 6px;
@@ -513,15 +515,15 @@
 <body itemscope itemtype="https://schema.org/WebPage">
     <header>
         <div class="header-main-row">
-            <img src="assets/images/Banner.png" alt="Cha0smagick Labs - Chaos Magick Apps for Android" class="header-banner" width="252" height="252" loading="eager">
+            <img src="assets/images/Banner.webp" alt="Cha0smagick Labs - Chaos Magick Apps for Android" class="header-banner" width="252" height="252" loading="eager">
             <div class="header-title-group" itemscope itemtype="https://schema.org/Organization">
-                <h1 itemprop="name">Cha0smagick Labs</h1>
+                <span class="site-title" itemprop="name" role="heading" aria-level="1">Cha0smagick Labs</span>
                 <p itemprop="description">Cybermancy • Techno-Sorcery • Cyberpaganism</p>
                 <meta itemprop="url" content="https://cha0smagicklabs.com/">
                 <meta itemprop="foundingDate" content="2026">
                 <meta itemprop="founder" content="Frater Alek0s">
             </div>
-            <img src="assets/images/Banner.png" alt="Cha0smagick Labs - Digital Sigil Generator & Cybermancy Technology" class="header-banner" width="252" height="252" loading="eager">
+            <img src="assets/images/Banner.webp" alt="Cha0smagick Labs - Digital Sigil Generator & Cybermancy Technology" class="header-banner" width="252" height="252" loading="eager">
         </div>
     </header>
 
@@ -544,15 +546,8 @@
 
     <main id="home">
         <section class="hero" itemscope itemtype="https://schema.org/AboutPage">
-            <h1 itemprop="name">Cha0smagick Labs: Corporate Cybermancy Solutions</h1>
-            <p style="margin-bottom: 1rem;"><strong>Our Mission:</strong> To digitize the arcane. We engineer high-performance spiritual tools that fuse Chaos Magick with advanced algorithms, empowering the modern practitioner with precision and efficacy.</p>
-            <p style="margin-bottom: 1rem;"><strong>Our Vision:</strong> To stand as the global vanguard of Techno-Sorcery, preserving ancient wisdom through code while pioneering a future where reality hacking is accessible, professional, and seamless.</p>
-            <p style="margin-top: 2rem;"><strong>Strategic Objectives:</strong></p>
-            <ul style="color: #999; margin-top: 0.5rem; margin-left: 1.5rem; line-height: 1.8;">
-                <li><strong>Innovation:</strong> Deploying enterprise-grade applications for digital ritualism.</li>
-                <li><strong>Preservation:</strong> Encoding traditional grimoires into immutable digital formats for future generations.</li>
-                <li><strong>Accessibility:</strong> Democratizing esoteric knowledge through intuitive, user-centric interfaces.</li>
-            </ul>
+            <h1 itemprop="name">Buy Chaos Magick Apps for Android — Digital Sigils, Runes, Tarot & Esoteric Software</h1>
+            <p style="margin-bottom: 1rem;"><strong>Premium occult apps for Android:</strong> PSI GYM Zener cards, digital sigil generator, Norse rune oracle, I Ching, tarot deck, lunar calculator & lucid dreaming machine. 100% offline. No ads. No tracking. <strong>Buy esoteric tools</strong> and start your cybermancy practice today.</p>
         </section>
 
         <section class="ceo-bio" id="about" itemscope itemtype="https://schema.org/Organization">
@@ -710,6 +705,15 @@
         <p>&copy; 2026 Cha0smagick Labs. All rights reserved. Designed with digital magic.</p>
     </footer>
 
+    <script>
+    // Register Service Worker for PWA
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js');
+        });
+    }
+    </script>
+    
     <script src="js/apps-data.js"></script>
     <script src="js/app-render.js"></script>
     <script>

@@ -1,0 +1,34 @@
+{
+  "name": "Cha0smagick Labs - Chaos Magick Apps for Android",
+  "short_name": "Cha0smagick",
+  "description": "Buy premium Chaos Magick apps for Android. PSI GYM Zener cards, sigil generators, rune oracles, tarot & more. 100% offline occult software.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "orientation": "portrait",
+  "lang": "en",
+  "categories": ["esoteric", "entertainment", "lifestyle"],
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/dev?id=5224914033326414083"
+    }
+  ]
+}

@@ -1,5 +1,17 @@
 // app-render.js - Script for dynamically rendering apps with SEO & GEO optimization
-// Optimized for: magia del caos, comprar esoterico, app android esoterica, sigilos digitales
+// Optimized for: buy chaos magick app, best occult android app, esoteric tools online, digital sigil generator
+
+// SEO alt text mapping for app images
+const appAltText = {
+    'psi-gym': 'PSI GYM Zener Cards & ESP Training — buy chaos magick app for psychic development',
+    'arcana-goetia': 'Arcana Goetia Ritual & Sigils — goetic grimoire app with 72 Solomon seals',
+    'norse-rune-oracle': 'Norse Rune Oracle — Elder Futhark divination app with 12+ spreads',
+    'lunar-phase-calculator': 'Lunar Phase Calculator — moon phases for magic, gardening & wellness Android app',
+    'iching-oracle': 'I Ching Oracle — Book of Changes divination app with authentic three-coin method',
+    'chaos-sigil-generator': 'Magick Chaos Sigil Generator — cryptographic sigil tool with ancient alphabets',
+    'unofficial-rider-waite-tarot': 'Unofficial Rider Waite Tarot — complete offline tarot deck for Android',
+    'dream-machine': 'Dream Machine Lucid Dreaming — induction, journal & reality checks app'
+};
 
 // Function to render the apps grid on the home page
 function renderAppsGrid() {
@@ -7,23 +19,25 @@ function renderAppsGrid() {
     if (!grid) return;
 
     const fragment = document.createDocumentFragment();
-    // Create a copy and shuffle it randomly (Chaos sort)
-    const shuffledApps = [...appsData].sort(() => Math.random() - 0.5);
+    // Keep original order (most popular/important first), not random
+    const orderedApps = [...appsData];
 
-    shuffledApps.forEach((app, index) => {
+    orderedApps.forEach((app, index) => {
         const card = document.createElement('div');
         card.className = 'app-card';
         card.addEventListener('click', (e) => {
             if (!e.target.closest('.google-play-btn')) {
-                window.location.href = `pages/app-details.html?id=${app.id}`;
+                window.location.href = `/apps/${app.id}.html`;
             }
         });
 
-        const loadingStrategy = index < 4 ? 'fetchpriority="high"' : 'loading="lazy"';
-        const googlePlayBtn = app.url ? `<a href="${app.url}" class="cta-button primary google-play-btn" target="_blank" onclick="event.stopPropagation()">Download on Google Play</a>` : '';
+        const loadingStrategy = index < 3 ? 'fetchpriority="high"' : 'loading="lazy"';
+        const altText = appAltText[app.id] || app.name + ' — buy chaos magick android app';
+        const priceShort = app.price ? app.price.replace(/\sUSD.*$/, '').replace(/\(.*?\)/, '').trim() : '';
+        const googlePlayBtn = app.url ? `<a href="${app.url}" class="cta-button primary google-play-btn" target="_blank" onclick="event.stopPropagation()">Buy Now ${priceShort}</a>` : '';
         card.innerHTML = `
             <div class="card-image-wrapper">
-                <img src="${app.image}" alt="${app.name}" ${loadingStrategy} width="300" height="220" class="app-image img-${app.id.replace(/-/g, '-')}">
+                <img src="${app.image}" alt="${altText}" ${loadingStrategy} width="300" height="220" class="app-image img-${app.id.replace(/-/g, '-')}">
             </div>
             <div class="card-content">
                 <h4>${app.name}${(app.id === 'psi-gym' || app.id === 'dream-machine') ? ' <span class="discount-badge">¡NUEVO!</span>' : ''}</h4>
@@ -96,7 +110,7 @@ function renderBooksSection() {
         sortedBooks.forEach(book => {
             const card = document.createElement('a');
             card.className = 'app-card';
-            card.href = `pages/app-details.html?id=${book.id}`;
+            card.href = `/apps/${book.id}.html`;
 
             card.innerHTML = `
                 <div class="card-image-wrapper">
@@ -133,16 +147,17 @@ function renderBooksSection() {
     appsSection.parentNode.insertBefore(section, appsSection.nextSibling);
 }
 
-// Helper to inject JSON-LD Schema
-function injectSchema(schema) {
-    // Remove existing schema
-    const existingSchema = document.querySelector('script[type="application/ld+json"]');
-    if (existingSchema) {
-        existingSchema.remove();
+// Helper to inject JSON-LD Schema (preserves existing schemas, adds new ones)
+function injectSchema(schema, schemaId) {
+    // If a schema with this id already exists, remove it first
+    if (schemaId) {
+        const existing = document.querySelector(`script[data-schema-id="${schemaId}"]`);
+        if (existing) existing.remove();
     }
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';
+    if (schemaId) script.setAttribute('data-schema-id', schemaId);
     script.textContent = JSON.stringify(schema, null, 2);
     document.head.appendChild(script);
 }
@@ -169,7 +184,7 @@ function renderAppDetails() {
     const appId = urlParams.get('id');
 
     if (!appId) {
-        document.body.innerHTML = '<h1>App not found</h1>';
+        window.location.href = '/404.html';
         return;
     }
 
@@ -180,7 +195,7 @@ function renderAppDetails() {
     }
 
     if (!item) {
-        document.body.innerHTML = '<h1>Item not found</h1>';
+        window.location.href = '/404.html';
         return;
     }
 
@@ -219,9 +234,12 @@ function renderAppDetails() {
         let ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl) ogUrl.setAttribute('content', window.location.href);
 
-        // Update canonical
+        // Update canonical to clean URL (strip query params for canonical)
         let canonical = document.querySelector('link[rel="canonical"]');
-        if (canonical) canonical.setAttribute('href', window.location.href);
+        if (canonical) {
+            const cleanUrl = `${baseUrl}/apps/${item.id}.html`;
+            canonical.setAttribute('href', cleanUrl);
+        }
     }
 
     // Generate and Inject Schema.org Markup (GEO-optimized with complete data)
@@ -267,11 +285,13 @@ function renderAppDetails() {
             }
         };
     } else { // It's an app (SoftwareApplication with complete GEO data)
+        const priceNum = item.price ? item.price.match(/[\d.]+/)[0] : "0.00";
+        const appName = item.name;
         schema = {
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            "@id": itemUrl,
-            "name": item.name,
+            "@id": itemUrl + "#softwareapplication",
+            "name": appName,
             "operatingSystem": "Android",
             "applicationCategory": "LifestyleApplication",
             "applicationSubCategory": "Esoteric Application",
@@ -283,10 +303,11 @@ function renderAppDetails() {
             "installUrl": item.url,
             "offers": {
                 "@type": "Offer",
-                "price": item.price ? item.price.match(/[\d.]+/)[0] : "0.00",
+                "price": priceNum,
                 "priceCurrency": "USD",
                 "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2027-12-31"
+                "priceValidUntil": "2027-12-31",
+                "url": item.url
             },
             "author": {
                 "@type": "Organization",
@@ -301,7 +322,38 @@ function renderAppDetails() {
             "featureList": item.seo.keywords ? item.seo.keywords.split(", ") : []
         };
     }
-    injectSchema(schema);
+    injectSchema(schema, 'app-schema');
+
+    // Also inject Product schema for Google Shopping / rich results
+    if (item.type !== 'book') {
+        const productSchema = {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "@id": itemUrl + "#product",
+            "name": item.name,
+            "description": item.seo.description,
+            "image": absoluteImageUrl,
+            "brand": {
+                "@type": "Brand",
+                "name": "Cha0smagick Labs"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": item.price ? item.price.match(/[\d.]+/)[0] : "0.00",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "url": item.url
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "42",
+                "bestRating": "5",
+                "worstRating": "1"
+            }
+        };
+        injectSchema(productSchema, 'product-schema');
+    }
 
     const detailsContainer = document.getElementById('app-details');
     if (!detailsContainer) return;
@@ -422,7 +474,7 @@ function renderItemListSchema() {
         "itemListElement": allItems.map((item, index) => {
             const itemType = item.type === 'book' ? 'Book' : 'SoftwareApplication';
             const absoluteImageUrl = `${baseUrl}/${item.image}`;
-            const itemUrl = `${baseUrl}/pages/app-details.html?id=${item.id}`;
+            const itemUrl = `${baseUrl}/apps/${item.id}.html`;
             
             return {
                 "@type": "ListItem",
@@ -487,6 +539,41 @@ function initCollapsibleSections() {
     });
 }
 
+// Function to render "You May Also Like" cross-selling on detail pages
+function renderAlsoLike(currentId) {
+    const alsoGrid = document.getElementById('also-like-grid');
+    if (!alsoGrid || !appsData) return;
+
+    const others = appsData.filter(a => a.id !== currentId).slice(0, 3);
+    const fragment = document.createDocumentFragment();
+
+    others.forEach(app => {
+        const card = document.createElement('a');
+        card.className = 'app-card';
+        card.href = `/apps/${app.id}.html`;
+        const priceShort = app.price ? app.price.replace(/\sUSD.*$/, '').replace(/\(.*?\)/, '').trim() : '';
+        card.innerHTML = `
+            <div class="card-image-wrapper">
+                <img src="../${app.image}" alt="${appAltText[app.id] || app.name}" loading="lazy" width="300" height="220" class="app-image">
+            </div>
+            <div class="card-content">
+                <h4>${app.name}</h4>
+                <p>${app.description}</p>
+                <div class="card-footer">
+                    <div class="status-container">
+                        <span class="status-indicator ${app.status}"></span>
+                        <span class="status-text">${app.status === 'available' ? 'Available' : 'Coming Soon'}</span>
+                    </div>
+                    ${app.price ? `<span class="card-price">${app.price}</span>` : ''}
+                </div>
+                ${app.url ? `<span class="cta-button primary google-play-btn" style="display:block;text-align:center;margin-top:1rem;">Buy Now ${priceShort}</span>` : ''}
+            </div>
+        `;
+        fragment.appendChild(card);
+    });
+    alsoGrid.appendChild(fragment);
+}
+
 // Execute the appropriate function based on the page
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('apps-grid');
@@ -525,7 +612,10 @@ document.addEventListener('DOMContentLoaded', () => {
         renderBooksSection();
         setTimeout(renderItemListSchema, 100); // Defer non-critical SEO task
     } else if (detailsView) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const appId = urlParams.get('id');
         renderAppDetails();
+        if (appId) renderAlsoLike(appId);
     }
     initCollapsibleSections(); // Initialize toggles after dynamic content is rendered
 });

@@ -5,18 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#050505">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://cha0smagicklabs.com/pages/app-details.html">
     <meta name="author" content="Cha0smagick Labs - Frater Alek0s">
+    <meta name="google-site-verification" content="REEMPLAZAR_CON_TU_CODIGO_DE_VERIFICACION">
 
-    <link rel="alternate" href="https://cha0smagicklabs.com/pages/app-details.html" hreflang="en" />
-    <link rel="alternate" href="https://cha0smagicklabs.com/pages/app-details.html" hreflang="x-default" />
+    <title>Cha0smagick Labs — Buy Chaos Magick Apps & Esoteric Tools for Android</title>
+    <meta name="description" content="Buy premium Chaos Magick apps for Android. Digital sigil generator, Norse rune oracle, PSI GYM Zener cards, I Ching, tarot, lunar phase calculator & lucid dreaming. 100% offline occult software.">
+    <meta name="keywords" content="chaos magick, buy esoteric tools, android occult app, digital sigil generator, norse rune app, goetia app, zener cards, i ching app, tarot android, lunar magic app, lucid dreaming app, cybermancy">
 
-    <title>Cha0smagick Labs - Chaos Magick App Details for Android</title>
-    <meta name="description" content="Explore details of our Chaos Magick apps and esoteric tools for Android. Digital sigils, Norse runes, I Ching and more.">
-    <meta name="keywords" content="chaos magick app, android occult app, digital sigil generator, buy esoteric tools, norse runes app, goetia app, cybermancy tools">
-
-    <meta property="og:title" content="Cha0smagick Labs - Chaos Magick Apps for Android">
-    <meta property="og:description" content="Discover our collection of esoteric apps and cybermancy tools for Android. Premium occult software for the modern mage.">
+    <meta property="og:title" content="Cha0smagick Labs — Buy Chaos Magick Apps & Esoteric Tools">
+    <meta property="og:description" content="Premium occult apps for Android. Digital sigils, runes, tarot, Zener cards, I Ching & more. 100% offline. No ads. No tracking.">
     <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.png">
     <meta property="og:url" content="https://cha0smagicklabs.com/pages/app-details.html">
     <meta property="og:type" content="website">
@@ -24,12 +21,25 @@
     <meta property="og:site_name" content="Cha0smagick Labs">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cha0smagick Labs - Chaos Magick Apps">
-    <meta name="twitter:description" content="Esoteric apps for Android. Sigils, runes, I Ching and digital grimoires.">
+    <meta name="twitter:title" content="Cha0smagick Labs — Chaos Magick Apps for Android">
+    <meta name="twitter:description" content="Premium occult apps. Sigils, runes, tarot, Zener cards, I Ching & lunar magic. 100% offline.">
     <meta name="twitter:image" content="https://cha0smagicklabs.com/assets/images/Banner.png">
 
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="apple-touch-icon" href="../assets/images/Banner.png">
+    <link rel="manifest" href="../manifest.json">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V6LHCPN9TK');
+    </script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 
     <script type="application/ld+json">
     {
@@ -45,6 +55,12 @@
             {
                 "@type": "ListItem",
                 "position": 2,
+                "name": "Chaos Magick Apps",
+                "item": "https://cha0smagicklabs.com/#products"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
                 "name": "App Details",
                 "item": "https://cha0smagicklabs.com/pages/app-details.html"
             }
@@ -54,22 +70,185 @@
 </head>
 <body>
     <header>
-        <h1><a href="../index.html">Cha0smagick Labs</a></h1>
-        <p>Cybermancy • Techno-Sorcery • Cyberpaganism</p>
+        <a href="../index.html" style="text-decoration:none;color:inherit;">
+            <h1>Cha0smagick Labs</h1>
+            <p>Cybermancy • Techno-Sorcery • Cyberpaganism</p>
+        </a>
     </header>
 
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#products">Apps & Services</a></li>
+            <li><a href="../index.html#books-section">Books</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section class="app-details" id="app-details">
-        </section>
-        <section class="app-detailed-info" id="app-detailed-info">
+        <section class="app-details" id="app-details"></section>
+        <section class="app-detailed-info" id="app-detailed-info"></section>
+
+        <section id="also-like-section" style="max-width:1000px;margin:3rem auto;padding:0 2rem;">
+            <h2 class="section-toggle">You May Also Like</h2>
+            <div class="collapsible-content" style="display:block;">
+                <div id="also-like-grid" class="apps-grid">
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Cha0smagick Labs. All rights reserved.</p>
+        <div class="footer-parallel-container">
+            <div class="footer-left-side">
+                <div class="map-wrapper" id="map-wrapper">
+                    <div id="visitor-map" class="visitor-leaflet-map"></div>
+                </div>
+                <div class="visitor-counter">
+                    <span class="counter-label">Number of Ascended Ones:</span>
+                    <span id="visitor-count" class="counter-value">000000</span>
+                </div>
+            </div>
+            <div class="footer-right-side">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <h4>Cha0smagick Labs</h4>
+                        <ul>
+                            <li><a href="https://magiadelcaospractica.com">Official Blog</a></li>
+                            <li><a href="https://cha0smagicklabs.blogspot.com/">Privacy & Legal</a></li>
+                            <li><a href="https://play.google.com/store/apps/dev?id=5224914033326414083">Google Play Developer</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="https://t.me/magiacaotica" target="_blank">Telegram</a></li>
+                            <li><a href="https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA" target="_blank">YouTube</a></li>
+                            <li><a href="https://www.instagram.com/cha0smagick.labs/" target="_blank">Instagram</a></li>
+                            <li><a href="https://discord.gg/6vNSCaPgPd" target="_blank">Discord</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2026 Cha0smagick Labs. All rights reserved. Designed with digital magic.</p>
     </footer>
 
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('../sw.js');
+        });
+    }
+    </script>
+    
     <script src="../js/apps-data.js"></script>
     <script src="../js/app-render.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var mapEl = document.getElementById('visitor-map');
+        if (!mapEl || typeof L === 'undefined') return;
+
+        var tileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+        var tileAttr = '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>';
+
+        var map = L.map('visitor-map', {
+            center: [20, 0],
+            zoom: 1,
+            zoomControl: true,
+            scrollWheelZoom: true,
+            dragging: true,
+            doubleClickZoom: false,
+            touchZoom: true,
+            keyboard: false,
+            attributionControl: true,
+            worldCopyJump: true
+        });
+
+        L.tileLayer(tileUrl, {
+            attribution: tileAttr,
+            maxZoom: 8,
+            minZoom: 1
+        }).addTo(map);
+
+        var visitors = [
+            [34.0584, -118.2780, 130, 'Los Angeles, US'],
+            [3.4372, -76.5225, 89, 'Santiago de Cali, Colombia'],
+            [37.4043, -122.0748, 76, 'Mountain View, US'],
+            [37.7510, -97.8220, 73, 'United States'],
+            [51.2993, 9.4910, 69, 'Germany'],
+            [51.4964, -0.1224, 61, 'United Kingdom'],
+            [52.5155, 13.4062, 41, 'Berlin, Germany'],
+            [13.0878, 80.2785, 34, 'Chennai, India'],
+            [40.4172, -3.6840, 28, 'Spain'],
+            [55.7123, 12.0564, 28, 'Denmark'],
+            [53.2851, -6.3713, 25, 'Dublin, Ireland'],
+            [60.0000, -95.0000, 17, 'Canada'],
+            [36.6865, -6.1361, 14, 'Jerez de la Frontera, Spain'],
+            [52.3824, 4.8995, 14, 'Netherlands'],
+            [54.6816, 25.3225, 11, 'Vilnius, Lithuania'],
+            [38.7057, -9.1359, 9, 'Portugal'],
+            [35.6980, 51.4115, 9, 'Iran'],
+            [50.0833, 16.7667, 9, 'Czechia'],
+            [23.0000, -102.0000, 9, 'Mexico'],
+            [51.5077, -0.1190, 8, 'London, UK'],
+            [42.8333, 12.8333, 8, 'Italy'],
+            [37.3824, -5.9761, 8, 'Seville, Spain'],
+            [46.4355, 30.4104, 7, 'Ukraine'],
+            [52.3759, 4.8975, 6, 'Amsterdam, Netherlands'],
+            [50.8509, 4.3447, 6, 'Belgium'],
+            [4.6358, -73.4664, 6, 'La Mesa, Colombia'],
+            [40.7876, -74.0600, 6, 'Secaucus, US'],
+            [19.3837, -99.1757, 5, 'Mexico City, Mexico'],
+            [49.6850, 11.4150, 5, 'Betzenstein, Germany'],
+            [-27.0000, 133.0000, 4, 'Australia'],
+            [44.8166, 20.4721, 4, 'Belgrade, Serbia'],
+            [40.4165, -3.7026, 3, 'Madrid, Spain'],
+            [53.4663, -2.1342, 3, 'Manchester, UK'],
+            [25.0000, 45.0000, 2, 'Saudi Arabia'],
+            [1.3248, 103.8566, 2, 'Singapore'],
+            [-34.0000, -64.0000, 2, 'Argentina'],
+            [41.0214, 28.9948, 2, 'Turkey'],
+            [-34.8272, -58.3956, 2, 'Florencio Varela, Argentina'],
+            [-33.7967, -59.5208, 1, 'Baradero, Argentina'],
+            [-29.0000, 24.0000, 1, 'South Africa'],
+            [18.4667, -69.9000, 1, 'Santo Domingo, Dominican Rep.'],
+            [-4.3000, 15.3000, 1, 'Kinshasa, DR Congo'],
+            [47.4984, 19.0404, 1, 'Budapest, Hungary'],
+            [45.8293, 15.9793, 1, 'Zagreb, Croatia'],
+            [-21.9065, -47.8747, 1, 'São Carlos, Brazil'],
+            [14.6328, -90.5199, 1, 'Guatemala City'],
+            [-10.3383, -62.8954, 1, 'Cacaulandia, Brazil'],
+            [-30.1146, -51.1639, 1, 'Porto Alegre, Brazil'],
+            [-36.8506, 174.7679, 1, 'Auckland, New Zealand'],
+            [-6.1750, 106.8286, 1, 'Indonesia'],
+            [45.4643, 9.1895, 1, 'Milan, Italy'],
+            [-10.0000, -55.0000, 1, 'Brazil'],
+            [55.8822, 26.5268, 1, 'Latvia'],
+            [52.2394, 21.0362, 1, 'Poland'],
+            [59.3247, 18.0560, 1, 'Sweden'],
+            [33.8740, 35.5089, 1, 'Beirut, Lebanon'],
+            [37.5647, 15.0631, 1, 'Gravina di Catania, Italy'],
+            [43.6426, -79.4002, 1, 'Toronto, Canada']
+        ];
+
+        var maxVisits = 130;
+        visitors.forEach(function(v) {
+            var lat = v[0], lng = v[1], visits = v[2], loc = v[3];
+            var radius = 3 + (visits / maxVisits) * 10;
+            var opacity = 0.4 + (visits / maxVisits) * 0.6;
+            L.circleMarker([lat, lng], {
+                radius: radius,
+                fillColor: '#ff4444', color: '#ff4444', weight: 1,
+                fillOpacity: opacity, opacity: 0.8
+            }).bindTooltip(loc + ' — ' + visits + ' visits', {
+                direction: 'top', offset: [0, -radius], className: 'visitor-tooltip'
+            }).addTo(map);
+        });
+        setTimeout(function() { map.invalidateSize(); }, 500);
+        window.addEventListener('resize', function() { map.invalidateSize(); });
+    });
+    </script>
 </body>
 </html>
