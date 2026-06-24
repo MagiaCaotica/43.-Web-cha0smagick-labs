@@ -395,6 +395,8 @@ section.apps-section p {
 /* ========================================================================
    GOOGLE PLAY STORE DOWNLOAD BUTTON
    ======================================================================== */
+a.play-store-btn,
+span.play-store-btn,
 .play-store-btn {
   display: inline-flex;
   align-items: center;
