@@ -32,51 +32,7 @@
         }
     }
     </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #050505; color: #e0e0e0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; }
-        header { text-align: center; padding: 2rem 1rem 1rem; border-bottom: 1px solid #1a1a2e; }
-        header h1 { color: #ffd700; font-size: 1.8rem; letter-spacing: 0.05em; }
-        header p { color: #888; font-size: 0.95rem; margin-top: 0.3rem; }
-        nav { background: #0a0a0a; padding: 0.8rem 1rem; text-align: center; border-bottom: 1px solid #1a1a2e; }
-        nav a { color: #c0a060; text-decoration: none; margin: 0 0.8rem; font-size: 0.95rem; }
-        nav a:hover { color: #ffd700; text-decoration: underline; }
-        .breadcrumb { max-width: 1100px; margin: 1rem auto; padding: 0 1rem; font-size: 0.85rem; color: #888; }
-        .breadcrumb a { color: #c0a060; text-decoration: none; }
-        .breadcrumb a:hover { text-decoration: underline; }
-        .intro { max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center; }
-        .intro h2 { color: #c0a060; font-size: 1.5rem; margin-bottom: 0.8rem; }
-        .intro p { color: #aaa; max-width: 700px; margin: 0 auto; }
-        .tools-grid { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-        @media (max-width: 650px) { .tools-grid { grid-template-columns: 1fr; } }
-        .tool-card { background: #0d0d1a; border: 1px solid #1a1a2e; border-radius: 8px; padding: 1.5rem; transition: border-color 0.3s, transform 0.3s; display: flex; flex-direction: column; }
-        .tool-card:hover { border-color: #c0a060; transform: translateY(-2px); }
-        .tool-card h3 { color: #ffd700; font-size: 1.2rem; margin-bottom: 0.4rem; }
-        .tool-card .desc { color: #aaa; font-size: 0.9rem; margin-bottom: 0.8rem; flex-grow: 1; }
-        .tool-card .features { color: #777; font-size: 0.85rem; margin-bottom: 1rem; }
-        .tool-card .features span { display: block; padding: 0.15rem 0; }
-        .tool-card .features span::before { content: "▸ "; color: #555; }
-        .tool-card .cta-row { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
-        .tool-card .cta-row .try-link { display: inline-block; padding: 0.5rem 1.2rem; background: #c0a060; color: #050505; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9rem; transition: background 0.3s; }
-        .tool-card .cta-row .try-link:hover { background: #ffd700; }
-        .tool-card .cta-row .buy-link { color: #888; font-size: 0.85rem; text-decoration: none; }
-        .tool-card .cta-row .buy-link:hover { color: #ffd700; }
-        .bottom-cta { max-width: 700px; margin: 3rem auto; padding: 2rem 1rem; text-align: center; border-top: 1px solid #1a1a2e; }
-        .bottom-cta h3 { color: #c0a060; font-size: 1.3rem; margin-bottom: 0.8rem; }
-        .bottom-cta p { color: #aaa; margin-bottom: 1.2rem; }
-        .bottom-cta a { display: inline-block; padding: 0.8rem 2rem; background: #c0a060; color: #050505; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 1.1rem; transition: background 0.3s; }
-        .bottom-cta a:hover { background: #ffd700; }
-        footer { text-align: center; padding: 2rem 1rem; color: #555; font-size: 0.85rem; border-top: 1px solid #1a1a2e; margin-top: 2rem; }
-        footer a { color: #888; text-decoration: none; }
-        footer a:hover { color: #c0a060; }
-        .lang-sidebar { position:fixed; left:0; top:50%; transform:translateY(-50%); z-index:99999; display:flex; flex-direction:column; align-items:center; }
-        .lang-toggle-btn { background:#1a1a1a; border:1px solid #444; border-left:none; border-radius:0 8px 8px 0; color:#ccc; font-size:1.3rem; cursor:pointer; padding:10px 6px; line-height:1; transition:all .2s; width:38px; }
-        .lang-toggle-btn:hover { background:#333; color:#fff; }
-        .lang-flag-list { display:none; flex-direction:column; gap:2px; margin-top:4px; padding:6px 4px; background:#1a1a1a; border:1px solid #444; border-left:none; border-radius:0 8px 8px 0; }
-        .lang-btn { background:transparent; border:none; color:#aaa; cursor:pointer; font-size:0.82rem; padding:4px 7px; text-align:left; white-space:nowrap; border-radius:4px; transition:all .15s; font-family:inherit; display:flex; align-items:center; gap:5px; width:100%; }
-        .lang-btn:hover { background:#333; color:#ffd700; }
-        .flag-icon { width:18px; height:auto; border-radius:2px; display:inline-block; vertical-align:middle; }
-    </style>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>

@@ -190,49 +190,7 @@ function generateToolPage(tool) {
         "operatingSystem": "Android"
     }
     </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #050505; color: #e0e0e0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; }
-        header { text-align: center; padding: 2rem 1rem 1rem; border-bottom: 1px solid #1a1a2e; }
-        header h1 { color: #ffd700; font-size: 2rem; letter-spacing: 0.05em; }
-        nav { background: #0a0a0a; padding: 0.8rem 1rem; text-align: center; border-bottom: 1px solid #1a1a2e; }
-        nav a { color: #c0a060; text-decoration: none; margin: 0 0.8rem; font-size: 0.95rem; }
-        nav a:hover { color: #ffd700; text-decoration: underline; }
-        .breadcrumb { max-width: 1100px; margin: 1rem auto; padding: 0 1rem; font-size: 0.85rem; color: #888; }
-        .breadcrumb a { color: #c0a060; text-decoration: none; }
-        .breadcrumb a:hover { text-decoration: underline; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1rem; }
-        .hero { text-align: center; margin-bottom: 2rem; }
-        .hero h2 { color: #c0a060; font-size: 1.4rem; margin-bottom: 1rem; }
-        .hero p { color: #aaa; max-width: 700px; margin: 0 auto; font-size: 1.05rem; }
-        .benefits { background: #0a0a14; border: 1px solid #1a1a2e; border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; }
-        .benefits h3 { color: #ffd700; margin-bottom: 0.8rem; font-size: 1.1rem; }
-        .benefits ul { list-style: none; padding: 0; }
-        .benefits li { padding: 0.4rem 0; color: #bbb; }
-        .benefits li::before { content: "▸ "; color: #c0a060; }
-        .tool-frame { background: #0d0d1a; border: 1px solid #1a1a2e; border-radius: 8px; overflow: hidden; margin-bottom: 2rem; }
-        .tool-frame iframe { width: 100%; height: 500px; border: none; display: block; }
-        .tool-frame .label { padding: 0.6rem 1rem; color: #888; font-size: 0.85rem; border-top: 1px solid #1a1a2e; text-align: center; }
-        .cta-box { background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 100%); border: 1px solid #c0a060; border-radius: 12px; padding: 2rem; text-align: center; margin-bottom: 2rem; }
-        .cta-box h3 { color: #ffd700; font-size: 1.4rem; margin-bottom: 0.8rem; }
-        .cta-box p { color: #aaa; max-width: 600px; margin: 0 auto 1.2rem; font-size: 0.95rem; }
-        .cta-box .features-text { color: #999; font-size: 0.9rem; margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .cta-box .price { color: #ffd700; font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; }
-        .cta-box a { display: inline-block; padding: 0.9rem 2.5rem; background: #c0a060; color: #050505; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 1.1rem; transition: background 0.3s; }
-        .cta-box a:hover { background: #ffd700; }
-        .back-link { text-align: center; margin-bottom: 2rem; }
-        .back-link a { color: #888; text-decoration: none; font-size: 0.9rem; }
-        .back-link a:hover { color: #c0a060; }
-        footer { text-align: center; padding: 2rem 1rem; color: #555; font-size: 0.85rem; border-top: 1px solid #1a1a2e; margin-top: 2rem; }
-        footer a { color: #888; text-decoration: none; }
-        footer a:hover { color: #c0a060; }
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.5rem; }
-            .tool-frame iframe { height: 380px; }
-            .cta-box { padding: 1.5rem; }
-        }
-        ${sfx}
-    </style>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
