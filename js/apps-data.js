@@ -426,6 +426,65 @@ const appsData = [
             <h3>The Cards Are Ready. Are You?</h3>
             <p>Download the <strong>Unofficial Rider Waite Tarot</strong> now and begin your mindful, language-rich tarot practice. The answers you seek are already in the symbols. 🃏</p>
         `
+    },
+    {
+        id: "dream-machine",
+        name: "Dream Machine: Lucid Dreaming",
+        price: "$3.99 USD",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine",
+        status: "available",
+        description: "Master the art of lucid dreaming with induction protocols, dream journal, reality checks, and binaural beats. 🌙",
+        image: "assets/images/lucid.png",
+        seo: {
+            title: "Dream Machine: Lucid Dreaming App | Induction, Journal & Reality Checks",
+            description: "Train your mind to wake within the dream. Lucid dreaming induction, dream journal, reality checks, binaural beats and MILD/WILD techniques. Download the ultimate lucid dream app for Android.",
+            keywords: "lucid dreaming, dream machine, lucid dream app, dream journal, reality checks, binaural beats, dream induction, MILD technique, WILD technique, astral projection, oneironautics, dream recall, buy esoteric, chaos magick app, android occult app, cybermancy, dream magic"
+        },
+        screenshots: [],
+        detailedDescription: `
+            <h3>What If You Could Wake Up Inside Your Dreams Tonight?</h3>
+            <p>Every night, your mind builds entire universes while you sleep—worlds where you can fly, talk to archetypal beings, rehearse real-life skills, and explore the architecture of your own subconscious. Most people experience these wonders as passive observers. <strong>Dream Machine: Lucid Dreaming</strong> gives you the keys to the cockpit. This is a complete lucid dreaming training system designed to take you from zero to fully conscious dreamer using evidence-based induction protocols, intelligent dream journaling, and precision reality-check drills.</p>
+            <p>Built for oneironauts, chaos magicians, and consciousness hackers, Dream Machine transforms your Android device into a personal dream laboratory. No ads. No subscriptions. Just pure neurotechnology for the night.</p>
+            
+            <h4>🌙 Key Features for the Conscious Dreamer</h4>
+            <ul>
+                <li><strong>Intelligent Dream Journal:</strong> Log your dreams with a clean, fast interface designed for groggy 3 AM entries. Tag dreams by type (lucid, prophetic, nightmare), rate recall quality, and search your entire history to spot recurring symbols and patterns.</li>
+                <li><strong>Reality Check Drills:</strong> Train your critical faculty with customizable reality checks—nose pinch, hand inspection, digital clock reading, and more. The app sends random vibration prompts throughout the day until checking reality becomes second nature.</li>
+                <li><strong>Binaural Beats & Isochronic Tones:</strong> Select from scientifically calibrated frequencies for REM induction, theta-wave deepening, and sleep onset. Built-in timer with fade-out lets you set it and forget it.</li>
+                <li><strong>MILD & WILD Induction Protocols:</strong> Step-by-step guides for the two most effective lucid dreaming techniques. Includes customizable affirmation loops, visualization cues, and wake-back-to-bed (WBTB) alarms.</li>
+                <li><strong>Dream Statistics & Analytics:</strong> Track your lucidity rate, dream recall percentage, and induction method success over time. Watch your progress with clean data visualizations.</li>
+                <li><strong>Lucid Dreaming Encyclopedia:</strong> Built-in reference covering incubation techniques, stabilization methods (hand rubbing, spinning), dream signs, and advanced practices like dream sharing and time dilation.</li>
+            </ul>
+            
+            <h4>🔮 Lucid Dreaming for Chaos Magicians</h4>
+            <p>In Chaos Magick, the dream state is a primary vector for sigil firing, servitor communication, and astral temple work. Dream Machine provides the structure to turn every night into a magical working session. Use the dream journal to record gnostic states, set dream sigils using MILD affirmations, and explore the astral plane with the confidence of a trained oneironaut.</p>
+            
+            <h4>📖 Who Is Dream Machine For?</h4>
+            <ul>
+                <li><strong>Beginners</strong> who want a structured, science-backed path to their first lucid dream.</li>
+                <li><strong>Experienced Lucid Dreamers</strong> looking for a reliable journal, advanced analytics, and MILD/WILD automation tools.</li>
+                <li><strong>Chaos Magicians & Cybermancers</strong> who use the dream state for sigil charging, astral projection, and subconscious reprogramming.</li>
+                <li><strong>Meditators & Consciousness Hackers</strong> exploring the boundaries of awareness and reality.</li>
+            </ul>
+            
+            <h4>❓ Frequently Asked Questions</h4>
+            <p><strong>How long does it take to have a lucid dream using this app?</strong><br>Most users report their first lucid dream within 1-3 weeks of consistent practice. The key is regular dream journaling, daily reality checks, and following the MILD protocol before sleep.</p>
+            <p><strong>Does the app work offline?</strong><br>Yes. All features—journal, reality checks, encyclopedia, and induction protocols—work completely offline. Binaural beats audio files are included and play locally.</p>
+            <p><strong>Are binaural beats scientifically proven?</strong><br>Research suggests binaural beats in the theta (4-8 Hz) and delta (1-4 Hz) ranges can promote relaxation and sleep onset, which are conducive to lucid dreaming. The app uses frequencies commonly cited in oneironautic literature.</p>
+            <p><strong>Can I use this app for astral projection?</strong><br>While Dream Machine is designed primarily for lucid dreaming, many practitioners use the same induction protocols (WILD, WBTB) as gateways for out-of-body experiences. The dream journal also works perfectly for recording OBEs.</p>
+            
+            <h4>🌟 Why Dream Machine Is the Lucid Dream App You Need</h4>
+            <ul>
+                <li><strong>Complete Training System:</strong> Journal + reality checks + induction + analytics in one app. No need for multiple tools.</li>
+                <li><strong>Science-Backed Protocols:</strong> Based on MILD (Mnemonic Induction of Lucid Dreams), WILD (Wake-Initiated Lucid Dreams), and WBTB (Wake Back to Bed) methodologies.</li>
+                <li><strong>Magick-Ready:</strong> Designed with chaos magicians in mind—perfect for dream sigil work, astral exploration, and servitor communication.</li>
+                <li><strong>100% Offline & Private:</strong> Your dream data stays on your device. No cloud, no accounts, no surveillance of your subconscious.</li>
+                <li><strong>Beautiful Dark Interface:</strong> Minimal, eye-friendly design for late-night journaling. No distractions, just dreams.</li>
+            </ul>
+            
+            <h3>The Gates of Sleep Are Yours to Command.</h3>
+            <p>Stop being a passenger in your own dreams. Download <strong>Dream Machine: Lucid Dreaming</strong> now and take the reins of your night—tonight. What will you discover when you wake inside the dream? 🌙⚡</p>
+        `
     }
 ];
 
