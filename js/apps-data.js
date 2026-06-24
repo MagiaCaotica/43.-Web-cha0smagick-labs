@@ -434,7 +434,7 @@ const appsData = [
         url: "https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine",
         status: "available",
         description: "Master the art of lucid dreaming with induction protocols, dream journal, reality checks, and binaural beats. 🌙",
-        image: "assets/images/lucid.webp",
+        image: "assets/images/lucid.png",
         seo: {
             title: "Dream Machine: Lucid Dreaming App | Induction, Journal & Reality Checks",
             description: "Train your mind to wake within the dream. Lucid dreaming induction, dream journal, reality checks, binaural beats and MILD/WILD techniques. Download the ultimate lucid dream app for Android.",
