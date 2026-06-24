@@ -1,71 +1,47 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#050505">
-    <meta name="robots" content="noindex, follow">
-    <title>404 - Page Not Found | Cha0smagick Labs</title>
-    <meta name="description" content="The page you are looking for does not exist. Explore our Chaos Magick apps for Android or return home.">
-    <link rel="canonical" href="https://cha0smagicklabs.com/404.html">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/images/Banner.png">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        .error-page {
-            text-align: center;
-            padding: 6rem 2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .error-page h1 {
-            font-size: 5rem;
-            color: var(--accent-color);
-            font-family: var(--font-mono);
-            margin-bottom: 1rem;
-        }
-        .error-page p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-        .error-page .cta-button {
-            display: inline-block;
-            margin: 0.5rem;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <a href="index.html" style="text-decoration:none;color:inherit;">
-            <h1>Cha0smagick Labs</h1>
-            <p>Cybermancy â€¢ Techno-Sorcery â€¢ Cyberpaganism</p>
-        </a>
-    </header>
-    
-    <main>
-        <div class="error-page">
-            <h1>404</h1>
-            <p>The portal you seek does not exist in this dimensional plane. It may have been sealed or never created.</p>
-            <p>Explore our <strong>Chaos Magick apps for Android</strong> or return home.</p>
-            <a href="index.html" class="cta-button primary">â† Back to Home</a>
-            <a href="index.html#products" class="cta-button">Browse Apps</a>
-        </div>
-    </main>
-    
-    <footer>
-        <p>&copy; 2026 Cha0smagick Labs. All rights reserved.</p>
-    </footer>
-    
-    <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('sw.js');
-        });
-    }
-    </script>
-<!-- Language Switcher - Fixed Left Sidebar -->
+import { readFileSync, writeFileSync } from 'fs';
+import { basename, resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const root = dirname(fileURLToPath(import.meta.url)) + '\\..\\';
+
+const htmlFiles = [
+  'index.html',
+  '404.html',
+  'pages/about.html',
+  'pages/app-details.html',
+  'tools/index.html',
+  'blog/index.html',
+  'blog/zener-cards-esp-training-guide.html',
+  'blog/digital-sigil-magic-guide.html',
+  'blog/norse-runes-beginners-guide.html',
+  'blog/i-ching-digital-guide.html',
+  'blog/lucid-dreaming-guide.html',
+  'blog/goetic-magic-beginners-guide.html',
+  'blog/lunar-phase-magic-guide.html',
+  'blog/rider-waite-tarot-beginners-guide.html',
+  'apps/psi-gym.html',
+  'apps/arcana-goetia.html',
+  'apps/norse-rune-oracle.html',
+  'apps/lunar-phase-calculator.html',
+  'apps/iching-oracle.html',
+  'apps/chaos-sigil-generator.html',
+  'apps/unofficial-rider-waite-tarot.html',
+  'apps/dream-machine.html',
+  'apps/manual-activacion-servidores-magicos-pdf.html',
+  'apps/tratado-runas-cazadoras-caos-pdf.html',
+  'apps/ouija-cazadora-pdf.html',
+  'apps/liber-lvpinux-pdf.html',
+];
+
+const OLD = `<div id="google_translate_element" style="position:fixed;top:0.5rem;right:0.5rem;z-index:99999;background:#1a1a1a;border:1px solid #444;border-radius:6px;padding:4px 8px;box-shadow:0 2px 12px rgba(0,0,0,0.5);"></div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>`;
+
+const NEW = `<!-- Language Switcher - Fixed Left Sidebar -->
 <div id="lang-sidebar" class="lang-sidebar">
   <button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button>
   <div id="lang-flag-list" class="lang-flag-list" style="display:none;">
@@ -111,6 +87,23 @@ function switchLang(lang) {
   }, 150);
 }
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-</html>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>`;
+
+let count = 0;
+for (const f of htmlFiles) {
+  const filePath = root + f;
+  try {
+    let content = readFileSync(filePath, 'utf8');
+    if (content.includes(OLD)) {
+      content = content.replace(OLD, NEW);
+      writeFileSync(filePath, content, 'utf8');
+      count++;
+      console.log('OK: ' + f);
+    } else {
+      console.log('SKIP (no match): ' + f);
+    }
+  } catch (e) {
+    console.log('ERROR: ' + f + ' - ' + e.message);
+  }
+}
+console.log('Done. ' + count + ' files updated.');
