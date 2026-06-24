@@ -1,0 +1,6 @@
+# Android build artifacts
+*.aab
+*.apk
+
+# Node dependencies
+node_modules/
