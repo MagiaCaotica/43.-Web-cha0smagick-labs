@@ -3,7 +3,6 @@ Allow: /
 Allow: /apps/
 Allow: /assets/images/
 Disallow: /assets/
-Disallow: /pages/app-details.html
 
 Sitemap: https://cha0smagicklabs.com/sitemap.xml
 

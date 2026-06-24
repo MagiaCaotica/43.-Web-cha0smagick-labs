@@ -2,6 +2,9 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com translate.google.com unpkg.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com unpkg.com; font-src fonts.gstatic.com; img-src 'self' data: https: *.tile.openstreetmap.org *.basemaps.cartocdn.com; connect-src 'self' www.google-analytics.com translate.google.com *.basemaps.cartocdn.com; frame-src translate.google.com; media-src 'self'
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
 
 # Assets caching
 /assets/*
