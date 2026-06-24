@@ -14,6 +14,7 @@ const tools = [
     h1: 'I Ching Oracle',
     hfSpace: 'https://cha0smagick-oraculo-de-iching.hf.space',
     appPage: '../apps/iching-oracle.html',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.app.ichingoracle',
     appName: 'I Ching Oracle App',
     appPrice: '$3.99',
     heroDesc: 'Cast the ancient Book of Changes with the authentic three-coin method. All 64 hexagrams with full interpretations.',
@@ -34,6 +35,7 @@ const tools = [
     h1: 'Viking Runes Oracle',
     hfSpace: 'https://cha0smagick-viking-runes-oracle.hf.space',
     appPage: '../apps/norse-rune-oracle.html',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.japps.norse_oracle',
     appName: 'Norse Rune Oracle App',
     appPrice: '$3.99',
     heroDesc: 'Unlock the wisdom of the Elder Futhark. Cast runes for love, wealth, protection, and daily guidance.',
@@ -54,6 +56,7 @@ const tools = [
     h1: 'Goetic Sigil Generator',
     hfSpace: 'https://cha0smagick-generador-de-sellos-goeticos.hf.space',
     appPage: '../apps/chaos-sigil-generator.html',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.app.goetiansealsgeneratorapp',
     appName: 'Chaos Sigil Generator App',
     appPrice: '$3.99',
     heroDesc: 'Generate precise sigils for the 72 spirits of Solomon. Cryptographic entropy engine with ancient alphabets.',
@@ -74,6 +77,7 @@ const tools = [
     h1: 'Lunar Phase Calculator',
     hfSpace: 'https://cha0smagick-calculo-fases-lunares.hf.space',
     appPage: '../apps/lunar-phase-calculator.html',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.lunarapp.app',
     appName: 'Lunar Phase Calculator App',
     appPrice: '$3.99',
     heroDesc: 'Track moon phases for magic, wellness, and biodynamic gardening. Real-time lunar data and guided rituals.',
@@ -230,7 +234,7 @@ function generateToolPage(tool) {
             <h3>Take It Offline with the Premium Android App</h3>
             <p>${tool.features}</p>
             <div class="price">${tool.appPrice}</div>
-            <a href="${tool.appPage}">Get ${tool.appName} →</a>
+            <a href="${tool.playStoreUrl}" class="play-store-btn pulse" target="_blank"><svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg> GET IT ON Google Play</a>
             <p style="margin-top:1rem;font-size:0.85rem;color:#888;">100% offline · No ads · No tracking · One-time payment</p>
         </section>
 

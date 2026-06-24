@@ -59,7 +59,8 @@ function renderAppsGrid() {
         const loadingStrategy = index < 3 ? 'fetchpriority="high"' : 'loading="lazy"';
         const altText = appAltText[app.id] || app.name + ' — buy chaos magick android app';
         const priceShort = app.price ? app.price.replace(/\sUSD.*$/, '').replace(/\(.*?\)/, '').trim() : '';
-        const googlePlayBtn = app.url ? `<a href="${app.url}" class="cta-button primary google-play-btn" target="_blank" onclick="event.stopPropagation()">Buy Now ${priceShort}</a>` : '';
+        const playIcon = '<svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>';
+        const googlePlayBtn = app.url ? `<a href="${app.url}" class="play-store-btn compact" target="_blank" onclick="event.stopPropagation()">${playIcon} GET IT ON</a>` : '';
         card.innerHTML = `
             <div class="card-image-wrapper">
                 ${buildPictureHtml(app.image, altText, 'app-image img-' + app.id.replace(/-/g, '-'), loadingStrategy.includes('fetchpriority') ? 'eager' : 'lazy', '300', '220')}
@@ -389,13 +390,14 @@ function renderAppDetails() {
         actionButton = `<a onclick="return false;" href="${item.hotmartLink}" class="hotmart-fb hotmart__button-checkout"><img src='https://static.hotmart.com/img/btn-buy-green.png' alt="Comprar"></a>`;
         loadHotmartWidget();
     } else if (item.url) {
-        actionButton = `<a href="${item.url}" class="cta-button primary" target="_blank">Download on Google Play</a>`;
+        const playIconBtn = '<svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px;"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>';
+        actionButton = `<a href="${item.url}" class="play-store-btn pulse" target="_blank">${playIconBtn} GET IT ON Google Play</a>`;
     } else {
         actionButton = '<button class="cta-button disabled">Coming Soon</button>';
     }
 
     if (item.onlineUrl) {
-        actionButton += ` <a href="${item.onlineUrl}" class="cta-button secondary" target="_blank" style="margin-left: 10px;">use it for free</a>`;
+        actionButton += ` <a href="${item.onlineUrl}" class="cta-button secondary" target="_blank">use it for free</a>`;
     }
 
     let screenshotsHtml = '';
