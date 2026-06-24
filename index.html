@@ -45,6 +45,8 @@
     <link rel="apple-touch-icon" href="assets/images/Banner.png">
     
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 
     <script type="application/ld+json">
     {
@@ -676,50 +678,7 @@
         <div class="footer-parallel-container">
             <div class="footer-left-side">
                 <div class="map-wrapper" id="map-wrapper">
-                    <div id="map-fallback" class="map-fallback">
-                        <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" class="world-map-svg">
-                            <rect width="400" height="200" fill="#0a0a0b"/>
-                            <ellipse cx="200" cy="100" rx="160" ry="80" fill="none" stroke="#27272a" stroke-width="0.5"/>
-                            <ellipse cx="200" cy="100" rx="120" ry="80" fill="none" stroke="#27272a" stroke-width="0.3"/>
-                            <ellipse cx="200" cy="100" rx="80" ry="80" fill="none" stroke="#27272a" stroke-width="0.3"/>
-                            <ellipse cx="200" cy="100" rx="40" ry="80" fill="none" stroke="#27272a" stroke-width="0.3"/>
-                            <line x1="40" y1="100" x2="360" y2="100" stroke="#27272a" stroke-width="0.3"/>
-                            <line x1="200" y1="20" x2="200" y2="180" stroke="#27272a" stroke-width="0.3"/>
-                            <circle cx="90" cy="65" r="2" fill="#c5a059" opacity="0.4"/>
-                            <circle cx="120" cy="80" r="1.5" fill="#c5a059" opacity="0.3"/>
-                            <circle cx="280" cy="70" r="2" fill="#c5a059" opacity="0.4"/>
-                            <circle cx="310" cy="110" r="1.5" fill="#c5a059" opacity="0.3"/>
-                            <circle cx="160" cy="90" r="1" fill="#c5a059" opacity="0.5"/>
-                            <circle cx="240" cy="120" r="1.5" fill="#c5a059" opacity="0.3"/>
-                            <circle cx="80" cy="130" r="1" fill="#c5a059" opacity="0.3"/>
-                            <circle cx="320" cy="85" r="1" fill="#c5a059" opacity="0.4"/>
-                            <circle cx="180" cy="140" r="1" fill="#c5a059" opacity="0.25"/>
-                            <circle cx="260" cy="60" r="1.5" fill="#c5a059" opacity="0.35"/>
-                            <circle cx="140" cy="50" r="1" fill="#c5a059" opacity="0.3"/>
-                            <circle cx="340" cy="130" r="1" fill="#c5a059" opacity="0.3"/>
-                            <circle cx="60" cy="100" r="1" fill="#c5a059" opacity="0.3"/>
-                            <circle cx="220" cy="75" r="1.5" fill="#c5a059" opacity="0.35"/>
-                            <text x="200" y="195" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">VISITOR MAP</text>
-                        </svg>
-                    </div>
-                    <script>
-                        (function() {
-                            var wrapper = document.getElementById('map-wrapper');
-                            if (!wrapper) return;
-                            var script = document.createElement('script');
-                            script.type = 'text/javascript';
-                            script.id = 'mapmyvisitors';
-                            script.src = 'https://mapmyvisitors.com/map.js?cl=ffffff&w=a&t=n&d=U600mkYyjnXucg1kTmKnUH5nokSrVr-IWPD9akBU-r0&co=000000';
-                            script.onload = function() {
-                                var fallback = document.getElementById('map-fallback');
-                                if (fallback) fallback.style.display = 'none';
-                            };
-                            script.onerror = function() {
-                                console.warn('MapMyVisitors widget failed to load');
-                            };
-                            wrapper.appendChild(script);
-                        })();
-                    </script>
+                    <div id="visitor-map" class="visitor-leaflet-map"></div>
                 </div>
                 <div class="visitor-counter">
                     <span class="counter-label">Number of Ascended Ones:</span>
@@ -753,5 +712,123 @@
 
     <script src="js/apps-data.js"></script>
     <script src="js/app-render.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var mapEl = document.getElementById('visitor-map');
+        if (!mapEl || typeof L === 'undefined') return;
+
+        // Dark tile layer from CartoDB (free, no API key)
+        var tileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+        var tileAttr = '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>';
+
+        var map = L.map('visitor-map', {
+            center: [20, 0],
+            zoom: 1,
+            zoomControl: true,
+            scrollWheelZoom: true,
+            dragging: true,
+            doubleClickZoom: false,
+            touchZoom: true,
+            keyboard: false,
+            attributionControl: true,
+            worldCopyJump: true
+        });
+
+        L.tileLayer(tileUrl, {
+            attribution: tileAttr,
+            maxZoom: 8,
+            minZoom: 1
+        }).addTo(map);
+
+        // Visitor data: [lat, lng, visits, location]
+        var visitors = [
+            [34.0584, -118.2780, 130, 'Los Angeles, US'],
+            [3.4372, -76.5225, 89, 'Santiago de Cali, Colombia'],
+            [37.4043, -122.0748, 76, 'Mountain View, US'],
+            [37.7510, -97.8220, 73, 'United States'],
+            [51.2993, 9.4910, 69, 'Germany'],
+            [51.4964, -0.1224, 61, 'United Kingdom'],
+            [52.5155, 13.4062, 41, 'Berlin, Germany'],
+            [13.0878, 80.2785, 34, 'Chennai, India'],
+            [40.4172, -3.6840, 28, 'Spain'],
+            [55.7123, 12.0564, 28, 'Denmark'],
+            [53.2851, -6.3713, 25, 'Dublin, Ireland'],
+            [60.0000, -95.0000, 17, 'Canada'],
+            [36.6865, -6.1361, 14, 'Jerez de la Frontera, Spain'],
+            [52.3824, 4.8995, 14, 'Netherlands'],
+            [54.6816, 25.3225, 11, 'Vilnius, Lithuania'],
+            [38.7057, -9.1359, 9, 'Portugal'],
+            [35.6980, 51.4115, 9, 'Iran'],
+            [50.0833, 16.7667, 9, 'Czechia'],
+            [23.0000, -102.0000, 9, 'Mexico'],
+            [51.5077, -0.1190, 8, 'London, UK'],
+            [42.8333, 12.8333, 8, 'Italy'],
+            [37.3824, -5.9761, 8, 'Seville, Spain'],
+            [46.4355, 30.4104, 7, 'Ukraine'],
+            [52.3759, 4.8975, 6, 'Amsterdam, Netherlands'],
+            [50.8509, 4.3447, 6, 'Belgium'],
+            [4.6358, -73.4664, 6, 'La Mesa, Colombia'],
+            [40.7876, -74.0600, 6, 'Secaucus, US'],
+            [19.3837, -99.1757, 5, 'Mexico City, Mexico'],
+            [49.6850, 11.4150, 5, 'Betzenstein, Germany'],
+            [-27.0000, 133.0000, 4, 'Australia'],
+            [44.8166, 20.4721, 4, 'Belgrade, Serbia'],
+            [40.4165, -3.7026, 3, 'Madrid, Spain'],
+            [53.4663, -2.1342, 3, 'Manchester, UK'],
+            [25.0000, 45.0000, 2, 'Saudi Arabia'],
+            [1.3248, 103.8566, 2, 'Singapore'],
+            [-34.0000, -64.0000, 2, 'Argentina'],
+            [41.0214, 28.9948, 2, 'Turkey'],
+            [-34.8272, -58.3956, 2, 'Florencio Varela, Argentina'],
+            [-33.7967, -59.5208, 1, 'Baradero, Argentina'],
+            [-29.0000, 24.0000, 1, 'South Africa'],
+            [18.4667, -69.9000, 1, 'Santo Domingo, Dominican Rep.'],
+            [-4.3000, 15.3000, 1, 'Kinshasa, DR Congo'],
+            [47.4984, 19.0404, 1, 'Budapest, Hungary'],
+            [45.8293, 15.9793, 1, 'Zagreb, Croatia'],
+            [-21.9065, -47.8747, 1, 'São Carlos, Brazil'],
+            [14.6328, -90.5199, 1, 'Guatemala City'],
+            [-10.3383, -62.8954, 1, 'Cacaulandia, Brazil'],
+            [-30.1146, -51.1639, 1, 'Porto Alegre, Brazil'],
+            [-36.8506, 174.7679, 1, 'Auckland, New Zealand'],
+            [-6.1750, 106.8286, 1, 'Indonesia'],
+            [45.4643, 9.1895, 1, 'Milan, Italy'],
+            [-10.0000, -55.0000, 1, 'Brazil'],
+            [55.8822, 26.5268, 1, 'Latvia'],
+            [52.2394, 21.0362, 1, 'Poland'],
+            [59.3247, 18.0560, 1, 'Sweden'],
+            [33.8740, 35.5089, 1, 'Beirut, Lebanon'],
+            [37.5647, 15.0631, 1, 'Gravina di Catania, Italy'],
+            [43.6426, -79.4002, 1, 'Toronto, Canada']
+        ];
+
+        var maxVisits = 130; // max value for radius scaling
+
+        visitors.forEach(function(v) {
+            var lat = v[0], lng = v[1], visits = v[2], loc = v[3];
+            var radius = 3 + (visits / maxVisits) * 10;
+            var opacity = 0.4 + (visits / maxVisits) * 0.6;
+
+            var marker = L.circleMarker([lat, lng], {
+                radius: radius,
+                fillColor: '#ff4444',
+                color: '#ff4444',
+                weight: 1,
+                fillOpacity: opacity,
+                opacity: 0.8
+            }).addTo(map);
+
+            marker.bindTooltip(loc + ' — ' + visits + ' visits', {
+                direction: 'top',
+                offset: [0, -radius],
+                className: 'visitor-tooltip'
+            });
+        });
+
+        // Add a small zoom-out bias so the whole world fits
+        setTimeout(function() { map.invalidateSize(); }, 500);
+        window.addEventListener('resize', function() { map.invalidateSize(); });
+    });
+    </script>
 </body>
 </html>
