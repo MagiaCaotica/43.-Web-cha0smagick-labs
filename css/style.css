@@ -486,7 +486,7 @@ span.play-store-btn,
 /* ========================================================================
    BREADCRUMB
    ======================================================================== */
-.breadcrumb-nav {
+.breadcrumb, .breadcrumb-nav {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0.75rem 2rem;
@@ -494,6 +494,8 @@ span.play-store-btn,
   color: var(--text-dim);
   font-family: var(--font-mono);
 }
+.breadcrumb a { color: var(--accent-gold); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
 .breadcrumb-list {
   list-style: none;
   display: flex;
@@ -857,6 +859,14 @@ footer a:hover { color: var(--accent-white); }
 .tools-header { text-align:center; padding:2rem 1rem; border-bottom:1px solid var(--border-subtle); }
 .tools-header h1 { color:var(--accent-light); font-size:1.8rem; letter-spacing:0.05em; }
 .tools-header p { color:#888; font-size:0.95rem; margin-top:0.3rem; }
+section.intro { text-align:center; max-width:700px; margin:2rem auto; padding:0 1rem; }
+section.intro h2 { color:var(--text-primary); font-size:1.3rem; margin-bottom:0.8rem; }
+section.intro p { color:var(--text-secondary); font-size:0.95rem; line-height:1.7; }
+section.bottom-cta { text-align:center; max-width:650px; margin:3rem auto; padding:2rem 1rem; border-top:1px solid var(--border-subtle); }
+section.bottom-cta h3 { color:var(--accent-gold); font-size:1.1rem; margin-bottom:0.8rem; }
+section.bottom-cta p { color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.2rem; }
+section.bottom-cta a { display:inline-block; background:var(--accent-gold); color:var(--bg-body); padding:0.7rem 1.8rem; border-radius:6px; font-weight:700; text-decoration:none; transition:all 0.3s; }
+section.bottom-cta a:hover { background:var(--accent-light); transform:translateY(-2px); }
 .tools-grid {
   max-width:1000px; margin:2rem auto; padding:0 1rem;
   display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;
@@ -991,6 +1001,52 @@ footer a:hover { color: var(--accent-white); }
 .mb-2 { margin-bottom:2rem; }
 
 /* ========================================================================
+   TOOL PAGE LAYOUT — Professional container & section styling
+   ======================================================================== */
+.container { max-width:800px; margin:0 auto; padding:0 1.5rem 3rem; }
+
+.container .hero { text-align:center; padding:2rem 0 1.5rem; margin-bottom:2rem; }
+.container .hero h2 { font-size:1.6rem; color:var(--text-primary); font-weight:300; letter-spacing:2px; text-transform:uppercase; margin-bottom:1rem; }
+.container .hero p { font-size:1rem; color:var(--text-secondary); max-width:650px; margin:0 auto; line-height:1.7; }
+
+.container .benefits { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:1.5rem 2rem; margin-bottom:2rem; }
+.container .benefits h3 { color:var(--accent-gold); font-size:1rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; }
+.container .benefits ul { list-style:none; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; }
+.container .benefits ul li { padding:0.4rem 0 0.4rem 1.5rem; position:relative; font-size:0.9rem; color:#bbb; }
+.container .benefits ul li::before { content:"✓"; position:absolute; left:0; color:var(--accent-gold); font-weight:700; }
+
+.container .tool-frame { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md); overflow:hidden; margin-bottom:2rem; box-shadow:0 4px 20px rgba(0,0,0,0.3); }
+.container .tool-frame iframe { width:100%; height:500px; border:none; display:block; }
+.container .tool-frame .label { padding:0.6rem 1rem; color:#888; font-size:0.85rem; border-top:1px solid var(--border-subtle); text-align:center; background:#0a0a0a; }
+
+.container .compare-section { margin-bottom:2rem; }
+.container .compare-section h3 { text-align:center; margin-bottom:1.2rem; color:var(--text-primary); font-size:1.1rem; }
+
+.container .funnel-faq { margin-bottom:2rem; }
+.container .funnel-faq h3 { text-align:center; margin-bottom:1rem; color:var(--text-primary); font-size:1.1rem; }
+
+.container .cta-box { background:linear-gradient(135deg, #0a0a0a 0%, #111 100%); border:1px solid var(--accent-gold); border-radius:var(--radius-lg); padding:2rem; margin-bottom:2rem; text-align:center; }
+.container .cta-box h3 { color:var(--text-primary); font-size:1.2rem; margin-bottom:1rem; }
+.container .cta-box p { color:var(--text-secondary); font-size:0.9rem; margin-bottom:1rem; max-width:600px; margin-left:auto; margin-right:auto; }
+.container .cta-box .price { font-family:var(--font-mono); font-size:2rem; color:var(--accent-gold); font-weight:700; margin:1rem 0; }
+.container .cta-box .play-store-btn { display:inline-flex; align-items:center; gap:0.5rem; background:#3DDC84; color:#000 !important; padding:0.7rem 1.8rem; border-radius:6px; font-weight:700; font-size:0.9rem; text-decoration:none; text-transform:uppercase; transition:all 0.3s; box-shadow:0 2px 8px rgba(61,220,132,0.3); }
+.container .cta-box .play-store-btn:hover { background:#2DBD6E; transform:translateY(-2px); box-shadow:0 6px 20px rgba(61,220,132,0.5); }
+.container .cta-box .play-icon { width:20px; height:20px; }
+
+.back-link { text-align:center; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border-subtle); }
+.back-link a { color:#888; font-size:0.85rem; text-decoration:none; transition:color 0.2s; }
+.back-link a:hover { color:var(--accent-light); }
+
+@media (max-width:600px) {
+  .container { padding:0 1rem 2rem; }
+  .container .hero h2 { font-size:1.2rem; }
+  .container .benefits ul { grid-template-columns:1fr; }
+  .container .tool-frame iframe { height:380px; }
+  .container .cta-box { padding:1.5rem; }
+  .container .cta-box .price { font-size:1.6rem; }
+}
+
+/* ========================================================================
    TOOL FUNNEL — Conversion Elements for Free Tool Pages
    ======================================================================== */
 .compare-table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.9rem; }
@@ -1012,8 +1068,8 @@ footer a:hover { color: var(--accent-white); }
 
 .sticky-conversion-bar { position:fixed; bottom:0; left:0; right:0; background:rgba(5,5,5,0.97); border-top:1px solid #333; padding:0.7rem 1.5rem; z-index:99999; display:flex; flex-wrap:wrap; align-items:center; gap:0.8rem; justify-content:center; backdrop-filter:blur(10px); }
 .sticky-conversion-bar .price-tag { font-family:var(--font-mono); color:#ffd700; font-size:1.2rem; font-weight:600; white-space:nowrap; }
-.sticky-conversion-bar .sticky-cta { background:#ffd700; color:#050505; border:none; padding:0.5rem 1.2rem; border-radius:4px; font-weight:600; cursor:pointer; font-size:0.85rem; text-decoration:none; white-space:nowrap; transition:transform 0.2s; }
-.sticky-conversion-bar .sticky-cta:hover { transform:scale(1.05); }
+.sticky-conversion-bar .sticky-cta { background:#3DDC84; color:#000; border:none; padding:0.5rem 1.2rem; border-radius:4px; font-weight:700; cursor:pointer; font-size:0.85rem; text-decoration:none; white-space:nowrap; text-transform:uppercase; transition:all 0.2s; box-shadow:0 2px 8px rgba(61,220,132,0.3); }
+.sticky-conversion-bar .sticky-cta:hover { background:#2DBD6E; transform:scale(1.05); box-shadow:0 4px 15px rgba(61,220,132,0.5); }
 .sticky-conversion-bar .sticky-text { font-size:0.8rem; color:#aaa; white-space:nowrap; }
 
 .funnel-urgency { display:inline-block; background:#ff4444; color:#fff; padding:0.2rem 0.6rem; border-radius:3px; font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-left:0.5rem; }
