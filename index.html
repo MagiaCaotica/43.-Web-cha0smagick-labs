@@ -16,6 +16,12 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
       gtag('js', new Date());
       gtag('config', 'G-V6LHCPN9TK');
     </script>
@@ -242,7 +248,7 @@
                 <a href="https://t.me/magiacaoticacoven" target="_blank" class="contact-btn" aria-label="Telegram coven group">💬 Telegram Coven</a>
                 <a href="https://www.instagram.com/cha0smagick.labs/" target="_blank" class="contact-btn" aria-label="Instagram">📷 Instagram</a>
                 <a href="https://discord.gg/6vNSCaPgPd" target="_blank" class="contact-btn" aria-label="Discord server">🎮 DISCORD</a>
-                <a href="https://cha0smagicklabs.blogspot.com/" target="_blank" class="contact-btn" aria-label="Privacy and legal policy">⚖️ LEGAL & PRIVACY</a>
+                <a href="privacy-policy.html" class="contact-btn" aria-label="Privacy and legal policy">⚖️ LEGAL & PRIVACY</a>
                 <a href="https://bit.ly/4lGEo9z" target="_blank" class="contact-btn special" aria-label="Abundance ritual">🌟 Abundance Ritual</a>
             </div>
             <p class="ads-info">General Contact & Inquiries: <a href="mailto:magiacaoticapractica@gmail.com">magiacaoticapractica@gmail.com</a></p>
@@ -349,7 +355,7 @@
                         <h4>Cha0smagick Labs</h4>
                         <ul>
                             <li><a href="https://magiadelcaospractica.com">Official Blog</a></li>
-                            <li><a href="https://cha0smagicklabs.blogspot.com/">Privacy & Legal</a></li>
+                            <li><a href="privacy-policy.html">Privacy & Legal</a></li>
                             <li><a href="https://play.google.com/store/apps/dev?id=5224914033326414083">Google Play Developer</a></li>
                         </ul>
                     </div>
@@ -548,6 +554,35 @@ function switchLang(lang) {
 }
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent-banner" style="position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;border-top:1px solid #444;padding:1rem 2rem;display:none;z-index:999999;font-size:0.9rem;color:#ccc;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:1rem;">
+        <p style="flex:1;margin:0;">This site uses minimal cookies for analytics and language translation. No tracking or advertising cookies are used. <a href="privacy-policy.html" style="color:#ffd700;">Learn more</a>.</p>
+        <button onclick="acceptCookies()" style="background:#ffd700;color:#050505;border:none;padding:0.6rem 1.5rem;border-radius:4px;font-weight:600;cursor:pointer;white-space:nowrap;">Accept</button>
+        <button onclick="declineCookies()" style="background:transparent;color:#aaa;border:1px solid #555;padding:0.6rem 1.5rem;border-radius:4px;cursor:pointer;white-space:nowrap;">Decline</button>
+    </div>
+</div>
+<script>
+(function() {
+    var c = document.cookie.match(/(?:^|;\s*)cookie_consent=([^;]*)/);
+    if (!c) {
+        setTimeout(function() {
+            document.getElementById('cookie-consent-banner').style.display = 'block';
+        }, 1000);
+    }
+})();
+function acceptCookies() {
+    document.cookie = "cookie_consent=accepted; max-age=31536000; path=/; SameSite=Lax";
+    document.getElementById('cookie-consent-banner').style.display = 'none';
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+}
+function declineCookies() {
+    document.cookie = "cookie_consent=declined; max-age=31536000; path=/; SameSite=Lax";
+    document.getElementById('cookie-consent-banner').style.display = 'none';
+    gtag('consent', 'update', { 'analytics_storage': 'denied' });
+}
+</script>
 </body>
 <!-- Rev 2026-06-24 -->
 </html>
