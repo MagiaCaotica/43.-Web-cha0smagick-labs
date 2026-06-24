@@ -7,6 +7,9 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://*.basemaps.cartocdn.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
@@ -24,8 +27,7 @@
     <link rel="canonical" href="https://cha0smagicklabs.com/">
     <meta name="author" content="Cha0smagick Labs - Frater Alek0s">
     <meta name="language" content="English">
-    <meta name="google-site-verification" content="REEMPLAZAR_CON_TU_CODIGO_DE_VERIFICACION">
-
+    
     <link rel="alternate" href="https://cha0smagicklabs.com/" hreflang="en" />
     <link rel="alternate" href="https://cha0smagicklabs.com/" hreflang="x-default" />
 
@@ -181,13 +183,28 @@
         header {
             background-color: #050505;
             color: #dcdcdc;
-            padding: 4rem 1rem;
+            padding: 3rem 1rem 2rem;
             text-align: center;
             border-bottom: 1px solid #1a1a1a;
             background-image: radial-gradient(circle at center, #111 0%, #050505 70%);
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        .header-logo {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 12px;
+            opacity: 0.7;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-logo:hover {
+            opacity: 1;
         }
 
         header .site-title, header h1 {
@@ -208,38 +225,14 @@
             text-transform: uppercase;
         }
 
-        .header-main-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        .header-title-group {
-            flex-shrink: 0;
-            padding: 0 1rem;
-        }
-
-        .header-banner {
-            width: 252px;
-            height: 252px;
-            flex-shrink: 0;
-            object-fit: contain;
-            border-radius: 12px;
-            opacity: 0.6;
-            border: 1px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .header-banner:hover {
-            opacity: 1;
-        }
-
         @media (max-width: 768px) {
-            .header-banner {
-                display: none;
+            .header-logo {
+                width: 140px;
+                height: 140px;
+            }
+            header .site-title {
+                font-size: 2rem;
+                letter-spacing: 3px;
             }
         }
 
@@ -514,16 +507,16 @@
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
     <header>
-        <div class="header-main-row">
-            <img src="assets/images/Banner.webp" alt="Cha0smagick Labs - Chaos Magick Apps for Android" class="header-banner" width="252" height="252" loading="eager">
-            <div class="header-title-group" itemscope itemtype="https://schema.org/Organization">
-                <span class="site-title" itemprop="name" role="heading" aria-level="1">Cha0smagick Labs</span>
-                <p itemprop="description">Corporate Cybermancy Solutions — Techno-Sorcery • Cybermancy • Cyberpaganism</p>
-                <meta itemprop="url" content="https://cha0smagicklabs.com/">
-                <meta itemprop="foundingDate" content="2026">
-                <meta itemprop="founder" content="Frater Alek0s">
-            </div>
-            <img src="assets/images/Banner.webp" alt="Cha0smagick Labs - Digital Sigil Generator & Cybermancy Technology" class="header-banner" width="252" height="252" loading="eager">
+        <picture>
+            <source srcset="assets/images/Banner.webp" type="image/webp">
+            <img src="assets/images/Banner.png" alt="Cha0smagick Labs - Chaos Magick Apps for Android" class="header-logo" width="200" height="200" loading="eager">
+        </picture>
+        <div itemscope itemtype="https://schema.org/Organization">
+            <span class="site-title" itemprop="name" role="heading" aria-level="1">Cha0smagick Labs</span>
+            <p itemprop="description">Corporate Cybermancy Solutions — Techno-Sorcery • Cybermancy • Cyberpaganism</p>
+            <meta itemprop="url" content="https://cha0smagicklabs.com/">
+            <meta itemprop="foundingDate" content="2026">
+            <meta itemprop="founder" content="Frater Alek0s">
         </div>
     </header>
 
@@ -531,8 +524,10 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
+            <li><a href="tools/index.html">Free Tools</a></li>
             <li><a href="#products">Apps & Services</a></li>
             <li><a href="#books-section">Books</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -837,5 +832,12 @@
         window.addEventListener('resize', function() { map.invalidateSize(); });
     });
     </script>
+<div id="google_translate_element" style="position:fixed;bottom:1rem;right:1rem;z-index:9999;"></div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

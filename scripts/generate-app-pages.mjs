@@ -488,6 +488,29 @@ function escapeHtml(str) {
     return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+/**
+ * Build a <picture> element with WebP source + PNG fallback.
+ * If src is already .png, returns a plain <img> (no WebP source).
+ * @param {string} src - Relative image path (e.g. "assets/images/zener.webp")
+ * @param {string} alt - Alt text
+ * @param {string} className - CSS class
+ * @param {number|string} width - Image width
+ * @param {number|string} height - Image height
+ * @param {string} loading - loading attribute ("lazy" or "eager")
+ * @param {string} [prefix="../"] - Path prefix (default "../")
+ * @returns {string} HTML string
+ */
+function buildPictureHtml(src, alt, className, width, height, loading, prefix = '../') {
+    const isWebp = src.endsWith('.webp');
+    const fullWebp = prefix + src;
+    const fullPng = prefix + (isWebp ? src.replace(/\.webp$/i, '.png') : src);
+    const imgTag = `<img src="${fullPng}" alt="${alt}" loading="${loading}" class="${className}" width="${width}" height="${height}">`;
+    if (isWebp) {
+        return `<picture>\n    <source srcset="${fullWebp}" type="image/webp">\n    ${imgTag}\n</picture>`;
+    }
+    return imgTag;
+}
+
 function buildBreadcrumbSchema(items) {
     return JSON.stringify({
         "@context": "https://schema.org",
@@ -590,7 +613,7 @@ function buildAlsoLikeSection(currentId, items) {
         return `
             <a href="${app.id}.html" class="app-card">
                 <div class="card-image-wrapper">
-                    <img src="../${app.image}" alt="${app.name}" loading="lazy" width="300" height="220" class="app-image">
+                    ${buildPictureHtml(app.image, app.name, 'app-image', 300, 220, 'lazy')}
                 </div>
                 <div class="card-content">
                     <h4>${app.name}</h4>
@@ -742,7 +765,6 @@ function generatePage(item, type) {
     <meta name="theme-color" content="#050505">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Cha0smagick Labs - Frater Alek0s">
-    <meta name="google-site-verification" content="REEMPLAZAR_CON_TU_CODIGO_DE_VERIFICACION">
     
     <title>${escapeHtml(item.seo.title)}</title>
     <meta name="description" content="${escapeHtml(item.seo.description.length > 160 ? item.seo.description.substring(0, 157) + '...' : item.seo.description)}">
@@ -771,6 +793,9 @@ function generatePage(item, type) {
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://*.basemaps.cartocdn.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="../css/style.css">
@@ -809,7 +834,7 @@ function generatePage(item, type) {
     <main>
         <section class="app-details">
             <div class="detail-header-layout">
-                <img src="../${cleanImage}" alt="${escapeHtml(item.name)}" loading="eager" class="detail-main-image" width="120" height="120">
+                ${buildPictureHtml(cleanImage, escapeHtml(item.name), 'detail-main-image', 120, 120, 'eager')}
                 <div class="detail-header-info">
                     <h2>${item.name}${isNew ? ' <span class="discount-badge">NEW!</span>' : ''}</h2>
                     <p class="lead-text">${item.description}</p>
@@ -928,6 +953,13 @@ function generatePage(item, type) {
         window.addEventListener('resize', function() { map.invalidateSize(); });
     });
     </script>
+<div id="google_translate_element" style="position:fixed;bottom:1rem;right:1rem;z-index:9999;"></div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>`;
 

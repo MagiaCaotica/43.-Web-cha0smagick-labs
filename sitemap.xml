@@ -88,4 +88,66 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <!-- Free Tools Hub -->
+    <url>
+        <loc>https://cha0smagicklabs.com/tools/index.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Blog Pages -->
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/index.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/zener-cards-esp-training-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/digital-sigil-magic-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/norse-runes-beginners-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/i-ching-digital-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/lucid-dreaming-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/goetic-magic-beginners-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/lunar-phase-magic-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/rider-waite-tarot-beginners-guide.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>

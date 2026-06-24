@@ -1,6 +1,31 @@
 // app-render.js - Script for dynamically rendering apps with SEO & GEO optimization
 // Optimized for: buy chaos magick app, best occult android app, esoteric tools online, digital sigil generator
 
+/**
+ * Build a <picture> element for WebP + PNG fallback.
+ * If src ends with .webp, generates <picture> with .webp source and .png fallback.
+ * If src ends with .png, returns a plain <img>.
+ * @param {string} src - Image path (relative or absolute)
+ * @param {string} alt - Alt text
+ * @param {string} className - CSS class
+ * @param {string} [loading='lazy'] - loading attribute
+ * @param {string} [width=''] - Image width
+ * @param {string} [height=''] - Image height
+ * @returns {string} HTML string
+ */
+function buildPictureHtml(src, alt, className, loading = 'lazy', width = '', height = '') {
+    const isWebp = src.endsWith('.webp');
+    const pngSrc = isWebp ? src.replace(/\.webp$/i, '.png') : src;
+    const dims = (width ? ` width="${width}"` : '') + (height ? ` height="${height}"` : '');
+    const imgTag = `<img src="${pngSrc}" alt="${alt}" loading="${loading}" class="${className}"${dims}>`;
+    if (isWebp) {
+        return `<picture>\n    <source srcset="${src}" type="image/webp">\n    ${imgTag}\n</picture>`;
+    }
+    return imgTag;
+}
+
+
+
 // SEO alt text mapping for app images
 const appAltText = {
     'psi-gym': 'PSI GYM Zener Cards & ESP Training — buy chaos magick app for psychic development',
@@ -37,7 +62,7 @@ function renderAppsGrid() {
         const googlePlayBtn = app.url ? `<a href="${app.url}" class="cta-button primary google-play-btn" target="_blank" onclick="event.stopPropagation()">Buy Now ${priceShort}</a>` : '';
         card.innerHTML = `
             <div class="card-image-wrapper">
-                <img src="${app.image}" alt="${altText}" ${loadingStrategy} width="300" height="220" class="app-image img-${app.id.replace(/-/g, '-')}">
+                ${buildPictureHtml(app.image, altText, 'app-image img-' + app.id.replace(/-/g, '-'), loadingStrategy.includes('fetchpriority') ? 'eager' : 'lazy', '300', '220')}
             </div>
             <div class="card-content">
                 <h4>${app.name}${(app.id === 'psi-gym' || app.id === 'dream-machine') ? ' <span class="discount-badge">¡NUEVO!</span>' : ''}</h4>
@@ -114,7 +139,7 @@ function renderBooksSection() {
 
             card.innerHTML = `
                 <div class="card-image-wrapper">
-                    <img src="${book.image}" alt="${book.name}" loading="lazy" width="300" height="220" class="app-image">
+                    ${buildPictureHtml(book.image, book.name, 'app-image', 'lazy', '300', '220')}
                 </div>
                 <div class="card-content">
                     <h4>${book.name}</h4>
@@ -389,7 +414,7 @@ function renderAppDetails() {
 
     detailsContainer.innerHTML = `
         <div class="detail-header-layout">
-            <img src="../${item.image}" alt="${item.name}" loading="lazy" class="detail-main-image">
+            ${buildPictureHtml('../' + item.image, item.name, 'detail-main-image', 'lazy')}
             <div class="detail-header-info">
                 <h2>${item.name}${(item.id === 'psi-gym' || item.id === 'dream-machine') ? ' <span class="discount-badge">¡NUEVO!</span>' : ''}</h2>
                 <p class="lead-text">${item.description}</p>
@@ -554,7 +579,7 @@ function renderAlsoLike(currentId) {
         const priceShort = app.price ? app.price.replace(/\sUSD.*$/, '').replace(/\(.*?\)/, '').trim() : '';
         card.innerHTML = `
             <div class="card-image-wrapper">
-                <img src="../${app.image}" alt="${appAltText[app.id] || app.name}" loading="lazy" width="300" height="220" class="app-image">
+                ${buildPictureHtml('../' + app.image, appAltText[app.id] || app.name, 'app-image', 'lazy', '300', '220')}
             </div>
             <div class="card-content">
                 <h4>${app.name}</h4>

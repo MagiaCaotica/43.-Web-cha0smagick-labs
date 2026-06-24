@@ -1,0 +1,115 @@
+{
+  "developer": {
+    "name": "Cha0smagick Labs",
+    "email": "cha0smagicklabs@gmail.com",
+    "website": "https://cha0smagicklabs.com",
+    "privacy_policy": "https://cha0smagicklabs.blogspot.com/",
+    "google_play_dev": "https://play.google.com/store/apps/dev?id=5224914033326414083"
+  },
+  "apps": [
+    {
+      "id": "psi-gym",
+      "name": "PSI GYM: Zener Cards & ESP",
+      "package": "com.cha0smagicklabs.zenercards",
+      "price": "$3.99 USD",
+      "category": "Lifestyle / Esoteric",
+      "short_description": "Train your intuition and extrasensory perception with professional Zener cards and advanced statistical tracking.",
+      "long_description": "Can You Predict the Unknown? Unlock Your Latent Psychic Potential.\n\nPSI GYM is a professional-grade ESP (Extrasensory Perception) training environment designed to take intuition out of the realm of 'luck' and into the realm of skill. Using the world-standard Zener card system—Circle, Cross, Waves, Square, and Star—this app provides a rigorous, distraction-free laboratory for your mind.\n\nFeatures:\n• Classic Zener Card Engine: Practice with the iconic 25-card deck (5 of each symbol). True randomness for valid statistical testing.\n• Advanced Statistical Tracking: Track hit rates, probability deviations, and historical performance to identify your 'psychic streaks'.\n• Multiple Training Modes: Open Deck for learning and Blind Testing for serious verification.\n• Minimalist Gnostic Interface: Clean, dark UI for focused ESP work.\n• 100% Offline & Private: Your data stays on your device.\n\nPerfect for psychic seekers, chaos magicians, and parapsychology enthusiasts.",
+      "tags": ["zener cards", "esp training", "psychic trainer", "intuition app", "extrasensory perception", "parapsychology", "chaos magick", "clairvoyance"],
+      "screenshots": ["assets/images/z1.png", "assets/images/z2.png", "assets/images/z3.png"],
+      "icon": "assets/images/zener.webp",
+      "google_play_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards"
+    },
+    {
+      "id": "arcana-goetia",
+      "name": "Arcana Goetia: Ritual & Sigils",
+      "package": "com.cha0smagick.sigilgeneratorfinal",
+      "price": "$3.99 USD",
+      "category": "Lifestyle / Esoteric",
+      "short_description": "Command the 72 spirits of Solomon with precision sigils, lore, and guided rituals—all offline.",
+      "long_description": "What If You Could Command the 72 Spirits of Solomon from Your Pocket?\n\nArcana Goetia is the first digital grimoire that puts the complete Lemegeton—sigils, hierarchies, planetary correspondences, and invocation guides—directly into your hands.\n\nFeatures:\n• Goetic Sigil Generator: Generate razor-sharp sigils for all 72 spirits of Solomon.\n• Complete Lore Grimoire: Exhaustive database of each spirit with rank, planetary hour, and correspondences.\n• Built-in Invocation Guidance: Structured ritual frameworks for beginners and adepts.\n• Minimalist Altar Interface: Dark, immersive environment for ritual work.\n• 100% Offline: No internet required.\n\nFor chaos magicians, Solomonic practitioners, and occult beginners.",
+      "tags": ["goetia", "solomon sigils", "lemegeton", "grimoire", "goetic magic", "sigil generator", "occult", "chaos magic", "invocation", "72 spirits"],
+      "screenshots": ["assets/images/go1.PNG", "assets/images/go2.PNG", "assets/images/go3.PNG"],
+      "icon": "assets/images/GSG.webp",
+      "google_play_url": "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal"
+    },
+    {
+      "id": "norse-rune-oracle",
+      "name": "Norse Rune Oracle",
+      "package": "com.japps.norse_oracle",
+      "price": "$3.99 USD",
+      "category": "Lifestyle / Esoteric",
+      "short_description": "Unlock Viking wisdom with 12+ rune spreads for love, wealth, protection, and daily guidance.",
+      "long_description": "What Do the Ancient Runes Say About Your Future?\n\nThe Norse Rune Oracle puts the full power of the Elder Futhark at your fingertips. Whether you are a seasoned rune reader or picking up a rune stone for the first time, this app transforms your phone into a living oracle.\n\nFeatures:\n• Daily Rune Inspiration: Pull a Rune of the Day every morning.\n• 12+ Advanced Casting Spreads: Odin's Rune, The Three Norns, Love Reading, Wealth Cast, Protection Cast, and more.\n• Intention-Focused Readings: Write your question and get a deeply personal interpretation.\n• Complete Elder Futhark Library: Master all 24 runes with detailed profiles.\n• Immersive Norse Atmosphere: Elegant animations and dark mystical interface.\n\nPerfect for beginners and experienced readers alike.",
+      "tags": ["norse runes", "viking runes", "rune reading", "elder futhark", "divination", "rune oracle", "viking wisdom", "norse divination"],
+      "screenshots": ["assets/images/nr1.PNG", "assets/images/nr2.PNG", "assets/images/nr3.PNG", "assets/images/nr4.PNG"],
+      "icon": "assets/images/norse-rune.webp",
+      "google_play_url": "https://play.google.com/store/apps/details?id=com.japps.norse_oracle"
+    },
+    {
+      "id": "lunar-phase-calculator",
+      "name": "Lunar Phase Calculator",
+      "package": "com.lunarapp.app",
+      "price": "$3.99 USD",
+      "category": "Lifestyle / Esoteric",
+      "short_description": "Track moon phases for magic, wellness, and biodynamic gardening with stunning real-time visuals.",
+      "long_description": "Are You Living in Sync with the Moon?\n\nThe Lunar Phase Calculator brings together astronomy, wellness, biodynamic gardening, and lunar magic in one stunning tool.\n\nFeatures:\n• Wellness Timing: Know the best lunar phases for haircuts, skincare, detox, and nutrition.\n• Precision Astronomy: Track moonrise, moonset, Earth-Moon distance with millimeter accuracy.\n• Biodynamic Gardening: Plant, transplant, prune at the optimal lunar moment.\n• Lunar Magic & Rituals: Guided rituals for manifestation, reflection, and release.\n• Stunning Live Visualization: Watch the current phase animate in real time.\n\nFor witches, gardeners, wellness enthusiasts, and astronomy lovers.",
+      "tags": ["lunar phase", "moon phases", "moon magic", "biodynamic gardening", "moon calendar", "astrology", "wellness", "lunar magic"],
+      "screenshots": ["assets/images/moon1.PNG", "assets/images/moon2.PNG", "assets/images/moon3.PNG"],
+      "icon": "assets/images/lunar-phase.webp",
+      "google_play_url": "https://play.google.com/store/apps/details?id=com.lunarapp.app"
+    },
+    {
+      "id": "iching-oracle",
+      "name": "I Ching Oracle",
+      "package": "com.app.ichingoracle",
+      "price": "$3.99 USD",
+      "category": "Lifestyle / Esoteric",
+      "short_description": "Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams, multilingual, and totally private.",
+      "long_description": "For 3,000 Years, the I Ching Has Guided Emperors, Philosophers, and Seekers. Now It Fits in Your Pocket.\n\nThe Book of Changes is not just an oracle—it is a philosophical mirror that reflects the patterns of the universe. I Ching Oracle brings this ancient Chinese divination system to life with a state-of-the-art simulation of the traditional three-coin method.\n\nFeatures:\n• 64 Complete Hexagrams with full meanings and judgments.\n• Authentic Three-Coin Algorithm: Strictly faithful to tradition.\n• Reading History: All readings saved locally.\n• Built-in Learning Guide: Complete educational section for beginners.\n• Total Privacy: Every query stays on your device.\n\nAvailable in 5 languages: English, Spanish, French, German, Italian.",
+      "tags": ["i ching", "book of changes", "chinese oracle", "hexagram", "divination", "taoist philosophy", "three coin method", "iching"],
+      "screenshots": ["assets/images/ching1.PNG", "assets/images/ching2.PNG", "assets/images/ching3.PNG", "assets/images/ching4.PNG"],
+      "icon": "assets/images/iching.webp",
+      "google_play_url": "https://play.google.com/store/apps/details?id=com.app.ichingoracle"
+    },
+    {
+      "id": "chaos-sigil-generator",
+      "name": "Magick Chaos Sigil Generator",
+      "package": "com.app.goetiansealsgeneratorapp",
+      "price": "$3.99 USD",
+      "category": "Lifestyle / Esoteric",
+      "short_description": "Encode your Will into unique cryptographic sigils using ancient alphabets and planetary magic squares.",
+      "long_description": "Your Will. Encoded. Sealed. Unleashed.\n\nThe Magick Chaos Sigil Generator is the most advanced digital sigil engine ever created—a cybernetic ritual tool that fuses the esoteric techniques of Austin Osman Spare with cryptographic entropy and ancient occult alphabets.\n\nFeatures:\n• Advanced Sigil Creation: Transform any intention into a visual sigil.\n• 6 Ancient Occult Alphabets: Runic, Egyptian Hieroglyphs, Hebrew, Arabic, Greek, Cyrillic.\n• Planetary Kameas: Align your sigil with Saturn, Jupiter, Mars, Sun, Venus, Mercury, or the Moon.\n• Cryptographic Entropy Engine: True randomization ensures every sigil is unique.\n• Visual Flash Ritual: Seal your sigil with a one-click gnostic burst.\n\nFor chaos magicians, witches, occultists, and technomancers.",
+      "tags": ["chaos magick", "sigil generator", "sigilization", "cybermancy", "cryptographic sigil", "planetary kameas", "occult", "technomancy"],
+      "screenshots": ["assets/images/msg1.PNG", "assets/images/msg2.PNG", "assets/images/msg3.PNG", "assets/images/msg4.PNG"],
+      "icon": "assets/images/chaos-sigil.webp",
+      "google_play_url": "https://play.google.com/store/apps/details?id=com.app.goetiansealsgeneratorapp"
+    },
+    {
+      "id": "unofficial-rider-waite-tarot",
+      "name": "Unofficial Rider Waite Tarot",
+      "package": "com.cha0smagick.unofficialraiderwaite",
+      "price": "$9.99 USD",
+      "category": "Lifestyle / Esoteric",
+      "short_description": "Full Rider-Waite deck offline with 6 spreads, encyclopedia, and 7-language support.",
+      "long_description": "The Full Rider-Waite Tarot in Your Pocket—No Internet, No Ads, No Distractions.\n\nThe Unofficial Rider Waite Tarot brings every card, every symbol, and every spread to your device in a premium, offline experience.\n\nFeatures:\n• Full 78-Card Rider-Waite Deck: Major Arcana and four suits.\n• Upright & Reversed Meanings: Detailed interpretations for every card.\n• 6 Professional Spreads: Card of the Day, Past-Present-Future, Celtic Cross, and more.\n• Searchable Encyclopedia: Built-in tarot reference with cross-referenced symbolism.\n• Reading History: Every reading is saved locally.\n\nAvailable in 7 languages: English, Spanish, French, German, Italian, Hindi, Chinese.",
+      "tags": ["rider waite tarot", "tarot app", "offline tarot", "tarot reader", "tarot encyclopedia", "tarot spreads", "celtic cross", "divination"],
+      "screenshots": ["assets/images/ta1.png", "assets/images/ta2.png", "assets/images/ta3.png"],
+      "icon": "assets/images/tarotbutton.webp",
+      "google_play_url": "https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite"
+    },
+    {
+      "id": "dream-machine",
+      "name": "Dream Machine: Lucid Dreaming",
+      "package": "com.cha0smagick.dreammachine",
+      "price": "$3.99 USD",
+      "category": "Health & Wellness / Lifestyle",
+      "short_description": "Master the art of lucid dreaming with induction protocols, dream journal, reality checks, and binaural beats.",
+      "long_description": "What If You Could Wake Up Inside Your Dreams Tonight?\n\nDream Machine: Lucid Dreaming gives you the keys to the cockpit of your own subconscious. A complete lucid dreaming training system designed to take you from zero to fully conscious dreamer.\n\nFeatures:\n• Intelligent Dream Journal: Log dreams with a clean, fast interface.\n• Reality Check Drills: Customizable reality checks with random vibration prompts.\n• Binaural Beats & Isochronic Tones: Scientifically calibrated frequencies for REM induction.\n• MILD & WILD Induction Protocols: Step-by-step guides for the two most effective techniques.\n• Dream Statistics & Analytics: Track your lucidity rate over time.\n\nFor beginners, experienced lucid dreamers, chaos magicians, and consciousness hackers.",
+      "tags": ["lucid dreaming", "dream journal", "reality checks", "binaural beats", "dream induction", "MILD technique", "WILD technique", "oneironautics"],
+      "screenshots": [],
+      "icon": "assets/images/lucid.webp",
+      "google_play_url": "https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine"
+    }
+  ]
+}
