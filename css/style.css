@@ -54,7 +54,7 @@ header h1 {
 }
 
 /* Estilos Responsivos para Logo y Subtítulo */
-header img:not(.lang-flag) {
+header img {
     max-width: 250px;
     width: 100%;
     height: auto;
@@ -67,34 +67,6 @@ header p {
     margin: 0 auto 1.5rem auto;
     line-height: 1.4;
     color: var(--text-secondary);
-}
-
-/* Language Gadget Styles */
-.language-gadget {
-    display: flex;
-    justify-content: center; /* Centrado */
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 1.5rem; /* Separación del título */
-    width: 100%;
-    z-index: 10;
-}
-
-.lang-flag {
-    width: 16px; /* Mucho más pequeñas */
-    height: 12px;
-    border-radius: 2px;
-    cursor: pointer;
-    filter: grayscale(100%) opacity(0.5); /* Gris por defecto */
-    transition: all 0.3s ease;
-    object-fit: cover;
-}
-
-.lang-link:hover .lang-flag,
-.lang-link.active .lang-flag {
-    filter: grayscale(0%) opacity(1); /* Color al hover o si está activo */
-    transform: scale(1.2);
-    box-shadow: 0 0 5px var(--accent-color);
 }
 
 nav ul {
