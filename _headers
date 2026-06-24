@@ -10,3 +10,12 @@
 # HTML caching
 /*.html
   Cache-Control: max-age=3600
+
+# Service Worker must be served with correct scope
+/sw.js
+  Cache-Control: no-cache
+  Service-Worker-Allowed: /
+
+# Manifest
+/manifest.json
+  Cache-Control: max-age=3600

@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
     <meta name="robots" content="noindex, follow">
     <title>404 - Page Not Found | Cha0smagick Labs</title>
     <meta name="description" content="The page you are looking for does not exist. Explore our Chaos Magick apps for Android or return home.">
     <link rel="canonical" href="https://cha0smagicklabs.com/404.html">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/Banner.png">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="css/style.css">
     <style>
         .error-page {
@@ -27,37 +30,40 @@
             margin-bottom: 2rem;
             font-size: 1.1rem;
         }
-        .error-page a {
+        .error-page .cta-button {
             display: inline-block;
-            padding: 0.75rem 2rem;
-            border: 1px solid var(--accent-color);
-            color: var(--accent-color);
-            text-decoration: none;
-            font-family: var(--font-mono);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        .error-page a:hover {
-            background: var(--accent-color);
-            color: var(--bg-main);
+            margin: 0.5rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1><a href="index.html">Cha0smagick Labs</a></h1>
-        <p>Cybermancy • Techno-Sorcery • Cyberpaganism</p>
+        <a href="index.html" style="text-decoration:none;color:inherit;">
+            <h1>Cha0smagick Labs</h1>
+            <p>Cybermancy • Techno-Sorcery • Cyberpaganism</p>
+        </a>
     </header>
+    
     <main>
         <div class="error-page">
             <h1>404</h1>
             <p>The portal you seek does not exist in this dimensional plane. It may have been sealed or never created.</p>
             <p>Explore our <strong>Chaos Magick apps for Android</strong> or return home.</p>
-            <a href="index.html">← Back to Home</a>
+            <a href="index.html" class="cta-button primary">← Back to Home</a>
+            <a href="index.html#products" class="cta-button">Browse Apps</a>
         </div>
     </main>
+    
     <footer>
         <p>&copy; 2026 Cha0smagick Labs. All rights reserved.</p>
     </footer>
+    
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js');
+        });
+    }
+    </script>
 </body>
 </html>

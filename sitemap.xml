@@ -3,76 +3,88 @@
     <!-- Main Page -->
     <url>
         <loc>https://cha0smagicklabs.com/</loc>
-        <lastmod>2026-06-05</lastmod>
+        <lastmod>2026-06-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <!-- About Page -->
     <url>
         <loc>https://cha0smagicklabs.com/pages/about.html</loc>
-        <lastmod>2026-06-05</lastmod>
+        <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    <!-- Apps -->
+    <!-- App Pages (Clean URLs) -->
     <url>
-        <loc>https://cha0smagicklabs.com/pages/app-details.html?id=arcana-goetia</loc>
-        <lastmod>2026-06-05</lastmod>
+        <loc>https://cha0smagicklabs.com/apps/psi-gym.html</loc>
+        <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/pages/app-details.html?id=norse-rune-oracle</loc>
-        <lastmod>2026-06-05</lastmod>
+        <loc>https://cha0smagicklabs.com/apps/arcana-goetia.html</loc>
+        <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/pages/app-details.html?id=lunar-phase-calculator</loc>
-        <lastmod>2026-06-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/pages/app-details.html?id=iching-oracle</loc>
-        <lastmod>2026-06-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cha0smagicklabs.com/pages/app-details.html?id=chaos-sigil-generator</loc>
-        <lastmod>2026-06-05</lastmod>
+        <loc>https://cha0smagicklabs.com/apps/norse-rune-oracle.html</loc>
+        <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/pages/app-details.html?id=unofficial-rider-waite-tarot</loc>
-        <lastmod>2026-06-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <!-- Books -->
-    <url>
-        <loc>https://cha0smagicklabs.com/pages/app-details.html?id=manual-activacion-servidores-magicos-pdf</loc>
-        <lastmod>2026-06-05</lastmod>
+        <loc>https://cha0smagicklabs.com/apps/lunar-phase-calculator.html</loc>
+        <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/pages/app-details.html?id=tratado-runas-cazadoras-caos-pdf</loc>
-        <lastmod>2026-06-05</lastmod>
+        <loc>https://cha0smagicklabs.com/apps/iching-oracle.html</loc>
+        <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/pages/app-details.html?id=ouija-cazadora-pdf</loc>
-        <lastmod>2026-06-05</lastmod>
+        <loc>https://cha0smagicklabs.com/apps/chaos-sigil-generator.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html</loc>
+        <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/pages/app-details.html?id=liber-lvpinux-pdf</loc>
-        <lastmod>2026-06-05</lastmod>
+        <loc>https://cha0smagicklabs.com/apps/dream-machine.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Book Pages -->
+    <url>
+        <loc>https://cha0smagicklabs.com/apps/manual-activacion-servidores-magicos-pdf.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/apps/tratado-runas-cazadoras-caos-pdf.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/apps/ouija-cazadora-pdf.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/apps/liber-lvpinux-pdf.html</loc>
+        <lastmod>2026-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
