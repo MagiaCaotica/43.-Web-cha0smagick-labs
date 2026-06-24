@@ -95,6 +95,30 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/tools/iching.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/tools/viking-runes.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/tools/sigil-generator.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/tools/lunar-phase.html</loc>
+        <lastmod>2026-06-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <!-- Blog Pages -->
     <url>
         <loc>https://cha0smagicklabs.com/blog/index.html</loc>
