@@ -20,14 +20,12 @@
 </head>
 <body>
 <header>
-    <div class="language-switcher">
-        <button class="lang-toggle-btn" onclick="toggleLangSidebar()" title="Select Language">🌐</button>
-    </div>
-    <div class="header-content">
+    
+<div class="header-content">
         <a href="../index.html" class="header-link">
             <picture>
-                <source srcset="../img/chaos_magick_labs_logo_small.webp" type="image/webp">
-                <img class="header-logo" src="../img/chaos_magick_labs_logo_small.png" alt="Cha0smagick Labs Logo" width="180" height="180" loading="lazy">
+                <source srcset="../assets/images/Banner.webp" type="image/webp">
+                <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
             </picture>
             <span class="site-title">CHA0SMAGICK LABS</span>
         </a>
@@ -52,12 +50,12 @@
         <li><span aria-current="page">Blog</span></li>
     </ol>
 </nav>
-<section class="blog-intro">
-<h2>Library of Cybermancy: Knowledge Base & Research</h2>
+<section class="blog-intro" style="text-align:center;">
+<h2 style="text-align:center;border-left:none;padding-left:0;">Library of Cybermancy: Knowledge Base & Research</h2>
 <p>Deep-dive guides, technical analyses, and ultra-specific tutorials on digital occult tools, chaos magick theory, and the intersection of code and sorcery. Written by Frater Alek0s, founder of Cha0smagick Labs.</p>
 </section>
 
-<div class="blog-categories">
+<div class="blog-categories" style="text-align:center;">
   <button class="cat-btn active" data-cat="all" onclick="filterCategory('all')">All</button>
   <button class="cat-btn" data-cat="sigils" onclick="filterCategory('sigils')">Sigils & Code</button>
   <button class="cat-btn" data-cat="divination" onclick="filterCategory('divination')">Divination</button>
@@ -257,17 +255,19 @@ function filterCategory(cat) {
     </div>
 </footer>
 
-<!-- Language Switcher -->
-<div id="lang-flag-list">
-    <button onclick="switchLang('en')" title="English">🇬🇧 EN</button>
-    <button onclick="switchLang('es')" title="Español">🇪🇸 ES</button>
-    <button onclick="switchLang('fr')" title="Français">🇫🇷 FR</button>
-    <button onclick="switchLang('de')" title="Deutsch">🇩🇪 DE</button>
-    <button onclick="switchLang('it')" title="Italiano">🇮🇹 IT</button>
-    <button onclick="switchLang('pt')" title="Português">🇵🇹 PT</button>
-    <button onclick="switchLang('ru')" title="Русский">🇷🇺 RU</button>
-    <button onclick="switchLang('ja')" title="日本語">🇯🇵 JP</button>
-    <button onclick="switchLang('zh-CN')" title="中文">🇨🇳 ZH</button>
+<div id="lang-sidebar" class="lang-sidebar">
+    <button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button>
+    <div id="lang-flag-list" class="lang-flag-list">
+        <button onclick="switchLang('en')" title="English" class="lang-btn">🇬🇧 EN</button>
+        <button onclick="switchLang('es')" title="Español" class="lang-btn">🇪🇸 ES</button>
+        <button onclick="switchLang('fr')" title="Français" class="lang-btn">🇫🇷 FR</button>
+        <button onclick="switchLang('de')" title="Deutsch" class="lang-btn">🇩🇪 DE</button>
+        <button onclick="switchLang('it')" title="Italiano" class="lang-btn">🇮🇹 IT</button>
+        <button onclick="switchLang('pt')" title="Português" class="lang-btn">🇵🇹 PT</button>
+        <button onclick="switchLang('ru')" title="Русский" class="lang-btn">🇷🇺 RU</button>
+        <button onclick="switchLang('ja')" title="日本語" class="lang-btn">🇯🇵 JP</button>
+        <button onclick="switchLang('zh-CN')" title="中文" class="lang-btn">🇨🇳 ZH</button>
+    </div>
 </div>
 <div id="google_translate_element" style="display:none;"></div>
 

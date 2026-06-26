@@ -540,55 +540,21 @@
     });
     </script>
 
-    <!-- Language Switcher -->
+    <div id="lang-sidebar" class="lang-sidebar">
+    <button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button>
+    <div id="lang-flag-list" class="lang-flag-list">
+        <button onclick="switchLang('en')" title="English" class="lang-btn">🇬🇧 EN</button>
+        <button onclick="switchLang('es')" title="Español" class="lang-btn">🇪🇸 ES</button>
+        <button onclick="switchLang('fr')" title="Français" class="lang-btn">🇫🇷 FR</button>
+        <button onclick="switchLang('de')" title="Deutsch" class="lang-btn">🇩🇪 DE</button>
+        <button onclick="switchLang('it')" title="Italiano" class="lang-btn">🇮🇹 IT</button>
+        <button onclick="switchLang('pt')" title="Português" class="lang-btn">🇵🇹 PT</button>
+        <button onclick="switchLang('ru')" title="Русский" class="lang-btn">🇷🇺 RU</button>
+        <button onclick="switchLang('ja')" title="日本語" class="lang-btn">🇯🇵 JP</button>
+        <button onclick="switchLang('zh-CN')" title="中文" class="lang-btn">🇨🇳 ZH</button>
     </div>
-
-    <div id="google_translate_element" style="display:none;"></div>
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-consent-banner" style="position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;border-top:1px solid #444;padding:1rem 2rem;display:none;z-index:999999;font-size:0.9rem;color:#ccc;">
-        <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:1rem;">
-            <p style="flex:1;margin:0;">This site uses minimal cookies for analytics and language translation. No tracking or advertising cookies are used. <a href="privacy-policy.html" style="color:#ffd700;">Learn more</a>.</p>
-            <button onclick="acceptCookies()" style="background:#ffd700;color:#050505;border:none;padding:0.6rem 1.5rem;border-radius:4px;font-weight:600;cursor:pointer;white-space:nowrap;">Accept</button>
-            <button onclick="declineCookies()" style="background:transparent;color:#aaa;border:1px solid #555;padding:0.6rem 1.5rem;border-radius:4px;cursor:pointer;white-space:nowrap;">Decline</button>
-        </div>
-    </div>
-    <script>
-    (function() {
-        var c = document.cookie.match(/(?:^|;\s*)cookie_consent=([^;]*)/);
-        if (!c) {
-            setTimeout(function() {
-                document.getElementById('cookie-consent-banner').style.display = 'block';
-            }, 1000);
-        }
-    })();
-    function acceptCookies() {
-        document.cookie = "cookie_consent=accepted; max-age=31536000; path=/; SameSite=Lax";
-        document.getElementById('cookie-consent-banner').style.display = 'none';
-        gtag('consent', 'update', { 'analytics_storage': 'granted' });
-    }
-    function declineCookies() {
-        document.cookie = "cookie_consent=declined; max-age=31536000; path=/; SameSite=Lax";
-        document.getElementById('cookie-consent-banner').style.display = 'none';
-        gtag('consent', 'update', { 'analytics_storage': 'denied' });
-    }
-    </script>
-
-
-<script src="js/shared.js"></script>
-
-<!-- Language Switcher -->
-<div id="lang-flag-list">
-    <button onclick="switchLang('en')" title="English">ðŸ‡¬ðŸ‡§ EN</button>
-    <button onclick="switchLang('es')" title="EspaÃ±ol">ðŸ‡ªðŸ‡¸ ES</button>
-    <button onclick="switchLang('fr')" title="FranÃ§ais">ðŸ‡«ðŸ‡· FR</button>
-    <button onclick="switchLang('de')" title="Deutsch">ðŸ‡©ðŸ‡ª DE</button>
-    <button onclick="switchLang('it')" title="Italiano">ðŸ‡®ðŸ‡¹ IT</button>
-    <button onclick="switchLang('pt')" title="PortuguÃªs">ðŸ‡µðŸ‡¹ PT</button>
-    <button onclick="switchLang('ru')" title="Ð ÑƒÑÑÐºÐ¸Ð¹">ðŸ‡·ðŸ‡º RU</button>
-    <button onclick="switchLang('ja')" title="æ—¥æœ¬èªž">ðŸ‡¯ðŸ‡µ JP</button>
-    <button onclick="switchLang('zh-CN')" title="ä¸­æ–‡">ðŸ‡¨ðŸ‡³ ZH</button>
 </div>
 <div id="google_translate_element" style="display:none;"></div>
+<script src="js/shared.js"></script>
 </body>
 </html>
