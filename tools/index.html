@@ -17,7 +17,8 @@
     <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
     <meta name="twitter:card" content="summary_large_image">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V6LHCPN9TK');</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());      gtag('consent', 'default', { 'analytics_storage': 'denied' });
+      gtag('config','G-V6LHCPN9TK');</script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -36,24 +37,40 @@
 </head>
 <body>
     <header>
-        <h1>Free Online Occult Tools</h1>
-        <p>Try before you buy — free divination & ritual tools powered by Cha0smagick Labs</p>
+        <div class="language-switcher">
+            <button class="lang-toggle-btn" onclick="toggleLangSidebar()" title="Select Language">🌐</button>
+        </div>
+        <div class="header-content">
+            <a href="../index.html" class="header-link">
+                <picture>
+                    <source srcset="../img/chaos_magick_labs_logo_small.webp" type="image/webp">
+                    <img class="header-logo" src="../img/chaos_magick_labs_logo_small.png" alt="Cha0smagick Labs Logo" width="180" height="180" loading="lazy">
+                </picture>
+                <span class="site-title">CHA0SMAGICK LABS</span>
+            </a>
+            <p>Explore the Art and Practice of Chaos Magick</p>
+        </div>
     </header>
 
     <nav>
-        <a href="../index.html">Home</a>
-        <a href="../index.html#about">About Us</a>
-        <a href="../index.html#products">Premium Apps</a>
-        <a href="index.html">Free Tools</a>
-        <a href="../blog/">Blog</a>
-        <a href="../glossary.html">Glossary</a>
-        <a href="../best-occult-apps-android.html">Best Apps</a>
-        <a href="../index.html#contact">Contact</a>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#products">Premium Apps</a></li>
+            <li><a href="index.html">Free Tools</a></li>
+            <li><a href="../blog/">Blog</a></li>
+            <li><a href="../glossary.html">Glossary</a></li>
+            <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+            <li><a href="../complete-chaos-magick-bundle.html">Bundle</a></li>
+        </ul>
     </nav>
 
-    <div class="breadcrumb">
-        <a href="../index.html">Home</a> › Free Online Occult Tools
-    </div>
+    <nav class="breadcrumb-nav">
+        <ol class="breadcrumb-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><span aria-current="page">Free Online Occult Tools</span></li>
+        </ol>
+    </nav>
 
     <section class="intro">
         <h2>Free Esoteric Tools for the Modern Practitioner</h2>
@@ -124,56 +141,65 @@
         <a href="../index.html#products">Browse All Premium Apps →</a>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Cha0smagick Labs — <a href="../index.html">Corporate Cybermancy Solutions</a></p>
+    <footer id="site-footer" class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Cha0smagick Labs</h4>
+                <p>Explore the Art and Practice of Chaos Magick.</p>
+                <p>Corporate Cybermancy Solutions — since 2025.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#products">Premium Apps</a></li>
+                    <li><a href="index.html">Free Tools</a></li>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../best-occult-apps-android.html">Best Occult Apps</a></li>
+                    <li><a href="../complete-chaos-magick-bundle.html">Complete Bundle</a></li>
+                    <li><a href="../glossary.html">Glossary</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-visitor">
+                <h4>Visitor Count</h4>
+                <div class="visitor-count">Visitors: <span id="visitor-count">000000</span></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cha0smagick Labs — Corporate Cybermancy Solutions</p>
+        </div>
     </footer>
 
-    <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('../sw.js').catch(function(err) {
-                console.log('SW registration failed:', err);
-            });
-        });
-    }
-    </script>
-
-    <!-- Language Switcher - Fixed Left Sidebar -->
-    <div id="lang-sidebar" class="lang-sidebar">
-      <button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button>
-      <div id="lang-flag-list" class="lang-flag-list" style="display:none;">
-        <button onclick="switchLang('en')" title="English" class="lang-btn"><img src="/assets/images/flags/gb.svg" alt="" class="flag-icon"> EN</button>
-        <button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="/assets/images/flags/es.svg" alt="" class="flag-icon"> ES</button>
-        <button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="/assets/images/flags/fr.svg" alt="" class="flag-icon"> FR</button>
-        <button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="/assets/images/flags/de.svg" alt="" class="flag-icon"> DE</button>
-        <button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="/assets/images/flags/it.svg" alt="" class="flag-icon"> IT</button>
-        <button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="/assets/images/flags/pt.svg" alt="" class="flag-icon"> PT</button>
-        <button onclick="switchLang('ru')" title="Русский" class="lang-btn"><img src="/assets/images/flags/ru.svg" alt="" class="flag-icon"> RU</button>
-        <button onclick="switchLang('ja')" title="日本語" class="lang-btn"><img src="/assets/images/flags/jp.svg" alt="" class="flag-icon"> JP</button>
-        <button onclick="switchLang('zh-CN')" title="中文" class="lang-btn"><img src="/assets/images/flags/cn.svg" alt="" class="flag-icon"> ZH</button>
-      </div>
+    <!-- Language Switcher -->
+    <div id="lang-flag-list">
+        <button onclick="switchLang('en')" title="English">🇬🇧 EN</button>
+        <button onclick="switchLang('es')" title="Español">🇪🇸 ES</button>
+        <button onclick="switchLang('fr')" title="Français">🇫🇷 FR</button>
+        <button onclick="switchLang('de')" title="Deutsch">🇩🇪 DE</button>
+        <button onclick="switchLang('it')" title="Italiano">🇮🇹 IT</button>
+        <button onclick="switchLang('pt')" title="Português">🇵🇹 PT</button>
+        <button onclick="switchLang('ru')" title="Русский">🇷🇺 RU</button>
+        <button onclick="switchLang('ja')" title="日本語">🇯🇵 JP</button>
+        <button onclick="switchLang('zh-CN')" title="中文">🇨🇳 ZH</button>
     </div>
-    <!-- Hidden Google Translate Element -->
     <div id="google_translate_element" style="display:none;"></div>
 
-    <script>
-    function toggleLangSidebar() {
-      var el = document.getElementById('lang-flag-list');
-      if (!el) return;
-      el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'flex' : 'none';
-    }
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,es,fr,de,it,pt,ru,ja,zh-CN', autoDisplay: false }, 'google_translate_element');
-    }
-    function switchLang(lang) {
-      var tries = 0;
-      var iv = setInterval(function() {
-        var sel = document.querySelector('.goog-te-combo');
-        if (sel) { sel.value = lang; sel.dispatchEvent(new Event('change')); clearInterval(iv); var fl = document.getElementById('lang-flag-list'); if (fl) fl.style.display = 'none'; }
-        if (++tries > 30) clearInterval(iv);
-      }, 150);
-    }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="../js/shared.js"></script>
+
+<div id="cookie-consent-banner">
+    <p>This site uses cookies for analytics and to improve your experience. <a href="../privacy-policy.html" style="color:#ffd700;">Learn more</a></p>
+    <div class="cookie-buttons">
+        <button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button>
+        <button class="cookie-btn-decline" onclick="declineCookies()">Decline</button>
+    </div>
+</div>
 </body>
 </html>
