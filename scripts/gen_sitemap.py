@@ -33,12 +33,10 @@ for fp in sorted(all_files):
     rel = os.path.relpath(fp, ROOT).replace("\\", "/")
     fname = os.path.basename(fp)
     
-    # Skip 404
-    if fname == "404.html":
-        continue
-    
     # Determine priority and changefreq
-    if rel == "index.html":
+    if fname == "404.html":
+        cf, pr = "monthly", "0.3"
+    elif rel == "index.html":
         cf, pr = "weekly", "1.0"
     elif rel.startswith("apps/"):
         cf, pr = ("monthly", "0.9") if "pdf" not in fname else ("monthly", "0.8")
