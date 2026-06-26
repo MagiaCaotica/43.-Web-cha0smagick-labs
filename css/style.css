@@ -530,6 +530,62 @@ footer {
 footer a { color: #777; text-decoration: none; }
 footer a:hover { color: var(--accent-white); }
 
+/* Footer grid layout (blog/pages) */
+.site-footer { letter-spacing: 0; text-transform: none; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto 3rem;
+  text-align: left;
+}
+.footer-section h4 {
+  color: var(--accent-gold);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.footer-section p {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-bottom: 0.5rem;
+}
+.footer-section ul { list-style: none; padding: 0; margin: 0; }
+.footer-section li { margin-bottom: 0.4rem; }
+.footer-section a {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.footer-section a:hover { color: var(--accent-gold); }
+.footer-visitor .visitor-count {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.footer-visitor #visitor-count {
+  color: var(--accent-gold);
+  font-family: var(--font-mono);
+  letter-spacing: 2px;
+}
+.footer-bottom {
+  border-top: 1px solid #111;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 /* Footer parallel layout (homepage) */
 .footer-parallel-container {
   display: flex;
