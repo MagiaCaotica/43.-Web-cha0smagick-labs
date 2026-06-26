@@ -138,17 +138,19 @@
 
 <script src="../js/shared.js"></script>
 
-<!-- Language Switcher -->
-<div id="lang-flag-list">
-    <button onclick="switchLang('en')" title="English">ðŸ‡¬ðŸ‡§ EN</button>
-    <button onclick="switchLang('es')" title="EspaÃ±ol">ðŸ‡ªðŸ‡¸ ES</button>
-    <button onclick="switchLang('fr')" title="FranÃ§ais">ðŸ‡«ðŸ‡· FR</button>
-    <button onclick="switchLang('de')" title="Deutsch">ðŸ‡©ðŸ‡ª DE</button>
-    <button onclick="switchLang('it')" title="Italiano">ðŸ‡®ðŸ‡¹ IT</button>
-    <button onclick="switchLang('pt')" title="PortuguÃªs">ðŸ‡µðŸ‡¹ PT</button>
-    <button onclick="switchLang('ru')" title="Ð ÑƒÑÑÐºÐ¸Ð¹">ðŸ‡·ðŸ‡º RU</button>
-    <button onclick="switchLang('ja')" title="æ—¥æœ¬èªž">ðŸ‡¯ðŸ‡µ JP</button>
-    <button onclick="switchLang('zh-CN')" title="ä¸­æ–‡">ðŸ‡¨ðŸ‡³ ZH</button>
+<div id="lang-sidebar" class="lang-sidebar">
+    <button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button>
+    <div id="lang-flag-list" class="lang-flag-list">
+        <button onclick="switchLang('en')" title="English" class="lang-btn">🇬🇧 EN</button>
+        <button onclick="switchLang('es')" title="Español" class="lang-btn">🇪🇸 ES</button>
+        <button onclick="switchLang('fr')" title="Français" class="lang-btn">🇫🇷 FR</button>
+        <button onclick="switchLang('de')" title="Deutsch" class="lang-btn">🇩🇪 DE</button>
+        <button onclick="switchLang('it')" title="Italiano" class="lang-btn">🇮🇹 IT</button>
+        <button onclick="switchLang('pt')" title="Português" class="lang-btn">🇵🇹 PT</button>
+        <button onclick="switchLang('ru')" title="Русский" class="lang-btn">🇷🇺 RU</button>
+        <button onclick="switchLang('ja')" title="日本語" class="lang-btn">🇯🇵 JP</button>
+        <button onclick="switchLang('zh-CN')" title="中文" class="lang-btn">🇨🇳 ZH</button>
+    </div>
 </div>
 <div id="google_translate_element" style="display:none;"></div>
 <div id="cookie-consent-banner">

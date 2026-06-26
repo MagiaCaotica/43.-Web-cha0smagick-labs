@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-language="en">
 <head>
     <meta charset="UTF-8">
@@ -510,17 +510,19 @@
         window.addEventListener('resize', function() { map.invalidateSize(); });
     });
     </script>
-<!-- Language Switcher -->
-<div id="lang-flag-list">
-    <button onclick="switchLang('en')" title="English">🇬🇧 EN</button>
-    <button onclick="switchLang('es')" title="Español">🇪🇸 ES</button>
-    <button onclick="switchLang('fr')" title="Français">🇫🇷 FR</button>
-    <button onclick="switchLang('de')" title="Deutsch">🇩🇪 DE</button>
-    <button onclick="switchLang('it')" title="Italiano">🇮🇹 IT</button>
-    <button onclick="switchLang('pt')" title="Português">🇵🇹 PT</button>
-    <button onclick="switchLang('ru')" title="Русский">🇷🇺 RU</button>
-    <button onclick="switchLang('ja')" title="日本語">🇯🇵 JP</button>
-    <button onclick="switchLang('zh-CN')" title="中文">🇨🇳 ZH</button>
+<div id="lang-sidebar" class="lang-sidebar">
+    <button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button>
+    <div id="lang-flag-list" class="lang-flag-list">
+        <button onclick="switchLang('en')" title="English" class="lang-btn">🇬🇧 EN</button>
+        <button onclick="switchLang('es')" title="Español" class="lang-btn">🇪🇸 ES</button>
+        <button onclick="switchLang('fr')" title="Français" class="lang-btn">🇫🇷 FR</button>
+        <button onclick="switchLang('de')" title="Deutsch" class="lang-btn">🇩🇪 DE</button>
+        <button onclick="switchLang('it')" title="Italiano" class="lang-btn">🇮🇹 IT</button>
+        <button onclick="switchLang('pt')" title="Português" class="lang-btn">🇵🇹 PT</button>
+        <button onclick="switchLang('ru')" title="Русский" class="lang-btn">🇷🇺 RU</button>
+        <button onclick="switchLang('ja')" title="日本語" class="lang-btn">🇯🇵 JP</button>
+        <button onclick="switchLang('zh-CN')" title="中文" class="lang-btn">🇨🇳 ZH</button>
+    </div>
 </div>
 <div id="google_translate_element" style="display:none;"></div>
 
