@@ -96,3 +96,36 @@ function declineCookies() {
         gtag('consent', 'update', { 'analytics_storage': 'denied' });
     }
 }
+
+// ========================================================================
+// 5. GLOSSARY ACCORDION — auto-open term when linked via URL hash
+// ========================================================================
+document.addEventListener('DOMContentLoaded', function() {
+    // If URL has a hash, try to open the corresponding <details> term
+    if (window.location.hash) {
+        var target = document.getElementById(window.location.hash.substring(1));
+        if (target && target.tagName === 'DETAILS') {
+            target.setAttribute('open', '');
+            // Scroll to it with offset
+            setTimeout(function() {
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+    }
+    // Also intercept clicks on internal anchor links to open details
+    document.addEventListener('click', function(e) {
+        var a = e.target.closest('a[href^="#"]');
+        if (a) {
+            var id = a.getAttribute('href').substring(1);
+            if (id) {
+                var details = document.getElementById(id);
+                if (details && details.tagName === 'DETAILS') {
+                    // Small delay to let the browser navigate the hash first
+                    setTimeout(function() {
+                        details.setAttribute('open', '');
+                    }, 50);
+                }
+            }
+        }
+    });
+});
