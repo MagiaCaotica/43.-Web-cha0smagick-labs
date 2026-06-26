@@ -121,7 +121,7 @@ def make_share_html(slug, title):
 </p>
 </div>"""
 
-def generate_article(slug, title, meta_desc, h1, content, image="zener-cards-guide", faqs=None, keywords=""):
+def generate_article(slug, title, meta_desc, h1, content, faqs=None, keywords=""):
     """Generate a complete HTML article file."""
     canonical = f"{BASE_URL}/{slug}.html"
     og_title = title.split(" | ")[0] if " | " in title else title
@@ -132,7 +132,7 @@ def generate_article(slug, title, meta_desc, h1, content, image="zener-cards-gui
         "@type": "Article",
         "headline": h1,
         "description": meta_desc[:200],
-        "image": f"https://cha0smagicklabs.com/assets/images/blog/{image}.png",
+        "image": f"https://cha0smagicklabs.com/assets/images/blog/{slug}.png",
         "author": {"@type": "Person", "name": "Frater Alek0s"},
         "datePublished": "2026-06-24",
         "dateModified": "2026-06-24",
@@ -180,7 +180,7 @@ def generate_article(slug, title, meta_desc, h1, content, image="zener-cards-gui
 <meta property="og:description" content="{meta_desc[:160]}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://cha0smagicklabs.com/assets/images/blog/{image}.png">
+<meta property="og:image" content="https://cha0smagicklabs.com/assets/images/blog/{slug}.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../css/style.css">
 {GTAG}
@@ -202,8 +202,8 @@ def generate_article(slug, title, meta_desc, h1, content, image="zener-cards-gui
 <article class="article">
 <div class="blog-nav"><a href="index.html">&larr; Back to Blog</a></div>
 <picture>
-    <source srcset="../assets/images/blog/{image}.webp" type="image/webp">
-    <img src="../assets/images/blog/{image}.png" alt="{og_title}" class="blog-featured-image" width="800" height="420" loading="eager">
+    <source srcset="../assets/images/blog/{slug}.webp" type="image/webp">
+    <img src="../assets/images/blog/{slug}.png" alt="{og_title}" class="blog-featured-image" width="800" height="420" loading="eager">
 </picture>
 <h1>{h1}</h1>
 <div class="meta">By Frater Alek0s &bull; <time datetime="2026-06-24">June 24, 2026</time> &bull; 10 min read</div>
@@ -243,7 +243,6 @@ articles.append({
     "title": "Chaos Sigil Generator App Review: Digital Sigil Making on Android (2026) | Cha0smagick Labs",
     "meta_desc": "Complete review of the Chaos Sigil Generator app for Android. Create cryptographic sigils, planetary magic squares, and encode your will into digital talismans.",
     "h1": "Chaos Sigil Generator App Review: Digital Sigil Making on Android (2026)",
-    "image": "digital-sigil-guide",
     "keywords": "chaos sigil generator app, sigil maker app android, digital sigil app, chaos magick app, sigil generator review",
     "faqs": [
         {"q": "Is the Chaos Sigil Generator app free?", "a": "The Chaos Sigil Generator is a premium app available for $3.99 USD on Google Play. The one-time purchase includes all alphabet systems, planetary kameas, cryptographic generation, and lifetime updates with no ads or subscriptions."},
@@ -296,7 +295,6 @@ articles.append({
     "title": "How to Make a Digital Sigil: Complete Guide to Tech Sigilization (2026) | Cha0smagick Labs",
     "meta_desc": "Step-by-step guide to creating digital sigils. Learn tech sigilization methods, cryptographic sigil programming, and the best digital tools for chaos magick.",
     "h1": "How to Make a Digital Sigil: Complete Guide to Tech Sigilization (2026)",
-    "image": "digital-sigil-guide",
     "keywords": "how to make a digital sigil, digital sigil creation, tech sigilization, digital chaos magick, sigil making guide",
     "faqs": [
         {"q": "What is a digital sigil?", "a": "A digital sigil is a symbol created using computer algorithms and cryptographic processes rather than hand-drawing. The intention is encoded as text, processed through a hash function or mathematical algorithm, and rendered as a unique visual symbol. Digital sigils maintain the same magical function as traditional sigils but offer perfect reproducibility and mathematical precision."},
@@ -357,7 +355,6 @@ articles.append({
     "title": "Planetary Magic Squares: Complete Guide for Sigil Creation | Cha0smagick Labs",
     "meta_desc": "Complete guide to planetary magic squares (kameas). Learn to create sigils using Saturn, Jupiter, Mars, Sun, Venus, Mercury, and Moon magic squares for targeted results.",
     "h1": "Planetary Magic Squares: Complete Guide for Sigil Creation",
-    "image": "digital-sigil-guide",
     "keywords": "planetary magic squares, planetary kameas, sigil creation kamea, magic square sigils, planetary sigils",
     "faqs": [
         {"q": "What is a planetary magic square?", "a": "A planetary magic square (kamea) is a grid of numbers where each row, column, and diagonal sums to the same total. Each planet has a specific square size and associated numbers: Saturn 3x3 (15), Jupiter 4x4 (34), Mars 5x5 (65), Sun 6x6 (111), Venus 7x7 (175), Mercury 8x8 (260), Moon 9x9 (369). These squares are used in ceremonial magic to create sigils charged with specific planetary energies."},
@@ -420,7 +417,6 @@ articles.append({
     "title": "Austin Osman Spare Sigilization: The Original Method Explained | Cha0smagick Labs",
     "meta_desc": "Complete guide to Austin Osman Spare's sigilization method. Learn the original technique that founded chaos magick, from the Alphabet of Desire to gnostic charging.",
     "h1": "Austin Osman Spare Sigilization: The Original Method Explained",
-    "image": "chaos-magick-beginners-guide",
     "keywords": "austin osman spare sigil method, spare sigilization, alphabet of desire, chaos magick founder, sigil magic original",
     "faqs": [
         {"q": "Who was Austin Osman Spare?", "a": "Austin Osman Spare (1886-1956) was an English artist and occultist who developed the modern sigil method and laid the foundation for chaos magick. Rejecting the complex ceremonial systems of the Hermetic Order of the Golden Dawn, Spare developed a direct, personal approach to magic based on sigilization, gnosis, and the Alphabet of Desire."},
@@ -476,7 +472,6 @@ articles.append({
     "title": "Norse Rune Oracle App Review: Best Viking Rune Reader for Android (2026) | Cha0smagick Labs",
     "meta_desc": "Complete review of the Norse Rune Oracle app for Android. Features 12+ rune spreads, Elder Futhark interpretations, and daily guidance. The best Viking rune app tested.",
     "h1": "Norse Rune Oracle App Review: Best Viking Rune Reader for Android (2026)",
-    "image": "norse-runes-guide",
     "keywords": "norse rune oracle app, viking rune app android, rune reading app, elder futhark app, best rune app 2026",
     "faqs": [
         {"q": "How many rune spreads does Norse Rune Oracle include?", "a": "The app includes over 12 rune spreads ranging from simple single-rune daily draws to complex multi-rune layouts like the Norse Cross, Odin's Nine, and the Celtic Cross adapted for runes. Each spread includes detailed position meanings."},
@@ -532,7 +527,6 @@ articles.append({
     "title": "Arcana Goetia App Review: Summon the 72 Spirits on Android (2026) | Cha0smagick Labs",
     "meta_desc": "Complete review of Arcana Goetia app for Android. Command the 72 spirits of Solomon with precision sigils, lore, and guided rituals. The definitive Goetia app tested.",
     "h1": "Arcana Goetia App Review: Summon the 72 Spirits on Android (2026)",
-    "image": "arcana-goetia-guide",
     "keywords": "arcana goetia app, goetia app android, solomon spirits app, lemegeton app, goetic magic app",
     "faqs": [
         {"q": "Does Arcana Goetia include all 72 spirits?", "a": "Yes, the app includes all 72 spirits from the Ars Goetia, the first book of the Lesser Key of Solomon. Each entry includes the spirit's name, rank, sigil (seal), description, planetary correspondence, and instructions for invocation or evocation."},
@@ -586,7 +580,6 @@ articles.append({
     "title": "Zener Cards Online: Test Your ESP with Digital Tools (2026) | Cha0smagick Labs",
     "meta_desc": "Learn to test ESP with Zener cards online. Digital tools make ESP testing more precise with cryptographic randomization and real-time statistical analysis.",
     "h1": "Zener Cards Online: Test Your ESP with Digital Tools (2026)",
-    "image": "zener-cards-guide",
     "keywords": "zener cards online, esp test online, zener cards test, online esp test, psychic test online",
     "faqs": [
         {"q": "How do Zener cards work in digital format?", "a": "Digital Zener cards work identically to physical cards but with advantages: cryptographically secure randomization ensures genuine unpredictability, automatic scoring eliminates human error, and real-time statistical analysis provides immediate feedback on your performance."},
@@ -630,7 +623,6 @@ articles.append({
     "title": "Remote Viewing for Beginners: Techniques, Training & Tools (2026) | Cha0smagick Labs",
     "meta_desc": "Complete beginner's guide to remote viewing. Learn coordinate remote viewing (CRV) techniques, stage 1-6 protocols, and the best tools for developing your psychic sight.",
     "h1": "Remote Viewing for Beginners: Techniques, Training & Tools (2026)",
-    "image": "zener-cards-guide",
     "keywords": "remote viewing for beginners, remote viewing techniques, coordinate remote viewing, CRV training, psychic sight",
     "faqs": [
         {"q": "Can anyone learn remote viewing?", "a": "Yes, remote viewing is a trainable skill. Like any ability, some people have natural aptitude, but most practitioners see significant improvement with consistent practice. The key is regular training using structured protocols and objective feedback."},
@@ -688,7 +680,6 @@ articles.append({
     "title": "Clairvoyance Test Online: How to Measure Your Psychic Abilities | Cha0smagick Labs",
     "meta_desc": "Take a clairvoyance test online and measure your psychic abilities. Learn about different testing methods, Zener cards, and how to objectively track your intuitive accuracy.",
     "h1": "Clairvoyance Test Online: How to Measure Your Psychic Abilities",
-    "image": "zener-cards-guide",
     "keywords": "clairvoyance test online, psychic test, clairvoyance test, measure psychic ability, esp test",
     "faqs": [
         {"q": "What is clairvoyance?", "a": "Clairvoyance (French for 'clear seeing') is the claimed ability to gain information about an object, person, location, or event through extrasensory perception. It is one of the main categories of ESP, along with telepathy (mind-to-mind communication) and precognition (perceiving future events)."}, {"q": "Are online clairvoyance tests reliable?", "a": "Online tests can be reliable if they use proper methodology: cryptographic randomization, blind testing protocols, and statistical analysis. Free tests on websites often lack these features and may produce misleading results. Professional apps like PSI GYM implement rigorous protocols based on academic parapsychology standards."}, {"q": "How can I improve my clairvoyance test scores?", "a": "Improvement comes from consistent practice and proper technique: enter a calm, receptive state before testing (gnosis), trust your first impression without overthinking, practice daily for at least 25 trials per session, and review your cumulative statistics to identify patterns in when and how you perform best."}
@@ -747,7 +738,6 @@ articles.append({
     "title": "Dream Machine App Review: Best Lucid Dreaming App for Android (2026) | Cha0smagick Labs",
     "meta_desc": "Complete review of Dream Machine: Lucid Dreaming app for Android. Features induction protocols, dream journal, binaural beats, and reality check reminders.",
     "h1": "Dream Machine App Review: Best Lucid Dreaming App for Android (2026)",
-    "image": "lucid-dreaming-guide",
     "keywords": "dream machine app, lucid dreaming app android, best lucid dreaming app, dream journal app, lucid dream inducer",
     "faqs": [
         {"q": "Does Dream Machine use binaural beats?", "a": "Yes, Dream Machine includes a library of binaural beat frequencies specifically designed for lucid dreaming induction. Theta (4-8 Hz) for deep relaxation, Delta (1-4 Hz) for deep sleep with awareness, and Gamma (30-100 Hz) for heightened dream awareness. You can use them with headphones during the WBTB method."},
@@ -800,7 +790,6 @@ articles.append({
     "title": "Binaural Beats for Lucid Dreaming: Complete Frequency Guide (2026) | Cha0smagick Labs",
     "meta_desc": "Complete guide to using binaural beats for lucid dreaming. Learn which frequencies induce WILD, enhance dream recall, and deepen the hypnagogic state.",
     "h1": "Binaural Beats for Lucid Dreaming: Complete Frequency Guide (2026)",
-    "image": "lucid-dreaming-guide",
     "keywords": "binaural beats lucid dreaming, isochronic tones lucid dreams, theta waves lucid dreaming, delta binaural beats, brainwave entrainment dreaming",
     "faqs": [
         {"q": "Do binaural beats really help with lucid dreaming?", "a": "Research on brainwave entrainment suggests binaural beats can help induce the brainwave states associated with lucid dreaming, particularly theta (4-8 Hz) for the hypnagogic state and gamma (30-100 Hz) for maintaining awareness during REM. Many practitioners report significant improvement in lucid dream frequency when using binaural beats consistently with the WBTB method."},
@@ -848,7 +837,6 @@ articles.append({
     "title": "Rider Waite Tarot App Review: Best Offline Tarot Reader for Android (2026) | Cha0smagick Labs",
     "meta_desc": "Complete review of the Unofficial Rider Waite Tarot app for Android. Full 78-card deck offline, 6 spreads, encyclopedia, and 7-language support.",
     "h1": "Rider Waite Tarot App Review: Best Offline Tarot Reader for Android (2026)",
-    "image": "tarot-reading-guide",
     "keywords": "rider waite tarot app android, offline tarot app, best tarot app, tarot reader app, full rider waite deck",
     "faqs": [
         {"q": "Does the Rider Waite Tarot app work offline?", "a": "Yes, the entire 78-card deck, all 6 spreads, and the complete encyclopedia work fully offline. Once installed, you can do unlimited readings anywhere without internet access. Card images and interpretations are stored locally."},
@@ -898,7 +886,6 @@ articles.append({
     "title": "Tarot Spreads for Beginners: Celtic Cross, 3-Card & More (2026) | Cha0smagick Labs",
     "meta_desc": "Complete guide to tarot spreads for beginners. Learn the Celtic Cross, Three Card spread, Relationship spread, and how to interpret card positions effectively.",
     "h1": "Tarot Spreads for Beginners: Celtic Cross, 3-Card & More (2026)",
-    "image": "tarot-reading-guide",
     "keywords": "tarot spreads for beginners, celtic cross tarot, three card spread, tarot card positions, easy tarot spreads",
     "faqs": [
         {"q": "What is the easiest tarot spread for beginners?", "a": "The Three Card spread (past/present/future) is the easiest for beginners. It uses only three cards, each with a clear positional meaning. It teaches you to read cards in relationship to each other without the complexity of larger spreads. Practice this spread until you are comfortable with card meanings before moving to more complex layouts."},
@@ -966,7 +953,6 @@ articles.append({
     "title": "I Ching Oracle App Review: Best Book of Changes App for Android (2026) | Cha0smagick Labs",
     "meta_desc": "Complete review of the I Ching Oracle app for Android. Authentic three-coin method, 64 hexagrams with interpretations, multilingual support, and offline functionality.",
     "h1": "I Ching Oracle App Review: Best Book of Changes App for Android (2026)",
-    "image": "iching-guide",
     "keywords": "i ching app android, i ching oracle, book of changes app, best i ching app, iching app review",
     "faqs": [
         {"q": "Does the I Ching Oracle app use the authentic three-coin method?", "a": "Yes, the app uses the authentic three-coin method where each coin toss produces a line (yin or yang, changing or stable). Three heads = changing yang, two heads = stable yin, one head = stable yang, three tails = changing yin. The app handles the randomization cryptographically."},
@@ -1015,7 +1001,6 @@ articles.append({
     "title": "I Ching Hexagram Meanings: Complete 64 Hexagram Guide (2026) | Cha0smagick Labs",
     "meta_desc": "Complete guide to all 64 I Ching hexagram meanings. Understand the Book of Changes with detailed interpretations for each hexagram, changing lines, and transformations.",
     "h1": "I Ching Hexagram Meanings: Complete 64 Hexagram Guide (2026)",
-    "image": "iching-guide",
     "keywords": "i ching hexagram meanings, 64 hexagrams explained, book of changes hexagrams, i ching interpretation guide",
     "faqs": [
         {"q": "How many hexagrams are in the I Ching?", "a": "The I Ching contains 64 hexagrams, each consisting of 6 lines (yin or yang). The hexagrams are built from 8 trigrams combined in all possible pairs (8x8=64). Each hexagram represents a specific life situation or archetypal pattern."},
@@ -1070,7 +1055,6 @@ articles.append({
     "title": "Lunar Phase Calculator App Review: Best Moon Tracker for Android (2026) | Cha0smagick Labs",
     "meta_desc": "Complete review of the Lunar Phase Calculator app for Android. Track moon phases for magic, wellness, and biodynamic gardening with stunning real-time visuals.",
     "h1": "Lunar Phase Calculator App Review: Best Moon Tracker for Android (2026)",
-    "image": "lunar-phase-guide",
     "keywords": "lunar phase calculator app, moon phase app android, moon tracker app, lunar calendar app, moon magic app",
     "faqs": [
         {"q": "Does the Lunar Phase Calculator show future moon phases?", "a": "Yes, the app shows past, present, and future moon phases indefinitely. You can scroll forward or backward through the calendar to see any date's moon phase. The visualization updates in real time based on your current location."},
@@ -1120,7 +1104,6 @@ articles.append({
     "title": "New Moon vs Full Moon Rituals: Which Phase for Which Magic (2026) | Cha0smagick Labs",
     "meta_desc": "Complete guide to new moon vs full moon rituals. Learn which lunar phase to use for manifestation, banishing, charging, and different types of magical work.",
     "h1": "New Moon vs Full Moon Rituals: Which Phase for Which Magic (2026)",
-    "image": "lunar-phase-guide",
     "keywords": "new moon ritual, full moon ritual, moon phase magic, lunar ritual timing, new moon vs full moon magic",
     "faqs": [
         {"q": "What is the difference between new moon and full moon magic?", "a": "The new moon represents beginnings, setting intentions, and planting seeds. It is ideal for manifestation, new projects, and personal growth. The full moon represents completion, peak power, and harvest. It is ideal for charging sigils, banishing what no longer serves, and amplifying ritual power. Think of the new moon as the seed and the full moon as the full-grown plant."},
@@ -1209,7 +1192,6 @@ articles.append({
     "title": "Complete Chaos Magick Bundle Review: Save 32% on Apps & PDFs (2026) | Cha0smagick Labs",
     "meta_desc": "Complete review of the Chaos Magick Complete Bundle. 8 Android apps + 3 PDFs for $29.99. Is it worth it? Full breakdown of every product included.",
     "h1": "Complete Chaos Magick Bundle Review: Save 32% on Apps & PDFs (2026)",
-    "image": "chaos-magick-beginners-guide",
     "keywords": "chaos magick bundle, occult apps bundle, chaos magick apps discount, magic app collection, best occult software bundle",
     "faqs": [
         {"q": "What is included in the Chaos Magick Complete Bundle?", "a": "The bundle includes 8 premium Android apps (PSI GYM, Arcana Goetia, Norse Rune Oracle, Lunar Phase Calculator, I Ching Oracle, Chaos Sigil Generator, Unofficial Rider Waite Tarot, Dream Machine) and 3 PDFs (Magical Servitors Manual, Treatise of Chaos Hunter Runes, Ouija Cazadora) — a total of 11 products valued at $47.91, available for $29.99."},
@@ -1281,7 +1263,6 @@ articles.append({
     "title": "Magical Servitors Manual PDF Review: Create Thought Forms | Cha0smagick Labs",
     "meta_desc": "Review of the Magical Servitors Manual PDF by Frater Alek0s. Learn to create, deploy, and dismiss magical servitors with step-by-step instructions and practical examples.",
     "h1": "Magical Servitors Manual PDF Review: Create Thought Forms",
-    "image": "chaos-magick-beginners-guide",
     "keywords": "magical servitors manual pdf, servitor creation guide, thought form magic, chaos magick pdf, frater alekos servitors",
     "faqs": [
         {"q": "Who is the Magical Servitors Manual for?", "a": "This manual is for intermediate to advanced chaos magicians who understand the basics of sigilization and want to create more complex autonomous thought forms. Beginners should first read our beginner's guide on how to create a servitor before tackling the advanced techniques in this manual."},
@@ -1330,7 +1311,6 @@ articles.append({
     "title": "Treatise of Chaos Hunter Runes PDF Review: 64 Runic Servitors | Cha0smagick Labs",
     "meta_desc": "Review of the Treatise of Chaos Hunter Runes PDF by Zener de Cydonia. A complete system of 64 runic servitors, the Alphabet of Desire, and the Magic Chess Matrix.",
     "h1": "Treatise of Chaos Hunter Runes PDF Review: 64 Runic Servitors",
-    "image": "norse-runes-guide",
     "keywords": "chaos hunter runes pdf, runic servitors treatise, alphabet of desire runes, zener de cydonia, chaos rune system",
     "faqs": [
         {"q": "What is the Chaos Hunter Runes system?", "a": "The Chaos Hunter Runes system is a completely new magical system developed by Zener de Cydonia. It combines the concept of runic alphabets with chaos magick servitor theory, creating 64 runic servitors — each a self-contained magical entity with specific functions. The system also includes the Magic Chess Matrix, a strategic framework for deploying runic servitors in combination."},
@@ -1375,7 +1355,6 @@ articles.append({
     "title": "Ouija Cazadora PDF Review: Chaos Magic Ritual Guide | Cha0smagick Labs",
     "meta_desc": "Review of the Ouija Cazadora: Chaos Magic Guide PDF by Zener de Cydonia. Transform the ouija board into a high-precision ritual instrument for chaos magick.",
     "h1": "Ouija Cazadora PDF Review: Chaos Magic Ritual Guide",
-    "image": "chaos-magick-beginners-guide",
     "keywords": "ouija cazadora pdf, ouija board magic guide, ouija chaos magick, ritual ouija board, zener de cydonia ouija",
     "faqs": [
         {"q": "Is this about using ouija boards for communication with spirits?", "a": "While the ouija board is traditionally used for spirit communication, the Ouija Cazadora system reimagines it as a precision ritual instrument for chaos magick. The board becomes a focusing tool, a communication interface with the subconscious, and a deployment mechanism for sigils and servitors — not just a tool for contacting entities."},
@@ -1431,7 +1410,6 @@ articles.append({
     "title": "Liber Lvpinux PDF Review: Lycanthropic Spiritual Path | Cha0smagick Labs",
     "meta_desc": "Review of Liber Lvpinux PDF by Frater Alek0s. Explores lycanthropy as a path of spiritual empowerment, psychic metamorphosis, and primal awakening.",
     "h1": "Liber Lvpinux PDF Review: Lycanthropic Spiritual Path",
-    "image": "chaos-magick-beginners-guide",
     "keywords": "liber lvpinux pdf, lycanthropy magic, werewolf spiritual path, lycanthropic awakening, frater alekos lycanthropy",
     "faqs": [
         {"q": "Is this about literal shapeshifting?", "a": "No. Liber Lvpinux treats lycanthropy as a spiritual and psychological path of empowerment, not physical transformation. The werewolf archetype represents the primal, instinctual self — the part of human consciousness that has been suppressed by civilization and social conditioning. The path involves awakening and integrating this primal self, not changing physical form."},
@@ -1485,7 +1463,6 @@ articles.append({
     "title": "Astral Projection for Beginners: Techniques & Safety Guide (2026) | Cha0smagick Labs",
     "meta_desc": "Complete beginner's guide to astral projection. Learn the rope technique, indirect method, and safe practices for out-of-body experiences (OBEs).",
     "h1": "Astral Projection for Beginners: Techniques & Safety Guide (2026)",
-    "image": "lucid-dreaming-guide",
     "keywords": "astral projection techniques, obe out of body experience, astral projection for beginners, how to astral project, rope technique astral projection",
     "faqs": [
         {"q": "Is astral projection dangerous?", "a": "Astral projection is generally safe when proper precautions are taken. Always ground yourself before and after, set protective intentions, and maintain awareness of your physical body. Avoid attempting astral projection when under the influence of substances or during emotional distress. The main risks are psychological disorientation and fear-based experiences, which can be managed with proper preparation."},
@@ -1536,7 +1513,6 @@ articles.append({
     "title": "Cybermancy: Complete Guide to Digital Sorcery (2026) | Cha0smagick Labs",
     "meta_desc": "Complete guide to cybermancy — digital sorcery for the information age. Learn how computers, code, and networks are used as magical tools.",
     "h1": "Cybermancy: Complete Guide to Digital Sorcery (2026)",
-    "image": "digital-sigil-guide",
     "keywords": "what is cybermancy, cybermancy magic, digital sorcery, technomancy vs cybermancy, digital witchcraft",
     "faqs": [
         {"q": "What is the difference between cybermancy and technomancy?", "a": "Technomancy broadly refers to using technology for magical purposes — computers as tools, apps as ritual implements, etc. Cybermancy is a subset of technomancy that specifically focuses on networked digital systems, code, and the Internet as a magical medium. Cybermancy includes practices like code sigilization, network servitors, and digital egregores."},
@@ -1569,7 +1545,6 @@ articles.append({
     "title": "Technomancy: Digital Magic for the Modern Mage (2026) | Cha0smagick Labs",
     "meta_desc": "Complete guide to technomancy — using technology as a magical tool. Learn digital sigils, app-based rituals, and the intersection of tech and occultism.",
     "h1": "Technomancy: Digital Magic for the Modern Mage (2026)",
-    "image": "digital-sigil-guide",
     "keywords": "technomancy, digital magic, technology magick, technomancer, digital occultism",
     "faqs": [
         {"q": "What is technomancy?", "a": "Technomancy is the practice of using technology — computers, smartphones, software, and digital media — as tools for magical work. It encompasses everything from using a sigil generator app on your phone to creating complex ritual software. Technomancy is based on the principle that any tool that focuses intention can be used for magic, and modern technology offers unprecedented precision and power."},
@@ -1597,7 +1572,6 @@ articles.append({
     "title": "Egregore Creation: How Collective Thought Forms Gain Power | Cha0smagick Labs",
     "meta_desc": "Complete guide to egregore creation. Learn how collective thought forms are created, sustained, and deployed by magical groups and online communities.",
     "h1": "Egregore Creation: How Collective Thought Forms Gain Power",
-    "image": "chaos-magick-beginners-guide",
     "keywords": "egregore creation, collective thought form, group mind magic, egregore definition, magical group entity",
     "faqs": [
         {"q": "What is an egregore?", "a": "An egregore is a collective thought form created by a group of people sharing a common intention, belief, or practice. Unlike a personal servitor, which is created by an individual, an egregore is sustained by group energy and can develop its own consciousness over time. Examples include organizational spirits, team mascots, and the 'vibe' of online communities."},
@@ -1629,7 +1603,6 @@ articles.append({
     "title": "Psychonaut Guide: Exploring Consciousness & Inner Realms (2026) | Cha0smagick Labs",
     "meta_desc": "Complete psychonaut guide to consciousness exploration. Learn techniques for inner journeying, dream work, meditation, and navigating altered states safely.",
     "h1": "Psychonaut Guide: Exploring Consciousness & Inner Realms (2026)",
-    "image": "lucid-dreaming-guide",
     "keywords": "psychonaut guide, consciousness exploration, inner realms journey, psychonaut techniques, altered states navigation",
     "faqs": [
         {"q": "What is a psychonaut?", "a": "A psychonaut (from Greek 'psyche' — mind/soul, and 'nautes' — sailor) is someone who systematically explores their own consciousness. Like a sailor navigates the ocean, a psychonaut navigates inner space — dreams, meditation states, trance, and other altered states of consciousness."},
@@ -1665,7 +1638,6 @@ articles.append({
     "title": "Reality Hacking: How to Bend Reality with Chaos Magick (2026) | Cha0smagick Labs",
     "meta_desc": "Complete guide to reality hacking. Learn chaos magick techniques for bending perception, rewriting beliefs, and manifesting change through paradigm shifting.",
     "h1": "Reality Hacking: How to Bend Reality with Chaos Magick (2026)",
-    "image": "chaos-magick-beginners-guide",
     "keywords": "reality hacking, bend reality, chaos magick manifestation, paradigm shifting, reality manipulation techniques",
     "faqs": [
         {"q": "What is reality hacking?", "a": "Reality hacking is the practice of deliberately changing your perception of and interaction with reality through magical techniques. Based on the chaos magick principle that belief is a tool, reality hacking involves adopting and discarding belief systems strategically to achieve desired outcomes."},
@@ -1703,7 +1675,6 @@ articles.append({
     "title": "Cyber-Paganism: The New Techno-Spirituality Movement (2026) | Cha0smagick Labs",
     "meta_desc": "Complete guide to cyber-paganism. Learn how digital technology is creating a new form of spirituality that blends ancient pagan practices with modern cybermancy.",
     "h1": "Cyber-Paganism: The New Techno-Spirituality Movement (2026)",
-    "image": "digital-sigil-guide",
     "keywords": "cyber-paganism, digital paganism, techno-spirituality, cyber witch, digital animism",
     "faqs": [
         {"q": "What is cyber-paganism?", "a": "Cyber-paganism is the fusion of pagan spirituality with digital technology. Cyber-pagans use computers, smartphones, and the internet as sacred tools — creating digital altars, performing online rituals, and treating cyberspace as a spiritual realm."},
@@ -1734,7 +1705,6 @@ articles.append({
     "title": "History of Chaos Magick: From Austin Osman Spare to the IOT (2026) | Cha0smagick Labs",
     "meta_desc": "Complete history of chaos magick from Austin Osman Spare to the Illuminates of Thanateros. Learn the key figures, texts, and events that shaped modern chaos magick.",
     "h1": "History of Chaos Magick: From Austin Osman Spare to the IOT (2026)",
-    "image": "chaos-magick-beginners-guide",
     "keywords": "history of chaos magick, austin osman spare history, illuminates of thanateros, chaos magick origins",
     "faqs": [
         {"q": "Who founded chaos magick?", "a": "Austin Osman Spare developed the core techniques of sigilization. Peter Carroll and Ray Sherwin systematized them in the 1970s, founding the Illuminates of Thanateros (IOT) and publishing Liber Null."},
@@ -1768,7 +1738,6 @@ articles.append({
     "title": "Scrying Techniques: Mirror, Crystal & Digital Scrying Guide (2026) | Cha0smagick Labs",
     "meta_desc": "Complete guide to scrying techniques including black mirror, crystal ball, water scrying, and digital scrying with modern tools.",
     "h1": "Scrying Techniques: Mirror, Crystal & Digital Scrying Guide (2026)",
-    "image": "zener-cards-guide",
     "keywords": "scrying techniques, black mirror scrying, crystal ball scrying, digital scrying, how to scry",
     "faqs": [
         {"q": "What is scrying?", "a": "Scrying is gazing into a reflective or translucent surface to access intuitive information. The surface acts as a focal point that induces a light trance state, allowing subconscious perceptions to surface as visions or impressions."},
@@ -1808,7 +1777,6 @@ articles.append({
     "title": "Free Sigil Generator Online: Create Chaos Magick Sigils (2026) | Cha0smagick Labs",
     "meta_desc": "Use our free online sigil generator to create chaos magick sigils instantly. Enter your intention and generate a unique sigil. Upgrade to the premium app for cryptographic generation.",
     "h1": "Free Sigil Generator Online: Create Chaos Magick Sigils (2026)",
-    "image": "digital-sigil-guide",
     "keywords": "free sigil generator online, sigil maker free, create sigil online, chaos magick sigil tool",
     "faqs": [
         {"q": "Is the free sigil generator really free?", "a": "Yes, the basic sigil generator at tools/sigil-generator.html is completely free with no registration, ads, or limits. The premium app adds cryptographic hashing, multiple alphabet systems, planetary kameas, and a charging timer."},
@@ -1841,7 +1809,6 @@ articles.append({
     "title": "Free Online Rune Reading: Instant Viking Divination (2026) | Cha0smagick Labs",
     "meta_desc": "Get a free online rune reading with instant Viking divination. Use our free rune tool or upgrade to the premium Norse Rune Oracle app for 12+ spreads.",
     "h1": "Free Online Rune Reading: Instant Viking Divination (2026)",
-    "image": "norse-runes-guide",
     "keywords": "free online rune reading, viking rune reading free, free rune divination, norse runes free",
     "faqs": [
         {"q": "Is the online rune reading accurate?", "a": "Our free tool uses cryptographic randomization for genuine unpredictability. Interpretations are based on traditional Elder Futhark meanings."},
@@ -1865,7 +1832,6 @@ articles.append({
     "title": "Free I Ching Online: Cast the Book of Changes (2026) | Cha0smagick Labs",
     "meta_desc": "Cast the I Ching online for free. Use our authentic three-coin method tool, or upgrade to the premium I Ching Oracle app for complete hexagram interpretations.",
     "h1": "Free I Ching Online: Cast the Book of Changes (2026)",
-    "image": "iching-guide",
     "keywords": "free i ching online, i ching casting free, book of changes online",
     "faqs": [
         {"q": "Is the free I Ching tool authentic?", "a": "Yes, it uses the authentic three-coin method with cryptographic randomization."},
@@ -1889,7 +1855,6 @@ articles.append({
     "title": "Free Lunar Phase Calculator: Track Moon Cycles Online (2026) | Cha0smagick Labs",
     "meta_desc": "Track moon phases with our free lunar phase calculator. See the current moon phase, upcoming lunations, and upgrade to the premium app for magical timing.",
     "h1": "Free Lunar Phase Calculator: Track Moon Cycles Online (2026)",
-    "image": "lunar-phase-guide",
     "keywords": "free lunar phase calculator, moon phase tracker free, current moon phase online",
     "faqs": [
         {"q": "What information does the free tool provide?", "a": "It shows the current moon phase with visual representation, illumination percentage, and upcoming phase dates."},
@@ -1913,7 +1878,6 @@ articles.append({
     "title": "Best Chaos Magick Books: Essential Reading List (2026) | Cha0smagick Labs",
     "meta_desc": "Complete list of best chaos magick books. Essential reading from Liber Null to Condensed Chaos, including rare texts and modern classics.",
     "h1": "Best Chaos Magick Books: Essential Reading List (2026)",
-    "image": "chaos-magick-beginners-guide",
     "keywords": "best chaos magick books, chaos magick book list, essential chaos magick reading",
     "faqs": [
         {"q": "What is the most important chaos magick book?", "a": "Liber Null & Psychonaut by Peter Carroll is the foundational text. Every serious practitioner should study it."},

@@ -1338,3 +1338,19 @@ nav ul li a[href*="glossary"]::before { content: "▤ "; }
 .tool-card h3 a { color: var(--text-primary); text-decoration: none; }
 .tool-card h3 a:hover { color: var(--accent-light); }
 .tool-card p { font-size: 0.85rem; color: var(--text-body); line-height: 1.5; }
+
+/* ========================================================================
+   SHARE BUTTONS
+   ======================================================================== */
+.share-section { margin: 2rem 0; padding: 1.5rem; background: var(--bg-card, #111); border: 1px solid var(--border-card, #333); border-radius: var(--radius-md, 8px); }
+.share-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+.share-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; border-radius: var(--radius-sm, 6px); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: all 0.2s ease; color: #fff !important; }
+.share-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+.share-btn .share-icon { width: 18px; height: 18px; flex-shrink: 0; }
+.share-twitter { background: #000; } .share-twitter:hover { background: #1a1a1a; }
+.share-reddit { background: #ff4500; } .share-reddit:hover { background: #ff5414; }
+.share-telegram { background: #0088cc; } .share-telegram:hover { background: #0099dd; }
+.share-tumblr { background: #35465c; } .share-tumblr:hover { background: #3e536b; }
+.share-facebook { background: #1877f2; } .share-facebook:hover { background: #1a7ff2; }
+.share-pinterest { background: #e60023; } .share-pinterest:hover { background: #ff0023; }
+@media (max-width: 600px) { .share-buttons { gap: 0.5rem; } .share-btn span { display: none; } .share-btn { padding: 0.6rem; } }
