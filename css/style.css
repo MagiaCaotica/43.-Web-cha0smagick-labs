@@ -1081,3 +1081,146 @@ section.bottom-cta a:hover { background:var(--accent-light); transform:translate
   .compare-table { font-size:0.8rem; }
   .compare-table th, .compare-table td { padding:0.5rem; }
 }
+
+/* ========================================================================
+   LANGUAGE SWITCHER — Sidebar Flag Panel  (was inline in every page)
+   ======================================================================== */
+#lang-flag-list {
+  display: none; position: fixed; top: 60px; right: 10px;
+  background: #111; border: 1px solid #333; border-radius: 8px;
+  padding: 10px; flex-wrap: wrap; gap: 6px; max-width: 200px;
+  z-index: 10000; box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+#lang-flag-list button {
+  background: none; border: 1px solid #333; border-radius: 4px;
+  padding: 4px 8px; cursor: pointer; font-size: 0.75rem; color: #ccc;
+  transition: all 0.2s;
+}
+#lang-flag-list button:hover { border-color: var(--accent-gold); color: #fff; }
+#google_translate_element { display: none; }
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+body { top: 0px !important; }
+
+.lang-toggle-btn {
+  background: none; border: 1px solid #333; border-radius: 4px;
+  color: #888; cursor: pointer; font-size: 0.8rem; padding: 4px 10px;
+  transition: all 0.2s;
+}
+.lang-toggle-btn:hover { border-color: var(--accent-gold); color: #fff; }
+
+.language-switcher { position: absolute; top: 10px; right: 10px; z-index: 100; }
+
+/* ========================================================================
+   COOKIE CONSENT BANNER  (was inline in every page)
+   ======================================================================== */
+#cookie-consent-banner {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0;
+  background: rgba(10,10,10,0.97); border-top: 1px solid #333;
+  padding: 1rem 1.5rem; z-index: 999999;
+  backdrop-filter: blur(10px); text-align: center;
+}
+#cookie-consent-banner p { color: #aaa; font-size: 0.85rem; margin-bottom: 0.8rem; }
+#cookie-consent-banner .cookie-buttons { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+.cookie-btn-accept { background: #3DDC84; color: #000; border: none; padding: 0.5rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+.cookie-btn-accept:hover { background: #2DBD6E; }
+.cookie-btn-decline { background: transparent; color: #888; border: 1px solid #444; padding: 0.5rem 1.5rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+.cookie-btn-decline:hover { border-color: #ff4444; color: #ff4444; }
+
+/* ========================================================================
+   ABOUT PAGE
+   ======================================================================== */
+.about-page section { margin-bottom: 2rem; }
+.about-page h2 { color: var(--accent-gold); font-size: 1.3rem; margin-bottom: 0.8rem; }
+.about-page p { line-height: 1.7; margin-bottom: 0.8rem; }
+
+/* ========================================================================
+   BLOG — Post Cards & Category Filters
+   ======================================================================== */
+.blog-intro { text-align: center; padding: 1.5rem 1rem; color: #888; font-size: 1rem; margin-bottom: 1rem; }
+
+.post-card {
+  background: var(--bg-card); border: 1px solid var(--border-card);
+  border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.2rem;
+  transition: border-color var(--transition-normal);
+}
+.post-card:hover { border-color: var(--accent-gold); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.post-card h2 a { color: var(--text-primary); text-decoration: none; }
+.post-card h2 a:hover { color: var(--accent-light); }
+.post-card .post-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.6rem; }
+.post-card .post-meta span { margin-right: 0.8rem; }
+.post-card p { font-size: 0.9rem; color: var(--text-body); line-height: 1.6; }
+.post-card .read-more { display: inline-block; margin-top: 0.8rem; color: var(--accent-gold); font-size: 0.85rem; text-decoration: none; font-weight: 500; }
+.post-card .read-more:hover { color: var(--accent-light); }
+
+.cat-btn {
+  background: transparent; border: 1px solid #333; color: #888;
+  padding: 0.4rem 1rem; border-radius: 20px; cursor: pointer;
+  font-size: 0.8rem; transition: all var(--transition-fast);
+  margin: 0.2rem;
+}
+.cat-btn:hover { border-color: var(--accent-gold); color: #ddd; }
+.cat-btn.active { background: var(--accent-gold); color: #000; border-color: var(--accent-gold); font-weight: 600; }
+.cat-btn.active:hover { background: var(--accent-light); }
+
+.blog-listing { margin-top: 1.5rem; }
+
+/* ========================================================================
+   BREADCRUMB — Explicit sizing for consistent line-height
+   ======================================================================== */
+.breadcrumb-nav { margin-bottom: 1.2rem; }
+.breadcrumb-nav ol,
+.breadcrumb-list {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem;
+  font-size: 0.8rem; color: var(--text-dim); padding: 0; margin: 0;
+  line-height: 1.6;
+}
+.breadcrumb-list li { display: flex; align-items: center; }
+.breadcrumb-list li:not(:first-child)::before {
+  content: "›"; margin-right: 0.5rem; color: var(--text-dim);
+}
+
+/* ========================================================================
+   NAV ICONS — Standardized ::before for nav links
+   ======================================================================== */
+nav ul li a[href="/"]::before { content: "⌂ "; }
+nav ul li a[href*="/apps/"]::before,
+nav ul li a[href*="apps/app-details"]::before { content: "⚇ "; }
+nav ul li a[href*="/tools/"]::before { content: "⚒ "; }
+nav ul li a[href*="/blog/"]::before { content: "✎ "; }
+nav ul li a[href*="about"]::before { content: "◈ "; }
+nav ul li a[href*="best-occult-apps"]::before { content: "★ "; }
+nav ul li a[href*="complete"]::before { content: "⊞ "; }
+nav ul li a[href*="privacy"]::before { content: "◎ "; }
+nav ul li a[href*="glossary"]::before { content: "▤ "; }
+
+/* ========================================================================
+   COMPARISON TABLE — for best-occult-apps page
+   ======================================================================== */
+.comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+.comparison-table th,
+.comparison-table td { padding: 0.75rem 0.8rem; border: 1px solid #333; text-align: left; vertical-align: top; }
+.comparison-table th { background: #111; color: var(--accent-light); font-weight: 600; white-space: nowrap; }
+.comparison-table td:first-child { font-weight: 500; color: #ccc; white-space: nowrap; }
+.comparison-table .check { color: #3DDC84; }
+.comparison-table .cross { color: #ff4444; }
+.comparison-table tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+.comparison-table tr:hover { background: rgba(255,215,0,0.04); }
+
+/* ========================================================================
+   GLOSSARY
+   ======================================================================== */
+.glossary-term { margin-bottom: 1.5rem; }
+.glossary-term h3 { color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 0.3rem; }
+.glossary-term p { color: var(--text-body); font-size: 0.9rem; line-height: 1.6; }
+
+/* ========================================================================
+   TOOLS INDEX
+   ======================================================================== */
+.tool-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.tool-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: 1.2rem; transition: border-color var(--transition-normal); }
+.tool-card:hover { border-color: var(--accent-gold); }
+.tool-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+.tool-card h3 a { color: var(--text-primary); text-decoration: none; }
+.tool-card h3 a:hover { color: var(--accent-light); }
+.tool-card p { font-size: 0.85rem; color: var(--text-body); line-height: 1.5; }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,6 +8,14 @@
 <link rel="canonical" href="https://cha0smagicklabs.com/blog/how-to-charge-sigil-correctly.html">
 <link rel="manifest" href="../manifest.json">
 <meta name="theme-color" content="#050505">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', { 'analytics_storage': 'denied' });
+      gtag('config', 'G-V6LHCPN9TK');
+    </script>
 <meta property="og:title" content="How to Charge a Sigil Correctly: 7 Proven Methods">
 <meta property="og:description" content="A sigil is just a drawing until charged. Master 7 proven sigil activation methods from chaos magick — from Spare's gnostic exhaustion to the digital flash ritual.">
 <meta property="og:url" content="https://cha0smagicklabs.com/blog/how-to-charge-sigil-correctly.html">
@@ -416,62 +424,34 @@
 </div>
 
 <footer><p>&copy; 2026 Cha0smagick Labs — <a href="../index.html">Corporate Cybermancy Solutions</a></p></footer>
-<script>
-if ('serviceWorker' in navigator) {
-window.addEventListener('load', function() {
-navigator.serviceWorker.register('../sw.js').catch(function(err) {
-console.log('SW registration failed:', err);
-});
-});
-}
-</script>
 <!-- Language Switcher - Fixed Left Sidebar -->
-<div id="lang-sidebar" class="lang-sidebar">
-  <button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button>
-  <div id="lang-flag-list" class="lang-flag-list" style="display:none;">
-    <button onclick="switchLang('en')" title="English" class="lang-btn"><img src="/assets/images/flags/gb.svg" alt="" class="flag-icon"> EN</button>
-    <button onclick="switchLang('es')" title="Espa&ntilde;ol" class="lang-btn"><img src="/assets/images/flags/es.svg" alt="" class="flag-icon"> ES</button>
-    <button onclick="switchLang('fr')" title="Fran&ccedil;ais" class="lang-btn"><img src="/assets/images/flags/fr.svg" alt="" class="flag-icon"> FR</button>
-    <button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="/assets/images/flags/de.svg" alt="" class="flag-icon"> DE</button>
-    <button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="/assets/images/flags/it.svg" alt="" class="flag-icon"> IT</button>
-    <button onclick="switchLang('pt')" title="Portugu&ecirc;s" class="lang-btn"><img src="/assets/images/flags/pt.svg" alt="" class="flag-icon"> PT</button>
-    <button onclick="switchLang('ru')" title="Русский" class="lang-btn"><img src="/assets/images/flags/ru.svg" alt="" class="flag-icon"> RU</button>
-    <button onclick="switchLang('ja')" title="日本語" class="lang-btn"><img src="/assets/images/flags/jp.svg" alt="" class="flag-icon"> JP</button>
-    <button onclick="switchLang('zh-CN')" title="中文" class="lang-btn"><img src="/assets/images/flags/cn.svg" alt="" class="flag-icon"> ZH</button>
-  </div>
 </div>
 
 <!-- Hidden Google Translate Element -->
 <div id="google_translate_element" style="display:none;"></div>
 
-<style>
-.lang-sidebar { position:fixed; left:0; top:50%; transform:translateY(-50%); z-index:99999; display:flex; flex-direction:column; align-items:center; }
-.lang-toggle-btn { background:#1a1a1a; border:1px solid #444; border-left:none; border-radius:0 8px 8px 0; color:#ccc; font-size:1.3rem; cursor:pointer; padding:10px 6px; line-height:1; transition:all .2s; width:38px; }
-.lang-toggle-btn:hover { background:#333; color:#fff; }
-.lang-flag-list { display:none; flex-direction:column; gap:2px; margin-top:4px; padding:6px 4px; background:#1a1a1a; border:1px solid #444; border-left:none; border-radius:0 8px 8px 0; }
-.lang-btn { background:transparent; border:none; color:#aaa; cursor:pointer; font-size:0.82rem; padding:4px 7px; text-align:left; white-space:nowrap; border-radius:4px; transition:all .15s; font-family:inherit; display:flex; align-items:center; gap:5px; width:100%; }
-.lang-btn:hover { background:#333; color:#ffd700; }
-.flag-icon { width:18px; height:auto; border-radius:2px; display:inline-block; vertical-align:middle; }
-</style>
 
-<script>
-function toggleLangSidebar() {
-  var el = document.getElementById('lang-flag-list');
-  if (!el) return;
-  el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'flex' : 'none';
-}
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,es,fr,de,it,pt,ru,ja,zh-CN', autoDisplay: false }, 'google_translate_element');
-}
-function switchLang(lang) {
-  var tries = 0;
-  var iv = setInterval(function() {
-    var sel = document.querySelector('.goog-te-combo');
-    if (sel) { sel.value = lang; sel.dispatchEvent(new Event('change')); clearInterval(iv); var fl = document.getElementById('lang-flag-list'); if (fl) fl.style.display = 'none'; }
-    if (++tries > 30) clearInterval(iv);
-  }, 150);
-}
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="../js/shared.js"></script>
+
+<!-- Language Switcher -->
+<div id="lang-flag-list">
+    <button onclick="switchLang('en')" title="English">ðŸ‡¬ðŸ‡§ EN</button>
+    <button onclick="switchLang('es')" title="EspaÃ±ol">ðŸ‡ªðŸ‡¸ ES</button>
+    <button onclick="switchLang('fr')" title="FranÃ§ais">ðŸ‡«ðŸ‡· FR</button>
+    <button onclick="switchLang('de')" title="Deutsch">ðŸ‡©ðŸ‡ª DE</button>
+    <button onclick="switchLang('it')" title="Italiano">ðŸ‡®ðŸ‡¹ IT</button>
+    <button onclick="switchLang('pt')" title="PortuguÃªs">ðŸ‡µðŸ‡¹ PT</button>
+    <button onclick="switchLang('ru')" title="Ð ÑƒÑÑÐºÐ¸Ð¹">ðŸ‡·ðŸ‡º RU</button>
+    <button onclick="switchLang('ja')" title="æ—¥æœ¬èªž">ðŸ‡¯ðŸ‡µ JP</button>
+    <button onclick="switchLang('zh-CN')" title="ä¸­æ–‡">ðŸ‡¨ðŸ‡³ ZH</button>
+</div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner">
+    <p>This site uses cookies for analytics and to improve your experience. <a href="../privacy-policy.html" style="color:#ffd700;">Learn more</a></p>
+    <div class="cookie-buttons">
+        <button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button>
+        <button class="cookie-btn-decline" onclick="declineCookies()">Decline</button>
+    </div>
+</div>
 </body>
 </html>
