@@ -112,6 +112,16 @@
       ]
     }
     </script>
+<style>
+.app-section { margin-bottom: 1.5rem; border: 1px solid var(--border-card, #333); border-radius: var(--radius-md, 8px); background: var(--bg-card, #0a0a0a); }
+.app-section summary { cursor: pointer; padding: 1rem 1.5rem; list-style: none; display: flex; align-items: center; justify-content: space-between; flex-direction: row-reverse; }
+.app-section summary::-webkit-details-marker { display: none; }
+.app-section summary::after { content: "▶"; color: var(--accent-gold, #c0a060); font-size: 0.85rem; transition: transform 0.2s ease; }
+.app-section[open] summary::after { content: "▼"; }
+.app-section summary h2 { display: inline; font-size: 1.1rem; margin: 0; color: var(--accent-gold, #c0a060); border: none; }
+.app-section summary:hover { background: rgba(192,160,96,0.05); border-radius: var(--radius-md, 8px); }
+.app-content { padding: 0 1.5rem 1.5rem; }
+</style>
 </head>
 <body>
     <header>
