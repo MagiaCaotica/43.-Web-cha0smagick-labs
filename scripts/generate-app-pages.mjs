@@ -542,13 +542,6 @@ function buildProductSchema(item, itemUrl, imageUrl) {
             "availability": "https://schema.org/InStock",
             "url": item.url || item.hotmartLink
         },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.5",
-            "reviewCount": "42",
-            "bestRating": "5",
-            "worstRating": "1"
-        }
     }, null, 2);
 }
 

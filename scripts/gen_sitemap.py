@@ -33,10 +33,12 @@ for fp in sorted(all_files):
     rel = os.path.relpath(fp, ROOT).replace("\\", "/")
     fname = os.path.basename(fp)
     
+    # Skip unwanted pages
+    if rel in ("404.html", "pages/app-details.html"):
+        continue
+    
     # Determine priority and changefreq
-    if fname == "404.html":
-        cf, pr = "monthly", "0.3"
-    elif rel == "index.html":
+    if rel == "index.html":
         cf, pr = "weekly", "1.0"
     elif rel.startswith("apps/"):
         cf, pr = ("monthly", "0.9") if "pdf" not in fname else ("monthly", "0.8")

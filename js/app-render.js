@@ -370,13 +370,6 @@ function renderAppDetails() {
                 "availability": "https://schema.org/InStock",
                 "url": item.url
             },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.5",
-                "reviewCount": "42",
-                "bestRating": "5",
-                "worstRating": "1"
-            }
         };
         injectSchema(productSchema, 'product-schema');
     }
