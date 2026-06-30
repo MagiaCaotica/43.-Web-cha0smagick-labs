@@ -60,7 +60,7 @@ function renderAppsGrid() {
         const altText = appAltText[app.id] || app.name + ' — buy chaos magick android app';
         const priceShort = app.price ? app.price.replace(/\sUSD.*$/, '').replace(/\(.*?\)/, '').trim() : '';
         const playIcon = '<svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>';
-        const googlePlayBtn = app.url ? `<a href="${app.url}" class="play-store-btn compact" target="_blank" onclick="event.stopPropagation()">${playIcon} GET IT ON PLAY STORE</a>` : '';
+        const googlePlayBtn = app.url ? `<a href="${app.url}" class="play-store-btn compact pulse" target="_blank" onclick="event.stopPropagation()">${playIcon} GET IT ON PLAY STORE</a>` : '';
         card.innerHTML = `
             <div class="card-image-wrapper">
                 ${buildPictureHtml(app.image, altText, 'app-image img-' + app.id.replace(/-/g, '-'), loadingStrategy.includes('fetchpriority') ? 'eager' : 'lazy', '300', '220')}
@@ -544,7 +544,7 @@ function renderAlsoLike(currentId) {
                     </div>
                     ${app.price ? `<span class="card-price">${app.price}</span>` : ''}
                 </div>
-                ${app.url ? `<span class="cta-button primary google-play-btn" style="display:block;text-align:center;margin-top:1rem;">Buy Now ${priceShort}</span>` : ''}
+                ${app.url ? `<a href="${app.url}" class="play-store-btn compact pulse" target="_blank" style="display:flex;margin-top:1rem;" onclick="event.stopPropagation()">${'<svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>'} GET IT ON PLAY STORE</a>` : ''}
             </div>
         `;
         fragment.appendChild(card);
