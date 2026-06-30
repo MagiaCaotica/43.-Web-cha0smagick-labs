@@ -85,10 +85,46 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cha0smagicklabs.com/complete-chaos-magick-bundle.html</loc>
+        <loc>https://cha0smagicklabs.com/blog/sigil-maker-ultimate-guide.html</loc>
         <lastmod>2026-06-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/sigil-engine-cryptographic-guide.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/complete-magickal-servitors-guide.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/viking-oracle-complete-guide.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/sigil-creator-online-free-vs-premium.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/moon-phase-generator-magic-guide.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cha0smagicklabs.com/blog/sigilscribe-art-science-writing-sigils.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://cha0smagicklabs.com/glossary.html</loc>
