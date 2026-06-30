@@ -498,6 +498,37 @@ span.play-store-btn,
   50% { box-shadow: 0 0 0 10px rgba(61, 220, 132, 0.15), 0 6px 20px rgba(61, 220, 132, 0.4); }
   100% { box-shadow: 0 2px 8px rgba(61, 220, 132, 0.3); }
 }
+/* Force ALL Google Play buttons to use the Play Store green + pulse */
+.cta-button.primary.google-play-btn,
+a.cta-button.primary[href*="play.google.com"],
+.google-play-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: #3DDC84 !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.5px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 12px 28px !important;
+  cursor: pointer !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 2px 8px rgba(61, 220, 132, 0.3) !important;
+  animation: play-pulse 2.5s infinite !important;
+}
+.cta-button.primary.google-play-btn:hover,
+a.cta-button.primary[href*="play.google.com"]:hover,
+.google-play-btn:hover {
+  background: #2DBD6E !important;
+  color: #000 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(61, 220, 132, 0.5) !important;
+}
 /* Compact version for cards */
 .play-store-btn.compact {
   padding: 8px 16px;
