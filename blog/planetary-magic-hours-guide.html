@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,7 @@
     <link rel="canonical" href="https://cha0smagicklabs.com/blog/planetary-magic-hours-guide.html">
     <link rel="alternate" href="https://cha0smagicklabs.com/blog/planetary-magic-hours-guide.html" hreflang="en">
     <link rel="alternate" href="https://cha0smagicklabs.com/blog/planetary-magic-hours-guide.html" hreflang="x-default">
+    <link rel="alternate" href="https://cha0smagicklabs.com/es/blog/planetary-magic-hours-guide.html" hreflang="es">
     <meta property="og:title" content="Planetary Magic & Planetary Hours: Complete Guide for Magickal Timing">
     <meta property="og:description" content="Master planetary magic and planetary hours. Learn correspondences, how to calculate planetary hours, and which hour to use for sigil work, evocation, and divination.">
     <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/blog/planetary-magic-hours-guide.png">
@@ -29,38 +30,486 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+        <style>
+        /* CRITICAL CSS INLINED */
+:root{--bg-body: #030303;
+  --bg-header: #050505;
+  --bg-nav: rgba(5,5,5,0.9);
+  --bg-card: #0a0a0a;
+  --bg-section: transparent;
+  --bg-footer: #030303;
+  --bg-code: #0a0a0a;
+
+  --text-primary: #f0f0f0;
+  --text-body: #a0a0a0;
+  --text-secondary: #999;
+  --text-muted: #666;
+  --text-dim: #444;
+
+  --accent-gold: #c0a060;
+  --accent-light: #ffd700;
+  --accent-white: #fff;
+
+  --border-subtle: #1a1a1a;
+  --border-mid: #333;
+  --border-card: #1a1a1a;
+
+  --font-main: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.4s ease;
+
+  --max-width: 1200px;}
+*, *::before, *::after{margin:0; padding:0; box-sizing:border-box;}
+body{font-family: var(--font-main);
+  background-color: var(--bg-body);
+  color: var(--text-body);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;}
+.header-link{color: inherit; 
+  text-decoration: none; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;}
+a:hover{color: var(--accent-light);}
+img{max-width:100%; height:auto;}
+.header-logo{width: 200px; height: 200px;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  opacity: 0.7;
+  border: 1px solid transparent;
+  transition: all var(--transition-normal);
+  margin-bottom: 1.5rem;}
+.header-logo:hover{opacity: 1;}
+header .site-title,
+header h1{margin: 0;
+  font-size: 3rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: var(--accent-white);
+  text-shadow: 0 0 20px rgba(255,255,255,0.1);}
+nav ul{list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  flex-wrap: wrap;}
+nav ul li a{display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1.2rem 2rem;
+  transition: all var(--transition-normal);
+  border-bottom: 1px solid transparent;}
+nav ul li a:hover{color: var(--accent-white);
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--accent-white);}
+section h2, section h3{color: var(--text-primary);
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-left: 2px solid var(--border-mid);
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: none;}
+section.hero{text-align: center;
+  padding: 3rem 0 2rem;
+  border-bottom: none;
+  position: relative;
+  margin-bottom: 4rem;}
+section.hero::after{content: '';
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: var(--accent-gold);
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);}
+section.hero h1{color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 200;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  max-width: 900px;
+  margin: 0 auto 1.2rem;
+  border: none;
+  padding: 0;
+  line-height: 1.5;}
+section.hero p{color: var(--text-secondary);
+  max-width: 750px;
+  margin: 1rem auto;
+  font-size: 1rem;
+  line-height: 1.7;}
+.hero-cta-link{display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.8rem;
+  background: var(--accent-gold);
+  color: #000 !important;
+  text-decoration: none !important;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;}
+.hero-cta-link:hover{background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);}
+section.ceo-bio{padding: 1rem 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 4rem;}
+section.ceo-bio p{color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 0.95rem;}
+section.ceo-bio a,
+a.inline-link{color: var(--accent-gold);
+  text-decoration: underline;}
+section.ceo-bio a:hover,
+a.inline-link:hover{color: var(--accent-light);}
+@media (max-width: 600px) { .trust-bar }{gap: 0.8rem; flex-direction: column; align-items: center;}
+@media (max-width: 600px) { .trust-item }{white-space: normal; text-align: center;}
+section.apps-section{margin-bottom: 4rem;}
+section.apps-section p{color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;}
+.cta-button{display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;}
+.cta-button:hover{background: var(--accent-gold);
+  color: var(--bg-body);}
+.cta-button.primary{background: var(--accent-gold);
+  color: var(--bg-body);
+  border: 1px solid var(--accent-gold);
+  padding: 0.85rem 2rem;
+  font-size: 0.95rem;}
+.cta-button.primary:hover{background: var(--accent-light);
+  border-color: var(--accent-light);}
+.cta-button.small{padding: 0.5rem 1.2rem;
+  font-size: 0.8rem;}
+a.play-store-btn,
+span.play-store-btn,
+.play-store-btn{display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #3DDC84;
+  color: #000 !important;
+  text-decoration: none !important;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(61, 220, 132, 0.3);}
+.play-store-btn:hover{background: #2DBD6E;
+  color: #000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(61, 220, 132, 0.5);}
+.play-store-btn:active{transform: translateY(0);}
+.play-store-btn .play-icon{width: 22px;
+  height: 22px;
+  flex-shrink: 0;}
+.play-store-btn.pulse{animation: play-pulse 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform, box-shadow;}
+.cta-button.primary.google-play-btn,
+a.cta-button.primary[href*="play.google.com"],
+.google-play-btn{display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: #3DDC84 !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.5px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 12px 28px !important;
+  cursor: pointer !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 2px 8px rgba(61, 220, 132, 0.3) !important;
+  animation: play-pulse 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+  will-change: transform, box-shadow;}
+.cta-button.primary.google-play-btn:hover,
+a.cta-button.primary[href*="play.google.com"]:hover,
+.google-play-btn:hover{background: #2DBD6E !important;
+  color: #000 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(61, 220, 132, 0.5) !important;}
+.play-store-btn.compact{padding: 8px 16px;
+  font-size: 0.75rem;
+  gap: 6px;}
+.card-content .play-store-btn,
+.card-content .google-play-btn,
+.card-content .cta-button.primary.google-play-btn{margin-top: 1.5rem !important;}
+.play-store-btn.compact .play-icon{width: 16px;
+  height: 16px;}
+.breadcrumb, .breadcrumb-nav{max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);}
+.breadcrumb a:hover{text-decoration: underline;}
+.breadcrumb-list{list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;}
+.breadcrumb-list li{color: var(--text-dim);}
+.breadcrumb-list li::before{content: "›";
+  margin-right: 0.5rem;
+  color: var(--accent-gold);}
+.breadcrumb-list li:first-child::before{content: none;}
+.breadcrumb-list a{color: var(--accent-gold); text-decoration: none;}
+.breadcrumb-list a:hover{text-decoration: underline;}
+footer{background-color: var(--bg-footer);
+  color: var(--text-dim);
+  text-align: center;
+  padding: 4rem 1rem;
+  border-top: 1px solid #111;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;}
+footer a{color: #777; text-decoration: none;}
+footer a:hover{color: var(--accent-white);}
+.site-footer{letter-spacing: 0; text-transform: none;}
+.footer-grid{display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto 3rem;
+  text-align: left;}
+.footer-section h4{color: var(--accent-gold);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;}
+.footer-section p{color: var(--text-dim);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-bottom: 0.5rem;}
+.footer-section ul{list-style: none; padding: 0; margin: 0;}
+.footer-section li{margin-bottom: 0.4rem;}
+.footer-section a{color: var(--text-dim);
+  font-size: 0.8rem;
+  text-transform: none;
+  letter-spacing: 0;}
+.footer-section a:hover{color: var(--accent-gold);}
+.footer-visitor .visitor-count{color: var(--text-dim);
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  text-transform: none;}
+.footer-visitor #visitor-count{color: var(--accent-gold);
+  font-family: var(--font-mono);
+  letter-spacing: 2px;}
+.footer-bottom{border-top: 1px solid #111;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;}
+.footer-parallel-container{display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: var(--max-width);
+  margin: 0 auto 3rem;}
+.footer-left-side{flex: 0 1 300px; display:flex; flex-direction:column; align-items:center;}
+.footer-right-side{flex:1; min-width:320px; max-width:600px; display:flex; flex-direction:column;}
+.footer-content{display:flex; flex-wrap:wrap; gap:3rem; text-align:left;}
+.footer-links h4,
+.footer-social h4{color: var(--accent-gold);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;}
+.footer-links ul,
+.footer-social ul{list-style:none; padding:0; margin:0;}
+.footer-links li,
+.footer-social li{margin-bottom:0.5rem;}
+.footer-links a,
+.footer-social a{color: var(--text-dim); font-size:0.85rem;}
+.footer-links a:hover,
+.footer-social a:hover{color: var(--accent-gold);}
+.visitor-leaflet-map .leaflet-control-zoom a:hover{background:var(--bg-card); color:var(--accent-gold);}
+#faq-section{max-width: var(--max-width);
+  margin: 4rem auto;
+  padding: 2rem;
+  border-top: 1px solid var(--border-subtle);}
+#faq-section h2{color: var(--text-primary);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-left: none;
+  padding-left: 0;}
+.collapsible-section.active .collapsible-content{max-height: 5000px;
+  opacity: 1;
+  padding-bottom: 2rem;}
+.collapsible-section.active .section-toggle::after{content: '[ - ]';}
+@media (max-width:900px) { .screenshot-item }{max-width:110px;}
+@media (max-width:500px) { .screenshot-item }{max-width:90px;}
+.blog-post, .article{max-width:800px; margin:0 auto; padding:2rem 1rem;}
+.blog-post h2, .article h2{color:var(--text-primary); font-weight:200; text-transform:uppercase; letter-spacing:3px; margin:2rem 0 1rem;}
+.blog-post h3, .article h3{color:var(--text-primary); font-weight:300; margin:1.5rem 0 0.8rem;}
+.blog-post p, .article p{color:var(--text-secondary); margin-bottom:1.2rem; line-height:1.8;}
+.blog-post ul, .blog-post ol, .article ul, .article ol{margin-bottom:1.5rem; padding-left:1.5rem; color:var(--text-secondary);}
+.blog-post li, .article li{margin-bottom:0.5rem;}
+.blog-meta, .article .meta{color:var(--text-dim); font-size:0.85rem; margin-bottom:2rem; font-family:var(--font-mono);}
+.blog-nav a{color:var(--accent-gold); font-size:0.9rem;}
+.blog-nav a:hover{color:var(--accent-light);}
+.article h1{color:var(--accent-light); font-size:2rem; margin-bottom:.5rem;}
+.article .cta-box{background:var(--bg-card); border:1px solid var(--accent-gold); border-radius:var(--radius-lg); padding:1.5rem; margin:2rem 0; text-align:center;}
+.article .cta-box p{color:var(--text-body); margin-bottom:.8rem;}
+.article .cta-box a{display:inline-block; padding:.7rem 1.8rem; background:var(--accent-gold); color:var(--bg-body); text-decoration:none; border-radius:6px; font-weight:700; transition:background var(--transition-normal);}
+.article .cta-box a:hover{background:var(--accent-light);}
+.share a:hover{color:var(--accent-light);}
+section.intro{text-align:center; max-width:700px; margin:2rem auto; padding:0 1rem;}
+section.intro h2{color:var(--text-primary); font-size:1.3rem; margin-bottom:0.8rem;}
+section.intro p{color:var(--text-secondary); font-size:0.95rem; line-height:1.7;}
+section.bottom-cta{text-align:center; max-width:650px; margin:3rem auto; padding:2rem 1rem; border-top:1px solid var(--border-subtle);}
+section.bottom-cta h3{color:var(--accent-gold); font-size:1.1rem; margin-bottom:0.8rem;}
+section.bottom-cta p{color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.2rem;}
+section.bottom-cta a{display:inline-block; background:var(--accent-gold); color:var(--bg-body); padding:0.7rem 1.8rem; border-radius:6px; font-weight:700; text-decoration:none; transition:all 0.3s;}
+section.bottom-cta a:hover{background:var(--accent-light); transform:translateY(-2px);}
+@media (max-width:650px) { .tools-grid }{grid-template-columns:1fr;}
+@media (max-width:650px) { .blog-grid }{grid-template-columns:1fr;}
+.ads-info a:hover{color: var(--accent-white);}
+@media (max-width: 768px) { header }{padding: 2rem 1rem;}
+@media (max-width: 768px) { header .site-title, header h1 }{font-size: 2rem; letter-spacing: 3px;}
+@media (max-width: 768px) { .header-logo }{width: 140px; height: 140px;}
+@media (max-width: 768px) { main }{padding: 2rem 1rem;}
+@media (max-width: 768px) { section }{margin-bottom: 4rem;}
+@media (max-width: 768px) { nav ul li a }{padding: 1rem 0.8rem; font-size: 0.75rem;}
+@media (max-width: 768px) { .contact-links }{justify-content: center;}
+@media (max-width: 768px) { .contact-btn }{width: 100%; justify-content: center;}
+@media (max-width: 768px) { .detail-header-layout }{flex-direction:column; align-items:center; text-align:center;}
+@media (max-width: 768px) { .detail-main-image }{margin-bottom:1rem;}
+@media (max-width: 768px) { #app-detailed-info }{padding:1.5rem;}
+@media (max-width: 768px) { .footer-parallel-container }{flex-direction:column; align-items:center; gap:2rem;}
+@media (max-width: 768px) { .footer-left-side }{order:2;}
+@media (max-width: 768px) { .footer-right-side }{order:1;}
+@media (max-width: 768px) { .footer-content }{gap:2rem; text-align:center;}
+@media (max-width: 768px) { .faq-item }{padding:1rem;}
+@media (max-width: 768px) { #faq-section, #features }{padding:1.5rem 1rem;}
+@media (max-width: 768px) { .author-links }{flex-direction:column;}
+@media (max-width: 768px) { .author-links .contact-btn }{width:100%; text-align:center;}
+@media (max-width: 768px) { .tools-grid }{grid-template-columns:1fr;}
+@media (max-width: 768px) { .blog-grid }{grid-template-columns:1fr;}
+@media (max-width: 768px) { .tool-frame iframe }{height:380px;}
+.cta-centered-wrapper .play-store-btn + .cta-button,
+.cta-centered-wrapper .play-store-btn + .play-store-btn{margin-left: 12px;}
+.card-footer{display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;}
+.container .cta-box .play-store-btn{display:inline-flex; align-items:center; gap:0.5rem; background:#3DDC84; color:#000 !important; padding:0.7rem 1.8rem; border-radius:6px; font-weight:700; font-size:0.9rem; text-decoration:none; text-transform:uppercase; transition:all 0.3s; box-shadow:0 2px 8px rgba(61,220,132,0.3);}
+.container .cta-box .play-store-btn:hover{background:#2DBD6E; transform:translateY(-2px); box-shadow:0 6px 20px rgba(61,220,132,0.5);}
+.back-link{text-align:center; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border-subtle);}
+.back-link a{color:#888; font-size:0.85rem; text-decoration:none; transition:color 0.2s;}
+.back-link a:hover{color:var(--accent-light);}
+@media (max-width:600px) { .container }{padding:0 1rem 2rem;}
+@media (max-width:600px) { .container .hero h2 }{font-size:1.2rem;}
+@media (max-width:600px) { .container .benefits ul }{grid-template-columns:1fr;}
+@media (max-width:600px) { .container .tool-frame iframe }{height:380px;}
+@media (max-width:600px) { .container .cta-box }{padding:1.5rem;}
+@media (max-width:600px) { .container .cta-box .price }{font-size:1.6rem;}
+.sticky-conversion-bar .sticky-cta:hover{background:#2DBD6E; transform:scale(1.05); box-shadow:0 4px 15px rgba(61,220,132,0.5);}
+@media (max-width:600px) { .sticky-conversion-bar }{padding:0.5rem 1rem; gap:0.5rem;}
+@media (max-width:600px) { .sticky-conversion-bar .sticky-text }{font-size:0.7rem;}
+@media (max-width:600px) { .sticky-conversion-bar .price-tag }{font-size:1rem;}
+@media (max-width:600px) { .compare-table }{font-size:0.8rem;}
+@media (max-width:600px) { .compare-table th, .compare-table td }{padding:0.5rem;}
+body{top: 0px !important;}
+#cookie-consent-banner{display: none; position: fixed; bottom: 0; left: 0; right: 0;
+  background: rgba(10,10,10,0.97); border-top: 1px solid #333;
+  padding: 1rem 1.5rem; z-index: 999999;
+  backdrop-filter: blur(10px); text-align: center;}
+#cookie-consent-banner p{color: #aaa; font-size: 0.85rem; margin-bottom: 0.8rem;}
+#cookie-consent-banner .cookie-buttons{display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap;}
+.blog-intro{text-align: center; padding: 1.5rem 1rem; color: #888; font-size: 1rem; margin-bottom: 1rem;}
+.post-card h2 a:hover{color: var(--accent-light);}
+.post-card .post-meta span{margin-right: 0.8rem;}
+.breadcrumb-nav{margin-bottom: 1.2rem;}
+.breadcrumb-nav ol,
+.breadcrumb-list{list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem;
+  font-size: 0.8rem; color: var(--text-dim); padding: 0; margin: 0;
+  line-height: 1.6;}
+.breadcrumb-list li{display: flex; align-items: center;}
+.breadcrumb-list li:not(:first-child)::before{content: "›"; margin-right: 0.5rem; color: var(--text-dim);}
+nav ul li a[href="/"]::before{content: "⌂ ";}
+nav ul li a[href*="/apps/"]::before,
+nav ul li a[href*="apps/app-details"]::before{content: "⚇ ";}
+nav ul li a[href*="/tools/"]::before{content: "⚒ ";}
+nav ul li a[href*="/blog/"]::before{content: "✎ ";}
+nav ul li a[href*="about"]::before{content: "◈ ";}
+nav ul li a[href*="best-occult-apps"]::before{content: "★ ";}
+nav ul li a[href*="complete"]::before{content: "⊞ ";}
+nav ul li a[href*="privacy"]::before{content: "◎ ";}
+nav ul li a[href*="glossary"]::before{content: "▤ ";}
+.tool-card h3 a:hover{color: var(--accent-light);}
+@media (max-width: 600px) { .share-buttons }{gap: 0.5rem;}
+@media (max-width: 600px) { .share-btn span }{display: none;}
+@media (max-width: 600px) { .share-btn }{padding: 0.6rem;}
+.related-links a:hover{color: var(--accent-light); text-decoration: underline;}
+@media (max-width: 600px) { .related-articles }{padding: 1.2rem;}
+.table-of-contents{background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem 1.5rem; margin: 1.5rem 0 2rem; font-size: 0.95rem;}
+.table-of-contents summary{cursor: pointer; font-weight: 600; color: var(--accent); padding: 0.25rem 0; user-select: none; font-size: 1.05rem;}
+.table-of-contents summary::-webkit-details-marker{color: var(--accent);}
+.table-of-contents[open] summary{margin-bottom: 0.75rem;}
+.table-of-contents nav ol{padding-left: 1.5rem; margin: 0;}
+.table-of-contents nav ol li{margin: 0.35rem 0;}
+.table-of-contents nav ol li a{color: var(--text); text-decoration: none; transition: color var(--transition-fast);}
+.table-of-contents nav ol li a:hover{color: var(--accent-light); text-decoration: underline;}
+    </style>
+
+    <link rel="preload" href="../css/style.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../css/style.min.css"></noscript>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());      gtag('consent', 'default', { 'analytics_storage': 'denied' });
       gtag('config','G-V6LHCPN9TK');</script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Planetary Magic & Planetary Hours: Complete Guide for Magickal Timing",
-        "description": "Master planetary magic and planetary hours. Learn correspondences, how to calculate planetary hours, and which hour to use for sigil work, evocation, and divination.",
-        "image": "https://cha0smagicklabs.com/assets/images/blog/planetary-magic-hours-guide.png",
-        "author": {
-            "@type": "Person",
-            "name": "Frater Alek0s",
-            "url": "https://cha0smagicklabs.com"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Cha0smagick Labs",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://cha0smagicklabs.com/assets/images/Banner.png"
-            }
-        },
-        "datePublished": "2026-06-24",
-        "dateModified": "2026-06-24",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://cha0smagicklabs.com/blog/planetary-magic-hours-guide.html"
-        }
-    }
-    </script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Planetary Magic & Planetary Hours: Complete Guide for Magickal Timing", "description": "Master planetary magic and planetary hours. Learn correspondences, how to calculate planetary hours, and which hour to use for sigil work, evocation, and divination.", "image": "https://cha0smagicklabs.com/assets/images/blog/planetary-magic-hours-guide.png", "author": {"@type": "Person", "name": "Frater Alek0s", "url": "https://cha0smagicklabs.com"}, "publisher": {"@type": "Organization", "name": "Cha0smagick Labs", "logo": {"@type": "ImageObject", "url": "https://cha0smagicklabs.com/assets/images/Banner.png"}}, "datePublished": "2026-06-24", "dateModified": "2026-06-24", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://cha0smagicklabs.com/blog/planetary-magic-hours-guide.html"}, "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".blog-post p", ".blog-post h2", ".blog-post h3", ".blog-post li"]}}</script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -190,7 +639,31 @@
 
         <p>Whether you are charging a sigil, evoking a spirit, casting a divination, or creating a talisman, the planetary hour at which you perform your working can mean the difference between a faint whisper and a thunderous manifestation. This guide covers everything you need to know: the correspondences of the seven classical planets, how to calculate planetary hours with precision, which hour to use for each type of magic, and how digital tools can automate the entire process.</p>
 
-        <h2>What Is Planetary Magic?</h2>
+        
+        <details class="table-of-contents" open>
+            <summary>Table of Contents</summary>
+            <nav aria-label="Table of Contents">
+                <ol>
+            <li><a href="#what-is-planetary-magic">What Is Planetary Magic?</a></li>
+            <li><a href="#the-seven-classical-planets-and-their-magical-correspondences">The Seven Classical Planets and Their Magical Correspondences</a></li>
+            <li><a href="#what-are-planetary-hours-and-why-they-matter">What Are Planetary Hours and Why They Matter</a></li>
+            <li><a href="#how-to-calculate-planetary-hours-the-sunrisesunset-method">How to Calculate Planetary Hours (The Sunrise/Sunset Method)</a></li>
+            <li><a href="#which-planetary-hour-to-use-for-what-type-of-magic">Which Planetary Hour to Use for What Type of Magic</a></li>
+            <li><a href="#planetary-kameas-the-magic-squares-of-the-seven-planets">Planetary Kameas: The Magic Squares of the Seven Planets</a></li>
+            <li><a href="#how-to-incorporate-planetary-timing-into-sigil-work">How to Incorporate Planetary Timing into Sigil Work</a></li>
+            <li><a href="#planetary-timing-for-evocation-and-spirit-work">Planetary Timing for Evocation and Spirit Work</a></li>
+            <li><a href="#planetary-timing-for-divination">Planetary Timing for Divination</a></li>
+            <li><a href="#digital-tools-for-tracking-planetary-hours">Digital Tools for Tracking Planetary Hours</a></li>
+            <li><a href="#advanced-planetary-magic-combining-hours-days-and-lunar-phases">Advanced Planetary Magic: Combining Hours, Days, and Lunar Phases</a></li>
+            <li><a href="#common-mistakes-in-planetary-hour-magic">Common Mistakes in Planetary Hour Magic</a></li>
+            <li><a href="#planetary-magic-in-the-digital-age">Planetary Magic in the Digital Age</a></li>
+            <li><a href="#references-recommended-reading">References & Recommended Reading</a></li>
+            <li><a href="#final-thoughts">Final Thoughts</a></li>
+            <li><a href="#references">References</a></li>
+                </ol>
+            </nav>
+        </details>
+<h2 id="what-is-planetary-magic">What Is Planetary Magic?</h2>
 
         <p>Planetary magic is a system of occult practice that assigns specific energies, spirits, colors, metals, incenses, and magical purposes to each of the seven classical planets visible to the naked eye: Saturn, Jupiter, Mars, the Sun, Venus, Mercury, and the Moon. These seven bodies form the backbone of Western ceremonial magic, from the Hermetic and Solomonic traditions to modern chaos magick.</p>
 
@@ -198,7 +671,7 @@
 
         <p>Planetary magic appears in virtually every major occult system. The Key of Solomon devotes entire chapters to planetary hours and correspondences. The Picatrix, a medieval grimoire of astrological magic, is built entirely around planetary timing. Even in chaos magick, where dogma is discarded in favor of pragmatic results, planetary hours remain a go-to tool for timing important workings.</p>
 
-        <h2>The Seven Classical Planets and Their Magical Correspondences</h2>
+        <h2 id="the-seven-classical-planets-and-their-magical-correspondences">The Seven Classical Planets and Their Magical Correspondences</h2>
 
         <p>Each of the seven classical planets governs specific domains of life, consciousness, and magical intent. Understanding these correspondences is essential before you begin working with planetary hours.</p>
 
@@ -301,7 +774,7 @@
 
         <p>The Moon is the closest celestial body to Earth and the most receptive of the classical planets. It governs emotion, intuition, dreams, psychic ability, fertility, healing, the subconscious, and the hidden realms. Lunar hours are ideal for meditation, dream magic, scrying, and any working that involves deep emotional healing or psychic development. The Moon's metal is silver, long associated with lunar goddesses and magical mirrors.</p>
 
-        <h2>What Are Planetary Hours and Why They Matter</h2>
+        <h2 id="what-are-planetary-hours-and-why-they-matter">What Are Planetary Hours and Why They Matter</h2>
 
         <p>Planetary hours are a system of time division based on the seven classical planets. Unlike the standard 60-minute hour, planetary hours are <strong>unequal</strong> — they vary in length depending on the season and your geographic latitude. The system divides the period from sunrise to sunset into 12 equal segments (daytime planetary hours) and from sunset to the next sunrise into another 12 equal segments (nighttime planetary hours).</p>
 
@@ -311,7 +784,7 @@
 
         <p>Traditional grimoires are explicit about this. The <em>Key of Solomon</em> instructs the magician to prepare all tools during the appropriate planetary hour. Medieval alchemists conducted experiments only at specific planetary times. In modern chaos magick, planetary hours are treated as a belief tool — a way to shift the practitioner's consciousness into alignment with specific archetypal forces.</p>
 
-        <h2>How to Calculate Planetary Hours (The Sunrise/Sunset Method)</h2>
+        <h2 id="how-to-calculate-planetary-hours-the-sunrisesunset-method">How to Calculate Planetary Hours (The Sunrise/Sunset Method)</h2>
 
         <p>Calculating planetary hours requires three pieces of information: the date, your geographic location, and the sunrise/sunset times for that location. Here is the step-by-step method:</p>
 
@@ -341,7 +814,7 @@
             <a href="../tools/planetary-hours.html" class="cta-button primary">Try the Planetary Hours Calculator &mdash; Free</a>
         </div>
 
-        <h2>Which Planetary Hour to Use for What Type of Magic</h2>
+        <h2 id="which-planetary-hour-to-use-for-what-type-of-magic">Which Planetary Hour to Use for What Type of Magic</h2>
 
         <p>Choosing the correct planetary hour for your working is the heart of planetary timing. Here is a comprehensive reference table for common magical intentions:</p>
 
@@ -424,7 +897,7 @@
             </tbody>
         </table>
 
-        <h2>Planetary Kameas: The Magic Squares of the Seven Planets</h2>
+        <h2 id="planetary-kameas-the-magic-squares-of-the-seven-planets">Planetary Kameas: The Magic Squares of the Seven Planets</h2>
 
         <p>Planetary kameas (also called magic squares) are a cornerstone of planetary magic. A kamea is a grid of numbers arranged so that every row, column, and diagonal sums to the same total. Each classical planet has its own square with unique dimensions and properties:</p>
 
@@ -442,7 +915,7 @@
 
         <p>Each kamea is also associated with a specific planetary intelligence and spirit. For example, the intelligence of the Sun kamea is Sorath, and the spirit of the Jupiter kamea is Saphtaiel. These intelligences are invoked when the talisman is forged during the correct planetary hour.</p>
 
-        <h2>How to Incorporate Planetary Timing into Sigil Work</h2>
+        <h2 id="how-to-incorporate-planetary-timing-into-sigil-work">How to Incorporate Planetary Timing into Sigil Work</h2>
 
         <p>Sigil magic and planetary timing are a natural combination. Planetary hours add a layer of precision and amplification to the sigil creation and charging process. Here is how to integrate them:</p>
 
@@ -457,7 +930,7 @@
         <h3>Sigil Firing (Gnosis Integration)</h3>
         <p>The moment of gnosis — whether through ecstatic dance, sensory deprivation, breathwork, or orgasm — is best timed for the final minutes of the planetary hour. As the planetary current peaks, fire the sigil. This is known as "riding the current" and is a hallmark of advanced planetary-sigil synchronization.</p>
 
-        <h2>Planetary Timing for Evocation and Spirit Work</h2>
+        <h2 id="planetary-timing-for-evocation-and-spirit-work">Planetary Timing for Evocation and Spirit Work</h2>
 
         <p>Evocation — the summoning of a spirit into visible appearance — is perhaps the area where planetary timing matters most. Every spirit in the Goetic system has planetary correspondences. Invoking King Bael (Jupiter) during a Mars hour is not only ineffective but potentially disruptive. The planetary hour is the spirit's preferred environment; evoking outside it is like calling someone at 3 AM.</p>
 
@@ -465,7 +938,7 @@
 
         <p>For servitor creation in chaos magick, planetary hours serve a different but equally important function. A servitor created during a Mercury hour will naturally be more attuned to communication and mental work. A servitor created during a Saturn hour will have a more binding, protective, or structuring function. By choosing the planetary hour, you effectively pre-program the servitor's core temperament.</p>
 
-        <h2>Planetary Timing for Divination</h2>
+        <h2 id="planetary-timing-for-divination">Planetary Timing for Divination</h2>
 
         <p>Divination is highly sensitive to planetary currents. Each divinatory method has natural planetary affinities:</p>
 
@@ -480,7 +953,7 @@
 
         <p>Readings performed during the correct planetary hour tend to be more accurate, more insightful, and require less interpretive effort by the reader. The cards or symbols seem to "speak" more clearly when the cosmic channel is open and aligned.</p>
 
-        <h2>Digital Tools for Tracking Planetary Hours</h2>
+        <h2 id="digital-tools-for-tracking-planetary-hours">Digital Tools for Tracking Planetary Hours</h2>
 
         <p>Manual calculation of planetary hours — while educational for beginners — is impractical for daily practice. The complexity of unequal hours, seasonal variation, and the Chaldean sequence makes automation nearly essential for consistent planetary timing. Fortunately, modern technology provides elegant solutions:</p>
 
@@ -499,7 +972,7 @@
             <p style="margin-top:1rem;font-size:0.85rem;color:#888;">Available on Google Play &bull; One-time purchase &bull; No ads &bull; Offline</p>
         </div>
 
-        <h2>Advanced Planetary Magic: Combining Hours, Days, and Lunar Phases</h2>
+        <h2 id="advanced-planetary-magic-combining-hours-days-and-lunar-phases">Advanced Planetary Magic: Combining Hours, Days, and Lunar Phases</h2>
 
         <p>Once you have mastered single-planet timing, the next level is multi-planet optimization. The most powerful workings align the day of the week, the planetary hour, and the lunar phase simultaneously. For example:</p>
 
@@ -512,7 +985,7 @@
 
         <p>This layered approach — known as "electional astrology applied to magic" — requires a solid understanding of both planetary cycles and lunar positions. The best digital tools allow you to layer all these filters simultaneously, showing you the perfect window for any specific working.</p>
 
-        <h2>Common Mistakes in Planetary Hour Magic</h2>
+        <h2 id="common-mistakes-in-planetary-hour-magic">Common Mistakes in Planetary Hour Magic</h2>
 
         <ul>
             <li><strong>Ignoring the length inequality:</strong> Planetary hours are not 60 minutes. A daytime hour in summer can be 80 minutes while a nighttime hour is 40 minutes. Plan accordingly.</li>
@@ -522,7 +995,7 @@
             <li><strong>Skipping lunar phase consideration:</strong> Jupiter hour on Jupiter day during a waning moon works against the natural growth cycle. The moon phase should support the intent.</li>
         </ul>
 
-        <h2>Planetary Magic in the Digital Age</h2>
+        <h2 id="planetary-magic-in-the-digital-age">Planetary Magic in the Digital Age</h2>
 
         <p>The intersection of planetary magic and technology represents a new frontier in occult practice. Digital planetary hour calculators, sigil generators that incorporate planetary kameas, and grimoire apps that log planetary timing alongside working results are transforming the way magicians interact with celestial cycles.</p>
 
@@ -532,7 +1005,7 @@
 
         <p>Cha0smagick Labs is committed to building tools that bridge ancient occult wisdom with modern technology. Our Planetary Hours Calculator, Lunar Phase Calculator, and cryptographic sigil generators are designed to eliminate the friction of manual timing so you can focus on what matters: the magic itself.</p>
 
-        <h2>References & Recommended Reading</h2>
+        <h2 id="references-recommended-reading">References & Recommended Reading</h2>
 
         <ul>
             <li><em>The Key of Solomon the King</em> (transl. S.L. MacGregor Mathers) — the foundational grimoire of planetary magic</li>
@@ -545,7 +1018,7 @@
             <li><a href="goetic-magic-beginners-guide.html">Goetic Magic for Beginners</a> — planetary hours for spirit evocation</li>
         </ul>
 
-        <h2>Final Thoughts</h2>
+        <h2 id="final-thoughts">Final Thoughts</h2>
 
         <p>Planetary magic is not a relic of the medieval past — it is a living, breathing system of magickal timing that is more relevant today than ever. The planets still move through their celestial dance. The hours still turn in their ancient Chaldean sequence. And the magician who learns to synchronize their will with these cosmic currents gains a power that no amount of raw intention alone can match.</p>
 
@@ -594,6 +1067,25 @@
         </a>
     </div>
 </div>
+
+<h2 id="references">References</h2>
+<ul>
+<li>Agrippa, H.C. (1533). <em>Three Books of Occult Philosophy</em>. Cologne.</li>
+<li>Barrett, F. (1801). <em>The Magus</em>. London.</li>
+<li>Greer, J.M. (2003). <em>The New Encyclopedia of the Occult</em>. St. Paul, MN: Llewellyn Publications</li>
+</ul>
+
+
+    <section class="related-articles">
+        <h2>Related Articles</h2>
+        <div class="related-links">
+            <p><a href="../blog/goetic-magic-beginners-guide.html">Goetic Magic for Beginners: Complete Guide to the 72 Spirits of Solomon →</a></p>
+<p><a href="../blog/planetary-magic-squares-sigil-creation.html">Planetary Magic Squares: Complete Guide for Sigil Creation →</a></p>
+<p><a href="../blog/moon-phase-generator-magic-guide.html">Moon Phase Generator: How to Use Lunar Cycles for Magic & Ritual Timing (2026) →</a></p>
+<p><a href="../blog/new-moon-vs-full-moon-ritual-guide.html">New Moon vs Full Moon Rituals: Which Phase for Which Magic (2026) →</a></p>
+        </div>
+    </section>
+
 </article>
     </main>
     <footer id="site-footer" class="site-footer">
@@ -637,7 +1129,7 @@
 <div id="google_translate_element" style="display:none;"></div>
 
 
-<script src="../js/shared.js"></script>
+<script src="../js/shared.min.js"></script>
 
 <div id="lang-sidebar" class="lang-sidebar">
     <button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">??</button>
@@ -648,9 +1140,9 @@
         <button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="" class="flag-icon"> DE</button>
         <button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="" class="flag-icon"> IT</button>
         <button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="" class="flag-icon"> PT</button>
-        <button onclick="switchLang('ru')" title="???????" class="lang-btn"><img src="../assets/images/flags/ru.svg" alt="" class="flag-icon"> RU</button>
-        <button onclick="switchLang('ja')" title="???" class="lang-btn"><img src="../assets/images/flags/jp.svg" alt="" class="flag-icon"> JP</button>
-        <button onclick="switchLang('zh-CN')" title="??" class="lang-btn"><img src="../assets/images/flags/cn.svg" alt="" class="flag-icon"> ZH</button>
+        <button onclick="switchLang('ru')" title="Русский" class="lang-btn"><img src="../assets/images/flags/ru.svg" alt="" class="flag-icon"> RU</button>
+        <button onclick="switchLang('ja')" title="日本語" class="lang-btn"><img src="../assets/images/flags/jp.svg" alt="" class="flag-icon"> JP</button>
+        <button onclick="switchLang('zh-CN')" title="中文" class="lang-btn"><img src="../assets/images/flags/cn.svg" alt="" class="flag-icon"> ZH</button>
     </div>
 </div>
 <div id="google_translate_element" style="display:none;"></div>

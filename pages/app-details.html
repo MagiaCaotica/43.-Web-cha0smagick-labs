@@ -8,6 +8,9 @@
     <meta name="author" content="Cha0smagick Labs - Frater Alek0s">
     
     <title>Cha0smagick Labs — Buy Chaos Magick Apps & Esoteric Tools for Android</title>
+    <link rel="alternate" href="https://cha0smagicklabs.com/pages/app-details.html" hreflang="en">
+    <link rel="alternate" href="https://cha0smagicklabs.com/es/pages/app-details.html" hreflang="es">
+    <link rel="alternate" href="https://cha0smagicklabs.com/pages/app-details.html" hreflang="x-default">
     <meta name="description" content="Buy premium Chaos Magick apps for Android. Digital sigil generator, Norse rune oracle, PSI GYM Zener cards, I Ching, tarot, lunar phase calculator & lucid dreaming. 100% offline occult software.">
     <meta name="keywords" content="chaos magick, buy esoteric tools, android occult app, digital sigil generator, norse rune app, goetia app, zener cards, i ching app, tarot android, lunar magic app, lucid dreaming app, cybermancy">
 
@@ -27,9 +30,7 @@
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     <link rel="apple-touch-icon" href="../assets/images/Banner.png">
     <link rel="manifest" href="../manifest.json">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-
+    <link rel="stylesheet" href="../css/style.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -38,8 +39,6 @@
       gtag('consent', 'default', { 'analytics_storage': 'denied' });
       gtag('config', 'G-V6LHCPN9TK');
     </script>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 
     <script type="application/ld+json">
     {
@@ -123,7 +122,7 @@
                         <h4>Cha0smagick Labs</h4>
                         <ul>
                             <li><a href="https://magiadelcaospractica.com">Official Blog</a></li>
-                            <li><a href="https://cha0smagicklabs.blogspot.com/">Privacy & Legal</a></li>
+                            <li><a href="/privacy-policy.html">Privacy & Legal</a></li>
                             <li><a href="https://play.google.com/store/apps/dev?id=5224914033326414083">Google Play Developer</a></li>
                         </ul>
                     </div>
@@ -147,31 +146,43 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var mapEl = document.getElementById('visitor-map');
-        if (!mapEl || typeof L === 'undefined') return;
+        if (!mapEl) return;
 
-        var tileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
-        var tileAttr = '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>';
-
-        var map = L.map('visitor-map', {
-            center: [20, 0],
-            zoom: 1,
-            zoomControl: true,
-            scrollWheelZoom: true,
-            dragging: true,
-            doubleClickZoom: false,
-            touchZoom: true,
-            keyboard: false,
-            attributionControl: true,
-            worldCopyJump: true
+        // Lazy-load Leaflet when map enters viewport
+        var observer = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+                observer.disconnect();
+                loadLeaflet(function() {
+                    initVisitorMap();
+                });
+            }
         });
+        observer.observe(mapEl);
 
-        L.tileLayer(tileUrl, {
-            attribution: tileAttr,
-            maxZoom: 8,
-            minZoom: 1
-        }).addTo(map);
+        function initVisitorMap() {
+            var tileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+            var tileAttr = '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>';
 
-        var visitors = [
+            var map = L.map('visitor-map', {
+                center: [20, 0],
+                zoom: 1,
+                zoomControl: true,
+                scrollWheelZoom: true,
+                dragging: true,
+                doubleClickZoom: false,
+                touchZoom: true,
+                keyboard: false,
+                attributionControl: true,
+                worldCopyJump: true
+            });
+
+            L.tileLayer(tileUrl, {
+                attribution: tileAttr,
+                maxZoom: 8,
+                minZoom: 1
+            }).addTo(map);
+
+            var visitors = [
             [34.0584, -118.2780, 130, 'Los Angeles, US'],
             [3.4372, -76.5225, 89, 'Santiago de Cali, Colombia'],
             [37.4043, -122.0748, 76, 'Mountain View, US'],
@@ -230,31 +241,40 @@
             [33.8740, 35.5089, 1, 'Beirut, Lebanon'],
             [37.5647, 15.0631, 1, 'Gravina di Catania, Italy'],
             [43.6426, -79.4002, 1, 'Toronto, Canada']
-        ];
+        ]
 
-        var maxVisits = 130;
-        visitors.forEach(function(v) {
-            var lat = v[0], lng = v[1], visits = v[2], loc = v[3];
-            var radius = 3 + (visits / maxVisits) * 10;
-            var opacity = 0.4 + (visits / maxVisits) * 0.6;
-            L.circleMarker([lat, lng], {
-                radius: radius,
-                fillColor: '#ff4444', color: '#ff4444', weight: 1,
-                fillOpacity: opacity, opacity: 0.8
-            }).bindTooltip(loc + ' — ' + visits + ' visits', {
-                direction: 'top', offset: [0, -radius], className: 'visitor-tooltip'
-            }).addTo(map);
-        });
-        setTimeout(function() { map.invalidateSize(); }, 500);
-        window.addEventListener('resize', function() { map.invalidateSize(); });
-    });
-    </script>
+            var maxVisits = 130;
+
+            visitors.forEach(function(v) {
+                var lat = v[0], lng = v[1], visits = v[2], loc = v[3];
+                var radius = 3 + (visits / maxVisits) * 10;
+                var opacity = 0.4 + (visits / maxVisits) * 0.6;
+
+                var marker = L.circleMarker([lat, lng], {
+                    radius: radius,
+                    fillColor: '#ff4444',
+                    color: '#ff4444',
+                    weight: 1,
+                    fillOpacity: opacity,
+                    opacity: 0.8
+                }).addTo(map);
+
+                marker.bindTooltip(loc + ' \u2014 ' + visits + ' visits', {
+                    direction: 'top',
+                    offset: [0, -radius],
+                    className: 'visitor-tooltip'
+                });
+            });
+
+            setTimeout(function() { map.invalidateSize(); }, 500);
+            window.addEventListener('resize', function() { map.invalidateSize(); });
+        }</script>
 
 
 <div id="google_translate_element" style="display:none;"></div>
 
 
-<script src="../js/shared.js"></script>
+<script src="../js/shared.min.js"></script>
 
 <div id="lang-sidebar" class="lang-sidebar">
     <button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button>

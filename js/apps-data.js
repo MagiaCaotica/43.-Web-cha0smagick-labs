@@ -13,9 +13,9 @@ const appsData = [
             keywords: "zener cards, esp training, psychic trainer, intuition app, extrasensory perception, parapsychology tool, psi training, remote viewing, clairvoyance practice, buy esoteric app, chaos magick app, psychic abilities, telepathy trainer"
         },
         screenshots: [
-            "../assets/images/z1.png",
-            "../assets/images/z2.png",
-            "../assets/images/z3.png"
+            "../assets/images/z1.webp",
+            "../assets/images/z2.webp",
+            "../assets/images/z3.webp"
         ],
         detailedDescription: `
             <h3>Can You Predict the Unknown? Unlock Your Latent Psychic Potential.</h3>
@@ -68,9 +68,9 @@ const appsData = [
             keywords: "goetia app, solomon sigils, lemegeton grimoire, goetic magic, sigil generator, occult app, chaos magic, invocation, 72 spirits, ritual tool, buy esoteric, android occult app, chaos magick app, digital sigil, goetic grimoire"
         },
         screenshots: [
-            "../assets/images/go1.PNG",
-            "../assets/images/go2.PNG",
-            "../assets/images/go3.PNG"
+            "../assets/images/go1.webp",
+            "../assets/images/go2.webp",
+            "../assets/images/go3.webp"
         ],
         detailedDescription: `
             <h3>What If You Could Command the 72 Spirits of Solomon from Your Pocket?</h3>
@@ -125,10 +125,10 @@ const appsData = [
             keywords: "norse runes, viking runes, rune reading app, elder futhark, divination, rune oracle, viking wisdom, spiritual guidance, norse divination, buy esoteric, chaos magick app, android occult app"
         },
         screenshots: [
-            "../assets/images/nr1.PNG",
-            "../assets/images/nr2.PNG",
-            "../assets/images/nr3.PNG",
-            "../assets/images/nr4.PNG"
+            "../assets/images/nr1.webp",
+            "../assets/images/nr2.webp",
+            "../assets/images/nr3.webp",
+            "../assets/images/nr4.webp"
         ],
         detailedDescription: `
             <h3>What Do the Ancient Runes Say About Your Future? Find Out Instantly.</h3>
@@ -191,9 +191,9 @@ const appsData = [
             keywords: "lunar phase calculator, moon phases, moon magic, biodynamic gardening, moon calendar, astrology app, wellness, ritual timing, lunar data, lunar magic app, buy esoteric, android occult app"
         },
         screenshots: [
-            "../assets/images/moon1.PNG",
-            "../assets/images/moon2.PNG",
-            "../assets/images/moon3.PNG"
+            "../assets/images/moon1.webp",
+            "../assets/images/moon2.webp",
+            "../assets/images/moon3.webp"
         ],
         detailedDescription: `
             <h3>Are You Living in Sync with the Moon? Start Today.</h3>
@@ -249,10 +249,10 @@ const appsData = [
             keywords: "i ching, book of changes, i ching app, chinese oracle, hexagram, divination app, taoist philosophy, three coin method, digital oracle, buy esoteric, android occult app, chaos magick"
         },
         screenshots: [
-            "../assets/images/ching1.PNG",
-            "../assets/images/ching2.PNG",
-            "../assets/images/ching3.PNG",
-            "../assets/images/ching4.PNG"
+            "../assets/images/ching1.webp",
+            "../assets/images/ching2.webp",
+            "../assets/images/ching3.webp",
+            "../assets/images/ching4.webp"
         ],
         detailedDescription: `
             <h3>For 3,000 Years, the I Ching Has Guided Emperors, Philosophers, and Seekers. Now It Fits in Your Pocket.</h3>
@@ -316,10 +316,10 @@ const appsData = [
             keywords: "chaos magick, sigil generator, austin osman spare, sigilization, cybermancy, cryptographic sigil, planetary kameas, occult app, technomancy, sigil maker, digital sigil generator, buy esoteric, android occult app"
         },
         screenshots: [
-            "../assets/images/msg1.PNG",
-            "../assets/images/msg2.PNG",
-            "../assets/images/msg3.PNG",
-            "../assets/images/msg4.PNG"
+            "../assets/images/msg1.webp",
+            "../assets/images/msg2.webp",
+            "../assets/images/msg3.webp",
+            "../assets/images/msg4.webp"
         ],
         detailedDescription: `
             <h3>Your Will. Encoded. Sealed. Unleashed.</h3>
@@ -379,9 +379,9 @@ const appsData = [
             keywords: "rider waite tarot, tarot app, offline tarot, tarot reader, tarot encyclopedia, tarot spreads, celtic cross, divination app, tarot learning, tarot reading app, buy esoteric, android occult app"
         },
         screenshots: [
-            "../assets/images/ta1.png",
-            "../assets/images/ta2.png",
-            "../assets/images/ta3.png"
+            "../assets/images/ta1.webp",
+            "../assets/images/ta2.webp",
+            "../assets/images/ta3.webp"
         ],
         detailedDescription: `
             <h3>The Full Rider-Waite Tarot in Your Pocket—No Internet, No Ads, No Distractions.</h3>

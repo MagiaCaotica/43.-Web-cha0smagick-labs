@@ -17,7 +17,6 @@ Cada app/PDF necesita al menos 1 artículo-REVIEW que rankee para "[producto] ap
 | 7 | Rider Waite Tarot | "tarot app android offline" | Rider Waite Tarot App Review: Best Offline Tarot Reader for Android | rider-waite-tarot-app-review |
 | 8 | I Ching Oracle | "i ching app android" | I Ching Oracle App Review: Best Book of Changes App for Android | i-ching-oracle-app-review |
 | 9 | Lunar Phase Calc | "lunar phase app android" | Lunar Phase Calculator App Review: Moon Tracker for Magic | lunar-phase-calculator-app-review |
-| 10 | Bundle | "chaos magick bundle discount" | Complete Chaos Magick Bundle Review: Save 32% on Apps & PDFs | chaos-magick-bundle-review |
 | 11 | Servitors PDF | "magical servitors manual pdf" | Magical Servitors Manual PDF Review: Create Thought Forms | magical-servitors-manual-pdf-review |
 | 12 | Hunter Runes PDF | "chaos hunter runes treatise pdf" | Treatise of Chaos Hunter Runes PDF Review: 64 Runic Servitors | chaos-hunter-runes-pdf-review |
 | 13 | Ouija PDF | "ouija board magic book" | Ouija Cazadora PDF Review: Chaos Magic Ritual Guide | ouija-cazadora-pdf-review |

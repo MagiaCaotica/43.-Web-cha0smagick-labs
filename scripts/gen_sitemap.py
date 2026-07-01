@@ -1,77 +1,58 @@
-"""
-Generate sitemap.xml for Cha0smagick Labs
-"""
-import os, glob, datetime
+# Generate complete sitemap.xml for cha0smagicklabs.com
+import os
+from datetime import datetime
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = "https://cha0smagicklabs.com"
-TODAY = "2026-06-26"
+base = 'https://cha0smagicklabs.com'
+root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Priority map
-PRIORITIES = {
-    "index.html": ("weekly", "1.0"),
-    "best-occult-apps-android.html": ("weekly", "0.9"),
-    "glossary.html": ("weekly", "0.9"),
-    "complete-chaos-magick-bundle.html": ("monthly", "0.8"),
-    "privacy-policy.html": ("monthly", "0.5"),
-}
-BLOG_PRIORITY = ("monthly", "0.7")
-APP_PRIORITY = ("monthly", "0.9")
-PDF_PRIORITY = ("monthly", "0.8")
-TOOL_PRIORITY = ("weekly", "0.8")
-BLOG_INDEX_PRIORITY = ("weekly", "0.8")
+pages = []
+for dirpath, dirnames, filenames in os.walk(root):
+    for fn in filenames:
+        if not fn.endswith('.html'):
+            continue
+        abspath = os.path.join(dirpath, fn)
+        relpath = os.path.relpath(abspath, root).replace('\\', '/')
+        if relpath == '404.html':
+            continue
+        # Skip non-HTML template files
+        if relpath.startswith('scripts/'):
+            continue
+        pages.append(relpath)
 
-entries = []
+now = datetime.now().strftime('%Y-%m-%d')
 
-# All HTML files
-all_files = []
-for pattern in ["*.html", "apps/*.html", "blog/*.html", "tools/*.html", "pages/*.html"]:
-    all_files.extend(glob.glob(os.path.join(ROOT, pattern), recursive=True))
+def get_priority(p):
+    if p == 'index.html':
+        return 1.0
+    if p.startswith('blog/'):
+        return 0.9
+    if p.startswith('apps/'):
+        return 0.8
+    if p.startswith('tools/'):
+        return 0.7
+    if p.startswith('pages/'):
+        return 0.6
+    if p in ('glossary.html', 'best-occult-apps-android.html', 'privacy-policy.html'):
+        return 0.7
+    return 0.8
 
-# Sort by type
-for fp in sorted(all_files):
-    rel = os.path.relpath(fp, ROOT).replace("\\", "/")
-    fname = os.path.basename(fp)
-    
-    # Skip unwanted pages
-    if rel in ("404.html", "pages/app-details.html"):
-        continue
-    
-    # Determine priority and changefreq
-    if rel == "index.html":
-        cf, pr = "weekly", "1.0"
-    elif rel.startswith("apps/"):
-        cf, pr = ("monthly", "0.9") if "pdf" not in fname else ("monthly", "0.8")
-    elif rel.startswith("blog/"):
-        if fname == "index.html":
-            cf, pr = BLOG_INDEX_PRIORITY
-        else:
-            cf, pr = BLOG_PRIORITY
-    elif rel.startswith("tools/"):
-        cf, pr = TOOL_PRIORITY
-    elif rel in PRIORITIES:
-        cf, pr = PRIORITIES[rel]
-    else:
-        cf, pr = "monthly", "0.7"
-    
-    loc = f"{BASE}/{rel}"
-    entries.append((loc, cf, pr))
+pages.sort(key=lambda p: (-get_priority(p), p))
 
-# Build XML
-xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
-xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+for p in pages:
+    url = base if p == 'index.html' else f'{base}/{p}'
+    lines.append('  <url>')
+    lines.append(f'    <loc>{url}</loc>')
+    lines.append(f'    <lastmod>{now}</lastmod>')
+    lines.append(f'    <priority>{get_priority(p):.1f}</priority>')
+    lines.append('  </url>')
+lines.append('</urlset>')
 
-for loc, cf, pr in entries:
-    xml += "    <url>\n"
-    xml += f"        <loc>{loc}</loc>\n"
-    xml += f"        <lastmod>{TODAY}</lastmod>\n"
-    xml += f"        <changefreq>{cf}</changefreq>\n"
-    xml += f"        <priority>{pr}</priority>\n"
-    xml += "    </url>\n"
+sitemap_path = os.path.join(root, 'sitemap.xml')
+with open(sitemap_path, 'w', encoding='utf-8') as f:
+    f.write('\n'.join(lines) + '\n')
 
-xml += "</urlset>\n"
-
-with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
-    f.write(xml)
-
-print(f"Generated sitemap.xml with {len(entries)} URLs")
+print(f'Sitemap generated: {len(pages)} URLs -> {sitemap_path}')
+for p in pages:
+    print(f'  {get_priority(p):.1f} {base if p == "index.html" else f"{base}/{p}"}')
