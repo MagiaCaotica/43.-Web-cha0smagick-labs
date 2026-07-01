@@ -7,4 +7,4 @@ Disallow: /submissions/
 Sitemap: https://cha0smagicklabs.com/sitemap.xml
 
 # Crawl-delay for polite crawling
-Crawl-Delay: 10
+Crawl-Delay: 5

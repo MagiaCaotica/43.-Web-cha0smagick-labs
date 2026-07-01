@@ -28,7 +28,6 @@ ARTICLE_APP_MAP = {
     "i-ching-hexagram-meanings-complete-guide": ("../apps/iching-oracle.html", "I Ching Oracle", "Book of Changes divination"),
     "lunar-phase-calculator-app-review": ("../apps/lunar-phase-calculator.html", "Lunar Phase Calculator", "Moon phase tracker"),
     "new-moon-vs-full-moon-ritual-guide": ("../apps/lunar-phase-calculator.html", "Lunar Phase Calculator", "Moon phase tracker"),
-    "chaos-magick-bundle-review": ("../complete-chaos-magick-bundle.html", "Complete Chaos Magick Bundle", "All apps + PDFs bundle"),
     "magical-servitors-manual-pdf-review": ("../apps/manual-activacion-servidores-magicos-pdf.html", "Magical Servitors Manual", "Advanced servitor creation PDF"),
     "chaos-hunter-runes-treatise-review": ("../apps/tratado-runas-cazadoras-caos-pdf.html", "Chaos Hunter: Runes Treatise", "Viking sorcery PDF"),
     "ouija-cazadora-pdf-review": ("../apps/ouija-cazadora-pdf.html", "Ouija Cazadora", "Digital spirit board PDF"),

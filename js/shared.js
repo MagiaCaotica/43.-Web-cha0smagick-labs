@@ -35,8 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================================================
-// 3. LANGUAGE SWITCHER (Google Translate)
+// 3. LANGUAGE SWITCHER (Google Translate) — lazy-loaded on first click
 // ========================================================================
+var _gtLoaded = false;
+
 function toggleLangSidebar() {
     var el = document.getElementById('lang-flag-list');
     if (!el) return;
@@ -52,6 +54,13 @@ function googleTranslateElementInit() {
 }
 
 function switchLang(lang) {
+    // Lazy-load the Google Translate script on first interaction
+    if (!_gtLoaded) {
+        _gtLoaded = true;
+        var s = document.createElement('script');
+        s.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        document.body.appendChild(s);
+    }
     var tries = 0;
     var iv = setInterval(function() {
         var sel = document.querySelector('.goog-te-combo');
@@ -128,4 +137,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-});
+
+// ========================================================================
+// 4. LAZY LOAD LEAFLET MAP (on scroll into viewport)
+// ========================================================================
+function loadLeaflet(callback) {
+    if (typeof L !== 'undefined') {
+        callback();
+        return;
+    }
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+    var script = document.createElement('script');
+    script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    script.crossOrigin = 'anonymous';
+    script.onload = callback;
+    document.head.appendChild(script);
+}
+
+}); // close DOMContentLoaded listener

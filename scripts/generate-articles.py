@@ -1,4 +1,4 @@
-﻿"""
+"""
 Article Generator for Cha0smagick Labs Blog
 Generates SEO/GEO-optimized HTML articles from structured data.
 Usage: python scripts/generate-articles.py
@@ -1185,76 +1185,6 @@ articles.append({
 """
 })
 
-# ========= BATCH 1E: COMPLETE BUNDLE =========
-
-articles.append({
-    "slug": "chaos-magick-bundle-review",
-    "title": "Complete Chaos Magick Bundle Review: Save 32% on Apps & PDFs (2026) | Cha0smagick Labs",
-    "meta_desc": "Complete review of the Chaos Magick Complete Bundle. 8 Android apps + 3 PDFs for $29.99. Is it worth it? Full breakdown of every product included.",
-    "h1": "Complete Chaos Magick Bundle Review: Save 32% on Apps & PDFs (2026)",
-    "keywords": "chaos magick bundle, occult apps bundle, chaos magick apps discount, magic app collection, best occult software bundle",
-    "faqs": [
-        {"q": "What is included in the Chaos Magick Complete Bundle?", "a": "The bundle includes 8 premium Android apps (PSI GYM, Arcana Goetia, Norse Rune Oracle, Lunar Phase Calculator, I Ching Oracle, Chaos Sigil Generator, Unofficial Rider Waite Tarot, Dream Machine) and 3 PDFs (Magical Servitors Manual, Treatise of Chaos Hunter Runes, Ouija Cazadora) — a total of 11 products valued at $47.91, available for $29.99."},
-        {"q": "How much money do I save with the bundle?", "a": "The bundle saves you 32% compared to buying everything individually. The apps alone cost $39.92, and the PDFs cost $11.97, totaling $51.89 (with full prices) or approximately $47.91 with current discounts. The bundle at $29.99 saves you about $18 or more."},
-        {"q": "Can I buy apps individually and upgrade to the bundle later?", "a": "No, the bundle must be purchased as a single package. However, each app and PDF is also available individually. If you already purchased individual products, contact support to discuss options, but generally it is most economical to purchase the bundle first."}
-    ],
-    "content": """
-<h2>Overview: What Is the Complete Chaos Magick Bundle?</h2>
-<p>The Complete Chaos Magick Bundle is a curated collection of 8 premium Android apps and 3 PDF guides from Cha0smagick Labs, offered at a 32% discount compared to individual purchases. Priced at $29.99, it brings together the full digital occult toolkit developed by Frater Alek0s and Zener de Cydonia.</p>
-<p>This review breaks down every product in the bundle to help you decide if it is worth your investment.</p>
-
-<h2>What's Included</h2>
-
-<h3>Android Apps (8 apps, $39.92 individual value)</h3>
-<ul>
-<li><strong>PSI GYM: Zener Cards &amp; ESP</strong> ($3.99) — Professional ESP testing with cryptographic randomization and statistical analysis.</li>
-<li><strong>Magick Chaos Sigil Generator</strong> ($3.99) — Cryptographic sigil creation with multiple alphabets and planetary kameas.</li>
-<li><strong>Norse Rune Oracle</strong> ($3.99) — Complete Elder Futhark divination with 12+ spreads.</li>
-<li><strong>Arcana Goetia</strong> ($3.99) — All 72 Goetic spirits with sigils and guided rituals.</li>
-<li><strong>I Ching Oracle</strong> ($3.99) — Authentic three-coin method with full hexagram library.</li>
-<li><strong>Lunar Phase Calculator</strong> ($3.99) — Moon tracking with magical and biodynamic data.</li>
-<li><strong>Dream Machine: Lucid Dreaming</strong> ($3.99) — Induction protocols, dream journal, binaural beats.</li>
-<li><strong>Unofficial Rider Waite Tarot</strong> ($9.99) — Full 78-card deck offline with encyclopedia.</li>
-</ul>
-
-<h3>PDF Guides (3 PDFs, $11.97 individual value)</h3>
-<ul>
-<li><strong>Magical Servitors Manual</strong> by Frater Alek0s — Step-by-step guide to creating and deploying magical servitors.</li>
-<li><strong>Treatise of Chaos Hunter Runes</strong> by Zener de Cydonia — 64 runic servitors and the Alphabet of Desire system.</li>
-<li><strong>Ouija Cazadora: Chaos Magic Guide</strong> by Zener de Cydonia — Transform the ouija board into a precision ritual instrument.</li>
-</ul>
-
-<h2>Total Value Breakdown</h2>
-<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
-<tr style="background:#111;"><th style="padding:8px;text-align:left;">Item</th><th style="padding:8px;text-align:left;">Individual Price</th></tr>
-<tr style="border-bottom:1px solid #222;"><td style="padding:8px;">8 Android Apps</td><td style="padding:8px;">$39.92</td></tr>
-<tr style="border-bottom:1px solid #222;"><td style="padding:8px;">3 PDFs</td><td style="padding:8px;">$11.97</td></tr>
-<tr style="border-bottom:1px solid #222;font-weight:bold;"><td style="padding:8px;">Total Individual</td><td style="padding:8px;">$51.89</td></tr>
-<tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Bundle Price</td><td style="padding:8px;">$29.99</td></tr>
-<tr style="background:var(--accent-dark);"><td style="padding:8px;"><strong>You Save</strong></td><td style="padding:8px;"><strong>~$18 (35% off)</strong></td></tr>
-</table>
-
-<h2>Who Should Buy the Bundle?</h2>
-<ul>
-<li><strong>Complete beginners</strong> building a digital occult toolkit from scratch — the bundle covers every major divination and magical system.</li>
-<li><strong>Chaos magicians</strong> who want all the tools in one package with a single purchase.</li>
-<li><strong>Value seekers</strong> who plan to buy multiple apps and want the best discount.</li>
-<li><strong>Occult researchers</strong> studying multiple systems (runes, tarot, I Ching, goetia, lunar magic).</li>
-</ul>
-
-<h2>Who Should Buy Individual Items Instead?</h2>
-<ul>
-<li>If you only need one or two specific apps (e.g., just the Tarot or just the Runes).</li>
-<li>If you already own some of the apps.</li>
-<li>If you don't read Spanish (the PDFs are currently in Spanish only).</li>
-</ul>
-
-<h2>Final Verdict</h2>
-<p>The Complete Chaos Magick Bundle is exceptional value for anyone building a comprehensive digital occult practice. At $29.99 for 8 apps and 3 PDFs, it is the most cost-effective way to acquire the full Cha0smagick Labs toolkit. The apps alone are worth $39.92, making the bundle an easy decision if you plan to use multiple tools.</p>
-<p><strong>Rating: 9.5/10</strong> — The ultimate digital occult toolkit.</p>
-<p><a href="https://bit.ly/4lGEo9z" target="_blank">Buy the Complete Chaos Magick Bundle →</a></p>
-"""
-})
 
 # ========= BATCH 1E: PDF ARTICLES =========
 

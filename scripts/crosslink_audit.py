@@ -57,9 +57,6 @@ EXPECTED_LINKS = {
     "lunar-phase-calculator-app-review": [
         ("app", "../apps/lunar-phase-calculator.html", "Lunar Phase Calculator app"),
     ],
-    "chaos-magick-bundle-review": [
-        ("bundle", "../complete-chaos-magick-bundle.html", "Bundle page"),
-    ],
     "magical-servitors-manual-pdf-review": [
         ("app", "../apps/manual-activacion-servidores-magicos-pdf.html", "Servitors PDF"),
     ],
