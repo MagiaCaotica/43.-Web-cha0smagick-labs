@@ -15,8 +15,12 @@ for dirpath, dirnames, filenames in os.walk(root):
         if relpath == '404.html':
             continue
         # Skip non-HTML template files
-        if relpath.startswith('scripts/'):
+        if relpath.startswith('scripts/') or relpath.startswith('node_modules/'):
             continue
+        # Skip duplicate root-level articles that exist in blog/
+        if relpath == 'what-is-magick-how-spells-work.html':
+            continue
+        # Skip non-web directories
         pages.append(relpath)
 
 now = datetime.now().strftime('%Y-%m-%d')
