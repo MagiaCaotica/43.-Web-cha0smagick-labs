@@ -1,78 +1,79 @@
-# Cha0smagick Labs — Chaos Magick, Cybermancy & Digital Occult Tools
+# Cha0smagick Labs — Occult Apps, Technomancy & Digital Esoteric Tools
 
-> Corporate Cybermancy Solutions — since 2025. Explore the Art and Practice of Chaos Magick through free online tools, premium Android apps, and educational PDF resources.
+> Corporate Techno-Sorcery Solutions — since 2025. Premium occult apps for Android, free online divination tools, digital grimoires, and educational resources for witches, mages, and practitioners of all magical traditions.
 
-## Site Overview
+## Tools (Free Online)
 
-Cha0smagick Labs is a digital occult platform offering free online chaos magick tools (sigil generators, rune oracles, I Ching, lunar phase calculator, Tengwar transcriber), premium Android apps (PSI GYM, Chaos Sigil Generator, Norse Rune Oracle, Arcana Goetia, Dream Machine, I Ching Oracle, Lunar Phase Calculator, Unofficial Rider Waite Tarot), and educational PDFs (Magical Servitors Manual, Liber Lvpinux, Ouija Cazadora, Treatise of Chaos Hunter Runes). The site also hosts an extensive blog with 40+ articles on chaos magick theory, practice, divination, and app reviews.
+- [Candle Color Calculator](https://cha0smagicklabs.com/tools/candle-color-calculator.html)
+- [Digital Pendulum](https://cha0smagicklabs.com/tools/digital-pendulum.html)
+- [Astrology Sign Calculator](https://cha0smagicklabs.com/tools/astrology-sign-calculator.html)
+- [Spell Builder](https://cha0smagicklabs.com/tools/spell-builder.html)
+- [Sigil Generator](https://cha0smagicklabs.com/tools/sigil-generator.html)
+- [I Ching Oracle](https://cha0smagicklabs.com/tools/iching.html)
+- [Viking Runes Oracle](https://cha0smagicklabs.com/tools/viking-runes.html)
+- [Lunar Phase Calculator](https://cha0smagicklabs.com/tools/lunar-phase.html)
+- [Tengwar Transcriber](https://cha0smagicklabs.com/tools/tengwar-transcriber.html)
+- [All Free Tools](https://cha0smagicklabs.com/tools/index.html)
 
-## Key Pages
+## Premium Android Apps
 
-### Tools (Free Online)
-- **Sigil Generator** — tools/sigil-generator.html
-- **I Ching Oracle** — tools/iching.html
-- **Viking Runes** — tools/viking-runes.html
-- **Lunar Phase Calculator** — tools/lunar-phase.html
-- **Tengwar Transcriber** — tools/tengwar-transcriber.html
-- **Magickal Servitor Activator** — tools/activador-servidores.html
-- **All Tools** — tools/index.html
+- [Chaos Sigil Generator](https://cha0smagicklabs.com/apps/chaos-sigil-generator.html)
+- [PSI GYM — Zener Cards ESP Trainer](https://cha0smagicklabs.com/apps/psi-gym.html)
+- [Norse Rune Oracle](https://cha0smagicklabs.com/apps/norse-rune-oracle.html)
+- [Arcana Goetia — 72 Spirits](https://cha0smagicklabs.com/apps/arcana-goetia.html)
+- [Dream Machine — Lucid Dreaming](https://cha0smagicklabs.com/apps/dream-machine.html)
+- [I Ching Oracle](https://cha0smagicklabs.com/apps/iching-oracle.html)
+- [Lunar Phase Calculator](https://cha0smagicklabs.com/apps/lunar-phase-calculator.html)
+- [Unofficial Rider Waite Tarot](https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html)
+- [All Apps](https://cha0smagicklabs.com/index.html#products)
 
-### Premium Android Apps
-- **Chaos Sigil Generator** — apps/chaos-sigil-generator.html
-- **PSI GYM — Zener Cards ESP Trainer** — apps/psi-gym.html
-- **Norse Rune Oracle** — apps/norse-rune-oracle.html
-- **Arcana Goetia — 72 Spirits** — apps/arcana-goetia.html
-- **Dream Machine — Binaural Beats** — apps/dream-machine.html
-- **I Ching Oracle** — apps/iching-oracle.html
-- **Lunar Phase Calculator** — apps/lunar-phase-calculator.html
-- **Unofficial Rider Waite Tarot** — apps/unofficial-rider-waite-tarot.html
-- **All Apps** — index.html#products
+## PDF Publications
 
-### PDF Publications
-- **Magical Servitors Manual** — apps/manual-activacion-servidores-magicos-pdf.html
-- **Liber Lvpinux** (Lycanthropic Transformation) — apps/liber-lvpinux-pdf.html
-- **Ouija Cazadora** (Spirit Board Guide) — apps/ouija-cazadora-pdf.html
-- **Treatise of Chaos Hunter Runes** — apps/tratado-runas-cazadoras-caos-pdf.html
+- [Magical Servitors Manual](https://cha0smagicklabs.com/apps/manual-activacion-servidores-magicos-pdf.html)
+- [Liber Lvpinux — Lycanthropic Transformation](https://cha0smagicklabs.com/apps/liber-lvpinux-pdf.html)
+- [Ouija Cazadora — Spirit Board Guide](https://cha0smagicklabs.com/apps/ouija-cazadora-pdf.html)
+- [Treatise of Chaos Hunter Runes](https://cha0smagicklabs.com/apps/tratado-runas-cazadoras-caos-pdf.html)
 
-### Core Pages
-- **Home** — index.html
-- **Blog Index** — blog/index.html
-- **Glossary** — glossary.html
-- **Best Occult Apps for Android** — best-occult-apps-android.html
-- **Privacy Policy** — privacy-policy.html
-- **About** — pages/about.html
-- **App Details** — pages/app-details.html
+## Core Pages
 
-## Blog Topics
+- [Home](https://cha0smagicklabs.com/index.html)
+- [Blog Index](https://cha0smagicklabs.com/blog/index.html)
+- [Glossary](https://cha0smagicklabs.com/glossary.html)
+- [Best Occult Apps for Android](https://cha0smagicklabs.com/best-occult-apps-android.html)
+- [Privacy Policy](https://cha0smagicklabs.com/privacy-policy.html)
+- [About](https://cha0smagicklabs.com/pages/about.html)
+- [App Details](https://cha0smagicklabs.com/pages/app-details.html)
 
-The blog (blog/) covers chaos magick fundamentals, sigil creation methods (Austin Osman Spare, cryptographic, digital), servitor and egregore theory, divination systems (I Ching, runes, Zener cards, tarot, scrying), lucid dreaming and astral projection, planetary magic, goetic magic, banishing and space cleansing, cybermancy and technomancy, app reviews, PDF reviews, moon phase ritual timing, and chaos magick history.
+## Recent Blog Posts
 
-### Notable Blog Posts
-- Chaos Magick for Beginners: Complete Guide — blog/chaos-magick-beginners-complete-guide.html
-- The Ultimate Sigil Maker Guide — blog/sigil-maker-ultimate-guide.html
-- Sigil Engine: Cryptographic Sigil Generation — blog/sigil-engine-cryptographic-guide.html
-- How to Create a Magickal Servitor — blog/how-to-create-magickal-servitor.html
-- Complete Magickal Servitors Guide — blog/complete-magickal-servitors-guide.html
-- Paradigm Shift & Belief as a Tool — blog/paradigm-shift-belief-as-tool.html
-- What is Gnosis? How to Achieve Gnosis — blog/what-is-gnosis-how-to-achieve.html
-- How to Charge a Sigil Correctly — blog/how-to-charge-sigil-correctly.html
-- Norse Runes for Beginners — blog/norse-runes-beginners-guide.html
-- I Ching Digital: Ancient Chinese Divination — blog/i-ching-digital-guide.html
-- Master Lucid Dreaming — blog/lucid-dreaming-guide.html
-- Goetic Magic for Beginners — blog/goetic-magic-beginners-guide.html
-- Moon Magic: Lunar Phases for Ritual Timing — blog/lunar-phase-magic-guide.html
-- Planetary Magic & Planetary Hours — blog/planetary-magic-hours-guide.html
-- Zener Cards ESP Training Guide — blog/zener-cards-esp-training-guide.html
-- Remote Viewing Techniques for Beginners — blog/remote-viewing-techniques-beginners.html
-- What is Cybermancy? Digital Sorcery Guide — blog/what-is-cybermancy-digital-sorcery-guide.html
-- Egregore Creation: Collective Thought Forms — blog/egregore-creation-collective-thought-forms.html
+- [Candle Magic for Beginners: Colors, Carving &amp; Correspondences](https://cha0smagicklabs.com/blog/candle-magic-beginners-guide.html)
+- [Best Astrology Apps for Android](https://cha0smagicklabs.com/blog/astrology-apps-android-guide.html)
+- [How to Use a Pendulum for Divination](https://cha0smagicklabs.com/blog/pendulum-divination-beginners-guide.html)
+- [Digital Spellcasting — Technomancy Guide](https://cha0smagicklabs.com/blog/digital-spellcasting-technomancy-guide.html)
+- [Magical Herbs: Correspondences Guide](https://cha0smagicklabs.com/blog/herbal-magic-correspondences-guide.html)
+- [Crystal Magic: 33 Crystals Reference](https://cha0smagicklabs.com/blog/crystal-magic-beginners-reference-guide.html)
+- [Kitchen Witchery 101](https://cha0smagicklabs.com/blog/kitchen-witchery-beginners-guide.html)
+- [Numerology for Beginners](https://cha0smagicklabs.com/blog/numerology-beginners-life-path-guide.html)
+- [Ogham Divination: Celtic Tree Alphabet](https://cha0smagicklabs.com/blog/ogham-divination-celtic-tree-alphabet-guide.html)
+- [Wheel of the Year: Sabbat Guide 2026](https://cha0smagicklabs.com/blog/wheel-of-the-year-sabbat-guide.html)
+- [Working with Archangels](https://cha0smagicklabs.com/blog/angel-magic-archangels-grimoire-guide.html)
+- [Chakra Balancing for Witches](https://cha0smagicklabs.com/blog/chakra-balancing-witches-guide.html)
+- [Elemental Magic: Air, Fire, Water, Earth](https://cha0smagicklabs.com/blog/elemental-magic-air-fire-water-earth-guide.html)
+- [10 Divination Methods Beyond Tarot](https://cha0smagicklabs.com/blog/divination-methods-beyond-tarot-guide.html)
+- [Chaos Magick for Beginners](https://cha0smagicklabs.com/blog/chaos-magick-beginners-complete-guide.html)
+- [Sigil Engine: Cryptographic Sigil Generation](https://cha0smagicklabs.com/blog/sigil-engine-cryptographic-guide.html)
+- [How to Create a Magickal Servitor](https://cha0smagicklabs.com/blog/how-to-create-magickal-servitor.html)
+- [What is Gnosis? How to Achieve Gnosis](https://cha0smagicklabs.com/blog/what-is-gnosis-how-to-achieve.html)
+- [Goetic Magic for Beginners](https://cha0smagicklabs.com/blog/goetic-magic-beginners-guide.html)
+- [Zener Cards ESP Training Guide](https://cha0smagicklabs.com/blog/zener-cards-esp-training-guide.html)
 
-## SEO & Technical Notes
-- Language: primarily English (EN), with Spanish (ES) hreflang on activador-servidores page
-- Canonical URLs use https://cha0smagicklabs.com/ with trailing slash on root, .html on all pages
-- Schema types used: SoftwareApplication, WebApplication, FAQPage, QAPage, HowTo, Article, ContactPoint, AggregateRating
-- Sitemap: sitemap.xml
-- CSS: style.min.css (single minified stylesheet)
-- JS: app-render.min.js, apps-data.min.js, visitor-map.min.js, shared.min.js
-- Mobile-responsive design with dark theme
-- Google Analytics via G-V6LHCPN9TK (privacy-focused, analytics_storage denied by default)
+## Technical Notes
+
+- **Language:** Primary English (EN), some Spanish (ES) for activador-servidores
+- **Canonical URLs:** `https://cha0smagicklabs.com/` with `.html` suffix on all pages
+- **Schema types:** SoftwareApplication, WebApplication, FAQPage, QAPage, HowTo, Article, ContactPoint, AggregateRating
+- **Sitemap:** [sitemap.xml](https://cha0smagicklabs.com/sitemap.xml)
+- **CSS:** Single minified stylesheet (`style.min.css`)
+- **JS:** `app-render.min.js`, `apps-data.min.js`, `visitor-map.min.js`, `shared.min.js`
+- **Analytics:** Google Analytics G-V6LHCPN9TK (privacy-first, denied by default)
+- **Theme:** Dark theme, mobile-responsive
