@@ -1,0 +1,78 @@
+# Cha0smagick Labs — Chaos Magick, Cybermancy & Digital Occult Tools
+
+> Corporate Cybermancy Solutions — since 2025. Explore the Art and Practice of Chaos Magick through free online tools, premium Android apps, and educational PDF resources.
+
+## Site Overview
+
+Cha0smagick Labs is a digital occult platform offering free online chaos magick tools (sigil generators, rune oracles, I Ching, lunar phase calculator, Tengwar transcriber), premium Android apps (PSI GYM, Chaos Sigil Generator, Norse Rune Oracle, Arcana Goetia, Dream Machine, I Ching Oracle, Lunar Phase Calculator, Unofficial Rider Waite Tarot), and educational PDFs (Magical Servitors Manual, Liber Lvpinux, Ouija Cazadora, Treatise of Chaos Hunter Runes). The site also hosts an extensive blog with 40+ articles on chaos magick theory, practice, divination, and app reviews.
+
+## Key Pages
+
+### Tools (Free Online)
+- **Sigil Generator** — tools/sigil-generator.html
+- **I Ching Oracle** — tools/iching.html
+- **Viking Runes** — tools/viking-runes.html
+- **Lunar Phase Calculator** — tools/lunar-phase.html
+- **Tengwar Transcriber** — tools/tengwar-transcriber.html
+- **Magickal Servitor Activator** — tools/activador-servidores.html
+- **All Tools** — tools/index.html
+
+### Premium Android Apps
+- **Chaos Sigil Generator** — apps/chaos-sigil-generator.html
+- **PSI GYM — Zener Cards ESP Trainer** — apps/psi-gym.html
+- **Norse Rune Oracle** — apps/norse-rune-oracle.html
+- **Arcana Goetia — 72 Spirits** — apps/arcana-goetia.html
+- **Dream Machine — Binaural Beats** — apps/dream-machine.html
+- **I Ching Oracle** — apps/iching-oracle.html
+- **Lunar Phase Calculator** — apps/lunar-phase-calculator.html
+- **Unofficial Rider Waite Tarot** — apps/unofficial-rider-waite-tarot.html
+- **All Apps** — index.html#products
+
+### PDF Publications
+- **Magical Servitors Manual** — apps/manual-activacion-servidores-magicos-pdf.html
+- **Liber Lvpinux** (Lycanthropic Transformation) — apps/liber-lvpinux-pdf.html
+- **Ouija Cazadora** (Spirit Board Guide) — apps/ouija-cazadora-pdf.html
+- **Treatise of Chaos Hunter Runes** — apps/tratado-runas-cazadoras-caos-pdf.html
+
+### Core Pages
+- **Home** — index.html
+- **Blog Index** — blog/index.html
+- **Glossary** — glossary.html
+- **Best Occult Apps for Android** — best-occult-apps-android.html
+- **Privacy Policy** — privacy-policy.html
+- **About** — pages/about.html
+- **App Details** — pages/app-details.html
+
+## Blog Topics
+
+The blog (blog/) covers chaos magick fundamentals, sigil creation methods (Austin Osman Spare, cryptographic, digital), servitor and egregore theory, divination systems (I Ching, runes, Zener cards, tarot, scrying), lucid dreaming and astral projection, planetary magic, goetic magic, banishing and space cleansing, cybermancy and technomancy, app reviews, PDF reviews, moon phase ritual timing, and chaos magick history.
+
+### Notable Blog Posts
+- Chaos Magick for Beginners: Complete Guide — blog/chaos-magick-beginners-complete-guide.html
+- The Ultimate Sigil Maker Guide — blog/sigil-maker-ultimate-guide.html
+- Sigil Engine: Cryptographic Sigil Generation — blog/sigil-engine-cryptographic-guide.html
+- How to Create a Magickal Servitor — blog/how-to-create-magickal-servitor.html
+- Complete Magickal Servitors Guide — blog/complete-magickal-servitors-guide.html
+- Paradigm Shift & Belief as a Tool — blog/paradigm-shift-belief-as-tool.html
+- What is Gnosis? How to Achieve Gnosis — blog/what-is-gnosis-how-to-achieve.html
+- How to Charge a Sigil Correctly — blog/how-to-charge-sigil-correctly.html
+- Norse Runes for Beginners — blog/norse-runes-beginners-guide.html
+- I Ching Digital: Ancient Chinese Divination — blog/i-ching-digital-guide.html
+- Master Lucid Dreaming — blog/lucid-dreaming-guide.html
+- Goetic Magic for Beginners — blog/goetic-magic-beginners-guide.html
+- Moon Magic: Lunar Phases for Ritual Timing — blog/lunar-phase-magic-guide.html
+- Planetary Magic & Planetary Hours — blog/planetary-magic-hours-guide.html
+- Zener Cards ESP Training Guide — blog/zener-cards-esp-training-guide.html
+- Remote Viewing Techniques for Beginners — blog/remote-viewing-techniques-beginners.html
+- What is Cybermancy? Digital Sorcery Guide — blog/what-is-cybermancy-digital-sorcery-guide.html
+- Egregore Creation: Collective Thought Forms — blog/egregore-creation-collective-thought-forms.html
+
+## SEO & Technical Notes
+- Language: primarily English (EN), with Spanish (ES) hreflang on activador-servidores page
+- Canonical URLs use https://cha0smagicklabs.com/ with trailing slash on root, .html on all pages
+- Schema types used: SoftwareApplication, WebApplication, FAQPage, QAPage, HowTo, Article, ContactPoint, AggregateRating
+- Sitemap: sitemap.xml
+- CSS: style.min.css (single minified stylesheet)
+- JS: app-render.min.js, apps-data.min.js, visitor-map.min.js, shared.min.js
+- Mobile-responsive design with dark theme
+- Google Analytics via G-V6LHCPN9TK (privacy-focused, analytics_storage denied by default)
