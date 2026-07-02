@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Spell Builder — Custom Spell Correspondences Generator</title>
+    <meta name="description" content="Free spell builder tool. Select your magical intention and instantly get a complete spell recipe with candle color, herbs, crystals, incense, planetary day, moon phase, and ritual steps. No signup required.">
+    <meta name="keywords" content="spell builder, spell correspondences, custom spell, magic recipe, spell ingredients, candle color, herbs for spells, crystals for spells, ritual planner, spell creator">
+    <link rel="canonical" href="https://cha0smagicklabs.com/tools/spell-builder.html">
+    <link rel="alternate" href="https://cha0smagicklabs.com/tools/spell-builder.html" hreflang="en"><link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Free Spell Builder — Custom Spell Correspondences Generator">
+    <meta property="og:description" content="Free spell builder. Select your intention and get a complete spell recipe with candle color, herbs, crystals, incense, planetary timing and ritual steps.">
+    <meta property="og:url" content="https://cha0smagicklabs.com/tools/spell-builder.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Spell Builder","description":"Free online spell builder with magical correspondences.","url":"https://cha0smagicklabs.com/tools/spell-builder.html","applicationCategory":"Multimedia","operatingSystem":"All"}</script>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <style>
+        :root{--bg-card:#0a0a0a;--text:#a0a0a0;--gold:#c0a060}
+        .spell-container{max-width:800px;margin:2rem auto;padding:0 1.5rem}
+        .intent-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:0.75rem;margin:1.5rem 0}
+        .intent-card{background:#111;border:1px solid #333;border-radius:10px;padding:1rem;cursor:pointer;transition:all .3s;text-align:center}
+        .intent-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+        .intent-card.selected{border-color:var(--gold);background:rgba(192,160,96,0.1);box-shadow:0 0 20px rgba(192,160,96,0.15)}
+        .intent-card .icon{font-size:1.8rem;margin-bottom:0.3rem}
+        .intent-card .name{color:#ccc;font-size:0.85rem;font-weight:500}
+        .intent-card .keyword{color:#666;font-size:0.7rem;margin-top:0.2rem}
+        .selected-list{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0;min-height:2.5rem}
+        .selected-tag{background:var(--gold);color:#000;padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;font-weight:600;display:flex;align-items:center;gap:0.4rem}
+        .selected-tag .remove{cursor:pointer;font-size:1rem;line-height:1}
+        .spell-recipe{background:var(--bg-card);border:1px solid #1a1a1a;border-radius:12px;padding:2rem;margin:1.5rem 0;display:none}
+        .spell-recipe.visible{display:block;animation:fadeIn .5s}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        .recipe-header{text-align:center;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid #1a1a1a}
+        .recipe-header h2{color:var(--gold);font-size:1.5rem}
+        .recipe-header .subtitle{color:#666;font-size:0.85rem;margin-top:0.3rem}
+        .recipe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem}
+        .recipe-item{background:#111;border:1px solid #1a1a1a;border-radius:8px;padding:1rem;text-align:center}
+        .recipe-item h4{color:#666;font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem}
+        .recipe-item p{color:var(--gold);font-size:0.9rem}
+        .recipe-item .value{color:#fff;font-size:0.9rem}
+        .ritual-steps{margin-top:1.5rem;padding:1.5rem;background:#111;border:1px solid #1a1a1a;border-radius:8px}
+        .ritual-steps h3{color:var(--gold);margin-bottom:1rem}
+        .ritual-steps ol{padding-left:1.2rem}
+        .ritual-steps li{color:#888;margin-bottom:0.5rem;font-size:0.9rem;line-height:1.5}
+        .build-btn{display:block;width:100%;padding:1rem;background:var(--gold);color:#000;border:none;border-radius:8px;font-size:1.1rem;font-weight:600;cursor:pointer;transition:all .3s;margin:1rem 0}
+        .build-btn:hover{background:#ffd700;transform:translateY(-2px)}
+        .build-btn:disabled{opacity:0.4;cursor:not-allowed;transform:none}
+        .clear-btn{display:inline-block;padding:0.5rem 1.2rem;background:transparent;border:1px solid #444;color:#888;border-radius:6px;cursor:pointer;font-size:0.85rem;transition:all .3s}
+        .clear-btn:hover{border-color:var(--gold);color:var(--gold)}
+        .print-btn{display:inline-block;padding:0.5rem 1.2rem;background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:6px;cursor:pointer;font-size:0.85rem;transition:all .3s;margin-left:0.5rem}
+        .print-btn:hover{background:var(--gold);color:#000}
+    </style>
+</head>
+<body>
+<header>
+<div class="header-content">
+    <a href="../index.html" class="header-link">
+        <picture>
+            <source srcset="../assets/images/Banner.webp" type="image/webp">
+            <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
+        </picture>
+        <span class="site-title">CHA0SMAGICK LABS</span>
+    </a>
+    <p>Explore the Art and Practice of the Occult</p>
+</div>
+</header>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">All Free Tools</a></li>
+    <li><a href="../index.html#products">Premium Apps</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+</ul>
+</nav>
+<div class="breadcrumb">
+    <a href="../index.html">Cha0smagick Labs</a> › <a href="index.html">Free Tools</a> › Spell Builder
+</div>
+<div class="container">
+<section class="hero">
+    <h1>Free Spell Builder</h1>
+    <p>Select one or more magical intentions and instantly generate a complete spell recipe with correspondences, timing, and step-by-step ritual instructions.</p>
+</section>
+<section class="benefits">
+    <h3>What You Get</h3>
+    <ul>
+        <li>Custom spell recipe based on your selected intentions</li>
+        <li>Candle color, herbs, crystals, incense, and planetary correspondences</li>
+        <li>Optimal moon phase and planetary day for casting</li>
+        <li>Step-by-step ritual instructions</li>
+        <li>Print-friendly format — save your spell recipe</li>
+    </ul>
+</section>
+
+<div class="spell-container">
+    <h3 style="color:var(--gold);text-align:center">? Select Your Intentions</h3>
+    <p style="text-align:center;color:#666;font-size:0.85rem;margin-bottom:0.5rem">Choose one or more — the builder will combine correspondences</p>
+    
+    <div class="intent-grid" id="intentGrid"></div>
+    
+    <div class="selected-list" id="selectedList"></div>
+    
+    <button class="build-btn" id="buildBtn" disabled>? Build My Spell</button>
+    <div style="text-align:center"><button class="clear-btn" id="clearBtn">? Clear All Selections</button></div>
+
+    <div class="spell-recipe" id="spellRecipe">
+        <div class="recipe-header">
+            <h2 id="recipeTitle">? Your Custom Spell</h2>
+            <div class="subtitle" id="recipeSubtitle">Combined correspondences for your intentions</div>
+        </div>
+        <div class="recipe-grid" id="recipeGrid"></div>
+        <div class="ritual-steps" id="ritualSteps">
+            <h3>? Ritual Steps</h3>
+            <ol id="stepsList"></ol>
+        </div>
+        <div style="text-align:center;margin-top:1rem">
+            <button class="clear-btn" onclick="document.getElementById('clearBtn').click()">? Start Over</button>
+            <button class="print-btn" onclick="window.print()">? Print Recipe</button>
+        </div>
+    </div>
+</div>
+
+<section class="compare-section">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android App</h3>
+    <table class="compare-table">
+        <tr><th>Feature</th><th>Free Web</th><th>Premium App</th></tr>
+        <tr><td>Spell builder with correspondences</td><td class="check">?</td><td class="check">?</td></tr>
+        <tr><td>Combine multiple intentions</td><td class="check">?</td><td class="check">?</td></tr>
+        <tr><td>Ritual timer & journal</td><td class="cross">?</td><td class="check">?</td></tr>
+        <tr><td>Spell library & history</td><td class="cross">?</td><td class="check">?</td></tr>
+        <tr><td>Works offline</td><td class="cross">?</td><td class="check">?</td></tr>
+        <tr><td>No ads, no tracking</td><td class="check">?</td><td class="check">?</td></tr>
+        <tr class="highlight-row"><td><strong>Price</strong></td><td><strong>Free</strong></td><td><strong>$3.99</strong></td></tr>
+    </table>
+</section>
+
+<div class="funnel-testimonial">
+    <p>"The free spell builder helped me understand correspondences. The Lunar Phase Calculator app's ritual timer and journal completely transformed how I track my spell work."</p>
+    <div class="author">— James L., verified purchaser</div>
+</div>
+
+<section class="funnel-faq">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free vs Premium</h3>
+    <details>
+        <summary>Is the free spell builder fully functional?</summary>
+        <div class="faq-answer">Yes! Select any combination of intentions and get a complete spell recipe. The premium app adds ritual timer, journal, spell library, and offline access.</div>
+    </details>
+    <details>
+        <summary>Does the premium app need internet?</summary>
+        <div class="faq-answer">No. 100% offline. No accounts, no data collection.</div>
+    </details>
+    <details>
+        <summary>Is this a subscription?</summary>
+        <div class="faq-answer">One-time payment of $3.99. Own it forever.</div>
+    </details>
+</section>
+
+<section class="cta-box">
+    <h3>? Cast Spells Anywhere</h3>
+    <p>Try the free spell builder, then supercharge your practice with the <strong>Lunar Phase Calculator</strong> Android app. Ritual timer, spell journal, and offline access everywhere.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1rem 0;">
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">?? Ritual Timer</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">?? Journal</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">?? Offline</span>
+    </div>
+    <div class="price">$3.99</div>
+    <a href="https://play.google.com/store/apps/details?id=com.cha0smagick.lunarphase" class="play-store-btn pulse" target="_blank"><svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg> GET IT ON Google Play</a>
+</section>
+
+<div class="sticky-conversion-bar">
+    <span class="sticky-text">? Lunar Phase Calculator</span>
+    <span class="price-tag">$3.99</span>
+    <a href="https://play.google.com/store/apps/details?id=com.cha0smagick.lunarphase" class="sticky-cta" target="_blank">Get the App ?</a>
+</div>
+
+<div class="back-link"><a href="index.html">? Back to All Free Tools</a></div>
+</div>
+
+<footer id="site-footer" class="site-footer">
+<div class="footer-grid">
+    <div class="footer-section">
+        <h4>Cha0smagick Labs</h4>
+        <p>Explore the Art and Practice of the Occult.</p>
+        <p>Corporate Techno-Sorcery Solutions — since 2025.</p>
+    </div>
+    <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="../index.html">Home Page</a></li>
+            <li><a href="index.html">Free Online Tools</a></li>
+            <li><a href="../blog/">Read Blog</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom"><p>&copy; 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p></div>
+</footer>
+<script src="../js/shared.min.js"></script>
+<div id="lang-sidebar" class="lang-sidebar">
+<button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button>
+<div id="lang-flag-list" class="lang-flag-list">
+    <button onclick="switchLang('en')" title="English" class="lang-btn"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button>
+    <button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button>
+    <button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button>
+    <button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button>
+    <button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button>
+    <button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button>
+</div>
+</div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner">
+    <p>This site uses cookies for analytics. <a href="../privacy-policy.html" style="color:#ffd700;">Privacy Policy</a></p>
+    <div class="cookie-buttons">
+        <button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button>
+        <button class="cookie-btn-decline" onclick="declineCookies()">Decline</button>
+    </div>
+</div>
+
+<script>
+// === CORRESPONDENCES DATABASE ===
+const intents = [
+    { id:'love', icon:'?', name:'Love & Romance', keyword:'Attract love', color:'Pink (#FF69B4)', herb:'Rose, Lavender, Jasmine', crystal:'Rose Quartz, Rhodonite', incense:'Rose, Ylang-Ylang', day:'Friday', planet:'Venus', moon:'Waxing → Full' },
+    { id:'passion', icon:'?', name:'Passion & Sex', keyword:'Ignite desire', color:'Red (#DC143C)', herb:'Damiana, Ginger, Hibiscus', crystal:'Garnet, Ruby, Red Jasper', incense:'Dragon\'s Blood, Cinnamon', day:'Tuesday', planet:'Mars', moon:'Full Moon' },
+    { id:'prosperity', icon:'?', name:'Prosperity & Wealth', keyword:'Attract abundance', color:'Green (#228B22)', herb:'Cinnamon, Basil, Patchouli', crystal:'Citrine, Pyrite, Jade', incense:'Patchouli, Cedar', day:'Thursday', planet:'Jupiter', moon:'Waxing → Full' },
+    { id:'success', icon:'?', name:'Success & Career', keyword:'Achieve goals', color:'Gold (#FFD700)', herb:'Saffron, Bay Laurel, Chamomile', crystal:'Tiger\'s Eye, Amber, Citrine', incense:'Frankincense, Myrrh', day:'Sunday', planet:'Sun', moon:'New → Waxing' },
+    { id:'protection', icon:'?', name:'Protection', keyword:'Shield from harm', color:'Black (#000000)', herb:'Rosemary, Sage, Black Pepper', crystal:'Black Tourmaline, Obsidian', incense:'Sage, Frankincense', day:'Saturday', planet:'Saturn', moon:'Waning → New' },
+    { id:'healing', icon:'?', name:'Healing', keyword:'Restore health', color:'Blue (#4169E1)', herb:'Lavender, Eucalyptus, Mint', crystal:'Lapis Lazuli, Sodalite', incense:'Lavender, Sandalwood', day:'Wednesday', planet:'Mercury', moon:'Waning' },
+    { id:'psychic', icon:'?', name:'Psychic Power', keyword:'Awaken intuition', color:'Purple (#800080)', herb:'Mugwort, Lotus, Anise', crystal:'Amethyst, Labradorite', incense:'Mugwort, Sandalwood', day:'Wednesday', planet:'Mercury', moon:'New Moon' },
+    { id:'purification', icon:'?', name:'Cleansing', keyword:'Purify space', color:'White (#FFFFFF)', herb:'Sage, Rosemary, Frankincense', crystal:'Clear Quartz, Selenite', incense:'White Sage, Copal', day:'Monday', planet:'Moon', moon:'New Moon' },
+    { id:'banishing', icon:'?', name:'Banishing', keyword:'Remove negativity', color:'Black (#000000)', herb:'Sage, Black Salt, Angelica', crystal:'Obsidian, Smoky Quartz', incense:'Sage, Camphor', day:'Saturday', planet:'Saturn', moon:'Waning → Dark' },
+    { id:'grounding', icon:'?', name:'Grounding', keyword:'Center & stabilize', color:'Brown (#8B4513)', herb:'Patchouli, Vetiver, Pine', crystal:'Smoky Quartz, Hematite', incense:'Pine, Cedar', day:'Saturday', planet:'Saturn', moon:'Waning' },
+    { id:'lunar', icon:'?', name:'Lunar Magic', keyword:'Work with moon', color:'Silver (#C0C0C0)', herb:'Mugwort, Jasmine, White Rose', crystal:'Moonstone, Selenite', incense:'Jasmine, Lotus', day:'Monday', planet:'Moon', moon:'Varies by phase' },
+    { id:'creativity', icon:'?', name:'Creativity', keyword:'Inspire art', color:'Orange (#FF8C00)', herb:'Cinnamon, Ginger, Clove', crystal:'Carnelian, Sunstone', incense:'Cinnamon, Frankincense', day:'Sunday', planet:'Sun', moon:'Waxing' }
+];
+
+// UI
+const grid = document.getElementById('intentGrid');
+const selectedList = document.getElementById('selectedList');
+const selected = new Set();
+
+intents.forEach(i => {
+    const card = document.createElement('div');
+    card.className = 'intent-card';
+    card.dataset.id = i.id;
+    card.innerHTML = `<div class="icon">${i.icon}</div><div class="name">${i.name}</div><div class="keyword">${i.keyword}</div>`;
+    card.onclick = function() {
+        if (selected.has(i.id)) {
+            selected.delete(i.id);
+            this.classList.remove('selected');
+        } else {
+            selected.add(i.id);
+            this.classList.add('selected');
+        }
+        updateUI();
+    };
+    grid.appendChild(card);
+});
+
+function updateUI() {
+    selectedList.innerHTML = '';
+    selected.forEach(id => {
+        const intent = intents.find(i => i.id === id);
+        const tag = document.createElement('span');
+        tag.className = 'selected-tag';
+        tag.innerHTML = `${intent.icon} ${intent.name} <span class="remove" onclick="removeIntent('${id}')">×</span>`;
+        selectedList.appendChild(tag);
+    });
+    document.getElementById('buildBtn').disabled = selected.size === 0;
+}
+
+function removeIntent(id) {
+    selected.delete(id);
+    document.querySelector(`.intent-card[data-id="${id}"]`).classList.remove('selected');
+    updateUI();
+}
+
+document.getElementById('clearBtn').onclick = function() {
+    selected.clear();
+    document.querySelectorAll('.intent-card').forEach(c => c.classList.remove('selected'));
+    updateUI();
+    document.getElementById('spellRecipe').classList.remove('visible');
+};
+
+// Combine correspondences
+function combine(prop) {
+    const values = [];
+    selected.forEach(id => {
+        const intent = intents.find(i => i.id === id);
+        const val = intent[prop];
+        val.split(', ').forEach(v => {
+            const trimmed = v.trim();
+            if (!values.includes(trimmed)) values.push(trimmed);
+        });
+    });
+    return values.join(', ');
+}
+
+document.getElementById('buildBtn').onclick = function() {
+    if (selected.size === 0) return;
+    
+    const names = [];
+    selected.forEach(id => names.push(intents.find(i => i.id === id).name));
+    
+    document.getElementById('recipeTitle').textContent = '? ' + names.join(' + ') + ' Spell';
+    document.getElementById('recipeSubtitle').textContent = selected.size + ' intention' + (selected.size > 1 ? 's combined' : '');
+    
+    document.getElementById('recipeGrid').innerHTML = `
+        <div class="recipe-item"><h4>? Candle Color</h4><p class="value">${combine('color')}</p></div>
+        <div class="recipe-item"><h4>? Herbs</h4><p class="value">${combine('herb')}</p></div>
+        <div class="recipe-item"><h4>? Crystals</h4><p class="value">${combine('crystal')}</p></div>
+        <div class="recipe-item"><h4>? Incense</h4><p class="value">${combine('incense')}</p></div>
+        <div class="recipe-item"><h4>? Best Day</h4><p class="value">${combine('day')}</p></div>
+        <div class="recipe-item"><h4>? Planet</h4><p class="value">${combine('planet')}</p></div>
+        <div class="recipe-item"><h4>? Moon Phase</h4><p class="value">${combine('moon')}</p></div>
+        <div class="recipe-item"><h4>? Timing</h4><p class="value">${combine('day')} · ${combine('moon').split(',')[0]}</p></div>
+    `;
+    
+    document.getElementById('stepsList').innerHTML = `
+        <li><strong>Cleanse your space</strong> — Use ${combine('incense').split(',')[0]} incense or sage smoke to purify your area.</li>
+        <li><strong>Set up your altar</strong> — Place a ${combine('color').split(',')[0].replace(/\(.*?\)/g,'').trim()} candle, ${combine('crystal').split(',')[0]}, and ${combine('herb').split(',')[0]}.</li>
+        <li><strong>Cast your circle</strong> — Ground yourself with three deep breaths. Visualize protective light around you.</li>
+        <li><strong>State your intention</strong> — Speak your desire clearly and with conviction. Visualize the outcome as already real.</li>
+        <li><strong>Light the candle</strong> — As the flame grows, project your energy into it. Recite: "${names.join(' and ')} manifest through me."</li>
+        <li><strong>Meditate on the flame</strong> — Focus on your intention for 5-10 minutes. Release attachment to the outcome.</li>
+        <li><strong>Close the ritual</strong> — Thank the elements. Ground again. Allow the candle to burn completely in a safe place.</li>
+        <li><strong>Record your results</strong> — Note the date, time, moon phase, and any signs or synchronicities in your grimoire.</li>
+    `;
+    
+    document.getElementById('spellRecipe').classList.add('visible');
+    document.getElementById('spellRecipe').scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+</script>
+</body>
+</html>

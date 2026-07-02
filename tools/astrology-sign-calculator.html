@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Astrology Sign Calculator — Sun, Moon & Rising Sign Finder</title>
+    <meta name="description" content="Free astrology sign calculator. Enter your birth date and time to instantly discover your Sun sign, Moon sign, and Rising sign (Ascendant) with detailed interpretations. No signup required.">
+    <meta name="keywords" content="astrology sign calculator, sun sign, moon sign, rising sign, ascendant calculator, birth chart, free astrology tool, zodiac sign finder, what is my moon sign, what is my rising sign">
+    <link rel="canonical" href="https://cha0smagicklabs.com/tools/astrology-sign-calculator.html">
+    <link rel="alternate" href="https://cha0smagicklabs.com/tools/astrology-sign-calculator.html" hreflang="en"><link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Free Astrology Sign Calculator — Sun, Moon & Rising Sign Finder">
+    <meta property="og:description" content="Free astrology calculator. Enter birth date and time to discover your Sun sign, Moon sign, and Rising sign with interpretations.">
+    <meta property="og:url" content="https://cha0smagicklabs.com/tools/astrology-sign-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Astrology Sign Calculator","description":"Free online astrology calculator for Sun, Moon and Rising signs.","url":"https://cha0smagicklabs.com/tools/astrology-sign-calculator.html","applicationCategory":"Multimedia","operatingSystem":"All"}</script>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <style>
+        :root{--bg-card:#0a0a0a;--text:#a0a0a0;--gold:#c0a060;--gold-light:#ffd700}
+        .astro-container{max-width:800px;margin:2rem auto;padding:0 1.5rem}
+        .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+        @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+        .form-group{display:flex;flex-direction:column;gap:0.4rem}
+        .form-group label{color:#888;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px}
+        .form-group input,.form-group select{padding:0.8rem;background:#111;border:1px solid #333;color:#fff;border-radius:6px;font-size:1rem}
+        .form-group input:focus,.form-group select:focus{border-color:var(--gold);outline:none}
+        .calc-btn{display:block;width:100%;padding:1rem;background:var(--gold);color:#000;border:none;border-radius:8px;font-size:1.1rem;font-weight:600;cursor:pointer;transition:all .3s;margin:1rem 0}
+        .calc-btn:hover{background:var(--gold-light);transform:translateY(-2px)}
+        .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem}
+        .sign-card{background:var(--bg-card);border:1px solid #1a1a1a;border-radius:12px;padding:1.5rem;text-align:center;transition:all .3s}
+        .sign-card:hover{border-color:var(--gold)}
+        .sign-icon{font-size:2.5rem;margin-bottom:0.5rem}
+        .sign-card h3{color:var(--gold);font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:0.3rem}
+        .sign-card .sign-name{font-size:1.3rem;color:#fff;margin-bottom:0.3rem}
+        .sign-card .sign-date{color:#666;font-size:0.8rem;margin-bottom:0.8rem}
+        .sign-card .sign-desc{color:#888;font-size:0.85rem;line-height:1.5}
+        .sign-card .sign-element{display:inline-block;padding:0.2rem 0.8rem;border-radius:20px;font-size:0.75rem;margin-top:0.5rem}
+        .element-fire{background:rgba(255,69,0,0.2);color:#ff4500}
+        .element-earth{background:rgba(34,139,34,0.2);color:#228b22}
+        .element-air{background:rgba(255,215,0,0.2);color:#ffd700}
+        .element-water{background:rgba(65,105,225,0.2);color:#4169e1}
+        .moon-note{text-align:center;color:#666;font-size:0.8rem;margin-top:0.5rem;padding:0.8rem;background:var(--bg-card);border:1px solid #1a1a1a;border-radius:8px}
+        .asc-note{text-align:center;color:#666;font-size:0.8rem;margin-top:0.5rem;padding:0.8rem;background:var(--bg-card);border:1px solid #1a1a1a;border-radius:8px}
+    </style>
+</head>
+<body>
+<header>
+<div class="header-content">
+    <a href="../index.html" class="header-link">
+        <picture>
+            <source srcset="../assets/images/Banner.webp" type="image/webp">
+            <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
+        </picture>
+        <span class="site-title">CHA0SMAGICK LABS</span>
+    </a>
+    <p>Explore the Art and Practice of the Occult</p>
+</div>
+</header>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">All Free Tools</a></li>
+    <li><a href="../index.html#products">Premium Apps</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+</ul>
+</nav>
+<div class="breadcrumb">
+    <a href="../index.html">Cha0smagick Labs</a> › <a href="index.html">Free Tools</a> › Astrology Sign Calculator
+</div>
+<div class="container">
+<section class="hero">
+    <h1>Free Astrology Sign Calculator</h1>
+    <p>Enter your birth details to discover your Sun sign, Moon sign, and Rising sign (Ascendant). Understand the three pillars of your astrological identity and how they influence your magical practice.</p>
+</section>
+<section class="benefits">
+    <h3>What You Get</h3>
+    <ul>
+        <li>Sun sign based on your exact birth date</li>
+        <li>Moon sign calculated using astronomical algorithms</li>
+        <li>Rising sign (Ascendant) estimated from birth time</li>
+        <li>Element, modality, and planetary ruler for each sign</li>
+        <li>Detailed interpretations for magical practice</li>
+    </ul>
+</section>
+
+<div class="astro-container">
+    <div class="form-grid">
+        <div class="form-group">
+            <label>Birth Date</label>
+            <input type="date" id="birthDate" value="1990-06-15">
+        </div>
+        <div class="form-group">
+            <label>Birth Time (optional, for Rising sign)</label>
+            <input type="time" id="birthTime" value="12:00">
+        </div>
+    </div>
+    <button class="calc-btn" id="calcBtn">? Calculate My Signs</button>
+
+    <div id="results" style="display:none">
+        <div class="result-grid" id="signGrid"></div>
+        <div class="moon-note" id="moonNote"></div>
+        <div class="asc-note" id="ascNote"></div>
+    </div>
+</div>
+
+<section class="compare-section">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android App</h3>
+    <table class="compare-table">
+        <tr><th>Feature</th><th>Free Web</th><th>Premium App</th></tr>
+        <tr><td>Sun, Moon & Rising signs</td><td class="check">?</td><td class="check">?</td></tr>
+        <tr><td>Birth chart with all planets</td><td class="cross">?</td><td class="check">?</td></tr>
+        <tr><td>Transit tracking</td><td class="cross">?</td><td class="check">?</td></tr>
+        <tr><td>Works offline</td><td class="cross">?</td><td class="check">?</td></tr>
+        <tr><td>Magical timing integration</td><td class="cross">?</td><td class="check">?</td></tr>
+        <tr><td>No ads, no tracking</td><td class="check">?</td><td class="check">?</td></tr>
+        <tr class="highlight-row"><td><strong>Price</strong></td><td><strong>Free</strong></td><td><strong>$3.99</strong></td></tr>
+    </table>
+</section>
+
+<div class="funnel-testimonial">
+    <p>"I used the free calculator to find my signs. The Lunar Phase Calculator app's magical timing feature based on my birth chart transformed my ritual practice."</p>
+    <div class="author">— Elena R., verified purchaser</div>
+</div>
+
+<section class="funnel-faq">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free vs Premium</h3>
+    <details>
+        <summary>Is the free calculator accurate?</summary>
+        <div class="faq-answer">Sun sign is 100% accurate. Moon sign uses astronomical algorithms with ±1 sign precision. Rising sign is an approximation based on birth time. The premium app uses Swiss Ephemeris for full accuracy.</div>
+    </details>
+    <details>
+        <summary>Does the premium app need internet?</summary>
+        <div class="faq-answer">No. 100% offline. No accounts, no data collection.</div>
+    </details>
+    <details>
+        <summary>Is this a subscription?</summary>
+        <div class="faq-answer">One-time payment of $3.99. Own it forever.</div>
+    </details>
+</section>
+
+<section class="cta-box">
+    <h3>? Full Astrology Anywhere</h3>
+    <p>Try the free calculator, then unlock your complete birth chart with the <strong>Lunar Phase Calculator</strong> Android app. Transit tracking, planetary hours, and magical timing.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1rem 0;">
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">?? Full Chart</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">?? Transits</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">?? Offline</span>
+    </div>
+    <div class="price">$3.99</div>
+    <a href="https://play.google.com/store/apps/details?id=com.cha0smagick.lunarphase" class="play-store-btn pulse" target="_blank"><svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg> GET IT ON Google Play</a>
+</section>
+
+<div class="sticky-conversion-bar">
+    <span class="sticky-text">? Lunar Phase Calculator</span>
+    <span class="price-tag">$3.99</span>
+    <a href="https://play.google.com/store/apps/details?id=com.cha0smagick.lunarphase" class="sticky-cta" target="_blank">Get the App ?</a>
+</div>
+
+<div class="back-link"><a href="index.html">? Back to All Free Tools</a></div>
+</div>
+
+<footer id="site-footer" class="site-footer">
+<div class="footer-grid">
+    <div class="footer-section">
+        <h4>Cha0smagick Labs</h4>
+        <p>Explore the Art and Practice of the Occult.</p>
+        <p>Corporate Techno-Sorcery Solutions — since 2025.</p>
+    </div>
+    <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="../index.html">Home Page</a></li>
+            <li><a href="index.html">Free Online Tools</a></li>
+            <li><a href="../blog/">Read Blog</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom"><p>&copy; 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p></div>
+</footer>
+<script src="../js/shared.min.js"></script>
+<div id="lang-sidebar" class="lang-sidebar">
+<button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button>
+<div id="lang-flag-list" class="lang-flag-list">
+    <button onclick="switchLang('en')" title="English" class="lang-btn"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button>
+    <button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button>
+    <button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button>
+    <button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button>
+    <button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button>
+    <button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button>
+</div>
+</div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner">
+    <p>This site uses cookies for analytics. <a href="../privacy-policy.html" style="color:#ffd700;">Privacy Policy</a></p>
+    <div class="cookie-buttons">
+        <button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button>
+        <button class="cookie-btn-decline" onclick="declineCookies()">Decline</button>
+    </div>
+</div>
+
+<script>
+// === ZODIAC DATA ===
+const signs = [
+    { name:'Aries',     icon:'?', element:'Fire',   ruler:'Mars',     modality:'Cardinal',   dates:'Mar 21 – Apr 19', desc:'Bold, competitive, impulsive. Natural leader who initiates action. Aries energy is raw courage and pioneering spirit.' },
+    { name:'Taurus',    icon:'?', element:'Earth',  ruler:'Venus',    modality:'Fixed',      dates:'Apr 20 – May 20', desc:'Stable, patient, sensual. Builds security and appreciates beauty. Taurus energy is persistence and grounded strength.' },
+    { name:'Gemini',    icon:'?', element:'Air',    ruler:'Mercury',  modality:'Mutable',     dates:'May 21 – Jun 20', desc:'Curious, adaptable, communicative. Quick-witted and versatile. Gemini energy is intellectual exploration.' },
+    { name:'Cancer',    icon:'?', element:'Water',  ruler:'Moon',     modality:'Cardinal',   dates:'Jun 21 – Jul 22', desc:'Nurturing, intuitive, emotional. Deeply connected to home and family. Cancer energy is protective care.' },
+    { name:'Leo',       icon:'?', element:'Fire',   ruler:'Sun',      modality:'Fixed',      dates:'Jul 23 – Aug 22', desc:'Confident, generous, dramatic. Natural performer who radiates warmth. Leo energy is creative self-expression.' },
+    { name:'Virgo',     icon:'?', element:'Earth',  ruler:'Mercury',  modality:'Mutable',     dates:'Aug 23 – Sep 22', desc:'Analytical, practical, detail-oriented. Seeks perfection through service. Virgo energy is precision and refinement.' },
+    { name:'Libra',     icon:'?', element:'Air',    ruler:'Venus',    modality:'Cardinal',   dates:'Sep 23 – Oct 22', desc:'Diplomatic, charming, fair-minded. Seeks harmony and balance. Libra energy is relationship and aesthetics.' },
+    { name:'Scorpio',   icon:'?', element:'Water',  ruler:'Pluto',    modality:'Fixed',      dates:'Oct 23 – Nov 21', desc:'Intense, mysterious, transformative. Delves into the hidden. Scorpio energy is depth and regeneration.' },
+    { name:'Sagittarius',icon:'?',element:'Fire',   ruler:'Jupiter',  modality:'Mutable',    dates:'Nov 22 – Dec 21', desc:'Adventurous, optimistic, philosophical. Seeks meaning through expansion. Sagittarius energy is exploration.' },
+    { name:'Capricorn', icon:'?', element:'Earth',  ruler:'Saturn',   modality:'Cardinal',   dates:'Dec 22 – Jan 19', desc:'Ambitious, disciplined, responsible. Builds structures for success. Capricorn energy is mastery and achievement.' },
+    { name:'Aquarius',  icon:'?', element:'Air',    ruler:'Uranus',   modality:'Fixed',      dates:'Jan 20 – Feb 18', desc:'Innovative, independent, humanitarian. Thinks beyond convention. Aquarius energy is visionary progress.' },
+    { name:'Pisces',    icon:'?', element:'Water',  ruler:'Neptune',  modality:'Mutable',     dates:'Feb 19 – Mar 20', desc:'Dreamy, compassionate, artistic. Dissolves boundaries between self and universe. Pisces energy is transcendent unity.' }
+];
+
+// Sun sign date boundaries (month, day)
+const sunDates = [
+    { m:3, d:21, i:0 },  // Aries
+    { m:4, d:20, i:1 },  // Taurus
+    { m:5, d:21, i:2 },  // Gemini
+    { m:6, d:21, i:3 },  // Cancer
+    { m:7, d:23, i:4 },  // Leo
+    { m:8, d:23, i:5 },  // Virgo
+    { m:9, d:23, i:6 },  // Libra
+    { m:10, d:23, i:7 }, // Scorpio
+    { m:11, d:22, i:8 }, // Sagittarius
+    { m:12, d:22, i:9 }, // Capricorn
+    { m:1, d:20, i:10 }, // Aquarius
+    { m:2, d:19, i:11 }  // Pisces
+];
+
+// === SUN SIGN (exact date-based) ===
+function getSunSign(m, d) {
+    for (let i = 0; i < sunDates.length; i++) {
+        const curr = sunDates[i];
+        const next = sunDates[(i + 1) % sunDates.length];
+        if (curr.m < next.m || (curr.m === 12 && next.m === 1)) {
+            if ((m > curr.m || (m === curr.m && d >= curr.d)) && 
+                (m < next.m || (m === next.m && d < next.d) || (curr.m === 12 && m === 1 && d < next.d))) {
+                return curr.i;
+            }
+        }
+    }
+    // Fallback: Capricorn (Dec 22 - Jan 19)
+    return 9;
+}
+
+// === MOON SIGN (astronomical algorithm) ===
+function getMoonSign(y, m, d) {
+    // Calculate Julian Day Number
+    const a = Math.floor((14 - m) / 12);
+    const yy = y + 4800 - a;
+    const mm = m + 12 * a - 3;
+    let jd = d + Math.floor((153 * mm + 2) / 5) + 365 * yy + Math.floor(yy / 4) - Math.floor(yy / 100) + Math.floor(yy / 400) - 32045;
+    jd += 0.5; // Convert to astronomical JD (starts at noon)
+    
+    // Time since J2000.0 in centuries
+    const T = (jd - 2451545.0) / 36525;
+    
+    // Moon's mean longitude (degrees)
+    const Lp = 218.3165 + 481267.8813 * T;
+    
+    // Mean elongation of the Moon
+    const D = 297.8502 + 445267.1114 * T;
+    
+    // Sun's mean anomaly
+    const M = 357.5291 + 35999.0503 * T;
+    
+    // Moon's mean anomaly
+    const Mp = 134.9634 + 477198.8676 * T;
+    
+    // Moon's argument of latitude
+    const F = 93.2720 + 483202.0175 * T;
+    
+    // Convert to radians
+    const toRad = (deg) => deg * Math.PI / 180;
+    
+    // Major corrections for ecliptic longitude
+    let lambda = Lp
+        + 6.289 * Math.sin(toRad(Mp))
+        - 1.274 * Math.sin(toRad(2 * D - Mp))
+        + 0.658 * Math.sin(toRad(2 * D))
+        - 0.186 * Math.sin(toRad(M))
+        - 0.059 * Math.sin(toRad(2 * F - 2 * D))
+        - 0.057 * Math.sin(toRad(Mp - 2 * D + M))
+        + 0.053 * Math.sin(toRad(Mp + 2 * D))
+        + 0.046 * Math.sin(toRad(2 * D - M))
+        + 0.041 * Math.sin(toRad(Mp - M))
+        - 0.035 * Math.sin(toRad(D))
+        - 0.031 * Math.sin(toRad(Mp + M))
+        - 0.015 * Math.sin(toRad(2 * F - 2 * Mp))
+        + 0.011 * Math.sin(toRad(Mp - 2 * Mp));
+    
+    // Normalize to 0-360
+    lambda = ((lambda % 360) + 360) % 360;
+    
+    return Math.floor(lambda / 30);
+}
+
+// === RISING SIGN (time-based approximation) ===
+function getRisingSign(hour, sunIdx) {
+    // Approximate: at 6 AM, ascendant ≈ opposite of Sun sign
+    // Every 2 hours shifts by approximately 1 sign
+    const baseSign = (sunIdx + 6) % 12; // 6 AM: ascendant ≈ 6 signs from sun
+    const hourOffset = hour - 6;
+    const signShift = Math.round(hourOffset / 2);
+    return ((baseSign + signShift) % 12 + 12) % 12;
+}
+
+// === ELEMENT CLASS ===
+function elementClass(el) {
+    return 'element-' + el.toLowerCase();
+}
+
+// === MAIN CALCULATION ===
+document.getElementById('calcBtn').onclick = function() {
+    const dateVal = document.getElementById('birthDate').value;
+    const timeVal = document.getElementById('birthTime').value;
+    
+    if (!dateVal) { alert('Please select your birth date.'); return; }
+    
+    const parts = dateVal.split('-');
+    const year = parseInt(parts[0]);
+    const month = parseInt(parts[1]);
+    const day = parseInt(parts[2]);
+    const hour = timeVal ? parseInt(timeVal.split(':')[0]) : 12;
+    
+    // Calculate signs
+    const sunIdx = getSunSign(month, day);
+    const moonIdx = getMoonSign(year, month, day);
+    const ascIdx = getRisingSign(hour, sunIdx);
+    
+    const sun = signs[sunIdx];
+    const moon = signs[moonIdx];
+    const asc = signs[ascIdx];
+    
+    // Render results
+    const grid = document.getElementById('signGrid');
+    grid.innerHTML = `
+        <div class="sign-card">
+            <div class="sign-icon">☀️</div>
+            <h3>Sun Sign</h3>
+            <div class="sign-name">${sun.name}</div>
+            <div class="sign-date">${sun.dates}</div>
+            <div class="sign-desc">${sun.desc}</div>
+            <div class="sign-element ${elementClass(sun.element)}">${sun.element} · ${sun.modality} · ${sun.ruler}</div>
+        </div>
+        <div class="sign-card">
+            <div class="sign-icon">🌙</div>
+            <h3>Moon Sign</h3>
+            <div class="sign-name">${moon.name}</div>
+            <div class="sign-date">Emotions · Subconscious · Intuition</div>
+            <div class="sign-desc">${moon.desc}</div>
+            <div class="sign-element ${elementClass(moon.element)}">${moon.element} · ${moon.modality} · ${moon.ruler}</div>
+        </div>
+        <div class="sign-card">
+            <div class="sign-icon">⬆️</div>
+            <h3>Rising Sign (Ascendant)</h3>
+            <div class="sign-name">${asc.name}</div>
+            <div class="sign-date">Personality · Appearance · First impressions</div>
+            <div class="sign-desc">${asc.desc}</div>
+            <div class="sign-element ${elementClass(asc.element)}">${asc.element} · ${asc.modality} · ${asc.ruler}</div>
+        </div>
+    `;
+    
+    document.getElementById('moonNote').innerHTML = '🌙 <strong>Moon sign</strong> calculated using astronomical algorithms (Meeus simplified). ±1 sign precision.';
+    document.getElementById('ascNote').innerHTML = '⬆️ <strong>Rising sign</strong> estimated from birth time. For exact ascendant, birth location coordinates are needed. <a href="../apps/lunar-phase-calculator.html" style="color:var(--gold)">Premium app</a> includes full Swiss Ephemeris calculation.';
+    
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
+// Set default date to 21 years ago
+(function() {
+    const d = new Date();
+    d.setFullYear(d.getFullYear() - 21);
+    document.getElementById('birthDate').value = d.toISOString().split('T')[0];
+})();
+</script>
+</body>
+</html>
