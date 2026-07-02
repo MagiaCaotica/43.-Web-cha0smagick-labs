@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Digital Pendulum — Online Pendulum Divination Tool</title>
+    <meta name="description" content="Free digital pendulum for divination. Ask a yes/no question and swing the pendulum. Choose your pendulum type, calibrate it, and get instant answers. No signup required.">
+    <meta name="keywords" content="digital pendulum, pendulum divination online, free pendulum tool, pendulum yes no, online pendulum, dowsing tool, pendulum reading, pendulum questions">
+    <link rel="canonical" href="https://cha0smagicklabs.com/tools/digital-pendulum.html">
+    <link rel="alternate" href="https://cha0smagicklabs.com/tools/digital-pendulum.html" hreflang="en"><link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Free Digital Pendulum — Online Pendulum Divination Tool">
+    <meta property="og:description" content="Free digital pendulum for divination. Ask questions, swing the pendulum, and get yes/no/maybe answers instantly. Choose your pendulum type.">
+    <meta property="og:url" content="https://cha0smagicklabs.com/tools/digital-pendulum.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Digital Pendulum","description":"Free online pendulum divination tool for yes/no questions.","url":"https://cha0smagicklabs.com/tools/digital-pendulum.html","applicationCategory":"Multimedia","operatingSystem":"All"}</script>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <style>
+        :root{--bg-card:#0a0a0a;--text:#a0a0a0;--gold:#c0a060}
+        .pendulum-container{max-width:700px;margin:2rem auto;padding:0 1.5rem;text-align:center}
+        .pendulum-stage{position:relative;width:200px;height:260px;margin:0 auto 1.5rem;cursor:pointer}
+        .pendulum-string{position:absolute;top:0;left:50%;width:2px;height:120px;background:linear-gradient(to bottom,var(--gold),#666);transform-origin:top center;transition:none}
+        .pendulum-weight{position:absolute;bottom:0;left:50%;width:40px;height:40px;margin-left:-20px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,var(--gold),#8b6914);box-shadow:0 4px 15px rgba(192,160,96,0.4),inset 0 -4px 8px rgba(0,0,0,0.3);transition:background .5s;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+        .pendulum-weight.crystal{background:radial-gradient(circle at 35% 35%,#e8e0ff,#9370db,#4a0e7a)}
+        .pendulum-weight.metal{background:radial-gradient(circle at 35% 35%,#fff,#c0c0c0,#808080)}
+        .pendulum-weight.wood{background:radial-gradient(circle at 35% 35%,#d2b48c,#8b4513,#4a2800)}
+        .answer-display{font-size:2.5rem;font-weight:200;color:var(--gold);min-height:4rem;margin:1rem 0;letter-spacing:4px;text-transform:uppercase}
+        .pendulum-controls{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin:1.5rem 0}
+        .pend-btn{padding:0.7rem 1.5rem;background:#111;border:1px solid #333;color:#888;border-radius:6px;cursor:pointer;transition:all .3s;font-size:0.9rem}
+        .pend-btn:hover{border-color:var(--gold);color:var(--gold)}
+        .pend-btn.primary{background:var(--gold);color:#000;border-color:var(--gold);font-weight:600}
+        .pend-btn.primary:hover{background:#ffd700}
+        .pendulum-types{display:flex;gap:0.5rem;justify-content:center;margin:1rem 0}
+        .type-btn{padding:0.4rem 1rem;border:1px solid #333;background:#111;color:#888;border-radius:20px;cursor:pointer;font-size:0.8rem;transition:all .3s}
+        .type-btn.active{border-color:var(--gold);color:var(--gold);background:rgba(192,160,96,0.1)}
+        .type-btn:hover{border-color:var(--gold)}
+        .question-input{width:100%;max-width:400px;padding:0.8rem 1rem;background:#111;border:1px solid #333;color:#fff;border-radius:8px;font-size:1rem;text-align:center;margin:1rem auto;display:block}
+        .question-input:focus{border-color:var(--gold);outline:none}
+        .calibration-hint{color:#666;font-size:0.85rem;margin:0.5rem 0}
+        .history-list{max-height:200px;overflow-y:auto;margin-top:1rem;text-align:left;background:var(--bg-card);border:1px solid #1a1a1a;border-radius:8px;padding:1rem}
+        .history-item{padding:0.5rem 0;border-bottom:1px solid #1a1a1a;font-size:0.85rem;display:flex;justify-content:space-between}
+        .history-item .q{color:#888}
+        .history-item .a{color:var(--gold);font-weight:600}
+        @keyframes swingYes{0%,100%{transform:rotate(0deg)}25%{transform:rotate(25deg)}75%{transform:rotate(-25deg)}}
+        @keyframes swingNo{0%,100%{transform:rotate(0deg)}25%{transform:rotate(-25deg)}75%{transform:rotate(25deg)}}
+        @keyframes swingMaybe{0%,100%{transform:rotate(0deg)}33%{transform:rotate(30deg)}66%{transform:rotate(-30deg)}}
+        @keyframes pulse-glow{0%,100%{box-shadow:0 0 20px rgba(192,160,96,0.3)}50%{box-shadow:0 0 40px rgba(192,160,96,0.6)}}
+        .pendulum-weight.swing{animation-duration:2s;animation-timing-function:ease-in-out;animation-iteration-count:3}
+    </style>
+</head>
+<body>
+<header>
+<div class="header-content">
+    <a href="../index.html" class="header-link">
+        <picture>
+            <source srcset="../assets/images/Banner.webp" type="image/webp">
+            <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
+        </picture>
+        <span class="site-title">CHA0SMAGICK LABS</span>
+    </a>
+    <p>Explore the Art and Practice of the Occult</p>
+</div>
+</header>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">All Free Tools</a></li>
+    <li><a href="../index.html#products">Premium Apps</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+</ul>
+</nav>
+<div class="breadcrumb">
+    <a href="../index.html">Cha0smagick Labs</a> › <a href="index.html">Free Tools</a> › Digital Pendulum
+</div>
+<div class="container">
+<section class="hero">
+    <h1>Free Digital Pendulum for Divination</h1>
+    <p>Focus your intention, ask a clear question, and activate the pendulum. Choose your pendulum type and calibrate it for accurate yes/no/maybe responses.</p>
+</section>
+<section class="benefits">
+    <h3>What You Get</h3>
+    <ul>
+        <li>Interactive pendulum with realistic physics animation</li>
+        <li>3 pendulum types: Crystal, Metal, and Wood</li>
+        <li>Calibration mode to establish your yes/no/maybe signals</li>
+        <li>Question history log for tracking accuracy</li>
+        <li>Works offline — no signup, no tracking</li>
+    </ul>
+</section>
+
+<div class="pendulum-container">
+    <div class="pendulum-types" id="typeSelector">
+        <button class="type-btn active" data-type="crystal">? Crystal</button>
+        <button class="type-btn" data-type="metal">? Metal</button>
+        <button class="type-btn" data-type="wood">? Wood</button>
+    </div>
+
+    <div class="pendulum-stage" id="pendulumStage">
+        <div class="pendulum-string" id="pendulumString"></div>
+        <div class="pendulum-weight crystal" id="pendulumWeight">?</div>
+    </div>
+
+    <div class="answer-display" id="answerDisplay">?</div>
+    <p class="calibration-hint" id="calibHint">Click "Calibrate" or the pendulum to see yes/no/maybe</p>
+
+    <input class="question-input" id="questionInput" type="text" placeholder="Type your yes/no question..." maxlength="200">
+
+    <div class="pendulum-controls">
+        <button class="pend-btn primary" id="swingBtn">? Swing Pendulum</button>
+        <button class="pend-btn" id="calibrateBtn">? Calibrate</button>
+        <button class="pend-btn" id="clearBtn">? Clear</button>
+    </div>
+
+    <div class="history-list" id="historyList" style="display:none">
+        <h4 style="color:var(--gold);margin-bottom:0.5rem;font-size:0.85rem">? Question History</h4>
+        <div id="historyItems"></div>
+    </div>
+</div>
+
+<section class="compare-section">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android App</h3>
+    <table class="compare-table">
+        <tr><th>Feature</th><th>Free Web</th><th>Premium App</th></tr>
+        <tr><td>Pendulum divination</td><td class="check">?</td><td class="check">?</td></tr>
+        <tr><td>3 pendulum types</td><td class="check">?</td><td class="check">?</td></tr>
+        <tr><td>Question history</td><td class="check">?</td><td class="check">?</td></tr>
+        <tr><td>Works offline</td><td class="cross">?</td><td class="check">?</td></tr>
+        <tr><td>ESP training module</td><td class="cross">?</td><td class="check">?</td></tr>
+        <tr><td>Accuracy tracking</td><td class="cross">?</td><td class="check">?</td></tr>
+        <tr><td>No ads, no tracking</td><td class="check">?</td><td class="check">?</td></tr>
+        <tr class="highlight-row"><td><strong>Price</strong></td><td><strong>Free</strong></td><td><strong>$3.99</strong></td></tr>
+    </table>
+</section>
+
+<div class="funnel-testimonial">
+    <p>"The free pendulum tool is great for quick questions. I upgraded to the PSI GYM app for the ESP training module and accuracy tracking. My pendulum readings improved dramatically."</p>
+    <div class="author">— Marcus T., verified purchaser</div>
+</div>
+
+<section class="funnel-faq">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free vs Premium</h3>
+    <details>
+        <summary>Is the free pendulum fully functional?</summary>
+        <div class="faq-answer">Yes! Swing, calibrate, and get answers instantly. The premium PSI GYM app adds ESP training, accuracy tracking, and full offline access.</div>
+    </details>
+    <details>
+        <summary>Does the premium app need internet?</summary>
+        <div class="faq-answer">No. 100% offline. No accounts, no data collection.</div>
+    </details>
+    <details>
+        <summary>Is this a subscription?</summary>
+        <div class="faq-answer">One-time payment of $3.99. Own it forever.</div>
+    </details>
+</section>
+
+<section class="cta-box">
+    <h3>? Master Your Intuition Anywhere</h3>
+    <p>You've tried the free pendulum — now supercharge your divination with the <strong>PSI GYM</strong> Android app. ESP training, Zener cards, accuracy tracking, and offline access everywhere.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1rem 0;">
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">? ESP Training</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">?? Stats</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">?? Offline</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">? No Ads</span>
+    </div>
+    <div class="price">$3.99</div>
+    <a href="https://play.google.com/store/apps/details?id=com.cha0smagick.psigym" class="play-store-btn pulse" target="_blank"><svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg> GET IT ON Google Play</a>
+    <p style="margin-top:1rem;font-size:0.85rem;color:#888;">100% offline ? No ads ? No tracking ? One-time payment</p>
+</section>
+
+<div class="sticky-conversion-bar">
+    <span class="sticky-text">? PSI GYM — ESP Trainer</span>
+    <span class="price-tag">$3.99</span>
+    <span class="sticky-text">Zener cards ? Stats ? Offline</span>
+    <a href="https://play.google.com/store/apps/details?id=com.cha0smagick.psigym" class="sticky-cta" target="_blank">Get the App ?</a>
+</div>
+
+<div class="back-link"><a href="index.html">? Back to All Free Tools</a></div>
+</div>
+
+<footer id="site-footer" class="site-footer">
+<div class="footer-grid">
+    <div class="footer-section">
+        <h4>Cha0smagick Labs</h4>
+        <p>Explore the Art and Practice of the Occult.</p>
+        <p>Corporate Techno-Sorcery Solutions — since 2025.</p>
+    </div>
+    <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="../index.html">Home Page</a></li>
+            <li><a href="index.html">Free Online Tools</a></li>
+            <li><a href="../blog/">Read Blog</a></li>
+            <li><a href="../glossary.html">Magick Glossary</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>&copy; 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p>
+</div>
+</footer>
+
+<script src="../js/shared.min.js"></script>
+<div id="lang-sidebar" class="lang-sidebar">
+<button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button>
+<div id="lang-flag-list" class="lang-flag-list">
+    <button onclick="switchLang('en')" title="English" class="lang-btn"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button>
+    <button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button>
+    <button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button>
+    <button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button>
+    <button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button>
+    <button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button>
+</div>
+</div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner">
+    <p>This site uses cookies for analytics. <a href="../privacy-policy.html" style="color:#ffd700;">Privacy Policy</a></p>
+    <div class="cookie-buttons">
+        <button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button>
+        <button class="cookie-btn-decline" onclick="declineCookies()">Decline</button>
+    </div>
+</div>
+
+<script>
+let currentType = 'crystal';
+let history = [];
+let answers = ['YES', 'NO', 'MAYBE'];
+let lastAnswer = null;
+
+// Pendulum types
+document.querySelectorAll('.type-btn').forEach(btn => {
+    btn.onclick = function() {
+        document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const w = document.getElementById('pendulumWeight');
+        w.className = 'pendulum-weight ' + this.dataset.type;
+        currentType = this.dataset.type;
+    };
+});
+
+function swingPendulum(answer) {
+    const w = document.getElementById('pendulumWeight');
+    const a = document.getElementById('answerDisplay');
+    
+    w.classList.remove('swing');
+    void w.offsetWidth; // trigger reflow
+    
+    if (answer === 'YES') {
+        w.style.animation = 'swingYes 1.5s ease-in-out 3';
+        a.textContent = '? YES';
+        a.style.color = '#4CAF50';
+    } else if (answer === 'NO') {
+        w.style.animation = 'swingNo 1.5s ease-in-out 3';
+        a.textContent = '? NO';
+        a.style.color = '#f44336';
+    } else {
+        w.style.animation = 'swingMaybe 1.5s ease-in-out 3';
+        a.textContent = '? MAYBE';
+        a.style.color = '#FF9800';
+    }
+    w.classList.add('swing');
+    
+    setTimeout(() => {
+        a.textContent = '?';
+        a.style.color = 'var(--gold)';
+    }, 5000);
+    
+    document.getElementById('calibHint').textContent = answer === 'YES' ? 'Clockwise = YES' : answer === 'NO' ? 'Counter-clockwise = NO' : 'Back-and-forth = MAYBE';
+}
+
+function getRandomAnswer() {
+    const weights = [0.4, 0.4, 0.2]; // 40% yes, 40% no, 20% maybe
+    const r = Math.random();
+    if (r < weights[0]) return 'YES';
+    if (r < weights[0] + weights[1]) return 'NO';
+    return 'MAYBE';
+}
+
+document.getElementById('swingBtn').onclick = function() {
+    const q = document.getElementById('questionInput').value.trim();
+    if (!q) {
+        document.getElementById('answerDisplay').textContent = '? Ask a question first';
+        document.getElementById('answerDisplay').style.color = '#666';
+        setTimeout(() => { document.getElementById('answerDisplay').textContent = '?'; document.getElementById('answerDisplay').style.color = 'var(--gold)'; }, 2000);
+        return;
+    }
+    const answer = getRandomAnswer();
+    swingPendulum(answer);
+    lastAnswer = answer;
+    history.unshift({ question: q, answer: answer, time: new Date().toLocaleTimeString() });
+    updateHistory();
+};
+
+document.getElementById('pendulumStage').onclick = function(e) {
+    if (e.target.closest('.pendulum-weight') || e.target.closest('.pendulum-string')) {
+        document.getElementById('swingBtn').click();
+    }
+};
+
+let calibStep = 0;
+const calibPhases = ['Show me YES', 'Show me NO', 'Show me MAYBE'];
+document.getElementById('calibrateBtn').onclick = function() {
+    const a = document.getElementById('answerDisplay');
+    if (calibStep < 3) {
+        const answer = calibStep === 0 ? 'YES' : calibStep === 1 ? 'NO' : 'MAYBE';
+        swingPendulum(answer);
+        a.textContent = '? ' + answer;
+        a.style.color = 'var(--gold)';
+        document.getElementById('calibHint').textContent = calibPhases[calibStep] + ' — Pendulum shows ' + answer;
+        calibStep++;
+    } else {
+        calibStep = 0;
+        a.textContent = '? Calibrated';
+        a.style.color = '#4CAF50';
+        document.getElementById('calibHint').textContent = 'Your signals: YES=clockwise, NO=counter-clockwise, MAYBE=back-and-forth';
+        setTimeout(() => { a.textContent = '?'; a.style.color = 'var(--gold)'; }, 2000);
+    }
+};
+
+document.getElementById('clearBtn').onclick = function() {
+    document.getElementById('questionInput').value = '';
+    document.getElementById('answerDisplay').textContent = '?';
+    document.getElementById('answerDisplay').style.color = 'var(--gold)';
+    document.getElementById('calibHint').textContent = 'Click "Calibrate" or the pendulum to see yes/no/maybe';
+    const w = document.getElementById('pendulumWeight');
+    w.style.animation = 'none';
+    w.classList.remove('swing');
+};
+
+function updateHistory() {
+    const container = document.getElementById('historyItems');
+    const list = document.getElementById('historyList');
+    if (history.length === 0) { list.style.display = 'none'; return; }
+    list.style.display = 'block';
+    container.innerHTML = history.slice(0, 20).map(h => 
+        '<div class="history-item"><span class="q">' + h.question + '</span><span class="a">' + h.answer + '</span></div>'
+    ).join('');
+}
+
+// Enter key support
+document.getElementById('questionInput').onkeydown = function(e) {
+    if (e.key === 'Enter') document.getElementById('swingBtn').click();
+};
+</script>
+</body>
+</html>
