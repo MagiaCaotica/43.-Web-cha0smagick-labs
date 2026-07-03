@@ -149,7 +149,7 @@ function renderBooksSection() {
                     ${book.language ? `
                     <div class="language-info">
                         <span>LANGUAGE: ${book.language}</span>
-                        <img src="https://flagcdn.com/w20/${book.languageFlag}.png" alt="${book.language}" class="lang-flag-mini">
+                        ${book.languageFlag.split(',').map(f => `<img src="https://flagcdn.com/w20/${f.trim()}.png" alt="${book.language}" class="lang-flag-mini">`).join('')}
                     </div>` : ''}
                     <div class="card-footer">
                         <div class="status-container">
@@ -417,7 +417,7 @@ function renderAppDetails() {
                 ${item.language ? `
                 <div class="language-info">
                     <span>LANGUAGE: ${item.language}</span>
-                    <img src="https://flagcdn.com/w20/${item.languageFlag}.png" alt="${item.language}" class="lang-flag-mini">
+                    ${item.languageFlag.split(',').map(f => `<img src="https://flagcdn.com/w20/${f.trim()}.png" alt="${item.language}" class="lang-flag-mini">`).join('')}
                 </div>` : ''}
                 ${item.price ? `<div class="detail-price">${item.price.replace(/(\(.*?\))/, '<span class="discount-badge">$1</span>')}</div>` : ''}
             </div>
