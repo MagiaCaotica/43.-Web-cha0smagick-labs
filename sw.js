@@ -4,7 +4,7 @@
  * v1.0.1
  */
 
-const CACHE_NAME = 'cha0smagick-v2';
+const CACHE_NAME = 'cha0smagick-v3';
 
 const PRECACHE_URLS = [
   '/',
