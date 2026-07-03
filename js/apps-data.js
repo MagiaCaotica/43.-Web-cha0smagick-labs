@@ -652,5 +652,61 @@ const booksData = [
             
             <p><strong>Are you ready to unleash the inner beast? Acquire Liber Lvpinux and master the art of transformation.</strong></p>
         `
+    },
+    {
+        id: "codex-chaoticus-pdf",
+        name: "Codex Chaoticus: Complete Treatise on Chaos Magick",
+        author: "Frater Alek0s",
+        language: "English",
+        languageFlag: "en",
+        price: "$4.99 USD",
+        type: "book",
+        status: "available",
+        image: "assets/images/codexchaoticum.png",
+        description: "The most comprehensive digital grimoire ever written on Chaos Magick. 27,000+ words, 15 APA tables, 5 sigil methods, servitor creation, and more.",
+        hotmartLink: "https://pay.hotmart.com/W106595764X?checkoutMode=2",
+        seo: {
+            title: "CODEX CHAOTICUS — Complete Treatise on Chaos Magick | PDF",
+            description: "The most comprehensive digital grimoire on Chaos Magick. 27,000+ words, 15 APA tables, 5 sigil methods, servitor creation, egregores & more. Buy the PDF now.",
+            keywords: "chaos magick, codex chaoticus, digital grimoire, sigils, servitors, egregores, gnosis, frater alekos, chaos magick pdf, esoteric book, occult grimoire, technomancy, pop magick, neuroplasticity magic"
+        },
+        detailedDescription: `
+            <h1>CODEX CHAOTICUS: The Complete Treatise on Chaos Magick</h1>
+            <p>The <strong>Codex Chaoticus</strong> is the definitive digital grimoire of Chaos Magick, authored by <strong>Frater Alek0s</strong> of Cha0smagick Labs. This comprehensive 27,000+ word treatise covers the entire spectrum of Chaos Magick theory and practice, from foundational principles to advanced techniques. Featuring 15 professionally formatted APA tables, an academic bibliography with over 50 references, and a dark, professional design with a Spare-style sigil cover.</p>
+            
+            <h2>What's Inside</h2>
+            <ul>
+                <li><strong>Introduction to Chaos Magick:</strong> Gnosis, paradigms, belief as a tool, and the philosophical foundations.</li>
+                <li><strong>Basic Training:</strong> Physical, mental, and spiritual skill development.</li>
+                <li><strong>Magical Intention & Documentation:</strong> Setting intentions and maintaining your grimoire.</li>
+                <li><strong>Primordial Energy:</strong> Ki, Chi, Prana, and Aether as building blocks of magical operations.</li>
+                <li><strong>Invocations & Entity Pantheon:</strong> Working with a wide pantheon of entities.</li>
+                <li><strong>Servitor Creation, Maintenance & Banishment:</strong> Complete lifecycle management of thought-forms.</li>
+                <li><strong>Sigils: 5 Proven Methods:</strong> Graphic, Syllabic, Ouroboric, Magic Squares, and Spare method.</li>
+                <li><strong>Hyper Sigils:</strong> Advanced nested sigil structures.</li>
+                <li><strong>Charging, Activation & Nullification:</strong> Gnosis-based techniques.</li>
+                <li><strong>Egregores, Astrosomes & Psychopomps:</strong> Hierarchy of thought-form entities.</li>
+                <li><strong>Advanced Techniques:</strong> Death Ritual, Automatic Writing.</li>
+                <li><strong>Urban Magick, Pop Magick & Glamour:</strong> Magic in modern life.</li>
+                <li><strong>Digital & Gaming Magick:</strong> Technomancy for the 21st century.</li>
+                <li><strong>Mental Reprogramming & Neuroplasticity:</strong> Chaos Magick meets neuroscience.</li>
+                <li><strong>Full APA Bibliography:</strong> 50+ references.</li>
+            </ul>
+            
+            <h2>Format</h2>
+            <ul>
+                <li>Professional PDF — instant download</li>
+                <li>Dark design with Spare-style sigil cover</li>
+                <li>Full-bleed cover, organized index, 15 APA tables</li>
+                <li>English & Spanish versions included</li>
+                <li>100% offline | No subscriptions | Lifetime access</li>
+            </ul>
+            
+            <h3>Who It's For</h3>
+            <p>Chaos magick practitioners (beginner to advanced), digital occultists, technomancers, students of Western esotericism, sigil and servitor creators, and anyone exploring magic as a technology of consciousness.</p>
+            
+            <p><strong>"Nothing is true. Everything is permitted."</strong></p>
+            <p>One-time purchase. Lifetime access. Instant download.</p>
+        `
     }
 ];
