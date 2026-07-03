@@ -1159,6 +1159,82 @@ section.bottom-cta a:hover { background:var(--accent-light); transform:translate
 .status-text { font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; }
 .card-price { font-family:var(--font-mono); font-size:0.9rem; color:var(--accent-gold); }
 
+/* Book card enhancements */
+#books-grid .app-card {
+  border-color: #1e1a14;
+}
+#books-grid .app-card:hover {
+  border-color: var(--accent-gold);
+}
+#books-grid .card-image-wrapper {
+  background: linear-gradient(135deg, #0a0806 0%, #14100c 100%);
+  border-bottom: 1px solid #1e1a14;
+}
+#books-grid .app-image {
+  filter: grayscale(60%) contrast(1.15) brightness(0.9);
+  opacity: 0.85;
+}
+#books-grid .app-card:hover .app-image {
+  filter: grayscale(0%) contrast(1.1) brightness(1);
+  opacity: 1;
+}
+/* Author metadata */
+.author-info {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0.6rem 0 0.4rem;
+  padding: 0.3rem 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  display: inline-block;
+}
+/* Language info row */
+.language-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.lang-flag-mini {
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+  object-fit: cover;
+  border: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+/* Discount / NEW badges */
+.discount-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #cc3300 0%, #ff4400 100%);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  margin-left: 0.3rem;
+  box-shadow: 0 1px 4px rgba(204, 51, 0, 0.4);
+}
+/* Price discount badge variant */
+.card-price .discount-badge {
+  background: linear-gradient(135deg, #b8860b 0%, #d4a017 100%);
+  font-size: 0.6rem;
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.4rem;
+  box-shadow: 0 1px 3px rgba(184, 134, 11, 0.3);
+}
+
 .text-center { text-align:center; }
 .text-mono { font-family:var(--font-mono); }
 .text-muted { color:var(--text-dim); }
