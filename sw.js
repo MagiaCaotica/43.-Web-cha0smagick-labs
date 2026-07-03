@@ -1,10 +1,10 @@
 /**
  * sw.js - Service Worker for Cha0smagick Labs
  * Cache-first strategy for static assets, network-first for HTML pages.
- * v1.0.0
+ * v1.0.1
  */
 
-const CACHE_NAME = 'cha0smagick-v1';
+const CACHE_NAME = 'cha0smagick-v2';
 
 const PRECACHE_URLS = [
   '/',
