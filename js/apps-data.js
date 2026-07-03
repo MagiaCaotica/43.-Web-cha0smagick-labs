@@ -711,62 +711,62 @@ const booksData = [
     },
     {
         id: "tarot-chaos-pdf",
-        name: "Tarot Chaos: Magia del Caos Aplicada al Tarot",
+        name: "Tarot Chaos: Chaos Magick Applied to the Tarot",
         author: "Frater Alek0s",
         language: "Spanish",
         languageFlag: "es",
-        price: "$3.99 USD",
+        price: "$9.99 USD",
         type: "book",
         status: "available",
         image: "assets/images/tarotchaos.png",
-        description: "Domina el Tarot desde la perspectiva de la Magia del Caos. Un grimorio digital que fusiona los arcanos con sigilos, gnosis y servidores mágicos.",
+        description: "Master the Tarot from the perspective of Chaos Magick. A digital grimoire that fuses the arcana with sigils, gnosis, and magical servitors.",
         hotmartLink: "https://pay.hotmart.com/J106598345U?checkoutMode=2",
         seo: {
-            title: "Tarot Chaos: Magia del Caos Aplicada al Tarot | PDF",
-            description: "Domina el Tarot desde la perspectiva de la Magia del Caos. Aprende a usar los arcanos como herramientas de sigilización, gnosis y manifestación. Descarga el PDF ahora.",
-            keywords: "tarot, magia del caos, tarot chaos, frater alekos, grimorio digital, tecnomancia, sigilos, gnosis, arcanos mayores, tarot pdf, esoterismo, libro de tarot, magia caótica"
+            title: "Tarot Chaos: Chaos Magick Applied to the Tarot | PDF",
+            description: "Master the Tarot from the perspective of Chaos Magick. Learn to use the arcana as tools for sigilization, gnosis, and manifestation. Download the PDF now.",
+            keywords: "tarot, chaos magick, tarot chaos, frater alekos, digital grimoire, technomancy, sigils, gnosis, major arcana, tarot pdf, esotericism, tarot book, chaotic magic, servitors, arcanum"
         },
         detailedDescription: `
-            <h1>Tarot Chaos: El Grimorio Digital de Magia del Caos para el Tarot</h1>
-            <p>El Tarot no es solo un oráculo — es un sistema de poder. En <strong>Tarot Chaos</strong>, Frater Alek0s revela cómo transformar las 78 cartas del Tarot Rider-Waite en un motor de manifestación caótica, utilizando los principios de la Magia del Caos: gnosis, sigilización, servidores y cambio de paradigma.</p>
-            <p>Este grimorio digital te enseña a dejar atrás las interpretaciones pasivas y convertir cada carta en una herramienta activa de cambio. No se trata de predecir el futuro — se trata de crearlo.</p>
+            <h1>Tarot Chaos: The Digital Grimoire of Chaos Magick for the Tarot</h1>
+            <p>The Tarot is not just an oracle — it is a system of power. In <strong>Tarot Chaos</strong>, Frater Alek0s reveals how to transform the 78 cards of the Rider-Waite Tarot into an engine of chaotic manifestation, using the principles of Chaos Magick: gnosis, sigilization, servitors, and paradigm shifting.</p>
+            <p>This digital grimoire teaches you to leave behind passive interpretations and turn every card into an active tool of change. It is not about predicting the future — it is about creating it.</p>
             
-            <h2>¿Qué hace único este libro?</h2>
+            <h2>What Makes This Book Unique</h2>
             <ul>
-                <li><strong>Tarot como Tecnología de Gnosis:</strong> Aprende a usar las imágenes arquetípicas del Tarot como portales de gnosis para cargar sigilos, comunicarte con servidores y alterar tu conciencia a voluntad.</li>
-                <li><strong>22 Arcanos Mayores como Herramientas de Poder:</strong> Cada arcano mayor es desglosado no como "significado", sino como una tecnología del caos — un paradigma que puedes adoptar, un sigilo que puedes cargar, una entidad que puedes invocar.</li>
-                <li><strong>Sigilización con el Tarot:</strong> Métodos avanzados para combinar cartas del tarot con técnicas de sigilización de Austin Osman Spare. Crea sigilos compuestos usando los arcanos como alfabeto del deseo.</li>
-                <li><strong>Servidores Arquetípicos:</strong> Crea servidores mágicos basados en arquetipos del tarot. El Mago, la Suma Sacerdotisa, la Emperatriz — conviértelos en entidades operativas para tu trabajo mágico.</li>
-                <li><strong>Tiradas Caóticas:</strong> Sistemas de tirada no lineales diseñados específicamente para la Magia del Caos. Olvida la Cruz Celta — aquí encontrarás La Espiral, El Caos Primordial y la Tirada del Vacío.</li>
-                <li><strong>Correspondencias Caóticas:</strong> Tablas que vinculan cada carta con planetas, elementos, metales, runas y estados de gnosis para un trabajo mágico preciso.</li>
+                <li><strong>Tarot as Gnosis Technology:</strong> Learn to use the archetypal images of the Tarot as gnosis portals to charge sigils, communicate with servitors, and alter your consciousness at will.</li>
+                <li><strong>22 Major Arcana as Power Tools:</strong> Each major arcana is broken down not as a "meaning," but as a chaos technology — a paradigm you can adopt, a sigil you can charge, an entity you can invoke.</li>
+                <li><strong>Sigilization with the Tarot:</strong> Advanced methods to combine tarot cards with Austin Osman Spare's sigilization techniques. Create composite sigils using the arcana as an alphabet of desire.</li>
+                <li><strong>Archetypal Servitors:</strong> Create magical servitors based on tarot archetypes. The Magician, the High Priestess, the Empress — turn them into operational entities for your magical work.</li>
+                <li><strong>Chaotic Spreads:</strong> Non-linear spread systems designed specifically for Chaos Magick. Forget the Celtic Cross — here you will find The Spiral, Primordial Chaos, and the Void Spread.</li>
+                <li><strong>Chaotic Correspondences:</strong> Tables linking each card to planets, elements, metals, runes, and gnosis states for precise magical work.</li>
             </ul>
             
-            <h2>Contenido del Grimorio</h2>
+            <h2>Grimoire Contents</h2>
             <ul>
-                <li><strong>Introducción:</strong> El Tarot como sistema operativo mágico</li>
-                <li><strong>Capítulo 1:</strong> Gnosis y Tarot — El estado de conciencia que potencia la lectura</li>
-                <li><strong>Capítulo 2:</strong> Los 22 Arcanos Mayores como Tecnologías del Caos</li>
-                <li><strong>Capítulo 3:</strong> Los 56 Arcanos Menores — Herramientas de manifestación cotidiana</li>
-                <li><strong>Capítulo 4:</strong> Sigilización Avanzada con el Tarot</li>
-                <li><strong>Capítulo 5:</strong> Creación de Servidores Arquetípicos</li>
-                <li><strong>Capítulo 6:</strong> Tiradas Caóticas y Sistemas No Lineales</li>
-                <li><strong>Capítulo 7:</strong> El Tarot como Herramienta de Cambio de Paradigma</li>
-                <li><strong>Apéndice:</strong> Tablas de Correspondencias Caóticas</li>
+                <li><strong>Introduction:</strong> The Tarot as a magical operating system</li>
+                <li><strong>Chapter 1:</strong> Gnosis and Tarot — The state of consciousness that empowers the reading</li>
+                <li><strong>Chapter 2:</strong> The 22 Major Arcana as Chaos Technologies</li>
+                <li><strong>Chapter 3:</strong> The 56 Minor Arcana — Tools of everyday manifestation</li>
+                <li><strong>Chapter 4:</strong> Advanced Sigilization with the Tarot</li>
+                <li><strong>Chapter 5:</strong> Creation of Archetypal Servitors</li>
+                <li><strong>Chapter 6:</strong> Chaotic Spreads and Non-Linear Systems</li>
+                <li><strong>Chapter 7:</strong> The Tarot as a Paradigm Shift Tool</li>
+                <li><strong>Appendix:</strong> Chaotic Correspondences Tables</li>
             </ul>
             
-            <h2>Formato</h2>
+            <h2>Format</h2>
             <ul>
-                <li>PDF profesional — descarga instantánea</li>
-                <li>Diseño oscuro con portada de arte sigilar</li>
-                <li>Índice interactivo con hipervínculos</li>
-                <li>100% offline | Sin suscripciones | Acceso de por vida</li>
+                <li>Professional PDF — instant download</li>
+                <li>Dark design with sigil art cover</li>
+                <li>Interactive index with hyperlinks</li>
+                <li>100% offline | No subscriptions | Lifetime access</li>
             </ul>
             
-            <h3>¿Para quién es este libro?</h3>
-            <p>Practicantes de Magia del Caos (principiantes a avanzados), lectores de tarot que buscan un enfoque más activo, tecnomantes y cualquier persona interesada en usar el tarot como tecnología de la conciencia.</p>
+            <h3>Who This Book Is For</h3>
+            <p>Chaos Magick practitioners (beginner to advanced), tarot readers seeking a more active approach, technomancers, and anyone interested in using the Tarot as a technology of consciousness.</p>
             
-            <p><strong>"Nada es verdad, todo está permitido."</strong></p>
-            <p>Compra única. Acceso de por vida. Descarga instantánea.</p>
+            <p><strong>"Nothing is true. Everything is permitted."</strong></p>
+            <p>One-time purchase. Lifetime access. Instant download.</p>
         `
     }
 ];
