@@ -658,7 +658,7 @@ const booksData = [
         name: "Codex Chaoticus: Complete Treatise on Chaos Magick",
         author: "Frater Alek0s",
         language: "English",
-        languageFlag: "en",
+        languageFlag: "us",
         price: "$4.99 USD",
         type: "book",
         status: "available",
