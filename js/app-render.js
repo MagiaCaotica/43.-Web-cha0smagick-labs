@@ -94,7 +94,7 @@ function renderBooksSection() {
 
     const section = document.createElement('div');
     section.id = 'books-section';
-    section.className = 'collapsible-section';
+    section.className = 'collapsible-section active';
     section.style.maxWidth = '1400px';
     section.style.margin = '0 auto';
     section.style.padding = '0 2rem 3rem';
