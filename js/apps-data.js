@@ -718,7 +718,7 @@ const booksData = [
         price: "$9.99 USD",
         type: "book",
         status: "available",
-        image: "assets/images/tarotchaos.png",
+        image: "images/tarotchaos.PNG",
         description: "Master the Tarot from the perspective of Chaos Magick. A digital grimoire that fuses the arcana with sigils, gnosis, and magical servitors.",
         hotmartLink: "https://pay.hotmart.com/J106598345U?checkoutMode=2",
         seo: {
