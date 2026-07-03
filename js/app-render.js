@@ -143,7 +143,7 @@ function renderBooksSection() {
                     ${buildPictureHtml(book.image, book.name, 'app-image', 'lazy', '300', '220')}
                 </div>
                 <div class="card-content">
-                    <h4>${book.name}</h4>
+                    <h4>${book.name}${(book.id === 'codex-chaoticus-pdf') ? ' <span class="discount-badge">¡NUEVO!</span>' : ''}</h4>
                     <p>${book.description}</p>
                     ${book.author ? `<div class="author-info">AUTHOR: ${book.author}</div>` : ''}
                     ${book.language ? `
@@ -411,7 +411,7 @@ function renderAppDetails() {
         <div class="detail-header-layout">
             ${buildPictureHtml('../' + item.image, item.name, 'detail-main-image', 'lazy')}
             <div class="detail-header-info">
-                <h2>${item.name}${(item.id === 'psi-gym' || item.id === 'dream-machine') ? ' <span class="discount-badge">¡NUEVO!</span>' : ''}</h2>
+                <h2>${item.name}${(item.id === 'psi-gym' || item.id === 'dream-machine' || item.id === 'codex-chaoticus-pdf') ? ' <span class="discount-badge">¡NUEVO!</span>' : ''}</h2>
                 <p class="lead-text">${item.description}</p>
                 ${item.author ? `<div class="author-info">AUTHOR: ${item.author}</div>` : ''}
                 ${item.language ? `

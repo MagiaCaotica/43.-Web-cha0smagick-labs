@@ -662,7 +662,7 @@ const booksData = [
         price: "$4.99 USD",
         type: "book",
         status: "available",
-        image: "assets/images/codexchaoticum.png",
+        image: "assets/images/codexchaoticus.png",
         description: "The most comprehensive digital grimoire ever written on Chaos Magick. 27,000+ words, 15 APA tables, 5 sigil methods, servitor creation, and more.",
         hotmartLink: "https://pay.hotmart.com/W106595764X?checkoutMode=2",
         seo: {
