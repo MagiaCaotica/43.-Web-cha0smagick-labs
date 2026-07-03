@@ -571,6 +571,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (h2 && h2.parentElement && !h2.parentElement.classList.contains('collapsible-section')) {
             const section = h2.parentElement;
             section.classList.add('collapsible-section');
+            // Apps section starts expanded by default
+            if (titleText === 'Cybermancy') section.classList.add('active');
             h2.classList.add('section-toggle');
             
             const content = document.createElement('div');
