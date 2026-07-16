@@ -365,6 +365,47 @@ const appsData = [
             
             <p>Download <strong>Dream Machine: Lucid Dreaming</strong> now and take the reins of your night.</p>
         `
+    },
+    {
+        id: "astral-lab",
+        name: "Astral Lab: Natal Chart & Astrology",
+        price: "$3.99 USD",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart",
+        status: "available",
+        description: "Professional natal charts, real-time transits & aspect grids — 100% offline with scientific-grade VSOP87/ELP-2000 precision.",
+        image: "assets/images/astrallab.png",
+        seo: {
+            title: "Astral Lab | Natal Chart & Astrology App for Android — Offline, Private & Precise",
+            description: "Generate professional natal charts with Astral Lab. Scientific-grade VSOP87 precision, real-time transits, aspect grids & unlimited profiles. 100% offline, zero tracking. Buy now.",
+            keywords: "natal chart app, astrology app android, birth chart calculator, astral lab, horoscope app, transit tracker, aspect grid, offline astrology, private astrology, VSOP87, ELP-2000, professional astrology tool, natal chart generator, buy astrology app, chaos magick astrology"
+        },
+        screenshots: [],
+        detailedDescription: `
+            <h3>Looking for Scientific Rigor and Total Privacy in Your Astrological Work?</h3>
+            <p><strong>Astral Lab</strong> is a powerful natal chart and astrology tool designed for professional astrologers and serious enthusiasts who refuse to compromise on precision. Unlike other astrology apps, Astral Lab runs <strong>100% offline</strong>. All complex mathematical calculations are performed directly on your device, ensuring that the sovereignty of your data is always our highest priority.</p>
+            
+            <h4>Why Choose Astral Lab?</h4>
+            <ul>
+                <li><strong>Absolute Privacy (Offline):</strong> The app requires zero internet permission. Your birth data, location, and saved profiles never leave your phone. No tracking, no telemetry, no external servers.</li>
+                <li><strong>Scientific Precision:</strong> Powered by the high-accuracy VSOP87 and ELP-2000 algorithms. We guarantee planetary positions that match NASA ephemerides perfectly.</li>
+                <li><strong>One-Time Purchase:</strong> No monthly subscriptions or hidden fees. Astral Lab is a single purchase, completely ad-free, with all premium features unlocked from day one.</li>
+                <li><strong>Modern Material 3 Interface:</strong> Enjoy a premium, fluid user experience with smooth navigation, dynamic dark mode, and crisp visual aspect grids.</li>
+            </ul>
+            
+            <h4>Key Features</h4>
+            <ul>
+                <li><strong>Instant Natal Charts:</strong> Detailed, high-precision natal chart calculations for any date, time, and geographic location.</li>
+                <li><strong>Real-Time Transits:</strong> Track current planetary movements and easily overlay them on any natal chart.</li>
+                <li><strong>Global Offline Database:</strong> Access thousands of cities worldwide with accurate historical timezone data — no GPS or mobile data required.</li>
+                <li><strong>Advanced Aspect Grids:</strong> Complete, intuitive analysis of planetary relationships and angular distances.</li>
+                <li><strong>Custom Profile Management:</strong> Save, organize, and manage unlimited natal charts for family, friends, or clients.</li>
+            </ul>
+            
+            <h4>Designed for Professionals on the Move</h4>
+            <p>Built for global users, Western astrologers, and mobile professionals who need a reliable, high-quality astrology and horoscope tool that works offline. It is perfect for remote areas, frequent travelers, or maintaining complete client confidentiality during consultations.</p>
+            
+            <p><strong>Take full control of your astrological work with a professional tool that respects your privacy, your time, and your data. Download Astral Lab today!</strong></p>
+        `
     }
 ];
 
@@ -701,7 +742,7 @@ function generatePage(item, type) {
     const absoluteImageUrl = `${BASE_URL}/${cleanImage}`;
     
     const isBook = type === 'book';
-    const isNew = item.id === 'psi-gym' || item.id === 'dream-machine';
+    const isNew = item.id === 'psi-gym' || item.id === 'dream-machine' || item.id === 'astral-lab';
     
     // Screenshots (only for apps)
     let screenshotsHtml = '';
