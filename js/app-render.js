@@ -453,7 +453,8 @@ function renderItemListSchema() {
         "itemListElement": allItems.map((item, index) => {
             const itemType = item.type === 'book' ? 'Book' : 'SoftwareApplication';
             const absoluteImageUrl = `${baseUrl}/${item.image}`;
-            const itemUrl = `${baseUrl}/apps/${item.id}.html`;
+            const itemDir = item.type === 'book' ? 'books' : 'apps';
+            const itemUrl = `${baseUrl}/${itemDir}/${item.id}.html`;
             
             return {
                 "@type": "ListItem",
