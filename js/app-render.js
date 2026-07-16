@@ -136,7 +136,7 @@ function renderBooksSection() {
         sortedBooks.forEach(book => {
             const card = document.createElement('a');
             card.className = 'app-card';
-            card.href = `/apps/${book.id}.html`;
+            card.href = `/books/${book.id}.html`;
 
             card.innerHTML = `
                 <div class="card-image-wrapper">
@@ -263,7 +263,8 @@ function renderAppDetails() {
         // Update canonical to clean URL (strip query params for canonical)
         let canonical = document.querySelector('link[rel="canonical"]');
         if (canonical) {
-            const cleanUrl = `${baseUrl}/apps/${item.id}.html`;
+            const itemDir = item.type === 'book' ? 'books' : 'apps';
+            const cleanUrl = `${baseUrl}/${itemDir}/${item.id}.html`;
             canonical.setAttribute('href', cleanUrl);
         }
     }
