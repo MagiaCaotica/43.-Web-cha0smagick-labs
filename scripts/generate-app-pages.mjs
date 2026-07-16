@@ -13,6 +13,7 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 const APPS_DIR = join(ROOT, 'apps');
+const BOOKS_DIR = join(ROOT, 'books');
 
 const BASE_URL = 'https://cha0smagicklabs.com';
 const GA_ID = 'G-V6LHCPN9TK';
@@ -520,6 +521,88 @@ const booksData = [
             
             <p>Are you ready to unleash the inner beast? Acquire Liber Lvpinux and master the art of transformation.</p>
         `
+    },
+    {
+        id: "mind-the-gap-pdf",
+        name: "Mind The Gap: Master the 0.3 Seconds That Define Your Life",
+        price: "$9.99 USD",
+        hotmartLink: "https://pay.hotmart.com/V106730857R?checkoutMode=2",
+        image: "assets/images/mindthegap.PNG",
+        description: "Master the Response Gap — the 0.3 seconds between stimulus and response. Neuroscience, 7 Laws, and actionable domains.",
+        seo: {
+            title: "Mind The Gap: Master the 0.3 Seconds That Define Your Life | PDF",
+            description: "What if everything you've been told about self-improvement is backward? Master the Response Gap. Buy the PDF now.",
+            keywords: "mind the gap, response gap, self-improvement, neuroscience, stoicism, emotional intelligence, impulse control, PDF book"
+        },
+        detailedDescription: `
+            <h3>Mind The Gap: Master the 0.3 Seconds That Define Your Life</h3>
+            <p><strong>What if everything you've been told about self-improvement is backward?</strong> You don't need more discipline. You need to master the <strong>0.3 seconds</strong> between what happens to you and what you do about it.</p>
+            
+            <h4>What You Will Master</h4>
+            <ul>
+                <li><strong>The Neuroscience:</strong> Why your brain fires before you think and how to rewire it.</li>
+                <li><strong>The 7 Laws:</strong> Stillness, Framing, Pausing, Identity, Direction, Accumulation, and Surrender.</li>
+                <li><strong>Actionable Domains:</strong> Relationships, Money, Health, and Adversity.</li>
+            </ul>
+            
+            <p>One-time purchase. Lifetime access. Instant download.</p>
+        `
+    },
+    {
+        id: "codex-chaoticus-pdf",
+        name: "Codex Chaoticus: Complete Treatise on Chaos Magick",
+        price: "$4.99 USD",
+        hotmartLink: "https://pay.hotmart.com/W106595764X?checkoutMode=2",
+        image: "assets/images/codexchaoticus.png",
+        description: "The most comprehensive digital grimoire ever written on Chaos Magick. 27,000+ words, 15 APA tables, 5 sigil methods.",
+        seo: {
+            title: "CODEX CHAOTICUS — Complete Treatise on Chaos Magick | PDF",
+            description: "The most comprehensive digital grimoire on Chaos Magick. 27,000+ words, 15 APA tables, 5 sigil methods, servitor creation. Buy the PDF now.",
+            keywords: "chaos magick, codex chaoticus, digital grimoire, sigils, servitors, egregores, gnosis, frater alekos, chaos magick pdf"
+        },
+        detailedDescription: `
+            <h3>CODEX CHAOTICUS: The Complete Treatise on Chaos Magick</h3>
+            <p>The <strong>Codex Chaoticus</strong> is the definitive digital grimoire of Chaos Magick, authored by <strong>Frater Alek0s</strong>. This comprehensive 27,000+ word treatise covers the entire spectrum of Chaos Magick theory and practice.</p>
+            
+            <h4>What's Inside</h4>
+            <ul>
+                <li><strong>Introduction to Chaos Magick:</strong> Gnosis, paradigms, belief as a tool.</li>
+                <li><strong>Sigils: 5 Proven Methods:</strong> Graphic, Syllabic, Ouroboric, Magic Squares, and Spare method.</li>
+                <li><strong>Servitor Creation, Maintenance & Banishment:</strong> Complete lifecycle management.</li>
+                <li><strong>Egregores, Astrosomes & Psychopomps:</strong> Hierarchy of thought-form entities.</li>
+                <li><strong>Advanced Techniques:</strong> Death Ritual, Automatic Writing, Pop Magick, Digital & Gaming Magick.</li>
+            </ul>
+            
+            <p>One-time purchase. Lifetime access. Instant download.</p>
+        `
+    },
+    {
+        id: "tarot-chaos-pdf",
+        name: "Tarot Chaos: Chaos Magick Applied to the Tarot",
+        price: "$9.99 USD",
+        hotmartLink: "https://pay.hotmart.com/J106598345U?checkoutMode=2",
+        image: "images/tarotchaos.PNG",
+        description: "Master the Tarot from the perspective of Chaos Magick. A digital grimoire that fuses the arcana with sigils, gnosis, and magical servitors.",
+        seo: {
+            title: "Tarot Chaos: Chaos Magick Applied to the Tarot | PDF",
+            description: "Master the Tarot from the perspective of Chaos Magick. Learn to use the arcana as tools for sigilization, gnosis, and manifestation. Download the PDF now.",
+            keywords: "tarot, chaos magick, tarot chaos, frater alekos, digital grimoire, sigils, gnosis, tarot pdf, esotericism"
+        },
+        detailedDescription: `
+            <h3>Tarot Chaos: The Digital Grimoire of Chaos Magick for the Tarot</h3>
+            <p>The Tarot is not just an oracle — it is a system of power. In <strong>Tarot Chaos</strong>, Frater Alek0s reveals how to transform the 78 cards into an engine of chaotic manifestation.</p>
+            
+            <h4>What Makes This Book Unique</h4>
+            <ul>
+                <li><strong>Tarot as Gnosis Technology:</strong> Use archetypal images as gnosis portals.</li>
+                <li><strong>22 Major Arcana as Power Tools:</strong> Each as a chaos technology.</li>
+                <li><strong>Sigilization with the Tarot:</strong> Advanced methods combining cards with Spare's techniques.</li>
+                <li><strong>Archetypal Servitors:</strong> Create servitors based on tarot archetypes.</li>
+                <li><strong>Chaotic Spreads:</strong> Non-linear spread systems for Chaos Magick.</li>
+            </ul>
+            
+            <p>One-time purchase. Lifetime access. Instant download.</p>
+        `
     }
 ];
 
@@ -645,7 +728,7 @@ function buildAlsoLikeSection(currentId, items) {
     const cards = others.map(app => {
         const priceShort = app.price.replace(/\sUSD.*$/, '').replace(/\(.*?\)/, '').trim();
         return `
-            <a href="${app.id}.html" class="app-card">
+            <a href="/apps/${app.id}.html" class="app-card">
                 <div class="card-image-wrapper">
                     ${buildPictureHtml(app.image, app.name, 'app-image', 300, 220, 'lazy')}
                 </div>
@@ -737,11 +820,12 @@ function buildMapData() {
 }
 
 function generatePage(item, type) {
-    const itemUrl = `${BASE_URL}/apps/${item.id}.html`;
+    const isBook = type === 'book';
+    const dir = isBook ? 'books' : 'apps';
+    const itemUrl = `${BASE_URL}/${dir}/${item.id}.html`;
     const cleanImage = item.image.replace('../', '');
     const absoluteImageUrl = `${BASE_URL}/${cleanImage}`;
     
-    const isBook = type === 'book';
     const isNew = item.id === 'psi-gym' || item.id === 'dream-machine' || item.id === 'astral-lab';
     
     // Screenshots (only for apps)
@@ -1005,6 +1089,9 @@ function main() {
     if (!existsSync(APPS_DIR)) {
         mkdirSync(APPS_DIR, { recursive: true });
     }
+    if (!existsSync(BOOKS_DIR)) {
+        mkdirSync(BOOKS_DIR, { recursive: true });
+    }
     
     let generated = 0;
     
@@ -1020,13 +1107,13 @@ function main() {
     // Generate book pages
     for (const book of booksData) {
         const html = generatePage(book, 'book');
-        const filePath = join(APPS_DIR, `${book.id}.html`);
+        const filePath = join(BOOKS_DIR, `${book.id}.html`);
         writeFileSync(filePath, html, 'utf-8');
-        console.log(`  ✓ apps/${book.id}.html`);
+        console.log(`  ✓ books/${book.id}.html`);
         generated++;
     }
     
-    console.log(`\nDone! ${generated} pages generated in apps/`);
+    console.log(`\nDone! ${generated} pages generated (apps/ + books/).`);
 }
 
 main();

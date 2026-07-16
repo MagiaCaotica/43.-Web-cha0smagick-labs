@@ -526,71 +526,6 @@ const appsData = [
             
             <p><strong>Take full control of your astrological work with a professional tool that respects your privacy, your time, and your data. Download Astral Lab today!</strong></p>
         `
-    },
-    {
-        id: "mind-the-gap-pdf",
-        name: "Mind The Gap: Master the 0.3 Seconds That Define Your Life",
-        author: "",
-        language: "English / Spanish",
-        languageFlag: "us,es",
-        price: "$9.99 USD",
-        type: "book",
-        status: "available",
-        image: "assets/images/mindthegap.PNG",
-        description: "Master the Response Gap — the 0.3 seconds between stimulus and response. Neuroscience, 7 Laws, and actionable domains for relationships, money, health, and adversity.",
-        hotmartLink: "https://pay.hotmart.com/V106730857R?checkoutMode=2",
-        seo: {
-            title: "Mind The Gap: Master the 0.3 Seconds That Define Your Life | PDF",
-            description: "What if everything you've been told about self-improvement is backward? Master the Response Gap — the 0.3 seconds between stimulus and response. Neuroscience, 7 Laws, and actionable domains. Buy the PDF now.",
-            keywords: "mind the gap, response gap, self-improvement, neuroscience, stoicism, emotional intelligence, impulse control, personal transformation, viktor frankl, cognitive behavioral, mindfulness, reaction vs response, PDF book"
-        },
-        detailedDescription: `
-            <h1>Mind The Gap: Master the 0.3 Seconds That Define Your Life</h1>
-            <p>🚀 <strong>What if everything you've been told about self-improvement is backward?</strong> You don't need more discipline. You don't need better habits. You don't need to force yourself to "think positive." What you actually need is to master the <strong>0.3 seconds</strong> between what happens to you and what you do about it.</p>
-            
-            <p>That fraction of a second — the <strong>Response Gap</strong> — is the single most important variable in your life. It determines whether you react like an automatic machine or respond like a sovereign creator.</p>
-            
-            <p>"Between stimulus and response there is a space. In that space is our power to choose our response." — <strong>Viktor E. Frankl</strong></p>
-            
-            <h2>What Is the Response Gap?</h2>
-            <p>Every moment follows: <strong>STIMULUS → [ THE GAP ] → RESPONSE.</strong> Most people skip the gap, executing old, automatic scripts. This book is the system to stop reacting and start deciding.</p>
-            
-            <h2>What You Will Master</h2>
-            <ul>
-                <li><strong>The Neuroscience:</strong> Why your brain fires before you think and how to rewire it.</li>
-                <li><strong>The 7 Laws:</strong> A complete system covering Stillness, Framing, Pausing, Identity, Direction, Accumulation, and Surrender.</li>
-                <li><strong>Actionable Domains:</strong> Apply the gap to Relationships (de-escalation), Money (impulse control), Health (habit design), and Adversity (crisis strategy).</li>
-            </ul>
-            
-            <h2>Exclusive Bonuses</h2>
-            <ul>
-                <li>Seven Laws Quick Reference Cheat Sheet.</li>
-                <li>30-Day Response Gap Digital Journal.</li>
-                <li>The Response Gap One-Page Blueprint.</li>
-            </ul>
-            
-            <h2>Who Is This For?</h2>
-            <ul>
-                <li>The Overthinker who freezes in critical moments.</li>
-                <li>The Reactive Individual struggling with impulsive outbursts.</li>
-                <li>The Ambitious Professional needing calm under pressure.</li>
-                <li>The Survivor breaking free from automatic emotional patterns.</li>
-            </ul>
-            
-            <h2>Format</h2>
-            <ul>
-                <li>Professional PDF — instant download</li>
-                <li>Includes cheat sheet, 30-day journal, and one-page blueprint</li>
-                <li>English</li>
-                <li>100% offline | No subscriptions | Lifetime access</li>
-            </ul>
-            
-            <h3>100% RISK-FREE 7-DAY GUARANTEE</h3>
-            <p>Try the system. If you don't find a transformative insight, get a full, unconditional refund via Hotmart. No questions asked.</p>
-            
-            <p><strong>"Between stimulus and response there is a space. In that space is our power to choose our response." — Viktor E. Frankl</strong></p>
-            <p>One-time purchase. Lifetime access. Instant download.</p>
-        `
     }
 ];
 
@@ -872,6 +807,71 @@ const booksData = [
             <p>Chaos Magick practitioners (beginner to advanced), tarot readers seeking a more active approach, technomancers, and anyone interested in using the Tarot as a technology of consciousness.</p>
             
             <p><strong>"Nothing is true. Everything is permitted."</strong></p>
+            <p>One-time purchase. Lifetime access. Instant download.</p>
+        `
+    },
+    {
+        id: "mind-the-gap-pdf",
+        name: "Mind The Gap: Master the 0.3 Seconds That Define Your Life",
+        author: "Frater Alek0s",
+        language: "English / Spanish",
+        languageFlag: "us,es",
+        price: "$9.99 USD",
+        type: "book",
+        status: "available",
+        image: "assets/images/mindthegap.PNG",
+        description: "Master the Response Gap — the 0.3 seconds between stimulus and response. Neuroscience, 7 Laws, and actionable domains for relationships, money, health, and adversity.",
+        hotmartLink: "https://pay.hotmart.com/V106730857R?checkoutMode=2",
+        seo: {
+            title: "Mind The Gap: Master the 0.3 Seconds That Define Your Life | PDF",
+            description: "What if everything you've been told about self-improvement is backward? Master the Response Gap — the 0.3 seconds between stimulus and response. Neuroscience, 7 Laws, and actionable domains. Buy the PDF now.",
+            keywords: "mind the gap, response gap, self-improvement, neuroscience, stoicism, emotional intelligence, impulse control, personal transformation, viktor frankl, cognitive behavioral, mindfulness, reaction vs response, PDF book"
+        },
+        detailedDescription: `
+            <h1>Mind The Gap: Master the 0.3 Seconds That Define Your Life</h1>
+            <p><strong>What if everything you've been told about self-improvement is backward?</strong> You don't need more discipline. You don't need better habits. You don't need to force yourself to "think positive." What you actually need is to master the <strong>0.3 seconds</strong> between what happens to you and what you do about it.</p>
+            
+            <p>That fraction of a second — the <strong>Response Gap</strong> — is the single most important variable in your life. It determines whether you react like an automatic machine or respond like a sovereign creator.</p>
+            
+            <p>"Between stimulus and response there is a space. In that space is our power to choose our response." — <strong>Viktor E. Frankl</strong></p>
+            
+            <h2>What Is the Response Gap?</h2>
+            <p>Every moment follows: <strong>STIMULUS → [ THE GAP ] → RESPONSE.</strong> Most people skip the gap, executing old, automatic scripts. This book is the system to stop reacting and start deciding.</p>
+            
+            <h2>What You Will Master</h2>
+            <ul>
+                <li><strong>The Neuroscience:</strong> Why your brain fires before you think and how to rewire it.</li>
+                <li><strong>The 7 Laws:</strong> A complete system covering Stillness, Framing, Pausing, Identity, Direction, Accumulation, and Surrender.</li>
+                <li><strong>Actionable Domains:</strong> Apply the gap to Relationships (de-escalation), Money (impulse control), Health (habit design), and Adversity (crisis strategy).</li>
+            </ul>
+            
+            <h2>Exclusive Bonuses</h2>
+            <ul>
+                <li>Seven Laws Quick Reference Cheat Sheet.</li>
+                <li>30-Day Response Gap Digital Journal.</li>
+                <li>The Response Gap One-Page Blueprint.</li>
+            </ul>
+            
+            <h2>Who Is This For?</h2>
+            <ul>
+                <li>The Overthinker who freezes in critical moments.</li>
+                <li>The Reactive Individual struggling with impulsive outbursts.</li>
+                <li>The Ambitious Professional needing calm under pressure.</li>
+                <li>The Survivor breaking free from automatic emotional patterns.</li>
+            </ul>
+            
+            <h2>Format</h2>
+            <ul>
+                <li>Professional PDF — instant download</li>
+                <li>Includes cheat sheet, 30-day journal, and one-page blueprint</li>
+                <li>English</li>
+                <li>100% offline | No subscriptions | Lifetime access</li>
+            </ul>
+            
+            <h3>100% RISK-FREE 7-DAY GUARANTEE</h3>
+            <p>Try the system. If you don't find a transformative insight, get a full, unconditional refund via Hotmart. No questions asked.</p>
+            
+            <p><strong>"Between stimulus and response there is a space. In that space is our power to choose our response." — Viktor E. Frankl</strong></p>
             <p>One-time purchase. Lifetime access. Instant download.</p>
         `
     }

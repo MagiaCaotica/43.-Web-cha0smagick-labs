@@ -29,10 +29,10 @@
 
 ## PDF Publications
 
-- [Magical Servitors Manual](https://cha0smagicklabs.com/apps/manual-activacion-servidores-magicos-pdf.html)
-- [Liber Lvpinux — Lycanthropic Transformation](https://cha0smagicklabs.com/apps/liber-lvpinux-pdf.html)
-- [Ouija Cazadora — Spirit Board Guide](https://cha0smagicklabs.com/apps/ouija-cazadora-pdf.html)
-- [Treatise of Chaos Hunter Runes](https://cha0smagicklabs.com/apps/tratado-runas-cazadoras-caos-pdf.html)
+- [Magical Servitors Manual](https://cha0smagicklabs.com/books/manual-activacion-servidores-magicos-pdf.html)
+- [Liber Lvpinux — Lycanthropic Transformation](https://cha0smagicklabs.com/books/liber-lvpinux-pdf.html)
+- [Ouija Cazadora — Spirit Board Guide](https://cha0smagicklabs.com/books/ouija-cazadora-pdf.html)
+- [Treatise of Chaos Hunter Runes](https://cha0smagicklabs.com/books/tratado-runas-cazadoras-caos-pdf.html)
 
 ## Core Pages
 

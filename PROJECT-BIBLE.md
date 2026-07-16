@@ -56,7 +56,7 @@ ROOT/
 │   ├── visitor-map.js            # Mapa de visitantes (249 líneas)
 │   └── visitor-map.min.js        # Minified
 │
-├── apps/                         # 15 landing pages (apps + books)
+├── apps/                         # 9 landing pages de apps Android
 │   ├── psi-gym.html
 │   ├── arcana-goetia.html
 │   ├── norse-rune-oracle.html
@@ -65,11 +65,14 @@ ROOT/
 │   ├── chaos-sigil-generator.html
 │   ├── unofficial-rider-waite-tarot.html
 │   ├── dream-machine.html
-│   ├── mind-the-gap-pdf.html
+│   └── astral-lab.html
+│
+├── books/                        # 7 landing pages de libros PDF (Hotmart)
 │   ├── manual-activacion-servidores-magicos-pdf.html
 │   ├── tratado-runas-cazadoras-caos-pdf.html
 │   ├── ouija-cazadora-pdf.html
 │   ├── liber-lvpinux-pdf.html
+│   ├── mind-the-gap-pdf.html
 │   ├── codex-chaoticus-pdf.html
 │   └── tarot-chaos-pdf.html
 │
@@ -862,7 +865,8 @@ El sitio se despliega automáticamente a GitHub Pages al hacer push a la rama pr
 |---------|----------|
 | Páginas HTML totales | ~110 |
 | Artículos del blog | 79 |
-| Landing pages de apps/books | 15 |
+| Landing pages de apps | 9 |
+| Landing pages de libros | 7 |
 | Herramientas gratuitas | 10 |
 | Páginas core | 5 (home, 404, glossary, best-apps, privacy) |
 | Archivos JS fuente | 4 (+ 4 minified) |
