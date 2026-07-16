@@ -489,7 +489,7 @@ const appsData = [
     {
         id: "astral-lab",
         name: "Astral Lab: Natal Chart & Astrology",
-        price: "$3.99 USD",
+        price: "$6.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart",
         status: "available",
         description: "Professional natal charts, real-time transits & aspect grids — 100% offline with scientific-grade VSOP87/ELP-2000 precision. 🔮",
