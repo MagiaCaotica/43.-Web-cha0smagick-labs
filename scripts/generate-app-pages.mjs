@@ -411,7 +411,7 @@ const appsData = [
     {
         id: "eerieroads",
         name: "Eerie Roads: Mysterious Paths",
-        price: "$3.99 USD",
+        price: "$9.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads",
         status: "available",
         description: "Navigate the unknown with total privacy. No trackers, no ads, just you and the open road.",
