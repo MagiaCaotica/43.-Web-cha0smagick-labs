@@ -1,7 +1,7 @@
 # PROJECT BIBLE — Cha0smagick Labs Website
 
 > **Este archivo es la fuente de verdad del proyecto.** Leerlo cada vez que se abra el proyecto.
-> Última actualización: 2026-07-16
+> Última actualización: 2026-07-21
 
 ---
 
@@ -150,6 +150,7 @@ Contiene **dos arrays globales** que son la fuente de verdad de todo el catálog
 | 7 | `unofficial-rider-waite-tarot` | Unofficial Rider Waite Tarot | $9.99 | App |
 | 8 | `dream-machine` | Dream Machine: Lucid Dreaming | $3.99 | App |
 | 9 | `mind-the-gap-pdf` | Mind The Gap (self-help) | $9.99 | Book (Hotmart) |
+| 10 | `eerieroads` | Eerie Roads: Mysterious Paths | $3.99 | App |
 
 #### `booksData[]` — Libros PDF vendidos via Hotmart
 
@@ -863,9 +864,9 @@ El sitio se despliega automáticamente a GitHub Pages al hacer push a la rama pr
 
 | Métrica | Cantidad |
 |---------|----------|
-| Páginas HTML totales | ~110 |
+| Páginas HTML totales | ~111 |
 | Artículos del blog | 79 |
-| Landing pages de apps | 9 |
+| Landing pages de apps | 10 |
 | Landing pages de libros | 7 |
 | Herramientas gratuitas | 10 |
 | Páginas core | 5 (home, 404, glossary, best-apps, privacy) |

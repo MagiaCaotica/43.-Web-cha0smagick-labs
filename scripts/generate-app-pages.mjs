@@ -407,6 +407,36 @@ const appsData = [
             
             <p><strong>Take full control of your astrological work with a professional tool that respects your privacy, your time, and your data. Download Astral Lab today!</strong></p>
         `
+    },
+    {
+        id: "eerieroads",
+        name: "Eerie Roads: Mysterious Paths",
+        price: "$3.99 USD",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads",
+        status: "available",
+        description: "Navigate the unknown with total privacy. No trackers, no ads, just you and the open road.",
+        image: "assets/images/eerieroads.png",
+        seo: {
+            title: "Eerie Roads | Private GPS Navigation & Offline Maps — No Trackers",
+            description: "Navigate the unknown with Eerie Roads. Private GPS navigation with zero trackers, offline OpenStreetMap support, and a dark mysterious interface. The ultimate privacy-first navigation app for Android. Buy now.",
+            keywords: "private navigation, offline maps, GPS privacy, no trackers, openstreetmap, osmdroid, eerie roads, privacy app, ghost urban exploration, dark maps, android navigation, buy esoteric app, chaos magick, technomancy"
+        },
+        screenshots: [],
+        detailedDescription: `
+            <h3>Some Paths Don't Appear on Ordinary Maps. Some Trails Are Meant to Be Traveled in Silence.</h3>
+            <p>While other GPS navigation apps collect your data and log every move you make for profit, <strong>Eerie Roads</strong> lets you explore the world in complete privacy. We have stripped away trackers, ads, and corporate connections to deliver a pure, dark, mysterious mapping experience.</p>
+            
+            <h4>Why Travel with Eerie Roads?</h4>
+            <ul>
+                <li><strong>Digital Invisibility (No Trackers):</strong> No Google Play Services or third-party trackers. Your location belongs only to you.</li>
+                <li><strong>OpenStreetMap Powered:</strong> Access collaborative maps revealing paths, ghost trails, and hidden routes.</li>
+                <li><strong>Silent & Secure GPS:</strong> Direct communication with native GPS — no middlemen, no cloud sync.</li>
+                <li><strong>Darkness by Design:</strong> High-contrast dark interface for night explorers.</li>
+                <li><strong>Local Storage:</strong> All data stays on your device. No cloud, no tracking.</li>
+            </ul>
+            
+            <p>Download <strong>Eerie Roads</strong> today and disappear into your next journey.</p>
+        `
     }
 ];
 
@@ -826,7 +856,7 @@ function generatePage(item, type) {
     const cleanImage = item.image.replace('../', '');
     const absoluteImageUrl = `${BASE_URL}/${cleanImage}`;
     
-    const isNew = item.id === 'psi-gym' || item.id === 'dream-machine' || item.id === 'astral-lab';
+    const isNew = item.id === 'psi-gym' || item.id === 'dream-machine' || item.id === 'astral-lab' || item.id === 'eerieroads';
     
     // Screenshots (only for apps)
     let screenshotsHtml = '';
