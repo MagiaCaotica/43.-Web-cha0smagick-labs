@@ -150,7 +150,7 @@ Contiene **dos arrays globales** que son la fuente de verdad de todo el catálog
 | 7 | `unofficial-rider-waite-tarot` | Unofficial Rider Waite Tarot | $9.99 | App |
 | 8 | `dream-machine` | Dream Machine: Lucid Dreaming | $3.99 | App |
 | 9 | `mind-the-gap-pdf` | Mind The Gap (self-help) | $9.99 | Book (Hotmart) |
-| 10 | `eerieroads` | Eerie Roads: Mysterious Paths | $3.99 | App |
+| 10 | `eerieroads` | Eerie Roads: Mysterious Paths | $9.99 | App |
 
 #### `booksData[]` — Libros PDF vendidos via Hotmart
 
