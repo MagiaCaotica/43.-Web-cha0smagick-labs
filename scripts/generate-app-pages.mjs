@@ -414,28 +414,35 @@ const appsData = [
         price: "$9.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads",
         status: "available",
-        description: "Navigate the unknown with total privacy. No trackers, no ads, just you and the open road.",
+        description: "Manifest your intentions on the map. Generate chaos coordinates, explore the unknown, and witness synchronicity in motion.",
         image: "assets/images/eerieroads.png",
         seo: {
-            title: "Eerie Roads | Private GPS Navigation & Offline Maps — No Trackers",
-            description: "Navigate the unknown with Eerie Roads. Private GPS navigation with zero trackers, offline OpenStreetMap support, and a dark mysterious interface. The ultimate privacy-first navigation app for Android. Buy now.",
-            keywords: "private navigation, offline maps, GPS privacy, no trackers, openstreetmap, osmdroid, eerie roads, privacy app, ghost urban exploration, dark maps, android navigation, buy esoteric app, chaos magick, technomancy"
+            title: "Eerie Roads | Intention Manifestation Map — Chaos Coordinates & Synchronicity Explorer",
+            description: "Manifest your intentions on a real-world map. Set your will, generate chaos-driven coordinates, and explore the synchronicities the universe delivers. The ultimate intention manifestation GPS app for Android. Buy now.",
+            keywords: "intention manifestation, chaos coordinates, random GPS generator, synchronicity app, reality hacking, manifest on map, chaos magick GPS, urban exploration, anomaly hunting, digital sorcery, entropy navigation, android occult app, buy esoteric app, technomancy"
         },
         screenshots: [],
         detailedDescription: `
-            <h3>Some Paths Don't Appear on Ordinary Maps. Some Trails Are Meant to Be Traveled in Silence.</h3>
-            <p>While other GPS navigation apps collect your data and log every move you make for profit, <strong>Eerie Roads</strong> lets you explore the world in complete privacy. We have stripped away trackers, ads, and corporate connections to deliver a pure, dark, mysterious mapping experience.</p>
+            <h3>Set Your Intention. Let Chaos Guide Your Feet. Witness the Synchronicity.</h3>
+            <p>Every tradition of magic agrees: intention shapes reality. <strong>Eerie Roads</strong> transforms the physical world into your personal manifestation grid. You set the intention, the app generates coordinates drawn from pure entropy, and you walk into the unknown—where meaning and coincidence converge.</p>
             
-            <h4>Why Travel with Eerie Roads?</h4>
+            <h4>How Eerie Roads Works</h4>
             <ul>
-                <li><strong>Digital Invisibility (No Trackers):</strong> No Google Play Services or third-party trackers. Your location belongs only to you.</li>
-                <li><strong>OpenStreetMap Powered:</strong> Access collaborative maps revealing paths, ghost trails, and hidden routes.</li>
-                <li><strong>Silent & Secure GPS:</strong> Direct communication with native GPS — no middlemen, no cloud sync.</li>
-                <li><strong>Darkness by Design:</strong> High-contrast dark interface for night explorers.</li>
-                <li><strong>Local Storage:</strong> All data stays on your device. No cloud, no tracking.</li>
+                <li><strong>Set Your Intention:</strong> Focus your will on a question or desire. The app captures your intent as the seed of the journey.</li>
+                <li><strong>Chaos Coordinate Generation:</strong> Entropy-driven GPS coordinates anchored to your intention. Pure chaotic manifestation.</li>
+                <li><strong>Explore & Decode:</strong> Navigate using offline OSM maps. Observe what you find—every detail is a message from the mirror of your will.</li>
+                <li><strong>Log Your Synchronicities:</strong> Record discoveries and build a personal grimoire of manifested coordinates.</li>
             </ul>
             
-            <p>Download <strong>Eerie Roads</strong> today and disappear into your next journey.</p>
+            <h4>Why Eerie Roads Is Different</h4>
+            <ul>
+                <li><strong>Intention-Driven:</strong> Chaos anchored to will. Coordinates reflect your intent filtered through entropy.</li>
+                <li><strong>True Privacy:</strong> No trackers, no cloud sync. Your practice stays sovereign.</li>
+                <li><strong>Offline Chaos Engine:</strong> All generation happens locally. No servers, no surveillance.</li>
+                <li><strong>Dark Cartography:</strong> Battery-efficient dark interface built for focus and night exploration.</li>
+            </ul>
+            
+            <p>Download <strong>Eerie Roads</strong> now and step into the living map of your own manifestation.</p>
         `
     }
 ];
