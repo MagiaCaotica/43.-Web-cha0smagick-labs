@@ -526,6 +526,53 @@ const appsData = [
             
             <p><strong>Take full control of your astrological work with a professional tool that respects your privacy, your time, and your data. Download Astral Lab today!</strong></p>
         `
+    },
+    {
+        id: "eerieroads",
+        name: "Eerie Roads: Mysterious Paths",
+        price: "$3.99 USD",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads",
+        status: "available",
+        description: "Navigate the unknown with total privacy. No trackers, no ads, just you and the open road. 👻",
+        image: "assets/images/eerieroads.png",
+        seo: {
+            title: "Eerie Roads | Private GPS Navigation & Offline Maps — No Trackers",
+            description: "Navigate the unknown with Eerie Roads. Private GPS navigation with zero trackers, offline OpenStreetMap support, and a dark mysterious interface. The ultimate privacy-first navigation app for Android. Buy now.",
+            keywords: "private navigation, offline maps, GPS privacy, no trackers, openstreetmap, osmdroid, eerie roads, privacy app, ghost urban exploration, dark maps, android navigation, buy esoteric app, chaos magick, technomancy"
+        },
+        screenshots: [],
+        detailedDescription: `
+            <h3>Some Paths Don't Appear on Ordinary Maps. Some Trails Are Meant to Be Traveled in Silence.</h3>
+            <p>While other GPS navigation apps collect your data and log every move you make for profit, <strong>Eerie Roads</strong> lets you explore the world in complete privacy. We have stripped away trackers, ads, and corporate connections to deliver a pure, dark, mysterious mapping experience.</p>
+            <p>Eerie Roads is the ultimate private navigation tool for the modern explorer, the urban ghost, and the seeker of strange things who refuses to be tracked.</p>
+            
+            <h4>👁️ Why Travel with Eerie Roads?</h4>
+            <ul>
+                <li><strong>Digital Invisibility (No Trackers):</strong> We do NOT use Google Play Services or third-party trackers. You are a ghost in the machine. Your location data belongs only to you, making it the perfect app for de-Googled phones and privacy-hardened setups.</li>
+                <li><strong>The Collective Grimoire (OpenStreetMap):</strong> Powered by OSM (osmdroid), giving you access to a top-tier collaborative map that reveals paths, ghost trails, and hidden routes others overlook.</li>
+                <li><strong>Silent & Secure GPS:</strong> Our app communicates directly with your device's native GPS. No middlemen, no cloud sync — just you, the satellites, and your next exploration.</li>
+                <li><strong>Darkness by Design:</strong> A sleek, high-contrast dark map interface crafted specifically for night explorers, battery preservation, and those who prefer the shadows.</li>
+                <li><strong>Local Soul (Offline Storage):</strong> Your saved locations and preferences remain safely on your device via a local database. We don't want your data — we want you to find your way safely.</li>
+            </ul>
+            
+            <h4>🧭 Ideal For:</h4>
+            <ul>
+                <li><strong>Urban Explorers & Ghost Hunters:</strong> Find coordinates of forgotten places without leaving a digital trace.</li>
+                <li><strong>Privacy Enthusiasts:</strong> The perfect companion for private offline map browsing and secure navigation.</li>
+                <li><strong>Adventure Travelers:</strong> A lightweight, efficient map app that respects your battery, your privacy, and your peace of mind.</li>
+            </ul>
+            
+            <h4>⚙️ Technical Specs for the Curious:</h4>
+            <ul>
+                <li>Built with Jetpack Compose for a smooth, modern, dark Android experience.</li>
+                <li>Reliable, lightweight map rendering via osmdroid and OpenStreetMap.</li>
+                <li>Privacy-first networking with OkHttp.</li>
+                <li>No bloatware, no ads, no distractions.</li>
+            </ul>
+            
+            <h3>The Road Calls. It Is Dark, Mysterious, and Waiting.</h3>
+            <p>Download <strong>Eerie Roads</strong> today and disappear into your next journey. 👻🛣️</p>
+        `
     }
 ];
 
