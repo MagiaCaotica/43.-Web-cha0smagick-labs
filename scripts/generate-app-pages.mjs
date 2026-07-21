@@ -29,9 +29,9 @@ const appsData = [
         description: "Train your intuition and extrasensory perception with professional Zener cards and advanced statistical tracking. 👁️",
         image: "assets/images/zener.webp",
         seo: {
-            title: "PSI GYM | Zener Cards & ESP Training App for Intuition",
-            description: "Enhance your psychic abilities with PSI GYM. Professional Zener card training, ESP testing & statistical analysis. The ultimate intuition trainer for Android. Buy now.",
-            keywords: "zener cards, esp training, psychic trainer, intuition app, extrasensory perception, parapsychology tool, psi training, remote viewing, clairvoyance practice, buy esoteric app, chaos magick app, psychic abilities, telepathy trainer"
+            title: "PSI GYM: Zener Cards & ESP Training App | Intuition Trainer & Statistical ESP Testing for Android",
+            description: "Download PSI GYM — the professional Zener card ESP training app for Android. Train your intuition with the classic 25-card deck, advanced statistical tracking, and multiple testing modes. The ultimate extrasensory perception trainer. Buy now — one-time purchase, no subscriptions.",
+            keywords: "zener cards, esp training, psychic trainer, intuition app, extrasensory perception, parapsychology tool, psi training, remote viewing, clairvoyance practice, buy esoteric app, chaos magick app, psychic abilities, telepathy trainer, statistical ESP testing, zener card deck app"
         },
         screenshots: [
             "../assets/images/z1.png",
@@ -84,9 +84,9 @@ const appsData = [
         description: "Command the 72 spirits of Solomon with precision sigils, lore, and guided rituals—all offline.",
         image: "assets/images/GSG.webp",
         seo: {
-            title: "Arcana Goetia: Ritual & Sigils | Goetic Grimoire & Sigil Generator App",
-            description: "Command the 72 spirits of Solomon with Arcana Goetia. Digital sigil generator, complete Lemegeton lore, and guided invocation—all offline. Download the ultimate Goetic grimoire app. Buy esoteric tools for Android.",
-            keywords: "goetia app, solomon sigils, lemegeton grimoire, goetic magic, sigil generator, occult app, chaos magic, invocation, 72 spirits, ritual tool, buy esoteric, android occult app, chaos magick app, digital sigil, goetic grimoire"
+            title: "Arcana Goetia: Ritual & Sigils | Goetic Grimoire & 72 Spirits Sigil Generator App for Android",
+            description: "Download Arcana Goetia — the complete Goetic grimoire and sigil generator app for Android. Command the 72 spirits of Solomon with precision sigils, Lemegeton lore, planetary correspondences, and guided invocation. All offline, no subscriptions. Buy now.",
+            keywords: "goetia app, solomon sigils, lemegeton grimoire, goetic magic, sigil generator, occult app, chaos magic, invocation, 72 spirits, ritual tool, buy esoteric, android occult app, chaos magick app, digital sigil, goetic grimoire, planetary magic, solomonic tradition"
         },
         screenshots: [
             "../assets/images/go1.PNG",
@@ -152,40 +152,44 @@ const appsData = [
             "../assets/images/nr4.PNG"
         ],
         detailedDescription: `
-            <h3>What Do the Ancient Runes Say About Your Future? Find Out Instantly.</h3>
-            <p>Every day you face decisions—about love, money, career, your path forward. What if you could hold a thousand years of Viking wisdom in your hand and get clarity in seconds? The <strong>Norse Rune Oracle</strong> puts the full power of the Elder Futhark at your fingertips.</p>
-            <p>Thousands of users already get daily guidance. Now it's your turn.</p>
+            <h2>What Is Norse Rune Oracle? The Elder Futhark Divination App for Android</h2>
+            <p>Every day you face decisions — about love, money, career, your path forward. The <strong>Norse Rune Oracle</strong> puts a thousand years of Viking wisdom in your hand, delivering clarity in seconds. Whether you are a seasoned rune reader or picking up a rune stone for the first time, this app transforms your phone into a living oracle powered by the 24 Elder Futhark runes.</p>
             
-            <h4>Powerful Features for Real Guidance</h4>
+            <h2>Key Features for Real Guidance</h2>
             <ul>
-                <li><strong>Daily Rune Inspiration:</strong> Pull a Rune of the Day every morning and receive instant cosmic guidance.</li>
-                <li><strong>12+ Advanced Casting Spreads:</strong> Odin's Rune, The Three Norns, Love Reading, Wealth Cast, Protection Cast, and more.</li>
-                <li><strong>Intention-Focused Readings:</strong> Write your question, set your intent, and get a deeply personal interpretation.</li>
-                <li><strong>Complete Elder Futhark Library:</strong> Master all 24 runes with detailed profiles.</li>
-                <li><strong>Immersive Norse Atmosphere:</strong> Elegant animations and a dark mystical interface.</li>
+                <li><strong>Daily Rune Inspiration:</strong> Pull a Rune of the Day every morning and receive instant cosmic guidance. Start each day with purpose and clarity.</li>
+                <li><strong>12+ Advanced Casting Spreads:</strong> Odin's Rune for quick answers, The Three Norns for past-present-future, Love Reading for relationships, Wealth Cast (Fehu) for abundance, Protection Cast (Algiz) for boundaries, Luck Cast (Gebo) for opportunities, and more.</li>
+                <li><strong>Intention-Focused Readings:</strong> Write your question, set your intent, and receive a deeply personal, accurate interpretation every time.</li>
+                <li><strong>Complete Elder Futhark Library:</strong> Master all 24 runes with detailed profiles covering historical meaning, symbolic interpretation, upright and reversed positions, and practical applications.</li>
+                <li><strong>Immersive Norse Atmosphere:</strong> Elegant animations, dark mystical interface, and atmospheric sound design that transports you to a Viking-age grove.</li>
             </ul>
             
-            <h4>Who Is the Norse Rune Oracle For?</h4>
+            <h2>Who Is the Norse Rune Oracle For?</h2>
             <ul>
-                <li><strong>Beginners</strong> who want a guided introduction to rune divination.</li>
-                <li><strong>Experienced Readers</strong> looking for a portable, feature-rich casting tool.</li>
-                <li><strong>Spiritual Seekers</strong> who want daily guidance and connection to Norse tradition.</li>
+                <li><strong>Beginners</strong> who want a guided, intuitive introduction to rune divination.</li>
+                <li><strong>Experienced Readers</strong> looking for a portable, feature-rich casting tool with multiple spreads.</li>
+                <li><strong>Spiritual Seekers</strong> who want daily guidance and deeper connection to Norse tradition.</li>
             </ul>
             
-            <h4>Frequently Asked Questions</h4>
-            <p><strong>Do I need prior knowledge of runes to use this app?</strong><br>Not at all. The app includes a complete rune library and guided interpretations.</p>
-            <p><strong>Can I use it for specific questions about love or money?</strong><br>Yes. The app features dedicated spreads for each area of life.</p>
-            <p><strong>Is my reading history private?</strong><br>Absolutely. All readings are stored locally on your device.</p>
-            
-            <h4>Why Choose Norse Rune Oracle?</h4>
+            <h2>Technical Specifications</h2>
             <ul>
-                <li><strong>Authentic Norse Foundation:</strong> Every interpretation is rooted in historical Eddaic and saga sources.</li>
-                <li><strong>Works Offline:</strong> No internet? No problem. All features work without a connection.</li>
-                <li><strong>Beautiful, Focused Design:</strong> An interface built for contemplation, not distraction.</li>
+                <li>24 Elder Futhark runes with full interpretations</li>
+                <li>12+ professional casting spreads</li>
+                <li>Intention-based reading algorithm</li>
+                <li>Reading history stored locally on device</li>
+                <li>Fully offline — no internet required</li>
+                <li>Zero ads, zero trackers, zero data collection</li>
+                <li>Android 6.0+ | One-time purchase — $3.99 USD</li>
             </ul>
             
-            <h3>The Runes Are Calling. Will You Answer?</h3>
-            <p>Stop wondering and start knowing. Download <strong>Norse Rune Oracle</strong> now and let the Elder Futhark illuminate your path.</p>
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Do I need prior knowledge of runes to use this app?</strong><br>Not at all. The app includes a complete rune library and guided interpretations, perfect for beginners while offering depth for experts.</p>
+            <p><strong>Can I use it for specific questions about love or money?</strong><br>Yes. The app features dedicated spreads for relationships, wealth, protection, and luck, each tailored for precise, actionable insights.</p>
+            <p><strong>Is my reading history private?</strong><br>Absolutely. All readings are stored locally on your device. No accounts, no cloud, no data collection.</p>
+            <p><strong>Does the app work offline?</strong><br>Yes. All features work without an internet connection. Your practice stays private and always accessible.</p>
+            
+            <h2>One-Time Purchase. Lifetime Access.</h2>
+            <p>Download <strong>Norse Rune Oracle</strong> now for a single payment of <strong>$3.99 USD</strong>. No subscriptions, no in-app purchases. The runes are calling. Will you answer?</p>
         `
     },
     {
@@ -207,19 +211,43 @@ const appsData = [
             "../assets/images/moon3.PNG"
         ],
         detailedDescription: `
-            <h3>Are You Living in Sync with the Moon? Start Today.</h3>
-            <p>Most people live by the sun alone—but the moon governs the tides, the growth of plants, the rhythms of the body, and the flow of energy. The <strong>Lunar Phase Calculator</strong> brings together astronomy, wellness, biodynamic gardening, and lunar magic in one stunning tool.</p>
+            <h2>What Is Lunar Phase Calculator? Your Complete Lunar Companion</h2>
+            <p>The <strong>Lunar Phase Calculator</strong> is the only Android app that seamlessly integrates <strong>astronomical precision, biodynamic gardening, wellness timing, and lunar magic</strong> in one stunning, real-time visualization. Powered by Jetpack Compose, it delivers professional-grade lunar data with an immersive dark interface designed for practitioners, gardeners, and astronomers alike.</p>
             
-            <h4>Everything the Moon Can Do for You</h4>
+            <h2>Key Features</h2>
             <ul>
-                <li><strong>Wellness Timing:</strong> Know the best lunar phases for haircuts, skincare, detox, and nutrition.</li>
-                <li><strong>Precision Astronomy:</strong> Track moonrise, moonset, Earth-Moon distance with millimeter accuracy.</li>
-                <li><strong>Biodynamic Gardening:</strong> Plant, transplant, prune at the optimal lunar moment.</li>
-                <li><strong>Lunar Magic & Rituals:</strong> Guided rituals for manifestation, reflection, and release.</li>
-                <li><strong>Stunning Live Visualization:</strong> Watch the current phase animate in real time.</li>
+                <li><strong>Real-Time Lunar Visualization:</strong> Watch the current moon phase animate with stunning Jetpack Compose graphics. Swipe between tabs for instant access to phase data, rise/set times, and distance metrics.</li>
+                <li><strong>Precision Astronomical Data:</strong> Track moonrise, moonset, Earth-Moon distance, and upcoming New Moon / Full Moon dates with millimeter accuracy. Professional-grade algorithms power every calculation.</li>
+                <li><strong>Wellness & Beauty Timing:</strong> Know the optimal lunar phases for haircuts, skincare treatments, detox programs, and nutrition planning. Align your self-care with cosmic rhythms.</li>
+                <li><strong>Biodynamic Gardening Calendar:</strong> Plant, transplant, prune, and harvest at the most favorable lunar moments. Healthier plants, higher yields, less effort — backed by generations of agricultural wisdom.</li>
+                <li><strong>Lunar Magic & Ritual Guide:</strong> Each phase carries distinct energetic properties. Access guided rituals for manifestation (New Moon), reflection (Full Moon), release (Waning), and intention-setting (Waxing).</li>
             </ul>
             
-            <p>Download the <strong>Lunar Phase Calculator</strong> now and discover what it feels like to live in harmony with the cosmos.</p>
+            <h2>Who Benefits From Lunar Phase Calculator?</h2>
+            <ul>
+                <li><strong>Witches & Magical Practitioners:</strong> Time rituals and spellwork to precise lunar phases for maximum energetic alignment.</li>
+                <li><strong>Biodynamic Gardeners:</strong> Sync planting and harvesting cycles with lunar rhythms for healthier, more abundant crops.</li>
+                <li><strong>Wellness Enthusiasts:</strong> Coordinate self-care routines with natural cycles for enhanced results.</li>
+                <li><strong>Astronomy Lovers:</strong> Access precise lunar data — moonrise, moonset, distance — at a glance.</li>
+            </ul>
+            
+            <h2>Technical Specifications</h2>
+            <ul>
+                <li>High-precision astronomical calculation engine</li>
+                <li>Jetpack Compose UI with real-time phase animation</li>
+                <li>Fully offline — no internet required</li>
+                <li>Zero trackers, zero ads, zero data collection</li>
+                <li>Android 6.0+ | Lightweight (~15MB)</li>
+            </ul>
+            
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>How accurate is the lunar data?</strong><br>Extremely. The app uses precise astronomical algorithms to calculate moonrise, moonset, phase percentage, and Earth-Moon distance with professional-grade accuracy matching NASA ephemeris data.</p>
+            <p><strong>Can I use this for gardening?</strong><br>Absolutely. The biodynamic gardening module provides phase-specific recommendations for planting, transplanting, pruning, and harvesting based on lunar cycles.</p>
+            <p><strong>Does it work offline?</strong><br>Yes. All data is calculated locally on your device. No internet connection required at any point.</p>
+            <p><strong>Is my data private?</strong><br>Completely. Lunar Phase Calculator contains no tracking libraries, no analytics, and no cloud connectivity. Your data stays on your device.</p>
+            
+            <h2>One-Time Purchase. Lifetime Access.</h2>
+            <p>Download the <strong>Lunar Phase Calculator</strong> now for a single payment of <strong>$3.99 USD</strong>. No subscriptions, no in-app purchases, no recurring fees. Start living in harmony with the moon today.</p>
         `
     },
     {
@@ -243,22 +271,48 @@ const appsData = [
             "../assets/images/ching4.PNG"
         ],
         detailedDescription: `
-            <h3>For 3,000 Years, the I Ching Has Guided Emperors, Philosophers, and Seekers. Now It Fits in Your Pocket.</h3>
-            <p>The Book of Changes is not just an oracle—it is a philosophical mirror that reflects the patterns of the universe. <strong>I Ching Oracle</strong> brings this ancient Chinese divination system to life with a state-of-the-art simulation of the traditional three-coin method.</p>
+            <h2>What Is I Ching Oracle? The Ancient Book of Changes Reimagined for Android</h2>
+            <p>For over three millennia, the <strong>I Ching (Book of Changes)</strong> has been the definitive oracle of Chinese philosophy — a system of wisdom consulted by emperors, strategists, and seekers facing life's deepest questions. The <strong>I Ching Oracle</strong> brings this tradition to your pocket with a state-of-the-art digital simulation of the authentic three-coin method, complete interpretations for all 64 hexagrams, and a beautiful, distraction-free interface built with Jetpack Compose.</p>
             
-            <h4>Key Features</h4>
+            <h2>How It Works: Authentic Three-Coin Casting</h2>
+            <p>Our advanced logic engine simulates the traditional three-coin method exactly as practiced for millennia. Each of the six lines is calculated as Yin or Yang, old or young, building your Original Hexagram line by line. If changing lines appear, the app automatically generates the Transformed Hexagram — revealing not only your current situation but the direction of change itself.</p>
+            
+            <h2>Key Features</h2>
             <ul>
-                <li><strong>64 Complete Hexagrams:</strong> Every symbol with its full meaning and judgment.</li>
-                <li><strong>Authentic Three-Coin Algorithm:</strong> Strictly faithful to tradition.</li>
-                <li><strong>Reading History:</strong> All readings saved locally on your device.</li>
-                <li><strong>Built-in Learning Guide:</strong> New to the I Ching? The app includes a complete educational section.</li>
-                <li><strong>Total Privacy:</strong> Every query stays on your device.</li>
+                <li><strong>64 Complete Hexagrams:</strong> Every symbol with full meaning, judgment, and line-by-line interpretation drawn from classical sources.</li>
+                <li><strong>Authentic Three-Coin Algorithm:</strong> Strictly faithful to tradition — each cast is mathematically accurate and spiritually meaningful.</li>
+                <li><strong>Reading History:</strong> All readings saved locally. Revisit past consultations and track your spiritual growth over time.</li>
+                <li><strong>Built-in Learning Guide:</strong> Comprehensive educational section covering hexagrams, lines, interpretation methods, and Taoist philosophy.</li>
+                <li><strong>Multilingual Support:</strong> Fully available in English, Spanish, French, German, and Italian.</li>
+                <li><strong>Total Privacy:</strong> Every query stays on your device. No accounts, no cloud, no tracking.</li>
             </ul>
             
-            <h4>Available in 5 Languages</h4>
-            <p>English, Spanish, French, German, and Italian.</p>
+            <h2>Who Is the I Ching Oracle For?</h2>
+            <ul>
+                <li><strong>Spiritual Seekers</strong> looking for daily guidance and deeper connection to Taoist philosophy.</li>
+                <li><strong>Divination Practitioners</strong> who need an accurate, traditional casting method in digital form.</li>
+                <li><strong>Philosophers & Meditators</strong> who use hexagrams as contemplative tools for self-reflection.</li>
+                <li><strong>Chaos Magicians</strong> who integrate the I Ching into sigil work and paradigm-shifting practices.</li>
+            </ul>
             
-            <p>Download <strong>I Ching Oracle</strong> now and start deciphering the changes in your destiny.</p>
+            <h2>Technical Specifications</h2>
+            <ul>
+                <li>Mathematically faithful three-coin simulation engine</li>
+                <li>Jetpack Compose UI — minimal, elegant, fluid</li>
+                <li>Fully offline — no internet required</li>
+                <li>5 languages: EN, ES, FR, DE, IT</li>
+                <li>Zero trackers, zero ads, zero data collection</li>
+                <li>Android 6.0+ | One-time purchase — $3.99 USD</li>
+            </ul>
+            
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>How is the hexagram generated?</strong><br>The app uses a precise digital simulation of the traditional three-coin method. Each line is calculated individually for an authentic, randomized result every time.</p>
+            <p><strong>Can I save and revisit my readings?</strong><br>Yes. Complete reading history is stored privately on your device. Review past hexagrams and reflections whenever you wish.</p>
+            <p><strong>Do I need prior knowledge of the I Ching?</strong><br>Not at all. The app includes a full educational guide explaining hexagrams, changing lines, and interpretation — perfect for beginners.</p>
+            <p><strong>Does the app work offline?</strong><br>Yes. All features work without an internet connection. Your practice stays private and always accessible.</p>
+            
+            <h2>One-Time Purchase. Lifetime Access.</h2>
+            <p>Download <strong>I Ching Oracle</strong> now for a single payment of <strong>$3.99 USD</strong>. No subscriptions, no in-app purchases, no recurring fees. The answer is already within you — let the I Ching reveal it.</p>
         `
     },
     {
@@ -282,19 +336,46 @@ const appsData = [
             "../assets/images/msg4.PNG"
         ],
         detailedDescription: `
-            <h3>Your Will. Encoded. Sealed. Unleashed.</h3>
-            <p>The <strong>Magick Chaos Sigil Generator</strong> is the most advanced digital sigil engine ever created—a cybernetic ritual tool that fuses the esoteric techniques of Austin Osman Spare with cryptographic entropy and ancient occult alphabets.</p>
+            <h2>What Is Magick Chaos Sigil Generator? The Ultimate Digital Sigil Engine</h2>
+            <p>The <strong>Magick Chaos Sigil Generator</strong> (also known as Chaos Sigilizer) is the most advanced digital sigil engine ever created — a cybernetic ritual tool that fuses the esoteric techniques of <strong>Austin Osman Spare</strong> with cryptographic entropy and ancient occult alphabets. Every sigil is a unique mathematical anomaly, a one-of-a-kind manifestation of your Will that can never be replicated.</p>
             
-            <h4>Key Features for the Modern Occultist</h4>
+            <h2>Key Features for the Modern Occultist</h2>
             <ul>
-                <li><strong>Advanced Sigil Creation:</strong> Transform any intention into a visual sigil using multiple tracing methods.</li>
-                <li><strong>6 Ancient Occult Alphabets:</strong> Runic, Egyptian Hieroglyphs, Hebrew, Arabic, Greek, and Cyrillic.</li>
-                <li><strong>Planetary Kameas:</strong> Align your sigil with Saturn, Jupiter, Mars, Sun, Venus, Mercury, or the Moon.</li>
-                <li><strong>Cryptographic Entropy Engine:</strong> True randomization ensures every sigil is a unique chaotic creation.</li>
-                <li><strong>Visual Flash Ritual:</strong> Seal your sigil with a one-click gnostic burst.</li>
+                <li><strong>Advanced Sigil Creation:</strong> Transform any intention into a visual sigil using multiple tracing methods including Wheel and Mantra styles. The algorithm handles geometry so you can focus on intent.</li>
+                <li><strong>6 Ancient Occult Alphabets:</strong> Infuse your sigils with historical power — Runic (Futhark), Egyptian Hieroglyphs, Hebrew, Arabic, Greek, and Cyrillic. Each alphabet carries its own vibrational signature.</li>
+                <li><strong>Planetary Kameas (Magic Squares):</strong> Structure your sigil within the astrological power of Saturn, Jupiter, Mars, Sun, Venus, Mercury, or the Moon to align with specific cosmic forces.</li>
+                <li><strong>Cryptographic Entropy Engine:</strong> True randomization based on your input ensures every sigil is a unique chaotic creation — perfect for cybermancy and chaos magick.</li>
+                <li><strong>Visual Flash Ritual:</strong> Seal your sigil with a one-click gnostic burst and save it directly to your gallery. The ritual is complete.</li>
+                <li><strong>Ritual Environment UI:</strong> Celestial Gold vectors on Deep Obsidian background — a focused, minimal interface designed to hold gnosis without distraction.</li>
             </ul>
             
-            <p>Download the <strong>Magick Chaos Sigil Generator</strong> now and encode your Will into reality.</p>
+            <h2>Who Is This For?</h2>
+            <ul>
+                <li><strong>Chaos Magicians</strong> practicing sigilization, cybermancy, and thought-form creation.</li>
+                <li><strong>Witches & Occultists</strong> who want to combine traditional alphabets with modern cryptographic power.</li>
+                <li><strong>Technomancers</strong> who see the screen as a portal and code as a spell.</li>
+            </ul>
+            
+            <h2>Technical Specifications</h2>
+            <ul>
+                <li>Cryptographic entropy sigil generation engine</li>
+                <li>6 ancient alphabets + 7 planetary Kameas</li>
+                <li>Multiple tracing methods (Wheel, Mantra, etc.)</li>
+                <li>Visual flash ritual for gnostic charging</li>
+                <li>5 languages: EN, ES, DE, IT, FR</li>
+                <li>Fully offline — all processing on-device</li>
+                <li>Zero trackers, zero ads</li>
+                <li>Android 6.0+ | One-time purchase — $3.99 USD</li>
+            </ul>
+            
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>How is the sigil generated?</strong><br>You write your intention. The app uses cryptographic entropy derived from your text to create a unique geometric seal. Every sigil is mathematically one-of-a-kind.</p>
+            <p><strong>Can I use traditional occult alphabets?</strong><br>Yes. The app supports Runic, Egyptian Hieroglyphs, Hebrew, Arabic, Greek, and Cyrillic scripts, each adding its own layer of symbolic power.</p>
+            <p><strong>What are Planetary Kameas?</strong><br>They are magic squares associated with the seven classical planets. Integrating them aligns your sigil with specific astrological energies.</p>
+            <p><strong>Is this suitable for beginners?</strong><br>Absolutely. While the technology is advanced, the interface is intuitive. Tutorials are included in multiple languages.</p>
+            
+            <h2>One-Time Purchase. Lifetime Access.</h2>
+            <p>Download the <strong>Magick Chaos Sigil Generator</strong> now for a single payment of <strong>$3.99 USD</strong>. No subscriptions, no in-app purchases. Encode your Will into reality today.</p>
         `
     },
     {
@@ -316,22 +397,48 @@ const appsData = [
             "../assets/images/ta3.png"
         ],
         detailedDescription: `
-            <h3>The Full Rider-Waite Tarot in Your Pocket—No Internet, No Ads, No Distractions.</h3>
-            <p>The <strong>Unofficial Rider Waite Tarot</strong> brings every card, every symbol, and every spread to your device in a premium, offline experience designed for deep contemplation.</p>
+            <h2>What Is Unofficial Rider Waite Tarot? Your Complete Offline Tarot Companion</h2>
+            <p>The Rider-Waite deck is the most iconic tarot system in the world — a visual language of archetypes that has guided readers for over a century. The <strong>Unofficial Rider Waite Tarot</strong> brings every card, every symbol, and every spread to your device in a premium, offline experience designed for deep contemplation. No ads. No subscriptions. No internet required. Just you, the cards, and the wisdom they hold.</p>
             
-            <h4>Complete Deck, Complete Wisdom</h4>
+            <h2>Complete Deck, Complete Wisdom</h2>
             <ul>
-                <li><strong>Full 78-Card Rider-Waite Deck:</strong> Major Arcana and four suits.</li>
-                <li><strong>Upright & Reversed Meanings:</strong> Detailed interpretations for every card.</li>
-                <li><strong>6 Professional Spreads:</strong> Card of the Day, Past-Present-Future, Celtic Cross, and more.</li>
-                <li><strong>Searchable Encyclopedia:</strong> Built-in tarot reference with cross-referenced symbolism.</li>
-                <li><strong>Reading History:</strong> Every reading is saved locally.</li>
+                <li><strong>Full 78-Card Rider-Waite Deck:</strong> Major Arcana and four suits — Cups, Pentacles, Swords, Wands. Every card rendered in high-quality illustration.</li>
+                <li><strong>Upright & Reversed Meanings:</strong> Each card includes detailed upright and reversed interpretations, keywords, and symbolic breakdowns.</li>
+                <li><strong>6 Professional Spreads:</strong> Card of the Day, Past-Present-Future, Grand Cross, Celtic Cross, and more. Enter a question and receive structured insights instantly.</li>
+                <li><strong>Searchable Encyclopedia:</strong> Built-in tarot reference with fast search, cross-referenced symbolism, and multilingual terminology.</li>
+                <li><strong>Reading History:</strong> Every reading is saved locally. Revisit past spreads and track your growth.</li>
+                <li><strong>Customizable Card Backs:</strong> Choose from multiple designs to personalize your experience.</li>
             </ul>
             
-            <h4>Available in 7 Languages</h4>
-            <p>English, Spanish, French, German, Italian, Hindi, and Chinese.</p>
+            <h2>Available in 7 Languages</h2>
+            <p>English, Spanish, French, German, Italian, Hindi, and Chinese (EN/ES/FR/DE/IT/HI/ZH). Card names, explanations, and interface labels adapt to your language.</p>
             
-            <p>Download the <strong>Unofficial Rider Waite Tarot</strong> now and begin your mindful tarot practice.</p>
+            <h2>Who Is This Tarot App For?</h2>
+            <ul>
+                <li><strong>Tarot Beginners</strong> who want to learn the Rider-Waite system with clear meanings and guided spreads.</li>
+                <li><strong>Experienced Readers</strong> who need a reliable, portable deck with multiple spread options.</li>
+                <li><strong>Multilingual Seekers</strong> who want to study tarot across languages.</li>
+            </ul>
+            
+            <h2>Technical Specifications</h2>
+            <ul>
+                <li>Full 78-card Rider-Waite deck</li>
+                <li>6 professional spread layouts</li>
+                <li>7 language translations</li>
+                <li>Searchable encyclopedia with cross-referenced symbolism</li>
+                <li>Fully offline — no internet required</li>
+                <li>Zero ads, zero trackers, zero data collection</li>
+                <li>Android 6.0+ | One-time purchase — $9.99 USD</li>
+            </ul>
+            
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Does this app require an internet connection?</strong><br>No. The entire deck, encyclopedia, and all features work completely offline. Your practice stays private.</p>
+            <p><strong>What spreads are available?</strong><br>The app includes Card of the Day, Past-Present-Future, Grand Cross, and Celtic Cross, among others.</p>
+            <p><strong>Can I save my readings?</strong><br>Yes. All readings are saved to your local history for later reflection.</p>
+            <p><strong>Is this the official Rider-Waite deck?</strong><br>This is an unofficial tribute featuring high-quality illustrations inspired by the Rider-Waite tradition.</p>
+            
+            <h2>One-Time Purchase. Lifetime Access.</h2>
+            <p>Download the <strong>Unofficial Rider Waite Tarot</strong> now for a single payment of <strong>$9.99 USD</strong>. No subscriptions, no in-app purchases. The cards are ready. Are you?</p>
         `
     },
     {
@@ -349,22 +456,50 @@ const appsData = [
         },
         screenshots: [],
         detailedDescription: `
-            <h3>What If You Could Wake Up Inside Your Dreams Tonight?</h3>
-            <p><strong>Dream Machine: Lucid Dreaming</strong> gives you the keys to the cockpit of your own subconscious. This is a complete lucid dreaming training system designed to take you from zero to fully conscious dreamer.</p>
+            <h2>What Is Dream Machine? Your Complete Lucid Dreaming Training System</h2>
+            <p>Every night, your mind builds entire universes while you sleep — worlds where you can fly, talk to archetypal beings, rehearse real-life skills, and explore the architecture of your own subconscious. Most people experience these wonders as passive observers. <strong>Dream Machine: Lucid Dreaming</strong> gives you the keys to the cockpit. This is a complete lucid dreaming training system designed to take you from zero to fully conscious dreamer using evidence-based induction protocols, intelligent dream journaling, and precision reality-check drills.</p>
             
-            <h4>Key Features for the Conscious Dreamer</h4>
+            <h2>Key Features for the Conscious Dreamer</h2>
             <ul>
-                <li><strong>Intelligent Dream Journal:</strong> Log your dreams with a clean, fast interface.</li>
-                <li><strong>Reality Check Drills:</strong> Customizable reality checks with random vibration prompts.</li>
-                <li><strong>Binaural Beats & Isochronic Tones:</strong> Scientifically calibrated frequencies for REM induction.</li>
-                <li><strong>MILD & WILD Induction Protocols:</strong> Step-by-step guides for the two most effective techniques.</li>
-                <li><strong>Dream Statistics & Analytics:</strong> Track your lucidity rate over time.</li>
+                <li><strong>Intelligent Dream Journal:</strong> Log your dreams with a clean, fast interface designed for groggy 3 AM entries. Tag dreams by type (lucid, prophetic, nightmare), rate recall quality, and search your entire history to spot recurring symbols.</li>
+                <li><strong>Reality Check Drills:</strong> Train your critical faculty with customizable reality checks — nose pinch, hand inspection, digital clock reading. Random vibration prompts throughout the day until checking reality becomes second nature.</li>
+                <li><strong>Binaural Beats & Isochronic Tones:</strong> Scientifically calibrated frequencies for REM induction, theta-wave deepening, and sleep onset. Built-in timer with fade-out.</li>
+                <li><strong>MILD & WILD Induction Protocols:</strong> Step-by-step guides for the two most effective lucid dreaming techniques. Includes customizable affirmation loops, visualization cues, and WBTB alarms.</li>
+                <li><strong>Dream Statistics & Analytics:</strong> Track your lucidity rate, dream recall percentage, and induction method success over time. Clean data visualizations show your progress.</li>
+                <li><strong>Lucid Dreaming Encyclopedia:</strong> Built-in reference covering incubation techniques, stabilization methods, dream signs, and advanced practices.</li>
             </ul>
             
-            <h4>Lucid Dreaming for Chaos Magicians</h4>
-            <p>In Chaos Magick, the dream state is a primary vector for sigil firing, servitor communication, and astral temple work.</p>
+            <h2>Lucid Dreaming for Chaos Magicians</h2>
+            <p>In Chaos Magick, the dream state is a primary vector for sigil firing, servitor communication, and astral temple work. Dream Machine provides the structure to turn every night into a magical working session. Use the dream journal to record gnostic states, set dream sigils using MILD affirmations, and explore the astral plane with confidence.</p>
             
-            <p>Download <strong>Dream Machine: Lucid Dreaming</strong> now and take the reins of your night.</p>
+            <h2>Who Is Dream Machine For?</h2>
+            <ul>
+                <li><strong>Beginners</strong> who want a structured, science-backed path to their first lucid dream.</li>
+                <li><strong>Experienced Lucid Dreamers</strong> looking for a reliable journal, advanced analytics, and induction automation.</li>
+                <li><strong>Chaos Magicians & Cybermancers</strong> who use the dream state for sigil charging and astral projection.</li>
+                <li><strong>Meditators & Consciousness Hackers</strong> exploring the boundaries of awareness.</li>
+            </ul>
+            
+            <h2>Technical Specifications</h2>
+            <ul>
+                <li>Intelligent dream journal with tagging and search</li>
+                <li>Customizable reality check system with vibration prompts</li>
+                <li>Binaural beats + isochronic tones audio engine</li>
+                <li>MILD, WILD, and WBTB protocol automation</li>
+                <li>Dream statistics with visual analytics</li>
+                <li>Fully offline — all features work without internet</li>
+                <li>Zero ads, zero trackers, zero data collection</li>
+                <li>Android 6.0+ | One-time purchase — $3.99 USD</li>
+            </ul>
+            
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>How long does it take to have a lucid dream?</strong><br>Most users report their first lucid dream within 1-3 weeks of consistent practice. Key factors are regular journaling, daily reality checks, and following the MILD protocol before sleep.</p>
+            <p><strong>Does the app work offline?</strong><br>Yes. All features — journal, reality checks, encyclopedia, and induction protocols — work completely offline. Binaural beats audio is included locally.</p>
+            <p><strong>Are binaural beats scientifically proven?</strong><br>Research suggests binaural beats in theta (4-8 Hz) and delta (1-4 Hz) ranges promote relaxation and sleep onset conducive to lucid dreaming.</p>
+            <p><strong>Can I use this for astral projection?</strong><br>While designed primarily for lucid dreaming, many practitioners use the same induction protocols (WILD, WBTB) as gateways for out-of-body experiences.</p>
+            
+            <h2>One-Time Purchase. Lifetime Access.</h2>
+            <p>Download <strong>Dream Machine: Lucid Dreaming</strong> now for a single payment of <strong>$3.99 USD</strong>. No subscriptions, no in-app purchases. The gates of sleep are yours to command.</p>
         `
     },
     {
@@ -382,30 +517,54 @@ const appsData = [
         },
         screenshots: [],
         detailedDescription: `
-            <h3>Looking for Scientific Rigor and Total Privacy in Your Astrological Work?</h3>
-            <p><strong>Astral Lab</strong> is a powerful natal chart and astrology tool designed for professional astrologers and serious enthusiasts who refuse to compromise on precision. Unlike other astrology apps, Astral Lab runs <strong>100% offline</strong>. All complex mathematical calculations are performed directly on your device, ensuring that the sovereignty of your data is always our highest priority.</p>
+            <h2>What Is Astral Lab? The Professional Offline Natal Chart & Astrology App</h2>
+            <p><strong>Astral Lab</strong> is a powerful natal chart and astrology tool designed for professional astrologers and serious enthusiasts who refuse to compromise on precision. Unlike other astrology apps that send your birth data to external servers, Astral Lab runs <strong>100% offline</strong> — all complex mathematical calculations are performed directly on your device using scientific-grade VSOP87 and ELP-2000 algorithms.</p>
             
-            <h4>Why Choose Astral Lab?</h4>
+            <h2>Why Choose Astral Lab?</h2>
             <ul>
                 <li><strong>Absolute Privacy (Offline):</strong> The app requires zero internet permission. Your birth data, location, and saved profiles never leave your phone. No tracking, no telemetry, no external servers.</li>
-                <li><strong>Scientific Precision:</strong> Powered by the high-accuracy VSOP87 and ELP-2000 algorithms. We guarantee planetary positions that match NASA ephemerides perfectly.</li>
-                <li><strong>One-Time Purchase:</strong> No monthly subscriptions or hidden fees. Astral Lab is a single purchase, completely ad-free, with all premium features unlocked from day one.</li>
-                <li><strong>Modern Material 3 Interface:</strong> Enjoy a premium, fluid user experience with smooth navigation, dynamic dark mode, and crisp visual aspect grids.</li>
+                <li><strong>Scientific Precision:</strong> Powered by high-accuracy VSOP87 and ELP-2000 algorithms. Planetary positions match NASA ephemerides perfectly.</li>
+                <li><strong>One-Time Purchase:</strong> No monthly subscriptions. Astral Lab is a single purchase, completely ad-free, with all premium features unlocked from day one.</li>
+                <li><strong>Modern Material 3 Interface:</strong> Premium, fluid user experience with smooth navigation, dynamic dark mode, and crisp visual aspect grids.</li>
             </ul>
             
-            <h4>Key Features</h4>
+            <h2>Key Features</h2>
             <ul>
-                <li><strong>Instant Natal Charts:</strong> Detailed, high-precision natal chart calculations for any date, time, and geographic location.</li>
-                <li><strong>Real-Time Transits:</strong> Track current planetary movements and easily overlay them on any natal chart.</li>
-                <li><strong>Global Offline Database:</strong> Access thousands of cities worldwide with accurate historical timezone data — no GPS or mobile data required.</li>
+                <li><strong>Instant Natal Charts:</strong> High-precision natal chart calculations for any date, time, and geographic location worldwide.</li>
+                <li><strong>Real-Time Transits:</strong> Track current planetary movements and overlay them on any natal chart instantly.</li>
+                <li><strong>Global Offline Database:</strong> Access thousands of cities with accurate historical timezone data — no GPS or mobile data required.</li>
                 <li><strong>Advanced Aspect Grids:</strong> Complete, intuitive analysis of planetary relationships and angular distances.</li>
-                <li><strong>Custom Profile Management:</strong> Save, organize, and manage unlimited natal charts for family, friends, or clients.</li>
+                <li><strong>Custom Profile Management:</strong> Save and manage unlimited natal charts for family, friends, or clients.</li>
             </ul>
             
-            <h4>Designed for Professionals on the Move</h4>
-            <p>Built for global users, Western astrologers, and mobile professionals who need a reliable, high-quality astrology and horoscope tool that works offline. It is perfect for remote areas, frequent travelers, or maintaining complete client confidentiality during consultations.</p>
+            <h2>Who Is Astral Lab For?</h2>
+            <ul>
+                <li><strong>Professional Astrologers</strong> who need reliable, accurate chart calculations for client consultations.</li>
+                <li><strong>Astrology Enthusiasts</strong> who want deep chart analysis without monthly subscription fees.</li>
+                <li><strong>Privacy-Conscious Users</strong> who refuse to upload sensitive birth data to cloud servers.</li>
+                <li><strong>Traveling Practitioners</strong> who need offline access in remote areas or during travel.</li>
+            </ul>
             
-            <p><strong>Take full control of your astrological work with a professional tool that respects your privacy, your time, and your data. Download Astral Lab today!</strong></p>
+            <h2>Technical Specifications</h2>
+            <ul>
+                <li>VSOP87 + ELP-2000 planetary calculations (NASA-grade precision)</li>
+                <li>Complete aspect grid with orbs and angular relationships</li>
+                <li>Real-time transit tracking and overlay</li>
+                <li>Global city database with historical timezone data</li>
+                <li>Unlimited profile storage</li>
+                <li>100% offline — zero internet permissions required</li>
+                <li>Zero ads, zero trackers, zero data collection</li>
+                <li>Android 6.0+ | One-time purchase — $6.99 USD</li>
+            </ul>
+            
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Does Astral Lab require an internet connection?</strong><br>No. Astral Lab is designed to work 100% offline. The app requires zero internet permissions. All calculations happen on your device.</p>
+            <p><strong>How accurate are the planetary positions?</strong><br>Astral Lab uses the same VSOP87 and ELP-2000 algorithms used by professional ephemeris software. Positions match NASA data perfectly.</p>
+            <p><strong>Is there a subscription fee?</strong><br>No. Astral Lab is a one-time purchase at $6.99 USD. All features are unlocked permanently. No subscriptions, no in-app purchases.</p>
+            <p><strong>Can I save charts for multiple people?</strong><br>Yes. Astral Lab supports unlimited profiles. Save charts for family, friends, or clients and switch between them instantly.</p>
+            
+            <h2>One-Time Purchase. Lifetime Access.</h2>
+            <p>Download <strong>Astral Lab</strong> now for a single payment of <strong>$6.99 USD</strong>. No subscriptions, no hidden fees. Take full control of your astrological work with a professional tool that respects your privacy.</p>
         `
     },
     {
