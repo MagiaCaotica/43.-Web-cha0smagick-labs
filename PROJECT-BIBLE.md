@@ -864,8 +864,8 @@ El sitio se despliega automáticamente a GitHub Pages al hacer push a la rama pr
 
 | Métrica | Cantidad |
 |---------|----------|
-| Páginas HTML totales | ~111 |
-| Artículos del blog | 79 |
+| Páginas HTML totales | ~131 |
+| Artículos del blog | 99 |
 | Landing pages de apps | 10 |
 | Landing pages de libros | 7 |
 | Herramientas gratuitas | 10 |
