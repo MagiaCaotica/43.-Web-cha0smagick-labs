@@ -35,7 +35,10 @@ const appAltText = {
     'iching-oracle': 'I Ching Oracle — Book of Changes divination app with authentic three-coin method',
     'chaos-sigil-generator': 'Magick Chaos Sigil Generator — cryptographic sigil tool with ancient alphabets',
     'unofficial-rider-waite-tarot': 'Unofficial Rider Waite Tarot — complete offline tarot deck for Android',
-    'dream-machine': 'Dream Machine Lucid Dreaming — induction, journal & reality checks app'
+    'dream-machine': 'Dream Machine Lucid Dreaming — induction, journal & reality checks app',
+    'astral-lab': 'Astral Lab Natal Chart & Astrology — natal chart generator for Android',
+    'eerieroads': 'Eerie Roads Mysterious Paths — intention manifestation map & chaos GPS for Android',
+    'lucid-dream': 'Lucid Dream Astral Projection — binaural beats, dream journal & astral projection app for Android'
 };
 
 // Function to render the apps grid on the home page
@@ -66,7 +69,7 @@ function renderAppsGrid() {
                 ${buildPictureHtml(app.image, altText, 'app-image img-' + app.id.replace(/-/g, '-'), loadingStrategy.includes('fetchpriority') ? 'eager' : 'lazy', '300', '220')}
             </div>
             <div class="card-content">
-                <h4>${app.name}${(app.id === 'psi-gym' || app.id === 'dream-machine' || app.id === 'astral-lab' || app.id === 'eerieroads') ? ' <span class="discount-badge">NEW!</span>' : ''}</h4>
+                <h4>${app.name}${(app.id === 'psi-gym' || app.id === 'dream-machine' || app.id === 'astral-lab' || app.id === 'eerieroads' || app.id === 'lucid-dream') ? ' <span class="discount-badge">NEW!</span>' : ''}</h4>
                 <p>${app.description}</p>
                 <div class="card-footer">
                     <div class="status-container">
@@ -412,7 +415,7 @@ function renderAppDetails() {
         <div class="detail-header-layout">
             ${buildPictureHtml('../' + item.image, item.name, 'detail-main-image', 'lazy')}
             <div class="detail-header-info">
-                <h2>${item.name}${(item.id === 'psi-gym' || item.id === 'dream-machine' || item.id === 'astral-lab' || item.id === 'eerieroads' || item.id === 'codex-chaoticus-pdf' || item.id === 'tarot-chaos-pdf') ? ' <span class="discount-badge">NEW!</span>' : ''}</h2>
+                <h2>${item.name}${(item.id === 'psi-gym' || item.id === 'dream-machine' || item.id === 'astral-lab' || item.id === 'eerieroads' || item.id === 'lucid-dream' || item.id === 'codex-chaoticus-pdf' || item.id === 'tarot-chaos-pdf') ? ' <span class="discount-badge">NEW!</span>' : ''}</h2>
                 <p class="lead-text">${item.description}</p>
                 ${item.author ? `<div class="author-info">AUTHOR: ${item.author}</div>` : ''}
                 ${item.language ? `

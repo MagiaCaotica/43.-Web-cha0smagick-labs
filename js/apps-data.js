@@ -679,6 +679,65 @@ const appsData = [
             <p><strong>Eerie Roads</strong> is available for a single payment of <strong>$9.99 USD</strong>. No subscriptions, no in-app purchases, no recurring fees. All features are unlocked from the moment of purchase. This is chaos magick applied to commerce: one transaction, permanent access, zero recurring obligations.</p>
             <p>The map is alive. The coordinates are forming. The synchronicities are already converging on the points where your intention meets the world. <strong>Download Eerie Roads now and take the first step into the living map of your own manifestation.</strong></p>
         `
+    },
+    {
+        id: "lucid-dream",
+        name: "Lucid Dream: Astral Projection",
+        price: "$3.99 USD",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer",
+        status: "available",
+        description: "Aprende a tener sueños lúcidos, lleva un registro de tus sueños y domina la proyección astral. 🌙",
+        image: "assets/images/luciddreamer.png",
+        seo: {
+            title: "Lucid Dream: Astral Projection & Lucid Dreaming App | Binaural Beats, Dream Journal for Android",
+            description: "Download Lucid Dream — the complete lucid dreaming and astral projection app for Android. Binaural beats engine, unlimited dream journal, advanced stats, hermetic rituals, environmental sensors, and gamification. One-time purchase, no subscriptions.",
+            keywords: "lucid dreaming, astral projection, lucid dream app, binaural beats, dream journal, dream stats, hermetic rituals, environmental sensors, gamification, dream recall, oneironautics, consciousness, sleep, meditation, buy esoteric app, chaos magick app, android occult app, cybermancy, dream magic, sleep tracker"
+        },
+        screenshots: [],
+        detailedDescription: `
+            <h2>Unlock the Power of Your Dreams</h2>
+            <p><strong>Lucid Dream</strong> is your complete nightly kit for mastering lucid dreaming and astral projection. Whether you are a beginner taking your first steps into the subconscious or an experienced astral projector perfecting your technique, this app guides you through every phase of the night.</p>
+            
+            <h2>Key Features for the Conscious Dreamer</h2>
+            <ul>
+                <li><strong>Advanced Binaural Beat Engine:</strong> Experience real-time brainwave synchronization designed to induce altered states of consciousness. Our audio engine uses alpha pulses (deep relaxation), theta waves (hypnagogic state), delta waves (deep sleep), and gamma frequencies (REM lucidity triggers). The engine progresses automatically through your sleep cycle.</li>
+                <li><strong>Unlimited Dream Journal:</strong> Record every experience with a fully customizable dream journal. Track your lucidity levels, vibrations, and specific dream types including astral projection, lucid dreams, sleep paralysis, and false awakenings. Search, filter, and review your entire dream history easily.</li>
+                <li><strong>Advanced Statistics & Graphs:</strong> Track your progress with interactive charts and dashboards. Analyze your lucidity trends, dream type distribution, weekly activity heatmaps, and correlations with sleep duration. Understand your dream patterns and improve your practice.</li>
+                <li><strong>Hermetic Ritual System:</strong> Align your mind and space before sleep with a guided 9-step preparation ritual. Cultivate the discipline needed for conscious dreaming, complete your nightly steps, earn XP, and generate powerful momentum toward astral mastery.</li>
+                <li><strong>Smart Environmental Context:</strong> Automatic sensor data collection records room temperature, light, humidity, atmospheric pressure, and your activity level. Understand precisely how your physical environment affects dream recall and sleep quality.</li>
+                <li><strong>Gamification & Progression:</strong> Stay motivated on your path. Unlock over 30 unique achievements, maintain practice streaks, and earn XP to level up. Every dream you record contributes to your astral profile.</li>
+                <li><strong>Multilingual Support:</strong> Fully localized in English, Spanish, French, German, Italian, and Portuguese.</li>
+            </ul>
+            
+            <h2>Why Choose Lucid Dream?</h2>
+            <ul>
+                <li><strong>One-Time Purchase:</strong> No monthly subscriptions, no annoying ads, no features locked behind paywalls.</li>
+                <li><strong>100% Offline:</strong> No internet connection required for any core features or the audio engine.</li>
+                <li><strong>Privacy First:</strong> Your subconscious thoughts are yours alone. All data is stored securely on your device.</li>
+                <li><strong>No Hardware Restrictions:</strong> If your device lacks physical ambient sensors, an optional weather API ensures data accuracy.</li>
+            </ul>
+            
+            <h2>What You Get</h2>
+            <ul>
+                <li>✓ Complete binaural beat engine with automatic sleep cycle progression</li>
+                <li>✓ Unlimited dream journal entries with no storage limits</li>
+                <li>✓ Full analytics dashboard with all charts unlocked</li>
+                <li>✓ Guided 9-step hermetic ritual system</li>
+                <li>✓ Smart environmental sensor integration</li>
+                <li>✓ Gamified leveling system with 30+ unlockable achievements</li>
+                <li>✓ All future updates included free</li>
+            </ul>
+            
+            <h2>Technical Requirements</h2>
+            <ul>
+                <li>Android 6.0 or higher</li>
+                <li>Headphones recommended for binaural beats</li>
+                <li>Optional: ambient light and pressure sensors for environmental data</li>
+            </ul>
+            
+            <h2>One-Time Purchase. Lifetime Access.</h2>
+            <p><strong>Lucid Dream</strong> is available for a single payment of <strong>$3.99 USD</strong>. No subscriptions, no in-app purchases, no recurring fees. Take full control of your dreams. The portal awaits.</p>
+        `
     }
 ];
 
