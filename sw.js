@@ -13,8 +13,8 @@ const PRECACHE_URLS = [
   '/manifest.json',
   '/assets/icons/icon-192.png',
   '/assets/icons/icon-512.png',
-  '/js/apps-data.min.js?v=20260703',
-  '/js/app-render.min.js?v=20260703'
+  '/js/apps-data.min.js?v=20260724',
+  '/js/app-render.min.js?v=20260724'
 ];
 
 // Install: precache static assets
