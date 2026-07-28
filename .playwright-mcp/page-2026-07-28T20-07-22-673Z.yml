@@ -1,0 +1,199 @@
+- generic [active] [ref=f260e1]:
+  - generic [ref=f260e2]:
+    - list [ref=f260e4]:
+      - link "Dashboard" [ref=f260e5] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/dashboard
+      - link "Subscribers" [ref=f260e11] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/subscribers
+      - link "Campaigns" [ref=f260e17] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+      - link "Automations" [ref=f260e23] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/automations/status/workflows
+      - link "Forms" [ref=f260e31] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/forms
+      - link "Sites" [ref=f260e37] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/sites
+      - link "Products New" [ref=f260e43] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/products
+        - generic [ref=f260e47]:
+          - generic [ref=f260e48]: Products
+          - generic [ref=f260e49]: New
+      - listitem [ref=f260e52] [cursor=pointer]:
+        - generic [ref=f260e56]: More
+    - generic [ref=f260e59]:
+      - generic [ref=f260e61]:
+        - link [ref=f260e64] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/resources
+        - generic [ref=f260e79] [cursor=pointer]:
+          - generic [ref=f260e80]: Cha0smagick LABS
+          - generic [ref=f260e81]: "Magia Caotica: Magia del Caos Práctica"
+      - main [ref=f260e87]:
+        - generic [ref=f260e90]:
+          - navigation "Breadcrumb" [ref=f260e91]:
+            - list [ref=f260e92]:
+              - listitem [ref=f260e93]:
+                - link "Automations" [ref=f260e94] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/automations/status/workflows
+              - listitem [ref=f260e95]:
+                - link "EN Lead Magnet - Chaos Magick Guide Workflow" [ref=f260e99] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=f260e100]:
+            - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=1] [ref=f260e102]
+            - generic [ref=f260e104]:
+              - button "Preview" [ref=f260e105] [cursor=pointer]
+              - button "Pause" [ref=f260e107] [cursor=pointer]
+              - button [ref=f260e114] [cursor=pointer]
+          - generic [ref=f260e118]: Overview
+        - generic [ref=f260e131]:
+          - generic [ref=f260e134]:
+            - heading "Workflow overview" [level=2] [ref=f260e137]
+            - generic [ref=f260e141]:
+              - generic [ref=f260e145]:
+                - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=3] [ref=f260e148]
+                - generic [ref=f260e149]:
+                  - generic [ref=f260e153]:
+                    - text: When subscriber completes a form
+                    - link "EN Lead Magnet - Chaos Magick Guide" [ref=f260e155] [cursor=pointer]:
+                      - /url: /forms/194257832689796115/overview
+                  - generic [ref=f260e157]: Created 3 hours ago
+              - generic [ref=f260e161]:
+                - generic [ref=f260e162]:
+                  - generic [ref=f260e163]: Started
+                  - generic [ref=f260e165]: "0"
+                - generic [ref=f260e166]:
+                  - generic [ref=f260e167]: In progress
+                  - link "0" [ref=f260e170] [cursor=pointer]:
+                    - /url: /automations/194259024266397145/activity?filter[status]=active
+                - generic [ref=f260e172]:
+                  - generic [ref=f260e173]: Completed
+                  - link "0" [ref=f260e176] [cursor=pointer]:
+                    - /url: /automations/194259024266397145/activity?filter[status]=completed
+          - generic [ref=f260e183]:
+            - generic [ref=f260e185]:
+              - heading "Performance overview" [level=2] [ref=f260e186]
+              - generic [ref=f260e187]:
+                - button "Last 30 days" [ref=f260e190] [cursor=pointer]
+                - button "Export" [ref=f260e197] [cursor=pointer]
+            - generic [ref=f260e202]:
+              - generic [ref=f260e203]:
+                - generic [ref=f260e207] [cursor=pointer]:
+                  - generic [ref=f260e208]: Engagement
+                  - button "Set metrics" [ref=f260e217]
+                - generic [ref=f260e224]:
+                  - generic [ref=f260e225]:
+                    - generic [ref=f260e227]:
+                      - generic [ref=f260e228]: Open rate
+                      - generic [ref=f260e231]: 0%
+                    - generic [ref=f260e235]:
+                      - generic [ref=f260e236]: Click rate
+                      - generic [ref=f260e239]: 0%
+                    - generic [ref=f260e243]:
+                      - generic [ref=f260e244]: Click to open rate
+                      - generic [ref=f260e252]: 0%
+                  - generic [ref=f260e256]:
+                    - generic [ref=f260e257]:
+                      - generic [ref=f260e258]: Clicks
+                      - generic [ref=f260e261]: "0"
+                    - generic [ref=f260e262]:
+                      - generic [ref=f260e263]: Opens
+                      - generic [ref=f260e266]: "0"
+              - generic [ref=f260e267]:
+                - generic [ref=f260e271] [cursor=pointer]:
+                  - generic [ref=f260e272]: Deliverability
+                  - button "Set metrics" [ref=f260e281]
+                - generic [ref=f260e288]:
+                  - generic [ref=f260e289]:
+                    - generic [ref=f260e291]:
+                      - generic [ref=f260e292]: Sent
+                      - generic [ref=f260e295]: "0"
+                    - generic [ref=f260e299]:
+                      - generic [ref=f260e300]: Delivery rate
+                      - generic [ref=f260e308]: 0%
+                    - generic [ref=f260e312]:
+                      - generic [ref=f260e313]: Hard bounce rate
+                      - generic [ref=f260e316]: 0%
+                  - generic [ref=f260e319]:
+                    - generic [ref=f260e320]:
+                      - generic [ref=f260e321]:
+                        - generic [ref=f260e322]: Deliveries
+                        - generic [ref=f260e330]: "0"
+                      - generic [ref=f260e331]:
+                        - generic [ref=f260e332]: Hard bounces
+                        - generic [ref=f260e335]: "0"
+                    - generic [ref=f260e336]:
+                      - generic [ref=f260e337]:
+                        - generic [ref=f260e338]: Soft bounces
+                        - generic [ref=f260e341]: "0"
+                      - generic [ref=f260e342]:
+                        - generic [ref=f260e343]: Soft bounce rate
+                        - generic [ref=f260e346]: 0%
+                    - generic [ref=f260e347]:
+                      - generic [ref=f260e348]:
+                        - generic [ref=f260e349]: Spam complaints
+                        - generic [ref=f260e352]: "0"
+                      - generic [ref=f260e353]:
+                        - generic [ref=f260e354]: Spam complaints rate
+                        - generic [ref=f260e357]: 0%
+                    - generic [ref=f260e358]:
+                      - generic [ref=f260e359]:
+                        - generic [ref=f260e360]: Unsubscribes
+                        - generic [ref=f260e363]: "0"
+                      - generic [ref=f260e364]:
+                        - generic [ref=f260e365]: Unsubscribe rate
+                        - generic [ref=f260e368]: 0%
+          - generic [ref=f260e371]:
+            - generic [ref=f260e373]:
+              - heading "Workflow emails" [level=2] [ref=f260e374]
+              - generic [ref=f260e376]:
+                - generic [ref=f260e383] [cursor=pointer]:
+                  - generic [ref=f260e387]: "Sort by:"
+                  - generic [ref=f260e388]: Sending order
+                - button "More" [ref=f260e394] [cursor=pointer]
+            - generic [ref=f260e401]:
+              - table [ref=f260e406]:
+                - rowgroup [ref=f260e407]:
+                  - row [ref=f260e408]:
+                    - columnheader "Email" [ref=f260e409]
+                    - columnheader "Recipients" [ref=f260e411]
+                    - columnheader [ref=f260e413]
+                    - columnheader [ref=f260e417]
+                    - columnheader [ref=f260e421]
+                - rowgroup [ref=f260e425]:
+                  - row [ref=f260e426]:
+                    - cell "Your Free Chaos Magick Quickstart Guide On trigger Created 2026-07-28 Find in workflow View report" [ref=f260e427]:
+                      - generic [ref=f260e432]:
+                        - generic [ref=f260e433]: Your Free Chaos Magick Quickstart Guide
+                        - generic [ref=f260e434]:
+                          - generic [ref=f260e435]: On trigger
+                          - generic [ref=f260e437]: Created 2026-07-28
+                        - generic [ref=f260e438]:
+                          - button "Find in workflow" [ref=f260e439] [cursor=pointer]
+                          - link "View report" [ref=f260e441] [cursor=pointer]:
+                            - /url: /automations/194259024266397145/emails/194259208949990872/overview
+                    - cell "0" [ref=f260e443]
+                    - cell "0%" [ref=f260e445]
+                    - cell "0%" [ref=f260e447]
+                    - cell "0%" [ref=f260e449]
+              - separator [ref=f260e452]
+              - generic [ref=f260e455]:
+                - paragraph [ref=f260e457]: Showing 1 to 1 of 1 results
+                - generic [ref=f260e460]:
+                  - button "Previous" [disabled] [ref=f260e461]
+                  - button "Next" [disabled] [ref=f260e463]
+          - generic [ref=f260e465]:
+            - generic [ref=f260e468]:
+              - heading "Reading environment" [level=2] [ref=f260e471]
+              - paragraph [ref=f260e475]: Reading environments are still unknown.
+            - generic [ref=f260e478]:
+              - heading "Top email clients" [level=2] [ref=f260e481]
+              - table [ref=f260e487]:
+                - rowgroup [ref=f260e488]:
+                  - row [ref=f260e489]:
+                    - columnheader "Email client" [ref=f260e490]
+                    - columnheader "Subscribers" [ref=f260e491]
+                - rowgroup [ref=f260e492]:
+                  - row [ref=f260e493]:
+                    - cell "Top email clients are still unknown." [ref=f260e494]
+                    - cell "-" [ref=f260e495]
+  - iframe [ref=f260e497]:
+    

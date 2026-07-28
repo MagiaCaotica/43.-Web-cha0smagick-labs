@@ -1,0 +1,56 @@
+- generic [ref=f127e1]:
+  - generic [ref=f127e2]:
+    - list [ref=f127e4]:
+      - link "Dashboard" [ref=f127e5] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/dashboard
+      - link "Subscribers" [ref=f127e11] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/subscribers
+      - link "Campaigns" [ref=f127e17] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+      - link "Automations" [ref=f127e23] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/automations/status/workflows
+      - link "Forms" [ref=f127e31] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/forms
+      - link "Sites" [ref=f127e37] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/sites
+      - link "Products New" [ref=f127e43] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/products
+        - generic [ref=f127e47]:
+          - generic [ref=f127e48]: Products
+          - generic [ref=f127e49]: New
+      - listitem [ref=f127e52] [cursor=pointer]:
+        - generic [ref=f127e56]: More
+    - generic [ref=f127e59]:
+      - generic [ref=f127e61]:
+        - link [ref=f127e64] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/resources
+        - generic [ref=f127e79] [cursor=pointer]:
+          - generic [ref=f127e80]: Cha0smagick LABS
+          - generic [ref=f127e81]: "Magia Caotica: Magia del Caos Práctica"
+      - main [ref=f127e87]:
+        - generic [ref=f127e88]:
+          - navigation "Breadcrumb" [ref=f127e89]:
+            - list [ref=f127e90]:
+              - listitem [ref=f127e91]:
+                - link "Name" [ref=f127e92] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/forms/194257832689796115/edit
+              - listitem [ref=f127e93]:
+                - link "Subscriber group" [ref=f127e97] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/forms/194257832689796115/groups
+              - listitem [ref=f127e98]:
+                - link "Content" [ref=f127e102] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/forms/194257832689796115/content
+          - heading "Form" [level=1] [ref=f127e105]
+        - generic [ref=f127e112]:
+          - generic [ref=f127e117]:
+            - generic [ref=f127e118]: Form name
+            - textbox "Form name" [active] [ref=f127e121]:
+              - /placeholder: ""
+              - text: EN Lead Magnet - Chaos Magick Guide
+            - generic [ref=f127e122]: Don’t worry, it’s just for internal use and you can change it later.
+          - generic [ref=f127e124]:
+            - link "Cancel" [ref=f127e125] [cursor=pointer]:
+              - /url: https://dashboard.mailerlite.com/forms/194257832689796115/groups
+            - button "Save and continue" [ref=f127e127] [cursor=pointer]
+  - iframe [ref=f127e129]:
+    
