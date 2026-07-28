@@ -1,0 +1,57 @@
+- generic [ref=f58e4]:
+  - banner:
+    - link "Saltar al contenido":
+      - /url: "#"
+    - generic [ref=f58e15]:
+      - generic [ref=f58e18]:
+        - generic:
+          - img "Icono de búsqueda"
+        - combobox "Buscar" [ref=f58e20]
+      - link "Tu perfil" [ref=f58e25] [cursor=pointer]:
+        - /url: /magiacaoticamagiadelcaosprctic/
+        - img [ref=f58e32]:
+          - generic [ref=f58e33]: M
+      - button "Cuentas" [ref=f58e37] [cursor=pointer]
+  - navigation [ref=f58e42]:
+    - generic [ref=f58e44]:
+      - generic [ref=f58e45]:
+        - generic "Inicio" [ref=f58e49]:
+          - link "Inicio" [ref=f58e50] [cursor=pointer]:
+            - /url: /
+        - generic "Inicio" [ref=f58e57]:
+          - link "Inicio" [ref=f58e58] [cursor=pointer]:
+            - /url: /
+        - generic "Explorar" [ref=f58e65]:
+          - link "Explorar" [ref=f58e66] [cursor=pointer]:
+            - /url: /today
+        - generic "Tus tableros" [ref=f58e73]:
+          - link "Tus tableros" [ref=f58e74] [cursor=pointer]:
+            - /url: /magiacaoticamagiadelcaosprctic/
+        - generic "Crear" [ref=f58e81]:
+          - button "Crear" [ref=f58e82] [cursor=pointer]
+        - generic "Actualizaciones" [ref=f58e109]:
+          - button "Actualizaciones" [ref=f58e110] [cursor=pointer]
+        - generic "Mensajes" [ref=f58e118]:
+          - button "Mensajes" [ref=f58e119] [cursor=pointer]
+      - generic "Configuración y soporte" [ref=f58e98]:
+        - button "Configuración y soporte" [ref=f58e99] [cursor=pointer]
+  - generic:
+    - complementary "Botones flotantes del pie de página"
+  - main [ref=f58e104]:
+    - generic [ref=f58e126]:
+      - generic [ref=f58e128]:
+        - generic [ref=f58e129]:
+          - generic [ref=f58e130]
+          - separator [ref=f58e141]
+        - generic [ref=f58e142]:
+          - generic [ref=f58e145]
+          - list [ref=f58e157]
+      - generic [ref=f58e393]:
+        - generic [ref=f58e394]:
+          - heading "Crear Pin" [level=1] [ref=f58e396]
+          - generic [ref=f58e397]
+        - generic [ref=f58e407]:
+          - generic [ref=f58e412]
+          - generic [ref=f58e427]
+  - generic:
+    - contentinfo "Pie de página"
