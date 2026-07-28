@@ -1,0 +1,170 @@
+- generic [active] [ref=f92e1]:
+  - generic [ref=f92e2]:
+    - generic [ref=f92e4]:
+      - link [ref=f92e6] [cursor=pointer]:
+        - /url: /
+      - link "Trial 14 days left" [ref=f92e16] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/billing/upgrade?source=sidebar_trial_banner
+        - generic [ref=f92e17]: Trial
+        - generic [ref=f92e22]: 14 days left
+      - list [ref=f92e23]:
+        - link "Dashboard" [ref=f92e24] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/dashboard
+        - link "Subscribers" [ref=f92e30] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/subscribers
+        - link "Campaigns" [ref=f92e36] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+        - link "Automations" [ref=f92e42] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/automations/status/workflows
+        - link "Forms" [ref=f92e50] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/forms
+        - link "Sites" [ref=f92e56] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/sites
+        - link "Products New" [ref=f92e62] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/products
+          - generic [ref=f92e66]:
+            - generic [ref=f92e67]: Products
+            - generic [ref=f92e68]: New
+      - generic [ref=f92e69]:
+        - list [ref=f92e70]:
+          - link "Account settings" [ref=f92e71] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/account/profile
+          - link "Integrations" [ref=f92e77] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/integrations
+          - link "File manager" [ref=f92e83] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/file-manager
+          - link "My templates" [ref=f92e89] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/templates
+        - list [ref=f92e95]:
+          - listitem [ref=f92e98] [cursor=pointer]:
+            - link "Partner offers" [ref=f92e99]:
+              - /url: https://dashboard.mailerlite.com/partner-perks
+          - listitem [ref=f92e103] [cursor=pointer]:
+            - link "Refer a friend" [ref=f92e104]:
+              - /url: https://dashboard.mailerlite.com/refer
+    - generic [ref=f92e106]:
+      - generic [ref=f92e108]:
+        - generic [ref=f92e109]:
+          - generic [ref=f92e116] [cursor=pointer]:
+            - generic [ref=f92e117]: Cha0smagick LABS
+            - generic [ref=f92e118]: 14-day trial
+          - link [ref=f92e124] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/billing/upgrade?source=navbar_primary_button
+        - generic [ref=f92e130]:
+          - generic [ref=f92e131] [cursor=pointer]: Help
+          - generic [ref=f92e149] [cursor=pointer]:
+            - generic [ref=f92e150]: "Magia Caotica: Magia del Caos Práctica"
+            - generic [ref=f92e151]: magiacaoticapractica@gmail.com
+      - main [ref=f92e157]:
+        - generic [ref=f92e158]:
+          - generic [ref=f92e160]:
+            - navigation "Breadcrumb" [ref=f92e161]:
+              - list [ref=f92e162]:
+                - listitem [ref=f92e163]:
+                  - link "Forms" [ref=f92e164] [cursor=pointer]:
+                    - /url: https://dashboard.mailerlite.com/forms
+                - listitem [ref=f92e165]:
+                  - link "Embedded forms" [ref=f92e169] [cursor=pointer]:
+                    - /url: https://dashboard.mailerlite.com/forms/embedded
+                - listitem [ref=f92e170]:
+                  - link "ES Lead Magnet - Guia Magia Caos" [ref=f92e174] [cursor=pointer]:
+                    - /url: "#"
+            - generic [ref=f92e175]:
+              - heading "ES Lead Magnet - Guia Magia Caos" [level=1] [ref=f92e177]
+              - button "Actions" [ref=f92e181] [cursor=pointer]
+            - navigation "Tabs" [ref=f92e188]:
+              - link "Overview" [ref=f92e189] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/194257833015903279/overview
+              - link "Analytics" [ref=f92e194] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/194257833015903279/stats
+              - link "Automation" [ref=f92e199] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/194257833015903279/automations
+              - link "Double opt-in" [ref=f92e204] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/194257833015903279/double-optin-settings
+          - generic [ref=f92e209]:
+            - generic [ref=f92e210]:
+              - generic [ref=f92e213]:
+                - generic [ref=f92e215]:
+                  - heading "Form" [level=2] [ref=f92e216]
+                  - generic [ref=f92e217]:
+                    - link "Create split test" [ref=f92e218] [cursor=pointer]:
+                      - /url: https://dashboard.mailerlite.com/forms/194257833015903279/split
+                    - link "Edit design" [ref=f92e220] [cursor=pointer]:
+                      - /url: https://dashboard.mailerlite.com/forms/194257833015903279/content?redirect=https%3A%2F%2Fdashboard.mailerlite.com%2Fforms%2F194257833015903279%2Foverview
+                - generic [ref=f92e223]:
+                  - button "Preview" [ref=f92e226] [cursor=pointer]
+                  - iframe [ref=f92e231]:
+                    - generic [ref=f97e5]:
+                      - generic [ref=f97e6]:
+                        - heading "Guía Gratis de Magia del Caos" [level=4] [ref=f97e7]
+                        - paragraph [ref=f97e8]: Ingresa tu email y te enviaré el PDF instantáneamente. Sin spam, puedes cancelar en cualquier momento.
+                      - generic [ref=f97e9]:
+                        - textbox "email" [ref=f97e13]:
+                          - /placeholder: Email
+                        - button "Enviar Guía Gratis →" [ref=f97e15] [cursor=pointer]
+              - generic [ref=f92e234]:
+                - generic [ref=f92e235]:
+                  - heading "Embed form into your website" [level=2] [ref=f92e237]
+                  - navigation "Tabs" [ref=f92e241]:
+                    - link "JavaScript snippet" [ref=f92e242] [cursor=pointer]:
+                      - /url: "#snippet"
+                    - link "HTML code" [ref=f92e247] [cursor=pointer]:
+                      - /url: "#html"
+                    - link "Show on click event" [ref=f92e252] [cursor=pointer]:
+                      - /url: "#click"
+                - generic [ref=f92e258]:
+                  - paragraph [ref=f92e259]: Make sure the following snippet of Javascript is present on every page of your website right before the closing "head" tag.
+                  - paragraph [ref=f92e260]: You only need to add this snippet once, even if you plan to have multiple forms.
+                  - generic [ref=f92e261]:
+                    - code [ref=f92e263]: "<!-- MailerLite Universal --> <script> (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]) .push(arguments);},l=d.createElement(e),l.async=1,l.src=u, n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);}) (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml'); ml('account', '2539880'); </script> <!-- End MailerLite Universal -->"
+                    - button "Copy" [ref=f92e264] [cursor=pointer]
+                  - paragraph [ref=f92e270]: Copy and paste the code provided below, wherever you want the form to appear.
+                  - generic [ref=f92e271]:
+                    - code [ref=f92e273]: <div class="ml-embedded" data-form="I95d94"></div>
+                    - button "Copy" [ref=f92e274] [cursor=pointer]
+                  - paragraph [ref=f92e280]:
+                    - strong [ref=f92e281]: Using WordPress?
+                    - text: Install or update
+                    - link "the signup forms plugin" [ref=f92e282] [cursor=pointer]:
+                      - /url: https://wordpress.org/plugins/official-mailerlite-sign-up-forms/
+                    - text: ", and the tracking snippet will be added automatically. Check our article"
+                    - link "How to set up the MailerLite integration for WordPress" [ref=f92e283] [cursor=pointer]:
+                      - /url: https://www.mailerlite.com/help/how-to-use-mailerlite-with-wordpress
+                    - text: for details.
+                  - paragraph [ref=f92e284]:
+                    - strong [ref=f92e285]: Using Shopify?
+                    - text: Install the
+                    - link "MailerLite app for Shopify" [ref=f92e286] [cursor=pointer]:
+                      - /url: https://apps.shopify.com/mailerlite-email-automation
+                    - text: for Shopify, and the tracking snippet will be added automatically. Check our article
+                    - link "How to set up the MailerLite integration for Shopify" [ref=f92e287] [cursor=pointer]:
+                      - /url: https://www.mailerlite.com/help/how-to-set-up-the-mailerlite-integration-for-shopify#new
+                    - text: for details.
+            - generic [ref=f92e288]:
+              - list [ref=f92e294]:
+                - generic [ref=f92e295]:
+                  - generic [ref=f92e296]: Double opt-in
+                  - button [ref=f92e302] [cursor=pointer]
+                - generic [ref=f92e306]:
+                  - generic [ref=f92e307]: Created
+                  - generic [ref=f92e309]: an hour ago
+                - generic [ref=f92e310]:
+                  - generic [ref=f92e311]: Share url
+                  - generic [ref=f92e313]:
+                    - textbox [ref=f92e315]: https://preview.mailerlite.io/forms/2539880/194257833015903279/share
+                    - button "Copy" [ref=f92e319] [cursor=pointer]
+              - generic [ref=f92e327]:
+                - generic [ref=f92e328]:
+                  - generic [ref=f92e329]:
+                    - heading "Groups" [level=2] [ref=f92e330]
+                    - link "Edit groups" [ref=f92e332] [cursor=pointer]:
+                      - /url: https://dashboard.mailerlite.com/forms/194257833015903279/groups
+                  - paragraph [ref=f92e335]: Subscribers will be added to selected groups.
+                - list [ref=f92e338]:
+                  - generic [ref=f92e339]:
+                    - generic [ref=f92e340]: Lead Magnet - Magia del Caos ES
+                    - generic [ref=f92e342]: "0"
+  - iframe [ref=f92e348]:
+    
+  - iframe [ref=f92e349]:
+    

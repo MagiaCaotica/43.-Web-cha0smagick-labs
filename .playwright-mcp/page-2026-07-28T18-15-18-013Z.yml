@@ -1,0 +1,9 @@
+- generic [ref=f27e4]:
+  - generic [ref=f27e5]: 404 Error
+  - heading "Looks like you got lost..." [level=1] [ref=f27e6]
+  - paragraph [ref=f27e7]: Sorry, the page you are looking for could be not found.
+  - generic [ref=f27e9]:
+    - link "Back to Dashboard" [ref=f27e10] [cursor=pointer]:
+      - /url: https://dashboard.mailerlite.com/dashboard
+    - link "Contact us" [ref=f27e12] [cursor=pointer]:
+      - /url: https://www.mailerlite.com/contact-us

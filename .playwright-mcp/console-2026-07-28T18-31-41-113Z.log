@@ -1,0 +1,6 @@
+[    1080ms] [WARNING] [Meta Pixel] - Duplicate Pixel ID: 930987978489178. @ https://connect.facebook.net/en_US/fbevents.js:187
+[   18718ms] [WARNING] [Meta Pixel] - Duplicate Pixel ID: 930987978489178. @ https://connect.facebook.net/en_US/fbevents.js:187
+[   26042ms] ReferenceError: axios is not defined
+    at https://dashboard.mailerlite.com/emails/194262842157828026/edit:100:21
+[   69094ms] [WARNING] [Meta Pixel] - Duplicate Pixel ID: 930987978489178. @ https://connect.facebook.net/en_US/fbevents.js:187
+[   76664ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://d.adroll.com/cm/eyeota/out?af0=5562f0f4&adroll_fpc=9d15874fe65af19018341b0804ed50fb-1785259217587&pv=19970074141.3787&arrfrr=https%3A%2F%2Fdashboard.mailerlite.com%2Fautomations%2F194262410018686857%2Fedit%3Fstep_id%3D194262805293041145&advertisable=7LB2ILMLV5HCZLHMN6LMKV:0
