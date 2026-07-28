@@ -1,0 +1,9 @@
+[2026-07-28T15:53:07.046Z] Plugin initialized: 0 commands []
+[2026-07-28T16:06:11.760Z] tool.before: callID=call_00_Eg1n2jCSyUhC3m01EKJi8215, cmd=undefined, desc="Play Store paid app selling st", mainCmd=undefined
+[2026-07-28T16:06:12.195Z] tool.after: callID=call_00_Eg1n2jCSyUhC3m01EKJi8215, cmd=undefined, wasTracked=false
+[2026-07-28T16:06:15.523Z] tool.before: callID=call_01_yxqKKzI4lWoZPjeC6RSa2653, cmd=undefined, desc="Email capture static site stra", mainCmd=undefined
+[2026-07-28T16:06:15.885Z] tool.after: callID=call_01_yxqKKzI4lWoZPjeC6RSa2653, cmd=undefined, wasTracked=false
+[2026-07-28T16:06:19.835Z] tool.before: callID=call_02_koXQv9cMPGwTkCJapD6m7950, cmd=undefined, desc="Analyze current site sales HTM", mainCmd=undefined
+[2026-07-28T16:06:20.209Z] tool.after: callID=call_02_koXQv9cMPGwTkCJapD6m7950, cmd=undefined, wasTracked=false
+[2026-07-28T16:06:23.015Z] tool.before: callID=call_03_i4FmLQfzJmzshxU7FfEE3175, cmd=undefined, desc="Find all app and book pages st", mainCmd=undefined
+[2026-07-28T16:06:23.376Z] tool.after: callID=call_03_i4FmLQfzJmzshxU7FfEE3175, cmd=undefined, wasTracked=false

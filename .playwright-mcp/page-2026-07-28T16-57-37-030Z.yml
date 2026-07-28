@@ -1,0 +1,112 @@
+- generic [active] [ref=f29e1]:
+  - generic [ref=f29e5]:
+    - navigation "Main" [ref=f29e6]:
+      - generic [ref=f29e8]:
+        - link "Kit" [ref=f29e10] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Collapse sidebar" [expanded] [ref=f29e14] [cursor=pointer]
+      - button "Search Kit" [ref=f29e17] [cursor=pointer]:
+        - generic [ref=f29e18]:
+          - generic [ref=f29e19]: Search Kit
+          - generic [ref=f29e20]:
+            - generic [ref=f29e21]: ⌘
+            - generic [ref=f29e22]: K
+      - list [ref=f29e23]:
+        - listitem [ref=f29e24]:
+          - link "Dashboard" [ref=f29e25] [cursor=pointer]:
+            - /url: /dashboard
+        - listitem [ref=f29e29]:
+          - link "Subscribers" [ref=f29e30] [cursor=pointer]:
+            - /url: /subscribers
+        - listitem [ref=f29e34]:
+          - link "Broadcasts" [ref=f29e35] [cursor=pointer]:
+            - /url: /campaigns
+        - listitem [ref=f29e39]:
+          - generic [ref=f29e40]:
+            - button "Audience growth" [expanded] [ref=f29e41] [cursor=pointer]
+            - list [ref=f29e47]:
+              - listitem [ref=f29e48]:
+                - link "Landing pages & forms" [ref=f29e49] [cursor=pointer]:
+                  - /url: /forms
+              - listitem [ref=f29e55]:
+                - link "Recommendations" [ref=f29e56] [cursor=pointer]:
+                  - /url: /creator-network
+              - listitem [ref=f29e62]:
+                - link "Newsletter site" [ref=f29e63] [cursor=pointer]:
+                  - /url: /newsletter-site
+        - listitem [ref=f29e69]:
+          - button "Monetization" [ref=f29e71] [cursor=pointer]
+        - listitem [ref=f29e74]:
+          - generic [ref=f29e75]:
+            - button "Automation" [expanded] [ref=f29e76] [cursor=pointer]
+            - list [ref=f29e82]:
+              - listitem [ref=f29e83]:
+                - link "Email sequences" [ref=f29e84] [cursor=pointer]:
+                  - /url: /sequences
+              - listitem [ref=f29e90]:
+                - link "Visual Automations" [ref=f29e91] [cursor=pointer]:
+                  - /url: /automations
+              - listitem [ref=f29e97]:
+                - link "Rules" [ref=f29e98] [cursor=pointer]:
+                  - /url: /rules
+              - listitem [ref=f29e104]:
+                - link "Kit MCP" [ref=f29e105] [cursor=pointer]:
+                  - /url: /kit-mcp
+              - listitem [ref=f29e111]:
+                - link "RSS" [ref=f29e112] [cursor=pointer]:
+                  - /url: /feeds
+        - listitem [ref=f29e118]:
+          - link "Apps" [ref=f29e119] [cursor=pointer]:
+            - /url: /apps
+      - generic [ref=f29e123]:
+        - generic [ref=f29e124]:
+          - generic [ref=f29e129]:
+            - button "14 / 14 days remaining in trial" [expanded] [ref=f29e130] [cursor=pointer]:
+              - generic [ref=f29e135]:
+                - generic: 14 / 14 days
+                - generic [ref=f29e136]: 14 / 14 days remaining in trial
+            - generic [ref=f29e138]:
+              - generic [ref=f29e139]:
+                - paragraph [ref=f29e140]: 14 days left on your free trial
+                - paragraph [ref=f29e141]: Upgrade to continue to use all the features you have access to without interruption.
+              - button "Upgrade now" [ref=f29e142] [cursor=pointer]
+          - button
+        - list [ref=f29e143]:
+          - listitem [ref=f29e144]:
+            - link "Settings" [ref=f29e145] [cursor=pointer]:
+              - /url: /account_settings
+        - button "Cha0smagick LABS account" [ref=f29e150] [cursor=pointer]:
+          - generic [ref=f29e154]:
+            - text: Cha0smagick LABS
+            - generic [ref=f29e155]: account
+    - generic [ref=f29e158]:
+      - generic [ref=f29e160]:
+        - heading "Rules" [level=1] [ref=f29e161]
+        - link "Create New rule" [ref=f29e162] [cursor=pointer]:
+          - /url: /rules/new
+          - generic [ref=f29e163]: Create
+          - generic [ref=f29e164]: New rule
+      - generic [ref=f29e166]:
+        - generic [ref=f29e167]:
+          - heading "You make the (automation) rules around here" [level=2] [ref=f29e168]
+          - heading "If this happens, that happens. End result? You win!" [level=4] [ref=f29e169]
+        - generic [ref=f29e170]:
+          - generic [ref=f29e172]:
+            - generic [ref=f29e177] [cursor=pointer]:
+              - img "Wistia video thumbnail"
+            - button [ref=f29e178] [cursor=pointer]:
+              - img "Play video" [ref=f29e180]
+          - paragraph [ref=f29e182]: Create the rules that run your automations, like clicked links, product purchases and more. This is where you'll create and edit what we call "link triggers" and connect with your favorite tools like Gumroad, Teachable, Shopify, and more.
+  - generic:
+    - region "Hints"
+  - iframe [ref=f29e184]:
+    
+  - dialog "How to Create an Automation Rule":
+    - generic [ref=f29e190]:
+      - generic "How to Create an Automation Rule" [ref=f29e192]
+      - generic [ref=f29e195]:
+        - generic:
+          - 'button "Play Video: How to Create an Automation Rule"'
+        - img "Video Thumbnail" [ref=f29e197]
+    - button "Close" [ref=f29e198] [cursor=pointer]:
+      - img "Click to close video" [ref=f29e199]

@@ -1,0 +1,308 @@
+- generic [active] [ref=f52e1]:
+  - generic [ref=f52e5]:
+    - navigation "Main" [ref=f52e6]:
+      - generic [ref=f52e8]:
+        - link "Kit" [ref=f52e10] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Collapse sidebar" [expanded] [ref=f52e14] [cursor=pointer]
+      - button "Search Kit" [ref=f52e17] [cursor=pointer]:
+        - generic [ref=f52e18]:
+          - generic [ref=f52e19]: Search Kit
+          - generic [ref=f52e20]:
+            - generic [ref=f52e21]: ⌘
+            - generic [ref=f52e22]: K
+      - list [ref=f52e23]:
+        - listitem [ref=f52e24]:
+          - link "Dashboard" [ref=f52e25] [cursor=pointer]:
+            - /url: /dashboard
+        - listitem [ref=f52e29]:
+          - link "Subscribers" [ref=f52e30] [cursor=pointer]:
+            - /url: /subscribers
+        - listitem [ref=f52e34]:
+          - link "Broadcasts" [ref=f52e35] [cursor=pointer]:
+            - /url: /campaigns
+        - listitem [ref=f52e39]:
+          - generic [ref=f52e40]:
+            - button "Audience growth" [expanded] [ref=f52e41] [cursor=pointer]
+            - list [ref=f52e47]:
+              - listitem [ref=f52e48]:
+                - link "Landing pages & forms" [ref=f52e49] [cursor=pointer]:
+                  - /url: /forms
+              - listitem [ref=f52e55]:
+                - link "Recommendations" [ref=f52e56] [cursor=pointer]:
+                  - /url: /creator-network
+              - listitem [ref=f52e62]:
+                - link "Newsletter site" [ref=f52e63] [cursor=pointer]:
+                  - /url: /newsletter-site
+        - listitem [ref=f52e69]:
+          - button "Monetization" [ref=f52e71] [cursor=pointer]
+        - listitem [ref=f52e74]:
+          - generic [ref=f52e75]:
+            - button "Automation" [expanded] [ref=f52e76] [cursor=pointer]
+            - list [ref=f52e82]:
+              - listitem [ref=f52e83]:
+                - link "Email sequences" [ref=f52e84] [cursor=pointer]:
+                  - /url: /sequences
+              - listitem [ref=f52e90]:
+                - link "Visual Automations" [ref=f52e91] [cursor=pointer]:
+                  - /url: /automations
+              - listitem [ref=f52e97]:
+                - link "Rules" [ref=f52e98] [cursor=pointer]:
+                  - /url: /rules
+              - listitem [ref=f52e104]:
+                - link "Kit MCP" [ref=f52e105] [cursor=pointer]:
+                  - /url: /kit-mcp
+              - listitem [ref=f52e111]:
+                - link "RSS" [ref=f52e112] [cursor=pointer]:
+                  - /url: /feeds
+        - listitem [ref=f52e118]:
+          - link "Apps" [ref=f52e119] [cursor=pointer]:
+            - /url: /apps
+      - generic [ref=f52e123]:
+        - generic [ref=f52e124]:
+          - generic [ref=f52e129]:
+            - button "14 / 14 days remaining in trial" [expanded] [ref=f52e130] [cursor=pointer]:
+              - generic [ref=f52e135]:
+                - generic: 14 / 14 days
+                - generic [ref=f52e136]: 14 / 14 days remaining in trial
+            - generic [ref=f52e138]:
+              - generic [ref=f52e139]:
+                - paragraph [ref=f52e140]: 14 days left on your free trial
+                - paragraph [ref=f52e141]: Upgrade to continue to use all the features you have access to without interruption.
+              - button "Upgrade now" [ref=f52e142] [cursor=pointer]
+          - button
+        - list [ref=f52e143]:
+          - listitem [ref=f52e144]:
+            - link "Settings" [ref=f52e145] [cursor=pointer]:
+              - /url: /account_settings
+        - button "Cha0smagick LABS account" [ref=f52e150] [cursor=pointer]:
+          - generic [ref=f52e154]:
+            - text: Cha0smagick LABS
+            - generic [ref=f52e155]: account
+    - generic [ref=f52e158]:
+      - generic [ref=f52e161]:
+        - generic [ref=f52e162]:
+          - heading "Landing Pages & Forms" [level=2] [ref=f52e163]
+          - list [ref=f52e164]:
+            - listitem [ref=f52e165]:
+              - generic [ref=f52e246]: "0"
+              - text: Today
+            - listitem [ref=f52e166]:
+              - generic [ref=f52e247]: "0"
+              - text: 7 days
+            - listitem [ref=f52e167]:
+              - generic [ref=f52e248]: "0"
+              - text: 30 days
+            - listitem [ref=f52e168]:
+              - generic [ref=f52e169]: "1"
+              - text: Total
+          - generic [ref=f52e173]:
+            - generic [ref=f52e174]: June 28, 2026
+            - generic [ref=f52e175]: –
+            - generic [ref=f52e176]: July 28, 2026
+        - generic "A chart." [ref=f52e251]:
+          - img "A chart." [ref=f52e252]:
+            - generic [ref=f52e269]:
+              - generic [ref=f52e270]:
+                - generic [ref=f52e271]: Jun
+                - generic [ref=f52e272]: "28"
+              - generic [ref=f52e273]:
+                - generic [ref=f52e274]: Jun
+                - generic [ref=f52e275]: "30"
+              - generic [ref=f52e276]:
+                - generic [ref=f52e277]: Jul
+                - generic [ref=f52e278]: "02"
+              - generic [ref=f52e279]:
+                - generic [ref=f52e280]: Jul
+                - generic [ref=f52e281]: "04"
+              - generic [ref=f52e282]:
+                - generic [ref=f52e283]: Jul
+                - generic [ref=f52e284]: "06"
+              - generic [ref=f52e285]:
+                - generic [ref=f52e286]: Jul
+                - generic [ref=f52e287]: "08"
+              - generic [ref=f52e288]:
+                - generic [ref=f52e289]: Jul
+                - generic [ref=f52e290]: "10"
+              - generic [ref=f52e291]:
+                - generic [ref=f52e292]: Jul
+                - generic [ref=f52e293]: "12"
+              - generic [ref=f52e294]:
+                - generic [ref=f52e295]: Jul
+                - generic [ref=f52e296]: "14"
+              - generic [ref=f52e297]:
+                - generic [ref=f52e298]: Jul
+                - generic [ref=f52e299]: "16"
+              - generic [ref=f52e300]:
+                - generic [ref=f52e301]: Jul
+                - generic [ref=f52e302]: "18"
+              - generic [ref=f52e303]:
+                - generic [ref=f52e304]: Jul
+                - generic [ref=f52e305]: "20"
+              - generic [ref=f52e306]:
+                - generic [ref=f52e307]: Jul
+                - generic [ref=f52e308]: "22"
+              - generic [ref=f52e309]:
+                - generic [ref=f52e310]: Jul
+                - generic [ref=f52e311]: "24"
+              - generic [ref=f52e312]:
+                - generic [ref=f52e313]: Jul
+                - generic [ref=f52e314]: "26"
+              - generic [ref=f52e315]:
+                - generic [ref=f52e316]: Jul
+                - generic [ref=f52e317]: "28"
+              - generic [ref=f52e318]: "-1"
+              - generic [ref=f52e320]: "-0.5"
+              - generic [ref=f52e322]: "0"
+              - generic [ref=f52e324]: "0.5"
+              - generic [ref=f52e326]: "1"
+          - generic "A tabular representation of the data in the chart." [ref=f52e328]:
+            - table [ref=f52e329]:
+              - rowgroup [ref=f52e330]:
+                - row [ref=f52e331]:
+                  - columnheader "Day" [ref=f52e332]
+                  - columnheader
+              - rowgroup [ref=f52e333]:
+                - row [ref=f52e334]:
+                  - cell "Jun 28" [ref=f52e335]
+                  - cell
+                - row [ref=f52e336]:
+                  - cell "Jun 29" [ref=f52e337]
+                  - cell
+                - row [ref=f52e338]:
+                  - cell "Jun 30" [ref=f52e339]
+                  - cell
+                - row [ref=f52e340]:
+                  - cell "Jul 01" [ref=f52e341]
+                  - cell
+                - row [ref=f52e342]:
+                  - cell "Jul 02" [ref=f52e343]
+                  - cell
+                - row [ref=f52e344]:
+                  - cell "Jul 03" [ref=f52e345]
+                  - cell
+                - row [ref=f52e346]:
+                  - cell "Jul 04" [ref=f52e347]
+                  - cell
+                - row [ref=f52e348]:
+                  - cell "Jul 05" [ref=f52e349]
+                  - cell
+                - row [ref=f52e350]:
+                  - cell "Jul 06" [ref=f52e351]
+                  - cell
+                - row [ref=f52e352]:
+                  - cell "Jul 07" [ref=f52e353]
+                  - cell
+                - row [ref=f52e354]:
+                  - cell "Jul 08" [ref=f52e355]
+                  - cell
+                - row [ref=f52e356]:
+                  - cell "Jul 09" [ref=f52e357]
+                  - cell
+                - row [ref=f52e358]:
+                  - cell "Jul 10" [ref=f52e359]
+                  - cell
+                - row [ref=f52e360]:
+                  - cell "Jul 11" [ref=f52e361]
+                  - cell
+                - row [ref=f52e362]:
+                  - cell "Jul 12" [ref=f52e363]
+                  - cell
+                - row [ref=f52e364]:
+                  - cell "Jul 13" [ref=f52e365]
+                  - cell
+                - row [ref=f52e366]:
+                  - cell "Jul 14" [ref=f52e367]
+                  - cell
+                - row [ref=f52e368]:
+                  - cell "Jul 15" [ref=f52e369]
+                  - cell
+                - row [ref=f52e370]:
+                  - cell "Jul 16" [ref=f52e371]
+                  - cell
+                - row [ref=f52e372]:
+                  - cell "Jul 17" [ref=f52e373]
+                  - cell
+                - row [ref=f52e374]:
+                  - cell "Jul 18" [ref=f52e375]
+                  - cell
+                - row [ref=f52e376]:
+                  - cell "Jul 19" [ref=f52e377]
+                  - cell
+                - row [ref=f52e378]:
+                  - cell "Jul 20" [ref=f52e379]
+                  - cell
+                - row [ref=f52e380]:
+                  - cell "Jul 21" [ref=f52e381]
+                  - cell
+                - row [ref=f52e382]:
+                  - cell "Jul 22" [ref=f52e383]
+                  - cell
+                - row [ref=f52e384]:
+                  - cell "Jul 23" [ref=f52e385]
+                  - cell
+                - row [ref=f52e386]:
+                  - cell "Jul 24" [ref=f52e387]
+                  - cell
+                - row [ref=f52e388]:
+                  - cell "Jul 25" [ref=f52e389]
+                  - cell
+                - row [ref=f52e390]:
+                  - cell "Jul 26" [ref=f52e391]
+                  - cell
+                - row [ref=f52e392]:
+                  - cell "Jul 27" [ref=f52e393]
+                  - cell
+                - row [ref=f52e394]:
+                  - cell "Jul 28" [ref=f52e395]
+                  - cell
+      - generic [ref=f52e188]:
+        - generic [ref=f52e189]:
+          - heading [level=1]
+        - generic [ref=f52e190]:
+          - generic [ref=f52e191]:
+            - generic [ref=f52e192]:
+              - text: Sort by
+              - combobox "Sort by" [ref=f52e193]:
+                - generic "Alphabetical" [ref=f52e194]
+            - tablist [ref=f52e195]:
+              - tab "set view to list" [ref=f52e196] [cursor=pointer]
+              - tab "set view to grid" [selected] [ref=f52e197] [cursor=pointer]
+            - link "view archived forms" [ref=f52e198] [cursor=pointer]:
+              - /url: /forms?status=archived
+          - button "New" [ref=f52e199] [cursor=pointer]
+      - tabpanel [ref=f52e200]:
+        - generic [ref=f52e202]:
+          - generic [ref=f52e203]:
+            - generic [ref=f52e204]:
+              - link "Pine form" [ref=f52e207] [cursor=pointer]:
+                - /url: /forms/designers/9737133/edit
+              - button "Open action menu" [ref=f52e208] [cursor=pointer]
+            - generic [ref=f52e210]:
+              - generic [ref=f52e211]:
+                - generic [ref=f52e212]: Total subscribers
+                - generic [ref=f52e213]: "0"
+              - generic [ref=f52e214]:
+                - paragraph [ref=f52e215]: Last 90 days
+                - generic [ref=f52e216]:
+                  - generic [ref=f52e217]:
+                    - generic [ref=f52e218]: Visitors
+                    - generic [ref=f52e219]: "0"
+                  - generic [ref=f52e220]:
+                    - generic [ref=f52e221]: Subscribers
+                    - generic [ref=f52e222]: "0"
+                  - generic [ref=f52e223]:
+                    - generic [ref=f52e224]: Conversion Rate
+                    - generic [ref=f52e225]: 0%
+          - generic [ref=f52e226]:
+            - generic [ref=f52e227]:
+              - link "Pine formES Lead Magnet - Guía Rápida Magia del Caos" [ref=f52e230] [cursor=pointer]:
+                - /url: /forms/designers/9737163/edit
+              - button "Open action menu" [ref=f52e231] [cursor=pointer]
+            - generic [ref=f52e233]:
+              - generic [ref=f52e234]: Total subscribers
+              - paragraph [ref=f52e239]: Last 90 days
+  - generic:
+    - region "Hints"
+  - iframe [ref=f52e245]:
+    

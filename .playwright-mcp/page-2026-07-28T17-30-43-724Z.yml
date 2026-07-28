@@ -1,0 +1,37 @@
+- generic [active] [ref=f159e1]:
+  - generic [ref=f159e3]:
+    - banner [ref=f159e4]:
+      - generic [ref=f159e5]:
+        - link [ref=f159e6] [cursor=pointer]:
+          - /url: /automations/status/drafts
+        - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=2] [ref=f159e11]
+      - generic [ref=f159e12]:
+        - button "Test" [ref=f159e13] [cursor=pointer]
+        - button "Activate" [ref=f159e15] [cursor=pointer]
+        - link [ref=f159e20] [cursor=pointer]:
+          - /url: /automations/status/drafts
+    - generic [ref=f159e24]:
+      - complementary [ref=f159e26]:
+        - list [ref=f159e28]:
+          - listitem [ref=f159e29]:
+            - button [ref=f159e30] [cursor=pointer]
+          - listitem [ref=f159e38]:
+            - button [ref=f159e39] [cursor=pointer]
+          - listitem [ref=f159e43]:
+            - button [ref=f159e44] [cursor=pointer]
+      - list [ref=f159e50]:
+        - generic [ref=f159e51]:
+          - generic [ref=f159e53]:
+            - generic [ref=f159e64] [cursor=pointer]:
+              - generic [ref=f159e66]:
+                - generic [ref=f159e67]: Completes a form 1
+                - button [ref=f159e77]
+              - generic [ref=f159e81]: EN Lead Magnet - Chaos Magick Guide
+            - button [ref=f159e94] [cursor=pointer]
+          - paragraph [ref=f159e105] [cursor=pointer]: Add second trigger
+      - generic [ref=f159e106]:
+        - button [ref=f159e110] [cursor=pointer]
+        - button [ref=f159e117] [cursor=pointer]
+        - button [disabled] [ref=f159e124]
+  - iframe [ref=f159e128]:
+    

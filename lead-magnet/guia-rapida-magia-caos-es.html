@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guía Rápida de Magia del Caos</title>
+<style>
+  @page { margin: 2.5cm 2cm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #1a1a1a;
+    line-height: 1.7;
+    font-size: 12pt;
+    background: #fff;
+  }
+  .page { page-break-after: always; padding: 0; }
+  .page:last-child { page-break-after: auto; }
+
+  .title-page {
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    min-height: 90vh;
+    text-align: center;
+  }
+  .title-page h1 {
+    font-size: 28pt;
+    color: #0d0d0d;
+    letter-spacing: 1px;
+    margin-bottom: 0.5cm;
+    line-height: 1.2;
+  }
+  .title-page .subtitle {
+    font-size: 14pt;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 2cm;
+  }
+  .title-page .author { font-size: 12pt; color: #333; }
+  .title-page .date { font-size: 11pt; color: #777; margin-top: 0.3cm; }
+  .title-page .ornament { font-size: 24pt; color: #8B0000; margin: 1cm 0; }
+  .title-page .logo-text { font-size: 10pt; color: #999; margin-top: 2cm; letter-spacing: 2px; text-transform: uppercase; }
+
+  .copyright-page {
+    min-height: 70vh; display: flex; flex-direction: column;
+    justify-content: center; font-size: 10pt; color: #555;
+  }
+  .copyright-page p { margin-bottom: 0.5cm; }
+  .copyright-page .isbn { margin-top: 1cm; font-size: 9pt; color: #999; }
+
+  h2 {
+    font-size: 20pt; color: #0d0d0d;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 4pt; margin-top: 1.5cm; margin-bottom: 0.7cm;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 14pt; color: #333;
+    margin-top: 1cm; margin-bottom: 0.4cm;
+    page-break-after: avoid;
+  }
+  p { margin-bottom: 0.5cm; text-align: justify; }
+  ul, ol { margin: 0.3cm 0 0.5cm 1.5cm; }
+  li { margin-bottom: 0.2cm; text-align: justify; }
+
+  table { width: 100%; border-collapse: collapse; margin: 0.5cm 0; font-size: 11pt; }
+  th, td { border: 1px solid #ccc; padding: 6pt 8pt; text-align: left; }
+  th { background: #f5f5f5; font-weight: bold; }
+
+  .callout {
+    background: #f9f2f2; border-left: 4px solid #8B0000;
+    padding: 0.5cm 0.6cm; margin: 0.7cm 0; font-size: 11pt;
+  }
+  .callout strong { color: #8B0000; }
+
+  .step { margin-bottom: 0.6cm; padding-left: 0.5cm; border-left: 2px solid #ddd; }
+  .step h4 { font-size: 12pt; color: #8B0000; margin-bottom: 0.15cm; }
+
+  .references { font-size: 10pt; }
+  .references p { margin-bottom: 0.3cm; padding-left: 1cm; text-indent: -1cm; }
+
+  blockquote {
+    font-style: italic; color: #555;
+    margin: 0.5cm 1cm; padding: 0.3cm 0.5cm;
+    border-left: 3px solid #bbb;
+  }
+
+  .footer-note {
+    margin-top: 1cm; padding-top: 0.3cm;
+    border-top: 1px solid #ddd;
+    font-size: 9pt; color: #999; text-align: center;
+  }
+
+  .toc { margin: 1cm 0; }
+  .toc-item {
+    display: flex; justify-content: space-between;
+    padding: 4pt 0; border-bottom: 1px dotted #ccc;
+    font-size: 12pt;
+  }
+  .toc-item .num { color: #8B0000; font-weight: bold; margin-right: 0.5cm; }
+  .toc-h3 { margin-left: 1.5cm; font-size: 11pt; }
+
+  .cta-box {
+    background: #1a1a1a; color: #fff;
+    padding: 0.7cm; margin: 0.7cm 0;
+    text-align: center; border-radius: 3px;
+  }
+  .cta-box h3 { color: #fff; margin-top: 0; }
+  .cta-box p { color: #ccc; text-align: center; font-size: 11pt; }
+  .cta-box a { color: #e8a0a0; text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<!-- PORTADA -->
+<div class="page">
+<div class="title-page">
+  <p class="logo-text">Cha0smagick Labs</p>
+  <div class="ornament">✦ ✦ ✦</div>
+  <h1>Guía Rápida de<br>Magia del Caos</h1>
+  <p class="subtitle">Fundamentos Prácticos para el Ocultista Moderno</p>
+  <p class="author">Cha0smagick Labs</p>
+  <p class="date">Julio de 2026</p>
+  <div class="ornament">✧</div>
+  <p class="logo-text">cha0smagicklabs.com</p>
+</div>
+</div>
+
+<!-- COPYRIGHT -->
+<div class="page">
+<div class="copyright-page">
+  <p><strong>Guía Rápida de Magia del Caos</strong><br>
+  Fundamentos Prácticos para el Ocultista Moderno</p>
+  <p>Publicado por Cha0smagick Labs, 2026.</p>
+  <p>Esta obra está licenciada bajo una Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional.</p>
+  <p>Quedan reservados todos los derechos. Ninguna parte de esta publicación puede ser reproducida, distribuida o transmitida en ninguna forma ni por ningún medio, incluyendo fotocopias, grabaciones u otros métodos electrónicos o mecánicos, sin el permiso previo por escrito del editor, excepto en el caso de citas breves incorporadas en reseñas críticas y otros usos no comerciales permitidos por la ley de derechos de autor.</p>
+  <p>Las técnicas y prácticas descritas en este documento se presentan con fines informativos y educativos. El editor y el autor no asumen responsabilidad alguna por lesiones, daños o pérdidas que pudieran derivarse del uso de la información contenida en esta guía. Se recomienda a los lectores ejercer su propio juicio y responsabilidad personal.</p>
+  <p class="isbn">Versión 1.0 — Julio de 2026<br>
+  Cha0smagick Labs &lt;cha0smagicklabs.com&gt;</p>
+</div>
+</div>
+
+<!-- ÍNDICE -->
+<div class="page">
+<h2>Índice de Contenidos</h2>
+<div class="toc">
+  <div class="toc-item"><span><span class="num">1</span> Introducción: ¿Qué es la Magia del Caos?</span><span class="page-num">1</span></div>
+  <div class="toc-item toc-h3">1.1 Breve historia</span><span class="page-num">1</span></div>
+  <div class="toc-item toc-h3">1.2 ¿Por qué practicar Magia del Caos?</span><span class="page-num">2</span></div>
+  <div class="toc-item"><span><span class="num">2</span> Principios Fundamentales</span><span class="page-num">3</span></div>
+  <div class="toc-item toc-h3">2.1 Nada es verdad, todo está permitido</span><span class="page-num">3</span></div>
+  <div class="toc-item toc-h3">2.2 La creencia como herramienta</span><span class="page-num">3</span></div>
+  <div class="toc-item toc-h3">2.3 Gnosis</span><span class="page-num">4</span></div>
+  <div class="toc-item toc-h3">2.4 Cambio de paradigma</span><span class="page-num">4</span></div>
+  <div class="toc-item"><span><span class="num">3</span> Ejercicio Práctico: Magia Sigílica</span><span class="page-num">5</span></div>
+  <div class="toc-item toc-h3">3.1 Formular la intención</span><span class="page-num">5</span></div>
+  <div class="toc-item toc-h3">3.2 Redactar la declaración</span><span class="page-num">5</span></div>
+  <div class="toc-item toc-h3">3.3 Deconstruir</span><span class="page-num">5</span></div>
+  <div class="toc-item toc-h3">3.4 Diseñar el sigilo</span><span class="page-num">5</span></div>
+  <div class="toc-item toc-h3">3.5 Cargar el sigilo</span><span class="page-num">6</span></div>
+  <div class="toc-item toc-h3">3.6 Liberar</span><span class="page-num">6</span></div>
+  <div class="toc-item toc-h3">3.7 Olvidar</span><span class="page-num">7</span></div>
+  <div class="toc-item"><span><span class="num">4</span> Construyendo una Práctica Diaria</span><span class="page-num">8</span></div>
+  <div class="toc-item toc-h3">4.1 Meditación para la gnosis</span><span class="page-num">8</span></div>
+  <div class="toc-item toc-h3">4.2 Diario mágico</span><span class="page-num">8</span></div>
+  <div class="toc-item toc-h3">4.3 Actitud experimental</span><span class="page-num">9</span></div>
+  <div class="toc-item"><span><span class="num">5</span> Apps y Recursos</span><span class="page-num">10</span></div>
+  <div class="toc-item"><span><span class="num">6</span> Lecturas Recomendadas</span><span class="page-num">11</span></div>
+</div>
+</div>
+
+<!-- CAPÍTULO 1 -->
+<div class="page">
+<h2>1. Introducción: ¿Qué es la Magia del Caos?</h2>
+
+<p>La Magia del Caos es una tradición mágica postmoderna que surgió a finales del siglo XX, principalmente a través del trabajo de los ocultistas británicos Austin Osman Spare, Peter J. Carroll y Ray Sherwin. A diferencia de los sistemas ocultos tradicionales, que exigen una adhesión estricta a rituales, símbolos y jerarquías establecidos, la Magia del Caos opera bajo un principio radicalmente pragmático: <strong>lo que funciona</strong>.</p>
+
+<p>En esencia, la Magia del Caos rechaza el dogma. Trata todos los sistemas de creencias como herramientas — lentes intercambiables a través de las cuales el mago puede manipular la realidad. Un mago del caos puede combinar elementos del tantra tibetano, la magia ceremonial enoquiana, la teoría sigílica moderna y los íconos de la cultura pop en un solo trabajo, cambiando de paradigma con la misma facilidad con que se cambia de ropa.</p>
+
+<blockquote>"La esencia de la Magia del Caos es que el mago decide lo que es verdad." — Phil Hine, <em>Caos Condensado</em></blockquote>
+
+<p>Esta guía no es un grimorio exhaustivo. Es un <strong>punto de partida práctico</strong> — suficiente teoría fundamental y técnica práctica para comenzar tu propia práctica experimental. El resto depende de ti.</p>
+
+<h3>1.1 Breve Historia</h3>
+<p>El movimiento moderno de Magia del Caos se cristalizó en torno a la publicación de <em>Liber Null</em> y <em>Psychonaut</em> de Peter J. Carroll (1978&ndash;1982) y la formación de los Iluminados de Thanateros (IOT). Inspirándose en la teoría sigílica de Austin Osman Spare, la contracultura psicodélica y el resurgimiento ocultista de las décadas de 1960 y 1970, la Magia del Caos se distinguió rápidamente por su enfoque meta-paradigmático: en lugar de unirse a una tradición, el mago del caos construye un sistema personal seleccionando técnicas de cualquier fuente que produzca resultados.</p>
+
+<h3>1.2 ¿Por Qué Practicar Magia del Caos?</h3>
+<ul>
+  <li><strong>Eficacia sobre tradición.</strong> Los resultados son la única medida del éxito.</li>
+  <li><strong>Flexibilidad total.</strong> No hay un panteón, calendario ni dogma fijo que te limite.</li>
+  <li><strong>Empoderamiento personal.</strong> Tú eres la fuente de autoridad, no un gurú o un texto.</li>
+  <li><strong>Compatibilidad con el escepticismo moderno.</strong> La Magia del Caos puede practicarse como un modelo puramente psicológico o como un camino genuinamente espiritual — o ambos simultáneamente.</li>
+</ul>
+</div>
+
+<!-- CAPÍTULO 2 -->
+<div class="page">
+<h2>2. Principios Fundamentales</h2>
+
+<h3>2.1 Nada Es Verdad, Todo Está Permitido</h3>
+<p>Esta máxima, tomada de Friedrich Nietzsche y popularizada en círculos ocultistas por Hassan i Sabbah (a través de William S. Burroughs), no es una licencia para el caos moral. Es un <strong>principio metodológico</strong>: ningún sistema de creencias posee verdad absoluta; por lo tanto, el mago es libre de adoptar cualquier creencia que sirva a su propósito. La prohibición es contra el apego dogmático, no contra el compromiso sincero. Para funcionar eficazmente, una creencia debe sostenerse con total convicción — pero solo durante la duración del trabajo.</p>
+
+<h3>2.2 La Creencia Como Herramienta</h3>
+<p>En la Magia del Caos, la creencia es una tecnología. El mago cultiva la capacidad de adoptar, mantener y descartar creencias a voluntad — lo que Peter J. Carroll llamó <em>meta-creencia</em>. Esto se entrena mediante ejercicios de cambio de paradigma, donde el practicante se compromete plenamente con una cosmovisión (ej., la Cábala Hermética) durante un período, y luego cambia a otra (ej., la magia rúnica nórdica), observando cómo cada sistema organiza la percepción y produce resultados.</p>
+
+<div class="callout">
+<strong>Ejercicio — Cambio de creencia:</strong> Durante una semana, actúa como si todo lo que sucede fuera resultado de tu propia voluntad. La semana siguiente, actúa como si todo fuera perfectamente aleatorio. Anota en tu diario la diferencia en tu percepción y resultados.
+</div>
+
+<h3>2.3 Gnosis</h3>
+<p>La gnosis — que se pronuncia igual que en griego, <em>gnó-sis</em> — es un estado alterado de conciencia en el que la charla normal de la mente consciente se silencia. Es el motor del cambio mágico. Todas las técnicas mágicas, desde la carga de sigilos hasta la invocación ritual, apuntan en última instancia a inducir gnosis.</p>
+<p>Existen dos modos principales:</p>
+<ul>
+  <li><strong>Gnosis Inhibitoria</strong> — se alcanza mediante la quietud, la meditación, la privación sensorial o la concentración profunda (ej., mirar fijamente una llama, repetición de mantras).</li>
+  <li><strong>Gnosis Excitatoria</strong> — se alcanza mediante actividad física o emocional intensa: baile, percusión, cánticos, sexo, ejercicio extremo o emociones intensas.</li>
+</ul>
+
+<h3>2.4 Cambio de Paradigma</h3>
+<p>El cambio de paradigma es la adopción deliberada de una cosmovisión completa para un propósito específico. El mago puede realizar un trabajo rúnico nórdico utilizando las Eddas como marco un día, y una creación servidora lovecraftiana al siguiente. El objetivo no es el sincretismo (mezclar tradiciones sin pensar) sino el <strong>cambio funcional</strong> — fluidez en múltiples lenguajes mágicos para que el adecuado esté disponible para cada tarea.</p>
+</div>
+
+<!-- CAPÍTULO 3 -->
+<div class="page">
+<h2>3. Ejercicio Práctico: Magia Sigílica</h2>
+
+<p>La magia sigílica es la técnica más accesible y practicada en la Magia del Caos. Es el arte de condensar un deseo en un glifo simbólico, cargarlo con energía gnóstica y liberarlo en el subconsciente para que se manifieste.</p>
+
+<div class="step">
+<h4>Paso 1: Formula tu Intención</h4>
+<p>Decide un deseo concreto y medible. Sé específico. "Quiero más dinero" es demasiado vago; "Recibo un pago inesperado de 500 € en las próximas dos semanas" es mejor. La intención debe ser lo suficientemente realista como para que puedas imaginar que sucede, pero lo suficientemente ambiciosa como para requerir asistencia mágica.</p>
+</div>
+
+<div class="step">
+<h4>Paso 2: Escribe una Declaración de Intención</h4>
+<p>Escribe una oración que exprese tu deseo en tiempo presente, como si ya estuviera sucediendo. Por ejemplo: "Ahora recibo un pago inesperado de 500 €."</p>
+</div>
+
+<div class="step">
+<h4>Paso 3: Elimina Letras Repetidas</h4>
+<p>Elimina todas las letras que aparecen más de una vez. En nuestro ejemplo: <strong>A H O R R C I B N P G D S 5 0 €</strong>. Luego elimina las vocales y las consonantes restantes forman la base de tu diseño sigílico.</p>
+</div>
+
+<div class="step">
+<h4>Paso 4: Diseña el Sigilo</h4>
+<p>Combina las letras restantes en un solo glifo abstracto. No te preocupes por la calidad artística — el sigilo es un candado para tu intención, no una obra de arte. Enlaza, espiraliza, superpone y estiliza las letras hasta que formen un símbolo cohesionado que agrade a tu sentido estético. Dibújalo claramente en un papel o usando una herramienta digital.</p>
+</div>
+
+<div class="step">
+<h4>Paso 5: Carga el Sigilo</h4>
+<p>Este es el punto crucial de la operación. Entra en un estado de gnosis mientras te concentras intensamente en el sigilo. Técnicas recomendadas:</p>
+<ul>
+  <li><strong>Carga sexual:</strong> Concéntrate en el sigilo en el momento cumbre de la excitación.</li>
+  <li><strong>Dolor/resistencia:</strong> Mira fijamente el sigilo mientras mantienes una posición físicamente exigente (ej., sentadilla contra la pared) hasta el agotamiento.</li>
+  <li><strong>Mántrica:</strong> Observa el sigilo mientras cantas una sola sílaba (ej., "IAO") hasta que la mente se quede en blanco.</li>
+  <li><strong>Emocional:</strong> Recuerda un recuerdo emocional intenso y proyéctalo en el sigilo.</li>
+</ul>
+<p>El momento de llegada de la gnosis es inconfundible — una breve sensación de «clic» o liberación. En ese instante, <strong>deja de pensar en la intención</strong>.</p>
+</div>
+
+<div class="step">
+<h4>Paso 6: Libera</h4>
+<p>Destruye el sigilo inmediatamente después de cargarlo — quémalo, rómpelo o lávalo. Este acto simboliza la liberación de la intención en el campo subconsciente/inconsciente donde trabajará. No guardes copias.</p>
+</div>
+
+<div class="step">
+<h4>Paso 7: Olvida</h4>
+<p>El paso más difícil. Vuelve a la vida normal y no pienses más en el sigilo ni en su intención. Pensar obsesivamente en el resultado crea ruido psíquico que interfiere con la manifestación. Confía en el proceso. Si la intención se manifiesta, regístralo en tu diario. Si no, analiza qué salió mal (¿gnosis débil? ¿intención poco clara? ¿resistencia?) e inténtalo de nuevo.</p>
+</div>
+
+<div class="callout">
+<strong>Consejo:</strong> La práctica de la magia sigílica se potencia enormemente usando una herramienta dedicada de creación de sigilos que te permita diseñar, guardar y cargar sigilos digitales en cualquier lugar. Prueba <strong>Chaos Sigil Generator</strong>, disponible en Google Play.
+</div>
+</div>
+
+<!-- CAPÍTULO 4 -->
+<div class="page">
+<h2>4. Construyendo una Práctica Diaria</h2>
+
+<p>La habilidad mágica se desarrolla mediante la constancia, no la intensidad. Una práctica diaria de diez minutos vale más que un ritual de seis horas realizado una vez al mes. A continuación se presentan los componentes fundamentales de una práctica sostenible.</p>
+
+<h3>4.1 Meditación para la Gnosis</h3>
+<p>La meditación entrena la capacidad de entrar en gnosis inhibitoria a voluntad — la habilidad más importante para cualquier mago. Comienza con cinco minutos diarios y extiende gradualmente hasta veinte.</p>
+
+<p><strong>Meditación básica de respiración:</strong></p>
+<ol>
+  <li>Siéntate erguido en una posición cómoda, con la columna recta.</li>
+  <li>Cierra los ojos y respira con naturalidad.</li>
+  <li>Cuenta cada exhalación: uno... dos... tres... hasta cinco, luego reinicia.</li>
+  <li>Cuando surjan pensamientos (y surgirán), simplemente vuelve a contar la respiración.</li>
+  <li>No te juzgues por distraerte — el regreso ES la práctica.</li>
+</ol>
+
+<p><strong>Meta semanal:</strong> Al final del primer mes, deberías poder mantener la atención enfocada en tu respiración durante diez minutos consecutivos sin perder la cuenta.</p>
+
+<div class="callout">
+<strong>App recomendada:</strong> <strong>PSI GYM</strong> (disponible en Google Play) ofrece sesiones de meditación guiada diseñadas específicamente para desarrollar habilidades de gnosis, con seguimiento de progreso e integración de biorretroalimentación.
+</div>
+
+<h3>4.2 Diario Mágico</h3>
+<p>Un diario mágico (también llamado «Libro de las Sombras» o grimorio) cumple múltiples funciones: registra experimentos para análisis posterior, externaliza procesos internos y construye un cuerpo de conocimiento personal con el tiempo. Mantén un cuaderno o documento digital dedicado y registra lo siguiente para cada trabajo:</p>
+
+<table>
+  <tr><th>Campo</th><th>Descripción</th></tr>
+  <tr><td>Fecha y Hora</td><td>Cuándo se realizó la operación</td></tr>
+  <tr><td>Intención</td><td>Declaración exacta del propósito</td></tr>
+  <tr><td>Método</td><td>Técnicas utilizadas (sigilo, invocación, servidor, etc.)</td></tr>
+  <tr><td>Tipo de Gnosis</td><td>Inhibitoria o excitatoria; técnica específica empleada</td></tr>
+  <tr><td>Duración</td><td>Tiempo del trabajo</td></tr>
+  <tr><td>Resultados</td><td>Efectos inmediatos y resultados a largo plazo</td></tr>
+  <tr><td>Notas</td><td>Observaciones, ajustes, impresiones intuitivas</td></tr>
+</table>
+</div>
+
+<div class="page">
+<h3>4.3 Actitud Experimental</h3>
+<p>La Magia del Caos es, ante todo, una ciencia experimental de la conciencia. Cada técnica es una hipótesis; cada resultado son datos. Cultiva las siguientes actitudes:</p>
+
+<ul>
+  <li><strong>Documéntalo todo.</strong> Si no está escrito, no sucedió.</li>
+  <li><strong>Prueba sistemáticamente.</strong> Cambia una variable a la vez. Si pasas de mirar una vela a cantar, no cambies la intención, la hora y la ubicación simultáneamente — no sabrás qué funcionó.</li>
+  <li><strong>Sé escéptico de tus propios éxitos.</strong> ¿Funcionó el sigilo por medios mágicos, o preparó tu percepción para notar oportunidades? La respuesta no importa; lo que importa es que el resultado ocurrió.</li>
+  <li><strong>Sé honesto acerca de tus fracasos.</strong> Las operaciones fallidas enseñan más que las exitosas si las analizas sin autoengaño.</li>
+</ul>
+
+<h3>4.4 Rutina Sugerida para la Primera Semana</h3>
+<table>
+  <tr><th>Día</th><th>Práctica</th><th>Duración</th></tr>
+  <tr><td>Lunes</td><td>Meditación de respiración</td><td>5 min</td></tr>
+  <tr><td>Martes</td><td>Meditación + reflexión en el diario</td><td>10 min</td></tr>
+  <tr><td>Miércoles</td><td>Meditación de respiración</td><td>5 min</td></tr>
+  <tr><td>Jueves</td><td>Meditación + crear primer sigilo (sin cargar)</td><td>15 min</td></tr>
+  <tr><td>Viernes</td><td>Meditación de respiración</td><td>5 min</td></tr>
+  <tr><td>Sábado</td><td>Operación sigílica completa</td><td>20 min</td></tr>
+  <tr><td>Domingo</td><td>Descanso / integración / diario</td><td>—</td></tr>
+</table>
+
+<div class="callout">
+<strong>Mejora tu práctica:</strong> La app <strong>Dream Machine</strong> ayuda a registrar sueños para magia incubatoria, mientras que <strong>Lucid Dream</strong> proporciona técnicas de inducción para estados de gnosis astral. Ambas disponibles en Google Play.
+</div>
+</div>
+
+<!-- CAPÍTULO 5 -->
+<div class="page">
+<h2>5. Apps y Recursos</h2>
+
+<p>La Magia del Caos no requiere nada más que tu propia mente y voluntad. Sin embargo, las herramientas de calidad pueden acelerar tu progreso, proporcionar estructura y ampliar tu gama de técnicas. A continuación se presentan los recursos digitales desarrollados por Cha0smagick Labs, diseñados específicamente para el mago del caos moderno.</p>
+
+<h3>5.1 Apps Android para el Mago del Caos</h3>
+
+<table>
+  <tr><th>App</th><th>Propósito</th><th>Precio</th></tr>
+  <tr><td><strong>Chaos Sigil Generator</strong></td><td>Crea, gestiona y carga sigilos digitales con temporizadores de gnosis integrados</td><td>$3.99</td></tr>
+  <tr><td><strong>PSI GYM</strong></td><td>Meditación guiada y entrenamiento de gnosis con seguimiento de progreso</td><td>$3.99</td></tr>
+  <tr><td><strong>Norse Rune Oracle</strong></td><td>Adivinación rúnica con Elder Futhark, incluyendo tiradas personalizadas</td><td>$3.99</td></tr>
+  <tr><td><strong>I Ching Oracle</strong></td><td>Sistema clásico de adivinación china adaptado para la práctica oculta</td><td>$3.99</td></tr>
+  <tr><td><strong>Lunar Phase Calculator</strong></td><td>Seguimiento lunar astronómicamente preciso para sincronizar operaciones mágicas</td><td>$3.99</td></tr>
+  <tr><td><strong>Rider Waite Tarot</strong></td><td>Baraja completa de 78 cartas con múltiples tiradas y guías de interpretación</td><td>$9.99</td></tr>
+  <tr><td><strong>Astral Lab</strong></td><td>Herramientas de proyección astral, ondas binaurales y entrenamiento de comprobación de realidad</td><td>$6.99</td></tr>
+  <tr><td><strong>Dream Machine</strong></td><td>Diario de sueños, incubadora y rastreador de lucidez para magia onírica</td><td>$3.99</td></tr>
+  <tr><td><strong>Lucid Dream</strong></td><td>Técnicas de inducción y sistema de comprobación de realidad para sueños lúcidos</td><td>$3.99</td></tr>
+  <tr><td><strong>Arcana Goetia</strong></td><td>Interfaz de grimorio con sellos espirituales, sincronización de evocaciones y avisos rituales</td><td>$3.99</td></tr>
+  <tr><td><strong>Eerie Roads</strong></td><td>Exploración urbana y magia de espacios liminales con diario oculto basado en GPS</td><td>$9.99</td></tr>
+</table>
+
+<h3>5.2 Libros para Estudio Avanzado</h3>
+
+<table>
+  <tr><th>Título</th><th>Precio</th></tr>
+  <tr><td><em>Magical Servitors Manual</em> — Cha0smagick Labs</td><td>$3.99</td></tr>
+  <tr><td><em>Codex Chaoticus</em> — Cha0smagick Labs</td><td>$4.99</td></tr>
+  <tr><td><em>Liber Lvpinvx</em> — Cha0smagick Labs</td><td>$3.99</td></tr>
+  <tr><td><em>Tarot Chaos</em> — Cha0smagick Labs</td><td>$9.99</td></tr>
+  <tr><td><em>Mind The Gap</em> — Cha0smagick Labs</td><td>$9.99</td></tr>
+</table>
+
+<div class="cta-box">
+<h3>Consigue la Colección Completa</h3>
+<p>Las 11 apps + 7 libros en Google Play Store.<br>
+Desde $3.99 por producto — sin suscripciones, sin cargos ocultos.<br>
+<a href="https://cha0smagicklabs.com">cha0smagicklabs.com →</a></p>
+</div>
+</div>
+
+<!-- CAPÍTULO 6 -->
+<div class="page">
+<h2>6. Lecturas Recomendadas</h2>
+
+<div class="references">
+
+<p>Carroll, P. J. (2012). <em>Liber Null y Psychonaut: Introducción a la magia del caos</em> (M. Amado, Trad.). Ediciones Obelisco. (Trabajo original publicado en 1987)</p>
+
+<p>Carroll, P. J. (1995). <em>Liber Kaos</em>. Weiser Books.</p>
+
+<p>Hine, P. (2006). <em>Caos condensado: Introducción a la magia del caos</em> (M. Figueras, Trad.). Índigo.</p>
+
+<p>Kraig, D. M. (2004). <em>Magia Moderna: Doce lecciones de las altas artes mágicas</em> (2ª ed.). Llewellyn Español.</p>
+
+<p>Rietveld, J. (2018). <em>Magia del Caos: Guía para principiantes de la magia del caos</em>. Publicación independiente.</p>
+
+<p>Spare, A. O. (2010). <em>El Libro del Placer (Amor Propio): La psicología del éxtasis</em>. Índigo. (Trabajo original publicado en 1913)</p>
+
+<p>Spare, A. O. (2005). <em>Obra Completa de Austin Osman Spare</em>. Skoob Esoterica.</p>
+
+<p>White, J. W. (2017). <em>Manual del Mago del Caos</em>. CreateSpace.</p>
+
+<p>Woodward, A. (2014). <em>Guía de Magia del Caos para Viejos Gruñones</em>. Scarlet Imprint.</p>
+
+</div>
+
+<div class="callout">
+<p><strong>Nota APA:</strong> Las referencias están formateadas según la 7ª edición de las normas APA. Cuando la fecha de publicación original difiere de la edición consultada, se proporcionan ambas fechas.</p>
+</div>
+
+<div class="footer-note">
+<p>Guía Rápida de Magia del Caos — Cha0smagick Labs, 2026 — cha0smagicklabs.com</p>
+<p>Esta guía es un lead magnet gratuito. Compártela libremente, pero no la modifiques ni la vendas.</p>
+</div>
+</div>
+
+</body>
+</html>

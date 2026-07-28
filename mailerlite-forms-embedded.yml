@@ -1,0 +1,65 @@
+- generic [active] [ref=f261e1]:
+  - generic [ref=f261e2]:
+    - generic [ref=f261e4]:
+      - link [ref=f261e6] [cursor=pointer]:
+        - /url: /
+      - link "Trial 14 days left" [ref=f261e16] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/billing/upgrade?source=sidebar_trial_banner
+        - generic [ref=f261e17]: Trial
+        - generic [ref=f261e22]: 14 days left
+      - list [ref=f261e23]:
+        - link "Dashboard" [ref=f261e24] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/dashboard
+        - link "Subscribers" [ref=f261e30] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/subscribers
+        - link "Campaigns" [ref=f261e36] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+        - link "Automations" [ref=f261e42] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/automations/status/workflows
+        - link "Forms" [ref=f261e50] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/forms
+        - link "Sites" [ref=f261e56] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/sites
+        - link "Products New" [ref=f261e62] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/products
+          - generic [ref=f261e66]
+      - generic [ref=f261e69]:
+        - list [ref=f261e70]:
+          - link "Account settings" [ref=f261e71] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/account/profile
+          - link "Integrations" [ref=f261e77] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/integrations
+          - link "File manager" [ref=f261e83] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/file-manager
+          - link "My templates" [ref=f261e89] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/templates
+        - list [ref=f261e95]:
+          - listitem [ref=f261e98] [cursor=pointer]
+          - listitem [ref=f261e103] [cursor=pointer]
+    - generic [ref=f261e106]:
+      - generic [ref=f261e108]:
+        - generic [ref=f261e109]:
+          - generic [ref=f261e116] [cursor=pointer]
+          - link "Upgrade" [ref=f261e124] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/billing/upgrade?source=navbar_primary_button
+        - generic [ref=f261e130]:
+          - generic [ref=f261e131] [cursor=pointer]: Help
+          - generic [ref=f261e149] [cursor=pointer]
+      - main [ref=f261e157]:
+        - generic [ref=f261e158]:
+          - heading "Forms" [level=1] [ref=f261e161]
+          - navigation "Tabs" [ref=f261e164]
+        - generic [ref=f261e188]:
+          - heading "Create your first pop-up" [level=2] [ref=f261e189]
+          - paragraph [ref=f261e190]
+          - generic [ref=f261e195]
+  - iframe [ref=f261e201]:
+    
+  - iframe [ref=f261e202]:
+    
+  - generic [ref=f261e203]:
+    - iframe [ref=f261e204]:
+      - generic [ref=f269e1]:
+        - generic "Intercom":
+          - region "Intercom Messenger"
+    - generic [ref=f261e205]: "1"

@@ -1,0 +1,126 @@
+- generic [active] [ref=f46e1]:
+  - generic [ref=f46e5]:
+    - navigation "Main" [ref=f46e6]:
+      - generic [ref=f46e8]:
+        - link "Kit" [ref=f46e10] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Collapse sidebar" [expanded] [ref=f46e14] [cursor=pointer]
+      - button "Search Kit" [ref=f46e17] [cursor=pointer]:
+        - generic [ref=f46e18]:
+          - generic [ref=f46e19]: Search Kit
+          - generic [ref=f46e20]:
+            - generic [ref=f46e21]: ⌘
+            - generic [ref=f46e22]: K
+      - list [ref=f46e23]:
+        - listitem [ref=f46e24]:
+          - link "Dashboard" [ref=f46e25] [cursor=pointer]:
+            - /url: /dashboard
+        - listitem [ref=f46e29]:
+          - link "Subscribers" [ref=f46e30] [cursor=pointer]:
+            - /url: /subscribers
+        - listitem [ref=f46e34]:
+          - link "Broadcasts" [ref=f46e35] [cursor=pointer]:
+            - /url: /campaigns
+        - listitem [ref=f46e39]:
+          - generic [ref=f46e40]:
+            - button "Audience growth" [expanded] [ref=f46e41] [cursor=pointer]
+            - list [ref=f46e47]:
+              - listitem [ref=f46e48]:
+                - link "Landing pages & forms" [ref=f46e49] [cursor=pointer]:
+                  - /url: /forms
+              - listitem [ref=f46e55]:
+                - link "Recommendations" [ref=f46e56] [cursor=pointer]:
+                  - /url: /creator-network
+              - listitem [ref=f46e62]:
+                - link "Newsletter site" [ref=f46e63] [cursor=pointer]:
+                  - /url: /newsletter-site
+        - listitem [ref=f46e69]:
+          - button "Monetization" [ref=f46e71] [cursor=pointer]
+        - listitem [ref=f46e74]:
+          - button "Automation" [ref=f46e76] [cursor=pointer]
+        - listitem [ref=f46e79]:
+          - link "Apps" [ref=f46e80] [cursor=pointer]:
+            - /url: /apps
+      - generic [ref=f46e84]:
+        - generic [ref=f46e85]:
+          - generic [ref=f46e90]:
+            - button "14 / 14 days remaining in trial" [expanded] [ref=f46e91] [cursor=pointer]:
+              - generic [ref=f46e96]:
+                - generic: 14 / 14 days
+                - generic [ref=f46e97]: 14 / 14 days remaining in trial
+            - generic [ref=f46e99]:
+              - generic [ref=f46e100]:
+                - paragraph [ref=f46e101]: 14 days left on your free trial
+                - paragraph [ref=f46e102]: Upgrade to continue to use all the features you have access to without interruption.
+              - button "Upgrade now" [ref=f46e103] [cursor=pointer]
+          - button
+        - list [ref=f46e104]:
+          - listitem [ref=f46e105]:
+            - link "Settings" [ref=f46e106] [cursor=pointer]:
+              - /url: /account_settings
+        - button "Cha0smagick LABS account" [ref=f46e111] [cursor=pointer]:
+          - generic [ref=f46e115]:
+            - text: Cha0smagick LABS
+            - generic [ref=f46e116]: account
+    - generic [ref=f46e117]:
+      - generic [ref=f46e119]:
+        - paragraph [ref=f46e120]:
+          - strong [ref=f46e121]: Confirm your email to finish setting up your account.
+          - text: We've sent a confirmation link to your sign-up address.
+        - link "Manage email address" [ref=f46e122] [cursor=pointer]:
+          - /url: https://app.kit.com/account_settings/account_info
+      - generic [ref=f46e124]:
+        - generic [ref=f46e128]:
+          - heading "Landing Pages & Forms" [level=2] [ref=f46e129]
+          - list [ref=f46e130]:
+            - listitem [ref=f46e131]: Today
+            - listitem [ref=f46e132]: 7 days
+            - listitem [ref=f46e133]: 30 days
+            - listitem [ref=f46e134]:
+              - generic [ref=f46e135]: "0"
+              - text: Total
+          - generic [ref=f46e139]:
+            - generic [ref=f46e140]: June 28, 2026
+            - generic [ref=f46e141]: –
+            - generic [ref=f46e142]: July 28, 2026
+        - generic [ref=f46e154]:
+          - generic [ref=f46e155]:
+            - heading [level=1]
+          - generic [ref=f46e156]:
+            - generic [ref=f46e157]:
+              - generic [ref=f46e158]:
+                - text: Sort by
+                - combobox "Sort by" [ref=f46e159]:
+                  - generic "Alphabetical" [ref=f46e160]
+              - tablist [ref=f46e161]:
+                - tab "set view to list" [ref=f46e162] [cursor=pointer]
+                - tab "set view to grid" [selected] [ref=f46e163] [cursor=pointer]
+              - link "view archived forms" [ref=f46e164] [cursor=pointer]:
+                - /url: /forms?status=archived
+            - button "New" [ref=f46e165] [cursor=pointer]
+        - tabpanel [ref=f46e166]:
+          - generic [ref=f46e169]:
+            - generic [ref=f46e170]:
+              - link "Pine form" [ref=f46e173] [cursor=pointer]:
+                - /url: /forms/designers/9737133/edit
+              - button "Open action menu" [ref=f46e174] [cursor=pointer]
+            - generic [ref=f46e176]:
+              - generic [ref=f46e177]:
+                - generic [ref=f46e178]: Total subscribers
+                - generic [ref=f46e179]: "0"
+              - generic [ref=f46e180]:
+                - paragraph [ref=f46e181]: Last 90 days
+                - generic [ref=f46e182]:
+                  - generic [ref=f46e183]:
+                    - generic [ref=f46e184]: Visitors
+                    - generic [ref=f46e185]: "0"
+                  - generic [ref=f46e186]:
+                    - generic [ref=f46e187]: Subscribers
+                    - generic [ref=f46e188]: "0"
+                  - generic [ref=f46e189]:
+                    - generic [ref=f46e190]: Conversion Rate
+                    - generic [ref=f46e191]: 0%
+  - generic:
+    - region "Hints"
+  - iframe [ref=f46e193]:
+    

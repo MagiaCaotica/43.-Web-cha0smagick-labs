@@ -1,0 +1,4 @@
+[     822ms] [ERROR] Error: <svg> attribute transform: Expected transform function, "down-1". @ https://cdn.kit.com/vite/assets/react-dom-DzNgw8eS.js:0
+[     826ms] [ERROR] Error: <svg> attribute transform: Expected transform function, "down-1". @ https://cdn.kit.com/vite/assets/react-dom-DzNgw8eS.js:0
+[     840ms] [ERROR] Error: <svg> attribute transform: Expected transform function, "down-1". @ https://cdn.kit.com/vite/assets/react-dom-DzNgw8eS.js:0
+[    1019ms] [INFO] [Intercom] Launcher is disabled in settings or current page does not match display conditions @ https://js.intercomcdn.com/frame-modern.d2ee85d7.js:0

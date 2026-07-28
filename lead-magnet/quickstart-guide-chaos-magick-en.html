@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quickstart Guide to Chaos Magick</title>
+<style>
+  @page { margin: 2.5cm 2cm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #1a1a1a;
+    line-height: 1.7;
+    font-size: 12pt;
+    background: #fff;
+  }
+  .page { page-break-after: always; padding: 0; }
+  .page:last-child { page-break-after: auto; }
+
+  /* TITLE PAGE */
+  .title-page {
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    min-height: 90vh;
+    text-align: center;
+  }
+  .title-page h1 {
+    font-size: 28pt;
+    color: #0d0d0d;
+    letter-spacing: 1px;
+    margin-bottom: 0.5cm;
+    line-height: 1.2;
+  }
+  .title-page .subtitle {
+    font-size: 14pt;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 2cm;
+  }
+  .title-page .author {
+    font-size: 12pt;
+    color: #333;
+  }
+  .title-page .date {
+    font-size: 11pt;
+    color: #777;
+    margin-top: 0.3cm;
+  }
+  .title-page .ornament {
+    font-size: 24pt;
+    color: #8B0000;
+    margin: 1cm 0;
+  }
+  .title-page .logo-text {
+    font-size: 10pt;
+    color: #999;
+    margin-top: 2cm;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* COPYRIGHT PAGE */
+  .copyright-page {
+    min-height: 70vh;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    font-size: 10pt;
+    color: #555;
+  }
+  .copyright-page p { margin-bottom: 0.5cm; }
+  .copyright-page .isbn { margin-top: 1cm; font-size: 9pt; color: #999; }
+
+  /* HEADINGS */
+  h2 {
+    font-size: 20pt;
+    color: #0d0d0d;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 4pt;
+    margin-top: 1.5cm;
+    margin-bottom: 0.7cm;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 14pt;
+    color: #333;
+    margin-top: 1cm;
+    margin-bottom: 0.4cm;
+    page-break-after: avoid;
+  }
+
+  /* CONTENT */
+  p { margin-bottom: 0.5cm; text-align: justify; }
+  ul, ol { margin: 0.3cm 0 0.5cm 1.5cm; }
+  li { margin-bottom: 0.2cm; text-align: justify; }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; margin: 0.5cm 0; font-size: 11pt; }
+  th, td { border: 1px solid #ccc; padding: 6pt 8pt; text-align: left; }
+  th { background: #f5f5f5; font-weight: bold; }
+
+  /* SIDEBAR / CALLOUT */
+  .callout {
+    background: #f9f2f2;
+    border-left: 4px solid #8B0000;
+    padding: 0.5cm 0.6cm;
+    margin: 0.7cm 0;
+    font-size: 11pt;
+  }
+  .callout strong { color: #8B0000; }
+
+  /* PROCESS STEPS */
+  .step {
+    margin-bottom: 0.6cm;
+    padding-left: 0.5cm;
+    border-left: 2px solid #ddd;
+  }
+  .step h4 {
+    font-size: 12pt;
+    color: #8B0000;
+    margin-bottom: 0.15cm;
+  }
+
+  /* REFERENCES */
+  .references { font-size: 10pt; }
+  .references p { margin-bottom: 0.3cm; padding-left: 1cm; text-indent: -1cm; }
+
+  /* BLOCKQUOTE */
+  blockquote {
+    font-style: italic;
+    color: #555;
+    margin: 0.5cm 1cm;
+    padding: 0.3cm 0.5cm;
+    border-left: 3px solid #bbb;
+  }
+
+  /* FOOTER NOTE */
+  .footer-note {
+    margin-top: 1cm;
+    padding-top: 0.3cm;
+    border-top: 1px solid #ddd;
+    font-size: 9pt;
+    color: #999;
+    text-align: center;
+  }
+
+  /* TOC */
+  .toc { margin: 1cm 0; }
+  .toc-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 4pt 0;
+    border-bottom: 1px dotted #ccc;
+    font-size: 12pt;
+  }
+  .toc-item .num { color: #8B0000; font-weight: bold; margin-right: 0.5cm; }
+  .toc-item .dots { flex: 1; border-bottom: 1px dotted #ccc; margin: 0 0.3cm; }
+  .toc-item .page-num { color: #555; }
+  .toc-h2 { margin-left: 0; }
+  .toc-h3 { margin-left: 1.5cm; font-size: 11pt; }
+
+  /* CTA BOX */
+  .cta-box {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 0.7cm;
+    margin: 0.7cm 0;
+    text-align: center;
+    border-radius: 3px;
+  }
+  .cta-box h3 { color: #fff; margin-top: 0; }
+  .cta-box p { color: #ccc; text-align: center; font-size: 11pt; }
+  .cta-box a { color: #e8a0a0; text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<!-- TITLE PAGE -->
+<div class="page">
+<div class="title-page">
+  <p class="logo-text">Cha0smagick Labs</p>
+  <div class="ornament">✦ ✦ ✦</div>
+  <h1>Quickstart Guide<br>to Chaos Magick</h1>
+  <p class="subtitle">Practical Foundations for the Modern Occultist</p>
+  <p class="author">Cha0smagick Labs</p>
+  <p class="date">July 2026</p>
+  <div class="ornament">✧</div>
+  <p class="logo-text">cha0smagicklabs.com</p>
+</div>
+</div>
+
+<!-- COPYRIGHT PAGE -->
+<div class="page">
+<div class="copyright-page">
+  <p><strong>Quickstart Guide to Chaos Magick</strong><br>
+  Practical Foundations for the Modern Occultist</p>
+  <p>Published by Cha0smagick Labs, 2026.</p>
+  <p>This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.</p>
+  <p>All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.</p>
+  <p>The techniques and practices described herein are presented for informational and educational purposes. The publisher and author assume no liability for any injuries, damages, or losses incurred as a result of the use of the information contained in this guide. Readers are encouraged to exercise sound judgment and personal responsibility.</p>
+  <p class="isbn">Version 1.0 — July 2026<br>
+  Cha0smagick Labs &lt;cha0smagicklabs.com&gt;</p>
+</div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="page">
+<h2>Table of Contents</h2>
+<div class="toc">
+  <div class="toc-item toc-h2"><span><span class="num">1</span> Introduction: What Is Chaos Magick?</span><span class="page-num">1</span></div>
+  <div class="toc-item toc-h2"><span><span class="num">2</span> Core Principles</span><span class="page-num">2</span></div>
+  <div class="toc-item toc-h3">2.1 Nothing Is True, Everything Is Permitted</span><span class="page-num">2</span></div>
+  <div class="toc-item toc-h3">2.2 Belief as a Tool</span><span class="page-num">2</span></div>
+  <div class="toc-item toc-h3">2.3 Gnosis</span><span class="page-num">3</span></div>
+  <div class="toc-item toc-h3">2.4 Paradigm Shifting</span><span class="page-num">3</span></div>
+  <div class="toc-item toc-h2"><span><span class="num">3</span> Practical Exercise: Sigil Magick</span><span class="page-num">4</span></div>
+  <div class="toc-item toc-h3">3.1 Formulate Intent</span><span class="page-num">4</span></div>
+  <div class="toc-item toc-h3">3.2 Create the Statement</span><span class="page-num">4</span></div>
+  <div class="toc-item toc-h3">3.3 Deconstruct</span><span class="page-num">4</span></div>
+  <div class="toc-item toc-h3">3.4 Design the Sigil</span><span class="page-num">4</span></div>
+  <div class="toc-item toc-h3">3.5 Charge the Sigil</span><span class="page-num">5</span></div>
+  <div class="toc-item toc-h3">3.6 Release</span><span class="page-num">5</span></div>
+  <div class="toc-item toc-h3">3.7 Forgetting</span><span class="page-num">5</span></div>
+  <div class="toc-item toc-h2"><span><span class="num">4</span> Building a Daily Practice</span><span class="page-num">6</span></div>
+  <div class="toc-item toc-h3">4.1 Meditation for Gnosis</span><span class="page-num">6</span></div>
+  <div class="toc-item toc-h3">4.2 Magical Journaling</span><span class="page-num">6</span></div>
+  <div class="toc-item toc-h3">4.3 Experimental Attitude</span><span class="page-num">7</span></div>
+  <div class="toc-item toc-h2"><span><span class="num">5</span> Tools, Apps &amp; Resources</span><span class="page-num">8</span></div>
+  <div class="toc-item toc-h2"><span><span class="num">6</span> Recommended Reading</span><span class="page-num">9</span></div>
+</div>
+</div>
+
+<!-- CHAPTER 1 -->
+<div class="page">
+<h2>1. Introduction: What Is Chaos Magick?</h2>
+
+<p>Chaos Magick is a postmodern magical tradition that emerged in the late 20th century, primarily through the work of British occultists Austin Osman Spare, Peter J. Carroll, and Ray Sherwin. Unlike traditional occult systems, which demand strict adherence to established rituals, symbols, and hierarchies, Chaos Magick operates on a radically pragmatic principle: <strong>whatever works</strong>.</p>
+
+<p>At its core, Chaos Magick rejects dogma. It treats all belief systems as tools — interchangeable lenses through which the magician may manipulate reality. A Chaos Magician might combine elements of Tibetan tantra, Enochian ceremonial magic, modern sigil theory, and pop culture icons in a single working, switching paradigms as easily as changing clothes.</p>
+
+<blockquote>"The essence of Chaos Magick is that the magician decides what is true." — Phil Hine, <em>Condensed Chaos</em></blockquote>
+
+<p>This guide is not a comprehensive grimoire. It is a <strong>practical starting point</strong> — enough foundational theory and hands-on technique to begin your own experimental practice. The rest is up to you.</p>
+
+<h3>1.1 A Brief History</h3>
+<p>The modern Chaos Magick movement crystallized around the publication of Peter J. Carroll's <em>Liber Null</em> and <em>Psychonaut</em> (1978&ndash;1982) and the formation of the Illuminates of Thanateros (IOT). Drawing inspiration from Austin Osman Spare's sigil theory, the psychedelic counterculture, and the occult revival of the 1960s&ndash;70s, Chaos Magick quickly distinguished itself by its meta-paradigmatic approach: instead of joining a tradition, the Chaos Magician builds a personal system by selecting techniques from any source that produces results.</p>
+
+<h3>1.2 Why Practice Chaos Magick?</h3>
+<ul>
+  <li><strong>Effectiveness over tradition.</strong> Results are the only measure of success.</li>
+  <li><strong>Total flexibility.</strong> No fixed pantheon, calendar, or dogma constrains you.</li>
+  <li><strong>Personal empowerment.</strong> You are the source of authority, not a guru or text.</li>
+  <li><strong>Compatibility with modern skepticism.</strong> Chaos Magick can be practiced as a purely psychological model or as a genuinely spiritual path — or both simultaneously.</li>
+</ul>
+</div>
+
+<!-- CHAPTER 2 -->
+<div class="page">
+<h2>2. Core Principles</h2>
+
+<h3>2.1 Nothing Is True, Everything Is Permitted</h3>
+<p>This maxim, borrowed from Friedrich Nietzsche and popularized in occult circles by Hassan i Sabbah (via William S. Burroughs), is not a license for moral chaos. It is a <strong>methodological principle</strong>: no belief system holds absolute truth; therefore, the magician is free to adopt any belief that serves their purpose. The prohibition is against dogmatic attachment, not against sincere engagement. To work effectively, a belief must be held with total conviction — but only for the duration of the working.</p>
+
+<h3>2.2 Belief as a Tool</h3>
+<p>In Chaos Magick, belief is a technology. The magician cultivates the ability to adopt, hold, and discard beliefs at will — what Peter J. Carroll called <em>meta-belief</em>. This is trained through paradigm shifting exercises, where the practitioner commits fully to one worldview (e.g., Hermetic Kabbalah) for a period, then switches to another (e.g., Norse rune magic), observing how each system organizes perception and produces results.</p>
+
+<div class="callout">
+<strong>Exercise — Belief Shifting:</strong> For one week, act as if everything that happens is the result of your own will. For the next week, act as if everything is perfectly random. Journal the difference in your perception and outcomes.
+</div>
+
+<h3>2.3 Gnosis</h3>
+<p>Gnosis — pronounced <em>NOH-sis</em> — is an altered state of consciousness in which the normal chatter of the conscious mind is silenced. It is the engine of magical change. All magical techniques, from sigil charging to ritual invocation, ultimately aim at inducing gnosis.</p>
+<p>There are two primary modes:</p>
+<ul>
+  <li><strong>Inhibitory Gnosis</strong> — achieved through stillness, meditation, sensory deprivation, or deep concentration (e.g., staring at a flame, mantra repetition).</li>
+  <li><strong>Excitatory Gnosis</strong> — achieved through intense physical or emotional activity: dancing, drumming, chanting, sex, extreme exercise, or intense emotion.</li>
+</ul>
+<p>Both modes produce the same underlying state: a temporary suspension of the analytical mind, allowing access to subconscious and superconscious processes.</p>
+
+<h3>2.4 Paradigm Shifting</h3>
+<p>Paradigm shifting is the deliberate adoption of a complete worldview for a specific purpose. The magician might perform a Norse rune working using the Eddas as a framework one day, and a Lovecraftian servitor creation the next. The goal is not syncretism (mixing traditions thoughtlessly) but <strong>functional switching</strong> — fluency in multiple magical languages so the right one is available for each task.</p>
+</div>
+
+<!-- CHAPTER 3 -->
+<div class="page">
+<h2>3. Practical Exercise: Sigil Magick</h2>
+
+<p>Sigil magick is the most accessible and widely practiced technique in Chaos Magick. It is the art of condensing a desire into a symbolic glyph, charging it with gnostic energy, and releasing it into the subconscious to manifest.</p>
+
+<div class="step">
+<h4>Step 1: Formulate Your Intent</h4>
+<p>Decide on a concrete, measurable desire. Be specific. "I want more money" is too vague; "I receive an unexpected payment of $500 within two weeks" is better. The intent must be realistic enough that you can imagine it happening, but ambitious enough that it requires magical assistance.</p>
+</div>
+
+<div class="step">
+<h4>Step 2: Write a Statement of Intent</h4>
+<p>Write a single sentence expressing your desire in the present tense, as if it is already happening. For example: "I now receive an unexpected payment of $500."</p>
+</div>
+
+<div class="step">
+<h4>Step 3: Remove Repeated Letters</h4>
+<p>Cross out every letter that appears more than once. From our example: <strong>I n o w r e c a i v p d f t h</strong></p>
+<p>Remove all vowels and remaining consonants to form your sigil script. The remaining letters become the building blocks of your sigil design.</p>
+</div>
+
+<div class="step">
+<h4>Step 4: Design the Sigil</h4>
+<p>Combine the remaining letters into a single abstract glyph. Do not worry about artistic quality — the sigil is a lock for your intent, not a work of art. Loop, spiral, overlap, and stylize the letters until they form a cohesive symbol that pleases your aesthetic sense. Draw it clearly on a piece of paper or using a digital tool.</p>
+</div>
+
+<div class="step">
+<h4>Step 5: Charge the Sigil</h4>
+<p>This is the crux of the operation. Enter a state of gnosis while focusing intensely on the sigil. Techniques:</p>
+<ul>
+  <li><strong>Sexual charging:</strong> Focus on the sigil at the peak of arousal.</li>
+  <li><strong>Pain/endurance:</strong> Stare at the sigil while holding a physically demanding position (e.g., wall squat) until failure.</li>
+  <li><strong>Mantric:</strong> Gaze at the sigil while chanting a single syllable (e.g., "IAO") until the mind goes blank.</li>
+  <li><strong>Emotional:</strong> Recall an intense emotional memory and project it into the sigil.</li>
+</ul>
+<p>The moment of gnosis arrival is unmistakable — a brief sensation of "clicking" or release. At that instant, <strong>stop thinking about the intent</strong>.</p>
+</div>
+
+<div class="step">
+<h4>Step 6: Release</h4>
+<p>Destroy the sigil immediately after charging — burn it, tear it up, or wash it away. This act symbolizes the release of the intent into the subconscious/unconscious field where it will work. Do not keep copies.</p>
+</div>
+
+<div class="step">
+<h4>Step 7: Forgetting</h4>
+<p>The most difficult step. Return to normal life and do not dwell on the sigil or its intent. Obsessive thinking about the outcome creates psychic noise that interferes with manifestation. Trust the process. If the intent manifests, record it in your journal. If it does not, analyze what went wrong (weak gnosis? unclear intent? resistance?) and try again.</p>
+</div>
+
+<div class="callout">
+<strong>Tip:</strong> The practice of sigil magick is greatly enhanced by using a dedicated sigil creation tool that allows you to design, save, and charge digital sigils anywhere. Consider the <strong>Chaos Sigil Generator</strong> app available on Google Play for guided digital sigil construction.
+</div>
+</div>
+
+<!-- CHAPTER 4 -->
+<div class="page">
+<h2>4. Building a Daily Practice</h2>
+
+<p>Magical skill develops through consistency, not intensity. A ten-minute daily practice is worth more than a six-hour ritual performed once a month. Below are the foundational components of a sustainable practice.</p>
+
+<h3>4.1 Meditation for Gnosis</h3>
+<p>Meditation trains the ability to enter inhibitory gnosis on demand — the single most important skill for any magician. Begin with five minutes daily and gradually extend to twenty.</p>
+
+<p><strong>Basic Breath Meditation:</strong></p>
+<ol>
+  <li>Sit upright in a comfortable position, spine straight.</li>
+  <li>Close your eyes and breathe naturally.</li>
+  <li>Count each exhale: one... two... three... up to five, then restart.</li>
+  <li>When thoughts arise (they will), simply return to counting your breath.</li>
+  <li>Do not judge yourself for wandering — the return IS the practice.</li>
+</ol>
+
+<p><strong>Weekly Goal:</strong> By the end of the first month, you should be able to maintain focused attention on your breath for ten consecutive minutes without losing count.</p>
+
+<div class="callout">
+<strong>Recommended App:</strong> The <strong>PSI GYM</strong> app (available on Google Play) provides guided meditation sessions specifically designed for developing gnosis skills, with progress tracking and biofeedback integration.
+</div>
+
+<h3>4.2 Magical Journaling</h3>
+<p>A magical journal (also called a "Book of Shadows" or "grimoire") serves multiple functions: it records experiments for later analysis, externalizes internal processes, and builds a personal body of knowledge over time. Keep a dedicated notebook or digital document and record the following for each working:</p>
+
+<table>
+  <tr><th>Field</th><th>Description</th></tr>
+  <tr><td>Date &amp; Time</td><td>When the operation was performed</td></tr>
+  <tr><td>Intent</td><td>Exact statement of purpose</td></tr>
+  <tr><td>Method</td><td>Techniques used (sigil, invocation, servitor, etc.)</td></tr>
+  <tr><td>Gnosis Type</td><td>Inhibitory or excitatory; specific technique employed</td></tr>
+  <tr><td>Duration</td><td>Length of the working</td></tr>
+  <tr><td>Results</td><td>Immediate effects and long-term outcomes</td></tr>
+  <tr><td>Notes</td><td>Observations, adjustments, intuitive impressions</td></tr>
+</table>
+</div>
+
+<div class="page">
+<h3>4.3 Experimental Attitude</h3>
+<p>Chaos Magick is, above all, an experimental science of consciousness. Every technique is a hypothesis; every result is data. Cultivate the following attitudes:</p>
+
+<ul>
+  <li><strong>Document everything.</strong> If it is not written down, it did not happen.</li>
+  <li><strong>Test systematically.</strong> Change one variable at a time. If you switch from candle-gazing to chanting, do not change the intent, time, and location simultaneously — you will not know what worked.</li>
+  <li><strong>Be skeptical of your own successes.</strong> Did the sigil work through magical means, or did it prime your perception to notice opportunities? The answer does not matter; what matters is that the outcome occurred.</li>
+  <li><strong>Be honest about your failures.</strong> Failed operations teach more than successful ones if you analyze them without self-deception.</li>
+</ul>
+
+<h3>4.4 Suggested First-Week Routine</h3>
+<table>
+  <tr><th>Day</th><th>Practice</th><th>Duration</th></tr>
+  <tr><td>Monday</td><td>Breath meditation</td><td>5 min</td></tr>
+  <tr><td>Tuesday</td><td>Breath meditation + journal reflection</td><td>10 min</td></tr>
+  <tr><td>Wednesday</td><td>Breath meditation</td><td>5 min</td></tr>
+  <tr><td>Thursday</td><td>Breath meditation + create first sigil (not charged)</td><td>15 min</td></tr>
+  <tr><td>Friday</td><td>Breath meditation</td><td>5 min</td></tr>
+  <tr><td>Saturday</td><td>Full sigil operation</td><td>20 min</td></tr>
+  <tr><td>Sunday</td><td>Rest / integrate / journal</td><td>—</td></tr>
+</table>
+
+<div class="callout">
+<strong>Enhance your practice:</strong> The <strong>Dream Machine</strong> app helps track dream recall for incubatory magic, while <strong>Lucid Dream</strong> provides induction techniques for astral gnosis states. Both available on Google Play.
+</div>
+</div>
+
+<!-- CHAPTER 5 -->
+<div class="page">
+<h2>5. Tools, Apps &amp; Resources</h2>
+
+<p>Chaos Magick requires nothing but your own mind and will. However, quality tools can accelerate your progress, provide structure, and expand your range of techniques. Below are digital resources developed by Cha0smagick Labs, designed specifically for the modern chaos magician.</p>
+
+<h3>5.1 Android Apps for the Chaos Magician</h3>
+
+<table>
+  <tr><th>App</th><th>Purpose</th><th>Price</th></tr>
+  <tr><td><strong>Chaos Sigil Generator</strong></td><td>Create, manage, and charge digital sigils with built-in gnosis timers</td><td>$3.99</td></tr>
+  <tr><td><strong>PSI GYM</strong></td><td>Guided meditation and gnosis training with progress tracking</td><td>$3.99</td></tr>
+  <tr><td><strong>Norse Rune Oracle</strong></td><td>Rune divination with Elder Futhark, including custom spreads</td><td>$3.99</td></tr>
+  <tr><td><strong>I Ching Oracle</strong></td><td>Classic Chinese divination system adapted for occult practice</td><td>$3.99</td></tr>
+  <tr><td><strong>Lunar Phase Calculator</strong></td><td>Astronomically accurate lunar tracking for timing magical operations</td><td>$3.99</td></tr>
+  <tr><td><strong>Rider Waite Tarot</strong></td><td>Full 78-card Tarot deck with multiple spreads and interpretation guides</td><td>$9.99</td></tr>
+  <tr><td><strong>Astral Lab</strong></td><td>Astral projection tools, binaural beats, and reality-check training</td><td>$6.99</td></tr>
+  <tr><td><strong>Dream Machine</strong></td><td>Dream journal, incubator, and lucidity tracker for oneiric magic</td><td>$3.99</td></tr>
+  <tr><td><strong>Lucid Dream</strong></td><td>Induction techniques and reality-check system for conscious dreaming</td><td>$3.99</td></tr>
+  <tr><td><strong>Arcana Goetia</strong></td><td>Grimoire interface with spirit seals, evocation timing, and ritual prompts</td><td>$3.99</td></tr>
+  <tr><td><strong>Eerie Roads</strong></td><td>Urban exploration and liminal space magick with GPS-based occult journaling</td><td>$9.99</td></tr>
+</table>
+
+<h3>5.2 Books for Deeper Study</h3>
+
+<table>
+  <tr><th>Title</th><th>Author</th><th>Price</th></tr>
+  <tr><td><em>Magical Servitors Manual</em></td><td>Cha0smagick Labs</td><td>$3.99</td></tr>
+  <tr><td><em>Codex Chaoticus</em></td><td>Cha0smagick Labs</td><td>$4.99</td></tr>
+  <tr><td><em>Liber Lvpinvx</em></td><td>Cha0smagick Labs</td><td>$3.99</td></tr>
+  <tr><td><em>Tarot Chaos</em></td><td>Cha0smagick Labs</td><td>$9.99</td></tr>
+  <tr><td><em>Mind The Gap</em></td><td>Cha0smagick Labs</td><td>$9.99</td></tr>
+</table>
+
+<div class="cta-box">
+<h3>Get the Complete Collection</h3>
+<p>All 11 apps + 7 books on the Google Play Store.<br>
+From $3.99 per item — no subscriptions, no hidden fees.<br>
+<a href="https://cha0smagicklabs.com">cha0smagicklabs.com →</a></p>
+</div>
+</div>
+
+<!-- CHAPTER 6 -->
+<div class="page">
+<h2>6. Recommended Reading</h2>
+
+<div class="references">
+
+<p>Carroll, P. J. (1987). <em>Liber Null &amp; Psychonaut: An introduction to chaos magick</em>. Weiser Books.</p>
+
+<p>Carroll, P. J. (1992). <em>The Apophenion: A chaos magick paradigm</em>. Mandrake of Oxford.</p>
+
+<p>Carroll, P. J. (1995). <em>Liber Kaos</em>. Weiser Books.</p>
+
+<p>Hine, P. (1995). <em>Condensed Chaos: An introduction to chaos magic</em>. New Falcon Publications.</p>
+
+<p>Hine, P. (2001). <em>Prime Chaos: Adventures in chaos magic</em>. New Falcon Publications.</p>
+
+<p>Kraig, D. M. (2004). <em>Modern Magick: Twelve lessons in the high magickal arts</em> (2nd ed.). Llewellyn Publications.</p>
+
+<p>Rietveld, J. (2018). <em>Chaos Magick: A beginner's guide to the magic of chaos</em>. Independently published.</p>
+
+<p>Spare, A. O. (1975). <em>The Book of Pleasure (Self-Love): The psychology of ecstasy</em>. Askin Publishers. (Original work published 1913)</p>
+
+<p>Spare, A. O. (2005). <em>The Collected Works of Austin Osman Spare</em>. Skoob Esoterica.</p>
+
+<p>White, J. W. (2017). <em>The Chaos Magician's Workbook</em>. CreateSpace.</p>
+
+<p>Woodward, A. (2014). <em>The Grumpy Old Man's Guide to Chaos Magick</em>. Scarlet Imprint.</p>
+
+</div>
+
+<div class="callout">
+<p><strong>APA Note:</strong> References are formatted according to APA 7th edition guidelines. Where original publication dates differ from the edition consulted, both dates are provided.</p>
+</div>
+
+<div class="footer-note">
+<p>Quickstart Guide to Chaos Magick — Cha0smagick Labs, 2026 — cha0smagicklabs.com</p>
+<p>This guide is a free lead magnet. Share it freely, but do not modify or sell it.</p>
+</div>
+</div>
+
+</body>
+</html>

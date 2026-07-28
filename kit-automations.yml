@@ -1,0 +1,104 @@
+- generic [active] [ref=f14e1]:
+  - generic [ref=f14e6]:
+    - navigation "Main" [ref=f14e7]:
+      - generic [ref=f14e9]:
+        - link "Kit" [ref=f14e11] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Collapse sidebar" [expanded] [ref=f14e15] [cursor=pointer]
+      - button "Search Kit" [ref=f14e18] [cursor=pointer]:
+        - generic [ref=f14e19]:
+          - generic [ref=f14e20]: Search Kit
+          - generic [ref=f14e21]:
+            - generic [ref=f14e22]: ⌘
+            - generic [ref=f14e23]: K
+      - list [ref=f14e24]:
+        - listitem [ref=f14e25]:
+          - link "Dashboard" [ref=f14e26] [cursor=pointer]:
+            - /url: /dashboard
+        - listitem [ref=f14e30]:
+          - link "Subscribers" [ref=f14e31] [cursor=pointer]:
+            - /url: /subscribers
+        - listitem [ref=f14e35]:
+          - link "Broadcasts" [ref=f14e36] [cursor=pointer]:
+            - /url: /campaigns
+        - listitem [ref=f14e40]:
+          - generic [ref=f14e41]:
+            - button "Audience growth" [expanded] [ref=f14e42] [cursor=pointer]
+            - list [ref=f14e48]:
+              - listitem [ref=f14e49]:
+                - link "Landing pages & forms" [ref=f14e50] [cursor=pointer]:
+                  - /url: /forms
+              - listitem [ref=f14e56]:
+                - link "Recommendations" [ref=f14e57] [cursor=pointer]:
+                  - /url: /creator-network
+              - listitem [ref=f14e63]:
+                - link "Newsletter site" [ref=f14e64] [cursor=pointer]:
+                  - /url: /newsletter-site
+        - listitem [ref=f14e70]:
+          - button "Monetization" [ref=f14e72] [cursor=pointer]
+        - listitem [ref=f14e75]:
+          - generic [ref=f14e76]:
+            - button "Automation" [expanded] [ref=f14e77] [cursor=pointer]
+            - list [ref=f14e83]:
+              - listitem [ref=f14e84]:
+                - link "Email sequences" [ref=f14e85] [cursor=pointer]:
+                  - /url: /sequences
+              - listitem [ref=f14e91]:
+                - link "Visual Automations" [ref=f14e92] [cursor=pointer]:
+                  - /url: /automations
+              - listitem [ref=f14e98]:
+                - link "Rules" [ref=f14e99] [cursor=pointer]:
+                  - /url: /rules
+              - listitem [ref=f14e105]:
+                - link "Kit MCP" [ref=f14e106] [cursor=pointer]:
+                  - /url: /kit-mcp
+              - listitem [ref=f14e112]:
+                - link "RSS" [ref=f14e113] [cursor=pointer]:
+                  - /url: /feeds
+        - listitem [ref=f14e119]:
+          - link "Apps" [ref=f14e120] [cursor=pointer]:
+            - /url: /apps
+      - generic [ref=f14e124]:
+        - generic [ref=f14e125]:
+          - generic [ref=f14e130]:
+            - button "14 / 14 days remaining in trial" [expanded] [ref=f14e131] [cursor=pointer]:
+              - generic [ref=f14e136]:
+                - generic: 14 / 14 days
+                - generic [ref=f14e137]: 14 / 14 days remaining in trial
+            - generic [ref=f14e139]:
+              - generic [ref=f14e140]:
+                - paragraph [ref=f14e141]: 14 days left on your free trial
+                - paragraph [ref=f14e142]: Upgrade to continue to use all the features you have access to without interruption.
+              - button "Upgrade now" [ref=f14e143] [cursor=pointer]
+          - button
+        - list [ref=f14e144]:
+          - listitem [ref=f14e145]:
+            - link "Settings" [ref=f14e146] [cursor=pointer]:
+              - /url: /account_settings
+        - button "Cha0smagick LABS account" [ref=f14e151] [cursor=pointer]:
+          - generic [ref=f14e155]:
+            - text: Cha0smagick LABS
+            - generic [ref=f14e156]: account
+    - generic [ref=f14e159]:
+      - generic [ref=f14e160]:
+        - heading "Visual Automations" [level=1] [ref=f14e163]
+        - generic [ref=f14e165]:
+          - tablist [ref=f14e166]:
+            - tab "My Automations 0" [selected] [ref=f14e167] [cursor=pointer]:
+              - text: My Automations
+              - generic [ref=f14e168]: "0"
+            - tab "Templates" [ref=f14e169] [cursor=pointer]
+          - link "create new automation" [ref=f14e171] [cursor=pointer]:
+            - /url: /automations/templates
+            - generic [ref=f14e172]: New automation
+      - generic [ref=f14e176]:
+        - img "Visual Automation" [ref=f14e178]
+        - generic [ref=f14e179]: Paid feature
+        - generic [ref=f14e180]: Build it once. Let it run.
+        - generic [ref=f14e181]: Create automations that welcome subscribers, follow up after purchases, or tag your most engaged customers. Set them up once and they'll keep working in the background.
+        - link "New automation" [ref=f14e183] [cursor=pointer]:
+          - /url: /automations/templates
+  - iframe [ref=f14e5]:
+    
+  - generic:
+    - region "Hints"

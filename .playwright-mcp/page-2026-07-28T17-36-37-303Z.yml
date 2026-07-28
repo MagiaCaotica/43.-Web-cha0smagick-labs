@@ -1,0 +1,46 @@
+- generic [active] [ref=f221e1]:
+  - generic [ref=f221e3]:
+    - banner [ref=f221e4]:
+      - generic [ref=f221e5]:
+        - link [ref=f221e6] [cursor=pointer]:
+          - /url: /automations/status/workflows
+        - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=2] [ref=f221e11]
+      - generic [ref=f221e12]:
+        - button "Test" [ref=f221e13] [cursor=pointer]
+        - button "Activate" [ref=f221e15] [cursor=pointer]
+        - link [ref=f221e20] [cursor=pointer]:
+          - /url: /automations/status/workflows
+    - generic [ref=f221e24]:
+      - complementary [ref=f221e26]:
+        - list [ref=f221e28]:
+          - listitem [ref=f221e29]:
+            - button [ref=f221e30] [cursor=pointer]
+          - listitem [ref=f221e34]:
+            - button [ref=f221e35] [cursor=pointer]
+          - listitem [ref=f221e39]:
+            - button [ref=f221e40] [cursor=pointer]
+      - list [ref=f221e46]:
+        - generic [ref=f221e47]:
+          - generic [ref=f221e49]:
+            - generic [ref=f221e60] [cursor=pointer]:
+              - generic [ref=f221e62]:
+                - generic [ref=f221e63]: Completes a form 1
+                - button [ref=f221e73]
+              - generic [ref=f221e77]: EN Lead Magnet - Chaos Magick Guide
+            - button [ref=f221e90] [cursor=pointer]
+          - paragraph [ref=f221e101] [cursor=pointer]: Add second trigger
+        - listitem [ref=f221e103]:
+          - generic [ref=f221e113] [cursor=pointer]:
+            - generic [ref=f221e115]:
+              - generic [ref=f221e116]: Email 1
+              - button [ref=f221e126]
+            - generic [ref=f221e130]: Lead Magnet - Chaos Magick Guide
+          - generic [ref=f221e143]:
+            - button [ref=f221e144] [cursor=pointer]
+            - button "Exit flow" [ref=f221e152] [cursor=pointer]
+      - generic [ref=f221e162]:
+        - button [ref=f221e166] [cursor=pointer]
+        - button [ref=f221e173] [cursor=pointer]
+        - button [disabled] [ref=f221e180]
+  - iframe [ref=f221e184]:
+    

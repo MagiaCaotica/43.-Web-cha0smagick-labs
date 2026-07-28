@@ -1,0 +1,140 @@
+- generic [active] [ref=f69e1]:
+  - generic [ref=f69e2]:
+    - generic [ref=f69e4]:
+      - link [ref=f69e6] [cursor=pointer]:
+        - /url: /
+      - link "Trial 14 days left" [ref=f69e16] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/billing/upgrade?source=sidebar_trial_banner
+        - generic [ref=f69e17]: Trial
+        - generic [ref=f69e22]: 14 days left
+      - list [ref=f69e23]:
+        - link "Dashboard" [ref=f69e24] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/dashboard
+        - link "Subscribers" [ref=f69e30] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/subscribers
+        - link "Campaigns" [ref=f69e36] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+        - link "Automations" [ref=f69e42] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/automations/status/drafts
+        - link "Forms" [ref=f69e50] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/forms
+        - link "Sites" [ref=f69e56] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/sites
+        - link "Products New" [ref=f69e62] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/products
+          - generic [ref=f69e66]:
+            - generic [ref=f69e67]: Products
+            - generic [ref=f69e68]: New
+      - generic [ref=f69e69]:
+        - list [ref=f69e70]:
+          - link "Account settings" [ref=f69e71] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/account/profile
+          - link "Integrations" [ref=f69e77] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/integrations
+          - link "File manager" [ref=f69e83] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/file-manager
+          - link "My templates" [ref=f69e89] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/templates
+        - list [ref=f69e95]:
+          - listitem [ref=f69e98] [cursor=pointer]:
+            - link "Partner offers" [ref=f69e99]:
+              - /url: https://dashboard.mailerlite.com/partner-perks
+          - listitem [ref=f69e103] [cursor=pointer]:
+            - link "Refer a friend" [ref=f69e104]:
+              - /url: https://dashboard.mailerlite.com/refer
+    - generic [ref=f69e106]:
+      - generic [ref=f69e108]:
+        - generic [ref=f69e109]:
+          - generic [ref=f69e116] [cursor=pointer]:
+            - generic [ref=f69e117]: Cha0smagick LABS
+            - generic [ref=f69e118]: 14-day trial
+          - link [ref=f69e124] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/billing/upgrade?source=navbar_primary_button
+        - generic [ref=f69e130]:
+          - generic [ref=f69e131] [cursor=pointer]: Help
+          - generic [ref=f69e149] [cursor=pointer]:
+            - generic [ref=f69e150]: "Magia Caotica: Magia del Caos Práctica"
+            - generic [ref=f69e151]: magiacaoticapractica@gmail.com
+      - main [ref=f69e157]:
+        - generic [ref=f69e158]:
+          - navigation "Breadcrumb" [ref=f69e159]:
+            - list [ref=f69e160]:
+              - listitem [ref=f69e161]:
+                - link "Name" [ref=f69e162] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/forms/194257832689796115/edit
+              - listitem [ref=f69e163]:
+                - link "Subscriber group" [ref=f69e167] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/forms/194257832689796115/groups
+              - listitem [ref=f69e168]:
+                - link "Content" [ref=f69e172] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/forms/194257832689796115/content
+          - heading "Behavior" [level=1] [ref=f69e175]
+        - generic [ref=f69e182]:
+          - generic [ref=f69e183]:
+            - generic [ref=f69e184]:
+              - generic [ref=f69e185]:
+                - heading "Trigger" [level=2] [ref=f69e188]
+                - paragraph [ref=f69e189]: Choose when you want to show the pop-up.
+              - generic [ref=f69e190]:
+                - generic [ref=f69e192]:
+                  - generic [ref=f69e193]:
+                    - checkbox "Wait" [checked] [ref=f69e194]
+                    - generic [ref=f69e195]: Wait
+                  - spinbutton [ref=f69e200]: "5"
+                  - generic [ref=f69e201]: seconds before showing the pop-up
+                - generic [ref=f69e203]:
+                  - generic [ref=f69e204]:
+                    - checkbox "Show when user scrolls to" [ref=f69e205]
+                    - generic [ref=f69e206]: Show when user scrolls to
+                  - generic [ref=f69e209]: 50%
+                - generic [ref=f69e221]:
+                  - checkbox "Show before closing page (doesn’t work on mobile)" [ref=f69e222]
+                  - generic [ref=f69e223]: Show before closing page (doesn’t work on mobile)
+            - generic [ref=f69e226]:
+              - generic [ref=f69e227]:
+                - heading "Frequency" [level=2] [ref=f69e230]
+                - paragraph [ref=f69e231]: Set the period when you want to show the pop-up to the same user again.
+              - generic [ref=f69e233]:
+                - spinbutton [ref=f69e237]: "1"
+                - generic [ref=f69e238]: months
+            - generic [ref=f69e249]:
+              - generic [ref=f69e250]:
+                - heading "Schedule" [level=2] [ref=f69e253]
+                - paragraph [ref=f69e254]: Set the timing of your pop-up in advance.
+              - generic [ref=f69e257]:
+                - generic [ref=f69e259] [cursor=pointer]:
+                  - radio [checked] [ref=f69e262]
+                  - generic [ref=f69e263]:
+                    - generic [ref=f69e264]: None
+                    - generic [ref=f69e265]: Pop-up will activate immediately.
+                - generic [ref=f69e267] [cursor=pointer]:
+                  - radio [ref=f69e270]
+                  - generic [ref=f69e271]:
+                    - generic [ref=f69e272]: Specific Time
+                    - generic [ref=f69e273]: Schedule a start and end time.
+            - generic [ref=f69e274]:
+              - heading "Visibility" [level=2] [ref=f69e278]
+              - generic [ref=f69e280]:
+                - generic [ref=f69e282]:
+                  - generic [ref=f69e283]:
+                    - radio "Always show" [checked] [ref=f69e285] [cursor=pointer]
+                    - generic [ref=f69e286]: Always show
+                  - generic [ref=f69e289]:
+                    - radio "Hide on specific pages" [ref=f69e291] [cursor=pointer]
+                    - generic [ref=f69e292]: Hide on specific pages
+                  - generic [ref=f69e295]:
+                    - radio "Show on specific pages" [ref=f69e297] [cursor=pointer]
+                    - generic [ref=f69e298]: Show on specific pages
+                - generic [ref=f69e301]:
+                  - generic [ref=f69e302]:
+                    - checkbox "Hide on desktop devices" [ref=f69e303]
+                    - generic [ref=f69e304]: Hide on desktop devices
+                  - generic [ref=f69e307]:
+                    - checkbox "Hide on mobile devices" [ref=f69e308]
+                    - generic [ref=f69e309]: Hide on mobile devices
+                  - generic [ref=f69e312]:
+                    - checkbox "Hide on tablet devices" [ref=f69e313]
+                    - generic [ref=f69e314]: Hide on tablet devices
+          - button "Save changes" [ref=f69e319] [cursor=pointer]
+  - iframe [ref=f69e321]:
+    

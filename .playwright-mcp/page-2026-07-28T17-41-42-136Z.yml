@@ -1,0 +1,291 @@
+- generic [active] [ref=f252e1]:
+  - generic [ref=f252e2]:
+    - generic [ref=f252e4]:
+      - link [ref=f252e6] [cursor=pointer]:
+        - /url: /
+      - link "Trial 14 days left" [ref=f252e16] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/billing/upgrade?source=sidebar_trial_banner
+        - generic [ref=f252e17]: Trial
+        - generic [ref=f252e22]: 14 days left
+      - list [ref=f252e23]:
+        - link "Dashboard" [ref=f252e24] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/dashboard
+        - link "Subscribers" [ref=f252e30] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/subscribers
+        - link "Campaigns" [ref=f252e36] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+        - link "Automations" [ref=f252e42] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/automations/status/workflows
+        - link "Forms" [ref=f252e50] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/forms
+        - link "Sites" [ref=f252e56] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/sites
+        - link "Products New" [ref=f252e62] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/products
+          - generic [ref=f252e66]:
+            - generic [ref=f252e67]: Products
+            - generic [ref=f252e68]: New
+      - generic [ref=f252e69]:
+        - list [ref=f252e70]:
+          - link "Account settings" [ref=f252e71] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/account/profile
+          - link "Integrations" [ref=f252e77] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/integrations
+          - link "File manager" [ref=f252e83] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/file-manager
+          - link "My templates" [ref=f252e89] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/templates
+        - list [ref=f252e95]:
+          - listitem [ref=f252e98] [cursor=pointer]:
+            - link "Partner offers" [ref=f252e99]:
+              - /url: https://dashboard.mailerlite.com/partner-perks
+          - listitem [ref=f252e103] [cursor=pointer]:
+            - link "Refer a friend" [ref=f252e104]:
+              - /url: https://dashboard.mailerlite.com/refer
+    - generic [ref=f252e106]:
+      - generic [ref=f252e108]:
+        - generic [ref=f252e109]:
+          - generic [ref=f252e116] [cursor=pointer]:
+            - generic [ref=f252e117]: Cha0smagick LABS
+            - generic [ref=f252e118]: 14-day trial
+          - link [ref=f252e124] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/billing/upgrade?source=navbar_primary_button
+        - generic [ref=f252e130]:
+          - generic [ref=f252e131] [cursor=pointer]: Help
+          - generic [ref=f252e149] [cursor=pointer]:
+            - generic [ref=f252e150]: "Magia Caotica: Magia del Caos Práctica"
+            - generic [ref=f252e151]: magiacaoticapractica@gmail.com
+      - main [ref=f252e157]:
+        - heading "Dashboard" [level=1] [ref=f252e161]
+        - generic [ref=f252e166]:
+          - button "Dismiss checklist" [ref=f252e168] [cursor=pointer]
+          - generic [ref=f252e173]:
+            - generic [ref=f252e174]:
+              - heading "Let's get you started" [level=2] [ref=f252e175]
+              - paragraph [ref=f252e176]: Use this personalised guide to start your journey.
+            - generic [ref=f252e177]:
+              - paragraph [ref=f252e178]: 2 / 4 steps
+              - progressbar [ref=f252e181]
+          - generic [ref=f252e183]:
+            - paragraph [ref=f252e194]:
+              - generic [ref=f252e195]: Give subscribers a way to sign up
+            - generic [ref=f252e198]:
+              - generic [ref=f252e199]: "2"
+              - generic [ref=f252e201]:
+                - generic [ref=f252e202]:
+                  - paragraph [ref=f252e203]:
+                    - generic [ref=f252e204]: Review your brand styles
+                  - paragraph [ref=f252e205]: Define your brand once and keep it consistent across every email, landing page and form.
+                - generic [ref=f252e206]:
+                  - link "Review brand" [ref=f252e207] [cursor=pointer]:
+                    - /url: /configuration/brand-styles
+                  - button "Mark completed" [ref=f252e209] [cursor=pointer]
+            - paragraph [ref=f252e224]:
+              - generic [ref=f252e225]: Engage your subscribers
+            - generic [ref=f252e228]:
+              - generic [ref=f252e229]: "4"
+              - paragraph [ref=f252e233]:
+                - generic [ref=f252e234]: Connect your domain
+        - generic [ref=f252e238]:
+          - generic [ref=f252e240]:
+            - heading "Performance overview" [level=2] [ref=f252e241]
+            - generic [ref=f252e242]:
+              - button "Last 30 days" [ref=f252e245] [cursor=pointer]
+              - button "Export" [disabled] [ref=f252e251]
+          - generic [ref=f252e254]:
+            - generic [ref=f252e255]:
+              - generic [ref=f252e256]: Subscribers
+              - generic [ref=f252e262]:
+                - generic [ref=f252e263]:
+                  - generic [ref=f252e264]:
+                    - generic [ref=f252e265]: Total active subscribers
+                    - generic [ref=f252e266]: "2"
+                    - generic [ref=f252e267]:
+                      - text: Want more subscribers? Grow your email list with
+                      - link "signup forms" [ref=f252e268] [cursor=pointer]:
+                        - /url: /forms
+                  - generic [ref=f252e269]:
+                    - generic [ref=f252e270]:
+                      - generic [ref=f252e272]:
+                        - generic [ref=f252e273]: New subscribers today
+                        - generic [ref=f252e276]: "2"
+                      - generic [ref=f252e280]:
+                        - generic [ref=f252e281]: New subscribers this month
+                        - generic [ref=f252e284]: "2"
+                    - generic [ref=f252e287]:
+                      - generic [ref=f252e289]:
+                        - generic [ref=f252e290]:
+                          - generic [ref=f252e291]: New
+                          - generic [ref=f252e294]: Last 30 days
+                        - generic [ref=f252e295]: —
+                      - generic [ref=f252e299]:
+                        - generic [ref=f252e300]:
+                          - generic [ref=f252e301]: Unsubscribed
+                          - generic [ref=f252e304]: Last 30 days
+                        - generic [ref=f252e305]: —
+                - generic [ref=f252e308]: Chart loading...
+            - generic [ref=f252e317]:
+              - generic [ref=f252e318]:
+                - generic [ref=f252e319]: Campaigns
+                - generic [ref=f252e325]:
+                  - generic [ref=f252e326]: "Viewing data for:"
+                  - button "All groups" [ref=f252e329] [cursor=pointer]
+                  - button "All folders" [ref=f252e341] [cursor=pointer]
+              - generic [ref=f252e351]:
+                - generic [ref=f252e352]:
+                  - generic [ref=f252e353]:
+                    - generic [ref=f252e354]: Emails sent
+                    - generic [ref=f252e355]: —
+                    - generic [ref=f252e356]: Last 30 days
+                  - generic [ref=f252e357]:
+                    - generic [ref=f252e358]:
+                      - generic [ref=f252e360]:
+                        - generic [ref=f252e361]:
+                          - generic [ref=f252e362]: Opens
+                          - generic [ref=f252e365]: Last 30 days
+                        - generic [ref=f252e366]: "-"
+                      - generic [ref=f252e370]:
+                        - generic [ref=f252e371]:
+                          - generic [ref=f252e372]: Clicks
+                          - generic [ref=f252e375]: Last 30 days
+                        - generic [ref=f252e376]: "-"
+                      - generic [ref=f252e380]:
+                        - generic [ref=f252e381]:
+                          - generic [ref=f252e382]: CTOR
+                          - generic [ref=f252e390]: Last 30 days
+                        - generic [ref=f252e391]: "-"
+                    - group [ref=f252e397]:
+                      - region "Chart" [ref=f252e402]:
+                        - generic [ref=f252e413]:
+                          - generic:
+                            - generic:
+                              - group "Opens"
+                              - group "Clicks"
+                - generic [ref=f252e419]:
+                  - generic [ref=f252e420]:
+                    - generic [ref=f252e421]: Campaign performance by month sent
+                    - table [ref=f252e427]:
+                      - rowgroup [ref=f252e428]:
+                        - row [ref=f252e429]:
+                          - columnheader "Month sent" [ref=f252e430]
+                          - columnheader "Campaigns" [ref=f252e431]
+                          - columnheader "Emails sent" [ref=f252e432]
+                          - columnheader "Opened" [ref=f252e433]
+                          - columnheader "Clicked" [ref=f252e434]
+                          - columnheader "Unsubscribed" [ref=f252e435]
+                          - columnheader "Spam complaints" [ref=f252e436]
+                      - rowgroup [ref=f252e437]:
+                        - row [ref=f252e438]:
+                          - cell "2026 July" [ref=f252e439]
+                          - cell "0" [ref=f252e440]
+                          - cell "0" [ref=f252e441]
+                          - cell "0% (0)" [ref=f252e442]
+                          - cell "0% (0)" [ref=f252e443]
+                          - cell "0% (0)" [ref=f252e444]
+                          - cell "0% (0)" [ref=f252e445]
+                        - row [ref=f252e446]:
+                          - cell "2026 June" [ref=f252e447]
+                          - cell "0" [ref=f252e448]
+                          - cell "0" [ref=f252e449]
+                          - cell "0% (0)" [ref=f252e450]
+                          - cell "0% (0)" [ref=f252e451]
+                          - cell "0% (0)" [ref=f252e452]
+                          - cell "0% (0)" [ref=f252e453]
+                        - row [ref=f252e454]:
+                          - cell "2026 May" [ref=f252e455]
+                          - cell "0" [ref=f252e456]
+                          - cell "0" [ref=f252e457]
+                          - cell "0% (0)" [ref=f252e458]
+                          - cell "0% (0)" [ref=f252e459]
+                          - cell "0% (0)" [ref=f252e460]
+                          - cell "0% (0)" [ref=f252e461]
+                  - button "Show more" [ref=f252e464] [cursor=pointer]
+            - generic [ref=f252e466]:
+              - generic [ref=f252e467]:
+                - generic [ref=f252e468]: Automations
+                - generic [ref=f252e476]:
+                  - generic [ref=f252e477]: "Viewing data for:"
+                  - button "All groups" [ref=f252e480] [cursor=pointer]
+              - generic [ref=f252e491]:
+                - generic [ref=f252e492]:
+                  - generic [ref=f252e493]: Active automation workflows
+                  - generic [ref=f252e494]: "1"
+                  - generic [ref=f252e495]:
+                    - text: Automatically send emails based on subscriber actions by using
+                    - link "automation workflows" [ref=f252e496] [cursor=pointer]:
+                      - /url: https://dashboard.mailerlite.com/automations/status/workflows
+                    - text: .
+                - generic [ref=f252e497]:
+                  - generic [ref=f252e498]:
+                    - generic [ref=f252e500]:
+                      - generic [ref=f252e501]: Subscribers in progress
+                      - generic [ref=f252e504]: "-"
+                    - generic [ref=f252e508]:
+                      - generic [ref=f252e509]:
+                        - generic [ref=f252e510]: Completed subscribers
+                        - generic [ref=f252e512]: Last 30 days
+                      - generic [ref=f252e513]: "-"
+                  - generic [ref=f252e516]:
+                    - generic [ref=f252e518]:
+                      - generic [ref=f252e519]:
+                        - generic [ref=f252e520]: Emails sent
+                        - generic [ref=f252e522]: Last 30 days
+                      - generic [ref=f252e523]: "-"
+                    - generic [ref=f252e527]:
+                      - generic [ref=f252e528]:
+                        - generic [ref=f252e529]: Unsubscribed
+                        - generic [ref=f252e531]: Last 30 days
+                      - generic [ref=f252e532]: "-"
+            - generic [ref=f252e535]:
+              - generic [ref=f252e536]: Forms
+              - generic [ref=f252e543]:
+                - generic [ref=f252e544]:
+                  - generic [ref=f252e545]: All active forms
+                  - generic [ref=f252e552]: "2"
+                  - generic [ref=f252e553]:
+                    - text: Make it easy for people to share their email with you by using
+                    - link "signup forms" [ref=f252e554] [cursor=pointer]:
+                      - /url: https://dashboard.mailerlite.com/forms
+                    - text: .
+                - generic [ref=f252e556]:
+                  - generic [ref=f252e557]:
+                    - generic [ref=f252e558]:
+                      - generic [ref=f252e559]:
+                        - generic [ref=f252e560]: Signups
+                        - generic [ref=f252e562]: Last 30 days
+                      - generic [ref=f252e563]: "0"
+                    - generic [ref=f252e566]: Chart loading...
+                  - generic [ref=f252e575]:
+                    - generic [ref=f252e576]:
+                      - generic [ref=f252e577]:
+                        - generic [ref=f252e578]: Avg. Conversion rate
+                        - generic [ref=f252e580]: Last 30 days
+                      - generic [ref=f252e581]: 0%
+                    - generic [ref=f252e584]: Chart loading...
+            - generic [ref=f252e593]:
+              - generic [ref=f252e594]: Sites
+              - generic [ref=f252e601]:
+                - generic [ref=f252e602]:
+                  - generic [ref=f252e603]: All published sites
+                  - generic [ref=f252e610]:
+                    - text: Start building professional websites with
+                    - link "sites" [ref=f252e611] [cursor=pointer]:
+                      - /url: https://dashboard.mailerlite.com/sites
+                    - text: .
+                - generic [ref=f252e613]:
+                  - generic [ref=f252e614]:
+                    - generic [ref=f252e615]:
+                      - generic [ref=f252e616]:
+                        - generic [ref=f252e617]: Signups
+                        - generic [ref=f252e619]: Last 30 days
+                      - generic [ref=f252e620]: "0"
+                    - generic [ref=f252e623]: Chart loading...
+                  - generic [ref=f252e632]:
+                    - generic [ref=f252e633]:
+                      - generic [ref=f252e634]:
+                        - generic [ref=f252e635]: Avg. Conversion rate
+                        - generic [ref=f252e637]: Last 30 days
+                      - generic [ref=f252e638]: 0%
+                    - generic [ref=f252e641]: Chart loading...
+  - iframe [ref=f252e650]:
+    

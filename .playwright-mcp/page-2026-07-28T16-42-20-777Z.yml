@@ -1,0 +1,1456 @@
+- generic [active] [ref=f42e1]:
+  - main [ref=f42e4]:
+    - generic [ref=f42e6]:
+      - paragraph [ref=f42e7]:
+        - generic [ref=f42e8]: See every new feature we launched at Craft + Commerce 2026
+      - link "See what's new" [ref=f42e11] [cursor=pointer]:
+        - /url: /2026-release
+    - generic [ref=f42e13]:
+      - navigation [ref=f42e14]:
+        - generic [ref=f42e17]:
+          - link "Kit Logo - Navigate to homepage" [ref=f42e19] [cursor=pointer]:
+            - /url: /
+            - img "Kit"
+          - generic [ref=f42e22]:
+            - button "Features menu" [ref=f42e23]:
+              - generic [ref=f42e24]: Features
+              - img "Down" [ref=f42e25]
+            - link "Pricing" [ref=f42e28] [cursor=pointer]:
+              - /url: /pricing
+            - button "Use Cases menu" [ref=f42e30]:
+              - generic [ref=f42e31]: Use Cases
+              - img "Down" [ref=f42e32]
+            - button "Resources menu" [ref=f42e35]:
+              - generic [ref=f42e36]: Resources
+              - img "Down" [ref=f42e37]
+          - generic [ref=f42e41]:
+            - link "Log in" [ref=f42e43] [cursor=pointer]:
+              - /url: https://app.kit.com/users/login
+            - link "Request a demo" [ref=f42e46] [cursor=pointer]:
+              - /url: /request-demo
+            - link "Start free trial" [ref=f42e49] [cursor=pointer]:
+              - /url: https://app.kit.com/users/signup?plan=1k
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Want a personalized product tour?
+                        - generic: Our team of experts would love to show you around.
+                        - generic:
+                          - link "Request demo":
+                            - /url: /request-demo
+                    - generic:
+                      - text: Overview
+                      - list:
+                        - listitem:
+                          - link "See all features":
+                            - /url: /features
+                        - listitem:
+                          - link "Pro":
+                            - /url: /pro
+                        - listitem:
+                          - generic: Watch demo
+                        - listitem:
+                          - link "Kit + AI":
+                            - /url: /ai
+                        - listitem:
+                          - link "Advertisers":
+                            - /url: /advertisers
+                    - generic:
+                      - text: Grow
+                      - list:
+                        - listitem:
+                          - link "Analytics New":
+                            - /url: /features/analytics
+                            - text: Analytics
+                            - generic: New
+                        - listitem:
+                          - link "Subscriber Signals New":
+                            - /url: /features/signals
+                            - text: Subscriber Signals
+                            - generic: New
+                        - listitem:
+                          - link "Recommendations":
+                            - /url: /features/recommendations
+                        - listitem:
+                          - link "Landing pages":
+                            - /url: /features/landing-pages
+                        - listitem:
+                          - link "Forms":
+                            - /url: /features/forms
+                    - generic:
+                      - text: Send
+                      - list:
+                        - listitem:
+                          - link "Email designer":
+                            - /url: /features/email-designer
+                        - listitem:
+                          - link "Email marketing":
+                            - /url: /features/email-marketing
+                        - listitem:
+                          - link "Deliverability":
+                            - /url: /features/deliverability
+                    - generic:
+                      - text: Automate
+                      - list:
+                        - listitem:
+                          - link "Visual Automations":
+                            - /url: /features/automations
+                        - listitem:
+                          - link "Kit App Store":
+                            - /url: /apps
+                        - listitem:
+                          - link "Kit MCP New":
+                            - /url: /ai/mcp
+                            - text: Kit MCP
+                            - generic: New
+                    - generic:
+                      - text: Earn
+                      - list:
+                        - listitem:
+                          - link "Commerce":
+                            - /url: /features/commerce
+                        - listitem:
+                          - link "Paid Recommendations":
+                            - /url: /features/paid-recommendations
+                        - listitem:
+                          - link "Paid newsletter":
+                            - /url: /features/commerce/paid-newsletter
+                        - listitem:
+                          - link "Newsletter sponsorships New":
+                            - /url: /features/newsletter-sponsorships
+                            - text: Newsletter sponsorships
+                            - generic: New
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - text: Kit for
+                        - list:
+                          - listitem:
+                            - link "Artists":
+                              - /url: /use-cases/artists
+                          - listitem:
+                            - link "Authors":
+                              - /url: /use-cases/authors
+                          - listitem:
+                            - link "Bloggers":
+                              - /url: /use-cases/bloggers
+                          - listitem:
+                            - link "Coaches":
+                              - /url: /use-cases/coaches
+                          - listitem:
+                            - link "Course creators":
+                              - /url: /use-cases/course-memberships
+                          - listitem:
+                            - link "Marketers":
+                              - /url: /use-cases/marketers
+                          - listitem:
+                            - link "Musicians":
+                              - /url: /use-cases/musicians
+                          - listitem:
+                            - link "Newsletter creators":
+                              - /url: /use-cases/newsletter-creators
+                          - listitem:
+                            - link "Podcasters":
+                              - /url: /use-cases/podcasters
+                          - listitem:
+                            - link "YouTubers":
+                              - /url: /use-cases/youtubers
+                    - list:
+                      - listitem:
+                        - link "Emails Email marketing Market your products and services using email marketing features built for creators":
+                          - /url: /features/email-marketing
+                          - generic:
+                            - generic:
+                              - img "Emails"
+                              - generic:
+                                - generic: Email marketing
+                                - generic: Market your products and services using email marketing features built for creators
+                      - listitem:
+                        - link "DollarRepeat Run a paid newsletter Earn recurring income with newsletter subscriptions":
+                          - /url: /features/commerce/paid-newsletter
+                          - generic:
+                            - generic:
+                              - img "DollarRepeat"
+                              - generic:
+                                - generic: Run a paid newsletter
+                                - generic: Earn recurring income with newsletter subscriptions
+                      - listitem:
+                        - link "Bolt Automate your marketing Set up welcome sequences, launches, and nurture campaigns that run 24/7 while you create":
+                          - /url: /features/automations
+                          - generic:
+                            - generic:
+                              - img "Bolt"
+                              - generic:
+                                - generic: Automate your marketing
+                                - generic: Set up welcome sequences, launches, and nurture campaigns that run 24/7 while you create
+                      - listitem:
+                        - link "Cart Sell digital products Simple product pages, automated fulfillment, and low transaction fees":
+                          - /url: /features/commerce
+                          - generic:
+                            - generic:
+                              - img "Cart"
+                              - generic:
+                                - generic: Sell digital products
+                                - generic: Simple product pages, automated fulfillment, and low transaction fees
+                      - listitem:
+                        - link "See all case studies":
+                          - /url: /resources/blog/category/case-study
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - text: Support
+                        - list:
+                          - listitem:
+                            - link "Get support":
+                              - /url: /support
+                          - listitem:
+                            - link "Hire a Kit Expert":
+                              - /url: https://contra.com/kit
+                          - listitem:
+                            - link "Free migrations":
+                              - /url: /migrations
+                      - generic:
+                        - text: More resources
+                        - list:
+                          - listitem:
+                            - link "Email templates":
+                              - /url: /marketplace
+                          - listitem:
+                            - link "Latest report":
+                              - /url: /reports/creator-economy-2024
+                          - listitem:
+                            - link "Kit University":
+                              - /url: https://learn.kit.com
+                          - listitem:
+                            - link "Podcasts":
+                              - /url: /resources/podcasts
+                    - list:
+                      - listitem:
+                        - link "Newspaper Blog How-to guides to help you earn a living online":
+                          - /url: /resources
+                          - generic:
+                            - generic:
+                              - img "Newspaper"
+                              - generic:
+                                - generic: Blog
+                                - generic: How-to guides to help you earn a living online
+                      - listitem:
+                        - link "Microphone Kit Studios Professional recording studios for Kit creators":
+                          - /url: /studios
+                          - generic:
+                            - generic:
+                              - img "Microphone"
+                              - generic:
+                                - generic: Kit Studios
+                                - generic: Professional recording studios for Kit creators
+                      - listitem:
+                        - link "Book I Am A Creator Inspiring stories of creators":
+                          - /url: /resources/creator-stories
+                          - generic:
+                            - generic:
+                              - img "Book"
+                              - generic:
+                                - generic: I Am A Creator
+                                - generic: Inspiring stories of creators
+                      - listitem:
+                        - link "Video Rebranding in Public Video series about our rebranding process":
+                          - /url: /rebranding-in-public
+                          - generic:
+                            - generic:
+                              - img "Video"
+                              - generic:
+                                - generic: Rebranding in Public
+                                - generic: Video series about our rebranding process
+                      - listitem:
+                        - link "See all resources":
+                          - /url: /resources
+      - generic [ref=f42e53]:
+        - generic [ref=f42e55]:
+          - heading "Your email list should be working harder for you" [level=1] [ref=f42e56]
+          - paragraph [ref=f42e57]: Your audience is more valuable than you think. Kit is the email marketing platform that helps you grow your list, find your highest-value subscribers, and earn more from every send.
+          - generic [ref=f42e59]:
+            - link "Start free trial" [ref=f42e62] [cursor=pointer]:
+              - /url: https://app.kit.com/users/signup?plan=1k
+            - paragraph [ref=f42e64]: 14-day free trial. No credit card required. Free migrations.
+        - region "Featured creators using Kit" [ref=f42e65]:
+          - generic [ref=f42e66]:
+            - status [ref=f42e67]:
+              - generic [ref=f42e68]: Trusted By
+              - generic [ref=f42e69]: Anne-Laure Le Cunff
+              - generic [ref=f42e70]: Neuroscientist and bestselling author
+            - group "Carousel navigation" [ref=f42e71]:
+              - button "View Anne-Laure Le Cunff, 1 of 5" [ref=f42e72] [cursor=pointer]:
+                - img "Anne-Laure Le Cunff" [ref=f42e74]
+              - button "View James Clear, 2 of 5" [ref=f42e75] [cursor=pointer]:
+                - img "James Clear" [ref=f42e77]
+              - button "View Ali Abdaal, 3 of 5" [ref=f42e78] [cursor=pointer]:
+                - img "Ali Abdaal" [ref=f42e80]
+              - button "View Nisha Vora, 4 of 5" [ref=f42e81] [cursor=pointer]:
+                - img "Nisha Vora" [ref=f42e83]
+              - button "View Matthew McConaughey, 5 of 5" [ref=f42e84] [cursor=pointer]:
+                - img "Matthew McConaughey" [ref=f42e86]
+          - generic:
+            - img "Anne-Laure Le Cunff" [ref=f42e87]
+            - img "James Clear" [ref=f42e88]
+            - img "Ali Abdaal" [ref=f42e89]
+            - img "Nisha Vora" [ref=f42e90]
+            - img "Matthew McConaughey" [ref=f42e91]
+      - generic [ref=f42e94]:
+        - button [ref=f42e95] [cursor=pointer]:
+          - img "Grow feature illustration" [ref=f42e97]
+          - paragraph [ref=f42e98]:
+            - strong [ref=f42e99]: Get more subscribers
+            - text: with landing pages, forms, and creator recommendations.
+        - button [ref=f42e100] [cursor=pointer]:
+          - img "Send feature illustration" [ref=f42e102]
+          - paragraph [ref=f42e103]:
+            - strong [ref=f42e104]: Send beautiful emails
+            - text: that build relationships, not just revenue.
+        - button [ref=f42e105] [cursor=pointer]:
+          - img "Automate feature illustration" [ref=f42e107]
+          - paragraph [ref=f42e108]:
+            - strong [ref=f42e109]: Automate your work
+            - text: with apps that connect your creator tools directly to Kit.
+        - button [ref=f42e110] [cursor=pointer]:
+          - img "Earn feature illustration" [ref=f42e112]
+          - paragraph [ref=f42e113]:
+            - strong [ref=f42e114]: Earn more on autopilot
+            - text: with your digital products, subscriptions, and newsletter sponsorships.
+        - generic [ref=f42e115]:
+          - generic [ref=f42e116]:
+            - img "Grow feature screenshot" [ref=f42e118]
+            - generic "kit-hp-1-grow-your-list-v4a" [ref=f42e128]
+          - generic [ref=f42e130]:
+            - img "Send feature screenshot" [ref=f42e132]
+            - generic [ref=f42e140]:
+              - generic "kit-hp-2-email-templates-v4a" [ref=f42e142]
+              - generic [ref=f42e145]:
+                - generic:
+                  - 'button "Play Video: kit-hp-2-email-templates-v4a"'
+                - img "Video Thumbnail" [ref=f42e147]
+          - generic [ref=f42e148]:
+            - img "Automate feature screenshot" [ref=f42e150]
+            - generic [ref=f42e158]:
+              - generic "kit-hp-3-automations-v4a" [ref=f42e160]
+              - generic [ref=f42e163]:
+                - generic:
+                  - 'button "Play Video: kit-hp-3-automations-v4a"'
+                - img "Video Thumbnail" [ref=f42e165]
+          - generic [ref=f42e166]:
+            - img "Earn feature screenshot" [ref=f42e168]
+            - generic [ref=f42e176]:
+              - generic "kit-hp-4-sell-products-v4a" [ref=f42e178]
+              - generic [ref=f42e181]:
+                - generic:
+                  - 'button "Play Video: kit-hp-4-sell-products-v4a"'
+                - img "Video Thumbnail" [ref=f42e183]
+          - img "Grow feature screenshot" [ref=f42e185]
+      - generic [ref=f42e186]:
+        - generic [ref=f42e190]:
+          - generic [ref=f42e191]: Thousands of authors use Kit to grow their business
+          - paragraph [ref=f42e192]:
+            - generic [ref=f42e193]: Thousands of
+            - generic [ref=f42e195]:
+              - text: entrepreneurs
+              - generic [ref=f42e196]: authors
+              - text: entrepreneurs
+          - paragraph [ref=f42e197]: use Kit to grow their business
+        - generic [ref=f42e200]:
+          - generic [ref=f42e206]:
+            - paragraph [ref=f42e207]: Matthew McConaughey
+            - paragraph [ref=f42e208]: Founder of Lyrics of Livin newsletter
+          - generic [ref=f42e214]:
+            - paragraph [ref=f42e215]: Nicole Walters
+            - paragraph [ref=f42e216]: New York Times bestselling author, Emmy nominated producer, and CEO
+          - generic [ref=f42e222]:
+            - paragraph [ref=f42e223]: Ali Abdaal
+            - paragraph [ref=f42e224]: Ex-doctor turned Productivity Expert, YouTuber, bestselling author, and entrepreneur
+          - generic [ref=f42e230]:
+            - paragraph [ref=f42e231]: Susan Cain
+            - paragraph [ref=f42e232]: "#1 New York Times bestselling author, and speaker"
+          - generic [ref=f42e238]:
+            - paragraph [ref=f42e239]: Pat Flynn
+            - paragraph [ref=f42e240]: Entrepreneur, YouTuber, and podcast host
+          - generic [ref=f42e246]:
+            - paragraph [ref=f42e247]: James Clear
+            - paragraph [ref=f42e248]: "Author of #1 New York Times bestseller, Atomic Habits"
+          - generic [ref=f42e254]:
+            - paragraph [ref=f42e255]: Lil Jon
+            - paragraph [ref=f42e256]: Grammy winning entertainer, producer, and DJ. Founder of Wellness Wednesday
+          - generic [ref=f42e262]:
+            - paragraph [ref=f42e263]: Mandy Moore
+            - paragraph [ref=f42e264]: Emmy-, Grammy-, and Golden Globe-nominated actress, singer, and songwriter
+          - generic [ref=f42e270]:
+            - paragraph [ref=f42e271]: Andrew Huberman
+            - paragraph [ref=f42e272]: Professor of Neurobiology & Ophthalmology at Stanford, and podcast host
+          - generic [ref=f42e278]:
+            - paragraph [ref=f42e279]: Nisha Vora
+            - paragraph [ref=f42e280]: Vegan cookbook author, YouTuber with 1M+ subscribers
+          - generic [ref=f42e286]:
+            - paragraph [ref=f42e287]: Tim Ferriss
+            - paragraph [ref=f42e288]: Five-time New York Times bestselling author, podcast host
+          - generic [ref=f42e294]:
+            - paragraph [ref=f42e295]: Tomi Adeyemi
+            - paragraph [ref=f42e296]: "Time 100 most influential people, #1 New York Times bestselling novelist"
+          - generic [ref=f42e302]:
+            - paragraph [ref=f42e303]: Mark Manson
+            - paragraph [ref=f42e304]: "Three-time #1 New York Times bestselling author"
+          - generic [ref=f42e310]:
+            - paragraph [ref=f42e311]: Rachel Rodgers
+            - paragraph [ref=f42e312]: Angel investor, CEO & Founder of Hello Seven
+          - generic [ref=f42e318]:
+            - paragraph [ref=f42e319]: Ryan Holiday
+            - paragraph [ref=f42e320]: "#1 New York Times bestselling author, podcast host"
+          - generic [ref=f42e326]:
+            - paragraph [ref=f42e327]: Sahil Bloom
+            - paragraph [ref=f42e328]: Entrepreneur, investor, and newsletter writer with 800K+ subscribers
+          - generic [ref=f42e334]:
+            - paragraph [ref=f42e335]: Tim McGraw
+            - paragraph [ref=f42e336]: Grammy award-winning singer and songwriter
+          - generic [ref=f42e342]:
+            - paragraph [ref=f42e343]: Skinny Confidential
+            - paragraph [ref=f42e344]: Michael & Lauryn Bosstick. The Skinny Confidential Him & Her Show
+          - generic [ref=f42e350]:
+            - paragraph [ref=f42e351]: Robert Greene
+            - paragraph [ref=f42e352]: "#1 New York Times bestselling author"
+          - generic [ref=f42e358]:
+            - paragraph [ref=f42e359]: Gillian Perkins
+            - paragraph [ref=f42e360]: Entrepreneur and digital marketing expert with 35M+ views on YouTube
+          - generic [ref=f42e366]:
+            - paragraph [ref=f42e367]: Arthur Brooks
+            - paragraph [ref=f42e368]: "Harvard professor, PhD social scientist, and #1 bestselling author"
+          - generic [ref=f42e374]:
+            - paragraph [ref=f42e375]: Lindsey Stirling
+            - paragraph [ref=f42e376]: Violinist, dancer, and award-winning songwriter
+          - generic [ref=f42e382]:
+            - paragraph [ref=f42e383]: Courtland Allen
+            - paragraph [ref=f42e384]: Y Combinator alum, full-stack web developer, and founder of Indie Hackers
+          - generic [ref=f42e390]:
+            - paragraph [ref=f42e391]: Shannon Wild
+            - paragraph [ref=f42e392]: National Geographic wildlife photographer and filmmaker
+          - generic [ref=f42e398]:
+            - paragraph [ref=f42e399]: Lindsay Ostrom
+            - paragraph [ref=f42e400]: Creator of food blog Pinch of Yum
+          - generic [ref=f42e406]:
+            - paragraph [ref=f42e407]: Chris Guillebeau
+            - paragraph [ref=f42e408]: New York Times bestselling author, traveler
+          - generic [ref=f42e414]:
+            - paragraph [ref=f42e415]: Katie Wells
+            - paragraph [ref=f42e416]: Bestselling author, podcast host, and founder of Wellness Mama
+          - generic [ref=f42e422]:
+            - paragraph [ref=f42e423]: Neil Patel
+            - paragraph [ref=f42e424]: Top 10 marketer by Forbes, New York Times bestselling author
+          - generic [ref=f42e430]:
+            - paragraph [ref=f42e431]: Shane Parrish
+            - paragraph [ref=f42e432]: New York Times bestselling author, and newsletter writer
+          - generic [ref=f42e438]:
+            - paragraph [ref=f42e439]: Maya Krampf
+            - paragraph [ref=f42e440]: Bestselling author, founder of food blog Wholesome Yum
+          - generic [ref=f42e446]:
+            - paragraph [ref=f42e447]: Matthew McConaughey
+            - paragraph [ref=f42e448]: Founder of Lyrics of Livin newsletter
+          - generic [ref=f42e454]:
+            - paragraph [ref=f42e455]: Nicole Walters
+            - paragraph [ref=f42e456]: New York Times bestselling author, Emmy nominated producer, and CEO
+          - generic [ref=f42e462]:
+            - paragraph [ref=f42e463]: Ali Abdaal
+            - paragraph [ref=f42e464]: Ex-doctor turned Productivity Expert, YouTuber, bestselling author, and entrepreneur
+          - generic [ref=f42e470]:
+            - paragraph [ref=f42e471]: Susan Cain
+            - paragraph [ref=f42e472]: "#1 New York Times bestselling author, and speaker"
+          - generic [ref=f42e478]:
+            - paragraph [ref=f42e479]: Pat Flynn
+            - paragraph [ref=f42e480]: Entrepreneur, YouTuber, and podcast host
+          - generic [ref=f42e486]:
+            - paragraph [ref=f42e487]: James Clear
+            - paragraph [ref=f42e488]: "Author of #1 New York Times bestseller, Atomic Habits"
+          - generic [ref=f42e494]:
+            - paragraph [ref=f42e495]: Lil Jon
+            - paragraph [ref=f42e496]: Grammy winning entertainer, producer, and DJ. Founder of Wellness Wednesday
+          - generic [ref=f42e502]:
+            - paragraph [ref=f42e503]: Mandy Moore
+            - paragraph [ref=f42e504]: Emmy-, Grammy-, and Golden Globe-nominated actress, singer, and songwriter
+          - generic [ref=f42e510]:
+            - paragraph [ref=f42e511]: Andrew Huberman
+            - paragraph [ref=f42e512]: Professor of Neurobiology & Ophthalmology at Stanford, and podcast host
+          - generic [ref=f42e518]:
+            - paragraph [ref=f42e519]: Nisha Vora
+            - paragraph [ref=f42e520]: Vegan cookbook author, YouTuber with 1M+ subscribers
+          - generic [ref=f42e526]:
+            - paragraph [ref=f42e527]: Tim Ferriss
+            - paragraph [ref=f42e528]: Five-time New York Times bestselling author, podcast host
+          - generic [ref=f42e534]:
+            - paragraph [ref=f42e535]: Tomi Adeyemi
+            - paragraph [ref=f42e536]: "Time 100 most influential people, #1 New York Times bestselling novelist"
+          - generic [ref=f42e542]:
+            - paragraph [ref=f42e543]: Mark Manson
+            - paragraph [ref=f42e544]: "Three-time #1 New York Times bestselling author"
+          - generic [ref=f42e550]:
+            - paragraph [ref=f42e551]: Rachel Rodgers
+            - paragraph [ref=f42e552]: Angel investor, CEO & Founder of Hello Seven
+          - generic [ref=f42e558]:
+            - paragraph [ref=f42e559]: Ryan Holiday
+            - paragraph [ref=f42e560]: "#1 New York Times bestselling author, podcast host"
+          - generic [ref=f42e566]:
+            - paragraph [ref=f42e567]: Sahil Bloom
+            - paragraph [ref=f42e568]: Entrepreneur, investor, and newsletter writer with 800K+ subscribers
+          - generic [ref=f42e574]:
+            - paragraph [ref=f42e575]: Tim McGraw
+            - paragraph [ref=f42e576]: Grammy award-winning singer and songwriter
+          - generic [ref=f42e582]:
+            - paragraph [ref=f42e583]: Skinny Confidential
+            - paragraph [ref=f42e584]: Michael & Lauryn Bosstick. The Skinny Confidential Him & Her Show
+          - generic [ref=f42e590]:
+            - paragraph [ref=f42e591]: Robert Greene
+            - paragraph [ref=f42e592]: "#1 New York Times bestselling author"
+          - generic [ref=f42e598]:
+            - paragraph [ref=f42e599]: Gillian Perkins
+            - paragraph [ref=f42e600]: Entrepreneur and digital marketing expert with 35M+ views on YouTube
+          - generic [ref=f42e606]:
+            - paragraph [ref=f42e607]: Arthur Brooks
+            - paragraph [ref=f42e608]: "Harvard professor, PhD social scientist, and #1 bestselling author"
+          - generic [ref=f42e614]:
+            - paragraph [ref=f42e615]: Lindsey Stirling
+            - paragraph [ref=f42e616]: Violinist, dancer, and award-winning songwriter
+          - generic [ref=f42e622]:
+            - paragraph [ref=f42e623]: Courtland Allen
+            - paragraph [ref=f42e624]: Y Combinator alum, full-stack web developer, and founder of Indie Hackers
+          - generic [ref=f42e630]:
+            - paragraph [ref=f42e631]: Shannon Wild
+            - paragraph [ref=f42e632]: National Geographic wildlife photographer and filmmaker
+          - generic [ref=f42e638]:
+            - paragraph [ref=f42e639]: Lindsay Ostrom
+            - paragraph [ref=f42e640]: Creator of food blog Pinch of Yum
+          - generic [ref=f42e646]:
+            - paragraph [ref=f42e647]: Chris Guillebeau
+            - paragraph [ref=f42e648]: New York Times bestselling author, traveler
+          - generic [ref=f42e654]:
+            - paragraph [ref=f42e655]: Katie Wells
+            - paragraph [ref=f42e656]: Bestselling author, podcast host, and founder of Wellness Mama
+          - generic [ref=f42e662]:
+            - paragraph [ref=f42e663]: Neil Patel
+            - paragraph [ref=f42e664]: Top 10 marketer by Forbes, New York Times bestselling author
+          - generic [ref=f42e670]:
+            - paragraph [ref=f42e671]: Shane Parrish
+            - paragraph [ref=f42e672]: New York Times bestselling author, and newsletter writer
+          - generic [ref=f42e678]:
+            - paragraph [ref=f42e679]: Maya Krampf
+            - paragraph [ref=f42e680]: Bestselling author, founder of food blog Wholesome Yum
+          - generic [ref=f42e686]:
+            - paragraph [ref=f42e687]: Matthew McConaughey
+            - paragraph [ref=f42e688]: Founder of Lyrics of Livin newsletter
+          - generic [ref=f42e694]:
+            - paragraph [ref=f42e695]: Nicole Walters
+            - paragraph [ref=f42e696]: New York Times bestselling author, Emmy nominated producer, and CEO
+          - generic [ref=f42e702]:
+            - paragraph [ref=f42e703]: Ali Abdaal
+            - paragraph [ref=f42e704]: Ex-doctor turned Productivity Expert, YouTuber, bestselling author, and entrepreneur
+          - generic [ref=f42e710]:
+            - paragraph [ref=f42e711]: Susan Cain
+            - paragraph [ref=f42e712]: "#1 New York Times bestselling author, and speaker"
+          - generic [ref=f42e718]:
+            - paragraph [ref=f42e719]: Pat Flynn
+            - paragraph [ref=f42e720]: Entrepreneur, YouTuber, and podcast host
+          - generic [ref=f42e726]:
+            - paragraph [ref=f42e727]: James Clear
+            - paragraph [ref=f42e728]: "Author of #1 New York Times bestseller, Atomic Habits"
+          - generic [ref=f42e734]:
+            - paragraph [ref=f42e735]: Lil Jon
+            - paragraph [ref=f42e736]: Grammy winning entertainer, producer, and DJ. Founder of Wellness Wednesday
+          - generic [ref=f42e742]:
+            - paragraph [ref=f42e743]: Mandy Moore
+            - paragraph [ref=f42e744]: Emmy-, Grammy-, and Golden Globe-nominated actress, singer, and songwriter
+          - generic [ref=f42e750]:
+            - paragraph [ref=f42e751]: Andrew Huberman
+            - paragraph [ref=f42e752]: Professor of Neurobiology & Ophthalmology at Stanford, and podcast host
+          - generic [ref=f42e758]:
+            - paragraph [ref=f42e759]: Nisha Vora
+            - paragraph [ref=f42e760]: Vegan cookbook author, YouTuber with 1M+ subscribers
+          - generic [ref=f42e766]:
+            - paragraph [ref=f42e767]: Tim Ferriss
+            - paragraph [ref=f42e768]: Five-time New York Times bestselling author, podcast host
+          - generic [ref=f42e774]:
+            - paragraph [ref=f42e775]: Tomi Adeyemi
+            - paragraph [ref=f42e776]: "Time 100 most influential people, #1 New York Times bestselling novelist"
+          - generic [ref=f42e782]:
+            - paragraph [ref=f42e783]: Mark Manson
+            - paragraph [ref=f42e784]: "Three-time #1 New York Times bestselling author"
+          - generic [ref=f42e790]:
+            - paragraph [ref=f42e791]: Rachel Rodgers
+            - paragraph [ref=f42e792]: Angel investor, CEO & Founder of Hello Seven
+          - generic [ref=f42e798]:
+            - paragraph [ref=f42e799]: Ryan Holiday
+            - paragraph [ref=f42e800]: "#1 New York Times bestselling author, podcast host"
+          - generic [ref=f42e806]:
+            - paragraph [ref=f42e807]: Sahil Bloom
+            - paragraph [ref=f42e808]: Entrepreneur, investor, and newsletter writer with 800K+ subscribers
+          - generic [ref=f42e814]:
+            - paragraph [ref=f42e815]: Tim McGraw
+            - paragraph [ref=f42e816]: Grammy award-winning singer and songwriter
+          - generic [ref=f42e822]:
+            - paragraph [ref=f42e823]: Skinny Confidential
+            - paragraph [ref=f42e824]: Michael & Lauryn Bosstick. The Skinny Confidential Him & Her Show
+          - generic [ref=f42e830]:
+            - paragraph [ref=f42e831]: Robert Greene
+            - paragraph [ref=f42e832]: "#1 New York Times bestselling author"
+          - generic [ref=f42e838]:
+            - paragraph [ref=f42e839]: Gillian Perkins
+            - paragraph [ref=f42e840]: Entrepreneur and digital marketing expert with 35M+ views on YouTube
+          - generic [ref=f42e846]:
+            - paragraph [ref=f42e847]: Arthur Brooks
+            - paragraph [ref=f42e848]: "Harvard professor, PhD social scientist, and #1 bestselling author"
+          - generic [ref=f42e854]:
+            - paragraph [ref=f42e855]: Lindsey Stirling
+            - paragraph [ref=f42e856]: Violinist, dancer, and award-winning songwriter
+          - generic [ref=f42e862]:
+            - paragraph [ref=f42e863]: Courtland Allen
+            - paragraph [ref=f42e864]: Y Combinator alum, full-stack web developer, and founder of Indie Hackers
+          - generic [ref=f42e870]:
+            - paragraph [ref=f42e871]: Shannon Wild
+            - paragraph [ref=f42e872]: National Geographic wildlife photographer and filmmaker
+          - generic [ref=f42e878]:
+            - paragraph [ref=f42e879]: Lindsay Ostrom
+            - paragraph [ref=f42e880]: Creator of food blog Pinch of Yum
+          - generic [ref=f42e886]:
+            - paragraph [ref=f42e887]: Chris Guillebeau
+            - paragraph [ref=f42e888]: New York Times bestselling author, traveler
+          - generic [ref=f42e894]:
+            - paragraph [ref=f42e895]: Katie Wells
+            - paragraph [ref=f42e896]: Bestselling author, podcast host, and founder of Wellness Mama
+          - generic [ref=f42e902]:
+            - paragraph [ref=f42e903]: Neil Patel
+            - paragraph [ref=f42e904]: Top 10 marketer by Forbes, New York Times bestselling author
+          - generic [ref=f42e910]:
+            - paragraph [ref=f42e911]: Shane Parrish
+            - paragraph [ref=f42e912]: New York Times bestselling author, and newsletter writer
+          - generic [ref=f42e918]:
+            - paragraph [ref=f42e919]: Maya Krampf
+            - paragraph [ref=f42e920]: Bestselling author, founder of food blog Wholesome Yum
+        - generic [ref=f42e922]:
+          - paragraph [ref=f42e923]: For over a decade and counting, Kit is the email marketing platform experts choose to grow their audience, deepen their relationships, and build a business around the work they love.
+          - generic [ref=f42e925]:
+            - link "Start free trial" [ref=f42e928] [cursor=pointer]:
+              - /url: https://app.kit.com/users/signup?plan=1k
+            - paragraph [ref=f42e930]: No credit card required
+      - generic [ref=f42e935]:
+        - generic [ref=f42e937]:
+          - generic [ref=f42e938]:
+            - generic [ref=f42e939]:
+              - generic [ref=f42e940]: Early Access
+              - heading "Subscriber Signals" [level=2] [ref=f42e941]
+            - paragraph [ref=f42e942]: Behind every email address is a real person. Subscriber Signals shows you who they are and how they can change your business.
+          - list [ref=f42e944]:
+            - listitem [ref=f42e945]:
+              - img "AlarmRing" [ref=f42e947]
+              - paragraph [ref=f42e950]: Get notified the moment a high-value subscriber joins your list
+            - listitem [ref=f42e951]:
+              - img "Security" [ref=f42e953]
+              - paragraph [ref=f42e956]: Win bigger sponsorships with Kit-verified audience data
+            - listitem [ref=f42e957]:
+              - img "LineChart" [ref=f42e959]
+              - paragraph [ref=f42e962]: Search your list by industry, location, or social reach in one click
+          - generic [ref=f42e965]:
+            - link "Start Pro free trial" [ref=f42e967] [cursor=pointer]:
+              - /url: https://app.kit.com/users/signup?plan=1k-pro
+            - link "Learn more ArrowRight" [ref=f42e970] [cursor=pointer]:
+              - /url: /features/signals
+              - generic [ref=f42e971]: Learn more
+              - img "ArrowRight" [ref=f42e972]
+        - generic [ref=f42e983]:
+          - generic "subscriber-signals-hero-animation" [ref=f42e985]
+          - generic [ref=f42e988]:
+            - generic:
+              - 'button "Play Video: subscriber-signals-hero-animation"'
+            - img "Video Thumbnail" [ref=f42e990]
+      - generic [ref=f42e992]:
+        - generic [ref=f42e993]:
+          - heading "Focus on what you love, automate more with Kit" [level=3] [ref=f42e995]
+          - link "Jump to features ArrowDown" [ref=f42e997] [cursor=pointer]:
+            - /url: /index#features
+            - generic [ref=f42e998]: Jump to features
+            - img "ArrowDown" [ref=f42e999]
+        - generic [ref=f42e1002]:
+          - generic [ref=f42e1003]:
+            - generic [ref=f42e1005]:
+              - img "Kit Creator Network recommendation stats showing 6 recommending creators, 15,529 views, 5,772 subscribers up 16.1%, and 37.17% conversion rate" [ref=f42e1008]
+              - generic [ref=f42e1009]:
+                - generic [ref=f42e1010]:
+                  - heading "Grow your email list, not your to-do list" [level=2] [ref=f42e1011]
+                  - paragraph [ref=f42e1012]:
+                    - text: Your expertise deserves a bigger audience. Reach more people and grow your list on autopilot with
+                    - strong [ref=f42e1013]: no-code landing pages, opt-in forms, and newsletter recommendations.
+                - generic [ref=f42e1015]:
+                  - link "Start free trial" [ref=f42e1018] [cursor=pointer]:
+                    - /url: https://app.kit.com/users/signup?plan=1k
+                  - paragraph [ref=f42e1020]: No credit card required
+            - generic [ref=f42e1022]:
+              - img "Segment filter set to Within Segment with Book fans and Paid Newsletter tags selected" [ref=f42e1025]
+              - generic [ref=f42e1027]:
+                - heading "Sell more without being salesy" [level=2] [ref=f42e1028]
+                - paragraph [ref=f42e1029]:
+                  - text: Kit’s tags and segments help you organize your audience based on their interests so the
+                  - strong [ref=f42e1030]: right people get the right message at the right time
+                  - text: .
+          - generic [ref=f42e1032]:
+            - img "A visual automation showing a completed re-engagement series for 428 subscribers followed by a Thinkific Course Progress custom field condition" [ref=f42e1035]
+            - generic [ref=f42e1037]:
+              - heading "Build once, benefit forever" [level=2] [ref=f42e1038]
+              - paragraph [ref=f42e1039]:
+                - text: Automations welcome new subscribers, nurture relationships, and
+                - strong [ref=f42e1040]: drive sales 24/7
+                - text: . It's like having another “you” in your business.
+          - generic [ref=f42e1041]:
+            - generic [ref=f42e1043]:
+              - img "Engagement funnel showing 88,531 received at 99.8%, 44,021 opened at 49.7%, and 6,285 clicked at 7.1%, with email landing in Inbox not Spam" [ref=f42e1046]
+              - generic [ref=f42e1048]:
+                - heading "Reach more people with every email" [level=2] [ref=f42e1049]
+                - paragraph [ref=f42e1050]:
+                  - text: With an industry-leading
+                  - strong [ref=f42e1051]: 99.8% delivery rate and average open rates above 40%
+                  - text: ", your carefully crafted emails land in inboxes, not spam folders."
+            - generic [ref=f42e1053]:
+              - img "New subscribers chart over 90 days broken down by UTM source, with 44.2% open rate and 45,390 total subscribers" [ref=f42e1056]
+              - generic [ref=f42e1057]:
+                - generic [ref=f42e1058]:
+                  - heading "Email analytics that drive revenue" [level=2] [ref=f42e1059]
+                  - paragraph [ref=f42e1060]:
+                    - text: See which email subscribers are most engaged, where they came from, and how long they stay, so you can
+                    - strong [ref=f42e1061]: double down on what’s working and fix what isn’t
+                    - text: .
+                - generic [ref=f42e1063]:
+                  - link "Start free trial" [ref=f42e1066] [cursor=pointer]:
+                    - /url: https://app.kit.com/users/signup?plan=1k
+                  - paragraph [ref=f42e1068]: No credit card required
+      - generic [ref=f42e1073]:
+        - generic [ref=f42e1075]:
+          - generic [ref=f42e1076]:
+            - generic [ref=f42e1077]:
+              - generic [ref=f42e1078]: NEW
+              - heading "Kit MCP" [level=2] [ref=f42e1079]
+            - paragraph [ref=f42e1080]: Connect Claude, ChatGPT, Gemini, and more directly to Kit so every AI analysis and action is personal to your business, your audience, and your list—with you in control of every move.
+          - list [ref=f42e1082]:
+            - listitem [ref=f42e1083]:
+              - img "ChatConversation" [ref=f42e1085]
+              - paragraph [ref=f42e1088]: Real answers from your actual Kit data—not generic AI advice
+            - listitem [ref=f42e1089]:
+              - img "Sparkle" [ref=f42e1091]
+              - paragraph [ref=f42e1096]: Tag subscribers, draft broadcasts, and trigger workflows from one conversation
+            - listitem [ref=f42e1097]:
+              - img "Admin" [ref=f42e1099]
+              - paragraph [ref=f42e1102]: You set the permissions and can revoke access anytime
+          - generic [ref=f42e1105]:
+            - link "Start free trial" [ref=f42e1107] [cursor=pointer]:
+              - /url: https://app.kit.com/users/signup?plan=1k
+            - link "Learn more ArrowRight" [ref=f42e1110] [cursor=pointer]:
+              - /url: /ai/mcp
+              - generic [ref=f42e1111]: Learn more
+              - img "ArrowRight" [ref=f42e1112]
+        - generic [ref=f42e1123]:
+          - generic "Kit MCP - Hero Animation" [ref=f42e1125]
+          - generic [ref=f42e1128]:
+            - generic:
+              - 'button "Play Video: Kit MCP - Hero Animation"'
+            - img "Video Thumbnail" [ref=f42e1130]
+      - generic [ref=f42e1132]:
+        - generic [ref=f42e1135]:
+          - heading "The email marketing platform for creators who mean business" [level=2] [ref=f42e1136]
+          - paragraph
+          - generic [ref=f42e1137]:
+            - generic [ref=f42e1138]:
+              - link "Start free trial" [ref=f42e1140] [cursor=pointer]:
+                - /url: https://app.kit.com/users/signup?plan=1k
+              - link "Request a demo" [ref=f42e1143] [cursor=pointer]:
+                - /url: /request-demo
+            - paragraph [ref=f42e1145]: 14-day free trial. No credit card required. Free migrations.
+        - generic [ref=f42e1147]:
+          - generic [ref=f42e1149]:
+            - img "Email" [ref=f42e1150]
+            - generic [ref=f42e1154]:
+              - heading "Email marketing" [level=6] [ref=f42e1155]
+              - paragraph [ref=f42e1156]: Reach your audience with personalized, engaging emails.
+          - generic [ref=f42e1158]:
+            - img "Newspaper" [ref=f42e1159]
+            - generic [ref=f42e1163]:
+              - heading "Newsletters" [level=6] [ref=f42e1164]
+              - paragraph [ref=f42e1165]: Write and design newsletters that build loyal fans.
+          - generic [ref=f42e1167]:
+            - img "Bolt" [ref=f42e1168]
+            - generic [ref=f42e1172]:
+              - heading "Visual Automations" [level=6] [ref=f42e1173]
+              - paragraph [ref=f42e1174]: Build email sequences and workflows that run 24/7.
+          - generic [ref=f42e1176]:
+            - img "Form" [ref=f42e1177]
+            - generic [ref=f42e1181]:
+              - heading "Forms & opt-ins" [level=6] [ref=f42e1182]
+              - paragraph [ref=f42e1183]: Capture subscribers with customizable opt-in forms.
+          - generic [ref=f42e1185]:
+            - img "Tag" [ref=f42e1186]
+            - generic [ref=f42e1190]:
+              - heading "Segmentation & tagging" [level=6] [ref=f42e1191]
+              - paragraph [ref=f42e1192]: Organize subscribers for targeted, relevant messaging.
+          - generic [ref=f42e1194]:
+            - img "LandingPage" [ref=f42e1195]
+            - generic [ref=f42e1199]:
+              - heading "Landing pages" [level=6] [ref=f42e1200]
+              - paragraph [ref=f42e1201]: Build beautiful customized website pages that convert.
+          - generic [ref=f42e1203]:
+            - img "Recommendations" [ref=f42e1204]
+            - generic [ref=f42e1209]:
+              - heading "Recommendations" [level=6] [ref=f42e1210]
+              - paragraph [ref=f42e1211]: Grow subscribers by cross-promoting with other creators.
+          - generic [ref=f42e1213]:
+            - img "Plug" [ref=f42e1214]
+            - generic [ref=f42e1218]:
+              - heading "Kit App Store" [level=6] [ref=f42e1219]
+              - paragraph [ref=f42e1220]: Connect all your tools so everything works together seamlessly.
+          - generic [ref=f42e1222]:
+            - img "AnalyticsChart" [ref=f42e1223]
+            - generic [ref=f42e1231]:
+              - heading "Analytics" [level=6] [ref=f42e1232]
+              - paragraph [ref=f42e1233]: Track engagement and growth with actionable audience insights.
+          - generic [ref=f42e1235]:
+            - img "ABTesting" [ref=f42e1236]
+            - generic [ref=f42e1240]:
+              - heading "Email A/B testing" [level=6] [ref=f42e1241]
+              - paragraph [ref=f42e1242]: Optimize email conversions with data-driven split testing.
+          - generic [ref=f42e1244]:
+            - img "Ad" [ref=f42e1245]
+            - generic [ref=f42e1251]:
+              - heading "Newsletter sponsorships" [level=6] [ref=f42e1252]
+              - paragraph [ref=f42e1253]: Earn from your newsletter with brand sponsorships.
+          - generic [ref=f42e1255]:
+            - img "Money" [ref=f42e1256]
+            - generic [ref=f42e1261]:
+              - heading "Commerce" [level=6] [ref=f42e1262]
+              - paragraph [ref=f42e1263]: Sell digital products, memberships, and subscriptions directly through Kit.
+          - generic [ref=f42e1265]:
+            - img "BarsChart" [ref=f42e1266]
+            - generic [ref=f42e1273]:
+              - heading "Subscriber Signals" [level=6] [ref=f42e1274]
+              - paragraph [ref=f42e1275]: Find your best subscribers and what they're worth to your business.
+          - generic [ref=f42e1277]:
+            - img "Sparkle" [ref=f42e1278]
+            - generic [ref=f42e1284]:
+              - heading "Kit MCP" [level=6] [ref=f42e1285]
+              - paragraph [ref=f42e1286]: Connect your AI tool directly to Kit and turn insights into action.
+          - generic [ref=f42e1288]:
+            - img "Content" [ref=f42e1289]
+            - generic [ref=f42e1293]:
+              - heading "Dynamic content" [level=6] [ref=f42e1294]
+              - paragraph [ref=f42e1295]: Deliver personalized content to every subscriber, automatically.
+          - generic [ref=f42e1297]:
+            - img "Microphone" [ref=f42e1298]
+            - generic [ref=f42e1302]:
+              - heading "Kit Studios" [level=6] [ref=f42e1303]
+              - paragraph [ref=f42e1304]: Professional production studios in NYC, Chicago, and Boise, free for Kit creators.
+      - generic [ref=f42e1306]:
+        - generic [ref=f42e1308]:
+          - generic [ref=f42e1309]:
+            - heading "Free access to professional recording studios" [level=2] [ref=f42e1310]
+            - paragraph [ref=f42e1311]: Located in NYC, Chicago, and Boise.
+          - generic [ref=f42e1313]:
+            - link "Start free trial" [ref=f42e1315] [cursor=pointer]:
+              - /url: https://app.kit.com/users/signup?plan=1k
+            - link "Explore studios ArrowRight" [ref=f42e1318] [cursor=pointer]:
+              - /url: /studios
+              - generic [ref=f42e1319]: Explore studios
+              - img "ArrowRight" [ref=f42e1320]
+        - img "Kit Studios Chicago recording room with white curved sofa, professional lighting and camera equipment, and Chicago-themed wall art" [ref=f42e1325]
+      - generic [ref=f42e1326]:
+        - generic [ref=f42e1329]:
+          - generic [ref=f42e1330]:
+            - heading "Smart apps that connect your creator tools directly to Kit" [level=3] [ref=f42e1332]
+            - generic [ref=f42e1334]:
+              - link "Start free trial" [ref=f42e1337] [cursor=pointer]:
+                - /url: https://app.kit.com/users/signup?plan=1k
+              - paragraph [ref=f42e1339]: No credit card required
+          - paragraph [ref=f42e1341]: Your personalized hub for streamlining your business and creative workflows.
+        - generic [ref=f42e1344]:
+          - generic [ref=f42e1347]:
+            - generic [ref=f42e1348]:
+              - img "Shopify" [ref=f42e1351]
+              - paragraph [ref=f42e1352]: Shopify
+            - generic [ref=f42e1353]:
+              - paragraph [ref=f42e1355]: Grow Your Creator Business, Automate Your Marketing, and Drive More Sales
+              - button "+" [ref=f42e1358]
+          - generic [ref=f42e1362]:
+            - generic [ref=f42e1363]:
+              - img "Canva" [ref=f42e1366]
+              - paragraph [ref=f42e1367]: Canva
+            - generic [ref=f42e1368]:
+              - paragraph [ref=f42e1370]: Get access to your Canva library natively within the Kit media gallery
+              - button "+" [ref=f42e1373]
+          - generic [ref=f42e1377]:
+            - generic [ref=f42e1378]:
+              - img "Circle" [ref=f42e1381]
+              - paragraph [ref=f42e1382]: Circle
+            - generic [ref=f42e1383]:
+              - paragraph [ref=f42e1385]: Connect Kit with your Circle Community.
+              - button "+" [ref=f42e1388]
+          - generic [ref=f42e1392]:
+            - generic [ref=f42e1393]:
+              - img "GIPHY" [ref=f42e1396]
+              - paragraph [ref=f42e1397]: GIPHY
+            - generic [ref=f42e1398]:
+              - paragraph [ref=f42e1400]: Get access to the world's largest library of free GIFs, Clips, & Stickers.
+              - button "+" [ref=f42e1403]
+        - generic [ref=f42e1408]:
+          - generic [ref=f42e1409]:
+            - img "SavvyCal" [ref=f42e1411]
+            - generic [ref=f42e1412]:
+              - heading "SavvyCal" [level=6] [ref=f42e1413]
+              - paragraph [ref=f42e1414]: Embed beautiful booking links in your Kit emails. Perfect for coaching calls and webinars.
+          - generic [ref=f42e1415]:
+            - img "Custom Fonts" [ref=f42e1417]
+            - generic [ref=f42e1418]:
+              - heading "Custom Fonts" [level=6] [ref=f42e1419]
+              - paragraph [ref=f42e1420]: Use custom fonts in your emails by dynamically rendering them as images
+          - generic [ref=f42e1421]:
+            - img "Lex" [ref=f42e1423]
+            - generic [ref=f42e1424]:
+              - heading "Lex" [level=6] [ref=f42e1425]
+              - paragraph [ref=f42e1426]: Write something great today. We'll analyze your style and create custom prompts for you.
+          - generic [ref=f42e1427]:
+            - img "Senja" [ref=f42e1429]
+            - generic [ref=f42e1430]:
+              - heading "Senja" [level=6] [ref=f42e1431]
+              - paragraph [ref=f42e1432]: Add your text and video testimonials to your Kit emails. Increase your sales.
+          - generic [ref=f42e1433]:
+            - img "Sponsy" [ref=f42e1435]
+            - generic [ref=f42e1436]:
+              - heading "Sponsy" [level=6] [ref=f42e1437]
+              - paragraph [ref=f42e1438]: Connect your ad inventory from Sponsy straight to Kit
+          - generic [ref=f42e1439]:
+            - img "Transistor.fm" [ref=f42e1441]
+            - generic [ref=f42e1442]:
+              - heading "Transistor.fm" [level=6] [ref=f42e1443]
+              - paragraph [ref=f42e1444]: Embed great-looking podcast players into your Kit emails, linked to a playable web page.
+          - generic [ref=f42e1445]:
+            - img "Linktree" [ref=f42e1447]
+            - generic [ref=f42e1448]:
+              - heading "Linktree" [level=6] [ref=f42e1449]
+              - paragraph [ref=f42e1450]: Sync contact lists seamlessly between Linktree and Kit
+          - generic [ref=f42e1451]:
+            - img "Thinkific" [ref=f42e1453]
+            - generic [ref=f42e1454]:
+              - heading "Thinkific" [level=6] [ref=f42e1455]
+              - paragraph [ref=f42e1456]: Create online courses, digital products, and communities that actually sell.
+          - link "See all apps ArrowRight" [ref=f42e1458] [cursor=pointer]:
+            - /url: /apps
+            - generic [ref=f42e1459]: See all apps
+            - img "ArrowRight" [ref=f42e1460]
+      - generic [ref=f42e1465]:
+        - heading "Experts use Kit to build relationships and revenue" [level=2] [ref=f42e1466]
+        - generic [ref=f42e1468]:
+          - generic [ref=f42e1469]:
+            - generic [ref=f42e1471]:
+              - generic [ref=f42e1472]:
+                - img "QuoteFilled" [ref=f42e1473]
+                - generic [ref=f42e1477]:
+                  - img "StarFilled" [ref=f42e1478]
+                  - img "StarFilled" [ref=f42e1481]
+                  - img "StarFilled" [ref=f42e1484]
+                  - img "StarFilled" [ref=f42e1487]
+                  - img "StarFilled" [ref=f42e1490]
+              - paragraph [ref=f42e1494]:
+                - text: When I first announced the book on Instagram, it had a little bump in pre-order numbers, but when
+                - strong [ref=f42e1495]: I sent an email to my list using Kit—that's when we started to see some real movement
+                - text: .
+              - generic [ref=f42e1497]:
+                - img "Nisha Vora" [ref=f42e1501]
+                - generic [ref=f42e1502]:
+                  - generic [ref=f42e1503]: Nisha Vora
+                  - generic [ref=f42e1504]:
+                    - text: NYT bestselling author of
+                    - emphasis [ref=f42e1505]: Big Vegan Flavor
+            - generic [ref=f42e1507]:
+              - generic [ref=f42e1508]:
+                - img "QuoteFilled" [ref=f42e1509]
+                - generic [ref=f42e1513]:
+                  - img "StarFilled" [ref=f42e1514]
+                  - img "StarFilled" [ref=f42e1517]
+                  - img "StarFilled" [ref=f42e1520]
+                  - img "StarFilled" [ref=f42e1523]
+                  - img "StarFilled" [ref=f42e1526]
+              - paragraph [ref=f42e1530]:
+                - text: It's built for creators. You can tell when you're using the platform that
+                - strong [ref=f42e1531]: they want you to make money from your email list
+                - text: ", and they want to make it as easy as possible for someone who's not super technical."
+              - generic [ref=f42e1533]:
+                - img "Terry Rice" [ref=f42e1537]
+                - generic [ref=f42e1538]:
+                  - generic [ref=f42e1539]: Terry Rice
+                  - generic [ref=f42e1540]: Podcaster, consultant, and author
+            - generic [ref=f42e1542]:
+              - generic [ref=f42e1543]:
+                - img "QuoteFilled" [ref=f42e1544]
+                - generic [ref=f42e1548]:
+                  - img "StarFilled" [ref=f42e1549]
+                  - img "StarFilled" [ref=f42e1552]
+                  - img "StarFilled" [ref=f42e1555]
+                  - img "StarFilled" [ref=f42e1558]
+                  - img "StarFilled" [ref=f42e1561]
+              - paragraph [ref=f42e1565]:
+                - text: Our business would NOT exist without Kit. In fact,
+                - strong [ref=f42e1566]:
+                  - text: we wouldn't be Sunday Times bestsellers of our book,
+                  - emphasis [ref=f42e1567]: Financial Joy
+                  - text: ", without Kit"
+                - text: .
+              - generic [ref=f42e1569]:
+                - img "Ken & Mary Okoroafor" [ref=f42e1573]
+                - generic [ref=f42e1574]:
+                  - generic [ref=f42e1575]: Ken & Mary Okoroafor
+                  - generic [ref=f42e1576]:
+                    - text: Bestselling authors and founders of
+                    - emphasis [ref=f42e1577]: The Humble Penny
+          - generic [ref=f42e1578]:
+            - generic [ref=f42e1580]:
+              - generic [ref=f42e1581]:
+                - img "QuoteFilled" [ref=f42e1582]
+                - generic [ref=f42e1586]:
+                  - img "StarFilled" [ref=f42e1587]
+                  - img "StarFilled" [ref=f42e1590]
+                  - img "StarFilled" [ref=f42e1593]
+                  - img "StarFilled" [ref=f42e1596]
+                  - img "StarFilled" [ref=f42e1599]
+              - paragraph [ref=f42e1603]:
+                - text: Kit is integral because it's the
+                - strong [ref=f42e1604]: hub of the business
+                - text: .
+              - generic [ref=f42e1606]:
+                - img "Eddie Shleyner" [ref=f42e1610]
+                - generic [ref=f42e1611]:
+                  - generic [ref=f42e1612]: Eddie Shleyner
+                  - generic [ref=f42e1613]:
+                    - text: Author of
+                    - emphasis [ref=f42e1614]: Very Good Copy
+            - generic [ref=f42e1616]:
+              - generic [ref=f42e1617]:
+                - img "QuoteFilled" [ref=f42e1618]
+                - generic [ref=f42e1622]:
+                  - img "StarFilled" [ref=f42e1623]
+                  - img "StarFilled" [ref=f42e1626]
+                  - img "StarFilled" [ref=f42e1629]
+                  - img "StarFilled" [ref=f42e1632]
+                  - img "StarFilled" [ref=f42e1635]
+              - paragraph [ref=f42e1639]:
+                - text: We recently launched a new onboarding sequence to identify pain points and have a targeted welcome sequence based on those pain points. It's been hugely successful.
+                - strong [ref=f42e1640]: We saw a 30 percent growth in the sale of the two products
+                - text: we feature in those sequences over the last three months.
+              - generic [ref=f42e1642]:
+                - img "Katelyn Bourgoin" [ref=f42e1646]
+                - generic [ref=f42e1647]:
+                  - generic [ref=f42e1648]: Katelyn Bourgoin
+                  - generic [ref=f42e1649]: Founder of the Why We Buy newsletter
+            - generic [ref=f42e1651]:
+              - generic [ref=f42e1652]:
+                - img "QuoteFilled" [ref=f42e1653]
+                - generic [ref=f42e1657]:
+                  - img "StarFilled" [ref=f42e1658]
+                  - img "StarFilled" [ref=f42e1661]
+                  - img "StarFilled" [ref=f42e1664]
+                  - img "StarFilled" [ref=f42e1667]
+                  - img "StarFilled" [ref=f42e1670]
+              - paragraph [ref=f42e1674]:
+                - strong [ref=f42e1675]: 22,000 subscribers have come from Recommendations
+                - text: and it is one of the best things that has ever happened to my newsletter.
+              - generic [ref=f42e1677]:
+                - img "Dan Go" [ref=f42e1681]
+                - generic [ref=f42e1682]:
+                  - generic [ref=f42e1683]: Dan Go
+                  - generic [ref=f42e1684]: High performance coach
+          - generic [ref=f42e1685]:
+            - generic [ref=f42e1687]:
+              - generic [ref=f42e1688]:
+                - img "QuoteFilled" [ref=f42e1689]
+                - generic [ref=f42e1693]:
+                  - img "StarFilled" [ref=f42e1694]
+                  - img "StarFilled" [ref=f42e1697]
+                  - img "StarFilled" [ref=f42e1700]
+                  - img "StarFilled" [ref=f42e1703]
+                  - img "StarFilled" [ref=f42e1706]
+              - paragraph [ref=f42e1710]:
+                - text: Thanks to the fact that we sell our own product through our email list now, I have
+                - strong [ref=f42e1711]: the freedom to live, learn, and teach on my own terms
+                - text: ", which is the thing I care about."
+              - generic [ref=f42e1713]:
+                - img "Ali Abdaal" [ref=f42e1717]
+                - generic [ref=f42e1718]:
+                  - generic [ref=f42e1719]: Ali Abdaal
+                  - generic [ref=f42e1720]:
+                    - text: NYT bestselling author of
+                    - emphasis [ref=f42e1721]: Feel-Good Productivity
+            - generic [ref=f42e1723]:
+              - generic [ref=f42e1724]:
+                - img "QuoteFilled" [ref=f42e1725]
+                - generic [ref=f42e1729]:
+                  - img "StarFilled" [ref=f42e1730]
+                  - img "StarFilled" [ref=f42e1733]
+                  - img "StarFilled" [ref=f42e1736]
+                  - img "StarFilled" [ref=f42e1739]
+                  - img "StarFilled" [ref=f42e1742]
+              - paragraph [ref=f42e1746]:
+                - text: I like that
+                - strong [ref=f42e1747]: Kit is intuitive
+                - text: and I can do things myself; it makes me feel closer to my business.
+              - generic [ref=f42e1749]:
+                - img "Dorie Clark" [ref=f42e1753]
+                - generic [ref=f42e1754]:
+                  - generic [ref=f42e1755]: Dorie Clark
+                  - generic [ref=f42e1756]:
+                    - text: Wall Street Journal and USA Today bestselling author of
+                    - emphasis [ref=f42e1757]: The Long Game
+            - generic [ref=f42e1759]:
+              - generic [ref=f42e1760]:
+                - img "QuoteFilled" [ref=f42e1761]
+                - generic [ref=f42e1765]:
+                  - img "StarFilled" [ref=f42e1766]
+                  - img "StarFilled" [ref=f42e1769]
+                  - img "StarFilled" [ref=f42e1772]
+                  - img "StarFilled" [ref=f42e1775]
+                  - img "StarFilled" [ref=f42e1778]
+              - paragraph [ref=f42e1782]:
+                - text: Even more than social, email is the way.
+                - strong [ref=f42e1783]: Kit is more central to me than any publication
+                - text: .
+              - generic [ref=f42e1785]:
+                - img "Ryan Holiday" [ref=f42e1789]
+                - generic [ref=f42e1790]:
+                  - generic [ref=f42e1791]: Ryan Holiday
+                  - generic [ref=f42e1792]:
+                    - text: NYT bestselling author of
+                    - emphasis [ref=f42e1793]: The Daily Stoic
+      - generic [ref=f42e1794]:
+        - generic [ref=f42e1797]:
+          - generic [ref=f42e1798]:
+            - heading "Kit serves creators, not investors" [level=3] [ref=f42e1800]
+            - generic [ref=f42e1802]:
+              - link "Start free trial" [ref=f42e1805] [cursor=pointer]:
+                - /url: https://app.kit.com/users/signup?plan=1k
+              - paragraph [ref=f42e1807]: No credit card required
+          - generic [ref=f42e1808]:
+            - paragraph [ref=f42e1809]:
+              - text: "When Kit founder Nathan Barry published his first book in 2013, he discovered what every creator learns:"
+              - strong [ref=f42e1810]: email marketing works.
+            - paragraph [ref=f42e1811]: The problem? It was impossibly complicated. He wanted to create a platform that was accessible for creators running solo businesses, with tools they could easily use to share their expertise and serve people well.
+            - paragraph [ref=f42e1812]: Today Kit is still bootstrapped, mission-driven, and seriously focused on solving the real problems creators face, so you can get back to creating the work that matters.
+        - generic [ref=f42e1815]:
+          - img "A group of creators sitting and standing together" [ref=f42e1817]
+          - generic [ref=f42e1819]:
+            - heading "587M+" [level=4] [ref=f42e1820]
+            - generic [ref=f42e1821]:
+              - paragraph [ref=f42e1822]: subscribers served
+              - paragraph [ref=f42e1823]: More than a decade supporting creators who put their subscribers first.
+          - img "Doc Williams" [ref=f42e1825]
+          - img "Anne-Laure Le Cunff & Austin Church" [ref=f42e1827]
+          - generic [ref=f42e1829]:
+            - heading "13+" [level=4] [ref=f42e1830]
+            - generic [ref=f42e1831]:
+              - paragraph [ref=f42e1832]: years of expertise
+              - paragraph [ref=f42e1833]: We know a thing or two about leveraging email to grow creator businesses.
+        - generic [ref=f42e1835]:
+          - generic [ref=f42e1836]:
+            - generic [ref=f42e1837]:
+              - img "StarFilled" [ref=f42e1838]
+              - img "StarFilled" [ref=f42e1841]
+              - img "StarFilled" [ref=f42e1844]
+              - img "StarFilled" [ref=f42e1847]
+              - img "StarFilled" [ref=f42e1850]
+            - generic [ref=f42e1853]:
+              - tablist "Testimonials" [ref=f42e1854]:
+                - tab [selected] [ref=f42e1855] [cursor=pointer]:
+                  - img "Nisha Vora" [ref=f42e1857]
+                - tab [ref=f42e1858] [cursor=pointer]:
+                  - img "Katelyn Bourgoin" [ref=f42e1860]
+                - tab [ref=f42e1861] [cursor=pointer]:
+                  - img "Lawrence Yeo" [ref=f42e1863]
+                - tab [ref=f42e1864] [cursor=pointer]:
+                  - img "Eddie Shleyner" [ref=f42e1866]
+                - tab [ref=f42e1867] [cursor=pointer]:
+                  - img "Whitney Manney" [ref=f42e1869]
+                - tab [ref=f42e1870] [cursor=pointer]:
+                  - img "Pat Flynn" [ref=f42e1872]
+              - tabpanel "Nisha Vora" [ref=f42e1873]:
+                - generic [ref=f42e1874]:
+                  - paragraph [ref=f42e1875]: "\"Adding Kit landing pages…helped us add 100k subscribers.\""
+                  - paragraph [ref=f42e1876]: Nisha Vora
+          - generic [ref=f42e1879]:
+            - generic [ref=f42e1881]:
+              - heading "See what your list is really worth" [level=2] [ref=f42e1882]
+              - paragraph [ref=f42e1883]: You’ve already built something valuable. It’s time to see what it can become.
+            - generic [ref=f42e1885]:
+              - link "Start free trial" [ref=f42e1888] [cursor=pointer]:
+                - /url: https://app.kit.com/users/signup?plan=1k
+              - paragraph [ref=f42e1890]: No credit card required
+          - img "A laptop opened to the Kit Broadcast page in the app" [ref=f42e1893]
+      - generic [ref=f42e1894]:
+        - generic [ref=f42e1897]:
+          - generic [ref=f42e1898]:
+            - generic [ref=f42e1899]:
+              - img "Kit"
+              - paragraph [ref=f42e1900]:
+                - link "Formerly ConvertKit" [ref=f42e1901] [cursor=pointer]:
+                  - /url: /resources/blog/convertkit-is-now-kit
+            - link "Start free trial" [ref=f42e1903] [cursor=pointer]:
+              - /url: https://app.kit.com/users/signup?plan=1k
+            - paragraph [ref=f42e1906]: No credit card required
+          - generic [ref=f42e1908]:
+            - generic [ref=f42e1910]:
+              - paragraph [ref=f42e1911]: GET STARTED
+              - list [ref=f42e1912]:
+                - listitem [ref=f42e1913]:
+                  - link "Pricing" [ref=f42e1914] [cursor=pointer]:
+                    - /url: /pricing
+                - listitem [ref=f42e1915]:
+                  - link "Free migrations" [ref=f42e1916] [cursor=pointer]:
+                    - /url: /migrations
+                - listitem [ref=f42e1917]:
+                  - generic [ref=f42e1918] [cursor=pointer]: Watch demo
+                - listitem [ref=f42e1919]:
+                  - link "Request a demo" [ref=f42e1920] [cursor=pointer]:
+                    - /url: /request-demo
+            - generic [ref=f42e1922]:
+              - paragraph [ref=f42e1923]: Use Cases
+              - list [ref=f42e1924]:
+                - listitem [ref=f42e1925]:
+                  - link "Artists" [ref=f42e1926] [cursor=pointer]:
+                    - /url: /use-cases/artists
+                - listitem [ref=f42e1927]:
+                  - link "Authors" [ref=f42e1928] [cursor=pointer]:
+                    - /url: /use-cases/authors
+                - listitem [ref=f42e1929]:
+                  - link "Bloggers" [ref=f42e1930] [cursor=pointer]:
+                    - /url: /use-cases/bloggers
+                - listitem [ref=f42e1931]:
+                  - link "Coaches" [ref=f42e1932] [cursor=pointer]:
+                    - /url: /use-cases/coaches
+                - listitem [ref=f42e1933]:
+                  - link "Course creators" [ref=f42e1934] [cursor=pointer]:
+                    - /url: /use-cases/course-memberships
+                - listitem [ref=f42e1935]:
+                  - link "Marketers" [ref=f42e1936] [cursor=pointer]:
+                    - /url: /use-cases/marketers
+                - listitem [ref=f42e1937]:
+                  - link "Musicians" [ref=f42e1938] [cursor=pointer]:
+                    - /url: /use-cases/musicians
+                - listitem [ref=f42e1939]:
+                  - link "Newsletter creators" [ref=f42e1940] [cursor=pointer]:
+                    - /url: /use-cases/newsletter-creators
+                - listitem [ref=f42e1941]:
+                  - link "Podcasters" [ref=f42e1942] [cursor=pointer]:
+                    - /url: /use-cases/podcasters
+                - listitem [ref=f42e1943]:
+                  - link "YouTubers" [ref=f42e1944] [cursor=pointer]:
+                    - /url: /use-cases/youtubers
+            - generic [ref=f42e1946]:
+              - paragraph [ref=f42e1947]: Product
+              - list [ref=f42e1948]:
+                - listitem [ref=f42e1949]:
+                  - link "Product overview" [ref=f42e1950] [cursor=pointer]:
+                    - /url: /features
+                - listitem [ref=f42e1951]:
+                  - link "Pro" [ref=f42e1952] [cursor=pointer]:
+                    - /url: /pro
+                - listitem [ref=f42e1953]:
+                  - link "What's new" [ref=f42e1954] [cursor=pointer]:
+                    - /url: https://updates.kit.com/changelog
+                - listitem [ref=f42e1955]:
+                  - link "Kit + AI" [ref=f42e1956] [cursor=pointer]:
+                    - /url: /ai
+                - listitem [ref=f42e1957]:
+                  - link "Mailchimp vs Kit" [ref=f42e1958] [cursor=pointer]:
+                    - /url: /compare/mailchimp
+                - listitem [ref=f42e1959]:
+                  - link "ActiveCampaign vs Kit" [ref=f42e1960] [cursor=pointer]:
+                    - /url: /compare/activecampaign
+                - listitem [ref=f42e1961]:
+                  - link "Mailerlite vs Kit" [ref=f42e1962] [cursor=pointer]:
+                    - /url: /compare/mailerlite
+                - listitem [ref=f42e1963]:
+                  - link "Beehiiv vs Kit" [ref=f42e1964] [cursor=pointer]:
+                    - /url: /compare/beehiiv
+                - listitem [ref=f42e1965]:
+                  - link "Substack vs Kit" [ref=f42e1966] [cursor=pointer]:
+                    - /url: /compare/substack
+                - listitem [ref=f42e1967]:
+                  - link "Aweber vs Kit" [ref=f42e1968] [cursor=pointer]:
+                    - /url: /compare/aweber
+                - listitem [ref=f42e1969]:
+                  - link "Flodesk vs Kit" [ref=f42e1970] [cursor=pointer]:
+                    - /url: /compare/flodesk
+                - listitem [ref=f42e1971]:
+                  - link "Compare platforms" [ref=f42e1972] [cursor=pointer]:
+                    - /url: /compare
+            - generic [ref=f42e1974]:
+              - paragraph [ref=f42e1975]: Features
+              - list [ref=f42e1976]:
+                - listitem [ref=f42e1977]:
+                  - link "Analytics New" [ref=f42e1978] [cursor=pointer]:
+                    - /url: /features/analytics
+                    - text: Analytics
+                    - generic [ref=f42e1979]: New
+                - listitem [ref=f42e1980]:
+                  - link "Subscriber Signals New" [ref=f42e1981] [cursor=pointer]:
+                    - /url: /features/signals
+                    - text: Subscriber Signals
+                    - generic [ref=f42e1982]: New
+                - listitem [ref=f42e1983]:
+                  - link "Newsletter sponsorships New" [ref=f42e1984] [cursor=pointer]:
+                    - /url: /features/newsletter-sponsorships
+                    - text: Newsletter sponsorships
+                    - generic [ref=f42e1985]: New
+                - listitem [ref=f42e1986]:
+                  - link "Kit MCP New" [ref=f42e1987] [cursor=pointer]:
+                    - /url: /ai/mcp
+                    - text: Kit MCP
+                    - generic [ref=f42e1988]: New
+                - listitem [ref=f42e1989]:
+                  - link "Landing pages" [ref=f42e1990] [cursor=pointer]:
+                    - /url: /features/landing-pages
+                - listitem [ref=f42e1991]:
+                  - link "Forms" [ref=f42e1992] [cursor=pointer]:
+                    - /url: /features/forms
+                - listitem [ref=f42e1993]:
+                  - link "Recommendations" [ref=f42e1994] [cursor=pointer]:
+                    - /url: /features/recommendations
+                - listitem [ref=f42e1995]:
+                  - link "Email designer" [ref=f42e1996] [cursor=pointer]:
+                    - /url: /features/email-designer
+                - listitem [ref=f42e1997]:
+                  - link "Email marketing" [ref=f42e1998] [cursor=pointer]:
+                    - /url: /features/email-marketing
+                - listitem [ref=f42e1999]:
+                  - link "Deliverability" [ref=f42e2000] [cursor=pointer]:
+                    - /url: /features/deliverability
+                - listitem [ref=f42e2001]:
+                  - link "Visual Automations" [ref=f42e2002] [cursor=pointer]:
+                    - /url: /features/automations
+                - listitem [ref=f42e2003]:
+                  - link "Kit App Store" [ref=f42e2004] [cursor=pointer]:
+                    - /url: /apps
+                - listitem [ref=f42e2005]:
+                  - link "Commerce" [ref=f42e2006] [cursor=pointer]:
+                    - /url: /features/commerce
+                - listitem [ref=f42e2007]:
+                  - link "Paid recommendations" [ref=f42e2008] [cursor=pointer]:
+                    - /url: /features/paid-recommendations
+            - generic [ref=f42e2010]:
+              - paragraph [ref=f42e2011]: Resources
+              - list [ref=f42e2012]:
+                - listitem [ref=f42e2013]:
+                  - link "Blog" [ref=f42e2014] [cursor=pointer]:
+                    - /url: /resources
+                - listitem [ref=f42e2015]:
+                  - link "Rebranding in Public" [ref=f42e2016] [cursor=pointer]:
+                    - /url: /rebranding-in-public
+                - listitem [ref=f42e2017]:
+                  - link "Email template marketplace" [ref=f42e2018] [cursor=pointer]:
+                    - /url: /marketplace
+                - listitem [ref=f42e2019]:
+                  - link "Podcasts" [ref=f42e2020] [cursor=pointer]:
+                    - /url: /resources/podcasts
+                - listitem [ref=f42e2021]:
+                  - link "Kit University" [ref=f42e2022] [cursor=pointer]:
+                    - /url: https://learn.kit.com
+                - listitem [ref=f42e2023]:
+                  - link "Hire a Kit Expert" [ref=f42e2024] [cursor=pointer]:
+                    - /url: https://contra.com/kit
+                - listitem [ref=f42e2025]:
+                  - link "Get support" [ref=f42e2026] [cursor=pointer]:
+                    - /url: /support
+                - listitem [ref=f42e2027]:
+                  - link "Report spam" [ref=f42e2028] [cursor=pointer]:
+                    - /url: /report-spam
+                - listitem [ref=f42e2029]:
+                  - link "Knowledge base" [ref=f42e2030] [cursor=pointer]:
+                    - /url: https://help.kit.com/en/
+                - listitem [ref=f42e2031]:
+                  - link "Subscribe to our newsletter" [ref=f42e2032] [cursor=pointer]:
+                    - /url: https://newsletter.kit.com/
+                - listitem [ref=f42e2033]:
+                  - link "Sitemap" [ref=f42e2034] [cursor=pointer]:
+                    - /url: /sitemap
+            - generic [ref=f42e2036]:
+              - paragraph [ref=f42e2037]: COMPANY
+              - list [ref=f42e2038]:
+                - listitem [ref=f42e2039]:
+                  - link "About" [ref=f42e2040] [cursor=pointer]:
+                    - /url: /about
+                - listitem [ref=f42e2041]:
+                  - link "Kit Studios" [ref=f42e2042] [cursor=pointer]:
+                    - /url: /studios
+                - listitem [ref=f42e2043]:
+                  - link "Press" [ref=f42e2044] [cursor=pointer]:
+                    - /url: /news
+                - listitem [ref=f42e2045]:
+                  - link "Careers" [ref=f42e2046] [cursor=pointer]:
+                    - /url: /careers
+                - listitem [ref=f42e2047]:
+                  - link "Brand assets" [ref=f42e2048] [cursor=pointer]:
+                    - /url: /brand
+                - listitem [ref=f42e2049]:
+                  - link "Developer docs" [ref=f42e2050] [cursor=pointer]:
+                    - /url: https://developers.kit.com/api-reference/overview#introduction
+                - listitem [ref=f42e2051]:
+                  - link "Affiliate program" [ref=f42e2052] [cursor=pointer]:
+                    - /url: /affiliate
+                - listitem [ref=f42e2053]:
+                  - link "ConvertKit is now Kit" [ref=f42e2054] [cursor=pointer]:
+                    - /url: /resources/blog/convertkit-is-now-kit
+                - listitem [ref=f42e2055]:
+                  - link "Advertisers" [ref=f42e2056] [cursor=pointer]:
+                    - /url: /advertisers
+                - listitem [ref=f42e2057]:
+                  - link "Contact us" [ref=f42e2058] [cursor=pointer]:
+                    - /url: mailto:help@kit.com
+        - generic [ref=f42e2061]:
+          - list [ref=f42e2063]:
+            - listitem [ref=f42e2064]:
+              - link "YouTube" [ref=f42e2065] [cursor=pointer]:
+                - /url: https://www.youtube.com/@Kit
+                - img "YouTube" [ref=f42e2066]:
+                  - img "YouTube" [ref=f42e2067]
+            - listitem [ref=f42e2069]:
+              - link "Twitter" [ref=f42e2070] [cursor=pointer]:
+                - /url: https://x.com/kit
+                - img "Twitter" [ref=f42e2071]
+            - listitem [ref=f42e2074]:
+              - link "Facebook" [ref=f42e2075] [cursor=pointer]:
+                - /url: https://www.facebook.com/kit
+                - img "Facebook" [ref=f42e2076]:
+                  - img "Facebook" [ref=f42e2077]
+            - listitem [ref=f42e2079]:
+              - link "Instagram" [ref=f42e2080] [cursor=pointer]:
+                - /url: https://www.instagram.com/kit
+                - img "Instagram" [ref=f42e2081]
+            - listitem [ref=f42e2086]:
+              - link "LinkedIn" [ref=f42e2087] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/kit.com
+                - img "LinkedIn" [ref=f42e2088]
+          - list [ref=f42e2091]:
+            - listitem [ref=f42e2092]:
+              - link [ref=f42e2093] [cursor=pointer]:
+                - /url: /privacy
+                - paragraph [ref=f42e2094]: Privacy Policy
+            - listitem [ref=f42e2095]:
+              - link [ref=f42e2096] [cursor=pointer]:
+                - /url: /terms
+                - paragraph [ref=f42e2097]: Terms of Service
+            - listitem [ref=f42e2098]:
+              - link [ref=f42e2099] [cursor=pointer]:
+                - /url: /gdpr
+                - paragraph [ref=f42e2100]: GDPR
+            - listitem [ref=f42e2101]:
+              - link [ref=f42e2102] [cursor=pointer]:
+                - /url: /imprint
+                - paragraph [ref=f42e2103]: Imprint
+          - generic [ref=f42e2104]: Kit © 2026
+  - alert [ref=f42e2106]

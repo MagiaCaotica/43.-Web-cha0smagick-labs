@@ -1,0 +1,23 @@
+[     819ms] [WARNING] [Meta Pixel] - Duplicate Pixel ID: 930987978489178. @ https://connect.facebook.net/en_US/fbevents.js:187
+[   82453ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'preventDefault')
+    at prevent (https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:18:19915)
+    at n.<computed>.n.<computed> (https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:18:20350)
+    at kn (https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:13:1385)
+    at ct (https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:13:1455)
+    at cg (https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:14:32564)
+    at Proxy.emitClick (https://assets.mailerlite.com/build/assets/app-CeqzIG7g.js:48:515498)
+    at eval (eval at <anonymous> (eval at evaluate (:303:30)), <anonymous>:1:256)
+    at eval (eval at evaluate (:303:30), <anonymous>:4:50)
+    at UtilityScript.evaluate (<anonymous>:305:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44) @ https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:12
+[  106215ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'preventDefault')
+    at prevent (https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:18:19915)
+    at n.<computed>.n.<computed> (https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:18:20350)
+    at kn (https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:13:1385)
+    at ct (https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:13:1455)
+    at cg (https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:14:32564)
+    at Proxy.emitClick (https://assets.mailerlite.com/build/assets/app-CeqzIG7g.js:48:515498)
+    at eval (eval at <anonymous> (eval at evaluate (:303:30)), <anonymous>:1:396)
+    at eval (eval at evaluate (:303:30), <anonymous>:4:50)
+    at UtilityScript.evaluate (<anonymous>:305:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44) @ https://assets.mailerlite.com/build/assets/vendor-vue-ChB3Ab8T.js:12

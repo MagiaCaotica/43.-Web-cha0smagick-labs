@@ -1,0 +1,15 @@
+- generic [active]:
+  - generic [ref=f56e2]:
+    - link "Go back" [ref=f56e4] [cursor=pointer]:
+      - /url: javascript:;
+    - generic [ref=f56e6]:
+      - button "" [ref=f56e7] [cursor=pointer]
+      - link "Preview" [ref=f56e9] [cursor=pointer]:
+        - /url: javascript:;
+      - button [disabled] [ref=f56e10]
+  - iframe [ref=f56e13]:
+    
+  - generic [ref=f56e14]:  
+  - iframe [ref=f56e15]:
+    
+  - text:  

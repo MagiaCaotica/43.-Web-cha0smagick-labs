@@ -1,0 +1,94 @@
+- generic [ref=f32e1]:
+  - generic [ref=f32e6]:
+    - navigation "Main" [ref=f32e7]:
+      - generic [ref=f32e9]:
+        - link "Kit" [ref=f32e11] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Collapse sidebar" [expanded] [ref=f32e15] [cursor=pointer]
+      - button "Search Kit" [ref=f32e18] [cursor=pointer]:
+        - generic [ref=f32e19]:
+          - generic [ref=f32e20]: Search Kit
+          - generic [ref=f32e21]:
+            - generic [ref=f32e22]: ⌘
+            - generic [ref=f32e23]: K
+      - list [ref=f32e24]:
+        - listitem [ref=f32e25]:
+          - link "Dashboard" [ref=f32e26] [cursor=pointer]:
+            - /url: /dashboard
+        - listitem [ref=f32e30]:
+          - link "Subscribers" [ref=f32e31] [cursor=pointer]:
+            - /url: /subscribers
+        - listitem [ref=f32e35]:
+          - link "Broadcasts" [ref=f32e36] [cursor=pointer]:
+            - /url: /campaigns
+        - listitem [ref=f32e40]:
+          - generic [ref=f32e41]:
+            - button "Audience growth" [expanded] [ref=f32e42] [cursor=pointer]
+            - list [ref=f32e48]:
+              - listitem [ref=f32e49]:
+                - link "Landing pages & forms" [ref=f32e50] [cursor=pointer]:
+                  - /url: /forms
+              - listitem [ref=f32e56]:
+                - link "Recommendations" [ref=f32e57] [cursor=pointer]:
+                  - /url: /creator-network
+              - listitem [ref=f32e63]:
+                - link "Newsletter site" [ref=f32e64] [cursor=pointer]:
+                  - /url: /newsletter-site
+        - listitem [ref=f32e70]:
+          - button "Monetization" [ref=f32e72] [cursor=pointer]
+        - listitem [ref=f32e75]:
+          - button "Automation" [ref=f32e77] [cursor=pointer]
+        - listitem [ref=f32e80]:
+          - link "Apps" [ref=f32e81] [cursor=pointer]:
+            - /url: /apps
+      - generic [ref=f32e85]:
+        - generic [ref=f32e86]:
+          - generic [ref=f32e91]:
+            - button "14 / 14 days remaining in trial" [expanded] [ref=f32e92] [cursor=pointer]:
+              - generic [ref=f32e97]:
+                - generic: 14 / 14 days
+                - generic [ref=f32e98]: 14 / 14 days remaining in trial
+            - generic [ref=f32e100]:
+              - generic [ref=f32e101]:
+                - paragraph [ref=f32e102]: 14 days left on your free trial
+                - paragraph [ref=f32e103]: Upgrade to continue to use all the features you have access to without interruption.
+              - button "Upgrade now" [ref=f32e104] [cursor=pointer]
+          - button
+        - list [ref=f32e105]:
+          - listitem [ref=f32e106]:
+            - link "Settings" [ref=f32e107] [cursor=pointer]:
+              - /url: /account_settings
+        - button "Cha0smagick LABS account" [ref=f32e112] [cursor=pointer]:
+          - generic [ref=f32e116]:
+            - text: Cha0smagick LABS
+            - generic [ref=f32e117]: account
+    - generic [ref=f32e118]:
+      - generic [ref=f32e120]:
+        - paragraph [ref=f32e121]:
+          - strong [ref=f32e122]: Confirm your email to finish setting up your account.
+          - text: We've sent a confirmation link to your sign-up address.
+        - link "Manage email address" [ref=f32e123] [cursor=pointer]:
+          - /url: https://app.kit.com/account_settings/account_info
+      - generic [ref=f32e126]:
+        - heading "Choose the display format of this form" [level=3] [ref=f32e127]
+        - generic [ref=f32e128]:
+          - link "inline Inline" [active] [ref=f32e129] [cursor=pointer]:
+            - /url: /forms/new?format=inline
+            - img "inline" [ref=f32e130]
+            - generic [ref=f32e131]: Inline
+          - link "modal Modal" [ref=f32e132] [cursor=pointer]:
+            - /url: /forms/new?format=modal
+            - img "modal" [ref=f32e133]
+            - generic [ref=f32e134]: Modal
+          - link "slide in Slide in" [ref=f32e135] [cursor=pointer]:
+            - /url: /forms/new?format=slide%20in
+            - img "slide in" [ref=f32e136]
+            - generic [ref=f32e137]: Slide in
+          - link "sticky bar Sticky bar" [ref=f32e138] [cursor=pointer]:
+            - /url: /forms/new?format=sticky%20bar
+            - img "sticky bar" [ref=f32e139]
+            - generic [ref=f32e140]: Sticky bar
+  - iframe [ref=f32e5]:
+    
+  - generic:
+    - region "Hints"

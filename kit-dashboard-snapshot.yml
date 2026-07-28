@@ -1,0 +1,18 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e6]:
+    - navigation "Main" [ref=e7]:
+      - generic [ref=e9]
+      - button "Search Kit" [ref=e18] [cursor=pointer]
+      - list [ref=e24]
+      - generic [ref=e85]
+    - generic [ref=e121]:
+      - generic [ref=e123]
+      - generic [ref=e132]
+      - generic [ref=e199]
+      - region "Revenue" [ref=e212]
+      - region "Subscribers" [ref=e247]
+      - region "From Kit" [ref=e288]
+  - iframe [ref=e5]:
+    
+  - generic:
+    - region "Hints"

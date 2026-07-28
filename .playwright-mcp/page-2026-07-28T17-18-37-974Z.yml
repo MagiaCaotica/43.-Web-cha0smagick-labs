@@ -1,0 +1,49 @@
+- generic [active] [ref=e1]:
+  - dialog [ref=e2]:
+    - generic [ref=e4]:
+      - paragraph [ref=e6]:
+        - text: By clicking “Accept all cookies”, you agree to the storing of cookies on your device and the use of similar technologies to enhance site navigation, analyze site usage, personalize advertising, and assist in our marketing efforts.
+        - link "View our Cookie Policy" [ref=e7] [cursor=pointer]:
+          - /url: https://www.mailerlite.com/legal/cookie-policy
+        - text: .
+      - generic [ref=e8]:
+        - button "Cookies settings" [ref=e9] [cursor=pointer]
+        - button "Reject all" [ref=e10] [cursor=pointer]
+        - button "Accept all cookies" [ref=e11] [cursor=pointer]
+  - generic [ref=e13]:
+    - link [ref=e14] [cursor=pointer]:
+      - /url: https://www.mailerlite.com
+    - generic [ref=e23]:
+      - heading "Sign in to your MailerLite account" [level=1] [ref=e24]
+      - paragraph [ref=e25]:
+        - text: Don't have an account yet?
+        - link "Sign up" [ref=e26] [cursor=pointer]:
+          - /url: https://accounts.mailerlite.com/signup
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - generic [ref=e30]: Email address
+            - textbox "Email address" [ref=e31]
+          - generic [ref=e32]:
+            - generic [ref=e33]: Password
+            - textbox "Password" [ref=e34]
+            - button [ref=e35] [cursor=pointer]
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - checkbox "Remember me" [ref=e42]
+            - generic [ref=e43]: Remember me
+          - paragraph [ref=e44]:
+            - link "Forgot your password?" [ref=e45] [cursor=pointer]:
+              - /url: https://accounts.mailerlite.com/forgot-password
+        - button "Sign in" [disabled] [ref=e46]
+      - generic [ref=e48]:
+        - separator [ref=e50]
+        - generic [ref=e51]: or sign in with
+        - separator [ref=e53]
+      - generic [ref=e54]:
+        - button [ref=e57] [cursor=pointer]
+        - generic [ref=e64] [cursor=pointer]: More sign in options
+      - link "I can't log in to my account" [ref=e69] [cursor=pointer]:
+        - /url: https://www.mailerlite.com/help/i-can-t-login-to-my-account
+  - iframe [ref=e71]:
+    
