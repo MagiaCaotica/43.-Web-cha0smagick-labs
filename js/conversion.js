@@ -317,6 +317,47 @@
 
     insertBefore(document.querySelector('footer'), html);
   }
+
+  function injectTestimonials() {
+    if (document.getElementById('cm-testimonials')) return;
+
+    var article = document.querySelector('article.article, .blog-post, article');
+    if (!article) return;
+
+    // Aggregate stats from our Play Store presence
+    var html = '\
+<section id="cm-testimonials" class="cm-section cm-testimonials-section">\
+  <h3 class="cm-testimonials-heading">' + (isSpanish() ? 'Lo Que Dicen Nuestros Usuarios' : 'What Our Users Say') + '</h3>\
+  <div class="cm-testimonials-stats">\
+    <div class="cm-tstat">\
+      <span class="cm-tstat-num">4.7</span>\
+      <span class="cm-tstat-label">' + (isSpanish() ? 'Estrellas' : 'Stars') + '</span>\
+      <div class="cm-tstat-stars">\
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>\
+      </div>\
+    </div>\
+    <div class="cm-tstat-sep"></div>\
+    <div class="cm-tstat">\
+      <span class="cm-tstat-num">128+</span>\
+      <span class="cm-tstat-label">' + (isSpanish() ? 'Rese\u00F1as' : 'Reviews') + '</span>\
+      <span class="cm-tstat-sub">' + (isSpanish() ? 'En Google Play' : 'Across Google Play') + '</span>\
+    </div>\
+    <div class="cm-tstat-sep"></div>\
+    <div class="cm-tstat">\
+      <span class="cm-tstat-num">11</span>\
+      <span class="cm-tstat-label">' + (isSpanish() ? 'Apps' : 'Apps') + '</span>\
+      <span class="cm-tstat-sub">' + (isSpanish() ? 'Premium sin publicidad' : 'Premium Ad-Free') + '</span>\
+    </div>\
+  </div>\
+  <div class="cm-testimonials-cta">\
+    <a href="/" class="cm-collection-btn">' + (isSpanish() ? 'Ver la Colecci\u00F3n Completa' : 'View the Complete Collection') + '</a>\
+  </div>\
+</section>';
+
+    insertBefore(document.querySelector('footer'), html);
+  }
+
+  function injectRelatedApps() {
     if (document.getElementById('cm-related-apps')) return;
 
     var target = document.querySelector('footer');
@@ -386,7 +427,10 @@
         // 1. Social share buttons at top of article
         injectShareButtons();
 
-        // 2. Lead magnet email form at article bottom (before footer)
+        // 2. Testimonials section
+        injectTestimonials();
+
+        // 3. Lead magnet email form at article bottom (before footer)
         var articleEl = document.querySelector('article.article');
         if (!articleEl) {
           articleEl = document.querySelector('.blog-post');
@@ -395,7 +439,7 @@
           injectLeadMagnet('article.article, .blog-post');
         }
 
-        // 3. Collection CTA after lead magnet
+        // 4. Collection CTA after lead magnet
         // (will be injected after the lead section loads)
         // We schedule this after a short delay to ensure lead section is in DOM
         setTimeout(function() {
@@ -809,6 +853,68 @@
 }\
 .cm-social-pin:hover {\
   background: #9a0715;\
+}\
+\
+/* Testimonials */\
+.cm-testimonials-section {\
+  background: #0a0a0a;\
+  border: 1px solid #1a1a1a;\
+  border-radius: 12px;\
+  padding: 2rem;\
+  margin: 2rem auto;\
+  text-align: center;\
+}\
+.cm-testimonials-heading {\
+  color: #c0a060;\
+  font-size: 1.2rem;\
+  font-weight: 200;\
+  letter-spacing: 2px;\
+  text-transform: uppercase;\
+  margin-bottom: 1.5rem;\
+}\
+.cm-testimonials-stats {\
+  display: flex;\
+  justify-content: center;\
+  align-items: center;\
+  gap: 2rem;\
+  flex-wrap: wrap;\
+  margin-bottom: 1.5rem;\
+}\
+.cm-tstat {\
+  text-align: center;\
+}\
+.cm-tstat-num {\
+  display: block;\
+  font-size: 2rem;\
+  font-weight: 700;\
+  color: #ffd700;\
+  font-family: "JetBrains Mono", Consolas, monospace;\
+}\
+.cm-tstat-label {\
+  display: block;\
+  font-size: 0.85rem;\
+  color: #ccc;\
+  text-transform: uppercase;\
+  letter-spacing: 1px;\
+  margin-bottom: 0.3rem;\
+}\
+.cm-tstat-sub {\
+  display: block;\
+  font-size: 0.75rem;\
+  color: #666;\
+}\
+.cm-tstat-stars {\
+  font-size: 1.3rem;\
+  color: #ffd700;\
+  letter-spacing: 3px;\
+}\
+.cm-tstat-sep {\
+  width: 1px;\
+  height: 60px;\
+  background: #333;\
+}\
+.cm-testimonials-cta {\
+  margin-top: 0.5rem;\
 }\
 \
 /* Responsive */\

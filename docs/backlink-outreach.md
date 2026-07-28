@@ -1,117 +1,62 @@
-# Backlink Outreach Guide — cha0smagicklabs.com
+# Backlink Outreach Strategy — Cha0smagick Labs
 
-## Por Qué Backlinks
-Backlinks son el factor #1 de ranking en Google. Sin backlinks, tus 133 artículos no posicionan. Necesitas 5-10 backlinks de sitios esotéricos/ocultos reales.
+## Target Blogs / Sites
 
-## Estrategia: Guest Post + Resource Page
+### Tier 1 — Alta Autoridad
+1. **Lucky Mojo** (luckymojo.com) — Contacto: formulario web
+2. **Rune Soup** (runesoup.com) — Gordon White, afinidad chaos magic
+3. **The Hoodwitch** (thehoodwitch.com) — 500K+ followers
+4. **Learn Religions — Occult Section** (learnreligions.com) — DA alto
 
-Tenemos 11 apps Android únicas. Propón a blogs esotéricos: "escribe un review de mi app a cambio de un artículo único para tu blog."
+### Tier 2 — Autoridad Media
+5. **Occult World** (occult-world.com) — Enciclopedia oculta
+6. **Esoteric Library** (esotericlibrary.com) — Blog curado
+7. **The Hermetic Library** (hermeticlibrary.com) — Nicho académico
 
-## Metas
-- **Corto plazo** (1-2 semanas): 3-5 backlinks de blogs pequeños
-- **Medio plazo** (1-2 meses): 10-15 backlinks de sitios medianos
-- **Largo plazo** (3-6 meses): 20-30 backlinks incluyendo .edu/.org
+### Tier 3 — Blogs Pequeños
+8. **Digital Occult** — Blogger independiente
+9. **Morrigan's Workshop** — Brujería digital
+10. **Paranormal Daily News** — Acepta guest posts
 
-## Blogs Objetivo (Ocultismo/Esoterismo en Inglés)
+## Plantillas de Email
 
-### Nivel 1 — Fáciles (contactar hoy)
-| Blog | URL | Por qué |
-|------|-----|---------|
-| Magickal Spot | https://magickalspot.com | Aceptan guest posts de ocultismo |
-| Spell8 | https://spell8.com | Blog de hechizos activo |
-| Otherworldly Oracle | https://otherworldlyoracle.com | Acepta guest posts |
-| Wicca Living | https://wiccaliving.com | Blog grande de wicca |
-| Learn Religions (Occult) | https://learnreligions.com/occult | Sección de ocultismo |
+### Plantilla 1: Guest Post Gratis
+**Asunto**: Guest Post GRATIS para [Blog]
 
-### Nivel 2 — Medios
-| Blog | URL |
-|------|-----|
-| Llewellyn Worldwide | https://llewellyn.com/blog |
-| The Hoodwitch | https://thehoodwitch.com/blog |
-| Witches & Pagans | https://witchesandpagans.com |
-| Patheos Pagan | https://patheos.com/pagan |
-| Esoteric Online | https://esotericonline.com |
+Hola [Nombre],
 
-### Nivel 3 — Difíciles
-| Blog | URL |
-|------|-----|
-| Atlas Obscura | https://atlasobscura.com |
-| Ancient Origins | https://ancient-origins.net |
-| Ghost City Press | https://ghostcitypress.com |
+Soy lector de [Blog] y me encanta tu contenido.
 
-## Template 1: Guest Post Pitch (Email)
+Tengo Cha0smagick Labs — 11 apps Android de ocultismo (sigilos, tarot, runas, astrología, 4.7★, 128+ reseñas) y 7 libros esotéricos.
 
-**Asunto**: Article idea for [Blog Name]: [Topic]
+Te ofrezco un **guest post GRATIS y original** para tu blog:
 
-Hi [Name],
+Ideas: "Los 5 mejores libros de Magia del Caos", "Guía de Magia con Sigilos para principiantes", "Divinación Digital con Apps".
 
-I'm a long-time reader of [Blog Name] and I love your content on [specific topic they cover].
+El post sería 100% original, 1500+ palabras, con referencias. Solo pido un link a mi web en la bio.
 
-I run cha0smagicklabs.com — we create practical occult tools for Android (apps like Sigil Generator, Tarot, Rune Oracle). I'd love to contribute a guest post to your blog on a topic your readers would find valuable:
+¿Te interesa? Ajusto el tema a tu audiencia.
 
-**"[Article Title]"**
-
-Brief outline:
-- [Point 1]
-- [Point 2]
-- [Point 3]
-
-[Article] would be original, 1500+ words, and I can include my author bio with a link back to my site. No promotional fluff — just genuinely useful content for your audience.
-
-Is this something you'd be open to?
-
-Thanks,
-[Your Name]
+Saludos,
 https://cha0smagicklabs.com
 
----
+### Plantilla 2: Solicitud de Link
+**Asunto**: Sugerencia de recurso
 
-## Template 2: Resource Page Request
+Hola, vi tu página de recursos. Te sugiero agregar Cha0smagick Labs (11 apps de ocultismo, 4.7★, 128 reseñas). https://cha0smagicklabs.com ¡Gracias!
 
-**Asunto**: Occult resources for your [Blog Name] page
+### Plantilla 3: Broken Link
+**Asunto**: Link roto encontrado
 
-Hi [Name],
+Encontré un link roto en tu sitio. Tengo un recurso relevante si quieres reemplazarlo. ¡Saludos!
 
-I came across your resources/links page at [URL] and noticed you list [type of resources].
+## Plan Semanal
+**Semana 1**: Identificar 10 blogs → Enviar 5 guest post pitches
+**Semana 2**: Follow-up → Enviar 5 más
+**Semana 3**: YouTube outreach → Broken links
 
-I thought you might want to add cha0smagicklabs.com — we offer a collection of 11 Android apps for occult practitioners (sigil generation, tarot, rune divination, astrology, goetia, dream analysis, etc.), plus 7 esoteric books.
-
-The apps are free to download and our readers consistently give them 4.7-star ratings. Would be a perfect fit for your resources section.
-
-Thanks for considering,
-[Your Name]
-
----
-
-## Template 3: App Review Request
-
-**Asunto**: Free access to our occult app — review opportunity
-
-Hi [Name],
-
-I'm the creator of [App Name] — a [description] Android app available on Google Play.
-
-I'd love to offer you and your readers an exclusive preview. I can provide:
-- Free license keys for you to test
-- Screenshots and promo materials
-- An original article about how the app was created
-
-I'm looking for an honest review on your site. Here's the Play Store link: [URL]
-
-Would you be interested?
-
-Best,
-[Your Name]
-
----
-
-## Outreach Checklist
-- [ ] Send 5 emails to Level 1 blogs
-- [ ] Follow up after 7 days
-- [ ] Track responses in a spreadsheet
-- [ ] Write 1 guest post (adapt from witchcraft article)
-- [ ] Submit to 2 resource pages
-- [ ] Monitor new backlinks in Google Search Console
-
-## Nota Importante
-No pagues por backlinks. Google penaliza. Siempre contenido original + valor real.
+## Tips
+- Personaliza CADA email (menciona artículo de ellos)
+- Ofrece guest post GRATIS
+- Follow-up a los 7 días
+- Blogs pequeños aceptan más fácil

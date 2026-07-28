@@ -1,0 +1,34 @@
+- generic [ref=f58e4]:
+  - banner:
+    - link "Saltar al contenido":
+      - /url: "#"
+    - generic [ref=f58e15]:
+      - generic [ref=f58e18]:
+        - generic:
+          - img "Icono de búsqueda"
+        - combobox "Buscar" [ref=f58e20]
+      - link "Tu perfil" [ref=f58e25] [cursor=pointer]:
+        - /url: /magiacaoticamagiadelcaosprctic/
+        - img [ref=f58e32]:
+          - generic [ref=f58e33]: M
+      - button "Cuentas" [ref=f58e37] [cursor=pointer]
+  - navigation [ref=f58e42]:
+    - generic [ref=f58e44]:
+      - generic [ref=f58e45]:
+        - generic "Inicio" [ref=f58e49]:
+          - link "Inicio" [ref=f58e50] [cursor=pointer]:
+            - /url: /
+        - generic "Inicio" [ref=f58e57]:
+          - link "Inicio" [ref=f58e58] [cursor=pointer]:
+            - /url: /
+        - generic "Explorar" [ref=f58e65]:
+          - link "Explorar" [ref=f58e66] [cursor=pointer]:
+            - /url: /today
+        - generic "Tus tableros" [ref=f58e73]:
+          - link "Tus tableros" [ref=f58e74] [cursor=pointer]:
+            - /url: /magiacaoticamagiadelcaosprctic/
+        - generic "Crear" [ref=f58e81]:
+          - button "Crear" [ref=f58e82] [cursor=pointer]
+      - generic "Configuración y soporte" [ref=f58e98]:
+        - button "Configuración y soporte" [ref=f58e99] [cursor=pointer]
+  - main [ref=f58e104]
