@@ -1,0 +1,111 @@
+- generic [active] [ref=f163e1]:
+  - generic [ref=f163e2]:
+    - list [ref=f163e4]:
+      - link "Dashboard" [ref=f163e5] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/dashboard
+      - link "Subscribers" [ref=f163e11] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/subscribers
+      - link "Campaigns" [ref=f163e17] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+      - link "Automations" [ref=f163e23] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/automations/status/workflows
+      - link "Forms" [ref=f163e31] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/forms
+      - link "Sites" [ref=f163e37] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/sites
+      - link "Products New" [ref=f163e43] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/products
+        - generic [ref=f163e47]:
+          - generic [ref=f163e48]: Products
+          - generic [ref=f163e49]: New
+      - listitem [ref=f163e52] [cursor=pointer]:
+        - generic [ref=f163e56]: More
+    - generic [ref=f163e59]:
+      - generic [ref=f163e61]:
+        - link [ref=f163e64] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/resources
+        - generic [ref=f163e79] [cursor=pointer]:
+          - generic [ref=f163e80]: Cha0smagick LABS
+          - generic [ref=f163e81]: "Magia Caotica: Magia del Caos Práctica"
+      - main [ref=f163e87]:
+        - generic [ref=f163e88]:
+          - generic [ref=f163e89]:
+            - navigation "Breadcrumb" [ref=f163e90]:
+              - list [ref=f163e91]:
+                - listitem [ref=f163e92]:
+                  - link "Subscribers" [ref=f163e93] [cursor=pointer]:
+                    - /url: https://dashboard.mailerlite.com/subscribers
+                - listitem [ref=f163e94]:
+                  - link "test@test.com" [ref=f163e98] [cursor=pointer]:
+                    - /url: "#"
+            - generic [ref=f163e99]:
+              - generic [ref=f163e100]:
+                - heading "test@test.com" [level=1] [ref=f163e101]
+                - paragraph [ref=f163e102]:
+                  - generic [ref=f163e103]: active
+              - button "Actions" [ref=f163e107] [cursor=pointer]
+            - generic [ref=f163e112]: Subscriber profile
+          - generic [ref=f163e126]:
+            - generic [ref=f163e130]:
+              - generic [ref=f163e131]:
+                - generic [ref=f163e132]:
+                  - generic [ref=f163e133]: Emails sent
+                  - generic [ref=f163e135]: "0"
+                - generic [ref=f163e137]:
+                  - generic [ref=f163e138]: Opened
+                  - generic [ref=f163e140]: 0%
+                - generic [ref=f163e144]:
+                  - generic [ref=f163e145]: Clicked
+                  - generic [ref=f163e147]: 0%
+              - generic [ref=f163e150]:
+                - generic [ref=f163e151]:
+                  - generic [ref=f163e152]: Subscribed on
+                  - generic [ref=f163e154]: 2026-07-28 17:07:02 via api
+                - generic [ref=f163e155]:
+                  - generic [ref=f163e156]: Signup IP address
+                  - generic [ref=f163e158]: —
+                - generic [ref=f163e159]:
+                  - generic [ref=f163e160]: Opt-in IP address
+                  - generic [ref=f163e162]: —
+                - generic [ref=f163e163]:
+                  - generic [ref=f163e164]: Location
+                  - generic [ref=f163e166]: —
+                - generic [ref=f163e167]:
+                  - generic [ref=f163e168]: Opt-in date
+                  - generic [ref=f163e170]: —
+                - generic [ref=f163e171]:
+                  - generic [ref=f163e172]: Last detected timezone
+                  - generic [ref=f163e174]: —
+            - generic [ref=f163e177]:
+              - generic [ref=f163e179]:
+                - heading "Subscriber details" [level=2] [ref=f163e180]
+                - button "Edit" [ref=f163e182] [cursor=pointer]
+              - list [ref=f163e186]:
+                - generic [ref=f163e187]:
+                  - generic [ref=f163e188]: Email
+                  - generic [ref=f163e190]: test@test.com
+                - generic [ref=f163e191]:
+                  - generic [ref=f163e192]: Groups
+                  - generic [ref=f163e194]: Lead Magnet - Chaos Magick EN
+            - generic [ref=f163e199]:
+              - generic [ref=f163e201]:
+                - heading "Activity" [level=2] [ref=f163e202]
+                - generic [ref=f163e203]: All
+              - generic [ref=f163e217]:
+                - generic [ref=f163e218]: 2026-07-28
+                - list [ref=f163e221]:
+                  - listitem [ref=f163e222]:
+                    - generic [ref=f163e228]:
+                      - generic [ref=f163e229]:
+                        - text: Added to group
+                        - link "Lead Magnet - Chaos Magick EN" [ref=f163e230] [cursor=pointer]:
+                          - /url: /subscribers?rules=W1t7ImNvbmRpdGlvbiI6Imdyb3VwcyIsIm9wZXJhdG9yIjoiaW5fYW55IiwiYXJncyI6WyJncm91cHMiLFsiMTk0MjU3NDc2NjEzMzEwMTM3Il1dfV1d
+                      - generic [ref=f163e231]: 17:07:02
+                  - listitem [ref=f163e232]:
+                    - generic [ref=f163e238]:
+                      - generic [ref=f163e239]: Status changed to active
+                      - generic [ref=f163e240]: 17:07:02
+  - iframe [ref=f163e241]:
+    
+  - iframe [ref=f163e242]:
+    

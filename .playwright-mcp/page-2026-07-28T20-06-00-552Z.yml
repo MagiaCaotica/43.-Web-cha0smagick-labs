@@ -1,0 +1,44 @@
+- generic [active] [ref=f250e1]:
+  - generic [ref=f250e2]:
+    - list [ref=f250e4]:
+      - link "Dashboard" [ref=f250e5] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/dashboard
+      - link "Subscribers" [ref=f250e11] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/subscribers
+      - link "Campaigns" [ref=f250e17] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+      - link "Automations" [ref=f250e23] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/automations/status/workflows
+      - link "Forms" [ref=f250e31] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/forms
+      - link "Sites" [ref=f250e37] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/sites
+      - link "Products New" [ref=f250e43] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/products
+        - generic [ref=f250e47]:
+          - generic [ref=f250e48]: Products
+          - generic [ref=f250e49]: New
+      - listitem [ref=f250e52] [cursor=pointer]:
+        - generic [ref=f250e56]: More
+    - generic [ref=f250e59]:
+      - generic [ref=f250e61]:
+        - link [ref=f250e64] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/resources
+        - generic [ref=f250e79] [cursor=pointer]:
+          - generic [ref=f250e80]: Cha0smagick LABS
+          - generic [ref=f250e81]: "Magia Caotica: Magia del Caos Práctica"
+      - main [ref=f250e87]:
+        - heading "Campaigns" [level=1] [ref=f250e91]
+        - generic [ref=f250e97]:
+          - heading "Create your first campaign" [level=2] [ref=f250e98]
+          - paragraph [ref=f250e99]:
+            - text: Pick any editor and design a campaign in minutes, then enhance it with these advanced features.
+            - list [ref=f250e100]:
+              - listitem [ref=f250e101]: A/B testing makes it easy to find which elements work best
+              - listitem [ref=f250e102]: Auto resend gives subscribers a second chance to open
+              - listitem [ref=f250e103]: RSS campaigns automatically send emails with new content updates
+              - listitem [ref=f250e104]: Pre-designed templates let you craft emails that match your goals
+              - listitem [ref=f250e105]: Surveys, dynamic content, and social media blocks increase engagement
+          - button "Create" [ref=f250e108] [cursor=pointer]
+  - iframe [ref=f250e110]:
+    

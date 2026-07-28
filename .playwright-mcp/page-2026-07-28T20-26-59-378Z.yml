@@ -1,0 +1,351 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - banner:
+        - link "Saltar al contenido":
+          - /url: "#"
+      - main:
+        - generic [ref=e6]:
+          - generic [ref=e7]:
+            - generic:
+              - generic:
+                - list:
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img "pin-image"
+          - generic [ref=e10]:
+            - img "Cargando" [ref=e14]
+            - generic [ref=e20]:
+              - generic [ref=e21]:
+                - img "Pinterest" [ref=e24]
+                - heading "Bienvenido a Pinterest" [level=1] [ref=e26]
+                - generic [ref=e27]: Inicia sesión para descubrir más ideas solo para ti
+              - generic [ref=e31]:
+                - form "login form" [ref=e32]:
+                  - generic [ref=e33]:
+                    - generic [ref=e35]:
+                      - generic [ref=e37]:
+                        - generic [ref=e38]: Correo electrónico
+                        - textbox "Correo electrónico" [ref=e40]:
+                          - /placeholder: ""
+                      - generic: Correo electrónico
+                    - generic [ref=e42]:
+                      - generic [ref=e43]:
+                        - generic [ref=e45]:
+                          - generic [ref=e46]: Contraseña
+                          - textbox "Contraseña" [ref=e48]:
+                            - /placeholder: ""
+                          - generic "Mostrar contraseña" [ref=e51]:
+                            - switch "Mostrar contraseña" [ref=e52] [cursor=pointer]
+                        - generic: Contraseña
+                      - link "¿Olvidaste la contraseña?" [ref=e58] [cursor=pointer]:
+                        - /url: /password/reset/
+                    - button "Iniciar sesión" [ref=e61] [cursor=pointer]
+                - generic [ref=e64]: O
+                - generic [ref=e68]:
+                  - generic [ref=e70]:
+                    - button "Continuar con Google. Se abre en una pestaña nueva." [ref=e72] [cursor=pointer]:
+                      - generic [ref=e74]: Continuar con Google
+                    - iframe
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic: Continuar con Google
+                - button "QR code login button" [ref=e84] [cursor=pointer]:
+                  - generic [ref=e85]: Continuar con código QR
+              - generic [ref=e92]:
+                - text: ¿Nuevo en Pinterest?
+                - link "Únete gratis" [ref=e93] [cursor=pointer]:
+                  - /url: "#"
+              - generic [ref=e95]:
+                - link "Términos del servicio" [ref=e96] [cursor=pointer]:
+                  - /url: /_/_/policy/terms-of-service/
+                - text: ·
+                - link "Política de privacidad" [ref=e97] [cursor=pointer]:
+                  - /url: https://www.pinterest.com/_/_/policy/privacy-policy/
+                - text: ·
+                - link "Aviso en la colección" [ref=e98] [cursor=pointer]:
+                  - /url: https://policy.pinterest.com/notice-at-collection
+          - button "Registrarse" [ref=e100] [cursor=pointer]

@@ -283,8 +283,40 @@
     loadMailerLite();
   }
 
-  // --- Cross-sell Related Apps on Blog ---
-  function injectRelatedApps(appsList) {
+  // --- Social Share Buttons (X/Twitter + Pinterest) ---
+  function injectShareButtons() {
+    if (document.getElementById('cm-social-share')) return;
+
+    var article = document.querySelector('article.article, .blog-post, article');
+    if (!article) return;
+
+    var url = encodeURIComponent(window.location.href);
+    var title = encodeURIComponent(document.title);
+    var description = encodeURIComponent(
+      (document.querySelector('meta[name="description"]') || {}).content || document.title
+    );
+
+    var html = '\
+<section id="cm-social-share" class="cm-section cm-social-section">\
+  <div class="cm-social-inner">\
+    <span class="cm-social-label">' + (isSpanish() ? 'Comparte este art\u00EDculo:' : 'Share this article:') + '</span>\
+    <div class="cm-social-buttons">\
+      <a href="https://twitter.com/intent/tweet?text=' + title + '&url=' + url + '" \
+         target="_blank" rel="noopener" class="cm-social-btn cm-social-x" aria-label="Share on X">\
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>\
+        <span>X</span>\
+      </a>\
+      <a href="https://pinterest.com/pin/create/button/?url=' + url + '&description=' + description + '" \
+         target="_blank" rel="noopener" class="cm-social-btn cm-social-pin" aria-label="Pin on Pinterest">\
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0a12 12 0 0 0-4.36 23.17c-.1-.79-.2-2.02.04-2.89.22-.79 1.4-5.69 1.4-5.69s-.36-.72-.36-1.78c0-1.67.97-2.92 2.18-2.92 1.03 0 1.53.77 1.53 1.7 0 1.03-.66 2.58-1 4.01-.28 1.2.6 2.18 1.78 2.18 2.14 0 3.78-2.25 3.78-5.5 0-2.88-2.07-4.89-5.02-4.89-3.42 0-5.43 2.56-5.43 5.22 0 1.03.4 2.14.89 2.74a.36.36 0 0 1 .08.34l-.33 1.35c-.05.22-.17.27-.4.16-1.5-.7-2.44-2.88-2.44-4.64 0-3.78 2.74-7.25 7.92-7.25 4.15 0 7.38 2.96 7.38 6.92 0 4.13-2.6 7.45-6.22 7.45-1.21 0-2.35-.63-2.74-1.38l-.75 2.85c-.27 1.04-1 2.35-1.49 3.14A12 12 0 1 0 12 0z"/></svg>\
+        <span>Pinterest</span>\
+      </a>\
+    </div>\
+  </div>\
+</section>';
+
+    insertBefore(document.querySelector('footer'), html);
+  }
     if (document.getElementById('cm-related-apps')) return;
 
     var target = document.querySelector('footer');
@@ -351,7 +383,10 @@
     switch (pageType) {
 
       case 'blog': {
-        // 1. Lead magnet email form at article bottom (before footer)
+        // 1. Social share buttons at top of article
+        injectShareButtons();
+
+        // 2. Lead magnet email form at article bottom (before footer)
         var articleEl = document.querySelector('article.article');
         if (!articleEl) {
           articleEl = document.querySelector('.blog-post');
@@ -360,7 +395,7 @@
           injectLeadMagnet('article.article, .blog-post');
         }
 
-        // 2. Collection CTA after lead magnet
+        // 3. Collection CTA after lead magnet
         // (will be injected after the lead section loads)
         // We schedule this after a short delay to ensure lead section is in DOM
         setTimeout(function() {
@@ -724,6 +759,56 @@
   color: #c0a060;\
   font-size: 0.85rem;\
   font-weight: 700;\
+}\
+\
+/* Social Share */\
+.cm-social-section {\
+  margin: 2rem auto;\
+  padding: 1rem 0;\
+}\
+.cm-social-inner {\
+  display: flex;\
+  align-items: center;\
+  justify-content: center;\
+  gap: 1rem;\
+  flex-wrap: wrap;\
+}\
+.cm-social-label {\
+  color: #888;\
+  font-size: 0.85rem;\
+  text-transform: uppercase;\
+  letter-spacing: 1px;\
+}\
+.cm-social-buttons {\
+  display: flex;\
+  gap: 0.5rem;\
+}\
+.cm-social-btn {\
+  display: inline-flex;\
+  align-items: center;\
+  gap: 0.4rem;\
+  padding: 0.5rem 1rem;\
+  border-radius: 6px;\
+  text-decoration: none;\
+  font-size: 0.8rem;\
+  font-weight: 600;\
+  transition: all 0.3s;\
+}\
+.cm-social-x {\
+  background: #1a1a1a;\
+  color: #fff !important;\
+  border: 1px solid #333;\
+}\
+.cm-social-x:hover {\
+  background: #333;\
+  border-color: #555;\
+}\
+.cm-social-pin {\
+  background: #bd081c;\
+  color: #fff !important;\
+}\
+.cm-social-pin:hover {\
+  background: #9a0715;\
 }\
 \
 /* Responsive */\

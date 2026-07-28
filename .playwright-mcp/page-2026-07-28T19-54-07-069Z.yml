@@ -1,0 +1,85 @@
+- generic [active] [ref=f136e1]:
+  - generic [ref=f136e2]:
+    - list [ref=f136e4]:
+      - link "Dashboard" [ref=f136e5] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/dashboard
+      - link "Subscribers" [ref=f136e11] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/subscribers
+      - link "Campaigns" [ref=f136e17] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+      - link "Automations" [ref=f136e23] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/automations/status/workflows
+      - link "Forms" [ref=f136e31] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/forms
+      - link "Sites" [ref=f136e37] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/sites
+      - link "Products New" [ref=f136e43] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/products
+        - generic [ref=f136e47]:
+          - generic [ref=f136e48]: Products
+          - generic [ref=f136e49]: New
+      - listitem [ref=f136e52] [cursor=pointer]:
+        - generic [ref=f136e56]: More
+    - generic [ref=f136e59]:
+      - generic [ref=f136e61]:
+        - link [ref=f136e64] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/resources
+        - generic [ref=f136e79] [cursor=pointer]:
+          - generic [ref=f136e80]: Cha0smagick LABS
+          - generic [ref=f136e81]: "Magia Caotica: Magia del Caos Práctica"
+      - main [ref=f136e87]:
+        - generic [ref=f136e90]:
+          - navigation "Breadcrumb" [ref=f136e91]:
+            - list [ref=f136e92]:
+              - listitem [ref=f136e93]:
+                - link "Automations" [ref=f136e94] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/automations/status/workflows
+              - listitem [ref=f136e95]:
+                - link "EN Lead Magnet - Chaos Magick Guide Workflow" [ref=f136e99] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=f136e100]:
+            - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=1] [ref=f136e102]
+            - generic [ref=f136e104]:
+              - button "Preview" [ref=f136e105] [cursor=pointer]
+              - button "Pause" [ref=f136e107] [cursor=pointer]
+              - button [ref=f136e114] [cursor=pointer]
+          - generic [ref=f136e118]: Activity
+        - generic [ref=f136e134]:
+          - generic [ref=f136e136]:
+            - generic [ref=f136e137]:
+              - generic [ref=f136e138]:
+                - generic [ref=f136e139]: Showing
+                - generic [ref=f136e140]: Completed
+                - generic [ref=f136e151]: subscribers
+              - generic [ref=f136e152]: "0"
+            - generic [ref=f136e155]:
+              - textbox "Search for subscribers" [ref=f136e156]
+              - button [ref=f136e158] [cursor=pointer]
+          - generic [ref=f136e164]:
+            - button "Filter" [ref=f136e167] [cursor=pointer]
+            - button "Actions" [ref=f136e174] [cursor=pointer]
+          - table [ref=f136e185]:
+            - rowgroup [ref=f136e186]:
+              - row [ref=f136e187]:
+                - columnheader [ref=f136e188]:
+                  - button [ref=f136e189] [cursor=pointer]
+                - columnheader [ref=f136e193]:
+                  - link "Subscriber" [ref=f136e194] [cursor=pointer]:
+                    - /url: "#"
+                - columnheader [ref=f136e196]:
+                  - link "Date" [ref=f136e197] [cursor=pointer]:
+                    - /url: "#"
+            - rowgroup [ref=f136e203]:
+              - row [ref=f136e204]:
+                - cell "No results." [ref=f136e205]
+          - generic [ref=f136e209]:
+            - generic [ref=f136e210]: "50"
+            - generic [ref=f136e223]:
+              - paragraph [ref=f136e224]: Showing 0 to 0 of 0 results
+              - generic [ref=f136e225]:
+                - button "Previous" [disabled] [ref=f136e226]
+                - button "Next" [disabled] [ref=f136e228]
+  - iframe [ref=f136e230]:
+    
+  - iframe [ref=f136e231]:
+    

@@ -1,0 +1,47 @@
+- generic [active] [ref=f20e1]:
+  - generic [ref=f20e2]:
+    - list [ref=f20e4]:
+      - link "Dashboard" [ref=f20e5] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/dashboard
+      - link "Subscribers" [ref=f20e11] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/subscribers
+      - link "Campaigns" [ref=f20e17] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+      - link "Automations" [ref=f20e23] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/automations/status/workflows
+      - link "Forms" [ref=f20e31] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/forms
+      - link "Sites" [ref=f20e37] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/sites
+      - link "Products New" [ref=f20e43] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/products
+        - generic [ref=f20e47]:
+          - generic [ref=f20e48]: Products
+          - generic [ref=f20e49]: New
+      - listitem [ref=f20e52] [cursor=pointer]:
+        - generic [ref=f20e56]: More
+    - generic [ref=f20e59]:
+      - generic [ref=f20e61]:
+        - link [ref=f20e64] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/resources
+        - generic [ref=f20e79] [cursor=pointer]:
+          - generic [ref=f20e80]: Cha0smagick LABS
+          - generic [ref=f20e81]: "Magia Caotica: Magia del Caos Práctica"
+      - main [ref=f20e87]:
+        - generic [ref=f20e88]:
+          - heading "Forms" [level=1] [ref=f20e91]
+          - generic [ref=f20e92]: Pop-ups
+        - generic [ref=f20e110]:
+          - heading "Create your first pop-up" [level=2] [ref=f20e111]
+          - paragraph [ref=f20e112]:
+            - text: Get subscriber sign-ups when they are most engaged! Design pop-ups and schedule when they appear.
+            - list [ref=f20e113]:
+              - listitem [ref=f20e114]: Choose from several pop-up types, including floating bars and slideboxes
+              - listitem [ref=f20e115]: Determine pop-up behavior based on timing and scrolling
+              - listitem [ref=f20e116]: Use pre-designed templates to get started quickly
+          - generic [ref=f20e117]:
+            - link "Create" [ref=f20e119] [cursor=pointer]:
+              - /url: https://dashboard.mailerlite.com/forms/create?type=popup
+            - button "Learn more" [ref=f20e121] [cursor=pointer]
+  - iframe [ref=f20e123]:
+    
