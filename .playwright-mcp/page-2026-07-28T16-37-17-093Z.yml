@@ -1,0 +1,40 @@
+- generic [ref=e1]:
+  - main "Kit content" [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e7]:
+        - generic [ref=e11]:
+          - generic [ref=e12]: Log in
+          - link "Create account" [ref=e13] [cursor=pointer]:
+            - /url: https://app.kit.com/users/signup?plan=1k
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - generic [ref=e17]:
+              - generic [ref=e18]:
+                - generic [ref=e19]: Email
+                - generic [ref=e20]: "*"
+              - textbox "Email *" [active] [ref=e22]:
+                - /placeholder: E.g; jane@company.com
+            - generic [ref=e24]:
+              - generic [ref=e26]:
+                - generic [ref=e27]: Password
+                - generic [ref=e28]: "*"
+              - generic [ref=e29]:
+                - textbox "Password *" [ref=e30]:
+                  - /placeholder: "**********"
+                - button "Show password" [ref=e32] [cursor=pointer]
+            - generic [ref=e34]:
+              - checkbox "Keep me logged in on this device" [ref=e35] [cursor=pointer]
+              - generic [ref=e36]: Keep me logged in on this device
+            - button "Log in" [ref=e37] [cursor=pointer]
+          - paragraph [ref=e38]:
+            - link "I forgot my password" [ref=e39] [cursor=pointer]:
+              - /url: /users/password/new
+      - complementary [ref=e40]:
+        - img "Gabby Beckford" [ref=e41]
+        - generic [ref=e42]:
+          - generic [ref=e43]: Gabby Beckford
+          - generic [ref=e44]: Travel Blogger
+  - generic:
+    - region "Hints"
+  - iframe [ref=e46]:
+    

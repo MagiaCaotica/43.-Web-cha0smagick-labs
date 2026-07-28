@@ -105,7 +105,7 @@ function renderBooksSection() {
     // Title
     const title = document.createElement('h2');
     title.className = 'section-toggle';
-    title.textContent = 'Books for Sale';
+    title.textContent = 'Complete Your Collection — Books';
     title.style.fontFamily = 'var(--font-mono)';
     title.style.color = 'var(--text-primary)';
     title.style.textTransform = 'uppercase';

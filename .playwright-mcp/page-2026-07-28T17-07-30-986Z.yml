@@ -1,0 +1,49 @@
+- generic [ref=f79e1]:
+  - dialog [ref=f79e2]:
+    - generic [ref=f79e4]:
+      - paragraph [ref=f79e6]:
+        - text: By clicking “Accept all cookies”, you agree to the storing of cookies on your device and the use of similar technologies to enhance site navigation, analyze site usage, personalize advertising, and assist in our marketing efforts.
+        - link "View our Cookie Policy" [ref=f79e7] [cursor=pointer]:
+          - /url: https://www.mailerlite.com/legal/cookie-policy
+        - text: .
+      - generic [ref=f79e8]:
+        - button "Cookies settings" [ref=f79e9] [cursor=pointer]
+        - button "Reject all" [ref=f79e10] [cursor=pointer]
+        - button "Accept all cookies" [ref=f79e11] [cursor=pointer]
+  - generic [ref=f79e13]:
+    - link [ref=f79e14] [cursor=pointer]:
+      - /url: https://www.mailerlite.com
+    - generic [ref=f79e23]:
+      - heading "Sign in to your MailerLite account" [level=1] [ref=f79e24]
+      - paragraph [ref=f79e25]:
+        - text: Don't have an account yet?
+        - link "Sign up" [ref=f79e26] [cursor=pointer]:
+          - /url: https://accounts.mailerlite.com/signup
+      - generic [ref=f79e27]:
+        - generic [ref=f79e28]:
+          - generic [ref=f79e29]:
+            - generic [ref=f79e30]: Email address
+            - textbox "Email address" [active] [ref=f79e31]
+          - generic [ref=f79e32]:
+            - generic [ref=f79e33]: Password
+            - textbox "Password" [ref=f79e34]
+            - button [ref=f79e35] [cursor=pointer]
+        - generic [ref=f79e40]:
+          - generic [ref=f79e41]:
+            - checkbox "Remember me" [ref=f79e42]
+            - generic [ref=f79e43]: Remember me
+          - paragraph [ref=f79e44]:
+            - link "Forgot your password?" [ref=f79e45] [cursor=pointer]:
+              - /url: https://accounts.mailerlite.com/forgot-password
+        - button "Sign in" [disabled] [ref=f79e46]
+      - generic [ref=f79e48]:
+        - separator [ref=f79e50]
+        - generic [ref=f79e51]: or sign in with
+        - separator [ref=f79e53]
+      - generic [ref=f79e54]:
+        - button [ref=f79e57] [cursor=pointer]
+        - generic [ref=f79e64] [cursor=pointer]: More sign in options
+      - link "I can't log in to my account" [ref=f79e69] [cursor=pointer]:
+        - /url: https://www.mailerlite.com/help/i-can-t-login-to-my-account
+  - iframe [ref=f79e71]:
+    

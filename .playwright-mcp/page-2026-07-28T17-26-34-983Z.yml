@@ -1,0 +1,311 @@
+- generic [active] [ref=f112e1]:
+  - generic [ref=f112e2]:
+    - generic [ref=f112e4]:
+      - link [ref=f112e6] [cursor=pointer]:
+        - /url: /
+      - link "Trial 14 days left" [ref=f112e16] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/billing/upgrade?source=sidebar_trial_banner
+        - generic [ref=f112e17]: Trial
+        - generic [ref=f112e22]: 14 days left
+      - list [ref=f112e23]:
+        - link "Dashboard" [ref=f112e24] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/dashboard
+        - link "Subscribers" [ref=f112e30] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/subscribers
+        - link "Campaigns" [ref=f112e36] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+        - link "Automations" [ref=f112e42] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/automations/status/drafts
+        - link "Forms" [ref=f112e50] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/forms
+        - link "Sites" [ref=f112e56] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/sites
+        - link "Products New" [ref=f112e62] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/products
+          - generic [ref=f112e66]:
+            - generic [ref=f112e67]: Products
+            - generic [ref=f112e68]: New
+      - generic [ref=f112e69]:
+        - list [ref=f112e70]:
+          - link "Account settings" [ref=f112e71] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/account/profile
+          - link "Integrations" [ref=f112e77] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/integrations
+          - link "File manager" [ref=f112e83] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/file-manager
+          - link "My templates" [ref=f112e89] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/templates
+        - list [ref=f112e95]:
+          - listitem [ref=f112e98] [cursor=pointer]:
+            - link "Partner offers" [ref=f112e99]:
+              - /url: https://dashboard.mailerlite.com/partner-perks
+          - listitem [ref=f112e103] [cursor=pointer]:
+            - link "Refer a friend" [ref=f112e104]:
+              - /url: https://dashboard.mailerlite.com/refer
+    - generic [ref=f112e106]:
+      - generic [ref=f112e108]:
+        - generic [ref=f112e109]:
+          - generic [ref=f112e116] [cursor=pointer]:
+            - generic [ref=f112e117]: Cha0smagick LABS
+            - generic [ref=f112e118]: 14-day trial
+          - link [ref=f112e124] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/billing/upgrade?source=navbar_primary_button
+        - generic [ref=f112e130]:
+          - generic [ref=f112e131] [cursor=pointer]: Help
+          - generic [ref=f112e149] [cursor=pointer]:
+            - generic [ref=f112e150]: "Magia Caotica: Magia del Caos Práctica"
+            - generic [ref=f112e151]: magiacaoticapractica@gmail.com
+      - main [ref=f112e157]:
+        - generic [ref=f112e158]:
+          - generic [ref=f112e160]:
+            - navigation "Breadcrumb" [ref=f112e161]:
+              - list [ref=f112e162]:
+                - listitem [ref=f112e163]:
+                  - link "Forms" [ref=f112e164] [cursor=pointer]:
+                    - /url: https://dashboard.mailerlite.com/forms
+                - listitem [ref=f112e165]:
+                  - link "Embedded forms" [ref=f112e169] [cursor=pointer]:
+                    - /url: https://dashboard.mailerlite.com/forms/embedded
+                - listitem [ref=f112e170]:
+                  - link "EN Lead Magnet - Chaos Magick Guide" [ref=f112e174] [cursor=pointer]:
+                    - /url: "#"
+            - generic [ref=f112e175]:
+              - heading "EN Lead Magnet - Chaos Magick Guide" [level=1] [ref=f112e177]
+              - button "Actions" [ref=f112e181] [cursor=pointer]
+            - navigation "Tabs" [ref=f112e188]:
+              - link "Overview" [ref=f112e189] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/194257832689796115/overview
+              - link "Analytics" [ref=f112e194] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/194257832689796115/stats
+              - link "Automation" [ref=f112e199] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/194257832689796115/automations
+              - link "Double opt-in" [ref=f112e204] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/194257832689796115/double-optin-settings
+          - generic [ref=f112e209]:
+            - generic [ref=f112e213]:
+              - generic [ref=f112e214]:
+                - heading "Double opt-in" [level=2] [ref=f112e215]
+                - button [ref=f112e218] [cursor=pointer]
+              - paragraph [ref=f112e223]: Enable double opt-in if you want to send confirmation emails to subscribers who join through this form.
+            - generic [ref=f112e226]:
+              - generic [ref=f112e227]:
+                - heading "Double opt-in emails" [level=2] [ref=f112e229]
+                - navigation "Tabs" [ref=f112e233]:
+                  - link "Confirmation email" [ref=f112e234] [cursor=pointer]:
+                    - /url: "#email"
+                  - link "Confirmation thank you page" [ref=f112e239] [cursor=pointer]:
+                    - /url: "#thank_you"
+              - generic [ref=f112e246]:
+                - generic [ref=f112e249]:
+                  - heading "Confirmation email" [level=2] [ref=f112e252]
+                  - list [ref=f112e255]:
+                    - generic [ref=f112e256]:
+                      - generic [ref=f112e257]: Subject
+                      - generic [ref=f112e259]:
+                        - text: Confirmation email
+                        - button "Edit" [disabled] [ref=f112e262]
+                    - generic [ref=f112e264]:
+                      - generic [ref=f112e265]: Sender
+                      - generic [ref=f112e267]:
+                        - text: Cha0smagick LABS (magiacaoticapractica@gmail.com)
+                        - button "Edit" [ref=f112e268] [cursor=pointer]
+                - generic [ref=f112e272]:
+                  - generic [ref=f112e274]:
+                    - heading "Preview" [level=2] [ref=f112e275]
+                    - generic [ref=f112e276]:
+                      - button "Edit" [disabled] [ref=f112e279]
+                      - link "View report" [ref=f112e281] [cursor=pointer]:
+                        - /url: /emails/194257834467133376/overview
+                  - iframe [ref=f112e284]:
+                    - table [ref=f113e2]:
+                      - rowgroup [ref=f113e3]:
+                        - row [ref=f113e4]:
+                          - cell [ref=f113e5]:
+                            - generic [ref=f113e6]:
+                              - table [ref=f113e7]:
+                                - rowgroup [ref=f113e8]:
+                                  - row [ref=f113e9]:
+                                    - cell [ref=f113e10]
+                                  - row [ref=f113e11]:
+                                    - cell "Thank you for your interest in our newsletter!" [ref=f113e12]
+                                  - row [ref=f113e13]:
+                                    - cell [ref=f113e14]
+                              - table [ref=f113e15]:
+                                - rowgroup [ref=f113e16]:
+                                  - row [ref=f113e17]:
+                                    - cell [ref=f113e18]:
+                                      - table [ref=f113e19]:
+                                        - rowgroup [ref=f113e20]:
+                                          - row [ref=f113e21]:
+                                            - cell [ref=f113e22]:
+                                              - table [ref=f113e23]:
+                                                - rowgroup [ref=f113e24]:
+                                                  - row [ref=f113e25]:
+                                                    - cell [ref=f113e26]
+                                              - table [ref=f113e27]:
+                                                - rowgroup [ref=f113e28]:
+                                                  - row [ref=f113e29]:
+                                                    - cell [ref=f113e30]
+                                              - table [ref=f113e31]:
+                                                - rowgroup [ref=f113e32]:
+                                                  - row [ref=f113e33]:
+                                                    - cell [ref=f113e34]:
+                                                      - table [ref=f113e35]:
+                                                        - rowgroup [ref=f113e36]:
+                                                          - row [ref=f113e37]:
+                                                            - cell [ref=f113e38]:
+                                                              - link [ref=f113e39] [cursor=pointer]:
+                                                                - /url: ""
+                                              - table [ref=f113e40]:
+                                                - rowgroup [ref=f113e41]:
+                                                  - row [ref=f113e42]:
+                                                    - cell [ref=f113e43]
+                                              - table [ref=f113e44]:
+                                                - rowgroup [ref=f113e45]:
+                                                  - row [ref=f113e46]:
+                                                    - cell [ref=f113e47]
+                                      - table [ref=f113e48]:
+                                        - rowgroup [ref=f113e49]:
+                                          - row [ref=f113e50]:
+                                            - cell [ref=f113e51]:
+                                              - table [ref=f113e52]:
+                                                - rowgroup [ref=f113e53]:
+                                                  - row [ref=f113e54]:
+                                                    - cell [ref=f113e55]
+                                              - table [ref=f113e56]:
+                                                - rowgroup [ref=f113e57]:
+                                                  - row [ref=f113e58]:
+                                                    - cell [ref=f113e59]:
+                                                      - heading [level=1] [ref=f113e60]:
+                                                        - strong [ref=f113e61]: Confirm your email address
+                                              - table [ref=f113e62]:
+                                                - rowgroup [ref=f113e63]:
+                                                  - row [ref=f113e64]:
+                                                    - cell [ref=f113e65]
+                                      - table [ref=f113e66]:
+                                        - rowgroup [ref=f113e67]:
+                                          - row [ref=f113e68]:
+                                            - cell [ref=f113e69]:
+                                              - table
+                                              - table [ref=f113e70]:
+                                                - rowgroup [ref=f113e71]:
+                                                  - row [ref=f113e72]:
+                                                    - cell [ref=f113e73]:
+                                                      - paragraph [ref=f113e74]:
+                                                        - generic [ref=f113e75]:
+                                                          - text: Please click the button below to confirm that
+                                                          - strong
+                                                          - text: is the correct email address to receive our newsletter.
+                                              - table [ref=f113e76]:
+                                                - rowgroup [ref=f113e77]:
+                                                  - row [ref=f113e78]:
+                                                    - cell [ref=f113e79]
+                                      - table [ref=f113e80]:
+                                        - rowgroup [ref=f113e81]:
+                                          - row [ref=f113e82]:
+                                            - cell [ref=f113e83]:
+                                              - table [ref=f113e84]:
+                                                - rowgroup [ref=f113e85]:
+                                                  - row [ref=f113e86]:
+                                                    - cell [ref=f113e87]
+                                              - table [ref=f113e88]:
+                                                - rowgroup [ref=f113e89]:
+                                                  - row [ref=f113e90]:
+                                                    - cell [ref=f113e91]:
+                                                      - table [ref=f113e92]:
+                                                        - rowgroup [ref=f113e93]:
+                                                          - row [ref=f113e94]:
+                                                            - cell [ref=f113e95]:
+                                                              - link "Confirm your email" [ref=f113e96] [cursor=pointer]:
+                                                                - /url: javascript:void(0)
+                                              - table [ref=f113e97]:
+                                                - rowgroup [ref=f113e98]:
+                                                  - row [ref=f113e99]:
+                                                    - cell [ref=f113e100]
+                                      - table [ref=f113e101]:
+                                        - rowgroup [ref=f113e102]:
+                                          - row [ref=f113e103]:
+                                            - cell [ref=f113e104]:
+                                              - table [ref=f113e105]:
+                                                - rowgroup [ref=f113e106]:
+                                                  - row [ref=f113e107]:
+                                                    - cell [ref=f113e108]
+                                              - table [ref=f113e109]:
+                                                - rowgroup [ref=f113e110]:
+                                                  - row [ref=f113e111]:
+                                                    - cell [ref=f113e112]:
+                                                      - table [ref=f113e113]:
+                                                        - rowgroup [ref=f113e114]:
+                                                          - row [ref=f113e115]:
+                                                            - cell [ref=f113e116]
+                                      - table [ref=f113e117]:
+                                        - rowgroup [ref=f113e118]:
+                                          - row [ref=f113e119]:
+                                            - cell [ref=f113e120]:
+                                              - table [ref=f113e121]:
+                                                - rowgroup [ref=f113e122]:
+                                                  - row [ref=f113e123]:
+                                                    - cell [ref=f113e124]
+                                              - table [ref=f113e125]:
+                                                - rowgroup [ref=f113e126]:
+                                                  - row [ref=f113e127]:
+                                                    - cell [ref=f113e128]:
+                                                      - paragraph [ref=f113e129]: If you didn't subscribe, you can just delete this email. You will not be subscribed to this newsletter unless you click the confirmation button above.
+                                              - table [ref=f113e130]:
+                                                - rowgroup [ref=f113e131]:
+                                                  - row [ref=f113e132]:
+                                                    - cell [ref=f113e133]
+                            - table [ref=f113e134]:
+                              - rowgroup [ref=f113e135]:
+                                - row [ref=f113e136]:
+                                  - cell [ref=f113e137]:
+                                    - table [ref=f113e138]:
+                                      - rowgroup [ref=f113e139]:
+                                        - row [ref=f113e140]:
+                                          - cell [ref=f113e141]
+                                        - row [ref=f113e142]:
+                                          - cell [ref=f113e143]:
+                                            - table [ref=f113e144]:
+                                              - rowgroup [ref=f113e145]:
+                                                - row [ref=f113e146]:
+                                                  - cell [ref=f113e147]:
+                                                    - link [ref=f113e148] [cursor=pointer]:
+                                                      - /url: ""
+                                        - row [ref=f113e149]:
+                                          - cell [ref=f113e150]
+                                        - row [ref=f113e151]:
+                                          - cell [ref=f113e152]:
+                                            - table [ref=f113e153]:
+                                              - rowgroup [ref=f113e154]:
+                                                - row [ref=f113e155]:
+                                                  - cell [ref=f113e156]:
+                                                    - link [ref=f113e157] [cursor=pointer]:
+                                                      - /url: "#"
+                                                      - img "facebook" [ref=f113e158]
+                                                  - cell [ref=f113e159]:
+                                                    - link [ref=f113e160] [cursor=pointer]:
+                                                      - /url: "#"
+                                                      - img "x" [ref=f113e161]
+                                                  - cell [ref=f113e162]:
+                                                    - link [ref=f113e163] [cursor=pointer]:
+                                                      - /url: "#"
+                                                      - img "instagram" [ref=f113e164]
+                                        - row [ref=f113e165]:
+                                          - cell [ref=f113e166]
+                                        - row:
+                                          - cell
+                                - row [ref=f113e167]:
+                                  - cell [ref=f113e168]
+                            - table [ref=f113e169]:
+                              - rowgroup [ref=f113e170]:
+                                - row [ref=f113e171]:
+                                  - cell [ref=f113e172]
+                                - row [ref=f113e173]:
+                                  - cell [ref=f113e174]:
+                                    - link [ref=f113e175] [cursor=pointer]:
+                                      - /url: https://www.mailerlite.com
+                                      - img "Sent by MailerLite" [ref=f113e176]
+                                - row [ref=f113e177]:
+                                  - cell [ref=f113e178]
+  - iframe [ref=f112e285]:
+    

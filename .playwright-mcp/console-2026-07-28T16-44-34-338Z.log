@@ -1,0 +1,7 @@
+[     999ms] [INFO] [Intercom] Launcher is disabled in settings or current page does not match display conditions @ https://js.intercomcdn.com/frame-modern.d2ee85d7.js:0
+[   51192ms] [ERROR] Error: <svg> attribute transform: Expected transform function, "down-1". @ https://cdn.kit.com/vite/assets/react-dom-Xi36fV6o.js:0
+[   51195ms] [ERROR] Error: <svg> attribute transform: Expected transform function, "down-1". @ https://cdn.kit.com/vite/assets/react-dom-Xi36fV6o.js:0
+[   51205ms] [ERROR] Error: <svg> attribute transform: Expected transform function, "down-1". @ https://cdn.kit.com/vite/assets/react-dom-Xi36fV6o.js:0
+[  488574ms] [ERROR] Failed to load resource: the server responded with a status of 503 () @ https://analytics.tiktok.com/api/v2/pixel/act:0
+[  509225ms] [INFO] [Intercom] Launcher is disabled in settings or current page does not match display conditions @ https://js.intercomcdn.com/frame-modern.d2ee85d7.js:0
+[  509981ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://bat.bing.com/p/insights/t/97232527:0

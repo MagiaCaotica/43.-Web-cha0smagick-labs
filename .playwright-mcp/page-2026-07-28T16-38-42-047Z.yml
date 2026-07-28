@@ -1,0 +1,520 @@
+- generic [ref=f9e1]:
+  - generic [ref=f9e5]:
+    - navigation [ref=f9e6]:
+      - generic [ref=f9e7]: Main
+      - generic [ref=f9e8]:
+        - link [ref=f9e10] [cursor=pointer]:
+          - /url: /dashboard
+          - generic [ref=f9e13]: Kit
+        - button [expanded] [ref=f9e14] [cursor=pointer]:
+          - generic [ref=f9e15]: Collapse sidebar
+      - button [ref=f9e17] [cursor=pointer]:
+        - generic [ref=f9e18]:
+          - generic [ref=f9e19]: Search Kit
+          - generic [ref=f9e20]:
+            - generic [ref=f9e21]: ⌘
+            - generic [ref=f9e22]: K
+      - list [ref=f9e23]:
+        - listitem [ref=f9e24]:
+          - link [ref=f9e25] [cursor=pointer]:
+            - /url: /dashboard
+            - generic [ref=f9e26]: Dashboard
+        - listitem [ref=f9e29]:
+          - link [ref=f9e30] [cursor=pointer]:
+            - /url: /subscribers
+            - generic [ref=f9e31]: Subscribers
+        - listitem [ref=f9e34]:
+          - link [ref=f9e35] [cursor=pointer]:
+            - /url: /campaigns
+            - generic [ref=f9e36]: Broadcasts
+        - listitem [ref=f9e39]:
+          - button [ref=f9e41] [cursor=pointer]:
+            - generic [ref=f9e42]: Audience growth
+        - listitem [ref=f9e44]:
+          - button [ref=f9e46] [cursor=pointer]:
+            - generic [ref=f9e47]: Monetization
+        - listitem [ref=f9e49]:
+          - button [ref=f9e51] [cursor=pointer]:
+            - generic [ref=f9e52]: Automation
+        - listitem [ref=f9e54]:
+          - link [ref=f9e55] [cursor=pointer]:
+            - /url: /apps
+            - generic [ref=f9e56]: Apps
+      - generic [ref=f9e59]:
+        - generic [ref=f9e60]:
+          - generic [ref=f9e65]:
+            - button [expanded] [ref=f9e66] [cursor=pointer]:
+              - generic [ref=f9e71]:
+                - generic: 14 / 14 days
+                - generic [ref=f9e72]: 14 / 14 days remaining in trial
+            - generic [ref=f9e74]:
+              - generic [ref=f9e75]:
+                - paragraph [ref=f9e76]: 14 days left on your free trial
+                - paragraph [ref=f9e77]: Upgrade to continue to use all the features you have access to without interruption.
+              - button [ref=f9e78] [cursor=pointer]: Upgrade now
+          - button
+        - list [ref=f9e79]:
+          - listitem [ref=f9e80]:
+            - link [ref=f9e81] [cursor=pointer]:
+              - /url: /account_settings
+              - generic [ref=f9e82]: Settings
+        - button [ref=f9e86] [cursor=pointer]:
+          - generic [ref=f9e90]:
+            - text: Cha0smagick LABS
+            - generic [ref=f9e91]: account
+    - generic [ref=f9e92]:
+      - generic [ref=f9e94]:
+        - paragraph [ref=f9e95]:
+          - strong [ref=f9e96]: Confirm your email to finish setting up your account.
+          - text: We've sent a confirmation link to your sign-up address.
+        - link [ref=f9e97] [cursor=pointer]:
+          - /url: https://app.kit.com/account_settings/account_info
+          - text: Manage email address
+      - generic [ref=f9e100]:
+        - generic [ref=f9e102]:
+          - heading [level=1] [ref=f9e103]: Welcome to Kit, Cha0smagick LABS
+          - link [ref=f9e106] [cursor=pointer]:
+            - /url: /editor/starting-points
+            - text: Start writing
+        - generic [ref=f9e110]:
+          - generic [ref=f9e111]:
+            - generic [ref=f9e112]:
+              - generic [ref=f9e115]:
+                - heading [level=2] [ref=f9e116]: Let's set you up for success
+                - paragraph [ref=f9e117]: Here's exactly what to do during your first week with Kit to start reaching more people.
+              - generic [ref=f9e118]:
+                - button [ref=f9e119] [cursor=pointer]
+                - button [ref=f9e120] [cursor=pointer]
+            - generic [ref=f9e123]:
+              - button [expanded] [ref=f9e124] [cursor=pointer]:
+                - generic [ref=f9e125]:
+                  - checkbox [ref=f9e126]
+                  - paragraph [ref=f9e127]: Create a landing page that converts visitors
+                - generic [ref=f9e129]:
+                  - paragraph [ref=f9e130]: Growing your email list starts with a landing page. Our landing pages are easy to create so you see results fast. Choose from templates designed to convert traffic into subscribers, add your branding and content, share it across the internet, and watch your list grow.
+                  - generic [ref=f9e131]:
+                    - link [ref=f9e132]:
+                      - /url: /landing-pages/new
+                      - text: Pick a template
+                    - link [ref=f9e133]:
+                      - /url: https://www.youtube.com/watch?v=yDywH_Tm87o&list=PLOQ9AyTAfttGhQHwbJBT3jYO5YnW3zWI6&index=3
+                      - text: Watch a tutorial
+              - button [ref=f9e134] [cursor=pointer]:
+                - generic [ref=f9e135]:
+                  - checkbox [ref=f9e136]
+                  - paragraph [ref=f9e137]: Add a subscriber
+                - generic [ref=f9e138]:
+                  - paragraph [ref=f9e139]: If you have a list of subscribers, you can import them via CSV. If not, no worries-start by adding your own email as a subscriber so you can test sending broadcasts later.
+                  - link [ref=f9e141]:
+                    - /url: /subscribers
+                    - text: Add subscriber
+              - button [ref=f9e142] [cursor=pointer]:
+                - generic [ref=f9e143]:
+                  - checkbox [ref=f9e144]
+                  - paragraph [ref=f9e145]: Confirm your email address
+                - generic [ref=f9e146]:
+                  - paragraph [ref=f9e147]: Before you can send any emails, we need to confirm your email address. Check your inbox for a confirmation email from us, or head to the Settings page to resend the confirmation email.
+                  - link [ref=f9e149]:
+                    - /url: /account_settings/account_info
+                    - text: View email settings
+              - button [ref=f9e150] [cursor=pointer]:
+                - generic [ref=f9e151]:
+                  - checkbox [ref=f9e152]
+                  - paragraph [ref=f9e153]: Write your first email draft
+                - generic [ref=f9e154]:
+                  - paragraph [ref=f9e155]: Effortlessly design, write, and publish your first (or next) email. With Kit's editor and ready-to-use templates, you can create professional emails that reflect your brand in minutes.
+                  - generic [ref=f9e156]:
+                    - link [ref=f9e157]:
+                      - /url: /editor/starting-points
+                      - text: Start writing
+                    - link [ref=f9e158]:
+                      - /url: https://www.youtube.com/watch?v=LlQKkrG3xcU&list=PLOQ9AyTAfttGhQHwbJBT3jYO5YnW3zWI6&index=4
+                      - text: Watch a tutorial
+              - button [ref=f9e159] [cursor=pointer]:
+                - generic [ref=f9e160]:
+                  - checkbox [ref=f9e161]
+                  - paragraph [ref=f9e162]: Welcome subscribers with an automated email sequence
+                - generic [ref=f9e163]:
+                  - paragraph [ref=f9e164]: Give all your new subscribers an introduction to your content with a welcome sequence of introductory emails that share more about who you are, what to expect, and where they can find some of your most popular content.
+                  - generic [ref=f9e165]:
+                    - link [ref=f9e166]:
+                      - /url: /sequences/new
+                      - text: Create a welcome sequence
+                    - link [ref=f9e167]:
+                      - /url: https://www.youtube.com/watch?v=HOBZKMmyTyA
+                      - text: Watch a tutorial
+              - button [ref=f9e168] [cursor=pointer]:
+                - generic [ref=f9e169]:
+                  - checkbox [ref=f9e170]
+                  - paragraph [ref=f9e171]: Grow your list faster with Recommendations
+                - generic [ref=f9e172]:
+                  - paragraph [ref=f9e173]: Grow your email list with high-quality subscribers by cross-promoting your newsletter with thousands of creators who mean business.
+                  - generic [ref=f9e174]:
+                    - link [ref=f9e175]:
+                      - /url: /creator-network
+                      - text: Set up Recommendations
+                    - link [ref=f9e176]:
+                      - /url: https://www.youtube.com/watch?v=nvVw_R11i8g&list=PLOQ9AyTAfttGhQHwbJBT3jYO5YnW3zWI6&index=6
+                      - text: Watch a tutorial
+          - generic [ref=f9e177]:
+            - heading [level=3] [ref=f9e179]: Watch a demo
+            - link [ref=f9e181] [cursor=pointer]:
+              - /url: https://kit.com/request-demo/on-demand
+              - heading [level=4] [ref=f9e184]: Watch Kit in action in this on-demand demo
+  - generic "Welcome to Kit!" [ref=f9e185]:
+    - dialog [ref=f9e186]:
+      - generic [ref=f9e187]:
+        - heading [level=2]
+        - button "Close" [active] [ref=f9e188] [cursor=pointer]
+      - generic [ref=f9e192]:
+        - generic [ref=f9e193]:
+          - generic [ref=f9e194]:
+            - heading "Welcome to Kit!" [level=2] [ref=f9e195]
+            - paragraph [ref=f9e196]: Join the 100,000 creators using Kit to automate and grow their business.
+            - generic [ref=f9e197]:
+              - generic [ref=f9e198]: Set up email sequences that drive sales 24/7
+              - generic [ref=f9e200]: Grow your email list 2x faster with creator recommendations
+              - generic [ref=f9e202]: Connect the tools you already use - Shopify, Canva, and 50+ more
+              - generic [ref=f9e204]: 99.8% deliverability so your emails always reach the inbox
+              - generic [ref=f9e206]: 14-day free trial, cancel anytime
+          - generic [ref=f9e208]:
+            - img "Eddie Shleyner" [ref=f9e210]
+            - generic [ref=f9e211]:
+              - blockquote [ref=f9e214]: Kit is integral because it's the hub of the business.
+              - generic [ref=f9e215]:
+                - paragraph [ref=f9e216]: Eddie Shleyner
+                - paragraph [ref=f9e217]:
+                  - text: Author of
+                  - emphasis [ref=f9e218]: Very Good Copy
+        - generic [ref=f9e219]:
+          - generic [ref=f9e220]:
+            - paragraph [ref=f9e221]:
+              - strong [ref=f9e222]: Your 14 day trial starts today.
+              - text: You won't be billed until after your free trial ends.
+            - generic [ref=f9e223]:
+              - radiogroup [ref=f9e225]:
+                - radio "Monthly $39/month" [ref=f9e226] [cursor=pointer]:
+                  - generic [ref=f9e229]:
+                    - generic [ref=f9e230]: Monthly
+                    - generic [ref=f9e231]: $39/month
+                - radio "Annual $390/year (2 months free!)" [checked] [ref=f9e233] [cursor=pointer]:
+                  - generic [ref=f9e236]:
+                    - generic [ref=f9e237]: Annual
+                    - generic [ref=f9e238]: $390/year (2 months free!)
+              - generic [ref=f9e244]:
+                - generic [ref=f9e245]:
+                  - generic [ref=f9e247]:
+                    - text: Card Number
+                    - generic [ref=f9e249]:
+                      - iframe [ref=f9e250]:
+                        - generic [ref=f13e1]:
+                          - generic: 0123456789０１２３４５６７８９
+                          - textbox [disabled]
+                          - generic [ref=f13e2]:
+                            - textbox "Número de la tarjeta de crédito o débito" [ref=f13e25]:
+                              - /placeholder: 1234 1234 1234 1234
+                            - textbox
+                            - textbox
+                            - textbox
+                          - textbox [disabled]
+                          - button
+                      - textbox
+                  - generic [ref=f9e252]:
+                    - text: Expiration
+                    - generic [ref=f9e254]:
+                      - iframe [ref=f9e255]:
+                        - generic [ref=f14e1]:
+                          - generic: 0123456789０１２３４５６７８９
+                          - textbox [disabled]
+                          - generic [ref=f14e2]:
+                            - textbox "Fecha de caducidad de la tarjeta de crédito o débito" [ref=f14e5]:
+                              - /placeholder: MM / AA
+                            - textbox
+                          - textbox [disabled]
+                          - button
+                      - textbox
+                  - generic [ref=f9e257]:
+                    - text: Security Code
+                    - generic [ref=f9e259]:
+                      - iframe [ref=f9e260]:
+                        - generic [ref=f15e1]:
+                          - generic: 0123456789０１２３４５６７８９
+                          - textbox [disabled]
+                          - textbox "CVC/CVV de la tarjeta de crédito o débito" [ref=f15e5]:
+                            - /placeholder: CVC
+                          - textbox [disabled]
+                          - button
+                      - textbox
+                - generic [ref=f9e263]:
+                  - generic [ref=f9e264]:
+                    - generic [ref=f9e266]:
+                      - text: Street Address
+                      - textbox "Street Address" [ref=f9e267]:
+                        - /placeholder: 123 Example St
+                    - generic [ref=f9e269]:
+                      - text: City
+                      - textbox "City" [ref=f9e270]:
+                        - /placeholder: Seattle
+                  - generic [ref=f9e271]:
+                    - generic [ref=f9e273]:
+                      - text: State/Province
+                      - textbox "State/Province" [ref=f9e274]:
+                        - /placeholder: WA
+                    - generic [ref=f9e276]:
+                      - text: Postal Code
+                      - textbox "Postal Code" [ref=f9e277]:
+                        - /placeholder: "12345"
+                    - generic [ref=f9e279]:
+                      - text: Country
+                      - combobox "Country" [ref=f9e280]:
+                        - option "Select"
+                        - option "United States"
+                        - option "Afghanistan (‫افغانستان‬‎)"
+                        - option "Albania (Shqipëri)"
+                        - option "Algeria (‫الجزائر‬‎)"
+                        - option "American Samoa"
+                        - option "Andorra"
+                        - option "Angola"
+                        - option "Anguilla"
+                        - option "Antigua and Barbuda"
+                        - option "Argentina"
+                        - option "Armenia (Հայաստան)"
+                        - option "Aruba"
+                        - option "Ascension Island"
+                        - option "Australia"
+                        - option "Austria (Österreich)"
+                        - option "Azerbaijan (Azərbaycan)"
+                        - option "Bahamas"
+                        - option "Bahrain (‫البحرين‬‎)"
+                        - option "Bangladesh (বাংলাদেশ)"
+                        - option "Barbados"
+                        - option "Belarus (Беларусь)"
+                        - option "Belgium (België)"
+                        - option "Belize"
+                        - option "Benin (Bénin)"
+                        - option "Bermuda"
+                        - option "Bhutan (འབྲུག)"
+                        - option "Bolivia"
+                        - option "Bosnia and Herzegovina (Босна и Херцеговина)"
+                        - option "Botswana"
+                        - option "Brazil (Brasil)"
+                        - option "British Indian Ocean Territory"
+                        - option "British Virgin Islands"
+                        - option "Brunei"
+                        - option "Bulgaria (България)"
+                        - option "Burkina Faso"
+                        - option "Burundi (Uburundi)"
+                        - option "Cambodia (កម្ពុជា)"
+                        - option "Cameroon (Cameroun)"
+                        - option "Canada"
+                        - option "Cape Verde (Kabu Verdi)"
+                        - option "Caribbean Netherlands"
+                        - option "Cayman Islands"
+                        - option "Central African Republic (République centrafricaine)"
+                        - option "Chad (Tchad)"
+                        - option "Chile"
+                        - option "China (中国)"
+                        - option "Christmas Island"
+                        - option "Cocos (Keeling) Islands"
+                        - option "Colombia" [selected]
+                        - option "Comoros (‫جزر القمر‬‎)"
+                        - option "Congo (DRC) (Jamhuri ya Kidemokrasia ya Kongo)"
+                        - option "Congo (Republic) (Congo-Brazzaville)"
+                        - option "Cook Islands"
+                        - option "Costa Rica"
+                        - option "Côte d’Ivoire"
+                        - option "Croatia (Hrvatska)"
+                        - option "Cuba"
+                        - option "Curaçao"
+                        - option "Cyprus (Κύπρος)"
+                        - option "Czech Republic (Česká republika)"
+                        - option "Denmark (Danmark)"
+                        - option "Djibouti"
+                        - option "Dominica"
+                        - option "Dominican Republic (República Dominicana)"
+                        - option "Ecuador"
+                        - option "Egypt (‫مصر‬‎)"
+                        - option "El Salvador"
+                        - option "Equatorial Guinea (Guinea Ecuatorial)"
+                        - option "Eritrea"
+                        - option "Estonia (Eesti)"
+                        - option "Eswatini"
+                        - option "Ethiopia"
+                        - option "Falkland Islands (Islas Malvinas)"
+                        - option "Faroe Islands (Føroyar)"
+                        - option "Fiji"
+                        - option "Finland (Suomi)"
+                        - option "France"
+                        - option "French Guiana (Guyane française)"
+                        - option "French Polynesia (Polynésie française)"
+                        - option "Gabon"
+                        - option "Gambia"
+                        - option "Georgia (საქართველო)"
+                        - option "Germany (Deutschland)"
+                        - option "Ghana (Gaana)"
+                        - option "Gibraltar"
+                        - option "Greece (Ελλάδα)"
+                        - option "Greenland (Kalaallit Nunaat)"
+                        - option "Grenada"
+                        - option "Guadeloupe"
+                        - option "Guam"
+                        - option "Guatemala"
+                        - option "Guernsey"
+                        - option "Guinea (Guinée)"
+                        - option "Guinea-Bissau (Guiné Bissau)"
+                        - option "Guyana"
+                        - option "Haiti"
+                        - option "Honduras"
+                        - option "Hong Kong (香港)"
+                        - option "Hungary (Magyarország)"
+                        - option "Iceland (Ísland)"
+                        - option "India (भारत)"
+                        - option "Indonesia"
+                        - option "Iran (‫ایران‬‎)"
+                        - option "Iraq (‫العراق‬‎)"
+                        - option "Ireland"
+                        - option "Isle of Man"
+                        - option "Israel (‫ישראל‬‎)"
+                        - option "Italy (Italia)"
+                        - option "Jamaica"
+                        - option "Japan (日本)"
+                        - option "Jersey"
+                        - option "Jordan (‫الأردن‬‎)"
+                        - option "Kazakhstan (Казахстан)"
+                        - option "Kenya"
+                        - option "Kiribati"
+                        - option "Kosovo"
+                        - option "Kuwait (‫الكويت‬‎)"
+                        - option "Kyrgyzstan (Кыргызстан)"
+                        - option "Laos (ລາວ)"
+                        - option "Latvia (Latvija)"
+                        - option "Lebanon (‫لبنان‬‎)"
+                        - option "Lesotho"
+                        - option "Liberia"
+                        - option "Libya (‫ليبيا‬‎)"
+                        - option "Liechtenstein"
+                        - option "Lithuania (Lietuva)"
+                        - option "Luxembourg"
+                        - option "Macau (澳門)"
+                        - option "Macedonia (FYROM) (Македонија)"
+                        - option "Madagascar (Madagasikara)"
+                        - option "Malawi"
+                        - option "Malaysia"
+                        - option "Maldives"
+                        - option "Mali"
+                        - option "Malta"
+                        - option "Marshall Islands"
+                        - option "Martinique"
+                        - option "Mauritania (‫موريتانيا‬‎)"
+                        - option "Mauritius (Moris)"
+                        - option "Mayotte"
+                        - option "Mexico (México)"
+                        - option "Micronesia"
+                        - option "Moldova (Republica Moldova)"
+                        - option "Monaco"
+                        - option "Mongolia (Монгол)"
+                        - option "Montenegro (Crna Gora)"
+                        - option "Montserrat"
+                        - option "Morocco (‫المغرب‬‎)"
+                        - option "Mozambique (Moçambique)"
+                        - option "Myanmar (Burma) (မြန်မာ)"
+                        - option "Namibia (Namibië)"
+                        - option "Nauru"
+                        - option "Nepal (नेपाल)"
+                        - option "Netherlands (Nederland)"
+                        - option "New Caledonia (Nouvelle-Calédonie)"
+                        - option "New Zealand"
+                        - option "Nicaragua"
+                        - option "Niger (Nijar)"
+                        - option "Nigeria"
+                        - option "Niue"
+                        - option "Norfolk Island"
+                        - option "North Korea (조선 민주주의 인민 공화국)"
+                        - option "Northern Mariana Islands"
+                        - option "Norway (Norge)"
+                        - option "Oman (‫عُمان‬‎)"
+                        - option "Pakistan (‫پاکستان‬‎)"
+                        - option "Palau"
+                        - option "Palestine (‫فلسطين‬‎)"
+                        - option "Panama (Panamá)"
+                        - option "Papua New Guinea"
+                        - option "Paraguay"
+                        - option "Peru (Perú)"
+                        - option "Philippines"
+                        - option "Poland (Polska)"
+                        - option "Portugal"
+                        - option "Puerto Rico"
+                        - option "Qatar (‫قطر‬‎)"
+                        - option "Réunion (La Réunion)"
+                        - option "Romania (România)"
+                        - option "Russia (Россия)"
+                        - option "Rwanda"
+                        - option "Saint Barthélemy"
+                        - option "Saint Helena"
+                        - option "Saint Kitts and Nevis"
+                        - option "Saint Lucia"
+                        - option "Saint Martin (Saint-Martin (partie française))"
+                        - option "Saint Pierre and Miquelon (Saint-Pierre-et-Miquelon)"
+                        - option "Saint Vincent and the Grenadines"
+                        - option "Samoa"
+                        - option "San Marino"
+                        - option "São Tomé and Príncipe (São Tomé e Príncipe)"
+                        - option "Saudi Arabia (‫المملكة العربية السعودية‬‎)"
+                        - option "Senegal (Sénégal)"
+                        - option "Serbia (Србија)"
+                        - option "Seychelles"
+                        - option "Sierra Leone"
+                        - option "Singapore"
+                        - option "Sint Maarten"
+                        - option "Slovakia (Slovensko)"
+                        - option "Slovenia (Slovenija)"
+                        - option "Solomon Islands"
+                        - option "Somalia (Soomaaliya)"
+                        - option "South Africa"
+                        - option "South Korea (대한민국)"
+                        - option "South Sudan (‫جنوب السودان‬‎)"
+                        - option "Spain (España)"
+                        - option "Sri Lanka (ශ්‍රී ලංකාව)"
+                        - option "Sudan (‫السودان‬‎)"
+                        - option "Suriname"
+                        - option "Svalbard and Jan Mayen"
+                        - option "Sweden (Sverige)"
+                        - option "Switzerland (Schweiz)"
+                        - option "Syria (‫سوريا‬‎)"
+                        - option "Taiwan (台灣)"
+                        - option "Tajikistan"
+                        - option "Tanzania"
+                        - option "Thailand (ไทย)"
+                        - option "Timor-Leste"
+                        - option "Togo"
+                        - option "Tokelau"
+                        - option "Tonga"
+                        - option "Trinidad and Tobago"
+                        - option "Tunisia (‫تونس‬‎)"
+                        - option "Turkey (Türkiye)"
+                        - option "Turkmenistan"
+                        - option "Turks and Caicos Islands"
+                        - option "Tuvalu"
+                        - option "U.S. Virgin Islands"
+                        - option "Uganda"
+                        - option "Ukraine (Україна)"
+                        - option "United Arab Emirates (‫الإمارات العربية المتحدة‬‎)"
+                        - option "United Kingdom"
+                        - option "Uruguay"
+                        - option "Uzbekistan (Oʻzbekiston)"
+                        - option "Vanuatu"
+                        - option "Vatican City (Città del Vaticano)"
+                        - option "Venezuela"
+                        - option "Vietnam (Việt Nam)"
+                        - option "Wallis and Futuna (Wallis-et-Futuna)"
+                        - option "Western Sahara (‫الصحراء الغربية‬‎)"
+                        - option "Yemen (‫اليمن‬‎)"
+                        - option "Zambia"
+                        - option "Zimbabwe"
+                        - option "Åland Islands"
+                - button "Subscribe to the Creator Plan" [ref=f9e282] [cursor=pointer]
+              - generic [ref=f9e283]: You will be billed $390 (plus applicable tax) for up to 1,000 subscribers at the end of your free trial on August 11, 2026 and again on August 11 each year.
+          - button "I'll do this later" [ref=f9e284] [cursor=pointer]
+  - generic [ref=f9e285]: Hints
+  - iframe [ref=f9e286]:
+    

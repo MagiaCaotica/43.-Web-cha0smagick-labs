@@ -1,0 +1,179 @@
+- generic [active] [ref=f37e1]:
+  - generic [ref=f37e6]:
+    - navigation "Main" [ref=f37e7]:
+      - generic [ref=f37e9]:
+        - link "Kit" [ref=f37e11] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Collapse sidebar" [expanded] [ref=f37e15] [cursor=pointer]
+      - button "Search Kit" [ref=f37e18] [cursor=pointer]:
+        - generic [ref=f37e19]:
+          - generic [ref=f37e20]: Search Kit
+          - generic [ref=f37e21]:
+            - generic [ref=f37e22]: ⌘
+            - generic [ref=f37e23]: K
+      - list [ref=f37e24]:
+        - listitem [ref=f37e25]:
+          - link "Dashboard" [ref=f37e26] [cursor=pointer]:
+            - /url: /dashboard
+        - listitem [ref=f37e30]:
+          - link "Subscribers" [ref=f37e31] [cursor=pointer]:
+            - /url: /subscribers
+        - listitem [ref=f37e35]:
+          - link "Broadcasts" [ref=f37e36] [cursor=pointer]:
+            - /url: /campaigns
+        - listitem [ref=f37e40]:
+          - generic [ref=f37e41]:
+            - button "Audience growth" [expanded] [ref=f37e42] [cursor=pointer]
+            - list [ref=f37e48]:
+              - listitem [ref=f37e49]:
+                - link "Landing pages & forms" [ref=f37e50] [cursor=pointer]:
+                  - /url: /forms
+              - listitem [ref=f37e56]:
+                - link "Recommendations" [ref=f37e57] [cursor=pointer]:
+                  - /url: /creator-network
+              - listitem [ref=f37e63]:
+                - link "Newsletter site" [ref=f37e64] [cursor=pointer]:
+                  - /url: /newsletter-site
+        - listitem [ref=f37e70]:
+          - button "Monetization" [ref=f37e72] [cursor=pointer]
+        - listitem [ref=f37e75]:
+          - generic [ref=f37e76]:
+            - button "Automation" [expanded] [ref=f37e77] [cursor=pointer]
+            - list [ref=f37e83]:
+              - listitem [ref=f37e84]:
+                - link "Email sequences" [ref=f37e85] [cursor=pointer]:
+                  - /url: /sequences
+              - listitem [ref=f37e91]:
+                - link "Visual Automations" [ref=f37e92] [cursor=pointer]:
+                  - /url: /automations
+              - listitem [ref=f37e98]:
+                - link "Rules" [ref=f37e99] [cursor=pointer]:
+                  - /url: /rules
+              - listitem [ref=f37e105]:
+                - link "Kit MCP" [ref=f37e106] [cursor=pointer]:
+                  - /url: /kit-mcp
+              - listitem [ref=f37e112]:
+                - link "RSS" [ref=f37e113] [cursor=pointer]:
+                  - /url: /feeds
+        - listitem [ref=f37e119]:
+          - link "Apps" [ref=f37e120] [cursor=pointer]:
+            - /url: /apps
+      - generic [ref=f37e124]:
+        - generic [ref=f37e125]:
+          - generic [ref=f37e130]:
+            - button "14 / 14 days remaining in trial" [expanded] [ref=f37e131] [cursor=pointer]:
+              - generic [ref=f37e136]:
+                - generic: 14 / 14 days
+                - generic [ref=f37e137]: 14 / 14 days remaining in trial
+            - generic [ref=f37e139]:
+              - generic [ref=f37e140]:
+                - paragraph [ref=f37e141]: 14 days left on your free trial
+                - paragraph [ref=f37e142]: Upgrade to continue to use all the features you have access to without interruption.
+              - button "Upgrade now" [ref=f37e143] [cursor=pointer]
+          - button
+        - list [ref=f37e144]:
+          - listitem [ref=f37e145]:
+            - link "Settings" [ref=f37e146] [cursor=pointer]:
+              - /url: /account_settings
+        - button "Cha0smagick LABS account" [ref=f37e151] [cursor=pointer]:
+          - generic [ref=f37e155]:
+            - text: Cha0smagick LABS
+            - generic [ref=f37e156]: account
+    - generic [ref=f37e159]:
+      - banner [ref=f37e160]:
+        - link "« All Rules" [ref=f37e161] [cursor=pointer]:
+          - /url: /rules
+        - heading "New Rule" [level=1] [ref=f37e162]
+      - generic [ref=f37e164]:
+        - generic [ref=f37e165]:
+          - generic [ref=f37e166]:
+            - generic [ref=f37e168]:
+              - heading "Trigger" [level=2] [ref=f37e169]
+              - paragraph [ref=f37e170]: When this event happens...
+            - separator [ref=f37e171]
+            - list
+            - list [ref=f37e172]:
+              - listitem [ref=f37e173]:
+                - button [ref=f37e174] [cursor=pointer]:
+                  - generic [ref=f37e175]:
+                    - text: Subscribes to an email sequence
+                    - paragraph [ref=f37e176]: User subscribes to an email sequence
+              - listitem [ref=f37e177]:
+                - button [ref=f37e178] [cursor=pointer]:
+                  - generic [ref=f37e179]:
+                    - text: Subscribes to a form
+                    - paragraph [ref=f37e180]: User subscribes to a form
+              - listitem [ref=f37e181]:
+                - button [ref=f37e182] [cursor=pointer]:
+                  - generic [ref=f37e183]:
+                    - text: Completes an email sequence
+                    - paragraph [ref=f37e184]: User completes an email sequence
+              - listitem [ref=f37e185]:
+                - button [ref=f37e186] [cursor=pointer]:
+                  - generic [ref=f37e187]:
+                    - text: Clicks a link
+                    - paragraph [ref=f37e188]: User clicks a link
+              - listitem [ref=f37e189]:
+                - button [ref=f37e190] [cursor=pointer]:
+                  - generic [ref=f37e191]:
+                    - text: Tag added
+                    - paragraph [ref=f37e192]: User is tagged
+              - listitem [ref=f37e193]:
+                - button [ref=f37e194] [cursor=pointer]:
+                  - generic [ref=f37e195]:
+                    - text: Tag removed
+                    - paragraph [ref=f37e196]: Tag is removed from user
+          - generic [ref=f37e198]:
+            - generic [ref=f37e200]:
+              - heading "Action" [level=2] [ref=f37e201]
+              - paragraph [ref=f37e202]: ...do this.
+            - separator [ref=f37e203]
+            - list
+            - list [ref=f37e204]:
+              - listitem [ref=f37e205]:
+                - button [ref=f37e206] [cursor=pointer]:
+                  - generic [ref=f37e207]:
+                    - text: Subscribe to an email sequence
+                    - paragraph [ref=f37e208]: Subscribe user to an email sequence
+              - listitem [ref=f37e209]:
+                - button [ref=f37e210] [cursor=pointer]:
+                  - generic [ref=f37e211]:
+                    - text: Unsubscribe from an email sequence
+                    - paragraph [ref=f37e212]: Unsubscribe user from an email sequence
+              - listitem [ref=f37e213]:
+                - button [ref=f37e214] [cursor=pointer]:
+                  - generic [ref=f37e215]:
+                    - text: Subscribe to a form
+                    - paragraph [ref=f37e216]: Subscribe user to a form
+              - listitem [ref=f37e217]:
+                - button [ref=f37e218] [cursor=pointer]:
+                  - generic [ref=f37e219]:
+                    - text: Unsubscribe from a form
+                    - paragraph [ref=f37e220]: Unsubscribe user from a form
+              - listitem [ref=f37e221]:
+                - button [ref=f37e222] [cursor=pointer]:
+                  - generic [ref=f37e223]:
+                    - text: Add tag
+                    - paragraph [ref=f37e224]: Tag user
+              - listitem [ref=f37e225]:
+                - button [ref=f37e226] [cursor=pointer]:
+                  - generic [ref=f37e227]:
+                    - text: Remove tag
+                    - paragraph [ref=f37e228]: Remove tag from user
+              - listitem [ref=f37e229]:
+                - button [ref=f37e230] [cursor=pointer]:
+                  - generic [ref=f37e231]:
+                    - text: Set custom field
+                    - paragraph [ref=f37e232]: Set a custom field value for this user
+        - generic [ref=f37e233]:
+          - link "Cancel" [ref=f37e234] [cursor=pointer]:
+            - /url: /rules
+          - button "Save" [ref=f37e235] [cursor=pointer]:
+            - generic [ref=f37e237]:
+              - text: Save
+              - generic [ref=f37e238]: Saving
+              - generic [ref=f37e239]: Done
+  - iframe [ref=f37e5]:
+    
+  - generic:
+    - region "Hints"

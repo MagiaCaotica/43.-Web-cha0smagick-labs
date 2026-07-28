@@ -1,0 +1,46 @@
+- generic [active] [ref=f180e1]:
+  - generic [ref=f180e3]:
+    - banner [ref=f180e4]:
+      - generic [ref=f180e5]:
+        - link [ref=f180e6] [cursor=pointer]:
+          - /url: /automations/status/drafts
+        - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=2] [ref=f180e11]
+      - generic [ref=f180e12]:
+        - button "Test" [ref=f180e13] [cursor=pointer]
+        - button "Activate" [ref=f180e15] [cursor=pointer]
+        - link [ref=f180e20] [cursor=pointer]:
+          - /url: /automations/status/drafts
+    - generic [ref=f180e24]:
+      - complementary [ref=f180e26]:
+        - list [ref=f180e28]:
+          - listitem [ref=f180e29]:
+            - button [ref=f180e30] [cursor=pointer]
+          - listitem [ref=f180e38]:
+            - button [ref=f180e39] [cursor=pointer]
+          - listitem [ref=f180e43]:
+            - button [ref=f180e44] [cursor=pointer]
+      - list [ref=f180e50]:
+        - generic [ref=f180e51]:
+          - generic [ref=f180e53]:
+            - generic [ref=f180e64] [cursor=pointer]:
+              - generic [ref=f180e66]:
+                - generic [ref=f180e67]: Completes a form 1
+                - button [ref=f180e77]
+              - generic [ref=f180e81]: EN Lead Magnet - Chaos Magick Guide
+            - button [ref=f180e94] [cursor=pointer]
+          - paragraph [ref=f180e105] [cursor=pointer]: Add second trigger
+        - listitem [ref=f180e107]:
+          - generic [ref=f180e117] [cursor=pointer]:
+            - generic [ref=f180e119]:
+              - generic [ref=f180e120]: Email 1
+              - button [ref=f180e130]
+            - generic [ref=f180e134]: Set up email
+          - generic [ref=f180e146]:
+            - button [ref=f180e147] [cursor=pointer]
+            - button "Exit flow" [ref=f180e155] [cursor=pointer]
+      - generic [ref=f180e165]:
+        - button [ref=f180e169] [cursor=pointer]
+        - button [ref=f180e176] [cursor=pointer]
+        - button [disabled] [ref=f180e183]
+  - iframe [ref=f180e187]:
+    

@@ -1,0 +1,176 @@
+- generic [ref=f70e1]:
+  - generic [ref=f70e5]:
+    - navigation [ref=f70e753] [cursor=pointer]:
+      - generic [ref=f70e7]: Main
+      - button [ref=f70e754]:
+        - generic [ref=f70e15]: Expand sidebar
+      - button [ref=f70e755]:
+        - generic [ref=f70e420]: Search Kit
+      - list [ref=f70e23]:
+        - listitem [ref=f70e24]:
+          - link [ref=f70e756]:
+            - /url: /dashboard
+            - generic [ref=f70e421]: Dashboard
+        - listitem [ref=f70e29]:
+          - link [ref=f70e757]:
+            - /url: /subscribers
+            - generic [ref=f70e422]: Subscribers
+        - listitem [ref=f70e34]:
+          - link [ref=f70e758]:
+            - /url: /campaigns
+            - generic [ref=f70e423]: Broadcasts
+        - listitem [ref=f70e39]:
+          - button [ref=f70e759]:
+            - generic [ref=f70e425]: Audience growth
+        - listitem [ref=f70e69]:
+          - button [ref=f70e760]:
+            - generic [ref=f70e427]: Monetization
+        - listitem [ref=f70e74]:
+          - button [ref=f70e761]:
+            - generic [ref=f70e429]: Automation
+        - listitem [ref=f70e79]:
+          - link [ref=f70e762]:
+            - /url: /apps
+            - generic [ref=f70e430]: Apps
+      - generic [ref=f70e84]:
+        - generic [ref=f70e85]:
+          - generic:
+            - generic:
+              - generic:
+                - button [expanded]:
+                  - generic:
+                    - generic: 14 / 14 days
+                    - generic: 14 / 14 days remaining in trial
+                - generic:
+                  - generic:
+                    - generic:
+                      - paragraph: 14 days left on your free trial
+                      - paragraph: Upgrade to continue to use all the features you have access to without interruption.
+                    - button: Upgrade now
+          - button [ref=f70e763]
+        - list [ref=f70e104]:
+          - listitem [ref=f70e105]:
+            - link [ref=f70e764]:
+              - /url: /account_settings
+              - generic [ref=f70e438]: Settings
+        - button [ref=f70e765]:
+          - generic [ref=f70e439]: Cha0smagick LABS account
+    - generic [ref=f70e117]:
+      - generic [ref=f70e119]:
+        - paragraph [ref=f70e120]:
+          - strong [ref=f70e121]: Confirm your email to finish setting up your account.
+          - text: We've sent a confirmation link to your sign-up address.
+        - link [ref=f70e766] [cursor=pointer]:
+          - /url: https://app.kit.com/account_settings/account_info
+          - text: Manage email address
+      - generic [ref=f70e441]:
+        - generic [ref=f70e443]:
+          - generic [ref=f70e444]:
+            - link [ref=f70e767] [cursor=pointer]:
+              - /url: /forms
+              - generic [ref=f70e446]: Back to landing pages & forms
+            - generic [ref=f70e448]:
+              - generic [ref=f70e715] [cursor=pointer]: Pine formES Lead Magnet - Guía Rápida Magia del Caos
+              - button [ref=f70e768] [cursor=pointer]:
+                - generic [ref=f70e717]: Edit name
+          - generic [ref=f70e452]:
+            - generic [ref=f70e453]:
+              - button [ref=f70e769] [cursor=pointer]: Preview
+              - link [ref=f70e770] [cursor=pointer]:
+                - /url: /forms/9737163/reports
+                - text: Reports
+              - button [ref=f70e771] [cursor=pointer]: Settings
+            - generic [ref=f70e457]:
+              - button [ref=f70e458] [cursor=pointer]
+              - generic [ref=f70e459]:
+                - button [ref=f70e772] [cursor=pointer]: Embed
+                - button [ref=f70e773] [cursor=pointer]: Save & Publish
+        - generic [ref=f70e463]:
+          - generic [ref=f70e464]:
+            - generic [ref=f70e469]:
+              - generic [ref=f70e470]:
+                - textbox [ref=f70e472]:
+                  - heading [level=2] [ref=f70e774]:
+                    - generic [ref=f70e474]: Join thGuía Rápida de Magia del Caos - PDF Gratise Newsletter
+                - textbox [ref=f70e476]:
+                  - paragraph [ref=f70e477]:
+                    - generic [ref=f70e478]: Subscribe to get our latest content by emIngresa tu email y te envIngresa tu email y te enviaré la guía PDF al instante. Sin spam, cancela cuando quieras.aré la guía PDF al instante. Sin spam, cancela cuando quieras.ail.
+                - button [ref=f70e480] [cursor=pointer]
+              - generic [ref=f70e482]:
+                - generic [ref=f70e483]:
+                  - button [ref=f70e484]:
+                    - textbox [ref=f70e775]:
+                      - /placeholder: Email Address
+                  - button [ref=f70e776] [cursor=pointer]:
+                    - generic [ref=f70e495]: Add Custom Field
+                  - generic [ref=f70e497] [cursor=pointer]: Subscribe
+                - textbox [ref=f70e499]:
+                  - paragraph [ref=f70e500]:
+                    - generic [ref=f70e501]: We respect your privacy. Unsubscribe at any time.
+                - button [ref=f70e777] [cursor=pointer]: Built with Kit
+            - generic [ref=f70e505]:
+              - button [ref=f70e778] [cursor=pointer]
+              - button [ref=f70e779] [cursor=pointer]
+              - button [ref=f70e780] [cursor=pointer]
+              - button [ref=f70e781] [cursor=pointer]
+              - button [ref=f70e510] [cursor=pointer]
+            - generic [ref=f70e511]:
+              - button [ref=f70e782] [cursor=pointer]
+              - button [ref=f70e783] [cursor=pointer]
+              - button [ref=f70e784] [cursor=pointer]
+              - button [ref=f70e516] [cursor=pointer]
+              - button [ref=f70e785] [cursor=pointer]
+              - button [ref=f70e786] [cursor=pointer]:
+                - generic [ref=f70e519]: Color
+              - button [ref=f70e520] [cursor=pointer]
+            - toolbar
+            - button [ref=f70e787] [cursor=pointer]:
+              - generic [ref=f70e523]: Open Block Toolbar
+            - generic [ref=f70e525]:
+              - button [ref=f70e788] [cursor=pointer]
+              - button [ref=f70e789] [cursor=pointer]
+              - button [ref=f70e790] [cursor=pointer]
+              - button [ref=f70e530] [cursor=pointer]
+              - button [ref=f70e791] [cursor=pointer]
+              - button [ref=f70e792] [cursor=pointer]:
+                - generic [ref=f70e533]: Color
+              - button [ref=f70e534] [cursor=pointer]
+            - toolbar
+            - button [ref=f70e793] [cursor=pointer]:
+              - generic [ref=f70e537]: Open Block Toolbar
+          - generic [ref=f70e719]:
+            - generic [ref=f70e720]:
+              - button [ref=f70e794] [cursor=pointer]: General styles
+              - heading [level=5] [ref=f70e795]: Subheader Styles
+            - generic [ref=f70e725]:
+              - generic [ref=f70e726]:
+                - generic [ref=f70e727]: Font color
+                - button [ref=f70e796] [cursor=pointer]:
+                  - generic [ref=f70e735]:
+                    - generic [ref=f70e736]: "#"
+                    - textbox [ref=f70e737]: "686868"
+              - generic [ref=f70e738]:
+                - generic [ref=f70e739]: Font size
+                - generic [ref=f70e740]:
+                  - spinbutton [ref=f70e798]: "15"
+                  - generic [ref=f70e742]: px
+  - generic [ref=f70e192]: Hints
+  - iframe [ref=f70e193]:
+    
+  - dialog "Embed this form" [ref=f70e800]:
+    - generic [ref=f70e801]:
+      - heading "Embed this form" [level=2] [ref=f70e802]
+      - button "Close" [active] [ref=f70e803] [cursor=pointer]
+    - generic [ref=f70e807]:
+      - tablist [ref=f70e808]:
+        - tab "JavaScript" [selected] [ref=f70e809] [cursor=pointer]
+        - tab "HTML" [ref=f70e810] [cursor=pointer]
+        - tab "Share" [ref=f70e811] [cursor=pointer]
+        - tab "WordPress" [ref=f70e812] [cursor=pointer]
+        - tab "Unbounce" [ref=f70e813] [cursor=pointer]
+      - tabpanel "JavaScript" [ref=f70e815]:
+        - heading "Embed your form onto your site with one line of JavaScript" [level=3] [ref=f70e816]
+        - paragraph [ref=f70e817]: Place this code where you want the form to display on your site
+        - generic [ref=f70e818]:
+          - button "COPY" [ref=f70e819] [cursor=pointer]
+          - textbox [ref=f70e820]: <script async data-uid="9f7688a409" src="https://cha0smagick-labs.kit.com/9f7688a409/index.js"></script>

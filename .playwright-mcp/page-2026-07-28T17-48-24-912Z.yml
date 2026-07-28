@@ -1,0 +1,194 @@
+- generic [active]:
+  - generic [ref=f325e2]:
+    - link "Go back" [ref=f325e4] [cursor=pointer]:
+      - /url: javascript:;
+    - list [ref=f325e6]:
+      - listitem [ref=f325e7]:
+        - link "Subscribe form" [ref=f325e8] [cursor=pointer]:
+          - /url: javascript:;
+      - listitem [ref=f325e9]:
+        - link "Success message" [ref=f325e10] [cursor=pointer]:
+          - /url: javascript:;
+    - generic [ref=f325e12]:
+      - button "" [ref=f325e13] [cursor=pointer]
+      - link "Preview" [ref=f325e15] [cursor=pointer]:
+        - /url: javascript:;
+      - button [ref=f325e16] [cursor=pointer]
+  - iframe [ref=f325e19]:
+    - generic [ref=f329e2]:
+      - text: 
+      - generic [ref=f329e3]:
+        - generic "Subscribe form"
+        - generic "Success message"
+        - generic "Design":
+          - generic "Background":
+            - generic "Background color"
+            - generic "Background image"
+          - generic "Background":
+            - generic "Background color"
+            - generic "Background image"
+          - generic "Layout":
+            - generic "Width"
+            - generic "Border"
+            - generic "Border color"
+            - generic "Border radius"
+            - generic "Form alignment"
+          - generic "Form template"
+          - generic "Heading 1":
+            - generic "Font color"
+            - generic "Size"
+            - generic "Font weight"
+            - generic "Font family"
+            - generic "Alignment"
+          - generic "Text":
+            - generic "Font color"
+            - generic "Link color"
+            - generic "Font size"
+            - generic "Font family"
+            - generic "Alignment"
+          - generic "Input":
+            - generic "Background"
+            - generic "Font color"
+            - generic "Font size"
+            - generic "Font family"
+            - generic "Border"
+            - generic "Border color"
+            - generic "Border radius"
+          - generic "Label":
+            - generic "Font family"
+            - generic "Font color"
+            - generic "Font size"
+            - generic "Font style"
+          - generic "Confirmation/Privacy":
+            - generic "Font color"
+            - generic "Font size"
+            - generic "Font family"
+          - generic "Checkbox":
+            - generic "Font color"
+            - generic "Border color"
+            - generic "Active background"
+            - generic "Font size"
+            - generic "Font family"
+            - generic "Font weight"
+            - generic "Font style"
+          - generic "Checkbox description":
+            - generic "Font color"
+            - generic "Font size"
+            - generic "Font family"
+            - generic "Font weight"
+            - generic "Font style"
+          - generic "Group name":
+            - generic "Font color"
+            - generic "Font size"
+            - generic "Font family"
+            - generic "Font weight"
+            - generic "Font style"
+          - generic "Group description":
+            - generic "Font color"
+            - generic "Font size"
+            - generic "Font family"
+            - generic "Font weight"
+            - generic "Font style"
+          - generic "Title":
+            - generic "Font color"
+            - generic "Size"
+            - generic "Font weight"
+            - generic "Font family"
+          - generic "Text":
+            - generic "Font color"
+            - generic "Link color"
+            - generic "Font size"
+            - generic "Font family"
+          - generic "Button":
+            - generic "Background"
+            - generic "Background hover"
+            - generic "Font size"
+            - generic "Font color"
+            - generic "Font weight"
+            - generic "Font family"
+            - generic "Border radius"
+        - generic "Settings":
+          - generic "Form settings"
+          - generic "Use custom field"
+          - generic "Assign value"
+          - generic "Redirect URL"
+        - generic [ref=f329e7]:
+          - generic "Content" [ref=f329e9]:
+            - generic [ref=f329e13]:
+              - heading "Guía Gratis de Magia del Caos" [level=4] [ref=f329e14]:
+                - generic "Heading 1" [ref=f329e15]: Guía Gratis de Magia del Caos
+              - generic "Text" [ref=f329e16]:
+                - paragraph [ref=f329e18]: Ingresa tu email y te enviaré el PDF instantáneamente. Sin spam, puedes cancelar en cualquier momento.
+          - generic [ref=f329e19]:
+            - generic "Signup" [ref=f329e21]:
+              - generic [ref=f329e25]:
+                - generic "Form fields"
+                - textbox "email" [ref=f329e28]:
+                  - /placeholder: Email
+            - generic "Button" [ref=f329e30]:
+              - button "Enviar Guía Gratis →" [ref=f329e35] [cursor=pointer]:
+                - generic "Button" [ref=f329e36]: Enviar Guía Gratis →
+  - generic [ref=f325e20]:
+    - text: 
+    - generic [ref=f325e22]:
+      - generic:
+        - list [ref=f325e24]:
+          - link "Design" [ref=f325e25] [cursor=pointer]:
+            - /url: javascript:;
+          - link "Settings" [ref=f325e26] [cursor=pointer]:
+            - /url: javascript:;
+        - generic [ref=f325e27]:
+          - text: 
+          - tabpanel [ref=f325e28]:
+            - form [ref=f325e29]:
+              - generic [ref=f325e39]:
+                - heading "Classic" [level=4] [ref=f325e40]
+                - paragraph [ref=f325e41]: A square inline form with your button below the content.
+                - link "Change" [ref=f325e42] [cursor=pointer]:
+                  - /url: javascript:;
+              - generic [ref=f325e46]:
+                - heading "Background" [level=4] [ref=f325e47]
+                - list:
+                  - listitem [ref=f325e48]:
+                    - generic [ref=f325e51]: Background
+              - generic [ref=f325e55]:
+                - heading "Form" [level=4] [ref=f325e56]
+                - list:
+                  - listitem [ref=f325e57]:
+                    - generic [ref=f325e60]: Background
+                  - listitem [ref=f325e61]:
+                    - generic [ref=f325e64]: Layout
+              - generic [ref=f325e68]:
+                - heading "Content style" [level=4] [ref=f325e69]
+                - list:
+                  - listitem [ref=f325e70]:
+                    - generic [ref=f325e71]: Aa
+                    - generic [ref=f325e73]: Heading 1
+                  - listitem [ref=f325e74]:
+                    - generic [ref=f325e75]: Aa
+                    - generic [ref=f325e77]: Text
+              - generic [ref=f325e81]:
+                - heading "Form elements" [level=4] [ref=f325e82]
+                - list:
+                  - listitem [ref=f325e83]:
+                    - generic [ref=f325e84]: Aa
+                    - generic [ref=f325e86]: Input
+                  - listitem [ref=f325e87]:
+                    - generic [ref=f325e88]: Aa
+                    - generic [ref=f325e90]: Label
+                  - listitem [ref=f325e91]:
+                    - generic [ref=f325e92]: Aa
+                    - generic [ref=f325e94]: Checkbox
+                  - listitem [ref=f325e95]:
+                    - generic [ref=f325e96]: Aa
+                    - generic [ref=f325e98]: Checkbox description
+              - generic [ref=f325e102]:
+                - heading "CALL TO ACTION" [level=4] [ref=f325e103]
+                - list:
+                  - listitem [ref=f325e104]:
+                    - generic [ref=f325e105]: Aa
+                    - generic [ref=f325e107]: Button
+          - text:  
+  - iframe [ref=f325e109]:
+    
+  - text:  
