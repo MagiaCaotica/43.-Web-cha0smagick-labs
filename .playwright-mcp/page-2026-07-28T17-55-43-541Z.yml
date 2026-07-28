@@ -1,0 +1,152 @@
+- generic [active] [ref=f18e1]:
+  - generic [ref=f18e2]:
+    - generic [ref=f18e4]:
+      - link [ref=f18e6] [cursor=pointer]:
+        - /url: /
+      - link "Trial 14 days left" [ref=f18e16] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/billing/upgrade?source=sidebar_trial_banner
+        - generic [ref=f18e17]: Trial
+        - generic [ref=f18e22]: 14 days left
+      - list [ref=f18e23]:
+        - link "Dashboard" [ref=f18e24] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/dashboard
+        - link "Subscribers" [ref=f18e30] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/subscribers
+        - link "Campaigns" [ref=f18e36] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+        - link "Automations" [ref=f18e42] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/automations/status/workflows
+        - link "Forms" [ref=f18e50] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/forms
+        - link "Sites" [ref=f18e56] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/sites
+        - link "Products New" [ref=f18e62] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/products
+          - generic [ref=f18e66]:
+            - generic [ref=f18e67]: Products
+            - generic [ref=f18e68]: New
+      - generic [ref=f18e69]:
+        - list [ref=f18e70]:
+          - link "Account settings" [ref=f18e71] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/account/profile
+          - link "Integrations" [ref=f18e77] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/integrations
+          - link "File manager" [ref=f18e83] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/file-manager
+          - link "My templates" [ref=f18e89] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/templates
+        - list [ref=f18e95]:
+          - listitem [ref=f18e98] [cursor=pointer]:
+            - link "Partner offers" [ref=f18e99]:
+              - /url: https://dashboard.mailerlite.com/partner-perks
+          - listitem [ref=f18e103] [cursor=pointer]:
+            - link "Refer a friend" [ref=f18e104]:
+              - /url: https://dashboard.mailerlite.com/refer
+    - generic [ref=f18e106]:
+      - generic [ref=f18e108]:
+        - generic [ref=f18e109]:
+          - generic [ref=f18e116] [cursor=pointer]:
+            - generic [ref=f18e117]: Cha0smagick LABS
+            - generic [ref=f18e118]: 14-day trial
+          - link [ref=f18e124] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/billing/upgrade?source=navbar_primary_button
+        - generic [ref=f18e130]:
+          - generic [ref=f18e131] [cursor=pointer]: Help
+          - generic [ref=f18e149] [cursor=pointer]:
+            - generic [ref=f18e150]: "Magia Caotica: Magia del Caos Práctica"
+            - generic [ref=f18e151]: magiacaoticapractica@gmail.com
+      - main [ref=f18e157]:
+        - generic [ref=f18e158]:
+          - generic [ref=f18e159]:
+            - generic [ref=f18e160]:
+              - heading "Forms" [level=1] [ref=f18e162]
+              - link "Create form" [ref=f18e164] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/create?type=embedded
+            - navigation "Tabs" [ref=f18e168]:
+              - link "Pop-ups 0" [ref=f18e169] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/popup
+                - generic [ref=f18e172]:
+                  - generic [ref=f18e173]: Pop-ups
+                  - generic [ref=f18e174]: "0"
+              - link "Embedded forms 2" [ref=f18e175] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/embedded
+                - generic [ref=f18e178]:
+                  - generic [ref=f18e179]: Embedded forms
+                  - generic [ref=f18e180]: "2"
+              - link "Promotions 0" [ref=f18e181] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/forms/promotion
+                - generic [ref=f18e184]:
+                  - generic [ref=f18e185]: Promotions
+                  - generic [ref=f18e186]: "0"
+          - generic [ref=f18e190]:
+            - generic [ref=f18e192]:
+              - generic [ref=f18e193]:
+                - generic [ref=f18e195]:
+                  - checkbox "Select all" [ref=f18e196]
+                  - generic [ref=f18e197]: Select all
+                - generic [ref=f18e200]:
+                  - button "All" [ref=f18e204] [cursor=pointer]
+                  - button "Filter" [ref=f18e216] [cursor=pointer]
+              - generic [ref=f18e221]:
+                - generic [ref=f18e222]: Date created
+                - button [ref=f18e233] [cursor=pointer]
+            - generic [ref=f18e238]:
+              - generic [ref=f18e239]:
+                - checkbox [ref=f18e242]
+                - generic [ref=f18e243]:
+                  - generic [ref=f18e244]:
+                    - button [ref=f18e245] [cursor=pointer]
+                    - generic [ref=f18e249]:
+                      - generic [ref=f18e250]:
+                        - heading "ES Lead Magnet - Guia Magia Caos" [level=3] [ref=f18e253]
+                        - paragraph [ref=f18e254]:
+                          - generic [ref=f18e255]: Created 43 minutes ago
+                      - generic [ref=f18e258]:
+                        - link "Overview" [ref=f18e259] [cursor=pointer]:
+                          - /url: /forms/194257833015903279/overview
+                        - link "Edit" [ref=f18e261] [cursor=pointer]:
+                          - /url: /forms/194257833015903279/content
+                        - button [ref=f18e265] [cursor=pointer]
+                  - generic [ref=f18e270]:
+                    - generic [ref=f18e271]:
+                      - generic [ref=f18e272]: Subscribers
+                      - generic [ref=f18e274]: "0"
+                    - generic [ref=f18e275]:
+                      - generic [ref=f18e276]: Visitors
+                      - generic [ref=f18e278]: "0"
+                    - generic [ref=f18e279]:
+                      - generic [ref=f18e280]: Conversion
+                      - generic [ref=f18e282]: 0%
+              - generic [ref=f18e283]:
+                - checkbox [ref=f18e286]
+                - generic [ref=f18e287]:
+                  - generic [ref=f18e288]:
+                    - button [ref=f18e289] [cursor=pointer]
+                    - generic [ref=f18e293]:
+                      - generic [ref=f18e294]:
+                        - heading "EN Lead Magnet - Chaos Magick Guide" [level=3] [ref=f18e297]
+                        - paragraph [ref=f18e298]:
+                          - generic [ref=f18e299]: Created 43 minutes ago
+                      - generic [ref=f18e302]:
+                        - link "Overview" [ref=f18e303] [cursor=pointer]:
+                          - /url: /forms/194257832689796115/overview
+                        - link "Edit" [ref=f18e305] [cursor=pointer]:
+                          - /url: /forms/194257832689796115/content
+                        - button [ref=f18e309] [cursor=pointer]
+                  - generic [ref=f18e314]:
+                    - generic [ref=f18e315]:
+                      - generic [ref=f18e316]: Subscribers
+                      - generic [ref=f18e318]: "0"
+                    - generic [ref=f18e319]:
+                      - generic [ref=f18e320]: Visitors
+                      - generic [ref=f18e322]: "1"
+                    - generic [ref=f18e323]:
+                      - generic [ref=f18e324]: Conversion
+                      - generic [ref=f18e326]: 0%
+            - generic [ref=f18e329]:
+              - paragraph [ref=f18e331]: Showing 1 to 2 of 2 results
+              - generic [ref=f18e334]:
+                - button "Previous" [disabled] [ref=f18e335]
+                - button "Next" [disabled] [ref=f18e337]
+  - iframe [ref=f18e339]:
+    

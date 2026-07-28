@@ -1,0 +1,605 @@
+- generic [active] [ref=f38e1]:
+  - banner [ref=f38e2]:
+    - img "Cha0smagick Labs - Occult Apps for Android" [ref=f38e4]
+    - generic [ref=f38e5]:
+      - heading "Cha0smagick Labs" [level=1] [ref=f38e6]
+      - paragraph [ref=f38e7]: Corporate Techno-Sorcery Solutions | Occult Apps | Cybermancy | Cyberpaganism
+  - navigation "Main navigation" [ref=f38e8]:
+    - list [ref=f38e9]:
+      - listitem [ref=f38e10]:
+        - link "↑ Home" [ref=f38e11] [cursor=pointer]:
+          - /url: "#home"
+      - listitem [ref=f38e12]:
+        - link "◈ About Us" [ref=f38e13] [cursor=pointer]:
+          - /url: "#about"
+      - listitem [ref=f38e14]:
+        - link "Free Tools" [ref=f38e15] [cursor=pointer]:
+          - /url: tools/
+      - listitem [ref=f38e16]:
+        - link "Apps & Services" [ref=f38e17] [cursor=pointer]:
+          - /url: "#products"
+      - listitem [ref=f38e18]:
+        - link "Books" [ref=f38e19] [cursor=pointer]:
+          - /url: "#books-section"
+      - listitem [ref=f38e20]:
+        - link "Blog" [ref=f38e21] [cursor=pointer]:
+          - /url: blog/
+      - listitem [ref=f38e22]:
+        - link "▤ Glossary" [ref=f38e23] [cursor=pointer]:
+          - /url: glossary.html
+      - listitem [ref=f38e24]:
+        - link "★ Best Apps" [ref=f38e25] [cursor=pointer]:
+          - /url: best-occult-apps-android.html
+      - listitem [ref=f38e26]:
+        - link "Paranormal R&D" [ref=f38e27] [cursor=pointer]:
+          - /url: "#paranormal-division"
+      - listitem [ref=f38e28]:
+        - link "Contact" [ref=f38e29] [cursor=pointer]:
+          - /url: "#contact"
+  - navigation "Breadcrumb" [ref=f38e30]:
+    - list [ref=f38e31]:
+      - listitem [ref=f38e32]:
+        - link "Home" [ref=f38e33] [cursor=pointer]:
+          - /url: https://cha0smagicklabs.com/
+      - listitem [ref=f38e34]: › Cha0smagick Labs - Occult Apps for Witches & Practitioners
+  - main [ref=f38e35]:
+    - generic [ref=f38e36]:
+      - 'heading "The Complete Occult Collection: 11 Android Apps & 7 Esoteric Books" [level=1] [ref=f38e37]'
+      - paragraph [ref=f38e38]:
+        - strong [ref=f38e39]: Build your complete technomancy library.
+        - text: Cha0smagick Labs offers
+        - strong [ref=f38e40]: 11 occult apps and 7 esoteric books
+        - text: — a comprehensive toolkit covering sigil magic, rune divination, ESP training, dream induction, astrology, tarot, I Ching, and more. Every tool is
+        - strong [ref=f38e41]: 100% offline, zero tracking, one-time payment
+        - text: ($3.99–$9.99 each).
+        - strong [ref=f38e42]: 4.7★ from 128+ practitioners worldwide.
+        - link "Explore the collection →" [ref=f38e43] [cursor=pointer]:
+          - /url: "#products"
+      - generic [ref=f38e44]:
+        - paragraph [ref=f38e45]:
+          - strong [ref=f38e46]: 📩 Get Your Free 'Quickstart Guide to Chaos Magick' PDF
+        - paragraph [ref=f38e47]: Enter your email and I will send you the PDF instantly. No spam, unsubscribe anytime.
+        - paragraph [ref=f38e48]: 🔒 Your email stays private. 1-click unsubscribe.
+    - generic [ref=f38e49]:
+      - 'heading "About Us: Technomancy for the Modern Practitioner [ + ]" [level=2] [ref=f38e50] [cursor=pointer]'
+      - generic:
+        - generic:
+          - paragraph [ref=f38e51]:
+            - strong [ref=f38e52]: Cha0smagick Labs is a technomancy studio.
+            - text: "We develop occult apps and publish esoteric books to solve two problems that every magical tradition faces: First, everything is overly complicated — grimoires are dense, rituals are convoluted, and beginners never know where to start. Second, belief is fragile — nobody commits to a practice until they see tangible results."
+          - paragraph [ref=f38e53]:
+            - strong [ref=f38e54]: "Our method:"
+            - text: We identify a specific magical need — sigil charging, rune divination, ESP development, dream induction, natal chart calculation — and engineer an app or book that makes the procedure
+            - strong [ref=f38e55]: simple, systematic, intuitive, and legal
+            - text: . Apps automate the hard parts (calculations, randomness, statistical tracking). Books distill decades of practice into clear, actionable guides.
+          - paragraph [ref=f38e56]:
+            - strong [ref=f38e57]: "By the numbers:"
+            - text: 11 Android apps, 7 PDF books, 4.7★ average rating, 128+ Google Play reviews, available in 6+ languages. Every tool is 100% offline, requires zero accounts, and costs a single one-time payment. No subscriptions. No tracking. No complications.
+            - strong [ref=f38e58]: The complete occult collection — one-time purchases, no subscription needed.
+          - paragraph [ref=f38e59]:
+            - text: Founded by
+            - strong [ref=f38e60]: Frater Alek0s
+            - text: and supported by the
+            - link [ref=f38e61] [cursor=pointer]:
+              - /url: https://t.me/magiacaoticacoven
+              - strong [ref=f38e62]: Magia del Caos Práctica community
+            - text: on Telegram and YouTube.
+          - paragraph [ref=f38e63]:
+            - text: "Blog:"
+            - link "magiadelcaospractica.com" [ref=f38e64] [cursor=pointer]:
+              - /url: https://magiadelcaospractica.com
+            - text: "| YouTube:"
+            - link "channel" [ref=f38e65] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA/join
+          - paragraph [ref=f38e66]:
+            - strong [ref=f38e67]: "🔭 Paranormal R&D Division:"
+            - text: In 2026, Cha0smagick Labs acquired
+            - link [ref=f38e68] [cursor=pointer]:
+              - /url: https://www.rinconparanormaloficial.com/
+              - strong [ref=f38e69]: El Rincón Paranormal
+            - text: — a leading Spanish-language paranormal research community — integrating UFOlogy, cryptozoology, and demonology field research into our technomancy ecosystem.
+            - link "Learn more →" [ref=f38e70] [cursor=pointer]:
+              - /url: "#paranormal-division"
+    - generic [ref=f38e71]:
+      - generic [ref=f38e72]:
+        - generic [ref=f38e73]: ★
+        - strong [ref=f38e74]: 4.7★
+        - text: "| 128+ reviews on Google Play"
+      - generic [ref=f38e75]:
+        - generic [ref=f38e76]: ⚡
+        - strong [ref=f38e77]: 11 Apps & 7 Books
+        - text: "| Complete occult collection"
+      - generic [ref=f38e78]:
+        - generic [ref=f38e79]: 🔒
+        - strong [ref=f38e80]: Zero tracking
+        - text: "| No accounts, no data collection"
+      - generic [ref=f38e81]:
+        - generic [ref=f38e82]: 💰
+        - strong [ref=f38e83]: From $3.99
+        - text: "| One-time payment, no subscriptions"
+      - generic [ref=f38e84]:
+        - generic [ref=f38e85]: 🔭
+        - strong [ref=f38e86]: Paranormal R&D Division
+        - text: "|"
+        - link "El Rincón Paranormal" [ref=f38e87] [cursor=pointer]:
+          - /url: https://www.rinconparanormaloficial.com/
+    - generic [ref=f38e88]:
+      - heading "The Complete Occult Collection" [level=2] [ref=f38e89]
+      - paragraph [ref=f38e90]:
+        - strong [ref=f38e91]: Every tool you need for a serious occult practice — in one place.
+        - text: Below you'll find our
+        - strong [ref=f38e92]: complete collection of 11 apps and 7 books
+        - text: . Each tool targets a specific magical need and eliminates the complexity that stops most practitioners in their tracks.
+        - strong [ref=f38e93]: Apps automate the hard parts
+        - text: (calculations, randomness, tracking) so you can focus on the magic.
+        - strong [ref=f38e94]: Books distill decades of practice
+        - text: into clear, step-by-step procedures. Simple. Systematic. Intuitive. Legal. With results.
+      - generic [ref=f38e95]:
+        - generic [ref=f38e96] [cursor=pointer]:
+          - img "PSI GYM Zener Cards & ESP Training — buy chaos magick app for psychic development" [ref=f38e99]
+          - generic [ref=f38e100]:
+            - 'heading "PSI GYM: Zener Cards & ESP NEW!" [level=4] [ref=f38e101]':
+              - text: "PSI GYM: Zener Cards & ESP"
+              - generic [ref=f38e102]: NEW!
+            - paragraph [ref=f38e103]: Train your intuition and extrasensory perception with professional Zener cards and advanced statistical tracking. 👁️
+            - generic [ref=f38e104]:
+              - generic [ref=f38e105]: Available
+              - generic [ref=f38e108]: $3.99 USD
+            - link "GET IT ON PLAY STORE" [ref=f38e109]:
+              - /url: https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards
+        - generic [ref=f38e112] [cursor=pointer]:
+          - img "Arcana Goetia Ritual & Sigils — goetic grimoire app with 72 Solomon seals" [ref=f38e115]
+          - generic [ref=f38e116]:
+            - 'heading "Arcana Goetia: Ritual & Sigils" [level=4] [ref=f38e117]'
+            - paragraph [ref=f38e118]: Command the 72 spirits of Solomon with precision sigils, lore, and guided rituals—all offline. 🗝️
+            - generic [ref=f38e119]:
+              - generic [ref=f38e120]: Available
+              - generic [ref=f38e123]: $3.99 USD
+            - link "GET IT ON PLAY STORE" [ref=f38e124]:
+              - /url: https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal
+        - generic [ref=f38e127] [cursor=pointer]:
+          - img "Norse Rune Oracle — Elder Futhark divination app with 12+ spreads" [ref=f38e130]
+          - generic [ref=f38e131]:
+            - heading "Norse Rune Oracle" [level=4] [ref=f38e132]
+            - paragraph [ref=f38e133]: Unlock Viking wisdom with 12+ rune spreads for love, wealth, protection, and daily guidance. 🔮
+            - generic [ref=f38e134]:
+              - generic [ref=f38e135]: Available
+              - generic [ref=f38e138]: $3.99 USD
+            - link "GET IT ON PLAY STORE" [ref=f38e139]:
+              - /url: https://play.google.com/store/apps/details?id=com.japps.norse_oracle
+        - generic [ref=f38e142] [cursor=pointer]:
+          - img "Lunar Phase Calculator — moon phases for magic, gardening & wellness Android app" [ref=f38e145]
+          - generic [ref=f38e146]:
+            - heading "Lunar Phase Calculator" [level=4] [ref=f38e147]
+            - paragraph [ref=f38e148]: Track moon phases for magic, wellness, and biodynamic gardening with stunning real-time visuals. 🌕
+            - generic [ref=f38e149]:
+              - generic [ref=f38e150]: Available
+              - generic [ref=f38e153]: $3.99 USD
+            - link "GET IT ON PLAY STORE" [ref=f38e154]:
+              - /url: https://play.google.com/store/apps/details?id=com.lunarapp.app
+        - generic [ref=f38e157] [cursor=pointer]:
+          - img "I Ching Oracle — Book of Changes divination app with authentic three-coin method" [ref=f38e160]
+          - generic [ref=f38e161]:
+            - heading "I Ching Oracle" [level=4] [ref=f38e162]
+            - paragraph [ref=f38e163]: Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams, multilingual, and totally private. 📜
+            - generic [ref=f38e164]:
+              - generic [ref=f38e165]: Available
+              - generic [ref=f38e168]: $3.99 USD
+            - link "GET IT ON PLAY STORE" [ref=f38e169]:
+              - /url: https://play.google.com/store/apps/details?id=com.app.ichingoracle
+        - generic [ref=f38e172] [cursor=pointer]:
+          - img "Magick Chaos Sigil Generator — cryptographic sigil tool with ancient alphabets" [ref=f38e175]
+          - generic [ref=f38e176]:
+            - heading "Magick Chaos Sigil Generator" [level=4] [ref=f38e177]
+            - paragraph [ref=f38e178]: Encode your Will into unique cryptographic sigils using ancient alphabets and planetary magic squares. ⚡
+            - generic [ref=f38e179]:
+              - generic [ref=f38e180]: Available
+              - generic [ref=f38e183]: $3.99 USD
+            - link "GET IT ON PLAY STORE" [ref=f38e184]:
+              - /url: https://play.google.com/store/apps/details?id=com.app.goetiansealsgeneratorapp
+        - generic [ref=f38e187] [cursor=pointer]:
+          - img "Unofficial Rider Waite Tarot — complete offline tarot deck for Android" [ref=f38e190]
+          - generic [ref=f38e191]:
+            - heading "Unofficial Rider Waite Tarot" [level=4] [ref=f38e192]
+            - paragraph [ref=f38e193]: Full Rider-Waite deck offline with 6 spreads, encyclopedia, and 7-language support. Your pocket tarot teacher. 🃏
+            - generic [ref=f38e194]:
+              - generic [ref=f38e195]: Available
+              - generic [ref=f38e198]: $9.99 USD
+            - link "GET IT ON PLAY STORE" [ref=f38e199]:
+              - /url: https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite
+        - generic [ref=f38e202] [cursor=pointer]:
+          - img "Dream Machine Lucid Dreaming — induction, journal & reality checks app" [ref=f38e204]
+          - generic [ref=f38e205]:
+            - 'heading "Dream Machine: Lucid Dreaming NEW!" [level=4] [ref=f38e206]':
+              - text: "Dream Machine: Lucid Dreaming"
+              - generic [ref=f38e207]: NEW!
+            - paragraph [ref=f38e208]: Master the art of lucid dreaming with induction protocols, dream journal, reality checks, and binaural beats. 🌙
+            - generic [ref=f38e209]:
+              - generic [ref=f38e210]: Available
+              - generic [ref=f38e213]: $3.99 USD
+            - link "GET IT ON PLAY STORE" [ref=f38e214]:
+              - /url: https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine
+        - generic [ref=f38e217] [cursor=pointer]:
+          - img "Astral Lab Natal Chart & Astrology — natal chart generator for Android" [ref=f38e219]
+          - generic [ref=f38e220]:
+            - 'heading "Astral Lab: Natal Chart & Astrology NEW!" [level=4] [ref=f38e221]':
+              - text: "Astral Lab: Natal Chart & Astrology"
+              - generic [ref=f38e222]: NEW!
+            - paragraph [ref=f38e223]: Professional natal charts, real-time transits & aspect grids — 100% offline with scientific-grade VSOP87/ELP-2000 precision. 🔮
+            - generic [ref=f38e224]:
+              - generic [ref=f38e225]: Available
+              - generic [ref=f38e228]: $6.99 USD
+            - link "GET IT ON PLAY STORE" [ref=f38e229]:
+              - /url: https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart
+        - generic [ref=f38e232] [cursor=pointer]:
+          - img "Eerie Roads Mysterious Paths — intention manifestation map & chaos GPS for Android" [ref=f38e234]
+          - generic [ref=f38e235]:
+            - 'heading "Eerie Roads: Mysterious Paths NEW!" [level=4] [ref=f38e236]':
+              - text: "Eerie Roads: Mysterious Paths"
+              - generic [ref=f38e237]: NEW!
+            - paragraph [ref=f38e238]: "Manifest your intentions on a real-world map. Generate chaos GPS coordinates, explore the unknown, and decode synchronicities. The #1 intention manifestation app for Android. 🗺️✨"
+            - generic [ref=f38e239]:
+              - generic [ref=f38e240]: Available
+              - generic [ref=f38e243]: $9.99 USD
+            - link "GET IT ON PLAY STORE" [ref=f38e244]:
+              - /url: https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads
+        - generic [ref=f38e247] [cursor=pointer]:
+          - img "Lucid Dream Astral Projection — binaural beats, dream journal & astral projection app for Android" [ref=f38e249]
+          - generic [ref=f38e250]:
+            - 'heading "Lucid Dream: Astral Projection NEW!" [level=4] [ref=f38e251]':
+              - text: "Lucid Dream: Astral Projection"
+              - generic [ref=f38e252]: NEW!
+            - paragraph [ref=f38e253]: Aprende a tener sueños lúcidos, lleva un registro de tus sueños y domina la proyección astral. 🌙
+            - generic [ref=f38e254]:
+              - generic [ref=f38e255]: Available
+              - generic [ref=f38e258]: $3.99 USD
+            - link "GET IT ON PLAY STORE" [ref=f38e259]:
+              - /url: https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer
+      - generic [ref=f38e262]:
+        - heading "Complete Your Collection — Books [ - ]" [level=2] [ref=f38e263] [cursor=pointer]
+        - generic [ref=f38e265]:
+          - 'link "Magical Servitors Manual Magical Servitors Manual Learn how to create and activate magical servitors with Chaos Magick. Practical guide by Frater Alekos. AUTHOR: Frater Alek0s LANGUAGE: Spanish Spanish Available $3.99 USD (60% off)" [ref=f38e266] [cursor=pointer]':
+            - /url: /books/manual-activacion-servidores-magicos-pdf.html
+            - img "Magical Servitors Manual" [ref=f38e268]
+            - generic [ref=f38e269]:
+              - heading "Magical Servitors Manual" [level=4] [ref=f38e270]
+              - paragraph [ref=f38e271]: Learn how to create and activate magical servitors with Chaos Magick. Practical guide by Frater Alekos.
+              - generic [ref=f38e272]: "AUTHOR: Frater Alek0s"
+              - generic [ref=f38e273]:
+                - generic [ref=f38e274]: "LANGUAGE: Spanish"
+                - img "Spanish" [ref=f38e275]
+              - generic [ref=f38e276]:
+                - generic [ref=f38e277]: Available
+                - generic [ref=f38e280]:
+                  - text: $3.99 USD
+                  - generic [ref=f38e281]: (60% off)
+          - 'link "Treatise of Chaos Hunter Runes Treatise of Chaos Hunter Runes A disruptive magical system designed by Zener of Cydonia and Frater Alekos. The Alphabet of Desire for the New Age. AUTHOR: Zener de Cydonia LANGUAGE: Spanish Spanish Available $3.99 USD (80% off)" [ref=f38e282] [cursor=pointer]':
+            - /url: /books/tratado-runas-cazadoras-caos-pdf.html
+            - img "Treatise of Chaos Hunter Runes" [ref=f38e284]
+            - generic [ref=f38e285]:
+              - heading "Treatise of Chaos Hunter Runes" [level=4] [ref=f38e286]
+              - paragraph [ref=f38e287]: A disruptive magical system designed by Zener of Cydonia and Frater Alekos. The Alphabet of Desire for the New Age.
+              - generic [ref=f38e288]: "AUTHOR: Zener de Cydonia"
+              - generic [ref=f38e289]:
+                - generic [ref=f38e290]: "LANGUAGE: Spanish"
+                - img "Spanish" [ref=f38e291]
+              - generic [ref=f38e292]:
+                - generic [ref=f38e293]: Available
+                - generic [ref=f38e296]:
+                  - text: $3.99 USD
+                  - generic [ref=f38e297]: (80% off)
+          - 'link "Ouija Cazadora: Chaos Magic Guide Ouija Cazadora: Chaos Magic Guide A profound exploration of psychic technology designed to transform the Ouija board into a high-precision ritual instrument. AUTHOR: Zener de Cydonia LANGUAGE: Spanish Spanish Available $3.99 USD (60% off)" [ref=f38e298] [cursor=pointer]':
+            - /url: /books/ouija-cazadora-pdf.html
+            - 'img "Ouija Cazadora: Chaos Magic Guide" [ref=f38e300]'
+            - generic [ref=f38e301]:
+              - 'heading "Ouija Cazadora: Chaos Magic Guide" [level=4] [ref=f38e302]'
+              - paragraph [ref=f38e303]: A profound exploration of psychic technology designed to transform the Ouija board into a high-precision ritual instrument.
+              - generic [ref=f38e304]: "AUTHOR: Zener de Cydonia"
+              - generic [ref=f38e305]:
+                - generic [ref=f38e306]: "LANGUAGE: Spanish"
+                - img "Spanish" [ref=f38e307]
+              - generic [ref=f38e308]:
+                - generic [ref=f38e309]: Available
+                - generic [ref=f38e312]:
+                  - text: $3.99 USD
+                  - generic [ref=f38e313]: (60% off)
+          - 'link "Liber Lvpinux: Lycanthropic Path Liber Lvpinux: Lycanthropic Path An operative and esoteric guide exploring lycanthropy as a path of spiritual empowerment and psychic metamorphosis. AUTHOR: Frater Alek0s LANGUAGE: Spanish Spanish Available $3.99 USD (90% off)" [ref=f38e314] [cursor=pointer]':
+            - /url: /books/liber-lvpinux-pdf.html
+            - 'img "Liber Lvpinux: Lycanthropic Path" [ref=f38e316]'
+            - generic [ref=f38e317]:
+              - 'heading "Liber Lvpinux: Lycanthropic Path" [level=4] [ref=f38e318]'
+              - paragraph [ref=f38e319]: An operative and esoteric guide exploring lycanthropy as a path of spiritual empowerment and psychic metamorphosis.
+              - generic [ref=f38e320]: "AUTHOR: Frater Alek0s"
+              - generic [ref=f38e321]:
+                - generic [ref=f38e322]: "LANGUAGE: Spanish"
+                - img "Spanish" [ref=f38e323]
+              - generic [ref=f38e324]:
+                - generic [ref=f38e325]: Available
+                - generic [ref=f38e328]:
+                  - text: $3.99 USD
+                  - generic [ref=f38e329]: (90% off)
+          - 'link "Codex Chaoticus: Complete Treatise on Chaos Magick Codex Chaoticus: Complete Treatise on Chaos Magick NEW! The most comprehensive digital grimoire ever written on Chaos Magick. 27,000+ words, 15 APA tables, 5 sigil methods, servitor creation, and more. AUTHOR: Frater Alek0s LANGUAGE: English / Spanish English / Spanish English / Spanish Available $4.99 USD" [ref=f38e330] [cursor=pointer]':
+            - /url: /books/codex-chaoticus-pdf.html
+            - 'img "Codex Chaoticus: Complete Treatise on Chaos Magick" [ref=f38e332]'
+            - generic [ref=f38e333]:
+              - 'heading "Codex Chaoticus: Complete Treatise on Chaos Magick NEW!" [level=4] [ref=f38e334]':
+                - text: "Codex Chaoticus: Complete Treatise on Chaos Magick"
+                - generic [ref=f38e335]: NEW!
+              - paragraph [ref=f38e336]: The most comprehensive digital grimoire ever written on Chaos Magick. 27,000+ words, 15 APA tables, 5 sigil methods, servitor creation, and more.
+              - generic [ref=f38e337]: "AUTHOR: Frater Alek0s"
+              - generic [ref=f38e338]:
+                - generic [ref=f38e339]: "LANGUAGE: English / Spanish"
+                - img "English / Spanish" [ref=f38e340]
+                - img "English / Spanish" [ref=f38e341]
+              - generic [ref=f38e342]:
+                - generic [ref=f38e343]: Available
+                - generic [ref=f38e346]: $4.99 USD
+          - 'link "Tarot Chaos: Chaos Magick Applied to the Tarot Tarot Chaos: Chaos Magick Applied to the Tarot NEW! Master the Tarot from the perspective of Chaos Magick. A digital grimoire that fuses the arcana with sigils, gnosis, and magical servitors. AUTHOR: Frater Alek0s LANGUAGE: English / Spanish English / Spanish English / Spanish Available $9.99 USD" [ref=f38e347] [cursor=pointer]':
+            - /url: /books/tarot-chaos-pdf.html
+            - 'img "Tarot Chaos: Chaos Magick Applied to the Tarot" [ref=f38e349]'
+            - generic [ref=f38e350]:
+              - 'heading "Tarot Chaos: Chaos Magick Applied to the Tarot NEW!" [level=4] [ref=f38e351]':
+                - text: "Tarot Chaos: Chaos Magick Applied to the Tarot"
+                - generic [ref=f38e352]: NEW!
+              - paragraph [ref=f38e353]: Master the Tarot from the perspective of Chaos Magick. A digital grimoire that fuses the arcana with sigils, gnosis, and magical servitors.
+              - generic [ref=f38e354]: "AUTHOR: Frater Alek0s"
+              - generic [ref=f38e355]:
+                - generic [ref=f38e356]: "LANGUAGE: English / Spanish"
+                - img "English / Spanish" [ref=f38e357]
+                - img "English / Spanish" [ref=f38e358]
+              - generic [ref=f38e359]:
+                - generic [ref=f38e360]: Available
+                - generic [ref=f38e363]: $9.99 USD
+          - 'link "Mind The Gap: Master the 0.3 Seconds That Define Your Life Mind The Gap: Master the 0.3 Seconds That Define Your Life NEW! Master the Response Gap — the 0.3 seconds between stimulus and response. Neuroscience, 7 Laws, and actionable domains for relationships, money, health, and adversity. AUTHOR: Frater Alek0s LANGUAGE: English / Spanish English / Spanish English / Spanish Available $9.99 USD" [ref=f38e364] [cursor=pointer]':
+            - /url: /books/mind-the-gap-pdf.html
+            - 'img "Mind The Gap: Master the 0.3 Seconds That Define Your Life" [ref=f38e366]'
+            - generic [ref=f38e367]:
+              - 'heading "Mind The Gap: Master the 0.3 Seconds That Define Your Life NEW!" [level=4] [ref=f38e368]':
+                - text: "Mind The Gap: Master the 0.3 Seconds That Define Your Life"
+                - generic [ref=f38e369]: NEW!
+              - paragraph [ref=f38e370]: Master the Response Gap — the 0.3 seconds between stimulus and response. Neuroscience, 7 Laws, and actionable domains for relationships, money, health, and adversity.
+              - generic [ref=f38e371]: "AUTHOR: Frater Alek0s"
+              - generic [ref=f38e372]:
+                - generic [ref=f38e373]: "LANGUAGE: English / Spanish"
+                - img "English / Spanish" [ref=f38e374]
+                - img "English / Spanish" [ref=f38e375]
+              - generic [ref=f38e376]:
+                - generic [ref=f38e377]: Available
+                - generic [ref=f38e380]: $9.99 USD
+    - generic [ref=f38e381]:
+      - heading "Why the Complete Collection?" [level=2] [ref=f38e382]
+      - generic [ref=f38e383]:
+        - generic [ref=f38e384]:
+          - generic [ref=f38e385]: 🎯
+          - heading "Every Modality Covered" [level=3] [ref=f38e386]
+          - paragraph [ref=f38e387]: Sigils, runes, tarot, I Ching, astrology, ESP training, lucid dreaming, goetia, pendulum — 11 apps spanning the full spectrum of occult practice.
+        - generic [ref=f38e388]:
+          - generic [ref=f38e389]: 📚
+          - heading "7 In-Depth Books" [level=3] [ref=f38e390]
+          - paragraph [ref=f38e391]: From beginner guides to advanced grimoires — PDF books on chaos magick, rune magic, servitor creation, tarot, and paranormal investigation.
+        - generic [ref=f38e392]:
+          - generic [ref=f38e393]: 🔒
+          - heading "Your Practice Stays Private" [level=3] [ref=f38e394]
+          - paragraph [ref=f38e395]: Every app works 100% offline. Zero accounts. Zero tracking. Zero data collection. Your magical practice stays sacred and private.
+        - generic [ref=f38e396]:
+          - generic [ref=f38e397]: ⭐
+          - heading "Trusted by 128+ Practitioners" [level=3] [ref=f38e398]
+          - paragraph [ref=f38e399]: 4.7★ average rating on Google Play. Used by occultists, witches, pagans, and paranormal researchers across 6+ languages.
+    - generic [ref=f38e400]:
+      - heading "What Practitioners Say" [level=2] [ref=f38e401]
+      - generic [ref=f38e402]:
+        - generic [ref=f38e403]:
+          - generic [ref=f38e404]: ★★★★★
+          - paragraph [ref=f38e405]: "\"Finally, an app that makes sigil generation fast and meaningful. The quality of the random encoding is impressive.\""
+          - generic [ref=f38e406]: — Google Play review, PSI GYM
+        - generic [ref=f38e407]:
+          - generic [ref=f38e408]: ★★★★★
+          - paragraph [ref=f38e409]: "\"The best rune oracle app I've found. Simple interface, accurate meanings, and completely offline. Exactly what I needed.\""
+          - generic [ref=f38e410]: — Google Play review, Norse Rune Oracle
+        - generic [ref=f38e411]:
+          - generic [ref=f38e412]: ★★★★★
+          - paragraph [ref=f38e413]: "\"Astral Lab's planetary calculations match my professional ephemeris. Impressive accuracy for a mobile app.\""
+          - generic [ref=f38e414]: — Google Play review, Astral Lab
+      - paragraph [ref=f38e415]:
+        - link "See all 128+ reviews on Google Play →" [ref=f38e416] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/dev?id=5224914033326414083
+    - generic [ref=f38e417]:
+      - heading "Contact Us & Community [ + ]" [level=2] [ref=f38e418] [cursor=pointer]
+      - generic:
+        - paragraph [ref=f38e419]: Join the coven, explore our rituals, and stay updated with the latest in Cybermancy.
+        - generic [ref=f38e420]:
+          - link "Official blog of Chaos Magick" [ref=f38e421] [cursor=pointer]:
+            - /url: https://magiadelcaospractica.com
+            - text: "?? OFFICIAL BLOG"
+          - link "Send email" [ref=f38e422] [cursor=pointer]:
+            - /url: mailto:magiacaoticapractica@gmail.com
+            - text: "?? Email"
+          - link "YouTube channel" [ref=f38e423] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA/join
+            - text: "?? Join on YouTube"
+          - link "Telegram channel" [ref=f38e424] [cursor=pointer]:
+            - /url: https://t.me/magiacaotica
+            - text: "?? Telegram"
+          - link "Telegram coven group" [ref=f38e425] [cursor=pointer]:
+            - /url: https://t.me/magiacaoticacoven
+            - text: "?? Telegram Coven"
+          - link "Instagram" [ref=f38e426] [cursor=pointer]:
+            - /url: https://www.instagram.com/cha0smagick.labs/
+            - text: "?? Instagram"
+          - link "Discord server" [ref=f38e427] [cursor=pointer]:
+            - /url: https://discord.gg/6vNSCaPgPd
+            - text: "?? DISCORD"
+          - link "Privacy and legal policy" [ref=f38e428] [cursor=pointer]:
+            - /url: privacy-policy.html
+            - text: "?? LEGAL & PRIVACY"
+          - link "Abundance ritual" [ref=f38e429] [cursor=pointer]:
+            - /url: https://bit.ly/4lGEo9z
+            - text: "?? Abundance Ritual"
+        - paragraph [ref=f38e430]:
+          - text: "General Contact & Inquiries:"
+          - link "magiacaoticapractica@gmail.com" [ref=f38e431] [cursor=pointer]:
+            - /url: mailto:magiacaoticapractica@gmail.com
+    - generic [ref=f38e432]:
+      - 'heading "About the Founder: Frater Alek0s [ + ]" [level=2] [ref=f38e433] [cursor=pointer]'
+      - generic [ref=f38e434]:
+        - generic [ref=f38e435]:
+          - paragraph [ref=f38e436]:
+            - strong [ref=f38e437]: Frater Alek0s
+            - text: is the founder and CEO of Cha0smagick Labs, creator of the
+            - strong [ref=f38e438]: Magia del Caos Práctica
+            - text: community (Telegram + YouTube), and author of multiple digital grimoires and
+            - strong [ref=f38e439]: technomancy apps
+            - text: .
+          - paragraph [ref=f38e440]:
+            - text: "His philosophy:"
+            - emphasis [ref=f38e441]: "\"Magic is always too complicated and nobody believes until they see results.\""
+            - text: "Every tool he builds — from sigil generators and rune oracles to ESP trainers and astrological engines — is designed to eliminate both bottlenecks: make the procedure"
+            - strong [ref=f38e442]: simple
+            - text: ", and deliver"
+            - strong [ref=f38e443]: measurable results
+            - text: .
+          - paragraph [ref=f38e444]: His work has been recognized in international esoteric communities and his apps have been downloaded by hundreds of practitioners on Google Play.
+        - generic [ref=f38e445]:
+          - link "?? Professional Blog" [ref=f38e446] [cursor=pointer]:
+            - /url: https://magiadelcaospractica.com
+          - link "?? YouTube Channel" [ref=f38e447] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA
+          - link "?? Telegram Community" [ref=f38e448] [cursor=pointer]:
+            - /url: https://t.me/magiacaotica
+    - generic [ref=f38e449]:
+      - heading "Frequently Asked Questions [ + ]" [level=2] [ref=f38e450] [cursor=pointer]
+      - generic [ref=f38e451]:
+        - generic [ref=f38e452]:
+          - heading "What is Cha0smagick Labs?" [level=3] [ref=f38e453]
+          - generic [ref=f38e454]:
+            - strong [ref=f38e455]: Cha0smagick Labs is a technomancy studio
+            - text: "with a complete occult collection: 11 apps and 7 PDF books for Android. Founded by Frater Alek0s, the studio has a 4.7★ average rating on Google Play. Every product is designed to make magic simple, systematic, and results-driven — no subscriptions, no tracking, one-time payment."
+        - generic [ref=f38e456]:
+          - heading "What is technomancy?" [level=3] [ref=f38e457]
+          - generic [ref=f38e458]:
+            - strong [ref=f38e459]: Technomancy is the practice of using modern technology to fulfill specific magical needs.
+            - text: "At Cha0smagick Labs, technomancy means building apps that automate complex magical procedures — sigil encoding, hexagram casting, natal chart calculation, ESP statistical tracking — so practitioners can focus on intention rather than mechanics. The result: magic that is simpler, more systematic, and verifiable."
+        - generic [ref=f38e460]:
+          - heading "How do your apps solve the complexity problem?" [level=3] [ref=f38e461]
+          - generic [ref=f38e462]:
+            - strong [ref=f38e463]: Our apps automate the hard parts of magic.
+            - text: "The Magick Chaos Sigil Generator encodes intentions into unique symbols in under 10 seconds. Astral Lab calculates natal charts with VSOP87/ELP-2000 precision — the same algorithms NASA uses. PSI GYM tracks ESP hit rates with statistical significance. No occult degree required: tap, generate, use."
+        - generic [ref=f38e464]:
+          - heading "How do your apps help with belief in magic?" [level=3] [ref=f38e465]
+          - generic [ref=f38e466]:
+            - strong [ref=f38e467]: Nobody believes until they see results — our apps give you results you can measure.
+            - text: PSI GYM provides statistical deviation data on ESP performance. Dream Machine timestamps every lucid dream entry for pattern analysis. Astral Lab matches NASA ephemerides exactly. When the numbers speak, belief follows.
+        - generic [ref=f38e468]:
+          - heading "Where can I buy your apps and books?" [level=3] [ref=f38e469]
+          - generic [ref=f38e470]:
+            - strong [ref=f38e471]: Apps are on Google Play Store
+            - text: ($3.99–$6.99 each, one-time payment).
+            - strong [ref=f38e472]: PDF books are on Hotmart
+            - text: (from $3.99, up to 80% off). All tools are affordable, legal, and work 100% offline. No accounts required.
+        - generic [ref=f38e473]:
+          - heading "What is the Paranormal R&D Division?" [level=3] [ref=f38e474]
+          - generic [ref=f38e475]:
+            - strong [ref=f38e476]: The Paranormal R&D Division is Cha0smagick Labs' official research arm for paranormal investigation.
+            - text: Created through the acquisition of
+            - link "El Rincón Paranormal" [ref=f38e477] [cursor=pointer]:
+              - /url: https://www.rinconparanormaloficial.com/
+            - text: — one of the most active Spanish-language paranormal research communities — the division covers UFOlogy, cryptozoology, paranormal encounters, demonology, ancient mysteries, and conspiracy analysis. The division bridges field research with our technomancy tools, combining rigorous investigation methodology with data-driven occult technology.
+    - generic [ref=f38e478]:
+      - 'heading "Why Our Tools Work: The Two Bottlenecks of Magic, Solved [ + ]" [level=2] [ref=f38e479] [cursor=pointer]'
+      - generic [ref=f38e480]:
+        - generic [ref=f38e481]:
+          - heading "🔥 Complexity → Solved" [level=3] [ref=f38e482]
+          - paragraph [ref=f38e483]:
+            - strong [ref=f38e484]: Technomancy automates what used to be hard.
+            - text: Sigil encoding that took hours now takes 10 seconds. Natal chart calculation that required an astrologer now runs on your phone. ESP tracking with statistical significance — not guesswork. Every app makes a complex magical procedure
+            - strong [ref=f38e485]: simple and intuitive
+            - text: .
+        - generic [ref=f38e486]:
+          - heading "👁️ Belief → Solved" [level=3] [ref=f38e487]
+          - paragraph [ref=f38e488]:
+            - strong [ref=f38e489]: Results you can verify, not just hope for.
+            - text: PSI GYM tracks ESP hit rates with statistical significance. Dream Machine timestamps every lucid dream entry. Astral Lab calculates planetary positions to NASA precision. When the data speaks, belief follows. That's what separates technomancy from traditional practice.
+        - generic [ref=f38e490]:
+          - heading "🔒 100% Offline & Private" [level=3] [ref=f38e491]
+          - paragraph [ref=f38e492]:
+            - strong [ref=f38e493]: Zero accounts. Zero tracking. Zero data collection.
+            - text: Every app runs locally on your Android device. No internet permission required. Your magical practice stays sacred and private — the way it should be.
+        - generic [ref=f38e494]:
+          - heading "💰 One-Time Payment" [level=3] [ref=f38e495]
+          - paragraph [ref=f38e496]:
+            - strong [ref=f38e497]: No subscriptions, no hidden fees, no freemium tricks.
+            - text: Pay once ($3.99–$6.99 per app), use forever. All premium features unlocked from day one. Books available from $3.99 via Hotmart.
+    - generic [ref=f38e498]:
+      - heading "Paranormal Research & Development Division" [level=2] [ref=f38e499]
+      - paragraph [ref=f38e500]:
+        - strong [ref=f38e501]:
+          - text: Cha0smagick Labs has acquired
+          - link "El Rincón Paranormal" [ref=f38e502] [cursor=pointer]:
+            - /url: https://www.rinconparanormaloficial.com/
+        - text: — one of the longest-running paranormal research communities in the Spanish-speaking world — and integrated it as our official Paranormal Research & Development Division.
+      - paragraph [ref=f38e503]:
+        - text: This isn't just a content merger.
+        - strong [ref=f38e504]: El Rincón Paranormal brings years of field research into UFOs, cryptids, paranormal encounters, demonology, ancient mysteries, and occult phenomena.
+        - text: "Combined with Cha0smagick Labs' technomancy toolkit, the division now bridges two worlds: rigorous paranormal investigation and data-driven occult technology."
+      - generic [ref=f38e505]:
+        - heading "What the Paranormal R&D Division Covers" [level=3] [ref=f38e506]
+        - list [ref=f38e507]:
+          - listitem [ref=f38e508]:
+            - strong [ref=f38e509]: "UFOlogy & Extraterrestrial Research:"
+            - text: Investigation of unidentified aerial phenomena, abduction cases, and contact experiences worldwide.
+          - listitem [ref=f38e510]:
+            - strong [ref=f38e511]: "Cryptozoology:"
+            - text: Field research into cryptids — from local legends to globally documented creatures.
+          - listitem [ref=f38e512]:
+            - strong [ref=f38e513]: "Paranormal Encounters:"
+            - text: Ghost investigations, poltergeist activity, dimensional anomalies, and afterlife research.
+          - listitem [ref=f38e514]:
+            - strong [ref=f38e515]: "Demonology & Occult Phenomena:"
+            - text: Historical and contemporary case studies of supernatural entities and rituals.
+          - listitem [ref=f38e516]:
+            - strong [ref=f38e517]: "Conspiracy Analysis:"
+            - text: Critical, evidence-based evaluation of paranormal-related conspiracy theories.
+          - listitem [ref=f38e518]:
+            - strong [ref=f38e519]: "Ancient Mysteries:"
+            - text: Archaeological enigmas, lost civilizations, and unexplained historical artifacts.
+      - link "Visit El Rincón Paranormal — Paranormal R&D Division" [ref=f38e521] [cursor=pointer]:
+        - /url: https://www.rinconparanormaloficial.com/
+        - text: 🔭 Visit El Rincón Paranormal →
+  - contentinfo [ref=f38e522]:
+    - generic [ref=f38e523]:
+      - generic [ref=f38e527]:
+        - generic [ref=f38e528]: "Number of Ascended Ones:"
+        - generic [ref=f38e529]: "000003"
+      - generic [ref=f38e531]:
+        - generic [ref=f38e532]:
+          - heading "Cha0smagick Labs" [level=4] [ref=f38e533]
+          - list [ref=f38e534]:
+            - listitem [ref=f38e535]:
+              - link "Official Blog" [ref=f38e536] [cursor=pointer]:
+                - /url: https://magiadelcaospractica.com
+            - listitem [ref=f38e537]:
+              - link "Paranormal R&D Division" [ref=f38e538] [cursor=pointer]:
+                - /url: https://www.rinconparanormaloficial.com/
+            - listitem [ref=f38e539]:
+              - link "Privacy & Legal" [ref=f38e540] [cursor=pointer]:
+                - /url: privacy-policy.html
+            - listitem [ref=f38e541]:
+              - link "Google Play Developer" [ref=f38e542] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/dev?id=5224914033326414083
+        - generic [ref=f38e543]:
+          - heading "Community" [level=4] [ref=f38e544]
+          - list [ref=f38e545]:
+            - listitem [ref=f38e546]:
+              - link "Telegram" [ref=f38e547] [cursor=pointer]:
+                - /url: https://t.me/magiacaotica
+            - listitem [ref=f38e548]:
+              - link "YouTube" [ref=f38e549] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA
+            - listitem [ref=f38e550]:
+              - link "Instagram" [ref=f38e551] [cursor=pointer]:
+                - /url: https://www.instagram.com/cha0smagick.labs/
+            - listitem [ref=f38e552]:
+              - link "Discord" [ref=f38e553] [cursor=pointer]:
+                - /url: https://discord.gg/6vNSCaPgPd
+    - paragraph [ref=f38e554]: © 2026 Cha0smagick Labs. All rights reserved. Designed with digital magic.
+  - button "🌐" [ref=f38e556] [cursor=pointer]
