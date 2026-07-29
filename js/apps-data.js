@@ -741,52 +741,52 @@ const appsData = [
     },
     {
         id: "noctem-tools",
-        name: "NOCTEM: Suite Profesional para la Investigación Paranormal",
+        name: "NOCTEM: Professional Paranormal Investigation Suite",
         price: "$14.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp",
         status: "available",
-        description: "NOCTEM: Suite Profesional para la Investigación Paranormal. Lleva tus investigaciones paranormales al nivel profesional con cámara SLS, grabadora EVP y suite de sensores. 👻",
+        description: "NOCTEM: Professional Paranormal Investigation Suite. Take your paranormal research to the professional level with SLS camera, EVP recorder, and sensor suite. 👻",
         image: "assets/images/noctemnobg.png",
         seo: {
-            title: "NOCTEM: Suite Profesional para la Investigación Paranormal | App SLS Camera & EVP Recorder for Android",
-            description: "Descarga NOCTEM — la suite profesional para investigación paranormal en Android. Cámara SLS con ML Kit, grabadora EVP de alta fidelidad, monitoreo ambiental, brújula y gestión de evidencia. Compra única, sin suscripciones. Lleva tus investigaciones al nivel profesional.",
-            keywords: "paranormal investigation app, noctem, sls camera app, evp recorder, ghost hunting app, paranormal research tool, spirit box, ghost detector, android paranormal app, caza fantasmas app, investigación paranormal, emf detector, ml kit skeleton tracking, buy esoteric app, cha0smagick labs, urban exploration app"
+            title: "NOCTEM: Professional Paranormal Investigation Suite | SLS Camera & EVP Recorder App for Android",
+            description: "Download NOCTEM — the professional paranormal investigation suite for Android. SLS camera with ML Kit skeleton tracking, high-fidelity EVP recorder, environmental monitoring, compass, and evidence management. One-time purchase, no subscriptions. Take your paranormal research to the next level.",
+            keywords: "paranormal investigation app, noctem, sls camera app, evp recorder, ghost hunting app, paranormal research tool, spirit box, ghost detector, android paranormal app, ghost hunting, paranormal investigation, emf detector, ml kit skeleton tracking, buy esoteric app, cha0smagick labs, urban exploration app"
         },
         screenshots: [],
         detailedDescription: `
-            <h3>Lleva tus Investigaciones Paranormales al Nivel Profesional con NOCTEM</h3>
-            <p><strong>NOCTEM</strong> es una completa suite de herramientas diseñada específicamente para investigadores paranormales, exploradores urbanos y aficionados a la caza de fantasmas. Gracias a la tecnología móvil avanzada y el aprendizaje automático, NOCTEM conecta las técnicas de investigación tradicionales con el análisis digital moderno.</p>
+            <h3>Take Your Paranormal Investigations to the Professional Level with NOCTEM</h3>
+            <p><strong>NOCTEM</strong> is a complete suite of tools designed specifically for paranormal investigators, urban explorers, and ghost hunting enthusiasts. Powered by advanced mobile technology and machine learning, NOCTEM bridges traditional investigation techniques with modern digital analysis.</p>
 
-            <h4>⚠️ Tecnología Avanzada de Cámara SLS</h4>
-            <p>Experimenta el poder del seguimiento de esqueletos en tu dispositivo móvil. La cámara SLS (Stick Lens System) de NOCTEM utiliza Google ML Kit para detectar formas humanas y esqueletos en tiempo real. A diferencia de los radares de fantasmas básicos, NOCTEM analiza el entorno para mapear anomalías invisibles a simple vista, proporcionando una representación visual de posibles entidades.</p>
+            <h4>⚠️ Advanced SLS Camera Technology</h4>
+            <p>Experience the power of skeleton tracking on your mobile device. NOCTEM's SLS (Stick Lens System) camera uses Google ML Kit to detect human forms and skeletons in real-time. Unlike basic ghost radar apps, NOCTEM analyzes the environment to map anomalies invisible to the naked eye, providing a visual representation of potential entities.</p>
 
-            <h4>🎙️ Grabadora de EVP de Alta Fidelidad</h4>
-            <p>Captura fenómenos de voz electrónica (EVP) con nuestra herramienta de investigación de audio especializada. La grabadora de NOCTEM está optimizada para capturar vocalizaciones inexplicables en el entorno. Monitorea los niveles de audio en tiempo real y guarda evidencia de alta calidad directamente en tu dispositivo para su posterior análisis.</p>
+            <h4>🎙️ High-Fidelity EVP Recorder</h4>
+            <p>Capture Electronic Voice Phenomena (EVP) with our specialized audio investigation tool. NOCTEM's recorder is optimized to capture unexplained vocalizations in the environment. Monitor audio levels in real-time and save high-quality evidence directly to your device for later analysis.</p>
 
-            <h4>🧭 Herramientas y Sensores para la Investigación Paranormal</h4>
+            <h4>🧭 Paranormal Research Tools & Sensors</h4>
             <ul>
-                <li><strong>Monitoreo ambiental:</strong> Utiliza los sensores integrados de tu dispositivo para monitorear los cambios en el entorno.</li>
-                <li><strong>Contexto direccional:</strong> La brújula integrada y el etiquetado de ubicación te ayudan a identificar puntos clave y documentar con precisión dónde se capturó la evidencia.</li>
-                <li><strong>Análisis en tiempo real:</strong> Una interfaz limpia e intuitiva, diseñada para condiciones de poca luz, te permite concentrarte en tu investigación sin distracciones.</li>
+                <li><strong>Environmental Monitoring:</strong> Use your device's built-in sensors to monitor changes in the environment.</li>
+                <li><strong>Directional Context:</strong> The integrated compass and location tagging help you identify key points and accurately document where evidence was captured.</li>
+                <li><strong>Real-time Analysis:</strong> A clean, intuitive interface designed for low-light conditions lets you focus on your investigation without distractions.</li>
             </ul>
 
-            <h4>📂 Gestión de Evidencia</h4>
-            <p>Tu evidencia es tuya. Todas las fotos, videos y grabaciones de EVP se almacenan localmente en tu dispositivo. NOCTEM no sube tus datos a la nube, garantizando así la privacidad de tus investigaciones.</p>
+            <h4>📂 Evidence Management</h4>
+            <p>Your evidence is yours. All photos, videos, and EVP recordings are stored locally on your device. NOCTEM does not upload your data to the cloud, ensuring the privacy of your investigations.</p>
 
-            <h4>Características Principales</h4>
+            <h4>Key Features</h4>
             <ul>
-                <li><strong>Cámara SLS en tiempo real:</strong> Mapeo esquelético avanzado y detección de postura con Google ML Kit.</li>
-                <li><strong>Captura de EVP de nivel profesional:</strong> Grabación de audio de alta sensibilidad para la comunicación con espíritus.</li>
-                <li><strong>Suite de investigación:</strong> Herramientas para el contexto, la orientación y el seguimiento ambiental de campos electromagnéticos (CEM).</li>
-                <li><strong>Gráficos profesionales:</strong> Una interfaz seria y profesional diseñada para investigadores reales, optimizada para condiciones de poca luz.</li>
-                <li><strong>Optimizado para Android 15:</strong> Desarrollado con los últimos estándares de CameraX y ML Kit para un rendimiento óptimo.</li>
+                <li><strong>Real-time SLS Camera:</strong> Advanced skeletal mapping and pose detection with Google ML Kit.</li>
+                <li><strong>Professional-grade EVP Capture:</strong> High-sensitivity audio recording for spirit communication.</li>
+                <li><strong>Investigation Suite:</strong> Tools for context, orientation, and environmental EMF tracking.</li>
+                <li><strong>Professional Graphics:</strong> A serious, professional interface designed for real investigators, optimized for low-light conditions.</li>
+                <li><strong>Optimized for Android 15:</strong> Built with the latest CameraX and ML Kit standards for peak performance.</li>
             </ul>
 
-            <h4>⚠️ Aviso Legal</h4>
-            <p>Dado que la actividad paranormal aún no puede probarse científicamente, no podemos garantizar que la aplicación se comunique con espíritus o fantasmas reales el 100% de las veces. Esta aplicación está destinada únicamente a la investigación paranormal. Úsela con responsabilidad y respete siempre los lugares que investigue.</p>
+            <h4>⚠️ Legal Notice</h4>
+            <p>Since paranormal activity cannot yet be scientifically proven, we cannot guarantee that the app will communicate with real spirits or ghosts 100% of the time. This app is intended for paranormal research purposes only. Use it responsibly and always respect the locations you investigate.</p>
 
-            <h3>Una Compra. Acceso de por Vida.</h3>
-            <p>Descarga <strong>NOCTEM</strong> ahora por un pago único de <strong>$14.99 USD</strong>. Sin suscripciones, sin compras integradas. La noche te espera. 👻</p>
+            <h3>One Purchase. Lifetime Access.</h3>
+            <p>Download <strong>NOCTEM</strong> now for a one-time payment of <strong>$14.99 USD</strong>. No subscriptions, no in-app purchases. The night awaits you. 👻</p>
         `
     }
 ];
