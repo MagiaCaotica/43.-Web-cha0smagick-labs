@@ -1,5 +1,0 @@
-[    1546ms] [WARNING] [Meta Pixel] - Duplicate Pixel ID: 930987978489178. @ https://connect.facebook.net/en_US/fbevents.js:187
-[    2979ms] Uncaught ReferenceError: module is not defined
-    at <anonymous> (https://groot.mailerlite.com/node_modules/lodash/index.js?v=1785148:0:0)
-[    5714ms] ReferenceError: axios is not defined
-    at https://dashboard.mailerlite.com/forms/194257832689796115/content:310:21

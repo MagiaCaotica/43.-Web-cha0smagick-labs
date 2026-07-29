@@ -90,7 +90,7 @@
 
 ## 4. Groq AI Integration
 
-**API Key**: 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
+**API Key**: gsk_your_groq_api_key_here
 
 **Model**: `llama3-70b-8192` (via Groq — fastest LLM inference)
 

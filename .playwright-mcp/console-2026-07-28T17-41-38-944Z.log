@@ -1,3 +1,0 @@
-[    1436ms] [WARNING] [Meta Pixel] - Duplicate Pixel ID: 930987978489178. @ https://connect.facebook.net/en_US/fbevents.js:187
-[    4730ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://api.canny.io/api/users/identify:0
-[    4730ms] [WARNING] Canny: Something went wrong identifying user:  server error @ https://canny.io/sdk.js:0

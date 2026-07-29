@@ -1,6 +1,27 @@
+# Secrets
+.env
+
 # Android build artifacts
 *.aab
 *.apk
 
 # Node dependencies
 node_modules/
+
+# Firecrawl scraped data
+.firecrawl/
+
+# Playwright MCP artifacts
+.playwright-mcp/
+
+# OpenCode continuation files
+.omo/
+
+# Scratch files
+compose-*.md
+compose-*.yml
+x-*.md
+x-*.yml
+home-snap.md
+post-tweet*.md
+x-login-check.md
