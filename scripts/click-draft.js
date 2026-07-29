@@ -1,8 +1,8 @@
 async (page) => {
   const result = await page.evaluate(() => {
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('[role=button], button');
     for (const b of buttons) {
-      if (b.textContent.includes('Chaos Magick That Actually Work')) {
+      if (b.textContent.includes('I Ching')) {
         b.dispatchEvent(new MouseEvent('click', {bubbles:true,cancelable:true,view:window}));
         return 'clicked draft: ' + b.textContent.trim().substring(0, 60).replace(/\s+/g, ' ');
       }
@@ -10,17 +10,14 @@ async (page) => {
     return 'draft not found';
   });
   
-  console.log('Draft click:', result);
-  await page.waitForTimeout(2000);
-  
-  const state = await page.evaluate(() => {
-    const img = document.querySelector('img[alt*="subida"]');
-    return {
-      hasImage: img ? true : false,
-      title: document.querySelector('input[placeholder*="Explica"]') ? 'has title field' : 'no title',
-      textPreview: document.body.innerText.substring(0, 200).replace(/\s+/g, ' ')
-    };
-  });
-  
-  return state;
+  if (result.includes('clicked')) {
+    await page.waitForTimeout(2000);
+    const pubBtn = page.getByRole('button', { name: 'Publicar' });
+    if (await pubBtn.isVisible().catch(() => false)) {
+      await pubBtn.click({ force: true });
+      return 'Clicked draft and published: ' + result;
+    }
+    return 'Clicked draft but no Publicar: ' + result;
+  }
+  return result;
 }

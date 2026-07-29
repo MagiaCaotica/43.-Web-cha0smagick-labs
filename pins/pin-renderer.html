@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pin Renderer</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1000px; height: 1500px; overflow: hidden; font-family: 'Georgia', 'Times New Roman', serif; display: flex; align-items: center; justify-content: center; }
+.pin { width: 1000px; height: 1500px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 50px; text-align: center; position: relative; }
+.bg-dark-purple { background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%); }
+.bg-black-gold { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a0a 50%, #0a0a0a 100%); }
+.bg-deep-red { background: linear-gradient(135deg, #1a0000 0%, #2d0a0a 50%, #1a0000 100%); }
+.bg-midnight-blue { background: linear-gradient(135deg, #000814 0%, #001529 50%, #000814 100%); }
+.bg-forest-dark { background: linear-gradient(135deg, #0a1205 0%, #152012 50%, #0a1205 100%); }
+.overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+.overlay::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.4) 100%); }
+.overlay::after { content: ''; position: absolute; top: 40px; left: 40px; right: 40px; bottom: 40px; border: 1px solid rgba(255,215,0,0.15); border-radius: 4px; }
+.decor { position: absolute; top: 60px; left: 50%; transform: translateX(-50%); color: #d4a843; font-size: 28px; letter-spacing: 12px; }
+.decor-b { position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); color: #d4a843; font-size: 28px; letter-spacing: 12px; }
+.content { position: relative; z-index: 1; }
+.circle { width: 80px; height: 80px; border: 2px solid rgba(212, 168, 67, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 35px; }
+.circle-inner { width: 30px; height: 30px; border: 2px solid #d4a843; border-radius: 50%; }
+.title { font-size: 42px; line-height: 1.3; color: #f0e6d6; margin-bottom: 25px; font-weight: 400; letter-spacing: 1px; max-width: 800px; }
+.divider { width: 60px; height: 1px; background: #d4a843; margin: 0 auto 25px; }
+.desc { font-size: 18px; line-height: 1.6; color: #b8a88a; max-width: 700px; margin: 0 auto; }
+.tags-bar { position: absolute; bottom: 120px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 650px; }
+.tag { padding: 5px 12px; border: 1px solid rgba(212,168,67,0.2); border-radius: 12px; font-size: 11px; color: #d4a843; letter-spacing: 0.5px; text-transform: uppercase; }
+.brand { position: absolute; bottom: 90px; left: 50%; transform: translateX(-50%); color: #d4a843; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.6; }
+</style>
+</head>
+<body>
+<div id="pin" class="pin">
+  <div class="overlay"></div>
+  <div class="decor">✦ ✦ ✦</div>
+  <div class="content">
+    <div class="circle"><div class="circle-inner"></div></div>
+    <div class="title" id="pin-title">TITLE</div>
+    <div class="divider"></div>
+    <div class="desc" id="pin-desc">DESCRIPTION</div>
+  </div>
+  <div class="tags-bar" id="pin-tags"></div>
+  <div class="brand">CHA0SMAGICK LABS</div>
+  <div class="decor-b">✦ ✦ ✦</div>
+</div>
+<script>
+function renderPin(data) {
+  document.getElementById('pin').className = 'pin ' + data.theme;
+  document.getElementById('pin-title').textContent = data.title;
+  document.getElementById('pin-desc').textContent = data.description;
+  var tagsBar = document.getElementById('pin-tags');
+  tagsBar.innerHTML = '';
+  data.tags.split(',').slice(0,4).forEach(function(tag) {
+    var span = document.createElement('span');
+    span.className = 'tag';
+    span.textContent = tag.trim();
+    tagsBar.appendChild(span);
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+- generic [ref=e4]:
+  - banner:
+    - link "Saltar al contenido":
+      - /url: "#"
+    - generic [ref=e15]:
+      - generic [ref=e18]:
+        - generic:
+          - img "Icono de búsqueda"
+        - combobox "Buscar" [ref=e20]
+      - link "Tu perfil" [ref=e25] [cursor=pointer]:
+        - /url: /magiacaoticamagiadelcaosprctic/
+        - img [ref=e32]:
+          - generic [ref=e33]: M
+      - button "Cuentas" [ref=e37] [cursor=pointer]
+  - navigation [ref=e42]:
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic "Inicio" [ref=e49]:
+          - link "Inicio" [ref=e50] [cursor=pointer]:
+            - /url: /
+        - generic "Inicio" [ref=e57]:
+          - link "Inicio" [ref=e58] [cursor=pointer]:
+            - /url: /
+        - generic "Explorar" [ref=e65]:
+          - link "Explorar" [ref=e66] [cursor=pointer]:
+            - /url: /today
+        - generic "Tus tableros" [ref=e73]:
+          - link "Tus tableros" [ref=e74] [cursor=pointer]:
+            - /url: /magiacaoticamagiadelcaosprctic/
+        - generic "Crear" [ref=e81]:
+          - button "Crear" [ref=e82] [cursor=pointer]
+        - generic "Actualizaciones" [ref=e109]:
+          - button "Actualizaciones" [ref=e110] [cursor=pointer]
+        - generic "Mensajes" [ref=e118]:
+          - button "Mensajes" [ref=e119] [cursor=pointer]
+      - generic "Configuración y soporte" [ref=e98]:
+        - button "Configuración y soporte" [ref=e99] [cursor=pointer]
+  - generic:
+    - complementary "Botones flotantes del pie de página"
+  - main [ref=e104]:
+    - generic [ref=e126]:
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - generic [ref=e132]:
+              - heading "Borradores de Pines (6)" [level=2] [ref=e1712]
+              - button "Cerrar barra lateral de borradores" [ref=e134] [cursor=pointer]
+            - button "Crear nuevo" [ref=e1713] [cursor=pointer]
+          - separator [ref=e141]
+        - generic [ref=e142]:
+          - generic [ref=e145]:
+            - checkbox "Seleccionar todo" [ref=e153] [cursor=pointer]
+            - generic "Seleccionar todo" [ref=e156] [cursor=pointer]
+          - list [ref=e157]:
+            - listitem [ref=e1260]:
+              - group "Borrador de tarjeta de Pin" [ref=e1261]:
+                - button "Crafting the Perfect Sigil Intention Faltan 30 días para que caduque" [ref=e1263] [cursor=pointer]:
+                  - generic [ref=e1276]:
+                    - heading "Crafting the Perfect Sigil Intention" [level=3] [ref=e1277]
+                    - generic [ref=e1279]: Faltan 30 días para que caduque
+                - generic [ref=e1282]:
+                  - checkbox "Crafting the Perfect Sigil Intention Faltan ,30, días para que caduque" [ref=e1288] [cursor=pointer]
+                  - generic [ref=e1289]: Crafting the Perfect Sigil Intention Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=e1293] [cursor=pointer]
+                - status
+            - listitem [ref=e1298]:
+              - group "Borrador de tarjeta de Pin" [ref=e1299]:
+                - 'button "Fire Sigils: Destruction as Creation Faltan 30 días para que caduque" [ref=e1301] [cursor=pointer]':
+                  - generic [ref=e1314]:
+                    - 'heading "Fire Sigils: Destruction as Creation" [level=3] [ref=e1315]'
+                    - generic [ref=e1317]: Faltan 30 días para que caduque
+                - generic [ref=e1320]:
+                  - 'checkbox "Fire Sigils: Destruction as Creation Faltan ,30, días para que caduque" [ref=e1326] [cursor=pointer]'
+                  - generic [ref=e1327]: "Fire Sigils: Destruction as Creation Faltan ,30, días para que caduque"
+                - button "Acciones en el borrador del Pin" [ref=e1331] [cursor=pointer]
+                - status
+            - listitem [ref=e1336]:
+              - group "Borrador de tarjeta de Pin" [ref=e1337]:
+                - button "AI and Sigil Generation Faltan 30 días para que caduque" [ref=e1339] [cursor=pointer]:
+                  - generic [ref=e1352]:
+                    - heading "AI and Sigil Generation" [level=3] [ref=e1353]
+                    - generic [ref=e1355]: Faltan 30 días para que caduque
+                - generic [ref=e1358]:
+                  - checkbox "AI and Sigil Generation Faltan ,30, días para que caduque" [ref=e1364] [cursor=pointer]
+                  - generic [ref=e1365]: AI and Sigil Generation Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=e1369] [cursor=pointer]
+                - status
+            - listitem [ref=e1374]:
+              - group "Borrador de tarjeta de Pin" [ref=e1375]:
+                - button "History of Sigil Magick Faltan 30 días para que caduque" [ref=e1377] [cursor=pointer]:
+                  - generic [ref=e1390]:
+                    - heading "History of Sigil Magick" [level=3] [ref=e1391]
+                    - generic [ref=e1393]: Faltan 30 días para que caduque
+                - generic [ref=e1396]:
+                  - checkbox "History of Sigil Magick Faltan ,30, días para que caduque" [ref=e1402] [cursor=pointer]
+                  - generic [ref=e1403]: History of Sigil Magick Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=e1407] [cursor=pointer]
+                - status
+            - listitem [ref=e1412]:
+              - group "Borrador de tarjeta de Pin" [ref=e1413]:
+                - 'button "Sigil Tattoos: Permanent Magick Faltan 30 días para que caduque" [ref=e1415] [cursor=pointer]':
+                  - generic [ref=e1428]:
+                    - 'heading "Sigil Tattoos: Permanent Magick" [level=3] [ref=e1429]'
+                    - generic [ref=e1431]: Faltan 30 días para que caduque
+                - generic [ref=e1434]:
+                  - 'checkbox "Sigil Tattoos: Permanent Magick Faltan ,30, días para que caduque" [ref=e1440] [cursor=pointer]'
+                  - generic [ref=e1441]: "Sigil Tattoos: Permanent Magick Faltan ,30, días para que caduque"
+                - button "Acciones en el borrador del Pin" [ref=e1445] [cursor=pointer]
+                - status
+            - listitem [ref=e1716]:
+              - group "Borrador de tarjeta de Pin" [ref=e1717]:
+                - button "Faltan 30 días para que caduque" [ref=e1719] [cursor=pointer]:
+                  - generic [ref=e1732]:
+                    - heading [level=3]
+                    - generic [ref=e1733]: Faltan 30 días para que caduque
+                - generic [ref=e1736]:
+                  - checkbox "Faltan ,30, días para que caduque" [ref=e1742] [cursor=pointer]
+                  - generic [ref=e1743]: Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=e1747] [cursor=pointer]
+                - status
+      - generic [ref=e1567]:
+        - generic [ref=e1568]:
+          - heading "Crear Pin" [level=1] [ref=e1570]
+          - generic [ref=e1571]:
+            - generic [ref=e1752]: ¡Cambios guardados!
+            - button "Publicar" [ref=e1576] [cursor=pointer]
+        - generic [ref=e1581]:
+          - generic [ref=e1586]:
+            - generic [ref=e1588]:
+              - img "Imagen subida para crear un Pin" [ref=e1591]
+              - generic:
+                - generic:
+                  - generic:
+                    - textbox "Campo de texto en blanco, ve a la página de edición de diseño del Pin para añadir una capa de texto"
+            - button "Editar Pin" [ref=e1593] [cursor=pointer]
+          - generic [ref=e1601]:
+            - generic [ref=e1605]:
+              - generic [ref=e1606]: Título
+              - textbox "Título" [ref=e1608]:
+                - /placeholder: Explica en qué consiste tu Pin
+            - button "Descripción Describe tu Pin" [ref=e1612] [cursor=pointer]:
+              - generic [ref=e1616]:
+                - button [ref=e1618]
+                - generic [ref=e1621]:
+                  - generic "Descripción" [ref=e1623]
+                  - generic [ref=e1624]:
+                    - generic: Describe tu Pin
+                    - combobox "Describe tu Pin" [ref=e1626]
+            - generic [ref=e1631]:
+              - generic [ref=e1635]:
+                - generic [ref=e1636]: Enlace
+                - textbox "Enlace" [ref=e1638]:
+                  - /placeholder: Añade un enlace
+              - button "Tablero Chaos Magick Abrir menú desplegable" [ref=e1644] [cursor=pointer]:
+                - generic [ref=e1645]:
+                  - generic "Tablero" [ref=e1647]
+                  - generic [ref=e1648]:
+                    - generic [ref=e1649]: Chaos Magick
+                    - img "Abrir menú desplegable" [ref=e1656]
+            - generic [ref=e1661]:
+              - generic [ref=e1662]:
+                - generic [ref=e1663]: Temas etiquetados (0)
+                - combobox "Temas etiquetados (0)" [ref=e1669]
+              - generic [ref=e1670]: No te preocupes, nadie verá tus etiquetas
+            - generic [ref=e1674]:
+              - generic "Etiquetar productos" [ref=e1676]
+              - button "Añadir productos" [ref=e1679] [cursor=pointer]
+            - generic [ref=e1682]:
+              - checkbox "Marcar como modificado por IA Contenido que fue creado total o parcialmente con IA" [ref=e1684] [cursor=pointer]
+              - generic [ref=e1686]:
+                - generic [ref=e1688] [cursor=pointer]:
+                  - generic [ref=e1689]: Marcar como modificado por IA
+                  - generic [ref=e1691]: Contenido que fue creado total o parcialmente con IA
+                - generic [ref=e1693]:
+                  - checkbox "Este Pin incluye una persona generada por IA" [disabled] [ref=e1699]
+                  - generic [ref=e1700]: Este Pin incluye una persona generada por IA
+            - button "Más opciones Icono de flecha de Mostrar más opciones" [ref=e1705] [cursor=pointer]:
+              - generic [ref=e1706]:
+                - generic [ref=e1707]: Más opciones
+                - img "Icono de flecha de Mostrar más opciones" [ref=e1710]
+  - generic:
+    - contentinfo "Pie de página"

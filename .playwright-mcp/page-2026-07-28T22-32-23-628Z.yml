@@ -1,0 +1,74 @@
+- generic [ref=f1e1]:
+  - link "Ir al contenido principal" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f1e6]:
+    - generic:
+      - banner [ref=f1e7]
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - tabpanel:
+                              - dialog "Iniciar sesión" [ref=f1e35]:
+                                - generic [ref=f1e39]:
+                                  - heading "Iniciar sesión" [level=1] [ref=f1e40]
+                                  - paragraph [ref=f1e41]:
+                                    - text: Al continuar, aceptas nuestro
+                                    - link "Acuerdo del usuario" [ref=f1e42] [cursor=pointer]:
+                                      - /url: https://www.redditinc.com/policies/user-agreement
+                                    - text: y confirmas que has entendido la
+                                    - link "Política de privacidad" [ref=f1e43] [cursor=pointer]:
+                                      - /url: https://www.redditinc.com/policies/privacy-policy
+                                    - text: .
+                                  - generic [ref=f1e44]:
+                                    - link "Continuar con el número de teléfono" [ref=f1e46] [cursor=pointer]:
+                                      - /url: https://www.reddit.com/login/
+                                    - generic [ref=f1e56]:
+                                      - iframe [ref=f1e143]:
+                                        - button "Continuar con Google. Se abre en una pestaña nueva." [ref=f5e3] [cursor=pointer]:
+                                          - generic [ref=f5e5]: Continuar con Google
+                                      - generic [ref=f1e75] [cursor=pointer]:
+                                        - generic [ref=f1e76]: Continuar con Apple
+                                        - button "Sign in with Apple" [ref=f1e82]:
+                                          - generic [ref=f1e83]:
+                                            - img:
+                                              - generic:
+                                                - img:
+                                                  - generic:  Sign in with Apple
+                                    - link "Enviarme enlace de un solo uso por correo electrónico" [ref=f1e88] [cursor=pointer]:
+                                      - /url: https://www.reddit.com/login/
+                                    - generic [ref=f1e94]:
+                                      - separator [ref=f1e95]
+                                      - generic [ref=f1e96]: O
+                                      - separator [ref=f1e97]
+                                  - group [ref=f1e98]:
+                                    - generic [ref=f1e103]:
+                                      - generic:
+                                        - generic: Correo electrónico o nombre de usuario
+                                        - text: "*"
+                                      - textbox "Correo electrónico o nombre de usuario" [ref=f1e104]: cha0smagick
+                                  - group [ref=f1e109]:
+                                    - generic [ref=f1e113]:
+                                      - generic [ref=f1e114]:
+                                        - generic:
+                                          - generic: Contraseña
+                                          - text: "*"
+                                        - textbox "Contraseña" [ref=f1e115]
+                                      - button [ref=f1e119] [cursor=pointer]
+                                  - link "¿Has olvidado tu contraseña?" [ref=f1e133] [cursor=pointer]:
+                                    - /url: https://www.reddit.com/password/
+                                  - generic [ref=f1e135]:
+                                    - text: ¿Es tu primera vez en Reddit?
+                                    - link "Regístrate" [ref=f1e137] [cursor=pointer]:
+                                      - /url: https://www.reddit.com/register/
+                                - generic [ref=f1e142]:
+                                  - button "Iniciar sesión" [disabled]
+                            - generic: back
+                            - generic: back

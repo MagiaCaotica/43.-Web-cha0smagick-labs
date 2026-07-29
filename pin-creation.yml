@@ -1,0 +1,21 @@
+- generic [ref=f28e4]:
+  - banner:
+    - link "Saltar al contenido":
+      - /url: "#"
+    - generic [ref=f28e15]:
+      - generic [ref=f28e18]
+      - link "Tu perfil" [ref=f28e25] [cursor=pointer]:
+        - /url: /magiacaoticamagiadelcaosprctic/
+      - button "Cuentas" [ref=f28e37] [cursor=pointer]
+  - navigation [ref=f28e42]:
+    - generic [ref=f28e44]:
+      - generic [ref=f28e45]
+      - generic "Configuración y soporte" [ref=f28e110]
+  - generic:
+    - complementary "Botones flotantes del pie de página"
+  - main [ref=f28e116]:
+    - generic [ref=f28e120]:
+      - generic [ref=f28e123]
+      - generic [ref=f28e139]
+  - generic:
+    - contentinfo "Pie de página"

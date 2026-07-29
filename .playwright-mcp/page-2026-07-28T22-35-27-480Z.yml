@@ -1,0 +1,110 @@
+- generic [ref=f16e3]:
+  - link "Saltar al contenido":
+    - /url: "#"
+  - banner [ref=f16e8]:
+    - generic [ref=f16e9]:
+      - link "Página de inicio para desarrolladores" [ref=f16e10] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f16e12]:
+          - img "Pinterest" [ref=f16e14]
+          - heading "Plataforma para desarrolladores" [level=2] [ref=f16e17]
+      - navigation "Sitio web" [ref=f16e19]:
+        - generic [ref=f16e20]:
+          - generic [ref=f16e22]:
+            - button "Documentos" [ref=f16e24] [cursor=pointer]
+            - button "Referencia de API" [ref=f16e28] [cursor=pointer]
+            - button "Gestión de mis aplicaciones" [ref=f16e32] [cursor=pointer]:
+              - generic [ref=f16e33]: Mis aplicaciones
+          - button "Referencia de Buscar en la documentación y API" [ref=f16e37]
+          - button "Gestionar cuenta" [ref=f16e43] [cursor=pointer]:
+            - 'img "Magia Caotica: Magia del Caos" [ref=f16e48]':
+              - generic [ref=f16e49]: M
+  - generic [ref=f16e50]:
+    - main [ref=f16e51]:
+      - heading "Crea tu nueva cuenta para desarrolladores" [level=1] [ref=f16e57]
+    - contentinfo [ref=f16e60]:
+      - generic [ref=f16e61]:
+        - generic [ref=f16e63]:
+          - img "Pinterest" [ref=f16e65]
+          - heading "Pinterest" [level=2] [ref=f16e68]
+        - generic [ref=f16e69]:
+          - list [ref=f16e70]:
+            - generic [ref=f16e71]:
+              - heading "Sobre nosotros" [level=3] [ref=f16e73]
+              - listitem [ref=f16e76]:
+                - link "¿Qué es Pinterest?" [ref=f16e77] [cursor=pointer]:
+                  - /url: https://www.pinterest.com/_/_/about/
+              - listitem [ref=f16e80]:
+                - link "Nuestro perfil de Pinterest" [ref=f16e81] [cursor=pointer]:
+                  - /url: https://www.pinterest.com/pinterest
+              - listitem [ref=f16e84]:
+                - link "Sala de prensa" [ref=f16e85] [cursor=pointer]:
+                  - /url: https://www.pinterest.com/_/_/newsroom/
+              - listitem [ref=f16e88]:
+                - link "Blog de ingeniería" [ref=f16e89] [cursor=pointer]:
+                  - /url: https://medium.com/pinterest-engineering
+              - listitem [ref=f16e92]:
+                - link "Empleos" [ref=f16e93] [cursor=pointer]:
+                  - /url: https://www.pinterestcareers.com/
+              - listitem [ref=f16e96]:
+                - link "Centro de asistencia" [ref=f16e97] [cursor=pointer]:
+                  - /url: https://help.pinterest.com/contact
+              - listitem [ref=f16e100]:
+                - link "Pinterest Labs" [ref=f16e101] [cursor=pointer]:
+                  - /url: https://www.pinterestlabs.com/
+          - list [ref=f16e102]:
+            - generic [ref=f16e103]:
+              - heading "Políticas" [level=3] [ref=f16e105]
+              - listitem [ref=f16e108]:
+                - link "Directrices para desarrolladores" [ref=f16e109] [cursor=pointer]:
+                  - /url: https://www.pinterest.com/_/_/policy/developer-guidelines
+              - listitem [ref=f16e112]:
+                - link "Términos de la API y de los desarrolladores" [ref=f16e113] [cursor=pointer]:
+                  - /url: /terms/
+              - generic [ref=f16e115]:
+                - listitem [ref=f16e117]:
+                  - link "Términos de Pinterest" [ref=f16e118] [cursor=pointer]:
+                    - /url: https://www.pinterest.com/_/_/policy/terms-of-service/
+                - text: "y"
+                - listitem [ref=f16e120]:
+                  - link "privacidad" [ref=f16e121] [cursor=pointer]:
+                    - /url: https://www.pinterest.com/_/_/policy/privacy-policy/
+              - generic [ref=f16e123]:
+                - listitem [ref=f16e125]:
+                  - link "Copyright" [ref=f16e126] [cursor=pointer]:
+                    - /url: https://www.pinterest.com/_/_/policy/copyright/
+                - text: "y"
+                - listitem [ref=f16e128]:
+                  - link "marca comercial" [ref=f16e129] [cursor=pointer]:
+                    - /url: https://www.pinterest.com/_/_/policy/trademark/
+          - list [ref=f16e130]:
+            - generic [ref=f16e131]:
+              - heading "Recursos" [level=3] [ref=f16e133]
+              - listitem [ref=f16e136]:
+                - link "Pinterest Partners" [ref=f16e137] [cursor=pointer]:
+                  - /url: https://business.pinterest.com/en/pinterest-partners
+              - listitem [ref=f16e140]:
+                - link "Pinterest Status" [ref=f16e141] [cursor=pointer]:
+                  - /url: https://www.pintereststatus.com/
+              - listitem [ref=f16e144]:
+                - link "Para empresas" [ref=f16e145] [cursor=pointer]:
+                  - /url: https://business.pinterest.com
+              - listitem [ref=f16e148]:
+                - link "Github" [ref=f16e149] [cursor=pointer]:
+                  - /url: http://github.com/pinterest/
+              - listitem [ref=f16e152]:
+                - link "Open source" [ref=f16e153] [cursor=pointer]:
+                  - /url: https://opensource.pinterest.com/
+              - listitem [ref=f16e156]:
+                - link "Stack Overflow" [ref=f16e157] [cursor=pointer]:
+                  - /url: http://stackoverflow.com/questions/tagged/pinterest
+              - listitem [ref=f16e160]:
+                - link "Facebook" [ref=f16e161] [cursor=pointer]:
+                  - /url: http://www.facebook.com/pinterest
+              - listitem [ref=f16e164]:
+                - link "Twitter" [ref=f16e165] [cursor=pointer]:
+                  - /url: http://twitter.com/pinterest/
+              - listitem [ref=f16e168]:
+                - link "YouTube" [ref=f16e169] [cursor=pointer]:
+                  - /url: http://www.youtube.com/pinterest
+      - generic [ref=f16e170]: © 2026 Pinterest

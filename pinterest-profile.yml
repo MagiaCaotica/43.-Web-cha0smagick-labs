@@ -1,0 +1,25 @@
+- generic [ref=e4]:
+  - banner:
+    - link "Saltar al contenido":
+      - /url: "#"
+    - navigation "Encabezado principal de navegación" [ref=e17]:
+      - button "Pinterest Pinterest Botón del menú desplegable de insignias dinámicas" [ref=e19] [cursor=pointer]
+      - button "Cha0smagick Labs Cha0smagick Labs Icono de flecha para cambiar de cuenta" [ref=e33] [cursor=pointer]
+      - button "Icono de búsqueda" [ref=e49] [cursor=pointer]
+      - link "Notificaciones" [ref=e58] [cursor=pointer]:
+        - /url: ""
+      - link "Mensajes" [ref=e68] [cursor=pointer]:
+        - /url: ""
+      - link "Tu perfil" [ref=e77] [cursor=pointer]:
+        - /url: /aquinteroru/
+      - button "Cuentas y más opciones" [ref=e89] [cursor=pointer]
+  - generic:
+    - complementary "Botones flotantes del pie de página":
+      - generic "Más" [ref=e99]
+  - main [ref=e105]:
+    - generic [ref=e109]:
+      - generic [ref=e111]
+      - tablist [ref=e183]
+      - list [ref=e211]
+  - generic:
+    - contentinfo "Pie de página"
