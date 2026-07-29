@@ -738,6 +738,56 @@ const appsData = [
             <h2>One-Time Purchase. Lifetime Access.</h2>
             <p><strong>Lucid Dream</strong> is available for a single payment of <strong>$3.99 USD</strong>. No subscriptions, no in-app purchases, no recurring fees. Take full control of your dreams. The portal awaits.</p>
         `
+    },
+    {
+        id: "noctem-tools",
+        name: "NOCTEM: Suite Profesional para la Investigación Paranormal",
+        price: "$14.99 USD",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp",
+        status: "available",
+        description: "NOCTEM: Suite Profesional para la Investigación Paranormal. Lleva tus investigaciones paranormales al nivel profesional con cámara SLS, grabadora EVP y suite de sensores. 👻",
+        image: "assets/images/noctemnobg.png",
+        seo: {
+            title: "NOCTEM: Suite Profesional para la Investigación Paranormal | App SLS Camera & EVP Recorder for Android",
+            description: "Descarga NOCTEM — la suite profesional para investigación paranormal en Android. Cámara SLS con ML Kit, grabadora EVP de alta fidelidad, monitoreo ambiental, brújula y gestión de evidencia. Compra única, sin suscripciones. Lleva tus investigaciones al nivel profesional.",
+            keywords: "paranormal investigation app, noctem, sls camera app, evp recorder, ghost hunting app, paranormal research tool, spirit box, ghost detector, android paranormal app, caza fantasmas app, investigación paranormal, emf detector, ml kit skeleton tracking, buy esoteric app, cha0smagick labs, urban exploration app"
+        },
+        screenshots: [],
+        detailedDescription: `
+            <h3>Lleva tus Investigaciones Paranormales al Nivel Profesional con NOCTEM</h3>
+            <p><strong>NOCTEM</strong> es una completa suite de herramientas diseñada específicamente para investigadores paranormales, exploradores urbanos y aficionados a la caza de fantasmas. Gracias a la tecnología móvil avanzada y el aprendizaje automático, NOCTEM conecta las técnicas de investigación tradicionales con el análisis digital moderno.</p>
+
+            <h4>⚠️ Tecnología Avanzada de Cámara SLS</h4>
+            <p>Experimenta el poder del seguimiento de esqueletos en tu dispositivo móvil. La cámara SLS (Stick Lens System) de NOCTEM utiliza Google ML Kit para detectar formas humanas y esqueletos en tiempo real. A diferencia de los radares de fantasmas básicos, NOCTEM analiza el entorno para mapear anomalías invisibles a simple vista, proporcionando una representación visual de posibles entidades.</p>
+
+            <h4>🎙️ Grabadora de EVP de Alta Fidelidad</h4>
+            <p>Captura fenómenos de voz electrónica (EVP) con nuestra herramienta de investigación de audio especializada. La grabadora de NOCTEM está optimizada para capturar vocalizaciones inexplicables en el entorno. Monitorea los niveles de audio en tiempo real y guarda evidencia de alta calidad directamente en tu dispositivo para su posterior análisis.</p>
+
+            <h4>🧭 Herramientas y Sensores para la Investigación Paranormal</h4>
+            <ul>
+                <li><strong>Monitoreo ambiental:</strong> Utiliza los sensores integrados de tu dispositivo para monitorear los cambios en el entorno.</li>
+                <li><strong>Contexto direccional:</strong> La brújula integrada y el etiquetado de ubicación te ayudan a identificar puntos clave y documentar con precisión dónde se capturó la evidencia.</li>
+                <li><strong>Análisis en tiempo real:</strong> Una interfaz limpia e intuitiva, diseñada para condiciones de poca luz, te permite concentrarte en tu investigación sin distracciones.</li>
+            </ul>
+
+            <h4>📂 Gestión de Evidencia</h4>
+            <p>Tu evidencia es tuya. Todas las fotos, videos y grabaciones de EVP se almacenan localmente en tu dispositivo. NOCTEM no sube tus datos a la nube, garantizando así la privacidad de tus investigaciones.</p>
+
+            <h4>Características Principales</h4>
+            <ul>
+                <li><strong>Cámara SLS en tiempo real:</strong> Mapeo esquelético avanzado y detección de postura con Google ML Kit.</li>
+                <li><strong>Captura de EVP de nivel profesional:</strong> Grabación de audio de alta sensibilidad para la comunicación con espíritus.</li>
+                <li><strong>Suite de investigación:</strong> Herramientas para el contexto, la orientación y el seguimiento ambiental de campos electromagnéticos (CEM).</li>
+                <li><strong>Gráficos profesionales:</strong> Una interfaz seria y profesional diseñada para investigadores reales, optimizada para condiciones de poca luz.</li>
+                <li><strong>Optimizado para Android 15:</strong> Desarrollado con los últimos estándares de CameraX y ML Kit para un rendimiento óptimo.</li>
+            </ul>
+
+            <h4>⚠️ Aviso Legal</h4>
+            <p>Dado que la actividad paranormal aún no puede probarse científicamente, no podemos garantizar que la aplicación se comunique con espíritus o fantasmas reales el 100% de las veces. Esta aplicación está destinada únicamente a la investigación paranormal. Úsela con responsabilidad y respete siempre los lugares que investigue.</p>
+
+            <h3>Una Compra. Acceso de por Vida.</h3>
+            <p>Descarga <strong>NOCTEM</strong> ahora por un pago único de <strong>$14.99 USD</strong>. Sin suscripciones, sin compras integradas. La noche te espera. 👻</p>
+        `
     }
 ];
 
