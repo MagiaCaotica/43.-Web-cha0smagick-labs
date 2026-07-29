@@ -1,1 +1,3 @@
-[2026-07-29T02:46:20.295Z] Plugin initialized: 0 commands []
+[2026-07-29T16:38:10.627Z] Plugin initialized: 0 commands []
+[2026-07-29T18:19:09.047Z] tool.before: callID=call_00_MnYxaovUNsZs8apgtgkc0028, cmd=undefined, desc="Find app roster structure", mainCmd=undefined
+[2026-07-29T18:19:09.531Z] tool.after: callID=call_00_MnYxaovUNsZs8apgtgkc0028, cmd=undefined, wasTracked=false
