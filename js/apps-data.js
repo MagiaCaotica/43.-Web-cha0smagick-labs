@@ -686,7 +686,7 @@ const appsData = [
         price: "$3.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer",
         status: "available",
-        description: "Aprende a tener sueños lúcidos, lleva un registro de tus sueños y domina la proyección astral. 🌙",
+        description: "Learn to have lucid dreams, keep a dream journal, and master astral projection. 🌙",
         image: "assets/images/luciddreamer.png",
         seo: {
             title: "Lucid Dream: Astral Projection & Lucid Dreaming App | Binaural Beats, Dream Journal for Android",
