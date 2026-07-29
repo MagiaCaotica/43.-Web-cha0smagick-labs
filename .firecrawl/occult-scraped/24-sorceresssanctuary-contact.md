@@ -1,0 +1,10 @@
+Something went wrong.
+
+### What happened?
+
+404 Not Found
+
+
+### What can I do?
+
+- Return to the previous page.

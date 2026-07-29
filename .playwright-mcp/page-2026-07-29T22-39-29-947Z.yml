@@ -1,0 +1,83 @@
+- generic [ref=f14e2]:
+  - generic [ref=f14e3]:
+    - link "Skip to content" [ref=f14e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global navigation menu" [ref=f14e8]:
+      - generic [ref=f14e9]:
+        - generic [ref=f14e10]:
+          - button "Open menu" [ref=f14e12] [cursor=pointer]
+          - link "Homepage (g then d)" [ref=f14e15] [cursor=pointer]:
+            - /url: /
+        - button "Search or jump to…" [ref=f14e21] [cursor=pointer]:
+          - generic [ref=f14e23]:
+            - generic:
+              - text: Type
+              - generic: /
+              - text: to search
+        - generic [ref=f14e24]:
+          - generic [ref=f14e25]:
+            - generic [ref=f14e28]:
+              - link "Chat with Copilot" [ref=f14e30] [cursor=pointer]:
+                - /url: /copilot
+              - button "Open Copilot…" [ref=f14e35] [cursor=pointer]
+            - button "Create new..." [ref=f14e37] [cursor=pointer]
+            - generic [ref=f14e39]:
+              - link "All issues (g then i)" [ref=f14e40] [cursor=pointer]:
+                - /url: /issues
+              - link "All pull requests (g then p)" [ref=f14e44] [cursor=pointer]:
+                - /url: /pulls
+              - link "All repositories" [ref=f14e47] [cursor=pointer]:
+                - /url: /repos
+          - link "You have no unread notifications (g then n)" [ref=f14e50] [cursor=pointer]:
+            - /url: /notifications
+          - button "Open user navigation menu" [ref=f14e54] [cursor=pointer]:
+            - img "Cha0smagick" [ref=f14e55]
+  - main [ref=f14e58]:
+    - generic [ref=f14e59]:
+      - img "giscus" [ref=f14e61]
+      - heading "Install giscus" [level=1] [ref=f14e62]
+      - paragraph [ref=f14e63]: Where do you want to install giscus?
+      - generic [ref=f14e65]:
+        - link [ref=f14e66] [cursor=pointer]:
+          - /url: https://github.com/apps/giscus/installations/new/permissions?target_id=8458022&target_type=User
+          - img "@Cha0smagick" [ref=f14e70]
+          - text: Cha0smagick
+        - link [ref=f14e71] [cursor=pointer]:
+          - /url: https://github.com/apps/giscus/installations/new/permissions?target_id=292592239&target_type=Organization
+          - img "@d-lers" [ref=f14e75]
+          - text: d-lers
+  - contentinfo [ref=f14e76]:
+    - heading "Footer" [level=2] [ref=f14e77]
+    - generic [ref=f14e78]:
+      - generic [ref=f14e79]:
+        - link "GitHub Homepage" [ref=f14e80] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f14e83]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f14e84]:
+        - heading "Footer navigation" [level=3] [ref=f14e85]
+        - list "Footer navigation" [ref=f14e86]:
+          - listitem [ref=f14e87]:
+            - link "Terms" [ref=f14e88] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f14e89]:
+            - link "Privacy" [ref=f14e90] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f14e91]:
+            - link "Security" [ref=f14e92] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f14e93]:
+            - link "Status" [ref=f14e94] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f14e95]:
+            - link "Community" [ref=f14e96] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f14e97]:
+            - link "Docs" [ref=f14e98] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f14e99]:
+            - link "Contact" [ref=f14e100] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f14e101]:
+            - button "Manage cookies" [ref=f14e103] [cursor=pointer]
+          - listitem [ref=f14e104]:
+            - button "Do not share my personal information" [ref=f14e106] [cursor=pointer]

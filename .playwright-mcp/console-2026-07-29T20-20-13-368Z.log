@@ -1,0 +1,5 @@
+[    1096ms] [WARNING] [Meta Pixel] - Duplicate Pixel ID: 930987978489178. @ https://connect.facebook.net/en_US/fbevents.js:187
+[    8642ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://d.adroll.com/cm/index/out?af0=5562f0f4&adroll_fpc=9d15874fe65af19018341b0804ed50fb-1785259217587&pv=40729293102.378716&arrfrr=https%3A%2F%2Fdashboard.mailerlite.com%2Fautomations%2Fstatus%2Fworkflows&advertisable=7LB2ILMLV5HCZLHMN6LMKV:0
+[    8727ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://d.adroll.com/cm/equativ/out?af0=5562f0f4&adroll_fpc=9d15874fe65af19018341b0804ed50fb-1785259217587&pv=40729293102.378716&arrfrr=https%3A%2F%2Fdashboard.mailerlite.com%2Fautomations%2Fstatus%2Fworkflows&advertisable=7LB2ILMLV5HCZLHMN6LMKV:0
+[    9280ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://api.canny.io/api/users/identify:0
+[    9280ms] [WARNING] Canny: Something went wrong identifying user:  server error @ https://canny.io/sdk.js:0

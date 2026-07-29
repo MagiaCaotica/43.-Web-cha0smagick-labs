@@ -1,0 +1,24 @@
+- generic [ref=f55e3]:
+  - paragraph
+  - paragraph [ref=f55e4]:
+    - strong [ref=f55e5]: Cha0smagick LABS
+  - paragraph [ref=f55e6]: Kalle Falsa 123, bogotaColombia
+  - paragraph [ref=f55e7]: You received this email because you signed up on our website or made a purchase from us.
+  - link [ref=f55e8] [cursor=pointer]:
+    - /url: https://t.me/magiacaotica
+    - img "telegram" [ref=f55e9]
+  - link [ref=f55e10] [cursor=pointer]:
+    - /url: https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA
+    - img "youtube" [ref=f55e11]
+  - link [ref=f55e12] [cursor=pointer]:
+    - /url: https://www.instagram.com/cha0smagick.labs/
+    - img "instagram" [ref=f55e13]
+  - link [ref=f55e14] [cursor=pointer]:
+    - /url: https://discord.gg/6vNSCaPgPd
+    - img "discord" [ref=f55e15]
+  - paragraph [ref=f55e16]:
+    - link "Unsubscribe" [ref=f55e17] [cursor=pointer]:
+      - /url: ""
+  - link [ref=f55e18] [cursor=pointer]:
+    - /url: https://www.mailerlite.com
+    - img "Sent by MailerLite" [ref=f55e19]

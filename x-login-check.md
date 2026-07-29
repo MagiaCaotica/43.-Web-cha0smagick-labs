@@ -1,0 +1,421 @@
+- generic [active] [ref=f40e1]:
+  - generic [ref=f40e2]:
+    - generic:
+      - generic:
+        - heading "To view keyboard shortcuts, press question mark View keyboard shortcuts" [level=2] [ref=f40e3]:
+          - generic [ref=f40e4]: To view keyboard shortcuts, press question mark
+          - link "View keyboard shortcuts" [ref=f40e5] [cursor=pointer]:
+            - /url: /i/keyboard_shortcuts
+        - generic:
+          - generic:
+            - button "Grok" [ref=f40e6] [cursor=pointer]
+            - button "Chat" [ref=f40e10] [cursor=pointer]
+        - generic [ref=f40e14]:
+          - button "Skip to home timeline" [ref=f40e15] [cursor=pointer]
+          - button "Skip to trending" [ref=f40e17] [cursor=pointer]
+          - banner [ref=f40e19]:
+            - generic [ref=f40e21]:
+              - generic [ref=f40e22]:
+                - heading [level=1] [ref=f40e24] [cursor=pointer]:
+                  - link "X" [ref=f40e25]:
+                    - /url: /home
+                - navigation "Primary" [ref=f40e31]:
+                  - link "Home" [ref=f40e32] [cursor=pointer]:
+                    - /url: /home
+                  - link "Search and explore" [ref=f40e39] [cursor=pointer]:
+                    - /url: /explore
+                    - generic [ref=f40e40]: Explore
+                  - link "Notifications" [ref=f40e46] [cursor=pointer]:
+                    - /url: /notifications
+                  - link "Follow" [ref=f40e53] [cursor=pointer]:
+                    - /url: /i/connect_people
+                  - link "Direct Messages" [ref=f40e60] [cursor=pointer]:
+                    - /url: /i/chat
+                    - generic [ref=f40e61]: Chat
+                  - link "Grok" [ref=f40e67] [cursor=pointer]:
+                    - /url: /i/grok
+                    - generic [ref=f40e68]:
+                      - generic "undefined unread items" [ref=f40e73]
+                      - generic [ref=f40e74]: Grok
+                  - link "Profile" [ref=f40e75] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                  - button "More menu items" [ref=f40e82] [cursor=pointer]:
+                    - generic [ref=f40e83]: More
+                - link "Post" [ref=f40e90] [cursor=pointer]:
+                  - /url: /compose/post
+              - button "Account menu" [ref=f40e99] [cursor=pointer]:
+                - generic [ref=f40e107]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic "ChaosmagickLabs":
+                          - img "ChaosmagickLabs"
+                - generic [ref=f40e111]:
+                  - generic [ref=f40e112]: ChaosmagickLabs
+                  - generic [ref=f40e116]: "@Cha0smagickLABS"
+          - main [ref=f40e124]:
+            - generic [ref=f40e127]:
+              - generic "Home timeline" [ref=f40e129]:
+                - generic [ref=f40e130]:
+                  - generic [ref=f40e133]:
+                    - navigation [ref=f40e292]:
+                      - generic [ref=f40e293]:
+                        - generic:
+                          - button "Previous" [disabled]
+                        - tablist [ref=f40e295]:
+                          - tab "For you" [selected] [ref=f40e296] [cursor=pointer]
+                          - tab "Following" [ref=f40e301] [cursor=pointer]
+                          - tab "Movies & TV" [ref=f40e305] [cursor=pointer]
+                          - tab "Memes" [ref=f40e309] [cursor=pointer]
+                          - tab "Pets" [ref=f40e313] [cursor=pointer]
+                        - generic:
+                          - button "Next" [disabled]
+                    - button "Manage timelines" [ref=f40e149] [cursor=pointer]
+                  - generic:
+                    - generic:
+                      - status:
+                        - button:
+                          - generic: See new posts
+                - generic [ref=f40e323]:
+                  - link [ref=f40e332] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic "ChaosmagickLabs":
+                            - img "ChaosmagickLabs"
+                  - generic [ref=f40e335]:
+                    - generic [ref=f40e353]:
+                      - generic [ref=f40e354]: What’s happening?
+                      - textbox "Post text" [ref=f40e357]
+                    - generic [ref=f40e364]:
+                      - navigation [ref=f40e365]:
+                        - generic [ref=f40e366]:
+                          - generic:
+                            - button "Previous" [disabled]
+                          - tablist [ref=f40e368]:
+                            - generic [ref=f40e371]:
+                              - button "Add photos or video" [ref=f40e372] [cursor=pointer]
+                              - button "Choose File" [ref=f40e378]
+                            - button "Add a GIF" [ref=f40e381] [cursor=pointer]
+                            - button "Generate image" [ref=f40e389] [cursor=pointer]
+                            - button "Add poll" [ref=f40e396] [cursor=pointer]
+                            - button "Add emoji" [ref=f40e404] [cursor=pointer]
+                            - button "Schedule post" [ref=f40e412] [cursor=pointer]
+                            - button "Tag location" [disabled] [ref=f40e419]
+                            - button "Content disclosure" [ref=f40e426] [cursor=pointer]
+                          - generic:
+                            - button "Next" [disabled]
+                      - button "Post" [disabled] [ref=f40e433]
+                - region [ref=f40e437]:
+                  - heading "Your Home Timeline" [level=1] [ref=f40e438]
+                  - 'generic "Timeline: Your Home Timeline" [ref=f40e439]':
+                    - generic [ref=f40e440]:
+                      - article "Sismologico Nacional Verified account @SismologicoMX 3 hours ago Up to 08:00 hours on July 29, 2026, 1,141 aftershocks have been recorded from the M 7.4 earthquake that occurred in Ciudad Hidalgo, Chiapas on July 17, 2026, the largest of magnitude M 6.5. 3 reposts, 42 likes, 53283 views" [ref=f40e444] [cursor=pointer]:
+                        - generic [ref=f40e450]:
+                          - link [ref=f40e462]:
+                            - /url: /SismologicoMX
+                          - generic [ref=f40e465]:
+                            - generic [ref=f40e467]:
+                              - generic [ref=f40e470]:
+                                - link "Sismologico Nacional Verified account" [ref=f40e473]:
+                                  - /url: /SismologicoMX
+                                  - generic [ref=f40e474]:
+                                    - generic [ref=f40e475]: Sismologico Nacional
+                                    - img "Verified account" [ref=f40e479]
+                                - generic [ref=f40e483]:
+                                  - link "@SismologicoMX" [ref=f40e485]:
+                                    - /url: /SismologicoMX
+                                  - generic [ref=f40e487]: ·
+                                  - link "3 hours ago" [ref=f40e489]:
+                                    - /url: /SismologicoMX/status/2082484393847738493
+                                    - time [ref=f40e490]: 3h
+                              - generic [ref=f40e492]:
+                                - button "Grok actions" [ref=f40e494]
+                                - button "More" [ref=f40e505]
+                            - generic [ref=f40e512]:
+                              - generic [ref=f40e513]:
+                                - generic [ref=f40e517]: Translated from Spanish
+                                - button "Show original" [ref=f40e518]
+                              - generic [ref=f40e522]: Up to 08:00 hours on July 29, 2026, 1,141 aftershocks have been recorded from the M 7.4 earthquake that occurred in Ciudad Hidalgo, Chiapas on July 17, 2026, the largest of magnitude M 6.5.
+                            - group "3 reposts, 42 likes, 53283 views" [ref=f40e525]:
+                              - button "0 Replies. Reply" [ref=f40e527]
+                              - button "3 reposts. Repost" [ref=f40e538]:
+                                - generic [ref=f40e539]: "3"
+                              - button "42 Likes. Like" [ref=f40e549]:
+                                - generic [ref=f40e550]: "42"
+                              - link "53283 views. View post analytics" [ref=f40e560]:
+                                - /url: /SismologicoMX/status/2082484393847738493/analytics
+                                - generic [ref=f40e561]: 53K
+                              - button "Bookmark" [ref=f40e571]
+                              - button "Share post" [ref=f40e580]
+                      - article "Netflix Verified account @netflix Jul 28 OBX. THE FINAL TRAILER. TOMORROW. Embedded video 0:10 147 replies, 1098 reposts, 10017 likes, 597 bookmarks, 896849 views" [ref=f40e590] [cursor=pointer]:
+                        - generic [ref=f40e596]:
+                          - link [ref=f40e608]:
+                            - /url: /netflix
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic "Square profile picture":
+                                    - img "Square profile picture"
+                          - generic [ref=f40e611]:
+                            - generic [ref=f40e613]:
+                              - generic [ref=f40e616]:
+                                - link "Netflix Verified account" [ref=f40e619]:
+                                  - /url: /netflix
+                                  - generic [ref=f40e620]:
+                                    - generic [ref=f40e621]: Netflix
+                                    - img "Verified account" [ref=f40e625]
+                                - generic [ref=f40e632]:
+                                  - link "@netflix" [ref=f40e634]:
+                                    - /url: /netflix
+                                  - generic [ref=f40e636]: ·
+                                  - link "Jul 28" [ref=f40e638]:
+                                    - /url: /netflix/status/2082164183009775784
+                                    - time [ref=f40e639]: Jul 28
+                              - generic [ref=f40e641]:
+                                - button "Grok actions" [ref=f40e643]
+                                - button "More" [ref=f40e654]
+                            - generic [ref=f40e661]: OBX. THE FINAL TRAILER. TOMORROW.
+                            - generic [ref=f40e679]:
+                              - generic "Embedded video" [ref=f40e682]
+                              - generic [ref=f40e683]: 0:10
+                            - group "147 replies, 1098 reposts, 10017 likes, 597 bookmarks, 896849 views" [ref=f40e691]:
+                              - button "147 Replies. Reply" [ref=f40e693]:
+                                - generic [ref=f40e694]: "147"
+                              - button "1098 reposts. Repost" [ref=f40e704]:
+                                - generic [ref=f40e705]: 1K
+                              - button "10017 Likes. Like" [ref=f40e715]:
+                                - generic [ref=f40e716]: 10K
+                              - link "896849 views. View post analytics" [ref=f40e726]:
+                                - /url: /netflix/status/2082164183009775784/analytics
+                                - generic [ref=f40e727]: 896K
+                              - button "Bookmark" [ref=f40e737]
+                              - button "Share post" [ref=f40e746]
+                      - 'article "Apple TV Verified account @AppleTV Jul 27 The Bowdens are coming apart at the seams. #CapeFear Embedded video Play Video. 27 seconds long 26 replies, 59 reposts, 514 likes, 48 bookmarks, 166992 views" [ref=f40e756] [cursor=pointer]':
+                        - generic [ref=f40e762]:
+                          - link [ref=f40e774]:
+                            - /url: /AppleTV
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic "Square profile picture":
+                                    - img "Square profile picture"
+                          - generic [ref=f40e777]:
+                            - generic [ref=f40e779]:
+                              - generic [ref=f40e782]:
+                                - link "Apple TV Verified account" [ref=f40e785]:
+                                  - /url: /AppleTV
+                                  - generic [ref=f40e786]:
+                                    - generic [ref=f40e787]: Apple TV
+                                    - img "Verified account" [ref=f40e791]
+                                - generic [ref=f40e798]:
+                                  - link "@AppleTV" [ref=f40e800]:
+                                    - /url: /AppleTV
+                                  - generic [ref=f40e802]: ·
+                                  - link "Jul 27" [ref=f40e804]:
+                                    - /url: /AppleTV/status/2081833893049888996
+                                    - time [ref=f40e805]: Jul 27
+                              - generic [ref=f40e807]:
+                                - button "Grok actions" [ref=f40e809]
+                                - button "More" [ref=f40e820]
+                            - generic [ref=f40e828]:
+                              - text: The Bowdens are coming apart at the seams.
+                              - link "#CapeFear" [ref=f40e830]:
+                                - /url: /hashtag/CapeFear?src=hashtag_click
+                            - generic [ref=f40e847]:
+                              - generic "Embedded video" [ref=f40e850]
+                              - button "Play Video. 27 seconds long" [ref=f40e857]
+                            - group "26 replies, 59 reposts, 514 likes, 48 bookmarks, 166992 views" [ref=f40e864]:
+                              - button "26 Replies. Reply" [ref=f40e866]:
+                                - generic [ref=f40e867]: "26"
+                              - button "59 reposts. Repost" [ref=f40e877]:
+                                - generic [ref=f40e878]: "59"
+                              - button "514 Likes. Like" [ref=f40e888]:
+                                - generic [ref=f40e889]: "514"
+                              - link "166992 views. View post analytics" [ref=f40e899]:
+                                - /url: /AppleTV/status/2081833893049888996/analytics
+                                - generic [ref=f40e900]: 166K
+                              - button "Bookmark" [ref=f40e910]
+                              - button "Share post" [ref=f40e919]
+                      - 'article "Peacock Verified account @peacock Jul 28 Only two days until launch. Grab your crew and get ready. #SuperMarioGalaxyMovie arrives July 30 on Peacock. Embedded video Play Video. 15 seconds long 5 replies, 75 reposts, 397 likes, 47 bookmarks, 57397 views" [ref=f40e929] [cursor=pointer]':
+                        - generic [ref=f40e935]:
+                          - link [ref=f40e947]:
+                            - /url: /peacock
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic "Square profile picture":
+                                    - img "Square profile picture"
+                          - generic [ref=f40e950]:
+                            - generic [ref=f40e952]:
+                              - generic [ref=f40e955]:
+                                - link "Peacock Verified account" [ref=f40e958]:
+                                  - /url: /peacock
+                                  - generic [ref=f40e959]:
+                                    - generic [ref=f40e960]: Peacock
+                                    - img "Verified account" [ref=f40e964]
+                                - generic [ref=f40e971]:
+                                  - link "@peacock" [ref=f40e973]:
+                                    - /url: /peacock
+                                  - generic [ref=f40e975]: ·
+                                  - link "Jul 28" [ref=f40e977]:
+                                    - /url: /peacock/status/2082119215423615148
+                                    - time [ref=f40e978]: Jul 28
+                              - generic [ref=f40e980]:
+                                - button "Grok actions" [ref=f40e982]
+                                - button "More" [ref=f40e993]
+                            - generic [ref=f40e1001]:
+                              - text: Only two days until launch. Grab your crew and get ready.
+                              - link "#SuperMarioGalaxyMovie" [ref=f40e1003]:
+                                - /url: /hashtag/SuperMarioGalaxyMovie?src=hashtag_click
+                              - text: arrives July 30 on Peacock.
+                            - generic [ref=f40e1020]:
+                              - generic "Embedded video" [ref=f40e1023]
+                              - button "Play Video. 15 seconds long" [ref=f40e1030]
+                            - group "5 replies, 75 reposts, 397 likes, 47 bookmarks, 57397 views" [ref=f40e1037]:
+                              - button "5 Replies. Reply" [ref=f40e1039]:
+                                - generic [ref=f40e1040]: "5"
+                              - button "75 reposts. Repost" [ref=f40e1050]:
+                                - generic [ref=f40e1051]: "75"
+                              - button "397 Likes. Like" [ref=f40e1061]:
+                                - generic [ref=f40e1062]: "397"
+                              - link "57397 views. View post analytics" [ref=f40e1072]:
+                                - /url: /peacock/status/2082119215423615148/analytics
+                                - generic [ref=f40e1073]: 57K
+                              - button "Bookmark" [ref=f40e1083]
+                              - button "Share post" [ref=f40e1092]
+              - generic "Trending" [ref=f40e230]:
+                - generic [ref=f40e231]:
+                  - search "Search" [ref=f40e236]:
+                    - combobox "Search query" [ref=f40e248]
+                  - complementary "Subscribe to Premium" [ref=f40e252]:
+                    - generic [ref=f40e255]: Get rid of ads, see your analytics, boost your replies and unlock 20+ features.
+                    - link "Subscribe" [ref=f40e256] [cursor=pointer]:
+                      - /url: /i/premium_sign_up
+                  - generic [ref=f40e1102]:
+                    - heading "Today’s News Close" [level=2] [ref=f40e1104]:
+                      - generic [ref=f40e1105]: Today’s News
+                      - button "Close" [ref=f40e1108] [cursor=pointer]
+                    - generic [ref=f40e1113]:
+                      - 'link "Zendaya and Tom Holland Shine at Spider-Man: Brand New Day UK Premiere Trending now · Entertainment · 5,525 posts" [ref=f40e1114] [cursor=pointer]':
+                        - generic [ref=f40e1117]:
+                          - generic [ref=f40e1118]: "Zendaya and Tom Holland Shine at Spider-Man: Brand New Day UK Premiere"
+                          - generic [ref=f40e1119]: Trending now · Entertainment · 5,525 posts
+                      - link "Heated Rivalry Stars Storrie and Williams Spotted Together in Toronto Trending now · Entertainment · 6,606 posts" [ref=f40e1158] [cursor=pointer]:
+                        - generic [ref=f40e1161]:
+                          - generic [ref=f40e1162]: Heated Rivalry Stars Storrie and Williams Spotted Together in Toronto
+                          - generic [ref=f40e1163]: Trending now · Entertainment · 6,606 posts
+                      - link "EA SPORTS FC 27 Overhauls Gameplay for Manual Skill Focus 3 hours ago · Sports · 3,738 posts" [ref=f40e1202] [cursor=pointer]:
+                        - generic [ref=f40e1205]:
+                          - generic [ref=f40e1206]: EA SPORTS FC 27 Overhauls Gameplay for Manual Skill Focus
+                          - generic [ref=f40e1207]: 3 hours ago · Sports · 3,738 posts
+                  - region [ref=f40e1246]:
+                    - heading "Trending now" [level=1] [ref=f40e1247]
+                    - 'generic "Timeline: Trending now" [ref=f40e1248]':
+                      - generic [ref=f40e1249]:
+                        - heading "What’s happening" [level=2] [ref=f40e1253]
+                        - link "Siente La Pasión Apuesta por tu equipo favorito Promoted by BetPlay More" [ref=f40e1257] [cursor=pointer]:
+                          - generic [ref=f40e1258]:
+                            - generic [ref=f40e1259]: Siente La Pasión
+                            - generic [ref=f40e1260]: Apuesta por tu equipo favorito
+                            - generic [ref=f40e1261]: Promoted by BetPlay
+                            - button "More" [ref=f40e1269]
+                        - link "Trending in Colombia Brutal More" [ref=f40e1278] [cursor=pointer]:
+                          - generic [ref=f40e1279]:
+                            - generic [ref=f40e1280]: Trending in Colombia
+                            - generic [ref=f40e1282]: Brutal
+                            - button "More" [ref=f40e1285]
+                        - link "Trending in Colombia Felices 501 More" [ref=f40e1294] [cursor=pointer]:
+                          - generic [ref=f40e1295]:
+                            - generic [ref=f40e1296]: Trending in Colombia
+                            - generic [ref=f40e1298]: Felices 501
+                            - button "More" [ref=f40e1301]
+                        - link "Trending in Colombia Faltan 9 More" [ref=f40e1310] [cursor=pointer]:
+                          - generic [ref=f40e1311]:
+                            - generic [ref=f40e1312]: Trending in Colombia
+                            - generic [ref=f40e1314]: Faltan 9
+                            - button "More" [ref=f40e1317]
+                        - link "Show more" [ref=f40e1326] [cursor=pointer]:
+                          - /url: /explore/tabs/for-you
+                  - complementary "Who to follow" [ref=f40e1328]:
+                    - heading "Who to follow" [level=2] [ref=f40e1330]
+                    - list [ref=f40e1332]:
+                      - listitem [ref=f40e1333] [cursor=pointer]:
+                        - generic [ref=f40e1334]:
+                          - link [ref=f40e1344]:
+                            - /url: /Avengers
+                          - generic [ref=f40e1348]:
+                            - generic [ref=f40e1350]:
+                              - link [ref=f40e1352]:
+                                - /url: /Avengers
+                                - generic [ref=f40e1353]:
+                                  - generic [ref=f40e1354]: Avengers
+                                  - generic [ref=f40e1357]:
+                                    - img "Verified account" [ref=f40e1358]
+                                    - link [ref=f40e1364]
+                              - link "@Avengers" [ref=f40e1373]:
+                                - /url: /Avengers
+                            - button "Follow @Avengers" [ref=f40e1377]:
+                              - generic [ref=f40e1378]: Follow
+                      - listitem [ref=f40e1381] [cursor=pointer]:
+                        - generic [ref=f40e1382]:
+                          - link [ref=f40e1392]:
+                            - /url: /streamonmax
+                          - generic [ref=f40e1396]:
+                            - generic [ref=f40e1398]:
+                              - link [ref=f40e1400]:
+                                - /url: /streamonmax
+                                - generic [ref=f40e1401]:
+                                  - generic [ref=f40e1402]: hbo max fka
+                                  - img "Verified account" [ref=f40e1406]
+                              - link "@streamonmax" [ref=f40e1414]:
+                                - /url: /streamonmax
+                            - button "Follow @streamonmax" [ref=f40e1418]:
+                              - generic [ref=f40e1419]: Follow
+                      - listitem [ref=f40e1422] [cursor=pointer]:
+                        - generic [ref=f40e1423]:
+                          - link [ref=f40e1433]:
+                            - /url: /NatGeo
+                          - generic [ref=f40e1437]:
+                            - generic [ref=f40e1439]:
+                              - link [ref=f40e1441]:
+                                - /url: /NatGeo
+                                - generic [ref=f40e1442]:
+                                  - generic [ref=f40e1443]: National Geographic
+                                  - img "Verified account" [ref=f40e1447]
+                              - link "@NatGeo" [ref=f40e1455]:
+                                - /url: /NatGeo
+                            - button "Follow @NatGeo" [ref=f40e1459]:
+                              - generic [ref=f40e1460]: Follow
+                    - link "Show more" [ref=f40e1463] [cursor=pointer]:
+                      - /url: /i/connect_people?user_id=2082185111257194496
+                  - generic [ref=f40e1468]:
+                    - iframe [ref=f40e1471]:
+                      - iframe [ref=f48e5]:
+                        
+                    - button "More" [ref=f40e1474] [cursor=pointer]
+                  - navigation "Footer" [ref=f40e270]:
+                    - generic [ref=f40e271]:
+                      - link "Terms" [ref=f40e272] [cursor=pointer]:
+                        - /url: https://x.com/tos
+                      - generic [ref=f40e273]: ·
+                    - generic [ref=f40e274]:
+                      - link "Privacy" [ref=f40e275] [cursor=pointer]:
+                        - /url: https://x.com/privacy
+                      - generic [ref=f40e276]: ·
+                    - generic [ref=f40e277]:
+                      - link "Cookies" [ref=f40e278] [cursor=pointer]:
+                        - /url: https://support.x.com/articles/20170514
+                      - generic [ref=f40e279]: ·
+                    - generic [ref=f40e280]:
+                      - link "Accessibility" [ref=f40e281] [cursor=pointer]:
+                        - /url: https://help.x.com/resources/accessibility
+                      - generic [ref=f40e282]: ·
+                    - generic [ref=f40e283]:
+                      - link "Ads Info" [ref=f40e284] [cursor=pointer]:
+                        - /url: https://business.x.com/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo
+                      - generic [ref=f40e285]: ·
+                    - button "More" [ref=f40e286] [cursor=pointer]
+                    - generic [ref=f40e291]: © 2026 X Corp.
+  - region "Notifications alt+T"

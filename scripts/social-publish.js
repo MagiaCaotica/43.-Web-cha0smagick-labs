@@ -44,16 +44,16 @@ const PIN_CALENDAR = [
 // =============================================
 const TWEET_CALENDAR = [
   // App promotion tweets
-  '🌀 Your mind is the most powerful tool in the universe. Train it with PSI GYM — the professional Zener card ESP trainer. → https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards #ESP #PsychicTraining',
+   '🌀 Your mind is the most powerful tool in the universe. Train it with PSI GYM — the professional Zener card ESP trainer. → https://cha0smagicklabs.com/apps/psi-gym.html #ESP #PsychicTraining',
   
-  '🃏 Full Rider Waite Tarot deck on your Android. 78 cards, 12 spreads, card meanings, daily draws. No subscriptions, one-time purchase. → https://play.google.com/store/apps/details?id=com.cha0smagicklabs.unofficialriderwaitetarot #Tarot #Divination',
+   '🃏 Full Rider Waite Tarot deck on your Android. 78 cards, 12 spreads, card meanings, daily draws. No subscriptions, one-time purchase. → https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html #Tarot #Divination',
   
-  'ᚱ The Elder Futhark speaks. 24 runes of power and wisdom. Norse Rune Oracle app — professional rune readings on Android. → https://play.google.com/store/apps/details?id=com.cha0smagicklabs.norseruneoracle #Runes #Norse',
+   'ᚱ The Elder Futhark speaks. 24 runes of power and wisdom. Norse Rune Oracle app — professional rune readings on Android. → https://cha0smagicklabs.com/apps/norse-rune-oracle.html #Runes #Norse',
   
-  '🌙 Lucid dreaming is a skill you can learn. Dream Machine + Lucid Dream apps — reality checks, dream journals, astral projection. → https://play.google.com/store/apps/details?id=com.cha0smagicklabs.dreammachine #LucidDreaming #AstralProjection',
+   '🌙 Lucid dreaming is a skill you can learn. Dream Machine + Lucid Dream apps — reality checks, dream journals, astral projection. → https://cha0smagicklabs.com/apps/dream-machine.html #LucidDreaming #AstralProjection',
   
   // Educational tweets
-  'Sigil magick 101: Write your intention. Remove the vowels. Turn the remaining letters into a symbol. Charge it with gnosis. Release it to the universe. Simple. Powerful. → Free tool: https://cha0smagicklabs.com/tools/sigil-generator.html',
+   'Sigil magick 101: Write your intention. Remove the vowels. Turn the remaining letters into a symbol. Charge it with gnosis. Release it to the universe. Simple. Powerful. → https://cha0smagicklabs.com/apps/chaos-sigil-generator.html',
   
   'The difference between a thought and a spell? Focus. Intention. Will. Every witch knows this. New to the craft? Start here → https://cha0smagicklabs.com/blog/witchcraft-for-beginners-guide.html #Witchcraft #BeginnerWitch',
   
@@ -79,32 +79,32 @@ const TWEET_CALENDAR = [
   // Value tweets
   'The 7 Hermetic Principles applied to everyday life: 1) Mentalism 2) Correspondence 3) Vibration 4) Polarity 5) Rhythm 6) Cause & Effect 7) Gender. Which one resonates today?',
   
-  'Your natal chart is not your destiny — it\'s your starting point. Astral Lab app: professional astrology on Android. → https://cha0smagicklabs.com/pages/app-details.html?id=astral-lab',
+   'Your natal chart is not your destiny — it\'s your starting point. Astral Lab app: professional astrology on Android. → https://cha0smagicklabs.com/apps/astral-lab.html',
   
   // Weekend engagement
   'This weekend: 1) Draw a tarot card 2) Light a candle 3) Write one sigil 4) Record your dream. Small practice, big results.',
   
-  'Arcana Goetia: The complete Ars Goetia grimoire with all 72 spirit sigils on your Android. Summon, banish, and work with the spirits. → https://play.google.com/store/apps/details?id=com.cha0smagicklabs.goetia #Goetia #Occult',
+   'Arcana Goetia: The complete Ars Goetia grimoire with all 72 spirit sigils on your Android. Summon, banish, and work with the spirits. → https://cha0smagicklabs.com/apps/arcana-goetia.html #Goetia #Occult',
   
-  'The I Ching has been used for 3000+ years. Still accurate. Still profound. Still free. → https://cha0smagicklabs.com/tools/iching.html #IChing #Divination',
+   'The I Ching has been used for 3000+ years. Still accurate. Still profound. Still free. → https://cha0smagicklabs.com/apps/iching-oracle.html #IChing #Divination',
   
   'New: Complete witchcraft guide for beginners. 6 types of witchcraft, 5 beginner spells, 6-minute daily practice. → https://cha0smagicklabs.com/blog/witchcraft-for-beginners-guide.html',
   
-  'What\'s your moon sign? Not sure? Astral Lab can calculate your full natal chart in seconds. → https://cha0smagicklabs.com/pages/app-details.html?id=astral-lab',
+   'What\'s your moon sign? Not sure? Astral Lab can calculate your full natal chart in seconds. → https://cha0smagicklabs.com/apps/astral-lab.html',
   
-  'Every sigil is a contract between you and the universe. Write it. Charge it. Forge it. The sigil generator makes it easy. → https://cha0smagicklabs.com/tools/sigil-generator.html',
+   'Every sigil is a contract between you and the universe. Write it. Charge it. Forge it. The Chaos Sigil Generator makes it easy. → https://cha0smagicklabs.com/apps/chaos-sigil-generator.html',
   
   'Dream recall tip: Keep a notebook by your bed. Write immediately upon waking. Within a week, you\'ll remember 3x more dreams.',
   
-  'Eerie Roads: Mysterious Paths — a unique app exploring liminal spaces, liminality, and the uncanny. $9.99 one-time. → https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads',
+   'Eerie Roads: Mysterious Paths — a unique app exploring liminal spaces, liminality, and the uncanny. $9.99 one-time. → https://cha0smagicklabs.com/apps/eerieroads.html',
   
   'Hot take: The best magickal tool is the one you actually use. Not the most expensive. Not the rarest. The one in your hand today.',
   
   'Free occult library: blog/ has 134+ articles on chaos magick, tarot, runes, astrology, lucid dreaming, witchcraft, and more. All free. https://cha0smagicklabs.com/blog/',
   
-  'Moon phase right now: Check the current lunar phase and plan your rituals accordingly. → https://cha0smagicklabs.com/tools/lunar-phase.html',
+   'Moon phase right now: Check the current lunar phase and plan your rituals accordingly. → https://cha0smagicklabs.com/apps/lunar-phase-calculator.html',
   
-  'The Goetic spirits are not demons to be feared — they are archetypes to be understood. 72 paths to self-knowledge. Arcana Goetia. → https://play.google.com/store/apps/details?id=com.cha0smagicklabs.goetia',
+   'The Goetic spirits are not demons to be feared — they are archetypes to be understood. 72 paths to self-knowledge. Arcana Goetia. → https://cha0smagicklabs.com/apps/arcana-goetia.html',
   
   'Midweek reset: Take 5 minutes. Close your eyes. Breathe. Visualize your intention. Write it down. The universe responds to clarity.',
   

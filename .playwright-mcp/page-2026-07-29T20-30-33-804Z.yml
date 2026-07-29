@@ -1,0 +1,116 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "ORDER BLOOD SEX MAGIC NOW!" [ref=e4] [cursor=pointer]:
+      - /url: https://www.thehoodwitch.com/blood-sex-magic-order-now
+    - generic [ref=e5]:
+      - button "Close Announcement" [ref=e6] [cursor=pointer]: ×
+      - paragraph [ref=e8]: ORDER BLOOD SEX MAGIC NOW!
+  - navigation [ref=e11]:
+    - list [ref=e12]:
+      - listitem [ref=e13]:
+        - link "Featured" [ref=e14] [cursor=pointer]:
+          - /url: /featured
+      - listitem [ref=e15]:
+        - link "About" [ref=e16] [cursor=pointer]:
+          - /url: /about
+      - listitem [ref=e17]:
+        - link "BOOK A READING" [ref=e18] [cursor=pointer]:
+          - /url: /book-tarot
+      - listitem [ref=e19]:
+        - link "THE HOODWITCH" [ref=e20] [cursor=pointer]:
+          - /url: https://www.thehoodwitch.com/featured
+      - listitem [ref=e21]:
+        - link "Blog" [ref=e22] [cursor=pointer]:
+          - /url: /blog
+      - listitem [ref=e23]:
+        - link "Store" [ref=e24] [cursor=pointer]:
+          - /url: /store
+  - banner [ref=e26]:
+    - navigation [ref=e28]:
+      - list [ref=e29]:
+        - listitem [ref=e30]:
+          - link "Featured" [ref=e31] [cursor=pointer]:
+            - /url: /featured
+        - listitem [ref=e32]:
+          - link "About" [ref=e33] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e34]:
+          - link "BOOK A READING" [ref=e35] [cursor=pointer]:
+            - /url: /book-tarot
+        - listitem [ref=e36]:
+          - link "THE HOODWITCH" [ref=e37] [cursor=pointer]:
+            - /url: https://www.thehoodwitch.com/featured
+        - listitem [ref=e38]:
+          - link "Blog" [ref=e39] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=e40]:
+          - link "Store" [ref=e41] [cursor=pointer]:
+            - /url: /store
+  - generic [ref=e42]:
+    - main [ref=e44]:
+      - generic [ref=e47]:
+        - heading "contact the hoodwitch" [level=1] [ref=e51]
+        - separator [ref=e55]
+        - generic [ref=e56]:
+          - figure [ref=e61]:
+            - img "Moon.jpg" [ref=e64]
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - generic [ref=e75] [cursor=pointer]:
+                  - generic [ref=e76]: Reason to contact us
+                  - generic [ref=e77]: (required)
+                - combobox "Reason to contact us" [ref=e79] [cursor=pointer]:
+                  - option "Store Order"
+                  - option "Press/Media"
+                  - option "Business Inquiry"
+              - group "Name" [ref=e80]:
+                - generic [ref=e85]:
+                  - generic [ref=e88] [cursor=pointer]:
+                    - text: First Name
+                    - generic [ref=e89]: (required)
+                  - textbox "First Name (required)" [ref=e90]
+                - generic [ref=e91]:
+                  - generic [ref=e94] [cursor=pointer]:
+                    - text: Last Name
+                    - generic [ref=e95]: (required)
+                  - textbox "Last Name (required)" [ref=e96]
+              - generic [ref=e97]:
+                - generic [ref=e100] [cursor=pointer]:
+                  - generic [ref=e101]: Email
+                  - generic [ref=e102]: (required)
+                - textbox "Email (required)" [ref=e103]:
+                  - /placeholder: ""
+              - generic [ref=e104]:
+                - generic [ref=e107] [cursor=pointer]:
+                  - generic [ref=e108]: Message
+                  - generic [ref=e109]: (required)
+                - textbox "Message (required)" [ref=e110]:
+                  - /placeholder: ""
+              - generic [ref=e111]:
+                - generic [ref=e112] [cursor=pointer]: Website
+                - textbox "Website" [ref=e116]:
+                  - /placeholder: ""
+                - generic [ref=e117]: http://
+              - generic:
+                - textbox
+            - button [ref=e119] [cursor=pointer]
+    - contentinfo [ref=e120]:
+      - generic [ref=e126]:
+        - paragraph [ref=e127]:
+          - link "Store Policies" [ref=e128] [cursor=pointer]:
+            - /url: /store-policies
+          - text: "|"
+          - link "Contact Us" [ref=e129] [cursor=pointer]:
+            - /url: /contact
+          - text: "|"
+          - link "Support Our Work" [ref=e130] [cursor=pointer]:
+            - /url: /support
+        - paragraph [ref=e131]: All images and content are copyright protected, ©2026 The Hoodwitch
+      - generic [ref=e133]:
+        - link [ref=e134] [cursor=pointer]:
+          - /url: http://thehoodwitch.tumblr.com
+        - link [ref=e139] [cursor=pointer]:
+          - /url: https://www.facebook.com/thehoodwitch
+        - link [ref=e144] [cursor=pointer]:
+          - /url: https://www.youtube.com/c/TheHoodwitch

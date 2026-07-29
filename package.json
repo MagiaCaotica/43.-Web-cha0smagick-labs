@@ -19,6 +19,8 @@
     "clean-css": "^5.3.3",
     "commander": "^7.2.0",
     "concat-map": "^0.0.1",
+    "discord.js": "^14.27.0",
+    "dotenv": "^17.4.2",
     "fill-range": "^7.1.1",
     "fs.realpath": "^1.0.0",
     "glob": "^7.2.3",
@@ -30,6 +32,7 @@
     "is-glob": "^4.0.3",
     "is-number": "^7.0.0",
     "minimatch": "^3.1.5",
+    "node-telegram-bot-api": "^1.2.0",
     "normalize-path": "^3.0.0",
     "once": "^1.4.0",
     "path-is-absolute": "^1.0.1",
@@ -43,7 +46,11 @@
     "wrappy": "^1.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bot:telegram": "node scripts/telegram-bot.js",
+    "bot:discord": "node scripts/discord-bot.js",
+    "bot:all": "node scripts/run-bots.js all",
+    "bot:start": "node scripts/run-bots.js all"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,73 @@
+- generic [active] [ref=f26e1]:
+  - table [ref=f26e4]:
+    - rowgroup [ref=f26e5]:
+      - row [ref=f26e6]:
+        - cell [ref=f26e7]:
+          - table [ref=f26e8]:
+            - rowgroup:
+              - row:
+                - cell
+                - cell
+        - cell [ref=f26e9]:
+          - table [ref=f26e10]:
+            - rowgroup:
+              - row:
+                - cell
+  - table [ref=f26e15]:
+    - rowgroup [ref=f26e16]:
+      - row [ref=f26e17]:
+        - cell [ref=f26e18]:
+          - link "Esoteric Library" [ref=f26e20] [cursor=pointer]:
+            - /url: /
+        - cell [ref=f26e21]:
+          - list [ref=f26e22]:
+            - listitem [ref=f26e23]:
+              - link "Home" [ref=f26e24] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f26e25]:
+              - link "Library" [ref=f26e26] [cursor=pointer]:
+                - /url: /library.html
+            - listitem [ref=f26e27]:
+              - link "Photos" [ref=f26e28] [cursor=pointer]:
+                - /url: /photos.html
+            - listitem [ref=f26e29]:
+              - link "Videos" [ref=f26e30] [cursor=pointer]:
+                - /url: /videos.html
+            - listitem [ref=f26e31]:
+              - link "Articles" [ref=f26e32] [cursor=pointer]:
+                - /url: /articles.html
+            - listitem [ref=f26e33]:
+              - link "more..." [ref=f26e34] [cursor=pointer]:
+                - /url: "#"
+  - generic [ref=f26e39]:
+    - generic [ref=f26e41]:
+      - list [ref=f26e43]:
+        - heading "Contact us" [level=2] [ref=f26e44]
+        - generic [ref=f26e46]:
+          - generic [ref=f26e47]: Name *
+          - generic [ref=f26e48]:
+            - textbox "Name * First" [ref=f26e49]
+            - generic [ref=f26e50]: First
+          - generic [ref=f26e51]:
+            - textbox "Last" [ref=f26e52]
+            - generic [ref=f26e53]: Last
+        - generic [ref=f26e55]:
+          - generic [ref=f26e56]: Email *
+          - textbox "Email *" [ref=f26e58]
+        - generic [ref=f26e60]:
+          - generic [ref=f26e61]: Comment *
+          - textbox "Comment *" [ref=f26e63]
+      - generic [ref=f26e64]:
+        - button "Submit" [ref=f26e65]
+        - generic [ref=f26e66] [cursor=pointer]: Submit
+    - img "Picture" [ref=f26e71]
+  - generic [ref=f26e75]:
+    - table [ref=f26e79]:
+      - rowgroup [ref=f26e80]:
+        - row [ref=f26e81]:
+          - cell [ref=f26e82]
+          - cell [ref=f26e84]
+    - generic [ref=f26e86]:
+      - text: Proudly powered by
+      - link "Weebly" [ref=f26e88] [cursor=pointer]:
+        - /url: https://www.weebly.com/?utm_source=internal&utm_medium=footer&utm_campaign=2

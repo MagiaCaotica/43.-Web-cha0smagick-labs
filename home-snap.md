@@ -1,0 +1,436 @@
+- generic [ref=f78e1]:
+  - generic [ref=f78e2]:
+    - generic:
+      - generic:
+        - heading "To view keyboard shortcuts, press question mark View keyboard shortcuts" [level=2] [ref=f78e3]:
+          - generic [ref=f78e4]: To view keyboard shortcuts, press question mark
+          - link "View keyboard shortcuts" [ref=f78e5] [cursor=pointer]:
+            - /url: /i/keyboard_shortcuts
+        - generic:
+          - generic:
+            - button "Grok" [ref=f78e6] [cursor=pointer]
+            - button "Chat" [ref=f78e10] [cursor=pointer]
+          - generic:
+            - generic:
+              - generic:
+                - dialog:
+                  - group [ref=f78e14]:
+                    - dialog [ref=f78e31]:
+                      - generic [ref=f78e34]:
+                        - progressbar [ref=f78e35]
+                        - generic [ref=f78e41]:
+                          - button "Close" [ref=f78e43] [cursor=pointer]
+                          - button "Drafts" [ref=f78e51] [cursor=pointer]
+                        - generic [ref=f78e60]:
+                          - generic [ref=f78e61]:
+                            - generic [ref=f78e69]:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic "ChaosmagickLabs":
+                                      - img "ChaosmagickLabs"
+                            - generic [ref=f78e90]:
+                              - generic [ref=f78e91]: What’s happening?
+                              - textbox "Post text" [active] [ref=f78e94]
+                          - generic [ref=f78e98]:
+                            - button "Everyone can reply" [ref=f78e102] [cursor=pointer]
+                            - generic [ref=f78e111]:
+                              - navigation [ref=f78e112]:
+                                - generic [ref=f78e113]:
+                                  - generic:
+                                    - button "Previous" [disabled]
+                                  - tablist [ref=f78e115]:
+                                    - generic [ref=f78e118]:
+                                      - button "Add photos or video" [ref=f78e119] [cursor=pointer]
+                                      - button "Choose File" [ref=f78e125]
+                                    - button "Add a GIF" [ref=f78e128] [cursor=pointer]
+                                    - button "Generate image" [ref=f78e136] [cursor=pointer]
+                                    - button "Add poll" [ref=f78e143] [cursor=pointer]
+                                    - button "Add emoji" [ref=f78e151] [cursor=pointer]
+                                    - button "Schedule post" [ref=f78e159] [cursor=pointer]
+                                    - button "Tag location" [disabled] [ref=f78e166]
+                                    - button "Content disclosure" [ref=f78e173] [cursor=pointer]
+                                  - generic:
+                                    - button "Next" [disabled]
+                              - button "Post" [disabled] [ref=f78e180]
+        - generic [ref=f78e21]:
+          - button [ref=f78e184] [cursor=pointer]
+          - button [ref=f78e186] [cursor=pointer]
+          - banner [ref=f78e22]:
+            - generic [ref=f78e189]:
+              - generic [ref=f78e190]:
+                - heading [level=1] [ref=f78e192] [cursor=pointer]:
+                  - link [ref=f78e193]:
+                    - /url: /home
+                - navigation [ref=f78e199]:
+                  - link [ref=f78e200] [cursor=pointer]:
+                    - /url: /home
+                    - generic [ref=f78e201]: Home
+                  - link [ref=f78e207] [cursor=pointer]:
+                    - /url: /explore
+                    - generic [ref=f78e208]: Explore
+                  - link [ref=f78e214] [cursor=pointer]:
+                    - /url: /notifications
+                    - generic [ref=f78e215]: Notifications
+                  - link [ref=f78e221] [cursor=pointer]:
+                    - /url: /i/connect_people
+                    - generic [ref=f78e222]: Follow
+                  - link [ref=f78e228] [cursor=pointer]:
+                    - /url: /i/chat
+                    - generic [ref=f78e229]: Chat
+                  - link [ref=f78e235] [cursor=pointer]:
+                    - /url: /i/grok
+                    - generic [ref=f78e236]: Grok
+                  - link [ref=f78e243] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                    - generic [ref=f78e244]: Profile
+                  - button [ref=f78e250] [cursor=pointer]:
+                    - generic [ref=f78e251]: More
+                - link [ref=f78e258] [cursor=pointer]:
+                  - /url: /compose/post
+                  - generic [ref=f78e259]: Post
+              - button [ref=f78e267] [cursor=pointer]:
+                - generic [ref=f78e279]:
+                  - generic [ref=f78e280]: ChaosmagickLabs
+                  - generic [ref=f78e284]: "@Cha0smagickLABS"
+          - main [ref=f78e23]:
+            - generic [ref=f78e293]:
+              - generic [ref=f78e295]:
+                - generic [ref=f78e296]:
+                  - generic [ref=f78e299]:
+                    - navigation [ref=f78e301]:
+                      - generic [ref=f78e302]:
+                        - generic:
+                          - button [disabled]
+                        - tablist [ref=f78e304]:
+                          - tab [selected] [ref=f78e305] [cursor=pointer]:
+                            - generic [ref=f78e306]: For you
+                          - tab [ref=f78e310] [cursor=pointer]:
+                            - generic [ref=f78e311]: Following
+                          - tab [ref=f78e314] [cursor=pointer]:
+                            - generic [ref=f78e315]: Movies & TV
+                          - tab [ref=f78e318] [cursor=pointer]:
+                            - generic [ref=f78e319]: Memes
+                          - tab [ref=f78e322] [cursor=pointer]:
+                            - generic [ref=f78e323]: Pets
+                        - generic:
+                          - button [disabled]
+                    - button [ref=f78e327] [cursor=pointer]
+                  - generic:
+                    - generic:
+                      - status:
+                        - button:
+                          - generic: See new posts
+                - generic [ref=f78e338]:
+                  - link [ref=f78e347] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                  - generic [ref=f78e350]:
+                    - generic [ref=f78e368]:
+                      - generic [ref=f78e369]: What’s happening?
+                      - textbox [ref=f78e372]
+                    - generic [ref=f78e379]:
+                      - navigation [ref=f78e380]:
+                        - generic [ref=f78e381]:
+                          - generic:
+                            - button [disabled]
+                          - tablist [ref=f78e383]:
+                            - generic [ref=f78e386]:
+                              - button [ref=f78e387] [cursor=pointer]
+                              - button [ref=f78e393]
+                            - button [ref=f78e396] [cursor=pointer]
+                            - button [ref=f78e404] [cursor=pointer]
+                            - button [ref=f78e411] [cursor=pointer]
+                            - button [ref=f78e419] [cursor=pointer]
+                            - button [ref=f78e427] [cursor=pointer]
+                            - button [disabled] [ref=f78e434]
+                            - button [ref=f78e441] [cursor=pointer]
+                          - generic:
+                            - button [disabled]
+                      - button [disabled] [ref=f78e448]:
+                        - generic [ref=f78e449]: Post
+                - region [ref=f78e454]:
+                  - heading [level=1] [ref=f78e455]: Your Home Timeline
+                  - generic [ref=f78e457]:
+                    - article [ref=f78e461] [cursor=pointer]:
+                      - generic [ref=f78e467]:
+                        - link [ref=f78e479]:
+                          - /url: /SismologicoMX
+                        - generic [ref=f78e482]:
+                          - generic [ref=f78e484]:
+                            - generic [ref=f78e487]:
+                              - link [ref=f78e490]:
+                                - /url: /SismologicoMX
+                                - generic [ref=f78e491]: Sismologico Nacional
+                              - generic [ref=f78e500]:
+                                - link [ref=f78e502]:
+                                  - /url: /SismologicoMX
+                                  - generic [ref=f78e503]: "@SismologicoMX"
+                                - generic [ref=f78e504]: ·
+                                - link [ref=f78e506]:
+                                  - /url: /SismologicoMX/status/2082371052320002488
+                                  - time [ref=f78e507]: 11h
+                            - generic [ref=f78e509]:
+                              - button [ref=f78e511]
+                              - button [ref=f78e522]
+                          - generic [ref=f78e529]: SISMO Magnitud 4.2 Loc. 148 km al SUROESTE de HUIXTLA, CHIS 29/07/26 01:29:02 Lat 14.20 Lon -93.45 Pf 18.6 km
+                          - group [ref=f78e533]:
+                            - button [ref=f78e535]
+                            - button [ref=f78e546]:
+                              - generic [ref=f78e547]: "2"
+                            - button [ref=f78e557]:
+                              - generic [ref=f78e558]: "31"
+                            - link [ref=f78e568]:
+                              - /url: /SismologicoMX/status/2082371052320002488/analytics
+                              - generic [ref=f78e569]: 68K
+                            - button [ref=f78e579]
+                            - button [ref=f78e588]
+                    - article [ref=f78e598] [cursor=pointer]:
+                      - generic [ref=f78e604]:
+                        - link [ref=f78e616]:
+                          - /url: /AppleTV
+                        - generic [ref=f78e619]:
+                          - generic [ref=f78e621]:
+                            - generic [ref=f78e624]:
+                              - link [ref=f78e627]:
+                                - /url: /AppleTV
+                                - generic [ref=f78e628]: Apple TV
+                              - generic [ref=f78e640]:
+                                - link [ref=f78e642]:
+                                  - /url: /AppleTV
+                                  - generic [ref=f78e643]: "@AppleTV"
+                                - generic [ref=f78e644]: ·
+                                - link [ref=f78e646]:
+                                  - /url: /AppleTV/status/2082160730527473766
+                                  - time [ref=f78e647]: Jul 28
+                            - generic [ref=f78e649]:
+                              - button [ref=f78e651]
+                              - button [ref=f78e662]
+                          - generic [ref=f78e670]:
+                            - text: Spy fall.
+                            - link [ref=f78e672]:
+                              - /url: /hashtag/SlowHorses?src=hashtag_click
+                              - text: "#SlowHorses"
+                            - text: — New Season September 16
+                          - button [ref=f78e699]
+                          - group [ref=f78e706]:
+                            - button [ref=f78e708]:
+                              - generic [ref=f78e709]: "118"
+                            - button [ref=f78e719]:
+                              - generic [ref=f78e720]: 1.7K
+                            - button [ref=f78e730]:
+                              - generic [ref=f78e731]: 7K
+                            - link [ref=f78e741]:
+                              - /url: /AppleTV/status/2082160730527473766/analytics
+                              - generic [ref=f78e742]: 1.2M
+                            - button [ref=f78e752]
+                            - button [ref=f78e761]
+                    - article [ref=f78e771] [cursor=pointer]:
+                      - generic [ref=f78e777]:
+                        - link [ref=f78e789]:
+                          - /url: /peacock
+                        - generic [ref=f78e792]:
+                          - generic [ref=f78e794]:
+                            - generic [ref=f78e797]:
+                              - link [ref=f78e800]:
+                                - /url: /peacock
+                                - generic [ref=f78e801]: Peacock
+                              - generic [ref=f78e813]:
+                                - link [ref=f78e815]:
+                                  - /url: /peacock
+                                  - generic [ref=f78e816]: "@peacock"
+                                - generic [ref=f78e817]: ·
+                                - link [ref=f78e819]:
+                                  - /url: /peacock/status/2082134444148707831
+                                  - time [ref=f78e820]: Jul 28
+                            - generic [ref=f78e822]:
+                              - button [ref=f78e824]
+                              - button [ref=f78e835]
+                          - generic [ref=f78e843]:
+                            - text: The experts weren’t buying it
+                            - link [ref=f78e846]:
+                              - /url: /hashtag/MarriedAtFirstSight?src=hashtag_click
+                              - text: "#MarriedAtFirstSight"
+                            - text: is streaming on Peacock, new episodes Thursdays.
+                          - button [ref=f78e873]
+                          - group [ref=f78e880]:
+                            - button [ref=f78e882]:
+                              - generic [ref=f78e883]: "2"
+                            - button [ref=f78e893]:
+                              - generic [ref=f78e894]: "3"
+                            - button [ref=f78e904]:
+                              - generic [ref=f78e905]: "21"
+                            - link [ref=f78e915]:
+                              - /url: /peacock/status/2082134444148707831/analytics
+                              - generic [ref=f78e916]: 35K
+                            - button [ref=f78e926]
+                            - button [ref=f78e935]
+                    - article [ref=f78e945] [cursor=pointer]:
+                      - generic [ref=f78e951]:
+                        - link [ref=f78e963]:
+                          - /url: /TexAveryToon
+                        - generic [ref=f78e966]:
+                          - generic [ref=f78e968]:
+                            - generic [ref=f78e971]:
+                              - link [ref=f78e974]:
+                                - /url: /TexAveryToon
+                                - generic [ref=f78e975]: Tex Avery Toon
+                              - generic [ref=f78e979]:
+                                - link [ref=f78e981]:
+                                  - /url: /TexAveryToon
+                                  - generic [ref=f78e982]: "@TexAveryToon"
+                                - generic [ref=f78e983]: ·
+                                - link [ref=f78e985]:
+                                  - /url: /TexAveryToon/status/2082292248801402888
+                                  - time [ref=f78e986]: 16h
+                            - generic [ref=f78e988]:
+                              - button [ref=f78e990]
+                              - button [ref=f78e1001]
+                          - generic [ref=f78e1008]: He's getting angry now
+                          - button [ref=f78e1036]
+                          - group [ref=f78e1043]:
+                            - button [ref=f78e1045]
+                            - button [ref=f78e1056]:
+                              - generic [ref=f78e1057]: "13"
+                            - button [ref=f78e1067]:
+                              - generic [ref=f78e1068]: "91"
+                            - link [ref=f78e1078]:
+                              - /url: /TexAveryToon/status/2082292248801402888/analytics
+                              - generic [ref=f78e1079]: 24K
+                            - button [ref=f78e1089]
+                            - button [ref=f78e1098]
+              - generic [ref=f78e1110]:
+                - search [ref=f78e1115]:
+                  - combobox [ref=f78e1127]
+                - complementary [ref=f78e1131]:
+                  - generic [ref=f78e1132]: Subscribe to Premium
+                  - generic [ref=f78e1134]: Get rid of ads, see your analytics, boost your replies and unlock 20+ features.
+                  - link [ref=f78e1135] [cursor=pointer]:
+                    - /url: /i/premium_sign_up
+                    - generic [ref=f78e1136]: Subscribe
+                - generic [ref=f78e1142]:
+                  - heading [level=2] [ref=f78e1144]:
+                    - generic [ref=f78e1145]: Today’s News
+                    - button [ref=f78e1148] [cursor=pointer]
+                  - generic [ref=f78e1153]:
+                    - link [ref=f78e1154] [cursor=pointer]:
+                      - generic [ref=f78e1157]:
+                        - generic [ref=f78e1158]: Fed Holds Rates Steady at 3.50%-3.75% in 9-3 Vote
+                        - generic [ref=f78e1159]: Trending now · News · 10.2K posts
+                    - link [ref=f78e1198] [cursor=pointer]:
+                      - generic [ref=f78e1201]:
+                        - generic [ref=f78e1202]: "Zendaya and Tom Holland Shine at Spider-Man: Brand New Day UK Premiere"
+                        - generic [ref=f78e1203]: Trending now · Entertainment · 6,796 posts
+                    - link [ref=f78e1242] [cursor=pointer]:
+                      - generic [ref=f78e1245]:
+                        - generic [ref=f78e1246]: BTS 'Aliens' Tops iTunes in 51 Countries After Grammy Boycott
+                        - generic [ref=f78e1247]: Trending now · Entertainment · 5,373 posts
+                - region [ref=f78e1287]:
+                  - heading [level=1] [ref=f78e1288]: Trending now
+                  - generic [ref=f78e1290]:
+                    - heading [level=2] [ref=f78e1294]:
+                      - generic [ref=f78e1295]: What’s happening
+                    - link [ref=f78e1298] [cursor=pointer]:
+                      - generic [ref=f78e1299]:
+                        - generic [ref=f78e1300]: Siente La Pasión
+                        - generic [ref=f78e1301]: Apuesta por tu equipo favorito
+                        - generic [ref=f78e1302]: Promoted by BetPlay
+                        - button [ref=f78e1310]
+                    - link [ref=f78e1319] [cursor=pointer]:
+                      - generic [ref=f78e1320]:
+                        - generic [ref=f78e1321]: Trending in Colombia
+                        - generic [ref=f78e1323]: Brutal
+                        - button [ref=f78e1326]
+                    - link [ref=f78e1335] [cursor=pointer]:
+                      - generic [ref=f78e1336]:
+                        - generic [ref=f78e1337]: Trending in Colombia
+                        - generic [ref=f78e1339]: Felices 501
+                        - button [ref=f78e1342]
+                    - link [ref=f78e1351] [cursor=pointer]:
+                      - generic [ref=f78e1352]:
+                        - generic [ref=f78e1353]: Trending in Colombia
+                        - generic [ref=f78e1355]: Faltan 9
+                        - button [ref=f78e1358]
+                    - link [ref=f78e1367] [cursor=pointer]:
+                      - /url: /explore/tabs/for-you
+                      - generic [ref=f78e1368]: Show more
+                - complementary [ref=f78e1371]:
+                  - heading [level=2] [ref=f78e1373]:
+                    - generic [ref=f78e1374]: Who to follow
+                  - list [ref=f78e1375]:
+                    - listitem [ref=f78e1376] [cursor=pointer]:
+                      - generic [ref=f78e1377]:
+                        - link [ref=f78e1387]:
+                          - /url: /MarkRuffalo
+                        - generic [ref=f78e1391]:
+                          - generic [ref=f78e1393]:
+                            - link [ref=f78e1395]:
+                              - /url: /MarkRuffalo
+                              - generic [ref=f78e1396]: Mark Ruffalo
+                            - link [ref=f78e1406]:
+                              - /url: /MarkRuffalo
+                              - generic [ref=f78e1407]: "@MarkRuffalo"
+                          - button [ref=f78e1410]:
+                            - generic [ref=f78e1411]: Follow
+                    - listitem [ref=f78e1414] [cursor=pointer]:
+                      - generic [ref=f78e1415]:
+                        - link [ref=f78e1425]:
+                          - /url: /USATODAY
+                        - generic [ref=f78e1429]:
+                          - generic [ref=f78e1431]:
+                            - link [ref=f78e1433]:
+                              - /url: /USATODAY
+                              - generic [ref=f78e1434]: USA TODAY
+                            - link [ref=f78e1447]:
+                              - /url: /USATODAY
+                              - generic [ref=f78e1448]: "@USATODAY"
+                          - button [ref=f78e1451]:
+                            - generic [ref=f78e1452]: Follow
+                    - listitem [ref=f78e1455] [cursor=pointer]:
+                      - generic [ref=f78e1456]:
+                        - link [ref=f78e1466]:
+                          - /url: /DisneyStudios
+                        - generic [ref=f78e1470]:
+                          - generic [ref=f78e1472]:
+                            - link [ref=f78e1474]:
+                              - /url: /DisneyStudios
+                              - generic [ref=f78e1475]:
+                                - generic [ref=f78e1476]: Walt Disney Studios
+                                - link [ref=f78e1486]
+                            - link [ref=f78e1495]:
+                              - /url: /DisneyStudios
+                              - generic [ref=f78e1496]: "@DisneyStudios"
+                          - button [ref=f78e1499]:
+                            - generic [ref=f78e1500]: Follow
+                  - link [ref=f78e1503] [cursor=pointer]:
+                    - /url: /i/connect_people?user_id=2082185111257194496
+                    - generic [ref=f78e1504]: Show more
+                - navigation [ref=f78e1509]:
+                  - generic [ref=f78e1510]:
+                    - link [ref=f78e1511] [cursor=pointer]:
+                      - /url: https://x.com/tos
+                      - text: Terms
+                    - generic [ref=f78e1512]: ·
+                  - generic [ref=f78e1513]:
+                    - link [ref=f78e1514] [cursor=pointer]:
+                      - /url: https://x.com/privacy
+                      - text: Privacy
+                    - generic [ref=f78e1515]: ·
+                  - generic [ref=f78e1516]:
+                    - link [ref=f78e1517] [cursor=pointer]:
+                      - /url: https://support.x.com/articles/20170514
+                      - text: Cookies
+                    - generic [ref=f78e1518]: ·
+                  - generic [ref=f78e1519]:
+                    - link [ref=f78e1520] [cursor=pointer]:
+                      - /url: https://help.x.com/resources/accessibility
+                      - text: Accessibility
+                    - generic [ref=f78e1521]: ·
+                  - generic [ref=f78e1522]:
+                    - link [ref=f78e1523] [cursor=pointer]:
+                      - /url: https://business.x.com/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo
+                      - text: Ads Info
+                    - generic [ref=f78e1524]: ·
+                  - button [ref=f78e1525] [cursor=pointer]:
+                    - generic [ref=f78e1526]: More
+                  - generic [ref=f78e1530]: © 2026 X Corp.
+  - region "Notifications alt+T"

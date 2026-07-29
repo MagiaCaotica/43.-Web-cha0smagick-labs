@@ -1,0 +1,43 @@
+- generic [ref=f33e2]:
+  - generic [ref=f33e3]:
+    - link "Skip to content" [ref=f33e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f33e6]
+  - main [ref=f33e9]:
+    - generic [ref=f33e10]:
+      - heading [level=1] [ref=f33e12]:
+        - text: Select user to authorize
+        - strong [ref=f33e13]: giscus
+      - generic [ref=f33e14]:
+        - generic [ref=f33e15]:
+          - generic [ref=f33e16]:
+            - img "@MagiaCaotica" [ref=f33e18]
+            - paragraph [ref=f33e20]:
+              - text: Signed in as
+              - strong [ref=f33e22]: MagiaCaotica
+          - button "Continue as MagiaCaotica" [ref=f33e24] [cursor=pointer]: Continue
+        - generic [ref=f33e25]:
+          - generic [ref=f33e26]:
+            - img "@Cha0smagick" [ref=f33e28]
+            - paragraph [ref=f33e30]:
+              - strong [ref=f33e32]: Cha0smagick
+          - button "Select Cha0smagick" [ref=f33e35] [cursor=pointer]: Select
+      - button "Use a different account" [ref=f33e36] [cursor=pointer]
+  - contentinfo [ref=f33e37]:
+    - list [ref=f33e38]:
+      - listitem [ref=f33e39]:
+        - link "Terms" [ref=f33e40] [cursor=pointer]:
+          - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - listitem [ref=f33e41]:
+        - link "Privacy" [ref=f33e42] [cursor=pointer]:
+          - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - listitem [ref=f33e43]:
+        - link "Docs" [ref=f33e44] [cursor=pointer]:
+          - /url: https://docs.github.com
+      - listitem [ref=f33e45]:
+        - link "Contact GitHub Support" [ref=f33e46] [cursor=pointer]:
+          - /url: https://support.github.com
+      - listitem [ref=f33e47]:
+        - button "Manage cookies" [ref=f33e49] [cursor=pointer]
+      - listitem [ref=f33e50]:
+        - button "Do not share my personal information" [ref=f33e52] [cursor=pointer]

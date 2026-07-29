@@ -1,0 +1,7 @@
+[    1910ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ https://paranormaldailynews.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1:1
+[    2569ms] [LOG] BasicSubscriptions Runtime: 1.0.153 @ https://news.google.com/swg/js/v1/swg-basic.js:0
+[    5180ms] [LOG] 🔔 service worker registered @ https://cdn.gravitec.net/storage/87ae75a3f3c4208612a63e2b6a972b73/client.js?service=wp&wpath=https://paranormaldailynews.com/wp-content/plugins/gravitec-net-web-push-notifications//sdk_files/sw.php&ver=2.9.19:0
+[   87750ms] Uncaught (in promise) AbortError: AbortError
+    at onCancel (https://news.google.com/swg/js/v1/swg-basic.js:0:74688)
+[   87750ms] Uncaught (in promise) AbortError: AbortError
+    at handleCancellations (https://news.google.com/swg/js/v1/swg-basic.js:0:177475)

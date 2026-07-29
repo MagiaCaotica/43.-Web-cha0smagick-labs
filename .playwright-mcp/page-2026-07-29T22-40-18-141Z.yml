@@ -1,0 +1,378 @@
+- generic [active] [ref=f17e1]:
+  - main [ref=f17e3]:
+    - generic [ref=f17e4]:
+      - generic [ref=f17e6]:
+        - generic [ref=f17e8]:
+          - link "@giscus giscus" [ref=f17e9] [cursor=pointer]:
+            - /url: https://github.com/apps/giscus
+            - img "@giscus" [ref=f17e10]
+            - generic [ref=f17e11]: giscus
+          - link [ref=f17e12] [cursor=pointer]:
+            - /url: https://github.com/giscus/giscus
+            - time [ref=f17e13]: 15 may 2021
+          - generic [ref=f17e14]: App
+        - generic [ref=f17e16]:
+          - heading [level=1] [ref=f17e17]:
+            - link "giscus" [ref=f17e18] [cursor=pointer]:
+              - /url: https://giscus.app/es
+          - paragraph [ref=f17e19]:
+            - text: Un sistema de comentarios desarrollado con
+            - link "Discusiones de GitHub" [ref=f17e20] [cursor=pointer]:
+              - /url: https://docs.github.com/en/discussions
+            - text: . ¡Permite a tus visitantes dejar comentarios y reacciones en su sitio web a través de GitHub! Inspirado en
+            - link "utterances" [ref=f17e21] [cursor=pointer]:
+              - /url: https://github.com/utterance/utterances
+            - text: .
+          - list [ref=f17e22]:
+            - listitem [ref=f17e23]:
+              - link "Código abierto" [ref=f17e24] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus
+              - text: . 🌏
+            - listitem [ref=f17e25]: Sin seguimiento, sin anuncios, siempre gratis. 📡 🚫
+            - listitem [ref=f17e26]:
+              - text: No se necesita base de datos. Todos los datos se almacenan en Discusiones de GitHub.
+              - img ":octocat:" [ref=f17e27]
+            - listitem [ref=f17e28]:
+              - text: ¡Soporta
+              - link "temas personalizados" [ref=f17e29] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#data-theme
+              - text: "! 🌗"
+            - listitem [ref=f17e30]:
+              - text: Soporta
+              - link "múltiples idiomas" [ref=f17e31] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md#adding-localizations
+              - text: . 🌐
+            - listitem [ref=f17e32]:
+              - link "Ampliamente configurable" [ref=f17e33] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md
+              - text: . 🔧
+            - listitem [ref=f17e34]: Obtiene automáticamente nuevos comentarios y ediciones de GitHub. 🔃
+            - listitem [ref=f17e35]:
+              - link "Puede ser autohospedado" [ref=f17e36] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/SELF-HOSTING.md
+              - text: "! 🤳"
+          - blockquote [ref=f17e37]:
+            - paragraph [ref=f17e38]:
+              - strong [ref=f17e39]: "Nota:"
+              - text: giscus todavía está en desarrollo activo. GitHub también sigue desarrollando activamente Discusiones y su API. Por lo tanto, algunas características de giscus pueden romperse o cambiar con el tiempo.
+          - heading "Cómo funciona" [level=2] [ref=f17e40]
+          - paragraph [ref=f17e41]:
+            - text: Cuando se carga giscus, la
+            - link "API de búsqueda de discusiones de GitHub" [ref=f17e42] [cursor=pointer]:
+              - /url: https://docs.github.com/en/graphql/guides/using-the-graphql-api-for-discussions#search
+            - text: se usa para encontrar la discusión asociada con la página en función de la forma de mapeo elegida (URL,
+            - code [ref=f17e43]: pathname
+            - text: ","
+            - code [ref=f17e44]: <title>
+            - text: ", etc.). Si no se puede encontrar una discusión que coincida, el bot giscus creará automáticamente una discusión la primera vez que alguien deje un comentario o una reacción."
+          - paragraph [ref=f17e45]:
+            - text: Para comentar, los visitantes deben autorizar la
+            - link "aplicación de giscus" [ref=f17e46] [cursor=pointer]:
+              - /url: https://github.com/apps/giscus
+            - text: para
+            - link "publicar en su nombre" [ref=f17e47] [cursor=pointer]:
+              - /url: https://docs.github.com/en/developers/apps/identifying-and-authorizing-users-for-github-apps
+            - text: utilizando el flujo de GitHub OAuth. Alternativamente, los visitantes pueden comentar sobre la Discusión de GitHub directamente. Puede moderar los comentarios en GitHub.
+        - generic [ref=f17e48]:
+          - heading "Configuración" [level=2] [ref=f17e49]
+          - heading "Idioma" [level=3] [ref=f17e50]
+          - paragraph [ref=f17e51]:
+            - text: Selecciona el idioma en el que se mostrará giscus. ¿No encuentras tu idioma? Puedes
+            - link "Contribuir" [ref=f17e52] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md#adding-localizations
+            - text: con la traducción.
+          - generic [ref=f17e53]: Idioma
+          - combobox "Idioma" [ref=f17e54]:
+            - option "العربية"
+            - option "Беларуская"
+            - option "български"
+            - option "Català"
+            - option "Čeština"
+            - option "Dansk"
+            - option "Deutsch"
+            - option "English"
+            - option "Esperanto"
+            - option "Español" [selected]
+            - option "Euskera"
+            - option "فارسی"
+            - option "Français"
+            - option "Ελληνικά"
+            - option "Srpsko-Hrvatski"
+            - option "עברית"
+            - option "Magyar"
+            - option "Indonesia"
+            - option "Italiano"
+            - option "日本語"
+            - option "ភាសាខ្មែរ"
+            - option "한국어"
+            - option "Nederlands"
+            - option "Polski"
+            - option "Português"
+            - option "Română"
+            - option "Русский"
+            - option "ภาษาไทย"
+            - option "Türkçe"
+            - option "Việt Nam"
+            - option "Українська"
+            - option "O'zbek"
+            - option "简体中文"
+            - option "繁體中文"
+            - option "香港繁體"
+          - heading "Repositorio" [level=3] [ref=f17e55]
+          - paragraph [ref=f17e56]: "Selecciona el repositorio al que se conectará giscus. Asegúrate de lo siguiente:"
+          - list [ref=f17e57]:
+            - listitem [ref=f17e58]:
+              - text: El
+              - strong [ref=f17e59]:
+                - text: repositorio es
+                - link "público" [ref=f17e60] [cursor=pointer]:
+                  - /url: https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/setting-repository-visibility#making-a-repository-public
+              - text: ", de lo contrario, tus visitantes no podrán ver los comentarios."
+            - listitem [ref=f17e61]:
+              - text: La aplicación de
+              - strong [ref=f17e62]:
+                - link "giscus" [ref=f17e63] [cursor=pointer]:
+                  - /url: https://github.com/apps/giscus
+                - text: está instalada
+              - text: ", de lo contrario, tus visitantes no podrán comentar ni reaccionar."
+            - listitem [ref=f17e64]:
+              - text: La
+              - strong [ref=f17e65]: función de Discusiones está activa
+              - text: en
+              - link "tu repositorio" [ref=f17e66] [cursor=pointer]:
+                - /url: https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/enabling-or-disabling-github-discussions-for-a-repository
+              - text: .
+          - group [ref=f17e67]:
+            - generic [ref=f17e68]: "repositorio:"
+            - textbox "repositorio:" [ref=f17e69]:
+              - /placeholder: usuario/repositorio
+            - paragraph [ref=f17e70]:
+              - text: Un repositorio
+              - strong [ref=f17e71]: público
+              - text: de GitHub. Es el repositorio donde se vincularán las discusiones.
+          - heading "Página ↔️ Mapeo de discusiones" [level=3] [ref=f17e72]
+          - paragraph [ref=f17e73]: Elige la forma de mapeo entre la página y las discusiones
+          - group [ref=f17e74]:
+            - generic [ref=f17e75]:
+              - radio "El título de la discusión contiene el pathname de la página" [checked] [ref=f17e76]
+              - strong [ref=f17e78] [cursor=pointer]:
+                - text: El título de la discusión contiene el
+                - code [ref=f17e79]: pathname
+                - text: de la página
+              - paragraph [ref=f17e80]:
+                - text: giscus buscará una discusión cuyo título contenga el
+                - code [ref=f17e81]: pathname
+                - text: de la página.
+            - generic [ref=f17e82]:
+              - radio "El título de la discusión contiene la URL de la página" [ref=f17e83]
+              - strong [ref=f17e85] [cursor=pointer]:
+                - text: El título de la discusión contiene la
+                - code [ref=f17e86]: URL
+                - text: de la página
+              - paragraph [ref=f17e87]: giscus buscará una discusión cuyo título contenga la URL de la página.
+            - generic [ref=f17e88]:
+              - radio "El título de la discusión contiene el <title> de la página." [ref=f17e89]
+              - strong [ref=f17e91] [cursor=pointer]:
+                - text: El título de la discusión contiene el
+                - code [ref=f17e92]: <title>
+                - text: de la página.
+              - paragraph [ref=f17e93]:
+                - text: giscus buscará una discusión cuyo título contenga la etiqueta HTML
+                - code [ref=f17e94]: <title>
+                - text: de la página.
+            - generic [ref=f17e95]:
+              - radio "El título de la discusión contiene el valor establecido en el atributo og:title" [ref=f17e96]
+              - strong [ref=f17e98] [cursor=pointer]:
+                - text: El título de la discusión contiene el valor establecido en el atributo
+                - code [ref=f17e99]: og:title
+              - paragraph [ref=f17e100]:
+                - text: giscus buscará una discusión cuyo título contenga el valor de la etiqueta HTML
+                - link [ref=f17e101] [cursor=pointer]:
+                  - /url: https://ogp.me
+                  - code [ref=f17e102]: <meta property="og:title">
+                - text: .
+            - generic [ref=f17e103]:
+              - radio "El título de la discusión contiene un término específico" [ref=f17e104]
+              - strong [ref=f17e106] [cursor=pointer]: El título de la discusión contiene un término específico
+              - paragraph [ref=f17e107]: giscus buscará una discusión cuyo título contenga el término especificado.
+            - generic [ref=f17e108]:
+              - radio "Número de discusión específico" [ref=f17e109]
+              - strong [ref=f17e111] [cursor=pointer]: Número de discusión específico
+              - paragraph [ref=f17e112]:
+                - text: giscus cargará una discusión específica por número. Esta opción
+                - strong [ref=f17e113]: "no"
+                - text: admite la creación automática de discusiones.
+          - generic [ref=f17e114]:
+            - checkbox "Usar coincidencia estricta de títulos" [ref=f17e115]
+            - strong [ref=f17e117]: Usar coincidencia estricta de títulos
+            - paragraph [ref=f17e118]:
+              - text: Evita discrepancias debido al método de búsqueda difuso de GitHub cuando hay varias discusiones con títulos similares. Consulta
+              - link "la documentación" [ref=f17e119] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#data-strict
+              - text: para obtener más detalles.
+          - heading "Categoría de discusión" [level=3] [ref=f17e120]
+          - paragraph [ref=f17e121]:
+            - text: Selecciona la categoría donde se crearán nuevas discusiones. Se recomienda usar una categoría con el tipo
+            - strong [ref=f17e122]: Announcement
+            - text: para que solo los mantenedores y giscus puedan crear nuevas discusiones.
+          - generic [ref=f17e123]: Categoría de discusión
+          - combobox "Categoría de discusión" [disabled] [ref=f17e124]:
+            - option "No se encontraron categorías" [disabled] [selected]
+          - generic [ref=f17e125]:
+            - checkbox "Buscar solo discusiones en esta categoría" [checked] [ref=f17e126]
+            - strong [ref=f17e128]: Buscar solo discusiones en esta categoría
+            - paragraph [ref=f17e129]: Al buscar una discusión, giscus exclusivamente buscará en esta categoría.
+          - heading "Características" [level=3] [ref=f17e130]
+          - paragraph [ref=f17e131]: Selecciona las funcionalidades específicas que quieres habilitar.
+          - generic [ref=f17e132]:
+            - checkbox "Habilitar reacciones para la publicación principal" [checked] [ref=f17e133]
+            - strong [ref=f17e135]: Habilitar reacciones para la publicación principal
+            - paragraph [ref=f17e136]: Las reacciones de la publicación principal se mostrarán antes de los comentarios.
+          - generic [ref=f17e137]:
+            - checkbox "Emitir metadatos de discusión" [ref=f17e138]
+            - strong [ref=f17e140]: Emitir metadatos de discusión
+            - paragraph [ref=f17e141]:
+              - text: Los metadatos de discusión se enviarán periódicamente a la ventana principal (la página de incrustación). Para una demostración, habilita esta opción y abre la consola de tu navegador en esta página. Consulta
+              - link "la documentación" [ref=f17e142] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage
+              - text: para obtener más detalles.
+          - generic [ref=f17e143]:
+            - checkbox "Colocar el cuadro de comentarios encima de los comentarios" [ref=f17e144]
+            - strong [ref=f17e146]: Colocar el cuadro de comentarios encima de los comentarios
+            - paragraph [ref=f17e147]: El cuadro de entrada de comentarios se colocará encima de los comentarios para que los usuarios puedan dejar un comentario sin desplazarse hasta el final de la discusión.
+          - generic [ref=f17e148]:
+            - checkbox "Cargar los comentarios perezosamente" [ref=f17e149]
+            - strong [ref=f17e151]: Cargar los comentarios perezosamente
+            - paragraph [ref=f17e152]:
+              - text: La carga de los comentarios se aplazará hasta que el usuario se desplace cerca del contenedor de comentarios. Esto se hace agregando
+              - link [ref=f17e153] [cursor=pointer]:
+                - /url: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-loading
+                - code [ref=f17e154]: loading="lazy"
+              - text: al elemento
+              - code [ref=f17e155]: <iframe>
+              - text: .
+          - heading "Tema" [level=3] [ref=f17e156]
+          - paragraph [ref=f17e157]:
+            - text: Selecciona un tema que coincida con tu sitio web. ¿No puedes encontrar uno que lo haga?
+            - link "Contribuye" [ref=f17e158] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md#creating-new-themes
+            - text: con un tema nuevo.
+          - generic [ref=f17e159]: Tema
+          - combobox "Tema" [ref=f17e160]:
+            - option "GitHub Light"
+            - option "GitHub Light High Contrast"
+            - option "GitHub Light Protanopia & Deuteranopia"
+            - option "GitHub Light Tritanopia"
+            - option "GitHub Dark"
+            - option "GitHub Dark High Contrast"
+            - option "GitHub Dark Protanopia & Deuteranopia"
+            - option "theme=dark_tritanopia"
+            - option "GitHub Dark Dimmed"
+            - option "Preferred color scheme" [selected]
+            - option "Transparent Dark"
+            - option "NoBorder Light"
+            - option "NoBorder Dark"
+            - option "NoBorder Gray"
+            - option "RStudio Cobalt"
+            - option "Purple Dark"
+            - option "Gruvbox"
+            - option "Gruvbox Dark"
+            - option "Gruvbox Light"
+            - option "Catppuccin Latte"
+            - option "Catppuccin Frappé"
+            - option "Catppuccin Macchiato"
+            - option "Catppuccin Mocha"
+            - option "Fro"
+            - option "Custom (experimental)"
+          - heading "Habilitar giscus" [level=3] [ref=f17e161]
+          - paragraph [ref=f17e162]:
+            - text: Añade la siguiente etiqueta
+            - code [ref=f17e163]: <script>
+            - text: a la plantilla de tu sitio web donde quieras que aparezcan los comentarios. Si existe un elemento con la clase
+            - code [ref=f17e164]: giscus
+            - text: ", los comentarios se mostrarán allí."
+          - generic [ref=f17e165]:
+            - text: No has configurado tu
+            - link "repositorio" [ref=f17e166] [cursor=pointer]:
+              - /url: "#repository"
+            - text: y/o
+            - link "categoría" [ref=f17e167] [cursor=pointer]:
+              - /url: "#category"
+            - text: . Los valores de esos campos no se mostrarán hasta que los completes.
+          - generic [ref=f17e168]:
+            - generic [ref=f17e169]:
+              - text: <script src="
+              - generic [ref=f17e170]: https://giscus.app/client.js
+              - text: "\" data-repo=\"[URL REPOSITORIO]\" data-repo-id=\"[ID REPOSITORIO]\" data-category=\"[NOMBRE CATEGORÍA]\" data-category-id=\"[ID CATEGORÍA]\" data-mapping=\"pathname\" data-strict=\"0\" data-reactions-enabled=\"1\" data-emit-metadata=\"0\" data-input-position=\"bottom\" data-theme=\"preferred_color_scheme\" data-lang=\"es\" crossorigin=\"anonymous\" async>"
+              - generic [ref=f17e171]: </
+              - text: script>
+            - button "Copiar" [ref=f17e173] [cursor=pointer]
+          - paragraph [ref=f17e177]:
+            - text: Puedes personalizar el diseño del contenedor utilizando los selectores
+            - code [ref=f17e178]: .giscus
+            - text: "y"
+            - code [ref=f17e179]: .giscus-frame
+            - text: de la página de incrustación.
+        - generic [ref=f17e180]:
+          - paragraph [ref=f17e181]:
+            - text: Si estás usando giscus, considera
+            - link "recomendar 🌟 giscus en GitHub" [ref=f17e182] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus
+            - text: y agregar el tópico
+            - link [ref=f17e183] [cursor=pointer]:
+              - /url: https://github.com/topics/giscus
+              - code [ref=f17e184]: giscus
+            - link "a tu repositorio" [ref=f17e185] [cursor=pointer]:
+              - /url: https://docs.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics
+            - text: "! 🎉"
+          - heading "Uso avanzado" [level=2] [ref=f17e186]
+          - paragraph [ref=f17e187]:
+            - text: Puedes agregar configuraciones adicionales (por ejemplo, permitir orígenes específicos) siguiendo la
+            - link "guía de uso avanzado" [ref=f17e188] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md
+            - text: .
+          - paragraph [ref=f17e189]:
+            - text: Para usar giscus con React, Vue o Svelte, consulta la
+            - link "biblioteca de componentes de giscus" [ref=f17e190] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus-component
+            - text: .
+          - heading "Migrando" [level=2] [ref=f17e191]
+          - paragraph [ref=f17e192]:
+            - text: Si has utilizado anteriormente otros sistemas que usan GitHub Issues (p.ej.
+            - link "utterances" [ref=f17e193] [cursor=pointer]:
+              - /url: https://github.com/utterance/utterances
+            - text: ","
+            - link "gitalk" [ref=f17e194] [cursor=pointer]:
+              - /url: https://github.com/gitalk/gitalk
+            - text: ), puedes
+            - link "convertir los issues existentes en discusiones" [ref=f17e195] [cursor=pointer]:
+              - /url: https://docs.github.com/en/discussions/managing-discussions-for-your-community/moderating-discussions#converting-an-issue-to-a-discussion
+            - text: . Después de la conversión, asegúrate de que el mapeo entre los títulos de la discusión y las páginas sea correcto, entonces giscus utilizará automáticamente las discusiones.
+          - heading "Sitios que usan giscus" [level=2] [ref=f17e196]
+          - list [ref=f17e197]:
+            - listitem [ref=f17e198]:
+              - link "laymonage.com" [ref=f17e199] [cursor=pointer]:
+                - /url: https://laymonage.com/posts/giscus
+            - listitem [ref=f17e200]:
+              - link "os.phil-opp.com" [ref=f17e201] [cursor=pointer]:
+                - /url: https://os.phil-opp.com
+            - listitem [ref=f17e202]:
+              - link "Stats and R" [ref=f17e203] [cursor=pointer]:
+                - /url: https://statsandr.com
+            - listitem [ref=f17e204]:
+              - link "Tech Debt Burndown Podcast" [ref=f17e205] [cursor=pointer]:
+                - /url: https://techdebtburndown.com
+            - listitem [ref=f17e206]:
+              - link [ref=f17e207] [cursor=pointer]:
+                - /url: https://github.com/topics/giscus
+                - strong [ref=f17e208]: Y muchos más!
+          - heading "Contribución" [level=2] [ref=f17e209]
+          - paragraph [ref=f17e210]:
+            - text: Ver
+            - link "CONTRIBUTING.md" [ref=f17e211] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md
+          - heading "Pruébalo 👇👇👇" [level=2] [ref=f17e212]
+      - link [ref=f17e213] [cursor=pointer]:
+        - /url: https://vercel.com/?utm_source=giscus&utm_campaign=oss
+        - img "Powered by Vercel" [ref=f17e214]
+  - alert [ref=f17e215]
