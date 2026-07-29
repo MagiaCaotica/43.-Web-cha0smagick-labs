@@ -1,0 +1,242 @@
+- generic [ref=f396e1]:
+  - generic [ref=f396e2]:
+    - generic:
+      - generic:
+        - heading "To view keyboard shortcuts, press question mark View keyboard shortcuts" [level=2] [ref=f396e3]:
+          - generic [ref=f396e4]: To view keyboard shortcuts, press question mark
+          - link "View keyboard shortcuts" [ref=f396e5] [cursor=pointer]:
+            - /url: /i/keyboard_shortcuts
+        - generic:
+          - generic:
+            - button "Grok" [ref=f396e6] [cursor=pointer]
+            - button "Chat" [ref=f396e10] [cursor=pointer]
+          - generic:
+            - generic:
+              - generic:
+                - dialog:
+                  - group [ref=f396e14]:
+                    - dialog [ref=f396e16]:
+                      - generic [ref=f396e19]:
+                        - progressbar [ref=f396e20]
+                        - generic [ref=f396e26]:
+                          - button "Close" [ref=f396e28] [cursor=pointer]
+                          - button "Drafts" [ref=f396e36] [cursor=pointer]
+                        - generic [ref=f396e45]:
+                          - generic [ref=f396e46]:
+                            - generic [ref=f396e54]:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic "ChaosmagickLabs":
+                                      - img "ChaosmagickLabs"
+                            - generic [ref=f396e75]:
+                              - generic [ref=f396e76]: What’s happening?
+                              - textbox "Post text" [active] [ref=f396e79]
+                          - generic [ref=f396e83]:
+                            - button "Everyone can reply" [ref=f396e87] [cursor=pointer]
+                            - generic [ref=f396e96]:
+                              - navigation [ref=f396e97]:
+                                - generic [ref=f396e98]:
+                                  - generic:
+                                    - button "Previous" [disabled]
+                                  - tablist [ref=f396e100]:
+                                    - generic [ref=f396e103]:
+                                      - button "Add photos or video" [ref=f396e104] [cursor=pointer]
+                                      - button "Choose File" [ref=f396e110]
+                                    - button "Add a GIF" [ref=f396e113] [cursor=pointer]
+                                    - button "Generate image" [ref=f396e121] [cursor=pointer]
+                                    - button "Add poll" [ref=f396e128] [cursor=pointer]
+                                    - button "Add emoji" [ref=f396e136] [cursor=pointer]
+                                    - button "Schedule post" [ref=f396e144] [cursor=pointer]
+                                    - button "Tag location" [disabled] [ref=f396e151]
+                                    - button "Content disclosure" [ref=f396e158] [cursor=pointer]
+                                  - generic:
+                                    - button "Next" [disabled]
+                              - button "Post" [disabled] [ref=f396e165]
+        - generic [ref=f396e169]:
+          - button [ref=f396e170] [cursor=pointer]
+          - button [ref=f396e172] [cursor=pointer]
+          - banner [ref=f396e174]:
+            - generic [ref=f396e176]:
+              - generic [ref=f396e177]:
+                - heading [level=1] [ref=f396e179] [cursor=pointer]:
+                  - link [ref=f396e180]:
+                    - /url: /home
+                - navigation [ref=f396e186]:
+                  - link [ref=f396e187] [cursor=pointer]:
+                    - /url: /home
+                    - generic [ref=f396e188]: Home
+                  - link [ref=f396e194] [cursor=pointer]:
+                    - /url: /explore
+                    - generic [ref=f396e195]: Explore
+                  - link [ref=f396e201] [cursor=pointer]:
+                    - /url: /notifications
+                    - generic [ref=f396e202]: Notifications
+                  - link [ref=f396e208] [cursor=pointer]:
+                    - /url: /i/connect_people
+                    - generic [ref=f396e209]: Follow
+                  - link [ref=f396e215] [cursor=pointer]:
+                    - /url: /i/chat
+                    - generic [ref=f396e216]: Chat
+                  - link [ref=f396e222] [cursor=pointer]:
+                    - /url: /i/grok
+                    - generic [ref=f396e223]: Grok
+                  - link [ref=f396e230] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                    - generic [ref=f396e231]: Profile
+                  - button [ref=f396e237] [cursor=pointer]:
+                    - generic [ref=f396e238]: More
+                - link [ref=f396e245] [cursor=pointer]:
+                  - /url: /compose/post
+                  - generic [ref=f396e246]: Post
+              - button [ref=f396e254] [cursor=pointer]:
+                - generic [ref=f396e266]:
+                  - generic [ref=f396e267]: ChaosmagickLabs
+                  - generic [ref=f396e271]: "@Cha0smagickLABS"
+          - main [ref=f396e279]:
+            - generic [ref=f396e282]:
+              - generic [ref=f396e284]:
+                - generic [ref=f396e285]:
+                  - generic [ref=f396e288]:
+                    - navigation [ref=f396e290]:
+                      - generic [ref=f396e291]:
+                        - generic:
+                          - button [disabled]
+                        - tablist [ref=f396e293]:
+                          - tab [selected] [ref=f396e294] [cursor=pointer]:
+                            - generic [ref=f396e295]: For you
+                          - tab [ref=f396e299] [cursor=pointer]:
+                            - generic [ref=f396e300]: Following
+                          - tab [ref=f396e303] [cursor=pointer]:
+                            - generic [ref=f396e304]: Movies & TV
+                          - tab [ref=f396e307] [cursor=pointer]:
+                            - generic [ref=f396e308]: Memes
+                          - tab [ref=f396e311] [cursor=pointer]:
+                            - generic [ref=f396e312]: Pets
+                        - generic:
+                          - button [disabled]
+                    - button [ref=f396e316] [cursor=pointer]
+                  - generic:
+                    - generic:
+                      - status:
+                        - button:
+                          - generic: See new posts
+                - generic [ref=f396e327]:
+                  - link [ref=f396e336] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                  - generic [ref=f396e339]:
+                    - generic [ref=f396e357]:
+                      - generic [ref=f396e358]: What’s happening?
+                      - textbox [ref=f396e361]
+                    - generic [ref=f396e368]:
+                      - navigation [ref=f396e369]:
+                        - generic [ref=f396e370]:
+                          - generic:
+                            - button [disabled]
+                          - tablist [ref=f396e372]:
+                            - generic [ref=f396e375]:
+                              - button [ref=f396e376] [cursor=pointer]
+                              - button [ref=f396e382]
+                            - button [ref=f396e385] [cursor=pointer]
+                            - button [ref=f396e393] [cursor=pointer]
+                            - button [ref=f396e400] [cursor=pointer]
+                            - button [ref=f396e408] [cursor=pointer]
+                            - button [ref=f396e416] [cursor=pointer]
+                            - button [disabled] [ref=f396e423]
+                            - button [ref=f396e430] [cursor=pointer]
+                          - generic:
+                            - button [disabled]
+                      - button [disabled] [ref=f396e437]:
+                        - generic [ref=f396e438]: Post
+                - progressbar [ref=f396e444]
+              - generic [ref=f396e454]:
+                - search [ref=f396e459]:
+                  - combobox [ref=f396e471]
+                - complementary [ref=f396e475]:
+                  - generic [ref=f396e476]: Subscribe to Premium
+                  - generic [ref=f396e478]: Get rid of ads, see your analytics, boost your replies and unlock 20+ features.
+                  - link [ref=f396e479] [cursor=pointer]:
+                    - /url: /i/premium_sign_up
+                    - generic [ref=f396e480]: Subscribe
+                - progressbar [ref=f396e486]
+                - complementary [ref=f396e493]:
+                  - heading [level=2] [ref=f396e495]:
+                    - generic [ref=f396e496]: Who to follow
+                  - list [ref=f396e497]:
+                    - listitem [ref=f396e498] [cursor=pointer]:
+                      - generic [ref=f396e499]:
+                        - link [ref=f396e509]:
+                          - /url: /AmazonMGMStudio
+                        - generic [ref=f396e513]:
+                          - generic [ref=f396e515]:
+                            - link [ref=f396e517]:
+                              - /url: /AmazonMGMStudio
+                              - generic [ref=f396e518]:
+                                - generic [ref=f396e519]: Amazon MGM Studios
+                                - link [ref=f396e529]
+                            - link [ref=f396e538]:
+                              - /url: /AmazonMGMStudio
+                              - generic [ref=f396e539]: "@AmazonMGMStudio"
+                          - button [ref=f396e542]:
+                            - generic [ref=f396e543]: Follow
+                    - listitem [ref=f396e546] [cursor=pointer]:
+                      - generic [ref=f396e547]:
+                        - link [ref=f396e557]:
+                          - /url: /ParamountMovies
+                        - generic [ref=f396e561]:
+                          - generic [ref=f396e563]:
+                            - link [ref=f396e565]:
+                              - /url: /ParamountMovies
+                              - generic [ref=f396e566]: Paramount Movies
+                            - link [ref=f396e579]:
+                              - /url: /ParamountMovies
+                              - generic [ref=f396e580]: "@ParamountMovies"
+                          - button [ref=f396e583]:
+                            - generic [ref=f396e584]: Follow
+                    - listitem [ref=f396e587] [cursor=pointer]:
+                      - generic [ref=f396e588]:
+                        - link [ref=f396e598]:
+                          - /url: /20thcentury
+                        - generic [ref=f396e602]:
+                          - generic [ref=f396e604]:
+                            - link [ref=f396e606]:
+                              - /url: /20thcentury
+                              - generic [ref=f396e607]: 20th Century Studios
+                            - link [ref=f396e620]:
+                              - /url: /20thcentury
+                              - generic [ref=f396e621]: "@20thcentury"
+                          - button [ref=f396e624]:
+                            - generic [ref=f396e625]: Follow
+                  - link [ref=f396e628] [cursor=pointer]:
+                    - /url: /i/connect_people?user_id=2082185111257194496
+                    - generic [ref=f396e629]: Show more
+                - navigation [ref=f396e635]:
+                  - generic [ref=f396e636]:
+                    - link [ref=f396e637] [cursor=pointer]:
+                      - /url: https://x.com/tos
+                      - text: Terms
+                    - generic [ref=f396e638]: ·
+                  - generic [ref=f396e639]:
+                    - link [ref=f396e640] [cursor=pointer]:
+                      - /url: https://x.com/privacy
+                      - text: Privacy
+                    - generic [ref=f396e641]: ·
+                  - generic [ref=f396e642]:
+                    - link [ref=f396e643] [cursor=pointer]:
+                      - /url: https://support.x.com/articles/20170514
+                      - text: Cookies
+                    - generic [ref=f396e644]: ·
+                  - generic [ref=f396e645]:
+                    - link [ref=f396e646] [cursor=pointer]:
+                      - /url: https://help.x.com/resources/accessibility
+                      - text: Accessibility
+                    - generic [ref=f396e647]: ·
+                  - generic [ref=f396e648]:
+                    - link [ref=f396e649] [cursor=pointer]:
+                      - /url: https://business.x.com/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo
+                      - text: Ads Info
+                    - generic [ref=f396e650]: ·
+                  - button [ref=f396e651] [cursor=pointer]:
+                    - generic [ref=f396e652]: More
+                  - generic [ref=f396e656]: © 2026 X Corp.
+  - region "Notifications alt+T"

@@ -1,0 +1,147 @@
+- generic [active] [ref=f442e1]:
+  - generic [ref=f442e2]:
+    - generic:
+      - generic:
+        - heading "To view keyboard shortcuts, press question mark View keyboard shortcuts" [level=2] [ref=f442e3]:
+          - generic [ref=f442e4]: To view keyboard shortcuts, press question mark
+          - link "View keyboard shortcuts" [ref=f442e5] [cursor=pointer]:
+            - /url: /i/keyboard_shortcuts
+        - generic:
+          - generic:
+            - button "Grok" [ref=f442e6] [cursor=pointer]
+            - button "Chat" [ref=f442e10] [cursor=pointer]
+        - generic [ref=f442e14]:
+          - button "Skip to home timeline" [ref=f442e15] [cursor=pointer]
+          - button "Skip to trending" [ref=f442e17] [cursor=pointer]
+          - banner [ref=f442e19]:
+            - generic [ref=f442e21]:
+              - generic [ref=f442e22]:
+                - heading [level=1] [ref=f442e24] [cursor=pointer]:
+                  - link "X" [ref=f442e25]:
+                    - /url: /home
+                - navigation "Primary" [ref=f442e31]:
+                  - link "Home" [ref=f442e32] [cursor=pointer]:
+                    - /url: /home
+                  - link "Search and explore" [ref=f442e39] [cursor=pointer]:
+                    - /url: /explore
+                    - generic [ref=f442e40]: Explore
+                  - link "Notifications" [ref=f442e46] [cursor=pointer]:
+                    - /url: /notifications
+                  - link "Follow" [ref=f442e53] [cursor=pointer]:
+                    - /url: /i/connect_people
+                  - link "Direct Messages" [ref=f442e60] [cursor=pointer]:
+                    - /url: /i/chat
+                    - generic [ref=f442e61]: Chat
+                  - link "Grok" [ref=f442e67] [cursor=pointer]:
+                    - /url: /i/grok
+                    - generic [ref=f442e68]:
+                      - generic "undefined unread items" [ref=f442e73]
+                      - generic [ref=f442e74]: Grok
+                  - link "Profile" [ref=f442e75] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                  - button "More menu items" [ref=f442e82] [cursor=pointer]:
+                    - generic [ref=f442e83]: More
+                - link "Post" [ref=f442e90] [cursor=pointer]:
+                  - /url: /compose/post
+              - button "Account menu" [ref=f442e99] [cursor=pointer]:
+                - generic [ref=f442e107]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic "ChaosmagickLabs":
+                          - img "ChaosmagickLabs"
+                - generic [ref=f442e111]:
+                  - generic [ref=f442e112]: ChaosmagickLabs
+                  - generic [ref=f442e116]: "@Cha0smagickLABS"
+          - main [ref=f442e124]:
+            - generic [ref=f442e127]:
+              - generic "Home timeline" [ref=f442e129]:
+                - generic [ref=f442e130]:
+                  - generic [ref=f442e136] [cursor=pointer]:
+                    - button "Back" [ref=f442e138]
+                    - generic [ref=f442e144]:
+                      - heading [level=2] [ref=f442e145]
+                      - generic [ref=f442e152]: 22 posts
+                    - button "Search" [ref=f442e155]
+                  - generic:
+                    - generic:
+                      - status:
+                        - button:
+                          - generic: See new posts
+                - generic [ref=f442e162]:
+                  - generic [ref=f442e163]:
+                    - generic [ref=f442e168]:
+                      - generic [ref=f442e169]:
+                        - link [ref=f442e177] [cursor=pointer]:
+                          - /url: /Cha0smagickLABS/photo
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic "Opens profile photo":
+                                  - img "Opens profile photo"
+                        - link "Edit profile" [ref=f442e181] [cursor=pointer]:
+                          - /url: /settings/profile
+                      - generic [ref=f442e188]:
+                        - generic [ref=f442e189]: ChaosmagickLabs
+                        - generic [ref=f442e193]: "@Cha0smagickLABS"
+                      - link "Joined July 2026" [ref=f442e200] [cursor=pointer]:
+                        - /url: /Cha0smagickLABS/about
+                      - generic [ref=f442e207]:
+                        - link "10 Following" [ref=f442e209] [cursor=pointer]:
+                          - /url: /Cha0smagickLABS/following
+                          - generic [ref=f442e210]: "10"
+                          - generic [ref=f442e211]: Following
+                        - link "0 Followers" [ref=f442e213] [cursor=pointer]:
+                          - /url: /Cha0smagickLABS/verified_followers
+                          - generic [ref=f442e214]: "0"
+                          - generic [ref=f442e215]: Followers
+                    - progressbar [ref=f442e217]
+                    - generic [ref=f442e224]:
+                      - button [ref=f442e225] [cursor=pointer]
+                      - generic [ref=f442e230]:
+                        - generic [ref=f442e231]: You aren’t verified yet
+                        - generic [ref=f442e235]: Get verified for boosted replies, analytics, ad-free browsing, and more. Upgrade your profile now.
+                        - link "Get verified" [ref=f442e236] [cursor=pointer]:
+                          - /url: /i/premium_sign_up
+                  - navigation "Profile timelines" [ref=f442e241]:
+                    - generic [ref=f442e242]:
+                      - generic:
+                        - button "Previous" [disabled]
+                      - tablist [ref=f442e244]:
+                        - tab "Posts" [selected] [ref=f442e245] [cursor=pointer]
+                        - tab "Replies" [ref=f442e250] [cursor=pointer]
+                        - tab "Media" [ref=f442e254] [cursor=pointer]
+                        - tab "Likes" [ref=f442e258] [cursor=pointer]
+                      - generic:
+                        - button "Next" [disabled]
+                  - progressbar "Loading posts by @Cha0smagickLABS" [ref=f442e263]
+              - generic "Trending" [ref=f442e272]:
+                - generic [ref=f442e273]:
+                  - search "Search" [ref=f442e278]:
+                    - combobox "Search query" [ref=f442e290]
+                  - progressbar "Loading recommendations for users to follow" [ref=f442e295]
+                  - progressbar "Loading timeline" [ref=f442e302]
+                  - navigation "Footer" [ref=f442e308]:
+                    - generic [ref=f442e309]:
+                      - link "Terms" [ref=f442e310] [cursor=pointer]:
+                        - /url: https://x.com/tos
+                      - generic [ref=f442e311]: ·
+                    - generic [ref=f442e312]:
+                      - link "Privacy" [ref=f442e313] [cursor=pointer]:
+                        - /url: https://x.com/privacy
+                      - generic [ref=f442e314]: ·
+                    - generic [ref=f442e315]:
+                      - link "Cookies" [ref=f442e316] [cursor=pointer]:
+                        - /url: https://support.x.com/articles/20170514
+                      - generic [ref=f442e317]: ·
+                    - generic [ref=f442e318]:
+                      - link "Accessibility" [ref=f442e319] [cursor=pointer]:
+                        - /url: https://help.x.com/resources/accessibility
+                      - generic [ref=f442e320]: ·
+                    - generic [ref=f442e321]:
+                      - link "Ads Info" [ref=f442e322] [cursor=pointer]:
+                        - /url: https://business.x.com/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo
+                      - generic [ref=f442e323]: ·
+                    - button "More" [ref=f442e324] [cursor=pointer]
+                    - generic [ref=f442e329]: © 2026 X Corp.
+  - region "Notifications alt+T"

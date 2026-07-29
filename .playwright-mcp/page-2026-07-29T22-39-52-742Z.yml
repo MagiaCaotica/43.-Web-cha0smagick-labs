@@ -1,0 +1,109 @@
+- generic [ref=f15e2]:
+  - generic [ref=f15e3]:
+    - link "Skip to content" [ref=f15e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global navigation menu" [ref=f15e8]:
+      - generic [ref=f15e9]:
+        - generic [ref=f15e10]:
+          - button "Open menu" [ref=f15e12] [cursor=pointer]
+          - link "Homepage (g then d)" [ref=f15e15] [cursor=pointer]:
+            - /url: /
+        - button "Search or jump to…" [ref=f15e21] [cursor=pointer]:
+          - generic [ref=f15e23]:
+            - generic:
+              - text: Type
+              - generic: /
+              - text: to search
+        - generic [ref=f15e24]:
+          - generic [ref=f15e25]:
+            - generic [ref=f15e28]:
+              - link "Chat with Copilot" [ref=f15e30] [cursor=pointer]:
+                - /url: /copilot
+              - button "Open Copilot…" [ref=f15e35] [cursor=pointer]
+            - button "Create new..." [ref=f15e37] [cursor=pointer]
+            - generic [ref=f15e39]:
+              - link "All issues (g then i)" [ref=f15e40] [cursor=pointer]:
+                - /url: /issues
+              - link "All pull requests (g then p)" [ref=f15e44] [cursor=pointer]:
+                - /url: /pulls
+              - link "All repositories" [ref=f15e47] [cursor=pointer]:
+                - /url: /repos
+          - link "You have no unread notifications (g then n)" [ref=f15e50] [cursor=pointer]:
+            - /url: /notifications
+          - button "Open user navigation menu" [ref=f15e54] [cursor=pointer]:
+            - img "Cha0smagick" [ref=f15e55]
+  - main [ref=f15e58]:
+    - generic [ref=f15e59]:
+      - heading [level=2] [ref=f15e61]:
+        - text: Install
+        - link "giscus" [ref=f15e62] [cursor=pointer]:
+          - /url: https://github.com/apps/giscus
+      - generic [ref=f15e63]:
+        - paragraph [ref=f15e64]:
+          - text: Install on your personal account Cha0smagick
+          - img "@Cha0smagick" [ref=f15e65]
+        - generic [ref=f15e66]:
+          - generic [ref=f15e67]:
+            - generic [ref=f15e68]:
+              - paragraph [ref=f15e69]: "for these repositories:"
+              - radiogroup "Repository access" [ref=f15e71]:
+                - generic [ref=f15e73]:
+                  - generic [ref=f15e74]:
+                    - radio "All repositories" [checked] [ref=f15e75] [cursor=pointer]
+                    - generic [ref=f15e76]:
+                      - generic [ref=f15e77] [cursor=pointer]: All repositories
+                      - generic [ref=f15e78]: This applies to all current and future repositories owned by the resource owner. Also includes public repositories (read-only).
+                  - generic [ref=f15e79]:
+                    - radio "Only select repositories" [ref=f15e80] [cursor=pointer]
+                    - generic [ref=f15e81]:
+                      - generic [ref=f15e82] [cursor=pointer]: Only select repositories
+                      - generic [ref=f15e83]: Select at least one repository. Also includes public repositories (read-only).
+            - paragraph [ref=f15e84]: "with these permissions:"
+            - list [ref=f15e86]:
+              - listitem [ref=f15e87]:
+                - strong [ref=f15e90]: Read
+                - text: access to metadata
+              - listitem [ref=f15e91]:
+                - strong [ref=f15e94]: Read
+                - text: and
+                - strong [ref=f15e95]: write
+                - text: access to discussions
+            - separator [ref=f15e96]
+            - button "Install" [ref=f15e97] [cursor=pointer]
+          - link "Cancel" [ref=f15e98] [cursor=pointer]:
+            - /url: /apps/giscus/installations/new
+  - contentinfo [ref=f15e99]:
+    - heading "Footer" [level=2] [ref=f15e100]
+    - generic [ref=f15e101]:
+      - generic [ref=f15e102]:
+        - link "GitHub Homepage" [ref=f15e103] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f15e106]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f15e107]:
+        - heading "Footer navigation" [level=3] [ref=f15e108]
+        - list "Footer navigation" [ref=f15e109]:
+          - listitem [ref=f15e110]:
+            - link "Terms" [ref=f15e111] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f15e112]:
+            - link "Privacy" [ref=f15e113] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f15e114]:
+            - link "Security" [ref=f15e115] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f15e116]:
+            - link "Status" [ref=f15e117] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f15e118]:
+            - link "Community" [ref=f15e119] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f15e120]:
+            - link "Docs" [ref=f15e121] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f15e122]:
+            - link "Contact" [ref=f15e123] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f15e124]:
+            - button "Manage cookies" [ref=f15e126] [cursor=pointer]
+          - listitem [ref=f15e127]:
+            - button "Do not share my personal information" [ref=f15e129] [cursor=pointer]

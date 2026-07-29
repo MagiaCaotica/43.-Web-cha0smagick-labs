@@ -34,10 +34,10 @@ FOOTER_HTML = """<footer id="site-footer" class="site-footer">
         <div class="footer-section">
             <h4>Community</h4>
             <ul>
-                <li><a href="https://t.me/magiacaotica" target="_blank">Telegram</a></li>
+                <li><a href="https://t.me/cha0smagicklabs" target="_blank">Telegram</a></li>
                 <li><a href="https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA" target="_blank">YouTube</a></li>
                 <li><a href="https://www.instagram.com/cha0smagick.labs/" target="_blank">Instagram</a></li>
-                <li><a href="https://discord.gg/6vNSCaPgPd" target="_blank">Discord</a></li>
+                <li><a href="https://discord.gg/PSfn26xqgD" target="_blank">Discord</a></li>
             </ul>
         </div>
         <div class="footer-section">
@@ -81,7 +81,10 @@ COOKIE_BANNER = """<div id="cookie-consent-banner">
 </div>"""
 
 GTAG = """<script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>"""
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});gtag('config','G-V6LHCPN9TK');
+<!-- META PIXEL (Google Ads) — Replace 000000000000000 with your real Pixel ID -->
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','000000000000000');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=000000000000000&ev=PageView&noscript=1"/></noscript>"""
 
 HEADER_HTML = """<header>
     <div class="header-content">
@@ -104,6 +107,7 @@ NAV_HTML = """<nav>
         <li><a href="../tools/">Free Tools</a></li>
         <li><a href="index.html">Blog</a></li>
         <li><a href="../glossary.html">Glossary</a></li>
+        <li><a href="https://t.me/cha0smagicklabs" target="_blank">Community</a></li>
         <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
         <li><a href="../complete-chaos-magick-bundle.html">Bundle</a></li>
     </ul>
@@ -215,8 +219,32 @@ def generate_article(slug, title, meta_desc, h1, content, faqs=None, keywords=""
 </article>
 </main>
 {FOOTER_HTML}
+
+<!-- Giscus Comments -->
+<div class="giscus-container" style="max-width:800px;margin:2rem auto;padding:0 1rem;">
+  <div id="giscus-comments"></div>
+</div>
+<script src="https://giscus.app/client.js"
+        data-repo="MagiaCaotica/43.-Web-cha0smagick-labs"
+        data-repo-id="R_kgDOQ95-4g"
+        data-category="General"
+        data-category-id="DIC_kwDOQ95-4s4DCREq"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="dark_dimmed"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
 <div id="google_translate_element" style="display:none;"></div>
 <script src="../js/shared.js"></script>
+<script src="../js/affiliate.js" defer></script>
+<script src="../js/conversion.js?v=20260729" defer></script>
 {LANG_SIDEBAR_HTML}
 {COOKIE_BANNER}
 </body>

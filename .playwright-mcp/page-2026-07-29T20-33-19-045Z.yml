@@ -1,0 +1,71 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e2]:
+    - banner [ref=f8e3]:
+      - generic [ref=f8e4]:
+        - heading [level=1] [ref=f8e5]:
+          - link [ref=f8e6] [cursor=pointer]:
+            - /url: https://runesoup.com/
+            - img "Rune Soup" [ref=f8e7]
+        - generic [ref=f8e8]:
+          - text: 
+          - generic [ref=f8e9]: 
+          - navigation [ref=f8e12]:
+            - generic:
+              - list:
+                - listitem [ref=f8e13]:
+                  - link "Blog " [ref=f8e14] [cursor=pointer]:
+                    - /url: /blog/
+                - listitem [ref=f8e15]:
+                  - link "Podcast" [ref=f8e16] [cursor=pointer]:
+                    - /url: http://podcast.runesoup.com
+                - listitem [ref=f8e17]:
+                  - link "Contact" [ref=f8e18] [cursor=pointer]:
+                    - /url: https://runesoup.com/contact/
+                - listitem [ref=f8e19]:
+                  - link "Login" [ref=f8e20] [cursor=pointer]:
+                    - /url: "#menu-login"
+    - heading "Contact" [level=1] [ref=f8e26]
+    - generic [ref=f8e30]:
+      - separator [ref=f8e31]
+      - generic [ref=f8e33]:
+        - generic [ref=f8e34]:
+          - heading "CONTACT RUNE SOUP" [level=2] [ref=f8e35]
+          - paragraph [ref=f8e36]: Is there anything more friendly than an impersonal contact page? If not, I haven’t seen it.
+          - paragraph [ref=f8e37]: There is also
+          - list [ref=f8e38]:
+            - listitem [ref=f8e39]:
+              - link "The Facebook page" [ref=f8e40] [cursor=pointer]:
+                - /url: https://www.facebook.com/runesoup/
+            - listitem [ref=f8e41]:
+              - link "Twitter" [ref=f8e42] [cursor=pointer]:
+                - /url: https://twitter.com/gordon_white
+            - listitem [ref=f8e43]:
+              - link "The YouTube channel" [ref=f8e44] [cursor=pointer]:
+                - /url: http://youtube.com/gordonnz
+          - paragraph [ref=f8e45]: Or you can sign up for emails and/or Premium Membership.
+          - paragraph [ref=f8e46]:
+            - emphasis [ref=f8e47]: Please note, due to the high volume of enquiries, I may not be able to respond to every email that comes through and I also very likely won’t give you free magical advice anyway.
+          - paragraph [ref=f8e48]:
+            - emphasis [ref=f8e49]: Premium members always receive priority replies to their questions and have the opportunity to engage during regular, live video Q&As.
+        - group "Contact Form" [ref=f8e54]:
+          - generic [ref=f8e56]:
+            - generic [ref=f8e57]:
+              - generic [ref=f8e58] [cursor=pointer]: Your Name *
+              - textbox "Your Name *" [ref=f8e59]
+            - generic [ref=f8e60]:
+              - generic [ref=f8e61] [cursor=pointer]: Email *
+              - textbox "Email *" [ref=f8e62]
+            - generic [ref=f8e63]:
+              - generic [ref=f8e64] [cursor=pointer]: Subject *
+              - textbox "Subject *" [ref=f8e65]
+            - generic [ref=f8e66]:
+              - generic [ref=f8e67] [cursor=pointer]: Your Message *
+              - textbox "Your Message *" [ref=f8e68]
+            - iframe [ref=f8e71]:
+              - generic [ref=f9e6]:
+                - text: protección de
+                - strong [ref=f9e7]: reCAPTCHA
+            - button "Submit" [ref=f8e73] [cursor=pointer]
+    - contentinfo [ref=f8e74]:
+      - generic [ref=f8e75]: Copyright © Rune Soup
+  - generic [ref=f8e78]: desktop

@@ -1,0 +1,374 @@
+- generic [active] [ref=f355e1]:
+  - generic [ref=f355e2]:
+    - generic:
+      - generic:
+        - heading "To view keyboard shortcuts, press question mark View keyboard shortcuts" [level=2] [ref=f355e3]:
+          - generic [ref=f355e4]: To view keyboard shortcuts, press question mark
+          - link "View keyboard shortcuts" [ref=f355e5] [cursor=pointer]:
+            - /url: /i/keyboard_shortcuts
+        - generic:
+          - generic:
+            - button "Grok" [ref=f355e6] [cursor=pointer]
+            - button "Chat" [ref=f355e10] [cursor=pointer]
+        - generic [ref=f355e14]:
+          - button "Skip to home timeline" [ref=f355e15] [cursor=pointer]
+          - button "Skip to trending" [ref=f355e17] [cursor=pointer]
+          - banner [ref=f355e19]:
+            - generic [ref=f355e21]:
+              - generic [ref=f355e22]:
+                - heading [level=1] [ref=f355e24] [cursor=pointer]:
+                  - link "X" [ref=f355e25]:
+                    - /url: /home
+                - navigation "Primary" [ref=f355e31]:
+                  - link "Home" [ref=f355e32] [cursor=pointer]:
+                    - /url: /home
+                  - link "Search and explore" [ref=f355e39] [cursor=pointer]:
+                    - /url: /explore
+                    - generic [ref=f355e40]: Explore
+                  - link "Notifications" [ref=f355e46] [cursor=pointer]:
+                    - /url: /notifications
+                  - link "Follow" [ref=f355e53] [cursor=pointer]:
+                    - /url: /i/connect_people
+                  - link "Direct Messages" [ref=f355e60] [cursor=pointer]:
+                    - /url: /i/chat
+                    - generic [ref=f355e61]: Chat
+                  - link "Grok" [ref=f355e67] [cursor=pointer]:
+                    - /url: /i/grok
+                    - generic [ref=f355e68]:
+                      - generic "undefined unread items" [ref=f355e73]
+                      - generic [ref=f355e74]: Grok
+                  - link "Profile" [ref=f355e75] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                  - button "More menu items" [ref=f355e82] [cursor=pointer]:
+                    - generic [ref=f355e83]: More
+                - link "Post" [ref=f355e90] [cursor=pointer]:
+                  - /url: /compose/post
+              - button "Account menu" [ref=f355e99] [cursor=pointer]:
+                - generic [ref=f355e107]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic "ChaosmagickLabs":
+                          - img "ChaosmagickLabs"
+                - generic [ref=f355e111]:
+                  - generic [ref=f355e112]: ChaosmagickLabs
+                  - generic [ref=f355e116]: "@Cha0smagickLABS"
+          - main [ref=f355e124]:
+            - generic [ref=f355e127]:
+              - generic "Home timeline" [ref=f355e129]:
+                - generic [ref=f355e130]:
+                  - generic [ref=f355e133]:
+                    - navigation [ref=f355e135]:
+                      - generic [ref=f355e136]:
+                        - generic:
+                          - button "Previous" [disabled]
+                        - tablist [ref=f355e138]:
+                          - tab "For you" [selected] [ref=f355e139] [cursor=pointer]
+                          - tab "Following" [ref=f355e144] [cursor=pointer]
+                          - tab "Movies & TV" [ref=f355e148] [cursor=pointer]
+                          - tab "Memes" [ref=f355e152] [cursor=pointer]
+                          - tab "Pets" [ref=f355e156] [cursor=pointer]
+                        - generic:
+                          - button "Next" [disabled]
+                    - button "Manage timelines" [ref=f355e161] [cursor=pointer]
+                  - generic:
+                    - generic:
+                      - status:
+                        - button:
+                          - generic: See new posts
+                - generic [ref=f355e310]:
+                  - link [ref=f355e319] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic "ChaosmagickLabs":
+                            - img "ChaosmagickLabs"
+                  - generic [ref=f355e322]:
+                    - generic [ref=f355e340]:
+                      - generic [ref=f355e341]: What’s happening?
+                      - textbox "Post text" [ref=f355e344]
+                    - generic [ref=f355e351]:
+                      - navigation [ref=f355e352]:
+                        - generic [ref=f355e353]:
+                          - generic:
+                            - button "Previous" [disabled]
+                          - tablist [ref=f355e355]:
+                            - generic [ref=f355e358]:
+                              - button "Add photos or video" [ref=f355e359] [cursor=pointer]
+                              - button "Choose File" [ref=f355e365]
+                            - button "Add a GIF" [ref=f355e368] [cursor=pointer]
+                            - button "Generate image" [ref=f355e376] [cursor=pointer]
+                            - button "Add poll" [ref=f355e383] [cursor=pointer]
+                            - button "Add emoji" [ref=f355e391] [cursor=pointer]
+                            - button "Schedule post" [ref=f355e399] [cursor=pointer]
+                            - button "Tag location" [disabled] [ref=f355e406]
+                            - button "Content disclosure" [ref=f355e413] [cursor=pointer]
+                          - generic:
+                            - button "Next" [disabled]
+                      - button "Post" [disabled] [ref=f355e420]
+                - region [ref=f355e424]:
+                  - heading "Your Home Timeline" [level=1] [ref=f355e425]
+                  - 'generic "Timeline: Your Home Timeline" [ref=f355e426]':
+                    - generic [ref=f355e427]:
+                      - article "Massimo Verified account @Rainmaker1973 7 hours ago 4-billion-year-old pattern locked inside a meteorite Embedded video 0:53 28 replies, 57 reposts, 376 likes, 91 bookmarks, 31917 views" [ref=f355e431] [cursor=pointer]:
+                        - generic [ref=f355e437]:
+                          - link [ref=f355e449]:
+                            - /url: /Rainmaker1973
+                          - generic [ref=f355e452]:
+                            - generic [ref=f355e454]:
+                              - generic [ref=f355e457]:
+                                - link "Massimo Verified account" [ref=f355e460]:
+                                  - /url: /Rainmaker1973
+                                  - generic [ref=f355e461]:
+                                    - generic [ref=f355e462]: Massimo
+                                    - img "Verified account" [ref=f355e466]
+                                - generic [ref=f355e470]:
+                                  - link "@Rainmaker1973" [ref=f355e472]:
+                                    - /url: /Rainmaker1973
+                                  - generic [ref=f355e474]: ·
+                                  - link "7 hours ago" [ref=f355e476]:
+                                    - /url: /Rainmaker1973/status/2082434835100901452
+                                    - time [ref=f355e477]: 7h
+                              - generic [ref=f355e479]:
+                                - button "Grok actions" [ref=f355e481]
+                                - button "More" [ref=f355e492]
+                            - generic [ref=f355e499]: 4-billion-year-old pattern locked inside a meteorite
+                            - generic [ref=f355e517]:
+                              - generic "Embedded video" [ref=f355e520]
+                              - generic [ref=f355e521]: 0:53
+                            - group "28 replies, 57 reposts, 376 likes, 91 bookmarks, 31917 views" [ref=f355e529]:
+                              - button "28 Replies. Reply" [ref=f355e531]:
+                                - generic [ref=f355e532]: "28"
+                              - button "57 reposts. Repost" [ref=f355e542]:
+                                - generic [ref=f355e543]: "57"
+                              - button "376 Likes. Like" [ref=f355e553]:
+                                - generic [ref=f355e554]: "376"
+                              - link "31917 views. View post analytics" [ref=f355e564]:
+                                - /url: /Rainmaker1973/status/2082434835100901452/analytics
+                                - generic [ref=f355e565]: 31K
+                              - button "Bookmark" [ref=f355e575]
+                              - button "Share post" [ref=f355e584]
+                      - article "SwitzerlandBest Verified account @Switzerland_aib 20 hours ago Switzerland 🇨🇭 Embedded video Play Video. 14 seconds long 3 replies, 25 reposts, 207 likes, 5 bookmarks, 3699 views" [ref=f355e594] [cursor=pointer]:
+                        - generic [ref=f355e600]:
+                          - link [ref=f355e612]:
+                            - /url: /Switzerland_aib
+                          - generic [ref=f355e615]:
+                            - generic [ref=f355e617]:
+                              - generic [ref=f355e620]:
+                                - link "SwitzerlandBest Verified account" [ref=f355e623]:
+                                  - /url: /Switzerland_aib
+                                  - generic [ref=f355e624]:
+                                    - generic [ref=f355e625]: SwitzerlandBest
+                                    - img "Verified account" [ref=f355e629]
+                                - generic [ref=f355e633]:
+                                  - link "@Switzerland_aib" [ref=f355e635]:
+                                    - /url: /Switzerland_aib
+                                  - generic [ref=f355e637]: ·
+                                  - link "20 hours ago" [ref=f355e639]:
+                                    - /url: /Switzerland_aib/status/2082247230208065890
+                                    - time [ref=f355e640]: 20h
+                              - generic [ref=f355e642]:
+                                - button "Grok actions" [ref=f355e644]
+                                - button "More" [ref=f355e655]
+                            - generic [ref=f355e663]:
+                              - text: Switzerland
+                              - img "🇨🇭" [ref=f355e664]
+                            - generic [ref=f355e681]:
+                              - generic "Embedded video" [ref=f355e684]
+                              - button "Play Video. 14 seconds long" [ref=f355e691]
+                            - group "3 replies, 25 reposts, 207 likes, 5 bookmarks, 3699 views" [ref=f355e698]:
+                              - button "3 Replies. Reply" [ref=f355e700]:
+                                - generic [ref=f355e701]: "3"
+                              - button "25 reposts. Repost" [ref=f355e711]:
+                                - generic [ref=f355e712]: "25"
+                              - button "207 Likes. Like" [ref=f355e722]:
+                                - generic [ref=f355e723]: "207"
+                              - link "3699 views. View post analytics" [ref=f355e733]:
+                                - /url: /Switzerland_aib/status/2082247230208065890/analytics
+                                - generic [ref=f355e734]: 3.6K
+                              - button "Bookmark" [ref=f355e744]
+                              - button "Share post" [ref=f355e753]
+                      - article "Amazing Physics Verified account @amazing_physics 5 hours ago When two black holes collide, space itself shakes One of the most powerful events in the universe happens when two black holes merge. This cosmic collision sends ripples through space-time called gravitational waves, creating a shockwave across the universe. Embedded video Play Video. 16 seconds long 2 replies, 14 reposts, 61 likes, 8 bookmarks, 7570 views" [ref=f355e763] [cursor=pointer]:
+                        - generic [ref=f355e769]:
+                          - link [ref=f355e781]:
+                            - /url: /amazing_physics
+                          - generic [ref=f355e784]:
+                            - generic [ref=f355e786]:
+                              - generic [ref=f355e789]:
+                                - link "Amazing Physics Verified account" [ref=f355e792]:
+                                  - /url: /amazing_physics
+                                  - generic [ref=f355e793]:
+                                    - generic [ref=f355e794]: Amazing Physics
+                                    - img "Verified account" [ref=f355e798]
+                                - generic [ref=f355e802]:
+                                  - link "@amazing_physics" [ref=f355e804]:
+                                    - /url: /amazing_physics
+                                  - generic [ref=f355e806]: ·
+                                  - link "5 hours ago" [ref=f355e808]:
+                                    - /url: /amazing_physics/status/2082465643417178400
+                                    - time [ref=f355e809]: 5h
+                              - generic [ref=f355e811]:
+                                - button "Grok actions" [ref=f355e813]
+                                - button "More" [ref=f355e824]
+                            - generic [ref=f355e831]:
+                              - generic [ref=f355e832]: When two black holes collide, space itself shakes One of the most powerful events in the universe happens when two black holes merge. This cosmic collision sends ripples through space-time called gravitational waves, creating a shockwave across the universe.
+                              - button "Show more" [ref=f355e833]
+                            - generic [ref=f355e850]:
+                              - generic "Embedded video" [ref=f355e853]
+                              - button "Play Video. 16 seconds long" [ref=f355e860]
+                            - group "2 replies, 14 reposts, 61 likes, 8 bookmarks, 7570 views" [ref=f355e867]:
+                              - button "2 Replies. Reply" [ref=f355e869]:
+                                - generic [ref=f355e870]: "2"
+                              - button "14 reposts. Repost" [ref=f355e880]:
+                                - generic [ref=f355e881]: "14"
+                              - button "61 Likes. Like" [ref=f355e891]:
+                                - generic [ref=f355e892]: "61"
+                              - link "7570 views. View post analytics" [ref=f355e902]:
+                                - /url: /amazing_physics/status/2082465643417178400/analytics
+                                - generic [ref=f355e903]: 7.5K
+                              - button "Bookmark" [ref=f355e913]
+                              - button "Share post" [ref=f355e922]
+              - generic "Trending" [ref=f355e242]:
+                - generic [ref=f355e243]:
+                  - search "Search" [ref=f355e248]:
+                    - combobox "Search query" [ref=f355e260]
+                  - complementary "Subscribe to Premium" [ref=f355e264]:
+                    - generic [ref=f355e267]: Get rid of ads, see your analytics, boost your replies and unlock 20+ features.
+                    - link "Subscribe" [ref=f355e268] [cursor=pointer]:
+                      - /url: /i/premium_sign_up
+                  - generic [ref=f355e932]:
+                    - heading "Today’s News Close" [level=2] [ref=f355e934]:
+                      - generic [ref=f355e935]: Today’s News
+                      - button "Close" [ref=f355e938] [cursor=pointer]
+                    - generic [ref=f355e943]:
+                      - link "Nolan's 'The Odyssey' Tops $700 Million in 12 Days 4 hours ago · Entertainment · 5,417 posts" [ref=f355e944] [cursor=pointer]:
+                        - generic [ref=f355e947]:
+                          - generic [ref=f355e948]: Nolan's 'The Odyssey' Tops $700 Million in 12 Days
+                          - generic [ref=f355e949]: 4 hours ago · Entertainment · 5,417 posts
+                      - link "Fauci Invokes Fifth Amendment in Tense Senate Hearing on COVID Origins 5 hours ago · News · 560K posts" [ref=f355e988] [cursor=pointer]:
+                        - generic [ref=f355e991]:
+                          - generic [ref=f355e992]: Fauci Invokes Fifth Amendment in Tense Senate Hearing on COVID Origins
+                          - generic [ref=f355e993]: 5 hours ago · News · 560K posts
+                      - 'link "Zendaya and Tom Holland Shine at Spider-Man: Brand New Day UK Premiere Trending now · Entertainment · 13.6K posts" [ref=f355e1032] [cursor=pointer]':
+                        - generic [ref=f355e1035]:
+                          - generic [ref=f355e1036]: "Zendaya and Tom Holland Shine at Spider-Man: Brand New Day UK Premiere"
+                          - generic [ref=f355e1037]: Trending now · Entertainment · 13.6K posts
+                  - region [ref=f355e1076]:
+                    - heading "Trending now" [level=1] [ref=f355e1077]
+                    - 'generic "Timeline: Trending now" [ref=f355e1078]':
+                      - generic [ref=f355e1079]:
+                        - heading "What’s happening" [level=2] [ref=f355e1083]
+                        - link "Siente La Pasión Apuesta por tu equipo favorito Promoted by BetPlay More" [ref=f355e1087] [cursor=pointer]:
+                          - generic [ref=f355e1088]:
+                            - generic [ref=f355e1089]: Siente La Pasión
+                            - generic [ref=f355e1090]: Apuesta por tu equipo favorito
+                            - generic [ref=f355e1091]: Promoted by BetPlay
+                            - button "More" [ref=f355e1099]
+                        - link "Sports · Trending Osorio More" [ref=f355e1108] [cursor=pointer]:
+                          - generic [ref=f355e1109]:
+                            - generic [ref=f355e1110]: Sports · Trending
+                            - generic [ref=f355e1112]: Osorio
+                            - button "More" [ref=f355e1115]
+                        - link "Trending in Colombia Grammys More" [ref=f355e1124] [cursor=pointer]:
+                          - generic [ref=f355e1125]:
+                            - generic [ref=f355e1126]: Trending in Colombia
+                            - generic [ref=f355e1128]: Grammys
+                            - button "More" [ref=f355e1131]
+                        - link "Trending in Colombia Manuel Grau More" [ref=f355e1140] [cursor=pointer]:
+                          - generic [ref=f355e1141]:
+                            - generic [ref=f355e1142]: Trending in Colombia
+                            - generic [ref=f355e1144]: Manuel Grau
+                            - button "More" [ref=f355e1147]
+                        - link "Show more" [ref=f355e1156] [cursor=pointer]:
+                          - /url: /explore/tabs/for-you
+                  - complementary "Who to follow" [ref=f355e1158]:
+                    - heading "Who to follow" [level=2] [ref=f355e1160]
+                    - list [ref=f355e1162]:
+                      - listitem [ref=f355e1163] [cursor=pointer]:
+                        - generic [ref=f355e1164]:
+                          - link [ref=f355e1174]:
+                            - /url: /katyperry
+                          - generic [ref=f355e1178]:
+                            - generic [ref=f355e1180]:
+                              - link [ref=f355e1182]:
+                                - /url: /katyperry
+                                - generic [ref=f355e1183]:
+                                  - generic [ref=f355e1184]: KATY PERRY
+                                  - img "Verified account" [ref=f355e1188]
+                              - link "@katyperry" [ref=f355e1193]:
+                                - /url: /katyperry
+                            - button "Follow @katyperry" [ref=f355e1197]:
+                              - generic [ref=f355e1198]: Follow
+                      - listitem [ref=f355e1201] [cursor=pointer]:
+                        - generic [ref=f355e1202]:
+                          - link [ref=f355e1212]:
+                            - /url: /ABCNetwork
+                          - generic [ref=f355e1216]:
+                            - generic [ref=f355e1218]:
+                              - link [ref=f355e1220]:
+                                - /url: /ABCNetwork
+                                - generic [ref=f355e1221]:
+                                  - generic [ref=f355e1222]: ABC
+                                  - img "Verified account" [ref=f355e1226]
+                              - link "@ABCNetwork" [ref=f355e1234]:
+                                - /url: /ABCNetwork
+                            - button "Follow @ABCNetwork" [ref=f355e1238]:
+                              - generic [ref=f355e1239]: Follow
+                      - listitem [ref=f355e1242] [cursor=pointer]:
+                        - generic [ref=f355e1243]:
+                          - link [ref=f355e1253]:
+                            - /url: /YaOnlyLivvOnce
+                          - generic [ref=f355e1257]:
+                            - generic [ref=f355e1259]:
+                              - link [ref=f355e1261]:
+                                - /url: /YaOnlyLivvOnce
+                                - generic [ref=f355e1262]:
+                                  - generic [ref=f355e1263]: LIV Morgan
+                                  - img "Verified account" [ref=f355e1267]
+                              - link "@YaOnlyLivvOnce" [ref=f355e1272]:
+                                - /url: /YaOnlyLivvOnce
+                            - button "Follow @YaOnlyLivvOnce" [ref=f355e1276]:
+                              - generic [ref=f355e1277]: Follow
+                    - link "Show more" [ref=f355e1280] [cursor=pointer]:
+                      - /url: /i/connect_people?user_id=2082185111257194496
+                  - iframe [ref=f355e1288]:
+                    - generic [ref=f363e1]:
+                      - generic [ref=f363e3]:
+                        - link:
+                          - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CT_qrFVVqarnzH7-K9cYP-vPngQmdmuLeiAGNl_6l5RWxkB8QASDQ2fWXAWCr4eSBsAagAeyz8sAByAEB4AIAqAMByAPJBKoEoAJP0D6IBsqLcfJipiRz-8ARkAFYVfD8WiaE6ePMwCLo2db3QlqxJT75MeRZHHm5kPHfJGIhp5QoS48xDlKhPi0Hs_GwLGYhg1981DPScbYz3ekfuJuRSONvjMHbv8nYSduJSnFWXxadQKjoPW6c0i9s6AW4d65bNJEDEF86OTb18MYCxKRS5ronbmS0Mxb3-YEHAiOKneIzW27Ny9jxRDyfw8HsClobBhXNuZtWzpIpCKwtp3RNhPitZ9_Ed8uvg52Ej7TsXMi-LyWgiAV5eNaDdFiLxagCLOQFVXnub9Z5xxXcdAF_GB2tQG1LBgUNtPRUI2mmXgN-mUppVgPkm-YSH4CF4Kdl6nmTXDnVcSpZEDKVVfvwuflscvnCdnMA-drABLXn5NPaBeAEAYgFuP_E4FiQBgGgBgKAB_zLjb8CiAcBkAcCqAenzLECqAfi2LECqAemvhuoB8zOsQKoB_PRG6gHltgbqAeqm7ECqAf-6LECqAeOzhuoB5PYG6gH8OAbqAfulrECqAf-nrECqAevvrECqAef4bECqAfVyRuoB9m2sQKoB5oGqAf_nrECqAffn7ECqAf4wrECqAf7wrEC2AcB0gg2CAAQAhgdMgiAgICAgICACDoUn9CAgICABIDAgICAoKiAAqiBgBBIvf3BOliLhZyG0PiVA2ABsQmXKaX3mTXCYYAKA5gLAcgLAaIMPmIZChdjb20uYW1vbWVkaWEubXVzY2xlbWF0ZWoZChdjb20uYW1vbWVkaWEubWFkbXVzY2xlc3gBiAEBkAEBqg0CQ0_IDQHiDRMIprmchtD4lQMVP0XdAh36-TmQ6g0TCOWrnobQ-JUDFT9F3QId-vk5kPANAogO____________AdgTDdAVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjU1NzQxNzUyMDBQBroXAjgBqhgXCQAAAADwaPFAEgo1NTc0MTc1MjAwGAGyGAkSAotPGAIiAQDQGAHoGAHCGQIIAQ&ae=1&gclid=CjwKCAjwyabTBhBFEiwAM3mNUCOUPszM8GEv8QBrly6k0Q4zIG8Tj_JXXsLyMr1YBZXnWEtufUhvjxoCMt0QAvD_BwE&num=1&cid=CAQS-gEAEQoqgecwxPdiMqViJVX9aUckL49MHfJlQxujxNEwwJRyo6uoCeDKQuZZE6mAcssAJdnpkQ6Do9WiNeNhdvLYAZlYqbHBQdm8879iOUiUp9PedzaIowQPhQ11fnoQEJ8k_zSS_KJ-V-6ngl0KAYzwDtpVEnHRrSjrwy-uCeXX4YcFJt8qDPqmjmCZ9ueam1lGvk89kvT9ZrQw9AnpyHRu8nrB7dK4ceeCz7ikeBwH10e05i7PJWeSsYPxV1XOA0uuYaEpHXfmLf08s2s-kfmpWaiEYYmcPFT9uK8dwdpbmH9zhxzJXP_4Oh4La6BxOMsUSJH_VAqv_NQpGAE&sig=AOD64_3tPgEYbNGLHxl1S2kghnOc84ezVg&client=ca-pub-3661441281163245&rf=2&nb=2&adurl=https://madmuscles.com/es/funnel/taichi-chair-v572-unsx/step-one%3Futm_source%3Dgoogle_discovery%26utm_medium%3D196133598133%26utm_campaign%3D23824777144%26utm_content%3D807776541036%26utm_term%3D%26camp_name%3D%26asn%3D%26utm_target%3Dv()_tm1(martarts)_tm2(taichi)%26utm_adname%3DBooCEX1_v1-3_cYM_dMT_pic_MM_tm1(martarts)_tm2(chair)_len_aMs_gM_300x250_30-04-26.png%26gad_source%3D5%26gad_campaignid%3D23824777144%26gclid%3DCjwKCAjwyabTBhBFEiwAM3mNUCOUPszM8GEv8QBrly6k0Q4zIG8Tj_JXXsLyMr1YBZXnWEtufUhvjxoCMt0QAvD_BwE
+                        - table [ref=f363e4]:
+                          - rowgroup [ref=f363e5]:
+                            - row [ref=f363e6]:
+                              - cell [ref=f363e7]:
+                                - link "madmuscles.com" [ref=f363e9] [cursor=pointer]:
+                                  - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CT_qrFVVqarnzH7-K9cYP-vPngQmdmuLeiAGNl_6l5RWxkB8QASDQ2fWXAWCr4eSBsAagAeyz8sAByAEB4AIAqAMByAPJBKoEoAJP0D6IBsqLcfJipiRz-8ARkAFYVfD8WiaE6ePMwCLo2db3QlqxJT75MeRZHHm5kPHfJGIhp5QoS48xDlKhPi0Hs_GwLGYhg1981DPScbYz3ekfuJuRSONvjMHbv8nYSduJSnFWXxadQKjoPW6c0i9s6AW4d65bNJEDEF86OTb18MYCxKRS5ronbmS0Mxb3-YEHAiOKneIzW27Ny9jxRDyfw8HsClobBhXNuZtWzpIpCKwtp3RNhPitZ9_Ed8uvg52Ej7TsXMi-LyWgiAV5eNaDdFiLxagCLOQFVXnub9Z5xxXcdAF_GB2tQG1LBgUNtPRUI2mmXgN-mUppVgPkm-YSH4CF4Kdl6nmTXDnVcSpZEDKVVfvwuflscvnCdnMA-drABLXn5NPaBeAEAYgFuP_E4FiQBgGgBgKAB_zLjb8CiAcBkAcCqAenzLECqAfi2LECqAemvhuoB8zOsQKoB_PRG6gHltgbqAeqm7ECqAf-6LECqAeOzhuoB5PYG6gH8OAbqAfulrECqAf-nrECqAevvrECqAef4bECqAfVyRuoB9m2sQKoB5oGqAf_nrECqAffn7ECqAf4wrECqAf7wrEC2AcB0gg2CAAQAhgdMgiAgICAgICACDoUn9CAgICABIDAgICAoKiAAqiBgBBIvf3BOliLhZyG0PiVA2ABsQmXKaX3mTXCYYAKA5gLAcgLAaIMPmIZChdjb20uYW1vbWVkaWEubXVzY2xlbWF0ZWoZChdjb20uYW1vbWVkaWEubWFkbXVzY2xlc3gBiAEBkAEBqg0CQ0_IDQHiDRMIprmchtD4lQMVP0XdAh36-TmQ6g0TCOWrnobQ-JUDFT9F3QId-vk5kPANAogO____________AdgTDdAVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjU1NzQxNzUyMDBQBroXAjgBqhgXCQAAAADwaPFAEgo1NTc0MTc1MjAwGAGyGAkSAotPGAIiAQDQGAHoGAHCGQIIAQ&ae=1&gclid=CjwKCAjwyabTBhBFEiwAM3mNUCOUPszM8GEv8QBrly6k0Q4zIG8Tj_JXXsLyMr1YBZXnWEtufUhvjxoCMt0QAvD_BwE&num=1&cid=CAQS-gEAEQoqgecwxPdiMqViJVX9aUckL49MHfJlQxujxNEwwJRyo6uoCeDKQuZZE6mAcssAJdnpkQ6Do9WiNeNhdvLYAZlYqbHBQdm8879iOUiUp9PedzaIowQPhQ11fnoQEJ8k_zSS_KJ-V-6ngl0KAYzwDtpVEnHRrSjrwy-uCeXX4YcFJt8qDPqmjmCZ9ueam1lGvk89kvT9ZrQw9AnpyHRu8nrB7dK4ceeCz7ikeBwH10e05i7PJWeSsYPxV1XOA0uuYaEpHXfmLf08s2s-kfmpWaiEYYmcPFT9uK8dwdpbmH9zhxzJXP_4Oh4La6BxOMsUSJH_VAqv_NQpGAE&sig=AOD64_3tPgEYbNGLHxl1S2kghnOc84ezVg&client=ca-pub-3661441281163245&rf=2&adurl=https://madmuscles.com/es/funnel/taichi-chair-v572-unsx/step-one%3Futm_source%3Dgoogle_discovery%26utm_medium%3D196133598133%26utm_campaign%3D23824777144%26utm_content%3D807776541036%26utm_term%3D%26camp_name%3D%26asn%3D%26utm_target%3Dv()_tm1(martarts)_tm2(taichi)%26utm_adname%3DBooCEX1_v1-3_cYM_dMT_pic_MM_tm1(martarts)_tm2(chair)_len_aMs_gM_300x250_30-04-26.png%26gad_source%3D5%26gad_campaignid%3D23824777144%26gclid%3DCjwKCAjwyabTBhBFEiwAM3mNUCOUPszM8GEv8QBrly6k0Q4zIG8Tj_JXXsLyMr1YBZXnWEtufUhvjxoCMt0QAvD_BwE
+                              - cell:
+                                - generic:
+                                  - link:
+                                    - /url: ""
+                      - iframe
+                  - navigation "Footer" [ref=f355e282]:
+                    - generic [ref=f355e283]:
+                      - link "Terms" [ref=f355e284] [cursor=pointer]:
+                        - /url: https://x.com/tos
+                      - generic [ref=f355e285]: ·
+                    - generic [ref=f355e286]:
+                      - link "Privacy" [ref=f355e287] [cursor=pointer]:
+                        - /url: https://x.com/privacy
+                      - generic [ref=f355e288]: ·
+                    - generic [ref=f355e289]:
+                      - link "Cookies" [ref=f355e290] [cursor=pointer]:
+                        - /url: https://support.x.com/articles/20170514
+                      - generic [ref=f355e291]: ·
+                    - generic [ref=f355e292]:
+                      - link "Accessibility" [ref=f355e293] [cursor=pointer]:
+                        - /url: https://help.x.com/resources/accessibility
+                      - generic [ref=f355e294]: ·
+                    - generic [ref=f355e295]:
+                      - link "Ads Info" [ref=f355e296] [cursor=pointer]:
+                        - /url: https://business.x.com/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo
+                      - generic [ref=f355e297]: ·
+                    - button "More" [ref=f355e298] [cursor=pointer]
+                    - generic [ref=f355e303]: © 2026 X Corp.
+  - region "Notifications alt+T"

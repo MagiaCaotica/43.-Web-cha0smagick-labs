@@ -1,0 +1,231 @@
+- generic [active] [ref=f27e1]:
+  - generic [ref=f27e2]:
+    - generic [ref=f27e4]:
+      - link [ref=f27e6] [cursor=pointer]:
+        - /url: /
+      - link "Trial 13 days left" [ref=f27e16] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/billing/upgrade?source=sidebar_trial_banner
+        - generic [ref=f27e17]: Trial
+        - generic [ref=f27e22]: 13 days left
+      - list [ref=f27e23]:
+        - link "Dashboard" [ref=f27e24] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/dashboard
+        - link "Subscribers" [ref=f27e30] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/subscribers
+        - link "Campaigns" [ref=f27e36] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+        - link "Automations" [ref=f27e42] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/automations/status/workflows
+        - link "Forms" [ref=f27e50] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/forms
+        - link "Sites" [ref=f27e56] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/sites
+        - link "Products New" [ref=f27e62] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/products
+          - generic [ref=f27e66]:
+            - generic [ref=f27e67]: Products
+            - generic [ref=f27e68]: New
+      - generic [ref=f27e69]:
+        - list [ref=f27e70]:
+          - link "Account settings" [ref=f27e71] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/account/profile
+          - link "Integrations" [ref=f27e77] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/integrations
+          - link "File manager" [ref=f27e83] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/file-manager
+          - link "My templates" [ref=f27e89] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/templates
+        - list [ref=f27e95]:
+          - listitem [ref=f27e98] [cursor=pointer]:
+            - link "Partner offers" [ref=f27e99]:
+              - /url: https://dashboard.mailerlite.com/partner-perks
+          - listitem [ref=f27e103] [cursor=pointer]:
+            - link "Refer a friend" [ref=f27e104]:
+              - /url: https://dashboard.mailerlite.com/refer
+    - generic [ref=f27e106]:
+      - generic [ref=f27e108]:
+        - generic [ref=f27e109]:
+          - generic [ref=f27e116] [cursor=pointer]:
+            - generic [ref=f27e117]: Cha0smagick LABS
+            - generic [ref=f27e118]: 14-day trial
+          - link [ref=f27e124] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/billing/upgrade?source=navbar_primary_button
+        - generic [ref=f27e130]:
+          - generic [ref=f27e131] [cursor=pointer]: Help
+          - generic [ref=f27e149] [cursor=pointer]:
+            - generic [ref=f27e150]: "Magia Caotica: Magia del Caos Práctica"
+            - generic [ref=f27e151]: magiacaoticapractica@gmail.com
+      - main [ref=f27e157]:
+        - generic [ref=f27e158]:
+          - navigation "Breadcrumb" [ref=f27e159]:
+            - list [ref=f27e160]:
+              - listitem [ref=f27e161]:
+                - link "Automations" [ref=f27e162] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/automations/status/workflows
+              - listitem [ref=f27e163]:
+                - link "ES Lead Magnet - Guia Magia Caos Workflow" [ref=f27e167] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/automations/194262410018686857
+              - listitem [ref=f27e168]:
+                - link "¡Tu Guía Rápida de Magia del Caos está aquí!" [ref=f27e172] [cursor=pointer]:
+                  - /url: "#"
+          - heading "¡Tu Guía Rápida de Magia del Caos está aquí!" [level=1] [ref=f27e175]
+          - navigation "Tabs" [ref=f27e178]:
+            - link "Overview" [ref=f27e179] [cursor=pointer]:
+              - /url: https://dashboard.mailerlite.com/automations/194262410018686857/emails/194262842157828026/overview
+            - link "View email" [ref=f27e184] [cursor=pointer]:
+              - /url: https://dashboard.mailerlite.com/automations/194262410018686857/emails/194262842157828026/view
+            - link "Link activity" [ref=f27e189] [cursor=pointer]:
+              - /url: https://dashboard.mailerlite.com/automations/194262410018686857/emails/194262842157828026/link-activity
+            - link "Sent emails" [ref=f27e194] [cursor=pointer]:
+              - /url: https://dashboard.mailerlite.com/automations/194262410018686857/emails/194262842157828026/sent-emails
+            - link "Location data" [ref=f27e199] [cursor=pointer]:
+              - /url: https://dashboard.mailerlite.com/automations/194262410018686857/emails/194262842157828026/locations
+        - generic [ref=f27e204]:
+          - generic [ref=f27e210]:
+            - generic [ref=f27e212]:
+              - heading "Performance overview" [level=2] [ref=f27e213]
+              - generic [ref=f27e214]:
+                - button "Last 30 days" [ref=f27e217] [cursor=pointer]
+                - button "Export" [ref=f27e224] [cursor=pointer]
+            - generic [ref=f27e229]:
+              - generic [ref=f27e230]:
+                - generic [ref=f27e234] [cursor=pointer]:
+                  - generic [ref=f27e235]: Engagement
+                  - button "Set metrics" [ref=f27e244]
+                - generic [ref=f27e251]:
+                  - generic [ref=f27e252]:
+                    - generic [ref=f27e254]:
+                      - generic [ref=f27e255]: Open rate
+                      - generic [ref=f27e258]: 0%
+                    - generic [ref=f27e262]:
+                      - generic [ref=f27e263]: Click rate
+                      - generic [ref=f27e266]: 0%
+                    - generic [ref=f27e270]:
+                      - generic [ref=f27e271]: Click to open rate
+                      - generic [ref=f27e279]: 0%
+                  - generic [ref=f27e283]:
+                    - generic [ref=f27e284]:
+                      - generic [ref=f27e285]: Clicks
+                      - generic [ref=f27e288]: "0"
+                    - generic [ref=f27e289]:
+                      - generic [ref=f27e290]: Opens
+                      - generic [ref=f27e293]: "0"
+              - generic [ref=f27e294]:
+                - generic [ref=f27e298] [cursor=pointer]:
+                  - generic [ref=f27e299]: Deliverability
+                  - button "Set metrics" [ref=f27e308]
+                - generic [ref=f27e315]:
+                  - generic [ref=f27e316]:
+                    - generic [ref=f27e318]:
+                      - generic [ref=f27e319]: Sent
+                      - generic [ref=f27e322]: "0"
+                    - generic [ref=f27e326]:
+                      - generic [ref=f27e327]: Delivery rate
+                      - generic [ref=f27e335]: 0%
+                    - generic [ref=f27e339]:
+                      - generic [ref=f27e340]: Hard bounce rate
+                      - generic [ref=f27e343]: 0%
+                  - generic [ref=f27e346]:
+                    - generic [ref=f27e347]:
+                      - generic [ref=f27e348]:
+                        - generic [ref=f27e349]: Deliveries
+                        - generic [ref=f27e357]: "0"
+                      - generic [ref=f27e358]:
+                        - generic [ref=f27e359]: Hard bounces
+                        - generic [ref=f27e362]: "0"
+                    - generic [ref=f27e363]:
+                      - generic [ref=f27e364]:
+                        - generic [ref=f27e365]: Soft bounces
+                        - generic [ref=f27e368]: "0"
+                      - generic [ref=f27e369]:
+                        - generic [ref=f27e370]: Soft bounce rate
+                        - generic [ref=f27e373]: 0%
+                    - generic [ref=f27e374]:
+                      - generic [ref=f27e375]:
+                        - generic [ref=f27e376]: Spam complaints
+                        - generic [ref=f27e379]: "0"
+                      - generic [ref=f27e380]:
+                        - generic [ref=f27e381]: Spam complaints rate
+                        - generic [ref=f27e384]: 0%
+                    - generic [ref=f27e385]:
+                      - generic [ref=f27e386]:
+                        - generic [ref=f27e387]: Unsubscribes
+                        - generic [ref=f27e390]: "0"
+                      - generic [ref=f27e391]:
+                        - generic [ref=f27e392]: Unsubscribe rate
+                        - generic [ref=f27e395]: 0%
+          - generic [ref=f27e396]:
+            - generic [ref=f27e399]:
+              - heading "Reading environment" [level=2] [ref=f27e402]
+              - paragraph [ref=f27e406]: Reading environments are still unknown.
+            - generic [ref=f27e409]:
+              - heading "Top email clients" [level=2] [ref=f27e412]
+              - table [ref=f27e418]:
+                - rowgroup [ref=f27e419]:
+                  - row [ref=f27e420]:
+                    - columnheader "Email client" [ref=f27e421]
+                    - columnheader "Subscribers" [ref=f27e422]
+                - rowgroup [ref=f27e423]:
+                  - row [ref=f27e424]:
+                    - cell "Top email clients are still unknown." [ref=f27e425]
+                    - cell "-" [ref=f27e426]
+          - generic [ref=f27e428]:
+            - generic [ref=f27e431]:
+              - generic [ref=f27e433]:
+                - heading "Link activity" [level=2] [ref=f27e434]
+                - link "All activity" [ref=f27e436] [cursor=pointer]:
+                  - /url: /automations/194262410018686857/emails/194262842157828026/link-activity
+              - table [ref=f27e443]:
+                - rowgroup [ref=f27e444]:
+                  - row [ref=f27e445]:
+                    - columnheader "Top links" [ref=f27e446]
+                    - columnheader "Unique clicks" [ref=f27e447]
+                    - columnheader "Total clicks" [ref=f27e448]
+                - rowgroup [ref=f27e449]:
+                  - row [ref=f27e450]:
+                    - cell [ref=f27e451]:
+                      - link "Webview link" [ref=f27e452] [cursor=pointer]:
+                        - /url: https://preview.mailerlite.io/preview/2539880/emails/194262842157828026
+                    - cell [ref=f27e453]:
+                      - link "0" [ref=f27e454] [cursor=pointer]:
+                        - /url: /automations/194262410018686857/emails/194262842157828026/link-activity/194262933014840900
+                    - cell "0" [ref=f27e459]
+                  - row [ref=f27e460]:
+                    - cell [ref=f27e461]:
+                      - link "Unsubscribe link" [ref=f27e462] [cursor=pointer]:
+                        - /url: https://preview.mailerlite.io/preview/2539880/emails/194262842157828026
+                    - cell [ref=f27e463]:
+                      - link "0" [ref=f27e464] [cursor=pointer]:
+                        - /url: /automations/194262410018686857/emails/194262842157828026/link-activity/194262961785669029
+                    - cell "0" [ref=f27e469]
+                  - row [ref=f27e470]:
+                    - cell [ref=f27e471]:
+                      - link "https://t.me/magiacaotica" [ref=f27e472] [cursor=pointer]:
+                        - /url: https://t.me/magiacaotica
+                    - cell [ref=f27e473]:
+                      - link "0" [ref=f27e474] [cursor=pointer]:
+                        - /url: /automations/194262410018686857/emails/194262842157828026/link-activity/194262932817708584
+                    - cell "0" [ref=f27e479]
+                  - row [ref=f27e480]:
+                    - cell [ref=f27e481]:
+                      - link "https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA" [ref=f27e482] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA
+                    - cell [ref=f27e483]:
+                      - link "0" [ref=f27e484] [cursor=pointer]:
+                        - /url: /automations/194262410018686857/emails/194262842157828026/link-activity/194262932826097193
+                    - cell "0" [ref=f27e489]
+                  - row [ref=f27e490]:
+                    - cell [ref=f27e491]:
+                      - link "https://discord.gg/6vNSCaPgPd" [ref=f27e492] [cursor=pointer]:
+                        - /url: https://discord.gg/6vNSCaPgPd
+                    - cell [ref=f27e493]:
+                      - link "0" [ref=f27e494] [cursor=pointer]:
+                        - /url: /automations/194262410018686857/emails/194262842157828026/link-activity/194262932839728685
+                    - cell "0" [ref=f27e499]
+            - generic [ref=f27e502]:
+              - heading "Unsubscribe reasons" [level=2] [ref=f27e505]
+              - paragraph [ref=f27e510]: No unsubscribe reasons have been recorded yet for this campaign
+  - iframe [ref=f27e511]:
+    
+  - iframe [ref=f27e512]:
+    

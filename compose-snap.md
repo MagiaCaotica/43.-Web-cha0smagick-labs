@@ -1,0 +1,142 @@
+- generic [ref=f78e1]:
+  - generic [ref=f78e2]:
+    - generic:
+      - generic:
+        - heading "To view keyboard shortcuts, press question mark View keyboard shortcuts" [level=2] [ref=f78e3]:
+          - generic [ref=f78e4]: To view keyboard shortcuts, press question mark
+          - link "View keyboard shortcuts" [ref=f78e5] [cursor=pointer]:
+            - /url: /i/keyboard_shortcuts
+        - generic:
+          - generic:
+            - button "Grok" [ref=f78e6] [cursor=pointer]
+            - button "Chat" [ref=f78e10] [cursor=pointer]
+          - generic:
+            - generic:
+              - generic:
+                - dialog:
+                  - group [ref=f78e14]:
+                    - dialog [ref=f78e31]
+        - generic [ref=f78e21]:
+          - button [ref=f78e184] [cursor=pointer]
+          - button [ref=f78e186] [cursor=pointer]
+          - banner [ref=f78e22]:
+            - generic [ref=f78e189]:
+              - generic [ref=f78e190]:
+                - heading [level=1] [ref=f78e192] [cursor=pointer]:
+                  - link [ref=f78e193]:
+                    - /url: /home
+                - navigation [ref=f78e199]:
+                  - link [ref=f78e200] [cursor=pointer]:
+                    - /url: /home
+                    - generic [ref=f78e201]: Home
+                  - link [ref=f78e207] [cursor=pointer]:
+                    - /url: /explore
+                    - generic [ref=f78e208]: Explore
+                  - link [ref=f78e214] [cursor=pointer]:
+                    - /url: /notifications
+                    - generic [ref=f78e215]: Notifications
+                  - link [ref=f78e221] [cursor=pointer]:
+                    - /url: /i/connect_people
+                    - generic [ref=f78e222]: Follow
+                  - link [ref=f78e228] [cursor=pointer]:
+                    - /url: /i/chat
+                    - generic [ref=f78e229]: Chat
+                  - link [ref=f78e235] [cursor=pointer]:
+                    - /url: /i/grok
+                    - generic [ref=f78e236]: Grok
+                  - link [ref=f78e243] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                    - generic [ref=f78e244]: Profile
+                  - button [ref=f78e250] [cursor=pointer]:
+                    - generic [ref=f78e251]: More
+                - link [ref=f78e258] [cursor=pointer]:
+                  - /url: /compose/post
+                  - generic [ref=f78e259]: Post
+              - button [ref=f78e267] [cursor=pointer]:
+                - generic [ref=f78e279]:
+                  - generic [ref=f78e280]: ChaosmagickLabs
+                  - generic [ref=f78e284]: "@Cha0smagickLABS"
+          - main [ref=f78e23]:
+            - generic [ref=f78e293]:
+              - generic [ref=f78e295]:
+                - generic [ref=f78e296]:
+                  - generic [ref=f78e299]:
+                    - navigation [ref=f78e301]
+                    - button [ref=f78e327] [cursor=pointer]
+                  - generic:
+                    - generic
+                - generic [ref=f78e338]:
+                  - link [ref=f78e347] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                  - generic [ref=f78e350]:
+                    - generic [ref=f78e368]
+                    - generic [ref=f78e379]
+                - region [ref=f78e454]:
+                  - heading [level=1] [ref=f78e455]: Your Home Timeline
+                  - generic [ref=f78e457]:
+                    - article [ref=f78e461] [cursor=pointer]
+                    - article [ref=f78e598] [cursor=pointer]
+                    - article [ref=f78e771] [cursor=pointer]
+                    - article [ref=f78e945] [cursor=pointer]
+              - generic [ref=f78e1110]:
+                - search [ref=f78e1115]:
+                  - combobox [ref=f78e1127]
+                - complementary [ref=f78e1131]:
+                  - generic [ref=f78e1132]: Subscribe to Premium
+                  - generic [ref=f78e1134]: Get rid of ads, see your analytics, boost your replies and unlock 20+ features.
+                  - link [ref=f78e1135] [cursor=pointer]:
+                    - /url: /i/premium_sign_up
+                    - generic [ref=f78e1136]: Subscribe
+                - generic [ref=f78e1142]:
+                  - heading [level=2] [ref=f78e1144]:
+                    - generic [ref=f78e1145]: Today’s News
+                    - button [ref=f78e1148] [cursor=pointer]
+                  - generic [ref=f78e1153]:
+                    - link [ref=f78e1154] [cursor=pointer]
+                    - link [ref=f78e1198] [cursor=pointer]
+                    - link [ref=f78e1242] [cursor=pointer]
+                - region [ref=f78e1287]:
+                  - heading [level=1] [ref=f78e1288]: Trending now
+                  - generic [ref=f78e1290]:
+                    - heading [level=2] [ref=f78e1294]
+                    - link [ref=f78e1298] [cursor=pointer]
+                    - link [ref=f78e1319] [cursor=pointer]
+                    - link [ref=f78e1335] [cursor=pointer]
+                    - link [ref=f78e1351] [cursor=pointer]
+                    - link [ref=f78e1367] [cursor=pointer]:
+                      - /url: /explore/tabs/for-you
+                - complementary [ref=f78e1371]:
+                  - heading [level=2] [ref=f78e1373]:
+                    - generic [ref=f78e1374]: Who to follow
+                  - list [ref=f78e1375]:
+                    - listitem [ref=f78e1376] [cursor=pointer]
+                    - listitem [ref=f78e1414] [cursor=pointer]
+                    - listitem [ref=f78e1455] [cursor=pointer]
+                  - link [ref=f78e1503] [cursor=pointer]:
+                    - /url: /i/connect_people?user_id=2082185111257194496
+                    - generic [ref=f78e1504]: Show more
+                - navigation [ref=f78e1509]:
+                  - generic [ref=f78e1510]:
+                    - link [ref=f78e1511] [cursor=pointer]:
+                      - /url: https://x.com/tos
+                    - generic [ref=f78e1512]: ·
+                  - generic [ref=f78e1513]:
+                    - link [ref=f78e1514] [cursor=pointer]:
+                      - /url: https://x.com/privacy
+                    - generic [ref=f78e1515]: ·
+                  - generic [ref=f78e1516]:
+                    - link [ref=f78e1517] [cursor=pointer]:
+                      - /url: https://support.x.com/articles/20170514
+                    - generic [ref=f78e1518]: ·
+                  - generic [ref=f78e1519]:
+                    - link [ref=f78e1520] [cursor=pointer]:
+                      - /url: https://help.x.com/resources/accessibility
+                    - generic [ref=f78e1521]: ·
+                  - generic [ref=f78e1522]:
+                    - link [ref=f78e1523] [cursor=pointer]:
+                      - /url: https://business.x.com/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo
+                    - generic [ref=f78e1524]: ·
+                  - button [ref=f78e1525] [cursor=pointer]:
+                    - generic [ref=f78e1526]: More
+                  - generic [ref=f78e1530]: © 2026 X Corp.
+  - region "Notifications alt+T"

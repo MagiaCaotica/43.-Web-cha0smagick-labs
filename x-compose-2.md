@@ -1,0 +1,432 @@
+- generic [ref=f55e1]:
+  - generic [ref=f55e2]:
+    - generic:
+      - generic:
+        - heading "To view keyboard shortcuts, press question mark View keyboard shortcuts" [level=2] [ref=f55e3]:
+          - generic [ref=f55e4]: To view keyboard shortcuts, press question mark
+          - link "View keyboard shortcuts" [ref=f55e5] [cursor=pointer]:
+            - /url: /i/keyboard_shortcuts
+        - generic:
+          - generic:
+            - button "Grok" [ref=f55e6] [cursor=pointer]
+            - button "Chat" [ref=f55e10] [cursor=pointer]
+          - generic:
+            - generic:
+              - generic:
+                - dialog:
+                  - group [ref=f55e14]:
+                    - dialog [ref=f55e16]:
+                      - generic [ref=f55e19]:
+                        - progressbar [ref=f55e20]
+                        - generic [ref=f55e26]:
+                          - button "Close" [ref=f55e28] [cursor=pointer]
+                          - button "Drafts" [ref=f55e36] [cursor=pointer]
+                        - generic [ref=f55e45]:
+                          - generic [ref=f55e46]:
+                            - generic [ref=f55e54]:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic "ChaosmagickLabs":
+                                      - img "ChaosmagickLabs"
+                            - textbox "Post text" [active] [ref=f55e79]:
+                              - generic [ref=f55e82]:
+                                - generic [ref=f55e1376]: 🃏
+                                - generic [ref=f55e1379]: Full Rider Waite Tarot deck on your Android. 78 cards, 12 spreads, card meanings, daily draws. No subscriptions, one-time purchase. →
+                                - generic [ref=f55e1380]: https://play.google.com/store/apps/details?id=com.cha0smagicklabs.unofficialriderwaitetarot
+                                - generic [ref=f55e1383]: "#Tarot"
+                                - generic [ref=f55e1386]: "#Divination"
+                          - generic [ref=f55e83]:
+                            - button "Everyone can reply" [ref=f55e87] [cursor=pointer]
+                            - generic [ref=f55e96]:
+                              - navigation [ref=f55e97]:
+                                - generic [ref=f55e98]:
+                                  - generic:
+                                    - button "Previous" [disabled]
+                                  - tablist [ref=f55e100]:
+                                    - generic [ref=f55e103]:
+                                      - button "Add photos or video" [ref=f55e104] [cursor=pointer]
+                                      - button "Choose File" [ref=f55e110]
+                                    - button "Add a GIF" [ref=f55e113] [cursor=pointer]
+                                    - button "Generate image" [ref=f55e121] [cursor=pointer]
+                                    - button "Add poll" [ref=f55e128] [cursor=pointer]
+                                    - button "Add emoji" [ref=f55e136] [cursor=pointer]
+                                    - button "Schedule post" [ref=f55e144] [cursor=pointer]
+                                    - button "Tag location" [disabled] [ref=f55e151]
+                                    - button "Content disclosure" [ref=f55e158] [cursor=pointer]
+                                  - generic:
+                                    - button "Next" [disabled]
+                              - generic [ref=f55e163]:
+                                - progressbar [ref=f55e1391]
+                                - button "Add post" [ref=f55e1401] [cursor=pointer]
+                                - button "Post" [ref=f55e165] [cursor=pointer]
+        - generic [ref=f55e169]:
+          - button [ref=f55e170] [cursor=pointer]
+          - button [ref=f55e172] [cursor=pointer]
+          - banner [ref=f55e174]:
+            - generic [ref=f55e176]:
+              - generic [ref=f55e177]:
+                - heading [level=1] [ref=f55e179] [cursor=pointer]:
+                  - link [ref=f55e180]:
+                    - /url: /home
+                - navigation [ref=f55e186]:
+                  - link [ref=f55e187] [cursor=pointer]:
+                    - /url: /home
+                    - generic [ref=f55e188]: Home
+                  - link [ref=f55e194] [cursor=pointer]:
+                    - /url: /explore
+                    - generic [ref=f55e195]: Explore
+                  - link [ref=f55e201] [cursor=pointer]:
+                    - /url: /notifications
+                    - generic [ref=f55e202]: Notifications
+                  - link [ref=f55e208] [cursor=pointer]:
+                    - /url: /i/connect_people
+                    - generic [ref=f55e209]: Follow
+                  - link [ref=f55e215] [cursor=pointer]:
+                    - /url: /i/chat
+                    - generic [ref=f55e216]: Chat
+                  - link [ref=f55e222] [cursor=pointer]:
+                    - /url: /i/grok
+                    - generic [ref=f55e223]: Grok
+                  - link [ref=f55e230] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                    - generic [ref=f55e231]: Profile
+                  - button [ref=f55e237] [cursor=pointer]:
+                    - generic [ref=f55e238]: More
+                - link [ref=f55e245] [cursor=pointer]:
+                  - /url: /compose/post
+                  - generic [ref=f55e246]: Post
+              - button [ref=f55e254] [cursor=pointer]:
+                - generic [ref=f55e266]:
+                  - generic [ref=f55e267]: ChaosmagickLabs
+                  - generic [ref=f55e271]: "@Cha0smagickLABS"
+          - main [ref=f55e279]:
+            - generic [ref=f55e282]:
+              - generic [ref=f55e284]:
+                - generic [ref=f55e285]:
+                  - generic [ref=f55e288]:
+                    - navigation [ref=f55e290]:
+                      - generic [ref=f55e291]:
+                        - generic:
+                          - button [disabled]
+                        - tablist [ref=f55e293]:
+                          - tab [selected] [ref=f55e294] [cursor=pointer]:
+                            - generic [ref=f55e295]: For you
+                          - tab [ref=f55e299] [cursor=pointer]:
+                            - generic [ref=f55e300]: Following
+                          - tab [ref=f55e303] [cursor=pointer]:
+                            - generic [ref=f55e304]: Movies & TV
+                          - tab [ref=f55e307] [cursor=pointer]:
+                            - generic [ref=f55e308]: Memes
+                          - tab [ref=f55e311] [cursor=pointer]:
+                            - generic [ref=f55e312]: Pets
+                        - generic:
+                          - button [disabled]
+                    - button [ref=f55e316] [cursor=pointer]
+                  - generic:
+                    - generic:
+                      - status:
+                        - button:
+                          - generic: See new posts
+                - generic [ref=f55e327]:
+                  - link [ref=f55e336] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                  - generic [ref=f55e339]:
+                    - generic [ref=f55e357]:
+                      - generic [ref=f55e358]: What’s happening?
+                      - textbox [ref=f55e361]
+                    - generic [ref=f55e368]:
+                      - navigation [ref=f55e369]:
+                        - generic [ref=f55e370]:
+                          - generic:
+                            - button [disabled]
+                          - tablist [ref=f55e372]:
+                            - generic [ref=f55e375]:
+                              - button [ref=f55e376] [cursor=pointer]
+                              - button [ref=f55e382]
+                            - button [ref=f55e385] [cursor=pointer]
+                            - button [ref=f55e393] [cursor=pointer]
+                            - button [ref=f55e400] [cursor=pointer]
+                            - button [ref=f55e408] [cursor=pointer]
+                            - button [ref=f55e416] [cursor=pointer]
+                            - button [disabled] [ref=f55e423]
+                            - button [ref=f55e430] [cursor=pointer]
+                          - generic:
+                            - button [disabled]
+                      - button [disabled] [ref=f55e437]:
+                        - generic [ref=f55e438]: Post
+                - region [ref=f55e443]:
+                  - heading [level=1] [ref=f55e444]: Your Home Timeline
+                  - generic [ref=f55e446]:
+                    - article [ref=f55e450] [cursor=pointer]:
+                      - generic [ref=f55e456]:
+                        - link [ref=f55e468]:
+                          - /url: /netflix
+                        - generic [ref=f55e471]:
+                          - generic [ref=f55e473]:
+                            - generic [ref=f55e476]:
+                              - link [ref=f55e479]:
+                                - /url: /netflix
+                                - generic [ref=f55e480]: Netflix
+                              - generic [ref=f55e492]:
+                                - link [ref=f55e494]:
+                                  - /url: /netflix
+                                  - generic [ref=f55e495]: "@netflix"
+                                - generic [ref=f55e496]: ·
+                                - link [ref=f55e498]:
+                                  - /url: /netflix/status/2082133988135645257
+                                  - time [ref=f55e499]: Jul 28
+                            - generic [ref=f55e501]:
+                              - button [ref=f55e503]
+                              - button [ref=f55e514]
+                          - generic [ref=f55e521]: Something’s in the water. Josh Hartnett, Mackenzie Davis, and Charlie Heaton star in the suspenseful new thriller BELOW. Coming October 8.
+                          - button [ref=f55e549]
+                          - group [ref=f55e556]:
+                            - button [ref=f55e558]:
+                              - generic [ref=f55e559]: "78"
+                            - button [ref=f55e569]:
+                              - generic [ref=f55e570]: "508"
+                            - button [ref=f55e580]:
+                              - generic [ref=f55e581]: 2.5K
+                            - link [ref=f55e591]:
+                              - /url: /netflix/status/2082133988135645257/analytics
+                              - generic [ref=f55e592]: 916K
+                            - button [ref=f55e602]
+                            - button [ref=f55e611]
+                    - article [ref=f55e621] [cursor=pointer]:
+                      - generic [ref=f55e627]:
+                        - link [ref=f55e639]:
+                          - /url: /paramountplus
+                        - generic [ref=f55e642]:
+                          - generic [ref=f55e644]:
+                            - generic [ref=f55e647]:
+                              - link [ref=f55e650]:
+                                - /url: /paramountplus
+                                - generic [ref=f55e651]: Paramount+
+                              - generic [ref=f55e663]:
+                                - link [ref=f55e665]:
+                                  - /url: /paramountplus
+                                  - generic [ref=f55e666]: "@paramountplus"
+                                - generic [ref=f55e667]: ·
+                                - link [ref=f55e669]:
+                                  - /url: /paramountplus/status/2082149173982314683
+                                  - time [ref=f55e670]: Jul 28
+                            - generic [ref=f55e672]:
+                              - button [ref=f55e674]
+                              - button [ref=f55e685]
+                          - generic [ref=f55e693]:
+                            - text: Divorced. Unqualified. Unstoppable. Turns out you don't need a badge when you've got instincts and zero chill. Her journey is far from over. Stream Season 2 of
+                            - link [ref=f55e695]:
+                              - /url: /hashtag/DiarraFromDetroit?src=hashtag_click
+                              - text: "#DiarraFromDetroit"
+                            - text: tomorrow, only on
+                            - link [ref=f55e697]:
+                              - /url: /hashtag/ParamountPlus?src=hashtag_click
+                              - text: "#ParamountPlus"
+                          - button [ref=f55e724]
+                          - group [ref=f55e731]:
+                            - button [ref=f55e733]:
+                              - generic [ref=f55e734]: "7"
+                            - button [ref=f55e744]:
+                              - generic [ref=f55e745]: "6"
+                            - button [ref=f55e755]:
+                              - generic [ref=f55e756]: "38"
+                            - link [ref=f55e766]:
+                              - /url: /paramountplus/status/2082149173982314683/analytics
+                              - generic [ref=f55e767]: 37K
+                            - button [ref=f55e777]
+                            - button [ref=f55e786]
+                    - article [ref=f55e796] [cursor=pointer]:
+                      - generic [ref=f55e802]:
+                        - link [ref=f55e814]:
+                          - /url: /AppleTV
+                        - generic [ref=f55e817]:
+                          - generic [ref=f55e819]:
+                            - generic [ref=f55e822]:
+                              - link [ref=f55e825]:
+                                - /url: /AppleTV
+                                - generic [ref=f55e826]: Apple TV
+                              - generic [ref=f55e838]:
+                                - link [ref=f55e840]:
+                                  - /url: /AppleTV
+                                  - generic [ref=f55e841]: "@AppleTV"
+                                - generic [ref=f55e842]: ·
+                                - link [ref=f55e844]:
+                                  - /url: /AppleTV/status/2082542012339986635
+                                  - time [ref=f55e845]: 7m
+                            - generic [ref=f55e847]:
+                              - button [ref=f55e849]
+                              - button [ref=f55e860]
+                          - generic [ref=f55e868]:
+                            - text: Looking good,
+                            - link [ref=f55e871]:
+                              - /url: /vistahollywood
+                              - text: "@vistahollywood"
+                            - text: .
+                            - link [ref=f55e873]:
+                              - /url: /hashtag/Sugar?src=hashtag_click
+                              - text: "#Sugar"
+                          - link [ref=f55e881]:
+                            - /url: /AppleTV/status/2082542012339986635/photo/1
+                          - group [ref=f55e890]:
+                            - button [ref=f55e892]:
+                              - generic [ref=f55e893]: "1"
+                            - button [ref=f55e903]:
+                              - generic [ref=f55e904]: "5"
+                            - button [ref=f55e914]:
+                              - generic [ref=f55e915]: "56"
+                            - link [ref=f55e925]:
+                              - /url: /AppleTV/status/2082542012339986635/analytics
+                              - generic [ref=f55e926]: 3.9K
+                            - button [ref=f55e936]
+                            - button [ref=f55e945]
+              - generic [ref=f55e957]:
+                - search [ref=f55e962]:
+                  - combobox [ref=f55e974]
+                - complementary [ref=f55e978]:
+                  - generic [ref=f55e979]: Subscribe to Premium
+                  - generic [ref=f55e981]: Get rid of ads, see your analytics, boost your replies and unlock 20+ features.
+                  - link [ref=f55e982] [cursor=pointer]:
+                    - /url: /i/premium_sign_up
+                    - generic [ref=f55e983]: Subscribe
+                - generic [ref=f55e989]:
+                  - heading [level=2] [ref=f55e991]:
+                    - generic [ref=f55e992]: Today’s News
+                    - button [ref=f55e995] [cursor=pointer]
+                  - generic [ref=f55e1000]:
+                    - link [ref=f55e1001] [cursor=pointer]:
+                      - generic [ref=f55e1004]:
+                        - generic [ref=f55e1005]: "Zendaya and Tom Holland Shine at Spider-Man: Brand New Day UK Premiere"
+                        - generic [ref=f55e1006]: Trending now · Entertainment · 6,128 posts
+                    - link [ref=f55e1045] [cursor=pointer]:
+                      - generic [ref=f55e1048]:
+                        - generic [ref=f55e1049]: Heated Rivalry Stars Storrie and Williams Spotted Together in Toronto
+                        - generic [ref=f55e1050]: Trending now · Entertainment · 6,813 posts
+                    - link [ref=f55e1089] [cursor=pointer]:
+                      - generic [ref=f55e1092]:
+                        - generic [ref=f55e1093]: EA SPORTS FC 27 Overhauls Gameplay for Manual Skill Focus
+                        - generic [ref=f55e1094]: 3 hours ago · Sports · 3,764 posts
+                - region [ref=f55e1134]:
+                  - heading [level=1] [ref=f55e1135]: Trending now
+                  - generic [ref=f55e1137]:
+                    - heading [level=2] [ref=f55e1141]:
+                      - generic [ref=f55e1142]: What’s happening
+                    - link [ref=f55e1145] [cursor=pointer]:
+                      - generic [ref=f55e1146]:
+                        - generic [ref=f55e1147]: Siente La Pasión
+                        - generic [ref=f55e1148]: Apuesta por tu equipo favorito
+                        - generic [ref=f55e1149]: Promoted by BetPlay
+                        - button [ref=f55e1157]
+                    - link [ref=f55e1166] [cursor=pointer]:
+                      - generic [ref=f55e1167]:
+                        - generic [ref=f55e1168]: Trending in Colombia
+                        - generic [ref=f55e1170]: Brutal
+                        - button [ref=f55e1173]
+                    - link [ref=f55e1182] [cursor=pointer]:
+                      - generic [ref=f55e1183]:
+                        - generic [ref=f55e1184]: Trending in Colombia
+                        - generic [ref=f55e1186]: Felices 501
+                        - button [ref=f55e1189]
+                    - link [ref=f55e1198] [cursor=pointer]:
+                      - generic [ref=f55e1199]:
+                        - generic [ref=f55e1200]: Trending in Colombia
+                        - generic [ref=f55e1202]: Faltan 9
+                        - button [ref=f55e1205]
+                    - link [ref=f55e1214] [cursor=pointer]:
+                      - /url: /explore/tabs/for-you
+                      - generic [ref=f55e1215]: Show more
+                - complementary [ref=f55e1218]:
+                  - heading [level=2] [ref=f55e1220]:
+                    - generic [ref=f55e1221]: Who to follow
+                  - list [ref=f55e1222]:
+                    - listitem [ref=f55e1223] [cursor=pointer]:
+                      - generic [ref=f55e1224]:
+                        - link [ref=f55e1234]:
+                          - /url: /chrishemsworth
+                        - generic [ref=f55e1238]:
+                          - generic [ref=f55e1240]:
+                            - link [ref=f55e1242]:
+                              - /url: /chrishemsworth
+                              - generic [ref=f55e1243]: Chris Hemsworth
+                            - link [ref=f55e1253]:
+                              - /url: /chrishemsworth
+                              - generic [ref=f55e1254]: "@chrishemsworth"
+                          - button [ref=f55e1257]:
+                            - generic [ref=f55e1258]: Follow
+                    - listitem [ref=f55e1261] [cursor=pointer]:
+                      - generic [ref=f55e1262]:
+                        - link [ref=f55e1272]:
+                          - /url: /gofooji
+                        - generic [ref=f55e1276]:
+                          - generic [ref=f55e1278]:
+                            - link [ref=f55e1280]:
+                              - /url: /gofooji
+                              - generic [ref=f55e1281]: Fooji
+                            - link [ref=f55e1294]:
+                              - /url: /gofooji
+                              - generic [ref=f55e1295]: "@gofooji"
+                          - button [ref=f55e1298]:
+                            - generic [ref=f55e1299]: Follow
+                    - listitem [ref=f55e1302] [cursor=pointer]:
+                      - generic [ref=f55e1303]:
+                        - link [ref=f55e1313]:
+                          - /url: /Roku
+                        - generic [ref=f55e1317]:
+                          - generic [ref=f55e1319]:
+                            - link [ref=f55e1321]:
+                              - /url: /Roku
+                              - generic [ref=f55e1322]: Roku
+                            - link [ref=f55e1327]:
+                              - /url: /Roku
+                              - generic [ref=f55e1328]: "@Roku"
+                          - button [ref=f55e1331]:
+                            - generic [ref=f55e1332]: Follow
+                  - link [ref=f55e1335] [cursor=pointer]:
+                    - /url: /i/connect_people?user_id=2082185111257194496
+                    - generic [ref=f55e1336]: Show more
+                - generic [ref=f55e1340]:
+                  - iframe [ref=f55e1343]:
+                    - generic [ref=f63e4]:
+                      - link [ref=f63e5] [cursor=pointer]:
+                        - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CzXM-qU9qauXqBoq33ugPsLjS0Q2_2v_XiAHij77fqRXrhIbLwgEQASDQ2fWXAWCr4eSBsAagAbD6zvM_yAEJ4AIAqAMByAMKqgSXAk_Qf9j2ocnkQAR1kWvpIA8VjGbtsqxeJPiujSyRV40sCUakwdfrN3O81WCrxQHHxXQVwnEEXsyEjLn7ZBb1JM-3UJMc44-YYgza6bE9OCsYLS72OpgG3RKrmITshc_qoRYMCZZnOx0a-2ap45_lJdUyIvnLQDZAUE03tlT7PiNem5acbavPLt9iXuyhLgLV6of_qlZ0W8LGhFrpi-vnJwDQBFiejwp2AWdg8pQnfS_B-JLYWDFxwgy4zDunQjRmPaHqHLJvekBYAW4kw3L5T349710wH4ylnK7jTK6rMvrUhIGIVVRmbBkudsz7r3hK1oSgDAAB-LN9oQh2HupPqslG6IBZIak7pwqWZKcDl6T4ANiIFqqQq8AEmaSj9-4F4AQBiAXVn4euWaAGLoAHsLKf0xqoB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwDSCDIIgGEQARgdMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYsbqX8Mr4lQNgAbEJCnRk_8i3406ACgOYCwHICwGADAGiDAOQAQGqDQJDT8gNAeINEwiK55fwyviVAxWKmxcHHTCcNNrqDRMIvsGY8Mr4lQMVipsXBx0wnDTa8A0CiA7___________8B2BMD0BUBmBYByhYCCgD4FgGAFwGyFxAYASoKNTU3NDE3NTIwMFAGuhcCOAGqGBcJAAAAAOAw7UASCjU1NzQxNzUyMDAYAbIYCRICqE4YLiIBANAYAcIZAggB&ae=1&gclid=EAIaIQobChMIpeOY8Mr4lQMVipsXBx0wnDTaEAEYASAAEgKJRvD_BwE&num=1&cid=CAQS8wEAEQoqgYGt1zj0kdzu23KKpuVeThiQmjI9xbeI4e1Y4OesaRrS-_1o6ikjUvDktZP0tP4-eG8mMtQJTkYB2_lpBAg2PUALtGCQiyqSNpKyXLZ7m-Ew2DCnJPXp4nQ_b8wxa8ecQJGPJHcPqxs0glBTMgA0zE9slCLO8JqJNbXyGUX2hFlE4gQsxpHb5ZyGe5gm1zEnghXFrRMKWq1pF04oG6jYIEM65h1zMDKoRVo4kQ2wMtKm9cqteXGX3zlb1ZVAOT9djb9hrrHb5O_M0XxuwWeTTdNfHDHitRP3A3C7EPPy_2E9b4km2a9knoIeOWPGMggYAQ&sig=AOD64_1ZZr1p39YoVZjU5kO9hulBtaimmA&client=ca-pub-3661441281163245&rf=4&nb=9&adurl=https://gacmotorcolombia.com/cotizador%3Fmodelo%3Daion-ut%26i%3DdGhpc2lzaXQxMDA1%26gad_source%3D5%26gad_campaignid%3D23987343317%26gclid%3DEAIaIQobChMIpeOY8Mr4lQMVipsXBx0wnDTaEAEYASAAEgKJRvD_BwE
+                      - generic [ref=f63e8]:
+                        - link "El verdadero '10' de los eléctricos." [ref=f63e13] [cursor=pointer]:
+                          - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CzXM-qU9qauXqBoq33ugPsLjS0Q2_2v_XiAHij77fqRXrhIbLwgEQASDQ2fWXAWCr4eSBsAagAbD6zvM_yAEJ4AIAqAMByAMKqgSXAk_Qf9j2ocnkQAR1kWvpIA8VjGbtsqxeJPiujSyRV40sCUakwdfrN3O81WCrxQHHxXQVwnEEXsyEjLn7ZBb1JM-3UJMc44-YYgza6bE9OCsYLS72OpgG3RKrmITshc_qoRYMCZZnOx0a-2ap45_lJdUyIvnLQDZAUE03tlT7PiNem5acbavPLt9iXuyhLgLV6of_qlZ0W8LGhFrpi-vnJwDQBFiejwp2AWdg8pQnfS_B-JLYWDFxwgy4zDunQjRmPaHqHLJvekBYAW4kw3L5T349710wH4ylnK7jTK6rMvrUhIGIVVRmbBkudsz7r3hK1oSgDAAB-LN9oQh2HupPqslG6IBZIak7pwqWZKcDl6T4ANiIFqqQq8AEmaSj9-4F4AQBiAXVn4euWaAGLoAHsLKf0xqoB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwDSCDIIgGEQARgdMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYsbqX8Mr4lQNgAbEJCnRk_8i3406ACgOYCwHICwGADAGiDAOQAQGqDQJDT8gNAeINEwiK55fwyviVAxWKmxcHHTCcNNrqDRMIvsGY8Mr4lQMVipsXBx0wnDTa8A0CiA7___________8B2BMD0BUBmBYByhYCCgD4FgGAFwGyFxAYASoKNTU3NDE3NTIwMFAGuhcCOAGqGBcJAAAAAOAw7UASCjU1NzQxNzUyMDAYAbIYCRICqE4YLiIBANAYAcIZAggB&ae=1&gclid=EAIaIQobChMIpeOY8Mr4lQMVipsXBx0wnDTaEAEYASAAEgKJRvD_BwE&num=1&cid=CAQS8wEAEQoqgYGt1zj0kdzu23KKpuVeThiQmjI9xbeI4e1Y4OesaRrS-_1o6ikjUvDktZP0tP4-eG8mMtQJTkYB2_lpBAg2PUALtGCQiyqSNpKyXLZ7m-Ew2DCnJPXp4nQ_b8wxa8ecQJGPJHcPqxs0glBTMgA0zE9slCLO8JqJNbXyGUX2hFlE4gQsxpHb5ZyGe5gm1zEnghXFrRMKWq1pF04oG6jYIEM65h1zMDKoRVo4kQ2wMtKm9cqteXGX3zlb1ZVAOT9djb9hrrHb5O_M0XxuwWeTTdNfHDHitRP3A3C7EPPy_2E9b4km2a9knoIeOWPGMggYAQ&sig=AOD64_1ZZr1p39YoVZjU5kO9hulBtaimmA&client=ca-pub-3661441281163245&rf=4&nb=0&adurl=https://gacmotorcolombia.com/cotizador%3Fmodelo%3Daion-ut%26i%3DdGhpc2lzaXQxMDA1%26gad_source%3D5%26gad_campaignid%3D23987343317%26gclid%3DEAIaIQobChMIpeOY8Mr4lQMVipsXBx0wnDTaEAEYASAAEgKJRvD_BwE
+                        - generic [ref=f63e16]:
+                          - link "GAC Motor Colombia" [ref=f63e18] [cursor=pointer]:
+                            - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CzXM-qU9qauXqBoq33ugPsLjS0Q2_2v_XiAHij77fqRXrhIbLwgEQASDQ2fWXAWCr4eSBsAagAbD6zvM_yAEJ4AIAqAMByAMKqgSXAk_Qf9j2ocnkQAR1kWvpIA8VjGbtsqxeJPiujSyRV40sCUakwdfrN3O81WCrxQHHxXQVwnEEXsyEjLn7ZBb1JM-3UJMc44-YYgza6bE9OCsYLS72OpgG3RKrmITshc_qoRYMCZZnOx0a-2ap45_lJdUyIvnLQDZAUE03tlT7PiNem5acbavPLt9iXuyhLgLV6of_qlZ0W8LGhFrpi-vnJwDQBFiejwp2AWdg8pQnfS_B-JLYWDFxwgy4zDunQjRmPaHqHLJvekBYAW4kw3L5T349710wH4ylnK7jTK6rMvrUhIGIVVRmbBkudsz7r3hK1oSgDAAB-LN9oQh2HupPqslG6IBZIak7pwqWZKcDl6T4ANiIFqqQq8AEmaSj9-4F4AQBiAXVn4euWaAGLoAHsLKf0xqoB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwDSCDIIgGEQARgdMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYsbqX8Mr4lQNgAbEJCnRk_8i3406ACgOYCwHICwGADAGiDAOQAQGqDQJDT8gNAeINEwiK55fwyviVAxWKmxcHHTCcNNrqDRMIvsGY8Mr4lQMVipsXBx0wnDTa8A0CiA7___________8B2BMD0BUBmBYByhYCCgD4FgGAFwGyFxAYASoKNTU3NDE3NTIwMFAGuhcCOAGqGBcJAAAAAOAw7UASCjU1NzQxNzUyMDAYAbIYCRICqE4YLiIBANAYAcIZAggB&ae=1&gclid=EAIaIQobChMIpeOY8Mr4lQMVipsXBx0wnDTaEAEYASAAEgKJRvD_BwE&num=1&cid=CAQS8wEAEQoqgYGt1zj0kdzu23KKpuVeThiQmjI9xbeI4e1Y4OesaRrS-_1o6ikjUvDktZP0tP4-eG8mMtQJTkYB2_lpBAg2PUALtGCQiyqSNpKyXLZ7m-Ew2DCnJPXp4nQ_b8wxa8ecQJGPJHcPqxs0glBTMgA0zE9slCLO8JqJNbXyGUX2hFlE4gQsxpHb5ZyGe5gm1zEnghXFrRMKWq1pF04oG6jYIEM65h1zMDKoRVo4kQ2wMtKm9cqteXGX3zlb1ZVAOT9djb9hrrHb5O_M0XxuwWeTTdNfHDHitRP3A3C7EPPy_2E9b4km2a9knoIeOWPGMggYAQ&sig=AOD64_1ZZr1p39YoVZjU5kO9hulBtaimmA&client=ca-pub-3661441281163245&rf=4&nb=1&adurl=https://gacmotorcolombia.com/cotizador%3Fmodelo%3Daion-ut%26i%3DdGhpc2lzaXQxMDA1%26gad_source%3D5%26gad_campaignid%3D23987343317%26gclid%3DEAIaIQobChMIpeOY8Mr4lQMVipsXBx0wnDTaEAEYASAAEgKJRvD_BwE
+                          - link "Learn More" [ref=f63e20] [cursor=pointer]:
+                            - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CzXM-qU9qauXqBoq33ugPsLjS0Q2_2v_XiAHij77fqRXrhIbLwgEQASDQ2fWXAWCr4eSBsAagAbD6zvM_yAEJ4AIAqAMByAMKqgSXAk_Qf9j2ocnkQAR1kWvpIA8VjGbtsqxeJPiujSyRV40sCUakwdfrN3O81WCrxQHHxXQVwnEEXsyEjLn7ZBb1JM-3UJMc44-YYgza6bE9OCsYLS72OpgG3RKrmITshc_qoRYMCZZnOx0a-2ap45_lJdUyIvnLQDZAUE03tlT7PiNem5acbavPLt9iXuyhLgLV6of_qlZ0W8LGhFrpi-vnJwDQBFiejwp2AWdg8pQnfS_B-JLYWDFxwgy4zDunQjRmPaHqHLJvekBYAW4kw3L5T349710wH4ylnK7jTK6rMvrUhIGIVVRmbBkudsz7r3hK1oSgDAAB-LN9oQh2HupPqslG6IBZIak7pwqWZKcDl6T4ANiIFqqQq8AEmaSj9-4F4AQBiAXVn4euWaAGLoAHsLKf0xqoB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwDSCDIIgGEQARgdMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYsbqX8Mr4lQNgAbEJCnRk_8i3406ACgOYCwHICwGADAGiDAOQAQGqDQJDT8gNAeINEwiK55fwyviVAxWKmxcHHTCcNNrqDRMIvsGY8Mr4lQMVipsXBx0wnDTa8A0CiA7___________8B2BMD0BUBmBYByhYCCgD4FgGAFwGyFxAYASoKNTU3NDE3NTIwMFAGuhcCOAGqGBcJAAAAAOAw7UASCjU1NzQxNzUyMDAYAbIYCRICqE4YLiIBANAYAcIZAggB&ae=1&gclid=EAIaIQobChMIpeOY8Mr4lQMVipsXBx0wnDTaEAEYASAAEgKJRvD_BwE&num=1&cid=CAQS8wEAEQoqgYGt1zj0kdzu23KKpuVeThiQmjI9xbeI4e1Y4OesaRrS-_1o6ikjUvDktZP0tP4-eG8mMtQJTkYB2_lpBAg2PUALtGCQiyqSNpKyXLZ7m-Ew2DCnJPXp4nQ_b8wxa8ecQJGPJHcPqxs0glBTMgA0zE9slCLO8JqJNbXyGUX2hFlE4gQsxpHb5ZyGe5gm1zEnghXFrRMKWq1pF04oG6jYIEM65h1zMDKoRVo4kQ2wMtKm9cqteXGX3zlb1ZVAOT9djb9hrrHb5O_M0XxuwWeTTdNfHDHitRP3A3C7EPPy_2E9b4km2a9knoIeOWPGMggYAQ&sig=AOD64_1ZZr1p39YoVZjU5kO9hulBtaimmA&client=ca-pub-3661441281163245&rf=4&nb=8&adurl=https://gacmotorcolombia.com/cotizador%3Fmodelo%3Daion-ut%26i%3DdGhpc2lzaXQxMDA1%26gad_source%3D5%26gad_campaignid%3D23987343317%26gclid%3DEAIaIQobChMIpeOY8Mr4lQMVipsXBx0wnDTaEAEYASAAEgKJRvD_BwE
+                          - link [ref=f63e21] [cursor=pointer]:
+                            - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CzXM-qU9qauXqBoq33ugPsLjS0Q2_2v_XiAHij77fqRXrhIbLwgEQASDQ2fWXAWCr4eSBsAagAbD6zvM_yAEJ4AIAqAMByAMKqgSXAk_Qf9j2ocnkQAR1kWvpIA8VjGbtsqxeJPiujSyRV40sCUakwdfrN3O81WCrxQHHxXQVwnEEXsyEjLn7ZBb1JM-3UJMc44-YYgza6bE9OCsYLS72OpgG3RKrmITshc_qoRYMCZZnOx0a-2ap45_lJdUyIvnLQDZAUE03tlT7PiNem5acbavPLt9iXuyhLgLV6of_qlZ0W8LGhFrpi-vnJwDQBFiejwp2AWdg8pQnfS_B-JLYWDFxwgy4zDunQjRmPaHqHLJvekBYAW4kw3L5T349710wH4ylnK7jTK6rMvrUhIGIVVRmbBkudsz7r3hK1oSgDAAB-LN9oQh2HupPqslG6IBZIak7pwqWZKcDl6T4ANiIFqqQq8AEmaSj9-4F4AQBiAXVn4euWaAGLoAHsLKf0xqoB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwDSCDIIgGEQARgdMgiKgoCAgICACDoPgECAwICAgICogAKog4AQSL39wTpYsbqX8Mr4lQNgAbEJCnRk_8i3406ACgOYCwHICwGADAGiDAOQAQGqDQJDT8gNAeINEwiK55fwyviVAxWKmxcHHTCcNNrqDRMIvsGY8Mr4lQMVipsXBx0wnDTa8A0CiA7___________8B2BMD0BUBmBYByhYCCgD4FgGAFwGyFxAYASoKNTU3NDE3NTIwMFAGuhcCOAGqGBcJAAAAAOAw7UASCjU1NzQxNzUyMDAYAbIYCRICqE4YLiIBANAYAcIZAggB&ae=1&gclid=EAIaIQobChMIpeOY8Mr4lQMVipsXBx0wnDTaEAEYASAAEgKJRvD_BwE&num=1&cid=CAQS8wEAEQoqgYGt1zj0kdzu23KKpuVeThiQmjI9xbeI4e1Y4OesaRrS-_1o6ikjUvDktZP0tP4-eG8mMtQJTkYB2_lpBAg2PUALtGCQiyqSNpKyXLZ7m-Ew2DCnJPXp4nQ_b8wxa8ecQJGPJHcPqxs0glBTMgA0zE9slCLO8JqJNbXyGUX2hFlE4gQsxpHb5ZyGe5gm1zEnghXFrRMKWq1pF04oG6jYIEM65h1zMDKoRVo4kQ2wMtKm9cqteXGX3zlb1ZVAOT9djb9hrrHb5O_M0XxuwWeTTdNfHDHitRP3A3C7EPPy_2E9b4km2a9knoIeOWPGMggYAQ&sig=AOD64_1ZZr1p39YoVZjU5kO9hulBtaimmA&client=ca-pub-3661441281163245&rf=4&nb=8&adurl=https://gacmotorcolombia.com/cotizador%3Fmodelo%3Daion-ut%26i%3DdGhpc2lzaXQxMDA1%26gad_source%3D5%26gad_campaignid%3D23987343317%26gclid%3DEAIaIQobChMIpeOY8Mr4lQMVipsXBx0wnDTaEAEYASAAEgKJRvD_BwE
+                  - button [ref=f55e1346] [cursor=pointer]
+                - navigation [ref=f55e1354]:
+                  - generic [ref=f55e1355]:
+                    - link [ref=f55e1356] [cursor=pointer]:
+                      - /url: https://x.com/tos
+                      - text: Terms
+                    - generic [ref=f55e1357]: ·
+                  - generic [ref=f55e1358]:
+                    - link [ref=f55e1359] [cursor=pointer]:
+                      - /url: https://x.com/privacy
+                      - text: Privacy
+                    - generic [ref=f55e1360]: ·
+                  - generic [ref=f55e1361]:
+                    - link [ref=f55e1362] [cursor=pointer]:
+                      - /url: https://support.x.com/articles/20170514
+                      - text: Cookies
+                    - generic [ref=f55e1363]: ·
+                  - generic [ref=f55e1364]:
+                    - link [ref=f55e1365] [cursor=pointer]:
+                      - /url: https://help.x.com/resources/accessibility
+                      - text: Accessibility
+                    - generic [ref=f55e1366]: ·
+                  - generic [ref=f55e1367]:
+                    - link [ref=f55e1368] [cursor=pointer]:
+                      - /url: https://business.x.com/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo
+                      - text: Ads Info
+                    - generic [ref=f55e1369]: ·
+                  - button [ref=f55e1370] [cursor=pointer]:
+                    - generic [ref=f55e1371]: More
+                  - generic [ref=f55e1375]: © 2026 X Corp.
+  - region "Notifications alt+T"

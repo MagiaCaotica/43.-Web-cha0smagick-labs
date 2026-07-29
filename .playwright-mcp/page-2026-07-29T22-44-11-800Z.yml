@@ -1,0 +1,376 @@
+- generic [active] [ref=f36e1]:
+  - main [ref=f36e3]:
+    - generic [ref=f36e4]:
+      - generic [ref=f36e6]:
+        - generic [ref=f36e8]:
+          - link "@giscus giscus" [ref=f36e9] [cursor=pointer]:
+            - /url: https://github.com/apps/giscus
+            - img "@giscus" [ref=f36e10]
+            - generic [ref=f36e11]: giscus
+          - link [ref=f36e12] [cursor=pointer]:
+            - /url: https://github.com/giscus/giscus
+            - time [ref=f36e13]: May 15, 2021
+          - generic [ref=f36e14]: App
+        - generic [ref=f36e16]:
+          - heading [level=1] [ref=f36e17]:
+            - link "giscus" [ref=f36e18] [cursor=pointer]:
+              - /url: https://giscus.app
+          - paragraph [ref=f36e19]:
+            - text: A comments system powered by
+            - link "GitHub Discussions" [ref=f36e20] [cursor=pointer]:
+              - /url: https://docs.github.com/en/discussions
+            - text: . Let visitors leave comments and reactions on your website via GitHub! Heavily inspired by
+            - link "utterances" [ref=f36e21] [cursor=pointer]:
+              - /url: https://github.com/utterance/utterances
+            - text: .
+          - list [ref=f36e22]:
+            - listitem [ref=f36e23]:
+              - link "Open source" [ref=f36e24] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus
+              - text: . 🌏
+            - listitem [ref=f36e25]: No tracking, no ads, always free. 📡 🚫
+            - listitem [ref=f36e26]:
+              - text: No database needed. All data is stored in GitHub Discussions.
+              - img ":octocat:" [ref=f36e27]
+            - listitem [ref=f36e28]:
+              - text: Supports
+              - link "custom themes" [ref=f36e29] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#data-theme
+              - text: "! 🌗"
+            - listitem [ref=f36e30]:
+              - text: Supports
+              - link "multiple languages" [ref=f36e31] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md#adding-localizations
+              - text: . 🌐
+            - listitem [ref=f36e32]:
+              - link "Extensively configurable" [ref=f36e33] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md
+              - text: . 🔧
+            - listitem [ref=f36e34]: Automatically fetches new comments and edits from GitHub. 🔃
+            - listitem [ref=f36e35]:
+              - link "Can be self-hosted" [ref=f36e36] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/SELF-HOSTING.md
+              - text: "! 🤳"
+          - blockquote [ref=f36e37]:
+            - paragraph [ref=f36e38]:
+              - strong [ref=f36e39]: Note
+              - text: giscus is still under active development. GitHub is also still actively developing Discussions and its API. Thus, some features of giscus may break or change over time.
+          - heading "How it works" [level=2] [ref=f36e40]
+          - paragraph [ref=f36e41]:
+            - text: When giscus loads, the
+            - link "GitHub Discussions search API" [ref=f36e42] [cursor=pointer]:
+              - /url: https://docs.github.com/en/graphql/guides/using-the-graphql-api-for-discussions#search
+            - text: is used to find the Discussion associated with the page based on a chosen mapping (URL,
+            - code [ref=f36e43]: pathname
+            - text: ","
+            - code [ref=f36e44]: <title>
+            - text: ", etc.). If a matching discussion cannot be found, the giscus bot will automatically create a discussion the first time someone leaves a comment or reaction."
+          - paragraph [ref=f36e45]:
+            - text: To comment, visitors must authorize the
+            - link "giscus app" [ref=f36e46] [cursor=pointer]:
+              - /url: https://github.com/apps/giscus
+            - text: to
+            - link "post on their behalf" [ref=f36e47] [cursor=pointer]:
+              - /url: https://docs.github.com/en/developers/apps/identifying-and-authorizing-users-for-github-apps
+            - text: using the GitHub OAuth flow. Alternatively, visitors can comment on the GitHub Discussion directly. You can moderate the comments on GitHub.
+        - generic [ref=f36e48]:
+          - heading "Configuration" [level=2] [ref=f36e49]
+          - heading "Language" [level=3] [ref=f36e50]
+          - paragraph [ref=f36e51]:
+            - text: Choose the language giscus will be displayed in. Can't find your language?
+            - link "Contribute" [ref=f36e52] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md#adding-localizations
+            - text: a localization.
+          - generic [ref=f36e53]: Language
+          - combobox "Language" [ref=f36e54]:
+            - option "العربية"
+            - option "Беларуская"
+            - option "български"
+            - option "Català"
+            - option "Čeština"
+            - option "Dansk"
+            - option "Deutsch"
+            - option "English" [selected]
+            - option "Esperanto"
+            - option "Español"
+            - option "Euskera"
+            - option "فارسی"
+            - option "Français"
+            - option "Ελληνικά"
+            - option "Srpsko-Hrvatski"
+            - option "עברית"
+            - option "Magyar"
+            - option "Indonesia"
+            - option "Italiano"
+            - option "日本語"
+            - option "ភាសាខ្មែរ"
+            - option "한국어"
+            - option "Nederlands"
+            - option "Polski"
+            - option "Português"
+            - option "Română"
+            - option "Русский"
+            - option "ภาษาไทย"
+            - option "Türkçe"
+            - option "Việt Nam"
+            - option "Українська"
+            - option "O'zbek"
+            - option "简体中文"
+            - option "繁體中文"
+            - option "香港繁體"
+          - heading "Repository" [level=3] [ref=f36e55]
+          - paragraph [ref=f36e56]: "Choose the repository giscus will connect to. Make sure that:"
+          - list [ref=f36e57]:
+            - listitem [ref=f36e58]:
+              - text: The
+              - strong [ref=f36e59]:
+                - text: repository is
+                - link "public" [ref=f36e60] [cursor=pointer]:
+                  - /url: https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/setting-repository-visibility#making-a-repository-public
+              - text: ", otherwise visitors will not be able to view the discussion."
+            - listitem [ref=f36e61]:
+              - text: The
+              - strong [ref=f36e62]:
+                - link "giscus" [ref=f36e63] [cursor=pointer]:
+                  - /url: https://github.com/apps/giscus
+                - text: app is installed
+              - text: ", otherwise visitors will not be able to comment and react."
+            - listitem [ref=f36e64]:
+              - text: The
+              - strong [ref=f36e65]: Discussions feature is turned on
+              - text: by
+              - link "enabling it for your repository" [ref=f36e66] [cursor=pointer]:
+                - /url: https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/enabling-or-disabling-github-discussions-for-a-repository
+              - text: .
+          - group [ref=f36e67]:
+            - generic [ref=f36e68]: "repository:"
+            - textbox "repository:" [ref=f36e69]:
+              - /placeholder: myusername/myrepo
+            - paragraph [ref=f36e70]:
+              - text: A
+              - strong [ref=f36e71]: public
+              - text: GitHub repository. This repo is where the discussions will be linked to.
+          - heading "Page ↔️ Discussions Mapping" [level=3] [ref=f36e72]
+          - paragraph [ref=f36e73]: Choose the mapping between the embedding page and the embedded discussion.
+          - group [ref=f36e74]:
+            - generic [ref=f36e75]:
+              - radio "Discussion title contains page pathname" [checked] [ref=f36e76]
+              - strong [ref=f36e78] [cursor=pointer]:
+                - text: Discussion title contains page
+                - code [ref=f36e79]: pathname
+              - paragraph [ref=f36e80]:
+                - text: giscus will search for a discussion whose title contains the page's
+                - code [ref=f36e81]: pathname
+                - text: URL component.
+            - generic [ref=f36e82]:
+              - radio "Discussion title contains page URL" [ref=f36e83]
+              - strong [ref=f36e85] [cursor=pointer]:
+                - text: Discussion title contains page
+                - code [ref=f36e86]: URL
+              - paragraph [ref=f36e87]: giscus will search for a discussion whose title contains the page's URL.
+            - generic [ref=f36e88]:
+              - radio "Discussion title contains page <title>" [ref=f36e89]
+              - strong [ref=f36e91] [cursor=pointer]:
+                - text: Discussion title contains page
+                - code [ref=f36e92]: <title>
+              - paragraph [ref=f36e93]:
+                - text: giscus will search for a discussion whose title contains the page's
+                - code [ref=f36e94]: <title>
+                - text: HTML tag.
+            - generic [ref=f36e95]:
+              - radio "Discussion title contains page og:title" [ref=f36e96]
+              - strong [ref=f36e98] [cursor=pointer]:
+                - text: Discussion title contains page
+                - code [ref=f36e99]: og:title
+              - paragraph [ref=f36e100]:
+                - text: giscus will search for a discussion whose title contains the page's
+                - link [ref=f36e101] [cursor=pointer]:
+                  - /url: https://ogp.me
+                  - code [ref=f36e102]: <meta property="og:title">
+                - text: HTML tag.
+            - generic [ref=f36e103]:
+              - radio "Discussion title contains a specific term" [ref=f36e104]
+              - strong [ref=f36e106] [cursor=pointer]: Discussion title contains a specific term
+              - paragraph [ref=f36e107]: giscus will search for a discussion whose title contains a specific term.
+            - generic [ref=f36e108]:
+              - radio "Specific discussion number" [ref=f36e109]
+              - strong [ref=f36e111] [cursor=pointer]: Specific discussion number
+              - paragraph [ref=f36e112]:
+                - text: giscus will load a specific discussion by number. This option
+                - strong [ref=f36e113]: does not
+                - text: support automatic discussion creation.
+          - generic [ref=f36e114]:
+            - checkbox "Use strict title matching" [ref=f36e115]
+            - strong [ref=f36e117]: Use strict title matching
+            - paragraph [ref=f36e118]:
+              - text: Avoid mismatches due to GitHub's fuzzy searching method when there are multiple discussions with similar titles. See
+              - link "the documentation" [ref=f36e119] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#data-strict
+              - text: for more details.
+          - heading "Discussion Category" [level=3] [ref=f36e120]
+          - paragraph [ref=f36e121]:
+            - text: Choose the discussion category where new discussions will be created. It is recommended to use a category with the
+            - strong [ref=f36e122]: Announcements
+            - text: type so that new discussions can only be created by maintainers and giscus.
+          - generic [ref=f36e123]: Discussion category
+          - combobox "Discussion category" [disabled] [ref=f36e124]:
+            - option "No categories found" [disabled] [selected]
+          - generic [ref=f36e125]:
+            - checkbox "Only search for discussions in this category" [checked] [ref=f36e126]
+            - strong [ref=f36e128]: Only search for discussions in this category
+            - paragraph [ref=f36e129]: When searching for a matching discussion, giscus will only search in this category.
+          - heading "Features" [level=3] [ref=f36e130]
+          - paragraph [ref=f36e131]: Choose whether specific features should be enabled.
+          - generic [ref=f36e132]:
+            - checkbox "Enable reactions for the main post" [checked] [ref=f36e133]
+            - strong [ref=f36e135]: Enable reactions for the main post
+            - paragraph [ref=f36e136]: The reactions for the discussion's main post will be shown before the comments.
+          - generic [ref=f36e137]:
+            - checkbox "Emit discussion metadata" [ref=f36e138]
+            - strong [ref=f36e140]: Emit discussion metadata
+            - paragraph [ref=f36e141]:
+              - text: Discussion metadata will be sent periodically to the parent window (the embedding page). For demonstration, enable this option and open your browser's console on this page. See
+              - link "the documentation" [ref=f36e142] [cursor=pointer]:
+                - /url: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage
+              - text: for more details.
+          - generic [ref=f36e143]:
+            - checkbox "Place the comment box above the comments" [ref=f36e144]
+            - strong [ref=f36e146]: Place the comment box above the comments
+            - paragraph [ref=f36e147]: The comment input box will be placed above the comments, so that users can leave a comment without scrolling to the bottom of the discussion.
+          - generic [ref=f36e148]:
+            - checkbox "Load the comments lazily" [ref=f36e149]
+            - strong [ref=f36e151]: Load the comments lazily
+            - paragraph [ref=f36e152]:
+              - text: Loading of the comments will be deferred until the user scrolls near the comments container. This is done by adding
+              - link [ref=f36e153] [cursor=pointer]:
+                - /url: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-loading
+                - code [ref=f36e154]: loading="lazy"
+              - text: to the
+              - code [ref=f36e155]: <iframe>
+              - text: element.
+          - heading "Theme" [level=3] [ref=f36e156]
+          - paragraph [ref=f36e157]:
+            - text: Choose a theme that matches your website. Can't find one that does?
+            - link "Contribute" [ref=f36e158] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md#creating-new-themes
+            - text: a new theme.
+          - generic [ref=f36e159]: Theme
+          - combobox "Theme" [ref=f36e160]:
+            - option "GitHub Light"
+            - option "GitHub Light High Contrast"
+            - option "GitHub Light Protanopia & Deuteranopia"
+            - option "GitHub Light Tritanopia"
+            - option "GitHub Dark"
+            - option "GitHub Dark High Contrast"
+            - option "GitHub Dark Protanopia & Deuteranopia"
+            - option "GitHub Dark Tritanopia"
+            - option "GitHub Dark Dimmed"
+            - option "Preferred color scheme" [selected]
+            - option "Transparent Dark"
+            - option "NoBorder Light"
+            - option "NoBorder Dark"
+            - option "NoBorder Gray"
+            - option "RStudio Cobalt"
+            - option "Purple Dark"
+            - option "Gruvbox"
+            - option "Gruvbox Dark"
+            - option "Gruvbox Light"
+            - option "Catppuccin Latte"
+            - option "Catppuccin Frappé"
+            - option "Catppuccin Macchiato"
+            - option "Catppuccin Mocha"
+            - option "Fro"
+            - option "Custom (experimental)"
+          - heading "Enable giscus" [level=3] [ref=f36e161]
+          - paragraph [ref=f36e162]:
+            - text: Add the following
+            - code [ref=f36e163]: <script>
+            - text: tag to your website's template where you want the comments to appear. If an element with the class
+            - code [ref=f36e164]: giscus
+            - text: exists, the comments will be placed there instead.
+          - generic [ref=f36e165]:
+            - text: You have not configured your
+            - link "repository" [ref=f36e166] [cursor=pointer]:
+              - /url: "#repository"
+            - text: and/or
+            - link "category" [ref=f36e167] [cursor=pointer]:
+              - /url: "#category"
+            - text: . The values for those fields will not show up until you fill them out.
+          - generic [ref=f36e168]:
+            - generic [ref=f36e169]:
+              - text: <script src="
+              - generic [ref=f36e170]: https://giscus.app/client.js
+              - text: "\" data-repo=\"[ENTER REPO HERE]\" data-repo-id=\"[ENTER REPO ID HERE]\" data-category=\"[ENTER CATEGORY NAME HERE]\" data-category-id=\"[ENTER CATEGORY ID HERE]\" data-mapping=\"pathname\" data-strict=\"0\" data-reactions-enabled=\"1\" data-emit-metadata=\"0\" data-input-position=\"bottom\" data-theme=\"preferred_color_scheme\" data-lang=\"en\" crossorigin=\"anonymous\" async>"
+              - generic [ref=f36e171]: </
+              - text: script>
+            - button "Copy" [ref=f36e173] [cursor=pointer]
+          - paragraph [ref=f36e177]:
+            - text: You can customize the container layout using the
+            - code [ref=f36e178]: .giscus
+            - text: and
+            - code [ref=f36e179]: .giscus-frame
+            - text: selectors from the embedding page.
+        - generic [ref=f36e180]:
+          - paragraph [ref=f36e181]:
+            - text: If you're using giscus, consider
+            - link "starring 🌟 giscus on GitHub" [ref=f36e182] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus
+            - text: and adding the
+            - link [ref=f36e183] [cursor=pointer]:
+              - /url: https://github.com/topics/giscus
+              - code [ref=f36e184]: giscus
+            - text: topic
+            - link "to your repository" [ref=f36e185] [cursor=pointer]:
+              - /url: https://docs.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics
+            - text: "! 🎉"
+          - heading "Advanced usage" [level=2] [ref=f36e186]
+          - paragraph [ref=f36e187]:
+            - text: You can add additional configurations (e.g. allowing specific origins) by following the
+            - link "advanced usage guide" [ref=f36e188] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md
+            - text: .
+          - paragraph [ref=f36e189]:
+            - text: To use giscus with React, Vue, or Svelte, check out the
+            - link "giscus component library" [ref=f36e190] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus-component
+            - text: .
+          - heading "Migrating" [level=2] [ref=f36e191]
+          - paragraph [ref=f36e192]:
+            - text: If you've previously used other systems that utilize GitHub Issues (e.g.
+            - link "utterances" [ref=f36e193] [cursor=pointer]:
+              - /url: https://github.com/utterance/utterances
+            - text: ","
+            - link "gitalk" [ref=f36e194] [cursor=pointer]:
+              - /url: https://github.com/gitalk/gitalk
+            - text: ), you can
+            - link "convert the existing issues into discussions" [ref=f36e195] [cursor=pointer]:
+              - /url: https://docs.github.com/en/discussions/managing-discussions-for-your-community/moderating-discussions#converting-an-issue-to-a-discussion
+            - text: . After the conversion, just make sure that the mapping between the discussion titles and the pages are correct, then giscus will automatically use the discussions.
+          - heading "Sites using giscus" [level=2] [ref=f36e196]
+          - list [ref=f36e197]:
+            - listitem [ref=f36e198]:
+              - link "laymonage.com" [ref=f36e199] [cursor=pointer]:
+                - /url: https://laymonage.com/posts/giscus
+            - listitem [ref=f36e200]:
+              - link "os.phil-opp.com" [ref=f36e201] [cursor=pointer]:
+                - /url: https://os.phil-opp.com
+            - listitem [ref=f36e202]:
+              - link "Stats and R" [ref=f36e203] [cursor=pointer]:
+                - /url: https://statsandr.com
+            - listitem [ref=f36e204]:
+              - link "Tech Debt Burndown Podcast" [ref=f36e205] [cursor=pointer]:
+                - /url: https://techdebtburndown.com
+            - listitem [ref=f36e206]:
+              - link [ref=f36e207] [cursor=pointer]:
+                - /url: https://github.com/topics/giscus
+                - strong [ref=f36e208]: and many more!
+          - heading "Contributing" [level=2] [ref=f36e209]
+          - paragraph [ref=f36e210]:
+            - text: See
+            - link "CONTRIBUTING.md" [ref=f36e211] [cursor=pointer]:
+              - /url: https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md
+          - heading "Try it out 👇👇👇" [level=2] [ref=f36e212]
+      - link [ref=f36e213] [cursor=pointer]:
+        - /url: https://vercel.com/?utm_source=giscus&utm_campaign=oss
+        - img "Powered by Vercel" [ref=f36e214]
+  - alert [ref=f36e215]

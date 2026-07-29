@@ -1,0 +1,78 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - heading "Lo que está pasando ahora." [level=1] [ref=e6]
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - generic [ref=e10]: Continue with phone
+          - generic [ref=e16]: Continuar con Google
+          - generic [ref=e26]: Continuar con Apple
+        - generic [ref=e32]: or
+        - generic [ref=e36]: Correo electrónico o nombre de usuario
+        - generic [ref=e39]: Continuar
+        - paragraph [ref=e41]:
+          - text: By continuing, you agree to our
+          - link [ref=e42] [cursor=pointer]:
+            - /url: https://x.com/tos
+            - text: Terms of Service
+          - text: ","
+          - link [ref=e43] [cursor=pointer]:
+            - /url: https://x.com/privacy
+            - text: Privacy Policy
+          - text: and
+          - link [ref=e44] [cursor=pointer]:
+            - /url: https://support.x.com/articles/20170514
+            - text: Cookie Use.
+    - img "X" [ref=e46]
+  - contentinfo [ref=e49]:
+    - navigation [ref=e50]:
+      - generic [ref=e51]:
+        - link "Información" [ref=e52] [cursor=pointer]:
+          - /url: https://about.x.com
+        - generic [ref=e53]: ·
+      - generic [ref=e54]:
+        - link "Get App" [ref=e55] [cursor=pointer]:
+          - /url: https://help.x.com/using-x/download-the-x-app
+        - generic [ref=e56]: ·
+      - generic [ref=e57]:
+        - link "Grok" [ref=e58] [cursor=pointer]:
+          - /url: https://grok.com/
+        - generic [ref=e59]: ·
+      - generic [ref=e60]:
+        - link "Ayuda" [ref=e61] [cursor=pointer]:
+          - /url: https://help.x.com
+        - generic [ref=e62]: ·
+      - generic [ref=e63]:
+        - link "Terms" [ref=e64] [cursor=pointer]:
+          - /url: https://x.com/tos
+        - generic [ref=e65]: ·
+      - generic [ref=e66]:
+        - link "Privacy" [ref=e67] [cursor=pointer]:
+          - /url: https://x.com/privacy
+        - generic [ref=e68]: ·
+      - generic [ref=e69]:
+        - link "Cookies" [ref=e70] [cursor=pointer]:
+          - /url: https://support.x.com/articles/20170514
+        - generic [ref=e71]: ·
+      - generic [ref=e72]:
+        - link "Careers" [ref=e73] [cursor=pointer]:
+          - /url: https://careers.x.com
+        - generic [ref=e74]: ·
+      - generic [ref=e75]:
+        - link "Ads & Business" [ref=e76] [cursor=pointer]:
+          - /url: https://business.x.com/advertising?ref=gl-tw-tw-twitter-advertise
+        - generic [ref=e77]: ·
+      - generic [ref=e78]:
+        - link "Desarrolladores" [ref=e79] [cursor=pointer]:
+          - /url: https://developer.x.com
+        - generic [ref=e80]: ·
+      - generic [ref=e81]:
+        - link "Noticias" [ref=e82] [cursor=pointer]:
+          - /url: https://x.com/i/jf/stories/home
+        - generic [ref=e83]: ·
+      - generic [ref=e84]:
+        - link "Accesibilidad" [ref=e85] [cursor=pointer]:
+          - /url: https://help.x.com/resources/accessibility
+        - generic [ref=e86]: ·
+      - generic [ref=e87]: © 2026 X Corp.
+  - generic [ref=e88]: Escanear para obtener la app

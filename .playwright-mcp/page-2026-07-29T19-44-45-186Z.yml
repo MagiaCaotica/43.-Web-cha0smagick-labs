@@ -1,0 +1,559 @@
+- generic [active] [ref=f491e1]:
+  - generic [ref=f491e2]:
+    - generic:
+      - generic:
+        - heading "To view keyboard shortcuts, press question mark View keyboard shortcuts" [level=2] [ref=f491e7]:
+          - generic [ref=f491e8]: To view keyboard shortcuts, press question mark
+          - link "View keyboard shortcuts" [ref=f491e9] [cursor=pointer]:
+            - /url: /i/keyboard_shortcuts
+        - generic:
+          - generic:
+            - button "Grok" [ref=f491e10] [cursor=pointer]
+            - button "Chat" [ref=f491e14] [cursor=pointer]
+        - generic [ref=f491e18]:
+          - button "Skip to home timeline" [ref=f491e19] [cursor=pointer]
+          - button "Skip to trending" [ref=f491e21] [cursor=pointer]
+          - banner [ref=f491e23]:
+            - generic [ref=f491e25]:
+              - generic [ref=f491e26]:
+                - heading [level=1] [ref=f491e28] [cursor=pointer]:
+                  - link "X" [ref=f491e29]:
+                    - /url: /home
+                - navigation "Primary" [ref=f491e35]:
+                  - link "Home" [ref=f491e36] [cursor=pointer]:
+                    - /url: /home
+                  - link "Search and explore" [ref=f491e43] [cursor=pointer]:
+                    - /url: /explore
+                    - generic [ref=f491e44]: Explore
+                  - link "Notifications" [ref=f491e50] [cursor=pointer]:
+                    - /url: /notifications
+                  - link "Follow" [ref=f491e57] [cursor=pointer]:
+                    - /url: /i/connect_people
+                  - link "Direct Messages" [ref=f491e64] [cursor=pointer]:
+                    - /url: /i/chat
+                    - generic [ref=f491e65]: Chat
+                  - link "Grok" [ref=f491e71] [cursor=pointer]:
+                    - /url: /i/grok
+                    - generic [ref=f491e72]:
+                      - generic "undefined unread items" [ref=f491e77]
+                      - generic [ref=f491e78]: Grok
+                  - link "Profile" [ref=f491e79] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                  - button "More menu items" [ref=f491e86] [cursor=pointer]:
+                    - generic [ref=f491e87]: More
+                - link "Post" [ref=f491e94] [cursor=pointer]:
+                  - /url: /compose/post
+              - button "Account menu" [ref=f491e103] [cursor=pointer]:
+                - generic [ref=f491e111]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic "ChaosmagickLabs":
+                          - img "ChaosmagickLabs"
+                - generic [ref=f491e115]:
+                  - generic [ref=f491e116]: ChaosmagickLabs
+                  - generic [ref=f491e120]: "@Cha0smagickLABS"
+          - main [ref=f491e128]:
+            - generic [ref=f491e131]:
+              - generic "Home timeline" [ref=f491e133]:
+                - generic [ref=f491e134]:
+                  - generic [ref=f491e140] [cursor=pointer]:
+                    - button "Back" [ref=f491e142]
+                    - generic [ref=f491e148]:
+                      - heading [level=2] [ref=f491e149]
+                      - generic [ref=f491e156]: 26 posts
+                    - button "Search" [ref=f491e159]
+                  - generic:
+                    - generic:
+                      - status:
+                        - button:
+                          - generic: See new posts
+                - generic [ref=f491e166]:
+                  - generic [ref=f491e167]:
+                    - generic [ref=f491e172]:
+                      - generic [ref=f491e173]:
+                        - link [ref=f491e181] [cursor=pointer]:
+                          - /url: /Cha0smagickLABS/photo
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic "Opens profile photo":
+                                  - img "Opens profile photo"
+                        - link "Edit profile" [ref=f491e185] [cursor=pointer]:
+                          - /url: /settings/profile
+                      - generic [ref=f491e192]:
+                        - generic [ref=f491e193]: ChaosmagickLabs
+                        - generic [ref=f491e197]: "@Cha0smagickLABS"
+                      - link "Joined July 2026" [ref=f491e204] [cursor=pointer]:
+                        - /url: /Cha0smagickLABS/about
+                      - generic [ref=f491e211]:
+                        - link "10 Following" [ref=f491e213] [cursor=pointer]:
+                          - /url: /Cha0smagickLABS/following
+                          - generic [ref=f491e214]: "10"
+                          - generic [ref=f491e215]: Following
+                        - link "0 Followers" [ref=f491e217] [cursor=pointer]:
+                          - /url: /Cha0smagickLABS/verified_followers
+                          - generic [ref=f491e218]: "0"
+                          - generic [ref=f491e219]: Followers
+                    - generic [ref=f491e222]:
+                      - button [ref=f491e223] [cursor=pointer]
+                      - generic [ref=f491e228]:
+                        - generic [ref=f491e229]: You aren’t verified yet
+                        - generic [ref=f491e233]: Get verified for boosted replies, analytics, ad-free browsing, and more. Upgrade your profile now.
+                        - link "Get verified" [ref=f491e234] [cursor=pointer]:
+                          - /url: /i/premium_sign_up
+                  - navigation "Profile timelines" [ref=f491e239]:
+                    - generic [ref=f491e240]:
+                      - generic:
+                        - button "Previous" [disabled]
+                      - tablist [ref=f491e242]:
+                        - tab "Posts" [selected] [ref=f491e243] [cursor=pointer]
+                        - tab "Replies" [ref=f491e248] [cursor=pointer]
+                        - tab "Highlights" [ref=f491e252] [cursor=pointer]
+                        - tab "Media" [ref=f491e256] [cursor=pointer]
+                        - tab "Likes" [ref=f491e260] [cursor=pointer]
+                      - generic:
+                        - button "Next" [disabled]
+                  - region [ref=f491e264]:
+                    - heading "ChaosmagickLabs’s posts" [level=1] [ref=f491e265]
+                    - 'generic "Timeline: ChaosmagickLabs’s posts" [ref=f491e266]':
+                      - generic [ref=f491e267]:
+                        - 'article "ChaosmagickLabs @Cha0smagickLABS 21 minutes ago Explore the collection → cha0smagicklabs.com The Complete Occult Collection: 11 Apps & 7 Books | Cha0smagick Labs From cha0smagicklabs.com" [ref=f491e1751] [cursor=pointer]':
+                          - generic [ref=f491e1757]:
+                            - link [ref=f491e1769]:
+                              - /url: /Cha0smagickLABS
+                            - generic [ref=f491e1772]:
+                              - generic [ref=f491e1774]:
+                                - generic [ref=f491e1777]:
+                                  - link "ChaosmagickLabs" [ref=f491e1780]:
+                                    - /url: /Cha0smagickLABS
+                                  - generic [ref=f491e1785]:
+                                    - link "@Cha0smagickLABS" [ref=f491e1787]:
+                                      - /url: /Cha0smagickLABS
+                                    - generic [ref=f491e1789]: ·
+                                    - link "21 minutes ago" [ref=f491e1791]:
+                                      - /url: /Cha0smagickLABS/status/2082547333489639687
+                                      - time [ref=f491e1792]: 21m
+                                - generic [ref=f491e1794]:
+                                  - button "Grok actions" [ref=f491e1796]
+                                  - button "More" [ref=f491e1807]
+                              - generic [ref=f491e1814]: Explore the collection →
+                              - generic [ref=f491e1816]:
+                                - 'link "cha0smagicklabs.com The Complete Occult Collection: 11 Apps & 7 Books | Cha0smagick Labs" [ref=f491e1819]':
+                                  - /url: https://t.co/hgmuyQp2ii
+                                  - generic [ref=f491e1825]: "The Complete Occult Collection: 11 Apps & 7 Books | Cha0smagick Labs"
+                                - link "From cha0smagicklabs.com" [ref=f491e1828]:
+                                  - /url: https://t.co/hgmuyQp2ii
+                              - group "3 views" [ref=f491e1831]:
+                                - button "0 Replies. Reply" [ref=f491e1833]
+                                - button "0 reposts. Repost" [ref=f491e1844]
+                                - button "0 Likes. Like" [ref=f491e1855]
+                                - link "3 views. View post analytics" [ref=f491e1866]:
+                                  - /url: /Cha0smagickLABS/status/2082547333489639687/analytics
+                                  - generic [ref=f491e1867]: "3"
+                                - button "Bookmark" [ref=f491e1877]
+                                - button "Share post" [ref=f491e1886]
+                        - article [ref=f491e1896] [cursor=pointer]:
+                          - generic [ref=f491e1902]:
+                            - link [ref=f491e1914]:
+                              - /url: /Cha0smagickLABS
+                            - generic [ref=f491e1917]:
+                              - generic [ref=f491e1919]:
+                                - generic [ref=f491e1922]:
+                                  - link "ChaosmagickLabs" [ref=f491e1925]:
+                                    - /url: /Cha0smagickLABS
+                                  - generic [ref=f491e1930]:
+                                    - link "@Cha0smagickLABS" [ref=f491e1932]:
+                                      - /url: /Cha0smagickLABS
+                                    - generic [ref=f491e1934]: ·
+                                    - link "23 minutes ago" [ref=f491e1936]:
+                                      - /url: /Cha0smagickLABS/status/2082546965649268943
+                                      - time [ref=f491e1937]: 23m
+                                - generic [ref=f491e1939]:
+                                  - button "Grok actions" [ref=f491e1941]
+                                  - button "More" [ref=f491e1952]
+                              - generic [ref=f491e1960]:
+                                - text: "Chaos Magick belief: Nothing is true. Everything is permitted. Your beliefs are tools — switch them at will. The complete guide →"
+                                - link "cha0smagicklabs.com/blog/chaos-mag" [ref=f491e1961]:
+                                  - /url: https://t.co/sjVizVizOY
+                                  - text: cha0smagicklabs.com/blog/chaos-mag …
+                                - text: "#ChaosMagickhttps://cha0smagicklabs.com/blog/chaos-magick-beginners-guide.html"
+                                - link "#ChaosMagick" [ref=f491e1963]:
+                                  - /url: /hashtag/ChaosMagick?src=hashtag_click
+                              - group "3 views" [ref=f491e1966]:
+                                - button "0 Replies. Reply" [ref=f491e1968]
+                                - button "0 reposts. Repost" [ref=f491e1979]
+                                - button "0 Likes. Like" [ref=f491e1990]
+                                - link "3 views. View post analytics" [ref=f491e2001]:
+                                  - /url: /Cha0smagickLABS/status/2082546965649268943/analytics
+                                  - generic [ref=f491e2002]: "3"
+                                - button "Bookmark" [ref=f491e2012]
+                                - button "Share post" [ref=f491e2021]
+                        - 'article "ChaosmagickLabs @Cha0smagickLABS 24 minutes ago 3 types of divination every occultist should know: 1) Tarot (symbolic reflection), 2) Runes (ancient wisdom), 3) I Ching (cosmic probability). Which speaks to you?" [ref=f491e2031] [cursor=pointer]':
+                          - generic [ref=f491e2037]:
+                            - link [ref=f491e2049]:
+                              - /url: /Cha0smagickLABS
+                            - generic [ref=f491e2052]:
+                              - generic [ref=f491e2054]:
+                                - generic [ref=f491e2057]:
+                                  - link "ChaosmagickLabs" [ref=f491e2060]:
+                                    - /url: /Cha0smagickLABS
+                                  - generic [ref=f491e2065]:
+                                    - link "@Cha0smagickLABS" [ref=f491e2067]:
+                                      - /url: /Cha0smagickLABS
+                                    - generic [ref=f491e2069]: ·
+                                    - link "24 minutes ago" [ref=f491e2071]:
+                                      - /url: /Cha0smagickLABS/status/2082546599742345645
+                                      - time [ref=f491e2072]: 24m
+                                - generic [ref=f491e2074]:
+                                  - button "Grok actions" [ref=f491e2076]
+                                  - button "More" [ref=f491e2087]
+                              - generic [ref=f491e2094]: "3 types of divination every occultist should know: 1) Tarot (symbolic reflection), 2) Runes (ancient wisdom), 3) I Ching (cosmic probability). Which speaks to you?"
+                              - group "2 views" [ref=f491e2098]:
+                                - button "0 Replies. Reply" [ref=f491e2100]
+                                - button "0 reposts. Repost" [ref=f491e2111]
+                                - button "0 Likes. Like" [ref=f491e2122]
+                                - link "2 views. View post analytics" [ref=f491e2133]:
+                                  - /url: /Cha0smagickLABS/status/2082546599742345645/analytics
+                                  - generic [ref=f491e2134]: "2"
+                                - button "Bookmark" [ref=f491e2144]
+                                - button "Share post" [ref=f491e2153]
+                        - article [ref=f491e2163] [cursor=pointer]:
+                          - generic [ref=f491e2169]:
+                            - link [ref=f491e2181]:
+                              - /url: /Cha0smagickLABS
+                            - generic [ref=f491e2184]:
+                              - generic [ref=f491e2186]:
+                                - generic [ref=f491e2189]:
+                                  - link "ChaosmagickLabs" [ref=f491e2192]:
+                                    - /url: /Cha0smagickLABS
+                                  - generic [ref=f491e2197]:
+                                    - link "@Cha0smagickLABS" [ref=f491e2199]:
+                                      - /url: /Cha0smagickLABS
+                                    - generic [ref=f491e2201]: ·
+                                    - link "26 minutes ago" [ref=f491e2203]:
+                                      - /url: /Cha0smagickLABS/status/2082546127035855108
+                                      - time [ref=f491e2204]: 26m
+                                - generic [ref=f491e2206]:
+                                  - button "Grok actions" [ref=f491e2208]
+                                  - button "More" [ref=f491e2219]
+                              - generic [ref=f491e2227]:
+                                - text: The difference between a thought and a spell? Focus. Intention. Will. Every witch knows this. New to the craft? Start here →
+                                - link "cha0smagicklabs.com/blog/witchcraf" [ref=f491e2228]:
+                                  - /url: https://t.co/fpCmKPTllg
+                                  - text: cha0smagicklabs.com/blog/witchcraf …
+                                - link "#Witchcraft" [ref=f491e2230]:
+                                  - /url: /hashtag/Witchcraft?src=hashtag_click
+                                - text: "#BeginnerWitchhttps://cha0smagicklabs.com/blog/witchcraft-for-beginners-guide.html"
+                                - link "#Witchcraft" [ref=f491e2232]:
+                                  - /url: /hashtag/Witchcraft?src=hashtag_click
+                                - link "#BeginnerWitch" [ref=f491e2234]:
+                                  - /url: /hashtag/BeginnerWitch?src=hashtag_click
+                              - generic [ref=f491e2236]:
+                                - link [ref=f491e2238]:
+                                  - /url: https://t.co/fpCmKPTllg
+                                - 'link "cha0smagicklabs.com Witchcraft for Beginners: A Complete Guide to Starting Your Practice Everything you need to know about witchcraft for beginners — tools, traditions, spells, ethics, and practical steps to begin your journey." [ref=f491e2250]':
+                                  - /url: https://t.co/fpCmKPTllg
+                                  - generic [ref=f491e2251]:
+                                    - generic [ref=f491e2252]: cha0smagicklabs.com
+                                    - generic [ref=f491e2254]: "Witchcraft for Beginners: A Complete Guide to Starting Your Practice"
+                                    - generic [ref=f491e2256]: Everything you need to know about witchcraft for beginners — tools, traditions, spells, ethics, and practical steps to begin your journey.
+                              - group "1 view" [ref=f491e2260]:
+                                - button "0 Replies. Reply" [ref=f491e2262]
+                                - button "0 reposts. Repost" [ref=f491e2273]
+                                - button "0 Likes. Like" [ref=f491e2284]
+                                - link "1 view. View post analytics" [ref=f491e2295]:
+                                  - /url: /Cha0smagickLABS/status/2082546127035855108/analytics
+                                  - generic [ref=f491e2296]: "1"
+                                - button "Bookmark" [ref=f491e2306]
+                                - button "Share post" [ref=f491e2315]
+                        - article [ref=f491e2325] [cursor=pointer]:
+                          - generic [ref=f491e2331]:
+                            - link [ref=f491e2343]:
+                              - /url: /Cha0smagickLABS
+                            - generic [ref=f491e2346]:
+                              - generic [ref=f491e2348]:
+                                - generic [ref=f491e2351]:
+                                  - link "ChaosmagickLabs" [ref=f491e2354]:
+                                    - /url: /Cha0smagickLABS
+                                  - generic [ref=f491e2359]:
+                                    - link "@Cha0smagickLABS" [ref=f491e2361]:
+                                      - /url: /Cha0smagickLABS
+                                    - generic [ref=f491e2363]: ·
+                                    - link "26 minutes ago" [ref=f491e2365]:
+                                      - /url: /Cha0smagickLABS/status/2082546049080607133
+                                      - time [ref=f491e2366]: 26m
+                                - generic [ref=f491e2368]:
+                                  - button "Grok actions" [ref=f491e2370]
+                                  - button "More" [ref=f491e2381]
+                              - generic [ref=f491e2389]:
+                                - text: "Sigil magick 101: Write your intention. Remove the vowels. Turn the remaining letters into a symbol. Charge it with gnosis. Release it to the universe. Simple. Powerful. →"
+                                - link "cha0smagicklabs.com/apps/chaos-sig" [ref=f491e2390]:
+                                  - /url: https://t.co/8JFCDyLUTG
+                                  - text: cha0smagicklabs.com/apps/chaos-sig …
+                              - group "1 view" [ref=f491e2393]:
+                                - button "0 Replies. Reply" [ref=f491e2395]
+                                - button "0 reposts. Repost" [ref=f491e2406]
+                                - button "0 Likes. Like" [ref=f491e2417]
+                                - link "1 view. View post analytics" [ref=f491e2428]:
+                                  - /url: /Cha0smagickLABS/status/2082546049080607133/analytics
+                                  - generic [ref=f491e2429]: "1"
+                                - button "Bookmark" [ref=f491e2439]
+                                - button "Share post" [ref=f491e2448]
+                        - article [ref=f491e2458] [cursor=pointer]:
+                          - generic [ref=f491e2464]:
+                            - link [ref=f491e2476]:
+                              - /url: /Cha0smagickLABS
+                            - generic [ref=f491e2479]:
+                              - generic [ref=f491e2481]:
+                                - generic [ref=f491e2484]:
+                                  - link "ChaosmagickLabs" [ref=f491e2487]:
+                                    - /url: /Cha0smagickLABS
+                                  - generic [ref=f491e2492]:
+                                    - link "@Cha0smagickLABS" [ref=f491e2494]:
+                                      - /url: /Cha0smagickLABS
+                                    - generic [ref=f491e2496]: ·
+                                    - link "29 minutes ago" [ref=f491e2498]:
+                                      - /url: /Cha0smagickLABS/status/2082545487962357835
+                                      - time [ref=f491e2499]: 29m
+                                - generic [ref=f491e2501]:
+                                  - button "Grok actions" [ref=f491e2503]
+                                  - button "More" [ref=f491e2514]
+                              - generic [ref=f491e2522]:
+                                - img "🌙" [ref=f491e2523]
+                                - text: Lucid dreaming is a skill you can learn. Dream Machine + Lucid Dream apps — reality checks, dream journals, astral projection. →
+                                - link "play.google.com/store/apps/det" [ref=f491e2524]:
+                                  - /url: https://t.co/My8wveIgiB
+                                  - text: play.google.com/store/apps/det …
+                                - link "#LucidDreaming" [ref=f491e2526]:
+                                  - /url: /hashtag/LucidDreaming?src=hashtag_click
+                                - link "#AstralProjection" [ref=f491e2528]:
+                                  - /url: /hashtag/AstralProjection?src=hashtag_click
+                              - group "2 views" [ref=f491e2531]:
+                                - button "0 Replies. Reply" [ref=f491e2533]
+                                - button "0 reposts. Repost" [ref=f491e2544]
+                                - button "0 Likes. Like" [ref=f491e2555]
+                                - link "2 views. View post analytics" [ref=f491e2566]:
+                                  - /url: /Cha0smagickLABS/status/2082545487962357835/analytics
+                                  - generic [ref=f491e2567]: "2"
+                                - button "Bookmark" [ref=f491e2577]
+                                - button "Share post" [ref=f491e2586]
+                        - article [ref=f491e2596] [cursor=pointer]:
+                          - generic [ref=f491e2602]:
+                            - link [ref=f491e2614]:
+                              - /url: /Cha0smagickLABS
+                            - generic [ref=f491e2617]:
+                              - generic [ref=f491e2619]:
+                                - generic [ref=f491e2622]:
+                                  - link "ChaosmagickLabs" [ref=f491e2625]:
+                                    - /url: /Cha0smagickLABS
+                                  - generic [ref=f491e2630]:
+                                    - link "@Cha0smagickLABS" [ref=f491e2632]:
+                                      - /url: /Cha0smagickLABS
+                                    - generic [ref=f491e2634]: ·
+                                    - link "30 minutes ago" [ref=f491e2636]:
+                                      - /url: /Cha0smagickLABS/status/2082545017436901819
+                                      - time [ref=f491e2637]: 30m
+                                - generic [ref=f491e2639]:
+                                  - button "Grok actions" [ref=f491e2641]
+                                  - button "More" [ref=f491e2652]
+                              - generic [ref=f491e2660]:
+                                - text: ᚱ The Elder Futhark speaks. 24 runes of power and wisdom. Norse Rune Oracle app — professional rune readings on Android. →
+                                - link "play.google.com/store/apps/det" [ref=f491e2661]:
+                                  - /url: https://t.co/PXjAd7dUYw
+                                  - text: play.google.com/store/apps/det …
+                                - link "#Runes" [ref=f491e2663]:
+                                  - /url: /hashtag/Runes?src=hashtag_click
+                                - link "#Norse" [ref=f491e2665]:
+                                  - /url: /hashtag/Norse?src=hashtag_click
+                              - group "3 views" [ref=f491e2668]:
+                                - button "0 Replies. Reply" [ref=f491e2670]
+                                - button "0 reposts. Repost" [ref=f491e2681]
+                                - button "0 Likes. Like" [ref=f491e2692]
+                                - link "3 views. View post analytics" [ref=f491e2703]:
+                                  - /url: /Cha0smagickLABS/status/2082545017436901819/analytics
+                                  - generic [ref=f491e2704]: "3"
+                                - button "Bookmark" [ref=f491e2714]
+                                - button "Share post" [ref=f491e2723]
+                        - article [ref=f491e2733] [cursor=pointer]:
+                          - generic [ref=f491e2739]:
+                            - link [ref=f491e2751]:
+                              - /url: /Cha0smagickLABS
+                            - generic [ref=f491e2754]:
+                              - generic [ref=f491e2756]:
+                                - generic [ref=f491e2759]:
+                                  - link "ChaosmagickLabs" [ref=f491e2762]:
+                                    - /url: /Cha0smagickLABS
+                                  - generic [ref=f491e2767]:
+                                    - link "@Cha0smagickLABS" [ref=f491e2769]:
+                                      - /url: /Cha0smagickLABS
+                                    - generic [ref=f491e2771]: ·
+                                    - link "32 minutes ago" [ref=f491e2773]:
+                                      - /url: /Cha0smagickLABS/status/2082544679669669924
+                                      - time [ref=f491e2774]: 32m
+                                - generic [ref=f491e2776]:
+                                  - button "Grok actions" [ref=f491e2778]
+                                  - button "More" [ref=f491e2789]
+                              - generic [ref=f491e2797]:
+                                - img "🃏" [ref=f491e2798]
+                                - text: Full Rider Waite Tarot deck on your Android. 78 cards, 12 spreads, card meanings, daily draws. No subscriptions, one-time purchase. →
+                                - link "play.google.com/store/apps/det" [ref=f491e2799]:
+                                  - /url: https://t.co/KLBi1pRH1J
+                                  - text: play.google.com/store/apps/det …
+                                - link "#Tarot" [ref=f491e2801]:
+                                  - /url: /hashtag/Tarot?src=hashtag_click
+                                - link "#Divination" [ref=f491e2803]:
+                                  - /url: /hashtag/Divination?src=hashtag_click
+                              - group "3 views" [ref=f491e2806]:
+                                - button "0 Replies. Reply" [ref=f491e2808]
+                                - button "0 reposts. Repost" [ref=f491e2819]
+                                - button "0 Likes. Like" [ref=f491e2830]
+                                - link "3 views. View post analytics" [ref=f491e2841]:
+                                  - /url: /Cha0smagickLABS/status/2082544679669669924/analytics
+                                  - generic [ref=f491e2842]: "3"
+                                - button "Bookmark" [ref=f491e2852]
+                                - button "Share post" [ref=f491e2861]
+                        - article [ref=f491e2871] [cursor=pointer]:
+                          - generic [ref=f491e2877]:
+                            - link [ref=f491e2889]:
+                              - /url: /Cha0smagickLABS
+                            - generic [ref=f491e2892]:
+                              - generic [ref=f491e2894]:
+                                - generic [ref=f491e2897]:
+                                  - link "ChaosmagickLabs" [ref=f491e2900]:
+                                    - /url: /Cha0smagickLABS
+                                  - generic [ref=f491e2905]:
+                                    - link "@Cha0smagickLABS" [ref=f491e2907]:
+                                      - /url: /Cha0smagickLABS
+                                    - generic [ref=f491e2909]: ·
+                                    - link "37 minutes ago" [ref=f491e2911]:
+                                      - /url: /Cha0smagickLABS/status/2082543356471656473
+                                      - time [ref=f491e2912]: 37m
+                                - generic [ref=f491e2914]:
+                                  - button "Grok actions" [ref=f491e2916]
+                                  - button "More" [ref=f491e2927]
+                              - generic [ref=f491e2935]:
+                                - img "🌀" [ref=f491e2936]
+                                - text: Your mind is the most powerful tool in the universe. Train it with PSI GYM — the professional Zener card ESP trainer. ➜
+                                - link "play.google.com/store/apps/det" [ref=f491e2937]:
+                                  - /url: https://t.co/Y6wolB0SI1
+                                  - text: play.google.com/store/apps/det …
+                                - link "#ESP" [ref=f491e2939]:
+                                  - /url: /hashtag/ESP?src=hashtag_click
+                                - link "#PsychicTraining" [ref=f491e2941]:
+                                  - /url: /hashtag/PsychicTraining?src=hashtag_click
+                              - group "6 views" [ref=f491e2944]:
+                                - button "0 Replies. Reply" [ref=f491e2946]
+                                - button "0 reposts. Repost" [ref=f491e2957]
+                                - button "0 Likes. Like" [ref=f491e2968]
+                                - link "6 views. View post analytics" [ref=f491e2979]:
+                                  - /url: /Cha0smagickLABS/status/2082543356471656473/analytics
+                                  - generic [ref=f491e2980]: "6"
+                                - button "Bookmark" [ref=f491e2990]
+                                - button "Share post" [ref=f491e2999]
+              - generic "Trending" [ref=f491e1073]:
+                - generic [ref=f491e1074]:
+                  - search "Search" [ref=f491e1079]:
+                    - combobox "Search query" [ref=f491e1091]
+                  - complementary "Who to follow" [ref=f491e1095]:
+                    - heading "You might like" [level=2] [ref=f491e1097]
+                    - list [ref=f491e1099]:
+                      - listitem [ref=f491e1100] [cursor=pointer]:
+                        - generic [ref=f491e1101]:
+                          - link [ref=f491e1111]:
+                            - /url: /ZelinaVegaWWE
+                          - generic [ref=f491e1115]:
+                            - generic [ref=f491e1117]:
+                              - link [ref=f491e1119]:
+                                - /url: /ZelinaVegaWWE
+                                - generic [ref=f491e1120]:
+                                  - generic [ref=f491e1121]: ZV
+                                  - img "Verified account" [ref=f491e1125]
+                              - link "@ZelinaVegaWWE" [ref=f491e1130]:
+                                - /url: /ZelinaVegaWWE
+                            - button "Follow @ZelinaVegaWWE" [ref=f491e1134]:
+                              - generic [ref=f491e1135]: Follow
+                      - listitem [ref=f491e1138] [cursor=pointer]:
+                        - generic [ref=f491e1139]:
+                          - link [ref=f491e1149]:
+                            - /url: /getFANDOM
+                          - generic [ref=f491e1153]:
+                            - generic [ref=f491e1155]:
+                              - link [ref=f491e1157]:
+                                - /url: /getFANDOM
+                                - generic [ref=f491e1158]:
+                                  - generic [ref=f491e1159]: Fandom
+                                  - img "Verified account" [ref=f491e1163]
+                              - link "@getFANDOM" [ref=f491e1171]:
+                                - /url: /getFANDOM
+                            - button "Follow @getFANDOM" [ref=f491e1175]:
+                              - generic [ref=f491e1176]: Follow
+                      - listitem [ref=f491e1179] [cursor=pointer]:
+                        - generic [ref=f491e1180]:
+                          - link [ref=f491e1190]:
+                            - /url: /Tubi
+                          - generic [ref=f491e1194]:
+                            - generic [ref=f491e1196]:
+                              - link [ref=f491e1198]:
+                                - /url: /Tubi
+                                - generic [ref=f491e1199]:
+                                  - generic [ref=f491e1200]: Tubi
+                                  - img "Verified account" [ref=f491e1204]
+                              - link "@Tubi" [ref=f491e1212]:
+                                - /url: /Tubi
+                            - button "Follow @Tubi" [ref=f491e1216]:
+                              - generic [ref=f491e1217]: Follow
+                    - link "Show more" [ref=f491e1220] [cursor=pointer]:
+                      - /url: /i/connect_people?user_id=2082185111257194496
+                  - region [ref=f491e1223]:
+                    - heading "Trending now" [level=1] [ref=f491e1224]
+                    - 'generic "Timeline: Trending now" [ref=f491e1225]':
+                      - generic [ref=f491e1226]:
+                        - heading "What’s happening" [level=2] [ref=f491e1230]
+                        - link "Siente La Pasión Apuesta por tu equipo favorito Promoted by BetPlay More" [ref=f491e1234] [cursor=pointer]:
+                          - generic [ref=f491e1235]:
+                            - generic [ref=f491e1236]: Siente La Pasión
+                            - generic [ref=f491e1237]: Apuesta por tu equipo favorito
+                            - generic [ref=f491e1238]: Promoted by BetPlay
+                            - button "More" [ref=f491e1246]
+                        - link "Sports · Trending Osorio More" [ref=f491e1255] [cursor=pointer]:
+                          - generic [ref=f491e1256]:
+                            - generic [ref=f491e1257]: Sports · Trending
+                            - generic [ref=f491e1259]: Osorio
+                            - button "More" [ref=f491e1262]
+                        - link "Trending in Colombia Brutal More" [ref=f491e1271] [cursor=pointer]:
+                          - generic [ref=f491e1272]:
+                            - generic [ref=f491e1273]: Trending in Colombia
+                            - generic [ref=f491e1275]: Brutal
+                            - button "More" [ref=f491e1278]
+                        - link "Trending in Colombia Junta Directiva More" [ref=f491e1287] [cursor=pointer]:
+                          - generic [ref=f491e1288]:
+                            - generic [ref=f491e1289]: Trending in Colombia
+                            - generic [ref=f491e1291]: Junta Directiva
+                            - button "More" [ref=f491e1294]
+                        - link "Show more" [ref=f491e1303] [cursor=pointer]:
+                          - /url: /explore/tabs/for-you
+                  - navigation "Footer" [ref=f491e1309]:
+                    - generic [ref=f491e1310]:
+                      - link "Terms" [ref=f491e1311] [cursor=pointer]:
+                        - /url: https://x.com/tos
+                      - generic [ref=f491e1312]: ·
+                    - generic [ref=f491e1313]:
+                      - link "Privacy" [ref=f491e1314] [cursor=pointer]:
+                        - /url: https://x.com/privacy
+                      - generic [ref=f491e1315]: ·
+                    - generic [ref=f491e1316]:
+                      - link "Cookies" [ref=f491e1317] [cursor=pointer]:
+                        - /url: https://support.x.com/articles/20170514
+                      - generic [ref=f491e1318]: ·
+                    - generic [ref=f491e1319]:
+                      - link "Accessibility" [ref=f491e1320] [cursor=pointer]:
+                        - /url: https://help.x.com/resources/accessibility
+                      - generic [ref=f491e1321]: ·
+                    - generic [ref=f491e1322]:
+                      - link "Ads Info" [ref=f491e1323] [cursor=pointer]:
+                        - /url: https://business.x.com/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo
+                      - generic [ref=f491e1324]: ·
+                    - button "More" [ref=f491e1325] [cursor=pointer]
+                    - generic [ref=f491e1330]: © 2026 X Corp.
+  - region "Notifications alt+T"

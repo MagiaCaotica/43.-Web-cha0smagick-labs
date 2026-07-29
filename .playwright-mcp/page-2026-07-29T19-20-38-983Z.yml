@@ -1,0 +1,125 @@
+- generic [active] [ref=f185e1]:
+  - generic [ref=f185e2]:
+    - generic:
+      - generic:
+        - heading "To view keyboard shortcuts, press question mark View keyboard shortcuts" [level=2] [ref=f185e3]:
+          - generic [ref=f185e4]: To view keyboard shortcuts, press question mark
+          - link "View keyboard shortcuts" [ref=f185e5] [cursor=pointer]:
+            - /url: /i/keyboard_shortcuts
+        - generic:
+          - generic:
+            - button "Grok" [ref=f185e6] [cursor=pointer]
+            - button "Chat" [ref=f185e10] [cursor=pointer]
+        - generic [ref=f185e14]:
+          - button "Skip to home timeline" [ref=f185e15] [cursor=pointer]
+          - button "Skip to trending" [ref=f185e17] [cursor=pointer]
+          - banner [ref=f185e19]:
+            - generic [ref=f185e21]:
+              - generic [ref=f185e22]:
+                - heading [level=1] [ref=f185e24] [cursor=pointer]:
+                  - link "X" [ref=f185e25]:
+                    - /url: /home
+                - navigation "Primary" [ref=f185e31]:
+                  - link "Home" [ref=f185e32] [cursor=pointer]:
+                    - /url: /home
+                  - link "Search and explore" [ref=f185e39] [cursor=pointer]:
+                    - /url: /explore
+                    - generic [ref=f185e40]: Explore
+                  - link "Notifications" [ref=f185e46] [cursor=pointer]:
+                    - /url: /notifications
+                  - link "Follow" [ref=f185e53] [cursor=pointer]:
+                    - /url: /i/connect_people
+                  - link "Direct Messages" [ref=f185e60] [cursor=pointer]:
+                    - /url: /i/chat
+                    - generic [ref=f185e61]: Chat
+                  - link "Grok" [ref=f185e67] [cursor=pointer]:
+                    - /url: /i/grok
+                    - generic [ref=f185e68]:
+                      - generic "undefined unread items" [ref=f185e73]
+                      - generic [ref=f185e74]: Grok
+                  - link "Profile" [ref=f185e75] [cursor=pointer]:
+                    - /url: /Cha0smagickLABS
+                  - button "More menu items" [ref=f185e82] [cursor=pointer]:
+                    - generic [ref=f185e83]: More
+                - link "Post" [ref=f185e90] [cursor=pointer]:
+                  - /url: /compose/post
+              - button "Account menu" [ref=f185e99] [cursor=pointer]:
+                - generic [ref=f185e107]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic "ChaosmagickLabs":
+                          - img "ChaosmagickLabs"
+                - generic [ref=f185e111]:
+                  - generic [ref=f185e112]: ChaosmagickLabs
+                  - generic [ref=f185e116]: "@Cha0smagickLABS"
+          - main [ref=f185e124]:
+            - generic [ref=f185e127]:
+              - generic "Home timeline" [ref=f185e129]:
+                - generic [ref=f185e130]:
+                  - generic [ref=f185e133]:
+                    - navigation [ref=f185e135]:
+                      - generic [ref=f185e136]:
+                        - generic:
+                          - button "Previous" [disabled]
+                        - tablist [ref=f185e138]:
+                          - tab "For you" [selected] [ref=f185e139] [cursor=pointer]
+                          - tab "Following" [ref=f185e144] [cursor=pointer]
+                          - tab "Movies & TV" [ref=f185e148] [cursor=pointer]
+                          - tab "Memes" [ref=f185e152] [cursor=pointer]
+                          - tab "Pets" [ref=f185e156] [cursor=pointer]
+                        - generic:
+                          - button "Next" [disabled]
+                    - button "Manage timelines" [ref=f185e161] [cursor=pointer]
+                  - generic:
+                    - generic:
+                      - status:
+                        - button:
+                          - generic: See new posts
+                - generic [ref=f185e178]:
+                  - generic [ref=f185e179]: What’s happening?
+                  - generic [ref=f185e180]:
+                    - generic [ref=f185e181]:
+                      - button [disabled] [ref=f185e182]
+                      - button [disabled] [ref=f185e188]
+                      - button [disabled] [ref=f185e194]
+                      - button [disabled] [ref=f185e199]
+                      - button [disabled] [ref=f185e204]
+                      - button [disabled] [ref=f185e210]
+                      - button [disabled] [ref=f185e215]
+                      - button [disabled] [ref=f185e220]
+                    - button "Post" [disabled] [ref=f185e226]
+                - progressbar "Loading timeline" [ref=f185e233]
+              - generic "Trending" [ref=f185e242]:
+                - generic [ref=f185e243]:
+                  - search "Search" [ref=f185e248]:
+                    - combobox "Search query" [ref=f185e260]
+                  - complementary "Subscribe to Premium" [ref=f185e264]:
+                    - generic [ref=f185e267]: Get rid of ads, see your analytics, boost your replies and unlock 20+ features.
+                    - link "Subscribe" [ref=f185e268] [cursor=pointer]:
+                      - /url: /i/premium_sign_up
+                  - progressbar "Loading recommendations for users to follow" [ref=f185e276]
+                  - navigation "Footer" [ref=f185e282]:
+                    - generic [ref=f185e283]:
+                      - link "Terms" [ref=f185e284] [cursor=pointer]:
+                        - /url: https://x.com/tos
+                      - generic [ref=f185e285]: ·
+                    - generic [ref=f185e286]:
+                      - link "Privacy" [ref=f185e287] [cursor=pointer]:
+                        - /url: https://x.com/privacy
+                      - generic [ref=f185e288]: ·
+                    - generic [ref=f185e289]:
+                      - link "Cookies" [ref=f185e290] [cursor=pointer]:
+                        - /url: https://support.x.com/articles/20170514
+                      - generic [ref=f185e291]: ·
+                    - generic [ref=f185e292]:
+                      - link "Accessibility" [ref=f185e293] [cursor=pointer]:
+                        - /url: https://help.x.com/resources/accessibility
+                      - generic [ref=f185e294]: ·
+                    - generic [ref=f185e295]:
+                      - link "Ads Info" [ref=f185e296] [cursor=pointer]:
+                        - /url: https://business.x.com/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo
+                      - generic [ref=f185e297]: ·
+                    - button "More" [ref=f185e298] [cursor=pointer]
+                    - generic [ref=f185e303]: © 2026 X Corp.
+  - region "Notifications alt+T"

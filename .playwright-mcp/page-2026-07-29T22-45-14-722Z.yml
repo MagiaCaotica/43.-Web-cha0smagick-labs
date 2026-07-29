@@ -1,0 +1,448 @@
+- generic [ref=f39e2]:
+  - generic [ref=f39e3]:
+    - link "Skip to content" [ref=f39e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global navigation menu" [ref=f39e8]:
+      - generic [ref=f39e9]:
+        - generic [ref=f39e10]:
+          - button "Open menu" [ref=f39e12] [cursor=pointer]
+          - link "Homepage (g then d)" [ref=f39e15] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f39e18]:
+          - navigation "Breadcrumbs" [ref=f39e19]:
+            - list [ref=f39e20]:
+              - listitem [ref=f39e21]:
+                - link "MagiaCaotica" [ref=f39e22] [cursor=pointer]:
+                  - /url: /MagiaCaotica
+              - listitem [ref=f39e24]:
+                - link "43.-Web-cha0smagick-labs" [ref=f39e25] [cursor=pointer]:
+                  - /url: /MagiaCaotica/43.-Web-cha0smagick-labs
+                - button "Switch repository (alt shift r)" [ref=f39e26] [cursor=pointer]
+          - button "Search or jump to…" [ref=f39e31] [cursor=pointer]:
+            - generic [ref=f39e33]:
+              - generic:
+                - text: Type
+                - generic: /
+                - text: to search
+        - generic [ref=f39e34]:
+          - generic [ref=f39e35]:
+            - generic [ref=f39e38]:
+              - link "Chat with Copilot" [ref=f39e40] [cursor=pointer]:
+                - /url: /copilot
+              - button "Open Copilot…" [ref=f39e45] [cursor=pointer]
+            - button "Create new..." [ref=f39e47] [cursor=pointer]
+            - generic [ref=f39e49]:
+              - link "All issues" [ref=f39e50] [cursor=pointer]:
+                - /url: /issues
+              - link "All pull requests" [ref=f39e54] [cursor=pointer]:
+                - /url: /pulls
+              - link "All repositories" [ref=f39e57] [cursor=pointer]:
+                - /url: /repos
+          - link "You have no unread notifications (g then n)" [ref=f39e60] [cursor=pointer]:
+            - /url: /notifications
+          - button "Open user navigation menu" [ref=f39e64] [cursor=pointer]:
+            - 'img "Magia Caotica: Magia del Caos Práctica" [ref=f39e65]'
+      - heading "Repository navigation" [level=2] [ref=f39e66]
+      - navigation "Repository" [ref=f39e67]:
+        - list [ref=f39e68]:
+          - listitem [ref=f39e69]:
+            - link "Code" [ref=f39e70] [cursor=pointer]:
+              - /url: /MagiaCaotica/43.-Web-cha0smagick-labs
+          - listitem [ref=f39e75]:
+            - link "Issues" [ref=f39e76] [cursor=pointer]:
+              - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/issues
+          - listitem [ref=f39e82]:
+            - link "Pull requests" [ref=f39e83] [cursor=pointer]:
+              - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/pulls
+          - listitem [ref=f39e88]:
+            - link "Actions" [ref=f39e89] [cursor=pointer]:
+              - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/actions
+          - listitem [ref=f39e94]:
+            - link "Projects" [ref=f39e95] [cursor=pointer]:
+              - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/projects
+          - listitem [ref=f39e100]:
+            - link "Wiki" [ref=f39e101] [cursor=pointer]:
+              - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/wiki
+          - listitem [ref=f39e106]:
+            - link "Security and quality" [ref=f39e107] [cursor=pointer]:
+              - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/security
+          - listitem [ref=f39e112]:
+            - link "Insights" [ref=f39e113] [cursor=pointer]:
+              - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/pulse
+          - listitem [ref=f39e118]:
+            - link "Settings" [ref=f39e119] [cursor=pointer]:
+              - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings
+  - main [ref=f39e127]:
+    - generic [ref=f39e129]:
+      - 'heading "Settings: MagiaCaotica/43.-Web-cha0smagick-labs" [level=1] [ref=f39e130]'
+      - generic [ref=f39e132]:
+        - navigation "General settings" [ref=f39e135]:
+          - list [ref=f39e137]:
+            - listitem [ref=f39e138]:
+              - link "General" [ref=f39e139] [cursor=pointer]:
+                - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings
+            - listitem [ref=f39e141]
+            - listitem [ref=f39e142]:
+              - generic [ref=f39e145]:
+                - heading "Access" [level=2] [ref=f39e147]
+                - list "Access" [ref=f39e148]:
+                  - listitem [ref=f39e149]:
+                    - link "Collaborators" [ref=f39e150] [cursor=pointer]:
+                      - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/access
+                  - listitem [ref=f39e152]:
+                    - button "Moderation options" [ref=f39e153] [cursor=pointer]
+            - listitem [ref=f39e155]
+            - listitem [ref=f39e156]:
+              - generic [ref=f39e159]:
+                - heading "Code, planning, and automation" [level=2] [ref=f39e161]
+                - list "Code, planning, and automation" [ref=f39e162]:
+                  - listitem [ref=f39e163]:
+                    - link "Branches" [ref=f39e164] [cursor=pointer]:
+                      - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/branches
+                  - listitem [ref=f39e166]:
+                    - link "Tags" [ref=f39e167] [cursor=pointer]:
+                      - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/tag_protection
+                  - listitem [ref=f39e169]:
+                    - button "Rules" [ref=f39e170] [cursor=pointer]
+                  - listitem [ref=f39e172]:
+                    - button "Actions" [ref=f39e173] [cursor=pointer]
+                  - listitem [ref=f39e175]:
+                    - link "Webhooks" [ref=f39e176] [cursor=pointer]:
+                      - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/hooks
+                  - listitem [ref=f39e178]:
+                    - button "Copilot" [ref=f39e179] [cursor=pointer]
+                  - listitem [ref=f39e181]:
+                    - button "Planning" [ref=f39e182] [cursor=pointer]
+                  - listitem [ref=f39e184]:
+                    - link "Environments" [ref=f39e185] [cursor=pointer]:
+                      - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/environments
+                  - listitem [ref=f39e187]:
+                    - link "Codespaces" [ref=f39e188] [cursor=pointer]:
+                      - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/codespaces
+                  - listitem [ref=f39e190]:
+                    - link "Pages" [ref=f39e191] [cursor=pointer]:
+                      - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/pages
+            - listitem [ref=f39e193]
+            - listitem [ref=f39e194]:
+              - generic [ref=f39e197]:
+                - heading "Security and quality" [level=2] [ref=f39e199]
+                - list "Security and quality" [ref=f39e200]:
+                  - listitem [ref=f39e201]:
+                    - link "Advanced Security" [ref=f39e202] [cursor=pointer]:
+                      - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/security_analysis
+                  - listitem [ref=f39e204]:
+                    - link "Deploy keys" [ref=f39e205] [cursor=pointer]:
+                      - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/keys
+                  - listitem [ref=f39e207]:
+                    - button "Secrets and variables" [ref=f39e208] [cursor=pointer]
+            - listitem [ref=f39e210]
+            - listitem [ref=f39e211]:
+              - generic [ref=f39e214]:
+                - heading "Integrations" [level=2] [ref=f39e216]
+                - list "Integrations" [ref=f39e217]:
+                  - listitem [ref=f39e218]:
+                    - link "GitHub Apps" [ref=f39e219] [cursor=pointer]:
+                      - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/installations
+                  - listitem [ref=f39e221]:
+                    - link "Email notifications" [ref=f39e222] [cursor=pointer]:
+                      - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/notifications
+        - generic [ref=f39e225]:
+          - heading "General" [level=2] [ref=f39e227]
+          - generic [ref=f39e228]:
+            - generic [ref=f39e230]:
+              - term [ref=f39e231]: Repository name
+              - definition [ref=f39e232]:
+                - textbox "Repository name" [ref=f39e233]: 43.-Web-cha0smagick-labs
+            - button "Rename" [ref=f39e234] [cursor=pointer]
+          - generic [ref=f39e236]:
+            - checkbox "Template repository" [ref=f39e237]
+            - text: Template repository
+            - generic [ref=f39e238]: Loading
+            - paragraph [ref=f39e240]:
+              - text: Template repositories let users generate new repositories with the same directory structure and files.
+              - link "Learn more about template repositories" [ref=f39e241] [cursor=pointer]:
+                - /url: https://docs.github.com/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
+              - text: .
+          - generic [ref=f39e242]:
+            - term [ref=f39e243]:
+              - heading "Default branch" [level=2] [ref=f39e245]
+              - paragraph [ref=f39e246]: The default branch is considered the “base” branch in your repository, against which all pull requests and code commits are automatically made, unless you specify a different branch.
+            - definition [ref=f39e247]:
+              - generic [ref=f39e248]: main
+              - button "Rename branch" [ref=f39e253] [cursor=pointer]
+          - heading "Releases" [level=2] [ref=f39e255]
+          - generic [ref=f39e257]:
+            - checkbox "Enable release immutability" [ref=f39e258]
+            - text: Enable release immutability
+            - generic [ref=f39e259]: Loading
+            - paragraph [ref=f39e261]: Disallow assets and tags from being modified once a release is published.
+          - generic [ref=f39e264]:
+            - heading "Social preview" [level=2] [ref=f39e266]
+            - generic [ref=f39e267]:
+              - paragraph [ref=f39e268]: Upload an image to customize your repository’s social media preview.
+              - paragraph [ref=f39e269]:
+                - text: Images should be at least 640×320px (1280×640px for best display).
+                - link "Download template" [ref=f39e270] [cursor=pointer]:
+                  - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/settings/og-template
+          - group [ref=f39e272]:
+            - button [ref=f39e273] [cursor=pointer]
+          - heading "Features" [level=2] [ref=f39e278]
+          - generic [ref=f39e279]:
+            - group "Wikis" [ref=f39e282]:
+              - checkbox "Wikis" [checked] [ref=f39e283]
+              - text: Wikis
+              - generic [ref=f39e284]: Loading
+              - paragraph [ref=f39e286]: Wikis host documentation for your repository.
+              - generic [ref=f39e287]:
+                - checkbox "Restrict editing to collaborators only" [checked] [ref=f39e288]
+                - text: Restrict editing to collaborators only
+                - generic [ref=f39e289]: Loading
+                - paragraph [ref=f39e291]: Public wikis will still be readable by everyone.
+            - generic [ref=f39e293]:
+              - generic [ref=f39e294]:
+                - checkbox "Issues" [checked] [ref=f39e295]
+                - text: Issues
+                - generic [ref=f39e296]: Loading
+                - paragraph [ref=f39e298]: Issues integrate lightweight task tracking into your repository. Keep projects on track with issue labels and milestones, and reference them in commit messages.
+              - generic [ref=f39e299]:
+                - heading "Issue permissions" [level=3] [ref=f39e300]
+                - generic [ref=f39e301]:
+                  - generic [ref=f39e302]:
+                    - 'button "Creation allowed by: All users" [ref=f39e305] [cursor=pointer]'
+                    - generic [ref=f39e308]: Loading
+                  - paragraph [ref=f39e310]: If restricted, issues will still be readable by everyone who can see this repository.
+              - generic [ref=f39e312]:
+                - generic [ref=f39e313]:
+                  - heading "Get organized with issue templates" [level=3] [ref=f39e314]
+                  - paragraph [ref=f39e315]: Give contributors issue templates that help you cut through the noise and help them push your project forward.
+                - link "Set up templates" [ref=f39e317] [cursor=pointer]:
+                  - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/issues/templates/edit
+            - generic [ref=f39e318]:
+              - generic [ref=f39e320]:
+                - checkbox "Sponsorships" [ref=f39e321]
+                - text: Sponsorships
+                - generic [ref=f39e322]: Loading
+                - paragraph [ref=f39e324]: Sponsorships help your community know how to financially support this repository.
+                - generic [ref=f39e326]:
+                  - generic [ref=f39e327]:
+                    - heading "Display a \"Sponsor\" button" [level=3] [ref=f39e328]
+                    - paragraph [ref=f39e329]: Add links to GitHub Sponsors or third-party methods your repository accepts for financial contributions to your project.
+                  - link "Set up sponsor button" [ref=f39e331] [cursor=pointer]:
+                    - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/new/main?repository_funding=1
+              - generic [ref=f39e333]:
+                - checkbox "Preserve this repository" [checked] [ref=f39e334]
+                - text: Preserve this repository
+                - generic [ref=f39e335]: Loading
+                - paragraph [ref=f39e337]:
+                  - text: Include this code in the
+                  - link "GitHub Archive Program" [ref=f39e338] [cursor=pointer]:
+                    - /url: https://archiveprogram.github.com/faq/
+                  - text: .
+            - generic [ref=f39e341]:
+              - checkbox "Discussions" [ref=f39e342]
+              - text: Discussions
+              - generic [ref=f39e343]: Loading
+              - paragraph [ref=f39e345]: Discussions is the space for your community to have conversations, ask questions and post answers without opening issues.
+            - generic [ref=f39e347]:
+              - generic [ref=f39e348]:
+                - heading "Get started with Discussions" [level=3] [ref=f39e349]
+                - paragraph [ref=f39e350]: Engage your community by having discussions right in your repository, where your community already lives
+              - button "Set up discussions" [ref=f39e353] [cursor=pointer]
+            - generic [ref=f39e356]:
+              - checkbox "Projects" [checked] [ref=f39e357]
+              - text: Projects
+              - generic [ref=f39e358]: Loading
+              - paragraph [ref=f39e360]: Projects on GitHub are created at the repository owner's level (organization or user) and can be linked to a repository's Projects tab. Projects are suitable for cross-repository development efforts such as feature work, complex product roadmaps or even Issue triage.
+            - generic [ref=f39e362]:
+              - generic [ref=f39e363]:
+                - checkbox "Pull requests" [checked] [ref=f39e364]
+                - text: Pull requests
+                - generic [ref=f39e365]: Loading
+                - paragraph [ref=f39e367]: Pull requests allow others to suggest changes to your repository.
+              - generic [ref=f39e368]:
+                - heading "Pull request permissions" [level=3] [ref=f39e369]
+                - generic [ref=f39e370]:
+                  - generic [ref=f39e371]:
+                    - 'button "Creation allowed by: All users" [ref=f39e374] [cursor=pointer]'
+                    - generic [ref=f39e377]: Loading
+                  - paragraph [ref=f39e379]: If restricted, pull requests will still be readable by everyone who can see this repository.
+          - heading "Pull Requests" [level=2] [ref=f39e381]
+          - paragraph [ref=f39e382]: When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled. If you have linear history requirement enabled on any protected branch, you must enable squashing or rebasing.
+          - generic [ref=f39e383]:
+            - list "Pull Requests" [ref=f39e385]:
+              - listitem [ref=f39e386]:
+                - generic [ref=f39e388]:
+                  - text: Allow merge commits
+                  - generic [ref=f39e389]: Loading
+                  - checkbox "Allow merge commits" [checked] [ref=f39e391]
+                  - paragraph [ref=f39e392]: Add all commits from the head branch to the base branch with a merge commit.
+                  - generic [ref=f39e393]:
+                    - heading "Default commit message" [level=3] [ref=f39e394]
+                    - paragraph [ref=f39e395]: Presented when merging a pull request with merge.
+                    - group [ref=f39e396]:
+                      - button "Default message" [ref=f39e397] [cursor=pointer]
+              - listitem [ref=f39e398]:
+                - generic [ref=f39e400]:
+                  - text: Allow squash merging
+                  - generic [ref=f39e401]: Loading
+                  - checkbox "Allow squash merging" [checked] [ref=f39e403]
+                  - paragraph [ref=f39e404]: Combine all commits from the head branch into a single commit in the base branch.
+                  - generic [ref=f39e405]:
+                    - heading "Default commit message" [level=3] [ref=f39e406]
+                    - paragraph [ref=f39e407]: Presented when merging a pull request with squash.
+                    - group [ref=f39e408]:
+                      - button "Default message" [ref=f39e409] [cursor=pointer]
+              - listitem [ref=f39e410]:
+                - generic [ref=f39e412]:
+                  - text: Allow rebase merging
+                  - generic [ref=f39e413]: Loading
+                  - checkbox "Allow rebase merging" [checked] [ref=f39e415]
+                  - paragraph [ref=f39e416]: Add all commits from the head branch onto the base branch individually.
+            - paragraph [ref=f39e417]: Control how and when users are prompted to update their branches if there are new changes available in the base branch.
+            - list [ref=f39e419]:
+              - listitem [ref=f39e420]:
+                - generic [ref=f39e422]:
+                  - text: Always suggest updating pull request branches
+                  - generic [ref=f39e423]: Loading
+                  - checkbox "Always suggest updating pull request branches" [ref=f39e425]
+                  - paragraph [ref=f39e426]: Whenever there are new changes available in the base branch, present an “update branch” option in the pull request.
+            - paragraph [ref=f39e427]: You can allow setting pull requests to merge automatically once all required reviews and status checks have passed.
+            - list [ref=f39e429]:
+              - listitem [ref=f39e430]:
+                - generic [ref=f39e432]:
+                  - text: Allow auto-merge
+                  - generic [ref=f39e433]: Loading
+                  - checkbox "Allow auto-merge" [ref=f39e435]
+                  - paragraph [ref=f39e436]:
+                    - text: Waits for merge requirements to be met and then merges automatically.
+                    - link "Learn more about auto-merge" [ref=f39e437] [cursor=pointer]:
+                      - /url: https://docs.github.com/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request
+                      - text: Learn more
+            - paragraph [ref=f39e438]: After pull requests are merged, you can have head branches deleted automatically.
+            - list [ref=f39e440]:
+              - listitem [ref=f39e441]:
+                - generic [ref=f39e443]:
+                  - text: Automatically delete head branches
+                  - generic [ref=f39e444]: Loading
+                  - checkbox "Automatically delete head branches" [ref=f39e446]
+                  - paragraph [ref=f39e447]: Deleted branches will still be able to be restored.
+          - heading "Commits" [level=2] [ref=f39e449]
+          - generic [ref=f39e450]:
+            - generic [ref=f39e453]:
+              - checkbox "Require contributors to sign off on web-based commits" [ref=f39e454]
+              - text: Require contributors to sign off on web-based commits
+              - generic [ref=f39e455]: Loading
+              - paragraph [ref=f39e457]:
+                - text: Enabling this setting will require contributors to sign off on commits made through GitHub’s web interface. Signing off is a way for contributors to affirm that their commit complies with the repository's terms, commonly the
+                - link "Developer Certificate of Origin (DCO)" [ref=f39e458] [cursor=pointer]:
+                  - /url: https://developercertificate.org
+                - text: .
+                - link "Learn more about signing off on commits" [ref=f39e459] [cursor=pointer]:
+                  - /url: https://docs.github.com/organizations/managing-organization-settings/managing-the-commit-signoff-policy-for-your-organization
+                - text: .
+            - generic [ref=f39e462]:
+              - checkbox "Allow comments on individual commits" [checked] [ref=f39e463]
+              - text: Allow comments on individual commits
+              - generic [ref=f39e464]: Loading
+              - paragraph [ref=f39e466]:
+                - text: Enabling this setting will allow anyone who can view this repository to add
+                - link "commit comments" [ref=f39e467] [cursor=pointer]:
+                  - /url: https://docs.github.com/en/rest/guides/working-with-comments?apiVersion=2022-11-28#commit-comments
+                - text: . Existing commit comments are not affected by this setting and will remain viewable, editable, and deletable.
+          - heading "Archives" [level=2] [ref=f39e469]
+          - paragraph [ref=f39e470]: When creating source code archives, you can choose to include files stored using Git LFS in the archive.
+          - list [ref=f39e473]:
+            - listitem [ref=f39e474]:
+              - generic [ref=f39e476]:
+                - text: Include Git LFS objects in archives
+                - checkbox "Include Git LFS objects in archives" [ref=f39e478]
+                - paragraph [ref=f39e479]: Git LFS usage in archives is billed at the same rate as usage with the client.
+          - heading "Pushes" [level=2] [ref=f39e481]
+          - list [ref=f39e484]:
+            - listitem [ref=f39e485]:
+              - generic [ref=f39e487]:
+                - text: Limit how many branches and tags can be updated in a single push
+                - generic [ref=f39e488]: Preview
+                - generic [ref=f39e489]: Loading
+                - checkbox "Limit how many branches and tags can be updated in a single push" [ref=f39e491]
+                - paragraph [ref=f39e492]:
+                  - text: Pushes will be rejected if they attempt to update more than this.
+                  - link "Learn more about this setting" [ref=f39e493] [cursor=pointer]:
+                    - /url: https://github.blog/changelog/2022-06-15-block-potentially-destructive-git-pushes
+                  - text: ", and send us your"
+                  - link "feedback" [ref=f39e494] [cursor=pointer]:
+                    - /url: https://github.com/github-community/community/discussions/categories/general
+                  - text: .
+          - heading "Issues" [level=2] [ref=f39e496]
+          - generic [ref=f39e497]:
+            - paragraph [ref=f39e498]: After merging a pull request, linked issues can be closed automatically.
+            - list [ref=f39e500]:
+              - listitem [ref=f39e501]:
+                - generic [ref=f39e503]:
+                  - text: Auto-close issues with merged linked pull requests
+                  - generic [ref=f39e504]: Loading
+                  - checkbox "Auto-close issues with merged linked pull requests" [checked] [ref=f39e506]
+                  - paragraph [ref=f39e507]: Whenever linked pull requests have merged, auto-close the issue.
+          - heading "Danger Zone" [level=2] [ref=f39e509]
+          - list [ref=f39e511]:
+            - listitem [ref=f39e512]:
+              - button "Change visibility" [ref=f39e516] [cursor=pointer]
+              - generic [ref=f39e519]:
+                - strong [ref=f39e520]: Change repository visibility
+                - generic [ref=f39e521]: This repository is currently public.
+            - listitem [ref=f39e522]:
+              - generic [ref=f39e523]:
+                - strong [ref=f39e524]: Disable branch protection rules
+                - paragraph [ref=f39e525]: Disable branch protection rules enforcement and APIs
+              - button "Disable branch protection rules" [ref=f39e527] [cursor=pointer]
+            - listitem [ref=f39e530]:
+              - generic [ref=f39e532]:
+                - strong [ref=f39e533]: Transfer ownership
+                - paragraph [ref=f39e534]: Transfer this repository to another user or to an organization where you have the ability to create repositories.
+              - link "Transfer" [ref=f39e535] [cursor=pointer]:
+                - /url: /MagiaCaotica/43.-Web-cha0smagick-labs/transfer
+            - listitem [ref=f39e538]:
+              - generic [ref=f39e539]:
+                - strong [ref=f39e540]: Archive this repository
+                - paragraph [ref=f39e541]: Mark this repository as archived and read-only.
+              - button "Archive this repository" [ref=f39e543] [cursor=pointer]
+            - listitem [ref=f39e546]:
+              - button "Delete this repository" [ref=f39e548] [cursor=pointer]
+              - generic [ref=f39e552]:
+                - strong [ref=f39e553]: Delete this repository
+                - paragraph [ref=f39e554]: Once you delete a repository, there is no going back. Please be certain.
+  - contentinfo [ref=f39e555]:
+    - heading "Footer" [level=2] [ref=f39e556]
+    - generic [ref=f39e557]:
+      - generic [ref=f39e558]:
+        - link "GitHub Homepage" [ref=f39e559] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f39e562]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f39e563]:
+        - heading "Footer navigation" [level=3] [ref=f39e564]
+        - list "Footer navigation" [ref=f39e565]:
+          - listitem [ref=f39e566]:
+            - link "Terms" [ref=f39e567] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f39e568]:
+            - link "Privacy" [ref=f39e569] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f39e570]:
+            - link "Security" [ref=f39e571] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f39e572]:
+            - link "Status" [ref=f39e573] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f39e574]:
+            - link "Community" [ref=f39e575] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f39e576]:
+            - link "Docs" [ref=f39e577] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f39e578]:
+            - link "Contact" [ref=f39e579] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f39e580]:
+            - button "Manage cookies" [ref=f39e582] [cursor=pointer]
+          - listitem [ref=f39e583]:
+            - button "Do not share my personal information" [ref=f39e585] [cursor=pointer]

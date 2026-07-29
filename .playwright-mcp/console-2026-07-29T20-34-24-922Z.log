@@ -1,0 +1,9 @@
+[    1177ms] [WARNING] yui: NOT loaded: squarespace-visitor_site_error_reporter @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-784b947826b4c445-min.en-US.js:7
+[    1177ms] [WARNING] yui: NOT loaded: squarespace-cldr_resource_pack @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-784b947826b4c445-min.en-US.js:7
+[    1177ms] [WARNING] yui: NOT loaded: squarespace-common_vendors_stable @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-784b947826b4c445-min.en-US.js:7
+[    1177ms] [WARNING] yui: NOT loaded: squarespace-common_vendors @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-784b947826b4c445-min.en-US.js:7
+[    1180ms] [WARNING] yui: NOT loaded: squarespace-performance @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-784b947826b4c445-min.en-US.js:7
+[    1217ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54a99f386f343cad:0
+[    1232ms] [LOG] deploy ready @ https://static1.squarespace.com/static/ta/505b6d77e4b0791034f9024f/3004/scripts/site.js:6
+[    1685ms] Uncaught (in promise) NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD
+    at e (https://static.olark.com/jsclient-bucket4/application2.js?v=1784660009573:32:11271)

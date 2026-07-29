@@ -1,0 +1,1068 @@
+- generic [ref=f71e1]:
+  - iframe [ref=f71e2]:
+    
+  - generic [ref=f71e10]:
+    - generic [ref=f71e12]:
+      - generic [ref=f71e13]:
+        - link "Ir al contenido" [ref=f71e14] [cursor=pointer]:
+          - /url: ""
+        - link "Cómo usar Gmail con lectores de pantalla" [ref=f71e15] [cursor=pointer]:
+          - /url: ""
+      - heading [level=1] [ref=f71e17]:
+        - banner [ref=f71e18]:
+          - generic [ref=f71e19]:
+            - generic [ref=f71e20]:
+              - button "Menú principal" [expanded] [ref=f71e21] [cursor=pointer]
+              - link "Gmail" [ref=f71e26] [cursor=pointer]:
+                - /url: "#inbox"
+            - generic [ref=f71e28]:
+              - search [ref=f71e30]:
+                - heading "Búsqueda" [level=2] [ref=f71e31]
+                - combobox "Buscar en el correo electrónico" [ref=f71e33]
+                - button "Opciones de búsqueda avanzada" [ref=f71e34] [cursor=pointer]
+                - button "Buscar en el correo electrónico" [disabled] [ref=f71e37] [cursor=pointer]
+              - generic [ref=f71e41]:
+                - button [ref=f71e42] [cursor=pointer]
+                - button "Configuración" [ref=f71e45] [cursor=pointer]
+                - generic [ref=f71e51]:
+                  - button "Actualizar" [ref=f71e53] [cursor=pointer]
+                  - tooltip [ref=f71e56]: Actualizar y obtener funciones premium
+            - generic [ref=f71e60]:
+              - button "Apps de Google" [ref=f71e64] [cursor=pointer]
+              - 'button "Cuenta de Google: Magia Caotica: Magia del Caos Práctica (magiacaoticapractica@gmail.com)" [ref=f71e70] [cursor=pointer]'
+      - alert [ref=f71e75]:
+        - generic [ref=f71e76]:
+          - generic [ref=f71e77]: Habilita las notificaciones de escritorio para Gmail.
+          - generic [ref=f71e78]:
+            - link "Aceptar" [ref=f71e79] [cursor=pointer]
+            - link "No, gracias" [ref=f71e80] [cursor=pointer]
+          - button "Cerrar" [ref=f71e81] [cursor=pointer]
+    - generic [ref=f71e83]:
+      - navigation [ref=f71e84]:
+        - button "Redactar" [ref=f71e87] [cursor=pointer]
+        - generic [ref=f71e93]:
+          - generic [ref=f71e95]:
+            - heading "Etiquetas" [level=2] [ref=f71e96]
+            - generic [ref=f71e97]:
+              - generic [ref=f71e98]:
+                - generic [ref=f71e100]:
+                  - generic [ref=f71e105]:
+                    - link "Recibidos 278 no leídos" [ref=f71e107] [cursor=pointer]:
+                      - /url: https://mail.google.com/mail/u/0/#inbox
+                      - text: Recibidos
+                    - generic [ref=f71e108]: "278"
+                  - link "Destacados" [ref=f71e115] [cursor=pointer]:
+                    - /url: https://mail.google.com/mail/u/0/#starred
+                  - link "Pospuestos" [ref=f71e122] [cursor=pointer]:
+                    - /url: https://mail.google.com/mail/u/0/#snoozed
+                  - link "Enviados" [ref=f71e129] [cursor=pointer]:
+                    - /url: https://mail.google.com/mail/u/0/#sent
+                  - link "Borradores" [ref=f71e136] [cursor=pointer]:
+                    - /url: https://mail.google.com/mail/u/0/#drafts
+                - generic [ref=f71e143]:
+                  - link "Compras 9 no leídos tiene un menú" [ref=f71e145] [cursor=pointer]:
+                    - /url: https://mail.google.com/mail/u/0/#category/purchases
+                    - text: Compras
+                  - generic [ref=f71e146]: "9"
+              - button "Más etiquetas" [ref=f71e148] [cursor=pointer]:
+                - generic [ref=f71e149]: Más
+          - generic [ref=f71e152]:
+            - heading "Etiquetas" [ref=f71e153]
+            - button "Crear etiqueta nueva" [ref=f71e154] [cursor=pointer]
+          - generic:
+            - generic "Etiquetas":
+              - heading "Etiquetas" [level=2] [ref=f71e155]
+      - generic [ref=f71e160]:
+        - generic [ref=f71e163]:
+          - generic [ref=f71e166]:
+            - button "Seleccionar" [ref=f71e168] [cursor=pointer]:
+              - checkbox [ref=f71e170]
+            - button "Actualizar" [ref=f71e173] [cursor=pointer]
+            - button "Más opciones de correo electrónico" [ref=f71e177] [cursor=pointer]
+          - generic [ref=f71e182]:
+            - button "Mostrar más mensajes" [ref=f71e183] [cursor=pointer]:
+              - generic [ref=f71e184]:
+                - generic [ref=f71e185]: 1–50
+                - text: de 335
+            - button "Más nuevas" [disabled] [ref=f71e186]
+            - button "Anterior" [ref=f71e187] [cursor=pointer]
+        - generic [ref=f71e189]:
+          - main [ref=f71e192]:
+            - heading "Conversaciones" [level=2] [ref=f71e194]
+            - table [ref=f71e196]:
+              - rowgroup [ref=f71e197]:
+                - tablist [ref=f71e198]:
+                  - heading [level=3] [ref=f71e199]:
+                    - tab "Principal" [selected] [ref=f71e200] [cursor=pointer]
+                  - heading [level=3] [ref=f71e205]:
+                    - tab "Promociones, un mensaje nuevo," [ref=f71e206] [cursor=pointer]:
+                      - generic [ref=f71e209]:
+                        - generic [ref=f71e210]: 1 nueva
+                        - generic [ref=f71e211]: Promociones
+                  - heading [level=3] [ref=f71e212]:
+                    - tab "Social" [ref=f71e213] [cursor=pointer]
+                  - heading [level=3] [ref=f71e218]:
+                    - tab "Notificaciones, un mensaje nuevo," [ref=f71e219] [cursor=pointer]:
+                      - generic [ref=f71e222]:
+                        - generic [ref=f71e223]: 1 nueva
+                        - generic [ref=f71e224]: Notificaciones
+                  - cell
+                  - cell
+                - row
+            - tabpanel "Principal" [ref=f71e227]:
+              - grid [ref=f71e230]:
+                - rowgroup [ref=f71e231]:
+                  - row "no leída, MailerLite, Welcome to MailerLite!, 12:13 p.m., Here's how to get started with your account View in browser Log in Welcome to MailerLite! Hi there, We're super excited you joined the MailerLite family 🎉. Let's begin your 14-day trial." [ref=f71e232] [cursor=pointer]:
+                    - gridcell [ref=f71e233]
+                    - gridcell "no leída, MailerLite, Welcome to MailerLite!, 12:13 p.m., Here's how to get started with your account View in browser Log in Welcome to MailerLite! Hi there, We're super excited you joined the MailerLite family 🎉. Let's begin your 14-day trial." [ref=f71e234]:
+                      - checkbox "no leída, MailerLite, Welcome to MailerLite!, 12:13 p.m., Here's how to get started with your account View in browser Log in Welcome to MailerLite! Hi there, We're super excited you joined the MailerLite family 🎉. Let's begin your 14-day trial." [ref=f71e235]
+                    - gridcell [ref=f71e236]:
+                      - button "Sin destacar" [ref=f71e237]
+                    - gridcell "MailerLite" [ref=f71e238]
+                    - gridcell [ref=f71e241]:
+                      - link "Welcome to MailerLite! - Here's how to get started with your account View in browser Log in Welcome to MailerLite! Hi there, We're super excited you joined the MailerLite family 🎉. Let's begin your 14-day trial" [ref=f71e243]:
+                        - generic [ref=f71e244]:
+                          - generic [ref=f71e245]: Welcome to MailerLite!
+                          - generic [ref=f71e247]:
+                            - generic [ref=f71e248]: "-"
+                            - text: Here's how to get started with your account View in browser Log in Welcome to MailerLite! Hi there, We're super excited you joined the MailerLite family
+                            - img "🎉" [ref=f71e249]
+                            - text: . Let's begin your 14-day trial
+                    - gridcell [ref=f71e250]
+                    - gridcell "mié, 29 jul 2026, 12:13 p.m." [ref=f71e251]:
+                      - generic "mié, 29 jul 2026, 12:13 p.m." [ref=f71e252]: 12:13 p.m.
+                    - gridcell
+                  - 'row "no leída, IARC Content Ratings, IARC Live Rating Notice: NOCTEM Tools: Ghost Hunting, 1:25 a.m., Live Rating Notice Global Rating ID: aa8b20e5-1520-8c3c-8020-3f6d44244902 Product Title: NOCTEM Tools: Ghost Hunting Company: Cha0smagick Rating Date: Wednesday, July 29, 2026 Storefront: Google Play." [ref=f71e253] [cursor=pointer]':
+                    - gridcell [ref=f71e254]
+                    - 'gridcell "no leída, IARC Content Ratings, IARC Live Rating Notice: NOCTEM Tools: Ghost Hunting, 1:25 a.m., Live Rating Notice Global Rating ID: aa8b20e5-1520-8c3c-8020-3f6d44244902 Product Title: NOCTEM Tools: Ghost Hunting Company: Cha0smagick Rating Date: Wednesday, July 29, 2026 Storefront: Google Play." [ref=f71e255]':
+                      - 'checkbox "no leída, IARC Content Ratings, IARC Live Rating Notice: NOCTEM Tools: Ghost Hunting, 1:25 a.m., Live Rating Notice Global Rating ID: aa8b20e5-1520-8c3c-8020-3f6d44244902 Product Title: NOCTEM Tools: Ghost Hunting Company: Cha0smagick Rating Date: Wednesday, July 29, 2026 Storefront: Google Play." [ref=f71e256]'
+                    - gridcell [ref=f71e257]:
+                      - button "Sin destacar" [ref=f71e258]
+                    - gridcell "IARC Content Ratings" [ref=f71e259]
+                    - gridcell [ref=f71e262]:
+                      - 'link "IARC Live Rating Notice: NOCTEM Tools: Ghost Hunting - Live Rating Notice Global Rating ID: aa8b20e5-1520-8c3c-8020-3f6d44244902 Product Title: NOCTEM Tools: Ghost Hunting Company: Cha0smagick Rating Date: Wednesday, July 29, 2026 Storefront: Google Play" [ref=f71e263]':
+                        - generic [ref=f71e264]:
+                          - generic [ref=f71e265]: "IARC Live Rating Notice: NOCTEM Tools: Ghost Hunting"
+                          - generic [ref=f71e267]:
+                            - generic [ref=f71e268]: "-"
+                            - text: "Live Rating Notice Global Rating ID: aa8b20e5-1520-8c3c-8020-3f6d44244902 Product Title: NOCTEM Tools: Ghost Hunting Company: Cha0smagick Rating Date: Wednesday, July 29, 2026 Storefront: Google Play"
+                    - gridcell [ref=f71e269]
+                    - gridcell "mié, 29 jul 2026, 1:25 a.m." [ref=f71e270]:
+                      - generic "mié, 29 jul 2026, 1:25 a.m." [ref=f71e271]: 1:25 a.m.
+                    - gridcell
+                  - row "yo, Mail 2, Your FREE App is Ready — I Ching Oracle, 28 jul, La entrega no se completó Hubo un problema temporal al entregar tu mensaje a test@cha0smagicklabs.com. Gmail seguirá intentando durante 46 horas más. Si la entrega falla definitivamente, recibirás una." [ref=f71e272] [cursor=pointer]:
+                    - gridcell [ref=f71e273]
+                    - gridcell "yo, Mail 2, Your FREE App is Ready — I Ching Oracle, 28 jul, La entrega no se completó Hubo un problema temporal al entregar tu mensaje a test@cha0smagicklabs.com. Gmail seguirá intentando durante 46 horas más. Si la entrega falla definitivamente, recibirás una." [ref=f71e274]:
+                      - checkbox "yo, Mail 2, Your FREE App is Ready — I Ching Oracle, 28 jul, La entrega no se completó Hubo un problema temporal al entregar tu mensaje a test@cha0smagicklabs.com. Gmail seguirá intentando durante 46 horas más. Si la entrega falla definitivamente, recibirás una." [ref=f71e275]
+                    - gridcell [ref=f71e276]:
+                      - button "Sin destacar" [ref=f71e277]
+                    - gridcell "yo, Mail 2" [ref=f71e278]:
+                      - generic [ref=f71e279]:
+                        - generic [ref=f71e280]: yo, Mail
+                        - generic [ref=f71e281]: "2"
+                    - gridcell [ref=f71e282]:
+                      - link "Your FREE App is Ready — I Ching Oracle - La entrega no se completó Hubo un problema temporal al entregar tu mensaje a test@cha0smagicklabs.com. Gmail seguirá intentando durante 46 horas más. Si la entrega falla definitivamente, recibirás una" [ref=f71e283]:
+                        - generic [ref=f71e284]:
+                          - generic [ref=f71e285]: Your FREE App is Ready — I Ching Oracle
+                          - generic [ref=f71e287]:
+                            - generic [ref=f71e288]: "-"
+                            - text: La entrega no se completó Hubo un problema temporal al entregar tu mensaje a test@cha0smagicklabs.com. Gmail seguirá intentando durante 46 horas más. Si la entrega falla definitivamente, recibirás una
+                    - gridcell [ref=f71e289]
+                    - gridcell "mar, 28 jul 2026, 7:17 p.m." [ref=f71e290]:
+                      - generic "mar, 28 jul 2026, 7:17 p.m." [ref=f71e291]: 28 jul
+                    - gridcell
+                  - row "no leída, X, Bienvenido a X, @Cha0smagickLABS, 28 jul, Descubre temas de tendencia, construye tu presencia y mucho más. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏." [ref=f71e292] [cursor=pointer]:
+                    - gridcell [ref=f71e293]
+                    - gridcell "no leída, X, Bienvenido a X, @Cha0smagickLABS, 28 jul, Descubre temas de tendencia, construye tu presencia y mucho más. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏." [ref=f71e294]:
+                      - checkbox "no leída, X, Bienvenido a X, @Cha0smagickLABS, 28 jul, Descubre temas de tendencia, construye tu presencia y mucho más. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏." [ref=f71e295]
+                    - gridcell [ref=f71e296]:
+                      - button "Sin destacar" [ref=f71e297]
+                    - gridcell "X" [ref=f71e298]
+                    - gridcell [ref=f71e301]:
+                      - link "Bienvenido a X, @Cha0smagickLABS - Descubre temas de tendencia, construye tu presencia y mucho más. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏" [ref=f71e302]:
+                        - generic [ref=f71e303]:
+                          - generic [ref=f71e304]: Bienvenido a X, @Cha0smagickLABS
+                          - generic [ref=f71e306]:
+                            - generic [ref=f71e307]: "-"
+                            - text: Descubre temas de tendencia, construye tu presencia y mucho más. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+                    - gridcell [ref=f71e308]
+                    - gridcell "mar, 28 jul 2026, 2:25 p.m." [ref=f71e309]:
+                      - generic "mar, 28 jul 2026, 2:25 p.m." [ref=f71e310]: 28 jul
+                    - gridcell
+                  - row "no leída, Google, Compartiste algunos datos de tu Cuenta de Google con x.com, 28 jul, Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en x.com el 28 de julio, 2:22 pm.." [ref=f71e311] [cursor=pointer]:
+                    - gridcell [ref=f71e312]
+                    - gridcell "no leída, Google, Compartiste algunos datos de tu Cuenta de Google con x.com, 28 jul, Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en x.com el 28 de julio, 2:22 pm.." [ref=f71e313]:
+                      - checkbox "no leída, Google, Compartiste algunos datos de tu Cuenta de Google con x.com, 28 jul, Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en x.com el 28 de julio, 2:22 pm.." [ref=f71e314]
+                    - gridcell [ref=f71e315]:
+                      - button "Sin destacar" [ref=f71e316]
+                    - gridcell "Google" [ref=f71e317]
+                    - gridcell [ref=f71e320]:
+                      - link "Compartiste algunos datos de tu Cuenta de Google con x.com - Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en x.com el 28 de julio, 2:22 pm." [ref=f71e322]:
+                        - generic [ref=f71e323]:
+                          - generic [ref=f71e324]: Compartiste algunos datos de tu Cuenta de Google con x.com
+                          - generic [ref=f71e326]:
+                            - generic [ref=f71e327]: "-"
+                            - text: Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en x.com el 28 de julio, 2:22 pm.
+                    - gridcell [ref=f71e328]
+                    - gridcell "mar, 28 jul 2026, 2:22 p.m." [ref=f71e329]:
+                      - generic "mar, 28 jul 2026, 2:22 p.m." [ref=f71e330]: 28 jul
+                    - gridcell
+                  - row "no leída, Google, Compartiste algunos datos de tu Cuenta de Google con Pinterest, 28 jul, Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en Pinterest el 28 de julio, 1:43." [ref=f71e331] [cursor=pointer]:
+                    - gridcell [ref=f71e332]
+                    - gridcell "no leída, Google, Compartiste algunos datos de tu Cuenta de Google con Pinterest, 28 jul, Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en Pinterest el 28 de julio, 1:43." [ref=f71e333]:
+                      - checkbox "no leída, Google, Compartiste algunos datos de tu Cuenta de Google con Pinterest, 28 jul, Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en Pinterest el 28 de julio, 1:43." [ref=f71e334]
+                    - gridcell [ref=f71e335]:
+                      - button "Sin destacar" [ref=f71e336]
+                    - gridcell "Google" [ref=f71e337]
+                    - gridcell [ref=f71e340]:
+                      - link "Compartiste algunos datos de tu Cuenta de Google con Pinterest - Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en Pinterest el 28 de julio, 1:43" [ref=f71e342]:
+                        - generic [ref=f71e343]:
+                          - generic [ref=f71e344]: Compartiste algunos datos de tu Cuenta de Google con Pinterest
+                          - generic [ref=f71e346]:
+                            - generic [ref=f71e347]: "-"
+                            - text: Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en Pinterest el 28 de julio, 1:43
+                    - gridcell [ref=f71e348]
+                    - gridcell "mar, 28 jul 2026, 1:43 p.m." [ref=f71e349]:
+                      - generic "mar, 28 jul 2026, 1:43 p.m." [ref=f71e350]: 28 jul
+                    - gridcell
+                  - row "no leída, Google, Alerta de seguridad, 28 jul, Un nuevo acceso en el dispositivo Windows magiacaoticapractica@gmail.com Detectamos un nuevo acceso a tu Cuenta de Google en el dispositivo Windows. Si fuiste tú, no tienes que hacer nada. De lo." [ref=f71e351] [cursor=pointer]:
+                    - gridcell [ref=f71e352]
+                    - gridcell "no leída, Google, Alerta de seguridad, 28 jul, Un nuevo acceso en el dispositivo Windows magiacaoticapractica@gmail.com Detectamos un nuevo acceso a tu Cuenta de Google en el dispositivo Windows. Si fuiste tú, no tienes que hacer nada. De lo." [ref=f71e353]:
+                      - checkbox "no leída, Google, Alerta de seguridad, 28 jul, Un nuevo acceso en el dispositivo Windows magiacaoticapractica@gmail.com Detectamos un nuevo acceso a tu Cuenta de Google en el dispositivo Windows. Si fuiste tú, no tienes que hacer nada. De lo." [ref=f71e354]
+                    - gridcell [ref=f71e355]:
+                      - button "Sin destacar" [ref=f71e356]
+                    - gridcell "Google" [ref=f71e357]
+                    - gridcell [ref=f71e360]:
+                      - link "Alerta de seguridad - Un nuevo acceso en el dispositivo Windows magiacaoticapractica@gmail.com Detectamos un nuevo acceso a tu Cuenta de Google en el dispositivo Windows. Si fuiste tú, no tienes que hacer nada. De lo" [ref=f71e362]:
+                        - generic [ref=f71e363]:
+                          - generic [ref=f71e364]: Alerta de seguridad
+                          - generic [ref=f71e366]:
+                            - generic [ref=f71e367]: "-"
+                            - text: Un nuevo acceso en el dispositivo Windows magiacaoticapractica@gmail.com Detectamos un nuevo acceso a tu Cuenta de Google en el dispositivo Windows. Si fuiste tú, no tienes que hacer nada. De lo
+                    - gridcell [ref=f71e368]
+                    - gridcell "mar, 28 jul 2026, 12:20 p.m." [ref=f71e369]:
+                      - generic "mar, 28 jul 2026, 12:20 p.m." [ref=f71e370]: 28 jul
+                    - gridcell
+                  - row "no leída, MailerLite, MailerLite API token created, 28 jul, Hi there, New API token Cha0smagick LABS has been created in your account Cha0smagick LABS. Have a Lite day! Contact supportTerms of use." [ref=f71e371] [cursor=pointer]:
+                    - gridcell [ref=f71e372]
+                    - gridcell "no leída, MailerLite, MailerLite API token created, 28 jul, Hi there, New API token Cha0smagick LABS has been created in your account Cha0smagick LABS. Have a Lite day! Contact supportTerms of use." [ref=f71e373]:
+                      - checkbox "no leída, MailerLite, MailerLite API token created, 28 jul, Hi there, New API token Cha0smagick LABS has been created in your account Cha0smagick LABS. Have a Lite day! Contact supportTerms of use." [ref=f71e374]
+                    - gridcell [ref=f71e375]:
+                      - button "Sin destacar" [ref=f71e376]
+                    - gridcell "MailerLite" [ref=f71e377]
+                    - gridcell [ref=f71e380]:
+                      - link "MailerLite API token created - Hi there, New API token Cha0smagick LABS has been created in your account Cha0smagick LABS. Have a Lite day! Contact supportTerms of use" [ref=f71e381]:
+                        - generic [ref=f71e382]:
+                          - generic [ref=f71e383]: MailerLite API token created
+                          - generic [ref=f71e385]:
+                            - generic [ref=f71e386]: "-"
+                            - text: Hi there, New API token Cha0smagick LABS has been created in your account Cha0smagick LABS. Have a Lite day! Contact supportTerms of use
+                    - gridcell [ref=f71e387]
+                    - gridcell "mar, 28 jul 2026, 12:04 p.m." [ref=f71e388]:
+                      - generic "mar, 28 jul 2026, 12:04 p.m." [ref=f71e389]: 28 jul
+                    - gridcell
+                  - row "no leída, Google, Compartiste algunos datos de tu Cuenta de Google con MailerLite, 28 jul, Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en MailerLite el 28 de julio, 12:." [ref=f71e390] [cursor=pointer]:
+                    - gridcell [ref=f71e391]
+                    - gridcell "no leída, Google, Compartiste algunos datos de tu Cuenta de Google con MailerLite, 28 jul, Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en MailerLite el 28 de julio, 12:." [ref=f71e392]:
+                      - checkbox "no leída, Google, Compartiste algunos datos de tu Cuenta de Google con MailerLite, 28 jul, Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en MailerLite el 28 de julio, 12:." [ref=f71e393]
+                    - gridcell [ref=f71e394]:
+                      - button "Sin destacar" [ref=f71e395]
+                    - gridcell "Google" [ref=f71e396]
+                    - gridcell [ref=f71e399]:
+                      - link "Compartiste algunos datos de tu Cuenta de Google con MailerLite - Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en MailerLite el 28 de julio, 12:" [ref=f71e401]:
+                        - generic [ref=f71e402]:
+                          - generic [ref=f71e403]: Compartiste algunos datos de tu Cuenta de Google con MailerLite
+                          - generic [ref=f71e405]:
+                            - generic [ref=f71e406]: "-"
+                            - text: "Haz un seguimiento de los datos de tu Cuenta de Google magiacaoticapractica@gmail.com Recibiste este correo electrónico porque usaste Acceder con Google para ingresar en MailerLite el 28 de julio, 12:"
+                    - gridcell [ref=f71e407]
+                    - gridcell "mar, 28 jul 2026, 12:00 p.m." [ref=f71e408]:
+                      - generic "mar, 28 jul 2026, 12:00 p.m." [ref=f71e409]: 28 jul
+                    - gridcell
+                  - 'row "Kit 2, Confirm your Kit email address, 28 jul, Kit logo Confirm your email address Click the button below to confirm your email address. Confirm your email or copy this link: https://app.kit.com/users/confirm-email?token=v6KyEyAzaG9Dk46WrWdpww Need." [ref=f71e410] [cursor=pointer]':
+                    - gridcell [ref=f71e411]
+                    - 'gridcell "Kit 2, Confirm your Kit email address, 28 jul, Kit logo Confirm your email address Click the button below to confirm your email address. Confirm your email or copy this link: https://app.kit.com/users/confirm-email?token=v6KyEyAzaG9Dk46WrWdpww Need." [ref=f71e412]':
+                      - 'checkbox "Kit 2, Confirm your Kit email address, 28 jul, Kit logo Confirm your email address Click the button below to confirm your email address. Confirm your email or copy this link: https://app.kit.com/users/confirm-email?token=v6KyEyAzaG9Dk46WrWdpww Need." [ref=f71e413]'
+                    - gridcell [ref=f71e414]:
+                      - button "Sin destacar" [ref=f71e415]
+                    - gridcell "Kit 2" [ref=f71e416]:
+                      - generic [ref=f71e417]:
+                        - generic [ref=f71e418]: Kit
+                        - generic [ref=f71e419]: "2"
+                    - gridcell [ref=f71e420]:
+                      - 'link "Confirm your Kit email address - Kit logo Confirm your email address Click the button below to confirm your email address. Confirm your email or copy this link: https://app.kit.com/users/confirm-email?token=v6KyEyAzaG9Dk46WrWdpww Need" [ref=f71e421]':
+                        - generic [ref=f71e422]:
+                          - generic [ref=f71e423]: Confirm your Kit email address
+                          - generic [ref=f71e425]:
+                            - generic [ref=f71e426]: "-"
+                            - text: "Kit logo Confirm your email address Click the button below to confirm your email address. Confirm your email or copy this link: https://app.kit.com/users/confirm-email?token=v6KyEyAzaG9Dk46WrWdpww Need"
+                    - gridcell [ref=f71e427]
+                    - gridcell "mar, 28 jul 2026, 11:52 a.m." [ref=f71e428]:
+                      - generic "mar, 28 jul 2026, 11:52 a.m." [ref=f71e429]: 28 jul
+                    - gridcell
+                  - 'row "Kit, New login to your Kit account, 28 jul, Kit logo You recently attempted to log in to your Kit account from an unrecognized device or IP address. Device: Chrome on Windows Location: Mosquera, Cundinamarca, Colombia (approximate) Time: 12:37." [ref=f71e430] [cursor=pointer]':
+                    - gridcell [ref=f71e431]
+                    - 'gridcell "Kit, New login to your Kit account, 28 jul, Kit logo You recently attempted to log in to your Kit account from an unrecognized device or IP address. Device: Chrome on Windows Location: Mosquera, Cundinamarca, Colombia (approximate) Time: 12:37." [ref=f71e432]':
+                      - 'checkbox "Kit, New login to your Kit account, 28 jul, Kit logo You recently attempted to log in to your Kit account from an unrecognized device or IP address. Device: Chrome on Windows Location: Mosquera, Cundinamarca, Colombia (approximate) Time: 12:37." [ref=f71e433]'
+                    - gridcell [ref=f71e434]:
+                      - button "Sin destacar" [ref=f71e435]
+                    - gridcell "Kit" [ref=f71e436]
+                    - gridcell [ref=f71e439]:
+                      - 'link "New login to your Kit account - Kit logo You recently attempted to log in to your Kit account from an unrecognized device or IP address. Device: Chrome on Windows Location: Mosquera, Cundinamarca, Colombia (approximate) Time: 12:37" [ref=f71e440]':
+                        - generic [ref=f71e441]:
+                          - generic [ref=f71e442]: New login to your Kit account
+                          - generic [ref=f71e444]:
+                            - generic [ref=f71e445]: "-"
+                            - text: "Kit logo You recently attempted to log in to your Kit account from an unrecognized device or IP address. Device: Chrome on Windows Location: Mosquera, Cundinamarca, Colombia (approximate) Time: 12:37"
+                    - gridcell [ref=f71e446]
+                    - gridcell "mar, 28 jul 2026, 11:37 a.m." [ref=f71e447]:
+                      - generic "mar, 28 jul 2026, 11:37 a.m." [ref=f71e448]: 28 jul
+                    - gridcell
+                  - row "no leída, Shiv at Kit, 📬 Welcome to Kit, Cha0smagick, 28 jul, Follow these steps to get set up and start sending ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏." [ref=f71e449] [cursor=pointer]:
+                    - gridcell [ref=f71e450]
+                    - gridcell "no leída, Shiv at Kit, 📬 Welcome to Kit, Cha0smagick, 28 jul, Follow these steps to get set up and start sending ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏." [ref=f71e451]:
+                      - checkbox "no leída, Shiv at Kit, 📬 Welcome to Kit, Cha0smagick, 28 jul, Follow these steps to get set up and start sending ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏." [ref=f71e452]
+                    - gridcell [ref=f71e453]:
+                      - button "Sin destacar" [ref=f71e454]
+                    - gridcell "Shiv at Kit" [ref=f71e455]
+                    - gridcell [ref=f71e458]:
+                      - link "📬 Welcome to Kit, Cha0smagick - Follow these steps to get set up and start sending ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏" [ref=f71e460]:
+                        - generic [ref=f71e461]:
+                          - generic [ref=f71e464]:
+                            - img "📬" [ref=f71e465]
+                            - text: Welcome to Kit, Cha0smagick
+                          - generic [ref=f71e466]:
+                            - generic [ref=f71e467]: "-"
+                            - text: Follow these steps to get set up and start sending ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+                    - gridcell [ref=f71e468]
+                    - gridcell "mar, 28 jul 2026, 11:29 a.m." [ref=f71e469]:
+                      - generic "mar, 28 jul 2026, 11:29 a.m." [ref=f71e470]: 28 jul
+                    - gridcell
+                  - row "Formspree, Email verification for your Formspree account, 28 jul, Please verify that you'd like to add the following email address. -- Formspree logo Verify new email address Please verify that you'd like to add the following email address to the Formspree." [ref=f71e471] [cursor=pointer]:
+                    - gridcell [ref=f71e472]
+                    - gridcell "Formspree, Email verification for your Formspree account, 28 jul, Please verify that you'd like to add the following email address. -- Formspree logo Verify new email address Please verify that you'd like to add the following email address to the Formspree." [ref=f71e473]:
+                      - checkbox "Formspree, Email verification for your Formspree account, 28 jul, Please verify that you'd like to add the following email address. -- Formspree logo Verify new email address Please verify that you'd like to add the following email address to the Formspree." [ref=f71e474]
+                    - gridcell [ref=f71e475]:
+                      - button "Sin destacar" [ref=f71e476]
+                    - gridcell "Formspree" [ref=f71e477]
+                    - gridcell [ref=f71e480]:
+                      - link "Email verification for your Formspree account - Please verify that you'd like to add the following email address. -- Formspree logo Verify new email address Please verify that you'd like to add the following email address to the Formspree" [ref=f71e481]:
+                        - generic [ref=f71e482]:
+                          - generic [ref=f71e483]: Email verification for your Formspree account
+                          - generic [ref=f71e485]:
+                            - generic [ref=f71e486]: "-"
+                            - text: Please verify that you'd like to add the following email address. -- Formspree logo Verify new email address Please verify that you'd like to add the following email address to the Formspree
+                    - gridcell [ref=f71e487]
+                    - gridcell "mar, 28 jul 2026, 11:23 a.m." [ref=f71e488]:
+                      - generic "mar, 28 jul 2026, 11:23 a.m." [ref=f71e489]: 28 jul
+                    - gridcell
+                  - row "no leída, Google, Alerta de seguridad, 27 jul, Se creó una contraseña de la aplicación para acceder a tu cuenta magiacaoticapractica@gmail.com Si no fuiste tú quien generó esta contraseña para ventas automaticas, es posible que otra persona esté." [ref=f71e490] [cursor=pointer]:
+                    - gridcell [ref=f71e491]
+                    - gridcell "no leída, Google, Alerta de seguridad, 27 jul, Se creó una contraseña de la aplicación para acceder a tu cuenta magiacaoticapractica@gmail.com Si no fuiste tú quien generó esta contraseña para ventas automaticas, es posible que otra persona esté." [ref=f71e492]:
+                      - checkbox "no leída, Google, Alerta de seguridad, 27 jul, Se creó una contraseña de la aplicación para acceder a tu cuenta magiacaoticapractica@gmail.com Si no fuiste tú quien generó esta contraseña para ventas automaticas, es posible que otra persona esté." [ref=f71e493]
+                    - gridcell [ref=f71e494]:
+                      - button "Sin destacar" [ref=f71e495]
+                    - gridcell "Google" [ref=f71e496]
+                    - gridcell [ref=f71e499]:
+                      - link "Alerta de seguridad - Se creó una contraseña de la aplicación para acceder a tu cuenta magiacaoticapractica@gmail.com Si no fuiste tú quien generó esta contraseña para ventas automaticas, es posible que otra persona esté" [ref=f71e501]:
+                        - generic [ref=f71e502]:
+                          - generic [ref=f71e503]: Alerta de seguridad
+                          - generic [ref=f71e505]:
+                            - generic [ref=f71e506]: "-"
+                            - text: Se creó una contraseña de la aplicación para acceder a tu cuenta magiacaoticapractica@gmail.com Si no fuiste tú quien generó esta contraseña para ventas automaticas, es posible que otra persona esté
+                    - gridcell [ref=f71e507]
+                    - gridcell "lun, 27 jul 2026, 5:26 p.m." [ref=f71e508]:
+                      - generic "lun, 27 jul 2026, 5:26 p.m." [ref=f71e509]: 27 jul
+                    - gridcell
+                  - 'row "no leída, IARC Content Ratings, IARC Live Rating Notice: Lucid Dream: Astral Projection, 24 jul, Live Rating Notice Global Rating ID: 64ada33f-e8e6-8676-8c50-3f6992c9c63b Product Title: Lucid Dream: Astral Projection Company: Cha0smagick Rating Date: Friday, July 24, 2026 Storefront: Google Play." [ref=f71e510] [cursor=pointer]':
+                    - gridcell [ref=f71e511]
+                    - 'gridcell "no leída, IARC Content Ratings, IARC Live Rating Notice: Lucid Dream: Astral Projection, 24 jul, Live Rating Notice Global Rating ID: 64ada33f-e8e6-8676-8c50-3f6992c9c63b Product Title: Lucid Dream: Astral Projection Company: Cha0smagick Rating Date: Friday, July 24, 2026 Storefront: Google Play." [ref=f71e512]':
+                      - 'checkbox "no leída, IARC Content Ratings, IARC Live Rating Notice: Lucid Dream: Astral Projection, 24 jul, Live Rating Notice Global Rating ID: 64ada33f-e8e6-8676-8c50-3f6992c9c63b Product Title: Lucid Dream: Astral Projection Company: Cha0smagick Rating Date: Friday, July 24, 2026 Storefront: Google Play." [ref=f71e513]'
+                    - gridcell [ref=f71e514]:
+                      - button "Sin destacar" [ref=f71e515]
+                    - gridcell "IARC Content Ratings" [ref=f71e516]
+                    - gridcell [ref=f71e519]:
+                      - 'link "IARC Live Rating Notice: Lucid Dream: Astral Projection - Live Rating Notice Global Rating ID: 64ada33f-e8e6-8676-8c50-3f6992c9c63b Product Title: Lucid Dream: Astral Projection Company: Cha0smagick Rating Date: Friday, July 24, 2026 Storefront: Google Play" [ref=f71e520]':
+                        - generic [ref=f71e521]:
+                          - generic [ref=f71e522]: "IARC Live Rating Notice: Lucid Dream: Astral Projection"
+                          - generic [ref=f71e524]:
+                            - generic [ref=f71e525]: "-"
+                            - text: "Live Rating Notice Global Rating ID: 64ada33f-e8e6-8676-8c50-3f6992c9c63b Product Title: Lucid Dream: Astral Projection Company: Cha0smagick Rating Date: Friday, July 24, 2026 Storefront: Google Play"
+                    - gridcell [ref=f71e526]
+                    - gridcell "vie, 24 jul 2026, 8:38 a.m." [ref=f71e527]:
+                      - generic "vie, 24 jul 2026, 8:38 a.m." [ref=f71e528]: 24 jul
+                    - gridcell
+                  - row "no leída, Google AdSense, Actualizaciones importantes de la búsqueda relacionada para Anuncios automáticos, 23 jul, Entérate de los próximos cambios en la búsqueda relacionada para Anuncios automáticos‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e529] [cursor=pointer]:
+                    - gridcell [ref=f71e530]
+                    - gridcell "no leída, Google AdSense, Actualizaciones importantes de la búsqueda relacionada para Anuncios automáticos, 23 jul, Entérate de los próximos cambios en la búsqueda relacionada para Anuncios automáticos‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e531]:
+                      - checkbox "no leída, Google AdSense, Actualizaciones importantes de la búsqueda relacionada para Anuncios automáticos, 23 jul, Entérate de los próximos cambios en la búsqueda relacionada para Anuncios automáticos‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e532]
+                    - gridcell [ref=f71e533]:
+                      - button "Sin destacar" [ref=f71e534]
+                    - gridcell "Google AdSense" [ref=f71e535]
+                    - gridcell [ref=f71e538]:
+                      - link "Actualizaciones importantes de la búsqueda relacionada para Anuncios automáticos - Entérate de los próximos cambios en la búsqueda relacionada para Anuncios automáticos‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌" [ref=f71e539]:
+                        - generic [ref=f71e540]:
+                          - generic [ref=f71e541]: Actualizaciones importantes de la búsqueda relacionada para Anuncios automáticos
+                          - generic [ref=f71e543]:
+                            - generic [ref=f71e544]: "-"
+                            - text: Entérate de los próximos cambios en la búsqueda relacionada para Anuncios automáticos‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+                    - gridcell [ref=f71e545]
+                    - gridcell "jue, 23 jul 2026, 11:20 a.m." [ref=f71e546]:
+                      - generic "jue, 23 jul 2026, 11:20 a.m." [ref=f71e547]: 23 jul
+                    - gridcell
+                  - row "no leída, MEGA, Información importante sobre tu cuenta de MEGA, 22 jul, magiacaoticapractica@gmail.com Hola, Esperamos que estés disfrutando de tu cuenta gratuita de MEGA. Tienes *25 GB* almacenados en tu cuenta gratuita de MEGA. Esto supera tu límite de almacenamiento de." [ref=f71e548] [cursor=pointer]:
+                    - gridcell [ref=f71e549]
+                    - gridcell "no leída, MEGA, Información importante sobre tu cuenta de MEGA, 22 jul, magiacaoticapractica@gmail.com Hola, Esperamos que estés disfrutando de tu cuenta gratuita de MEGA. Tienes *25 GB* almacenados en tu cuenta gratuita de MEGA. Esto supera tu límite de almacenamiento de." [ref=f71e550]:
+                      - checkbox "no leída, MEGA, Información importante sobre tu cuenta de MEGA, 22 jul, magiacaoticapractica@gmail.com Hola, Esperamos que estés disfrutando de tu cuenta gratuita de MEGA. Tienes *25 GB* almacenados en tu cuenta gratuita de MEGA. Esto supera tu límite de almacenamiento de." [ref=f71e551]
+                    - gridcell [ref=f71e552]:
+                      - button "Sin destacar" [ref=f71e553]
+                    - gridcell "MEGA" [ref=f71e554]
+                    - gridcell [ref=f71e557]:
+                      - link "Información importante sobre tu cuenta de MEGA - magiacaoticapractica@gmail.com Hola, Esperamos que estés disfrutando de tu cuenta gratuita de MEGA. Tienes *25 GB* almacenados en tu cuenta gratuita de MEGA. Esto supera tu límite de almacenamiento de" [ref=f71e558]:
+                        - generic [ref=f71e559]:
+                          - generic [ref=f71e560]: Información importante sobre tu cuenta de MEGA
+                          - generic [ref=f71e562]:
+                            - generic [ref=f71e563]: "-"
+                            - text: magiacaoticapractica@gmail.com Hola, Esperamos que estés disfrutando de tu cuenta gratuita de MEGA. Tienes *25 GB* almacenados en tu cuenta gratuita de MEGA. Esto supera tu límite de almacenamiento de
+                    - gridcell [ref=f71e564]
+                    - gridcell "mié, 22 jul 2026, 5:40 p.m." [ref=f71e565]:
+                      - generic "mié, 22 jul 2026, 5:40 p.m." [ref=f71e566]: 22 jul
+                    - gridcell
+                  - 'row "SUNNEX, yo 3, Subject: I think this could help your product, 22 jul, Hi Frater Alek0s, Thank you for your reply. I appreciate your response, and I apologize for not mentioning the specific app in my previous email. I wasn''t actually referring to a particular app at." [ref=f71e567] [cursor=pointer]':
+                    - gridcell [ref=f71e568]
+                    - 'gridcell "SUNNEX, yo 3, Subject: I think this could help your product, 22 jul, Hi Frater Alek0s, Thank you for your reply. I appreciate your response, and I apologize for not mentioning the specific app in my previous email. I wasn''t actually referring to a particular app at." [ref=f71e569]':
+                      - 'checkbox "SUNNEX, yo 3, Subject: I think this could help your product, 22 jul, Hi Frater Alek0s, Thank you for your reply. I appreciate your response, and I apologize for not mentioning the specific app in my previous email. I wasn''t actually referring to a particular app at." [ref=f71e570]'
+                    - gridcell [ref=f71e571]:
+                      - button "Sin destacar" [ref=f71e572]
+                    - gridcell "SUNNEX, yo 3" [ref=f71e573]:
+                      - generic [ref=f71e574]:
+                        - generic [ref=f71e575]: SUNNEX, yo
+                        - generic [ref=f71e576]: "3"
+                    - gridcell [ref=f71e577]:
+                      - 'link "Subject: I think this could help your product - Hi Frater Alek0s, Thank you for your reply. I appreciate your response, and I apologize for not mentioning the specific app in my previous email. I wasn''t actually referring to a particular app at" [ref=f71e578]':
+                        - generic [ref=f71e579]:
+                          - generic [ref=f71e580]: "Subject: I think this could help your product"
+                          - generic [ref=f71e582]:
+                            - generic [ref=f71e583]: "-"
+                            - text: Hi Frater Alek0s, Thank you for your reply. I appreciate your response, and I apologize for not mentioning the specific app in my previous email. I wasn't actually referring to a particular app at
+                    - gridcell [ref=f71e584]
+                    - gridcell "mié, 22 jul 2026, 9:02 a.m." [ref=f71e585]:
+                      - generic "mié, 22 jul 2026, 9:02 a.m." [ref=f71e586]: 22 jul
+                    - gridcell
+                  - 'row "no leída, Google AdSense, Tenemos buenas noticias: se optimizó su cuenta , 22 jul, Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google." [ref=f71e587] [cursor=pointer]':
+                    - gridcell [ref=f71e588]
+                    - 'gridcell "no leída, Google AdSense, Tenemos buenas noticias: se optimizó su cuenta , 22 jul, Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google." [ref=f71e589]':
+                      - 'checkbox "no leída, Google AdSense, Tenemos buenas noticias: se optimizó su cuenta , 22 jul, Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google." [ref=f71e590]'
+                    - gridcell [ref=f71e591]:
+                      - button "Sin destacar" [ref=f71e592]
+                    - gridcell "Google AdSense" [ref=f71e593]
+                    - gridcell [ref=f71e596]:
+                      - 'link "Tenemos buenas noticias: se optimizó su cuenta - Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google" [ref=f71e598]':
+                        - generic [ref=f71e599]:
+                          - generic [ref=f71e600]: "Tenemos buenas noticias: se optimizó su cuenta"
+                          - generic [ref=f71e602]:
+                            - generic [ref=f71e603]: "-"
+                            - text: "Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google"
+                    - gridcell [ref=f71e604]
+                    - gridcell "mié, 22 jul 2026, 5:03 a.m." [ref=f71e605]:
+                      - generic "mié, 22 jul 2026, 5:03 a.m." [ref=f71e606]: 22 jul
+                    - gridcell
+                  - row "no leída, Hotmart, ¡Todavía hay tiempo! ¡Queremos saber de ti!, 21 jul, 2 minutos de tu tiempo hacen la diferencia. Visualizar na Web ¡Hola! ¿Cómo estás? ¡Espero que bien! Estamos animados para escuchar tu opinión. sobre nuestras soluciones y servicios para apoyarnos en la." [ref=f71e607] [cursor=pointer]:
+                    - gridcell [ref=f71e608]
+                    - gridcell "no leída, Hotmart, ¡Todavía hay tiempo! ¡Queremos saber de ti!, 21 jul, 2 minutos de tu tiempo hacen la diferencia. Visualizar na Web ¡Hola! ¿Cómo estás? ¡Espero que bien! Estamos animados para escuchar tu opinión. sobre nuestras soluciones y servicios para apoyarnos en la." [ref=f71e609]:
+                      - checkbox "no leída, Hotmart, ¡Todavía hay tiempo! ¡Queremos saber de ti!, 21 jul, 2 minutos de tu tiempo hacen la diferencia. Visualizar na Web ¡Hola! ¿Cómo estás? ¡Espero que bien! Estamos animados para escuchar tu opinión. sobre nuestras soluciones y servicios para apoyarnos en la." [ref=f71e610]
+                    - gridcell [ref=f71e611]:
+                      - button "Sin destacar" [ref=f71e612]
+                    - gridcell "Hotmart" [ref=f71e613]
+                    - gridcell [ref=f71e616]:
+                      - link "¡Todavía hay tiempo! ¡Queremos saber de ti! - 2 minutos de tu tiempo hacen la diferencia. Visualizar na Web ¡Hola! ¿Cómo estás? ¡Espero que bien! Estamos animados para escuchar tu opinión. sobre nuestras soluciones y servicios para apoyarnos en la" [ref=f71e618]:
+                        - generic [ref=f71e619]:
+                          - generic [ref=f71e620]: ¡Todavía hay tiempo! ¡Queremos saber de ti!
+                          - generic [ref=f71e622]:
+                            - generic [ref=f71e623]: "-"
+                            - text: 2 minutos de tu tiempo hacen la diferencia. Visualizar na Web ¡Hola! ¿Cómo estás? ¡Espero que bien! Estamos animados para escuchar tu opinión. sobre nuestras soluciones y servicios para apoyarnos en la
+                    - gridcell [ref=f71e624]
+                    - gridcell "mar, 21 jul 2026, 9:00 a.m." [ref=f71e625]:
+                      - generic "mar, 21 jul 2026, 9:00 a.m." [ref=f71e626]: 21 jul
+                    - gridcell
+                  - 'row "no leída, IARC Content Ratings, IARC Live Rating Notice: Eerie Roads: Search & Find, 21 jul, Live Rating Notice Global Rating ID: 6bc510f0-c4f4-8a1a-8be0-3f67159fc97d Product Title: Eerie Roads: Search & Find Company: Cha0smagick Rating Date: Tuesday, July 21, 2026 Storefront: Google Play." [ref=f71e627] [cursor=pointer]':
+                    - gridcell [ref=f71e628]
+                    - 'gridcell "no leída, IARC Content Ratings, IARC Live Rating Notice: Eerie Roads: Search & Find, 21 jul, Live Rating Notice Global Rating ID: 6bc510f0-c4f4-8a1a-8be0-3f67159fc97d Product Title: Eerie Roads: Search & Find Company: Cha0smagick Rating Date: Tuesday, July 21, 2026 Storefront: Google Play." [ref=f71e629]':
+                      - 'checkbox "no leída, IARC Content Ratings, IARC Live Rating Notice: Eerie Roads: Search & Find, 21 jul, Live Rating Notice Global Rating ID: 6bc510f0-c4f4-8a1a-8be0-3f67159fc97d Product Title: Eerie Roads: Search & Find Company: Cha0smagick Rating Date: Tuesday, July 21, 2026 Storefront: Google Play." [ref=f71e630]'
+                    - gridcell [ref=f71e631]:
+                      - button "Sin destacar" [ref=f71e632]
+                    - gridcell "IARC Content Ratings" [ref=f71e633]
+                    - gridcell [ref=f71e636]:
+                      - 'link "IARC Live Rating Notice: Eerie Roads: Search & Find - Live Rating Notice Global Rating ID: 6bc510f0-c4f4-8a1a-8be0-3f67159fc97d Product Title: Eerie Roads: Search & Find Company: Cha0smagick Rating Date: Tuesday, July 21, 2026 Storefront: Google Play" [ref=f71e637]':
+                        - generic [ref=f71e638]:
+                          - generic [ref=f71e639]: "IARC Live Rating Notice: Eerie Roads: Search & Find"
+                          - generic [ref=f71e641]:
+                            - generic [ref=f71e642]: "-"
+                            - text: "Live Rating Notice Global Rating ID: 6bc510f0-c4f4-8a1a-8be0-3f67159fc97d Product Title: Eerie Roads: Search & Find Company: Cha0smagick Rating Date: Tuesday, July 21, 2026 Storefront: Google Play"
+                    - gridcell [ref=f71e643]
+                    - gridcell "mar, 21 jul 2026, 4:37 a.m." [ref=f71e644]:
+                      - generic "mar, 21 jul 2026, 4:37 a.m." [ref=f71e645]: 21 jul
+                    - gridcell
+                  - 'row "SUNNEX GOLD, Subject: I think this could help your product, 20 jul, Hi, I spent some time using your app today and ended up writing down one observation that I think could genuinely improve the experience. I wasn''t sure whether to send it, but I figured you''d." [ref=f71e646] [cursor=pointer]':
+                    - gridcell [ref=f71e647]
+                    - 'gridcell "SUNNEX GOLD, Subject: I think this could help your product, 20 jul, Hi, I spent some time using your app today and ended up writing down one observation that I think could genuinely improve the experience. I wasn''t sure whether to send it, but I figured you''d." [ref=f71e648]':
+                      - 'checkbox "SUNNEX GOLD, Subject: I think this could help your product, 20 jul, Hi, I spent some time using your app today and ended up writing down one observation that I think could genuinely improve the experience. I wasn''t sure whether to send it, but I figured you''d." [ref=f71e649]'
+                    - gridcell [ref=f71e650]:
+                      - button "Sin destacar" [ref=f71e651]
+                    - gridcell "SUNNEX GOLD" [ref=f71e652]
+                    - gridcell [ref=f71e655]:
+                      - 'link "Subject: I think this could help your product - Hi, I spent some time using your app today and ended up writing down one observation that I think could genuinely improve the experience. I wasn''t sure whether to send it, but I figured you''d" [ref=f71e656]':
+                        - generic [ref=f71e657]:
+                          - generic [ref=f71e658]: "Subject: I think this could help your product"
+                          - generic [ref=f71e660]:
+                            - generic [ref=f71e661]: "-"
+                            - text: Hi, I spent some time using your app today and ended up writing down one observation that I think could genuinely improve the experience. I wasn't sure whether to send it, but I figured you'd
+                    - gridcell [ref=f71e662]
+                    - gridcell "lun, 20 jul 2026, 1:20 p.m." [ref=f71e663]:
+                      - generic "lun, 20 jul 2026, 1:20 p.m." [ref=f71e664]: 20 jul
+                    - gridcell
+                  - 'row "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 19 jul, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"rinconparanormaloficial.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e665] [cursor=pointer]':
+                    - gridcell [ref=f71e666]
+                    - 'gridcell "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 19 jul, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"rinconparanormaloficial.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e667]':
+                      - 'checkbox "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 19 jul, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"rinconparanormaloficial.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e668]'
+                    - gridcell [ref=f71e669]:
+                      - button "Sin destacar" [ref=f71e670]
+                    - gridcell "Google AdSense" [ref=f71e671]
+                    - gridcell [ref=f71e674]:
+                      - 'link "Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense - Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"rinconparanormaloficial.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar" [ref=f71e675]':
+                        - generic [ref=f71e676]:
+                          - generic [ref=f71e677]: Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense
+                          - generic [ref=f71e679]:
+                            - generic [ref=f71e680]: "-"
+                            - text: "Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"rinconparanormaloficial.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar"
+                    - gridcell [ref=f71e681]
+                    - gridcell "dom, 19 jul 2026, 6:37 p.m." [ref=f71e682]:
+                      - generic "dom, 19 jul 2026, 6:37 p.m." [ref=f71e683]: 19 jul
+                    - gridcell
+                  - row "Instagram, cha0smagick.labs, we've made it easy to get back on Instagram, 19 jul, Hi cha0smagick.labs, Sorry to hear you're having trouble logging into Instagram. We got a message that you forgot your password. If this was you, you can get right back into your account or reset." [ref=f71e684] [cursor=pointer]:
+                    - gridcell [ref=f71e685]
+                    - gridcell "Instagram, cha0smagick.labs, we've made it easy to get back on Instagram, 19 jul, Hi cha0smagick.labs, Sorry to hear you're having trouble logging into Instagram. We got a message that you forgot your password. If this was you, you can get right back into your account or reset." [ref=f71e686]:
+                      - checkbox "Instagram, cha0smagick.labs, we've made it easy to get back on Instagram, 19 jul, Hi cha0smagick.labs, Sorry to hear you're having trouble logging into Instagram. We got a message that you forgot your password. If this was you, you can get right back into your account or reset." [ref=f71e687]
+                    - gridcell [ref=f71e688]:
+                      - button "Sin destacar" [ref=f71e689]
+                    - gridcell "Instagram" [ref=f71e690]
+                    - gridcell [ref=f71e693]:
+                      - link "cha0smagick.labs, we've made it easy to get back on Instagram - Hi cha0smagick.labs, Sorry to hear you're having trouble logging into Instagram. We got a message that you forgot your password. If this was you, you can get right back into your account or reset" [ref=f71e695]:
+                        - generic [ref=f71e696]:
+                          - generic [ref=f71e697]: cha0smagick.labs, we've made it easy to get back on Instagram
+                          - generic [ref=f71e699]:
+                            - generic [ref=f71e700]: "-"
+                            - text: Hi cha0smagick.labs, Sorry to hear you're having trouble logging into Instagram. We got a message that you forgot your password. If this was you, you can get right back into your account or reset
+                    - gridcell [ref=f71e701]
+                    - gridcell "dom, 19 jul 2026, 1:03 p.m." [ref=f71e702]:
+                      - generic "dom, 19 jul 2026, 1:03 p.m." [ref=f71e703]: 19 jul
+                    - gridcell
+                  - row "no leída, YouTube Creators, [Recordatorio] El precio de Miembros del Canal va a cambiar, 17 jul, Revisa y actualiza los precios para nuevos miembros. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e704] [cursor=pointer]:
+                    - gridcell [ref=f71e705]
+                    - gridcell "no leída, YouTube Creators, [Recordatorio] El precio de Miembros del Canal va a cambiar, 17 jul, Revisa y actualiza los precios para nuevos miembros. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e706]:
+                      - checkbox "no leída, YouTube Creators, [Recordatorio] El precio de Miembros del Canal va a cambiar, 17 jul, Revisa y actualiza los precios para nuevos miembros. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e707]
+                    - gridcell [ref=f71e708]:
+                      - button "Sin destacar" [ref=f71e709]
+                    - gridcell "YouTube Creators" [ref=f71e710]
+                    - gridcell [ref=f71e713]:
+                      - link "[Recordatorio] El precio de Miembros del Canal va a cambiar - Revisa y actualiza los precios para nuevos miembros. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌" [ref=f71e714]:
+                        - generic [ref=f71e715]:
+                          - generic [ref=f71e716]: "[Recordatorio] El precio de Miembros del Canal va a cambiar"
+                          - generic [ref=f71e718]:
+                            - generic [ref=f71e719]: "-"
+                            - text: Revisa y actualiza los precios para nuevos miembros. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+                    - gridcell [ref=f71e720]
+                    - gridcell "vie, 17 jul 2026, 2:25 p.m." [ref=f71e721]:
+                      - generic "vie, 17 jul 2026, 2:25 p.m." [ref=f71e722]: 17 jul
+                    - gridcell
+                  - 'row "no leída, IARC Content Ratings, IARC Live Rating Notice: Astral Lab: Natal Chart, 16 jul, Live Rating Notice Global Rating ID: 23088105-255e-8c0c-8710-3f631717938f Product Title: Astral Lab: Natal Chart Company: Cha0smagick Rating Date: Thursday, July 16, 2026 Storefront: Google Play." [ref=f71e723] [cursor=pointer]':
+                    - gridcell [ref=f71e724]
+                    - 'gridcell "no leída, IARC Content Ratings, IARC Live Rating Notice: Astral Lab: Natal Chart, 16 jul, Live Rating Notice Global Rating ID: 23088105-255e-8c0c-8710-3f631717938f Product Title: Astral Lab: Natal Chart Company: Cha0smagick Rating Date: Thursday, July 16, 2026 Storefront: Google Play." [ref=f71e725]':
+                      - 'checkbox "no leída, IARC Content Ratings, IARC Live Rating Notice: Astral Lab: Natal Chart, 16 jul, Live Rating Notice Global Rating ID: 23088105-255e-8c0c-8710-3f631717938f Product Title: Astral Lab: Natal Chart Company: Cha0smagick Rating Date: Thursday, July 16, 2026 Storefront: Google Play." [ref=f71e726]'
+                    - gridcell [ref=f71e727]:
+                      - button "Sin destacar" [ref=f71e728]
+                    - gridcell "IARC Content Ratings" [ref=f71e729]
+                    - gridcell [ref=f71e732]:
+                      - 'link "IARC Live Rating Notice: Astral Lab: Natal Chart - Live Rating Notice Global Rating ID: 23088105-255e-8c0c-8710-3f631717938f Product Title: Astral Lab: Natal Chart Company: Cha0smagick Rating Date: Thursday, July 16, 2026 Storefront: Google Play" [ref=f71e733]':
+                        - generic [ref=f71e734]:
+                          - generic [ref=f71e735]: "IARC Live Rating Notice: Astral Lab: Natal Chart"
+                          - generic [ref=f71e737]:
+                            - generic [ref=f71e738]: "-"
+                            - text: "Live Rating Notice Global Rating ID: 23088105-255e-8c0c-8710-3f631717938f Product Title: Astral Lab: Natal Chart Company: Cha0smagick Rating Date: Thursday, July 16, 2026 Storefront: Google Play"
+                    - gridcell [ref=f71e739]
+                    - gridcell "jue, 16 jul 2026, 2:37 a.m." [ref=f71e740]:
+                      - generic "jue, 16 jul 2026, 2:37 a.m." [ref=f71e741]: 16 jul
+                    - gridcell
+                  - 'row "no leída, Hotmart, Hotmart | Tu producto ha sido aprobado para ventas, 13 jul, ¡Hola, Alejandro! ¡Tu producto está disponible para ventas! Tu producto: MIND THE GAP - The 0.3 Seconds That Control Your Life ID: 8121868 ¿Tienes dudas sobre cómo continuar? 1) Aquí tienes el paso a." [ref=f71e742] [cursor=pointer]':
+                    - gridcell [ref=f71e743]
+                    - 'gridcell "no leída, Hotmart, Hotmart | Tu producto ha sido aprobado para ventas, 13 jul, ¡Hola, Alejandro! ¡Tu producto está disponible para ventas! Tu producto: MIND THE GAP - The 0.3 Seconds That Control Your Life ID: 8121868 ¿Tienes dudas sobre cómo continuar? 1) Aquí tienes el paso a." [ref=f71e744]':
+                      - 'checkbox "no leída, Hotmart, Hotmart | Tu producto ha sido aprobado para ventas, 13 jul, ¡Hola, Alejandro! ¡Tu producto está disponible para ventas! Tu producto: MIND THE GAP - The 0.3 Seconds That Control Your Life ID: 8121868 ¿Tienes dudas sobre cómo continuar? 1) Aquí tienes el paso a." [ref=f71e745]'
+                    - gridcell [ref=f71e746]:
+                      - button "Sin destacar" [ref=f71e747]
+                    - gridcell "Hotmart" [ref=f71e748]
+                    - gridcell [ref=f71e751]:
+                      - 'link "Hotmart | Tu producto ha sido aprobado para ventas - ¡Hola, Alejandro! ¡Tu producto está disponible para ventas! Tu producto: MIND THE GAP - The 0.3 Seconds That Control Your Life ID: 8121868 ¿Tienes dudas sobre cómo continuar? 1) Aquí tienes el paso a" [ref=f71e752]':
+                        - generic [ref=f71e753]:
+                          - generic [ref=f71e754]: Hotmart | Tu producto ha sido aprobado para ventas
+                          - generic [ref=f71e756]:
+                            - generic [ref=f71e757]: "-"
+                            - text: "¡Hola, Alejandro! ¡Tu producto está disponible para ventas! Tu producto: MIND THE GAP - The 0.3 Seconds That Control Your Life ID: 8121868 ¿Tienes dudas sobre cómo continuar? 1) Aquí tienes el paso a"
+                    - gridcell [ref=f71e758]
+                    - gridcell "lun, 13 jul 2026, 6:23 p.m." [ref=f71e759]:
+                      - generic "lun, 13 jul 2026, 6:23 p.m." [ref=f71e760]: 13 jul
+                    - gridcell
+                  - 'row "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 10 jul, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"cybersecuritytemple.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e761] [cursor=pointer]':
+                    - gridcell [ref=f71e762]
+                    - 'gridcell "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 10 jul, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"cybersecuritytemple.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e763]':
+                      - 'checkbox "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 10 jul, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"cybersecuritytemple.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e764]'
+                    - gridcell [ref=f71e765]:
+                      - button "Sin destacar" [ref=f71e766]
+                    - gridcell "Google AdSense" [ref=f71e767]
+                    - gridcell [ref=f71e770]:
+                      - 'link "Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense - Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"cybersecuritytemple.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar" [ref=f71e771]':
+                        - generic [ref=f71e772]:
+                          - generic [ref=f71e773]: Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense
+                          - generic [ref=f71e775]:
+                            - generic [ref=f71e776]: "-"
+                            - text: "Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"cybersecuritytemple.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar"
+                    - gridcell [ref=f71e777]
+                    - gridcell "vie, 10 jul 2026, 10:27 a.m." [ref=f71e778]:
+                      - generic "vie, 10 jul 2026, 10:27 a.m." [ref=f71e779]: 10 jul
+                    - gridcell
+                  - row "no leída, YouTube Creators, [Acción recomendada] Cambios en los precios de tus miembros del canal, 7 jul, Ahora tienes flexibilidad para actualizar los precios de los nuevos miembros. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e780] [cursor=pointer]:
+                    - gridcell [ref=f71e781]
+                    - gridcell "no leída, YouTube Creators, [Acción recomendada] Cambios en los precios de tus miembros del canal, 7 jul, Ahora tienes flexibilidad para actualizar los precios de los nuevos miembros. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e782]:
+                      - checkbox "no leída, YouTube Creators, [Acción recomendada] Cambios en los precios de tus miembros del canal, 7 jul, Ahora tienes flexibilidad para actualizar los precios de los nuevos miembros. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e783]
+                    - gridcell [ref=f71e784]:
+                      - button "Sin destacar" [ref=f71e785]
+                    - gridcell "YouTube Creators" [ref=f71e786]
+                    - gridcell [ref=f71e789]:
+                      - link "[Acción recomendada] Cambios en los precios de tus miembros del canal - Ahora tienes flexibilidad para actualizar los precios de los nuevos miembros. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌" [ref=f71e790]:
+                        - generic [ref=f71e791]:
+                          - generic [ref=f71e792]: "[Acción recomendada] Cambios en los precios de tus miembros del canal"
+                          - generic [ref=f71e794]:
+                            - generic [ref=f71e795]: "-"
+                            - text: Ahora tienes flexibilidad para actualizar los precios de los nuevos miembros. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+                    - gridcell [ref=f71e796]
+                    - gridcell "mar, 7 jul 2026, 8:06 a.m." [ref=f71e797]:
+                      - generic "mar, 7 jul 2026, 8:06 a.m." [ref=f71e798]: 7 jul
+                    - gridcell
+                  - 'row "no leída, Google AdSense, Tenemos buenas noticias: se optimizó su cuenta , 5 jul, Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google." [ref=f71e799] [cursor=pointer]':
+                    - gridcell [ref=f71e800]
+                    - 'gridcell "no leída, Google AdSense, Tenemos buenas noticias: se optimizó su cuenta , 5 jul, Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google." [ref=f71e801]':
+                      - 'checkbox "no leída, Google AdSense, Tenemos buenas noticias: se optimizó su cuenta , 5 jul, Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google." [ref=f71e802]'
+                    - gridcell [ref=f71e803]:
+                      - button "Sin destacar" [ref=f71e804]
+                    - gridcell "Google AdSense" [ref=f71e805]
+                    - gridcell [ref=f71e808]:
+                      - 'link "Tenemos buenas noticias: se optimizó su cuenta - Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google" [ref=f71e810]':
+                        - generic [ref=f71e811]:
+                          - generic [ref=f71e812]: "Tenemos buenas noticias: se optimizó su cuenta"
+                          - generic [ref=f71e814]:
+                            - generic [ref=f71e815]: "-"
+                            - text: "Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google"
+                    - gridcell [ref=f71e816]
+                    - gridcell "dom, 5 jul 2026, 4:48 a.m." [ref=f71e817]:
+                      - generic "dom, 5 jul 2026, 4:48 a.m." [ref=f71e818]: 5 jul
+                    - gridcell
+                  - 'row "no leída, Hotmart 2, Hotmart | Tu producto ha sido aprobado para ventas, 3 jul, ¡Hola, Alejandro! ¡Tu producto está disponible para ventas! Tu producto: Codex Chaoticum - A Complete Treatise on Chaos Magick ID: 8059331 ¿Tienes dudas sobre cómo continuar? 1) Aquí tienes el paso a." [ref=f71e819] [cursor=pointer]':
+                    - gridcell [ref=f71e820]
+                    - 'gridcell "no leída, Hotmart 2, Hotmart | Tu producto ha sido aprobado para ventas, 3 jul, ¡Hola, Alejandro! ¡Tu producto está disponible para ventas! Tu producto: Codex Chaoticum - A Complete Treatise on Chaos Magick ID: 8059331 ¿Tienes dudas sobre cómo continuar? 1) Aquí tienes el paso a." [ref=f71e821]':
+                      - 'checkbox "no leída, Hotmart 2, Hotmart | Tu producto ha sido aprobado para ventas, 3 jul, ¡Hola, Alejandro! ¡Tu producto está disponible para ventas! Tu producto: Codex Chaoticum - A Complete Treatise on Chaos Magick ID: 8059331 ¿Tienes dudas sobre cómo continuar? 1) Aquí tienes el paso a." [ref=f71e822]'
+                    - gridcell [ref=f71e823]:
+                      - button "Sin destacar" [ref=f71e824]
+                    - gridcell "Hotmart 2" [ref=f71e825]:
+                      - generic [ref=f71e826]:
+                        - generic [ref=f71e827]: Hotmart
+                        - generic [ref=f71e828]: "2"
+                    - gridcell [ref=f71e829]:
+                      - 'link "Hotmart | Tu producto ha sido aprobado para ventas - ¡Hola, Alejandro! ¡Tu producto está disponible para ventas! Tu producto: Codex Chaoticum - A Complete Treatise on Chaos Magick ID: 8059331 ¿Tienes dudas sobre cómo continuar? 1) Aquí tienes el paso a" [ref=f71e830]':
+                        - generic [ref=f71e831]:
+                          - generic [ref=f71e832]: Hotmart | Tu producto ha sido aprobado para ventas
+                          - generic [ref=f71e834]:
+                            - generic [ref=f71e835]: "-"
+                            - text: "¡Hola, Alejandro! ¡Tu producto está disponible para ventas! Tu producto: Codex Chaoticum - A Complete Treatise on Chaos Magick ID: 8059331 ¿Tienes dudas sobre cómo continuar? 1) Aquí tienes el paso a"
+                    - gridcell [ref=f71e836]
+                    - gridcell "vie, 3 jul 2026, 4:38 p.m." [ref=f71e837]:
+                      - generic "vie, 3 jul 2026, 4:38 p.m." [ref=f71e838]: 3 jul
+                    - gridcell
+                  - row "no leída, Hotmart 2, Hotmart | ¡Comunidad creada con éxito!, 3 jul, Hola, Alejandro Quintero ¡Comunidad creada con éxito! Ahora, empieza a compartir contenido para acercarte aún más a tu audiencia. Comunidad - chaos magick Hotmart Club Alejandro Quintero Acceder a la." [ref=f71e839] [cursor=pointer]:
+                    - gridcell [ref=f71e840]
+                    - gridcell "no leída, Hotmart 2, Hotmart | ¡Comunidad creada con éxito!, 3 jul, Hola, Alejandro Quintero ¡Comunidad creada con éxito! Ahora, empieza a compartir contenido para acercarte aún más a tu audiencia. Comunidad - chaos magick Hotmart Club Alejandro Quintero Acceder a la." [ref=f71e841]:
+                      - checkbox "no leída, Hotmart 2, Hotmart | ¡Comunidad creada con éxito!, 3 jul, Hola, Alejandro Quintero ¡Comunidad creada con éxito! Ahora, empieza a compartir contenido para acercarte aún más a tu audiencia. Comunidad - chaos magick Hotmart Club Alejandro Quintero Acceder a la." [ref=f71e842]
+                    - gridcell [ref=f71e843]:
+                      - button "Sin destacar" [ref=f71e844]
+                    - gridcell "Hotmart 2" [ref=f71e845]:
+                      - generic [ref=f71e846]:
+                        - generic [ref=f71e847]: Hotmart
+                        - generic [ref=f71e848]: "2"
+                    - gridcell [ref=f71e849]:
+                      - link "Hotmart | ¡Comunidad creada con éxito! - Hola, Alejandro Quintero ¡Comunidad creada con éxito! Ahora, empieza a compartir contenido para acercarte aún más a tu audiencia. Comunidad - chaos magick Hotmart Club Alejandro Quintero Acceder a la" [ref=f71e850]:
+                        - generic [ref=f71e851]:
+                          - generic [ref=f71e852]: Hotmart | ¡Comunidad creada con éxito!
+                          - generic [ref=f71e854]:
+                            - generic [ref=f71e855]: "-"
+                            - text: Hola, Alejandro Quintero ¡Comunidad creada con éxito! Ahora, empieza a compartir contenido para acercarte aún más a tu audiencia. Comunidad - chaos magick Hotmart Club Alejandro Quintero Acceder a la
+                    - gridcell [ref=f71e856]
+                    - gridcell "vie, 3 jul 2026, 2:56 p.m." [ref=f71e857]:
+                      - generic "vie, 3 jul 2026, 2:56 p.m." [ref=f71e858]: 3 jul
+                    - gridcell
+                  - 'row "no leída, Hotmart, Hotmart | Nuevo acceso detectado, 3 jul, Hola, Alejandro Quintero Detectamos un nuevo acceso en tu cuenta: Cuándo: 3/7/26 a las 15:15 Si este acceso ha sido realizado por ti, ignora este mensaje. En caso contrario, te recomendamos que cambies." [ref=f71e859] [cursor=pointer]':
+                    - gridcell [ref=f71e860]
+                    - 'gridcell "no leída, Hotmart, Hotmart | Nuevo acceso detectado, 3 jul, Hola, Alejandro Quintero Detectamos un nuevo acceso en tu cuenta: Cuándo: 3/7/26 a las 15:15 Si este acceso ha sido realizado por ti, ignora este mensaje. En caso contrario, te recomendamos que cambies." [ref=f71e861]':
+                      - 'checkbox "no leída, Hotmart, Hotmart | Nuevo acceso detectado, 3 jul, Hola, Alejandro Quintero Detectamos un nuevo acceso en tu cuenta: Cuándo: 3/7/26 a las 15:15 Si este acceso ha sido realizado por ti, ignora este mensaje. En caso contrario, te recomendamos que cambies." [ref=f71e862]'
+                    - gridcell [ref=f71e863]:
+                      - button "Sin destacar" [ref=f71e864]
+                    - gridcell "Hotmart" [ref=f71e865]
+                    - gridcell [ref=f71e868]:
+                      - 'link "Hotmart | Nuevo acceso detectado - Hola, Alejandro Quintero Detectamos un nuevo acceso en tu cuenta: Cuándo: 3/7/26 a las 15:15 Si este acceso ha sido realizado por ti, ignora este mensaje. En caso contrario, te recomendamos que cambies" [ref=f71e869]':
+                        - generic [ref=f71e870]:
+                          - generic [ref=f71e871]: Hotmart | Nuevo acceso detectado
+                          - generic [ref=f71e873]:
+                            - generic [ref=f71e874]: "-"
+                            - text: "Hola, Alejandro Quintero Detectamos un nuevo acceso en tu cuenta: Cuándo: 3/7/26 a las 15:15 Si este acceso ha sido realizado por ti, ignora este mensaje. En caso contrario, te recomendamos que cambies"
+                    - gridcell [ref=f71e875]
+                    - gridcell "vie, 3 jul 2026, 1:16 p.m." [ref=f71e876]:
+                      - generic "vie, 3 jul 2026, 1:16 p.m." [ref=f71e877]: 3 jul
+                    - gridcell
+                  - 'row "no leída, FormSubmit 2, Action Required: Activate FormSubmit on https://cha0smagicklabs.com/, 1 jul, Thank you for using FormSubmit! You''re only one step away from making forms on https://cha0smagicklabs.com/ functional. Click ''Activate Form'' to begin receiving submissions from this form.." [ref=f71e878] [cursor=pointer]':
+                    - gridcell [ref=f71e879]
+                    - 'gridcell "no leída, FormSubmit 2, Action Required: Activate FormSubmit on https://cha0smagicklabs.com/, 1 jul, Thank you for using FormSubmit! You''re only one step away from making forms on https://cha0smagicklabs.com/ functional. Click ''Activate Form'' to begin receiving submissions from this form.." [ref=f71e880]':
+                      - 'checkbox "no leída, FormSubmit 2, Action Required: Activate FormSubmit on https://cha0smagicklabs.com/, 1 jul, Thank you for using FormSubmit! You''re only one step away from making forms on https://cha0smagicklabs.com/ functional. Click ''Activate Form'' to begin receiving submissions from this form.." [ref=f71e881]'
+                    - gridcell [ref=f71e882]:
+                      - button "Sin destacar" [ref=f71e883]
+                    - gridcell "FormSubmit 2" [ref=f71e884]:
+                      - generic [ref=f71e885]:
+                        - generic [ref=f71e886]: FormSubmit
+                        - generic [ref=f71e887]: "2"
+                    - gridcell [ref=f71e888]:
+                      - 'link "Action Required: Activate FormSubmit on https://cha0smagicklabs.com/ - Thank you for using FormSubmit! You''re only one step away from making forms on https://cha0smagicklabs.com/ functional. Click ''Activate Form'' to begin receiving submissions from this form." [ref=f71e889]':
+                        - generic [ref=f71e890]:
+                          - generic [ref=f71e891]: "Action Required: Activate FormSubmit on https://cha0smagicklabs.com/"
+                          - generic [ref=f71e893]:
+                            - generic [ref=f71e894]: "-"
+                            - text: Thank you for using FormSubmit! You're only one step away from making forms on https://cha0smagicklabs.com/ functional. Click 'Activate Form' to begin receiving submissions from this form.
+                    - gridcell [ref=f71e895]
+                    - gridcell "mié, 1 jul 2026, 10:17 p.m." [ref=f71e896]:
+                      - generic "mié, 1 jul 2026, 10:17 p.m." [ref=f71e897]: 1 jul
+                    - gridcell
+                  - row "no leída, Semrush, Welcome to Semrush, 1 jul, Congratulations! Your account is ready ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏." [ref=f71e898] [cursor=pointer]:
+                    - gridcell [ref=f71e899]
+                    - gridcell "no leída, Semrush, Welcome to Semrush, 1 jul, Congratulations! Your account is ready ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏." [ref=f71e900]:
+                      - checkbox "no leída, Semrush, Welcome to Semrush, 1 jul, Congratulations! Your account is ready ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏." [ref=f71e901]
+                    - gridcell [ref=f71e902]:
+                      - button "Sin destacar" [ref=f71e903]
+                    - gridcell "Semrush" [ref=f71e904]
+                    - gridcell [ref=f71e907]:
+                      - link "Welcome to Semrush - Congratulations! Your account is ready ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏" [ref=f71e909]:
+                        - generic [ref=f71e910]:
+                          - generic [ref=f71e911]: Welcome to Semrush
+                          - generic [ref=f71e913]:
+                            - generic [ref=f71e914]: "-"
+                            - text: Congratulations! Your account is ready ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
+                    - gridcell [ref=f71e915]
+                    - gridcell "mié, 1 jul 2026, 8:22 p.m." [ref=f71e916]:
+                      - generic "mié, 1 jul 2026, 8:22 p.m." [ref=f71e917]: 1 jul
+                    - gridcell
+                  - 'row "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 30 jun, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"rinconparanormaloficial.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e918] [cursor=pointer]':
+                    - gridcell [ref=f71e919]
+                    - 'gridcell "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 30 jun, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"rinconparanormaloficial.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e920]':
+                      - 'checkbox "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 30 jun, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"rinconparanormaloficial.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e921]'
+                    - gridcell [ref=f71e922]:
+                      - button "Sin destacar" [ref=f71e923]
+                    - gridcell "Google AdSense" [ref=f71e924]
+                    - gridcell [ref=f71e927]:
+                      - 'link "Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense - Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"rinconparanormaloficial.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar" [ref=f71e928]':
+                        - generic [ref=f71e929]:
+                          - generic [ref=f71e930]: Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense
+                          - generic [ref=f71e932]:
+                            - generic [ref=f71e933]: "-"
+                            - text: "Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"rinconparanormaloficial.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar"
+                    - gridcell [ref=f71e934]
+                    - gridcell "mar, 30 jun 2026, 7:04 a.m." [ref=f71e935]:
+                      - generic "mar, 30 jun 2026, 7:04 a.m." [ref=f71e936]: 30 jun
+                    - gridcell
+                  - 'row "no leída, FormSubmit 5, Action Required: Activate FormSubmit on https://cha0smagicklabs.com/, 29 jun, Thank you for using FormSubmit! You''re only one step away from making forms on https://cha0smagicklabs.com/ functional. Click ''Activate Form'' to begin receiving submissions from this form.." [ref=f71e937] [cursor=pointer]':
+                    - gridcell [ref=f71e938]
+                    - 'gridcell "no leída, FormSubmit 5, Action Required: Activate FormSubmit on https://cha0smagicklabs.com/, 29 jun, Thank you for using FormSubmit! You''re only one step away from making forms on https://cha0smagicklabs.com/ functional. Click ''Activate Form'' to begin receiving submissions from this form.." [ref=f71e939]':
+                      - 'checkbox "no leída, FormSubmit 5, Action Required: Activate FormSubmit on https://cha0smagicklabs.com/, 29 jun, Thank you for using FormSubmit! You''re only one step away from making forms on https://cha0smagicklabs.com/ functional. Click ''Activate Form'' to begin receiving submissions from this form.." [ref=f71e940]'
+                    - gridcell [ref=f71e941]:
+                      - button "Sin destacar" [ref=f71e942]
+                    - gridcell "FormSubmit 5" [ref=f71e943]:
+                      - generic [ref=f71e944]:
+                        - generic [ref=f71e945]: FormSubmit
+                        - generic [ref=f71e946]: "5"
+                    - gridcell [ref=f71e947]:
+                      - 'link "Action Required: Activate FormSubmit on https://cha0smagicklabs.com/ - Thank you for using FormSubmit! You''re only one step away from making forms on https://cha0smagicklabs.com/ functional. Click ''Activate Form'' to begin receiving submissions from this form." [ref=f71e948]':
+                        - generic [ref=f71e949]:
+                          - generic [ref=f71e950]: "Action Required: Activate FormSubmit on https://cha0smagicklabs.com/"
+                          - generic [ref=f71e952]:
+                            - generic [ref=f71e953]: "-"
+                            - text: Thank you for using FormSubmit! You're only one step away from making forms on https://cha0smagicklabs.com/ functional. Click 'Activate Form' to begin receiving submissions from this form.
+                    - gridcell [ref=f71e954]
+                    - gridcell "lun, 29 jun 2026, 1:30 p.m." [ref=f71e955]:
+                      - generic "lun, 29 jun 2026, 1:30 p.m." [ref=f71e956]: 29 jun
+                    - gridcell
+                  - 'row "no leída, Hotmart, Hotmart | Nuevo acceso detectado, 28 jun, Hola, Alejandro Quintero Detectamos un nuevo acceso en tu cuenta: Cuándo: 28/6/26 a las 22:33 Si este acceso ha sido realizado por ti, ignora este mensaje. En caso contrario, te recomendamos que." [ref=f71e957] [cursor=pointer]':
+                    - gridcell [ref=f71e958]
+                    - 'gridcell "no leída, Hotmart, Hotmart | Nuevo acceso detectado, 28 jun, Hola, Alejandro Quintero Detectamos un nuevo acceso en tu cuenta: Cuándo: 28/6/26 a las 22:33 Si este acceso ha sido realizado por ti, ignora este mensaje. En caso contrario, te recomendamos que." [ref=f71e959]':
+                      - 'checkbox "no leída, Hotmart, Hotmart | Nuevo acceso detectado, 28 jun, Hola, Alejandro Quintero Detectamos un nuevo acceso en tu cuenta: Cuándo: 28/6/26 a las 22:33 Si este acceso ha sido realizado por ti, ignora este mensaje. En caso contrario, te recomendamos que." [ref=f71e960]'
+                    - gridcell [ref=f71e961]:
+                      - button "Sin destacar" [ref=f71e962]
+                    - gridcell "Hotmart" [ref=f71e963]
+                    - gridcell [ref=f71e966]:
+                      - 'link "Hotmart | Nuevo acceso detectado - Hola, Alejandro Quintero Detectamos un nuevo acceso en tu cuenta: Cuándo: 28/6/26 a las 22:33 Si este acceso ha sido realizado por ti, ignora este mensaje. En caso contrario, te recomendamos que" [ref=f71e967]':
+                        - generic [ref=f71e968]:
+                          - generic [ref=f71e969]: Hotmart | Nuevo acceso detectado
+                          - generic [ref=f71e971]:
+                            - generic [ref=f71e972]: "-"
+                            - text: "Hola, Alejandro Quintero Detectamos un nuevo acceso en tu cuenta: Cuándo: 28/6/26 a las 22:33 Si este acceso ha sido realizado por ti, ignora este mensaje. En caso contrario, te recomendamos que"
+                    - gridcell [ref=f71e973]
+                    - gridcell "dom, 28 jun 2026, 8:33 p.m." [ref=f71e974]:
+                      - generic "dom, 28 jun 2026, 8:33 p.m." [ref=f71e975]: 28 jun
+                    - gridcell
+                  - row "no leída, Instagram, New login to Instagram from Chrome on Windows, 25 jun, We noticed a new login, cha0smagick.labs We noticed a login from a device you don't usually use. Windows · Chrome · Facatativá, Colombia June 25 at 8:32 AM (PDT) If this was you, you won't be." [ref=f71e976] [cursor=pointer]:
+                    - gridcell [ref=f71e977]
+                    - gridcell "no leída, Instagram, New login to Instagram from Chrome on Windows, 25 jun, We noticed a new login, cha0smagick.labs We noticed a login from a device you don't usually use. Windows · Chrome · Facatativá, Colombia June 25 at 8:32 AM (PDT) If this was you, you won't be." [ref=f71e978]:
+                      - checkbox "no leída, Instagram, New login to Instagram from Chrome on Windows, 25 jun, We noticed a new login, cha0smagick.labs We noticed a login from a device you don't usually use. Windows · Chrome · Facatativá, Colombia June 25 at 8:32 AM (PDT) If this was you, you won't be." [ref=f71e979]
+                    - gridcell [ref=f71e980]:
+                      - button "Sin destacar" [ref=f71e981]
+                    - gridcell "Instagram" [ref=f71e982]
+                    - gridcell [ref=f71e985]:
+                      - link "New login to Instagram from Chrome on Windows - We noticed a new login, cha0smagick.labs We noticed a login from a device you don't usually use. Windows · Chrome · Facatativá, Colombia June 25 at 8:32 AM (PDT) If this was you, you won't be" [ref=f71e987]:
+                        - generic [ref=f71e988]:
+                          - generic [ref=f71e989]: New login to Instagram from Chrome on Windows
+                          - generic [ref=f71e991]:
+                            - generic [ref=f71e992]: "-"
+                            - text: We noticed a new login, cha0smagick.labs We noticed a login from a device you don't usually use. Windows · Chrome · Facatativá, Colombia June 25 at 8:32 AM (PDT) If this was you, you won't be
+                    - gridcell [ref=f71e993]
+                    - gridcell "jue, 25 jun 2026, 10:32 a.m." [ref=f71e994]:
+                      - generic "jue, 25 jun 2026, 10:32 a.m." [ref=f71e995]: 25 jun
+                    - gridcell
+                  - row "Instagram, cha0smagick.labs, we've made it easy to get back on Instagram, 25 jun, Hi cha0smagick.labs, Sorry to hear you're having trouble logging into Instagram. We got a message that you forgot your password. If this was you, you can get right back into your account or reset." [ref=f71e996] [cursor=pointer]:
+                    - gridcell [ref=f71e997]
+                    - gridcell "Instagram, cha0smagick.labs, we've made it easy to get back on Instagram, 25 jun, Hi cha0smagick.labs, Sorry to hear you're having trouble logging into Instagram. We got a message that you forgot your password. If this was you, you can get right back into your account or reset." [ref=f71e998]:
+                      - checkbox "Instagram, cha0smagick.labs, we've made it easy to get back on Instagram, 25 jun, Hi cha0smagick.labs, Sorry to hear you're having trouble logging into Instagram. We got a message that you forgot your password. If this was you, you can get right back into your account or reset." [ref=f71e999]
+                    - gridcell [ref=f71e1000]:
+                      - button "Sin destacar" [ref=f71e1001]
+                    - gridcell "Instagram" [ref=f71e1002]
+                    - gridcell [ref=f71e1005]:
+                      - link "cha0smagick.labs, we've made it easy to get back on Instagram - Hi cha0smagick.labs, Sorry to hear you're having trouble logging into Instagram. We got a message that you forgot your password. If this was you, you can get right back into your account or reset" [ref=f71e1007]:
+                        - generic [ref=f71e1008]:
+                          - generic [ref=f71e1009]: cha0smagick.labs, we've made it easy to get back on Instagram
+                          - generic [ref=f71e1011]:
+                            - generic [ref=f71e1012]: "-"
+                            - text: Hi cha0smagick.labs, Sorry to hear you're having trouble logging into Instagram. We got a message that you forgot your password. If this was you, you can get right back into your account or reset
+                    - gridcell [ref=f71e1013]
+                    - gridcell "jue, 25 jun 2026, 10:31 a.m." [ref=f71e1014]:
+                      - generic "jue, 25 jun 2026, 10:31 a.m." [ref=f71e1015]: 25 jun
+                    - gridcell
+                  - row "no leída, Google, Alerta de seguridad, 25 jun, Nuevo acceso a tu cuenta magiacaoticapractica@gmail.com Detectamos un nuevo acceso a tu Cuenta de Google. Si fuiste tú, no tienes que hacer nada. De lo contrario, te ayudaremos a proteger tu cuenta.." [ref=f71e1016] [cursor=pointer]:
+                    - gridcell [ref=f71e1017]
+                    - gridcell "no leída, Google, Alerta de seguridad, 25 jun, Nuevo acceso a tu cuenta magiacaoticapractica@gmail.com Detectamos un nuevo acceso a tu Cuenta de Google. Si fuiste tú, no tienes que hacer nada. De lo contrario, te ayudaremos a proteger tu cuenta.." [ref=f71e1018]:
+                      - checkbox "no leída, Google, Alerta de seguridad, 25 jun, Nuevo acceso a tu cuenta magiacaoticapractica@gmail.com Detectamos un nuevo acceso a tu Cuenta de Google. Si fuiste tú, no tienes que hacer nada. De lo contrario, te ayudaremos a proteger tu cuenta.." [ref=f71e1019]
+                    - gridcell [ref=f71e1020]:
+                      - button "Sin destacar" [ref=f71e1021]
+                    - gridcell "Google" [ref=f71e1022]
+                    - gridcell [ref=f71e1025]:
+                      - link "Alerta de seguridad - Nuevo acceso a tu cuenta magiacaoticapractica@gmail.com Detectamos un nuevo acceso a tu Cuenta de Google. Si fuiste tú, no tienes que hacer nada. De lo contrario, te ayudaremos a proteger tu cuenta." [ref=f71e1027]:
+                        - generic [ref=f71e1028]:
+                          - generic [ref=f71e1029]: Alerta de seguridad
+                          - generic [ref=f71e1031]:
+                            - generic [ref=f71e1032]: "-"
+                            - text: Nuevo acceso a tu cuenta magiacaoticapractica@gmail.com Detectamos un nuevo acceso a tu Cuenta de Google. Si fuiste tú, no tienes que hacer nada. De lo contrario, te ayudaremos a proteger tu cuenta.
+                    - gridcell [ref=f71e1033]
+                    - gridcell "jue, 25 jun 2026, 10:12 a.m." [ref=f71e1034]:
+                      - generic "jue, 25 jun 2026, 10:12 a.m." [ref=f71e1035]: 25 jun
+                    - gridcell
+                  - row "no leída, Google, Recuperaste correctamente tu Cuenta de Google, 25 jun, Se recuperó la cuenta correctamente magiacaoticapractica@gmail.com Te damos nuevamente la bienvenida a tu cuenta Si crees que no podías acceder a ella porque otra persona hizo cambios, revisa y protege." [ref=f71e1036] [cursor=pointer]:
+                    - gridcell [ref=f71e1037]
+                    - gridcell "no leída, Google, Recuperaste correctamente tu Cuenta de Google, 25 jun, Se recuperó la cuenta correctamente magiacaoticapractica@gmail.com Te damos nuevamente la bienvenida a tu cuenta Si crees que no podías acceder a ella porque otra persona hizo cambios, revisa y protege." [ref=f71e1038]:
+                      - checkbox "no leída, Google, Recuperaste correctamente tu Cuenta de Google, 25 jun, Se recuperó la cuenta correctamente magiacaoticapractica@gmail.com Te damos nuevamente la bienvenida a tu cuenta Si crees que no podías acceder a ella porque otra persona hizo cambios, revisa y protege." [ref=f71e1039]
+                    - gridcell [ref=f71e1040]:
+                      - button "Sin destacar" [ref=f71e1041]
+                    - gridcell "Google" [ref=f71e1042]
+                    - gridcell [ref=f71e1045]:
+                      - link "Recuperaste correctamente tu Cuenta de Google - Se recuperó la cuenta correctamente magiacaoticapractica@gmail.com Te damos nuevamente la bienvenida a tu cuenta Si crees que no podías acceder a ella porque otra persona hizo cambios, revisa y protege" [ref=f71e1047]:
+                        - generic [ref=f71e1048]:
+                          - generic [ref=f71e1049]: Recuperaste correctamente tu Cuenta de Google
+                          - generic [ref=f71e1051]:
+                            - generic [ref=f71e1052]: "-"
+                            - text: Se recuperó la cuenta correctamente magiacaoticapractica@gmail.com Te damos nuevamente la bienvenida a tu cuenta Si crees que no podías acceder a ella porque otra persona hizo cambios, revisa y protege
+                    - gridcell [ref=f71e1053]
+                    - gridcell "jue, 25 jun 2026, 10:12 a.m." [ref=f71e1054]:
+                      - generic "jue, 25 jun 2026, 10:12 a.m." [ref=f71e1055]: 25 jun
+                    - gridcell
+                  - row "no leída, Google, Más información sobre nuestras Condiciones del Servicio actualizadas, 25 jun, magiacaoticapractica@gmail.com Cada un par de años, actualizamos nuestras Condiciones del Servicio. Queremos informarte con anticipación que la próxima actualización será el 30 de julio de 2026. Estos." [ref=f71e1056] [cursor=pointer]:
+                    - gridcell [ref=f71e1057]
+                    - gridcell "no leída, Google, Más información sobre nuestras Condiciones del Servicio actualizadas, 25 jun, magiacaoticapractica@gmail.com Cada un par de años, actualizamos nuestras Condiciones del Servicio. Queremos informarte con anticipación que la próxima actualización será el 30 de julio de 2026. Estos." [ref=f71e1058]:
+                      - checkbox "no leída, Google, Más información sobre nuestras Condiciones del Servicio actualizadas, 25 jun, magiacaoticapractica@gmail.com Cada un par de años, actualizamos nuestras Condiciones del Servicio. Queremos informarte con anticipación que la próxima actualización será el 30 de julio de 2026. Estos." [ref=f71e1059]
+                    - gridcell [ref=f71e1060]:
+                      - button "Sin destacar" [ref=f71e1061]
+                    - gridcell "Google" [ref=f71e1062]
+                    - gridcell [ref=f71e1065]:
+                      - link "Más información sobre nuestras Condiciones del Servicio actualizadas - magiacaoticapractica@gmail.com Cada un par de años, actualizamos nuestras Condiciones del Servicio. Queremos informarte con anticipación que la próxima actualización será el 30 de julio de 2026. Estos" [ref=f71e1066]:
+                        - generic [ref=f71e1067]:
+                          - generic [ref=f71e1068]: Más información sobre nuestras Condiciones del Servicio actualizadas
+                          - generic [ref=f71e1070]:
+                            - generic [ref=f71e1071]: "-"
+                            - text: magiacaoticapractica@gmail.com Cada un par de años, actualizamos nuestras Condiciones del Servicio. Queremos informarte con anticipación que la próxima actualización será el 30 de julio de 2026. Estos
+                    - gridcell [ref=f71e1072]
+                    - gridcell "jue, 25 jun 2026, 12:52 a.m." [ref=f71e1073]:
+                      - generic "jue, 25 jun 2026, 12:52 a.m." [ref=f71e1074]: 25 jun
+                    - gridcell
+                  - 'row "no leída, IARC Content Ratings, IARC Live Rating Notice: Dreamachine: Lucid Dreaming, 24 jun, Live Rating Notice Global Rating ID: 37c01637-cee8-8c6c-8d90-3f52057190fe Product Title: Dreamachine: Lucid Dreaming Company: Cha0smagick Rating Date: Wednesday, June 24, 2026 Storefront: Google Play." [ref=f71e1075] [cursor=pointer]':
+                    - gridcell [ref=f71e1076]
+                    - 'gridcell "no leída, IARC Content Ratings, IARC Live Rating Notice: Dreamachine: Lucid Dreaming, 24 jun, Live Rating Notice Global Rating ID: 37c01637-cee8-8c6c-8d90-3f52057190fe Product Title: Dreamachine: Lucid Dreaming Company: Cha0smagick Rating Date: Wednesday, June 24, 2026 Storefront: Google Play." [ref=f71e1077]':
+                      - 'checkbox "no leída, IARC Content Ratings, IARC Live Rating Notice: Dreamachine: Lucid Dreaming, 24 jun, Live Rating Notice Global Rating ID: 37c01637-cee8-8c6c-8d90-3f52057190fe Product Title: Dreamachine: Lucid Dreaming Company: Cha0smagick Rating Date: Wednesday, June 24, 2026 Storefront: Google Play." [ref=f71e1078]'
+                    - gridcell [ref=f71e1079]:
+                      - button "Sin destacar" [ref=f71e1080]
+                    - gridcell "IARC Content Ratings" [ref=f71e1081]
+                    - gridcell [ref=f71e1084]:
+                      - 'link "IARC Live Rating Notice: Dreamachine: Lucid Dreaming - Live Rating Notice Global Rating ID: 37c01637-cee8-8c6c-8d90-3f52057190fe Product Title: Dreamachine: Lucid Dreaming Company: Cha0smagick Rating Date: Wednesday, June 24, 2026 Storefront: Google Play" [ref=f71e1085]':
+                        - generic [ref=f71e1086]:
+                          - generic [ref=f71e1087]: "IARC Live Rating Notice: Dreamachine: Lucid Dreaming"
+                          - generic [ref=f71e1089]:
+                            - generic [ref=f71e1090]: "-"
+                            - text: "Live Rating Notice Global Rating ID: 37c01637-cee8-8c6c-8d90-3f52057190fe Product Title: Dreamachine: Lucid Dreaming Company: Cha0smagick Rating Date: Wednesday, June 24, 2026 Storefront: Google Play"
+                    - gridcell [ref=f71e1091]
+                    - gridcell "mié, 24 jun 2026, 9:18 a.m." [ref=f71e1092]:
+                      - generic "mié, 24 jun 2026, 9:18 a.m." [ref=f71e1093]: 24 jun
+                    - gridcell
+                  - 'row "no leída, Hotmart, Venta realizada: Tratado de Runas Cazadoras del Caos, 23 jun, ¡Felicidades! Acabas de vender una copia del producto Tratado de Runas Cazadoras del Caos Tú has recibido : US$ 3.49 DATOS DE LA TRANSACCIÓN: Nombre: Laura Mata Caudillo Email: laura.mata@gmail.com." [ref=f71e1094] [cursor=pointer]':
+                    - gridcell [ref=f71e1095]
+                    - 'gridcell "no leída, Hotmart, Venta realizada: Tratado de Runas Cazadoras del Caos, 23 jun, ¡Felicidades! Acabas de vender una copia del producto Tratado de Runas Cazadoras del Caos Tú has recibido : US$ 3.49 DATOS DE LA TRANSACCIÓN: Nombre: Laura Mata Caudillo Email: laura.mata@gmail.com." [ref=f71e1096]':
+                      - 'checkbox "no leída, Hotmart, Venta realizada: Tratado de Runas Cazadoras del Caos, 23 jun, ¡Felicidades! Acabas de vender una copia del producto Tratado de Runas Cazadoras del Caos Tú has recibido : US$ 3.49 DATOS DE LA TRANSACCIÓN: Nombre: Laura Mata Caudillo Email: laura.mata@gmail.com." [ref=f71e1097]'
+                    - gridcell [ref=f71e1098]:
+                      - button "Sin destacar" [ref=f71e1099]
+                    - gridcell "Hotmart" [ref=f71e1100]
+                    - gridcell [ref=f71e1103]:
+                      - 'link "Venta realizada: Tratado de Runas Cazadoras del Caos - ¡Felicidades! Acabas de vender una copia del producto Tratado de Runas Cazadoras del Caos Tú has recibido : US$ 3.49 DATOS DE LA TRANSACCIÓN: Nombre: Laura Mata Caudillo Email: laura.mata@gmail.com" [ref=f71e1104]':
+                        - generic [ref=f71e1105]:
+                          - generic [ref=f71e1106]: "Venta realizada: Tratado de Runas Cazadoras del Caos"
+                          - generic [ref=f71e1108]:
+                            - generic [ref=f71e1109]: "-"
+                            - text: "¡Felicidades! Acabas de vender una copia del producto Tratado de Runas Cazadoras del Caos Tú has recibido : US$ 3.49 DATOS DE LA TRANSACCIÓN: Nombre: Laura Mata Caudillo Email: laura.mata@gmail.com"
+                    - gridcell [ref=f71e1110]
+                    - gridcell "mar, 23 jun 2026, 5:57 p.m." [ref=f71e1111]:
+                      - generic "mar, 23 jun 2026, 5:57 p.m." [ref=f71e1112]: 23 jun
+                    - gridcell
+                  - 'row "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 18 jun, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"cybersecuritytemple.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e1113] [cursor=pointer]':
+                    - gridcell [ref=f71e1114]
+                    - 'gridcell "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 18 jun, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"cybersecuritytemple.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e1115]':
+                      - 'checkbox "no leída, Google AdSense, Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense, 18 jun, Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"cybersecuritytemple.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar." [ref=f71e1116]'
+                    - gridcell [ref=f71e1117]:
+                      - button "Sin destacar" [ref=f71e1118]
+                    - gridcell "Google AdSense" [ref=f71e1119]
+                    - gridcell [ref=f71e1122]:
+                      - 'link "Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense - Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"cybersecuritytemple.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar" [ref=f71e1123]':
+                        - generic [ref=f71e1124]:
+                          - generic [ref=f71e1125]: Debes corregir algunos problemas para que tu sitio web esté preparado para AdSense
+                          - generic [ref=f71e1127]:
+                            - generic [ref=f71e1128]: "-"
+                            - text: "Su ID de editor: pub-3464915461302074 Gracias por enviar su sitio \"cybersecuritytemple.com\" para participar en AdSense. Nuestro equipo revisó su sitio y resolvió que no puede mostrar"
+                    - gridcell [ref=f71e1129]
+                    - gridcell "jue, 18 jun 2026, 7:03 p.m." [ref=f71e1130]:
+                      - generic "jue, 18 jun 2026, 7:03 p.m." [ref=f71e1131]: 18 jun
+                    - gridcell
+                  - row "no leída, Google AdSense, Soluciones expandidas para socios publicitarios en el EEE, el Reino Unido y Suiza, 17 jun, Google está expandiendo sus soluciones de personalización y medición de anuncios para socios en el EEE, el Reino Unido y Suiza‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e1132] [cursor=pointer]:
+                    - gridcell [ref=f71e1133]
+                    - gridcell "no leída, Google AdSense, Soluciones expandidas para socios publicitarios en el EEE, el Reino Unido y Suiza, 17 jun, Google está expandiendo sus soluciones de personalización y medición de anuncios para socios en el EEE, el Reino Unido y Suiza‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e1134]:
+                      - checkbox "no leída, Google AdSense, Soluciones expandidas para socios publicitarios en el EEE, el Reino Unido y Suiza, 17 jun, Google está expandiendo sus soluciones de personalización y medición de anuncios para socios en el EEE, el Reino Unido y Suiza‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌." [ref=f71e1135]
+                    - gridcell [ref=f71e1136]:
+                      - button "Sin destacar" [ref=f71e1137]
+                    - gridcell "Google AdSense" [ref=f71e1138]
+                    - gridcell [ref=f71e1141]:
+                      - link "Soluciones expandidas para socios publicitarios en el EEE, el Reino Unido y Suiza - Google está expandiendo sus soluciones de personalización y medición de anuncios para socios en el EEE, el Reino Unido y Suiza‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌" [ref=f71e1142]:
+                        - generic [ref=f71e1143]:
+                          - generic [ref=f71e1144]: Soluciones expandidas para socios publicitarios en el EEE, el Reino Unido y Suiza
+                          - generic [ref=f71e1146]:
+                            - generic [ref=f71e1147]: "-"
+                            - text: Google está expandiendo sus soluciones de personalización y medición de anuncios para socios en el EEE, el Reino Unido y Suiza‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+                    - gridcell [ref=f71e1148]
+                    - gridcell "mié, 17 jun 2026, 11:35 a.m." [ref=f71e1149]:
+                      - generic "mié, 17 jun 2026, 11:35 a.m." [ref=f71e1150]: 17 jun
+                    - gridcell
+                  - row "no leída, vidIQ, The niche isn't saturated., 16 jun, The generic version is. The specific lane underneath is wide open - here are three ways to claim it. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏." [ref=f71e1151] [cursor=pointer]:
+                    - gridcell [ref=f71e1152]
+                    - gridcell "no leída, vidIQ, The niche isn't saturated., 16 jun, The generic version is. The specific lane underneath is wide open - here are three ways to claim it. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏." [ref=f71e1153]:
+                      - checkbox "no leída, vidIQ, The niche isn't saturated., 16 jun, The generic version is. The specific lane underneath is wide open - here are three ways to claim it. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏." [ref=f71e1154]
+                    - gridcell [ref=f71e1155]:
+                      - button "Sin destacar" [ref=f71e1156]
+                    - gridcell "vidIQ" [ref=f71e1157]
+                    - gridcell [ref=f71e1160]:
+                      - link "The niche isn't saturated. - The generic version is. The specific lane underneath is wide open - here are three ways to claim it. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏" [ref=f71e1162]:
+                        - generic [ref=f71e1163]:
+                          - generic [ref=f71e1164]: The niche isn't saturated.
+                          - generic [ref=f71e1166]:
+                            - generic [ref=f71e1167]: "-"
+                            - text: The generic version is. The specific lane underneath is wide open - here are three ways to claim it. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+                    - gridcell [ref=f71e1168]
+                    - gridcell "mar, 16 jun 2026, 3:21 p.m." [ref=f71e1169]:
+                      - generic "mar, 16 jun 2026, 3:21 p.m." [ref=f71e1170]: 16 jun
+                    - gridcell
+                  - 'row "no leída, Google AdSense, Tenemos buenas noticias: se optimizó su cuenta , 14 jun, Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google." [ref=f71e1171] [cursor=pointer]':
+                    - gridcell [ref=f71e1172]
+                    - 'gridcell "no leída, Google AdSense, Tenemos buenas noticias: se optimizó su cuenta , 14 jun, Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google." [ref=f71e1173]':
+                      - 'checkbox "no leída, Google AdSense, Tenemos buenas noticias: se optimizó su cuenta , 14 jun, Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google." [ref=f71e1174]'
+                    - gridcell [ref=f71e1175]:
+                      - button "Sin destacar" [ref=f71e1176]
+                    - gridcell "Google AdSense" [ref=f71e1177]
+                    - gridcell [ref=f71e1180]:
+                      - 'link "Tenemos buenas noticias: se optimizó su cuenta - Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google" [ref=f71e1182]':
+                        - generic [ref=f71e1183]:
+                          - generic [ref=f71e1184]: "Tenemos buenas noticias: se optimizó su cuenta"
+                          - generic [ref=f71e1186]:
+                            - generic [ref=f71e1187]: "-"
+                            - text: "Su ID de editor: pub-3464915461302074 Iniciar sesión Se implementó la Optimización automática La función Optimización automática ya está completamente habilitada en su cuenta. Esta permite que Google"
+                    - gridcell [ref=f71e1188]
+                    - gridcell "dom, 14 jun 2026, 4:44 a.m." [ref=f71e1189]:
+                      - generic "dom, 14 jun 2026, 4:44 a.m." [ref=f71e1190]: 14 jun
+                    - gridcell
+                  - 'row "no leída, IARC Content Ratings, IARC Live Rating Notice: PSI GYM: Entrena tu Intuición, 11 jun, Live Rating Notice Global Rating ID: 7832ebfa-d361-82d2-8830-3f4805e94bed Product Title: PSI GYM: Entrena tu Intuición Company: Cha0smagick Rating Date: Thursday, June 11, 2026 Storefront: Google Play." [ref=f71e1191] [cursor=pointer]':
+                    - gridcell [ref=f71e1192]
+                    - 'gridcell "no leída, IARC Content Ratings, IARC Live Rating Notice: PSI GYM: Entrena tu Intuición, 11 jun, Live Rating Notice Global Rating ID: 7832ebfa-d361-82d2-8830-3f4805e94bed Product Title: PSI GYM: Entrena tu Intuición Company: Cha0smagick Rating Date: Thursday, June 11, 2026 Storefront: Google Play." [ref=f71e1193]':
+                      - 'checkbox "no leída, IARC Content Ratings, IARC Live Rating Notice: PSI GYM: Entrena tu Intuición, 11 jun, Live Rating Notice Global Rating ID: 7832ebfa-d361-82d2-8830-3f4805e94bed Product Title: PSI GYM: Entrena tu Intuición Company: Cha0smagick Rating Date: Thursday, June 11, 2026 Storefront: Google Play." [ref=f71e1194]'
+                    - gridcell [ref=f71e1195]:
+                      - button "Sin destacar" [ref=f71e1196]
+                    - gridcell "IARC Content Ratings" [ref=f71e1197]
+                    - gridcell [ref=f71e1200]:
+                      - 'link "IARC Live Rating Notice: PSI GYM: Entrena tu Intuición - Live Rating Notice Global Rating ID: 7832ebfa-d361-82d2-8830-3f4805e94bed Product Title: PSI GYM: Entrena tu Intuición Company: Cha0smagick Rating Date: Thursday, June 11, 2026 Storefront: Google Play" [ref=f71e1201]':
+                        - generic [ref=f71e1202]:
+                          - generic [ref=f71e1203]: "IARC Live Rating Notice: PSI GYM: Entrena tu Intuición"
+                          - generic [ref=f71e1205]:
+                            - generic [ref=f71e1206]: "-"
+                            - text: "Live Rating Notice Global Rating ID: 7832ebfa-d361-82d2-8830-3f4805e94bed Product Title: PSI GYM: Entrena tu Intuición Company: Cha0smagick Rating Date: Thursday, June 11, 2026 Storefront: Google Play"
+                    - gridcell [ref=f71e1207]
+                    - gridcell "jue, 11 jun 2026, 3:56 p.m." [ref=f71e1208]:
+                      - generic "jue, 11 jun 2026, 3:56 p.m." [ref=f71e1209]: 11 jun
+                    - gridcell
+          - contentinfo [ref=f71e1211]:
+            - link "Se usó el 96% de 15 GB Sigue el vínculo para administrar el almacenamiento" [ref=f71e1216] [cursor=pointer]:
+              - /url: https://drive.google.com/u/0/settings/storage?hl=es-419&utm_medium=web&utm_source=gmail&utm_campaign=storage_meter&utm_content=storage_very_high
+              - generic [ref=f71e1219]:
+                - generic [ref=f71e1220]: Se usó el 96% de 15 GB
+                - img "Sigue el vínculo para administrar el almacenamiento" [ref=f71e1221]
+            - generic [ref=f71e1225]:
+              - link "Condiciones" [ref=f71e1226] [cursor=pointer]:
+                - /url: https://www.google.com/intl/es-419/policies/terms/
+              - text: ·
+              - link "Privacidad" [ref=f71e1227] [cursor=pointer]:
+                - /url: https://www.google.com/intl/es-419/policies/privacy/
+              - text: ·
+              - link "Políticas de programa" [ref=f71e1228] [cursor=pointer]:
+                - /url: https://www.google.com/gmail/about/policy/
+            - generic [ref=f71e1231]:
+              - generic [ref=f71e1232]: "Última actividad de la cuenta: hace 4 minutos"
+              - link "Detalles" [ref=f71e1233] [cursor=pointer]
+      - generic [ref=f71e1236]:
+        - complementary "Panel lateral" [ref=f71e1237]:
+          - tablist [ref=f71e1239]:
+            - tab "Calendario"
+            - tab "Keep"
+            - tab "Tasks"
+            - tab "Contactos"
+            - separator [disabled] [ref=f71e1244]
+            - tab "Obtener complementos"
+        - generic:
+          - button "Ocultar panel lateral"

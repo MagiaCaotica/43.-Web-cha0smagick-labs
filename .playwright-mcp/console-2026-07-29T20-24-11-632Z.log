@@ -1,0 +1,2 @@
+[    3160ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ https://cdn2.runesoup.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1:1
+[    3648ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://runesoup.com/contact/:0

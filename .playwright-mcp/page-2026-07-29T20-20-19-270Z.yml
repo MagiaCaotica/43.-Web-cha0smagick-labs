@@ -1,0 +1,159 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e2]:
+    - generic [ref=f9e4]:
+      - link [ref=f9e6] [cursor=pointer]:
+        - /url: /
+      - link "Trial 13 days left" [ref=f9e16] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/billing/upgrade?source=sidebar_trial_banner
+        - generic [ref=f9e17]: Trial
+        - generic [ref=f9e22]: 13 days left
+      - list [ref=f9e23]:
+        - link "Dashboard" [ref=f9e24] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/dashboard
+        - link "Subscribers" [ref=f9e30] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/subscribers
+        - link "Campaigns" [ref=f9e36] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+        - link "Automations" [ref=f9e42] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/automations/status/workflows
+        - link "Forms" [ref=f9e50] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/forms
+        - link "Sites" [ref=f9e56] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/sites
+        - link "Products New" [ref=f9e62] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/products
+          - generic [ref=f9e66]:
+            - generic [ref=f9e67]: Products
+            - generic [ref=f9e68]: New
+      - generic [ref=f9e69]:
+        - list [ref=f9e70]:
+          - link "Account settings" [ref=f9e71] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/account/profile
+          - link "Integrations" [ref=f9e77] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/integrations
+          - link "File manager" [ref=f9e83] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/file-manager
+          - link "My templates" [ref=f9e89] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/templates
+        - list [ref=f9e95]:
+          - listitem [ref=f9e98] [cursor=pointer]:
+            - link "Partner offers" [ref=f9e99]:
+              - /url: https://dashboard.mailerlite.com/partner-perks
+          - listitem [ref=f9e103] [cursor=pointer]:
+            - link "Refer a friend" [ref=f9e104]:
+              - /url: https://dashboard.mailerlite.com/refer
+    - generic [ref=f9e106]:
+      - generic [ref=f9e108]:
+        - generic [ref=f9e109]:
+          - generic [ref=f9e116] [cursor=pointer]:
+            - generic [ref=f9e117]: Cha0smagick LABS
+            - generic [ref=f9e118]: 14-day trial
+          - link [ref=f9e124] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/billing/upgrade?source=navbar_primary_button
+        - generic [ref=f9e130]:
+          - generic [ref=f9e131] [cursor=pointer]: Help
+          - generic [ref=f9e149] [cursor=pointer]:
+            - generic [ref=f9e150]: "Magia Caotica: Magia del Caos Práctica"
+            - generic [ref=f9e151]: magiacaoticapractica@gmail.com
+      - main [ref=f9e157]:
+        - generic [ref=f9e158]:
+          - generic [ref=f9e159]:
+            - generic [ref=f9e160]:
+              - heading "Automations" [level=1] [ref=f9e162]
+              - link "New automation" [ref=f9e164] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/automations/create
+            - navigation "Tabs" [ref=f9e168]:
+              - link "Workflows 2" [ref=f9e169] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/automations/status/workflows
+                - generic [ref=f9e172]:
+                  - generic [ref=f9e173]: Workflows
+                  - generic [ref=f9e174]: "2"
+              - link "Drafts 1" [ref=f9e175] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/automations/status/drafts
+                - generic [ref=f9e178]:
+                  - generic [ref=f9e179]: Drafts
+                  - generic [ref=f9e180]: "1"
+          - generic [ref=f9e184]:
+            - generic [ref=f9e186]:
+              - generic [ref=f9e187]:
+                - generic [ref=f9e189]:
+                  - checkbox "Select all" [ref=f9e190]
+                  - generic [ref=f9e191]: Select all
+                - generic [ref=f9e194]:
+                  - button "Filter" [ref=f9e198] [cursor=pointer]
+                  - button "All" [ref=f9e207] [cursor=pointer]
+              - generic [ref=f9e217]:
+                - generic [ref=f9e219]:
+                  - textbox "Search automation" [ref=f9e220]
+                  - button [ref=f9e222] [cursor=pointer]
+                - generic [ref=f9e226]:
+                  - generic [ref=f9e227]: Date created
+                  - button [ref=f9e238] [cursor=pointer]
+            - generic [ref=f9e243]:
+              - generic [ref=f9e244]:
+                - checkbox [ref=f9e248]
+                - generic [ref=f9e249]:
+                  - generic [ref=f9e250]:
+                    - button [ref=f9e251] [cursor=pointer]
+                    - generic [ref=f9e255]:
+                      - generic [ref=f9e256]:
+                        - generic [ref=f9e257]: Active
+                        - heading "ES Lead Magnet - Guia Magia Caos Workflow" [level=3] [ref=f9e261]
+                        - paragraph [ref=f9e262]:
+                          - generic [ref=f9e263]:
+                            - generic [ref=f9e264]: Created a day ago
+                            - generic [ref=f9e270]:
+                              - text: When subscriber completes a form
+                              - link "ES Lead Magnet - Guia Magia Caos" [ref=f9e272] [cursor=pointer]:
+                                - /url: /forms/194257833015903279/overview
+                      - generic [ref=f9e273]:
+                        - link "View report" [ref=f9e274] [cursor=pointer]:
+                          - /url: /automations/194262410018686857
+                        - button "Pause" [ref=f9e278] [cursor=pointer]
+                        - button [ref=f9e285] [cursor=pointer]
+                  - generic [ref=f9e290]:
+                    - generic [ref=f9e291]:
+                      - generic [ref=f9e292]: In progress
+                      - link "0" [ref=f9e295] [cursor=pointer]:
+                        - /url: /automations/194262410018686857/activity?filter[status]=active
+                    - generic [ref=f9e297]:
+                      - generic [ref=f9e298]: Completed
+                      - link "0" [ref=f9e301] [cursor=pointer]:
+                        - /url: /automations/194262410018686857/activity?filter[status]=completed
+              - generic [ref=f9e303]:
+                - checkbox [ref=f9e307]
+                - generic [ref=f9e308]:
+                  - generic [ref=f9e309]:
+                    - button [ref=f9e310] [cursor=pointer]
+                    - generic [ref=f9e314]:
+                      - generic [ref=f9e315]:
+                        - generic [ref=f9e316]: Active
+                        - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=3] [ref=f9e320]
+                        - paragraph [ref=f9e321]:
+                          - generic [ref=f9e322]:
+                            - generic [ref=f9e323]: Created a day ago
+                            - generic [ref=f9e329]:
+                              - text: When subscriber completes a form
+                              - link "EN Lead Magnet - Chaos Magick Guide" [ref=f9e331] [cursor=pointer]:
+                                - /url: /forms/194257832689796115/overview
+                      - generic [ref=f9e332]:
+                        - link "View report" [ref=f9e333] [cursor=pointer]:
+                          - /url: /automations/194259024266397145
+                        - button "Pause" [ref=f9e337] [cursor=pointer]
+                        - button [ref=f9e344] [cursor=pointer]
+                  - generic [ref=f9e349]:
+                    - generic [ref=f9e350]:
+                      - generic [ref=f9e351]: In progress
+                      - link "0" [ref=f9e354] [cursor=pointer]:
+                        - /url: /automations/194259024266397145/activity?filter[status]=active
+                    - generic [ref=f9e356]:
+                      - generic [ref=f9e357]: Completed
+                      - link "1" [ref=f9e360] [cursor=pointer]:
+                        - /url: /automations/194259024266397145/activity?filter[status]=completed
+            - generic [ref=f9e364]:
+              - paragraph [ref=f9e366]: Showing 1 to 2 of 2 results
+              - generic [ref=f9e369]:
+                - button "Previous" [disabled] [ref=f9e370]
+                - button "Next" [disabled] [ref=f9e372]
+  - iframe [ref=f9e374]:
+    
