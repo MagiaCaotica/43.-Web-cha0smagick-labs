@@ -1,2 +1,0 @@
-[     424ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://dashboard.mailerlite.com/forms/embedded/I95d94:0
-[     480ms] [ERROR] CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token @ https://assets.mailerlite.com/build/assets/app-CeqzIG7g.js:1

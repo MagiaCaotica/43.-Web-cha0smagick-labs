@@ -4,7 +4,7 @@
  */
 const BRAIN = require('./bot-brain');
 const { askGroq, needsGroq } = require('./groq-ai');
-const GROQ_API_KEY = process.env.GROQ_API_KEY || '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';
+const GROQ_API_KEY = process.env.GROQ_API_KEY || 'gsk_your_groq_api_key_here';
 
 BRAIN.helpers.groqAsk = askGroq;
 

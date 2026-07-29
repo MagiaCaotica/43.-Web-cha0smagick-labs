@@ -1,3 +1,0 @@
-[    1916ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ https://app.kit.com/users/login:0
-[    2538ms] [WARNING] [Intercom] The App ID in your code snippet has not been set. Set it to your App ID found in settings to complete installation: https://app.intercom.com/a/apps/_/settings/web @ https://js.intercomcdn.com/frame-modern.d2ee85d7.js:0
-[   28188ms] [WARNING] [Intercom] The App ID in your code snippet has not been set. Set it to your App ID found in settings to complete installation: https://app.intercom.com/a/apps/_/settings/web @ https://js.intercomcdn.com/frame-modern.d2ee85d7.js:0

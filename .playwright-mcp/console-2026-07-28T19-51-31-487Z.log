@@ -1,2 +1,0 @@
-[     480ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://dashboard.mailerlite.com/account/2539880/campaigns/workflows/id/194259024266397145/edit:0
-[     562ms] [ERROR] CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token @ https://assets.mailerlite.com/build/assets/app-CeqzIG7g.js:1

@@ -1,1 +1,0 @@
-[![Demons | Succubus | Ghosts | Spirits - Spiritlover](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0JnlQ9XR5piDKaT7hOlZPrjqpYZGmeD5KVe7OnpDAh71LdlXAxOmjZHOdSQk7fe2dGlI_9JFmBt0NZMDzNItKb4szAlyvH_wozTJmW9NTazVjuEz9gOb3bdLykV0o0ePR4KGS6X0UCpA/s1600/sl_logo.png)](https://www.spiritlover.com/ "Demons | Succubus | Ghosts | Spirits - Spiritlover")

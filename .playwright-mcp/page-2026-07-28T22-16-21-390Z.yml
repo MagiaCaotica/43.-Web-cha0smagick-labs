@@ -1,9 +1,0 @@
-- generic [ref=f21e2]:
-  - generic [ref=f21e3]: No se encontró la URL solicitada en este servidor.
-  - generic [ref=f21e4]:
-    - link "Google Play":
-      - /url: /store
-      - img "Google Play" [ref=f21e5] [cursor=pointer]
-    - generic [ref=f21e6]:
-      - textbox [ref=f21e7]
-      - button "Buscar" [ref=f21e8]
