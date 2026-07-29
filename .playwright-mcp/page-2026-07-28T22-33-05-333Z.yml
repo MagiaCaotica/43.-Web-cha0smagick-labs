@@ -1,0 +1,1016 @@
+- generic [active] [ref=f26e1]:
+  - banner [ref=f26e2]:
+    - link "ir al contenido" [ref=f26e3] [cursor=pointer]:
+      - /url: "#content"
+    - generic [ref=f26e5]:
+      - button "GET NEW REDDIT" [ref=f26e6] [cursor=pointer]
+      - generic [ref=f26e7]: mis subreddits
+      - generic [ref=f26e9]:
+        - list [ref=f26e10]:
+          - listitem [ref=f26e11]:
+            - link "inicio" [ref=f26e12] [cursor=pointer]:
+              - /url: https://www.reddit.com/
+          - listitem [ref=f26e13]:
+            - text: "-"
+            - link "popular" [ref=f26e14] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/popular/
+          - listitem [ref=f26e15]:
+            - text: "-"
+            - link "todos" [ref=f26e16] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/all/
+          - listitem [ref=f26e17]:
+            - text: "-"
+            - link "moderador" [ref=f26e18] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/mod
+          - listitem [ref=f26e19]:
+            - text: "-"
+            - link "users" [ref=f26e20] [cursor=pointer]:
+              - /url: https://www.reddit.com/users/
+        - text: "|"
+        - list [ref=f26e21]:
+          - listitem [ref=f26e22]:
+            - link "pcmasterrace" [ref=f26e23] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/pcmasterrace/
+          - listitem [ref=f26e24]:
+            - text: "-"
+            - link "wallstreetbets" [ref=f26e25] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/wallstreetbets/
+          - listitem [ref=f26e26]:
+            - text: "-"
+            - link "PublicFreakout" [ref=f26e27] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/PublicFreakout/
+          - listitem [ref=f26e28]:
+            - text: "-"
+            - link "buildapc" [ref=f26e29] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/buildapc/
+          - listitem [ref=f26e30]:
+            - text: "-"
+            - link "Steam" [ref=f26e31] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Steam/
+          - listitem [ref=f26e32]:
+            - text: "-"
+            - link "personalfinance" [ref=f26e33] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/personalfinance/
+          - listitem [ref=f26e34]:
+            - text: "-"
+            - link "technology" [ref=f26e35] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/technology/
+          - listitem [ref=f26e36]:
+            - text: "-"
+            - link "videos" [ref=f26e37] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/videos/
+          - listitem [ref=f26e38]:
+            - text: "-"
+            - link "legaladvice" [ref=f26e39] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/legaladvice/
+          - listitem [ref=f26e40]:
+            - text: "-"
+            - link "WTF" [ref=f26e41] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/WTF/
+          - listitem [ref=f26e42]:
+            - text: "-"
+            - link "Twitch" [ref=f26e43] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Twitch/
+          - listitem [ref=f26e44]:
+            - text: "-"
+            - link "learnprogramming" [ref=f26e45] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/learnprogramming/
+          - listitem [ref=f26e46]:
+            - text: "-"
+            - link "Scams" [ref=f26e47] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Scams/
+          - listitem [ref=f26e48]:
+            - text: "-"
+            - link "skyrim" [ref=f26e49] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/skyrim/
+          - listitem [ref=f26e50]:
+            - text: "-"
+            - link "skyrimmods" [ref=f26e51] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/skyrimmods/
+          - listitem [ref=f26e52]:
+            - text: "-"
+            - link "dataisbeautiful" [ref=f26e53] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/dataisbeautiful/
+          - listitem [ref=f26e54]:
+            - text: "-"
+            - link "MMA" [ref=f26e55] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/MMA/
+          - listitem [ref=f26e56]:
+            - text: "-"
+            - link "stocks" [ref=f26e57] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/stocks/
+          - listitem [ref=f26e58]:
+            - text: "-"
+            - link "totalwar" [ref=f26e59] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/totalwar/
+          - listitem [ref=f26e60]:
+            - text: "-"
+            - link "Bitcoin" [ref=f26e61] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Bitcoin/
+          - listitem [ref=f26e62]:
+            - text: "-"
+            - link "CryptoCurrency" [ref=f26e63] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/CryptoCurrency/
+          - listitem [ref=f26e64]:
+            - text: "-"
+            - link "UFOs" [ref=f26e65] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/UFOs/
+          - listitem [ref=f26e66]:
+            - text: "-"
+            - link "conspiracy" [ref=f26e67] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/conspiracy/
+          - listitem [ref=f26e68]:
+            - text: "-"
+            - link "Whatcouldgowrong" [ref=f26e69] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Whatcouldgowrong/
+          - listitem [ref=f26e70]:
+            - text: "-"
+            - link "4chan" [ref=f26e71] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/4chan/
+          - listitem [ref=f26e72]:
+            - text: "-"
+            - link "Economics" [ref=f26e73] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Economics/
+          - listitem [ref=f26e74]:
+            - text: "-"
+            - link "horror" [ref=f26e75] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/horror/
+          - listitem [ref=f26e76]:
+            - text: "-"
+            - link "Fallout" [ref=f26e77] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Fallout/
+          - listitem [ref=f26e78]:
+            - text: "-"
+            - link "investing" [ref=f26e79] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/investing/
+          - listitem [ref=f26e80]:
+            - text: "-"
+            - link "programming" [ref=f26e81] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/programming/
+          - listitem [ref=f26e82]:
+            - text: "-"
+            - link "linuxquestions" [ref=f26e83] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/linuxquestions/
+          - listitem [ref=f26e84]:
+            - text: "-"
+            - link "aliens" [ref=f26e85] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/aliens/
+          - listitem [ref=f26e86]:
+            - text: "-"
+            - link "MachineLearning" [ref=f26e87] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/MachineLearning/
+          - listitem [ref=f26e88]:
+            - text: "-"
+            - link "cybersecurity" [ref=f26e89] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/cybersecurity/
+          - listitem [ref=f26e90]:
+            - text: "-"
+            - link "blackmagicfuckery" [ref=f26e91] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/blackmagicfuckery/
+          - listitem [ref=f26e92]:
+            - text: "-"
+            - link "nosleep" [ref=f26e93] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/nosleep/
+          - listitem [ref=f26e94]:
+            - text: "-"
+            - link "androidapps" [ref=f26e95] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/androidapps/
+          - listitem [ref=f26e96]:
+            - text: "-"
+            - link "HighStrangeness" [ref=f26e97] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/HighStrangeness/
+          - listitem [ref=f26e98]:
+            - text: "-"
+            - link "creepy" [ref=f26e99] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/creepy/
+          - listitem [ref=f26e100]:
+            - text: "-"
+            - link "hacking" [ref=f26e101] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/hacking/
+          - listitem [ref=f26e102]:
+            - text: "-"
+            - link "Boxing" [ref=f26e103] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Boxing/
+          - listitem [ref=f26e104]:
+            - text: "-"
+            - link "wizardposting" [ref=f26e105] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/wizardposting/
+          - listitem [ref=f26e106]:
+            - text: "-"
+            - link "baldursgate" [ref=f26e107] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/baldursgate/
+          - listitem [ref=f26e108]:
+            - text: "-"
+            - link "UnresolvedMysteries" [ref=f26e109] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/UnresolvedMysteries/
+          - listitem [ref=f26e110]:
+            - text: "-"
+            - link "speedrun" [ref=f26e111] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/speedrun/
+          - listitem [ref=f26e112]:
+            - text: "-"
+            - link "StockMarket" [ref=f26e113] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/StockMarket/
+          - listitem [ref=f26e114]:
+            - text: "-"
+            - link "javascript" [ref=f26e115] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/javascript/
+          - listitem [ref=f26e116]:
+            - text: "-"
+            - link "hajimenoippo" [ref=f26e117] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/hajimenoippo/
+          - listitem [ref=f26e118]:
+            - text: "-"
+            - link "Cyberpunk" [ref=f26e119] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Cyberpunk/
+          - listitem [ref=f26e120]:
+            - text: "-"
+            - link "Colombia" [ref=f26e121] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Colombia/
+          - listitem [ref=f26e122]:
+            - text: "-"
+            - link "softwaregore" [ref=f26e123] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/softwaregore/
+          - listitem [ref=f26e124]:
+            - text: "-"
+            - link "ArtefactPorn" [ref=f26e125] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/ArtefactPorn/
+          - listitem [ref=f26e126]:
+            - text: "-"
+            - link "Documentaries" [ref=f26e127] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Documentaries/
+          - listitem [ref=f26e128]:
+            - text: "-"
+            - link "morbidquestions" [ref=f26e129] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/morbidquestions/
+          - listitem [ref=f26e130]:
+            - text: "-"
+            - link "HowToHack" [ref=f26e131] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/HowToHack/
+          - listitem [ref=f26e132]:
+            - text: "-"
+            - link "CryptoMoonShots" [ref=f26e133] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/CryptoMoonShots/
+          - listitem [ref=f26e134]:
+            - text: "-"
+            - link "AskNetsec" [ref=f26e135] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/AskNetsec/
+          - listitem [ref=f26e136]:
+            - text: "-"
+            - link "TradingView" [ref=f26e137] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/TradingView/
+          - listitem [ref=f26e138]:
+            - text: "-"
+            - link "WhiteWolfRPG" [ref=f26e139] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/WhiteWolfRPG/
+          - listitem [ref=f26e140]:
+            - text: "-"
+            - link "Paranormal" [ref=f26e141] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Paranormal/
+          - listitem [ref=f26e142]:
+            - text: "-"
+            - link "Jung" [ref=f26e143] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Jung/
+          - listitem [ref=f26e144]:
+            - text: "-"
+            - link "Glitch_in_the_Matrix" [ref=f26e145] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Glitch_in_the_Matrix/
+          - listitem [ref=f26e146]:
+            - text: "-"
+            - link "gambling" [ref=f26e147] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/gambling/
+          - listitem [ref=f26e148]:
+            - text: "-"
+            - link "whatsthisrock" [ref=f26e149] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/whatsthisrock/
+          - listitem [ref=f26e150]:
+            - text: "-"
+            - link "astrology" [ref=f26e151] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/astrology/
+          - listitem [ref=f26e152]:
+            - text: "-"
+            - link "dogecoin" [ref=f26e153] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/dogecoin/
+          - listitem [ref=f26e154]:
+            - text: "-"
+            - link "AskOuija" [ref=f26e155] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/AskOuija/
+          - listitem [ref=f26e156]:
+            - text: "-"
+            - link "pennystocks" [ref=f26e157] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/pennystocks/
+          - listitem [ref=f26e158]:
+            - text: "-"
+            - link "occult" [ref=f26e159] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/occult/
+          - listitem [ref=f26e160]:
+            - text: "-"
+            - link "witchcraft" [ref=f26e161] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/witchcraft/
+          - listitem [ref=f26e162]:
+            - text: "-"
+            - link "ethtrader" [ref=f26e163] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/ethtrader/
+          - listitem [ref=f26e164]:
+            - text: "-"
+            - link "TOR" [ref=f26e165] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/TOR/
+          - listitem [ref=f26e166]:
+            - text: "-"
+            - link "mythology" [ref=f26e167] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/mythology/
+          - listitem [ref=f26e168]:
+            - text: "-"
+            - link "Lovecraft" [ref=f26e169] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Lovecraft/
+          - listitem [ref=f26e170]:
+            - text: "-"
+            - link "elonmusk" [ref=f26e171] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/elonmusk/
+          - listitem [ref=f26e172]:
+            - text: "-"
+            - link "onions" [ref=f26e173] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/onions/
+          - listitem [ref=f26e174]:
+            - text: "-"
+            - link "BitcoinBeginners" [ref=f26e175] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/BitcoinBeginners/
+          - listitem [ref=f26e176]:
+            - text: "-"
+            - link "tarot" [ref=f26e177] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/tarot/
+          - listitem [ref=f26e178]:
+            - text: "-"
+            - link "Ghosts" [ref=f26e179] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Ghosts/
+          - listitem [ref=f26e180]:
+            - text: "-"
+            - link "skateboarding" [ref=f26e181] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/skateboarding/
+          - listitem [ref=f26e182]:
+            - text: "-"
+            - link "Bogota" [ref=f26e183] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Bogota/
+          - listitem [ref=f26e184]:
+            - text: "-"
+            - link "darknet" [ref=f26e185] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/darknet/
+          - listitem [ref=f26e186]:
+            - text: "-"
+            - link "netsec" [ref=f26e187] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/netsec/
+          - listitem [ref=f26e188]:
+            - text: "-"
+            - link "cardano" [ref=f26e189] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/cardano/
+          - listitem [ref=f26e190]:
+            - text: "-"
+            - link "Paleontology" [ref=f26e191] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Paleontology/
+          - listitem [ref=f26e192]:
+            - text: "-"
+            - link "BlackMetal" [ref=f26e193] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/BlackMetal/
+          - listitem [ref=f26e194]:
+            - text: "-"
+            - link "EmKay" [ref=f26e195] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/EmKay/
+          - listitem [ref=f26e196]:
+            - text: "-"
+            - link "ParanormalEncounters" [ref=f26e197] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/ParanormalEncounters/
+          - listitem [ref=f26e198]:
+            - text: "-"
+            - link "Cryptozoology" [ref=f26e199] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Cryptozoology/
+          - listitem [ref=f26e200]:
+            - text: "-"
+            - link "ColombiaReddit" [ref=f26e201] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/ColombiaReddit/
+          - listitem [ref=f26e202]:
+            - text: "-"
+            - link "masterhacker" [ref=f26e203] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/masterhacker/
+          - listitem [ref=f26e204]:
+            - text: "-"
+            - link "litecoin" [ref=f26e205] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/litecoin/
+          - listitem [ref=f26e206]:
+            - text: "-"
+            - link "CrawlerSightings" [ref=f26e207] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/CrawlerSightings/
+          - listitem [ref=f26e208]:
+            - text: "-"
+            - link "pagan" [ref=f26e209] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/pagan/
+          - listitem [ref=f26e210]:
+            - text: "-"
+            - link "LetsNotMeet" [ref=f26e211] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/LetsNotMeet/
+          - listitem [ref=f26e212]:
+            - text: "-"
+            - link "AstralProjection" [ref=f26e213] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/AstralProjection/
+          - listitem [ref=f26e214]:
+            - text: "-"
+            - link "Hacking_Tutorials" [ref=f26e215] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Hacking_Tutorials/
+          - listitem [ref=f26e216]:
+            - text: "-"
+            - link "creepygaming" [ref=f26e217] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/creepygaming/
+          - listitem [ref=f26e218]:
+            - text: "-"
+            - link "conspiracytheories" [ref=f26e219] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/conspiracytheories/
+          - listitem [ref=f26e220]:
+            - text: "-"
+            - link "GoogleAnalytics" [ref=f26e221] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/GoogleAnalytics/
+          - listitem [ref=f26e222]:
+            - text: "-"
+            - link "Archaeology" [ref=f26e223] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Archaeology/
+          - listitem [ref=f26e224]:
+            - text: "-"
+            - link "btc" [ref=f26e225] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/btc/
+          - listitem [ref=f26e226]:
+            - text: "-"
+            - link "UAP" [ref=f26e227] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/UAP/
+          - listitem [ref=f26e228]:
+            - text: "-"
+            - link "CryptoMarkets" [ref=f26e229] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/CryptoMarkets/
+          - listitem [ref=f26e230]:
+            - text: "-"
+            - link "Malware" [ref=f26e231] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Malware/
+          - listitem [ref=f26e232]:
+            - text: "-"
+            - link "SHIBArmy" [ref=f26e233] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/SHIBArmy/
+          - listitem [ref=f26e234]:
+            - text: "-"
+            - link "fossilid" [ref=f26e235] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/fossilid/
+          - listitem [ref=f26e236]:
+            - text: "-"
+            - link "libros" [ref=f26e237] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/libros/
+          - listitem [ref=f26e238]:
+            - text: "-"
+            - link "instant_regret" [ref=f26e239] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/instant_regret/
+          - listitem [ref=f26e240]:
+            - text: "-"
+            - link "NFT" [ref=f26e241] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/NFT/
+          - listitem [ref=f26e242]:
+            - text: "-"
+            - link "NukesTop5" [ref=f26e243] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/NukesTop5/
+          - listitem [ref=f26e244]:
+            - text: "-"
+            - link "Wicca" [ref=f26e245] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Wicca/
+          - listitem [ref=f26e246]:
+            - text: "-"
+            - link "AbstractArt" [ref=f26e247] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/AbstractArt/
+          - listitem [ref=f26e248]:
+            - text: "-"
+            - link "thelema" [ref=f26e249] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/thelema/
+          - listitem [ref=f26e250]:
+            - text: "-"
+            - link "Arrowheads" [ref=f26e251] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Arrowheads/
+          - listitem [ref=f26e252]:
+            - text: "-"
+            - link "surrealmemes" [ref=f26e253] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/surrealmemes/
+          - listitem [ref=f26e254]:
+            - text: "-"
+            - link "deepweb" [ref=f26e255] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/deepweb/
+          - listitem [ref=f26e256]:
+            - text: "-"
+            - link "AntifascistsofReddit" [ref=f26e257] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/AntifascistsofReddit/
+          - listitem [ref=f26e258]:
+            - text: "-"
+            - link "Twitch_Startup" [ref=f26e259] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Twitch_Startup/
+          - listitem [ref=f26e260]:
+            - text: "-"
+            - link "GetMoreViewsYT" [ref=f26e261] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/GetMoreViewsYT/
+          - listitem [ref=f26e262]:
+            - text: "-"
+            - link "projectsession" [ref=f26e263] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/projectsession/
+          - listitem [ref=f26e264]:
+            - text: "-"
+            - link "magick" [ref=f26e265] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/magick/
+          - listitem [ref=f26e266]:
+            - text: "-"
+            - link "chaosmagick" [ref=f26e267] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/chaosmagick/
+          - listitem [ref=f26e268]:
+            - text: "-"
+            - link "Humanoidencounters" [ref=f26e269] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Humanoidencounters/
+          - listitem [ref=f26e270]:
+            - text: "-"
+            - link "Ghoststories" [ref=f26e271] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Ghoststories/
+          - listitem [ref=f26e272]:
+            - text: "-"
+            - link "Shamanism" [ref=f26e273] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Shamanism/
+          - listitem [ref=f26e274]:
+            - text: "-"
+            - link "Thetruthishere" [ref=f26e275] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Thetruthishere/
+          - listitem [ref=f26e276]:
+            - text: "-"
+            - link "Scary" [ref=f26e277] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Scary/
+          - listitem [ref=f26e278]:
+            - text: "-"
+            - link "CryptoTechnology" [ref=f26e279] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/CryptoTechnology/
+          - listitem [ref=f26e280]:
+            - text: "-"
+            - link "CreepyWikipedia" [ref=f26e281] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/CreepyWikipedia/
+          - listitem [ref=f26e282]:
+            - text: "-"
+            - link "securityCTF" [ref=f26e283] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/securityCTF/
+          - listitem [ref=f26e284]:
+            - text: "-"
+            - link "skinwalkers" [ref=f26e285] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/skinwalkers/
+          - listitem [ref=f26e286]:
+            - text: "-"
+            - link "death" [ref=f26e287] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/death/
+          - listitem [ref=f26e288]:
+            - text: "-"
+            - link "freebooks" [ref=f26e289] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/freebooks/
+          - listitem [ref=f26e290]:
+            - text: "-"
+            - link "ubius" [ref=f26e291] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/ubius/
+          - listitem [ref=f26e292]:
+            - text: "-"
+            - link "cryptocurrencymemes" [ref=f26e293] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/cryptocurrencymemes/
+          - listitem [ref=f26e294]:
+            - text: "-"
+            - link "realwitchcraft" [ref=f26e295] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/realwitchcraft/
+          - listitem [ref=f26e296]:
+            - text: "-"
+            - link "coolgithubprojects" [ref=f26e297] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/coolgithubprojects/
+          - listitem [ref=f26e298]:
+            - text: "-"
+            - link "CyberSecurityAdvice" [ref=f26e299] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/CyberSecurityAdvice/
+          - listitem [ref=f26e300]:
+            - text: "-"
+            - link "Missing411" [ref=f26e301] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Missing411/
+          - listitem [ref=f26e302]:
+            - text: "-"
+            - link "ArtBell" [ref=f26e303] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/ArtBell/
+          - listitem [ref=f26e304]:
+            - text: "-"
+            - link "HistoriasdeTerror" [ref=f26e305] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/HistoriasdeTerror/
+          - listitem [ref=f26e306]:
+            - text: "-"
+            - link "UnusualInstruments" [ref=f26e307] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/UnusualInstruments/
+          - listitem [ref=f26e308]:
+            - text: "-"
+            - link "demons" [ref=f26e309] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/demons/
+          - listitem [ref=f26e310]:
+            - text: "-"
+            - link "blackmagic" [ref=f26e311] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/blackmagic/
+          - listitem [ref=f26e312]:
+            - text: "-"
+            - link "creepyvideos" [ref=f26e313] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/creepyvideos/
+          - listitem [ref=f26e314]:
+            - text: "-"
+            - link "huggingface" [ref=f26e315] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/huggingface/
+          - listitem [ref=f26e316]:
+            - text: "-"
+            - link "druidism" [ref=f26e317] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/druidism/
+          - listitem [ref=f26e318]:
+            - text: "-"
+            - link "EsotericOccult" [ref=f26e319] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/EsotericOccult/
+          - listitem [ref=f26e320]:
+            - text: "-"
+            - link "cellular_automata" [ref=f26e321] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/cellular_automata/
+          - listitem [ref=f26e322]:
+            - text: "-"
+            - link "DIY_tech" [ref=f26e323] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/DIY_tech/
+          - listitem [ref=f26e324]:
+            - text: "-"
+            - link "Pentesting" [ref=f26e325] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Pentesting/
+          - listitem [ref=f26e326]:
+            - text: "-"
+            - link "solorpgplay" [ref=f26e327] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/solorpgplay/
+          - listitem [ref=f26e328]:
+            - text: "-"
+            - link "GeometryIsNeat" [ref=f26e329] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/GeometryIsNeat/
+          - listitem [ref=f26e330]:
+            - text: "-"
+            - link "PixelArtTutorials" [ref=f26e331] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/PixelArtTutorials/
+          - listitem [ref=f26e332]:
+            - text: "-"
+            - link "Digibyte" [ref=f26e333] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Digibyte/
+          - listitem [ref=f26e334]:
+            - text: "-"
+            - link "SacredGeometry" [ref=f26e335] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/SacredGeometry/
+          - listitem [ref=f26e336]:
+            - text: "-"
+            - link "precognition" [ref=f26e337] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/precognition/
+          - listitem [ref=f26e338]:
+            - text: "-"
+            - link "Archeology" [ref=f26e339] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Archeology/
+          - listitem [ref=f26e340]:
+            - text: "-"
+            - link "Masks" [ref=f26e341] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Masks/
+          - listitem [ref=f26e342]:
+            - text: "-"
+            - link "drawings" [ref=f26e343] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/drawings/
+          - listitem [ref=f26e344]:
+            - text: "-"
+            - link "skulls" [ref=f26e345] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/skulls/
+          - listitem [ref=f26e346]:
+            - text: "-"
+            - link "AskOccult" [ref=f26e347] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/AskOccult/
+          - listitem [ref=f26e348]:
+            - text: "-"
+            - link "RuinedMyDay" [ref=f26e349] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/RuinedMyDay/
+          - listitem [ref=f26e350]:
+            - text: "-"
+            - link "Tarots" [ref=f26e351] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Tarots/
+          - listitem [ref=f26e352]:
+            - text: "-"
+            - link "blogger" [ref=f26e353] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/blogger/
+          - listitem [ref=f26e354]:
+            - text: "-"
+            - link "ouijaboards" [ref=f26e355] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/ouijaboards/
+          - listitem [ref=f26e356]:
+            - text: "-"
+            - link "Divination" [ref=f26e357] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Divination/
+          - listitem [ref=f26e358]:
+            - text: "-"
+            - link "goetia" [ref=f26e359] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/goetia/
+          - listitem [ref=f26e360]:
+            - text: "-"
+            - link "Infosec" [ref=f26e361] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Infosec/
+          - listitem [ref=f26e362]:
+            - text: "-"
+            - link "crypto_currency" [ref=f26e363] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/crypto_currency/
+          - listitem [ref=f26e364]:
+            - text: "-"
+            - link "Sumerian" [ref=f26e365] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Sumerian/
+          - listitem [ref=f26e366]:
+            - text: "-"
+            - link "BONKcoin" [ref=f26e367] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/BONKcoin/
+          - listitem [ref=f26e368]:
+            - text: "-"
+            - link "Miedo" [ref=f26e369] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Miedo/
+          - listitem [ref=f26e370]:
+            - text: "-"
+            - link "chillsnarrator" [ref=f26e371] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/chillsnarrator/
+          - listitem [ref=f26e372]:
+            - text: "-"
+            - link "pwned" [ref=f26e373] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/pwned/
+          - listitem [ref=f26e374]:
+            - text: "-"
+            - link "blogspot" [ref=f26e375] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/blogspot/
+          - listitem [ref=f26e376]:
+            - text: "-"
+            - link "Hacking_Tricks" [ref=f26e377] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Hacking_Tricks/
+          - listitem [ref=f26e378]:
+            - text: "-"
+            - link "duckstation" [ref=f26e379] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/duckstation/
+          - listitem [ref=f26e380]:
+            - text: "-"
+            - link "occultlibrary" [ref=f26e381] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/occultlibrary/
+          - listitem [ref=f26e382]:
+            - text: "-"
+            - link "protest" [ref=f26e383] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/protest/
+          - listitem [ref=f26e384]:
+            - text: "-"
+            - link "svg" [ref=f26e385] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/svg/
+          - listitem [ref=f26e386]:
+            - text: "-"
+            - link "SurrealismArt" [ref=f26e387] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/SurrealismArt/
+          - listitem [ref=f26e388]:
+            - text: "-"
+            - link "mahabharata" [ref=f26e389] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/mahabharata/
+          - listitem [ref=f26e390]:
+            - text: "-"
+            - link "SubGenius" [ref=f26e391] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/SubGenius/
+          - listitem [ref=f26e392]:
+            - text: "-"
+            - link "BlackOps" [ref=f26e393] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/BlackOps/
+          - listitem [ref=f26e394]:
+            - text: "-"
+            - link "opencode" [ref=f26e395] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/opencode/
+          - listitem [ref=f26e396]:
+            - text: "-"
+            - link "magetheascension" [ref=f26e397] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/magetheascension/
+          - listitem [ref=f26e398]:
+            - text: "-"
+            - link "ChatGPT_Occult" [ref=f26e399] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/ChatGPT_Occult/
+          - listitem [ref=f26e400]:
+            - text: "-"
+            - link "OcultismoyBrujeria" [ref=f26e401] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/OcultismoyBrujeria/
+          - listitem [ref=f26e402]:
+            - text: "-"
+            - link "kyokushinkan" [ref=f26e403] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/kyokushinkan/
+          - listitem [ref=f26e404]:
+            - text: "-"
+            - link "askColombia" [ref=f26e405] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/askColombia/
+          - listitem [ref=f26e406]:
+            - text: "-"
+            - link "SkullCulture" [ref=f26e407] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/SkullCulture/
+          - listitem [ref=f26e408]:
+            - text: "-"
+            - link "PortalExperiencer" [ref=f26e409] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/PortalExperiencer/
+          - listitem [ref=f26e410]:
+            - text: "-"
+            - link "Cybersecurity101" [ref=f26e411] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Cybersecurity101/
+          - listitem [ref=f26e412]:
+            - text: "-"
+            - link "Hekate" [ref=f26e413] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Hekate/
+          - listitem [ref=f26e414]:
+            - text: "-"
+            - link "Republica_Colombia" [ref=f26e415] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/Republica_Colombia/
+          - listitem [ref=f26e416]:
+            - text: "-"
+            - link "CyberSecurityJobs" [ref=f26e417] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/CyberSecurityJobs/
+          - listitem [ref=f26e418]:
+            - text: "-"
+            - link "TheNightmareFactory" [ref=f26e419] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/TheNightmareFactory/
+          - listitem [ref=f26e420]:
+            - text: "-"
+            - link "opencodeCLI" [ref=f26e421] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/opencodeCLI/
+      - link "editar »" [ref=f26e422] [cursor=pointer]:
+        - /url: https://www.reddit.com/subreddits/
+    - generic [ref=f26e423]:
+      - link "reddit.com" [ref=f26e424] [cursor=pointer]:
+        - /url: /
+      - text: preferencias
+      - list [ref=f26e425]:
+        - listitem [ref=f26e426]:
+          - link "opciones" [ref=f26e427] [cursor=pointer]:
+            - /url: https://www.reddit.com/prefs/
+        - listitem [ref=f26e428]:
+          - link "aplicaciones" [ref=f26e429] [cursor=pointer]:
+            - /url: https://www.reddit.com/prefs/apps/
+        - listitem [ref=f26e430]:
+          - link "feeds RSS" [ref=f26e431] [cursor=pointer]:
+            - /url: https://www.reddit.com/prefs/feeds/
+        - listitem [ref=f26e432]:
+          - link "amigos" [ref=f26e433] [cursor=pointer]:
+            - /url: https://www.reddit.com/prefs/friends/
+        - listitem [ref=f26e434]:
+          - link "bloqueado" [ref=f26e435] [cursor=pointer]:
+            - /url: https://www.reddit.com/prefs/blocked/
+        - listitem [ref=f26e436]:
+          - link "contraseña/e-mail" [ref=f26e437] [cursor=pointer]:
+            - /url: https://www.reddit.com/prefs/update/
+        - listitem [ref=f26e438]:
+          - link "eliminar" [ref=f26e439] [cursor=pointer]:
+            - /url: https://www.reddit.com/prefs/deactivate/
+    - generic [ref=f26e440]:
+      - generic [ref=f26e441]:
+        - link "Cha0smagick" [ref=f26e442] [cursor=pointer]:
+          - /url: https://www.reddit.com/user/Cha0smagick/
+        - text: (1.375)
+      - text: "|"
+      - link "mensajes" [ref=f26e443] [cursor=pointer]:
+        - /url: https://www.reddit.com/message/unread/
+      - link "59" [ref=f26e444] [cursor=pointer]:
+        - /url: https://www.reddit.com/message/unread/
+      - text: "|"
+      - link "notifications" [ref=f26e445] [cursor=pointer]:
+        - /url: https://reddit.com/notifications
+      - text: "|"
+      - link "chat messages" [ref=f26e446] [cursor=pointer]:
+        - /url: https://chat.reddit.com
+      - text: "|"
+      - link "mensajes de moderador" [ref=f26e447] [cursor=pointer]:
+        - /url: https://www.reddit.com/mail/all/
+      - text: "|"
+      - list [ref=f26e448]:
+        - listitem [ref=f26e449]:
+          - link "preferencias" [ref=f26e450] [cursor=pointer]:
+            - /url: https://www.reddit.com/prefs/
+      - text: "|"
+      - link "salir" [ref=f26e452] [cursor=pointer]:
+        - /url: javascript:void(0)
+  - main [ref=f26e453]:
+    - heading "aplicaciones autorizadas" [level=1] [ref=f26e454]
+    - generic [ref=f26e455]:
+      - generic [ref=f26e458]:
+        - heading "DevPlatform Actions" [level=2] [ref=f26e459]
+        - list [ref=f26e461]:
+          - listitem [ref=f26e462]: Spend reddit gold creddits
+          - listitem [ref=f26e463]: Mod Note
+          - listitem [ref=f26e464]: Approve and ban users
+          - listitem [ref=f26e465]: New Modmail
+          - listitem [ref=f26e466]: Moderate Subreddit Configuration
+          - listitem [ref=f26e467]: Edit My Subscriptions
+          - listitem [ref=f26e468]: Edit structured styles
+          - listitem [ref=f26e469]: Read Wiki Pages
+          - listitem [ref=f26e470]: Wiki Editing
+          - listitem [ref=f26e471]: Vote
+          - listitem [ref=f26e472]: My Subreddits
+          - listitem [ref=f26e473]: Submit Content
+          - listitem [ref=f26e474]: Moderation Log
+          - listitem [ref=f26e475]: Moderate Posts
+          - listitem [ref=f26e476]: Moderate Flair
+          - listitem [ref=f26e477]: Announcements
+          - listitem [ref=f26e478]: Save Content
+          - listitem [ref=f26e479]: Invite or remove other moderators
+          - listitem [ref=f26e480]: Read Content
+          - listitem [ref=f26e481]: Private Messages
+          - listitem [ref=f26e482]: Report content
+          - listitem [ref=f26e483]: My Identity
+          - listitem [ref=f26e484]: Manage live threads
+          - listitem [ref=f26e485]: Update account information
+          - listitem [ref=f26e486]: Subreddit Traffic
+          - listitem [ref=f26e487]: Edit Posts
+          - listitem [ref=f26e488]: Moderate Wiki
+          - listitem [ref=f26e489]: Make changes to your subreddit moderator and contributor status
+          - listitem [ref=f26e490]: Manage My Flair
+          - listitem [ref=f26e491]: History
+      - generic [ref=f26e492]: DevPlatform Actions Infrastructure
+      - generic [ref=f26e493]:
+        - text: "Developers:"
+        - link "reddit" [ref=f26e494] [cursor=pointer]:
+          - /url: https://www.reddit.com/u/reddit
+      - link "revocar acceso" [ref=f26e497] [cursor=pointer]:
+        - /url: "#"
+    - generic [ref=f26e498]:
+      - generic [ref=f26e501]:
+        - heading [level=2] [ref=f26e502]:
+          - link "IFTTT" [ref=f26e503] [cursor=pointer]:
+            - /url: http://ifttt.com/wtf
+        - list [ref=f26e505]:
+          - listitem [ref=f26e506]: Submit Content
+          - listitem [ref=f26e507]: Read Content
+          - listitem [ref=f26e508]: Edit Posts
+          - listitem [ref=f26e509]: My Subreddits
+          - listitem [ref=f26e510]: Private Messages
+          - listitem [ref=f26e511]: Moderate Subreddit Configuration
+          - listitem [ref=f26e512]: Edit My Subscriptions
+          - listitem [ref=f26e513]: Moderation Log
+          - listitem [ref=f26e514]: Moderate Posts
+          - listitem [ref=f26e515]: Moderate Flair
+          - listitem [ref=f26e516]: Vote
+          - listitem [ref=f26e517]: Save Content
+          - listitem [ref=f26e518]: My Identity
+          - listitem [ref=f26e519]: History
+      - generic [ref=f26e520]: Put the internet to work for you.
+      - generic [ref=f26e521]:
+        - text: "Developers:"
+        - link "iftttchannel" [ref=f26e522] [cursor=pointer]:
+          - /url: https://www.reddit.com/u/iftttchannel
+      - link "revocar acceso" [ref=f26e525] [cursor=pointer]:
+        - /url: "#"
+    - generic:
+      - list
+    - button "eres un desarrollador? crea una aplicación..." [ref=f26e527] [cursor=pointer]
+  - generic [ref=f26e528]:
+    - generic [ref=f26e529]:
+      - list [ref=f26e531]:
+        - listitem [ref=f26e532]: acerca de
+        - listitem [ref=f26e533]:
+          - link "blog" [ref=f26e534] [cursor=pointer]:
+            - /url: https://redditblog.com
+        - listitem [ref=f26e535]:
+          - link "acerca de" [ref=f26e536] [cursor=pointer]:
+            - /url: https://www.redditinc.com
+        - listitem [ref=f26e537]:
+          - link "publicidad" [ref=f26e538] [cursor=pointer]:
+            - /url: https://www.redditinc.com/advertising
+        - listitem [ref=f26e539]:
+          - link "careers" [ref=f26e540] [cursor=pointer]:
+            - /url: https://www.redditinc.com/careers
+      - list [ref=f26e542]:
+        - listitem [ref=f26e543]: ayuda
+        - listitem [ref=f26e544]:
+          - link "reglas del sitio" [ref=f26e545] [cursor=pointer]:
+            - /url: https://www.reddit.com/rules/
+        - listitem [ref=f26e546]:
+          - link "Reddit help center" [ref=f26e547] [cursor=pointer]:
+            - /url: https://www.reddithelp.com
+        - listitem [ref=f26e548]:
+          - link "reddiquette" [ref=f26e549] [cursor=pointer]:
+            - /url: https://www.reddit.com/wiki/reddiquette/
+        - listitem [ref=f26e550]:
+          - link "mod guidelines" [ref=f26e551] [cursor=pointer]:
+            - /url: https://www.reddit.com/help/healthycommunities/
+        - listitem [ref=f26e552]:
+          - link "contacto" [ref=f26e553] [cursor=pointer]:
+            - /url: https://www.reddit.com/contact/
+      - list [ref=f26e555]:
+        - listitem [ref=f26e556]: apps y herramientas
+        - listitem [ref=f26e557]:
+          - link "Reddit para iPhone" [ref=f26e558] [cursor=pointer]:
+            - /url: https://itunes.apple.com/us/app/reddit-the-official-app/id1064216828?mt=8
+        - listitem [ref=f26e559]:
+          - link "Reddit para Android" [ref=f26e560] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.reddit.frontpage
+        - listitem [ref=f26e561]:
+          - link "sitio móvil" [ref=f26e562] [cursor=pointer]:
+            - /url: "#"
+      - list [ref=f26e564]:
+        - listitem [ref=f26e565]: <3
+        - listitem [ref=f26e566]:
+          - link "reddit premium" [ref=f26e567] [cursor=pointer]:
+            - /url: https://www.reddit.com/premium/
+    - paragraph [ref=f26e568]:
+      - text: El uso de este sitio implica la aceptación del
+      - link "Acuerdo de Usuario" [ref=f26e569] [cursor=pointer]:
+        - /url: https://www.reddit.com/help/useragreement
+      - text: y de la
+      - link "Política de privacidad" [ref=f26e570] [cursor=pointer]:
+        - /url: https://www.reddit.com/help/privacypolicy
+      - text: . © 2026 reddit inc. Todos los derechos reservados.
+    - paragraph [ref=f26e571]: REDDIT and the ALIEN Logo are registered trademarks of reddit inc.
+  - paragraph [ref=f26e573]: π

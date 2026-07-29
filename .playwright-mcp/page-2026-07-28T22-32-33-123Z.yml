@@ -1,0 +1,15 @@
+- generic [ref=f8e1]:
+  - link "Ir al contenido principal" [ref=f8e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f8e6]:
+    - generic:
+      - banner [ref=f8e7]
+      - dialog "¡Te hemos echado de menos!" [ref=f8e35]:
+        - generic [ref=f8e38]:
+          - heading "¡Te hemos echado de menos!" [level=1] [ref=f8e39]
+          - paragraph [ref=f8e40]: Ya has iniciado sesión y se te redirigirá a Reddit en breve.
+          - paragraph [ref=f8e41]:
+            - text: Si no se te redirige automáticamente, sigue
+            - link "este enlace" [active] [ref=f8e42] [cursor=pointer]:
+              - /url: https://www.reddit.com/
+            - text: .

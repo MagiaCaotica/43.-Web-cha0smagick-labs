@@ -1,0 +1,239 @@
+- generic [ref=f2019e4]:
+  - banner:
+    - link "Saltar al contenido":
+      - /url: "#"
+    - generic [ref=f2019e15]:
+      - generic [ref=f2019e18]:
+        - generic:
+          - img "Icono de búsqueda"
+        - combobox "Buscar" [ref=f2019e20]
+      - link "Tu perfil" [ref=f2019e25] [cursor=pointer]:
+        - /url: /magiacaoticamagiadelcaosprctic/
+        - img [ref=f2019e32]:
+          - generic [ref=f2019e33]: M
+      - button "Cuentas" [ref=f2019e37] [cursor=pointer]
+  - navigation [ref=f2019e42]:
+    - generic [ref=f2019e44]:
+      - generic [ref=f2019e45]:
+        - generic "Inicio" [ref=f2019e49]:
+          - link "Inicio" [ref=f2019e50] [cursor=pointer]:
+            - /url: /
+        - generic "Inicio" [ref=f2019e57]:
+          - link "Inicio" [ref=f2019e58] [cursor=pointer]:
+            - /url: /
+        - generic "Explorar" [ref=f2019e65]:
+          - link "Explorar" [ref=f2019e66] [cursor=pointer]:
+            - /url: /today
+        - generic "Tus tableros" [ref=f2019e73]:
+          - link "Tus tableros" [ref=f2019e74] [cursor=pointer]:
+            - /url: /magiacaoticamagiadelcaosprctic/
+        - generic "Crear" [ref=f2019e81]:
+          - button "Crear" [ref=f2019e82] [cursor=pointer]
+        - generic "Actualizaciones" [ref=f2019e91]:
+          - button "Actualizaciones" [ref=f2019e92] [cursor=pointer]
+        - generic "Mensajes" [ref=f2019e101]:
+          - button "Mensajes" [ref=f2019e102] [cursor=pointer]
+      - generic "Configuración y soporte" [ref=f2019e110]:
+        - button "Configuración y soporte" [ref=f2019e111] [cursor=pointer]
+  - generic:
+    - complementary "Botones flotantes del pie de página"
+  - main [ref=f2019e116]:
+    - generic [ref=f2019e120]:
+      - generic [ref=f2019e122]:
+        - generic [ref=f2019e123]:
+          - generic [ref=f2019e124]:
+            - generic [ref=f2019e126]:
+              - heading "Borradores de Pines (11)" [level=2] [ref=f2019e1271]
+              - button "Cerrar barra lateral de borradores" [ref=f2019e128] [cursor=pointer]
+            - generic [ref=f2019e133]:
+              - button "Crear nuevo" [disabled]
+          - separator [ref=f2019e138]
+        - generic [ref=f2019e139]:
+          - generic [ref=f2019e142]:
+            - checkbox "Seleccionar todo" [ref=f2019e150] [cursor=pointer]
+            - generic "Seleccionar todo" [ref=f2019e153] [cursor=pointer]
+          - list [ref=f2019e154]:
+            - listitem [ref=f2019e155]:
+              - group "Borrador de tarjeta de Pin" [ref=f2019e156]:
+                - button "Faltan 30 días para que caduque" [ref=f2019e158] [cursor=pointer]:
+                  - generic [ref=f2019e171]:
+                    - heading [level=3]
+                    - generic [ref=f2019e172]: Faltan 30 días para que caduque
+                - generic [ref=f2019e175]:
+                  - checkbox "Faltan ,30, días para que caduque" [ref=f2019e181] [cursor=pointer]
+                  - generic [ref=f2019e182]: Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=f2019e186] [cursor=pointer]
+                - status
+            - listitem [ref=f2019e343]:
+              - group "Borrador de tarjeta de Pin" [ref=f2019e344]:
+                - button "Faltan 30 días para que caduque" [ref=f2019e346] [cursor=pointer]:
+                  - generic [ref=f2019e359]:
+                    - heading [level=3]
+                    - generic [ref=f2019e360]: Faltan 30 días para que caduque
+                - generic [ref=f2019e363]:
+                  - checkbox "Faltan ,30, días para que caduque" [ref=f2019e369] [cursor=pointer]
+                  - generic [ref=f2019e370]: Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=f2019e374] [cursor=pointer]
+                - status
+            - listitem [ref=f2019e379]:
+              - group "Borrador de tarjeta de Pin" [ref=f2019e380]:
+                - button "Faltan 30 días para que caduque" [ref=f2019e382] [cursor=pointer]:
+                  - generic [ref=f2019e395]:
+                    - heading [level=3]
+                    - generic [ref=f2019e396]: Faltan 30 días para que caduque
+                - generic [ref=f2019e399]:
+                  - checkbox "Faltan ,30, días para que caduque" [ref=f2019e405] [cursor=pointer]
+                  - generic [ref=f2019e406]: Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=f2019e410] [cursor=pointer]
+                - status
+            - listitem [ref=f2019e453]:
+              - group "Borrador de tarjeta de Pin" [ref=f2019e454]:
+                - button "Goetia Seals Generator App - 72 Spirits of Solomon Faltan 30 días para que caduque" [ref=f2019e456] [cursor=pointer]:
+                  - generic [ref=f2019e469]:
+                    - heading "Goetia Seals Generator App - 72 Spirits of Solomon" [level=3] [ref=f2019e470]
+                    - generic [ref=f2019e472]: Faltan 30 días para que caduque
+                - generic [ref=f2019e475]:
+                  - checkbox "Goetia Seals Generator App - 72 Spirits of Solomon Faltan ,30, días para que caduque" [ref=f2019e481] [cursor=pointer]
+                  - generic [ref=f2019e482]: Goetia Seals Generator App - 72 Spirits of Solomon Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=f2019e486] [cursor=pointer]
+                - status
+            - listitem [ref=f2019e529]:
+              - group "Borrador de tarjeta de Pin" [ref=f2019e530]:
+                - button "Zener Cards ESP Test - Test Your Psychic Ability Online Faltan 30 días para que caduque" [ref=f2019e532] [cursor=pointer]:
+                  - generic [ref=f2019e545]:
+                    - heading "Zener Cards ESP Test - Test Your Psychic Ability Online" [level=3] [ref=f2019e546]
+                    - generic [ref=f2019e548]: Faltan 30 días para que caduque
+                - generic [ref=f2019e551]:
+                  - checkbox "Zener Cards ESP Test - Test Your Psychic Ability Online Faltan ,30, días para que caduque" [ref=f2019e557] [cursor=pointer]
+                  - generic [ref=f2019e558]: Zener Cards ESP Test - Test Your Psychic Ability Online Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=f2019e562] [cursor=pointer]
+                - status
+            - listitem [ref=f2019e567]:
+              - group "Borrador de tarjeta de Pin" [ref=f2019e568]:
+                - button "I Ching Oracle - Ancient Chinese Divination App Faltan 30 días para que caduque" [ref=f2019e570] [cursor=pointer]:
+                  - generic [ref=f2019e583]:
+                    - heading "I Ching Oracle - Ancient Chinese Divination App" [level=3] [ref=f2019e584]
+                    - generic [ref=f2019e586]: Faltan 30 días para que caduque
+                - generic [ref=f2019e589]:
+                  - checkbox "I Ching Oracle - Ancient Chinese Divination App Faltan ,30, días para que caduque" [ref=f2019e595] [cursor=pointer]
+                  - generic [ref=f2019e596]: I Ching Oracle - Ancient Chinese Divination App Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=f2019e600] [cursor=pointer]
+                - status
+            - listitem [ref=f2019e605]:
+              - group "Borrador de tarjeta de Pin" [ref=f2019e606]:
+                - button "Candle Color Calculator - Find the Perfect Candle Magick Color Faltan 30 días para que caduque" [ref=f2019e608] [cursor=pointer]:
+                  - generic [ref=f2019e621]:
+                    - heading "Candle Color Calculator - Find the Perfect Candle Magick Color" [level=3] [ref=f2019e622]
+                    - generic [ref=f2019e624]: Faltan 30 días para que caduque
+                - generic [ref=f2019e627]:
+                  - checkbox "Candle Color Calculator - Find the Perfect Candle Magick Color Faltan ,30, días para que caduque" [ref=f2019e633] [cursor=pointer]
+                  - generic [ref=f2019e634]: Candle Color Calculator - Find the Perfect Candle Magick Color Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=f2019e638] [cursor=pointer]
+                - status
+            - listitem [ref=f2019e643]:
+              - group "Borrador de tarjeta de Pin" [ref=f2019e644]:
+                - button "Digital Pendulum - Online Dowsing & Divination Tool Faltan 30 días para que caduque" [ref=f2019e646] [cursor=pointer]:
+                  - generic [ref=f2019e659]:
+                    - heading "Digital Pendulum - Online Dowsing & Divination Tool" [level=3] [ref=f2019e660]
+                    - generic [ref=f2019e662]: Faltan 30 días para que caduque
+                - generic [ref=f2019e665]:
+                  - checkbox "Digital Pendulum - Online Dowsing & Divination Tool Faltan ,30, días para que caduque" [ref=f2019e671] [cursor=pointer]
+                  - generic [ref=f2019e672]: Digital Pendulum - Online Dowsing & Divination Tool Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=f2019e676] [cursor=pointer]
+                - status
+            - listitem [ref=f2019e681]:
+              - group "Borrador de tarjeta de Pin" [ref=f2019e682]:
+                - button "Spell Builder - Create Custom Spells with Android App Faltan 30 días para que caduque" [ref=f2019e684] [cursor=pointer]:
+                  - generic [ref=f2019e697]:
+                    - heading "Spell Builder - Create Custom Spells with Android App" [level=3] [ref=f2019e698]
+                    - generic [ref=f2019e700]: Faltan 30 días para que caduque
+                - generic [ref=f2019e703]:
+                  - checkbox "Spell Builder - Create Custom Spells with Android App Faltan ,30, días para que caduque" [ref=f2019e709] [cursor=pointer]
+                  - generic [ref=f2019e710]: Spell Builder - Create Custom Spells with Android App Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=f2019e714] [cursor=pointer]
+                - status
+            - listitem [ref=f2019e719]:
+              - group "Borrador de tarjeta de Pin" [ref=f2019e720]:
+                - button "Astral Chart Calculator - Your Complete Birth Chart App Faltan 30 días para que caduque" [ref=f2019e722] [cursor=pointer]:
+                  - generic [ref=f2019e735]:
+                    - heading "Astral Chart Calculator - Your Complete Birth Chart App" [level=3] [ref=f2019e736]
+                    - generic [ref=f2019e738]: Faltan 30 días para que caduque
+                - generic [ref=f2019e741]:
+                  - checkbox "Astral Chart Calculator - Your Complete Birth Chart App Faltan ,30, días para que caduque" [ref=f2019e747] [cursor=pointer]
+                  - generic [ref=f2019e748]: Astral Chart Calculator - Your Complete Birth Chart App Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=f2019e752] [cursor=pointer]
+                - status
+            - listitem [ref=f2019e757]:
+              - group "Borrador de tarjeta de Pin" [ref=f2019e758]:
+                - button "The Complete Occult Collection - 11 Android Apps & 7 Books Faltan 30 días para que caduque" [ref=f2019e760] [cursor=pointer]:
+                  - generic [ref=f2019e773]:
+                    - heading "The Complete Occult Collection - 11 Android Apps & 7 Books" [level=3] [ref=f2019e774]
+                    - generic [ref=f2019e776]: Faltan 30 días para que caduque
+                - generic [ref=f2019e779]:
+                  - checkbox "The Complete Occult Collection - 11 Android Apps & 7 Books Faltan ,30, días para que caduque" [ref=f2019e785] [cursor=pointer]
+                  - generic [ref=f2019e786]: The Complete Occult Collection - 11 Android Apps & 7 Books Faltan ,30, días para que caduque
+                - button "Acciones en el borrador del Pin" [ref=f2019e790] [cursor=pointer]
+                - status
+      - generic [ref=f2019e1285]:
+        - heading "Crear Pin" [level=1] [ref=f2019e1288]
+        - generic [ref=f2019e1292]:
+          - generic [ref=f2019e1295]:
+            - generic [ref=f2019e1297]:
+              - generic [ref=f2019e1298]:
+                - generic:
+                  - generic:
+                    - img "Añadir archivos"
+                  - generic:
+                    - generic: Sube tus archivos multimedia
+                    - generic: Selecciona varios archivos en el selector de archivos con Mayús o Cmd/Ctrl
+                  - generic: JPG, PNG hasta 20 MB · MP4 hasta 200 MB
+              - button "Carga de archivos" [ref=f2019e1299] [cursor=pointer]
+            - generic [ref=f2019e1300]:
+              - separator [ref=f2019e1301]
+              - link "Guardar desde la URL" [ref=f2019e1303] [cursor=pointer]:
+                - /url: /pin-builder/?tab=save_from_url
+          - generic [ref=f2019e1309]:
+            - generic [ref=f2019e1313]:
+              - generic [ref=f2019e1314]: Título
+              - textbox "Título" [disabled] [ref=f2019e1316]:
+                - /placeholder: Explica en qué consiste tu Pin
+            - button "Descripción Describe tu Pin Describe tu Pin" [disabled] [ref=f2019e1320]:
+              - generic [ref=f2019e1324]:
+                - button [ref=f2019e1326]
+                - generic [ref=f2019e1329]:
+                  - generic "Descripción" [ref=f2019e1331]
+                  - generic [ref=f2019e1332]:
+                    - generic: Describe tu Pin
+                    - generic "Describe tu Pin" [ref=f2019e1334]
+            - generic [ref=f2019e1339]:
+              - generic [ref=f2019e1343]:
+                - generic [ref=f2019e1344]: Enlace
+                - textbox "Enlace" [disabled] [ref=f2019e1346]:
+                  - /placeholder: Añade un enlace
+              - button "Tablero Chaos Magick" [disabled] [ref=f2019e1352]:
+                - generic:
+                  - generic:
+                    - generic "Tablero"
+                  - generic: Chaos Magick
+            - generic [ref=f2019e1357]:
+              - generic [ref=f2019e1358]: Temas etiquetados (0)
+              - combobox "Temas etiquetados (0)" [disabled] [ref=f2019e1360]
+            - generic [ref=f2019e1361]:
+              - generic "Etiquetar productos" [ref=f2019e1363]
+              - generic [ref=f2019e1365]:
+                - button "Añadir productos" [disabled]
+            - generic [ref=f2019e1366]:
+              - checkbox "Marcar como modificado por IA Contenido que fue creado total o parcialmente con IA" [disabled] [ref=f2019e1368]
+              - generic [ref=f2019e1370]:
+                - generic [ref=f2019e1372] [cursor=pointer]:
+                  - generic [ref=f2019e1373]: Marcar como modificado por IA
+                  - generic [ref=f2019e1375]: Contenido que fue creado total o parcialmente con IA
+                - generic [ref=f2019e1377]:
+                  - checkbox "Este Pin incluye una persona generada por IA" [disabled] [ref=f2019e1383]
+                  - generic [ref=f2019e1384]: Este Pin incluye una persona generada por IA
+            - button "Más opciones Icono de flecha de Mostrar más opciones" [disabled] [ref=f2019e1389]:
+              - generic [ref=f2019e1390]:
+                - generic [ref=f2019e1391]: Más opciones
+                - img "Icono de flecha de Mostrar más opciones" [ref=f2019e1394]
+  - generic:
+    - contentinfo "Pie de página"

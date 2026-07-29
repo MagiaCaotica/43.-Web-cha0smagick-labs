@@ -1,0 +1,3 @@
+[    3876ms] [WARNING] The resource https://i.pinimg.com/236x/11/44/34/114434511e25f358e821adeb1c6bdd72.jpg was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://co.pinterest.com/:0
+[    7378ms] [ERROR] Framing 'https://www.recaptcha.net/' violates the following report-only Content Security Policy directive: "frame-ancestors 'self'". The violation has been logged, but no further action has been taken.
+ @ :0
