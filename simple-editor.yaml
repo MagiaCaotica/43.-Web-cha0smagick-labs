@@ -1,0 +1,115 @@
+- generic [ref=f57e1]:
+  - generic [ref=f57e3]:
+    - banner [ref=f57e4]:
+      - generic [ref=f57e5]:
+        - link [ref=f57e6] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f57e11]:
+          - text: Close sidebar
+          - link [ref=f57e12] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f57e15]:
+        - generic [ref=f57e16]:
+          - button [disabled]
+          - button [disabled]
+        - button [ref=f57e18] [cursor=pointer]
+        - button "Add as template" [ref=f57e21] [cursor=pointer]
+        - button "Preview and test" [ref=f57e23] [cursor=pointer]
+        - button "Next" [ref=f57e27] [cursor=pointer]
+    - generic [ref=f57e28]:
+      - complementary [ref=f57e29]:
+        - generic [ref=f57e30]:
+          - list [ref=f57e31]:
+            - listitem [ref=f57e32]:
+              - link [ref=f57e33] [cursor=pointer]:
+                - /url: "#"
+              - generic [ref=f57e38]:
+                - generic [ref=f57e39]:
+                  - generic [ref=f57e40]: Style
+                  - generic [ref=f57e41]: Edit your design styles for a consistent look and feel
+                - generic [ref=f57e42]:
+                  - generic [ref=f57e43]:
+                    - generic [ref=f57e47]:
+                      - paragraph [ref=f57e48]: Your brand, consistent everywhere
+                      - paragraph [ref=f57e49]: Define your colors and fonts in one place and keep every email, landing page, and website on-brand as you grow
+                    - link "Review brand" [ref=f57e50] [cursor=pointer]:
+                      - /url: /configuration/brand-styles
+                  - generic [ref=f57e54]:
+                    - generic [ref=f57e55]:
+                      - generic [ref=f57e56]: Base style
+                      - generic [ref=f57e68] [cursor=pointer]:
+                        - generic [ref=f57e69]: Your brand styles
+                        - generic [ref=f57e70]: Current style
+                    - generic [ref=f57e74]:
+                      - generic [ref=f57e75]:
+                        - paragraph [ref=f57e78]: Font family
+                        - button "Roboto" [ref=f57e80] [cursor=pointer]
+                      - generic [ref=f57e84]:
+                        - paragraph [ref=f57e87]: Background color
+                        - generic [ref=f57e89]:
+                          - button [ref=f57e90] [cursor=pointer]
+                          - textbox [ref=f57e91]: "#000000"
+                      - generic [ref=f57e93]:
+                        - paragraph [ref=f57e96]: Text color
+                        - generic [ref=f57e98]:
+                          - button [ref=f57e99] [cursor=pointer]
+                          - textbox [ref=f57e100]: "#FFFFFF"
+                      - generic [ref=f57e102]:
+                        - paragraph [ref=f57e105]: Link color
+                        - generic [ref=f57e107]:
+                          - button [ref=f57e108] [cursor=pointer]
+                          - textbox [ref=f57e109]: "#5C4B2E"
+                      - generic [ref=f57e111]:
+                        - paragraph [ref=f57e114]: Border color
+                        - generic [ref=f57e116]:
+                          - button [ref=f57e117] [cursor=pointer]
+                          - textbox [ref=f57e118]: "#FFD700"
+                  - generic [ref=f57e120]:
+                    - generic [ref=f57e121]: Layout
+                    - generic [ref=f57e122]:
+                      - generic [ref=f57e123]:
+                        - paragraph [ref=f57e126]: Width
+                        - generic [ref=f57e127]:
+                          - button "Default" [ref=f57e128] [cursor=pointer]
+                          - button "Full" [ref=f57e130] [cursor=pointer]
+                      - generic [ref=f57e132]:
+                        - paragraph [ref=f57e135]: Alignment
+                        - generic [ref=f57e136]:
+                          - button "Left" [ref=f57e137] [cursor=pointer]
+                          - button "Center" [ref=f57e139] [cursor=pointer]
+                  - generic [ref=f57e141]:
+                    - text: Typography
+                    - generic [ref=f57e142]:
+                      - generic [ref=f57e144] [cursor=pointer]:
+                        - generic [ref=f57e145]: H
+                        - text: Heading
+                      - generic [ref=f57e149] [cursor=pointer]:
+                        - generic [ref=f57e150]: p
+                        - text: Paragraphs
+                      - generic [ref=f57e154] [cursor=pointer]:
+                        - generic [ref=f57e155]: B
+                        - text: Button
+            - listitem [ref=f57e158]:
+              - generic [ref=f57e159]:
+                - text: Settings
+                - link [ref=f57e160] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=f57e163]:
+            - generic [ref=f57e164]:
+              - text: Dark mode
+              - button [ref=f57e165] [cursor=pointer]
+            - generic [ref=f57e169]:
+              - text: Knowledge base
+              - button [ref=f57e170] [cursor=pointer]
+      - main [ref=f57e173]:
+        - generic [active] [ref=f57e178]:
+          - heading [level=1] [ref=f57e181]
+          - generic [ref=f57e183]:
+            - group "Block actions" [ref=f57e184]:
+              - button "Add block" [ref=f57e185] [cursor=pointer]
+              - button "Block menu" [ref=f57e189]
+            - paragraph [ref=f57e193]:
+              - generic: Write, type "/" for commands...
+      - complementary
+  - iframe [ref=f57e195]:
+    

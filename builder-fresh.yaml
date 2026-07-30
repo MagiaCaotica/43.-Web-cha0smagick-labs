@@ -1,0 +1,78 @@
+- generic [active] [ref=f182e1]:
+  - generic [ref=f182e3]:
+    - banner [ref=f182e4]:
+      - generic [ref=f182e5]:
+        - link [ref=f182e6] [cursor=pointer]:
+          - /url: /automations/status/drafts
+        - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=2] [ref=f182e11]
+      - generic [ref=f182e12]:
+        - button "Test" [ref=f182e13] [cursor=pointer]
+        - button "Activate" [ref=f182e15] [cursor=pointer]
+        - link [ref=f182e20] [cursor=pointer]:
+          - /url: /automations/status/drafts
+    - generic [ref=f182e24]:
+      - generic [ref=f182e25]:
+        - complementary [ref=f182e26]:
+          - list [ref=f182e28]:
+            - listitem [ref=f182e29]:
+              - button [ref=f182e30] [cursor=pointer]
+            - listitem [ref=f182e38]:
+              - button [ref=f182e39] [cursor=pointer]
+            - listitem [ref=f182e43]:
+              - button [ref=f182e44] [cursor=pointer]
+        - generic [ref=f182e49]:
+          - generic [ref=f182e51]:
+            - heading "Add step" [level=2] [ref=f182e52]
+            - button [ref=f182e53] [cursor=pointer]
+          - navigation "Tabs" [ref=f182e59]:
+            - link "Triggers" [ref=f182e60] [cursor=pointer]:
+              - /url: "#triggers"
+            - link "Rules & actions" [ref=f182e65] [cursor=pointer]:
+              - /url: "#steps"
+          - generic [ref=f182e71]:
+            - generic [ref=f182e72]:
+              - heading "Subscriber activity" [level=4] [ref=f182e73]
+              - generic [ref=f182e74]:
+                - button "Completes a form Popular" [ref=f182e76] [cursor=pointer]:
+                  - generic [ref=f182e78]:
+                    - generic [ref=f182e83]: Completes a form
+                    - generic [ref=f182e84]: Popular
+                - button "Joins group(s)" [ref=f182e89] [cursor=pointer]
+                - button "Joins a segment" [ref=f182e101] [cursor=pointer]
+                - button "Clicks a link" [ref=f182e113] [cursor=pointer]
+                - button "Updates field" [ref=f182e125] [cursor=pointer]
+            - generic [ref=f182e136]:
+              - heading "Dates & events" [level=4] [ref=f182e137]
+              - generic [ref=f182e138]:
+                - button "Event anniversary" [ref=f182e140] [cursor=pointer]
+                - button "Exact date" [ref=f182e152] [cursor=pointer]
+            - generic [ref=f182e163]:
+              - heading "E-commerce" [level=4] [ref=f182e164]
+              - generic [ref=f182e174]:
+                - generic [ref=f182e175]: Connect store to unlock these triggers.
+                - link "Connect my store" [ref=f182e176] [cursor=pointer]:
+                  - /url: /integrations
+              - generic [ref=f182e178]:
+                - button "Abandoned cart" [disabled] [ref=f182e180]
+                - button "Abandoned checkout" [disabled] [ref=f182e192]
+              - generic [ref=f182e203]:
+                - button "Buys specific product" [disabled] [ref=f182e205]
+                - button "Buys any product" [disabled] [ref=f182e217]
+                - button "Purchase frequency" [disabled] [ref=f182e229]
+                - button "Buys from category" [disabled] [ref=f182e241]
+      - list [ref=f182e254]:
+        - generic [ref=f182e257]:
+          - generic [ref=f182e260]:
+            - img "trigger placeholder" [ref=f182e261]
+            - heading "Drop a step here to get started!" [level=3] [ref=f182e262]
+            - paragraph [ref=f182e264]:
+              - text: To start building your automation, pick a step from the Add step panel. Not sure where to start?
+              - link "Help me get started." [ref=f182e265] [cursor=pointer]:
+                - /url: https://www.mailerlite.com/help/how-to-create-an-automation-workflow#new/create
+          - button [ref=f182e270] [cursor=pointer]
+      - generic [ref=f182e275]:
+        - button [ref=f182e279] [cursor=pointer]
+        - button [ref=f182e286] [cursor=pointer]
+        - button [disabled] [ref=f182e293]
+  - iframe [ref=f182e297]:
+    

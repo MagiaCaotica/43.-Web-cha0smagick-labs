@@ -1,0 +1,133 @@
+- generic [active] [ref=f163e1]:
+  - generic [ref=f163e2]:
+    - generic [ref=f163e4]:
+      - link [ref=f163e6] [cursor=pointer]:
+        - /url: /
+      - link "Trial 12 days left" [ref=f163e16] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/billing/upgrade?source=sidebar_trial_banner
+        - generic [ref=f163e17]: Trial
+        - generic [ref=f163e22]: 12 days left
+      - list [ref=f163e23]:
+        - link "Dashboard" [ref=f163e24] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/dashboard
+        - link "Subscribers" [ref=f163e30] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/subscribers
+        - link "Campaigns" [ref=f163e36] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+        - link "Automations" [ref=f163e42] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/automations/status/drafts
+        - link "Forms" [ref=f163e50] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/forms
+        - link "Sites" [ref=f163e56] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/sites
+        - link "Products New" [ref=f163e62] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/products
+          - generic [ref=f163e66]:
+            - generic [ref=f163e67]: Products
+            - generic [ref=f163e68]: New
+      - generic [ref=f163e69]:
+        - list [ref=f163e70]:
+          - link "Account settings" [ref=f163e71] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/account/profile
+          - link "Integrations" [ref=f163e77] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/integrations
+          - link "File manager" [ref=f163e83] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/file-manager
+          - link "My templates" [ref=f163e89] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/templates
+        - list [ref=f163e95]:
+          - listitem [ref=f163e98] [cursor=pointer]:
+            - link "Partner offers" [ref=f163e99]:
+              - /url: https://dashboard.mailerlite.com/partner-perks
+          - listitem [ref=f163e103] [cursor=pointer]:
+            - link "Refer a friend" [ref=f163e104]:
+              - /url: https://dashboard.mailerlite.com/refer
+    - generic [ref=f163e106]:
+      - generic [ref=f163e108]:
+        - generic [ref=f163e109]:
+          - generic [ref=f163e116] [cursor=pointer]:
+            - generic [ref=f163e117]: Cha0smagick LABS
+            - generic [ref=f163e118]: 14-day trial
+          - link [ref=f163e124] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/billing/upgrade?source=navbar_primary_button
+        - generic [ref=f163e130]:
+          - generic [ref=f163e131] [cursor=pointer]: Help
+          - generic [ref=f163e149] [cursor=pointer]:
+            - generic [ref=f163e150]: "Magia Caotica: Magia del Caos Práctica"
+            - generic [ref=f163e151]: magiacaoticapractica@gmail.com
+      - main [ref=f163e157]:
+        - generic [ref=f163e158]:
+          - generic [ref=f163e159]:
+            - generic [ref=f163e160]:
+              - heading "Automations" [level=1] [ref=f163e162]
+              - link "New automation" [ref=f163e164] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/automations/create
+            - navigation "Tabs" [ref=f163e168]:
+              - link "Workflows 1" [ref=f163e169] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/automations/status/workflows
+                - generic [ref=f163e172]:
+                  - generic [ref=f163e173]: Workflows
+                  - generic [ref=f163e174]: "1"
+              - link "Drafts 1" [ref=f163e175] [cursor=pointer]:
+                - /url: https://dashboard.mailerlite.com/automations/status/drafts
+                - generic [ref=f163e178]:
+                  - generic [ref=f163e179]: Drafts
+                  - generic [ref=f163e180]: "1"
+          - generic [ref=f163e184]:
+            - generic [ref=f163e186]:
+              - generic [ref=f163e187]:
+                - generic [ref=f163e189]:
+                  - checkbox "Select all" [ref=f163e190]
+                  - generic [ref=f163e191]: Select all
+                - generic [ref=f163e194]:
+                  - button "Filter" [ref=f163e198] [cursor=pointer]
+                  - button "All" [ref=f163e207] [cursor=pointer]
+              - generic [ref=f163e217]:
+                - generic [ref=f163e219]:
+                  - textbox "Search automation" [ref=f163e220]
+                  - button [ref=f163e222] [cursor=pointer]
+                - generic [ref=f163e226]:
+                  - generic [ref=f163e227]: Date created
+                  - button [ref=f163e238] [cursor=pointer]
+            - generic [ref=f163e244]:
+              - checkbox [ref=f163e248]
+              - generic [ref=f163e249]:
+                - generic [ref=f163e250]:
+                  - generic [ref=f163e251]: No emails
+                  - generic [ref=f163e255]:
+                    - generic [ref=f163e256]:
+                      - generic [ref=f163e257]: Workflow is incomplete
+                      - heading "Lead Magnet Auto-Responder EN" [level=3] [ref=f163e261]
+                      - paragraph [ref=f163e262]:
+                        - generic [ref=f163e263]: Created a day ago
+                    - generic [ref=f163e267]:
+                      - link "Edit" [ref=f163e268] [cursor=pointer]:
+                        - /url: /automations/194257988955932398/edit
+                      - link "View report" [ref=f163e270] [cursor=pointer]:
+                        - /url: /automations/194257988955932398
+                      - button [ref=f163e274] [cursor=pointer]
+                - generic [ref=f163e279]:
+                  - generic [ref=f163e280]:
+                    - generic [ref=f163e281]: Queued
+                    - link "0" [ref=f163e284] [cursor=pointer]:
+                      - /url: /automations/194257988955932398/activity?filter[status]=active
+                  - generic [ref=f163e286]:
+                    - generic [ref=f163e287]: Completed
+                    - link "0" [ref=f163e290] [cursor=pointer]:
+                      - /url: /automations/194257988955932398/activity?filter[status]=completed
+            - generic [ref=f163e294]:
+              - paragraph [ref=f163e296]: Showing 1 to 1 of 1 results
+              - generic [ref=f163e299]:
+                - button "Previous" [disabled] [ref=f163e300]
+                - button "Next" [disabled] [ref=f163e302]
+  - iframe [ref=f163e304]:
+    
+  - iframe [ref=f163e305]:
+    
+  - generic [ref=f163e306]:
+    - iframe [ref=f163e307]:
+      - generic [ref=f171e1]:
+        - generic "Intercom":
+          - region "Intercom Messenger":
+            - button "Abrir Intercom Messenger, 1 nuevo mensaje" [ref=f171e2] [cursor=pointer]
+    - generic [ref=f163e308]: "1"

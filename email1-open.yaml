@@ -1,0 +1,104 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e3]:
+    - banner [ref=f9e4]:
+      - generic [ref=f9e5]:
+        - link [ref=f9e6] [cursor=pointer]:
+          - /url: /automations/status/drafts
+        - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=2] [ref=f9e11]
+      - generic [ref=f9e12]:
+        - button "Test" [ref=f9e13] [cursor=pointer]
+        - button "Activate" [ref=f9e15] [cursor=pointer]
+        - link [ref=f9e20] [cursor=pointer]:
+          - /url: /automations/status/drafts
+    - generic [ref=f9e24]:
+      - complementary [ref=f9e26]:
+        - list [ref=f9e28]:
+          - listitem [ref=f9e29]:
+            - button [ref=f9e30] [cursor=pointer]
+          - listitem [ref=f9e38]:
+            - button [ref=f9e39] [cursor=pointer]
+          - listitem [ref=f9e43]:
+            - button [ref=f9e44] [cursor=pointer]
+      - list [ref=f9e50]:
+        - generic [ref=f9e51]:
+          - generic [ref=f9e53]:
+            - generic [ref=f9e64] [cursor=pointer]:
+              - generic [ref=f9e66]:
+                - generic [ref=f9e67]: Completes a form 1
+                - button [ref=f9e77]
+              - generic [ref=f9e81]: EN Lead Magnet - Chaos Magick Guide
+            - button [ref=f9e94] [cursor=pointer]
+          - paragraph [ref=f9e105] [cursor=pointer]: Add second trigger
+        - listitem [ref=f9e107]:
+          - generic [ref=f9e117] [cursor=pointer]:
+            - generic [ref=f9e119]:
+              - generic [ref=f9e120]: Email 5
+              - button [ref=f9e130]
+            - generic [ref=f9e134]: Email 1 - Lead Magnet PDF
+          - generic [ref=f9e146]:
+            - button [ref=f9e147] [cursor=pointer]
+            - button "Exit flow" [ref=f9e155] [cursor=pointer]
+      - generic [ref=f9e188]:
+        - generic [ref=f9e191]:
+          - generic [ref=f9e192]: Email 5
+          - button [ref=f9e194] [cursor=pointer]
+        - generic [ref=f9e199]:
+          - generic [ref=f9e200]:
+            - generic [ref=f9e201]:
+              - generic [ref=f9e202]: Email content
+              - button "Design email" [ref=f9e204] [cursor=pointer]
+            - generic [ref=f9e206]:
+              - generic [ref=f9e208]:
+                - generic [ref=f9e209]: Email name
+                - textbox "Email name" [ref=f9e212]:
+                  - /placeholder: Name
+                  - text: Email 1 - Lead Magnet PDF
+              - generic [ref=f9e213]:
+                - generic [ref=f9e214]:
+                  - generic [ref=f9e215]: Subject
+                  - generic [ref=f9e216]:
+                    - button "Suggest" [ref=f9e222] [cursor=pointer]
+                    - button "Insert personalization" [ref=f9e229] [cursor=pointer]
+                - textbox "Email subject" [ref=f9e236]: Your Free Chaos Magick Quickstart Guide
+              - generic [ref=f9e237]:
+                - generic [ref=f9e238]: Who is it from?
+                - textbox "Who is it from?" [ref=f9e241]:
+                  - /placeholder: Sender name
+                  - text: Cha0smagick LABS
+              - generic [ref=f9e242]:
+                - generic [ref=f9e243]:
+                  - generic [ref=f9e244]:
+                    - generic [ref=f9e245]: Sender email
+                    - textbox "Sender email" [ref=f9e248]: magiacaoticapractica@gmail.com
+                  - generic [ref=f9e257]:
+                    - text: Free domains can affect email delivery. Use a custom domain for better results.
+                    - link "Learn more" [ref=f9e258] [cursor=pointer]:
+                      - /url: https://www.mailerlite.com/help/the-limitations-of-using-a-free-domain
+                - generic [ref=f9e260]:
+                  - checkbox "Use different Reply-to email" [ref=f9e261]
+                  - generic [ref=f9e262]: Use different Reply-to email
+              - generic [ref=f9e265]:
+                - generic [ref=f9e266]: Preheader
+                - textbox "Offer a short preview of your email’s content." [ref=f9e269]
+            - generic [ref=f9e270]:
+              - generic [ref=f9e271]: Opens tracking
+              - generic [ref=f9e273]:
+                - checkbox "Track opens with an invisible beacon embedded in your email." [checked] [ref=f9e274]
+                - generic [ref=f9e275]: Track opens with an invisible beacon embedded in your email.
+            - generic [ref=f9e278]:
+              - generic [ref=f9e279]: UTM tags
+              - generic [ref=f9e281]:
+                - checkbox "Add parameters to your URLs to track newsletter traffic on web analytics platforms." [ref=f9e282]
+                - generic [ref=f9e283]: Add parameters to your URLs to track newsletter traffic on web analytics platforms.
+            - generic [ref=f9e287]:
+              - generic [ref=f9e288]: Language
+              - generic [ref=f9e290]: English
+          - generic [ref=f9e300]:
+            - button "Cancel" [ref=f9e301] [cursor=pointer]
+            - button "Save" [ref=f9e303] [cursor=pointer]
+      - generic [ref=f9e165]:
+        - button [ref=f9e169] [cursor=pointer]
+        - button [ref=f9e176] [cursor=pointer]
+        - button [disabled] [ref=f9e183]
+  - iframe [ref=f9e187]:
+    

@@ -1,0 +1,60 @@
+- generic [ref=f182e1]:
+  - generic [ref=f182e3]:
+    - banner [ref=f182e4]:
+      - generic [ref=f182e5]:
+        - link [ref=f182e6] [cursor=pointer]:
+          - /url: /automations/status/drafts
+        - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=2] [ref=f182e11]
+      - generic [ref=f182e12]:
+        - button "Test" [ref=f182e13] [cursor=pointer]
+        - button "Activate" [ref=f182e15] [cursor=pointer]
+        - link [ref=f182e20] [cursor=pointer]:
+          - /url: /automations/status/drafts
+    - generic [ref=f182e24]:
+      - complementary [ref=f182e26]:
+        - list [ref=f182e28]:
+          - listitem [ref=f182e29]:
+            - button [ref=f182e30] [cursor=pointer]
+          - listitem [ref=f182e38]:
+            - button [ref=f182e39] [cursor=pointer]
+          - listitem [ref=f182e43]:
+            - button [ref=f182e44] [cursor=pointer]
+      - list [ref=f182e254]:
+        - generic [ref=f182e255]:
+          - generic [ref=f182e257]:
+            - generic [ref=f182e308] [cursor=pointer]:
+              - generic [ref=f182e310]:
+                - generic [ref=f182e311]: Completes a form 1
+                - button [active] [ref=f182e321]
+              - generic [ref=f182e325]: EN Lead Magnet - Chaos Magick Guide
+            - button [ref=f182e270] [cursor=pointer]
+          - paragraph [ref=f182e340] [cursor=pointer]: Add second trigger
+      - generic [ref=f182e394]:
+        - generic [ref=f182e397]:
+          - generic [ref=f182e398]: Test automation emails
+          - button [ref=f182e400] [cursor=pointer]
+        - generic [ref=f182e405]:
+          - generic [ref=f182e406]: How does it work?
+          - list [ref=f182e408]:
+            - listitem [ref=f182e409]: Send yourself all completed emails in this automation (ignoring delays, conditions, and A/B tests)
+            - listitem [ref=f182e410]:
+              - text: Certain links (Unsubscribe, Forward....) are inactive in test emails.
+              - link "Learn more" [ref=f182e411] [cursor=pointer]:
+                - /url: https://www.mailerlite.com/help/everything-about-test-emails#new/features
+              - text: .
+          - generic [ref=f182e412]: Please add an email step(s) to test your automation emails.
+          - generic [ref=f182e423]:
+            - generic [ref=f182e424]: Your email address
+            - textbox "Enter email" [disabled] [ref=f182e430]
+            - button "Send test" [disabled] [ref=f182e433]
+      - generic [ref=f182e275]:
+        - button [ref=f182e279] [cursor=pointer]
+        - button [ref=f182e286] [cursor=pointer]
+        - button [disabled] [ref=f182e293]
+  - iframe [ref=f182e297]:
+    
+  - list [ref=f182e437]:
+    - listitem [ref=f182e438]:
+      - button "Replace" [ref=f182e439] [cursor=pointer]
+    - listitem [ref=f182e448]:
+      - button "Delete" [ref=f182e449] [cursor=pointer]

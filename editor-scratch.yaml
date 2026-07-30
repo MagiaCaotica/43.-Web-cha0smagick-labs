@@ -1,0 +1,45 @@
+- generic [active] [ref=f24e1]:
+  - main [ref=f24e4]:
+    - generic [ref=f24e5]:
+      - navigation "Breadcrumb" [ref=f24e6]:
+        - list [ref=f24e7]:
+          - listitem [ref=f24e8]:
+            - link "Automation" [ref=f24e9] [cursor=pointer]:
+              - /url: https://dashboard.mailerlite.com/automations/status/drafts
+          - listitem [ref=f24e10]:
+            - link "Workflow" [ref=f24e14] [cursor=pointer]:
+              - /url: https://dashboard.mailerlite.com/automations/194374990433355431/edit
+          - listitem [ref=f24e15]:
+            - link "Content" [ref=f24e19] [cursor=pointer]:
+              - /url: "#"
+      - link [ref=f24e20] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/automations/194374990433355431/edit
+    - generic [ref=f24e25]:
+      - heading "Email design" [level=1] [ref=f24e28]
+      - navigation "Tabs" [ref=f24e31]:
+        - link "Start from scratch" [ref=f24e32] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/emails/194375948108301611/start-from-scratch
+        - link "Template gallery" [ref=f24e37] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/emails/194375948108301611/templates/gallery
+        - link "Recent emails" [ref=f24e42] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/emails/194375948108301611/recent-emails
+    - generic [ref=f24e50]:
+      - button "Drag & drop editor Design flexibly with many styling options while still enabling the simple drag & drop block functionality that you love. Continue" [ref=f24e52] [cursor=pointer]:
+        - generic [ref=f24e55]:
+          - heading "Drag & drop editor" [level=3] [ref=f24e56]
+          - paragraph [ref=f24e57]: Design flexibly with many styling options while still enabling the simple drag & drop block functionality that you love.
+          - generic [ref=f24e58]: Continue
+      - button "New Simple editor Try our new simple editor to create simple emails! A distraction free experience with seamless inline editing. Continue" [ref=f24e64] [cursor=pointer]:
+        - generic [ref=f24e67]:
+          - generic [ref=f24e68]: New
+          - heading "Simple editor" [level=3] [ref=f24e70]
+          - paragraph [ref=f24e71]: Try our new simple editor to create simple emails! A distraction free experience with seamless inline editing.
+          - generic [ref=f24e72]: Continue
+      - button "New Custom HTML editor This one is for the experts. Code your own email alongside our HTML agent. Continue" [ref=f24e78] [cursor=pointer]:
+        - generic [ref=f24e81]:
+          - generic [ref=f24e82]: New
+          - heading "Custom HTML editor" [level=3] [ref=f24e84]
+          - paragraph [ref=f24e85]: This one is for the experts. Code your own email alongside our HTML agent.
+          - generic [ref=f24e86]: Continue
+  - iframe [ref=f24e91]:
+    

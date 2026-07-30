@@ -1,0 +1,42 @@
+- generic [ref=f190e1]:
+  - generic [ref=f190e3]:
+    - banner [ref=f190e4]:
+      - generic [ref=f190e5]:
+        - link [ref=f190e6] [cursor=pointer]:
+          - /url: /automations/status/drafts
+        - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=2] [ref=f190e11]
+      - generic [ref=f190e12]:
+        - button "Test" [ref=f190e13] [cursor=pointer]
+        - button "Activate" [ref=f190e15] [cursor=pointer]
+        - link [ref=f190e20] [cursor=pointer]:
+          - /url: /automations/status/drafts
+    - generic [ref=f190e24]:
+      - complementary [ref=f190e26]:
+        - list [ref=f190e28]:
+          - listitem [ref=f190e29]:
+            - button [ref=f190e30] [cursor=pointer]
+          - listitem [ref=f190e38]:
+            - button [ref=f190e39] [cursor=pointer]
+          - listitem [ref=f190e43]:
+            - button [ref=f190e44] [cursor=pointer]
+      - list [ref=f190e50]:
+        - generic [ref=f190e51]:
+          - generic [ref=f190e53]:
+            - generic [ref=f190e64] [cursor=pointer]:
+              - generic [ref=f190e66]:
+                - generic [ref=f190e67]: Completes a form 1
+                - button [active] [ref=f190e77]
+              - generic [ref=f190e81]: EN Lead Magnet - Chaos Magick Guide
+            - button [ref=f190e94] [cursor=pointer]
+          - paragraph [ref=f190e105] [cursor=pointer]: Add second trigger
+      - generic [ref=f190e106]:
+        - button [ref=f190e110] [cursor=pointer]
+        - button [ref=f190e117] [cursor=pointer]
+        - button [disabled] [ref=f190e124]
+  - iframe [ref=f190e128]:
+    
+  - list [ref=f190e131]:
+    - listitem [ref=f190e132]:
+      - button "Replace" [ref=f190e133] [cursor=pointer]
+    - listitem [ref=f190e142]:
+      - button "Delete" [ref=f190e143] [cursor=pointer]
