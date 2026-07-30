@@ -1,0 +1,56 @@
+- generic [active] [ref=f131e1]:
+  - generic [ref=f131e2]:
+    - generic [ref=f131e3]:
+      - banner [ref=f131e4]:
+        - generic [ref=f131e5]:
+          - link [ref=f131e6] [cursor=pointer]:
+            - /url: /automations/status/workflows
+          - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=2] [ref=f131e11]
+        - generic [ref=f131e12]:
+          - button "Test" [ref=f131e13] [cursor=pointer]
+          - button "Activate" [ref=f131e15] [cursor=pointer]
+          - link [ref=f131e20] [cursor=pointer]:
+            - /url: /automations/status/workflows
+      - generic [ref=f131e24]:
+        - complementary [ref=f131e26]:
+          - list [ref=f131e28]:
+            - listitem [ref=f131e29]:
+              - button [ref=f131e30] [cursor=pointer]
+            - listitem [ref=f131e34]:
+              - button [ref=f131e35] [cursor=pointer]
+            - listitem [ref=f131e39]:
+              - button [ref=f131e40] [cursor=pointer]
+        - list [ref=f131e46]:
+          - generic [ref=f131e47]:
+            - generic [ref=f131e49]:
+              - generic [ref=f131e60] [cursor=pointer]:
+                - generic [ref=f131e62]:
+                  - generic [ref=f131e63]: Completes a form 1
+                  - button [ref=f131e73]
+                - generic [ref=f131e77]: EN Lead Magnet - Chaos Magick Guide
+              - button [ref=f131e90] [cursor=pointer]
+            - paragraph [ref=f131e101] [cursor=pointer]: Add second trigger
+          - listitem [ref=f131e103]:
+            - generic [ref=f131e113] [cursor=pointer]:
+              - generic [ref=f131e115]:
+                - generic [ref=f131e116]: Email 5
+                - button [ref=f131e126]
+              - generic [ref=f131e130]: Email 1 - Lead Magnet PDF
+            - generic [ref=f131e143]:
+              - button [ref=f131e144] [cursor=pointer]
+              - button "Exit flow" [ref=f131e152] [cursor=pointer]
+        - generic [ref=f131e162]:
+          - button [ref=f131e166] [cursor=pointer]
+          - button [ref=f131e173] [cursor=pointer]
+          - button [disabled] [ref=f131e180]
+    - generic [ref=f131e188]:
+      - button [ref=f131e189] [cursor=pointer]
+      - generic [ref=f131e194]:
+        - generic [ref=f131e195]:
+          - heading "Activate automation?" [level=2] [ref=f131e197]
+          - paragraph [ref=f131e198]: You're about to activate this automation. Once you do, any subscriber who meets the trigger criteria will enter the automation and all its steps.
+        - generic [ref=f131e199]:
+          - button "Go back" [ref=f131e200] [cursor=pointer]
+          - button "Activate" [ref=f131e202] [cursor=pointer]
+  - iframe [ref=f131e184]:
+    

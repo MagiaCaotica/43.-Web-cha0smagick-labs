@@ -1,0 +1,65 @@
+- generic [active] [ref=f31e1]:
+  - generic [ref=f31e3]:
+    - banner [ref=f31e4]:
+      - link [ref=f31e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f31e12]:
+        - button [disabled]
+        - button [ref=f31e13] [cursor=pointer]
+      - generic [ref=f31e16]:
+        - button [ref=f31e18] [cursor=pointer]
+        - button "Preview and test" [ref=f31e22] [cursor=pointer]
+        - button "Done editing" [ref=f31e26] [cursor=pointer]
+        - button [ref=f31e28] [cursor=pointer]
+    - generic [ref=f31e31]:
+      - complementary [ref=f31e32]:
+        - generic [ref=f31e33]:
+          - list [ref=f31e34]:
+            - listitem [ref=f31e35]:
+              - generic [ref=f31e36]:
+                - text: Fields and variables
+                - link [ref=f31e37] [cursor=pointer]:
+                  - /url: "#"
+            - listitem [ref=f31e40]:
+              - generic [ref=f31e41]:
+                - text: File manager
+                - link [ref=f31e42] [cursor=pointer]:
+                  - /url: "#"
+            - listitem [ref=f31e45]:
+              - link [ref=f31e91] [cursor=pointer]:
+                - /url: "#"
+              - generic [ref=f31e97]:
+                - generic [ref=f31e98]:
+                  - generic [ref=f31e99]: Import HTML
+                  - paragraph [ref=f31e100]: Drop or click to upload ZIP file from your device.
+                - generic [ref=f31e101]:
+                  - generic [ref=f31e102]:
+                    - paragraph: Drop ZIP file here
+                  - button "Upload your ZIP" [ref=f31e104] [cursor=pointer]
+          - generic [ref=f31e50]:
+            - generic [ref=f31e51]:
+              - text: Dark mode
+              - button [ref=f31e52] [cursor=pointer]
+            - generic [ref=f31e55]:
+              - text: Knowledge base
+              - link [ref=f31e56] [cursor=pointer]:
+                - /url: https://www.mailerlite.com/help/how-to-use-the-custom-html-editor
+      - main:
+        - iframe [ref=f31e61]:
+          
+      - complementary [ref=f31e67]:
+        - generic [ref=f31e107]:
+          - button "Code" [ref=f31e108] [cursor=pointer]
+          - button "Agent Beta" [ref=f31e112] [cursor=pointer]:
+            - generic [ref=f31e115]: Agent
+            - generic [ref=f31e116]: Beta
+        - generic [ref=f31e117]:
+          - generic [ref=f31e120]:
+            - generic [ref=f31e121]: "1"
+            - textbox [ref=f31e128]
+          - generic [ref=f31e130]:
+            - generic [ref=f31e131]: CSS (except media queries) will be applied as inline styles before sending.
+            - button "Dismiss" [ref=f31e135] [cursor=pointer]
+          - button "Beautify" [ref=f31e138] [cursor=pointer]
+  - iframe [ref=f31e90]:
+    

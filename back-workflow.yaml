@@ -1,0 +1,101 @@
+- generic [ref=f31e1]:
+  - generic [ref=f31e3]:
+    - banner [ref=f31e4]:
+      - link [ref=f31e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f31e12]:
+        - button [disabled]
+        - button [ref=f31e13] [cursor=pointer]
+      - generic [ref=f31e16]:
+        - generic [ref=f31e142]:
+          - generic [ref=f31e143]:
+            - text: Undo (Ctrl+Z)
+            - button [ref=f31e144] [cursor=pointer]
+          - button [disabled]
+        - button [ref=f31e18] [cursor=pointer]
+        - button "Preview and test" [ref=f31e22] [cursor=pointer]
+        - button "Done editing" [active] [ref=f31e26] [cursor=pointer]
+        - button [ref=f31e28] [cursor=pointer]
+    - generic [ref=f31e31]:
+      - complementary [ref=f31e32]:
+        - generic [ref=f31e33]:
+          - list [ref=f31e34]:
+            - listitem [ref=f31e35]:
+              - generic [ref=f31e36]:
+                - text: Fields and variables
+                - link [ref=f31e37] [cursor=pointer]:
+                  - /url: "#"
+            - listitem [ref=f31e40]:
+              - generic [ref=f31e41]:
+                - text: File manager
+                - link [ref=f31e42] [cursor=pointer]:
+                  - /url: "#"
+            - listitem [ref=f31e45]:
+              - link [ref=f31e91] [cursor=pointer]:
+                - /url: "#"
+              - generic [ref=f31e97]:
+                - generic [ref=f31e98]:
+                  - generic [ref=f31e99]: Import HTML
+                  - paragraph [ref=f31e100]: Drop or click to upload ZIP file from your device.
+                - generic [ref=f31e101]:
+                  - generic [ref=f31e102]:
+                    - paragraph: Drop ZIP file here
+                  - button "Upload your ZIP" [ref=f31e104] [cursor=pointer]
+          - generic [ref=f31e50]:
+            - generic [ref=f31e51]:
+              - text: Dark mode
+              - button [ref=f31e52] [cursor=pointer]
+            - generic [ref=f31e55]:
+              - text: Knowledge base
+              - link [ref=f31e56] [cursor=pointer]:
+                - /url: https://www.mailerlite.com/help/how-to-use-the-custom-html-editor
+      - main:
+        - iframe [ref=f31e61]:
+          - generic [ref=f36e1]: "Your Free Chaos Magick Quickstart Guide Hi {{name}}, Welcome to Cha0smagick Labs! Your journey into practical chaos magick starts here. Here is your free Chaos Magick Quickstart Guide. This guide covers: 🌀 Sigils — How to create, charge, and fire sigils 🧠 Servitors — Building autonomous thought-forms ⚡ Gnosis States — Achieving altered consciousness 🔄 Paradigm Shifting — Belief as a tool, not a cage Download Your Free Guide → Also explore our free tools, Android apps, and 134+ blog articles at cha0smagicklabs.com. Blessings, Cha0smagick Labs Team You received this because you subscribed. Unsubscribe | View in browser"
+      - complementary [ref=f31e67]:
+        - generic [ref=f31e107]:
+          - button "Code" [ref=f31e108] [cursor=pointer]
+          - button "Agent Beta" [ref=f31e112] [cursor=pointer]:
+            - generic [ref=f31e115]: Agent
+            - generic [ref=f31e116]: Beta
+        - generic [ref=f31e117]:
+          - generic [ref=f31e120]:
+            - generic [ref=f31e122]:
+              - generic [ref=f31e123]: "1"
+              - generic [ref=f31e147]: "2"
+              - generic [ref=f31e150]: "3"
+              - generic [ref=f31e151]: "4"
+              - generic [ref=f31e152]: "5"
+              - generic [ref=f31e153]: "6"
+              - generic [ref=f31e154]: "7"
+              - generic [ref=f31e155]: "8"
+              - generic [ref=f31e156]: "9"
+              - generic [ref=f31e157]: "10"
+              - generic [ref=f31e158]: "11"
+              - generic [ref=f31e159]: "12"
+              - generic [ref=f31e160]: "13"
+            - textbox [ref=f31e128]:
+              - generic [ref=f31e161]: Your Free Chaos Magick Quickstart Guide
+              - generic [ref=f31e162]: "Hi {{name}},"
+              - generic [ref=f31e163]: Welcome to Cha0smagick Labs! Your journey into practical chaos magick starts here.
+              - generic [ref=f31e164]: "Here is your free Chaos Magick Quickstart Guide. This guide covers:"
+              - generic [ref=f31e165]: 🌀 Sigils — How to create, charge, and fire sigils
+              - generic [ref=f31e166]: 🧠 Servitors — Building autonomous thought-forms
+              - generic [ref=f31e167]: ⚡ Gnosis States — Achieving altered consciousness
+              - generic [ref=f31e168]: 🔄 Paradigm Shifting — Belief as a tool, not a cage
+              - generic [ref=f31e169]: Download Your Free Guide →
+              - generic [ref=f31e170]: Also explore our free tools, Android apps, and 134+ blog articles at cha0smagicklabs.com.
+              - generic [ref=f31e171]: Blessings,
+              - generic [ref=f31e172]: Cha0smagick Labs Team
+              - generic [ref=f31e173]: You received this because you subscribed. Unsubscribe | View in browser
+          - button "Beautify" [ref=f31e138] [cursor=pointer]
+    - dialog [ref=f31e174]:
+      - generic [ref=f31e175]:
+        - generic [ref=f31e177]:
+          - heading "Unsubscribe link is missing!" [level=3] [ref=f31e178]
+          - paragraph [ref=f31e179]: You forgot to include an unsubscribe link. You can copy link from the Variables section
+        - contentinfo [ref=f31e181]:
+          - button "Resolve" [ref=f31e182] [cursor=pointer]
+      - button "Close" [ref=f31e184] [cursor=pointer]
+  - iframe [ref=f31e90]:
+    

@@ -1,0 +1,53 @@
+- generic [ref=f182e1]:
+  - generic [ref=f182e3]:
+    - banner [ref=f182e4]:
+      - generic [ref=f182e5]:
+        - link [ref=f182e6] [cursor=pointer]:
+          - /url: /automations/status/drafts
+        - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=2] [ref=f182e11]
+      - generic [ref=f182e12]:
+        - button "Test" [ref=f182e13] [cursor=pointer]
+        - button "Activate" [ref=f182e15] [cursor=pointer]
+        - link [ref=f182e20] [cursor=pointer]:
+          - /url: /automations/status/drafts
+    - generic [ref=f182e24]:
+      - complementary [ref=f182e26]:
+        - list [ref=f182e28]:
+          - listitem [ref=f182e29]:
+            - button [ref=f182e30] [cursor=pointer]
+          - listitem [ref=f182e38]:
+            - button [ref=f182e39] [cursor=pointer]
+          - listitem [ref=f182e43]:
+            - button [ref=f182e44] [cursor=pointer]
+      - list [ref=f182e254]:
+        - generic [ref=f182e255]:
+          - generic [ref=f182e257]:
+            - generic [ref=f182e308] [cursor=pointer]:
+              - generic [ref=f182e310]:
+                - generic [ref=f182e311]: Completes a form 1
+                - button [ref=f182e321]
+              - generic [ref=f182e325]: Select form
+            - button [ref=f182e270] [cursor=pointer]
+          - paragraph [ref=f182e340] [cursor=pointer]: Add second trigger
+      - generic [ref=f182e341]:
+        - generic [ref=f182e344]:
+          - generic [ref=f182e345]: Completes a form 1
+          - button [ref=f182e347] [cursor=pointer]
+        - generic [ref=f182e352]:
+          - generic [ref=f182e355]:
+            - generic [ref=f182e356]: Select form
+            - generic [ref=f182e358]: Please select
+          - button "Save" [ref=f182e368] [cursor=pointer]
+      - generic [ref=f182e275]:
+        - button [ref=f182e279] [cursor=pointer]
+        - button [ref=f182e286] [cursor=pointer]
+        - button [disabled] [ref=f182e293]
+  - iframe [ref=f182e297]:
+    
+  - list [ref=f182e373]:
+    - listitem [ref=f182e374]:
+      - textbox "Search..." [active] [ref=f182e377]
+    - listitem [ref=f182e378]:
+      - button "ES Lead Magnet - Guia Magia Caos" [ref=f182e379] [cursor=pointer]
+    - listitem [ref=f182e383]:
+      - button "EN Lead Magnet - Chaos Magick Guide" [ref=f182e384] [cursor=pointer]

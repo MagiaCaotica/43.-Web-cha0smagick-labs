@@ -1,0 +1,55 @@
+- generic [active] [ref=f31e1]:
+  - generic [ref=f31e3]:
+    - banner [ref=f31e4]:
+      - link [ref=f31e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f31e12]:
+        - button [disabled]
+        - button [ref=f31e13] [cursor=pointer]
+      - generic [ref=f31e16]:
+        - button [ref=f31e18] [cursor=pointer]
+        - button "Preview and test" [ref=f31e22] [cursor=pointer]
+        - button "Done editing" [ref=f31e26] [cursor=pointer]
+        - button [ref=f31e28] [cursor=pointer]
+    - generic [ref=f31e31]:
+      - complementary [ref=f31e32]:
+        - generic [ref=f31e33]:
+          - list [ref=f31e34]:
+            - listitem [ref=f31e35]:
+              - generic [ref=f31e36]:
+                - text: Fields and variables
+                - link [ref=f31e37] [cursor=pointer]:
+                  - /url: "#"
+            - listitem [ref=f31e40]:
+              - generic [ref=f31e41]:
+                - text: File manager
+                - link [ref=f31e42] [cursor=pointer]:
+                  - /url: "#"
+            - listitem [ref=f31e45]:
+              - generic [ref=f31e46]:
+                - text: Import HTML
+                - link [ref=f31e47] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=f31e50]:
+            - generic [ref=f31e51]:
+              - text: Dark mode
+              - button [ref=f31e52] [cursor=pointer]
+            - generic [ref=f31e55]:
+              - text: Knowledge base
+              - link [ref=f31e56] [cursor=pointer]:
+                - /url: https://www.mailerlite.com/help/how-to-use-the-custom-html-editor
+      - main [ref=f31e59]:
+        - generic [ref=f31e60]:
+          - iframe [ref=f31e61]:
+            
+          - button [ref=f31e64] [cursor=pointer]
+      - complementary [ref=f31e67]:
+        - complementary [ref=f31e70]:
+          - generic [ref=f31e72]:
+            - heading "How would you like to begin?" [level=2] [ref=f31e76]
+            - generic [ref=f31e77]:
+              - button "Generate email" [ref=f31e78] [cursor=pointer]
+              - button "Import HTML code" [ref=f31e82] [cursor=pointer]
+              - button "Code from scratch" [ref=f31e86] [cursor=pointer]
+  - iframe [ref=f31e90]:
+    

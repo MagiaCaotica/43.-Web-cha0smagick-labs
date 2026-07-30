@@ -1,0 +1,205 @@
+- generic [ref=f172e1]:
+  - generic [ref=f172e2]:
+    - generic [ref=f172e4]:
+      - link [ref=f172e6] [cursor=pointer]:
+        - /url: /
+      - link "Trial 12 days left" [ref=f172e16] [cursor=pointer]:
+        - /url: https://dashboard.mailerlite.com/billing/upgrade?source=sidebar_trial_banner
+        - generic [ref=f172e17]: Trial
+        - generic [ref=f172e22]: 12 days left
+      - list [ref=f172e23]:
+        - link "Dashboard" [ref=f172e24] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/dashboard
+        - link "Subscribers" [ref=f172e30] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/subscribers
+        - link "Campaigns" [ref=f172e36] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/campaigns/status/sent
+        - link "Automations" [ref=f172e42] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/automations/status/drafts
+        - link "Forms" [ref=f172e50] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/forms
+        - link "Sites" [ref=f172e56] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/sites
+        - link "Products New" [ref=f172e62] [cursor=pointer]:
+          - /url: https://dashboard.mailerlite.com/products
+          - generic [ref=f172e66]:
+            - generic [ref=f172e67]: Products
+            - generic [ref=f172e68]: New
+      - generic [ref=f172e69]:
+        - list [ref=f172e70]:
+          - link "Account settings" [ref=f172e71] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/account/profile
+          - link "Integrations" [ref=f172e77] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/integrations
+          - link "File manager" [ref=f172e83] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/file-manager
+          - link "My templates" [ref=f172e89] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/templates
+        - list [ref=f172e95]:
+          - listitem [ref=f172e98] [cursor=pointer]:
+            - link "Partner offers" [ref=f172e99]:
+              - /url: https://dashboard.mailerlite.com/partner-perks
+          - listitem [ref=f172e103] [cursor=pointer]:
+            - link "Refer a friend" [ref=f172e104]:
+              - /url: https://dashboard.mailerlite.com/refer
+    - generic [ref=f172e106]:
+      - generic [ref=f172e108]:
+        - generic [ref=f172e109]:
+          - generic [ref=f172e116] [cursor=pointer]:
+            - generic [ref=f172e117]: Cha0smagick LABS
+            - generic [ref=f172e118]: 14-day trial
+          - link [ref=f172e124] [cursor=pointer]:
+            - /url: https://dashboard.mailerlite.com/billing/upgrade?source=navbar_primary_button
+        - generic [ref=f172e130]:
+          - generic [ref=f172e131] [cursor=pointer]: Help
+          - generic [ref=f172e149] [cursor=pointer]:
+            - generic [ref=f172e150]: "Magia Caotica: Magia del Caos Práctica"
+            - generic [ref=f172e151]: magiacaoticapractica@gmail.com
+      - main [ref=f172e157]:
+        - generic [ref=f172e158]:
+          - navigation "Breadcrumb" [ref=f172e159]:
+            - list [ref=f172e160]:
+              - listitem [ref=f172e161]:
+                - link "Automations" [ref=f172e162] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/automations/status/drafts
+              - listitem [ref=f172e163]:
+                - link "Template" [ref=f172e167] [cursor=pointer]:
+                  - /url: https://dashboard.mailerlite.com/automations/create
+          - heading "Choose template" [level=1] [ref=f172e170]
+        - generic [ref=f172e171]:
+          - button "Start from scratch Pick up fresh and start building engaging automation with workflows from scratch. Create" [ref=f172e180] [cursor=pointer]:
+            - heading "Start from scratch" [level=3] [ref=f172e181]
+            - paragraph [ref=f172e182]: Pick up fresh and start building engaging automation with workflows from scratch.
+            - generic [ref=f172e183]: Create
+          - generic [ref=f172e191]:
+            - generic [ref=f172e192]: All templates
+            - generic [ref=f172e205]:
+              - button "Welcome Simple welcome email Use this easy workflow to welcome your new subscribers. Preview" [ref=f172e206] [cursor=pointer]:
+                - generic [ref=f172e207]: Welcome
+                - heading "Simple welcome email" [level=3] [ref=f172e209]
+                - paragraph [ref=f172e210]: Use this easy workflow to welcome your new subscribers.
+                - generic [ref=f172e211]: Preview
+              - button "Promotion Win back inactive subscribers Win back unengaged subscribers and unsubscribe inactive ones. Preview" [ref=f172e216] [cursor=pointer]:
+                - generic [ref=f172e217]: Promotion
+                - heading "Win back inactive subscribers" [level=3] [ref=f172e219]
+                - paragraph [ref=f172e220]: Win back unengaged subscribers and unsubscribe inactive ones.
+                - generic [ref=f172e221]: Preview
+              - button "Welcome Premium Advanced welcome email Use multiple channels like a sign up form or a landing page to trigger the same workflow for your new subscribers. Preview" [ref=f172e226] [cursor=pointer]:
+                - generic [ref=f172e227]:
+                  - generic [ref=f172e228]: Welcome
+                  - generic [ref=f172e229]: Premium
+                - heading "Advanced welcome email" [level=3] [ref=f172e234]
+                - paragraph [ref=f172e235]: Use multiple channels like a sign up form or a landing page to trigger the same workflow for your new subscribers.
+                - generic [ref=f172e236]: Preview
+              - button "Reminder E-commerce Abandoned cart Automatically follow up with shoppers who added items to their carts but didn’t proceed to checkout. Preview" [ref=f172e241] [cursor=pointer]:
+                - generic [ref=f172e242]:
+                  - generic [ref=f172e243]: Reminder
+                  - generic [ref=f172e244]: E-commerce
+                - heading "Abandoned cart" [level=3] [ref=f172e245]
+                - paragraph [ref=f172e246]: Automatically follow up with shoppers who added items to their carts but didn’t proceed to checkout.
+                - generic [ref=f172e247]: Preview
+              - button "Reminder E-commerce Abandoned checkout Follow up with shoppers who started the checkout process but didn't complete their purchase. Preview" [ref=f172e252] [cursor=pointer]:
+                - generic [ref=f172e253]:
+                  - generic [ref=f172e254]: Reminder
+                  - generic [ref=f172e255]: E-commerce
+                - heading "Abandoned checkout" [level=3] [ref=f172e256]
+                - paragraph [ref=f172e257]: Follow up with shoppers who started the checkout process but didn't complete their purchase.
+                - generic [ref=f172e258]: Preview
+              - button "Reminder E-commerce Reward repeat customers Reward repeat customers with a discount, special offer or a thank you. Preview" [ref=f172e263] [cursor=pointer]:
+                - generic [ref=f172e264]:
+                  - generic [ref=f172e265]: Reminder
+                  - generic [ref=f172e266]: E-commerce
+                - heading "Reward repeat customers" [level=3] [ref=f172e267]
+                - paragraph [ref=f172e268]: Reward repeat customers with a discount, special offer or a thank you.
+                - generic [ref=f172e269]: Preview
+              - button "Feedback E-commerce Purchase specific product Use this workflow to add your customers to a specific group after buying a particular product. Preview" [ref=f172e274] [cursor=pointer]:
+                - generic [ref=f172e275]:
+                  - generic [ref=f172e276]: Feedback
+                  - generic [ref=f172e277]: E-commerce
+                - heading "Purchase specific product" [level=3] [ref=f172e278]
+                - paragraph [ref=f172e279]: Use this workflow to add your customers to a specific group after buying a particular product.
+                - generic [ref=f172e280]: Preview
+              - button "Feedback E-commerce Purchase any product Use this workflow to add your customers in a group and send them a thank you email after purchase. Preview" [ref=f172e285] [cursor=pointer]:
+                - generic [ref=f172e286]:
+                  - generic [ref=f172e287]: Feedback
+                  - generic [ref=f172e288]: E-commerce
+                - heading "Purchase any product" [level=3] [ref=f172e289]
+                - paragraph [ref=f172e290]: Use this workflow to add your customers in a group and send them a thank you email after purchase.
+                - generic [ref=f172e291]: Preview
+              - button "Promotion E-commerce Promote specific product Use this workflow to introduce a new product to the segment of your customers who've already purchased from you. Preview" [ref=f172e296] [cursor=pointer]:
+                - generic [ref=f172e297]:
+                  - generic [ref=f172e298]: Promotion
+                  - generic [ref=f172e299]: E-commerce
+                - heading "Promote specific product" [level=3] [ref=f172e300]
+                - paragraph [ref=f172e301]: Use this workflow to introduce a new product to the segment of your customers who've already purchased from you.
+                - generic [ref=f172e302]: Preview
+              - button "Promotion New promotion Send subscribers new promotions and update custom fields based on their interaction with the campaigns. Preview" [ref=f172e307] [cursor=pointer]:
+                - generic [ref=f172e308]: Promotion
+                - heading "New promotion" [level=3] [ref=f172e310]
+                - paragraph [ref=f172e311]: Send subscribers new promotions and update custom fields based on their interaction with the campaigns.
+                - generic [ref=f172e312]: Preview
+              - button "Promotion Retarget subscribers Send your subscribers a new offer based on their interests. Preview" [ref=f172e317] [cursor=pointer]:
+                - generic [ref=f172e318]: Promotion
+                - heading "Retarget subscribers" [level=3] [ref=f172e320]
+                - paragraph [ref=f172e321]: Send your subscribers a new offer based on their interests.
+                - generic [ref=f172e322]: Preview
+              - button "Event Online course Start your online course at a specific date and send automated lessons every week. Preview" [ref=f172e327] [cursor=pointer]:
+                - generic [ref=f172e328]: Event
+                - heading "Online course" [level=3] [ref=f172e330]
+                - paragraph [ref=f172e331]: Start your online course at a specific date and send automated lessons every week.
+                - generic [ref=f172e332]: Preview
+              - button "Event Premium Webinar invitation Use this workflow to invite subscribers from multiple signup sources to your webinar event. Preview" [ref=f172e337] [cursor=pointer]:
+                - generic [ref=f172e338]:
+                  - generic [ref=f172e339]: Event
+                  - generic [ref=f172e340]: Premium
+                - heading "Webinar invitation" [level=3] [ref=f172e345]
+                - paragraph [ref=f172e346]: Use this workflow to invite subscribers from multiple signup sources to your webinar event.
+                - generic [ref=f172e347]: Preview
+              - button "Special date Birthday wishes Use this workflow to surprise subscribers with birthday wishes on their special day! Preview" [ref=f172e352] [cursor=pointer]:
+                - generic [ref=f172e353]: Special date
+                - heading "Birthday wishes" [level=3] [ref=f172e355]
+                - paragraph [ref=f172e356]: Use this workflow to surprise subscribers with birthday wishes on their special day!
+                - generic [ref=f172e357]: Preview
+              - button "Welcome Premium members Use this workflow to update the preferences of your premium members according to their engagement. Preview" [ref=f172e362] [cursor=pointer]:
+                - generic [ref=f172e363]: Welcome
+                - heading "Premium members" [level=3] [ref=f172e365]
+                - paragraph [ref=f172e366]: Use this workflow to update the preferences of your premium members according to their engagement.
+                - generic [ref=f172e367]: Preview
+              - button "Event Premium Demo call invitation Use this workflow to invite your subscribers from multiple signup sources to a demo call. Preview" [ref=f172e372] [cursor=pointer]:
+                - generic [ref=f172e373]:
+                  - generic [ref=f172e374]: Event
+                  - generic [ref=f172e375]: Premium
+                - heading "Demo call invitation" [level=3] [ref=f172e380]
+                - paragraph [ref=f172e381]: Use this workflow to invite your subscribers from multiple signup sources to a demo call.
+                - generic [ref=f172e382]: Preview
+              - button "Reminder Membership renewal You can use this workflow to remind your premium users to renew their memberships on specific dates. Preview" [ref=f172e387] [cursor=pointer]:
+                - generic [ref=f172e388]: Reminder
+                - heading "Membership renewal" [level=3] [ref=f172e390]
+                - paragraph [ref=f172e391]: You can use this workflow to remind your premium users to renew their memberships on specific dates.
+                - generic [ref=f172e392]: Preview
+              - button "Feedback NPS survey Did you receive low ratings on your latest NPS survey? If so, send an automated email asking for feedback and improvements. Preview" [ref=f172e397] [cursor=pointer]:
+                - generic [ref=f172e398]: Feedback
+                - heading "NPS survey" [level=3] [ref=f172e400]
+                - paragraph [ref=f172e401]: Did you receive low ratings on your latest NPS survey? If so, send an automated email asking for feedback and improvements.
+                - generic [ref=f172e402]: Preview
+    - generic [ref=f172e414]:
+      - button [ref=f172e415] [cursor=pointer]
+      - generic [ref=f172e419]:
+        - generic [ref=f172e421]:
+          - heading "Create automation" [level=2] [ref=f172e422]
+          - paragraph [ref=f172e423]: Guide your subscribers through every step of the journey - from the welcome email to desired result.
+        - textbox "Enter automation name" [active] [ref=f172e429]
+        - generic [ref=f172e431]:
+          - button "Cancel" [ref=f172e432] [cursor=pointer]
+          - button "Start building →" [ref=f172e434] [cursor=pointer]
+  - iframe [ref=f172e407]:
+    
+  - iframe [ref=f172e408]:
+    
+  - generic [ref=f172e409]:
+    - iframe [ref=f172e410]:
+      - generic [ref=f180e1]:
+        - generic "Intercom":
+          - region "Intercom Messenger":
+            - button "Abrir Intercom Messenger, 1 nuevo mensaje" [ref=f180e2] [cursor=pointer]
+    - generic [ref=f172e411]: "1"

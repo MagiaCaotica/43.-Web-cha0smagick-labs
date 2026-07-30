@@ -1,0 +1,75 @@
+- generic [active] [ref=f197e1]:
+  - generic [ref=f197e3]:
+    - banner [ref=f197e4]:
+      - generic [ref=f197e5]:
+        - link [ref=f197e6] [cursor=pointer]:
+          - /url: /automations/status/drafts
+        - heading "EN Lead Magnet - Chaos Magick Guide Workflow" [level=2] [ref=f197e11]
+      - generic [ref=f197e12]:
+        - button "Test" [ref=f197e13] [cursor=pointer]
+        - button "Activate" [ref=f197e15] [cursor=pointer]
+        - link [ref=f197e20] [cursor=pointer]:
+          - /url: /automations/status/drafts
+    - generic [ref=f197e24]:
+      - complementary [ref=f197e26]:
+        - list [ref=f197e28]:
+          - listitem [ref=f197e29]:
+            - button [ref=f197e30] [cursor=pointer]
+          - listitem [ref=f197e38]:
+            - button [ref=f197e39] [cursor=pointer]
+          - listitem [ref=f197e43]:
+            - button [ref=f197e44] [cursor=pointer]
+      - list [ref=f197e50]:
+        - generic [ref=f197e51]:
+          - generic [ref=f197e53]:
+            - generic [ref=f197e64] [cursor=pointer]:
+              - generic [ref=f197e66]:
+                - generic [ref=f197e67]: Completes a form 1
+                - button [ref=f197e77]
+              - generic [ref=f197e81]: EN Lead Magnet - Chaos Magick Guide
+            - button [ref=f197e94] [cursor=pointer]
+          - paragraph [ref=f197e105] [cursor=pointer]: Add second trigger
+        - generic [ref=f197e106]:
+          - listitem [ref=f197e107]:
+            - generic [ref=f197e117] [cursor=pointer]:
+              - generic [ref=f197e119]:
+                - generic [ref=f197e120]: Email 1
+                - button [ref=f197e130]
+              - generic [ref=f197e134]: Email 5 - Community
+            - button [ref=f197e147] [cursor=pointer]
+          - listitem [ref=f197e151]:
+            - generic [ref=f197e161] [cursor=pointer]:
+              - generic [ref=f197e163]:
+                - generic [ref=f197e164]: Email 2
+                - button [ref=f197e174]
+              - generic [ref=f197e178]: Email 4 - Books Bundle
+            - button [ref=f197e191] [cursor=pointer]
+          - listitem [ref=f197e195]:
+            - generic [ref=f197e205] [cursor=pointer]:
+              - generic [ref=f197e207]:
+                - generic [ref=f197e208]: Email 3
+                - button [ref=f197e218]
+              - generic [ref=f197e222]: Email 3 - Android Apps
+            - button [ref=f197e235] [cursor=pointer]
+          - listitem [ref=f197e239]:
+            - generic [ref=f197e249] [cursor=pointer]:
+              - generic [ref=f197e251]:
+                - generic [ref=f197e252]: Email 4
+                - button [ref=f197e262]
+              - generic [ref=f197e266]: Email 2 - Free Tools
+            - button [ref=f197e279] [cursor=pointer]
+          - listitem [ref=f197e283]:
+            - generic [ref=f197e293] [cursor=pointer]:
+              - generic [ref=f197e295]:
+                - generic [ref=f197e296]: Email 5
+                - button [ref=f197e306]
+              - generic [ref=f197e310]: Email 1 - Lead Magnet PDF
+            - generic [ref=f197e322]:
+              - button [ref=f197e323] [cursor=pointer]
+              - button "Exit flow" [ref=f197e331] [cursor=pointer]
+      - generic [ref=f197e341]:
+        - button [ref=f197e345] [cursor=pointer]
+        - button [ref=f197e352] [cursor=pointer]
+        - button [disabled] [ref=f197e359]
+  - iframe [ref=f197e363]:
+    

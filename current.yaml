@@ -1,0 +1,121 @@
+- generic [active] [ref=f104e1]:
+  - generic [ref=f104e2]:
+    - generic [ref=f104e3]:
+      - banner [ref=f104e4]:
+        - generic [ref=f104e5]:
+          - link [ref=f104e6] [cursor=pointer]:
+            - /url: /automations/status/workflows
+          - heading "EN Lead Magnet - Chaos Magick Guide" [level=2] [ref=f104e11]
+        - generic [ref=f104e12]:
+          - button "Test" [ref=f104e13] [cursor=pointer]
+          - button "Activate" [ref=f104e15] [cursor=pointer]
+          - link [ref=f104e20] [cursor=pointer]:
+            - /url: /automations/status/workflows
+      - generic [ref=f104e24]:
+        - complementary [ref=f104e26]:
+          - list [ref=f104e28]:
+            - listitem [ref=f104e29]:
+              - button [ref=f104e30] [cursor=pointer]
+            - listitem [ref=f104e34]:
+              - button [ref=f104e35] [cursor=pointer]
+            - listitem [ref=f104e39]:
+              - button [ref=f104e40] [cursor=pointer]
+        - list [ref=f104e46]:
+          - generic [ref=f104e47]:
+            - generic [ref=f104e49]:
+              - generic [ref=f104e60] [cursor=pointer]:
+                - generic [ref=f104e62]:
+                  - generic [ref=f104e63]: Completes a form 1
+                  - button [ref=f104e73]
+                - generic [ref=f104e77]: EN Lead Magnet - Chaos Magick Guide
+              - button [ref=f104e90] [cursor=pointer]
+            - paragraph [ref=f104e101] [cursor=pointer]: Add second trigger
+          - listitem [ref=f104e103]:
+            - generic [ref=f104e113] [cursor=pointer]:
+              - generic [ref=f104e115]:
+                - generic [ref=f104e116]: Email 1
+                - button [ref=f104e126]
+              - generic [ref=f104e131]:
+                - generic [ref=f104e132]: PDF Delivery - Chaos Magick Quickstart Guide
+                - generic [ref=f104e134]: Updating thumbnail...
+            - generic [ref=f104e143]:
+              - button [ref=f104e144] [cursor=pointer]
+              - button "Exit flow" [ref=f104e152] [cursor=pointer]
+        - generic [ref=f104e162]:
+          - generic [ref=f104e165]:
+            - generic [ref=f104e166]: Email 1
+            - button [ref=f104e168] [cursor=pointer]
+          - generic [ref=f104e173]:
+            - generic [ref=f104e174]:
+              - generic [ref=f104e175]:
+                - generic [ref=f104e176]: Email content
+                - generic [ref=f104e183]:
+                  - generic [ref=f104e184]:
+                    - link "Edit content" [ref=f104e185] [cursor=pointer]:
+                      - /url: /emails/194378933362230786/edit?redirect=https%3A%2F%2Fdashboard.mailerlite.com%2Fautomations%2F194378774476752390%2Fedit%3Fstep_id%3D194378933350696571
+                    - button [ref=f104e189] [cursor=pointer]
+                  - paragraph [ref=f104e193]: Preview or Send a test email
+              - generic [ref=f104e194]:
+                - generic [ref=f104e196]:
+                  - generic [ref=f104e197]: Email name
+                  - textbox "Email name" [ref=f104e200]:
+                    - /placeholder: Name
+                    - text: PDF Delivery - Chaos Magick Quickstart Guide
+                - generic [ref=f104e201]:
+                  - generic [ref=f104e202]:
+                    - generic [ref=f104e203]: Subject
+                    - generic [ref=f104e204]:
+                      - button "Suggest" [ref=f104e210] [cursor=pointer]
+                      - button "Insert personalization" [ref=f104e217] [cursor=pointer]
+                  - textbox "Email subject" [ref=f104e224]: Your Free Chaos Magick Quickstart Guide
+                - generic [ref=f104e225]:
+                  - generic [ref=f104e226]: Who is it from?
+                  - textbox "Who is it from?" [ref=f104e229]:
+                    - /placeholder: Sender name
+                    - text: Cha0smagick LABS
+                - generic [ref=f104e230]:
+                  - generic [ref=f104e231]:
+                    - generic [ref=f104e232]:
+                      - generic [ref=f104e233]: Sender email
+                      - textbox "Sender email" [ref=f104e236]: magiacaoticapractica@gmail.com
+                    - generic [ref=f104e245]:
+                      - text: Free domains can affect email delivery. Use a custom domain for better results.
+                      - link "Learn more" [ref=f104e246] [cursor=pointer]:
+                        - /url: https://www.mailerlite.com/help/the-limitations-of-using-a-free-domain
+                  - generic [ref=f104e248]:
+                    - checkbox "Use different Reply-to email" [ref=f104e249]
+                    - generic [ref=f104e250]: Use different Reply-to email
+                - generic [ref=f104e253]:
+                  - generic [ref=f104e254]: Preheader
+                  - textbox "Offer a short preview of your email’s content." [ref=f104e257]
+              - generic [ref=f104e258]:
+                - generic [ref=f104e259]: Opens tracking
+                - generic [ref=f104e261]:
+                  - checkbox "Track opens with an invisible beacon embedded in your email." [checked] [ref=f104e262]
+                  - generic [ref=f104e263]: Track opens with an invisible beacon embedded in your email.
+              - generic [ref=f104e266]:
+                - generic [ref=f104e267]: UTM tags
+                - generic [ref=f104e269]:
+                  - checkbox "Add parameters to your URLs to track newsletter traffic on web analytics platforms." [ref=f104e270]
+                  - generic [ref=f104e271]: Add parameters to your URLs to track newsletter traffic on web analytics platforms.
+              - generic [ref=f104e275]:
+                - generic [ref=f104e276]: Language
+                - generic [ref=f104e278]: English
+            - generic [ref=f104e288]:
+              - button "Cancel" [ref=f104e289] [cursor=pointer]
+              - button "Save" [ref=f104e291] [cursor=pointer]
+        - generic [ref=f104e293]:
+          - button [ref=f104e297] [cursor=pointer]
+          - button [ref=f104e304] [cursor=pointer]
+          - button [disabled] [ref=f104e311]
+    - generic [ref=f104e319]:
+      - button [ref=f104e320] [cursor=pointer]
+      - generic [ref=f104e325]:
+        - generic [ref=f104e326]:
+          - heading "Activate automation?" [level=2] [ref=f104e328]
+          - paragraph [ref=f104e329]: You're about to activate this automation. Once you do, any subscriber who meets the trigger criteria will enter the automation and all its steps.
+        - generic [ref=f104e330]:
+          - button "Go back" [ref=f104e331] [cursor=pointer]
+          - button "Activate" [ref=f104e333] [cursor=pointer]
+  - iframe [ref=f104e315]:
+    
