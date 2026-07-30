@@ -349,7 +349,11 @@
       <span class="cm-tstat-sub">' + (isSpanish() ? 'Premium sin publicidad' : 'Premium Ad-Free') + '</span>\
     </div>\
   </div>\
-  <div class="cm-testimonials-cta">\
+  <div class="cm-guarantee-badge" style="background:#151515;border:1px solid #c9a84c;border-radius:8px;padding:16px 20px;text-align:center;margin-top:16px">\
+    <span style="color:#c9a84c;font-weight:600;font-size:1.05em">🛡️ ' + (isSpanish() ? 'Garant\u00EDa de Reembolso de 7 D\u00EDas' : '7-Day Money-Back Guarantee') + '</span>\
+    <p style="color:#bbb;margin:6px 0 0;font-size:0.9em">' + (isSpanish() ? 'Si no quedas satisfecho, te devolvemos tu dinero. Sin preguntas. Compra con confianza.' : 'Not satisfied? Get a full refund. No questions asked. Buy with confidence.') + '</p>\
+  </div>\
+  <div class="cm-testimonials-cta" style="margin-top:12px">\
     <a href="/" class="cm-collection-btn">' + (isSpanish() ? 'Ver la Colecci\u00F3n Completa' : 'View the Complete Collection') + '</a>\
   </div>\
 </section>';
