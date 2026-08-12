@@ -1,0 +1,2 @@
+google.com, pub-PONER_PUBLISHER_ID, DIRECT, f08c47fec0942fa0
+# App-specific format (replace the wildcard with each real package ID): cha0smagick, com.cha0smagick.*, DIRECT

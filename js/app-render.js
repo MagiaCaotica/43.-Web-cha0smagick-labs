@@ -42,6 +42,49 @@ const appAltText = {
     'noctem-tools': 'NOCTEM Suite Profesional para la Investigación Paranormal — SLS camera, EVP recorder & ghost hunting app for Android'
 };
 
+/* ========================================================================
+   MEASUREMENT + ATTRIBUTION HELPERS
+   ======================================================================== */
+
+// Safe GA4 dispatch — never throws if gtag has not loaded on this template.
+function cmTrack(eventName, params) {
+    try {
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', eventName, params || {});
+        }
+    } catch (e) { /* analytics must never break rendering */ }
+}
+
+// Delegates to the canonical addUTM() from shared.js / apps-data.js.
+// Falls back to a local implementation so this file works standalone
+// (app detail pages load app-render.js without shared.js).
+function cmUTM(url, campaign) {
+    if (typeof window.addUTM === 'function') return window.addUTM(url, campaign);
+    if (!url || typeof url !== 'string' || url.indexOf('utm_source=') !== -1) return url;
+    var sep = url.indexOf('?') !== -1 ? '&' : '?';
+    return url + sep + 'utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=' +
+        encodeURIComponent(String(campaign || 'site_cta').replace(/[^a-zA-Z0-9_\-]/g, '_'));
+}
+
+// Numeric price for GA4 `value` / `price` fields ("$3.99 USD" -> 3.99).
+function cmPriceNum(price) {
+    if (!price) return 0;
+    var m = String(price).match(/[\d.]+/);
+    return m ? parseFloat(m[0]) : 0;
+}
+
+// Campaign slug from an item id ("psi-gym" -> "app_psi_gym").
+function cmCampaign(item) {
+    var prefix = item && item.type === 'book' ? 'book_' : 'app_';
+    return prefix + String((item && item.id) || 'unknown').replace(/-/g, '_');
+}
+
+// Attributes shared by every outbound product link: UTM-tagged href, affiliate
+// opt-in (picked up by the global listener in shared.js) and a product label.
+function cmProductLinkAttrs(item) {
+    return 'data-affiliate="true" data-product="' + ((item && item.id) || '') + '"';
+}
+
 // Function to render the apps grid on the home page
 function renderAppsGrid() {
     const grid = document.getElementById('apps-grid');
@@ -64,7 +107,8 @@ function renderAppsGrid() {
         const altText = appAltText[app.id] || app.name + ' — buy chaos magick android app';
         const priceShort = app.price ? app.price.replace(/\sUSD.*$/, '').replace(/\(.*?\)/, '').trim() : '';
         const playIcon = '<svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>';
-        const googlePlayBtn = app.url ? `<a href="${app.url}" class="play-store-btn compact pulse" target="_blank" onclick="event.stopPropagation()">${playIcon} GET IT ON PLAY STORE</a>` : '';
+        const gridUrl = app.url ? cmUTM(app.url, cmCampaign(app) + '_grid') : '';
+        const googlePlayBtn = app.url ? `<a href="${gridUrl}" class="play-store-btn compact pulse" target="_blank" ${cmProductLinkAttrs(app)} onclick="event.stopPropagation()">${playIcon} GET IT ON PLAY STORE</a>` : '';
         card.innerHTML = `
             <div class="card-image-wrapper">
                 ${buildPictureHtml(app.image, altText, 'app-image img-' + app.id.replace(/-/g, '-'), loadingStrategy.includes('fetchpriority') ? 'eager' : 'lazy', '300', '220')}
@@ -86,6 +130,22 @@ function renderAppsGrid() {
         fragment.appendChild(card);
     });
     grid.appendChild(fragment);
+
+    // GA4: catalogue impression for the whole grid.
+    cmTrack('view_item_list', {
+        item_list_id: 'apps_grid',
+        item_list_name: 'Android Apps Catalogue',
+        items: orderedApps.slice(0, 20).map(function (app, i) {
+            return {
+                item_id: app.id,
+                item_name: app.name,
+                item_category: 'app',
+                price: cmPriceNum(app.price),
+                currency: 'USD',
+                index: i
+            };
+        })
+    });
 }
 
 // Function to render the books section
@@ -382,14 +442,45 @@ function renderAppDetails() {
     const detailsContainer = document.getElementById('app-details');
     if (!detailsContainer) return;
 
+    /* --------------------------------------------------------------
+       GA4: view_item — the single most important product-page signal.
+       Fires once per detail render with the full item payload so GA4 can
+       build the product funnel (view_item -> purchase_click).
+       -------------------------------------------------------------- */
+    const itemPriceNum = cmPriceNum(item.price);
+    cmTrack('view_item', {
+        currency: 'USD',
+        value: itemPriceNum,
+        items: [{
+            item_id: item.id,
+            item_name: item.name,
+            item_category: item.type === 'book' ? 'book' : 'app',
+            item_brand: 'Cha0smagick Labs',
+            price: itemPriceNum,
+            currency: 'USD',
+            quantity: 1
+        }]
+    });
+    if (typeof window.fbq === 'function') {
+        window.fbq('track', 'ViewContent', {
+            content_ids: [item.id],
+            content_name: item.name,
+            content_type: 'product',
+            value: itemPriceNum,
+            currency: 'USD'
+        });
+    }
+
     // Determine Action Button (App Download or Hotmart Buy)
     let actionButton = '';
+    const detailCampaign = cmCampaign(item) + '_detail';
     if (item.hotmartLink) {
-        actionButton = `<a onclick="return false;" href="${item.hotmartLink}" class="hotmart-fb hotmart__button-checkout"><img src='https://static.hotmart.com/img/btn-buy-green.png' alt="Comprar"></a>`;
+        const hotmartUrl = cmUTM(item.hotmartLink, detailCampaign);
+        actionButton = `<a onclick="return false;" href="${hotmartUrl}" class="hotmart-fb hotmart__button-checkout" ${cmProductLinkAttrs(item)}><img src='https://static.hotmart.com/img/btn-buy-green.png' alt="Comprar"></a>`;
         loadHotmartWidget();
     } else if (item.url) {
         const playIconBtn = '<svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px;"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>';
-        actionButton = `<a href="${item.url}" class="play-store-btn pulse" target="_blank">${playIconBtn} GET IT ON PLAY STORE</a>`;
+        actionButton = `<a href="${cmUTM(item.url, detailCampaign)}" class="play-store-btn pulse" target="_blank" ${cmProductLinkAttrs(item)}>${playIconBtn} GET IT ON PLAY STORE</a>`;
     } else {
         actionButton = '<button class="cta-button disabled">Coming Soon</button>';
     }
@@ -550,7 +641,7 @@ function renderAlsoLike(currentId) {
                     </div>
                     ${app.price ? `<span class="card-price">${app.price}</span>` : ''}
                 </div>
-                ${app.url ? `<a href="${app.url}" class="play-store-btn compact pulse" target="_blank" style="display:flex;margin-top:1rem;" onclick="event.stopPropagation()">${'<svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>'} GET IT ON PLAY STORE</a>` : ''}
+                ${app.url ? `<a href="${cmUTM(app.url, cmCampaign(app) + '_also_like')}" class="play-store-btn compact pulse" target="_blank" style="display:flex;margin-top:1rem;" ${cmProductLinkAttrs(app)} onclick="event.stopPropagation()">${'<svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>'} GET IT ON PLAY STORE</a>` : ''}
             </div>
         `;
         fragment.appendChild(card);
@@ -603,4 +694,207 @@ document.addEventListener('DOMContentLoaded', () => {
         if (appId) renderAlsoLike(appId);
     }
     initCollapsibleSections(); // Initialize toggles after dynamic content is rendered
+
+    cmBindPurchaseTracking();  // GA4 purchase_click on every Play/Hotmart CTA
+    cmTrackStaticProductPage(); // view_item on the static /apps/ + /books/ pages
+    cmInjectAppShareButtons(); // Share row on app/book detail pages
 });
+
+/* ========================================================================
+   view_item ON STATIC PRODUCT PAGES
+   ------------------------------------------------------------------------
+   The 12 /apps/*.html and 7 /books/*.html landing pages are hand-written:
+   they contain #app-detailed-info but NOT #app-details, so renderAppDetails()
+   — and therefore its view_item — never runs there. Those are the highest
+   intent pages on the site, so we emit view_item for them here, deriving the
+   product from the URL slug and enriching it from the catalogue when
+   apps-data.js happens to be loaded (books pages) or falling back to the
+   document title when it is not (apps pages load app-render.js alone).
+   ======================================================================== */
+function cmTrackStaticProductPage() {
+    if (window.__cmViewItemSent) return;
+    if (document.getElementById('app-details')) return; // dynamic page: already handled
+    if (document.getElementById('apps-grid')) return;   // catalogue page: view_item_list
+
+    const m = window.location.pathname.match(/\/(apps|books)\/([^\/]+)\.html?$/i);
+    if (!m) return;
+
+    const section = m[1].toLowerCase();
+    const slug = m[2];
+    if (slug === 'index') return;
+    window.__cmViewItemSent = true;
+
+    let name = (document.title || slug).split('|')[0].trim();
+    let price = 0;
+    let category = section === 'books' ? 'book' : 'app';
+
+    try {
+        const pool = []
+            .concat(typeof appsData !== 'undefined' ? appsData : [])
+            .concat(typeof booksData !== 'undefined' ? booksData : []);
+        const found = pool.find(p => p.id === slug);
+        if (found) {
+            name = found.name;
+            price = cmPriceNum(found.price);
+            category = found.type === 'book' ? 'book' : 'app';
+        }
+    } catch (e) {}
+
+    // Last resort: read the price straight off the rendered page.
+    if (!price) {
+        const el = document.querySelector('.detail-price, .card-price, [class*="price"]');
+        if (el) price = cmPriceNum(el.textContent);
+    }
+
+    cmTrack('view_item', {
+        currency: 'USD',
+        value: price,
+        items: [{
+            item_id: slug,
+            item_name: name,
+            item_category: category,
+            item_brand: 'Cha0smagick Labs',
+            price: price,
+            currency: 'USD',
+            quantity: 1
+        }]
+    });
+
+    if (typeof window.fbq === 'function') {
+        window.fbq('track', 'ViewContent', {
+            content_ids: [slug], content_name: name,
+            content_type: 'product', value: price, currency: 'USD'
+        });
+    }
+}
+
+/* ========================================================================
+   PURCHASE INTENT TRACKING
+   ------------------------------------------------------------------------
+   App detail pages load app-render.js WITHOUT conversion.js, so the click
+   tracking has to live here too. Both files share the
+   window.__cmPurchaseClickBound guard, so whichever loads first wins and the
+   event can never fire twice.
+   ======================================================================== */
+function cmBindPurchaseTracking() {
+    if (window.__cmPurchaseClickBound) return;
+    window.__cmPurchaseClickBound = true;
+
+    document.addEventListener('click', function (e) {
+        const a = e.target && e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+
+        const href = a.getAttribute('href') || '';
+        const isPlay = href.indexOf('play.google.com') !== -1;
+        const isHotmart = href.indexOf('hotmart.com') !== -1;
+        if (!isPlay && !isHotmart) return;
+
+        const productId = a.getAttribute('data-product') ||
+            (href.match(/[?&]id=([\w.]+)/) || [])[1] ||
+            (href.match(/hotmart\.com\/([A-Z0-9]+)/i) || [])[1] || 'unknown';
+
+        // Recover name/price from the catalogue when it is on the page.
+        let name = productId, price = 0, category = isHotmart ? 'book' : 'app';
+        try {
+            const pool = []
+                .concat(typeof appsData !== 'undefined' ? appsData : [])
+                .concat(typeof booksData !== 'undefined' ? booksData : []);
+            const found = pool.find(function (p) {
+                return p.id === productId ||
+                    (p.url && p.url.indexOf(productId) !== -1) ||
+                    (p.hotmartLink && p.hotmartLink.indexOf(productId) !== -1);
+            });
+            if (found) {
+                name = found.name;
+                price = cmPriceNum(found.price);
+                category = found.type === 'book' ? 'book' : 'app';
+            }
+        } catch (err) {}
+
+        const items = [{
+            item_id: productId,
+            item_name: name,
+            item_category: category,
+            item_brand: 'Cha0smagick Labs',
+            price: price,
+            currency: 'USD',
+            quantity: 1
+        }];
+
+        // purchase_click = leaving our site for the merchant checkout.
+        cmTrack('purchase_click', {
+            currency: 'USD',
+            value: price,
+            destination: isPlay ? 'google_play' : 'hotmart',
+            link_url: href,
+            page: location.pathname,
+            items: items
+        });
+        // Standard funnel event so GA4's built-in ecommerce reports populate.
+        cmTrack('begin_checkout', { currency: 'USD', value: price, items: items });
+
+        if (typeof window.fbq === 'function') {
+            window.fbq('track', 'InitiateCheckout', {
+                content_ids: [productId],
+                content_name: name,
+                content_type: 'product',
+                value: price,
+                currency: 'USD'
+            });
+        }
+    }, true);
+}
+
+/* ========================================================================
+   SHARE BUTTONS (app / book detail pages)
+   ------------------------------------------------------------------------
+   conversion.js owns this on blog pages; app detail pages do not load it,
+   so a compact equivalent lives here behind the shared
+   window.__cmShareInjected guard to guarantee a single instance.
+   ======================================================================== */
+function cmInjectAppShareButtons() {
+    if (window.__cmShareInjected) return;
+    if (document.getElementById('cm-share-row')) return;
+
+    // Product pages only — either the dynamic #app-details view or the static
+    // /apps/ + /books/ landing pages (which only have #app-detailed-info).
+    const host = document.querySelector('.share-buttons') ||
+        document.getElementById('app-detailed-info') ||
+        document.getElementById('app-details');
+    if (!host) return;
+    if (document.getElementById('apps-grid')) return; // not on the catalogue
+    window.__cmShareInjected = true;
+
+    const url = window.location.href;
+    const title = document.title;
+    const nets = [
+        ['x', 'X', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url)],
+        ['pinterest', 'Pinterest', 'https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(url) + '&description=' + encodeURIComponent(title)],
+        ['whatsapp', 'WhatsApp', 'https://wa.me/?text=' + encodeURIComponent(title + ' ' + url)],
+        ['facebook', 'Facebook', 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url)]
+    ];
+
+    const row = document.createElement('div');
+    row.id = 'cm-share-row';
+    row.setAttribute('style', 'display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;align-items:center;margin:1.5rem auto;');
+    row.innerHTML = '<span style="color:#888;font-size:.8rem;text-transform:uppercase;letter-spacing:1px;">Share:</span>' +
+        nets.map(function (n) {
+            return '<a href="' + n[2] + '" data-cm-share="' + n[0] + '" rel="noopener" ' +
+                'style="padding:.45rem 1rem;border-radius:6px;background:#1a1a1a;border:1px solid #333;' +
+                'color:#e0e0e0;text-decoration:none;font-size:.8rem;font-weight:600;">' + n[1] + '</a>';
+        }).join('');
+
+    row.addEventListener('click', function (e) {
+        const a = e.target.closest('a[data-cm-share]');
+        if (!a) return;
+        e.preventDefault();
+        window.open(a.href, 'cm_share', 'width=600,height=500,noopener');
+        cmTrack('share', {
+            method: a.getAttribute('data-cm-share'),
+            content_type: 'product',
+            item_id: new URLSearchParams(location.search).get('id') || location.pathname
+        });
+    });
+
+    host.appendChild(row);
+}
