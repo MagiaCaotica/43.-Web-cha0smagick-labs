@@ -9,19 +9,13 @@
 ## 🔴 P0 — Bloqueantes de medición (hazlas hoy)
 
 ### 1. Verificar Google Search Console (15 min)
-- **Qué**: el sitio ya tiene el tag `<meta name="google-site-verification" content="PONER_TOKEN_GSC_AQUI" />` en `index.html` línea 38.
+- **Qué**: el sitio ya tiene el tag `<meta name="google-site-verification" content="ZE9ZgD-J_UiN2y-dRCbY6XkJFB68N6H8fWVlYkhunHs" />` en `index.html` línea 38.
 - **Cómo**:
   1. Entra a https://search.google.com/search-console con `magiacaoticapractica@gmail.com`
   2. Propiedad: `cha0smagicklabs.com` → método HTML tag
-  3. Copia el token real (formato `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`) y reemplázalo en `index.html` por `PONER_TOKEN_GSC_AQUI`
+  3. Copia el token real (formato `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`) y reemplázalo en `index.html` por `ZE9ZgD-J_UiN2y-dRCbY6XkJFB68N6H8fWVlYkhunHs`
   4. Guarda y sube (git push) → GSC verifica
 - **Por qué**: sin GSC no hay datos de búsqueda y Google no indexa bien las 12 apps/7 books. Es la base de TODO el SEO.
-
-### 2. Rotar los secretos del `.env` (30 min)
-- **Qué**: el `.env` (no trackeado en git ✓) contiene tokens reales que podrían estar expuestos en historial o máquinas compartidas.
-- **Variables a rotar** (por nombre; sin valores aquí): `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHANNEL`, `TELEGRAM_GROUP_INVITE`, `DISCORD_CLIENT_ID`, `DISCORD_CLIENT_SECRET`, `DISCORD_BOT_TOKEN`, `GROQ_API_KEY`, `MAILERLITE_API_KEY`.
-- **Cómo**: regenera cada token desde su panel (BotFather para Telegram, Discord Developer Portal, console.groq.com, MailerLite Integrations) y actualiza `.env`.
-- **Por qué**: los tokens de bots con acceso a grupos/canales en manos equivocadas = spam/abuso con tu marca.
 
 ### 3. Publicar el form ES de MailerLite + activar workflow (15 min)
 - **Qué**: el form español (`I95d94`) nunca se publicó; el workflow (`194262410018686857`) está en draft sin paso de email. Estás perdiendo ~30% del tráfico hispanohablante.
