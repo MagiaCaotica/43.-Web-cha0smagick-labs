@@ -28,6 +28,14 @@ const ARTICLES = [
   { slug: 'noctem-tools-app-review', title: 'NEW: NOCTEM App Review — the best ghost hunting app for Android (EVP, spirit box & EMF in one tool)' },
   { slug: 'runas-para-chaos-magick', title: 'NEW: Runes for Chaos Magic — combine Elder Futhark & sigils (bind rune tutorial inside)' },
   { slug: 'lunar-eclipse-ritual', title: 'NEW: Lunar Eclipse Ritual for Releasing — step-by-step guide 2026 (do it at the exact peak time)' },
+  { slug: 'tarot-para-chaos-practitioner', title: 'NEW: Tarot for Chaos Magic — the practitioner\'s guide to cards & sigils' },
+  { slug: 'ex-tarot-spread', title: 'NEW: What does my ex think of me? The 5-card tarot spread that tells the truth' },
+  { slug: 'astral-projection-app-guide', title: 'NEW: Astral Projection for Beginners — step-by-step guide 2026 (app method)' },
+  { slug: 'nightmares-lucid', title: 'NEW: How to Stop Nightmares Tonight — lucid dreaming techniques that work' },
+  { slug: 'goetia-beginners-ritual', title: 'NEW: How to Safely Invoke a Goetic Spirit for Beginners — step-by-step ritual 2026' },
+  { slug: 'big-three-explained', title: 'NEW: Big Three Explained — what your sun, moon & rising signs mean together' },
+  { slug: 'haunted-roads-guide', title: 'NEW: Haunted Roads Guide — the best haunted road trip itineraries & urban legends' },
+  { slug: 'lucid-dream-app-review', title: 'NEW: Lucid Dream App Review 2026 — the best lucid dreaming app for Android' },
 ];
 
 async function tgSend(text) {
