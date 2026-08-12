@@ -1,9 +1,37 @@
+/* ========================================================================
+   UTM ATTRIBUTION HELPER
+   ------------------------------------------------------------------------
+   Every outbound Play Store / Hotmart URL in this file is pre-tagged with
+   utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=<slug> so GA4,
+   Play Console and Hotmart can all attribute the sale back to this site.
+
+   addUTM() is the canonical helper for links built at RUNTIME (render code in
+   app-render.js / conversion.js). The definition below is a guarded fallback:
+   js/shared.js declares the same function, and whichever file loads first wins
+   — both implementations are identical, so load order is irrelevant.
+   ======================================================================== */
+if (typeof window !== 'undefined' && typeof window.addUTM !== 'function') {
+    window.addUTM = function (url, campaign) {
+        if (!url || typeof url !== 'string') return url;
+        if (url.indexOf('utm_source=') !== -1) return url; // already attributed
+        if (/^(mailto:|tel:|javascript:|#)/i.test(url)) return url;
+        var hash = '';
+        var hashAt = url.indexOf('#');
+        if (hashAt !== -1) { hash = url.slice(hashAt); url = url.slice(0, hashAt); }
+        var camp = String(campaign || 'site_cta').replace(/[^a-zA-Z0-9_\-]/g, '_').slice(0, 64);
+        var sep = url.indexOf('?') !== -1 ? '&' : '?';
+        return url + sep +
+            'utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=' +
+            encodeURIComponent(camp) + hash;
+    };
+}
+
 const appsData = [
     {
         id: "psi-gym",
         name: "PSI GYM: Zener Cards & ESP",
         price: "$3.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_psi_gym",
         status: "available",
         description: "Train your intuition and extrasensory perception with professional Zener cards and advanced statistical tracking. 👁️",
         image: "assets/images/zener.webp",
@@ -58,7 +86,7 @@ const appsData = [
         id: "arcana-goetia",
         name: "Arcana Goetia: Ritual & Sigils",
         price: "$3.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_arcana_goetia",
         status: "available",
         description: "Command the 72 spirits of Solomon with precision sigils, lore, and guided rituals—all offline. 🗝️",
         image: "assets/images/GSG.webp",
@@ -114,7 +142,7 @@ const appsData = [
         id: "norse-rune-oracle",
         name: "Norse Rune Oracle",
         price: "$3.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.japps.norse_oracle",
+        url: "https://play.google.com/store/apps/details?id=com.japps.norse_oracle&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_norse_rune_oracle",
         onlineUrl: "https://www.magiadelcaospractica.com/2024/09/Descubre%20el%20Oraculo%20Runico%20Vikingo%20Online%20Gratis.html",
         status: "available",
         description: "Unlock Viking wisdom with 12+ rune spreads for love, wealth, protection, and daily guidance. 🔮",
@@ -175,7 +203,7 @@ const appsData = [
         id: "lunar-phase-calculator",
         name: "Lunar Phase Calculator",
         price: "$3.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.lunarapp.app",
+        url: "https://play.google.com/store/apps/details?id=com.lunarapp.app&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_lunar_phase_calculator",
         status: "available",
         description: "Track moon phases for magic, wellness, and biodynamic gardening with stunning real-time visuals. 🌕",
         image: "assets/images/lunar-phase.webp",
@@ -243,7 +271,7 @@ const appsData = [
         id: "iching-oracle",
         name: "I Ching Oracle",
         price: "$3.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.app.ichingoracle",
+        url: "https://play.google.com/store/apps/details?id=com.app.ichingoracle&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_iching_oracle",
         onlineUrl: "https://www.magiadelcaospractica.com/2024/09/software-de-i-ching-gratuito-online.html",
         status: "available",
         description: "Cast the I Ching with an authentic three-coin algorithm. 64 hexagrams, multilingual, and totally private. 📜",
@@ -308,7 +336,7 @@ const appsData = [
         id: "chaos-sigil-generator",
         name: "Magick Chaos Sigil Generator",
         price: "$3.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.app.goetiansealsgeneratorapp",
+        url: "https://play.google.com/store/apps/details?id=com.app.goetiansealsgeneratorapp&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_chaos_sigil_generator",
         onlineUrl: "https://www.magiadelcaospractica.com/2024/09/Generador%20de%20Sigilos%20Goeticos%20Online%20Gratuito.html",
         status: "available",
         description: "Encode your Will into unique cryptographic sigils using ancient alphabets and planetary magic squares. ⚡",
@@ -374,7 +402,7 @@ const appsData = [
         id: "unofficial-rider-waite-tarot",
         name: "Unofficial Rider Waite Tarot",
         price: "$9.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_rider_waite_tarot",
         status: "available",
         description: "Full Rider-Waite deck offline with 6 spreads, encyclopedia, and 7-language support. Your pocket tarot teacher. 🃏",
         image: "assets/images/tarotbutton.webp",
@@ -437,7 +465,7 @@ const appsData = [
         id: "dream-machine",
         name: "Dream Machine: Lucid Dreaming",
         price: "$3.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_dream_machine",
         status: "available",
         description: "Master the art of lucid dreaming with induction protocols, dream journal, reality checks, and binaural beats. 🌙",
         image: "assets/images/lucid.png",
@@ -498,7 +526,7 @@ const appsData = [
         id: "astral-lab",
         name: "Astral Lab: Natal Chart & Astrology",
         price: "$6.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_astral_lab",
         status: "available",
         description: "Professional natal charts, real-time transits & aspect grids — 100% offline with scientific-grade VSOP87/ELP-2000 precision. 🔮",
         image: "assets/images/astrallab.png",
@@ -563,7 +591,7 @@ const appsData = [
         id: "eerieroads",
         name: "Eerie Roads: Mysterious Paths",
         price: "$9.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_eerie_roads",
         status: "available",
         description: "Manifest your intentions on a real-world map. Generate chaos GPS coordinates, explore the unknown, and decode synchronicities. The #1 intention manifestation app for Android. 🗺️✨",
         image: "assets/images/eerieroads.png",
@@ -684,7 +712,7 @@ const appsData = [
         id: "lucid-dream",
         name: "Lucid Dream: Astral Projection",
         price: "$3.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_lucid_dream",
         status: "available",
         description: "Learn to have lucid dreams, keep a dream journal, and master astral projection. 🌙",
         image: "assets/images/luciddreamer.png",
@@ -743,7 +771,7 @@ const appsData = [
         id: "noctem-tools",
         name: "NOCTEM: Professional Paranormal Investigation Suite",
         price: "$14.99 USD",
-        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp",
+        url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_noctem_tools",
         status: "available",
         description: "NOCTEM: Professional Paranormal Investigation Suite. Take your paranormal research to the professional level with SLS camera, EVP recorder, and sensor suite. 👻",
         image: "assets/images/noctemnobg.png",
@@ -803,7 +831,7 @@ const booksData = [
         status: "available",
         image: "assets/images/servidores.png",
         description: "Learn how to create and activate magical servitors with Chaos Magick. Practical guide by Frater Alekos.",
-        hotmartLink: "https://pay.hotmart.com/D104270399P?checkoutMode=2",
+        hotmartLink: "https://pay.hotmart.com/D104270399P?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_manual_servidores_magicos",
         seo: {
             title: "Magical Servitors Manual: Activation and Design Guide | Chaos Magick PDF",
             description: "Learn how to create and activate magical servitors with Chaos Magick. Practical guide by Frater Alekos to manifest real results. Download the PDF here. Buy esoteric books online.",
@@ -841,7 +869,7 @@ const booksData = [
         status: "available",
         image: "assets/images/runascazadoras.png",
         description: "A disruptive magical system designed by Zener of Cydonia and Frater Alekos. The Alphabet of Desire for the New Age.",
-        hotmartLink: "https://pay.hotmart.com/F104270966V?checkoutMode=2",
+        hotmartLink: "https://pay.hotmart.com/F104270966V?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_tratado_runas_cazadoras",
         seo: {
             title: "Chaos Hunter Runes Treatise: The Alphabet of Desire | PDF",
             description: "Discover the Chaos Hunter Runes, a disruptive magical system by Zener of Cydonia. Master the 64 runic servitors and the Magic Chess Matrix. Buy esoteric books and chaos magick PDF.",
@@ -884,7 +912,7 @@ const booksData = [
         status: "available",
         image: "assets/images/ouijacazadora.png",
         description: "A profound exploration of psychic technology designed to transform the Ouija board into a high-precision ritual instrument.",
-        hotmartLink: "https://pay.hotmart.com/B104271332D?checkoutMode=2",
+        hotmartLink: "https://pay.hotmart.com/B104271332D?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_ouija_cazadora",
         seo: {
             title: "Ouija Cazadora: Chaos Magic Guide to the Oracular Manual | PDF",
             description: "Master the ouija board with Chaos Magic. A practical guide by Zener de Cydonia and Frater Alekos for safe and effective rituals. Download the oracular manual PDF. Buy esoteric books.",
@@ -921,7 +949,7 @@ const booksData = [
         status: "available",
         image: "assets/images/liber.png",
         description: "An operative and esoteric guide exploring lycanthropy as a path of spiritual empowerment and psychic metamorphosis.",
-        hotmartLink: "https://pay.hotmart.com/O104271155J?checkoutMode=2",
+        hotmartLink: "https://pay.hotmart.com/O104271155J?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_liber_lvpinux",
         seo: {
             title: "Liber Lvpinux: Lycanthropic Transformation and Chaos Magic | PDF",
             description: "Discover Liber Lvpinux by Frater Alekos. A grimoire on lycanthropy, chaos magic and the path of the animagus. Download the PDF guide. Buy esoteric books and digital grimoires.",
@@ -967,7 +995,7 @@ const booksData = [
         status: "available",
         image: "assets/images/codexchaoticus.png",
         description: "The most comprehensive digital grimoire ever written on Chaos Magick. 27,000+ words, 15 APA tables, 5 sigil methods, servitor creation, and more.",
-        hotmartLink: "https://pay.hotmart.com/W106595764X?checkoutMode=2",
+        hotmartLink: "https://pay.hotmart.com/W106595764X?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_codex_chaoticus",
         seo: {
             title: "CODEX CHAOTICUS — Complete Treatise on Chaos Magick | PDF",
             description: "The most comprehensive digital grimoire on Chaos Magick. 27,000+ words, 15 APA tables, 5 sigil methods, servitor creation, egregores & more. Buy the PDF now.",
@@ -1023,7 +1051,7 @@ const booksData = [
         status: "available",
         image: "images/tarotchaos.PNG",
         description: "Master the Tarot from the perspective of Chaos Magick. A digital grimoire that fuses the arcana with sigils, gnosis, and magical servitors.",
-        hotmartLink: "https://pay.hotmart.com/J106598345U?checkoutMode=2",
+        hotmartLink: "https://pay.hotmart.com/J106598345U?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_tarot_chaos",
         seo: {
             title: "Tarot Chaos: Chaos Magick Applied to the Tarot | PDF",
             description: "Master the Tarot from the perspective of Chaos Magick. Learn to use the arcana as tools for sigilization, gnosis, and manifestation. Download the PDF now.",
@@ -1083,7 +1111,7 @@ const booksData = [
         status: "available",
         image: "assets/images/mindthegap.PNG",
         description: "Master the Response Gap — the 0.3 seconds between stimulus and response. Neuroscience, 7 Laws, and actionable domains for relationships, money, health, and adversity.",
-        hotmartLink: "https://pay.hotmart.com/V106730857R?checkoutMode=2",
+        hotmartLink: "https://pay.hotmart.com/V106730857R?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_mind_the_gap",
         seo: {
             title: "Mind The Gap: Master the 0.3 Seconds That Define Your Life | PDF",
             description: "What if everything you've been told about self-improvement is backward? Master the Response Gap — the 0.3 seconds between stimulus and response. Neuroscience, 7 Laws, and actionable domains. Buy the PDF now.",

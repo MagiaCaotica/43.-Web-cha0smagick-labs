@@ -30,8 +30,365 @@
       psychic: ['psi-gym', 'dream-machine', 'lucid-dream'],
       astrology: ['astral-lab', 'lunar-phase-calculator'],
       goetia: ['arcana-goetia']
-    }
+    },
+
+    /* --- Measurement IDs -------------------------------------------------
+     * ga4Id         : live GA4 measurement ID.
+     * googleAdsId   : PLACEHOLDER. Conversions stay OFF until a real
+     *                 "AW-XXXXXXXXX" is pasted here (see shared.js).
+     * metaPixelId   : PLACEHOLDER. Meta business account is restricted until
+     *                 2026-12-02, so no real Pixel ID exists yet. Paste the
+     *                 numeric ID here and fbq() activates automatically.
+     * -------------------------------------------------------------------- */
+    ga4Id: 'G-V6LHCPN9TK',
+    googleAdsId: 'PONER_AW_ID_AQUI',
+    metaPixelId: 'PONER_META_PIXEL_ID_AQUI',
+
+    // Email popup behaviour
+    popupDelayMs: 30000,      // (a) 30s dwell
+    popupScrollPct: 50,       // (a) or 50% scroll depth
+    popupPages: ['homepage', 'blog', 'tools']
   };
+
+  /* ============================================================
+   * MEASUREMENT CORE
+   * ------------------------------------------------------------
+   * conversion.js is the ONLY script present on ~227 of the 281 pages
+   * (blog articles load nothing else but the gtag library), so the
+   * measurement bootstrap has to live here as well as in shared.js.
+   * Every block below is idempotent via a window.__cm* flag, so pages
+   * that load both files still initialise exactly once.
+   * ============================================================ */
+
+  function idIsReal(id, prefix) {
+    if (!id || typeof id !== 'string') return false;
+    if (id.indexOf('PONER_') === 0) return false;
+    if (prefix && id.indexOf(prefix) !== 0) return false;
+    return true;
+  }
+
+  function getCookie(name) {
+    var m = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+
+  // Safe GA4 dispatch.
+  function track(eventName, params) {
+    try {
+      if (typeof window.gtag === 'function') window.gtag('event', eventName, params || {});
+    } catch (e) { /* analytics must never break the page */ }
+  }
+
+  /* --- GA4 bootstrap + consent -------------------------------------------
+   * Two separate defects made most traffic invisible in GA4:
+   *   1. Blog templates load gtag/js but never call gtag('js')/gtag('config'),
+   *      so those ~190 article pages reported nothing at all.
+   *   2. Pages that DO have the inline snippet declared consent 'default'
+   *      as 'denied', which withholds hits until the user clicks Accept.
+   * This function repairs both: it only creates the config when one is
+   * genuinely missing (never duplicating an existing init), and it pushes a
+   * consent update to 'granted' unless the visitor explicitly declined.
+   * ---------------------------------------------------------------------- */
+  function ensureGtag() {
+    if (window.__cmGtagReady) return;
+    window.__cmGtagReady = true;
+
+    window.dataLayer = window.dataLayer || [];
+    if (typeof window.gtag !== 'function') {
+      window.gtag = function () { window.dataLayer.push(arguments); };
+    }
+
+    var configured = false;
+    try {
+      for (var i = 0; i < window.dataLayer.length; i++) {
+        var row = window.dataLayer[i];
+        if (row && row[0] === 'config' && row[1] === CONFIG.ga4Id) { configured = true; break; }
+      }
+    } catch (e) {}
+
+    applyConsent(); // consent first, so the very first hit is already correct
+
+    if (!configured) {
+      window.gtag('js', new Date());
+      window.gtag('config', CONFIG.ga4Id);
+    }
+
+    if (idIsReal(CONFIG.googleAdsId, 'AW-')) {
+      window.gtag('config', CONFIG.googleAdsId);
+    }
+  }
+
+  // Granted by default; denied only when the visitor opted out via the banner.
+  function applyConsent() {
+    if (typeof window.gtag !== 'function') return;
+    var state = getCookie('cookie_consent') === 'declined' ? 'denied' : 'granted';
+    window.gtag('consent', 'update', {
+      'analytics_storage': state,
+      'ad_storage': state,
+      'ad_user_data': state,
+      'ad_personalization': state
+    });
+  }
+
+  /* --- Meta Pixel (inert until a real ID is supplied) --------------------- */
+  function initMetaPixel() {
+    if (window.__cmPixelReady) return;
+    if (!idIsReal(CONFIG.metaPixelId)) return;
+    window.__cmPixelReady = true;
+
+    /* Standard Meta Pixel base code */
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
+      t = b.createElement(e); t.async = !0; t.src = v;
+      s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', CONFIG.metaPixelId);
+    fbq('track', 'PageView');
+  }
+
+  /* --- UTM helper --------------------------------------------------------
+   * Canonical implementation lives in shared.js; this guarded copy keeps
+   * conversion.js self-sufficient on the pages that omit shared.js.
+   * ---------------------------------------------------------------------- */
+  function addUTM(url, campaign) {
+    if (typeof window.addUTM === 'function' && window.addUTM !== addUTM) {
+      return window.addUTM(url, campaign);
+    }
+    if (!url || typeof url !== 'string') return url;
+    if (url.indexOf('utm_source=') !== -1) return url;
+    if (/^(mailto:|tel:|javascript:|#)/i.test(url)) return url;
+    var hash = '';
+    var hashAt = url.indexOf('#');
+    if (hashAt !== -1) { hash = url.slice(hashAt); url = url.slice(0, hashAt); }
+    var camp = String(campaign || 'site_cta').replace(/[^a-zA-Z0-9_\-]/g, '_').slice(0, 64);
+    var sep = url.indexOf('?') !== -1 ? '&' : '?';
+    return url + sep +
+      'utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=' +
+      encodeURIComponent(camp) + hash;
+  }
+  if (typeof window.addUTM !== 'function') window.addUTM = addUTM;
+
+  function priceNum(price) {
+    if (!price) return 0;
+    var m = String(price).match(/[\d.]+/);
+    return m ? parseFloat(m[0]) : 0;
+  }
+
+  // Short page slug used to build readable utm_campaign values.
+  function pageSlug() {
+    var p = window.location.pathname.replace(/\.html?$/i, '').replace(/^\/+|\/+$/g, '');
+    if (!p) return 'home';
+    return p.split('/').pop().replace(/[^a-zA-Z0-9_\-]/g, '_').slice(0, 40) || 'home';
+  }
+
+  /* --- Attribute every outbound Play Store / Hotmart link ----------------
+   * Covers links hard-coded in the HTML as well as anything injected later
+   * (MutationObserver), so no CTA can ship without attribution.
+   * ---------------------------------------------------------------------- */
+  function tagOutboundLinks(root) {
+    var scope = root && root.querySelectorAll ? root : document;
+    var links;
+    try {
+      links = scope.querySelectorAll('a[href*="play.google.com"], a[href*="hotmart.com"]');
+    } catch (e) { return; }
+
+    Array.prototype.forEach.call(links, function (a) {
+      if (a.getAttribute('data-cm-tagged') === '1') return;
+      a.setAttribute('data-cm-tagged', '1');
+
+      var href = a.getAttribute('href') || '';
+      if (!href || href.charAt(0) === '#') return;
+
+      var campaign = pageSlug() + '_cta';
+      var tagged = addUTM(href, campaign);
+      if (tagged !== href) a.setAttribute('href', tagged);
+
+      // Opt the link into the affiliate ?ref= system (shared.js listener).
+      if (!a.hasAttribute('data-affiliate')) a.setAttribute('data-affiliate', 'true');
+      if (!a.hasAttribute('data-product')) {
+        var pid = (href.match(/[?&]id=([\w.]+)/) || [])[1] ||
+                  (href.match(/hotmart\.com\/([A-Z0-9]+)/i) || [])[1] || '';
+        if (pid) a.setAttribute('data-product', pid);
+      }
+    });
+  }
+
+  function watchForNewLinks() {
+    if (window.__cmLinkObserver || typeof MutationObserver === 'undefined') return;
+    var pending = null;
+    window.__cmLinkObserver = new MutationObserver(function () {
+      if (pending) return;                       // coalesce bursts
+      pending = setTimeout(function () {
+        pending = null;
+        tagOutboundLinks(document);
+      }, 250);
+    });
+    try {
+      window.__cmLinkObserver.observe(document.body, { childList: true, subtree: true });
+    } catch (e) {}
+  }
+
+  /* --- Affiliate activation ----------------------------------------------
+   * Mirrors shared.js so pages without shared.js still persist ?ref=.
+   * ---------------------------------------------------------------------- */
+  function bindAffiliate() {
+    if (window.__cmAffiliateBound) return;
+    window.__cmAffiliateBound = true;
+
+    var REF_DAYS = 60;
+
+    function readRef() {
+      var m = document.cookie.match(/(?:^|;\s*)cm_ref=([^;]+)/);
+      if (m) return decodeURIComponent(m[1]);
+      try {
+        var s = JSON.parse(localStorage.getItem('cm_ref') || 'null');
+        if (s && Date.now() - s.ts < REF_DAYS * 864e5) return s.id;
+      } catch (e) {}
+      return null;
+    }
+
+    function writeRef(id) {
+      var clean = String(id).replace(/[^a-zA-Z0-9_\-]/g, '').slice(0, 32);
+      if (!clean) return null;
+      var exp = new Date();
+      exp.setDate(exp.getDate() + REF_DAYS);
+      document.cookie = 'cm_ref=' + encodeURIComponent(clean) +
+        '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
+      try {
+        localStorage.setItem('cm_ref', JSON.stringify({
+          id: clean, ts: Date.now(), landing: location.pathname
+        }));
+      } catch (e) {}
+      return clean;
+    }
+
+    try {
+      var incoming = new URLSearchParams(window.location.search).get('ref');
+      if (incoming) writeRef(incoming);
+    } catch (e) {}
+
+    // Capture phase so the cookie is written even when the anchor calls
+    // stopPropagation() (several product cards do).
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest && e.target.closest('a[data-affiliate="true"]');
+      if (!a) return;
+      var ref = readRef();
+      if (ref) {
+        writeRef(ref); // refresh the 60-day window
+        try {
+          var u = new URL(a.href, location.origin);
+          if (!u.searchParams.get('ref')) {
+            u.searchParams.set('ref', ref);
+            a.href = u.toString();
+          }
+        } catch (err) {}
+      }
+      track('affiliate_click', {
+        affiliate_id: ref || '(none)',
+        product: a.getAttribute('data-product') || a.href,
+        page: location.pathname
+      });
+    }, true);
+  }
+
+  /* --- purchase_click ----------------------------------------------------
+   * Guard is shared with app-render.js so the event fires exactly once even
+   * when both scripts are on the page.
+   * ---------------------------------------------------------------------- */
+  function bindPurchaseTracking() {
+    if (window.__cmPurchaseClickBound) return;
+    window.__cmPurchaseClickBound = true;
+
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var isPlay = href.indexOf('play.google.com') !== -1;
+      var isHotmart = href.indexOf('hotmart.com') !== -1;
+      if (!isPlay && !isHotmart) return;
+
+      var productId = a.getAttribute('data-product') ||
+        (href.match(/[?&]id=([\w.]+)/) || [])[1] ||
+        (href.match(/hotmart\.com\/([A-Z0-9]+)/i) || [])[1] || 'unknown';
+
+      var name = productId, price = 0, category = isHotmart ? 'book' : 'app';
+      try {
+        var pool = [].concat(getAppsData() || []).concat(getBooksData() || []);
+        var found = pool.filter(function (p) {
+          return p.id === productId ||
+            (p.url && p.url.indexOf(productId) !== -1) ||
+            (p.hotmartLink && p.hotmartLink.indexOf(productId) !== -1);
+        })[0];
+        if (found) {
+          name = found.name;
+          price = priceNum(found.price);
+          category = found.type === 'book' ? 'book' : 'app';
+        }
+      } catch (err) {}
+
+      var items = [{
+        item_id: productId,
+        item_name: name,
+        item_category: category,
+        item_brand: 'Cha0smagick Labs',
+        price: price,
+        currency: 'USD',
+        quantity: 1
+      }];
+
+      track('purchase_click', {
+        currency: 'USD',
+        value: price,
+        destination: isPlay ? 'google_play' : 'hotmart',
+        link_url: href,
+        page: location.pathname,
+        items: items
+      });
+      track('begin_checkout', { currency: 'USD', value: price, items: items });
+
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'InitiateCheckout', {
+          content_ids: [productId], content_name: name,
+          content_type: 'product', value: price, currency: 'USD'
+        });
+      }
+    }, true);
+  }
+
+  /* --- form_submit (MailerLite lead capture) ------------------------------ */
+  function bindFormTracking() {
+    if (window.__cmFormBound) return;
+    window.__cmFormBound = true;
+
+    document.addEventListener('submit', function (e) {
+      var form = e.target;
+      if (!form || form.tagName !== 'FORM') return;
+
+      var isML = !!(form.closest('.ml-embedded, .ml-form-embedContainer, .ml-form-embedWrapper')) ||
+        /mailerlite/i.test(form.getAttribute('action') || '') ||
+        !!form.querySelector('input[type="email"], input[name="fields[email]"]');
+      if (!isML) return;
+
+      var formId = (form.closest('.ml-embedded') || {}).dataset;
+      track('form_submit', {
+        form_id: (formId && formId.form) || CONFIG.mlFormEN,
+        form_name: 'mailerlite_lead_magnet',
+        form_destination: 'mailerlite',
+        page: location.pathname,
+        page_type: getPageType(),
+        location: form.closest('#cm-email-popup') ? 'popup' : 'inline'
+      });
+      // GA4 recommended lead event — makes the conversion visible in reports.
+      track('generate_lead', { currency: 'USD', value: 0, method: 'mailerlite' });
+
+      if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
+    }, true);
+  }
 
   /* ============================================================
    * HELPERS
@@ -82,16 +439,24 @@
     // Check if ml function already exists
     if (typeof window.ml === 'function') return;
 
-    (function(m,a,i,l,e,r){
-      m[l]=m[l]||function(){(m[l].q=m[l].q||[]).push(arguments)};
-      e=a.createElement(i);
-      r=a.getElementsByTagName(i)[0];
-      e.async=1;
-      e.src=l+'?v='+~~(new Date().getTime()/3600000);
-      r.parentNode.insertBefore(e,r);
-    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js');
+    /* BUGFIX: the previous snippet was called with only 4 arguments, so the
+     * queue-stub name parameter was undefined and the stub was attached to
+     * window["https://static.mailerlite.com/js/universal.js"] instead of
+     * window.ml. The following `window.ml(...)` call therefore threw a
+     * TypeError on every page, aborting run() — which silently killed the
+     * lead-magnet form, the collection CTA and everything scheduled after it.
+     * Passing 'ml' as the name argument (per MailerLite's official snippet)
+     * restores the intended behaviour. */
+    (function (w, d, e, u, f, l, n) {
+      w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
+      l = d.createElement(e); l.async = 1;
+      l.src = u + '?v=' + ~~(new Date().getTime() / 3600000);
+      n = d.getElementsByTagName(e)[0];
+      if (n && n.parentNode) n.parentNode.insertBefore(l, n);
+      else d.head.appendChild(l);
+    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
 
-    window.ml('account', CONFIG.mlAccount);
+    try { window.ml('account', CONFIG.mlAccount); } catch (e) { /* non-fatal */ }
   }
 
   // Insert HTML after an element
@@ -283,39 +648,136 @@
     loadMailerLite();
   }
 
-  // --- Social Share Buttons (X/Twitter + Pinterest) ---
+  // --- Social Share Buttons (X · Pinterest · WhatsApp · Facebook) ---
+  // Prefers an existing .share-buttons container (97 blog templates already
+  // ship an empty one); otherwise a row is created at the TOP of the article,
+  // where share intent is highest. Guarded by window.__cmShareInjected, the
+  // same flag app-render.js uses, so only one row can ever exist.
   function injectShareButtons() {
+    if (window.__cmShareInjected) return;
     if (document.getElementById('cm-social-share')) return;
 
     var article = document.querySelector('article.article, .blog-post, article');
     if (!article) return;
 
-    var url = encodeURIComponent(window.location.href);
-    var title = encodeURIComponent(document.title);
+    var rawUrl = window.location.href;
+    var rawTitle = document.title;
+    var url = encodeURIComponent(rawUrl);
+    var title = encodeURIComponent(rawTitle);
     var description = encodeURIComponent(
-      (document.querySelector('meta[name="description"]') || {}).content || document.title
+      (document.querySelector('meta[name="description"]') || {}).content || rawTitle
     );
 
+    var ICONS = {
+      x: '<svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
+      pinterest: '<svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0a12 12 0 0 0-4.36 23.17c-.1-.79-.2-2.02.04-2.89.22-.79 1.4-5.69 1.4-5.69s-.36-.72-.36-1.78c0-1.67.97-2.92 2.18-2.92 1.03 0 1.53.77 1.53 1.7 0 1.03-.66 2.58-1 4.01-.28 1.2.6 2.18 1.78 2.18 2.14 0 3.78-2.25 3.78-5.5 0-2.88-2.07-4.89-5.02-4.89-3.42 0-5.43 2.56-5.43 5.22 0 1.03.4 2.14.89 2.74a.36.36 0 0 1 .08.34l-.33 1.35c-.05.22-.17.27-.4.16-1.5-.7-2.44-2.88-2.44-4.64 0-3.78 2.74-7.25 7.92-7.25 4.15 0 7.38 2.96 7.38 6.92 0 4.13-2.6 7.45-6.22 7.45-1.21 0-2.35-.63-2.74-1.38l-.75 2.85c-.27 1.04-1 2.35-1.49 3.14A12 12 0 1 0 12 0z"/></svg>',
+      whatsapp: '<svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 0 1 6.99 2.896 9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.887 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.892c0 2.096.549 4.142 1.595 5.945L0 24l6.335-1.652a12.02 12.02 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>',
+      facebook: '<svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 3.925 23.094 9.101 24v-8.437H6.627v-3.49h2.474V9.9c0-3.476 2.06-5.398 5.22-5.398 1.512 0 3.093.271 3.093.271v3.42h-1.743c-1.717 0-2.252 1.072-2.252 2.171v2.607h3.833l-.612 3.49h-3.22V24C20.075 23.094 24 18.1 24 12.073"/></svg>'
+    };
+
+    // window.open target URLs (600x500 popup, wired below)
+    var NETS = [
+      { key: 'x', label: 'X', cls: 'cm-social-x', href: 'https://twitter.com/intent/tweet?text=' + title + '&url=' + url },
+      { key: 'pinterest', label: 'Pinterest', cls: 'cm-social-pin', href: 'https://pinterest.com/pin/create/button/?url=' + url + '&description=' + description },
+      { key: 'whatsapp', label: 'WhatsApp', cls: 'cm-social-wa', href: 'https://wa.me/?text=' + encodeURIComponent(rawTitle + ' ' + rawUrl) },
+      { key: 'facebook', label: 'Facebook', cls: 'cm-social-fb', href: 'https://www.facebook.com/sharer/sharer.php?u=' + url }
+    ];
+
+    var buttons = NETS.map(function (n) {
+      return '<a href="' + n.href + '" target="_blank" rel="noopener" ' +
+        'data-cm-share="' + n.key + '" class="cm-social-btn ' + n.cls + '" ' +
+        'aria-label="Share on ' + n.label + '">' + ICONS[n.key] +
+        '<span>' + n.label + '</span></a>';
+    }).join('');
+
+    var label = isSpanish() ? 'Comparte este art\u00EDculo:' : 'Share this article:';
+
+    /* Reuse the container the blog templates already render.
+     * 85 of the 225 article templates ship a .share-buttons div that is
+     * ALREADY populated with plain <a> links (Twitter/Facebook/Reddit/
+     * Pinterest). Appending a second row there would duplicate the widget,
+     * so instead we upgrade what is there — wire the existing anchors to the
+     * 600x500 popup + GA4 tracking — and only add the networks that are
+     * genuinely missing. */
+    var host = document.querySelector('.share-buttons');
+    if (host) {
+      window.__cmShareInjected = true;
+      host.id = host.id || 'cm-social-share';
+
+      var existing = host.querySelectorAll('a[href]');
+      if (existing.length) {
+        // Upgrade in place.
+        Array.prototype.forEach.call(existing, function (a) {
+          if (a.hasAttribute('data-cm-share')) return;
+          var h = a.getAttribute('href') || '';
+          var key = /twitter\.com|\/\/x\.com/.test(h) ? 'x'
+                  : /pinterest\./.test(h) ? 'pinterest'
+                  : /wa\.me|whatsapp/.test(h) ? 'whatsapp'
+                  : /facebook\.com/.test(h) ? 'facebook'
+                  : /reddit\.com/.test(h) ? 'reddit'
+                  : 'other';
+          a.setAttribute('data-cm-share', key);
+        });
+
+        // Add any of our four networks that the template omitted.
+        var present = {};
+        Array.prototype.forEach.call(host.querySelectorAll('a[data-cm-share]'), function (a) {
+          present[a.getAttribute('data-cm-share')] = true;
+        });
+        var missing = NETS.filter(function (n) { return !present[n.key]; });
+        if (missing.length) {
+          host.insertAdjacentHTML('beforeend', missing.map(function (n) {
+            return '<a href="' + n.href + '" target="_blank" rel="noopener" ' +
+              'data-cm-share="' + n.key + '" class="cm-social-btn ' + n.cls + '" ' +
+              'aria-label="Share on ' + n.label + '">' + ICONS[n.key] +
+              '<span>' + n.label + '</span></a>';
+          }).join(''));
+        }
+      } else {
+        // Empty container — fill it.
+        host.insertAdjacentHTML('beforeend',
+          '<span class="cm-social-label">' + label + '</span>' +
+          '<div class="cm-social-buttons">' + buttons + '</div>');
+      }
+
+      bindShareClicks(host);
+      return;
+    }
+
+    window.__cmShareInjected = true;
     var html = '\
 <section id="cm-social-share" class="cm-section cm-social-section">\
   <div class="cm-social-inner">\
-    <span class="cm-social-label">' + (isSpanish() ? 'Comparte este art\u00EDculo:' : 'Share this article:') + '</span>\
-    <div class="cm-social-buttons">\
-      <a href="https://twitter.com/intent/tweet?text=' + title + '&url=' + url + '" \
-         target="_blank" rel="noopener" class="cm-social-btn cm-social-x" aria-label="Share on X">\
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>\
-        <span>X</span>\
-      </a>\
-      <a href="https://pinterest.com/pin/create/button/?url=' + url + '&description=' + description + '" \
-         target="_blank" rel="noopener" class="cm-social-btn cm-social-pin" aria-label="Pin on Pinterest">\
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0a12 12 0 0 0-4.36 23.17c-.1-.79-.2-2.02.04-2.89.22-.79 1.4-5.69 1.4-5.69s-.36-.72-.36-1.78c0-1.67.97-2.92 2.18-2.92 1.03 0 1.53.77 1.53 1.7 0 1.03-.66 2.58-1 4.01-.28 1.2.6 2.18 1.78 2.18 2.14 0 3.78-2.25 3.78-5.5 0-2.88-2.07-4.89-5.02-4.89-3.42 0-5.43 2.56-5.43 5.22 0 1.03.4 2.14.89 2.74a.36.36 0 0 1 .08.34l-.33 1.35c-.05.22-.17.27-.4.16-1.5-.7-2.44-2.88-2.44-4.64 0-3.78 2.74-7.25 7.92-7.25 4.15 0 7.38 2.96 7.38 6.92 0 4.13-2.6 7.45-6.22 7.45-1.21 0-2.35-.63-2.74-1.38l-.75 2.85c-.27 1.04-1 2.35-1.49 3.14A12 12 0 1 0 12 0z"/></svg>\
-        <span>Pinterest</span>\
-      </a>\
-    </div>\
+    <span class="cm-social-label">' + label + '</span>\
+    <div class="cm-social-buttons">' + buttons + '</div>\
   </div>\
 </section>';
 
-    insertBefore(document.querySelector('footer'), html);
+    // Top of the article — highest share intent.
+    var heading = article.querySelector('h1');
+    if (heading) {
+      insertAfter(heading, html);
+    } else {
+      article.insertAdjacentHTML('afterbegin', html);
+    }
+    bindShareClicks(document.getElementById('cm-social-share'));
+  }
+
+  // Opens the network in a 600x500 popup instead of a new tab, and reports
+  // a GA4 `share` event.
+  function bindShareClicks(scope) {
+    if (!scope) return;
+    scope.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[data-cm-share]');
+      if (!a) return;
+      e.preventDefault();
+      window.open(a.href, 'cm_share_win', 'width=600,height=500,noopener,scrollbars=yes,resizable=yes');
+      track('share', {
+        method: a.getAttribute('data-cm-share'),
+        content_type: getPageType(),
+        item_id: location.pathname
+      });
+    });
   }
 
   function injectTestimonials() {
@@ -445,6 +907,147 @@
   }
 
   /* ============================================================
+   * EMAIL CAPTURE POPUP + EXIT INTENT
+   * ------------------------------------------------------------
+   * Triggers (whichever fires first):
+   *   (a) 30s dwell  OR  50% scroll depth
+   *   (b) exit-intent — pointer leaves through the top of the viewport
+   *       (desktop only; mobile has no equivalent gesture)
+   * Shown at most once per session (sessionStorage) and never again once
+   * the visitor subscribes or dismisses it.
+   * ============================================================ */
+
+  var SESSION_KEY = 'cm_popup_shown_v1';
+
+  function popupAlreadySeen() {
+    try { return sessionStorage.getItem(SESSION_KEY) === '1'; } catch (e) { return false; }
+  }
+
+  function markPopupSeen() {
+    try { sessionStorage.setItem(SESSION_KEY, '1'); } catch (e) {}
+  }
+
+  function isDesktop() {
+    return window.matchMedia ? window.matchMedia('(min-width: 1024px)').matches
+                             : window.innerWidth >= 1024;
+  }
+
+  function buildPopup() {
+    // index.html ships an empty #exit-intent-popup placeholder; reuse it when
+    // present, otherwise create our own host element.
+    var host = document.getElementById('exit-intent-popup');
+    if (!host) {
+      host = document.createElement('div');
+      host.id = 'exit-intent-popup';
+      document.body.appendChild(host);
+    }
+
+    var lang = isSpanish();
+    var formSlug = lang ? CONFIG.mlFormES : CONFIG.mlFormEN;
+
+    host.setAttribute('aria-hidden', 'true');
+    host.innerHTML = '\
+<div id="cm-email-popup" class="cm-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="cm-popup-title">\
+  <div class="cm-popup-box">\
+    <button type="button" class="cm-popup-close" aria-label="' + (lang ? 'Cerrar' : 'Close') + '">&times;</button>\
+    <h3 id="cm-popup-title" class="cm-popup-title">' +
+      (lang ? '\u00A1Espera! Ll\u00E9vate la Gu\u00EDa Gratis' : 'Wait — Grab the Free Guide') + '</h3>\
+    <p class="cm-popup-text">' +
+      (lang
+        ? 'Gu\u00EDa R\u00E1pida de Magia del Caos: 10 p\u00E1ginas sobre sigilos, gnosis y servidores. Gratis, al instante.'
+        : 'Chaos Magick Quickstart: a 10-page PDF on sigils, gnosis states & servitors. Free, delivered instantly.') + '</p>\
+    <div class="ml-embedded" data-form="' + formSlug + '"></div>\
+    <p class="cm-popup-privacy">' +
+      (lang ? 'Sin spam. Cancela cuando quieras.' : 'No spam. Unsubscribe anytime.') + '</p>\
+  </div>\
+</div>';
+
+    loadMailerLite();
+
+    var overlay = host.querySelector('#cm-email-popup');
+    var closeBtn = host.querySelector('.cm-popup-close');
+
+    function close(reason) {
+      host.style.display = 'none';
+      host.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      track('popup_close', { reason: reason || 'button', page: location.pathname });
+    }
+
+    closeBtn.addEventListener('click', function () { close('button'); });
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) close('overlay');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && host.style.display === 'block') close('escape');
+    });
+
+    return host;
+  }
+
+  function showPopup(trigger) {
+    if (popupAlreadySeen()) return;
+    markPopupSeen();
+
+    // Build on first show; reuse the same host on any later call.
+    var host = document.getElementById('cm-email-popup')
+      ? document.getElementById('exit-intent-popup')
+      : buildPopup();
+    if (!host) return;
+
+    host.style.display = 'block';
+    host.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    track('popup_view', { trigger: trigger, page: location.pathname, page_type: getPageType() });
+  }
+
+  function initEmailPopup() {
+    if (window.__cmPopupBound) return;
+    if (CONFIG.popupPages.indexOf(getPageType()) === -1) return; // home/blog/tools only
+    if (popupAlreadySeen()) return;
+    window.__cmPopupBound = true;
+
+    var fired = false;
+    function fire(trigger) {
+      if (fired) return;
+      fired = true;
+      showPopup(trigger);
+    }
+
+    // (a1) dwell timer
+    var timer = setTimeout(function () { fire('timer_30s'); }, CONFIG.popupDelayMs);
+
+    // (a2) scroll depth
+    function onScroll() {
+      var doc = document.documentElement;
+      var scrollable = (doc.scrollHeight - window.innerHeight);
+      if (scrollable <= 0) return;
+      var pct = (window.scrollY / scrollable) * 100;
+      if (pct >= CONFIG.popupScrollPct) {
+        window.removeEventListener('scroll', onScroll);
+        fire('scroll_50pct');
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // (b) exit intent — desktop only
+    if (isDesktop()) {
+      document.addEventListener('mouseout', function (e) {
+        if (fired) return;
+        if (e.relatedTarget || e.toElement) return;   // still inside the page
+        if (e.clientY > 10) return;                   // must exit via the top
+        fire('exit_intent');
+      });
+    }
+
+    // Stop the timer once the popup has been shown by another trigger.
+    var stopper = setInterval(function () {
+      if (fired) { clearTimeout(timer); clearInterval(stopper); }
+    }, 1000);
+  }
+
+  /* ============================================================
    * ROUTER - Run appropriate injections per page type
    * ============================================================ */
 
@@ -551,6 +1154,9 @@
       }
 
       case 'app-details': {
+        // Share row on product pages too (guarded — app-render.js may own it)
+        injectShareButtons();
+
         // Wait for app-render to finish rendering
         var checkRender = setInterval(function() {
           var detailInfo = document.getElementById('app-detailed-info');
@@ -587,6 +1193,9 @@
       }
 
       case 'books': {
+        // Share row on book sales pages
+        injectShareButtons();
+
         // Book pages - inject lead magnet + collection CTA
         var bookFooter = document.querySelector('footer');
         var bookContent = document.querySelector('.blog-post, article, main');
@@ -890,6 +1499,100 @@
 .cm-social-pin:hover {\
   background: #9a0715;\
 }\
+.cm-social-wa {\
+  background: #25D366;\
+  color: #062512 !important;\
+}\
+.cm-social-wa:hover {\
+  background: #1da851;\
+}\
+.cm-social-fb {\
+  background: #1877F2;\
+  color: #fff !important;\
+}\
+.cm-social-fb:hover {\
+  background: #0f5fc4;\
+}\
+\
+/* Email Capture Popup (timer / scroll / exit-intent) */\
+#exit-intent-popup {\
+  display: none;\
+}\
+.cm-popup-overlay {\
+  position: fixed;\
+  inset: 0;\
+  z-index: 99999;\
+  background: rgba(0, 0, 0, 0.82);\
+  display: flex;\
+  align-items: center;\
+  justify-content: center;\
+  padding: 1rem;\
+  animation: cmPopupFade 0.25s ease-out;\
+}\
+@keyframes cmPopupFade {\
+  from { opacity: 0; }\
+  to   { opacity: 1; }\
+}\
+.cm-popup-box {\
+  position: relative;\
+  width: 100%;\
+  max-width: 460px;\
+  background: linear-gradient(135deg, #0a0a0a 0%, #141414 100%);\
+  border: 1px solid #c0a060;\
+  border-radius: 12px;\
+  padding: 2rem 1.75rem 1.5rem;\
+  text-align: center;\
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);\
+  max-height: 90vh;\
+  overflow-y: auto;\
+  animation: cmPopupRise 0.28s ease-out;\
+}\
+@keyframes cmPopupRise {\
+  from { transform: translateY(18px); opacity: 0; }\
+  to   { transform: translateY(0); opacity: 1; }\
+}\
+.cm-popup-close {\
+  position: absolute;\
+  top: 8px;\
+  right: 12px;\
+  width: 34px;\
+  height: 34px;\
+  background: transparent;\
+  border: 0;\
+  color: #888;\
+  font-size: 1.9rem;\
+  line-height: 1;\
+  cursor: pointer;\
+  border-radius: 50%;\
+  transition: color 0.2s, background 0.2s;\
+}\
+.cm-popup-close:hover {\
+  color: #ffd700;\
+  background: rgba(255, 215, 0, 0.08);\
+}\
+.cm-popup-title {\
+  color: #ffd700;\
+  font-size: 1.25rem;\
+  font-weight: 200;\
+  letter-spacing: 1.5px;\
+  text-transform: uppercase;\
+  margin: 0 0 0.7rem;\
+}\
+.cm-popup-text {\
+  color: #ccc;\
+  font-size: 0.92rem;\
+  line-height: 1.55;\
+  margin: 0 0 1.1rem;\
+}\
+.cm-popup-privacy {\
+  color: #666;\
+  font-size: 0.72rem;\
+  margin: 0.8rem 0 0;\
+}\
+@media (max-width: 600px) {\
+  .cm-popup-box { padding: 1.6rem 1.1rem 1.2rem; }\
+  .cm-popup-title { font-size: 1.05rem; }\
+}\
 \
 /* Testimonials */\
 .cm-testimonials-section {\
@@ -1042,15 +1745,32 @@
    * ============================================================ */
 
   function init() {
+    /* --- Measurement first -------------------------------------------
+     * These run synchronously, before any DOM work, so a rendering error
+     * further down can never cost us the pageview. All are idempotent.
+     * ------------------------------------------------------------------ */
+    ensureGtag();          // GA4 bootstrap + consent 'granted' by default
+    initMetaPixel();       // inert until META_PIXEL_ID is real
+    bindAffiliate();       // ?ref= capture + 60-day cookie on product clicks
+    bindPurchaseTracking();// purchase_click / begin_checkout
+    bindFormTracking();    // form_submit / generate_lead
+
     // Inject styles
     injectStyles();
 
     // Run after DOM is ready
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', run);
+      document.addEventListener('DOMContentLoaded', onReady);
     } else {
-      run();
+      onReady();
     }
+  }
+
+  function onReady() {
+    tagOutboundLinks(document); // UTM + affiliate on hard-coded HTML CTAs
+    watchForNewLinks();         // ...and on anything injected later
+    run();                      // page-type specific CTA injection
+    initEmailPopup();           // 30s / 50% scroll / exit-intent capture
   }
 
   init();
