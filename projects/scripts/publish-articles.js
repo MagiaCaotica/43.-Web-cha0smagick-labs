@@ -36,6 +36,9 @@ const ARTICLES = [
   { slug: 'big-three-explained', title: 'NEW: Big Three Explained — what your sun, moon & rising signs mean together' },
   { slug: 'haunted-roads-guide', title: 'NEW: Haunted Roads Guide — the best haunted road trip itineraries & urban legends' },
   { slug: 'lucid-dream-app-review', title: 'NEW: Lucid Dream App Review 2026 — the best lucid dreaming app for Android' },
+  { slug: 'psi-gym-app-review', title: 'NEW: PSI GYM App Review — train your ESP with Zener cards on Android' },
+  { slug: 'dream-machine-app-review', title: 'NEW: Dream Machine App Review — the best lucid dreaming app with dream journal & reality checks' },
+  { slug: 'astral-lab-app-review', title: 'NEW: Astral Lab App Review — the best offline natal chart app (no subscription)' },
 ];
 
 async function tgSend(text) {
