@@ -957,6 +957,10 @@
         ? 'Gu\u00EDa R\u00E1pida de Magia del Caos: 10 p\u00E1ginas sobre sigilos, gnosis y servidores. Gratis, al instante.'
         : 'Chaos Magick Quickstart: a 10-page PDF on sigils, gnosis states & servitors. Free, delivered instantly.') + '</p>\
     <div class="ml-embedded" data-form="' + formSlug + '"></div>\
+    <a class="cm-popup-download" href="' +
+      (lang ? '/lead-magnet/Guia-Rapida-Magia-Caos.pdf' : '/lead-magnet/Quickstart-Guide-Chaos-Magick.pdf') +
+      '" download>' +
+      (lang ? 'Descargar la gu\u00EDa ahora' : 'Download the guide now') + '</a>\
     <p class="cm-popup-privacy">' +
       (lang ? 'Sin spam. Cancela cuando quieras.' : 'No spam. Unsubscribe anytime.') + '</p>\
   </div>\
@@ -1583,6 +1587,26 @@
   font-size: 0.92rem;\
   line-height: 1.55;\
   margin: 0 0 1.1rem;\
+}\
+.cm-popup-download {\
+  display: inline-block;\
+  margin: 0.4rem auto 0.2rem;\
+  padding: 0.7rem 1.6rem;\
+  background: linear-gradient(135deg, #c0a060 0%, #a8843c 100%);\
+  color: #0a0a0a !important;\
+  font-size: 0.9rem;\
+  font-weight: 600;\
+  letter-spacing: 1px;\
+  text-transform: uppercase;\
+  text-decoration: none;\
+  border-radius: 6px;\
+  box-shadow: 0 4px 14px rgba(192, 160, 96, 0.35);\
+  transition: transform 0.15s, box-shadow 0.2s;\
+}\
+.cm-popup-download:hover {\
+  transform: translateY(-1px);\
+  box-shadow: 0 6px 20px rgba(192, 160, 96, 0.5);\
+  color: #000 !important;\
 }\
 .cm-popup-privacy {\
   color: #666;\
