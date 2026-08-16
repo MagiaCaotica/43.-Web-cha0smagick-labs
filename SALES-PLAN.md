@@ -54,16 +54,16 @@
 - [x] A40. `one-time-vs-subscription-calculator-occult` → ALL — "One-Time vs Subscription: The 3-Year Cost Calculator for Occult Apps (2026)" (kw: one time payment vs subscription, occult app cost comparison, subscription calculator apps; 3-year comparison table; related: why-stop-paying-subscription-occult-apps, best-tarot-apps-android-2026)
 
 **Batch A2 (10) — feature deep-dives + reviews:**
-- [ ] "How to Use the Dream Journal in Dream Machine: Complete Guide" → dream-machine
-- [ ] "How to Read Changing Lines with the I Ching Oracle App" → iching-oracle
-- [ ] "Eerie Roads Reviewed After 90 Nights of EVP Sessions" → eerieroads
-- [ ] "NOCTEM Paranormal Suite: Complete Feature Tour (2026)" → noctem-tools
-- [ ] "Using the Astral Lab App: From Hypnagogia to Full Projection" → astral-lab
-- [ ] "Lunar Phase Calculator App: Tracking Spells Across the Year" → lunar-phase-calculator
-- [ ] "Norse Rune Oracle App: How to Do the Nine-Rune Cast Digitally" → norse-rune-oracle
-- [ ] "PSI GYM Training Modes: A Practical Walkthrough" → psi-gym
-- [ ] "Arcana Goetia App: Browsing the 72 Spirits Like a Pro" → arcana-goetia
-- [ ] "Chaos Sigil Generator App: Design, Charge, Forget" → chaos-sigil-generator
+- [x] "How to Use the Dream Journal in Dream Machine: Complete Guide" → dream-machine
+- [x] "How to Read Changing Lines with the I Ching Oracle App" → iching-oracle
+- [x] "Eerie Roads Reviewed After 90 Nights of EVP Sessions" → eerieroads
+- [x] "NOCTEM Paranormal Suite: Complete Feature Tour (2026)" → noctem-tools
+- [x] "Using the Astral Lab App: From Hypnagogia to Full Projection" → astral-lab
+- [x] "Lunar Phase Calculator App: Tracking Spells Across the Year" → lunar-phase-calculator
+- [x] "Norse Rune Oracle App: How to Do the Nine-Rune Cast Digitally" → norse-rune-oracle
+- [x] "PSI GYM Training Modes: A Practical Walkthrough" → psi-gym
+- [x] "Arcana Goetia App: Browsing the 72 Spirits Like a Pro" → arcana-goetia
+- [x] "Chaos Sigil Generator App: Design, Charge, Forget" → chaos-sigil-generator
 
 **Batch A3 (10) — reviews (3rd-party honest tone):**
 - [ ] 5 reviews: Dream Machine (90-night), PSI GYM (30-day score log), Arcana Goetia (72-spirit test), Eerie Roads (field), Tarot (200 readings)

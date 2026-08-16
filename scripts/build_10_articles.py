@@ -34,9 +34,10 @@ from articles_d import ARTICLES_D  # noqa: E402
 from articles_e import ARTICLES_E  # noqa: E402
 from articles_f import ARTICLES_F  # noqa: E402
 from articles_g import ARTICLES_G  # noqa: E402
+from articles_h import ARTICLES_H  # noqa: E402
 
 ARTICLES = (ARTICLES_A + ARTICLES_B + ARTICLES_C
-+ ARTICLES_D + ARTICLES_E + ARTICLES_F + ARTICLES_G)
++ ARTICLES_D + ARTICLES_E + ARTICLES_F + ARTICLES_G + ARTICLES_H)
 
 
 # ---------------------------------------------------------------- rendering

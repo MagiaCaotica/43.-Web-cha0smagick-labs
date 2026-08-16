@@ -68,4 +68,11 @@ RELATED_TITLES = {
     "free-lunar-phase-calculator-guide": "Free Lunar Phase Calculator: Track Moon Cycles Online (2026)",
     "why-stop-paying-subscription-occult-apps": "Why I Stopped Paying for Subscription Occult Apps (2026)",
     "true-cost-tarot-app-subscription-vs-onetime": "The True Cost of a Tarot App: Subscription vs One-Time Payment (2026)",
+    "dream-journaling-lucid-dreaming-complete-guide": "Dream Journaling for Lucid Dreaming: Complete Guide with Templates (2026)",
+    "dream-machine-vs-awoken-comparison": "Dream Machine vs Awoken (2026): Which Lucid Dreaming App Wins?",
+    "spirit-box-frequency-settings": "Spirit Box Frequency Settings: Best Sweep Rates for Clear EVP (2026)",
+    "noctem-tools-app-review": "NOCTEM App Review 2026: The Best Ghost Hunting App for Android",
+    "goetia-seals-and-sigils-guide": "Goetia Seals & Sigils: How to Use the 72 Seals of Solomon (2026)",
+    "best-goetia-app-comparison": "Best Goetia App for Android (2026): Arcana Goetia vs the Alternatives",
+    "how-long-sigil-takes-to-work": "How Long Does a Sigil Take to Work? Timelines Explained (2026)",
 }
