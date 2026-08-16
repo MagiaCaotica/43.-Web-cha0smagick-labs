@@ -75,4 +75,12 @@ RELATED_TITLES = {
     "goetia-seals-and-sigils-guide": "Goetia Seals & Sigils: How to Use the 72 Seals of Solomon (2026)",
     "best-goetia-app-comparison": "Best Goetia App for Android (2026): Arcana Goetia vs the Alternatives",
     "how-long-sigil-takes-to-work": "How Long Does a Sigil Take to Work? Timelines Explained (2026)",
+    "dream-machine-dream-journal-guide": "How to Use the Dream Journal in Dream Machine: Complete Guide (2026)",
+    "eerieroads-90-night-review": "Eerie Roads Reviewed After 90 Nights of EVP Sessions (2026)",
+    "tarot-journaling-track-readings-progress": "Tarot Journaling: How to Track Your Readings and Measure Your Progress",
+    "daily-tarot-practice-routine": "How to Build a Daily Tarot Practice: Morning and Evening Rituals for Readers",
+    "iching-vs-tarot": "I Ching vs Tarot: Which Divination Is Right for You? (2026)",
+    "iching-for-love-questions": "I Ching for Love Questions: How to Ask About Relationships (2026)",
+    "new-moon-ritual-manifestation": "New Moon Ritual for Manifestation: Step-by-Step Guide (2026)",
+    "money-sigil-guide": "How to Make a Money Sigil: Step-by-Step Wealth Sigilization (2026)",
 }
