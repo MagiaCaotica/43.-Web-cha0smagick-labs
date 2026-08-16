@@ -29,8 +29,13 @@ PUBLISHER = "Cha0smagick Labs"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from articles_a import ARTICLES_A  # noqa: E402
 from articles_b import ARTICLES_B  # noqa: E402
+from articles_c import ARTICLES_C  # noqa: E402
+from articles_d import ARTICLES_D  # noqa: E402
+from articles_e import ARTICLES_E  # noqa: E402
+from articles_f import ARTICLES_F  # noqa: E402
 
-ARTICLES = ARTICLES_A + ARTICLES_B
+ARTICLES = (ARTICLES_A + ARTICLES_B + ARTICLES_C
+            + ARTICLES_D + ARTICLES_E + ARTICLES_F)
 
 
 # ---------------------------------------------------------------- rendering
@@ -139,6 +144,8 @@ def cta_block(a):
 
 
 def faq_block(a):
+    if "faq" not in a:
+        return ""
     out = ['<h2 id="faq">Frequently Asked Questions</h2>']
     for q, ans in a["faq"]:
         out.append(f"<h3>{q}</h3>")
@@ -325,7 +332,7 @@ def main():
         update_index(a)
         update_sitemap(a)
         ok += 1
-        print(f"OK {ok}/10 {slug}.html")
+        print(f"OK {ok}/{len(ARTICLES)} {slug}.html")
 
 
 if __name__ == "__main__":
