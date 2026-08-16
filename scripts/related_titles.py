@@ -60,4 +60,12 @@ RELATED_TITLES = {
     "best-lucid-dreaming-apps-android-2026": "Best Lucid Dreaming Apps for Android (2026): Tested & Compared",
     "best-offline-lucid-dreaming-app-2026": "Best Offline Lucid Dreaming App for 2026: No Subscription, No Ads",
     "clairvoyance-test-online": "Clairvoyance Test Online: Measure Your Psychic Ability",
+    "how-to-lucid-dream-tonight": "How to Lucid Dream Tonight: 5 Fast Techniques That Work (2026)",
+    "best-esp-training-apps-android": "Best ESP Training Apps for Android 2026: Tested & Reviewed",
+    "best-tarot-apps-android-2026": "10 Best Tarot Apps for Android in 2026: Honest Comparison Guide",
+    "free-sigil-generator-online-guide": "Free Sigil Generator Online: Create Chaos Magick Sigils",
+    "free-i-ching-online-guide": "Free I Ching Online: Cast the Book of Changes (2026)",
+    "free-lunar-phase-calculator-guide": "Free Lunar Phase Calculator: Track Moon Cycles Online (2026)",
+    "why-stop-paying-subscription-occult-apps": "Why I Stopped Paying for Subscription Occult Apps (2026)",
+    "true-cost-tarot-app-subscription-vs-onetime": "The True Cost of a Tarot App: Subscription vs One-Time Payment (2026)",
 }
