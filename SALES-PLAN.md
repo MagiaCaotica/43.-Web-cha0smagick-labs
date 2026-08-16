@@ -66,8 +66,8 @@
 - [x] "Chaos Sigil Generator App: Design, Charge, Forget" → chaos-sigil-generator
 
 **Batch A3 (10) — reviews (3rd-party honest tone):**
-- [ ] 5 reviews: Dream Machine (90-night), PSI GYM (30-day score log), Arcana Goetia (72-spirit test), Eerie Roads (field), Tarot (200 readings)
-- [ ] 5 "app + practice" reviews: Rune Oracle, I Ching, Lunar, Astral Lab, Sigil Generator
+- [x] 5 reviews: Dream Machine (90-night), PSI GYM (30-day score log), Arcana Goetia (72-spirit test), Eerie Roads (field), Tarot (200 readings)
+- [x] 5 "app + practice" reviews: Rune Oracle, I Ching, Lunar, Astral Lab, Sigil Generator
 
 ### WAVE B — Emotional MOFU Content (50)
 
