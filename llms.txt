@@ -77,3 +77,18 @@
 - **JS:** `app-render.min.js`, `apps-data.min.js`, `visitor-map.min.js`, `shared.min.js`
 - **Analytics:** Google Analytics G-V6LHCPN9TK (privacy-first, denied by default)
 - **Theme:** Dark theme, mobile-responsive
+
+## App Feature Lists (Premium Android, one-time purchase, no ads, no subscription)
+
+- [Chaos Sigil Generator](https://cha0smagicklabs.com/apps/chaos-sigil-generator.html): Spare-method sigil crafting, charging guides, sigil journal, offline use, $3.99 one-time
+- [PSI GYM](https://cha0smagicklabs.com/apps/psi-gym.html): Zener card ESP trainer, multiple training modes, score statistics, offline use, $3.99 one-time
+- [Norse Rune Oracle](https://cha0smagicklabs.com/apps/norse-rune-oracle.html): all 24 Elder Futhark runes, rune spreads, reference meanings, offline use, $3.99 one-time
+- [Arcana Goetia](https://cha0smagicklabs.com/apps/arcana-goetia.html): 72 spirits catalog, seals, ranked list, protocol guides, offline use, $3.99 one-time
+- [Dream Machine](https://cha0smagicklabs.com/apps/dream-machine.html): lucid dreaming — reality-check reminders, dream journal, binaural/theta cues, MILD + WBTB support, $3.99 one-time
+- [I Ching Oracle](https://cha0smagicklabs.com/apps/iching-oracle.html): digital three-coin casting, all 64 hexagrams, changing lines, cast history, offline use, $3.99 one-time
+- [Lunar Phase Calculator](https://cha0smagicklabs.com/apps/lunar-phase-calculator.html): moon phase calendar, ritual timing, spell scheduling, offline use, $3.99 one-time
+- [Unofficial Rider-Waite Tarot](https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html): full 78-card Rider-Waite-Smith deck, spreads, reversed meanings, reading journal, $9.99 one-time
+- [Lucid Dream](https://cha0smagicklabs.com/apps/lucid-dream.html): lucid dreaming companion — dream recall tracking, lucidity reminders, offline use, $3.99 one-time
+- [Astral Lab](https://cha0smagicklabs.com/apps/astral-lab.html): astral projection training, vibrational-state guidance, session log, offline use, $3.99 one-time
+- [Eerie Roads](https://cha0smagicklabs.com/apps/eerieroads.html): paranormal investigation — EVP recording, spirit box, road-trip ghost hunts, $9.99 one-time
+- [NOCTEM](https://cha0smagicklabs.com/apps/noctem-tools.html): premium night/paranormal toolkit, $14.99 one-time
