@@ -83,4 +83,9 @@ RELATED_TITLES = {
     "iching-for-love-questions": "I Ching for Love Questions: How to Ask About Relationships (2026)",
     "new-moon-ritual-manifestation": "New Moon Ritual for Manifestation: Step-by-Step Guide (2026)",
     "money-sigil-guide": "How to Make a Money Sigil: Step-by-Step Wealth Sigilization (2026)",
+    "psi-gym-vs-free-zener-test": "PSI GYM vs Free Online Zener Tests (2026): Why Scoring Matters",
+    "psi-gym-training-modes-guide": "PSI GYM Training Modes: A Practical Walkthrough (2026)",
+    "psi-gym-30-day-esp-training-log": "30 Days of Zener Card Training: My PSI GYM Score Log (2026)",
+    "lucid-dreaming-alarm-guide": "Lucid Dreaming Alarms: Do Smart Alarms & Reminders Work? (2026)",
+    "chaos-sigil-design-charge-forget-guide": "Design, Charge, Forget: The Complete Chaos Sigil Workflow (2026)",
 }

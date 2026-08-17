@@ -72,18 +72,18 @@
 ### WAVE B — Emotional MOFU Content (50)
 
 **Batch B1 (12) — transformation journeys:**
-- [ ] "30 Days of Zener Training: My Score Went from 6 to 14" → psi-gym
-- [ ] "My First Lucid Dream After 3 Weeks with Dream Machine" → dream-machine
-- [ ] "I Made a Money Sigil Every New Moon for 3 Months: Results" → chaos-sigil-generator
-- [ ] "How Astral Projection Changed My Fear of Death" → astral-lab
-- [ ] "Learning to Read Runes: From Confusion to Daily Practice" → norse-rune-oracle
-- [ ] "My First Year with a Digital Tarot Practice" → unofficial-rider-waite-tarot
-- [ ] "From Skeptic to Practitioner: How the I Ching Answered Hard Questions" → iching-oracle
-- [ ] "What 100 EVP Sessions Taught Me About Grief" → eerieroads
-- [ ] "The Night I Summoned (and Dismissed) My First Goetia Spirit" → arcana-goetia
-- [ ] "Lucid Dreaming Stopped My Nightmares in 30 Days" → lucid-dream
-- [ ] "Moon Magic for a Year: Tracking Every Phase" → lunar-phase-calculator
-- [ ] "A Complete Beginner's First Month of ESP Training" → psi-gym
+- [x] "30 Days of Zener Training: My Score Went from 6 to 14" → psi-gym
+- [x] "My First Lucid Dream After 3 Weeks with Dream Machine" → dream-machine
+- [x] "I Made a Money Sigil Every New Moon for 3 Months: Results" → chaos-sigil-generator
+- [x] "How Astral Projection Changed My Fear of Death" → astral-lab
+- [x] "Learning to Read Runes: From Confusion to Daily Practice" → norse-rune-oracle
+- [x] "My First Year with a Digital Tarot Practice" → unofficial-rider-waite-tarot
+- [x] "From Skeptic to Practitioner: How the I Ching Answered Hard Questions" → iching-oracle
+- [x] "What 100 EVP Sessions Taught Me About Grief" → eerieroads
+- [x] "The Night I Summoned (and Dismissed) My First Goetia Spirit" → arcana-goetia
+- [x] "Lucid Dreaming Stopped My Nightmares in 30 Days" → lucid-dream
+- [x] "Moon Magic for a Year: Tracking Every Phase" → lunar-phase-calculator
+- [x] "A Complete Beginner's First Month of ESP Training" → psi-gym
 
 **Batch B2 (10) — fear-handling (ethical):**
 - [ ] "What Actually Happens in an EVP Session: No Jump Scares" → eerieroads
