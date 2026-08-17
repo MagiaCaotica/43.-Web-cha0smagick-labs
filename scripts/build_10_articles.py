@@ -36,9 +36,11 @@ from articles_f import ARTICLES_F  # noqa: E402
 from articles_g import ARTICLES_G  # noqa: E402
 from articles_h import ARTICLES_H  # noqa: E402
 from articles_i import ARTICLES_I  # noqa: E402
+from articles_j import ARTICLES_J  # noqa: E402
+from articles_k import ARTICLES_K  # noqa: E402
 
 ARTICLES = (ARTICLES_A + ARTICLES_B + ARTICLES_C
-+ ARTICLES_D + ARTICLES_E + ARTICLES_F + ARTICLES_G + ARTICLES_H + ARTICLES_I)
++ ARTICLES_D + ARTICLES_E + ARTICLES_F + ARTICLES_G + ARTICLES_H + ARTICLES_I + ARTICLES_J + ARTICLES_K)
 
 
 # ---------------------------------------------------------------- rendering
@@ -234,20 +236,23 @@ def build_article(a, template):
         flags=re.S,
     )
     # 3. featured picture
-    html = re.sub(
-        r"<picture>.*?</picture>",
-        (
-            f'<picture><source srcset="../assets/images/blog/{slug}.webp" '
-            f'type="image/webp"><img src="../assets/images/blog/{slug}.png" '
-            f'alt="{a["og_alt"]}" class="blog-featured-image" width="800" '
-            f'height="420" loading="eager" '
-            f'style="width:100%;max-width:800px;height:auto;border-radius:8px;'
-            f'margin-bottom:2rem;border:1px solid #333;"></picture>'
-        ),
-        html,
-        count=1,
-        flags=re.S,
-    )
+    if a.get("og_alt"):
+        html = re.sub(
+            r"<picture>.*?</picture>",
+            (
+                f'<picture><source srcset="../assets/images/blog/{slug}.webp" '
+                f'type="image/webp"><img src="../assets/images/blog/{slug}.png" '
+                f'alt="{a["og_alt"]}" class="blog-featured-image" width="800" '
+                f'height="420" loading="eager" '
+                f'style="width:100%;max-width:800px;height:auto;border-radius:8px;'
+                f'margin-bottom:2rem;border:1px solid #333;"></picture>'
+            ),
+            html,
+            count=1,
+            flags=re.S,
+        )
+    else:
+        html = re.sub(r"<picture>.*?</picture>", "", html, count=1, flags=re.S)
     # 4. h1
     html = re.sub(r"<h1>.*?</h1>", f"<h1>{a['title']}</h1>", html, count=1, flags=re.S)
     # 5. meta line

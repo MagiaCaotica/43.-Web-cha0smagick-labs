@@ -1,0 +1,80 @@
+# -*- coding: utf-8 -*-
+"""A80: Can You Get 'Stuck' Out of Body? The Truth."""
+
+from related_titles import RELATED_TITLES as RT
+
+A80 = {
+    'slug': 'can-you-get-stuck-out-of-body-the-truth',
+    'title': "Can You Get 'Stuck' Out of Body? The Truth (2026)",
+    'index_title': "Can You Get Stuck Out of Body?",
+    'desc': "The fear that you might not come back from astral projection is the oldest one in the practice. Here's the truth about returning, and why it isn't a real risk.",
+    'keywords': 'astral projection stuck, out of body return, OBE safety, astral projection myths, astral projection fear',
+    'date_iso': '2026-08-16',
+    'date_display': 'August 16, 2026',
+    'lastmod': '2026-08-16',
+    'read_min': 8,
+    'category': 'Fear & Safety',
+    'excerpt': "The fear that you might not come back from astral projection is the oldest one in the practice. Here's the truth about returning, and why it isn't a real risk.",
+    'cta_apps': [
+        ['astral-lab', 'Astral Lab'],
+    ],
+    'related': [
+        [RT['astral-projection-for-beginners'][0], RT['astral-projection-for-beginners'][1]],
+        [RT['astral-projection-techniques-rope-roll-out-phasing-compared'][0], RT['astral-projection-techniques-rope-roll-out-phasing-compared'][1]],
+        [RT['astral-lab-app-review'][0], RT['astral-lab-app-review'][1]],
+        [RT['vibrational-state-obe-precursor-recognition'][0], RT['vibrational-state-obe-precursor-recognition'][1]],
+    ],
+    'references': [
+        'Bruce, Astral Dynamics',
+        'Buhlman, Adventures Beyond the Body',
+        'Out-of-body experience overview, PMC',
+    ],
+    'howto': [
+        {'name': 'Remember you are always tethered', 'text': 'Know that your body continues breathing and your awareness can return at any moment.'},
+        {'name': 'Set a clear return intention', 'text': 'Before practicing, tell yourself plainly: when I intend to, I will return.'},
+        {'name': 'Use gentle reentry', 'text': 'To return, simply intend to move back and focus on your physical sensations.'},
+        {'name': 'Ground after every session', 'text': 'Drink water, stretch, and name three things you can see in the room.'},
+    ],
+    'toc': [
+        ['start', 'Where the Fear Comes From'],
+        ['the-fear', 'The Fear Itself'],
+        ['the-truth', 'The Truth'],
+        ['why-people-believe', 'Why People Believe It'],
+        ['what-you-feel', 'What You Actually Feel'],
+        ['safety', 'Staying Safe'],
+        ['faq', 'FAQ'],
+    ],
+    'sections': [
+        {'t': 'h2', 'text': 'Where the Fear Comes From', 'id': 'start'},
+        {'t': 'p', 'text': "Ask anyone who practices astral projection what new people worry about most, and the answer is almost always the same: what if I get stuck out of my body and can't come back? It's the fear underneath every other fear about the practice, and it's been around as long as the practice itself."},
+        {'t': 'p', 'text': "I understand why it takes hold. If you're imagining a 'self' that leaves the body, it's natural to wonder whether that self can always find its way home. So let's look at what the experience actually is, and why the fear of being stuck rests on a misunderstanding."},
+        {'t': 'h2', 'text': 'The Fear Itself', 'id': 'the-fear'},
+        {'t': 'p', 'text': "The fear is rarely specific. It's a vague dread that you might float away, lose the thread, or somehow end up unable to reattach to your body. In online forums you'll find dramatic stories about people who 'almost didn't make it back.'"},
+        {'t': 'p', 'text': "Almost always, those stories are about a different thing: the temporary panic of the vibrational state, or a heavy sleep paralysis that makes movement feel impossible. Neither is the same as being stuck, and neither lasts."},
+        {'t': 'h2', 'text': 'The Truth', 'id': 'the-truth'},
+        {'t': 'p', 'text': "There is no mechanism by which your awareness could become permanently separated from your living body. Astral projection, whatever it ultimately is, is a state of consciousness. Consciousness states end when the conditions that produce them change. Your body is always breathing, always alive, and your awareness is always connected to it."},
+        {'t': 'p', 'text': "The reason people 'can't come back' is almost always that they don't want to, or that they've drifted into a deep, dreamlike sleep and simply wake up normally. The return is not a journey that can fail; it's a shift of attention that happens constantly."},
+        {'t': 'h2', 'text': 'Why People Believe It', 'id': 'why-people-believe'},
+        {'t': 'p', 'text': "The belief persists for a few honest reasons. First, the vibrational state genuinely feels alarming if you don't expect it. Second, sleep paralysis genuinely mimics being trapped. Third, a vivid experience can feel so real that it's easy to imagine consequences that real experiences don't have."},
+        {'t': 'p', 'text': "None of these add up to a real risk. They add up to a practice that deserves respect, good information, and calm boundaries — not fear."},
+        {'t': 'h2', 'text': 'What You Actually Feel', 'id': 'what-you-feel'},
+        {'t': 'p', 'text': "People who have projected report a few consistent sensations on the way back: a heaviness, a sense of falling or sliding, or simply the awareness that they're back before they open their eyes. None of it is painful. Most people describe the return as gentle and quick."},
+        {'t': 'p', 'text': "If you ever feel disoriented for a moment after returning, that's normal and it passes. You don't need a rescue; you just need a few seconds and a deep breath."},
+        {'t': 'h2', 'text': 'Staying Safe', 'id': 'safety'},
+        {'t': 'p', 'text': "Safety in astral projection is about the same things safety is about in any practice: good preparation, clear intention, and the freedom to stop."},
+        {'t': 'ul', 'items': [
+            "Practice when you're rested, never exhausted.",
+            "Set an intention to return before you begin.",
+            "Keep sessions short when you're starting out.",
+            "If you feel real distress, stop and ground yourself.",
+            "Don't combine the practice with anything that alters your state of mind.",
+        ]},
+        {'t': 'p', 'text': "If you're curious about the basics before you go further, read our beginner guide to <a href=\"/blog/astral-projection-for-beginners.html\">astral projection for beginners</a>."},
+        {'t': 'h2', 'text': 'FAQ', 'id': 'faq'},
+    ],
+    'faq': [
+        ("Can you actually get stuck out of your body?", "No. There's no known mechanism by which awareness could become permanently separated from a living body. The return is a shift of attention, not a journey that can fail."),
+        ("Is the vibrational state a sign I'm about to get stuck?", "No. The vibrational state is a normal, well-documented precursor many people feel before a projection. It feels intense but it passes quickly and means the practice is working as intended."),
+        ("What should I do if I feel panicked during a session?", "Stop and ground yourself. Focus on your physical breath, move your fingers, and open your eyes. Panic is a signal to pause, not a sign of danger."),
+    ],
+}
