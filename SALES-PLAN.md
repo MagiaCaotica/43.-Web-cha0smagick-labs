@@ -86,88 +86,88 @@
 - [x] "A Complete Beginner's First Month of ESP Training" → psi-gym
 
 **Batch B2 (10) — fear-handling (ethical):**
-- [ ] "What Actually Happens in an EVP Session: No Jump Scares" → eerieroads
-- [ ] "Goetia for Beginners: What No One Tells You First" → arcana-goetia
-- [ ] "Is It Dangerous to Make a Money Sigil?" → chaos-sigil-generator
-- [ ] "Why People Fear the Death Card (And Why They Shouldn't)" → unofficial-rider-waite-tarot
-- [ ] "Am I Haunted or Is It Pareidolia? Honest Signs" → eerieroads/noctem-tools
-- [ ] "Astral Projection Safety: What Can Actually Go Wrong" → astral-lab
-- [ ] "Ouija vs Digital Spirit Box: Fear Compared" → eerieroads
-- [ ] "Can You Get 'Stuck' Out of Body? The Truth" → astral-lab
-- [ ] "The Dark Moon Isn't Scary: A Witch's Perspective" → lunar-phase-calculator
-- [ ] "Sigil Backfire: Myth, Psychology, or Real?" → chaos-sigil-generator
+- [x] "What Actually Happens in an EVP Session: No Jump Scares" → eerieroads
+- [x] "Goetia for Beginners: What No One Tells You First" → arcana-goetia
+- [x] "Is It Dangerous to Make a Money Sigil?" → chaos-sigil-generator
+- [x] "Why People Fear the Death Card (And Why They Shouldn't)" → unofficial-rider-waite-tarot
+- [x] "Am I Haunted or Is It Pareidolia? Honest Signs" → eerieroads/noctem-tools
+- [x] "Astral Projection Safety: What Can Actually Go Wrong" → astral-lab
+- [x] "Ouija vs Digital Spirit Box: Fear Compared" → eerieroads
+- [x] "Can You Get 'Stuck' Out of Body? The Truth" → astral-lab
+- [x] "The Dark Moon Isn't Scary: A Witch's Perspective" → lunar-phase-calculator
+- [x] "Sigil Backfire: Myth, Psychology, or Real?" → chaos-sigil-generator
 
 **Batch B3 (10) — hope/dream:**
-- [ ] "Can Anyone Learn ESP? The Science Says Maybe" → psi-gym
-- [ ] "The Psychic Abilities You Already Have (And How to Train Them)" → psi-gym
-- [ ] "Lucid Dreaming as a Superpower for Problem Solving" → dream-machine/lucid-dream
-- [ ] "Manifesting Wealth: Why Money Sigils Work for Some People" → chaos-sigil-generator
-- [ ] "The Fool's Journey Is Your Life: A Hopeful Reading" → unofficial-rider-waite-tarot
-- [ ] "What the I Ching Can Teach You About Difficult Choices" → iching-oracle
-- [ ] "Rune Divination for Daily Guidance: A Gentle Start" → norse-rune-oracle
-- [ ] "The Moon as Your Manifestation Calendar" → lunar-phase-calculator
-- [ ] "Angels, Spirits, and You: A Framework for Contact" → arcana-goetia
-- [ ] "Astral Travel for Healing Old Wounds" → astral-lab
+- [x] "Can Anyone Learn ESP? The Science Says Maybe" → psi-gym
+- [x] "The Psychic Abilities You Already Have (And How to Train Them)" → psi-gym
+- [x] "Lucid Dreaming as a Superpower for Problem Solving" → dream-machine/lucid-dream
+- [x] "Manifesting Wealth: Why Money Sigils Work for Some People" → chaos-sigil-generator
+- [x] "The Fool's Journey Is Your Life: A Hopeful Reading" → unofficial-rider-waite-tarot
+- [x] "What the I Ching Can Teach You About Difficult Choices" → iching-oracle
+- [x] "Rune Divination for Daily Guidance: A Gentle Start" → norse-rune-oracle
+- [x] "The Moon as Your Manifestation Calendar" → lunar-phase-calculator
+- [x] "Angels, Spirits, and You: A Framework for Contact" → arcana-goetia
+- [x] "Astral Travel for Healing Old Wounds" → astral-lab
 
 **Batch B4 (8) — identity/lifestyle:**
-- [ ] "The Digital Grimoire: Organizing Your Whole Practice" → all
-- [ ] "The Tech-Witch Starter Pack: 5 Tools + 3 Apps" → all
-- [ ] "What Cybermancy Says About the Modern Practitioner" → all
-- [ ] "Building a Daily Occult Practice in 15 Minutes" → all
-- [ ] "Occult Apps and Privacy: What Your Data Says (Ours: Nothing)" → all (trust)
-- [ ] "The Psychonaut's Toolkit: Dreams, OBE, and ESP" → astral-lab/psi-gym
-- [ ] "Chaos Magick for Skeptics: A Practical Intro" → chaos-sigil-generator
-- [ ] "A Witch's Year with the Lunar Phase App" → lunar-phase-calculator
+- [x] "The Digital Grimoire: Organizing Your Whole Practice" → all
+- [x] "The Tech-Witch Starter Pack: 5 Tools + 3 Apps" → all
+- [x] "What Cybermancy Says About the Modern Practitioner" → all
+- [x] "Building a Daily Occult Practice in 15 Minutes" → all
+- [x] "Occult Apps and Privacy: What Your Data Says (Ours: Nothing)" → all (trust)
+- [x] "The Psychonaut's Toolkit: Dreams, OBE, and ESP" → astral-lab/psi-gym
+- [x] "Chaos Magick for Skeptics: A Practical Intro" → chaos-sigil-generator
+- [x] "A Witch's Year with the Lunar Phase App" → lunar-phase-calculator
 
 **Batch B5 (10) — tool→app bridges (one per free tool):**
-- [ ] Free Sigil Generator → Chaos Sigil Generator app bridge
-- [ ] Free I Ching → I Ching Oracle app bridge
-- [ ] Free Rune Oracle → Norse Rune Oracle app bridge
-- [ ] Free Lunar Phase → Lunar Phase Calculator app bridge
-- [ ] Free Spell Builder → (all apps) bridge
-- [ ] Free Astrology Sign Calculator → Astral Lab bridge
-- [ ] Free Candle Color Calculator → candle/moon apps bridge
-- [ ] Free Digital Pendulum → divination apps bridge
-- [ ] Free Tengwar Transcriber → identity content bridge
-- [ ] Free Servitor Activator → servitor + sigil apps bridge
+- [x] Free Sigil Generator → Chaos Sigil Generator app bridge
+- [x] Free I Ching → I Ching Oracle app bridge
+- [x] Free Rune Oracle → Norse Rune Oracle app bridge
+- [x] Free Lunar Phase → Lunar Phase Calculator app bridge
+- [x] Free Spell Builder → (all apps) bridge
+- [x] Free Astrology Sign Calculator → Astral Lab bridge
+- [x] Free Candle Color Calculator → candle/moon apps bridge
+- [x] Free Digital Pendulum → divination apps bridge
+- [x] Free Tengwar Transcriber → identity content bridge
+- [x] Free Servitor Activator → servitor + sigil apps bridge
 
 ### WAVE C — Seasonal + GEO + Authority (30)
 
 **Batch C1 (10) — seasonal/calendar:**
-- [ ] "New Moon Dates 2026–2027: Ritual Calendar" → lunar-phase-calculator
-- [ ] "Mercury Retrograde 2026: Complete Survival Guide" → tarot/iching
-- [ ] "Halloween EVP Night: How to Run a Public Session" → eerieroads
-- [ ] "Lunar Eclipse Rituals 2026" → lunar-phase-calculator
-- [ ] "Full Moon Charging Nights 2026" → lunar-phase-calculator
-- [ ] "Samhain Deep-Dive: The Witches' New Year" → tarot/runes
-- [ ] "New Year Intention Setting with Sigils" → chaos-sigil-generator
-- [ ] "Christmas Gift Guide: Occult Apps for $10 or Less" → all (gifting)
-- [ ] "World Sleep Day: Lucid Dreaming as Sleep Science" → dream-machine/lucid-dream
-- [ ] "Eclipse Season: Astral Projection Opportunities" → astral-lab
+- [x] "New Moon Dates 2026–2027: Ritual Calendar" → lunar-phase-calculator
+- [x] "Mercury Retrograde 2026: Complete Survival Guide" → tarot/iching
+- [x] "Halloween EVP Night: How to Run a Public Session" → eerieroads
+- [x] "Lunar Eclipse Rituals 2026" → lunar-phase-calculator
+- [x] "Full Moon Charging Nights 2026" → lunar-phase-calculator
+- [x] "Samhain Deep-Dive: The Witches' New Year" → tarot/runes
+- [x] "New Year Intention Setting with Sigils" → chaos-sigil-generator
+- [x] "Christmas Gift Guide: Occult Apps for $10 or Less" → all (gifting)
+- [x] "World Sleep Day: Lucid Dreaming as Sleep Science" → dream-machine/lucid-dream
+- [x] "Eclipse Season: Astral Projection Opportunities" → astral-lab
 
 **Batch C2 (10) — GEO/AI-citation bait (definitional + stats):**
-- [ ] "What Is a Zener Card? Definition, History, Statistics" → psi-gym
-- [ ] "ESP Test Statistics Explained for Beginners" → psi-gym
-- [ ] "All 24 Elder Futhark Runes: The Complete Reference" → norse-rune-oracle
-- [ ] "The 78 Tarot Cards: Complete Reference List" → unofficial-rider-waite-tarot
-- [ ] "The 72 Goetia Spirits: Complete Ranked List" → arcana-goetia
-- [ ] "I Ching Hexagram List: All 64 with One-Line Meanings" → iching-oracle
-- [ ] "Moon Phases Explained: Dates, Energies, Rituals" → lunar-phase-calculator
-- [ ] "Lucid Dreaming Statistics: What Research Actually Shows" → dream-machine
-- [ ] "What Is a Spirit Box? How It Works + Frequencies" → eerieroads
-- [ ] "Sigil Magic Statistics: Does It Work?" → chaos-sigil-generator
+- [x] "What Is a Zener Card? Definition, History, Statistics" → psi-gym
+- [x] "ESP Test Statistics Explained for Beginners" → psi-gym
+- [x] "All 24 Elder Futhark Runes: The Complete Reference" → norse-rune-oracle
+- [x] "The 78 Tarot Cards: Complete Reference List" → unofficial-rider-waite-tarot
+- [x] "The 72 Goetia Spirits: Complete Ranked List" → arcana-goetia
+- [x] "I Ching Hexagram List: All 64 with One-Line Meanings" → iching-oracle
+- [x] "Moon Phases Explained: Dates, Energies, Rituals" → lunar-phase-calculator
+- [x] "Lucid Dreaming Statistics: What Research Actually Shows" → dream-machine
+- [x] "What Is a Spirit Box? How It Works + Frequencies" → eerieroads
+- [x] "Sigil Magic Statistics: Does It Work?" → chaos-sigil-generator
 
 **Batch C3 (10) — authority/trust:**
-- [ ] "How We Test Occult Apps: Our Methodology" → all
-- [ ] "Why We Don't Do Subscriptions (And Never Will)" → all
-- [ ] "Our Privacy Policy Explained in Plain English" → all
-- [ ] "Who Is Frater Alek0s? Meet the Author" → all
-- [ ] "How to Vet an Occult App Before Buying" → all
-- [ ] "We Answer Every Support Email — Here's Proof" → all (trust)
-- [ ] "Refund Policy: What Happens If You Don't Like It" → all
-- [ ] "The History of Cha0smagick Labs (Since 2025)" → all
-- [ ] "App Security: Where Your Data Lives (It Doesn't)" → all
-- [ ] "10 Occult Myths Debunked by Practitioners" → all
+- [x] "How We Test Occult Apps: Our Methodology" → all
+- [x] "Why We Don't Do Subscriptions (And Never Will)" → all
+- [x] "Our Privacy Policy Explained in Plain English" → all
+- [x] "Who Is Frater Alek0s? Meet the Author" → all
+- [x] "How to Vet an Occult App Before Buying" → all
+- [x] "We Answer Every Support Email — Here's Proof" → all (trust)
+- [x] "Refund Policy: What Happens If You Don't Like It" → all
+- [x] "The History of Cha0smagick Labs (Since 2025)" → all
+- [x] "App Security: Where Your Data Lives (It Doesn't)" → all
+- [x] "10 Occult Myths Debunked by Practitioners" → all
 
 ---
 
@@ -201,20 +201,20 @@
 
 ## 5. GEO
 
-- [ ] Definitional/stats posts (Wave C2) — AI citation bait
-- [ ] Yearly lastmod freshness rotation on seasonal posts
-- [ ] Extend llms.txt with app feature lists
-- [ ] Keep speakable schema + FAQ headers on all posts
+- [x] Definitional/stats posts (Wave C2) — AI citation bait
+- [x] Yearly lastmod freshness rotation on seasonal posts (script scripts/_rotate_lastmod.py)
+- [x] Extend llms.txt with app feature lists
+- [x] Keep speakable schema + FAQ headers on all posts
 
 ---
 
 ## 6. Conversion Mechanics
 
-- [ ] Free-tool → app bridge banners on all 10 tool pages
+- [x] Free-tool → app bridge banners on all 10 tool pages
 - [ ] Email capture on every MOFU article (MailerLite EN/ES lead magnets)
 - [ ] Seasonal email blasts synced to calendar content
-- [ ] Sticky conversion bar on BOFU articles (`.sticky-conversion-bar` CSS already in template)
-- [ ] "Verified by" stats boxes on ESP/lucid articles (GEO compounding)
+- [x] Sticky conversion bar on BOFU articles (`.sticky-conversion-bar` CSS already in template)
+- [x] "Verified by" stats boxes on ESP/lucid articles (GEO compounding)
 
 ---
 

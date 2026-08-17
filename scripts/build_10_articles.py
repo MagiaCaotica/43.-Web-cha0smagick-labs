@@ -38,9 +38,15 @@ from articles_h import ARTICLES_H  # noqa: E402
 from articles_i import ARTICLES_I  # noqa: E402
 from articles_j import ARTICLES_J  # noqa: E402
 from articles_k import ARTICLES_K  # noqa: E402
+from articles_l import ARTICLES_L  # noqa: E402
+from articles_m import ARTICLES_M  # noqa: E402
+from articles_n import ARTICLES_N  # noqa: E402
+from articles_o import ARTICLES_O  # noqa: E402
+from articles_p import ARTICLES_P  # noqa: E402
+from articles_q import ARTICLES_Q  # noqa: E402
 
 ARTICLES = (ARTICLES_A + ARTICLES_B + ARTICLES_C
-+ ARTICLES_D + ARTICLES_E + ARTICLES_F + ARTICLES_G + ARTICLES_H + ARTICLES_I + ARTICLES_J + ARTICLES_K)
++ ARTICLES_D + ARTICLES_E + ARTICLES_F + ARTICLES_G + ARTICLES_H + ARTICLES_I + ARTICLES_J + ARTICLES_K + ARTICLES_L + ARTICLES_M + ARTICLES_N + ARTICLES_O + ARTICLES_P + ARTICLES_Q)
 
 
 # ---------------------------------------------------------------- rendering
@@ -174,10 +180,36 @@ def references_block(a):
     return f"<h2>References</h2><ul>{items}</ul>"
 
 
+def verified_by_block(a):
+    """Optional 'Verified by research' stats box (Section 6.5)."""
+    vb = a.get("verified_by")
+    if not vb:
+        return ""
+    rows = "".join(
+        '<div class="vb-row" style="display:flex;justify-content:space-between;'
+        'gap:1rem;padding:.4rem 0;border-bottom:1px solid #262626;">'
+        '<span class="vb-stat" style="font-weight:600;">{s}</span>'
+        '<span class="vb-src" style="color:#a3a3a3;text-align:right;">{src}</span></div>'.format(
+            s=stat, src=source
+        )
+        for stat, source in vb
+    )
+    return (
+        '<div class="verified-by" style="margin:2rem 0;padding:1.25rem 1.5rem;'
+        'background:#1a1a1a;border:1px solid #333;border-left:3px solid #8b5cf6;'
+        'border-radius:8px;font-size:.95rem;">'
+        '<div style="font-weight:700;letter-spacing:.04em;text-transform:uppercase;'
+        'font-size:.75rem;color:#8b5cf6;margin-bottom:.75rem;">Verified by research</div>'
+        + rows
+        + "</div>"
+    )
+
+
 def body_block(a):
     return "\n".join(
         [
             render_sections(a["sections"]),
+            verified_by_block(a),
             cta_block(a),
             faq_block(a),
             related_block(a),
