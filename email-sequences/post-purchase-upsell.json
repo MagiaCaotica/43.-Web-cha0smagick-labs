@@ -1,0 +1,165 @@
+{
+  "name": "Post-Purchase Upsell - 3 Emails (Dynamic by Product)",
+  "trigger": "tag_buyer_apps OR tag_buyer_books",
+  "versions": {
+    "apps_buyer": {
+      "description": "Compró app → Upsell libros + bundle apps + complete access",
+      "emails": [
+        {
+          "id": "u1_apps_1h",
+          "delay_hours": 1,
+          "subject": "¡Gracias! Tu {{product_name}} está listo 🎁",
+          "preheader": "Y como bienvenida: 50% off en el grimorio complementario",
+          "body_html": "<p>Frater,</p><p>Tu compra de <strong>{{product_name}}</strong> está confirmada. Descarga inmediata en Google Play / tu email.</p><p>Como bienvenida: <strong>48 horas para añadir el grimorio que potencia {{product_name}} al 50% off.</strong></p><p>{{upsell_book_recommendation}}</p><p style='text-align:center; margin:25px 0;'><a href='{{upsell_book_url}}' style='background:#FFB03A;color:#0B1026;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>AÑADIR GRIMORIO 50% OFF →</a></p><hr style='border-color:#131A3A;margin:30px 0;'><p style='font-size:14px;color:#8A93B8;'>¿Preguntas? Responde a este email. Acceso vitalicio, sin suscripciones.</p><p style='font-size:12px;color:#8A93B8;'>Frater Alek0s · Cha0smagick Labs</p>",
+          "dynamic_fields": {
+            "product_name": "{{product_name}}",
+            "upsell_book_recommendation": "{{upsell_book_recommendation}}",
+            "upsell_book_url": "{{upsell_book_url}}"
+          }
+        },
+        {
+          "id": "u2_apps_24h",
+          "delay_hours": 24,
+          "subject": "¿Sabes qué potencia tus resultados 3x?",
+          "preheader": "El bundle de apps que usan los practicantes serios",
+          "body_html": "<p>Frater,</p><p>Una app es poderosa. <strong>El sistema completo es otra liga.</strong></p><p>Los practicantes que más resultados reportan no usan una herramienta — usan el <em>ecosistema completo</em>:</p><ul><li>Sigilos → <strong>Sigil Generator</strong></li><li>Investigación → <strong>NOCTEM</strong></li><li>Sueños lúcidos → <strong>Lucid Dream + Dreamachine</strong></li><li>Astrología → <strong>Astral Lab</strong></li><li>Intuición → <strong>PSI GYM</strong></li><li>Runas/Tarot/I Ching/Goetia → Apps dedicadas</li></ul><p>Hoy: <strong>Apps Complete Bundle (11 apps) = $29.99</strong> (ahorro $45+ vs individuales)</p><p style='text-align:center; margin:25px 0;'><a href='https://apps-bundle.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u2_apps_bundle' style='background:#FFB03A;color:#0B1026;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>VER APPS BUNDLE $29.99 →</a></p><hr style='border-color:#131A3A;margin:30px 0;'><p style='font-size:14px;color:#8A93B8;'>Cada app: 4.7★ · 100% offline · 7-day guarantee</p><p style='font-size:12px;color:#8A93B8;'>Frater Alek0s · Cha0smagick Labs</p>",
+          "cta_url": "https://apps-bundle.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u2_apps_bundle",
+          "cta_text": "VER APPS BUNDLE $29.99"
+        },
+        {
+          "id": "u3_apps_48h",
+          "delay_hours": 48,
+          "subject": "Última oportunidad: Complete Access $49.99 (12h)",
+          "preheader": "Apps + Libros = todo lo que necesitas. Solo 12 horas.",
+          "body_html": "<p>Frater,</p><p>Tienes las apps. Te faltan los grimorios.</p><p><strong>Complete Access = 11 Apps + 7 Libros = $49.99</strong></p><p>Incluye: Codex Chaoticum, Tarot del Caos, Servidores Mágicos, Librería LV, Magia del Caos Práctica, +2 libros exclusivos.</p><p>Valor real: $175+ → Tu precio final: <strong>$49.99</strong></p><p style='text-align:center; margin:25px 0;'><a href='https://complete-access.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u3_complete' style='background:#F87171;color:#FFFFFF;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>UPGRADE TO COMPLETE ACCESS $49.99 →</a></p><p style='text-align:center; color:#F87171; font-weight:bold;'>⏳ EXPIRA EN 12 HORAS</p><hr style='border-color:#131A3A;margin:30px 0;'><p style='font-size:12px;color:#8A93B8;'>Frater Alek0s · Cha0smagick Labs</p>",
+          "cta_url": "https://complete-access.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u3_complete",
+          "cta_text": "UPGRADE TO COMPLETE ACCESS $49.99"
+        }
+      ],
+      "product_mapping": {
+        "com.cha0smagicklabs.noctemapp": {
+          "product_name": "NOCTEM Tools: Ghost Hunting",
+          "upsell_book_recommendation": "Para investigación paranormal seria necesitas el marco teórico: <strong>Codex Chaoticum</strong> cubre entidades, psicopompos y protocolos de banishment que NOCTEM detecta.",
+          "upsell_book_url": "https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_noctem_codex"
+        },
+        "com.cha0smagicklabs.luciddreamer": {
+          "product_name": "Lucid Dream: Astral Projection",
+          "upsell_book_recommendation": "El compañero esencial para proyección astral: <strong>Tarot del Caos</strong> — métodos de navegación astral usando arcanos mayores como mapas dimensionales.",
+          "upsell_book_url": "https://hotmart.com/en/marketplace/products/tarot-del-caos/W106595765X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_lucid_tarot"
+        },
+        "com.cha0smagicklabs.astralchart": {
+          "product_name": "Astral Lab: Natal Chart",
+          "upsell_book_recommendation": "Tu carta natal es el mapa. <strong>Codex Chaoticum</strong> te enseña a leerlo como grimorio operativo: casas = templos, planetas = entidades, aspectos = enlaces.",
+          "upsell_book_url": "https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_astral_codex"
+        },
+        "com.cha0smagicklabs.sigilgenerator": {
+          "product_name": "Sigil Generator",
+          "upsell_book_recommendation": "Generar sigilos es el 10%. <strong>Codex Chaoticum</strong> te da los otros 5 métodos (Silábico, Urobórico, Cuadrados, Spare) + carga/activación/nulificación completa.",
+          "upsell_book_url": "https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_sigil_codex"
+        },
+        "com.cha0smagicklabs.psigym": {
+          "product_name": "PSI GYM: Train Your Intuition",
+          "upsell_book_recommendation": "Entrenar intuición sin marco teórico es navegar sin brújula. <strong>Librería LV</strong> — el compendio de servidores y egregoros para canalizar tu percepción.",
+          "upsell_book_url": "https://hotmart.com/en/marketplace/products/libreria-lv/W106595766X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_psi_lv"
+        },
+        "com.cha0smagicklabs.dreammachine": {
+          "product_name": "Dreamachine: Lucid Dreaming",
+          "upsell_book_recommendation": "Los sueños lúcidos son la puerta. <strong>Tarot del Caos</strong> te enseña a usar el Tarot como sistema de navegación onírica controlada.",
+          "upsell_book_url": "https://hotmart.com/en/marketplace/products/tarot-del-caos/W106595765X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_dream_tarot"
+        },
+        "com.cha0smagicklabs.eerieroads": {
+          "product_name": "Eerie Roads: Search & Find",
+          "upsell_book_recommendation": "Encontraste el sitio. Ahora necesitas el ritual. <strong>Servidores Mágicos</strong> — creación, mantenimiento y despliegue de servidores para investigación de campo.",
+          "upsell_book_url": "https://hotmart.com/en/marketplace/products/servidores-magicos/W106595767X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_eerie_servidores"
+        },
+        "com.cha0smagicklabs.runereader": {
+          "product_name": "Rune Reader",
+          "upsell_book_recommendation": "Las runas leen el wyrd. <strong>Codex Chaoticum</strong> incluye el sistema rúnico completo + integración con sigilos urobóricos para fijar destinos.",
+          "upsell_book_url": "https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_rune_codex"
+        },
+        "com.cha0smagicklabs.tarotchaos": {
+          "product_name": "Tarot Chaos",
+          "upsell_book_recommendation": "El Tarot del Caos no es adivinación — es ingeniería de probabilidad. <strong>Tarot del Caos (libro)</strong> profundiza 20 spreads operativos + correspondencias caóticas.",
+          "upsell_book_url": "https://hotmart.com/en/marketplace/products/tarot-del-caos/W106595765X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_tarot_book"
+        },
+        "com.cha0smagicklabs.iching": {
+          "product_name": "I Ching Oracle",
+          "upsell_book_recommendation": "El I Ching es el sistema de decisión más antiguo. <strong>Codex Chaoticum</strong> incluye integración I Ching + Magia del Caos: hexagramas como matrices de probabilidad manipulable.",
+          "upsell_book_url": "https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_iching_codex"
+        },
+        "com.cha0smagicklabs.goetiaguide": {
+          "product_name": "Goetia Guide",
+          "upsell_book_recommendation": "Las 72 entidades necesitan protocolo. <strong>Servidores Mágicos</strong> — creación de servidores goéticos personalizados con contratos, alimentación y banishment seguro.",
+          "upsell_book_url": "https://hotmart.com/en/marketplace/products/servidores-magicos/W106595767X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_goetia_servidores"
+        }
+      }
+    },
+    "books_buyer": {
+      "description": "Compró libro → Upsell apps + bundle libros + complete access",
+      "emails": [
+        {
+          "id": "u1_books_1h",
+          "delay_hours": 1,
+          "subject": "¡Gracias! Tu {{product_name}} está listo 📜",
+          "preheader": "Y como bienvenida: 50% off en la app que pone en práctica este grimorio",
+          "body_html": "<p>Frater,</p><p>Tu compra de <strong>{{product_name}}</strong> está confirmada. Descarga inmediata en tu email / Hotmart.</p><p>Como bienvenida: <strong>48 horas para añadir la app que pone en práctica {{product_name}} al 50% off.</strong></p><p>{{upsell_app_recommendation}}</p><p style='text-align:center; margin:25px 0;'><a href='{{upsell_app_url}}' style='background:#35C4D9;color:#0B1026;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>AÑADIR APP 50% OFF →</a></p><hr style='border-color:#131A3A;margin:30px 0;'><p style='font-size:14px;color:#8A93B8;'>¿Preguntas? Responde a este email. Acceso vitalicio, sin suscripciones.</p><p style='font-size:12px;color:#8A93B8;'>Frater Alek0s · Cha0smagick Labs</p>",
+          "dynamic_fields": {
+            "product_name": "{{product_name}}",
+            "upsell_app_recommendation": "{{upsell_app_recommendation}}",
+            "upsell_app_url": "{{upsell_app_url}}"
+          }
+        },
+        {
+          "id": "u2_books_24h",
+          "delay_hours": 24,
+          "subject": "¿Tienes la teoría? Ahora necesitas la herramienta",
+          "preheader": "Bundle de libros 50% off + apps recomendadas",
+          "body_html": "<p>Frater,</p><p>El conocimiento sin herramienta = teoría muerta.</p><p>Ya tienes <strong>{{product_name}}</strong>. Ahora necesitas el <em>motor de ejecución</em>:</p><ul><li>Sigilos → <strong>Sigil Generator</strong> (automatiza 5 métodos)</li><li>Investigación → <strong>NOCTEM</strong> (EVP/EMF/Spirit Box real)</li><li>Sueños/astral → <strong>Lucid Dream + Dreamachine</strong></li><li>Astrología → <strong>Astral Lab</strong> (carta natal + tránsitos + progresiones)</li><li>Intuición → <strong>PSI GYM</strong> (entrenamiento estadístico)</li></ul><p>Hoy: <strong>Bundle 7 Libros (todos) = 50% OFF</strong> + Apps Bundle $29.99</p><p style='text-align:center; margin:25px 0;'><a href='https://books-bundle.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u2_books_bundle' style='background:#FFB03A;color:#0B1026;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>VER LIBROS BUNDLE 50% OFF →</a></p><hr style='border-color:#131A3A;margin:30px 0;'><p style='font-size:14px;color:#8A93B8;'>Apps: 4.7★ · 100% offline · 7-day guarantee</p><p style='font-size:12px;color:#8A93B8;'>Frater Alek0s · Cha0smagick Labs</p>",
+          "cta_url": "https://books-bundle.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u2_books_bundle",
+          "cta_text": "VER LIBROS BUNDLE 50% OFF"
+        },
+        {
+          "id": "u3_books_48h",
+          "delay_hours": 48,
+          "subject": "Última oportunidad: Complete Access $49.99 (12h)",
+          "preheader": "Libros + Apps = todo lo que necesitas. Solo 12 horas.",
+          "body_html": "<p>Frater,</p><p>Tienes los grimorios. Te faltan las herramientas.</p><p><strong>Complete Access = 7 Libros + 11 Apps = $49.99</strong></p><p>Todo el ecosistema Cha0smagick en tu bolsillo. Para siempre.</p><p>Valor real: $175+ → Tu precio final: <strong>$49.99</strong></p><p style='text-align:center; margin:25px 0;'><a href='https://complete-access.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u3_complete_books' style='background:#F87171;color:#FFFFFF;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>UPGRADE TO COMPLETE ACCESS $49.99 →</a></p><p style='text-align:center; color:#F87171; font-weight:bold;'>⏳ EXPIRA EN 12 HORAS</p><hr style='border-color:#131A3A;margin:30px 0;'><p style='font-size:12px;color:#8A93B8;'>Frater Alek0s · Cha0smagick Labs</p>",
+          "cta_url": "https://complete-access.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u3_complete_books",
+          "cta_text": "UPGRADE TO COMPLETE ACCESS $49.99"
+        }
+      ],
+      "product_mapping": {
+        "codex-chaoticum": {
+          "product_name": "Codex Chaoticum - Complete Treatise on Chaos Magick",
+          "upsell_app_recommendation": "La teoría más completa necesita la herramienta más completa: <strong>Sigil Generator</strong> — automatiza los 5 métodos del Codex (Gráfico, Silábico, Urobórico, Cuadrados Mágicos, Spare) + carga/activación en 1 clic.",
+          "upsell_app_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.sigilgenerator&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_codex_sigil"
+        },
+        "tarot-del-caos": {
+          "product_name": "Tarot del Caos",
+          "upsell_app_recommendation": "Los spreads operativos del libro cobran vida en <strong>Tarot Chaos App</strong> — 20 spreads predefinidos, interpretaciones caóticas, journal automático, sin memorizar significados.",
+          "upsell_app_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.tarotchaos&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_tarot_app"
+        },
+        "servidores-magicos": {
+          "product_name": "Servidores Mágicos",
+          "upsell_app_recommendation": "Crear servidores es arte. <strong>NOCTEM</strong> te deja registrar y validar la actividad de tus servidores en campo: EVP, EMF, anomalías térmicas. Retroalimentación real.",
+          "upsell_app_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_servidores_noctem"
+        },
+        "libreria-lv": {
+          "product_name": "Librería LV",
+          "upsell_app_recommendation": "La librería de servidores/egregoros cobra vida en <strong>PSI GYM</strong> — entrena tu percepción para contactar y verificar tus constructos. Datos, no fe.",
+          "upsell_app_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.psigym&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_lv_psi"
+        },
+        "magia-del-caos-practica": {
+          "product_name": "Magia del Caos Práctica",
+          "upsell_app_recommendation": "La práctica diaria necesita tools diarias. <strong>Apps Bundle (11 apps)</strong> = toolkit completo para cada capítulo del libro. $29.99 vs $75+ individuales.",
+          "upsell_app_url": "https://apps-bundle.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_practica_bundle"
+        },
+        "bundle-todos-libros": {
+          "product_name": "Bundle Todos Los Libros ESP (7 Libros)",
+          "upsell_app_recommendation": "Tienes toda la teoría. Ahora el ecosistema de ejecución: <strong>Apps Complete Bundle (11 apps)</strong> = $29.99. Cada grimorio tiene su app counterpart.",
+          "upsell_app_url": "https://apps-bundle.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_bundle_apps"
+        }
+      }
+    }
+  }
+}

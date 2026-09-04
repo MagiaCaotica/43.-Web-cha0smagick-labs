@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gnosis / Altered State Timer | Free Chaos Magick Tool</title>
+    <meta name="description" content="Free Gnosis Timer for chaos magick. Customizable timer for breathwork, drumming, staring, hyperventilation with optional binaural beats suggestions. No signup required.">
+    <meta name="keywords" content="gnosis timer, altered state timer, chaos magick timer, breathwork timer, drumming timer, hyperventilation timer, binaural beats timer">
+    <link rel="canonical" href="https://cha0smagicklabs.com/tools/gnosis-timer.html">
+    <link rel="alternate" href="https://cha0smagicklabs.com/tools/gnosis-timer.html" hreflang="en">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Gnosis / Altered State Timer | Free Chaos Magick Tool">
+    <meta property="og:description" content="Free Gnosis Timer for chaos magick. Customizable timer for breathwork, drumming, staring, hyperventilation with binaural suggestions.">
+    <meta property="og:url" content="https://cha0smagicklabs.com/tools/gnosis-timer.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Gnosis / Altered State Timer","description":"Free timer for gnosis induction: breathwork, drumming, staring, hyperventilation with binaural beat suggestions.","url":"https://cha0smagicklabs.com/tools/gnosis-timer.html","applicationCategory":"Lifestyle","operatingSystem":"All"}</script>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <style>
+        :root{--bg-card:#0a0a0a;--text:#a0a0a0;--gold:#c0a060;--red:#f87171;--blue:#3b82f6;--purple:#a855f7}
+        .gnosis-container{max-width:800px;margin:2rem auto;padding:0 1.5rem}
+        .method-tabs{display:flex;gap:0.5rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap}
+        .method-tab{padding:0.75rem 1.5rem;background:#111;border:1px solid #333;color:#888;border-radius:8px;cursor:pointer;transition:all .3s;font-weight:600}
+        .method-tab:hover{border-color:var(--gold);color:var(--gold)}
+        .method-tab.active{background:var(--gold);color:#000;border-color:var(--gold)}
+        .timer-display{text-align:center;margin:2rem 0}
+        .timer-circle{width:280px;height:280px;border-radius:50%;border:8px solid #222;display:flex;align-items:center;justify-content:center;margin:0 auto;position:relative;background:radial-gradient(circle at center,#111 0%,#0a0a0a 100%)}
+        .timer-circle::before{content:'';position:absolute;top:-8px;left:-8px;right:-8px;bottom:-8px;border-radius:50%;border:8px solid transparent;border-top-color:var(--gold);animation:spin 4s linear infinite}
+        @keyframes spin{to{transform:rotate(360deg)}}
+        .timer-time{font-size:5rem;font-weight:800;color:#fff;font-family:'JetBrains Mono',monospace;line-height:1}
+        .timer-label{color:#888;font-size:1rem;margin-top:0.5rem}
+        .controls{display:flex;gap:1rem;justify-content:center;margin:2rem 0;flex-wrap:wrap}
+        .btn{padding:1rem 2rem;border:none;border-radius:8px;font-size:1.1rem;font-weight:700;cursor:pointer;transition:all .3s;min-width:140px}
+        .btn-primary{background:var(--gold);color:#000}
+        .btn-primary:hover{background:#ffd700;transform:translateY(-2px)}
+        .btn-secondary{background:transparent;border:1px solid #444;color:#888}
+        .btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
+        .btn-danger{background:var(--red);color:#fff}
+        .btn-danger:hover{background:#ef4444}
+        .preset-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:2rem 0}
+        .preset-btn{padding:1.5rem;background:#111;border:1px solid #333;border-radius:12px;cursor:pointer;transition:all .3s;text-align:center}
+        .preset-btn:hover{border-color:var(--gold);transform:translateY(-2px)}
+        .preset-btn .icon{font-size:2.5rem;margin-bottom:0.5rem}
+        .preset-btn .name{font-weight:700;color:#fff;margin-bottom:0.25rem}
+        .preset-btn .desc{font-size:0.8rem;color:#888}
+        .custom-time{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap}
+        .time-input{width:100px;background:#111;border:1px solid #333;color:#eee;padding:0.75rem;border-radius:8px;text-align:center;font-size:1.2rem}
+        .binaural-section{background:#111;border:1px solid #222;border-radius:12px;padding:1.5rem;margin:2rem 0}
+        .binaural-section h3{color:var(--gold);margin-bottom:1rem}
+        .binaural-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+        .binaural-btn{padding:1rem;background:#0a0a0a;border:1px solid #222;border-radius:8px;cursor:pointer;transition:all .3s;text-align:center}
+        .binaural-btn:hover{border-color:var(--purple);background:rgba(168,85,247,0.1)}
+        .binaural-btn.active{border-color:var(--purple);background:rgba(168,85,247,0.2)}
+        .log-section{margin-top:2rem}
+        .log-entry{background:#111;border:1px solid #222;border-radius:8px;padding:1rem;margin:0.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
+        .log-entry .info{flex:1;min-width:200px}
+        .log-entry .time{font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:#888}
+        .log-entry .method{font-weight:700;font-size:0.9rem;color:var(--gold)}
+        .log-entry .duration{font-size:0.9rem;color:#888}
+        .compare-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem}
+        .compare-table th,.compare-table td{padding:0.75rem;text-align:center;border:1px solid #222}
+        .compare-table th{background:#111;color:var(--gold)}
+        .compare-table .check{color:var(--green)}.compare-table .cross{color:var(--red)}
+        .compare-table .highlight-row{background:rgba(192,160,96,0.1)}
+        .cta-box{background:linear-gradient(135deg,#1a1a0a 0%,#0a0a0a 100%);border:1px solid var(--gold);border-radius:16px;padding:2.5rem;text-align:center;margin:2rem 0}
+        .cta-box h3{color:var(--gold);font-size:1.5rem;margin-bottom:1rem}
+        .sticky-conversion-bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,#1a1a0a 0%,#0a0a0a 100%);border-top:1px solid var(--gold);padding:1rem;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;z-index:1000;box-shadow:0 -4px 20px rgba(0,0,0,0.5)}
+        .sticky-conversion-bar .price-tag{background:var(--gold);color:#000;padding:0.25rem 1rem;border-radius:20px;font-weight:700}
+    </style>
+</head>
+<body>
+<header>
+<div class="header-content">
+    <a href="../index.html" class="header-link">
+        <picture>
+            <source srcset="../assets/images/Banner.webp" type="image/webp">
+            <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
+        </picture>
+        <span class="site-title">CHA0SMAGICK LABS</span>
+    </a>
+    <p>Explore the Art and Practice of the Occult</p>
+</div>
+</header>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">All Free Tools</a></li>
+    <li><a href="../index.html#products">Premium Apps</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+</ul>
+</nav>
+<div class="breadcrumb"><a href="../index.html">Cha0smagick Labs</a> › <a href="index.html">Free Tools</a> › Gnosis / Altered State Timer</div>
+
+<div class="container">
+<section class="hero">
+    <h1>Gnosis / Altered State Timer</h1>
+    <p>Induce gnosis for chaos magick. Customizable timer for inhibitory (breathwork, staring) and excitatory (drumming, hyperventilation, dance) methods with optional binaural beat suggestions.</p>
+</section>
+
+<section class="benefits">
+    <h3>What You Get</h3>
+    <ul>
+        <li>Inhibitory methods: Box breathing, 4-7-8, trataka (staring), sensory deprivation</li>
+        <li>Excitatory methods: Drumming/rhythm, hyperventilation, ecstatic dance, spinning</li>
+        <li>Hybrid methods: Yoga nidra, self-hypnosis, progressive relaxation</li>
+        <li>Customizable phases: Preparation → Induction → Gnosis → Return</li>
+        <li>Binaural beat suggestions per method (theta 4-8Hz, alpha 8-12Hz, gamma 40Hz)</li>
+        <li>Visual strobing option for photo-driving (use with caution)</li>
+        <li>Session log with method, duration, depth rating, notes (localStorage)</li>
+        <li>Works offline — no signup, no tracking, no data collection</li>
+    </ul>
+</section>
+
+<div class="gnosis-container">
+    <div class="method-tabs">
+        <button class="method-tab active" data-method="breathwork">🫁 Breathwork</button>
+        <button class="method-tab" data-method="staring">👁️ Trataka/Staring</button>
+        <button class="method-tab" data-method="drumming">🥁 Drumming/Rhythm</button>
+        <button class="method-tab" data-method="hypervent">💨 Hyperventilation</button>
+        <button class="method-tab" data-method="dance">💃 Ecstatic Dance</button>
+        <button class="method-tab" data-method="custom">⚙️ Custom</button>
+    </div>
+
+    <div class="timer-display">
+        <div class="timer-circle" id="timerCircle">
+            <div class="timer-time" id="timerDisplay">00:00</div>
+            <div class="timer-label" id="phaseLabel">Ready</div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn btn-primary" id="startBtn">▶️ Start</button>
+        <button class="btn btn-secondary" id="pauseBtn" disabled>⏸️ Pause</button>
+        <button class="btn btn-danger" id="resetBtn" disabled>⏹️ Reset</button>
+    </div>
+
+    <div class="preset-grid" id="presetGrid"></div>
+
+    <div class="custom-time">
+        <label style="display:flex;align-items:center;gap:0.5rem;color:#888;font-size:0.9rem">Custom Duration:</label>
+        <input type="number" class="time-input" id="customMinutes" placeholder="Min" min="1" max="180" value="20">
+        <span style="display:flex;align-items:center;color:#888">:</span>
+        <input type="number" class="time-input" id="customSeconds" placeholder="Sec" min="0" max="59" value="0">
+        <button class="btn btn-secondary" id="setCustom" style="margin-left:1rem">Set Custom</button>
+    </div>
+
+    <div class="binaural-section">
+        <h3>🎧 Binaural Beat Suggestions for Current Method</h3>
+        <p style="color:#888;margin-bottom:1rem;font-size:0.9rem">Use headphones. Binaural beats require stereo separation to work.</p>
+        <div class="binaural-grid" id="binauralGrid"></div>
+        <p style="color:#666;font-size:0.85rem;margin-top:1rem">⚠️ Photosensitive epilepsy warning: Visual strobing can trigger seizures. Disable if sensitive.</p>
+    </div>
+
+    <div class="log-section">
+        <h3 style="color:var(--gold);margin-bottom:1rem">Session Log</h3>
+        <div id="logList"></div>
+    </div>
+</div>
+
+<section class="compare-section">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android Apps</h3>
+    <table class="compare-table">
+        <tr><th>Feature</th><th>Free Web</th><th>Dream Machine</th><th>PSI GYM</th></tr>
+        <tr><td>Inhibitory & excitatory methods</td><td class="check">✓</td><td class="check">✓</td><td class="cross">✗</td></tr>
+        <tr><td>Customizable phases</td><td class="check">✓</td><td class="check">✓</td><td class="cross">✗</td></tr>
+        <tr><td>Binaural beat suggestions</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Visual strobing (photo-driving)</td><td class="check">✓</td><td class="check">✓</td><td class="cross">✗</td></tr>
+        <tr><td>Session log with depth rating</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Works 100% offline</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr class="highlight-row"><td><strong>Price</strong></td><td><strong>Free</strong></td><td><strong>$3.99</strong></td><td><strong>$3.99</strong></td></tr>
+    </table>
+</section>
+
+<div class="funnel-testimonial">
+    <p>"The gnosis timer got me doing 20-min trataka daily. Dream Machine app added the strobing visuals and binaural audio — my first full gnosis state came on day 7. The flash ritual is now my go-to for sigil charging."</p>
+    <div class="author">— David S., verified purchaser, Dream Machine</div>
+</div>
+
+<div class="cta-box">
+    <h3>⚡ Master the Art of Gnosis Induction</h3>
+    <p>Gnosis is the engine. The <strong>Dream Machine</strong> Android app gives you: strobing visual entrainment, binaural/isochronic audio, custom ritual scripts, depth tracking, and offline access. <strong>PSI GYM</strong> adds statistical validation of your intuitive hits post-gnosis.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1.5rem 0">
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Strobing</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Binaural</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Scripts</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Offline</span>
+    </div>
+    <div class="price">$3.99</div>
+    <a href="../apps/dream-machine.html" class="cta-button primary" style="display:inline-block;margin-top:0.5rem;">💤 Get Dream Machine</a>
+    <a href="../apps/psi-gym.html" class="cta-button secondary" style="display:inline-block;margin-top:0.5rem;margin-left:1rem;">🎯 Get PSI GYM</a>
+    <p style="margin-top:1rem;font-size:0.85rem;color:#888;">100% offline · No ads · No tracking · One-time payment · 7-day guarantee</p>
+</div>
+
+<div class="sticky-conversion-bar">
+    <span class="sticky-text">Dream Machine — Gnosis Induction</span>
+    <span class="price-tag">$3.99</span>
+    <span class="sticky-text">Strobing · Binaural · Custom Scripts</span>
+    <a href="../apps/dream-machine.html" class="sticky-cta">Get App →</a>
+</div>
+
+<div class="back-link"><a href="index.html">← Back to All Free Tools</a></div>
+
+<footer id="site-footer" class="site-footer">
+<div class="footer-grid">
+    <div class="footer-section"><h4>Cha0smagick Labs</h4><p>Explore the Art and Practice of the Occult.</p><p>Corporate Techno-Sorcery Solutions — since 2025.</p></div>
+    <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="../index.html">Home Page</a></li><li><a href="index.html">Free Online Tools</a></li><li><a href="../blog/">Read Blog</a></li><li><a href="../glossary.html">Magick Glossary</a></li></ul></div>
+    <div class="footer-section"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p></div>
+</footer>
+
+<script src="../js/shared.min.js"></script>
+<div id="lang-sidebar" class="lang-sidebar"><button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button><div id="lang-flag-list" class="lang-flag-list"><button onclick="switchLang('en')" title="English" class="lang-btn"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button><button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button><button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button><button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button><button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button><button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button></div></div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner"><p>This site uses cookies for analytics. <a href="../privacy-policy.html" style="color:#ffd700;">Review our Privacy Policy</a></p><div class="cookie-buttons"><button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button><button class="cookie-btn-decline" onclick="declineCookies()">Decline</button></div></div>
+
+<script>
+// === GNOSIS TIMER DATA ===
+const METHODS = {
+    breathwork: {
+        name: 'Breathwork (Inhibitory)',
+        icon: '🫁',
+        description: 'Controlled breathing to quiet the mind. Box breathing, 4-7-8, or custom rhythm.',
+        defaultMinutes: 20,
+        phases: [
+            {name: 'Settle', duration: 2, instruction: 'Sit comfortably. Close eyes. Begin natural breathing.'},
+            {name: 'Box Breathing', duration: 15, instruction: 'Inhale 4 → Hold 4 → Exhale 4 → Hold 4. Repeat.'},
+            {name: 'Integration', duration: 3, instruction: 'Return to natural breath. Notice the stillness.'}
+        ],
+        binaural: {freq: '4-8 Hz (Theta)', desc: 'Deep meditation, gnosis threshold', youtube: 'https://youtu.be/theta-binaural'},
+        strobing: false
+    },
+    staring: {
+        name: 'Trataka / Staring (Inhibitory)',
+        icon: '👁️',
+        description: 'Fixed gaze on a single point (candle flame, sigil, dot) to induce visual gnosis.',
+        defaultMinutes: 15,
+        phases: [
+            {name: 'Setup', duration: 2, instruction: 'Place candle/sigil at eye level, arm\'s length. Dim lights.'},
+            {name: 'Trataka', duration: 10, instruction: 'Fixed gaze without blinking. When eyes water, close and visualize afterimage.'},
+            {name: 'Afterimage', duration: 3, instruction: 'Hold the internal image. When it fades, open eyes slowly.'}
+        ],
+        binaural: {freq: '4-8 Hz (Theta)', desc: 'Visual gnosis, hypnagogic imagery'},
+        strobing: true
+    },
+    drumming: {
+        name: 'Drumming / Rhythm (Excitatory)',
+        icon: '🥁',
+        description: 'Repetitive rhythm to drive excitatory gnosis. 180-220 BPM for trance states.',
+        defaultMinutes: 20,
+        phases: [
+            {name: 'Warm-up', duration: 3, instruction: 'Start slow. 60 BPM. Find your rhythm.'},
+            {name: 'Acceleration', duration: 12, instruction: 'Gradually increase to 180-220 BPM. Let the rhythm drive you.'},
+            {name: 'Peak', duration: 3, instruction: 'Maximum sustainable speed. Surrender to the rhythm.'},
+            {name: 'Deceleration', duration: 2, instruction: 'Slow down gradually. Ground yourself.'}
+        ],
+        binaural: {freq: '4-8 Hz (Theta) + 40 Hz (Gamma)', desc: 'Rhythmic entrainment, peak states'},
+        strobing: false
+    },
+    hypervent: {
+        name: 'Hyperventilation (Excitatory)',
+        icon: '💨',
+        description: 'Rapid breathing to induce excitatory gnosis. Use with caution — can cause tetany.',
+        defaultMinutes: 10,
+        phases: [
+            {name: 'Warning', duration: 1, instruction: '⚠️ Sit or lie down. Have a sitter if possible. Stop if tingling/numbness occurs.'},
+            {name: 'Rapid Breath', duration: 3, instruction: 'Fast, deep breaths. 30-40 breaths/min. In through nose, out through mouth.'},
+            {name: 'Hold', duration: 1, instruction: 'After last exhale, hold breath as long as comfortable.'},
+            {name: 'Recovery', duration: 5, instruction: 'Return to slow, natural breathing. Ground thoroughly.'}
+        ],
+        binaural: {freq: '40 Hz (Gamma)', desc: 'High arousal, altered states'},
+        strobing: false
+    },
+    dance: {
+        name: 'Ecstatic Dance (Excitatory)',
+        icon: '💃',
+        description: 'Free-form movement to driving rhythm. Let the body lead. No choreography.',
+        defaultMinutes: 30,
+        phases: [
+            {name: 'Warm-up', duration: 5, instruction: 'Gentle movement. Connect with breath. Feel the floor.'},
+            {name: 'Build', duration: 10, instruction: 'Music intensifies. Let movement grow. No self-consciousness.'},
+            {name: 'Peak', duration: 10, instruction: 'Maximum intensity. Surrender completely. No observer.'},
+            {name: 'Stillness', duration: 5, instruction: 'Abrupt stop. Stand absolutely still. Feel the vibration.'}
+        ],
+        binaural: {freq: '4-8 Hz (Theta) + 40 Hz (Gamma)', desc: 'Ecstatic trance, embodiment'},
+        strobing: false
+    },
+    custom: {
+        name: 'Custom Protocol',
+        icon: '⚙️',
+        description: 'Build your own gnosis protocol with custom phases and durations.',
+        defaultMinutes: 20,
+        phases: [
+            {name: 'Phase 1', duration: 5, instruction: 'Custom instruction 1'},
+            {name: 'Phase 2', duration: 10, instruction: 'Custom instruction 2'},
+            {name: 'Phase 3', duration: 5, instruction: 'Custom instruction 3'}
+        ],
+        binaural: {freq: 'Choose based on goal', desc: 'Theta=gnosis, Alpha=relax, Gamma=peak'},
+        strobing: false
+    }
+};
+
+const BINAURAL_OPTIONS = {
+    breathwork: [
+        {freq: '4-8 Hz (Theta)', desc: 'Deep meditation, gnosis threshold'},
+        {freq: '7.83 Hz (Schumann)', desc: 'Earth resonance, grounding'},
+        {freq: '10 Hz (Alpha)', desc: 'Relaxed alertness, flow'}
+    ],
+    staring: [
+        {freq: '4-8 Hz (Theta)', desc: 'Visual gnosis, hypnagogic imagery'},
+        {freq: '6 Hz (Theta)', desc: 'Deep trance, visionary states'},
+        {freq: '10 Hz (Alpha)', desc: 'Relaxed focus, afterimage clarity'}
+    ],
+    drumming: [
+        {freq: '4-8 Hz (Theta)', desc: 'Rhythmic trance, entrainment'},
+        {freq: '40 Hz (Gamma)', desc: 'Peak cognition, binding'},
+        {freq: '180-220 BPM Isochronic', desc: 'Rhythmic driving, excitatory'}
+    ],
+    hypervent: [
+        {freq: '40 Hz (Gamma)', desc: 'High arousal, altered states'},
+        {freq: '20 Hz (Beta)', desc: 'High alertness, energy'}
+    ],
+    dance: [
+        {freq: '4-8 Hz (Theta)', desc: 'Ecstatic trance, flow'},
+        {freq: '40 Hz (Gamma)', desc: 'Peak embodiment, unity'},
+        {freq: '180-220 BPM Isochronic', desc: 'Driving rhythm, surrender'}
+    ],
+    custom: [
+        {freq: '4-8 Hz (Theta)', desc: 'Gnosis, deep meditation'},
+        {freq: '8-12 Hz (Alpha)', desc: 'Relaxed focus, creativity'},
+        {freq: '40 Hz (Gamma)', desc: 'Peak performance, binding'},
+        {freq: '7.83 Hz (Schumann)', desc: 'Grounding, earth resonance'}
+    ]
+};
+
+let currentMethod = 'breathwork';
+let timerInterval = null;
+let timeRemaining = 0;
+let totalTime = 0;
+let isRunning = false;
+let currentPhase = 0;
+let phases = [];
+let sessionStart = null;
+
+const timerDisplay = document.getElementById('timerDisplay');
+const phaseLabel = document.getElementById('phaseLabel');
+const timerCircle = document.getElementById('timerCircle');
+const startBtn = document.getElementById('startBtn');
+const pauseBtn = document.getElementById('pauseBtn');
+const resetBtn = document.getElementById('resetBtn');
+const presetGrid = document.getElementById('presetGrid');
+const binauralGrid = document.getElementById('binauralGrid');
+const logList = document.getElementById('logList');
+
+let logs = [];
+
+function loadLogs() {
+    const saved = localStorage.getItem('gnosis_logs');
+    if (saved) { try { logs = JSON.parse(saved); } catch(e) { logs = []; } }
+    renderLogs();
+}
+
+function saveLogs() { localStorage.setItem('gnosis_logs', JSON.stringify(logs.slice(-100))); }
+
+function renderLogs() {
+    if (logs.length === 0) { logList.innerHTML = '<div style="text-align:center;color:#666;padding:1rem">No sessions logged yet</div>'; return; }
+    logList.innerHTML = logs.slice().reverse().map(l => `
+        <div class="log-entry">
+            <div class="info">
+                <div class="time">${new Date(l.timestamp).toLocaleString()}</div>
+                <div class="method">${l.method}</div>
+                <div class="duration">${l.duration}min — Depth: ${l.depth}/10</div>
+                ${l.notes ? `<div style="font-size:0.8rem;color:#888;margin-top:0.25rem;font-style:italic">${l.notes}</div>` : ''}
+            </div>
+            <button class="log-btn" onclick="deleteLog('${l.timestamp}')">🗑️</button>
+        </div>
+    `).join('');
+}
+
+function deleteLog(ts) { logs = logs.filter(l=>l.timestamp!==ts); saveLogs(); renderLogs(); }
+
+function renderMethodTabs() {
+    document.querySelectorAll('.method-tab').forEach(btn => {
+        btn.onclick = () => {
+            currentMethod = btn.dataset.method;
+            document.querySelectorAll('.method-tab').forEach(b=>b.classList.remove('active'));
+            btn.classList.add('active');
+            loadMethod(currentMethod);
+        };
+    });
+}
+
+function loadMethod(method) {
+    const m = METHODS[method];
+    timeRemaining = m.defaultMinutes * 60;
+    totalTime = timeRemaining;
+    phases = m.phases.map((p,i) => ({...p, start: i===0 ? 0 : phases.slice(0,i).reduce((a,b)=>a+b.duration,0)*60, end: 0}));
+    for(let i=0;i<phases.length;i++){phases[i].end = (i===0?0:phases.slice(0,i).reduce((a,b)=>a+b.duration,0)*60) + p.duration*60;}
+    // Fix phase end times
+    let cum = 0;
+    phases.forEach((p,i) => { cum += p.duration*60; phases[i].end = cum; });
+    
+    currentPhase = 0;
+    updateTimerDisplay();
+    renderPresets();
+    renderBinaural();
+    resetTimer();
+}
+
+function renderPresets() {
+    const m = METHODS[currentMethod];
+    presetGrid.innerHTML = `
+        <button class="preset-btn" onclick="setTime(5)"><div class="icon">⚡</div><div class="name">Quick 5min</div><div class="desc">Quick gnosis dip</div></button>
+        <button class="preset-btn" onclick="setTime(${m.defaultMinutes})"><div class="icon">${m.icon}</div><div class="name">Standard ${m.defaultMinutes}min</div><div class="desc">${m.name}</div></button>
+        <button class="preset-btn" onclick="setTime(30)"><div class="icon">🧘</div><div class="name">Deep 30min</div><div class="desc">Extended gnosis</div></button>
+        <button class="preset-btn" onclick="setTime(60)"><div class="icon">🔥</div><div class="name">Extended 60min</div><div class="desc">Ritual length</div></button>
+    `;
+}
+
+function renderBinaural() {
+    const options = BINAURAL_OPTIONS[currentMethod] || BINAURAL_OPTIONS.custom;
+    binauralGrid.innerHTML = options.map((b,i) => `
+        <button class="binaural-btn" onclick="selectBinaural(${i})">
+            <div style="font-weight:700;color:var(--gold)">${b.freq}</div>
+            <div style="font-size:0.85rem;color:#888">${b.desc}</div>
+        </button>
+    `).join('');
+}
+
+function selectBinaural(i) {
+    document.querySelectorAll('.binaural-btn').forEach((b,idx) => b.classList.toggle('active', idx===i));
+}
+
+function setTime(minutes) {
+    timeRemaining = minutes * 60;
+    totalTime = timeRemaining;
+    updateTimerDisplay();
+}
+
+document.getElementById('setCustom').onclick = () => {
+    const min = parseInt(document.getElementById('customMinutes').value) || 0;
+    const sec = parseInt(document.getElementById('customSeconds').value) || 0;
+    timeRemaining = min * 60 + sec;
+    totalTime = timeRemaining;
+    updateTimerDisplay();
+};
+
+function updateTimerDisplay() {
+    const m = Math.floor(timeRemaining / 60).toString().padStart(2,'0');
+    const s = (timeRemaining % 60).toString().padStart(2,'0');
+    timerDisplay.textContent = `${m}:${s}`;
+    
+    // Update phase label
+    const elapsed = totalTime - timeRemaining;
+    let phase = phases.find(p => elapsed < p.end) || phases[phases.length-1];
+    if (phase) phaseLabel.textContent = phase.name;
+    
+    // Update circle progress
+    const progress = totalTime > 0 ? (1 - timeRemaining/totalTime) : 0;
+    timerCircle.style.setProperty('--progress', progress);
+}
+
+function startTimer() {
+    if (isRunning) return;
+    if (timeRemaining <= 0) return;
+    
+    isRunning = true;
+    sessionStart = Date.now();
+    startBtn.disabled = true;
+    pauseBtn.disabled = false;
+    resetBtn.disabled = false;
+    
+    timerInterval = setInterval(() => {
+        timeRemaining--;
+        updateTimerDisplay();
+        
+        if (timeRemaining <= 0) {
+            completeTimer();
+        }
+    }, 1000);
+}
+
+function pauseTimer() {
+    if (!isRunning) return;
+    isRunning = false;
+    clearInterval(timerInterval);
+    startBtn.disabled = false;
+    pauseBtn.disabled = true;
+}
+
+function resetTimer() {
+    isRunning = false;
+    clearInterval(timerInterval);
+    loadMethod(currentMethod);
+    startBtn.disabled = false;
+    pauseBtn.disabled = true;
+    resetBtn.disabled = true;
+}
+
+function completeTimer() {
+    isRunning = false;
+    clearInterval(timerInterval);
+    timerDisplay.textContent = '00:00';
+    phaseLabel.textContent = 'Complete! ✨';
+    startBtn.disabled = false;
+    pauseBtn.disabled = true;
+    resetBtn.disabled = false;
+    
+    // Log session
+    const duration = Math.round((Date.now() - sessionStart) / 60000);
+    const m = METHODS[currentMethod];
+    logs.unshift({
+        timestamp: new Date().toISOString(),
+        method: m.name,
+        duration: duration,
+        depth: 0, // User can edit later
+        notes: ''
+    });
+    saveLogs();
+    renderLogs();
+    
+    // Play completion sound
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.frequency.value = 528; osc.type = 'sine';
+    gain.gain.value = 0.1;
+    osc.start(); osc.stop(ctx.currentTime + 1);
+}
+
+function saveLogs() { localStorage.setItem('gnosis_logs', JSON.stringify(logs.slice(-100))); }
+
+function renderLogs() {
+    if (logs.length === 0) { logList.innerHTML = '<div style="text-align:center;color:#666;padding:1rem">No sessions logged yet</div>'; return; }
+    logList.innerHTML = logs.slice().reverse().map(l => `
+        <div class="log-entry">
+            <div class="info">
+                <div class="time">${new Date(l.timestamp).toLocaleString()}</div>
+                <div class="method">${l.method}</div>
+                <div class="duration">${l.duration}min — Depth: ${l.depth}/10</div>
+                ${l.notes ? `<div style="font-size:0.8rem;color:#888;margin-top:0.25rem;font-style:italic">${l.notes}</div>` : ''}
+            </div>
+            <button class="log-btn" onclick="deleteLog('${l.timestamp}')">🗑️</button>
+        </div>
+    `).join('');
+}
+
+function deleteLog(ts) { logs = logs.filter(l=>l.timestamp!==ts); saveLogs(); renderLogs(); }
+
+// Event listeners
+startBtn.onclick = startTimer;
+pauseBtn.onclick = pauseTimer;
+resetBtn.onclick = resetTimer;
+
+document.querySelectorAll('.method-tab').forEach(btn => {
+    btn.onclick = () => {
+        currentMethod = btn.dataset.method;
+        document.querySelectorAll('.method-tab').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        loadMethod(currentMethod);
+    };
+});
+
+loadLogs();
+loadMethod('breathwork');
+renderMethodTabs();
+</script>
+<script src="../js/conversion.js?v=20260728"></script>
+</body>
+</html>

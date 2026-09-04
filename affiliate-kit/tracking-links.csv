@@ -1,0 +1,31 @@
+Producto,Nombre Corto,Precio USD,Precio COP,Link Base (Hotmart/Play),Link Afiliado (REEMPLAZAR),UTM Campaign,UTM Content,Comisión % ,Notas
+codex-chaoticum,Codex Chaoticum,$29.99,~120000,https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE,[TU_LINK_AFILIADO_CODEX],affiliate_codex,affiliate_codex,50%,Libro principal 500+ pág
+tarot-del-caos,Tarot del Caos,$19.99,~80000,https://hotmart.com/en/marketplace/products/tarot-del-caos/W106595765X?sck=HOTMART_SITE,[TU_LINK_AFILIADO_TAROT],affiliate_tarot,affiliate_tarot,50%,Spreads operativos
+servidores-magicos,Servidores Mágicos,$24.99,~100000,https://hotmart.com/en/marketplace/products/servidores-magicos/W106595767X?sck=HOTMART_SITE,[TU_LINK_AFILIADO_SERVIDORES],affiliate_servidores,affiliate_servidores,50%,Creación/mantenimiento
+libreria-lv,Librería LV,$29.99,~120000,https://hotmart.com/en/marketplace/products/libreria-lv/W106595766X?sck=HOTMART_SITE,[TU_LINK_AFILIADO_LV],affiliate_lv,affiliate_lv,50%,Servidores/egregoros
+magia-caos-practica,Magia del Caos Práctica,$19.99,~80000,https://hotmart.com/en/marketplace/products/magia-del-caos-practica/W106595768X?sck=HOTMART_SITE,[TU_LINK_AFILIADO_PRACTICA],affiliate_practica,affiliate_practica,50%,Rituales + diario
+bundle-todos-libros,Bundle 7 Libros (50% OFF),$74.97,~300000,https://hotmart.com/es/marketplace/productos/bundle-todos-los-libros-esp/V107097103W?sck=HOTMART_SITE,[TU_LINK_AFILIADO_BOOKS_BUNDLE],affiliate_books_bundle,affiliate_books_bundle,50%,Bundle principal libros
+complete-access,Complete Access (Apps+Libros),$49.99,~200000,https://hotmart.com/en/marketplace/products/complete-access/[HOTMART_PRODUCT_ID]?sck=HOTMART_SITE,[TU_LINK_AFILIADO_COMPLETE],affiliate_complete,affiliate_complete,50%,Upsell final: Apps+Libros
+inner-circle-monthly,Inner Circle $19/mes,$19/mes,~76000/mes,https://hotmart.com/es/marketplace/productos/inner-circle-monthly/[HOTMART_SUB_ID]?sck=HOTMART_SITE,[TU_LINK_AFILIADO_IC_MONTHLY],affiliate_ic_monthly,affiliate_ic_monthly,30%,Suscripción recurrente
+inner-circle-founding,Inner Circle Founding $9/mes,$9/mes,~36000/mes,https://hotmart.com/es/marketplace/productos/inner-circle-founding/[HOTMART_SUB_ID]?sck=HOTMART_SITE,[TU_LINK_AFILIADO_IC_FOUNDING],affiliate_ic_founding,affiliate_ic_founding,30%,Founding members (stock 50)
+flash-sale-99,Flash Sale $99 (72h),$99,~400000,https://hotmart.com/es/marketplace/productos/flash-sale-99/[HOTMART_FLASH_ID]?sck=HOTMART_SITE,[TU_LINK_AFILIADO_FLASH],affiliate_flash,affiliate_flash,50%,Plan B: Stock 20, 72h
+sigil-generator,Sigil Generator,$3.99,~16000,https://play.google.com/store/apps/details?id=com.cha0smagicklabs.sigilgenerator,[TU_LINK_AFILIADO_SIGIL],affiliate_sigil,affiliate_sigil,0% (directo),Play Store - Google no tiene affiliate
+noctem,NOCTEM Tools,$12.50,~50000,https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp,[TU_LINK_AFILIADO_NOCTEM],affiliate_noctem,affiliate_noctem,0% (directo),App premium investigación
+lucid-dream,Lucid Dream,$7.99,~32000,https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer,[TU_LINK_AFILIADO_LUCID],affiliate_lucid,affiliate_lucid,0% (directo),Sueños lúcidos/astral
+astral-lab,Astral Lab,$6.50,~26000,https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart,[TU_LINK_AFILIADO_ASTRAL],affiliate_astral,affiliate_astral,0% (directo),Carta natal completa
+dreamachine,Dreamachine,$3.99,~16000,https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine,[TU_LINK_AFILIADO_DREAM],affiliate_dream,affiliate_dream,0% (directo),Inducción sueños lúcidos
+psi-gym,PSI GYM,$?,~?,https://play.google.com/store/apps/details?id=com.cha0smagicklabs.psigym,[TU_LINK_AFILIADO_PSI],affiliate_psi,affiliate_psi,0% (directo),Entrenamiento ESP
+eerie-roads,Eerie Roads,$?,~?,https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads,[TU_LINK_AFILIADO_EERIE],affiliate_eerie,affiliate_eerie,0% (directo),Search & Find field
+rune-reader,Rune Reader,$?,~?,https://play.google.com/store/apps/details?id=com.cha0smagicklabs.runereader,[TU_LINK_AFILIADO_RUNE],affiliate_rune,affiliate_rune,0% (directo),Elder Futhark
+tarot-chaos,Tarot Chaos,$?,~?,https://play.google.com/store/apps/details?id=com.cha0smagicklabs.tarotchaos,[TU_LINK_AFILIADO_TAROT_APP],affiliate_tarot_app,affiliate_tarot_app,0% (directo),20 spreads
+iching,I Ching,$?,~?,https://play.google.com/store/apps/details?id=com.cha0smagicklabs.iching,[TU_LINK_AFILIADO_ICHING],affiliate_iching,affiliate_iching,0% (directo),Hexagramas completos
+goetia-guide,Goetia Guide,$?,~?,https://play.google.com/store/apps/details?id=com.cha0smagicklabs.goetiaguide,[TU_LINK_AFILIADO_GOETIA],affiliate_goetia,affiliate_goetia,0% (directo),72 entidades
+bundle-apps,Bundle 11 Apps,$29.99,~120000,https://play.google.com/store/apps/collection/cluster?gsr=SmRqGEFUVW5TRWFZN0NicHVTeXJ6Zmw4UEE9PbICRAonCiNjb20uY2hhMHNtYWdpY2suc2lnaWxnZW5lcmF0b3JmaW5hbBAHEhcIARITNzE3ODc3MzIzMjI4NTIxNDc0NxgAsBIA:S:ANO1ljI1Hcg,[TU_LINK_AFILIADO_APPS_BUNDLE],affiliate_apps_bundle,affiliate_apps_bundle,0% (directo),Bundle principal apps
+
+INSTRUCCIONES:
+1. En Hotmart: Marketplace → Products → Cada producto → Affiliates → Generate Link → Copia TU link único
+2. En Google Play: No hay programa afiliados nativo. Usa link directo + UTM para tracking.
+3. PROHIBIDO: Stripe, PayPal directo, cualquier pasarela externa. SOLO Hotmart + Google Play.
+4. Reemplaza [TU_LINK_AFILIADO_XXX] en columna F con tu link real de afiliado Hotmart.
+5. Usa columna H (UTM Content) para diferenciar en GA4: affiliate_codex_email, affiliate_codex_twitter, etc.
+6. Productos NUEVOS a crear en Hotmart: complete-access, inner-circle-monthly, inner-circle-founding, flash-sale-99

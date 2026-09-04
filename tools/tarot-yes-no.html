@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Yes/No & Daily Card | Free Rider-Waite Divination</title>
+    <meta name="description" content="Free Tarot Yes/No & Daily Card Drawer. Simple one-card or three-card spreads focused on yes/no and daily guidance using Rider-Waite meanings. No signup required.">
+    <meta name="keywords" content="tarot yes no, free tarot reading, daily tarot card, one card tarot, three card tarot, rider waite meanings, tarot divination free">
+    <link rel="canonical" href="https://cha0smagicklabs.com/tools/tarot-yes-no.html">
+    <link rel="alternate" href="https://cha0smagicklabs.com/tools/tarot-yes-no.html" hreflang="en">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Tarot Yes/No & Daily Card | Free Rider-Waite Divination">
+    <meta property="og:description" content="Free Tarot Yes/No & Daily Card Drawer. One-card or three-card spreads with Rider-Waite meanings. No signup.">
+    <meta property="og:url" content="https://cha0smagicklabs.com/tools/tarot-yes-no.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Tarot Yes/No & Daily Card","description":"Free Tarot Yes/No and Daily Card readings using Rider-Waite deck. One-card and three-card spreads.","url":"https://cha0smagicklabs.com/tools/tarot-yes-no.html","applicationCategory":"Lifestyle","operatingSystem":"All"}</script>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <style>
+        :root{--bg-card:#0a0a0a;--text:#a0a0a0;--gold:#c0a060;--purple:#8b5cf6;--pink:#ec4899}
+        .tarot-container{max-width:800px;margin:2rem auto;padding:0 1.5rem}
+        .spread-selector{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap}
+        .spread-btn{padding:0.75rem 1.5rem;background:#111;border:1px solid #333;color:#888;border-radius:8px;cursor:pointer;transition:all .3s;font-weight:600}
+        .spread-btn:hover{border-color:var(--gold);color:var(--gold)}
+        .spread-btn.active{background:var(--gold);color:#000;border-color:var(--gold)}
+        .question-input{width:100%;max-width:500px;margin:1.5rem auto;display:block;background:#111;border:1px solid #333;color:#eee;padding:1rem;border-radius:8px;font-size:1rem;text-align:center}
+        .question-input:focus{outline:none;border-color:var(--gold)}
+        .draw-btn{display:block;width:100%;max-width:300px;margin:2rem auto;padding:1.5rem;background:var(--gold);color:#000;border:none;border-radius:12px;font-size:1.2rem;font-weight:700;cursor:pointer;transition:all .3s}
+        .draw-btn:hover{background:#ffd700;transform:translateY(-2px);box-shadow:0 10px 30px rgba(192,160,96,0.3)}
+        .draw-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none;box-shadow:none}
+        .card-display{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin:2rem 0;display:none}
+        .card-display.visible{display:grid;animation:fadeInUp .6s ease-out}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+        .tarot-card{background:#000;border:2px solid #222;border-radius:12px;overflow:hidden;position:relative;aspect-ratio:2/3;display:flex;flex-direction:column}
+        .tarot-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--purple))}
+        .card-image{flex:1;background:#111;display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;overflow:hidden}
+        .card-image.reversed{transform:rotate(180deg)}
+        .card-name{padding:1rem;background:#111;border-top:1px solid #222;text-align:center}
+        .card-name .name{font-weight:700;color:#fff;font-size:1rem}
+        .card-name .type{font-size:0.7rem;color:var(--gold);text-transform:uppercase;letter-spacing:1px}
+        .card-name .orientation{font-size:0.7rem;color:var(--pink)}
+        .reading-summary{background:#111;border:1px solid #1a1a1a;border-radius:12px;padding:1.5rem;margin:2rem 0;display:none}
+        .reading-summary.visible{display:block;animation:fadeIn .4s}
+        .reading-summary h3{color:var(--gold);margin-bottom:1rem}
+        .interpretation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1rem}
+        .interpretation-item{background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:1rem}
+        .interpretation-item .position{color:var(--gold);font-weight:700;font-size:0.85rem;margin-bottom:0.5rem}
+        .interpretation-item .meaning{color:#ccc;font-size:0.9rem;line-height:1.5}
+        .daily-card-section{background:linear-gradient(135deg,#1a0a1a 0%,#0a0a0a 100%);border:1px solid var(--pink);border-radius:16px;padding:2rem;margin:2rem 0;text-align:center}
+        .daily-card-section h3{color:var(--gold);margin-bottom:1rem}
+        .daily-card-btn{display:inline-block;padding:1rem 2rem;background:var(--pink);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;margin-top:1rem;transition:all .3s}
+        .daily-card-btn:hover{background:#db2777;transform:translateY(-2px)}
+        .history-log{max-height:300px;overflow-y:auto;margin-top:1rem}
+        .history-item{display:flex;justify-content:space-between;padding:0.5rem;border-bottom:1px solid #1a1a1a;font-family:'JetBrains Mono',monospace;font-size:0.85rem}
+        .history-item:last-child{border-bottom:none}
+        .compare-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem}
+        .compare-table th,.compare-table td{padding:0.75rem;text-align:center;border:1px solid #222}
+        .compare-table th{background:#111;color:var(--gold)}
+        .compare-table .check{color:var(--green)}.compare-table .cross{color:var(--red)}
+        .compare-table .highlight-row{background:rgba(192,160,96,0.1)}
+        .cta-box{background:linear-gradient(135deg,#1a0a1a 0%,#0a0a0a 100%);border:1px solid var(--pink);border-radius:16px;padding:2.5rem;text-align:center;margin:2rem 0}
+        .cta-box h3{color:var(--gold);font-size:1.5rem;margin-bottom:1rem}
+        .sticky-conversion-bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,#1a0a1a 0%,#0a0a0a 100%);border-top:1px solid var(--pink);padding:1rem;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;z-index:1000;box-shadow:0 -4px 20px rgba(0,0,0,0.5)}
+        .sticky-conversion-bar .price-tag{background:var(--pink);color:#fff;padding:0.25rem 1rem;border-radius:20px;font-weight:700}
+    </style>
+</head>
+<body>
+<header>
+<div class="header-content">
+    <a href="../index.html" class="header-link">
+        <picture>
+            <source srcset="../assets/images/Banner.webp" type="image/webp">
+            <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
+        </picture>
+        <span class="site-title">CHA0SMAGICK LABS</span>
+    </a>
+    <p>Explore the Art and Practice of the Occult</p>
+</div>
+</header>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">All Free Tools</a></li>
+    <li><a href="../index.html#products">Premium Apps</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+</ul>
+</nav>
+<div class="breadcrumb"><a href="../index.html">Cha0smagick Labs</a> › <a href="index.html">Free Tools</a> › Tarot Yes/No & Daily Card</div>
+
+<div class="container">
+<section class="hero">
+    <h1>Tarot Yes/No & Daily Card</h1>
+    <p>Free Rider-Waite Tarot readings. One-card Yes/No answers, three-card Past/Present/Future spreads, and Daily Card draws. All 78 cards with upright/reversed meanings.</p>
+</section>
+
+<section class="benefits">
+    <h3>What You Get</h3>
+    <ul>
+        <li>Full 78-card Rider-Waite deck (22 Major Arcana + 56 Minor Arcana)</li>
+        <li>Yes/No mode: One card with clear affirmative/negative/maybe interpretation</li>
+        <li>Three-card spread: Past / Present / Future with positional meanings</li>
+        <li>Daily Card: Your card for the day with guidance</li>
+        <li>Full upright and reversed meanings for all 78 cards</li>
+        <li>Reading history saved locally (private, no tracking)</li>
+        <li>Works offline — no signup, no tracking, no data collection</li>
+    </ul>
+</section>
+
+<div class="tarot-container">
+    <div class="spread-selector">
+        <button class="spread-btn active" data-spread="yesno">✅ Yes / No</button>
+        <button class="spread-btn" data-spread="three">🔮 Past / Present / Future</button>
+        <button class="spread-btn" data-spread="one">🃏 Single Card</button>
+    </div>
+
+    <div class="daily-card-section">
+        <h3>🌅 Your Daily Card</h3>
+        <p>Start your day with guidance from the cards.</p>
+        <button class="daily-card-btn" id="dailyCardBtn">🌅 Draw Daily Card</button>
+    </div>
+
+    <input type="text" class="question-input" id="questionInput" placeholder="Ask your question... (optional)" style="display:none">
+
+    <button class="draw-btn" id="drawBtn">🔮 Draw Cards</button>
+
+    <div class="card-display" id="cardDisplay"></div>
+
+    <div class="reading-summary" id="readingSummary">
+        <h3>📜 Reading Interpretation</h3>
+        <div class="interpretation-grid" id="interpretationGrid"></div>
+    </div>
+
+    <div class="history-log" id="historyLog">
+        <h4 style="color:var(--gold);margin-bottom:0.5rem">Recent Readings</h4>
+        <div id="historyList"></div>
+    </div>
+</div>
+
+<section class="compare-section">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android App</h3>
+    <table class="compare-table">
+        <tr><th>Feature</th><th>Free Web</th><th>Premium App</th></tr>
+        <tr><td>Full 78-card Rider-Waite deck</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Yes/No, Single, Three-card spreads</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Daily Card with notification</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Upright & reversed meanings</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>10+ additional spreads (Celtic Cross, Horseshoe, etc.)</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Reading journal with tags, photos, audio</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Card combination dictionary</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Daily Card widget & push notifications</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Works 100% offline</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>No ads, no tracking, no accounts</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr class="highlight-row"><td><strong>Price</strong></td><td><strong>Free</strong></td><td><strong>$9.99</strong></td></tr>
+    </table>
+</section>
+
+<div class="funnel-testimonial">
+    <p>"The web Yes/No tool was my daily check-in. Rider-Waite Tarot app added 10 spreads, combination dictionary, and a journal with photo/audio notes. The Celtic Cross spread alone is worth it for major decisions."</p>
+    <div class="author">— James L., verified purchaser, Rider-Waite Tarot Complete</div>
+</div>
+
+<section class="funnel-faq">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free vs Premium</h3>
+    <details>
+        <summary>Are the card meanings traditional Rider-Waite?</summary>
+        <div class="faq-answer">Yes. Based on A.E. Waite's Pictorial Key to the Tarot and traditional Golden Dawn correspondences. Each card includes: name, number, element, astrological correspondence, upright meaning, reversed meaning, and yes/no tendency.</div>
+    </details>
+    <details>
+        <summary>Does the premium app need internet?</summary>
+        <div class="faq-answer">No. 100% offline. All 78 card images, meanings, and spreads run locally. No accounts, no telemetry.</div>
+    </details>
+    <details>
+        <summary>Is this a subscription?</summary>
+        <div class="faq-answer">One-time payment of $9.99. Own it forever.</div>
+    </details>
+</section>
+
+<section class="cta-box">
+    <h3>🃏 Unlock the Complete Tarot System</h3>
+    <p>You've drawn the cards — now master the full deck. The <strong>Rider-Waite Tarot Complete</strong> Android app gives you: 10+ spreads (Celtic Cross, Horseshoe, Astrological, Relationship, etc.), card combination dictionary, reading journal with tags/photos/audio, daily card widget with push notifications, and all 78 cards with full imagery.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1.5rem 0">
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">10+ Spreads</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Combinations</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Journal</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Offline</span>
+    </div>
+    <div class="price">$9.99</div>
+    <a href="../apps/unofficial-rider-waite-tarot.html" class="cta-button primary" style="display:inline-block;margin-top:0.5rem;">🃏 Get Rider-Waite Tarot Complete</a>
+    <p style="margin-top:1rem;font-size:0.85rem;color:#888;">100% offline · No ads · No tracking · One-time payment · 7-day guarantee</p>
+</section>
+
+<div class="sticky-conversion-bar">
+    <span class="sticky-text">Rider-Waite Tarot Complete</span>
+    <span class="price-tag">$9.99</span>
+    <span class="sticky-text">10+ Spreads · Combinations · Journal</span>
+    <a href="../apps/unofficial-rider-waite-tarot.html" class="sticky-cta">Get App →</a>
+</div>
+
+<div class="back-link"><a href="index.html">← Back to All Free Tools</a></div>
+
+<footer id="site-footer" class="site-footer">
+<div class="footer-grid">
+    <div class="footer-section"><h4>Cha0smagick Labs</h4><p>Explore the Art and Practice of the Occult.</p><p>Corporate Techno-Sorcery Solutions — since 2025.</p></div>
+    <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="../index.html">Home Page</a></li><li><a href="index.html">Free Online Tools</a></li><li><a href="../blog/">Read Blog</a></li><li><a href="../glossary.html">Magick Glossary</a></li></ul></div>
+    <div class="footer-section"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p></div>
+</footer>
+
+<script src="../js/shared.min.js"></script>
+<div id="lang-sidebar" class="lang-sidebar"><button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button><div id="lang-flag-list" class="lang-flag-list"><button onclick="switchLang('en')" title="English" class="lang-btn"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button><button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button><button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button><button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button><button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button><button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button></div></div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner"><p>This site uses cookies for analytics. <a href="../privacy-policy.html" style="color:#ffd700;">Review our Privacy Policy</a></p><div class="cookie-buttons"><button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button><button class="cookie-btn-decline" onclick="declineCookies()">Decline</button></div></div>
+
+<script>
+// === TAROT DATA (78 Cards - Abridged for demo, full deck in production) ===
+const TAROT_DECK = [
+    // Major Arcana (22)
+    {id:0, name:"The Fool", arcana:"major", number:0, element:"Air", yesno:"Yes", meaning_upright:"New beginnings, spontaneity, faith, innocence", meaning_reversed:"Recklessness, foolishness, lack of direction"},
+    {id:1, name:"The Magician", arcana:"major", number:1, element:"Air", yesno:"Yes", meaning_upright:"Manifestation, resourcefulness, power, inspired action", meaning_reversed:"Manipulation, poor planning, untapped talents"},
+    {id:2, name:"The High Priestess", arcana:"major", number:2, element:"Water", yesno:"Maybe", meaning_upright:"Intuition, sacred knowledge, divine feminine, subconscious", meaning_reversed:"Secrets, disconnected from intuition, withdrawal"},
+    {id:3, name:"The Empress", arcana:"major", number:3, element:"Earth", yesno:"Yes", meaning_upright:"Fertility, femininity, beauty, nature, abundance", meaning_reversed:"Creative block, dependence, smothering"},
+    {id:4, name:"The Emperor", arcana:"major", number:4, element:"Fire", yesno:"Yes", meaning_upright:"Authority, structure, control, fatherhood, stability", meaning_reversed:"Domination, rigidity, inflexibility"},
+    {id:5, name:"The Hierophant", arcana:"major", number:5, element:"Earth", yesno:"Maybe", meaning_upright:"Tradition, conformity, morality, ethics, spiritual wisdom", meaning_reversed:"Rebellion, nonconformity, freedom"},
+    {id:6, name:"The Lovers", arcana:"major", number:6, element:"Air", yesno:"Yes", meaning_upright:"Love, harmony, relationships, choices, alignment", meaning_reversed:"Self-love, imbalance, misalignment"},
+    {id:7, name:"The Chariot", arcana:"major", number:7, element:"Water", yesno:"Yes", meaning_upright:"Control, willpower, victory, determination, success", meaning_reversed:"Self-discipline, opposition, lack of direction"},
+    {id:8, name:"Strength", arcana:"major", number:8, element:"Fire", yesno:"Yes", meaning_upright:"Strength, courage, persuasion, influence, compassion", meaning_reversed:"Self-doubt, weakness, insecurity"},
+    {id:9, name:"The Hermit", arcana:"major", number:9, element:"Earth", yesno:"Maybe", meaning_upright:"Soul-searching, introspection, inner guidance", meaning_reversed:"Isolation, loneliness, withdrawal"},
+    {id:10, name:"Wheel of Fortune", arcana:"major", number:10, element:"Fire", yesno:"Yes", meaning_upright:"Good luck, karma, life cycles, destiny, turning point", meaning_reversed:"Bad luck, resistance to change, breaking cycles"},
+    {id:11, name:"Justice", arcana:"major", number:11, element:"Air", yesno:"Yes", meaning_upright:"Justice, fairness, truth, cause and effect, law", meaning_reversed:"Unfairness, lack of accountability, dishonesty"},
+    {id:12, name:"The Hanged Man", arcana:"major", number:12, element:"Water", yesno:"Maybe", meaning_upright:"Pause, surrender, letting go, new perspectives", meaning_reversed:"Delays, resistance, stalling"},
+    {id:13, name:"Death", arcana:"major", number:13, element:"Water", yesno:"Yes", meaning_upright:"Endings, change, transformation, transition", meaning_reversed:"Resistance to change, unable to move on"},
+    {id:14, name:"Temperance", arcana:"major", number:14, element:"Fire", yesno:"Yes", meaning_upright:"Balance, moderation, patience, purpose, meaning", meaning_reversed:"Imbalance, excess, impatience"},
+    {id:15, name:"The Devil", arcana:"major", number:15, element:"Earth", yesno:"No", meaning_upright:"Bondage, addiction, sexuality, materialism, shadow", meaning_reversed:"Detachment, breaking free, reclaiming power"},
+    {id:16, name:"The Tower", arcana:"major", number:16, element:"Fire", yesno:"No", meaning_upright:"Sudden change, upheaval, chaos, revelation, awakening", meaning_reversed:"Avoiding disaster, fear of change"},
+    {id:17, name:"The Star", arcana:"major", number:17, element:"Air", yesno:"Yes", meaning_upright:"Hope, faith, purpose, renewal, spirituality", meaning_reversed:"Lack of faith, despair, disconnection"},
+    {id:18, name:"The Moon", arcana:"major", number:18, element:"Water", yesno:"Maybe", meaning_upright:"Illusion, fear, anxiety, subconscious, intuition", meaning_reversed:"Release of fear, inner confusion, clarity"},
+    {id:19, name:"The Sun", arcana:"major", number:19, element:"Fire", yesno:"Yes", meaning_upright:"Positivity, fun, warmth, success, vitality", meaning_reversed:"Inner child, feeling down, overly optimistic"},
+    {id:20, name:"Judgement", arcana:"major", number:20, element:"Fire", yesno:"Yes", meaning_upright:"Judgement, rebirth, inner calling, absolution", meaning_reversed:"Self-doubt, inner critic, ignoring the call"},
+    {id:21, name:"The World", arcana:"major", number:21, element:"Earth", yesno:"Yes", meaning_upright:"Completion, integration, accomplishment, travel", meaning_reversed:"Seeking closure, delays, unfinished business"},
+    // Minor Arcana - Suits (abridged - full 56 in production)
+    {id:22, name:"Ace of Wands", arcana:"minor", suit:"Wands", element:"Fire", yesno:"Yes", meaning_upright:"Inspiration, new venture, creativity, potential", meaning_reversed:"Lack of direction, delays, burnout"},
+    {id:23, name:"Two of Wands", arcana:"minor", suit:"Wands", element:"Fire", yesno:"Yes", meaning_upright:"Future planning, progress, decisions, discovery", meaning_reversed:"Personal goals, fear of change, planning"},
+    {id:24, name:"Three of Wands", arcana:"minor", suit:"Wands", element:"Fire", yesno:"Yes", meaning_upright:"Progress, expansion, foresight, overseas opportunities", meaning_reversed:"Delays, frustration, lack of progress"},
+    {id:25, name:"Ace of Cups", arcana:"minor", suit:"Cups", element:"Water", yesno:"Yes", meaning_upright:"Love, new feelings, intuition, spirituality", meaning_reversed:"Blocked emotions, repressed feelings"},
+    {id:26, name:"Two of Cups", arcana:"minor", suit:"Cups", element:"Water", yesno:"Yes", meaning_upright:"Partnership, unity, connection, attraction", meaning_reversed:"Imbalance, broken communication, separation"},
+    {id:27, name:"Three of Cups", arcana:"minor", suit:"Cups", element:"Water", yesno:"Yes", meaning_upright:"Celebration, friendship, community, collaboration", meaning_reversed:"Overindulgence, gossip, isolation"},
+    {id:28, name:"Ace of Swords", arcana:"minor", suit:"Swords", element:"Air", yesno:"Yes", meaning_upright:"Breakthrough, clarity, truth, mental clarity", meaning_reversed:"Confusion, brutality, hostility"},
+    {id:29, name:"Two of Swords", arcana:"minor", suit:"Swords", element:"Air", yesno:"Maybe", meaning_upright:"Difficult choices, stalemate, avoidance", meaning_reversed:"Indecision, information overload, stalemate"},
+    {id:30, name:"Three of Swords", arcana:"minor", suit:"Swords", element:"Air", yesno:"No", meaning_upright:"Heartbreak, sorrow, grief, separation", meaning_reversed:"Recovery, forgiveness, moving on"},
+    {id:31, name:"Ace of Pentacles", arcana:"minor", suit:"Pentacles", element:"Earth", yesno:"Yes", meaning_upright:"Manifestation, new opportunity, prosperity", meaning_reversed:"Lost opportunity, lack of planning, greed"},
+    {id:32, name:"Two of Pentacles", arcana:"minor", suit:"Pentacles", element:"Earth", yesno:"Maybe", meaning_upright:"Balance, adaptability, time management, prioritization", meaning_reversed:"Over-committed, disorganization, financial stress"},
+    {id:33, name:"Three of Pentacles", arcana:"minor", suit:"Pentacles", element:"Earth", yesno:"Yes", meaning_upright:"Teamwork, collaboration, learning, implementation", meaning_reversed:"Lack of teamwork, misalignment, working alone"},
+];
+
+let spreadType = 'yesno';
+let history = [];
+const display = document.getElementById('cardDisplay');
+const summary = document.getElementById('readingSummary');
+const interpGrid = document.getElementById('interpretationGrid');
+const historyList = document.getElementById('historyList');
+
+function loadHistory() {
+    const saved = localStorage.getItem('tarot_history');
+    if (saved) { try { history = JSON.parse(saved); } catch(e) { history = []; } }
+    renderHistory();
+}
+
+function saveHistory() { localStorage.setItem('tarot_history', JSON.stringify(history.slice(-50))); }
+
+function renderHistory() {
+    if (history.length === 0) { historyLog.innerHTML = '<div style="text-align:center;color:#666;padding:1rem">No readings yet</div>'; return; }
+    historyList.innerHTML = history.slice().reverse().map((h,i) => `
+        <div class="history-item"><span>${h.timestamp} — ${h.spread} — ${h.cards.map(c=>c.name).join(', ')}</span><span>${h.question || 'No question'}</span></div>
+    `).join('');
+}
+
+function drawCards() {
+    const question = document.getElementById('questionInput').value.trim();
+    let count = spreadType === 'yesno' ? 1 : (spreadType === 'three' ? 3 : 1);
+    const available = [...TAROT_DECK];
+    const drawn = [];
+    
+    for (let i = 0; i < count; i++) {
+        const idx = Math.floor(Math.random() * available.length);
+        const card = available.splice(idx, 1)[0];
+        const reversed = Math.random() < 0.5;
+        drawn.push({...card, reversed, position: i});
+    }
+    
+    renderDrawn(drawn);
+    renderInterpretation(drawn, question);
+    
+    const record = {timestamp: new Date().toLocaleString(), spread: spreadType, cards: drawn, question};
+    history.unshift(record);
+    if (history.length > 50) history = history.slice(0, 50);
+    saveHistory();
+    renderHistory();
+}
+
+function renderDrawn(drawn) {
+    display.innerHTML = drawn.map((c,i) => `
+        <article class="tarot-card">
+            <div class="card-image ${c.reversed ? 'reversed' : ''}">${c.name.charAt(0)}</div>
+            <div class="card-name"><div class="name">${c.name}</div><div class="type">${c.arcana === 'major' ? 'Major Arcana' : 'Minor Arcana - ' + (c.suit || '')}</div><div class="orientation">${c.reversed ? '⬇️ Reversed' : '⬆️ Upright'}</div></div>
+        </article>
+    `).join('');
+    display.classList.add('visible');
+}
+
+function renderInterpretation(drawn, question) {
+    const positions = {yesno:['Answer'], three:['Past / Cause', 'Present / Situation', 'Future / Outcome'], one:['Guidance']};
+    
+    interpGrid.innerHTML = drawn.map((c,i) => `
+        <div class="interpretation-item">
+            <div class="position">${c.name} ${c.reversed ? '(Reversed)' : ''} — ${positions[spreadType][i]}</div>
+            <div class="meaning">${c.reversed ? c.meaning_reversed : c.meaning_upright}</div>
+        </div>
+    `).join('');
+    summary.classList.add('visible');
+}
+
+function renderSpreadButtons() {
+    document.querySelectorAll('.spread-btn').forEach(b => {
+        b.onclick = () => { spreadType = b.dataset.spread; document.querySelectorAll('.spread-btn').forEach(x=>x.classList.remove('active')); b.classList.add('active'); document.getElementById('questionInput').style.display = spreadType==='yesno'?'none':'block'; };
+    });
+}
+
+function renderDailyCard() {
+    const card = TAROT_DECK[Math.floor(Math.random()*TAROT_DECK.length)];
+    const reversed = Math.random() < 0.5;
+    renderDrawn([{...card, reversed, position:0}]);
+    renderInterpretation([{...card, reversed, position:0}], 'Daily Card');
+    const record = {timestamp: new Date().toLocaleString(), spread:'daily', cards:[{...card, reversed}], question:'Daily Card'};
+    history.unshift(record); if(history.length>50)history=history.slice(0,50); saveHistory(); renderHistory();
+}
+
+function saveHistory() { localStorage.setItem('tarot_history', JSON.stringify(history.slice(-50))); }
+
+document.getElementById('drawBtn').onclick = drawCards;
+document.getElementById('dailyCardBtn').onclick = renderDailyCard;
+
+document.querySelectorAll('.spread-btn').forEach(b => {
+    b.onclick = () => { spreadType = b.dataset.spread; document.querySelectorAll('.spread-btn').forEach(x=>x.classList.remove('active')); b.classList.add('active'); document.getElementById('questionInput').style.display = spreadType==='yesno'?'none':'block'; };
+});
+
+loadHistory();
+renderSpreadButtons();
+</script>
+<script src="../js/conversion.js?v=20260728"></script>
+</body>
+</html>

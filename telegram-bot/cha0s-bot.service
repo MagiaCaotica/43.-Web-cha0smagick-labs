@@ -1,0 +1,25 @@
+[Unit]
+Description=Cha0smagick Labs Telegram Daily Offer Bot
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/cha0s-bot
+ExecStart=/usr/bin/python3 /home/ubuntu/cha0s-bot/bot.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Environment variables (set via systemctl edit or EnvironmentFile)
+Environment=TG_TOKEN=YOUR_BOT_TOKEN_HERE
+Environment=ADMIN_USER_ID=YOUR_TELEGRAM_USER_ID_HERE
+
+# Resource limits (Oracle Free Tier micro instance)
+MemoryLimit=400M
+CPUQuota=50%
+
+[Install]
+WantedBy=multi-user.target

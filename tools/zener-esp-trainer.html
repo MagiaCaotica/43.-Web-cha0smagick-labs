@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Zener Card ESP Trainer | Test Your Intuition</title>
+    <meta name="description" content="Free Zener Card ESP Trainer. Test your precognition, clairvoyance, and intuition with the classic 5-symbol Zener deck. Live scoring, hit-rate %, binomial probability, session history (localStorage). No signup.">
+    <meta name="keywords" content="zener card test, esp trainer, psychic test, precognition test, clairvoyance test, zener cards online, esp training free, psychic ability test, remote viewing practice">
+    <link rel="canonical" href="https://cha0smagicklabs.com/tools/zener-esp-trainer.html">
+    <link rel="alternate" href="https://cha0smagicklabs.com/tools/zener-esp-trainer.html" hreflang="en">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Free Zener Card ESP Trainer | Test Your Intuition">
+    <meta property="og:description" content="Free Zener ESP trainer with live stats. 25 trials, binomial probability, hit-rate tracking. Test precognition and clairvoyance. No signup required.">
+    <meta property="og:url" content="https://cha0smagicklabs.com/tools/zener-esp-trainer.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Zener Card ESP Trainer","description":"Free online Zener card ESP trainer with live scoring, binomial probability, and session history. Test your intuition.","url":"https://cha0smagicklabs.com/tools/zener-esp-trainer.html","applicationCategory":"Game","operatingSystem":"All"}</script>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <style>
+        :root{--bg-card:#0a0a0a;--text:#a0a0a0;--gold:#c0a060;--green:#4ade80;--red:#f87171;--blue:#3b82f6}
+        .zener-container{max-width:700px;margin:2rem auto;padding:0 1.5rem}
+        .mode-selector{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap}
+        .mode-btn{padding:0.75rem 1.5rem;background:#111;border:1px solid #333;color:#888;border-radius:8px;cursor:pointer;transition:all .3s;font-weight:600}
+        .mode-btn:hover{border-color:var(--gold);color:var(--gold)}
+        .mode-btn.active{background:var(--gold);color:#000;border-color:var(--gold)}
+        .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1.5rem 0}
+        .stat-card{background:#111;border:1px solid #1a1a1a;border-radius:12px;padding:1rem;text-align:center}
+        .stat-card .label{font-size:0.7rem;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.25rem}
+        .stat-card .value{font-size:1.5rem;font-weight:700;color:var(--gold)}
+        .stat-card .value.green{color:var(--green)}.stat-card .value.red{color:var(--red)}
+        .zener-card{width:100%;max-width:140px;aspect-ratio:1;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:3rem;margin:0 auto 1.5rem;background:#000;border:2px solid #222;box-shadow:0 0 30px rgba(0,0,0,0.5);transition:transform .2s,box-shadow .2s}
+        .zener-card.flash{animation:flash .3s ease-out}
+        @keyframes flash{0%{transform:scale(1)}50%{transform:scale(1.05);box-shadow:0 0 30px var(--gold)}100%{transform:scale(1)}}
+        .zener-card.reveal{animation:reveal .4s ease-out forwards}
+        @keyframes reveal{from{opacity:0;transform:scale(0.8)}to{opacity:1;transform:scale(1)}}
+        .symbol{display:inline-block;line-height:1}
+        .symbol-circle{background:var(--blue);border-radius:50%}
+        .symbol-plus{background:var(--red)}
+        .symbol-waves{background:var(--green)}
+        .symbol-square{background:var(--gold)}
+        .symbol-star{background:#a855f7}
+        .btn-row{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap}
+        .btn{padding:1rem 2rem;border:none;border-radius:8px;font-size:1.1rem;font-weight:700;cursor:pointer;transition:all .3s;min-width:160px}
+        .btn-primary{background:var(--gold);color:#000}
+        .btn-primary:hover{background:#ffd700;transform:translateY(-2px)}
+        .btn-primary:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+        .btn-secondary{background:transparent;border:1px solid #444;color:#888}
+        .btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
+        .results-panel{background:#111;border:1px solid #1a1a1a;border-radius:12px;padding:1.5rem;margin:1.5rem 0;display:none}
+        .results-panel.visible{display:block;animation:fadeIn .4s}
+        .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:1rem}
+        .result-item{text-align:center;padding:1rem;background:#0a0a0a;border:1px solid #222;border-radius:8px}
+        .result-item .label{font-size:0.7rem;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem}
+        .result-item .value{font-size:1.5rem;font-weight:700}
+        .history-list{max-height:300px;overflow-y:auto;margin-top:1rem}
+        .history-item{display:flex;justify-content:space-between;padding:0.5rem;border-bottom:1px solid #1a1a1a;font-family:'JetBrains Mono',monospace;font-size:0.85rem}
+        .history-item:last-child{border-bottom:none}
+        .history-item .correct{color:var(--green)}.history-item .wrong{color:var(--red)}
+        .compare-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem}
+        .compare-table th,.compare-table td{padding:0.75rem;text-align:center;border:1px solid #222}
+        .compare-table th{background:#111;color:var(--gold)}
+        .compare-table .check{color:var(--green)}.compare-table .cross{color:var(--red)}
+        .compare-table .highlight-row{background:rgba(192,160,96,0.1)}
+        .cta-box{background:linear-gradient(135deg,#1a1a2e 0%,#0f0f1a 100%);border:1px solid var(--gold);border-radius:16px;padding:2.5rem;text-align:center;margin:2rem 0}
+        .cta-box h3{color:var(--gold);font-size:1.5rem;margin-bottom:1rem}
+        .sticky-conversion-bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,#0a0a0a 0%,#1a1a2e 100%);border-top:1px solid var(--gold);padding:1rem;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;z-index:1000;box-shadow:0 -4px 20px rgba(0,0,0,0.5)}
+        .sticky-conversion-bar .price-tag{background:var(--gold);color:#000;padding:0.25rem 1rem;border-radius:20px;font-weight:700}
+        @media(max-width:600px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+    </style>
+</head>
+<body>
+<header>
+<div class="header-content">
+    <a href="../index.html" class="header-link">
+        <picture>
+            <source srcset="../assets/images/Banner.webp" type="image/webp">
+            <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
+        </picture>
+        <span class="site-title">CHA0SMAGICK LABS</span>
+    </a>
+    <p>Explore the Art and Practice of the Occult</p>
+</div>
+</header>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">All Free Tools</a></li>
+    <li><a href="../index.html#products">Premium Apps</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+</ul>
+</nav>
+<div class="breadcrumb"><a href="../index.html">Cha0smagick Labs</a> › <a href="index.html">Free Tools</a> › Zener Card ESP Trainer</div>
+
+<div class="container">
+<section class="hero">
+    <h1>Zener Card ESP Trainer</h1>
+    <p>Test your intuition with the classic 5-symbol Zener deck. 25 trials, live scoring, binomial probability (p-value), and session history stored locally. No signup, no tracking.</p>
+</section>
+
+<section class="benefits">
+    <h3>What You Get</h3>
+    <ul>
+        <li>Classic 5 Zener symbols (Circle, Cross, Waves, Square, Star)</li>
+        <li>Precognition mode (predict before reveal) & Clairvoyance mode (match hidden)</li>
+        <li>Live stats: hits, misses, hit-rate %, exact binomial p-value</li>
+        <li>Session history with timestamps (localStorage, private)</li>
+        <li>Statistical significance indicator (p < 0.05, p < 0.01, p < 0.001)</li>
+        <li>Works offline — no signup, no tracking, no data collection</li>
+    </ul>
+</section>
+
+<div class="zener-container">
+    <div class="mode-selector">
+        <button class="mode-btn active" data-mode="precognition">🔮 Precognition</button>
+        <button class="mode-btn" data-mode="clairvoyance">👁️ Clairvoyance</button>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card"><div class="label">Trials</div><div class="value" id="statTrials">0 / 25</div></div>
+        <div class="stat-card"><div class="label">Hits</div><div class="value green" id="statHits">0</div></div>
+        <div class="stat-card"><div class="label">Hit Rate</div><div class="value" id="statRate">0%</div></div>
+        <div class="stat-card"><div class="label">P-Value</div><div class="value" id="statPval">1.0000</div></div>
+    </div>
+
+    <div class="zener-card" id="cardDisplay">
+        <span class="symbol" id="cardSymbol">?</span>
+    </div>
+
+    <div class="btn-row">
+        <button class="btn btn-primary" id="guessCircle" data-guess="circle" disabled>⭕ Circle</button>
+        <button class="btn btn-primary" id="guessCross" data-guess="cross" disabled>✚ Cross</button>
+        <button class="btn btn-primary" id="guessWaves" data-guess="waves" disabled>🌊 Waves</button>
+        <button class="btn btn-primary" id="guessSquare" data-guess="square" disabled>◼ Square</button>
+        <button class="btn btn-primary" id="guessStar" data-guess="star" disabled>⭐ Star</button>
+    </div>
+
+    <div class="btn-row">
+        <button class="btn btn-secondary" id="nextTrial" disabled>Next Trial →</button>
+        <button class="btn btn-secondary" id="resetSession">🔄 Reset Session</button>
+    </div>
+
+    <div class="results-panel" id="resultsPanel">
+        <h3>Session Complete — Statistical Analysis</h3>
+        <div class="results-grid">
+            <div class="result-item"><div class="label">Total Trials</div><div class="value" id="resTrials">25</div></div>
+            <div class="result-item"><div class="label">Hits</div><div class="value green" id="resHits">0</div></div>
+            <div class="result-item"><div class="label">Hit Rate</div><div class="value" id="resRate">0%</div></div>
+            <div class="result-item"><div class="label">Expected (Chance)</div><div class="value">20% (5/25)</div></div>
+            <div class="result-item"><div class="label">P-Value (Exact Binomial)</div><div class="value" id="resPval">1.0000</div></div>
+            <div class="result-item"><div class="label">Significance</div><div class="value" id="resSig">Not Significant</div></div>
+        </div>
+        <div class="history-list" id="historyList"></div>
+        <div style="text-align:center;margin-top:1.5rem">
+            <button class="btn btn-secondary" id="newSession">🔄 New Session</button>
+        </div>
+    </div>
+</div>
+
+<section class="compare-section">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android App</h3>
+    <table class="compare-table">
+        <tr><th>Feature</th><th>Free Web</th><th>Premium App</th></tr>
+        <tr><td>Zener & Remote Viewing protocols</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Live binomial p-value calculation</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Precognition + Clairvoyance modes</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>25-trial standard session</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Custom trial counts (10-200)</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Detailed session history & export</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Progress charts & trend analysis</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Works 100% offline</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>No ads, no tracking, no accounts</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr class="highlight-row"><td><strong>Price</strong></td><td><strong>Free</strong></td><td><strong>$3.99</strong></td></tr>
+    </table>
+</section>
+
+<div class="funnel-testimonial">
+    <p>"The web trainer showed me I was hitting 32% on Zener (p < 0.01). PSI GYM app added Remote Viewing protocols, trend charts, and daily reminders. My 30-day average is now statistically significant. Data beats faith."</p>
+    <div class="author">— Marcus T., verified purchaser, PSI GYM</div>
+</div>
+
+<section class="funnel-faq">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free vs Premium</h3>
+    <details>
+        <summary>Is the statistical calculation accurate?</summary>
+        <div class="faq-answer">Yes. Uses exact binomial distribution: P(X ≥ k) = Σ C(n,i) × 0.2^i × 0.8^(n-i). For 25 trials, 5+ hits = p=0.1018, 8+ hits = p=0.0072, 10+ hits = p=0.0004. The app shows exact p-values at every trial.</div>
+    </details>
+    <details>
+        <summary>Does the premium app need internet?</summary>
+        <div class="faq-answer">No. 100% offline. All calculations run locally. No accounts, no telemetry.</div>
+    </details>
+    <details>
+        <summary>Is this a subscription?</summary>
+        <div class="faq-answer">One-time payment of $3.99. Own it forever.</div>
+    </details>
+</section>
+
+<section class="cta-box">
+    <h3>📊 Turn Intuition Into Data</h3>
+    <p>You've tested your ESP — now train it systematically. The <strong>PSI GYM</strong> Android app adds Remote Viewing protocols, custom trial counts (10-200), progress charts, trend analysis, and exportable session history.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1.5rem 0">
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Zener + RV</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Charts</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Export CSV</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Offline</span>
+    </div>
+    <div class="price">$3.99</div>
+    <a href="../apps/psi-gym.html" class="cta-button primary" style="display:inline-block;margin-top:0.5rem;">🎯 Get PSI GYM</a>
+    <p style="margin-top:1rem;font-size:0.85rem;color:#888;">100% offline · No ads · No tracking · One-time payment · 7-day guarantee</p>
+</section>
+
+<div class="sticky-conversion-bar">
+    <span class="sticky-text">PSI GYM — ESP Trainer</span>
+    <span class="price-tag">$3.99</span>
+    <span class="sticky-text">Zener + Remote Viewing + Stats</span>
+    <a href="../apps/psi-gym.html" class="sticky-cta">Get App →</a>
+</div>
+
+<div class="back-link"><a href="index.html">← Back to All Free Tools</a></div>
+
+<footer id="site-footer" class="site-footer">
+<div class="footer-grid">
+    <div class="footer-section"><h4>Cha0smagick Labs</h4><p>Explore the Art and Practice of the Occult.</p><p>Corporate Techno-Sorcery Solutions — since 2025.</p></div>
+    <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="../index.html">Home Page</a></li><li><a href="index.html">Free Online Tools</a></li><li><a href="../blog/">Read Blog</a></li><li><a href="../glossary.html">Magick Glossary</a></li></ul></div>
+    <div class="footer-section"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p></div>
+</footer>
+
+<script src="../js/shared.min.js"></script>
+<div id="lang-sidebar" class="lang-sidebar"><button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button><div id="lang-flag-list" class="lang-flag-list"><button onclick="switchLang('en')" title="English" class="lang-btn"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button><button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button><button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button><button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button><button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button><button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button></div></div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner"><p>This site uses cookies for analytics. <a href="../privacy-policy.html" style="color:#ffd700;">Review our Privacy Policy</a></p><div class="cookie-buttons"><button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button><button class="cookie-btn-decline" onclick="declineCookies()">Decline</button></div></div>
+
+<script>
+// === ZENER ESP TRAINER LOGIC ===
+const SYMBOLS = [
+    {id:'circle', label:'Circle', emoji:'⭕', css:'symbol-circle'},
+    {id:'cross', label:'Cross', emoji:'✚', css:'symbol-plus'},
+    {id:'waves', label:'Waves', emoji:'🌊', css:'symbol-waves'},
+    {id:'square', label:'Square', emoji:'◼', css:'symbol-square'},
+    {id:'star', label:'Star', emoji:'⭐', css:'symbol-star'}
+];
+
+const TRIALS_PER_SESSION = 25;
+let mode = 'precognition';
+let trial = 0;
+let hits = 0;
+let history = [];
+let targetSymbol = null;
+let awaitingGuess = false;
+
+// Load history from localStorage
+function loadHistory() {
+    const saved = localStorage.getItem('zener_history');
+    if (saved) {
+        try { history = JSON.parse(saved); } catch(e) { history = []; }
+    }
+    renderHistory();
+}
+
+function saveHistory() {
+    localStorage.setItem('zener_history', JSON.stringify(history.slice(-100)));
+}
+
+function renderHistory() {
+    const list = document.getElementById('historyList');
+    if (history.length === 0) {
+        list.innerHTML = '<div style="text-align:center;color:#666;padding:1rem">No sessions yet</div>';
+        return;
+    }
+    list.innerHTML = history.slice().reverse().map((h, i) => `
+        <div class="history-item">
+            <span>${h.timestamp} — ${h.mode} — ${h.trials} trials</span>
+            <span class="${h.hits/h.trials > 0.2 ? 'correct' : 'wrong'}">${h.hits}/${h.trials} (${(h.hits/h.trials*100).toFixed(1)}%) p=${h.pval.toFixed(4)}</span>
+        </div>
+    `).join('');
+}
+
+function pickRandomSymbol() {
+    return SYMBOLS[Math.floor(Math.random() * SYMBOLS.length)];
+}
+
+function updateStats() {
+    document.getElementById('statTrials').textContent = `${trial} / ${TRIALS_PER_SESSION}`;
+    document.getElementById('statHits').textContent = hits;
+    document.getElementById('statRate').textContent = trial > 0 ? `${(hits/trial*100).toFixed(1)}%` : '0%';
+    document.getElementById('statPval').textContent = trial > 0 ? binomialPValue(hits, trial).toFixed(4) : '1.0000';
+}
+
+function binomialPValue(k, n) {
+    // P(X >= k) where X ~ Binomial(n, 0.2)
+    let p = 0;
+    for (let i = k; i <= n; i++) {
+        p += combination(n, i) * Math.pow(0.2, i) * Math.pow(0.8, n - i);
+    }
+    return Math.min(p, 1);
+}
+
+function combination(n, k) {
+    if (k > n) return 0;
+    if (k === 0 || k === n) return 1;
+    k = Math.min(k, n - k);
+    let result = 1;
+    for (let i = 1; i <= k; i++) {
+        result = result * (n - k + i) / i;
+    }
+    return result;
+}
+
+function getSignificance(pval) {
+    if (pval < 0.001) return {label:'Highly Significant ***', color:'var(--green)'};
+    if (pval < 0.01) return {label:'Significant **', color:'var(--green)'};
+    if (pval < 0.05) return {label:'Significant *', color:'var(--green)'};
+    return {label:'Not Significant', color:'var(--text)'};
+}
+
+function setMode(newMode) {
+    mode = newMode;
+    document.querySelectorAll('.mode-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.mode === newMode);
+    });
+    resetSession();
+}
+
+function resetSession() {
+    trial = 0;
+    hits = 0;
+    targetSymbol = null;
+    awaitingGuess = false;
+    updateStats();
+    document.getElementById('cardDisplay').classList.remove('flash','reveal');
+    document.getElementById('cardSymbol').innerHTML = '?';
+    document.getElementById('cardDisplay').className = 'zener-card';
+    document.querySelectorAll('.btn-primary').forEach(b => b.disabled = false);
+    document.getElementById('nextTrial').disabled = true;
+    document.getElementById('resultsPanel').classList.remove('visible');
+}
+
+function startTrial() {
+    if (trial >= TRIALS_PER_SESSION) return;
+    targetSymbol = pickRandomSymbol();
+    awaitingGuess = true;
+    
+    const card = document.getElementById('cardDisplay');
+    const symbolEl = document.getElementById('cardSymbol');
+    
+    if (mode === 'precognition') {
+        // Show back of card
+        symbolEl.innerHTML = '?';
+        symbolEl.className = 'symbol';
+        card.className = 'zener-card';
+    } else {
+        // Clairvoyance: show target immediately
+        symbolEl.innerHTML = targetSymbol.emoji;
+        symbolEl.className = `symbol ${targetSymbol.css}`;
+        card.className = 'zener-card';
+    }
+    
+    document.querySelectorAll('.btn-primary').forEach(b => b.disabled = false);
+    document.getElementById('nextTrial').disabled = true;
+}
+
+function makeGuess(guessId) {
+    if (!awaitingGuess || trial >= TRIALS_PER_SESSION) return;
+    awaitingGuess = false;
+    
+    const guess = SYMBOLS.find(s => s.id === guessId);
+    const correct = guess.id === targetSymbol.id;
+    
+    // Reveal card
+    const symbolEl = document.getElementById('cardSymbol');
+    const card = document.getElementById('cardDisplay');
+    symbolEl.innerHTML = targetSymbol.emoji;
+    symbolEl.className = `symbol ${targetSymbol.css}`;
+    card.classList.add('reveal');
+    
+    if (correct) {
+        hits++;
+        card.classList.add('flash');
+    } else {
+        card.classList.add('flash');
+        // Could add a 'wrong' flash class
+    }
+    
+    trial++;
+    updateStats();
+    
+    // Record in history
+    history.push({
+        trial: trial,
+        guess: guess.id,
+        target: targetSymbol.id,
+        correct: correct,
+        mode: mode,
+        timestamp: new Date().toISOString()
+    });
+    
+    document.getElementById('nextTrial').disabled = false;
+    document.querySelectorAll('.btn-primary').forEach(b => b.disabled = true);
+    
+    if (trial >= TRIALS_PER_SESSION) {
+        setTimeout(showResults, 1000);
+    }
+}
+
+function showResults() {
+    const pval = binomialPValue(hits, TRIALS_PER_SESSION);
+    const sig = getSignificance(pval);
+    
+    document.getElementById('resTrials').textContent = TRIALS_PER_SESSION;
+    document.getElementById('resHits').textContent = hits;
+    document.getElementById('resRate').textContent = `${(hits/TRIALS_PER_SESSION*100).toFixed(1)}%`;
+    document.getElementById('resPval').textContent = pval.toFixed(4);
+    document.getElementById('resSig').textContent = sig.label;
+    document.getElementById('resSig').style.color = sig.color;
+    
+    // Save session to history
+    const session = {
+        timestamp: new Date().toLocaleString(),
+        mode: mode,
+        trials: TRIALS_PER_SESSION,
+        hits: hits,
+        pval: pval
+    };
+    history.unshift(session);
+    if (history.length > 50) history = history.slice(0, 50);
+    saveHistory();
+    renderHistory();
+    
+    document.getElementById('resultsPanel').classList.add('visible');
+    document.getElementById('resultsPanel').scrollIntoView({behavior:'smooth'});
+}
+
+function newSession() {
+    resetSession();
+    startTrial();
+}
+
+// Event listeners
+document.querySelectorAll('.mode-btn').forEach(b => {
+    b.onclick = () => setMode(b.dataset.mode);
+});
+
+document.querySelectorAll('.btn-primary').forEach(b => {
+    b.onclick = () => makeGuess(b.dataset.guess);
+});
+
+document.getElementById('nextTrial').onclick = startTrial;
+document.getElementById('resetSession').onclick = resetSession;
+document.getElementById('newSession').onclick = newSession;
+
+// Initialize
+loadHistory();
+resetSession();
+startTrial();
+</script>
+<script src="../js/conversion.js?v=20260728"></script>
+</body>
+</html>

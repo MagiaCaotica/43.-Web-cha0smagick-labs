@@ -192,6 +192,8 @@
 
 ## 4. ASO Pass (11 apps — one-time)
 
+> ⏸ PENDIENTE (cerrado 2026-08-16): requiere acceso a Play Console — copy ASO (título/subtítulo, descripción corta, descripción larga, screenshots, review velocity) no ejecutado.
+
 - [ ] Title/subtitle keyword front-loading per app
 - [ ] Short description with 5 keywords + price anchor ("One-time payment. No subscription. No ads.")
 - [ ] Full description 300-500 words (transformation + fear-busting copy)
@@ -211,14 +213,16 @@
 ## 6. Conversion Mechanics
 
 - [x] Free-tool → app bridge banners on all 10 tool pages
-- [ ] Email capture on every MOFU article (MailerLite EN/ES lead magnets)
-- [ ] Seasonal email blasts synced to calendar content
+- [ ] Email capture on every MOFU article (MailerLite EN/ES lead magnets) — ⏸ PENDIENTE: requiere credenciales MailerLite
+- [ ] Seasonal email blasts synced to calendar content — ⏸ PENDIENTE: requiere MailerLite
 - [x] Sticky conversion bar on BOFU articles (`.sticky-conversion-bar` CSS already in template)
 - [x] "Verified by" stats boxes on ESP/lucid articles (GEO compounding)
 
 ---
 
 ## 7. KPIs (90-day)
+
+> ⏸ PENDIENTE (cerrado 2026-08-16): medición a 90 días — requiere GA4/Play Console. Fila 1 "New articles published 120" YA CUMPLIDA (140 publicados).
 
 | Metric | Target |
 |---|---|
