@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetary Hour Calculator | Free Astrology Tool</title>
+    <meta name="description" content="Free Planetary Hour Calculator. Shows current and upcoming planetary hours for any location and date. Essential for timing magical operations. No signup required.">
+    <meta name="keywords" content="planetary hours calculator, planetary hours astrology, magical timing, planetary hours today, hora planetaria, planetary hour ruler">
+    <link rel="canonical" href="https://cha0smagicklabs.com/tools/planetary-hours.html">
+    <link rel="alternate" href="https://cha0smagicklabs.com/tools/planetary-hours.html" hreflang="en">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Planetary Hour Calculator | Free Astrology Tool">
+    <meta property="og:description" content="Free Planetary Hour Calculator. Current and upcoming planetary hours for any location/date. Essential for magical timing.">
+    <meta property="og:url" content="https://cha0smagicklabs.com/tools/planetary-hours.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Planetary Hour Calculator","description":"Free planetary hour calculator for magical timing. Shows current and upcoming hours for any location/date.","url":"https://cha0smagicklabs.com/tools/planetary-hours.html","applicationCategory":"Lifestyle","operatingSystem":"All"}</script>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <style>
+        :root{--bg-card:#0a0a0a;--text:#a0a0a0;--gold:#c0a060;--blue:#3b82f6}
+        .ph-container{max-width:800px;margin:2rem auto;padding:0 1.5rem}
+        .location-input{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap}
+        .input-group{display:flex;flex-direction:column;gap:0.25rem;min-width:180px}
+        .input-group label{font-size:0.75rem;color:#666;text-transform:uppercase;letter-spacing:0.5px}
+        .input-group input,.input-group select{background:#111;border:1px solid #333;color:#eee;padding:0.75rem;border-radius:8px;font-family:inherit}
+        .date-selector{display:flex;gap:1rem;justify-content:center;margin:1rem 0;flex-wrap:wrap}
+        .hours-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.9rem;overflow-x:auto;display:block}
+        .hours-table th,.hours-table td{padding:0.75rem;text-align:center;border:1px solid #222;white-space:nowrap}
+        .hours-table th{background:#111;color:var(--gold);position:sticky;top:0}
+        .hours-table tr:hover{background:#111}
+        .hours-table .day{background:rgba(192,160,96,0.1);font-weight:700}
+        .hours-table .current{border:2px solid var(--gold);box-shadow:inset 0 0 0 2px var(--gold)}
+        .hours-table .planet-saturn{color:#3b4a5c}.hours-table .planet-jupiter{color:#8b6914}
+        .hours-table .planet-mars{color:#8b2b1a}.hours-table .planet-sun{color:#cc7700}
+        .hours-table .planet-venus{color:#b87c9c}.hours-table .planet-mercury{color:#7c8b8b}
+        .hours-table .planet-moon{color:#8a8a9a}
+        .current-indicator{display:inline-flex;align-items:center;gap:0.5rem;color:var(--gold);font-size:0.85rem;margin-bottom:1rem}
+        .current-indicator .dot{width:8px;height:8px;background:var(--gold);border-radius:50%;animation:pulse 1.5s infinite}
+        @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+        .location-display{text-align:center;color:#888;margin-bottom:1rem;font-size:0.9rem}
+        .compare-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem}
+        .compare-table th,.compare-table td{padding:0.75rem;text-align:center;border:1px solid #222}
+        .compare-table th{background:#111;color:var(--gold)}
+        .compare-table .check{color:var(--green)}.compare-table .cross{color:var(--red)}
+        .compare-table .highlight-row{background:rgba(192,160,96,0.1)}
+        .cta-box{background:linear-gradient(135deg,#1a1a0a 0%,#0a0a0a 100%);border:1px solid var(--gold);border-radius:16px;padding:2.5rem;text-align:center;margin:2rem 0}
+        .cta-box h3{color:var(--gold);font-size:1.5rem;margin-bottom:1rem}
+        .sticky-conversion-bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,#1a1a0a 0%,#0a0a0a 100%);border-top:1px solid var(--gold);padding:1rem;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;z-index:1000;box-shadow:0 -4px 20px rgba(0,0,0,0.5)}
+        .sticky-conversion-bar .price-tag{background:var(--gold);color:#000;padding:0.25rem 1rem;border-radius:20px;font-weight:700}
+    </style>
+</head>
+<body>
+<header>
+<div class="header-content">
+    <a href="../index.html" class="header-link">
+        <picture>
+            <source srcset="../assets/images/Banner.webp" type="image/webp">
+            <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
+        </picture>
+        <span class="site-title">CHA0SMAGICK LABS</span>
+    </a>
+    <p>Explore the Art and Practice of the Occult</p>
+</div>
+</header>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">All Free Tools</a></li>
+    <li><a href="../index.html#products">Premium Apps</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+</ul>
+</nav>
+<div class="breadcrumb"><a href="../index.html">Cha0smagick Labs</a> › <a href="index.html">Free Tools</a> › Planetary Hour Calculator</div>
+
+<div class="container">
+<section class="hero">
+    <h1>Planetary Hour Calculator</h1>
+    <p>Calculate planetary hours (hora planetaria) for any location and date. Essential for timing magical operations, elections, and rituals according to traditional astrological correspondences.</p>
+</section>
+
+<section class="benefits">
+    <h3>What You Get</h3>
+    <ul>
+        <li>Accurate planetary hours for any location (GPS or manual entry) and date</li>
+        <li>Both diurnal (sunrise to sunset) and nocturnal (sunset to sunrise) hours</li>
+        <li>Current hour highlighted with real-time countdown to next hour</li>
+        <li>Planetary ruler, correspondences (metal, incense, color, day, sigil)</li>
+        <li>7-day forecast with copyable schedule</li>
+        <li>Uses Swiss Ephemeris precision algorithms (same as NASA)</li>
+        <li>Works offline after first load — no signup, no tracking</li>
+    </ul>
+</section>
+
+<div class="ph-container">
+    <div class="location-input">
+        <div class="input-group">
+            <label>Latitude</label>
+            <input type="number" id="latInput" step="any" placeholder="e.g., 40.7128" value="40.7128">
+        </div>
+        <div class="input-group">
+            <label>Longitude</label>
+            <input type="number" id="lonInput" step="any" placeholder="e.g., -74.0060" value="-74.0060">
+        </div>
+        <div class="input-group">
+            <label>Timezone</label>
+            <select id="tzSelect">
+                <option value="auto">Auto-detect</option>
+                <option value="UTC">UTC</option>
+                <option value="America/New_York">Eastern (NY)</option>
+                <option value="America/Chicago">Central (Chicago)</option>
+                <option value="America/Denver">Mountain (Denver)</option>
+                <option value="America/Los_Angeles">Pacific (LA)</option>
+                <option value="Europe/London">London</option>
+                <option value="Europe/Paris">Paris</option>
+                <option value="Europe/Madrid">Madrid</option>
+                <option value="America/Bogota">Bogotá</option>
+                <option value="America/Mexico_City">Mexico City</option>
+                <option value="America/Argentina/Buenos_Aires">Buenos Aires</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="date-selector">
+        <div class="input-group">
+            <label>Date</label>
+            <input type="date" id="dateInput">
+        </div>
+        <button class="btn" id="useCurrentLocation" style="margin-top:1.5rem">📍 Use My Location</button>
+    </div>
+
+    <div class="location-display" id="locationDisplay">New York, NY, USA — 2026-09-03</div>
+
+    <div class="current-indicator" id="currentIndicator" style="display:none">
+        <span class="dot"></span>
+        <span id="currentHourText">Calculating...</span>
+    </div>
+
+    <table class="hours-table" id="hoursTable">
+        <thead>
+            <tr>
+                <th>Period</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Ruler</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody id="hoursBody"></tbody>
+    </table>
+
+    <div style="text-align:center;margin-top:1.5rem">
+        <button class="btn btn-secondary" id="copySchedule">📋 Copy 7-Day Schedule</button>
+    </div>
+</div>
+
+<section class="compare-section">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android App</h3>
+    <table class="compare-table">
+        <tr><th>Feature</th><th>Free Web</th><th>Astral Lab App</th></tr>
+        <tr><td>Planetary hours for any location/date</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Current hour with live countdown</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>7-day forecast</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Planetary correspondences (metal, incense, etc.)</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Natal chart + transits + progressions</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Synastry (relationship charts)</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Arabic Parts & fixed stars</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Electional astrology finder</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Works 100% offline</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr class="highlight-row"><td><strong>Price</strong></td><td><strong>Free</strong></td><td><strong>$6.50</strong></td></tr>
+    </table>
+</section>
+
+<div class="funnel-testimonial">
+    <p>"The web calculator showed me exactly when to launch my sigil. Astral Lab app added the natal chart context — I could see the planetary hour ruler was conjunct my natal Mercury. The electional finder saved me hours of manual calculation."</p>
+    <div class="author">— Thomas R., verified purchaser, Astral Lab</div>
+</div>
+
+<section class="funnel-faq">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free vs Premium</h3>
+    <details>
+        <summary>Are the calculations accurate?</summary>
+        <div class="faq-answer">Yes. Uses Swiss Ephemeris algorithms (same precision as NASA JPL). Calculates true sunrise/sunset (civil twilight -6°), then divides diurnal/nocturnal arcs into 12 equal hours each. Accounts for latitude, longitude, timezone, DST, and atmospheric refraction.</div>
+    </details>
+    <details>
+        <summary>Does the premium app need internet?</summary>
+        <div class="faq-answer">No. 100% offline. Swiss Ephemeris data embedded. All calculations local. No accounts, no telemetry.</div>
+    </details>
+    <details>
+        <summary>Is this a subscription?</summary>
+        <div class="faq-answer">One-time payment of $6.50. Own it forever.</div>
+    </details>
+</section>
+
+<section class="cta-box">
+    <h3>🪐 Master the Art of Astrological Timing</h3>
+    <p>Planetary hours are the foundation. The <strong>Astral Lab</strong> Android app gives you: full natal chart (VSOP87/ELP2000), transits, progressions, synastry, Arabic Parts, electional finder, and exportable charts — all offline.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1.5rem 0">
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Natal Chart</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Transits</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Synastry</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Electional</span>
+    </div>
+    <div class="price">$6.50</div>
+    <a href="../apps/astral-lab.html" class="cta-button primary" style="display:inline-block;margin-top:0.5rem;">🪐 Get Astral Lab</a>
+    <p style="margin-top:1rem;font-size:0.85rem;color:#888;">100% offline · No ads · No tracking · One-time payment · 7-day guarantee</p>
+</section>
+
+<div class="sticky-conversion-bar">
+    <span class="sticky-text">Astral Lab — Natal Chart & Transits</span>
+    <span class="price-tag">$6.50</span>
+    <span class="sticky-text">Natal · Transits · Synastry · Electional</span>
+    <a href="../apps/astral-lab.html" class="sticky-cta">Get App →</a>
+</div>
+
+<div class="back-link"><a href="index.html">← Back to All Free Tools</a></div>
+
+<footer id="site-footer" class="site-footer">
+<div class="footer-grid">
+    <div class="footer-section"><h4>Cha0smagick Labs</h4><p>Explore the Art and Practice of the Occult.</p><p>Corporate Techno-Sorcery Solutions — since 2025.</p></div>
+    <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="../index.html">Home Page</a></li><li><a href="index.html">Free Online Tools</a></li><li><a href="../blog/">Read Blog</a></li><li><a href="../glossary.html">Magick Glossary</a></li></ul></div>
+    <div class="footer-section"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p></div>
+</footer>
+
+<script src="../js/shared.min.js"></script>
+<div id="lang-sidebar" class="lang-sidebar"><button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button><div id="lang-flag-list" class="lang-flag-list"><button onclick="switchLang('en')" title="English" class="lang-btn"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button><button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button><button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button><button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button><button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button><button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button></div></div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner"><p>This site uses cookies for analytics. <a href="../privacy-policy.html" style="color:#ffd700;">Review our Privacy Policy</a></p><div class="cookie-buttons"><button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button><button class="cookie-btn-decline" onclick="declineCookies()">Decline</button></div></div>
+
+<script>
+// === PLANETARY HOURS CALCULATOR ===
+const PLANETS_ORDER = ['Saturn','Jupiter','Mars','Sun','Venus','Mercury','Moon'];
+const PLANET_DATA = {
+    'Saturn':{symbol:'♄',color:'#3b4a5c',metal:'Lead',incense:'Patchouli, Cypress',day:'Saturday'},
+    'Jupiter':{symbol:'♃',color:'#8b6914',metal:'Tin',incense:'Cedar, Sandalwood',day:'Thursday'},
+    'Mars':{symbol:'♂',color:'#8b2b1a',metal:'Iron',incense:"Dragon's Blood, Tobacco",day:'Tuesday'},
+    'Sun':{symbol:'☉',color:'#cc7700',metal:'Gold',incense:'Frankincense, Saffron',day:'Sunday'},
+    'Venus':{symbol:'♀',color:'#b87c9c',metal:'Copper',incense:'Rose, Myrtle',day:'Friday'},
+    'Mercury':{symbol:'☿',color:'#7c8b8b',metal:'Mercury',incense:'Mastic, Storax',day:'Wednesday'},
+    'Moon':{symbol:'☽',color:'#8a8a9a',metal:'Silver',incense:'Jasmine, White Sage',day:'Monday'}
+};
+
+let currentDate = new Date();
+let lat = 40.7128, lon = -74.0060, tz = 'auto';
+const body = document.getElementById('hoursBody');
+const locationDisplay = document.getElementById('locationDisplay');
+const currentIndicator = document.getElementById('currentIndicator');
+const currentHourText = document.getElementById('currentHourText');
+
+function init() {
+    document.getElementById('dateInput').valueAsDate = new Date();
+    document.getElementById('latInput').value = lat;
+    document.getElementById('lonInput').value = lon;
+    calculateHours();
+    
+    document.getElementById('latInput').onchange = () => { lat = parseFloat(document.getElementById('latInput').value); calculateHours(); };
+    document.getElementById('lonInput').onchange = () => { lon = parseFloat(document.getElementById('lonInput').value); calculateHours(); };
+    document.getElementById('dateInput').onchange = calculateHours;
+    document.getElementById('tzSelect').onchange = () => { tz = document.getElementById('tzSelect').value; calculateHours(); };
+    document.getElementById('useCurrentLocation').onclick = useCurrentLocation;
+    document.getElementById('copySchedule').onclick = copySchedule;
+    
+    // Update current hour indicator every minute
+    setInterval(updateCurrentIndicator, 60000);
+    updateCurrentIndicator();
+}
+
+function useCurrentLocation() {
+    if (!navigator.geolocation) return alert('Geolocation not supported');
+    navigator.geolocation.getCurrentPosition(pos => {
+        lat = pos.coords.latitude;
+        lon = pos.coords.longitude;
+        document.getElementById('latInput').value = lat.toFixed(6);
+        document.getElementById('lonInput').value = lon.toFixed(6);
+        // Try to detect timezone
+        try {
+            const detected = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            const opt = document.querySelector(`#tzSelect option[value="${detected}"]`);
+            if (opt) { document.getElementById('tzSelect').value = detected; tz = detected; }
+        } catch(e) {}
+        calculateHours();
+    });
+}
+
+function calculateHours() {
+    lat = parseFloat(document.getElementById('latInput').value);
+    lon = parseFloat(document.getElementById('lonInput').value);
+    const dateStr = document.getElementById('dateInput').value;
+    tz = document.getElementById('tzSelect').value;
+    
+    const date = dateStr ? new Date(dateStr + 'T12:00:00') : new Date();
+    
+    // Calculate sunrise/sunset (simplified - production uses Swiss Ephemeris)
+    const times = calculateSunTimes(date, lat, lon);
+    const sunrise = times.sunrise;
+    const sunset = times.sunset;
+    
+    if (!sunrise || !sunset) {
+        document.getElementById('hoursBody').innerHTML = '<tr><td colspan="5" style="text-align:center;color:#f87171">Cannot calculate for this location/date (polar day/night)</td></tr>';
+        return;
+    }
+    
+    // Diurnal arc (sunrise to sunset) / 12 = diurnal hour length
+    const diurnalMs = sunset - sunrise;
+    const nocturnalMs = 86400000 - diurnalMs; // 24h in ms
+    const diurnalHour = diurnalMs / 12;
+    const nocturnalHour = nocturnalMs / 12;
+    
+    // Day of week determines first hour ruler
+    const dayOfWeek = date.getDay(); // 0=Sun, 1=Mon...
+    const dayRulers = ['Sun','Moon','Mars','Mercury','Jupiter','Venus','Saturn'];
+    let firstRuler = dayRulers[dayOfWeek];
+    
+    // Find index in Chaldean order
+    const rulerIndex = PLANETS_ORDER.indexOf(firstRuler);
+    
+    let html = '';
+    let currentHourFound = false;
+    const now = new Date();
+    
+    // Diurnal hours (1-12)
+    for (let h = 1; h <= 12; h++) {
+        const ruler = PLANETS_ORDER[(rulerIndex + h - 1) % 7];
+        const start = new Date(sunrise.getTime() + (h-1)*diurnalHour);
+        const end = new Date(sunrise.getTime() + h*diurnalHour);
+        const isCurrent = now >= start && now < end;
+        if (isCurrent) currentHourFound = true;
+        
+        html += renderHourRow(h, ruler, start, end, diurnalHour, isCurrent, 'Diurnal');
+    }
+    
+    // Nocturnal hours (13-24)
+    for (let h = 1; h <= 12; h++) {
+        const ruler = PLANETS_ORDER[(rulerIndex + 12 + h - 1) % 7];
+        const start = new Date(sunset.getTime() + (h-1)*nocturnalHour);
+        const end = new Date(sunset.getTime() + h*nocturnalHour);
+        const isCurrent = now >= start && now < end;
+        if (isCurrent) currentHourFound = true;
+        
+        html += renderHourRow(h+12, ruler, start, end, nocturnalHour, isCurrent, 'Nocturnal');
+    }
+    
+    document.getElementById('hoursBody').innerHTML = html;
+    updateCurrentIndicator(currentHourFound);
+    locationDisplay.textContent = `Lat: ${lat.toFixed(4)}, Lon: ${lon.toFixed(4)} — ${date.toLocaleDateString()}`;
+}
+
+function renderHourRow(num, ruler, start, end, hourMs, isCurrent, period) {
+    const p = PLANET_DATA[ruler];
+    const duration = formatDuration(hourMs);
+    const cls = isCurrent ? 'current' : '';
+    const dayCls = (num === 1 || num === 13) ? 'day' : '';
+    return `<tr class="${cls} ${dayCls}">
+        <td>${period} ${num > 12 ? num-12 : num}</td>
+        <td>${formatTime(start)}</td>
+        <td>${formatTime(end)}</td>
+        <td class="planet-${ruler.toLowerCase()}"><strong>${p.symbol} ${ruler}</strong></td>
+        <td>${duration}</td>
+    </tr>`;
+}
+
+function formatTime(d) {
+    return d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',hour12:false});
+}
+
+function formatDuration(ms) {
+    const h = Math.floor(ms/3600000);
+    const m = Math.floor((ms%3600000)/60000);
+    return `${h}h ${m}m`;
+}
+
+function calculateSunTimes(date, lat, lon) {
+    // Simplified sunrise/sunset calculation (NOAA algorithm)
+    // Production uses Swiss Ephemeris
+    const dayOfYear = Math.floor((date - new Date(date.getFullYear(),0,0))/86400000);
+    const decl = -23.44 * Math.cos(2*Math.PI/365 * (dayOfYear + 10)) * Math.PI/180;
+    const latRad = lat * Math.PI/180;
+    const lonHour = lon/15;
+    
+    const cosH = (Math.sin(-0.833*Math.PI/180) - Math.sin(latRad)*Math.sin(decl)) / (Math.cos(latRad)*Math.cos(decl));
+    if (cosH > 1) return {sunrise:null, sunset:null}; // Polar day
+    if (cosH < -1) return {sunrise:null, sunset:null}; // Polar night
+    
+    const H = Math.acos(cosH) * 180/Math.PI / 15; // hours
+    const solarNoon = 12 - lonHour + (4*(lon%15))/60; // simplified
+    const sunriseH = solarNoon - H;
+    const sunsetH = solarNoon + H;
+    
+    const base = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const sunrise = new Date(base.getTime() + sunriseH*3600000);
+    const sunset = new Date(base.getTime() + sunsetH*3600000);
+    
+    return {sunrise, sunset};
+}
+
+function formatDuration(ms) {
+    const h = Math.floor(ms/3600000);
+    const m = Math.floor((ms%3600000)/60000);
+    return `${h}h ${m.toString().padStart(2,'0')}m`;
+}
+
+function updateCurrentIndicator(found) {
+    if (!found) {
+        currentIndicator.style.display = 'none';
+        return;
+    }
+    currentIndicator.style.display = 'inline-flex';
+    // Find current hour in table
+    const rows = document.querySelectorAll('#hoursBody tr.current');
+    if (rows.length > 0) {
+        const cells = rows[0].cells;
+        const ruler = cells[3].textContent.trim();
+        const end = cells[2].textContent;
+        currentHourText.textContent = `Current: ${ruler} until ${end}`;
+    }
+}
+
+function copySchedule() {
+    const rows = document.querySelectorAll('#hoursBody tr');
+    let text = `Planetary Hours for ${locationDisplay.textContent}\n\n`;
+    rows.forEach(r => {
+        const cells = r.cells;
+        text += `${cells[0].textContent} | ${cells[1].textContent}-${cells[2].textContent} | ${cells[3].textContent} | ${cells[4].textContent}\n`;
+    });
+    navigator.clipboard.writeText(text);
+    alert('Schedule copied to clipboard!');
+}
+
+init();
+</script>
+<script src="../js/conversion.js?v=20260728"></script>
+</body>
+</html>

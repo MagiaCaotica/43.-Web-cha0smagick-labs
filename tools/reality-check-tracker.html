@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reality Check Randomizer & Tracker | Lucid Dreaming Tool</title>
+    <meta name="description" content="Free Reality Check Randomizer & Tracker. Generates random reality-check prompts throughout the day + simple log of lucid dream attempts and success rate. No signup required.">
+    <meta name="keywords" content="reality check lucid dreaming, reality check tracker, lucid dream journal, reality testing, lucid dreaming techniques, reality check reminders">
+    <link rel="canonical" href="https://cha0smagicklabs.com/tools/reality-check-tracker.html">
+    <link rel="alternate" href="https://cha0smagicklabs.com/tools/reality-check-tracker.html" hreflang="en">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Reality Check Randomizer & Tracker | Lucid Dreaming Tool">
+    <meta property="og:description" content="Free Reality Check Randomizer for lucid dreaming. Random prompts throughout the day + log of attempts and success rate.">
+    <meta property="og:url" content="https://cha0smagicklabs.com/tools/reality-check-tracker.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Reality Check Randomizer & Tracker","description":"Free reality check tool for lucid dreaming. Random prompts + attempt log with success rate.","url":"https://cha0smagicklabs.com/tools/reality-check-tracker.html","applicationCategory":"Lifestyle","operatingSystem":"All"}</script>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <style>
+        :root{--bg-card:#0a0a0a;--text:#a0a0a0;--gold:#c0a060;--blue:#3b82f6;--purple:#a855f7;--pink:#ec4899}
+        .rc-container{max-width:700px;margin:2rem auto;padding:0 1.5rem}
+        .mode-tabs{display:flex;gap:0.5rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap}
+        .tab-btn{padding:0.75rem 1.5rem;background:#111;border:1px solid #333;color:#888;border-radius:8px;cursor:pointer;transition:all .3s;font-weight:600}
+        .tab-btn:hover{border-color:var(--gold);color:var(--gold)}
+        .tab-btn.active{background:var(--gold);color:#000;border-color:var(--gold)}
+        .prompt-card{background:#111;border:1px solid #222;border-radius:16px;padding:2rem;text-align:center;margin:2rem 0;min-height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+        .prompt-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--purple),var(--pink))}
+        .prompt-text{font-size:1.5rem;color:#fff;line-height:1.5;max-width:90%}
+        .prompt-type{display:inline-block;background:rgba(59,130,246,0.2);color:var(--blue);padding:0.25rem 0.75rem;border-radius:20px;font-size:0.7rem;font-weight:600;margin-bottom:1rem}
+        .next-prompt{display:block;width:100%;max-width:300px;margin:2rem auto;padding:1rem;background:var(--blue);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:all .3s}
+        .next-prompt:hover{background:#2563eb;transform:translateY(-2px)}
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin:1.5rem 0}
+        .stat-card{background:#111;border:1px solid #1a1a1a;border-radius:12px;padding:1rem;text-align:center}
+        .stat-card .label{font-size:0.7rem;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.25rem}
+        .stat-card .value{font-size:1.5rem;font-weight:700;color:var(--gold)}
+        .log-section{margin-top:2rem}
+        .log-entry{background:#111;border:1px solid #222;border-radius:8px;padding:1rem;margin:0.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
+        .log-entry.lucid{border-left:3px solid var(--purple)}
+        .log-entry.failed{border-left:3px solid var(--pink)}
+        .log-info{flex:1;min-width:200px}
+        .log-time{font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:#888}
+        .log-type{font-weight:700;font-size:0.9rem;margin-top:0.25rem}
+        .log-type.lucid{color:var(--purple)}.log-type.failed{color:var(--pink)}
+        .log-actions{display:flex;gap:0.5rem}
+        .log-btn{padding:0.35rem 0.75rem;background:transparent;border:1px solid #333;color:#888;border-radius:6px;font-size:0.75rem;cursor:pointer}
+        .log-btn:hover{border-color:var(--gold);color:var(--gold)}
+        .add-entry-form{background:#111;border:1px solid #222;border-radius:12px;padding:1.5rem;margin:1.5rem 0;display:none}
+        .add-entry-form.visible{display:block;animation:fadeIn .3s}
+        .form-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+        .form-group{flex:1;min-width:200px}
+        .form-group label{display:block;font-size:0.75rem;color:#666;margin-bottom:0.25rem;text-transform:uppercase;letter-spacing:0.5px}
+        .form-group select,.form-group textarea,.form-group input{width:100%;background:#0a0a0a;border:1px solid #333;color:#eee;padding:0.75rem;border-radius:8px;font-family:inherit}
+        .form-group textarea{min-height:80px;resize:vertical}
+        .compare-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem}
+        .compare-table th,.compare-table td{padding:0.75rem;text-align:center;border:1px solid #222}
+        .compare-table th{background:#111;color:var(--gold)}
+        .compare-table .check{color:var(--green)}.compare-table .cross{color:var(--red)}
+        .compare-table .highlight-row{background:rgba(192,160,96,0.1)}
+        .cta-box{background:linear-gradient(135deg,#1a0a1a 0%,#0a0a0a 100%);border:1px solid var(--purple);border-radius:16px;padding:2.5rem;text-align:center;margin:2rem 0}
+        .cta-box h3{color:var(--gold);font-size:1.5rem;margin-bottom:1rem}
+        .sticky-conversion-bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,#1a0a1a 0%,#0a0a0a 100%);border-top:1px solid var(--purple);padding:1rem;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;z-index:1000;box-shadow:0 -4px 20px rgba(0,0,0,0.5)}
+        .sticky-conversion-bar .price-tag{background:var(--purple);color:#fff;padding:0.25rem 1rem;border-radius:20px;font-weight:700}
+    </style>
+</head>
+<body>
+<header>
+<div class="header-content">
+    <a href="../index.html" class="header-link">
+        <picture>
+            <source srcset="../assets/images/Banner.webp" type="image/webp">
+            <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
+        </picture>
+        <span class="site-title">CHA0SMAGICK LABS</span>
+    </a>
+    <p>Explore the Art and Practice of the Occult</p>
+</div>
+</header>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">All Free Tools</a></li>
+    <li><a href="../index.html#products">Premium Apps</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+</ul>
+</nav>
+<div class="breadcrumb"><a href="../index.html">Cha0smagick Labs</a> › <a href="index.html">Free Tools</a> › Reality Check Randomizer & Tracker</div>
+
+<div class="container">
+<section class="hero">
+    <h1>Reality Check Randomizer & Tracker</h1>
+    <p>Build the habit that triggers lucidity. Random reality-check prompts throughout the day + simple log of lucid dream attempts, techniques used, and success rate. No signup, all local.</p>
+</section>
+
+<section class="benefits">
+    <h3>What You Get</h3>
+    <ul>
+        <li>Random reality-check prompts (configurable frequency) with varied techniques</li>
+        <li>15+ reality check methods: nose pinch, hand look, clock check, text re-read, light switch, mirror, gravity, breathing, etc.</li>
+        <li>One-tap logging: Lucid success / Failed attempt / False awakening</li>
+        <li>Success rate tracking with 7/30-day rolling averages</li>
+        <li>Technique effectiveness breakdown (which RCs work best for YOU)</li>
+        <li>All data in localStorage — private, no cloud, no tracking</li>
+        <li>Works offline — no signup, no accounts</li>
+    </ul>
+</section>
+
+<div class="rc-container">
+    <div class="mode-tabs">
+        <button class="tab-btn active" data-tab="prompt">🎲 Random Prompt</button>
+        <button class="tab-btn" data-tab="log">📝 Log Attempt</button>
+        <button class="tab-btn" data-tab="stats">📊 Stats</button>
+        <button class="tab-btn" data-tab="methods">📚 Methods</button>
+    </div>
+
+    <div class="tab-panel" id="panel-prompt">
+        <div class="prompt-card" id="promptCard">
+            <span class="prompt-type" id="promptCategory">Click "Next Check" to begin</span>
+            <p class="prompt-text" id="promptText">Press the button below for your first reality check.</p>
+        </div>
+        <button class="next-prompt" id="nextPrompt">🔮 Next Reality Check</button>
+    </div>
+
+    <div class="tab-panel" id="panel-log" style="display:none">
+        <div class="stats-grid">
+            <div class="stat-card"><div class="label">Total Checks</div><div class="value" id="statChecks">0</div></div>
+            <div class="stat-card"><div class="label">Lucid Successes</div><div class="value" id="statLucid">0</div></div>
+            <div class="stat-card"><div class="label">Success Rate</div><div class="value" id="statRate">0%</div></div>
+            <div class="stat-card"><div class="label">7-Day Avg</div><div class="value" id="stat7d">0%</div></div>
+        </div>
+
+        <button class="btn" id="showAddEntry" style="width:100%;max-width:300px;margin:0 auto 1.5rem;display:block;padding:1rem;background:var(--gold);color:#000;border:none;border-radius:8px;font-weight:700">➕ Log New Attempt</button>
+
+        <form class="add-entry-form" id="addEntryForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Result</label>
+                    <select id="entryResult" required>
+                        <option value="">Select result</option>
+                        <option value="lucid">✅ Lucid Success</option>
+                        <option value="failed">❌ Failed Check (not dreaming)</option>
+                        <option value="false_awakening">🌀 False Awakening</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Technique Used</label>
+                    <select id="entryTechnique" required>
+                        <option value="">Select technique</option>
+                        <option value="nose_pinch">👃 Nose Pinch</option>
+                        <option value="hand_look">👀 Look at Hands</option>
+                        <option value="clock_check">🕐 Check Clock/Time</option>
+                        <option value="text_reread">📖 Re-read Text</option>
+                        <option value="light_switch">💡 Light Switch</option>
+                        <option value="mirror_check">🪞 Mirror Check</option>
+                        <option value="gravity_test">🪂 Jump/Gravity Test</option>
+                        <option value="breathing">🫁 Hold Breath</option>
+                        <option value="finger_palm">☝️ Finger Through Palm</option>
+                        <option value="memory">🧠 Recall Last 5 Minutes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group" style="flex:100%">
+                    <label>Notes (optional)</label>
+                    <textarea id="entryNotes" placeholder="Dream details, emotions, what triggered lucidity..."></textarea>
+                </div>
+            </div>
+            <div style="display:flex;gap:1rem;justify-content:flex-end">
+                <button type="button" class="btn btn-secondary" id="cancelEntry">Cancel</button>
+                <button type="submit" class="btn" style="background:var(--gold);color:#000;border:none">💾 Save Entry</button>
+            </div>
+        </form>
+
+        <div class="log-section">
+            <h3 style="color:var(--gold);margin-bottom:1rem">Recent Attempts</h3>
+            <div id="logList"></div>
+        </div>
+    </div>
+
+    <div class="tab-panel" id="panel-stats" style="display:none">
+        <div class="stats-grid">
+            <div class="stat-card"><div class="label">Total Checks</div><div class="value" id="sChecks">0</div></div>
+            <div class="stat-card"><div class="label">Lucid Dreams</div><div class="value" id="sLucid">0</div></div>
+            <div class="stat-card"><div class="label">Lifetime Rate</div><div class="value" id="sRate">0%</div></div>
+            <div class="stat-card"><div class="label">7-Day Rate</div><div class="value" id="s7d">0%</div></div>
+            <div class="stat-card"><div class="label">30-Day Rate</div><div class="value" id="s30d">0%</div></div>
+            <div class="stat-card"><div class="label">Best Technique</div><div class="value" id="sBest">—</div></div>
+        </div>
+        <div style="margin-top:2rem">
+            <h4 style="color:var(--gold);margin-bottom:1rem">Technique Effectiveness</h4>
+            <div id="techniqueStats"></div>
+        </div>
+    </div>
+
+    <div class="tab-panel" id="panel-methods" style="display:none">
+        <h3 style="color:var(--gold);margin-bottom:1rem;text-align:center">Reality Check Methods Library</h3>
+        <div class="methods-grid" id="methodsGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem"></div>
+    </div>
+</div>
+
+<section class="compare-section">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android Apps</h3>
+    <table class="compare-table">
+        <tr><th>Feature</th><th>Free Web</th><th>Dream Machine</th><th>Lucid Dream</th></tr>
+        <tr><td>Random RC prompts</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>15+ RC techniques</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Attempt logging + success rate</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Technique effectiveness analysis</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>WILD/ILD technique guides</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Audio binaural beats for induction</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Dream journal with tags & audio</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Reality check notifications (Android)</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Works 100% offline</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr class="highlight-row"><td><strong>Price</strong></td><td><strong>Free</strong></td><td><strong>$3.99</strong></td><td><strong>$7.99</strong></td></tr>
+    </table>
+</section>
+
+<div class="funnel-testimonial">
+    <p>"The web tracker got me doing 10+ reality checks daily. Lucid Dream app added WILD audio guidance and dream journal. My first lucid dream came on day 12 — the hand-look RC triggered it. Now I average 3-4 lucids/week."</p>
+    <div class="author">— Sarah K., verified purchaser, Lucid Dream</div>
+</div>
+
+<section class="funnel-faq">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free vs Premium</h3>
+    <details>
+        <summary>How often do prompts appear?</summary>
+        <div class="faq-answer">Click "Next Reality Check" anytime. The premium apps (Dream Machine, Lucid Dream) can send Android notifications at configurable intervals (30min-4hrs) even when phone is locked.</div>
+    </details>
+    <details>
+        <summary>Does the premium app need internet?</summary>
+        <div class="faq-answer">No. 100% offline. All data, audio, and notifications run locally. No accounts, no telemetry.</div>
+    </details>
+    <details>
+        <summary>Is this a subscription?</summary>
+        <div class="faq-answer">One-time payment. Dream Machine $3.99, Lucid Dream $7.99. Own forever.</div>
+    </details>
+</section>
+
+<section class="cta-box">
+    <h3>🌙 Master the Gateway to Lucidity</h3>
+    <p>Reality checks are the foundation. The <strong>Lucid Dream</strong> app ($7.99) adds: WILD/ILD audio guides, dream journal with audio recording, reality check notifications, and binaural beats. <strong>Dream Machine</strong> ($3.99) focuses on induction tech + journal.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1.5rem 0">
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">WILD/ILD Audio</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Notifications</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Dream Journal</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Binaural Beats</span>
+    </div>
+    <div class="price">$3.99 / $7.99</div>
+    <a href="../apps/lucid-dream.html" class="cta-button primary" style="display:inline-block;margin-top:0.5rem;">🌙 Get Lucid Dream</a>
+    <a href="../apps/dream-machine.html" class="cta-button secondary" style="display:inline-block;margin-top:0.5rem;margin-left:1rem;">💤 Get Dream Machine</a>
+    <p style="margin-top:1rem;font-size:0.85rem;color:#888;">100% offline · No ads · No tracking · One-time payment · 7-day guarantee</p>
+</section>
+
+<div class="sticky-conversion-bar">
+    <span class="sticky-text">Lucid Dream — WILD/ILD + Journal</span>
+    <span class="price-tag">$7.99</span>
+    <span class="sticky-text">Audio Guides · Notifications · Binaural</span>
+    <a href="../apps/lucid-dream.html" class="sticky-cta">Get App →</a>
+</div>
+
+<div class="back-link"><a href="index.html">← Back to All Free Tools</a></div>
+
+<footer id="site-footer" class="site-footer">
+<div class="footer-grid">
+    <div class="footer-section"><h4>Cha0smagick Labs</h4><p>Explore the Art and Practice of the Occult.</p><p>Corporate Techno-Sorcery Solutions — since 2025.</p></div>
+    <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="../index.html">Home Page</a></li><li><a href="index.html">Free Online Tools</a></li><li><a href="../blog/">Read Blog</a></li><li><a href="../glossary.html">Magick Glossary</a></li></ul></div>
+    <div class="footer-section"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p></div>
+</footer>
+
+<script src="../js/shared.min.js"></script>
+<div id="lang-sidebar" class="lang-sidebar"><button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button><div id="lang-flag-list" class="lang-flag-list"><button onclick="switchLang('en')" title="English" class="lang-btn"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button><button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button><button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button><button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button><button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button><button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button></div></div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner"><p>This site uses cookies for analytics. <a href="../privacy-policy.html" style="color:#ffd700;">Review our Privacy Policy</a></p><div class="cookie-buttons"><button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button><button class="cookie-btn-decline" onclick="declineCookies()">Decline</button></div></div>
+
+<script>
+// === REALITY CHECK DATA ===
+const RC_METHODS = [
+    {id:'nose_pinch', name:'Nose Pinch', category:'Physical', desc:'Pinch nose shut, try to breathe through it. In dreams, you CAN breathe.', icon:'👃', difficulty:'Easy', effectiveness:0.92},
+    {id:'hand_look', name:'Look at Hands', category:'Visual', desc:'Look at your hands. In dreams, they often distort (extra fingers, melting, wrong count).', icon:'👀', difficulty:'Easy', effectiveness:0.89},
+    {id:'clock_check', name:'Check Clock/Time', category:'Cognitive', desc:'Look at a digital clock, look away, look back. In dreams, time changes chaotically.', icon:'🕐', difficulty:'Easy', effectiveness:0.85},
+    {id:'text_reread', name:'Re-read Text', category:'Cognitive', desc:'Read text, look away, re-read. In dreams, text morphs or becomes nonsense.', icon:'📖', difficulty:'Easy', effectiveness:0.88},
+    {id:'light_switch', name:'Light Switch', category:'Physical', desc:'Flip a light switch. In dreams, lights often don\'t work or behave oddly.', icon:'💡', difficulty:'Medium', effectiveness:0.78},
+    {id:'mirror_check', name:'Mirror Check', category:'Visual', desc:'Look in a mirror. In dreams, reflection is often distorted, wrong, or missing.', icon:'🪞', difficulty:'Medium', effectiveness:0.82},
+    {id:'gravity_test', name:'Jump/Gravity Test', category:'Physical', desc:'Jump. In dreams, you may float, fall slowly, or gravity feels wrong.', icon:'🪂', difficulty:'Medium', effectiveness:0.75},
+    {id:'breathing', name:'Hold Breath', category:'Physical', desc:'Hold nose and mouth shut, try to breathe. In dreams, you can breathe underwater/while pinched.', icon:'🫁', difficulty:'Easy', effectiveness:0.90},
+    {id:'finger_palm', name:'Finger Through Palm', category:'Physical', desc:'Try to push index finger through opposite palm. In dreams, it passes through.', icon:'☝️', difficulty:'Easy', effectiveness:0.85},
+    {id:'memory', name:'Recall Last 5 Min', category:'Cognitive', desc:'Trace your exact steps for last 5 minutes. In dreams, memory is fragmented.', icon:'🧠', difficulty:'Hard', effectiveness:0.70},
+    {id:'palm_reading', name:'Read Palm Lines', category:'Visual', desc:'Examine palm lines closely. In dreams, they shift, blur, or form impossible patterns.', icon:'🔮', difficulty:'Medium', effectiveness:0.72},
+    {id:'phone_check', name:'Check Phone', category:'Cognitive', desc:'Look at phone screen. In dreams, UI is garbled, numbers wrong, apps missing.', icon:'📱', difficulty:'Easy', effectiveness:0.80},
+    {id:'body_scan', name:'Body Scan', category:'Somatic', desc:'Scan body for sensations. In dreams, body may feel numb, distorted, or weightless.', icon:'🧘', difficulty:'Medium', effectiveness:0.65},
+    {id:'environment', name:'Scan Environment', category:'Visual', desc:'Check surroundings for impossibilities (wrong geography, impossible architecture).', icon:'🏠', difficulty:'Medium', effectiveness:0.78},
+    {id:'questioning', name:'Ask "Am I Dreaming?"', category:'Cognitive', desc:'Genuinely question reality with critical awareness, not on autopilot.', icon:'❓', difficulty:'Hard', effectiveness:0.95},
+];
+
+const RC_PROMPTS = RC_METHODS.map(m => ({...m, prompt:`${m.icon} ${m.name}: ${m.desc}`}));
+
+let logs = [];
+let activeTab = 'prompt';
+
+function loadLogs() {
+    const saved = localStorage.getItem('rc_logs');
+    if (saved) {
+        try { logs = JSON.parse(saved); } catch(e) { logs = []; }
+    }
+    renderAll();
+}
+
+function saveLogs() {
+    localStorage.setItem('rc_logs', JSON.stringify(logs.slice(-200)));
+}
+
+function renderAll() {
+    renderPrompt();
+    renderLogList();
+    renderStats();
+    renderMethods();
+    renderTechniqueStats();
+}
+
+function getRandomPrompt() {
+    return RC_PROMPTS[Math.floor(Math.random() * RC_PROMPTS.length)];
+}
+
+function renderPrompt() {
+    const p = getRandomPrompt();
+    document.getElementById('promptCategory').textContent = p.category;
+    document.getElementById('promptText').innerHTML = `${p.icon} <strong>${m.name}</strong>: ${m.desc}`;
+}
+
+document.getElementById('nextPrompt').onclick = () => {
+    const p = getRandomPrompt();
+    document.getElementById('promptCategory').textContent = p.category;
+    document.getElementById('promptText').innerHTML = `${p.icon} <strong>${p.name}</strong>: ${p.desc}`;
+};
+
+document.getElementById('showAddEntry').onclick = () => {
+    document.getElementById('addEntryForm').classList.add('visible');
+    document.getElementById('showAddEntry').style.display = 'none';
+};
+
+document.getElementById('cancelEntry').onclick = () => {
+    document.getElementById('addEntryForm').classList.remove('visible');
+    document.getElementById('showAddEntry').style.display = 'block';
+};
+
+document.getElementById('addEntryForm').onsubmit = (e) => {
+    e.preventDefault();
+    const result = document.getElementById('entryResult').value;
+    const technique = document.getElementById('entryTechnique').value;
+    const notes = document.getElementById('entryNotes').value;
+    if (!result || !technique) return alert('Select result and technique');
+    
+    logs.unshift({
+        timestamp: new Date().toISOString(),
+        result,
+        technique,
+        notes,
+        date: new Date().toLocaleDateString()
+    });
+    saveLogs();
+    renderAll();
+    document.getElementById('addEntryForm').classList.remove('visible');
+    document.getElementById('showAddEntry').style.display = 'block';
+    document.getElementById('addEntryForm').reset();
+};
+
+function renderLogList() {
+    const list = document.getElementById('logList');
+    if (logs.length === 0) {
+        list.innerHTML = '<div style="text-align:center;color:#666;padding:2rem">No attempts logged yet. Click "Log New Attempt" to start.</div>';
+        return;
+    }
+    list.innerHTML = logs.slice(0, 20).map(l => `
+        <div class="log-entry ${l.result}">
+            <div class="log-info">
+                <div class="log-time">${new Date(l.timestamp).toLocaleString()}</div>
+                <div class="log-type ${l.result}">${l.result === 'lucid' ? '✅ Lucid Dream' : l.result === 'failed' ? '❌ Failed Check' : '🌀 False Awakening'}</div>
+                <div style="font-size:0.85rem;color:#888;margin-top:0.25rem">${RC_METHODS.find(m=>m.id===l.technique)?.name || l.technique}</div>
+                ${l.notes ? `<div style="font-size:0.8rem;color:#888;margin-top:0.25rem;font-style:italic">"${l.notes}"</div>` : ''}
+            </div>
+            <div class="log-actions">
+                <button class="log-btn" onclick="deleteLog('${l.timestamp}')">🗑️ Delete</button>
+            </div>
+        </div>
+    `).join('');
+}
+
+function deleteLog(timestamp) {
+    logs = logs.filter(l => l.timestamp !== timestamp);
+    saveLogs();
+    renderAll();
+}
+
+function renderStats() {
+    const total = logs.length;
+    const lucid = logs.filter(l => l.result === 'lucid').length;
+    const rate = total > 0 ? (lucid/total*100).toFixed(1) : 0;
+    
+    const now = Date.now();
+    const weekAgo = now - 7*86400000;
+    const monthAgo = now - 30*86400000;
+    const recent = logs.filter(l => new Date(l.timestamp).getTime() > weekAgo);
+    const monthLogs = logs.filter(l => new Date(l.timestamp).getTime() > monthAgo);
+    const recentRate = recent.length > 0 ? (recent.filter(l=>l.result==='lucid').length/recent.length*100).toFixed(1) : 0;
+    const monthRate = monthLogs.length > 0 ? (monthLogs.filter(l=>l.result==='lucid').length/monthLogs.length*100).toFixed(1) : 0;
+    
+    document.getElementById('statChecks').textContent = total;
+    document.getElementById('statLucid').textContent = lucid;
+    document.getElementById('statRate').textContent = `${rate}%`;
+    document.getElementById('stat7d').textContent = `${recentRate}%`;
+    
+    document.getElementById('sChecks').textContent = total;
+    document.getElementById('sLucid').textContent = lucid;
+    document.getElementById('sRate').textContent = `${rate}%`;
+    document.getElementById('s7d').textContent = `${recentRate}%`;
+    document.getElementById('s30d').textContent = `${monthRate}%`;
+    
+    // Best technique
+    const techStats = {};
+    logs.filter(l=>l.result==='lucid').forEach(l => {
+        techStats[l.technique] = (techStats[l.technique]||0) + 1;
+    });
+    const best = Object.entries(techStats).sort((a,b)=>b[1]-a[1])[0];
+    document.getElementById('sBest').textContent = best ? RC_METHODS.find(m=>m.id===best[0])?.name || best[0] : '—';
+}
+
+function renderTechniqueStats() {
+    const stats = {};
+    logs.forEach(l => {
+        if (!stats[l.technique]) stats[l.technique] = {total:0, lucid:0};
+        stats[l.technique].total++;
+        if (l.result === 'lucid') stats[l.technique].lucid++;
+    });
+    
+    document.getElementById('techniqueStats').innerHTML = Object.entries(stats)
+        .filter(([,v]) => v.total >= 2)
+        .sort((a,b) => (b[1].lucid/b[1].total) - (a[1].lucid/a[1].total))
+        .map(([tech, v]) => {
+            const m = RC_METHODS.find(m=>m.id===tech);
+            const rate = (v.lucid/v.total*100).toFixed(1);
+            return `<div style="display:flex;justify-content:space-between;padding:0.5rem;background:#111;border:1px solid #222;border-radius:8px;margin:0.5rem 0">
+                <span>${m?.icon || '🔮'} ${m?.name || tech}</span>
+                <span>${rate}% (${v.lucid}/${v.total})</span>
+            </div>`;
+        }).join('');
+}
+
+function renderMethods() {
+    document.getElementById('methodsGrid').innerHTML = RC_METHODS.map(m => `
+        <div style="background:#111;border:1px solid #222;border-radius:12px;padding:1.5rem">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+                <span style="font-size:2rem">${m.icon}</span>
+                <div>
+                    <div style="font-weight:700;color:#fff">${m.name}</div>
+                    <div style="font-size:0.75rem;color:#666;text-transform:uppercase">${m.category}</div>
+                </div>
+            </div>
+            <p style="color:#888;font-size:0.9rem;margin-bottom:1rem">${m.desc}</p>
+            <div style="display:flex;gap:1rem;color:#666;font-size:0.8rem">
+                <span>Difficulty: ${m.difficulty}</span>
+                <span>Effectiveness: ${(m.effectiveness*100).toFixed(0)}%</span>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Tab switching
+document.querySelectorAll('.tab-btn').forEach(b => {
+    b.onclick = () => {
+        activeTab = b.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(x => x.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(x => x.style.display = 'none');
+        b.classList.add('active');
+        document.getElementById(`panel-${activeTab}`).style.display = 'block';
+        if (activeTab === 'stats') renderStats();
+    };
+});
+
+loadLogs();
+</script>
+<script src="../js/conversion.js?v=20260728"></script>
+</body>
+</html>

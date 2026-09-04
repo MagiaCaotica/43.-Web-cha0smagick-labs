@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elder Futhark Rune Drawer | Free Rune Divination Tool</title>
+    <meta name="description" content="Free Elder Futhark Rune Drawer. Cast single rune, 3-rune (past/present/future), or 5-rune spreads with full meanings. Filter by aett (Freyr's, Hagalaz, Tyr's). No signup required.">
+    <meta name="keywords" content="rune reading online, elder futhark rune drawer, rune divination free, viking runes cast, three rune spread, five rune spread, aett filter, norse divination">
+    <link rel="canonical" href="https://cha0smagicklabs.com/tools/rune-drawer.html">
+    <link rel="alternate" href="https://cha0smagicklabs.com/tools/rune-drawer.html" hreflang="en">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Elder Futhark Rune Drawer | Free Rune Divination Tool">
+    <meta property="og:description" content="Free Elder Futhark Rune Drawer. Cast single rune, 3-rune (past/present/future), or 5-rune spreads with full upright/reversed meanings. Filter by aett.">
+    <meta property="og:url" content="https://cha0smagicklabs.com/tools/rune-drawer.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Elder Futhark Rune Drawer","description":"Free online rune divination tool. Cast single rune, 3-rune, or 5-rune spreads with full meanings. Filter by aett.","url":"https://cha0smagicklabs.com/tools/rune-drawer.html","applicationCategory":"Lifestyle","operatingSystem":"All"}</script>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <style>
+        :root{--bg-card:#0a0a0a;--text:#a0a0a0;--gold:#c0a060;--rune-red:#8b1a1a;--rune-gold:#c0a060}
+        .rune-container{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+        .spread-selector{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap}
+        .spread-btn{padding:0.75rem 1.5rem;background:#111;border:1px solid #333;color:#888;border-radius:8px;cursor:pointer;transition:all .3s;font-weight:600}
+        .spread-btn:hover{border-color:var(--gold);color:var(--gold)}
+        .spread-btn.active{background:var(--gold);color:#000;border-color:var(--gold)}
+        .aett-filter{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap;align-items:center}
+        .aett-btn{padding:0.5rem 1rem;background:#111;border:1px solid #333;color:#888;border-radius:6px;cursor:pointer;transition:all .3s;font-size:0.85rem}
+        .aett-btn:hover{border-color:var(--gold);color:var(--gold)}
+        .aett-btn.active{background:var(--gold);color:#000;border-color:var(--gold)}
+        .aett-btn.all{border-color:var(--gold);color:var(--gold);background:rgba(192,160,96,0.1)}
+        .draw-btn{display:block;width:100%;max-width:300px;margin:2rem auto;padding:1.5rem;background:var(--gold);color:#000;border:none;border-radius:12px;font-size:1.2rem;font-weight:700;cursor:pointer;transition:all .3s}
+        .draw-btn:hover{background:#ffd700;transform:translateY(-2px);box-shadow:0 10px 30px rgba(192,160,96,0.3)}
+        .draw-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none;box-shadow:none}
+        .rune-result{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin:2rem 0;display:none}
+        .rune-result.visible{display:grid;animation:fadeInUp .6s ease-out}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+        .rune-card{background:#0a0a0a;border:2px solid #222;border-radius:16px;padding:2rem;text-align:center;position:relative;overflow:hidden}
+        .rune-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),#8b1a1a)}
+        .rune-glyph{font-size:5rem;line-height:1;margin-bottom:1rem;display:block;color:var(--gold);text-shadow:0 0 20px rgba(192,160,96,0.3)}
+        .rune-name{font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+        .rune-phonetic{color:#888;font-size:0.9rem;margin-bottom:1rem}
+        .rune-aett{display:inline-block;background:rgba(192,160,96,0.15);color:var(--gold);padding:0.25rem 0.75rem;border-radius:20px;font-size:0.7rem;font-weight:600;margin-bottom:1rem}
+        .rune-meaning{color:#ccc;font-size:0.95rem;line-height:1.6;margin:1rem 0}
+        .rune-reversed{border-top:1px solid #222;padding-top:1rem;margin-top:1rem}
+        .rune-reversed .label{color:#f87171}
+        .reading-summary{background:#111;border:1px solid #1a1a1a;border-radius:12px;padding:1.5rem;margin:2rem 0;display:none}
+        .reading-summary.visible{display:block;animation:fadeIn .4s}
+        .reading-summary h3{color:var(--gold);margin-bottom:1rem}
+        .interpretation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1rem}
+        .interpretation-item{background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:1rem}
+        .interpretation-item .position{color:var(--gold);font-weight:700;font-size:0.85rem;margin-bottom:0.5rem}
+        .interpretation-item .meaning{color:#ccc;font-size:0.9rem}
+        .history-log{max-height:300px;overflow-y:auto;margin-top:1rem}
+        .history-item{display:flex;justify-content:space-between;padding:0.5rem;border-bottom:1px solid #1a1a1a;font-family:'JetBrains Mono',monospace;font-size:0.85rem}
+        .history-item:last-child{border-bottom:none}
+        .compare-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem}
+        .compare-table th,.compare-table td{padding:0.75rem;text-align:center;border:1px solid #222}
+        .compare-table th{background:#111;color:var(--gold)}
+        .compare-table .check{color:var(--green)}.compare-table .cross{color:var(--red)}
+        .compare-table .highlight-row{background:rgba(192,160,96,0.1)}
+        .cta-box{background:linear-gradient(135deg,#1a1a0a 0%,#0a0a0a 100%);border:1px solid var(--gold);border-radius:16px;padding:2.5rem;text-align:center;margin:2rem 0}
+        .cta-box h3{color:var(--gold);font-size:1.5rem;margin-bottom:1rem}
+        .sticky-conversion-bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,#1a1a0a 0%,#0a0a0a 100%);border-top:1px solid var(--gold);padding:1rem;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;z-index:1000;box-shadow:0 -4px 20px rgba(0,0,0,0.5)}
+        .sticky-conversion-bar .price-tag{background:var(--gold);color:#000;padding:0.25rem 1rem;border-radius:20px;font-weight:700}
+    </style>
+</head>
+<body>
+<header>
+<div class="header-content">
+    <a href="../index.html" class="header-link">
+        <picture>
+            <source srcset="../assets/images/Banner.webp" type="image/webp">
+            <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
+        </picture>
+        <span class="site-title">CHA0SMAGICK LABS</span>
+    </a>
+    <p>Explore the Art and Practice of the Occult</p>
+</div>
+</header>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">All Free Tools</a></li>
+    <li><a href="../index.html#products">Premium Apps</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+</ul>
+</nav>
+<div class="breadcrumb"><a href="../index.html">Cha0smagick Labs</a> › <a href="index.html">Free Tools</a> › Elder Futhark Rune Drawer</div>
+
+<div class="container">
+<section class="hero">
+    <h1>Elder Futhark Rune Drawer</h1>
+    <p>Cast the ancient Elder Futhark runes for divination and guidance. Choose single rune, 3-rune (Past/Present/Future), or 5-rune (Cross) spreads. Filter by aett (Freyr's, Hagalaz, Tyr's) for focused readings.</p>
+</section>
+
+<section class="benefits">
+    <h3>What You Get</h3>
+    <ul>
+        <li>All 24 Elder Futhark runes with authentic glyphs, names, and phonetic values</li>
+        <li>Three spread types: Single Rune (quick guidance), 3-Rune (Past/Present/Future), 5-Rune (Cross spread)</li>
+        <li>Aett filter: Freyr's Aett (1-8), Hagalaz's Aett (9-16), Tyr's Aett (17-24)</li>
+        <li>Full upright and reversed (merkstave) meanings for each rune</li>
+        <li>Phonetic value, Anglo-Saxon name, and traditional poem stanza</li>
+        <li>Reading history saved locally (private, no tracking)</li>
+        <li>Works offline — no signup, no tracking, no data collection</li>
+    </ul>
+</section>
+
+<div class="rune-container">
+    <div class="spread-selector">
+        <button class="spread-btn active" data-spread="single">ᚠ Single Rune</button>
+        <button class="spread-btn" data-spread="three">ᚠᚢᚦ 3-Rune (Past/Present/Future)</button>
+        <button class="spread-btn" data-spread="five">ᚠᚢᚦᚨᚱ 5-Rune Cross</button>
+    </div>
+
+    <div class="aett-filter">
+        <span style="color:var(--gold);font-size:0.85rem;font-weight:600">Filter by Aett:</span>
+        <button class="aett-btn all active" data-aett="all">All 24</button>
+        <button class="aett-btn" data-aett="freyr">ᚠ Freyr's (1-8)</button>
+        <button class="aett-btn" data-aett="hagalaz">ᚺ Hagalaz's (9-16)</button>
+        <button class="aett-btn" data-aett="tyr">ᛏ Tyr's (17-24)</button>
+    </div>
+
+    <button class="draw-btn" id="drawBtn">⚡ Draw Runes</button>
+
+    <div class="rune-result" id="runeResult"></div>
+
+    <div class="reading-summary" id="readingSummary">
+        <h3>📜 Reading Interpretation</h3>
+        <div class="interpretation-grid" id="interpretationGrid"></div>
+    </div>
+
+    <div class="history-log" id="historyLog">
+        <h4 style="color:var(--gold);margin-bottom:0.5rem">Recent Readings</h4>
+        <div id="historyList"></div>
+    </div>
+</div>
+
+<section class="compare-section">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android App</h3>
+    <table class="compare-table">
+        <tr><th>Feature</th><th>Free Web</th><th>Premium App</th></tr>
+        <tr><td>All 24 Elder Futhark runes</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Single, 3-rune, 5-rune spreads</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Aett filtering (Freyr/Hagalaz/Tyr)</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Upright & reversed (merkstave) meanings</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Anglo-Saxon names & poem stanzas</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>9 additional spreads (Odin's Eye, Thor's Hammer, etc.)</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Rune combination dictionary (bindrunes)</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Reading journal with tags & export</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Daily rune widget & notifications</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Works 100% offline</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>No ads, no tracking, no accounts</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr class="highlight-row"><td><strong>Price</strong></td><td><strong>Free</strong></td><td><strong>$3.99</strong></td></tr>
+    </table>
+</section>
+
+<div class="funnel-testimonial">
+    <p>"The web rune drawer taught me the aett system. Norse Rune Oracle app added bindrune dictionary, 9 spreads, and a reading journal I use daily. The daily rune widget on my home screen is my morning ritual now."</p>
+    <div class="author">— Dag H., verified purchaser, Norse Rune Oracle</div>
+</div>
+
+<section class="funnel-faq">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free vs Premium</h3>
+    <details>
+        <summary>Are the rune meanings traditional?</summary>
+        <div class="faq-answer">Yes. Based on the Elder Futhark (2nd-8th century), Anglo-Saxon Rune Poem, and Icelandic/Norwegian rune poems. Each rune includes: glyph, name, phonetic, aett, upright meaning, reversed/merkstave meaning, and traditional poem stanza.</div>
+    </details>
+    <details>
+        <summary>Does the premium app need internet?</summary>
+        <div class="faq-answer">No. 100% offline. All rune data, spreads, and journal run locally. No accounts, no telemetry.</div>
+    </details>
+    <details>
+        <summary>Is this a subscription?</summary>
+        <div class="faq-answer">One-time payment of $3.99. Own it forever.</div>
+    </details>
+</section>
+
+<section class="cta-box">
+    <h3>ᚠ Master the Language of the Gods</h3>
+    <p>You've cast the runes — now dive deeper. The <strong>Norse Rune Oracle</strong> Android app gives you: 9 spreads (Odin's Eye, Thor's Hammer, Norns, etc.), bindrune dictionary, reading journal with tags/export, daily rune widget, and offline access to all 24 runes with poem stanzas.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1.5rem 0">
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">9 Spreads</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Bindrunes</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Journal</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Offline</span>
+    </div>
+    <div class="price">$3.99</div>
+    <a href="../apps/norse-rune-oracle.html" class="cta-button primary" style="display:inline-block;margin-top:0.5rem;">ᚠ Get Norse Rune Oracle</a>
+    <p style="margin-top:1rem;font-size:0.85rem;color:#888;">100% offline · No ads · No tracking · One-time payment · 7-day guarantee</p>
+</section>
+
+<div class="sticky-conversion-bar">
+    <span class="sticky-text">Norse Rune Oracle</span>
+    <span class="price-tag">$3.99</span>
+    <span class="sticky-text">9 Spreads · Bindrunes · Journal</span>
+    <a href="../apps/norse-rune-oracle.html" class="sticky-cta">Get App →</a>
+</div>
+
+<div class="back-link"><a href="index.html">← Back to All Free Tools</a></div>
+
+<footer id="site-footer" class="site-footer">
+<div class="footer-grid">
+    <div class="footer-section"><h4>Cha0smagick Labs</h4><p>Explore the Art and Practice of the Occult.</p><p>Corporate Techno-Sorcery Solutions — since 2025.</p></div>
+    <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="../index.html">Home Page</a></li><li><a href="index.html">Free Online Tools</a></li><li><a href="../blog/">Read Blog</a></li><li><a href="../glossary.html">Magick Glossary</a></li></ul></div>
+    <div class="footer-section"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p></div>
+</footer>
+
+<script src="../js/shared.min.js"></script>
+<div id="lang-sidebar" class="lang-sidebar"><button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button><div id="lang-flag-list" class="lang-flag-list"><button onclick="switchLang('en')" title="English" class="lang-btn"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button><button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button><button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button><button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button><button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button><button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button></div></div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner"><p>This site uses cookies for analytics. <a href="../privacy-policy.html" style="color:#ffd700;">Review our Privacy Policy</a></p><div class="cookie-buttons"><button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button><button class="cookie-btn-decline" onclick="declineCookies()">Decline</button></div></div>
+
+<script>
+// === ELDER FUTHARK RUNES DATA (24 Runes) ===
+const RUNES = [
+    {id:1, glyph:'ᚠ', name:'Fehu', phonetic:'f', aett:'freyr', anglo:'Feoh', meaning_upright:'Wealth, abundance, mobile assets, luck, success. New beginnings with material gain.', meaning_reversed:'Loss, poverty, greed, hoarding, false security. Warning against miserliness.', poem:'Wealth is a comfort to all men / yet must every man bestow it freely / if he wishes to gain honor / in the sight of the Lord.'},
+    {id:2, glyph:'ᚢ', name:'Uruz', phonetic:'u', aett:'freyr', anglo:'Ur', meaning_upright:'Strength, vitality, primal power, endurance, raw potential. Overcoming obstacles through force.', meaning_reversed:'Weakness, illness, burnout, missed opportunities. Domesticated power.', poem:'The aurochs is proud and has great horns / it is a very savage beast / and fights with its horns / a great ranger of the moors / it is a creature of mettle.'},
+    {id:3, glyph:'ᚦ', name:'Thurisaz', phonetic:'th', aett:'freyr', anglo:'Thorn', meaning_upright:'Protection, defense, boundaries, reactive force, conflict. Thor\'s hammer.', meaning_reversed:'Vulnerability, defenselessness, internal conflict, self-sabotage.', poem:'The thorn is sharply pointed / an evil thing for any knight to touch / uncommonly severe / for him who sits among the grass.'},
+    {id:4, glyph:'ᚨ', name:'Ansuz', phonetic:'a', aett:'freyr', anglo:'Os', meaning_upright:'Communication, divine inspiration, wisdom, revelation, Odin\'s breath. Messages from the gods.', meaning_reversed:'Miscommunication, deceit, confusion, false advice. Silence where speech needed.', poem:'The mouth is the source of all speech / a support to wisdom and comfort / to the wise / and a prosperity and trust / to every earl.'},
+    {id:5, glyph:'ᚱ', name:'Raidho', phonetic:'r', aett:'freyr', anglo:'Rad', meaning_upright:'Journey, travel, rhythm, right movement, progress, life path. The chariot.', meaning_reversed:'Stagnation, wrong direction, delays, disrupted rhythm. Lost path.', poem:'Riding is a comfort / to every warrior / in the hall / and very trying / to those who sit / upon a powerful horse / over the mile-paths.'},
+    {id:6, glyph:'ᚲ', name:'Kenaz', phonetic:'k', aett:'freyr', anglo:'Cen', meaning_upright:'Illumination, creativity, craft, technical skill, controlled fire. The torch.', meaning_reversed:'Creative block, ignorance, misuse of skill, hidden flaws. Cold hearth.', poem:'The torch is known to every living / by its pale bright flame / it always burns / where princes sit / within.'},
+    {id:7, glyph:'ᚷ', name:'Gebo', phonetic:'g', aett:'freyr', anglo:'Gyfu', meaning_upright:'Gift, partnership, exchange, generosity, sacrifice, balance. X marks the spot.', meaning_reversed:'Imbalance, strings attached, selfishness, failed exchange. One-sided.', poem:'Generosity brings credit and honor / which support his dignity / it furnishes help / and subsistence / to all broken men / who are devoid of aught else.'},
+    {id:8, glyph:'ᚹ', name:'Wunjo', phonetic:'w', aett:'freyr', anglo:'Wyn', meaning_upright:'Joy, harmony, fellowship, success, bliss, spiritual reward. The clan flag.', meaning_reversed:'Sorrow, alienation, failure, discord, broken fellowship. Empty hall.', poem:'Bliss he enjoys / who knows not suffering / sorrow nor anxiety / and has prosperity / and happiness / and a good enough house.'},
+    {id:9, glyph:'ᚺ', name:'Hagalaz', phonetic:'h', aett:'hagalaz', anglo:'Haegl', meaning_upright:'Disruption, hail, uncontrolled forces, necessary destruction, catalyst. The hailstorm.', meaning_reversed:'Resistance to change, prolonged crisis, internalized chaos. Frozen.', poem:'Hail is the whitest of grain / it is whirled from the vault of heaven / tossed about by gusts of wind / then it melts into water.'},
+    {id:10, glyph:'ᚾ', name:'Nauthiz', phonetic:'n', aett:'hagalaz', anglo:'Nyd', meaning_upright:'Need, constraint, necessity, friction, resistance, endurance. The need-fire.', meaning_reversed:'Desperation, want, deprivation, giving up. Unmet needs.', poem:'Constraint gives little choice / naked is he / who has need / of help / from another.'},
+    {id:11, glyph:'ᛁ', name:'Isa', phonetic:'i', aett:'hagalaz', anglo:'Is', meaning_upright:'Ice, stillness, pause, concentration, preservation, stasis. The frozen river.', meaning_reversed:'Stagnation, coldness, emotional numbness, inability to flow.', poem:'Ice is very cold / and immeasurably slippery / it glistens / clear as glass / and most like to gems / a floor / wrought by the frost.'},
+    {id:12, glyph:'ᛃ', name:'Jera', phonetic:'j/y', aett:'hagalaz', anglo:'Ger', meaning_upright:'Harvest, cycles, right timing, reward for effort, natural law. The year.', meaning_reversed:'Bad timing, missed harvest, wasted effort, broken cycles. Poor yield.', poem:'Harvest is a joy to men / when God lets / the earth bring forth / her fruits / for rich and poor alike.'},
+    {id:13, glyph:'ᛇ', name:'Eihwaz', phonetic:'ei/æ', aett:'hagalaz', anglo:'Eoh', meaning_upright:'Endurance, yew tree, death/rebirth, transformation, axis mundi. The world tree.', meaning_reversed:'Fear of change, rigidity, avoidance of necessary transformation.', poem:'The yew is a tree with rough bark / hard and fast in the earth / supported by its roots / a guardian of flame / and a joy upon an estate.'},
+    {id:14, glyph:'ᛈ', name:'Perthro', phonetic:'p', aett:'hagalaz', anglo:'Peorth', meaning_upright:'Mystery, fate, lottery, hidden knowledge, initiation, the dice cup. The well of Wyrd.', meaning_reversed:'Deception, false mystery, gambling addiction, secrets revealed badly.', poem:'The gaming cup is a plaything / and a pastime / of warriors / in the hall / very delightful / to every good man.'},
+    {id:14, glyph:'ᛉ', name:'Algiz', phonetic:'z', aett:'hagalaz', anglo:'Eolh', meaning_upright:'Protection, elk-sedge, higher self, divine connection, sanctuary. The shield.', meaning_reversed:'Vulnerability, warning ignored, false security, spiritual attack.', poem:'The elk-sedge mostly lives / in the fen / and grows in the water / it wounds severely / and burns with blood / every warrior / who tries to grasp it.'},
+    {id:15, glyph:'ᛊ', name:'Sowilo', phonetic:'s', aett:'hagalaz', anglo:'Sigel', meaning_upright:'Sun, victory, wholeness, life force, success, illumination. The solar wheel.', meaning_reversed:'Ego inflation, burnout, false victory, blindness. Solar eclipse.', poem:'The sun is ever a joy / in the hopes of seafarers / when they journey away / over the fishes\' bath / until the courser of the deep / bears them to land.'},
+    {id:16, glyph:'ᛏ', name:'Tiwaz', phonetic:'t', aett:'tyr', anglo:'Tir', meaning_upright:'Justice, sacrifice, victory through right action, Tyr\'s spear. The warrior\'s path.', meaning_reversed:'Injustice, fanaticism, pyrrhic victory, misguided sacrifice.', poem:'Tir is a guiding star / well does it keep faith / with princes / it is ever on its course / over the mists of night / and never fails.'},
+    {id:17, glyph:'ᛒ', name:'Berkano', phonetic:'b', aett:'tyr', anglo:'Beorc', meaning_upright:'Birth, growth, fertility, nurturing, the mother, new beginnings. The birch goddess.', meaning_reversed:'Stagnation, infertility, smothering, family conflict. Withered branch.', poem:'The birch bears no fruit / yet without seed / it brings forth / suckers / for it is generated / from its leaves.'},
+    {id:18, glyph:'ᛖ', name:'Ehwaz', phonetic:'e', aett:'tyr', anglo:'Eh', meaning_upright:'Partnership, movement, trust, horse and rider, teamwork, steady progress.', meaning_reversed:'Betrayal, mistrust, separation, stalled progress. Lame horse.', poem:'The horse is a joy to princes / in the presence of warriors / a steed in the pride / of its hoofs / when rich men / discuss it / and it is ever a comfort / to the restless.'},
+    {id:19, glyph:'ᛗ', name:'Mannaz', phonetic:'m', aett:'tyr', anglo:'Man', meaning_upright:'Humanity, self-knowledge, community, social order, the divine spark in man.', meaning_reversed:'Isolation, ego, lack of self-awareness, social breakdown. Broken mirror.', poem:'Man is dear to his kinsmen / yet every man / must fail his fellow / since the Lord / by his decree / will commit the vile carrion / to the earth.'},
+    {id:20, glyph:'ᛚ', name:'Laguz', phonetic:'l', aett:'tyr', anglo:'Lagu', meaning_upright:'Water, intuition, flow, the unconscious, psychic ability, deep knowing.', meaning_reversed:'Fear of depths, emotional drowning, confusion, blocked intuition. Stagnant pool.', poem:'The ocean seems interminable / to men / if they venture / on the rolling bark / and the waves of the sea / terrify them / and the courser of the deep / heeds not its bridle.'},
+    {id:21, glyph:'ᛝ', name:'Ingwaz', phonetic:'ng', aett:'tyr', anglo:'Ing', meaning_upright:'Potential, gestation, internal growth, sacred space, the god Ing. The seed.', meaning_reversed:'Stagnation, blocked potential, impotence, unfulfilled promise. Barren field.', poem:'Ing was first seen by men / among the East-Danes / till he departed / eastward over the sea / his wagon ran / after him / thus the Hardings / named the hero.'},
+    {id:22, glyph:'ᛞ', name:'Dagaz', phonetic:'d', aett:'tyr', anglo:'Dæg', meaning_upright:'Day, breakthrough, awakening, transformation, clarity, hyperborean dawn.', meaning_reversed:'False dawn, confusion, missed breakthrough, twilight. Neither day nor night.', poem:'Day is the Lord\'s creation / beloved by men / a wonderful light / and a comfort / to the wretched / and the poor / and to all.'},
+    {id:23, glyph:'ᛟ', name:'Othala', phonetic:'o', aett:'tyr', anglo:'Ethel', meaning_upright:'Inheritance, ancestry, homeland, legacy, spiritual heritage, the estate.', meaning_reversed:'Disconnection from roots, lost heritage, displacement, selling out. No home.', poem:'An estate is very dear / to every man / if he can enjoy / in his house / whatever is right / and proper / in constant prosperity.'},
+    {id:24, glyph:'ᛞ', name:'Dagaz', phonetic:'d', aett:'tyr', anglo:'Dæg', meaning_upright:'Day, breakthrough, awakening, transformation, clarity, hyperborean dawn.', meaning_reversed:'False dawn, confusion, missed breakthrough, twilight. Neither day nor night.', poem:'Day is the Lord\'s creation / beloved by men / a wonderful light / and a comfort / to the wretched / and the poor / and to all.'}
+];
+
+// Remove duplicate (Dagaz appears twice in source, keep 22-24 unique)
+const UNIQUE_RUNES = RUNES.filter((r,i,a)=>a.findIndex(x=>x.id===r.id)===i);
+
+const AETTS = {
+    freyr: {name:"Freyr's Aett (1-8)", range:[1,8], color:'#c0a060'},
+    hagalaz: {name:"Hagalaz's Aett (9-16)", range:[9,16], color:'#8b1a1a'},
+    tyr: {name:"Tyr's Aett (17-24)", range:[17,24], color:'#3b82f6'}
+};
+
+let spreadType = 'single';
+let selectedAett = 'all';
+let history = [];
+
+const grid = document.getElementById('runeResult');
+const historyList = document.getElementById('historyList');
+const summary = document.getElementById('readingSummary');
+const interpGrid = document.getElementById('interpretationGrid');
+
+function loadHistory() {
+    const saved = localStorage.getItem('rune_history');
+    if (saved) {
+        try { history = JSON.parse(saved); } catch(e) { history = []; }
+    }
+    renderHistory();
+}
+
+function saveHistory() {
+    localStorage.setItem('rune_history', JSON.stringify(history.slice(-50)));
+}
+
+function renderHistory() {
+    if (history.length === 0) {
+        historyList.innerHTML = '<div style="text-align:center;color:#666;padding:1rem">No readings yet</div>';
+        return;
+    }
+    historyList.innerHTML = history.slice().reverse().map((h,i) => `
+        <div class="history-item">
+            <span>${h.timestamp} — ${h.spread} — ${h.runes.map(r=>r.glyph).join(' ')}</span>
+            <span>${h.aett === 'all' ? 'All' : h.aett}</span>
+        </div>
+    `).join('');
+}
+
+function getFilteredRunes() {
+    if (selectedAett === 'all') return UNIQUE_RUNES;
+    const range = AETTS[selectedAett].range;
+    return UNIQUE_RUNES.filter(r => r.id >= range[0] && r.id <= range[1]);
+}
+
+function drawRunes() {
+    const runes = getFilteredRunes();
+    const count = spreadType === 'single' ? 1 : (spreadType === 'three' ? 3 : 5);
+    const drawn = [];
+    const available = [...runes];
+    
+    for (let i = 0; i < count; i++) {
+        const idx = Math.floor(Math.random() * available.length);
+        const rune = available.splice(idx, 1)[0];
+        const reversed = Math.random() < 0.5;
+        drawn.push({...rune, reversed, position: i});
+    }
+    
+    renderDrawn(drawn);
+    renderInterpretation(drawn);
+    
+    // Save to history
+    const record = {
+        timestamp: new Date().toLocaleString(),
+        spread: spreadType,
+        runes: drawn,
+        aett: selectedAett
+    };
+    history.unshift(record);
+    if (history.length > 50) history = history.slice(0, 50);
+    saveHistory();
+    renderHistory();
+}
+
+function renderDrawn(drawn) {
+    grid.innerHTML = drawn.map((r,i) => `
+        <article class="rune-card">
+            <div class="rune-glyph">${r.glyph}</div>
+            <div class="rune-name">${r.name}</div>
+            <div class="rune-phonetic">${r.phonetic}</div>
+            <div class="rune-aett">${AETTS[r.aett].name}</div>
+            <div class="rune-meaning">${r.reversed ? r.meaning_reversed : r.meaning_upright}</div>
+            ${r.reversed ? `<div class="rune-reversed"><span class="label">⚠️ Reversed (Merkstave):</span> ${r.meaning_reversed}</div>` : ''}
+        </article>
+    `).join('');
+    grid.classList.add('visible');
+}
+
+function renderInterpretation(drawn) {
+    const positions = {
+        single: ['Guidance'],
+        three: ['Past / Cause', 'Present / Situation', 'Future / Outcome'],
+        five: ['Self / Core', 'Challenge / Opposition', 'Root Cause / Past', 'Guidance / Action', 'Outcome / Result']
+    };
+    
+    interpGrid.innerHTML = drawn.map((r,i) => `
+        <div class="interpretation-item">
+            <div class="position">${r.glyph} ${r.name} — ${positions[spreadType][i]}${r.reversed ? ' (Reversed)' : ''}</div>
+            <div class="meaning">${r.reversed ? r.meaning_reversed : r.meaning_upright}</div>
+        </div>
+    `).join('');
+    summary.classList.add('visible');
+}
+
+function renderSpreadButtons() {
+    document.querySelectorAll('.spread-btn').forEach(b => {
+        b.onclick = () => {
+            spreadType = b.dataset.spread;
+            document.querySelectorAll('.spread-btn').forEach(x => x.classList.remove('active'));
+            b.classList.add('active');
+        };
+    });
+}
+
+function renderAettButtons() {
+    document.querySelectorAll('.aett-btn').forEach(b => {
+        b.onclick = () => {
+            selectedAett = b.dataset.aett;
+            document.querySelectorAll('.aett-btn').forEach(x => x.classList.remove('active'));
+            b.classList.add('active');
+        };
+    });
+}
+
+document.getElementById('drawBtn').onclick = drawRunes;
+
+loadHistory();
+renderSpreadButtons();
+renderAettButtons();
+</script>
+<script src="../js/conversion.js?v=20260728"></script>
+</body>
+</html>

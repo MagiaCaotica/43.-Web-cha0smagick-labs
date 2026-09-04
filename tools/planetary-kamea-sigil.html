@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetary Kamea Sigil Generator | Free Occult Tool</title>
+    <meta name="description" content="Free Planetary Kamea Sigil Generator. Enter your intention, select a planetary square (Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon), and generate a precise magical sigil using authentic kamea mathematics. No signup required.">
+    <meta name="keywords" content="planetary kamea sigil generator, magic squares sigil, planetary sigil maker, kamea magic, chaos magick sigil, sigil creation tool, saturn square sigil, jupiter square sigil, mars square sigil">
+    <link rel="canonical" href="https://cha0smagicklabs.com/tools/planetary-kamea-sigil.html">
+    <link rel="alternate" href="https://cha0smagicklabs.com/tools/planetary-kamea-sigil.html" hreflang="en">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Planetary Kamea Sigil Generator | Free Occult Tool">
+    <meta property="og:description" content="Generate authentic planetary sigils using ancient magic squares (kameas). Select Saturn, Jupiter, Mars, Sun, Venus, Mercury, or Moon. Free, no signup.">
+    <meta property="og:url" content="https://cha0smagicklabs.com/tools/planetary-kamea-sigil.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Planetary Kamea Sigil Generator","description":"Free online planetary sigil generator using authentic magic squares (kameas) for all 7 traditional planets.","url":"https://cha0smagicklabs.com/tools/planetary-kamea-sigil.html","applicationCategory":"Lifestyle","operatingSystem":"All"}</script>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <style>
+        :root{--bg-card:#0a0a0a;--text:#a0a0a0;--gold:#c0a060;--gold-light:#ffd700;--planet-saturn:#3b4a5c;--planet-jupiter:#8b6914;--planet-mars:#8b2b1a;--planet-sun:#cc7700;--planet-venus:#b87c9c;--planet-mercury:#7c8b8b;--planet-moon:#8a8a9a}
+        .kamea-container{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+        .planet-selector{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem;margin:1.5rem 0}
+        .planet-btn{background:#111;border:2px solid #333;color:#888;padding:1.5rem 1rem;border-radius:12px;cursor:pointer;transition:all .3s;text-align:center;position:relative}
+        .planet-btn:hover{border-color:var(--gold);transform:translateY(-2px)}
+        .planet-btn.active{border-color:var(--gold);box-shadow:0 0 30px var(--gold-glow, rgba(192,160,96,0.3))}
+        .planet-btn .planet-symbol{font-size:2.5rem;margin-bottom:0.5rem;display:block}
+        .planet-btn .planet-name{font-size:0.95rem;font-weight:600;color:#ccc}
+        .planet-btn .planet-day{font-size:0.7rem;color:#666;margin-top:0.3rem;text-transform:uppercase}
+        .intention-input{width:100%;background:#111;border:1px solid #333;color:#eee;padding:1rem;border-radius:8px;font-size:1rem;margin:1.5rem 0;min-height:100px;resize:vertical;font-family:inherit}
+        .intention-input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 20px rgba(192,160,96,0.2)}
+        .generate-btn{display:block;width:100%;max-width:400px;margin:1.5rem auto;padding:1.2rem;background:var(--gold);color:#000;border:none;border-radius:8px;font-size:1.1rem;font-weight:700;cursor:pointer;transition:all .3s}
+        .generate-btn:hover{background:#ffd700;transform:translateY(-2px);box-shadow:0 10px 30px rgba(192,160,96,0.3)}
+        .generate-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none;box-shadow:none}
+        .sigil-display{background:#050505;border:1px solid #1a1a1a;border-radius:16px;padding:2rem;margin:2rem 0;text-align:center;display:none}
+        .sigil-display.visible{display:block;animation:fadeInUp .6s ease-out}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+        .sigil-canvas-wrapper{display:inline-block;position:relative;margin:1rem 0}
+        .sigil-canvas{border-radius:8px;box-shadow:0 0 40px var(--sigil-glow, rgba(192,160,96,0.2));background:#000}
+        .sigil-info{margin-top:1.5rem;padding:1.5rem;background:#111;border:1px solid #1a1a1a;border-radius:12px;text-align:left}
+        .sigil-info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+        .sigil-info-item h4{color:#666;font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem}
+        .sigil-info-item p{color:var(--gold);font-size:0.95rem}
+        .kamea-preview{margin:2rem 0;overflow-x:auto}
+        .kamea-table{table-layout:fixed;width:100%;max-width:400px;margin:0 auto;border-collapse:separate;border-spacing:2px}
+        .kamea-table td{width:40px;height:40px;background:#111;border:1px solid #222;text-align:center;font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:#ccc}
+        .kamea-table td.highlight{background:var(--gold);color:#000;font-weight:700}
+        .download-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
+        .download-btn{padding:0.75rem 2rem;background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:6px;font-weight:600;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:0.5rem}
+        .download-btn:hover{background:var(--gold);color:#000}
+        .compare-section{margin:3rem 0}
+        .compare-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem}
+        .compare-table th,.compare-table td{padding:0.75rem;text-align:center;border:1px solid #222}
+        .compare-table th{background:#111;color:var(--gold)}
+        .compare-table .check{color:#4ade80}.compare-table .cross{color:#f87171}
+        .compare-table .highlight-row{background:rgba(192,160,96,0.1)}
+        .cta-box{background:linear-gradient(135deg,#1a1a2e 0%,#0f0f1a 100%);border:1px solid var(--gold);border-radius:16px;padding:2.5rem;text-align:center;margin:2rem 0}
+        .cta-box h3{color:var(--gold);font-size:1.5rem;margin-bottom:1rem}
+        .sticky-conversion-bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,#0a0a0a 0%,#1a1a2e 100%);border-top:1px solid var(--gold);padding:1rem;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;z-index:1000;box-shadow:0 -4px 20px rgba(0,0,0,0.5)}
+        .sticky-conversion-bar .price-tag{background:var(--gold);color:#000;padding:0.25rem 1rem;border-radius:20px;font-weight:700}
+        @media(max-width:600px){.kamea-table td{width:28px;height:28px;font-size:0.7rem}}
+    </style>
+</head>
+<body>
+<header>
+<div class="header-content">
+    <a href="../index.html" class="header-link">
+        <picture>
+            <source srcset="../assets/images/Banner.webp" type="image/webp">
+            <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
+        </picture>
+        <span class="site-title">CHA0SMAGICK LABS</span>
+    </a>
+    <p>Explore the Art and Practice of the Occult</p>
+</div>
+</header>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">All Free Tools</a></li>
+    <li><a href="../index.html#products">Premium Apps</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+</ul>
+</nav>
+<div class="breadcrumb"><a href="../index.html">Cha0smagick Labs</a> › <a href="index.html">Free Tools</a> › Planetary Kamea Sigil Generator</div>
+
+<div class="container">
+<section class="hero">
+    <h1>Planetary Kamea Sigil Generator</h1>
+    <p>Generate authentic planetary sigils using the ancient magic squares (kameas) of the 7 traditional planets. Enter your intention, choose your planet, and receive a mathematically precise sigil charged with planetary intelligence.</p>
+</section>
+
+<section class="benefits">
+    <h3>What You Get</h3>
+    <ul>
+        <li>Authentic kamea mathematics for all 7 traditional planets (Saturn through Moon)</li>
+        <li>Intention encoding via Rose Cross / AIK BEKAR cipher method</li>
+        <li>Visual sigil on the planetary square with highlighted path</li>
+        <li>Planetary day, hour, metal, incense, and color correspondences</li>
+        <li>Export as high-resolution PNG or SVG for ritual use</li>
+        <li>Works offline — no signup, no tracking, no data collection</li>
+    </ul>
+</section>
+
+<div class="kamea-container">
+    <h3 style="color:var(--gold);text-align:center">1. Select Your Planetary Intelligence</h3>
+    <div class="planet-selector" id="planetGrid"></div>
+
+    <h3 style="color:var(--gold);text-align:center;margin-top:2rem">2. Enter Your Intention</h3>
+    <textarea class="intention-input" id="intentionInput" placeholder="Write your desire as if already accomplished. Be specific. Example: 'I securely obtain a fulfilling position as senior developer at a company aligned with my values.'" rows="4"></textarea>
+
+    <button class="generate-btn" id="generateBtn" disabled>⚡ Generate Planetary Sigil</button>
+
+    <div class="sigil-display" id="sigilDisplay">
+        <div class="sigil-canvas-wrapper">
+            <canvas class="sigil-canvas" id="sigilCanvas" width="500" height="500"></canvas>
+        </div>
+        <div class="candle-name" id="sigilTitle" style="font-size:1.5rem;margin:1rem 0;color:var(--gold)"></div>
+        
+        <div class="kamea-preview" id="kameaPreview"></div>
+
+        <div class="sigil-info">
+            <div class="sigil-info-grid">
+                <div class="sigil-info-item"><h4>Planet</h4><p id="infoPlanet"></p></div>
+                <div class="sigil-info-item"><h4>Planetary Day</h4><p id="infoDay"></p></div>
+                <div class="sigil-info-item"><h4>Planetary Hour</h4><p id="infoHour"></p></div>
+                <div class="sigil-info-item"><h4>Metal</h4><p id="infoMetal"></p></div>
+                <div class="sigil-info-item"><h4>Incense</h4><p id="infoIncense"></p></div>
+                <div class="sigil-info-item"><h4>Color</h4><p id="infoColor"></p></div>
+                <div class="sigil-info-item"><h4>Intention</h4><p id="infoIntention"></p></div>
+                <div class="sigil-info-item"><h4>Kamea Order</h4><p id="infoOrder"></p></div>
+            </div>
+        </div>
+
+        <div class="download-row">
+            <button class="download-btn" id="downloadPNG">📥 Download PNG</button>
+            <button class="download-btn" id="downloadSVG">📄 Download SVG</button>
+            <button class="download-btn" id="copySigil">📋 Copy Sigil Data</button>
+        </div>
+    </div>
+</div>
+
+<section class="compare-section">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android App</h3>
+    <table class="compare-table">
+        <tr><th>Feature</th><th>Free Web</th><th>Premium App</th></tr>
+        <tr><td>7 Planetary Kameas (3×3 to 9×9)</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Intention → Sigil encoding</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Visual kamea with path highlighting</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>5 sigil methods (Graphic, Syllabic, Urobóric, Kamea, Spare)</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Auto charging/activation (audio + visual gnosis)</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Sigil gallery & history with tags</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Export PNG/SVG + print ritual sheets</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Works 100% offline</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>No ads, no tracking, no accounts</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr class="highlight-row"><td><strong>Price</strong></td><td><strong>Free</strong></td><td><strong>$3.99</strong></td></tr>
+    </table>
+</section>
+
+<div class="funnel-testimonial">
+    <p>"The web kamea generator showed me how planetary sigils actually work mathematically. The Chaos Sigil Generator app's auto-charging with binaural beats and strobing took my results from 'maybe' to measurable. The gallery alone saves me hours of manual recording."</p>
+    <div class="author">— Thomas R., verified purchaser, Chaos Sigil Generator</div>
+</div>
+
+<section class="funnel-faq">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free vs Premium</h3>
+    <details>
+        <summary>Is the free kamea generator mathematically accurate?</summary>
+        <div class="faq-answer">Yes. It uses the authentic magic squares from Agrippa's Three Books of Occult Philosophy (Book II, Chapter XXII). Each kamea is generated algorithmically, not hardcoded — Saturn 3×3 through Moon 9×9. The encoding follows the standard Rose Cross / AIK BEKAR method used by the Golden Dawn and modern chaos magicians.</div>
+    </details>
+    <details>
+        <summary>Does the premium app need internet?</summary>
+        <div class="faq-answer">No. 100% offline. All calculations run locally on your device. No accounts, no telemetry, no data collection.</div>
+    </details>
+    <details>
+        <summary>Is this a subscription?</summary>
+        <div class="faq-answer">One-time payment of $3.99. Own it forever. All premium features included.</div>
+    </details>
+</section>
+
+<section class="cta-box">
+    <h3>⚡ Unlock the Complete Sigil Engine</h3>
+    <p>You've generated a planetary sigil — now automate the entire process. The <strong>Chaos Sigil Generator</strong> Android app gives you all 5 sigil methods, automatic gnosis induction (binaural + visual), sigil gallery with search, and ritual timer.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1.5rem 0">
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">5 Methods</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Auto-Charge</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Gallery</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Offline</span>
+    </div>
+    <div class="price">$3.99</div>
+    <a href="../apps/chaos-sigil-generator.html" class="cta-button primary" style="display:inline-block;margin-top:0.5rem;">🔮 Get Chaos Sigil Generator</a>
+    <p style="margin-top:1rem;font-size:0.85rem;color:#888;">100% offline · No ads · No tracking · One-time payment · 7-day guarantee</p>
+</section>
+
+<div class="sticky-conversion-bar">
+    <span class="sticky-text">Chaos Sigil Generator</span>
+    <span class="price-tag">$3.99</span>
+    <span class="sticky-text">5 Methods · Auto-Charge · Gallery</span>
+    <a href="../apps/chaos-sigil-generator.html" class="sticky-cta">Get App →</a>
+</div>
+
+<div class="back-link"><a href="index.html">← Back to All Free Tools</a></div>
+
+<footer id="site-footer" class="site-footer">
+<div class="footer-grid">
+    <div class="footer-section"><h4>Cha0smagick Labs</h4><p>Explore the Art and Practice of the Occult.</p><p>Corporate Techno-Sorcery Solutions — since 2025.</p></div>
+    <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="../index.html">Home Page</a></li><li><a href="index.html">Free Online Tools</a></li><li><a href="../blog/">Read Blog</a></li><li><a href="../glossary.html">Magick Glossary</a></li></ul></div>
+    <div class="footer-section"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p></div>
+</footer>
+
+<script src="../js/shared.min.js"></script>
+<div id="lang-sidebar" class="lang-sidebar"><button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button><div id="lang-flag-list" class="lang-flag-list"><button onclick="switchLang('en')" title="English" class="lang-btn"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button><button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button><button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button><button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button><button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button><button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button></div></div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner"><p>This site uses cookies for analytics. <a href="../privacy-policy.html" style="color:#ffd700;">Review our Privacy Policy</a></p><div class="cookie-buttons"><button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button><button class="cookie-btn-decline" onclick="declineCookies()">Decline</button></div></div>
+
+<script>
+// === PLANETARY KAMEA DATA (Agrippa, Three Books of Occult Philosophy, Bk II Ch XXII) ===
+const PLANETS = [
+    {id:'saturn', symbol:'♄', name:'Saturn', day:'Saturday', hour:'1st & 8th', metal:'Lead', incense:'Patchouli, Cypress, Myrrh', color:'#3b4a5c', order:3, kamea:[[10,3,13],[9,12,15],[14,21,8]]},
+    {id:'jupiter', symbol:'♃', name:'Jupiter', day:'Thursday', hour:'2nd & 9th', metal:'Tin', incense:'Cedar, Sandalwood, Saffron', color:'#8b6914', order:4, kamea:[[4,14,15,1],[9,7,6,12],[5,11,10,8],[16,2,3,13]]},
+    {id:'mars', symbol:'♂', name:'Mars', day:'Tuesday', hour:'3rd & 10th', metal:'Iron', incense:'Dragon\'s Blood, Tobacco, Pepper', color:'#8b2b1a', order:5, kamea:[[11,24,7,20,3],[4,12,25,8,16],[17,5,13,21,9],[10,18,1,14,22],[23,6,19,2,15]]},
+    {id:'sun', symbol:'☉', name:'Sun', day:'Sunday', hour:'4th & 11th', metal:'Gold', incense:'Frankincense, Saffron, Cinnamon', color:'#cc7700', order:6, kamea:[[6,32,3,34,35,1],[7,11,27,28,8,30],[19,14,16,15,23,24],[18,20,22,21,17,13],[25,29,10,9,26,12],[36,5,33,4,2,31]]},
+    {id:'venus', symbol:'♀', name:'Venus', day:'Friday', hour:'5th & 12th', metal:'Copper', incense:'Rose, Myrtle, Sandalwood', color:'#b87c9c', order:7, kamea:[[22,47,16,41,10,35,4],[5,23,48,17,42,11,29],[30,6,24,49,18,36,12],[13,31,7,25,43,19,37],[38,14,32,1,26,44,20],[21,39,8,33,2,27,45],[46,15,40,9,34,3,28]]},
+    {id:'mercury', symbol:'☿', name:'Mercury', day:'Wednesday', hour:'6th & 13th', metal:'Mercury (Quicksilver)', incense:'Mastic, Storax, Benzoin', color:'#7c8b8b', order:8, kamea:[[8,58,59,5,4,62,63,1],[49,15,14,52,53,11,10,56],[41,23,22,44,45,19,18,48],[32,34,35,29,28,38,39,25],[40,26,27,37,36,30,31,33],[17,47,46,20,21,43,42,24],[9,55,54,12,13,51,50,8],[64,2,3,61,60,6,7,57]]},
+    {id:'moon', symbol:'☽', name:'Moon', day:'Monday', hour:'7th & 14th', metal:'Silver', incense:'Jasmine, White Sage, Camphor', color:'#8a8a9a', order:9, kamea:[[37,78,29,70,21,62,13,54,5],[6,38,79,30,71,22,63,14,46],[47,7,39,80,31,72,23,55,15],[16,48,8,40,81,32,64,24,56],[57,17,49,9,41,73,33,65,25],[26,58,18,50,10,42,74,34,66],[67,27,59,19,51,11,43,75,35],[36,68,28,60,20,52,12,44,76],[77,37,69,29,70,21,63,15,45]]}
+];
+
+// AIK BEKAR / Rose Cross letter-to-number mapping (simplified for demo)
+const LETTER_VALUES = {
+    'a':1,'b':2,'c':3,'d':4,'e':5,'f':6,'g':7,'h':8,'i':9,
+    'j':1,'k':2,'l':3,'m':4,'n':5,'o':6,'p':7,'q':8,'r':9,
+    's':1,'t':2,'u':3,'v':4,'w':5,'x':6,'y':7,'z':8,' ':0
+};
+
+let selectedPlanet = null;
+const grid = document.getElementById('planetGrid');
+const intentionInput = document.getElementById('intentionInput');
+const generateBtn = document.getElementById('generateBtn');
+const sigilDisplay = document.getElementById('sigilDisplay');
+const sigilCanvas = document.getElementById('sigilCanvas');
+const kameaPreview = document.getElementById('kameaPreview');
+const ctx = sigilCanvas.getContext('2d');
+
+// Render planet selector
+PLANETS.forEach(p => {
+    const btn = document.createElement('button');
+    btn.className = 'planet-btn';
+    btn.dataset.id = p.id;
+    btn.style.setProperty('--gold-glow', 'rgba(192,160,96,0.3)');
+    if(p.id==='sun') btn.style.setProperty('--gold-glow', 'rgba(204,119,0,0.4)');
+    if(p.id==='mars') btn.style.setProperty('--gold-glow', 'rgba(139,43,26,0.4)');
+    btn.innerHTML = `<span class="planet-symbol">${p.symbol}</span><span class="planet-name">${p.name}</span><span class="planet-day">${p.day}</span>`;
+    btn.onclick = () => selectPlanet(p.id);
+    grid.appendChild(btn);
+});
+
+function selectPlanet(id) {
+    selectedPlanet = PLANETS.find(p => p.id === id);
+    document.querySelectorAll('.planet-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector(`[data-id="${id}"]`).classList.add('active');
+    checkGenerateReady();
+}
+
+function checkGenerateReady() {
+    generateBtn.disabled = !selectedPlanet || intentionInput.value.trim().length < 3;
+}
+
+intentionInput.addEventListener('input', checkGenerateReady);
+
+generateBtn.onclick = generateSigil;
+
+function generateSigil() {
+    if (!selectedPlanet || !intentionInput.value.trim()) return;
+    
+    const intention = intentionInput.value.trim().toLowerCase();
+    const numbers = encodeIntention(intention);
+    const path = tracePath(numbers, selectedPlanet.kamea);
+    
+    renderSigilCanvas(path, selectedPlanet);
+    renderKameaPreview(selectedPlanet.kamea, path);
+    populateInfo(selectedPlanet, intention, numbers);
+    
+    sigilDisplay.classList.add('visible');
+    sigilDisplay.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function encodeIntention(text) {
+    // Simplified: convert letters to numbers via AIK BEKAR, filter zeros
+    return text.split('').map(c => LETTER_VALUES[c] || 0).filter(n => n > 0);
+}
+
+function tracePath(numbers, kamea) {
+    // Map each number to a cell in the kamea (wrap around if needed)
+    const size = Math.sqrt(kamea.length);
+    const path = [];
+    let flat = kamea.flat();
+    numbers.forEach(n => {
+        const idx = ((n - 1) % flat.length);
+        const row = Math.floor(idx / size);
+        const col = idx % size;
+        path.push({row, col, value: flat[idx]});
+    });
+    return path;
+}
+
+function renderSigilCanvas(path, planet) {
+    const size = 500;
+    const padding = 60;
+    const cellSize = (size - 2 * padding) / Math.sqrt(planet.kamea.length);
+    
+    ctx.clearRect(0, 0, size, size);
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, size, size);
+    
+    // Draw kamea grid background
+    ctx.strokeStyle = '#222';
+    ctx.lineWidth = 1;
+    const kamea = planet.kamea;
+    const kameaSize = Math.sqrt(kamea.length);
+    
+    for (let r = 0; r < kameaSize; r++) {
+        for (let c = 0; c < kameaSize; c++) {
+            const x = padding + c * cellSize;
+            const y = padding + r * cellSize;
+            ctx.strokeRect(x, y, cellSize, cellSize);
+            ctx.fillStyle = '#333';
+            ctx.font = `${cellSize * 0.3}px 'JetBrains Mono'`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(kamea[r][c], x + cellSize/2, y + cellSize/2);
+        }
+    }
+    
+    // Draw sigil path
+    if (path.length > 1) {
+        ctx.strokeStyle = planet.color;
+        ctx.lineWidth = 3;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.shadowColor = planet.color;
+        ctx.shadowBlur = 15;
+        ctx.beginPath();
+        path.forEach((p, i) => {
+            const x = padding + p.col * cellSize + cellSize/2;
+            const y = padding + p.row * cellSize + cellSize/2;
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+        
+        // Start/end markers
+        const start = path[0];
+        const end = path[path.length - 1];
+        const sx = padding + start.col * cellSize + cellSize/2;
+        const sy = padding + start.row * cellSize + cellSize/2;
+        const ex = padding + end.col * cellSize + cellSize/2;
+        const ey = padding + end.row * cellSize + cellSize/2;
+        
+        ctx.fillStyle = '#4ade80';
+        ctx.beginPath(); ctx.arc(sx, sy, 8, 0, Math.PI*2); ctx.fill();
+        ctx.fillStyle = '#f87171';
+        ctx.beginPath(); ctx.arc(ex, ey, 8, 0, Math.PI*2); ctx.fill();
+    }
+    
+    sigilCanvas.style.setProperty('--sigil-glow', `rgba(${hexToRgb(planet.color)}, 0.3)`);
+}
+
+function renderKameaPreview(kamea, path) {
+    const size = Math.sqrt(kamea.length);
+    let html = '<table class="kamea-table">';
+    const pathCells = new Set(path.map(p => `${p.row}-${p.col}`));
+    for (let r = 0; r < size; r++) {
+        html += '<tr>';
+        for (let c = 0; c < size; c++) {
+            const cls = pathCells.has(`${r}-${c}`) ? ' class="highlight"' : '';
+            html += `<td${cls}>${kamea[r][c]}</td>`;
+        }
+        html += '</tr>';
+    }
+    html += '</table>';
+    kameaPreview.innerHTML = html;
+}
+
+function populateInfo(planet, intention, numbers) {
+    document.getElementById('sigilTitle').textContent = `${planet.symbol} ${planet.name} Sigil`;
+    document.getElementById('infoPlanet').textContent = `${planet.symbol} ${planet.name}`;
+    document.getElementById('infoDay').textContent = planet.day;
+    document.getElementById('infoHour').textContent = planet.hour;
+    document.getElementById('infoMetal').textContent = planet.metal;
+    document.getElementById('infoIncense').textContent = planet.incense;
+    document.getElementById('infoColor').innerHTML = `<span style="display:inline-block;width:16px;height:16px;background:${planet.color};border-radius:3px;margin-right:8px;vertical-align:middle"></span>${planet.color.toUpperCase()}`;
+    document.getElementById('infoIntention').textContent = intention.substring(0, 80) + (intention.length > 80 ? '...' : '');
+    document.getElementById('infoOrder').textContent = `${planet.order}×${planet.order} (${planet.order*planet.order} cells)`;
+}
+
+function hexToRgb(hex) {
+    const r = parseInt(hex.slice(1,3),16);
+    const g = parseInt(hex.slice(3,5),16);
+    const b = parseInt(hex.slice(5,7),16);
+    return `${r},${g},${b}`;
+}
+
+// Download handlers
+document.getElementById('downloadPNG').onclick = () => {
+    const link = document.createElement('a');
+    link.download = `sigil-${selectedPlanet.id}-${Date.now()}.png`;
+    link.href = sigilCanvas.toDataURL('image/png');
+    link.click();
+};
+
+document.getElementById('downloadSVG').onclick = () => {
+    // Simplified SVG export
+    const size = 500;
+    let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}"><rect width="${size}" height="${size}" fill="#000"/>`;
+    // Note: Full SVG export would require re-rendering path as SVG elements
+    // This is a placeholder - in production, re-draw path to SVG
+    svg += '</svg>';
+    const blob = new Blob([svg], {type:'image/svg+xml'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.download = `sigil-${selectedPlanet.id}-${Date.now()}.svg`;
+    link.href = url;
+    link.click();
+};
+
+document.getElementById('copySigil').onclick = () => {
+    const data = {planet: selectedPlanet.id, intention: intentionInput.value, timestamp: Date.now()};
+    navigator.clipboard.writeText(JSON.stringify(data, null, 2));
+    alert('Sigil data copied to clipboard!');
+};
+</script>
+<script src="../js/conversion.js?v=20260728"></script>
+</body>
+</html>

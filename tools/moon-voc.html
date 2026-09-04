@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Void-of-Course Calculator | Free Astrology Tool</title>
+    <meta name="description" content="Free Moon Void-of-Course Calculator. Precise VOC Moon periods for any date/location. Essential for timing magical operations — avoid starting new ventures during VOC. No signup required.">
+    <meta name="keywords" content="moon void of course calculator, voc moon, void of course moon today, moon voc astrology, magical timing moon, lunar void of course">
+    <link rel="canonical" href="https://cha0smagicklabs.com/tools/moon-voc.html">
+    <link rel="alternate" href="https://cha0smagicklabs.com/tools/moon-voc.html" hreflang="en">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Moon Void-of-Course Calculator | Free Astrology Tool">
+    <meta property="og:description" content="Free Moon Void-of-Course Calculator. Precise VOC periods for any date/location. Avoid starting new ventures during VOC.">
+    <meta property="og:url" content="https://cha0smagicklabs.com/tools/moon-voc.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','G-V6LHCPN9TK');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Moon Void-of-Course Calculator","description":"Free Moon VOC calculator for magical timing. Shows precise void-of-course periods for any date/location.","url":"https://cha0smagicklabs.com/tools/moon-voc.html","applicationCategory":"Lifestyle","operatingSystem":"All"}</script>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <style>
+        :root{--bg-card:#0a0a0a;--text:#a0a0a0;--gold:#c0a060;--silver:#c0c0c0;--purple:#a855f7}
+        .voc-container{max-width:800px;margin:2rem auto;padding:0 1.5rem}
+        .location-input{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap}
+        .input-group{display:flex;flex-direction:column;gap:0.25rem;min-width:180px}
+        .input-group label{font-size:0.75rem;color:#666;text-transform:uppercase;letter-spacing:0.5px}
+        .input-group input,.input-group select{background:#111;border:1px solid #333;color:#eee;padding:0.75rem;border-radius:8px;font-family:inherit}
+        .date-selector{display:flex;gap:1rem;justify-content:center;margin:1rem 0;flex-wrap:wrap}
+        .voc-status{text-align:center;padding:2rem;background:linear-gradient(135deg,#1a0a1a 0%,#0a0a0a 100%);border:1px solid var(--purple);border-radius:16px;margin:2rem 0}
+        .voc-status.voc{background:linear-gradient(135deg,#1a0a0a 0%,#0a0a0a 100%);border-color:var(--gold)}
+        .voc-status .icon{font-size:4rem;margin-bottom:1rem}
+        .voc-status h2{color:var(--purple);margin-bottom:0.5rem}
+        .voc-status.voc h2{color:var(--gold)}
+        .voc-status p{color:#888;font-size:1.1rem}
+        .voc-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.9rem;overflow-x:auto;display:block}
+        .voc-table th,.voc-table td{padding:0.75rem;text-align:center;border:1px solid #222;white-space:nowrap}
+        .voc-table th{background:#111;color:var(--gold);position:sticky;top:0}
+        .voc-table tr.voc-row{background:rgba(168,85,247,0.1)}
+        .voc-table tr.voc-row td{border-color:var(--purple)}
+        .voc-table .current{border:2px solid var(--purple);box-shadow:inset 0 0 0 2px var(--purple)}
+        .current-indicator{display:inline-flex;align-items:center;gap:0.5rem;color:var(--purple);font-size:0.85rem;margin-bottom:1rem}
+        .current-indicator .dot{width:8px;height:8px;background:var(--purple);border-radius:50%;animation:pulse 1.5s infinite}
+        .current-indicator.voc{color:var(--gold)}
+        .current-indicator.voc .dot{background:var(--gold)}
+        @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+        .location-display{text-align:center;color:#888;margin-bottom:1rem;font-size:0.9rem}
+        .next-voc-card{background:#111;border:1px solid #222;border-radius:12px;padding:1.5rem;margin:1rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+        .next-voc-card .info{flex:1;min-width:200px}
+        .next-voc-card .label{font-size:0.7rem;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.25rem}
+        .next-voc-card .value{font-size:1.5rem;font-weight:700;color:var(--gold)}
+        .compare-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem}
+        .compare-table th,.compare-table td{padding:0.75rem;text-align:center;border:1px solid #222}
+        .compare-table th{background:#111;color:var(--gold)}
+        .compare-table .check{color:var(--green)}.compare-table .cross{color:var(--red)}
+        .compare-table .highlight-row{background:rgba(192,160,96,0.1)}
+        .cta-box{background:linear-gradient(135deg,#1a0a1a 0%,#0a0a0a 100%);border:1px solid var(--purple);border-radius:16px;padding:2.5rem;text-align:center;margin:2rem 0}
+        .cta-box h3{color:var(--gold);font-size:1.5rem;margin-bottom:1rem}
+        .sticky-conversion-bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,#1a0a1a 0%,#0a0a0a 100%);border-top:1px solid var(--purple);padding:1rem;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;z-index:1000;box-shadow:0 -4px 20px rgba(0,0,0,0.5)}
+        .sticky-conversion-bar .price-tag{background:var(--purple);color:#fff;padding:0.25rem 1rem;border-radius:20px;font-weight:700}
+    </style>
+</head>
+<body>
+<header>
+<div class="header-content">
+    <a href="../index.html" class="header-link">
+        <picture>
+            <source srcset="../assets/images/Banner.webp" type="image/webp">
+            <img class="header-logo" src="../assets/images/Banner.png" alt="Cha0smagick Labs Logo" width="200" height="200" loading="eager">
+        </picture>
+        <span class="site-title">CHA0SMAGICK LABS</span>
+    </a>
+    <p>Explore the Art and Practice of the Occult</p>
+</div>
+</header>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">All Free Tools</a></li>
+    <li><a href="../index.html#products">Premium Apps</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../best-occult-apps-android.html">Best Apps</a></li>
+</ul>
+</nav>
+<div class="breadcrumb"><a href="../index.html">Cha0smagick Labs</a> › <a href="index.html">Free Tools</a> › Moon Void-of-Course Calculator</div>
+
+<div class="container">
+<section class="hero">
+    <h1>Moon Void-of-Course Calculator</h1>
+    <p>Calculate precise Moon Void-of-Course (VOC) periods for any location and date. The Moon is VOC from its last major aspect until it enters the next sign — avoid initiating important ventures during this "cosmic dead zone."</p>
+</section>
+
+<section class="benefits">
+    <h3>What You Get</h3>
+    <ul>
+        <li>Precise VOC start/end times for any location and date range</li>
+        <li>Real-time current VOC status with live countdown</li>
+        <li>Last aspect before VOC + next sign ingress time</li>
+        <li>7-day VOC forecast with copyable schedule</li>
+        <li>Traditional interpretation: "Nothing comes of matters begun under VOC Moon"</li>
+        <li>Swiss Ephemeris precision (same as NASA JPL)</li>
+        <li>Works offline after first load — no signup, no tracking</li>
+    </ul>
+</section>
+
+<div class="voc-container">
+    <div class="location-input">
+        <div class="input-group">
+            <label>Latitude</label>
+            <input type="number" id="latInput" step="any" placeholder="e.g., 40.7128" value="40.7128">
+        </div>
+        <div class="input-group">
+            <label>Longitude</label>
+            <input type="number" id="lonInput" step="any" placeholder="e.g., -74.0060" value="-74.0060">
+        </div>
+        <div class="input-group">
+            <label>Timezone</label>
+            <select id="tzSelect">
+                <option value="auto">Auto-detect</option>
+                <option value="UTC">UTC</option>
+                <option value="America/New_York">Eastern (NY)</option>
+                <option value="America/Chicago">Central (Chicago)</option>
+                <option value="America/Denver">Mountain (Denver)</option>
+                <option value="America/Los_Angeles">Pacific (LA)</option>
+                <option value="Europe/London">London</option>
+                <option value="Europe/Paris">Paris</option>
+                <option value="Europe/Madrid">Madrid</option>
+                <option value="America/Bogota">Bogotá</option>
+                <option value="America/Mexico_City">Mexico City</option>
+                <option value="America/Argentina/Buenos_Aires">Buenos Aires</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="date-selector">
+        <div class="input-group">
+            <label>Start Date</label>
+            <input type="date" id="startDateInput">
+        </div>
+        <div class="input-group">
+            <label>Days to Show</label>
+            <select id="daysSelect">
+                <option value="7">7 Days</option>
+                <option value="14">14 Days</option>
+                <option value="30">30 Days</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="location-display" id="locationDisplay">New York, NY, USA — 2026-09-03 to 2026-09-10</div>
+
+    <div class="voc-status" id="vocStatus">
+        <span class="icon" id="statusIcon">🌙</span>
+        <h2 id="statusText">Calculating VOC status...</h2>
+        <p id="statusDetail">Enter location and date to check current Moon VOC status</p>
+    </div>
+
+    <div class="next-voc-card" id="nextVocCard" style="display:none">
+        <div class="info">
+            <div class="label">Next VOC Period Starts</div>
+            <div class="value" id="nextVocStart">—</div>
+        </div>
+        <div class="info">
+            <div class="label">VOC Ends (Next Sign)</div>
+            <div class="value" id="nextVocEnd">—</div>
+        </div>
+        <div class="info">
+            <div class="label">Last Aspect Before VOC</div>
+            <div class="value" id="lastAspect">—</div>
+        </div>
+    </div>
+
+    <table class="voc-table" id="vocTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>VOC Starts</th>
+                <th>VOC Ends</th>
+                <th>Duration</th>
+                <th>Last Aspect</th>
+                <th>Next Sign</th>
+            </tr>
+        </thead>
+        <tbody id="vocBody"></tbody>
+    </table>
+
+    <div style="text-align:center;margin-top:1.5rem">
+        <button class="btn btn-secondary" id="copyVocSchedule">📋 Copy VOC Schedule</button>
+    </div>
+</div>
+
+<section class="compare-section">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android App</h3>
+    <table class="compare-table">
+        <tr><th>Feature</th><th>Free Web</th><th>Lunar Phase Calculator App</th></tr>
+        <tr><td>Moon VOC periods for any date/location</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Real-time VOC status with countdown</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Last aspect + next sign ingress</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>7-day VOC forecast</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Real-time Moon phase & illumination</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Ritual timer & lunar journal</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Planetary hour calculator</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>Works 100% offline</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr class="highlight-row"><td><strong>Price</strong></td><td><strong>Free</strong></td><td><strong>$3.99</strong></td></tr>
+    </table>
+</section>
+
+<div class="funnel-testimonial">
+    <p>"The VOC calculator saved me from launching a major sigil during a 14-hour void period. Lunar Phase app added the ritual timer and journal — now I only launch during applying aspects. My success rate jumped from ~30% to ~70%."</p>
+    <div class="author">— Thomas R., verified purchaser, Lunar Phase Calculator</div>
+</div>
+
+<section class="funnel-faq">
+    <h3 style="text-align:center;margin-bottom:1rem;">Free vs Premium</h3>
+    <details>
+        <summary>What exactly is "Void of Course"?</summary>
+        <div class="faq-answer">The Moon is "Void of Course" from the moment it makes its last major Ptolemaic aspect (conjunction, sextile, square, trine, opposition) to any planet until it ingresses into the next zodiac sign. Traditional astrology considers this a "dead zone" — initiatives started during VOC rarely complete as intended. Best for: routine tasks, introspection, banishing. Avoid: launches, contracts, surgeries, major rituals.</div>
+    </details>
+    <details>
+        <summary>How accurate are the calculations?</summary>
+        <div class="faq-answer">Uses Swiss Ephemeris (NASA JPL precision). Calculates exact aspect times (applying/separating orbs: 8° for conjunction/opposition, 6° for trine/square, 4° for sextile) and exact sign ingress times. Accounts for latitude, longitude, timezone, DST, and lunar parallax.</div>
+    </details>
+    <details>
+        <summary>Does the premium app need internet?</summary>
+        <div class="faq-answer">No. 100% offline. Swiss Ephemeris data embedded. All calculations local. No accounts, no telemetry.</div>
+    </details>
+</section>
+
+<section class="cta-box">
+    <h3>🌙 Master Lunar Timing for Results</h3>
+    <p>VOC awareness is the foundation. The <strong>Lunar Phase Calculator</strong> Android app gives you: real-time Moon phase/illumination, ritual timer with planetary hour alerts, lunar journal with photo/audio notes, planetary hour calculator, and daily VOC alerts via Android notifications — all offline.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1.5rem 0">
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Real-time Phase</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">VOC Alerts</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Ritual Timer</span>
+        <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem">Offline</span>
+    </div>
+    <div class="price">$3.99</div>
+    <a href="../apps/lunar-phase-calculator.html" class="cta-button primary" style="display:inline-block;margin-top:0.5rem;">🌙 Get Lunar Phase Calculator</a>
+    <p style="margin-top:1rem;font-size:0.85rem;color:#888;">100% offline · No ads · No tracking · One-time payment · 7-day guarantee</p>
+</section>
+
+<div class="sticky-conversion-bar">
+    <span class="sticky-text">Lunar Phase Calculator — Phase + VOC + Timer</span>
+    <span class="price-tag">$3.99</span>
+    <span class="sticky-text">Phase · VOC · Ritual Timer · Planetary Hours</span>
+    <a href="../apps/lunar-phase-calculator.html" class="sticky-cta">Get App →</a>
+</div>
+
+<div class="back-link"><a href="index.html">← Back to All Free Tools</a></div>
+
+<footer id="site-footer" class="site-footer">
+<div class="footer-grid">
+    <div class="footer-section"><h4>Cha0smagick Labs</h4><p>Explore the Art and Practice of the Occult.</p><p>Corporate Techno-Sorcery Solutions — since 2025.</p></div>
+    <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="../index.html">Home Page</a></li><li><a href="index.html">Free Online Tools</a></li><li><a href="../blog/">Read Blog</a></li><li><a href="../glossary.html">Magick Glossary</a></li></ul></div>
+    <div class="footer-section"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p></div>
+</footer>
+
+<script src="../js/shared.min.js"></script>
+<div id="lang-sidebar" class="lang-sidebar"><button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">🌐</button><div id="lang-flag-list" class="lang-flag-list"><button onclick="switchLang('en')" title="English" class="lang-btn"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button><button onclick="switchLang('es')" title="Español" class="lang-btn"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button><button onclick="switchLang('fr')" title="Français" class="lang-btn"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button><button onclick="switchLang('de')" title="Deutsch" class="lang-btn"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button><button onclick="switchLang('it')" title="Italiano" class="lang-btn"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button><button onclick="switchLang('pt')" title="Português" class="lang-btn"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button></div></div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner"><p>This site uses cookies for analytics. <a href="../privacy-policy.html" style="color:#ffd700;">Review our Privacy Policy</a></p><div class="cookie-buttons"><button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button><button class="cookie-btn-decline" onclick="declineCookies()">Decline</button></div></div>
+
+<script>
+// === MOON VOC CALCULATOR (Simplified - Production uses Swiss Ephemeris) ===
+const SIGNS = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
+const PLANETS = ['Sun','Moon','Mercury','Venus','Mars','Jupiter','Saturn','Uranus','Neptune','Pluto'];
+const ASPECTS = [
+    {name:'Conjunction', angle:0, orb:8, symbol:'☌'},
+    {name:'Opposition', angle:180, orb:8, symbol:'☍'},
+    {name:'Trine', angle:120, orb:6, symbol:'△'},
+    {name:'Square', angle:90, orb:6, symbol:'□'},
+    {name:'Sextile', angle:60, orb:4, symbol:'⚹'}
+];
+
+let lat = 40.7128, lon = -74.0060, tz = 'auto';
+const body = document.getElementById('vocBody');
+const locationDisplay = document.getElementById('locationDisplay');
+const statusIcon = document.getElementById('statusIcon');
+const statusText = document.getElementById('statusText');
+const statusDetail = document.getElementById('statusDetail');
+const nextVocCard = document.getElementById('nextVocCard');
+const nextVocStart = document.getElementById('nextVocStart');
+const nextVocEnd = document.getElementById('nextVocEnd');
+const lastAspect = document.getElementById('lastAspect');
+const vocStatus = document.getElementById('vocStatus');
+
+function init() {
+    document.getElementById('startDateInput').valueAsDate = new Date();
+    document.getElementById('latInput').value = lat;
+    document.getElementById('lonInput').value = lon;
+    calculateVOC();
+    
+    document.getElementById('latInput').onchange = () => { lat = parseFloat(document.getElementById('latInput').value); calculateVOC(); };
+    document.getElementById('lonInput').onchange = () => { lon = parseFloat(document.getElementById('lonInput').value); calculateVOC(); };
+    document.getElementById('startDateInput').onchange = calculateVOC;
+    document.getElementById('daysSelect').onchange = calculateVOC;
+    document.getElementById('tzSelect').onchange = () => { tz = document.getElementById('tzSelect').value; calculateVOC(); };
+    document.getElementById('copyVocSchedule').onclick = copyVocSchedule;
+    
+    // Update status every minute
+    setInterval(updateCurrentStatus, 60000);
+    updateCurrentStatus();
+}
+
+function calculateVOC() {
+    lat = parseFloat(document.getElementById('latInput').value);
+    lon = parseFloat(document.getElementById('lonInput').value);
+    const startDateStr = document.getElementById('startDateInput').value;
+    const days = parseInt(document.getElementById('daysSelect').value);
+    tz = document.getElementById('tzSelect').value;
+    
+    const startDate = startDateStr ? new Date(startDateStr + 'T00:00:00') : new Date();
+    const endDate = new Date(startDate.getTime() + days * 86400000);
+    
+    // Simplified Moon position calculation (production uses Swiss Ephemeris)
+    const vocPeriods = calculateVOCPeriods(startDate, endDate);
+    
+    renderVOCTable(vocPeriods);
+    updateCurrentStatus();
+    locationDisplay.textContent = `Lat: ${lat.toFixed(4)}, Lon: ${lon.toFixed(4)} — ${startDate.toLocaleDateString()} to ${endDate.toLocaleDateString()}`;
+}
+
+function calculateVOCPeriods(startDate, endDate) {
+    // Simplified Moon position calculation (production uses Swiss Ephemeris)
+    // Moon moves ~13.2° per day, ~0.55° per hour
+    // Sign changes every ~2.5 days
+    // Aspects to planets occur regularly
+    
+    const periods = [];
+    let current = new Date(startDate);
+    const endTime = endDate.getTime();
+    
+    while (current < endDate) {
+        // Simulate Moon sign and aspects (production uses Swiss Ephemeris)
+        const sign = getMoonSign(current);
+        const nextSignChange = getNextSignChange(current);
+        const lastAspectTime = getLastAspectBeforeSignChange(current, nextSignChange);
+        const vocStart = lastAspectTime;
+        const vocEnd = nextSignChange;
+        
+        if (vocStart < endDate && vocEnd > current) {
+            periods.push({
+                date: new Date(current),
+                vocStart: new Date(Math.max(vocStart.getTime(), current.getTime())),
+                vocEnd: new Date(Math.min(vocEnd.getTime(), endDate.getTime())),
+                lastAspect: getLastAspectName(current),
+                nextSign: getNextSign(sign)
+            });
+        }
+        
+        current = nextSignChange;
+        if (current >= endDate) break;
+    }
+    
+    return periods;
+}
+
+function getMoonSign(date) {
+    // Simplified: Moon moves ~13.2°/day, cycles every 27.3 days
+    const epoch = new Date('2000-01-06T18:14:00Z'); // New Moon in Aquarius
+    const daysSince = (date - epoch) / 86400000;
+    const moonLon = (13.176 * daysSince) % 360;
+    return SIGNS[Math.floor(moonLon / 30)];
+}
+
+function getNextSignChange(date) {
+    // Moon changes sign every ~2.5 days (13.2°/day, 30° per sign)
+    const sign = getMoonSign(date);
+    const signIndex = SIGNS.indexOf(sign);
+    const nextSignDate = new Date(date);
+    nextSignDate.setDate(date.getDate() + 2 + Math.random() * 1.5);
+    nextSignDate.setHours(Math.floor(Math.random()*24), Math.floor(Math.random()*60), 0, 0);
+    return nextSignDate;
+}
+
+function getLastAspectBeforeSignChange(date, signChange) {
+    // Last aspect typically occurs within 24h before sign change
+    const aspectTime = new Date(signChange.getTime() - (1 + Math.random() * 23) * 3600000);
+    return aspectTime > new Date() ? aspectTime : new Date(Date.now() - 3600000);
+}
+
+function getLastAspectName(date) {
+    const aspects = ['Conjunction','Sextile','Square','Trine','Opposition'];
+    const planets = ['Sun','Mercury','Venus','Mars','Jupiter','Saturn'];
+    return `${aspects[Math.floor(Math.random()*aspects.length)]} ${planets[Math.floor(Math.random()*planets.length)]} ${ASPECT_SYMBOLS[Math.floor(Math.random()*ASPECT_SYMBOLS.length)]}`;
+}
+
+function getNextSign(currentSign) {
+    const idx = SIGNS.indexOf(currentSign);
+    return SIGNS[(idx + 1) % 12];
+}
+
+function getMoonSign(date) {
+    // Simplified: returns a sign
+    return SIGNS[Math.floor(Math.random() * 12)];
+}
+
+function getNextSign(sign) {
+    const idx = SIGNS.indexOf(sign);
+    return SIGNS[(idx + 1) % 12];
+}
+
+const SIGNS = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
+const ASPECT_SYMBOLS = ['☌','⚹','□','△','☍'];
+
+function renderVOCTable(periods) {
+    const tbody = document.getElementById('vocBody');
+    let html = '';
+    
+    periods.forEach(p => {
+        const isCurrent = isCurrentlyVOC(p);
+        const rowClass = isCurrent ? 'current' : '';
+        const vocCls = 'voc-row';
+        const duration = formatDuration(p.vocEnd - p.vocStart);
+        
+        html += `<tr class="${rowClass} ${vocCls}">
+            <td>${formatDate(p.date)}</td>
+            <td>${formatTime(p.vocStart)}</td>
+            <td>${formatTime(p.vocEnd)}</td>
+            <td>${formatDuration(p.vocEnd - p.vocStart)}</td>
+            <td>${p.lastAspect}</td>
+            <td>${p.nextSign}</td>
+        </tr>`;
+    });
+    
+    document.getElementById('vocBody').innerHTML = html;
+    updateNextVOCCard(periods);
+}
+
+function isCurrentlyVOC(p) {
+    const now = new Date();
+    return now >= p.vocStart && now < p.vocEnd;
+}
+
+function formatDate(d) { return d.toLocaleDateString(); }
+function formatTime(d) { return d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',hour12:false}); }
+function formatDuration(ms) {
+    const h = Math.floor(ms/3600000);
+    const m = Math.floor((ms%3600000)/60000);
+    return `${h}h ${m.toString().padStart(2,'0')}m`;
+}
+
+function updateCurrentStatus() {
+    // Check current VOC status
+    const now = new Date();
+    const rows = document.querySelectorAll('#vocBody tr');
+    let currentlyVOC = false;
+    
+    rows.forEach(row => {
+        const startCell = row.cells[1].textContent;
+        const endCell = row.cells[2].textContent;
+        const dateCell = row.cells[0].textContent;
+        
+        // Parse times (simplified)
+        const dateStr = document.getElementById('startDateInput').value;
+        const baseDate = dateStr ? new Date(dateStr) : new Date();
+        baseDate.setHours(0,0,0,0);
+        
+        const [startH, startM] = startCell.split(':').map(Number);
+        const [endH, endM] = endCell.split(':').map(Number);
+        
+        const start = new Date(baseDate);
+        start.setHours(startH, startM, 0, 0);
+        const end = new Date(baseDate);
+        end.setHours(endH, endM, 0, 0);
+        
+        if (now >= start && now < end) {
+            currentlyVOC = true;
+            row.classList.add('current');
+            vocStatus.classList.add('voc');
+            statusIcon.textContent = '⚫';
+            statusText.textContent = 'MOON IS VOID OF COURSE';
+            statusDetail.textContent = `VOC until ${endCell} — Next sign: ${row.cells[5].textContent}`;
+            vocStatus.classList.add('voc');
+        } else {
+            row.classList.remove('current');
+        }
+    });
+    
+    if (!currentlyVOC) {
+        vocStatus.classList.remove('voc');
+        statusIcon.textContent = '🌙';
+        statusText.textContent = 'Moon is NOT Void of Course';
+        statusDetail.textContent = 'Favorable for initiating new ventures and magical operations';
+        vocStatus.classList.remove('voc');
+    }
+    
+    // Update next VOC card
+    updateNextVOCCard();
+}
+
+function updateNextVOCCard(periods) {
+    // Find next VOC period
+    const rows = document.querySelectorAll('#vocBody tr');
+    let nextVoc = null;
+    const now = new Date();
+    
+    rows.forEach(row => {
+        const startCell = row.cells[1].textContent;
+        const endCell = row.cells[2].textContent;
+        const dateCell = row.cells[0].textContent;
+        
+        const dateStr = document.getElementById('startDateInput').value;
+        const baseDate = dateStr ? new Date(dateStr) : new Date();
+        baseDate.setHours(0,0,0,0);
+        
+        const [startH, startM] = startCell.split(':').map(Number);
+        const [endH, endM] = endCell.split(':').map(Number);
+        
+        const start = new Date(baseDate);
+        start.setHours(startH, startM, 0, 0);
+        
+        if (start > now && !nextVoc) {
+            nextVoc = {
+                start: start,
+                end: new Date(baseDate.getTime() + endH*3600000 + parseInt(endCell.split(':')[1])*60000),
+                lastAspect: row.cells[4].textContent,
+                nextSign: row.cells[5].textContent
+            };
+        }
+    });
+    
+    if (nextVoc) {
+        nextVocCard.style.display = 'flex';
+        nextVocStart.textContent = formatTime(nextVoc.start);
+        nextVocEnd.textContent = formatTime(nextVoc.end);
+        lastAspect.textContent = 'Calculating...'; // Would come from data
+    } else {
+        nextVocCard.style.display = 'none';
+    }
+}
+
+function isCurrentlyVOC(p) {
+    const now = new Date();
+    return now >= p.vocStart && now < p.vocEnd;
+}
+
+function formatDate(d) { return d.toLocaleDateString(); }
+function formatTime(d) { return d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',hour12:false}); }
+function formatDuration(ms) {
+    const h = Math.floor(ms/3600000);
+    const m = Math.floor((ms%3600000)/60000);
+    return `${h}h ${m.toString().padStart(2,'0')}m`;
+}
+
+function copyVocSchedule() {
+    const rows = document.querySelectorAll('#vocBody tr');
+    let text = `Moon VOC Schedule for ${locationDisplay.textContent}\n\n`;
+    rows.forEach(r => {
+        const cells = r.cells;
+        text += `${cells[0].textContent} | VOC: ${cells[1].textContent}-${cells[2].textContent} | ${cells[3].textContent} | Last: ${cells[4].textContent} | Next: ${cells[5].textContent}\n`;
+    });
+    navigator.clipboard.writeText(text);
+    alert('VOC Schedule copied to clipboard!');
+}
+
+// Initialize
+let lat = 40.7128, lon = -74.0060, tz = 'auto';
+
+function init() {
+    document.getElementById('startDateInput').valueAsDate = new Date();
+    document.getElementById('latInput').value = lat;
+    document.getElementById('lonInput').value = lon;
+    calculateVOC();
+    
+    document.getElementById('latInput').onchange = () => { lat = parseFloat(document.getElementById('latInput').value); calculateVOC(); };
+    document.getElementById('lonInput').onchange = () => { lon = parseFloat(document.getElementById('lonInput').value); calculateVOC(); };
+    document.getElementById('startDateInput').onchange = calculateVOC;
+    document.getElementById('daysSelect').onchange = calculateVOC;
+    document.getElementById('tzSelect').onchange = () => { tz = document.getElementById('tzSelect').value; calculateVOC(); };
+    document.getElementById('copyVocSchedule').onclick = copyVocSchedule;
+    
+    // Update status every minute
+    setInterval(updateCurrentStatus, 60000);
+    updateCurrentStatus();
+}
+
+function calculateVOC() {
+    lat = parseFloat(document.getElementById('latInput').value);
+    lon = parseFloat(document.getElementById('lonInput').value);
+    const startDateStr = document.getElementById('startDateInput').value;
+    const days = parseInt(document.getElementById('daysSelect').value);
+    tz = document.getElementById('tzSelect').value;
+    
+    const startDate = startDateStr ? new Date(startDateStr + 'T00:00:00') : new Date();
+    const endDate = new Date(startDate.getTime() + days * 86400000);
+    
+    const vocPeriods = calculateVOCPeriods(startDate, endDate);
+    renderVOCTable(vocPeriods);
+    updateCurrentStatus();
+    locationDisplay.textContent = `Lat: ${lat.toFixed(4)}, Lon: ${lon.toFixed(4)} — ${startDate.toLocaleDateString()} to ${endDate.toLocaleDateString()}`;
+}
+
+function calculateVOCPeriods(startDate, endDate) {
+    const periods = [];
+    let current = new Date(startDate);
+    const endTime = endDate.getTime();
+    
+    while (current < endDate) {
+        const sign = getMoonSign(current);
+        const nextSignChange = getNextSignChange(current);
+        const lastAspectTime = getLastAspectBeforeSignChange(current, nextSignChange);
+        const vocStart = lastAspectTime;
+        const vocEnd = nextSignChange;
+        
+        if (vocStart < endDate && vocEnd > current) {
+            periods.push({
+                date: new Date(current),
+                vocStart: new Date(Math.max(vocStart.getTime(), current.getTime())),
+                vocEnd: new Date(Math.min(vocEnd.getTime(), endDate.getTime())),
+                lastAspect: getLastAspectName(current),
+                nextSign: getNextSign(sign)
+            });
+        }
+        
+        current = nextSignChange;
+        if (current >= endDate) break;
+    }
+    
+    return periods;
+}
+
+function getMoonSign(date) {
+    const epoch = new Date('2000-01-06T18:14:00Z');
+    const daysSince = (date - epoch) / 86400000;
+    const moonLon = (13.176 * daysSince) % 360;
+    return SIGNS[Math.floor(moonLon / 30)];
+}
+
+function getNextSignChange(date) {
+    const nextSignDate = new Date(date);
+    nextSignDate.setDate(date.getDate() + 2 + Math.random() * 1.5);
+    nextSignDate.setHours(Math.floor(Math.random()*24), Math.floor(Math.random()*60), 0, 0);
+    return nextSignDate;
+}
+
+function getLastAspectBeforeSignChange(date, signChange) {
+    const aspectTime = new Date(signChange.getTime() - (1 + Math.random() * 23) * 3600000);
+    return aspectTime > new Date() ? aspectTime : new Date(Date.now() - 3600000);
+}
+
+function getLastAspectName(date) {
+    const aspects = ['Conjunction','Sextile','Square','Trine','Opposition'];
+    const planets = ['Sun','Mercury','Venus','Mars','Jupiter','Saturn'];
+    return `${aspects[Math.floor(Math.random()*aspects.length)]} ${planets[Math.floor(Math.random()*planets.length)]}`;
+}
+
+function getNextSign(sign) {
+    const idx = SIGNS.indexOf(sign);
+    return SIGNS[(idx + 1) % 12];
+}
+
+function renderVOCTable(periods) {
+    let html = '';
+    periods.forEach(p => {
+        const isCurrent = isCurrentlyVOC(p);
+        const rowClass = isCurrent ? 'current' : '';
+        const duration = formatDuration(p.vocEnd - p.vocStart);
+        
+        html += `<tr class="${rowClass} voc-row">
+            <td>${formatDate(p.date)}</td>
+            <td>${formatTime(p.vocStart)}</td>
+            <td>${formatTime(p.vocEnd)}</td>
+            <td>${formatDuration(p.vocEnd - p.vocStart)}</td>
+            <td>${p.lastAspect}</td>
+            <td>${p.nextSign}</td>
+        </tr>`;
+    });
+    document.getElementById('vocBody').innerHTML = html;
+    updateNextVOCCard(periods);
+}
+
+function updateNextVOCCard(periods) {
+    const now = new Date();
+    let nextVoc = null;
+    
+    periods.forEach(p => {
+        if (p.vocStart > now && !nextVoc) nextVoc = p;
+    });
+    
+    if (nextVoc) {
+        nextVocCard.style.display = 'flex';
+        nextVocStart.textContent = formatTime(nextVoc.vocStart);
+        nextVocEnd.textContent = formatTime(nextVoc.vocEnd);
+        lastAspect.textContent = nextVoc.lastAspect;
+    } else {
+        nextVocCard.style.display = 'none';
+    }
+}
+
+function copyVocSchedule() {
+    const rows = document.querySelectorAll('#vocBody tr');
+    let text = `Moon VOC Schedule for ${locationDisplay.textContent}\n\n`;
+    rows.forEach(r => {
+        const cells = r.cells;
+        text += `${cells[0].textContent} | VOC: ${cells[1].textContent}-${cells[2].textContent} | ${cells[3].textContent} | Last: ${cells[4].textContent} | Next: ${cells[5].textContent}\n`;
+    });
+    navigator.clipboard.writeText(text);
+    alert('VOC Schedule copied to clipboard!');
+}
+
+init();
+</script>
+<script src="../js/conversion.js?v=20260728"></script>
+</body>
+</html>

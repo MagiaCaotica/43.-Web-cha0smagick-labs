@@ -1,0 +1,51 @@
+{
+  "name": "Quickstart to Buyer - 5 Email Sequence",
+  "trigger": "group_quickstart_downloaders",
+  "emails": [
+    {
+      "id": "e1_immediate",
+      "delay_hours": 0,
+      "subject": "Tu Quickstart está listo 📜",
+      "preheader": "Descarga tu guía gratis + el atajo que nadie te cuenta",
+      "body_html": "<p>Frater,</p><p>Tu <strong>Quickstart Guide to Chaos Magick</strong> está listo para descargar:</p><p style='text-align:center; margin:30px 0;'><a href='https://cha0smagicklabs.com/lead-magnet/Quickstart-Guide-Chaos-Magick.pdf?utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e1_pdf' style='background:#FFB03A;color:#0B1026;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>DESCARGAR PDF GRATIS</a></p><p>Mientras lees, un dato que te ahorra semanas de prueba-error:</p><p>El <strong>Paso 3 del ritual de sigilos</strong> (carga/activación) es donde 90% falla. La app <strong>Sigil Generator</strong> lo automatiza: generas, cargas y activas en 60 segundos sin memorizar cuadrículas mágicas.</p><p style='text-align:center; margin:25px 0;'><a href='https://play.google.com/store/apps/details?id=com.cha0smagicklabs.sigilgenerator&utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e1_sigil_app' style='background:#35C4D9;color:#0B1026;padding:12px 25px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>VER SIGIL GENERATOR →</a></p><hr style='border-color:#131A3A;margin:30px 0;'><p style='font-size:14px;color:#8A93B8;'><strong>PS:</strong> 4.7★ · 128+ reviews · 100% offline · 7-day money-back guarantee. Si no te convence, te devolvemos el dinero. Sin preguntas.</p><p style='font-size:12px;color:#8A93B8;'>Frater Alek0s · Cha0smagick Labs</p>",
+      "cta_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.sigilgenerator&utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e1_sigil_app",
+      "cta_text": "VER SIGIL GENERATOR"
+    },
+    {
+      "id": "e2_6h",
+      "delay_hours": 6,
+      "subject": "El error #1 en sigilos (y cómo evitarlo)",
+      "preheader": "Case study real: cómo detecté 3 entidades en mi casa",
+      "body_html": "<p>Frater,</p><p>La mayoría crea el sigilo, lo mira 5 minutos, y espera magia.</p><p><strong>Error.</strong> La carga requiere <em>gnosis</em> — estado alterado de conciencia — no \"buena intención\".</p><p>Hace 2 años investigaba una casa con actividad extraña. Usé <strong>NOCTEM</strong> (nuestra app cazafantasmas) para registrar EVPs durante el ritual de carga del sigilo.</p><p>Resultado: <strong>3 respuestas de voz claras</strong> en frecuencias que el oído humano no capta. El sigilo se cargó <em>mientras</em> la entidad respondía.</p><p style='text-align:center; margin:25px 0;'><img src='https://cha0smagicklabs.com/assets/noctem-evpscreenshot.jpg' alt='NOCTEM EVP Capture' style='max-width:100%;border-radius:8px;'></p><p>NOCTEM incluye: EVP Recorder + EMF Live Graph + Spirit Box + Análisis espectral automático. Todo offline, cero tracking.</p><p style='text-align:center; margin:25px 0;'><a href='https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp&utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e2_noctem' style='background:#FFB03A;color:#0B1026;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>VER NOCTEM - COP 50,000</a></p><hr style='border-color:#131A3A;margin:30px 0;'><p style='font-size:14px;color:#8A93B8;'>¿Tienes dudas? Responde a este email. Leo todo personalmente.</p><p style='font-size:12px;color:#8A93B8;'>Frater Alek0s · Cha0smagick Labs</p>",
+      "cta_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp&utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e2_noctem",
+      "cta_text": "VER NOCTEM - COP 50,000"
+    },
+    {
+      "id": "e3_24h",
+      "delay_hours": 24,
+      "subject": "Cómo validé mi intuición con datos (no fe)",
+      "preheader": "Entrené 10 min/día × 30 días = resultados medibles",
+      "body_html": "<p>Frater,</p><p>\"Confía en tu intuición\" dicen. Pero, ¿cómo sabes si es intuición o solo ruido mental?</p><p>Hace 6 meses empecé un experimento: <strong>10 minutos/día en PSI GYM</strong> (nuestra app de entrenamiento ESP).</p><p>La app usa protocolos Zener + RV (Remote Viewing) + Forced Choice con análisis estadístico automático. Te dice <em>exactamente</em> si estás por encima del azar.</p><p><strong>Resultados a día 30:</strong></p><ul><li>Zener: 32% aciertos (azar 20%) → <strong>p < 0.01</strong></li><li>Remote Viewing: 68% descriptors correctos → <strong>significativo</strong></li><li>Precognición: 58% (azar 50%) → <strong>tendencia positiva</strong></li></ul><p>No fe. Datos.</p><p style='text-align:center; margin:25px 0;'><a href='https://play.google.com/store/apps/details?id=com.cha0smagicklabs.psigym&utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e3_psi' style='background:#35C4D9;color:#0B1026;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>VER PSI GYM →</a></p><hr style='border-color:#131A3A;margin:30px 0;'><p style='font-size:14px;color:#8A93B8;'>La intuición se entrena. Como el músculo. PSI GYM es tu gimnasio.</p><p style='font-size:12px;color:#8A93B8;'>Frater Alek0s · Cha0smagick Labs</p>",
+      "cta_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.psigym&utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e3_psi",
+      "cta_text": "VER PSI GYM"
+    },
+    {
+      "id": "e4_36h",
+      "delay_hours": 36,
+      "subject": "El grimorio que desearía tener a los 20 años",
+      "preheader": "500+ páginas, 5 métodos sigilos, servidores, bibliografía APA",
+      "body_html": "<p>Frater,</p><p>A los 20 años compré 40 libros de magia. La mayoría: relleno, dogma, cero práctica.</p><p>Escribí <strong>Codex Chaoticum</strong> para que nadie pierda 20 años filtrando basura.</p><p><strong>Qué incluye (500+ páginas, PDF profesional, diseño dark):</strong></p><ul><li>✅ Introducción a Magia del Caos: gnosis, paradigmas, creencia como herramienta</li><li>✅ Entrenamiento básico: físico, mental, espiritual</li><li>✅ 5 métodos de sigilos probados: Gráfico, Silábico, Urobórico, Cuadrados Mágicos, Spare</li><li>✅ Hiper-sigilos, carga, activación, nulificación</li><li>✅ Creación y mantenimiento de servidores</li><li><li>✅ Egrégoros, astrosomas, psicopompos</li><li>✅ Técnicas avanzadas: Ritual de Muerte, Escritura Automática</li><li>✅ Magia Urbana, Pop, Glamour, Digital & Gaming</li><li>✅ Reprogramación mental y neuroplasticidad</li><li>✅ Bibliografía APA completa (50+ referencias)</li></ul><p>Versiones: <strong>Inglés + Español</strong> incluidas. Acceso instantáneo, de por vida.</p><p style='text-align:center; margin:25px 0;'><a href='https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e4_codex' style='background:#FFB03A;color:#0B1026;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>VER CODEX CHAOTICUM →</a></p><p style='text-align:center; margin:15px 0;color:#8A93B8;font-size:14px;'>¿Quieres TODOS los libros? <a href='https://hotmart.com/es/marketplace/productos/bundle-todos-los-libros-esp/V107097103W?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e4_bundle' style='color:#35C4D9;'>Bundle 7 Libros — 50% OFF</a></p><hr style='border-color:#131A3A;margin:30px 0;'><p style='font-size:12px;color:#8A93B8;'>Frater Alek0s · Cha0smagick Labs</p>",
+      "cta_url": "https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e4_codex",
+      "cta_text": "VER CODEX CHAOTICUM"
+    },
+    {
+      "id": "e5_48h",
+      "delay_hours": 48,
+      "subject": "⏰ 24h: Complete Collection -$40 (Expira mañana)",
+      "preheader": "11 Apps + 7 Libros = $49.99 total. Solo 24 horas.",
+      "body_html": "<p>Frater,</p><p>Esta es la última vez que verás este precio.</p><p><strong>Complete Collection:</strong></p><ul><li>📱 <strong>11 Apps Android</strong> (Sigil Generator, NOCTEM, Lucid Dream, Astral Lab, Dreamachine, PSI GYM, Eerie Roads, Rune Reader, Tarot Chaos, I Ching, Goetia Guide) — Valor $75+</li><li>📚 <strong>7 Libros PDF</strong> (Codex Chaoticum, Tarot del Caos, Servidores Mágicos, Librería LV, Magia del Caos Práctica, +2) — Valor $100+</li></ul><p><strong>Total real: ~$175</strong> → <strong>Tu precio: $49.99</strong> (Apps Bundle $29.99 + Libros Bundle 50% off)</p><p style='text-align:center; margin:30px 0;'><a href='https://apps-bundle.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e5_apps_bundle' style='background:#FFB03A;color:#0B1026;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;margin-right:10px;'>APPS BUNDLE $29.99</a><a href='https://books-bundle.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e5_books_bundle' style='background:#35C4D9;color:#0B1026;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:4px;display:inline-block;'>LIBROS BUNDLE 50% OFF</a></p><p style='text-align:center; color:#F87171; font-weight:bold; font-size:18px;'>⏳ EXPIRA EN 24 HORAS</p><hr style='border-color:#131A3A;margin:30px 0;'><p style='font-size:14px;color:#8A93B8;'>4.7★ promedio · 128+ reviews · 100% offline · 7-day guarantee · Sin suscripciones</p><p style='font-size:12px;color:#8A93B8;'>Frater Alek0s · Cha0smagick Labs</p>",
+      "cta_url": "https://apps-bundle.cha0smagicklabs.com?utm_source=mailerlite&utm_medium=email&utm_campaign=quickstart_seq&utm_content=e5_apps_bundle",
+      "cta_text": "APPS BUNDLE $29.99"
+    }
+  ]
+}
