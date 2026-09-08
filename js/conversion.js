@@ -11,14 +11,13 @@
    * CONFIG
    * ============================================================ */
   var CONFIG = {
-    // MailerLite
-    mlAccount: '2539880',
-    mlFormEN: 'UOlyYH',   // EN lead magnet form
-    mlFormES: 'I95d94',   // ES lead magnet form (not published yet)
+    // Google Forms Lead Magnet (replaces MailerLite)
+    // Single embed URL works for both languages (form has language selector)
+    googleFormEmbedUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdNSQ6i1dDJaY0TsVRpo96DqBjL55xinOW_l5TVyQ09LtR_Rw/viewform?embedded=true',
 
-    // Lead Magnet PDFs
-    leadMagnetEN: '/lead-magnet/Quickstart-Guide-Chaos-Magick.pdf',
-    leadMagnetES: '/lead-magnet/Guia-Rapida-Magia-Caos.pdf',
+    // Lead Magnet PDFs (direct download links for noscript)
+    leadMagnetEN: 'https://drive.google.com/file/d/1grjtsbR9plJoQPtkoVhnsAgytCiXuPQb/view?usp=sharing',
+    leadMagnetES: 'https://drive.google.com/file/d/1VH15ZHker5zfnWYoj-j1XZ9SWDzuLBlg/view?usp=sharing',
 
     // Play Store collection URL
     playStoreURL: 'https://play.google.com/store/apps/dev?id=7060930672313565766',
@@ -360,34 +359,31 @@
     }, true);
   }
 
-  /* --- form_submit (MailerLite lead capture) ------------------------------ */
+  /* --- form_submit (Google Forms lead capture) ------------------------------ */
   function bindFormTracking() {
     if (window.__cmFormBound) return;
     window.__cmFormBound = true;
 
-    document.addEventListener('submit', function (e) {
-      var form = e.target;
-      if (!form || form.tagName !== 'FORM') return;
-
-      var isML = !!(form.closest('.ml-embedded, .ml-form-embedContainer, .ml-form-embedWrapper')) ||
-        /mailerlite/i.test(form.getAttribute('action') || '') ||
-        !!form.querySelector('input[type="email"], input[name="fields[email]"]');
-      if (!isML) return;
-
-      var formId = (form.closest('.ml-embedded') || {}).dataset;
-      track('form_submit', {
-        form_id: (formId && formId.form) || CONFIG.mlFormEN,
-        form_name: 'mailerlite_lead_magnet',
-        form_destination: 'mailerlite',
-        page: location.pathname,
-        page_type: getPageType(),
-        location: form.closest('#cm-email-popup') ? 'popup' : 'inline'
-      });
-      // GA4 recommended lead event — makes the conversion visible in reports.
-      track('generate_lead', { currency: 'USD', value: 0, method: 'mailerlite' });
-
-      if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
-    }, true);
+    // Track when lead magnet section enters viewport (interest signal)
+    var leadSection = document.getElementById('cm-cta-lead-magnet');
+    if (leadSection && 'IntersectionObserver' in window) {
+      var observed = false;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && !observed) {
+            observed = true;
+            track('lead_magnet_view', {
+              form_name: 'google_forms_lead_magnet',
+              form_destination: 'google_forms',
+              page: location.pathname,
+              page_type: getPageType()
+            });
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.5 });
+      observer.observe(leadSection);
+    }
   }
 
   /* ============================================================
@@ -429,34 +425,6 @@
 
   function getBooksData() {
     return (typeof booksData !== 'undefined') ? booksData : null;
-  }
-
-  // Build mailerLite Universal JS once
-  function loadMailerLite() {
-    if (window._mlLoaded) return;
-    window._mlLoaded = true;
-
-    // Check if ml function already exists
-    if (typeof window.ml === 'function') return;
-
-    /* BUGFIX: the previous snippet was called with only 4 arguments, so the
-     * queue-stub name parameter was undefined and the stub was attached to
-     * window["https://static.mailerlite.com/js/universal.js"] instead of
-     * window.ml. The following `window.ml(...)` call therefore threw a
-     * TypeError on every page, aborting run() — which silently killed the
-     * lead-magnet form, the collection CTA and everything scheduled after it.
-     * Passing 'ml' as the name argument (per MailerLite's official snippet)
-     * restores the intended behaviour. */
-    (function (w, d, e, u, f, l, n) {
-      w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
-      l = d.createElement(e); l.async = 1;
-      l.src = u + '?v=' + ~~(new Date().getTime() / 3600000);
-      n = d.getElementsByTagName(e)[0];
-      if (n && n.parentNode) n.parentNode.insertBefore(l, n);
-      else d.head.appendChild(l);
-    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
-
-    try { window.ml('account', CONFIG.mlAccount); } catch (e) { /* non-fatal */ }
   }
 
   // Insert HTML after an element
@@ -513,7 +481,7 @@
    * INJECTORS
    * ============================================================ */
 
-  // --- Lead Magnet Email Form ---
+  // --- Lead Magnet Email Form (Google Forms iframe) ---
   function injectLeadMagnet(targetSelector, position) {
     position = position || 'after';
     var target = document.querySelector(targetSelector);
@@ -521,19 +489,16 @@
 
     var lang = isSpanish();
     var headline = lang
-      ? 'ðŸ”— Â¡ObtÃ©n Tu GuÃa RÃ¡pida de Magia del Caos GRATIS!'
-      : 'ðŸ”— Get Your FREE Chaos Magick Quickstart Guide!';
+      ? '📩 ¡Obtén Tu Guía Rápida de Magia del Caos GRATIS!'
+      : '📩 Get Your FREE Chaos Magick Quickstart Guide!';
     var subtext = lang
-      ? 'Aprende tÃ©cnicas de sigilos, gnosis y servidores en este PDF de 10 pÃ¡ginas. Ingresa tu email y te lo envÃ­o al instante.'
+      ? 'Aprende técnicas de sigilos, gnosis y servidores en este PDF de 10 páginas. Ingresa tu email y te lo envío al instante.'
       : 'Learn sigil techniques, gnosis states & servitor creation in this 10-page PDF. Enter your email and I\'ll send it instantly.';
-    var btnText = lang ? 'Enviar mi GuÃ­a Gratis â†”' : 'Send My Free Guide â†”';
-    var formSlug = lang ? CONFIG.mlFormES : CONFIG.mlFormEN;
     var privacyText = lang
       ? 'Sin spam. Puedes darte de baja cuando quieras.'
       : 'No spam. Unsubscribe anytime.';
 
     // Don't inject if form already present on page
-    if (document.querySelector('.ml-embedded[data-form="' + formSlug + '"]')) return;
     if (document.getElementById('cm-cta-lead-magnet')) return;
 
     var html = '\
@@ -542,7 +507,7 @@
     <div class="cm-lead-content">\
       <h3 class="cm-lead-headline">' + headline + '</h3>\
       <p class="cm-lead-subtext">' + subtext + '</p>\
-      <div class="ml-embedded" data-form="' + formSlug + '"></div>\
+      <iframe src="' + CONFIG.googleFormEmbedUrl + '" width="100%" height="380" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>\
       <p class="cm-lead-privacy">' + privacyText + '</p>\
     </div>\
   </div>\
@@ -553,9 +518,6 @@
     } else {
       insertBefore(target, html);
     }
-
-    // Load MailerLite universal JS
-    loadMailerLite();
   }
 
   // --- Complete Collection CTA ---
@@ -645,7 +607,6 @@
     } else {
       insertBefore(insertPoint, html);
     }
-    loadMailerLite();
   }
 
   // --- Social Share Buttons (X · Pinterest · WhatsApp · Facebook) ---
@@ -943,7 +904,7 @@
     }
 
     var lang = isSpanish();
-    var formSlug = lang ? CONFIG.mlFormES : CONFIG.mlFormEN;
+    var pdfUrl = lang ? CONFIG.leadMagnetES : CONFIG.leadMagnetEN;
 
     host.setAttribute('aria-hidden', 'true');
     host.innerHTML = '\
@@ -956,17 +917,13 @@
       (lang
         ? 'Gu\u00EDa R\u00E1pida de Magia del Caos: 10 p\u00E1ginas sobre sigilos, gnosis y servidores. Gratis, al instante.'
         : 'Chaos Magick Quickstart: a 10-page PDF on sigils, gnosis states & servitors. Free, delivered instantly.') + '</p>\
-    <div class="ml-embedded" data-form="' + formSlug + '"></div>\
-    <a class="cm-popup-download" href="' +
-      (lang ? '/lead-magnet/Guia-Rapida-Magia-Caos.pdf' : '/lead-magnet/Quickstart-Guide-Chaos-Magick.pdf') +
-      '" download>' +
+    <iframe src="' + CONFIG.googleFormEmbedUrl + '" width="100%" height="380" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>\
+    <a class="cm-popup-download" href="' + pdfUrl + '" target="_blank" rel="noopener">' +
       (lang ? 'Descargar la gu\u00EDa ahora' : 'Download the guide now') + '</a>\
     <p class="cm-popup-privacy">' +
       (lang ? 'Sin spam. Cancela cuando quieras.' : 'No spam. Unsubscribe anytime.') + '</p>\
   </div>\
 </div>';
-
-    loadMailerLite();
 
     var overlay = host.querySelector('#cm-email-popup');
     var closeBtn = host.querySelector('.cm-popup-close');
