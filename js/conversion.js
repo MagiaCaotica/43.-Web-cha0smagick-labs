@@ -11,9 +11,10 @@
    * CONFIG
    * ============================================================ */
   var CONFIG = {
-    // Google Forms Lead Magnet (replaces MailerLite)
-    // Single embed URL works for both languages (form has language selector)
-    googleFormEmbedUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdNSQ6i1dDJaY0TsVRpo96DqBjL55xinOW_l5TVyQ09LtR_Rw/viewform?embedded=true',
+    // MailerLite Lead Magnet
+    mlAccount: '2539880',
+    mlFormEN: 'UOlyYH',   // EN lead magnet form
+    mlFormES: 'I95d94',   // ES lead magnet form
 
     // Lead Magnet PDFs (direct download links for noscript)
     leadMagnetEN: 'https://drive.google.com/file/d/1grjtsbR9plJoQPtkoVhnsAgytCiXuPQb/view?usp=sharing',
@@ -477,11 +478,39 @@
     return shuffled.slice(0, n);
   }
 
+  // Build MailerLite Universal JS once
+  function loadMailerLite() {
+    if (window._mlLoaded) return;
+    window._mlLoaded = true;
+
+    // Check if ml function already exists
+    if (typeof window.ml === 'function') return;
+
+    /* BUGFIX: the previous snippet was called with only 4 arguments, so the
+     * queue-stub name parameter was undefined and the stub was attached to
+     * window["https://static.mailerlite.com/js/universal.js"] instead of
+     * window.ml. The following `window.ml(...)` call therefore threw a
+     * TypeError on every page, aborting run() — which silently killed the
+     * lead-magnet form, the collection CTA and everything scheduled after it.
+     * Passing 'ml' as the name argument (per MailerLite's official snippet)
+     * restores the intended behaviour. */
+    (function (w, d, e, u, f, l, n) {
+      w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
+      l = d.createElement(e); l.async = 1;
+      l.src = u + '?v=' + ~~(new Date().getTime() / 3600000);
+      n = d.getElementsByTagName(e)[0];
+      if (n && n.parentNode) n.parentNode.insertBefore(l, n);
+      else d.head.appendChild(l);
+    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+    try { window.ml('account', CONFIG.mlAccount); } catch (e) { /* non-fatal */ }
+  }
+
   /* ============================================================
    * INJECTORS
    * ============================================================ */
 
-  // --- Lead Magnet Email Form (Google Forms iframe) ---
+  // --- Lead Magnet Email Form (MailerLite) ---
   function injectLeadMagnet(targetSelector, position) {
     position = position || 'after';
     var target = document.querySelector(targetSelector);
@@ -494,11 +523,13 @@
     var subtext = lang
       ? 'Aprende técnicas de sigilos, gnosis y servidores en este PDF de 10 páginas. Ingresa tu email y te lo envío al instante.'
       : 'Learn sigil techniques, gnosis states & servitor creation in this 10-page PDF. Enter your email and I\'ll send it instantly.';
+    var formSlug = lang ? CONFIG.mlFormES : CONFIG.mlFormEN;
     var privacyText = lang
       ? 'Sin spam. Puedes darte de baja cuando quieras.'
       : 'No spam. Unsubscribe anytime.';
 
     // Don't inject if form already present on page
+    if (document.querySelector('.ml-embedded[data-form="' + formSlug + '"]')) return;
     if (document.getElementById('cm-cta-lead-magnet')) return;
 
     var html = '\
@@ -507,7 +538,7 @@
     <div class="cm-lead-content">\
       <h3 class="cm-lead-headline">' + headline + '</h3>\
       <p class="cm-lead-subtext">' + subtext + '</p>\
-      <iframe src="' + CONFIG.googleFormEmbedUrl + '" width="100%" height="380" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>\
+      <div class="ml-embedded" data-form="' + formSlug + '"></div>\
       <p class="cm-lead-privacy">' + privacyText + '</p>\
     </div>\
   </div>\
@@ -518,6 +549,9 @@
     } else {
       insertBefore(target, html);
     }
+
+    // Load MailerLite universal JS (already loaded globally, but ensure account is set)
+    loadMailerLite();
   }
 
   // --- Complete Collection CTA ---
@@ -904,6 +938,7 @@
     }
 
     var lang = isSpanish();
+    var formSlug = lang ? CONFIG.mlFormES : CONFIG.mlFormEN;
     var pdfUrl = lang ? CONFIG.leadMagnetES : CONFIG.leadMagnetEN;
 
     host.setAttribute('aria-hidden', 'true');
@@ -917,7 +952,7 @@
       (lang
         ? 'Gu\u00EDa R\u00E1pida de Magia del Caos: 10 p\u00E1ginas sobre sigilos, gnosis y servidores. Gratis, al instante.'
         : 'Chaos Magick Quickstart: a 10-page PDF on sigils, gnosis states & servitors. Free, delivered instantly.') + '</p>\
-    <iframe src="' + CONFIG.googleFormEmbedUrl + '" width="100%" height="380" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>\
+    <div class="ml-embedded" data-form="' + formSlug + '"></div>\
     <a class="cm-popup-download" href="' + pdfUrl + '" target="_blank" rel="noopener">' +
       (lang ? 'Descargar la gu\u00EDa ahora' : 'Download the guide now') + '</a>\
     <p class="cm-popup-privacy">' +
