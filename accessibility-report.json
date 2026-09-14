@@ -1,0 +1,94 @@
+[
+  {
+    "page": "index.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/psi-gym.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/arcana-goetia.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/norse-rune-oracle.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/lunar-phase-calculator.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/iching-oracle.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/chaos-sigil-generator.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/unofficial-rider-waite-tarot.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/dream-machine.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/astral-lab.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/eerieroads.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/lucid-dream.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "apps/noctem-tools.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "books/manual-activacion-servidores-magicos-pdf.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "books/tratado-runas-cazadoras-caos-pdf.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "books/ouija-cazadora-pdf.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "books/liber-lvpinux-pdf.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "books/codex-chaoticus-pdf.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "books/tarot-chaos-pdf.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "books/mind-the-gap-pdf.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "blog/best-sigil-generator-app-onetime.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "blog/zener-cards-esp-training-guide.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  },
+  {
+    "page": "blog/chaos-magick-beginners-complete-guide.html",
+    "error": "Required \"window\" or \"document\" globals not defined and cannot be deduced from the context. Either set the globals before running or pass in a valid Element."
+  }
+]
