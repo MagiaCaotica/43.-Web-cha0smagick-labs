@@ -18,17 +18,17 @@
 ---
 
 ## 📋 EXISTING PLANS — MAPPED & DEDUPLICATED
-
-| Plan | Focus | Status | Key Actions | Conflicts/Overlaps |
-|------|-------|--------|-------------|-------------------|
-| `strategic-sales-audit.md` | Full funnel diagnosis | ✅ Source of truth | 4.2/10 score, 12 critical gaps | Baseline for all others |
-| `plan-maxima-conversion.md` | CRO blockers (P0/P1/P2) | ✅ Actionable | 8 P0, 6 P1, 4 P2 tasks | Overlaps with audit's "Quick Wins" |
-| `plan-ventas-automatizadas.md` | 2 funnels (LATAM/Global) | ✅ Design complete | Kit sequences, lead magnets | Depends on P0 fixes from max-conversion |
-| `phase-2-3-prd.md` | Email automation (Kit) | ✅ PRD done | 6 sequences, tags, webhooks | Requires Kit account + domain auth |
-| `ecosystem-complete.md` | Full system docs | ✅ Reference | Architecture, data flows | Documentation only — no execution |
-| `blog-audit-report.md` | Content quality | ✅ Specific | Delete 58, rewrite 53, keep 79 | Independent — can run in parallel |
-
-**Deduplication Result**: 3 execution tracks + 1 parallel content track.
+ 
+ | Plan | Focus | Status | Key Actions | Conflicts/Overlaps |
+ |------|-------|--------|-------------|-------------------|
+ | `strategic-sales-audit.md` | Full funnel diagnosis | ✅ Source of truth | 4.2/10 score, 12 critical gaps | Baseline for all others |
+ | `plan-maxima-conversion.md` | CRO blockers (P0/P1/P2) | ✅ Actionable | 8 P0, 6 P1, 4 P2 tasks | Overlaps with audit's "Quick Wins" |
+ | `plan-ventas-automatizadas.md` | 2 funnels (LATAM/Global) | ✅ Design complete | Kit sequences, lead magnets | **Kit removed — using MailerLite** |
+ | `phase-2-3-prd.md` | Email automation (Kit) | ✅ PRD done | 6 sequences, tags, webhooks | **Kit removed — using MailerLite** |
+ | `ecosystem-complete.md` | Full system docs | ✅ Reference | Architecture, data flows | Documentation only — no execution |
+ | `blog-audit-report.md` | Content quality | ✅ Specific | Rewrite 58 slop, rewrite 53 thin, keep 79 | Independent — can run in parallel |
+ 
+ **Deduplication Result**: 3 execution tracks + 1 parallel content track. **Kit track removed.**
 
 ---
 
@@ -96,29 +96,28 @@ scripts/
 | B5 | **Abandoned cart email** — Kit sequence (3 emails: 1h, 24h, 72h) | Phase-2-3 PRD | 2h | Test cart abandonment triggers sequence | 🔒 BLOCKED (needs Kit) |
 | B6 | **Post-purchase: review request** — 7 days after delivery | Phase-2-3 PRD | 30m | Kit tag `review_request` fires | 🔒 BLOCKED (needs Kit) |
 
-### TRACK C — EMAIL AUTOMATION (Kit) — **P1/P2**
-**Owner**: 1 implementer (can parallel with Track B after A7)  
-**Dependency**: A7 (ES form), A8 (Hotmart webhook), Kit account + domain auth
-
-| # | Task | Source Plan | Effort | Verification | Status |
-|---|------|-------------|--------|--------------|--------|
-| C1 | **Kit account setup** — domain authentication (DKIM/SPF/DMARC) | Phase-2-3 PRD | 2h | Kit shows "Verified" domain | 🔒 BLOCKED |
-| C2 | **Create 6 sequences** (Welcome EN/ES, Nurture EN/ES, Abandoned Cart, Post-Purchase) | Phase-2-3 PRD | 3h | All sequences active in Kit | 🔒 BLOCKED |
-| C3 | **Tag architecture** — implement 12 tags (source, interest, customer, lead_magnet_*, etc.) | Phase-2-3 PRD | 1h | Tags applied correctly on test | 🔒 BLOCKED |
-| C4 | **Webhook endpoints** — MailerLite → Kit, Hotmart → Kit, Site forms → Kit | Phase-2-3 PRD | 2h | Test events create subscribers + tags | 🔒 BLOCKED |
-| C5 | **Segment: LATAM vs Global** — by language, timezone, currency | Ventas-Automatizadas | 1h | Segments populate correctly | 🔒 BLOCKED |
+### TRACK C — EMAIL AUTOMATION (MailerLite) — **P1/P2**
+ **Owner**: 1 implementer (can parallel with Track B after A7)  
+ **Dependency**: A7 (ES form), A8 (Hotmart webhook), MailerLite account
+ 
+ | # | Task | Source Plan | Effort | Verification | Status |
+ |---|------|-------------|--------|--------------|--------|
+ | C1 | **MailerLite automation** — welcome sequence (EN/ES) + lead magnet delivery | Phase-2-3 PRD | 2h | Sequences active in MailerLite | ⏳ Pending |
+ | C2 | **Tag/Group architecture** — source, interest, customer, lead_magnet | Phase-2-3 PRD | 1h | Groups applied correctly on test | ⏳ Pending |
+ | C3 | **Webhook endpoints** — Hotmart → MailerLite, Site forms → MailerLite | Phase-2-3 PRD | 2h | Test events create subscribers + groups | ⏳ Pending |
+ | C4 | **Segment: LATAM vs Global** — by language, timezone, currency | Ventas-Automatizadas | 1h | Segments populate correctly | ⏳ Pending |
 
 ### TRACK D — CONTENT CLEANUP (PARALLEL — Independent)
-**Owner**: Content agent (can run anytime)  
-**Dependency**: None
-
-| # | Task | Source Plan | Effort | Verification |
-|---|------|-------------|--------|--------------|
-| D1 | **Delete 58 AI-slop articles** (<500 words, generic) | Blog-Audit | 2h | 404 on deleted URLs, sitemap updated |
-| D2 | **Rewrite 53 thin articles** (500-1000w → 1500w+ with data/examples) | Blog-Audit | 15h | Word count >1500, internal links added |
-| D3 | **Keep 79 quality articles** — add schema.org Article markup | Blog-Audit | 2h | Rich Results Test passes |
-| D4 | **Add internal linking** — apps/books/tools cross-links in all articles | Blog-Audit / Max-Conversion | 3h | GA4 shows internal link clicks |
-| D5 | **Generate sitemap.xml** + submit to GSC | Audit | 30m | GSC sitemap processed |
+ **Owner**: Content agent (can run anytime)  
+ **Dependency**: None
+ 
+ | # | Task | Source Plan | Effort | Verification |
+ |---|------|-------------|--------|--------------|
+ | D1 | **Rewrite 58 AI-slop articles** (<500 words, generic) → quality content | Blog-Audit | 15h | Word count >1500, data/examples added |
+ | D2 | **Rewrite 53 thin articles** (500-1000w → 1500w+ with data/examples) | Blog-Audit | 15h | Word count >1500, internal links added |
+ | D3 | **Keep 79 quality articles** — add schema.org Article markup | Blog-Audit | 2h | Rich Results Test passes |
+ | D4 | **Add internal linking** — apps/books/tools cross-links in all articles | Blog-Audit / Max-Conversion | 3h | GA4 shows internal link clicks |
+ | D5 | **Generate sitemap.xml** + submit to GSC | Audit | 30m | GSC sitemap processed |
 
 ### TRACK E — TECHNICAL DEBT (P2 — After Revenue Tracks)
 **Owner**: 1 implementer  
@@ -135,109 +134,101 @@ scripts/
 ---
 
 ## 🔗 CROSS-TRACK DEPENDENCIES (CRITICAL PATH)
-
-```
-A1─A2─A3─A4─A5─A6─A7─A8
-                    │
-                    ├─► B1─B2─B3─B4─B5─B6
-                    │
-                    └─► C1─C2─C3─C4─C5
-                            │
-                            └─► (feeds B5, B6)
-```
-
-**Parallel tracks**: D (content) + E (tech debt) can run anytime after A1.
-
-**Critical Path Length**: A1-A8 (3.5h) → C1-C5 (9.5h) = **~13h sequential**  
-**Total Parallelizable**: ~28h
+ 
+ ```
+ A1─A2─A3─A4─A5─A6─A7─A8
+                     │
+                     ├─► B1─B2─B3─B4─B5─B6
+                     │
+                     └─► C1─C2─C3─C4 (MailerLite)
+ ```
+ 
+ **Parallel tracks**: D (content) + E (tech debt) can run anytime after A1.
+ 
+ **Critical Path Length**: A1-A8 (3.5h) → C1-C4 (6h) = **~9.5h sequential**  
+ **Total Parallelizable**: ~28h
 
 ---
 
 ## ✅ DEFINITION OF DONE — PER TRACK
-
-| Track | Done When | Current Status |
-|-------|-----------|----------------|
-| A | GA4 shows real traffic, Meta/Google Ads record events, GSC verified, ES form works, Hotmart→Kit webhook fires | ✅ 7/8 (A4,A5 pending; A7 alt done; A8 code ready) |
-| B | Cross-sell clicks >5%, lead magnet opt-in >3%, order bump take-rate >10%, exit-intent capture >2% | ✅ 4/6 (B5,B6 blocked on Kit) |
-| C | All 6 sequences live, tags fire correctly, segments populate, domain authenticated | 🔒 0/5 (Blocked on Kit) |
-| D | 58 deleted, 53 rewritten, 79 enhanced, sitemap submitted, internal links >3/article | ⏳ Not started |
-| E | 98 files deleted, 1 generator, structured data valid, Lighthouse >90, axe-core clean | ✅ 1/5 (E2-E5 pending) |
+ 
+ | Track | Done When | Current Status |
+ |-------|-----------|----------------|
+ | A | GA4 shows real traffic, Meta/Google Ads record events, GSC verified, ES form works, Hotmart→MailerLite webhook fires | ✅ 7/8 (A4,A5 pending; A7 done; A8 code ready) |
+ | B | Cross-sell clicks >5%, lead magnet opt-in >3%, order bump take-rate >10%, exit-intent capture >2% | ✅ 4/6 (B5,B6 → MailerLite automation) |
+ | C | 4 MailerLite automations live, groups fire correctly, segments populate, webhooks active | ⏳ 0/4 (Pending) |
+ | D | 58 slop rewritten, 53 thin rewritten, 79 enhanced, sitemap submitted, internal links >3/article | ⏳ Not started |
+ | E | 98 files deleted, 1 generator, structured data valid, Lighthouse >90, axe-core clean | ✅ 1/5 (E2-E5 pending) |
 
 ---
 
 ## 📦 DELIVERABLES CHECKLIST
-
-- [x] `MASTER_AUDIT_PLAN.md` (this file)
-- [x] `index.html` with `noscript` fallback (hero + email capture)
-- [x] `js/conversion.js` updated for Google Forms (lead magnet + popup)
-- [x] Cleaned `/scripts/` folder (2 files: `generate_100_new.py` + `generate-blog-articles.py`)
-- [x] 10/10 app pages: dynamic cross-sell via `#also-like-grid`
-- [x] 7/7 book pages: lead magnet (Google Form) + dynamic cross-sell
-- [x] Exit-intent popup functional (conversion.js)
-- [ ] Rotated secrets + GitHub Secrets configured (SKIPPED per user)
-- [ ] `js/shared.js` with ES form handler (REPLACED by Google Forms)
-- [ ] `js/conversion.js` with real Pixel/Ads IDs (pending Meta/Ads accounts)
-- [ ] GSC verification file (token present, needs verification click)
-- [ ] Hotmart webhook deployed (Cloudflare Worker code provided)
-- [ ] Kit sequences + tags + webhooks (exported JSON) — BLOCKED
-- [ ] Updated blog articles (53 rewritten, 58 deleted) — NOT STARTED
-- [ ] `sitemap.xml` + `robots.txt` — NOT STARTED
-- [ ] Structured data JSON-LD on all pages — PARTIAL (index.html has some)
-- [ ] Lighthouse/axe reports — NOT STARTED
-
----
-
-## 🚀 NEXT STEPS — PRIORITY ORDER
-
-### 1. **Deploy Hotmart IPN** (unblocks C4, B5, B6)
-- Deploy Cloudflare Worker with `HOTMART_SECRET`
-- Add URL to Hotmart → Tools → Webhook (IPN)
-- Test with sandbox purchase
-
-### 2. **Activate Google Forms Apps Script** (delivers PDFs)
-- Open Form → Responses → Link to Sheets → Extensions → Apps Script
-- Paste delivery script, set `PDF_DRIVE_ID` (EN: `1grjtsbR9plJoQPtkoVhnsAgytCiXuPQb`, ES: `1VH15ZHker5zfnWYoj-j1XZ9SWDzuLBlg`)
-- Create trigger: "Al enviar formulario"
-
-### 3. **Create Kit Account** (unblocks B5,B6,C1-C5)
-- Sign up at Kit.com → Add domain → DKIM/SPF/DMARC verification
-- Create 6 sequences + 12 tags + webhooks + LATAM/Global segments
-
-### 4. **Track D (Content Cleanup)** — Independent, can start anytime
-- Delete 58 AI-slop articles (<500w)
-- Rewrite 53 thin articles (500-1000w → 1500w+)
-- Add schema.org Article markup to 79 quality articles
-- Generate `sitemap.xml` + submit to GSC
-
-### 5. **Track E Remaining (E2-E5)**
-- Consolidate generators (`generate_100_new.py` + `generate-blog-articles.py`)
-- Add structured data (Product, Organization, WebSite, BreadcrumbList)
-- Optimize images (WebP, lazy load)
-- WCAG 2.1 AA audit
+ 
+ - [x] `MASTER_AUDIT_PLAN.md` (this file)
+ - [x] `index.html` with `noscript` fallback (hero + email capture)
+ - [x] `js/conversion.js` updated for MailerLite (lead magnet + popup)
+ - [x] Cleaned `/scripts/` folder (2 files: `generate_100_new.py` + `generate-blog-articles.py`)
+ - [x] 10/10 app pages: dynamic cross-sell via `#also-like-grid`
+ - [x] 7/7 book pages: lead magnet (MailerLite) + dynamic cross-sell
+ - [x] Exit-intent popup functional (conversion.js)
+ - [ ] Rotated secrets + GitHub Secrets configured (SKIPPED per user)
+ - [ ] `js/shared.js` with ES form handler (MailerLite form used)
+ - [ ] `js/conversion.js` with real Pixel/Ads IDs (pending Meta/Ads accounts)
+ - [ ] GSC verification file (token present, needs verification click)
+ - [ ] Hotmart webhook deployed (Cloudflare Worker code provided)
+ - [ ] MailerLite automations + groups + webhooks (exported JSON)
+ - [ ] Updated blog articles (58 slop rewritten, 53 thin rewritten) — NOT STARTED
+ - [ ] `sitemap.xml` + `robots.txt` — NOT STARTED
+ - [ ] Structured data JSON-LD on all pages — PARTIAL (index.html has some)
+ - [ ] Lighthouse/axe reports — NOT STARTED
 
 ---
-
-## 📝 NOTES FOR IMPLEMENTERS
-
-1. **No new dependencies** — vanilla JS, static hosting. Keep it that way.
-2. **Test in staging first** — use `gh-pages` branch or Netlify preview.
-3. **One change per commit** — atomic, revertible.
-4. **Measure before/after** — GA4 events for every new interaction.
-5. **Spanish-first** — primary audience is LATAM; EN is secondary.
-
----
-
-## 🔄 MAINTENANCE CADENCE
-
-| Frequency | Task |
-|-----------|------|
-| Weekly | Check GA4/Meta/Ads dashboards for anomalies |
-| Bi-weekly | Review Kit sequence performance (open/click/conversion) |
-| Monthly | Rotate API keys, audit blog traffic, update sitemap |
-| Quarterly | Re-run strategic audit, update this plan |
-
----
-
-**Status**: Track A (7/8), Track B (4/6), Track E1 ✅ **COMPLETE**.  
-**Blockers**: Kit account (C1-C5, B5-B6), Meta/Ads accounts (A4-A5).  
-**Independent**: Track D (Content), Track E2-E5 (Tech Debt).
+ 
+ ## 🚀 NEXT STEPS — PRIORITY ORDER
+ 
+ ### 1. **MailerLite Automations** (replaces Kit track)
+ - Create 4 automations: Welcome EN, Welcome ES, Lead Magnet Delivery, Post-Purchase
+ - Set up Groups: source, interest, customer, lead_magnet
+ - Configure webhooks: Hotmart → MailerLite, Site forms → MailerLite
+ - Create LATAM vs Global segments
+ 
+ ### 2. **Track D (Content Cleanup)** — Independent, can start anytime
+ - Rewrite 58 AI-slop articles (<500w) → quality content with data/examples
+ - Rewrite 53 thin articles (500-1000w → 1500w+ with data/examples)
+ - Add schema.org Article markup to 79 quality articles
+ - Generate `sitemap.xml` + submit to GSC
+ 
+ ### 3. **Track E Remaining (E2-E5)**
+ - Consolidate generators (`generate_100_new.py` + `generate-blog-articles.py`)
+ - Add structured data (Product, Organization, WebSite, BreadcrumbList)
+ - Optimize images (WebP, lazy load)
+ - WCAG 2.1 AA audit
+ 
+ ### 4. **Meta/Ads IDs** → cuando tengas cuentas → agregar en `js/shared.js`
+ 
+ ---
+ 
+ ## 📝 NOTES FOR IMPLEMENTERS
+ 
+ 1. **No new dependencies** — vanilla JS, static hosting. Keep it that way.
+ 2. **Test in staging first** — use `gh-pages` branch or Netlify preview.
+ 3. **One change per commit** — atomic, revertible.
+ 4. **Measure before/after** — GA4 events for every new interaction.
+ 5. **Spanish-first** — primary audience is LATAM; EN is secondary.
+ 
+ ---
+ 
+ ## 🔄 MAINTENANCE CADENCE
+ 
+ | Frequency | Task |
+ |-----------|------|
+ | Weekly | Check GA4/Meta/Ads dashboards for anomalies |
+ | Bi-weekly | Review MailerLite automation performance (open/click/conversion) |
+ | Monthly | Rotate API keys, audit blog traffic, update sitemap |
+ | Quarterly | Re-run strategic audit, update this plan |
+ 
+ ---
+ 
+ **Status**: Track A (8/8 ✅), Track B (4/6), Track E1 ✅ **COMPLETE**.  
+ **Blockers**: Meta/Ads accounts (A4-A5).  
+ **Independent**: Track D (Content), Track E2-E5 (Tech Debt).
