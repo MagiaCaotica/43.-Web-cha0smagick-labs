@@ -1,0 +1,520 @@
+# MASTER EXECUTION PLAN — Cha0smagick Labs
+## Single Source of Truth | Supersedes All Prior Plans
+**Generated**: 2025-09-16 | **Version**: 1.0 | **Status**: ACTIVE
+
+---
+
+## 🎯 NORTH STAR: WHAT "DONE" LOOKS LIKE
+
+The system is **production ready for automated revenue** when ALL criteria pass:
+
+| # | Criterion | Verification Command |
+|---|-----------|---------------------|
+| 1 | Zero secrets in git history | `git log --all --full-history -- .env \| grep -c "TOKEN\|KEY\|SECRET" = 0` |
+| 2 | All secrets in GitHub Secrets | Repository Settings → Secrets → 10+ entries (TG, Discord, Groq, ML, GA4, Hotmart, Meta, Ads, Stripe, Pinterest) |
+| 3 | Zero inline JS >50 lines | `grep -r "<script>" --include="*.html" . \| wc -l < 20` (only bootstrap scripts) |
+| 4 | Test suite passes | `pytest scripts/ -v` ✅ + `npm test` (vitest) ✅ |
+| 5 | Rich Results Test passes | All page types (Article, Product, SoftwareApplication, WebApplication, Book, CollectionPage, FAQPage, BreadcrumbList) |
+| 6 | All 379 articles have Giscus | Spot-check: `curl -s <10 random articles> \| grep -c "giscus" = 10` |
+| 7 | Bots start via documented command | `node scripts/bots/run-bots.js all` → both bots connect |
+| 8 | Staging deployment works | PR preview URL accessible, no 404s |
+| 9 | Lighthouse CI budgets met | Perf >90, A11y >95, SEO >90, Best Practices >90 |
+| 10 | Revenue Track A complete | GA4 Realtime shows traffic; Meta Events Manager + Google Ads show test conversions |
+| 11 | MailerLite automations live | Test subscriber receives: Welcome EN, Welcome ES, Lead Magnet, Post-Purchase |
+| 12 | Hotmart products real + webhook deployed | Test purchase → instant delivery + MailerLite tag + Sheets log + Telegram admin notify |
+| 13 | Google Play sales tracked | Daily fetch script logs to Sheets → triggers MailerLite for app buyers |
+| 14 | Social publishing automated | Cron runs daily → Pinterest + X + Telegram channel auto-post from calendar |
+| 15 | KPI dashboard live + alerting | Google Sheets formulas + Apps Script daily check → Telegram alert if revenue <50% target |
+
+---
+
+## 🏗️ ARCHITECTURE: FOUR EXECUTION LAYERS (SEQUENTIAL DEPENDENCY)
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ LAYER 0: FOUNDATION (Security + Testability) — MUST BE FIRST   │
+├─────────────────────────────────────────────────────────────────┤
+│ LAYER 1: CODE QUALITY (Refactor + Build + SEO Fixes)           │
+├─────────────────────────────────────────────────────────────────┤
+│ LAYER 2: REVENUE ENGINE (Analytics + MailerLite + Conversion)  │
+├─────────────────────────────────────────────────────────────────┤
+│ LAYER 3: OPERATIONS (Bots + Deploy + Monitoring + Content)     │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Rule**: No work in Layer N+1 until Layer N is 100% complete and verified.
+
+---
+
+## 📋 LAYER 0 — FOUNDATION (Days 1-2)
+*Prerequisite for ALL other work. Zero exceptions.*
+
+### 0.1 Secret Rotation & Git Hygiene [P0 - BLOCKER]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 0.1.1 Rotate Telegram Bot Token | You | 5m | New token works in bot |
+| 0.1.2 Rotate Discord Bot Token + Client Secret | You | 5m | New tokens work in bot |
+| 0.1.3 Rotate Groq API Key | You | 5m | `/ask` works in both bots |
+| 0.1.4 Rotate MailerLite API Key | You | 5m | Forms submit successfully |
+| 0.1.5 Rotate Hotmart Webhook Secret | You | 5m | Webhook validates |
+| 0.1.6 Rotate GA4 Measurement ID (optional) | You | 5m | GA4 Realtime works |
+| 0.1.7 Rotate Stripe Secret + Webhook Secret | You | 5m | Stripe webhook validates |
+| 0.1.8 Rotate Pinterest/Post Bridge API Key | You | 5m | social-publish.js works |
+| 0.1.9 Add ALL 10 secrets to GitHub Repository Secrets | You | 10m | Settings → Secrets shows 10 entries |
+| 0.1.10 Verify `.env` in `.gitignore` | You | 2m | `git check-ignore .env` returns path |
+| 0.1.11 Purge secrets from git history (BFG/git-filter-repo) | You | 30m | `git log --all --full-history -- .env` shows no secrets |
+
+### 0.2 Test Infrastructure [P0 - BLOCKER]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 0.2.1 Add `pytest` + `pytest-html` to root `package.json` devDeps | Dev | 10m | `pytest --version` works |
+| 0.2.2 Create `scripts/conftest.py` with fixtures (temp dirs, sample articles) | Dev | 30m | `pytest scripts/test_generate_blog.py -v` passes — ✔️. Verified |
+| 0.2.3 Write tests for `generate_blog.py` (dry-run, index update, sitemap update) | Dev | 1h | 5+ tests pass |
+| 0.2.4 Write tests for `add_internal_links.py` (keyword matching, no duplicates) | Dev | 45m | 3+ tests pass |
+| 0.2.5 Write tests for `add_structured_data.py` (schema injection, no duplicates) | Dev | 45m | 3+ tests pass |
+| 0.2.6 Add `vitest` + `@vitest/coverage-v8` to root `package.json` devDeps | Dev | 10m | `npm test -- --run` works |
+| 0.2.7 Create `scripts/bots/test/bot-brain.test.js` (catalog integrity) | Dev | 1h | 10+ tests pass |
+| 0.2.8 Create `scripts/bots/test/groq-ai.test.js` (classifier, prompt building) | Dev | 1h | 5+ tests pass |
+| 0.2.9 Create `scripts/bots/test/telegram-bot.test.js` (command routing, auto-reply) | Dev | 1.5h | 8+ tests pass |
+| 0.2.10 Create `scripts/bots/test/discord-bot.test.js` (slash commands, welcome) | Dev | 1.5h | 8+ tests pass |
+| 0.2.11 Add `test` script to root `package.json`: `"test": "pytest scripts/ && vitest run scripts/bots/test/"` | Dev | 5m | `npm test` runs full suite |
+
+### 0.3 Bot Path Fix [P0 - BLOCKER]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 0.3.1 Move `projects/scripts/` → `scripts/bots/` | Dev | 10m | `ls scripts/bots/` shows 5 files |
+| 0.3.2 Update `run-bots.js` imports to relative paths | Dev | 10m | No import errors |
+| 0.3.3 Update README.md bot commands to `node scripts/bots/run-bots.js` | Dev | 5m | README matches reality |
+| 0.3.4 Test: `node scripts/bots/run-bots.js all` starts both bots | Dev | 5m | Both bots log "connected" |
+
+---
+
+## 📋 LAYER 1 — CODE QUALITY (Days 3-5)
+*All refactoring, build setup, SEO fixes. No revenue work yet.*
+
+### 1.1 Inline JavaScript Extraction [P0]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 1.1.1 Create `js/zener-trainer.js` from `tools/zener-esp-trainer.html` inline script (460 lines) | Dev | 1h | File exists, exports `initZenerTrainer()` |
+| 1.1.2 Update `tools/zener-esp-trainer.html` → load `../js/zener-trainer.js` via `<script type="module">` | Dev | 15m | Tool works identically |
+| 1.1.3 Create `js/visitor-map.js` from apps/books inline Leaflet init (~300 lines each) | Dev | 45m | File exists, exports `initVisitorMap()` |
+| 1.1.4 Update all 12 app pages → remove inline Leaflet, load `../js/visitor-map.js` | Dev | 30m | Maps render on all apps |
+| 1.1.5 Update all 7 book pages → remove inline Leaflet, load `../js/visitor-map.js` | Dev | 20m | Maps render on all books |
+| 1.1.6 Delete duplicate Leaflet init code from all 19 HTML files | Dev | 20m | `grep -r "L.map" apps/ books/` returns only visitor-map.js |
+| 1.1.7 Remove duplicate Product JSON-LD from `books/codex-chaoticus-pdf.html` (keep 1 of 3) | Dev | 10m | Rich Results Test passes |
+
+### 1.2 Build System & Consolidation [P1]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 1.2.1 Install `esbuild` as devDependency | Dev | 5m | `npx esbuild --version` works |
+| 1.2.2 Add `build:js` script: `esbuild js/*.js --minify --outdir=js --target=es2020` | Dev | 10m | `npm run build:js` creates `.min.js` files |
+| 1.2.3 Consolidate `addUTM()` → single definition in `shared.js` (remove from apps-data.js, conversion.js) | Dev | 30m | `grep -r "addUTM" js/` shows only shared.js |
+| 1.2.4 Update all HTML references from `.min.js` → `.js` (source) for dev; `.min.js` for prod via build | Dev | 20m | Dev loads source, prod loads minified |
+| 1.2.5 Add `build:css` if needed (currently using external style.min.css) | Dev | 15m | CSS builds if applicable |
+| 1.2.6 Add `prebuild` script that runs `build:js` before any deploy | Dev | 5m | GitHub Actions runs build |
+
+### 1.3 SEO & HTML Fixes [P1]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 1.3.1 Add noscript CSS fallback to ALL pages (copy `glossary.html` pattern) | Dev | 1h | `grep -r "noscript" --include="*.html" .` shows 400+ matches |
+| 1.3.2 Add `article:published_time` + `article:modified_time` meta to blog template (`generate_blog.py`) | Dev | 30m | 10 random articles have both meta tags |
+| 1.3.3 Add `twitter:site` (`@Cha0smagickLABS`) + `twitter:creator` (`@FraterAlek0s`) to all templates | Dev | 30m | All page types have both tags |
+| 1.3.4 Add JSON-LD Product/Offer to `landing-pages/*.html` (complete-access, apps-bundle, books-bundle, flash-sale) | Dev | 45m | Rich Results Test passes on landing pages |
+| 1.3.5 Replace hardcoded share buttons in blog template → use `conversion.js injectShareButtons()` | Dev | 45m | Blog articles use dynamic share row |
+| 1.3.6 Fix duplicate Article JSON-LD in blog articles (some have 2: one correct, one hardcoded to Zener) | Dev | 30m | `grep -c '"@type": "Article"' blog/*.html` = 379 (not 758) |
+| 1.3.7 Add `dateModified` to Article schema (use file mtime or current date) | Dev | 20m | All articles have dateModified |
+| 1.3.8 Run `add-giscus-to-articles.ps1` on all 379 articles | Dev | 10m | Spot-check 10 articles: all have Giscus |
+| 1.3.9 Run `add-cross-links.ps1` on all 379 articles | Dev | 10m | Spot-check 10 articles: all have Related Articles |
+| 1.3.10 Regenerate `sitemap.xml` via `generate_sitemap.py` | Dev | 5m | Sitemap has 400+ URLs, all lastmod current |
+
+### 1.4 Python Script Cleanup [P1]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 1.4.1 Delete `scripts/generate_100_new.py` | Dev | 2m | File gone |
+| 1.4.2 Delete `scripts/generate-blog-articles.py` | Dev | 2m | File gone |
+| 1.4.3 Update `generate_blog.py` to run `check_a11y.py` on ALL pages (not sample) | Dev | 15m | Accessibility report covers 100% |
+| 1.4.4 Run full blog regeneration: `python scripts/generate_blog.py` | Dev | 5m | 379 articles regenerated cleanly |
+
+---
+
+## 📋 LAYER 2 — REVENUE ENGINE (Days 6-14)
+*Analytics visible, MailerLite live, conversion optimized, ALL Hotmart products real, webhooks deployed. Depends on Layer 0-1 complete.*
+
+### 2.1 Analytics & Tracking Completion [P0]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 2.1.1 A2: GA4 consent default = granted (already done) | — | — | ✅ Verified |
+| 2.1.2 A3: GSC verification (already done, token present) | You | 5m | Click "Verify" in GSC |
+| 2.1.3 A4: Add real Meta Pixel ID to `js/shared.js` + `js/conversion.js` CONFIG | You | 5m | Meta Events Manager shows test PageView |
+| 2.1.4 A5: Add real Google Ads Conversion ID to `js/shared.js` + `js/conversion.js` CONFIG | You | 5m | Google Ads shows test conversion |
+| 2.1.5 A6: noscript fallback on index.html (already done) | — | — | ✅ Verified |
+| 2.1.6 A7: ES form replaced with Google Forms (already done) | — | — | ✅ Verified |
+| 2.1.7 A8: Deploy Hotmart webhook (Make.com scenario from `webhooks/webhook-configs.md`) | Dev | 1h | Test purchase → MailerLite tag `customer` + Sheets log |
+| 2.1.8 Verify GA4 consent update logic works (shared.js cmApplyConsent) | Dev | 15m | Decline cookie → GA4 stops; Accept → GA4 resumes |
+| 2.1.9 Add Hotmart purchase events to GA4 (via webhook → Measurement Protocol) | Dev | 1h | GA4 shows purchase events |
+| 2.1.10 Add Google Play purchase events to GA4 (via daily fetch script) | Dev | 1h | GA4 shows app purchase events |
+
+### 2.2 Hotmart Product Creation (R1, R2, R5, R6) [P0 - REVENUE BLOCKERS]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 2.2.1 Create Hotmart product: Books Bundle (7 books, 50% off = $19.99) | You | 30m | Product live in Hotmart, checkout works |
+| 2.2.2 Create Hotmart product: Apps Bundle (11 apps, $29.99) — since Play doesn't support bundles | You | 30m | Product live in Hotmart, delivers license keys or redirect |
+| 2.2.3 Create Hotmart product: Complete Access (apps + books, $49.99) | You | 30m | Product live in Hotmart |
+| 2.2.4 Create Hotmart subscription: Inner Circle ($9/mo founding, $19/mo regular) | You | 45m | Subscription active, webhook fires on create/cancel |
+| 2.2.5 Create Hotmart product: Flash Sale ($99, 72h, 20 unit limit) | You | 30m | Product live with unit limit enforced |
+| 2.2.6 Update all landing pages (`landing-pages/*.html`) with real Hotmart product IDs + checkout URLs | Dev | 1h | Buttons link to real Hotmart checkout |
+| 2.2.7 Update `bot-brain.js` with real Hotmart product IDs + URLs (remove placeholders) | Dev | 30m | Bot slash commands show real prices/links |
+
+### 2.3 MailerLite Automation Setup (Track C + R4) [P1]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 2.3.1 Import `email-sequences/quickstart-to-buyer.json` → Welcome EN automation (5 emails) | You | 45m | Test EN subscriber gets full sequence |
+| 2.3.2 Import `email-sequences/post-purchase-upsell.json` → Welcome ES automation (5 emails) | You | 45m | Test ES subscriber gets full sequence |
+| 2.3.3 Create Lead Magnet Delivery automation (trigger: group `lead_magnet_*`) | You | 30m | Form submit → PDF delivered |
+| 2.3.4 Create Post-Purchase automation (trigger: Hotmart webhook → tag `customer`) | You | 45m | Test purchase → sequence starts |
+| 2.3.5 Create Abandoned Cart automation (3 emails: 1h, 24h, 72h) — **NEW** | You | 1h | Test cart abandonment → sequence triggers |
+| 2.3.6 Create Win-Back automation (inactive 30d, 60d, 90d) — **R11 NEW** | You | 1h | Simulate inactive → sequence fires |
+| 2.3.7 Create Cross-Sell Nurture automation (apps→books monthly, books→apps monthly) — **R12 NEW** | You | 1h | Test subscriber gets cross-sell at 30d |
+| 2.3.8 Create Onboarding automation (Day 1: first ritual, Day 3: troubleshooting, Day 7: results) — **R13 NEW** | You | 1h | Test buyer gets onboarding sequence |
+| 2.3.9 Create Referral Program automation (unique ref links + reward fulfillment) — **R14 NEW** | You | 1.5h | Test referral flow end-to-end |
+| 2.3.10 Create Groups: `source`, `interest`, `customer`, `lead_magnet`, `inner_circle`, `vip_customers` | You | 20m | Groups visible in MailerLite |
+| 2.3.11 Map forms → groups (EN form → source:website_en, ES form → source:website_es, lead magnet → lead_magnet_*) | You | 20m | Test submissions apply correct groups |
+| 2.3.12 Configure Hotmart → MailerLite webhook (IPN URL, secret, field mapping per `webhook-configs.md`) | Dev | 1h | Test IPN → subscriber created + tagged |
+| 2.3.13 Configure Site Forms → MailerLite webhook (Google Forms / MailerLite forms) | Dev | 45m | Test form → subscriber created + tagged |
+| 2.3.14 Create Segment LATAM (language=es OR country in LATAM) | You | 15m | Segment populates correctly |
+| 2.3.15 Create Segment Global (language=en OR country not in LATAM) | You | 15m | Segment populates correctly |
+| 2.3.16 Add price localization (GeoIP → COP/ARS/MXN/BRL display on landing pages) — **R15** | Dev | 2h | Prices show local currency for LATAM visitors |
+
+### 2.4 Conversion Optimization (Track B + R5, R6, R7, R16) [P1]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 2.4.1 B1: Cross-sell on app pages (already done 10/10) | — | — | ✅ Verified |
+| 2.4.2 B2: Lead magnet on book pages (already done 7/7 via Google Forms) | — | — | ✅ Verified |
+| 2.4.3 B3: Order bump on Hotmart (already configured) | — | — | ✅ Verified |
+| 2.4.4 B4: Exit-intent popup (already in conversion.js) | — | — | ✅ Verified |
+| 2.4.5 B5: Abandoned cart email (3 emails: 1h, 24h, 72h) — **requires MailerLite 2.3.5** | You | 1h | Test cart abandonment → sequence triggers |
+| 2.4.6 B6: Post-purchase review request (7 days) — **requires MailerLite 2.3.4** | You | 30m | Test purchase → review request fires at day 7 |
+| 2.4.7 Build Play Console → Make webhook (Cloud Pub/Sub → Cloud Function → Make) — **R7** | Dev | 2h | Test app purchase → webhook fires → MailerLite |
+| 2.4.8 Alternative: Daily Play Console sales fetch script (`play-sales-report.py` → webhook simulation) — **R16** | Dev | 1h | Daily cron logs app sales → Sheets → MailerLite trigger |
+| 2.4.9 Create Inner Circle Telegram VIP group + invite link automation (Make.com) — **R5** | Dev | 1h | Test subscription → invite generated + emailed |
+| 2.4.10 Implement Flash Sale 20-slot limit enforcement (Hotmart API or Make counter) — **R6, R23** | Dev | 1h | 21st purchase rejected or waitlisted |
+| 2.4.11 Add Flash Sale real countdown sync (server time, not client) — **R6** | Dev | 45m | Countdown matches across all pages/bots |
+
+### 2.5 Affiliate Program Activation (R8) [P2]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 2.5.1 Build affiliate payout calculator (Make.com + Google Sheets + monthly email) | Dev | 2h | Monthly payout email sent with correct amounts |
+| 2.5.2 Create affiliate terms page + agreement | You | 30m | Page live, agreement signed by affiliates |
+| 2.5.3 Build affiliate dashboard (simple: clicks, conversions, earnings) | Dev | 2h | Affiliate logs in → sees stats |
+
+### 2.6 Revenue Attribution & KPI Dashboard (R10, R25, R28, R29) [P2]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 2.6.1 Build live KPI dashboard in Google Sheets (formulas + conditional formatting) — **R10** | You | 1h | Dashboard shows: revenue, conversion, LTV, CAC by channel |
+| 2.6.2 Build SEO → revenue attribution (GA4 exploration or BigQuery export) — **R25** | Dev | 2h | "Organic keyword X → $Y revenue" visible |
+| 2.6.3 Build revenue alerting (Apps Script daily check → Telegram admin alert) — **R28** | Dev | 1h | Alert fires if revenue <50% target |
+| 2.6.4 Build cohort analysis (MailerLite export → Sheets pivot tables) — **R29** | Dev | 1h | "Jan 2026 buyers LTV vs Jul 2026 buyers" view |
+
+---
+
+## 📋 LAYER 3 — OPERATIONS (Days 15-21 + Ongoing)
+*Bots hardened, deployment automated, monitoring live, content pipeline running, AutoShorts separated.*
+
+### 3.1 Bot Hardening [P1]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 3.1.1 Make `bot-brain.js` dynamic (fetch offers from API/JSON, not hardcoded) — **R21** | Dev | 2h | Bot shows updated offers without code change |
+| 3.1.2 Add sales closing framing to Groq system prompt — **R22** | You | 30m | `/ask` responses include "buy now" CTA when relevant |
+| 3.1.3 Replace Imgur placeholder images in bot daily offers with real assets — **R21** | You | 1h | Daily offers show real product images |
+| 3.1.4 Create `ecosystem.config.js` for PM2 (both bots, auto-restart, log rotation) | Dev | 30m | `pm2 start ecosystem.config.js` → both online |
+| 3.1.5 Add `/health` endpoint to both bots (HTTP server on port 3000/3001) | Dev | 45m | `curl localhost:3000/health` → `{"status":"ok"}` |
+| 3.1.6 Add structured logging (Pino) to both bots | Dev | 1h | Logs are JSON, include timestamp, level, context |
+| 3.1.7 Integrate Sentry (or self-hosted GlitchTip) for error tracking | Dev | 1h | Test error → appears in Sentry |
+| 3.1.8 Add uptime monitoring (UptimeRobot / Better Uptime) for bot health endpoints | You | 15m | Dashboard shows both bots UP |
+| 3.1.9 Create systemd service files for production (if not using PM2) | Dev | 30m | `systemctl start cha0s-bots` works |
+| 3.1.10 Document bot deployment process in `docs/bot-deployment.md` | Dev | 30m | Doc exists, runnable by stranger |
+| 3.1.11 Add support ticket bot (Telegram/Discord → GitHub Issues or email) — **R26** | Dev | 2h | User creates ticket → appears in GitHub Issues |
+| 3.1.12 Add legal automation: ToS acceptance log, GDPR deletion endpoint — **R27** | Dev | 1.5h | `/delete-my-data` works, ToS logged on checkout |
+
+### 3.2 CI/CD & Deployment Pipeline [P1]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 3.2.1 Extend `.github/workflows/pages.yml` → add `build:js` step before deploy | Dev | 15m | Workflow runs build, then deploys |
+| 3.2.2 Create `.github/workflows/ci.yml` — runs `npm test` on every PR | Dev | 30m | PR shows "All checks passed" |
+| 3.2.3 Create `.github/workflows/dependabot.yml` — weekly dependency updates | Dev | 15m | Dependabot PRs appear weekly |
+| 3.2.4 Create `.github/workflows/security-scan.yml` — npm audit + CodeQL | Dev | 30m | Scan runs on schedule + PR |
+| 3.2.5 Create `.github/workflows/bot-deploy.yml` — deploy bots to server (SSH + PM2 reload) | Dev | 1h | Push to main → bots restart with new code |
+| 3.2.6 Add staging deployment: `gh-pages` branch or Netlify preview on PR | Dev | 45m | PR shows "Preview: https://deploy-preview-XXX..." |
+| 3.2.7 Add Lighthouse CI workflow (`.github/workflows/lighthouse.yml`) with budgets | Dev | 1h | PR fails if Perf <90, A11y <95, SEO <90 |
+
+### 3.3 Social Publishing Automation (R9) [P1]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 3.3.1 Add cron job for daily social publishing (Pinterest + X + Telegram channel) | Dev | 1h | Cron runs daily, posts published |
+| 3.3.2 Build evergreen content rotation (recycle best-performing pins/tweets) | Dev | 1.5h | Old content re-posted with variation |
+| 3.3.3 Connect blog → social auto-post (new article → auto-share to channels) | Dev | 1h | New blog post → appears on Telegram channel + X |
+| 3.3.4 Add analytics feedback loop (post performance → content calendar priority) | Dev | 1h | High-performing content gets boosted |
+
+### 3.4 Content Pipeline (Track D) [P2 - Parallelizable]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 3.4.1 D2: Rewrite 136 thin articles (priority: highest traffic potential first) | Content | ~100h | Word count >1500, data/examples, internal links |
+| 3.4.2 D3: Schema.org Article markup (already done) | — | — | ✅ Verified |
+| 3.4.3 D4: Internal linking apps/books/tools (already done 378/379) | — | — | ✅ Verified |
+| 3.4.4 D5: Sitemap.xml + GSC submit (already done) | — | — | ✅ Verified |
+| 3.4.5 Ongoing: Weekly blog audit (check_a11y.py, check_lazy.py, schema validation) | Content | 30m/wk | Reports clean |
+| 3.4.6 Build article→product mapping (auto-generate "related product" from content) — **R24** | Dev | 2h | New articles auto-link to relevant products |
+
+### 3.5 Technical Debt Verification (Track E) [P2]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 3.5.1 E3: Structured data (Product, Organization, WebSite, BreadcrumbList, Article, HowTo, FAQPage) — verify all | Dev | 1h | Rich Results Test: 0 errors |
+| 3.5.2 E4: Performance optimize images (WebP, lazy load, sizing) — verify all | Dev | 1h | Lighthouse Perf >90 |
+| 3.5.3 E5: Accessibility audit WCAG 2.1 AA — verify all | Dev | 1h | axe-core: 0 violations |
+
+### 3.6 AutoShorts Separation [P3]
+
+| Task | Owner | Effort | Verification |
+|------|-------|--------|--------------|
+| 3.6.1 Move `projects/auto-shorts/`, `projects/auto-shorts-full/`, `tools/auto-shorts/` to separate repo | Dev | 2h | New repo exists, main repo clean |
+| 3.6.2 Update `.gitignore` to exclude AutoShorts if keeping locally | Dev | 5m | AutoShorts not in main repo |
+| 3.6.3 Remove AutoShorts deps from root `package.json` (discord.js, playwright, puppeteer stay for bots) | Dev | 10m | `package.json` only has bot deps |
+
+---
+
+## 🔗 DEPENDENCY GRAPH (CRITICAL PATH)
+
+```
+LAYER 0 (Sequential)
+├── 0.1 Secrets → 0.2 Tests → 0.3 Bot Path
+    │
+    ▼
+LAYER 1 (Parallel after 0.1-0.3)
+├── 1.1 JS Extraction (sequential: zener → visitor-map)
+├── 1.2 Build System
+├── 1.3 SEO Fixes (parallel: noscript, meta, JSON-LD, Giscus, cross-links)
+└── 1.4 Python Cleanup
+    │
+    ▼
+LAYER 2 (Sequential after Layer 1)
+├── 2.1 Analytics (A4, A5, A8-A10)
+├── 2.2 Hotmart Products (R1-R2, R5-R6) ──→ 2.3 MailerLite (C1-C16 sequential)
+│       │
+│       ├────→ 2.4 Conversion (B5, B6, R7, R16, R5, R6, R10-R15)
+│       │
+│       ├────→ 2.5 Affiliate (R8)
+│       │
+│       └────→ 2.6 Attribution (R10, R25, R28, R29)
+    │
+    ▼
+LAYER 3 (Parallel after Layer 2)
+├── 3.1 Bot Hardening (R21, R22, R26, R27)
+├── 3.2 CI/CD
+├── 3.3 Social Cron (R9)
+├── 3.4 Content (ongoing + R24)
+├── 3.5 Tech Debt (verify)
+└── 3.6 AutoShorts Separation
+```
+
+**Critical Path Duration**: ~21 days (if 1 dev + 1 content + you for secrets/MailerLite/Hotmart)  
+**Parallelizable**: ~80% of Layer 1, ~60% of Layer 3
+
+---
+
+## ✅ ATOMIC TASK TEMPLATE (Use for Every Task)
+
+```
+### TASK [ID]: [Title]
+**Owner**: [Name] | **Effort**: [Time] | **Depends On**: [Task IDs]
+**Acceptance Criteria**:
+- [ ] Criterion 1 (measurable)
+- [ ] Criterion 2 (measurable)
+**Verification Command**: `[command that proves done]`
+**Rollback**: `[how to undo if broken]`
+**Notes**: `[context, gotchas, links]`
+```
+
+---
+
+## 📦 DELIVERABLES CHECKLIST (Final Audit)
+
+### Layer 0
+- [ ] All 10 secrets rotated + in GitHub Secrets
+- [ ] `.env` purged from git history
+- [ ] `pytest` + `vitest` suites pass (`npm test` green)
+- [ ] Bots start via `node scripts/bots/run-bots.js all`
+
+### Layer 1
+- [ ] `js/zener-trainer.js` + `js/visitor-map.js` exist, no inline JS >50 lines
+- [ ] `npm run build:js` creates `.min.js` files
+- [ ] `addUTM()` single source in `shared.js`
+- [ ] All 400+ HTML pages have noscript CSS fallback
+- [ ] All 379 blog articles have Giscus + cross-links + correct meta + single Article schema
+- [ ] Landing pages have Product/Offer JSON-LD
+- [ ] Legacy Python scripts deleted
+- [ ] `sitemap.xml` regenerated, 400+ URLs current
+
+### Layer 2
+- [ ] Meta Pixel ID + Google Ads ID live (test events visible)
+- [ ] Hotmart webhook deployed + tested (purchase → MailerLite + Sheets + Telegram)
+- [ ] 5 Hotmart products real (Books Bundle, Apps Bundle, Complete Access, Inner Circle, Flash Sale)
+- [ ] 9 MailerLite automations live + groups + webhooks + segments
+- [ ] Abandoned cart + review request + win-back + cross-sell + onboarding + referral emails firing
+- [ ] Play Console sales tracked (webhook or daily fetch) → MailerLite for app buyers
+- [ ] Price localization live (LATAM sees COP/ARS/MXN)
+- [ ] Affiliate payout calculator + dashboard live
+- [ ] KPI dashboard live + daily Telegram alert
+- [ ] SEO → revenue attribution visible
+- [ ] Cohort analysis view available
+
+### Layer 3
+- [ ] PM2 + health endpoints + Sentry + uptime monitoring for bots
+- [ ] CI workflow (test on PR) + Dependabot + Security scan + Bot deploy + Lighthouse CI
+- [ ] Staging preview on PR
+- [ ] Bot offers dynamic (API-driven), Groq has sales framing, real images
+- [ ] Social posts daily auto-publish + evergreen rotation + blog→social auto
+- [ ] Support ticket bot + legal automation (ToS log, GDPR deletion)
+- [ ] 136 thin articles rewritten (ongoing)
+- [ ] Article→product mapping auto-generated
+- [ ] AutoShorts separated
+- [ ] All Rich Results Test pass, Lighthouse budgets met
+
+---
+
+## 🚀 EXECUTION ORDER (Copy-Paste to Todo App)
+
+```
+[ ] 0.1.1-0.1.11 Secret Rotation & Git Hygiene
+[ ] 0.2.1-0.2.11 Test Infrastructure
+[ ] 0.3.1-0.3.4 Bot Path Fix
+[ ] 1.1.1-1.1.7 Inline JS Extraction
+[ ] 1.2.1-1.2.6 Build System
+[ ] 1.3.1-1.3.10 SEO & HTML Fixes
+[ ] 1.4.1-1.4.4 Python Cleanup
+[ ] 2.1.3-2.1.10 Analytics Completion
+[ ] 2.2.1-2.2.7 Hotmart Product Creation
+[ ] 2.3.1-2.3.16 MailerLite Automation (9 automations)
+[ ] 2.4.5-2.4.11 Conversion (B5, B6, R7, R16, R5, R6, R15)
+[ ] 2.5.1-2.5.3 Affiliate Program (R8)
+[ ] 2.6.1-2.6.4 Revenue Attribution (R10, R25, R28, R29)
+[ ] 3.1.1-3.1.12 Bot Hardening (R21, R22, R26, R27)
+[ ] 3.2.1-3.2.7 CI/CD Pipeline
+[ ] 3.3.1-3.3.4 Social Publishing Automation (R9)
+[ ] 3.4.1-3.4.6 Content Pipeline (D2 + R24)
+[ ] 3.5.1-3.5.3 Tech Debt Verify
+[ ] 3.6.1-3.6.3 AutoShorts Separation
+```
+
+---
+
+## 📊 PROGRESS TRACKING
+
+| Layer | Tasks Total | Done | In Progress | Blocked | % Complete |
+|-------|-------------|------|-------------|---------|------------|
+| 0 Foundation | 25 | 0 | 0 | 0 | 0% |
+| 1 Code Quality | 33 | 0 | 0 | 0 | 0% |
+| 2 Revenue Engine | 52 | 0 | 0 | 0 | 0% |
+| 3 Operations | 35 | 0 | 0 | 0 | 0% |
+| **TOTAL** | **145** | **0** | **0** | **0** | **0%** |
+
+> **Update this table daily**. When a task moves to Done, increment the count.
+
+---
+
+## 🛑 STOP CONDITIONS (Do Not Proceed If)
+
+| Condition | Action |
+|-----------|--------|
+| Any Layer 0 task incomplete | **STOP** — fix before Layer 1 |
+| `npm test` failing | **STOP** — fix tests before any refactor |
+| Secrets still in git history | **STOP** — rotate + purge before deploy |
+| GA4 not showing traffic after 2.1.3-2.1.5 | **STOP** — debug consent + config |
+| MailerLite webhooks not firing | **STOP** — fix before 2.3.4+ |
+| Hotmart webhook not deployed | **STOP** — fix before 2.4.7 |
+| Lighthouse CI failing on main | **STOP** — fix perf/a11y/seo before merge |
+| Hotmart products not created | **STOP** — create before 2.3.12 |
+
+---
+
+## 📝 NOTES FOR IMPLEMENTERS
+
+1. **Atomic commits** — one task = one commit (or small PR). Message format: `[LAYER.N.TASK] Description`
+2. **Test first** — write failing test, make it pass, then refactor (TDD)
+3. **Measure before/after** — GA4 events for every new interaction (already in conversion.js)
+4. **Spanish-first** — primary audience LATAM; EN secondary
+5. **No new dependencies** — vanilla JS, static hosting, stdlib Python. Keep it that way.
+6. **Document as you go** — update this plan with findings, gotchas, decisions
+7. **Revenue plumbing first** — Hotmart products (2.2) must be created before MailerLite webhooks (2.3.12)
+
+---
+
+## 🔄 MAINTENANCE CADENCE (Post-Launch)
+
+| Frequency | Task | Owner |
+|-----------|------|-------|
+| Daily | Check GA4/Meta/Ads dashboards for anomalies | You |
+| Daily | Check bot health (uptime monitor) | You |
+| Daily | Check KPI dashboard + Telegram alerts | You |
+| Weekly | Run `npm test` locally before push | Dev |
+| Weekly | Review MailerLite automation performance (open/click/conversion) | You |
+| Bi-weekly | Run `check_a101y.py` + `check_lazy.py` on new content | Content |
+| Monthly | Rotate API keys (if policy requires), audit blog traffic, update sitemap | You |
+| Monthly | Dependabot PRs review + merge | Dev |
+| Monthly | Affiliate payout calculation + payment | You |
+| Quarterly | Re-run strategic audit, update this plan | You + Dev |
+
+---
+
+## 🗂️ FILES TO RETAIN (Single Source of Truth)
+
+**Core Execution Plans (KEEP):**
+- `MASTER_EXECUTION_PLAN.md` ← **THIS FILE**
+- `webhooks/webhook-configs.md` (Make.com implementation specs)
+- `email-sequences/quickstart-to-buyer.json` (5-email welcome EN)
+- `email-sequences/post-purchase-upsell.json` (3-email upsell × 18 products)
+
+**Reference Docs (KEEP):**
+- `README.md` (project overview)
+- `PROJECT-BIBLE.md` (technical architecture reference)
+- `docs/bot-deployment.md` (to be created in 3.1.10)
+
+**DELETE / ARCHIVE (superseded by this plan):**
+- `MASTER_AUDIT_PLAN.md` → **DELETE**
+- `UNIFIED_EXECUTION_BLUEPRINT.md` → **DELETE**
+- `REVENUE_AUTOMATION_RE_AUDIT.md` → **DELETE**
+- `strategic-sales-audit.md` → **ARCHIVE to `projects/docs/archive/`**
+- `plan-maxima-conversion.md` → **ARCHIVE**
+- `plan-ventas-automatizadas.md` → **ARCHIVE**
+- `phase-2-3-prd.md` → **ARCHIVE**
+- `ecosystem-complete.md` → **ARCHIVE**
+- `blog-audit-report.md` → **ARCHIVE**
+- `kpi-dashboard/kpi-dashboard-template.md` → **ARCHIVE** (replaced by 2.6.1)
+- `content-calendar/content-calendar.md` → **ARCHIVE** (replaced by 3.3.2)
+- `affiliate-kit/*.md` → **ARCHIVE** (replaced by 2.5)
+- `projects/scripts/tweet-queue-remaining.md` → **DELETE**
+- `projects/docs/tweets-x-30-12ago2026.md` → **DELETE**
+- `projects/ventas/*.md` → **ARCHIVE**
+- `projects/research/play-store-sales-research.md` → **ARCHIVE**
+- `projects/scripts/keyword-article-map.md` → **ARCHIVE** (replaced by 3.4.6)
+
+---
+
+**This plan is the single source of truth. All prior plans are superseded.**
