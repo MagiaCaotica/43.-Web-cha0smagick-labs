@@ -111,12 +111,12 @@ The system is **production ready for automated revenue** when ALL criteria pass:
 
 | Task | Owner | Effort | Verification |
 |------|-------|--------|--------------|
-| 1.2.1 Install `esbuild` as devDependency | Dev | 5m | `npx esbuild --version` works |
-| 1.2.2 Add `build:js` script: `esbuild js/*.js --minify --outdir=js --target=es2020` | Dev | 10m | `npm run build:js` creates `.min.js` files |
-| 1.2.3 Consolidate `addUTM()` → single definition in `shared.js` (remove from apps-data.js, conversion.js) | Dev | 30m | `grep -r "addUTM" js/` shows only shared.js |
-| 1.2.4 Update all HTML references from `.min.js` → `.js` (source) for dev; `.min.js` for prod via build | Dev | 20m | Dev loads source, prod loads minified |
-| 1.2.5 Add `build:css` if needed (currently using external style.min.css) | Dev | 15m | CSS builds if applicable |
-| 1.2.6 Add `prebuild` script that runs `build:js` before any deploy | Dev | 5m | GitHub Actions runs build |
+| 1.2.1 Install `esbuild` as devDependency | Dev | 5m | ✔️ esbuild 0.28.2 en devDeps (edit manual + `--package-lock-only`, diff limpio solo devDeps). `npx esbuild --version` = 0.28.2 |
+| 1.2.2 Add `build:js` script: `esbuild js/*.js --minify --outdir=js --target=es2020` | Dev | 10m | ✔️ build:js con 6 entradas explícitas (el glob js/*.js incluiría .min.js como entradas = doble minify) + `--out-extension:.js=.min.js`. Artefactos fresh: affiliate 1323 (nuevo), app-render 22609, apps-data 103392, conversion 40163 (nuevo, -25KB/pág), shared 6501, visitor-map 3169 (antes stale 4870). zener-trainer excluido (ES module, tools page carga source). Empírico pre-build: esbuild preserva nombres top-level (`function addUTM`, `const appsData`) |
+| 1.2.3 Consolidate `addUTM()` → single definition in `shared.js` (remove from apps-data.js, conversion.js) | Dev | 30m | ✔️ Canónica en shared.js (unguarded + window.addUTM). Fallback de apps-data.js ELIMINADO (solo refs en comentario). Copia de conversion.js CONSERVADA — 7 book pages cargan conversion.js sin shared.js (copia autónoma intencional, documentada en código). Dup `<script src="js/shared.min.js">` index.html L852 eliminado (duplicaba listeners DOMContentLoaded → doble firing). Verificado HTTP: addUTM funciona en book (copia) e index (canónica) |
+| 1.2.4 Update all HTML references from `.min.js` → `.js` (source) for dev; `.min.js` for prod via build | Dev | 20m | ✔️ Interpretado: refs HTML → `.min.js` (artefactos commiteados regenerados por build:js; dev edita js/*.js fuentes y corre build:js). 379 refs actualizadas en 378 archivos (affiliate/conversion → .min.js, ?v stale eliminado, incl. 1 ref raíz-absoluta `/js/` en blog). POST-CHECK: 0 refs fuente restantes |
+| 1.2.5 Add `build:css` if needed (currently using external style.min.css) | Dev | 15m | ✔️ build:css = `cleancss -o css/style.min.css css/style.css` (clean-css-cli ya en devDeps). 67765 → 50853 bytes fresh |
+| 1.2.6 Add `prebuild` script that runs `build:js` before any deploy | Dev | 5m | ✔️ prebuild = `npm run build:js` (convención npm: corre antes de build) + build = `npm run build:css`. GitHub Actions (L3) correrá `npm run build` |
 
 ### 1.3 SEO & HTML Fixes [P1]
 
@@ -407,7 +407,7 @@ LAYER 3 (Parallel after Layer 2)
 [x] 0.2.1-0.2.11 Test Infrastructure
 [ ] 0.3.1-0.3.4 Bot Path Fix
 [x] 1.1.1-1.1.7 Inline JS Extraction
-[ ] 1.2.1-1.2.6 Build System
+[x] 1.2.1-1.2.6 Build System
 [ ] 1.3.1-1.3.10 SEO & HTML Fixes
 [ ] 1.4.1-1.4.4 Python Cleanup
 [ ] 2.1.3-2.1.10 Analytics Completion
@@ -438,7 +438,7 @@ LAYER 3 (Parallel after Layer 2)
 
 > **Update this table daily**. When a task moves to Done, increment the count.
 >
-> **Última actualización (2026-09-17)**: 0.2.1-0.2.11 ✔️ COMPLETO — Test infrastructure: pytest 38 tests + vitest 160 tests (4 files en `scripts/bots/test/`), `npm test` EXIT 0. 0.2.1: pytest/pytest-html son paquetes pip (no npm devDeps; el paquete npm "pytest" es bogus). 0.3.1-0.3.4 ✔️ (bots en `scripts/bots/`, Telegram+Discord conectados). **1.1.1-1.1.7 ✔️ COMPLETO — JS extraction: js/zener-trainer.js (221 líneas, handlers verificados) + js/visitor-map.js (59 entradas), 19 páginas transformadas, dup Product JSON-LD 3→1; verificado vía HTTP server + Playwright: mapa init (leaflet-container) + 58 circleMarkers en app / 61 en book, zener handlers bound, módulo carga sin CORS.** Pendiente manual: 0.1 (rotación secretos). Bug evitado: devDeps edit manual + `--package-lock-only` (sin transitive deps re-flattened). 2.1.1/2.1.5/2.1.6 y 2.4.1-2.4.4 verificados en el propio plan. Siguiente: LAYER 1.2.x (esbuild build system).
+> **Última actualización (2026-09-17)**: 0.2.1-0.2.11 ✔️ COMPLETO — Test infrastructure: pytest 38 tests + vitest 160 tests (4 files en `scripts/bots/test/`), `npm test` EXIT 0. 0.2.1: pytest/pytest-html son paquetes pip (no npm devDeps; el paquete npm "pytest" es bogus). 0.3.1-0.3.4 ✔️ (bots en `scripts/bots/`, Telegram+Discord conectados). **1.1.1-1.1.7 ✔️ COMPLETO — JS extraction: js/zener-trainer.js (221 líneas, handlers verificados) + js/visitor-map.js (59 entradas), 19 páginas transformadas, dup Product JSON-LD 3→1; verificado vía HTTP server + Playwright: mapa init (leaflet-container) + 58 circleMarkers en app / 61 en book, zener handlers bound, módulo carga sin CORS.** **1.2.1-1.2.6 ✔️ COMPLETO — Build system: esbuild 0.28.2 devDeps; build:js (6 entradas explícitas, artefactos .min.js fresh: -35KB payload total); addUTM consolidado (canónica shared.js, fallback apps-data eliminado, copia conversion.js conservada para 7 books, dup shared.min.js index eliminado); 379 refs HTML → .min.js en 378 archivos; build:css (67.8→50.9KB); prebuild wired. Verificado HTTP: addUTM funciona, appsData cross-file OK, 0 errores consola.** 1.3.11 ✔️ (CARTO basemap key). Pendiente manual: 0.1 (rotación secretos). Bug evitado: devDeps edit manual + `--package-lock-only` (sin transitive deps re-flattened). 2.1.1/2.1.5/2.1.6 y 2.4.1-2.4.4 verificados en el propio plan. Siguiente: 1.3.1-1.3.10 (SEO & HTML fixes).
 
 ---
 
