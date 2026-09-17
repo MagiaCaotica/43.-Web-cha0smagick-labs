@@ -50,7 +50,7 @@ Sigil Generator, I Ching Oracle, Rune Oracle, Lunar Phase Calculator, Spell Buil
 
 **Stack**: Node.js, `node-telegram-bot-api`, `discord.js` v14, Groq AI (`llama-3.3-70b-versatile`)
 
-**Run**: `node scripts/run-bots.js [telegram|discord|all]`
+**Run**: `node scripts/bots/run-bots.js [telegram|discord|all]`
 
 ## 📈 Social
 
@@ -77,7 +77,7 @@ Sigil Generator, I Ching Oracle, Rune Oracle, Lunar Phase Calculator, Spell Buil
 | `scripts/groq-ai.js` | Groq-powered Q&A module |
 | `scripts/telegram-bot.js` | Telegram bot (polling, 11 commands) |
 | `scripts/discord-bot.js` | Discord bot (slash commands, rich embeds) |
-| `scripts/run-bots.js` | Bot runner (telegram/discord/all) |
+| `scripts/bots/run-bots.js` | Bot runner (telegram/discord/all) |
 | `scripts/add-cross-links.ps1` | Inject topical cross-links (35 articles modified) |
 | `scripts/add-giscus-to-articles.ps1` | Inject Giscus comments into all 206 articles |
 | `scripts/share-noctem-news.js` | Share NOCTEM posts to Telegram + Discord |

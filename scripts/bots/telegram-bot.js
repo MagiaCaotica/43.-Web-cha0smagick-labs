@@ -18,7 +18,7 @@
 
 // Load .env from project root
 const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
+require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 
 const { TelegramBot } = require('node-telegram-bot-api');
 const BRAIN = require('./bot-brain');
