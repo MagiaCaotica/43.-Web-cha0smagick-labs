@@ -17,6 +17,11 @@ import argparse
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 
+try:
+    from check_a11y import check_accessibility
+except ImportError:  # scripts/ dir not on sys.path (module-style import in tests)
+    check_accessibility = None
+
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = ROOT / "blog" / "best-sigil-generator-app-onetime.html"
 INDEX = ROOT / "blog" / "index.html"
@@ -139,6 +144,8 @@ def build_head(a: Dict) -> str:
         f'<link rel="canonical" href="{url}">',
         f'<link rel="alternate" hreflang="en" href="{url}">',
         '<link rel="manifest" href="../manifest.json">',
+        "<link rel=\"preload\" href=\"../css/style.min.css\" as=\"style\" onload=\"this.rel='stylesheet'\">",
+        "<noscript><link rel=\"stylesheet\" href=\"../css/style.min.css\"></noscript>",
         '<meta name="theme-color" content="#050505">',
         f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>',
         '<script>',
@@ -159,6 +166,10 @@ def build_head(a: Dict) -> str:
         f'<meta name="twitter:title" content="{a["title"]}">',
         f'<meta name="twitter:description" content="{a["desc"]}">',
         f'<meta name="twitter:image" content="{img}">',
+        '<meta name="twitter:site" content="@Cha0smagickLABS">',
+        '<meta name="twitter:creator" content="@FraterAlek0s">',
+        f'<meta property="article:published_time" content="{date_iso}">',
+        f'<meta property="article:modified_time" content="{date_iso}">',
         '<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">',
         '<link rel="apple-touch-icon" href="../assets/images/Banner.png">',
         f'<script type="application/ld+json">{article_json}</script>'
@@ -325,9 +336,20 @@ def build_article(a: Dict, template: str) -> str:
     body = body_block(a)
     html = template
 
-    html = re.sub(
-        r"<title>.*?</script>", lambda _m: build_head(a), html, count=1, flags=re.S
-    )
+    # Plan 1.3.6 fix — replace the ENTIRE <head> (older base templates carry
+    # duplicated meta/schema from previous generations); preserve its <style>.
+    head_match = re.search(r"<head\b[^>]*>.*?</head>", html, flags=re.S)
+    if head_match:
+        style_blocks = re.findall(r"<style\b[^>]*>.*?</style>", head_match.group(0), flags=re.S)
+        new_head = "<head>\n" + build_head(a) + "\n"
+        for st in style_blocks:
+            new_head += st + "\n"
+        new_head += "</head>"
+        html = html[:head_match.start()] + new_head + html[head_match.end():]
+    else:
+        html = re.sub(
+            r"<title>.*?</script>", lambda _m: build_head(a), html, count=1, flags=re.S
+        )
     html = re.sub(
         r'<div class="breadcrumb">.*?</div>',
         lambda _m: f'<div class="breadcrumb"><a href="index.html">Community Blog</a> | {a["title"]}</div>',
@@ -438,6 +460,8 @@ def build_article(a: Dict, template: str) -> str:
     </div>
 </div>
 <script src="../js/shared.min.js"></script>
+<script src="../js/conversion.min.js" defer></script>
+<script src="../js/affiliate.min.js" defer></script>
 <div id="lang-sidebar" class="lang-sidebar">
     <button id="lang-toggle-btn" class="lang-toggle-btn" title="Select Language" onclick="toggleLangSidebar()">??</button>
     <div id="lang-flag-list" class="lang-flag-list">
@@ -567,6 +591,24 @@ def main():
     
     count = generate_articles(articles, dry_run=args.dry_run)
     print(f"\nDone. Generated {count} articles.")
+
+    # Plan 1.4.3 — accessibility check on ALL pages (no sample)
+    if check_accessibility is not None and not args.dry_run:
+        page_files = []
+        for d in (".", "apps", "books", "tools", "blog", "landing-pages"):
+            p = Path(d)
+            if p.exists():
+                page_files.extend(sorted(p.glob("*.html")))
+        issue_total = {"missing_alt": 0, "empty_alt": 0, "heading_skips": 0}
+        for pf in page_files:
+            try:
+                for k, v in check_accessibility(pf).items():
+                    issue_total[k] += v
+            except OSError as exc:
+                print(f"A11Y: skipped {pf} ({exc})")
+        print(f"Accessibility check covered {len(page_files)} pages (ALL pages, no sample):")
+        for k, v in issue_total.items():
+            print(f"  {k}: {v}")
 
 
 if __name__ == "__main__":
