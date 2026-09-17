@@ -29,6 +29,7 @@ AUTHOR = "Frater Alek0s"
 PUBLISHER = "Cha0smagick Labs"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(ROOT))  # repo root: article data modules H-K live here
 
 # Import all article data modules
 from new_articles_a import ARTICLES_A
@@ -61,7 +62,18 @@ def _esc(text: str) -> str:
 def render_sections(sections: List[Dict]) -> str:
     out = []
     for s in sections:
-        t = s["t"]
+        t = s.get("t")
+        if t is None:
+            # Legacy section format (draft modules H/I/J): {"name", "content"} dicts.
+            name = s.get("name", "")
+            content = s.get("content", "")
+            if name:
+                out.append(f"<h2>{name}</h2>")
+            for para in content.split("\n\n"):
+                para = para.strip()
+                if para:
+                    out.append(f"<p>{para}</p>")
+            continue
         if t == "h2":
             out.append(f'<h2 id="{s["id"]}">{s["text"]}</h2>')
         elif t == "h3":
@@ -248,6 +260,55 @@ def references_block(a: Dict) -> str:
     return f"<h2>References</h2><ul>{items}</ul>"
 
 
+def _slugify(text: str) -> str:
+    parts = [ch if ch.isalnum() else " " for ch in text.lower()]
+    return "-".join("".join(parts).split())
+
+
+# Legacy draft modules (H/I/J) reference apps in dot notation; map to real app slugs.
+_LEGACY_APP_MAP = {
+    "astrology": "astral-lab",
+    "charts": "lunar-phase-calculator",
+    "cryptozoology": "eerieroads",
+    "ghost-hunting": "noctem-tools",
+    "goetia": "arcana-goetia",
+    "nde-research": "astral-lab",
+    "parapsychology": "psi-gym",
+    "rituals": "chaos-sigil-generator",
+    "runes": "norse-rune-oracle",
+    "sigils": "chaos-sigil-generator",
+}
+
+
+def normalize_article(a: Dict) -> Dict:
+    """Normalize legacy draft article dicts (modules H/I/J) to the renderer contract.
+
+    Legacy shapes: toc/cta_apps as plain strings, faq/related/references as dicts.
+    """
+    toc = a.get("toc", [])
+    if toc and isinstance(toc[0], str):
+        a = {**a, "toc": [(_slugify(t), t) for t in toc]}
+    cta = a.get("cta_apps", [])
+    if cta and isinstance(cta[0], str):
+        def _legacy_app(c: str):
+            slug = c.split(".")[-1]
+            return (_LEGACY_APP_MAP.get(slug, slug), slug.replace("-", " ").title())
+        a = {**a, "cta_apps": [_legacy_app(c) for c in cta]}
+    faq = a.get("faq", [])
+    if faq and isinstance(faq[0], dict):
+        a = {**a, "faq": [(f["q"], f["a"]) for f in faq]}
+    related = a.get("related", [])
+    if related and isinstance(related[0], dict):
+        a = {**a, "related": [(r["slug"], r["title"]) for r in related]}
+    refs = a.get("references", [])
+    if refs and isinstance(refs[0], dict):
+        a = {**a, "references": [f'{r["title"]} — {r["url"]}' for r in refs]}
+    howto = a.get("howto")
+    if isinstance(howto, str):
+        a = {**a, "howto": [{"name": "How to Use", "text": howto}]}
+    return a
+
+
 def body_block(a: Dict) -> str:
     return "\n".join([
         render_sections(a["sections"]),
@@ -259,16 +320,17 @@ def body_block(a: Dict) -> str:
 
 
 def build_article(a: Dict, template: str) -> str:
+    a = normalize_article(a)
     slug = a["slug"]
     body = body_block(a)
     html = template
 
     html = re.sub(
-        r"<title>.*?</script>", build_head(a), html, count=1, flags=re.S
+        r"<title>.*?</script>", lambda _m: build_head(a), html, count=1, flags=re.S
     )
     html = re.sub(
         r'<div class="breadcrumb">.*?</div>',
-        f'<div class="breadcrumb"><a href="index.html">Community Blog</a> | {a["title"]}</div>',
+        lambda _m: f'<div class="breadcrumb"><a href="index.html">Community Blog</a> | {a["title"]}</div>',
         html,
         count=1,
         flags=re.S,
@@ -276,7 +338,7 @@ def build_article(a: Dict, template: str) -> str:
     if a.get("og_alt"):
         html = re.sub(
             r"<picture>.*?</picture>",
-            (
+            lambda _m: (
                 f'<picture><source srcset="../assets/images/blog/{slug}.webp" '
                 f'type="image/webp"><img src="../assets/images/blog/{slug}.png" '
                 f'alt="{a["og_alt"]}" class="blog-featured-image" width="800" '
@@ -399,7 +461,23 @@ def build_article(a: Dict, template: str) -> str:
     return html
 
 
+def _ensure_index() -> None:
+    """Create a minimal blog index scaffold when missing (fresh clone or
+    isolated test tree) so card insertion always has its anchor."""
+    if not INDEX.exists():
+        INDEX.write_text(
+            '<!DOCTYPE html>\n<html lang="en">\n<head>\n'
+            '  <meta charset="utf-8">\n'
+            "  <title>Blog — Cha0smagick Labs</title>\n"
+            "</head>\n<body>\n"
+            '<div class="posts">\n</div>\n'
+            "</body>\n</html>\n",
+            encoding="utf-8",
+        )
+
+
 def update_index(a: Dict) -> bool:
+    _ensure_index()
     text = INDEX.read_text(encoding="utf-8")
     card = (
         '<div class="post-card" data-category="' + a["category"] + '">\n'
@@ -416,7 +494,20 @@ def update_index(a: Dict) -> bool:
     return True
 
 
+def _ensure_sitemap() -> None:
+    """Create a minimal sitemap scaffold when missing so URL insertion
+    always has its ``</urlset>`` anchor."""
+    if not SITEMAP.exists():
+        SITEMAP.write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            "</urlset>\n",
+            encoding="utf-8",
+        )
+
+
 def update_sitemap(a: Dict) -> bool:
+    _ensure_sitemap()
     text = SITEMAP.read_text(encoding="utf-8")
     entry = (
         f"<url><loc>{SITE}/blog/{a['slug']}.html</loc>"

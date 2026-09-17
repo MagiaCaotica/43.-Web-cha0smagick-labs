@@ -69,7 +69,7 @@ def add_product_schema_to_book(filepath: Path, book_data: dict):
     content = filepath.read_text(encoding="utf-8")
     
     # Check if Product schema already exists
-    if '"@type": "Product"' in content:
+    if '"@type":"Product"' in content:
         print(f"Already has Product schema: {filepath.name}")
         return False
     
