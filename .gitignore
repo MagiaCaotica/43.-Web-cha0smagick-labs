@@ -29,3 +29,7 @@ projects/playstore.json
 
 # Checklist personal de ventas (no subir)
 /checklist-ventas.html
+
+# Python caches
+__pycache__/
+*.pyc
