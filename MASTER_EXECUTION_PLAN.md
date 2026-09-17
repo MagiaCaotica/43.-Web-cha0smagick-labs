@@ -69,17 +69,17 @@ The system is **production ready for automated revenue** when ALL criteria pass:
 
 | Task | Owner | Effort | Verification |
 |------|-------|--------|--------------|
-| 0.2.1 Add `pytest` + `pytest-html` to root `package.json` devDeps | Dev | 10m | `pytest --version` works — 🔄 En progreso (pytest 9.1.1 OK; falta devDeps en package.json) |
+| 0.2.1 Add `pytest` + `pytest-html` to root `package.json` devDeps | Dev | 10m | ✔️ Resuelto: pytest 9.1.1 + pytest-html 4.2.0 verificados vía pip (`pip list`). pytest/pytest-html son paquetes Python, NO van en npm devDeps (el paquete npm "pytest" es bogus); intención cumplida (tooling verificado) |
 | 0.2.2 Create `scripts/conftest.py` with fixtures (temp dirs, sample articles) | Dev | 30m | `pytest scripts/test_generate_blog.py -v` passes — ✔️. Verified |
 | 0.2.3 Write tests for `generate_blog.py` (dry-run, index update, sitemap update) | Dev | 1h | 5+ tests pass — ✔️. Verified |
 | 0.2.4 Write tests for `add_internal_links.py` (keyword matching, no duplicates) | Dev | 45m | 3+ tests pass — ✔️. Verified |
 | 0.2.5 Write tests for `add_structured_data.py` (schema injection, no duplicates) | Dev | 45m | 3+ tests pass — ✔️. Verified |
-| 0.2.6 Add `vitest` + `@vitest/coverage-v8` to root `package.json` devDeps | Dev | 10m | `npm test -- --run` works |
-| 0.2.7 Create `scripts/bots/test/bot-brain.test.js` (catalog integrity) | Dev | 1h | 10+ tests pass |
-| 0.2.8 Create `scripts/bots/test/groq-ai.test.js` (classifier, prompt building) | Dev | 1h | 5+ tests pass |
-| 0.2.9 Create `scripts/bots/test/telegram-bot.test.js` (command routing, auto-reply) | Dev | 1.5h | 8+ tests pass |
-| 0.2.10 Create `scripts/bots/test/discord-bot.test.js` (slash commands, welcome) | Dev | 1.5h | 8+ tests pass |
-| 0.2.11 Add `test` script to root `package.json`: `"test": "pytest scripts/ && vitest run scripts/bots/test/"` | Dev | 5m | `npm test` runs full suite |
+| 0.2.6 Add `vitest` + `@vitest/coverage-v8` to root `package.json` devDeps | Dev | 10m | ✔️ vitest 5.0.1 + @vitest/coverage-v8 5.0.1 en devDeps (edit manual + `npm install --package-lock-only`, sin re-flattening en package.json). `npx vitest run` OK |
+| 0.2.7 Create `scripts/bots/test/bot-brain.test.js` (catalog integrity) | Dev | 1h | ✔️ 48 tests pass (SDKs mockeados, sin red, sin polling) |
+| 0.2.8 Create `scripts/bots/test/groq-ai.test.js` (classifier, prompt building) | Dev | 1h | ✔️ 24 tests pass |
+| 0.2.9 Create `scripts/bots/test/telegram-bot.test.js` (command routing, auto-reply) | Dev | 1.5h | ✔️ 41 tests pass |
+| 0.2.10 Create `scripts/bots/test/discord-bot.test.js` (slash commands, welcome) | Dev | 1.5h | ✔️ 47 tests pass |
+| 0.2.11 Add `test` script to root `package.json`: `"test": "pytest scripts/ && vitest run scripts/bots/test/"` | Dev | 5m | ✔️ `npm test` = pytest 38 passed (4.27s) + vitest 160 tests (4 files), EXIT 0 |
 
 ### 0.3 Bot Path Fix [P0 - BLOCKER]
 
@@ -403,7 +403,7 @@ LAYER 3 (Parallel after Layer 2)
 
 ```
 [ ] 0.1.1-0.1.11 Secret Rotation & Git Hygiene
-[ ] 0.2.1-0.2.11 Test Infrastructure
+[x] 0.2.1-0.2.11 Test Infrastructure
 [ ] 0.3.1-0.3.4 Bot Path Fix
 [ ] 1.1.1-1.1.7 Inline JS Extraction
 [ ] 1.2.1-1.2.6 Build System
@@ -437,7 +437,7 @@ LAYER 3 (Parallel after Layer 2)
 
 > **Update this table daily**. When a task moves to Done, increment the count.
 >
-> **Última actualización (2025-09-16)**: 0.2.2-0.2.5 ✔️ (38 tests pytest OK) y 0.3.1-0.3.4 ✔️ (bots en `scripts/bots/`, Telegram+Discord conectados). Commits: `89a36df` [L0.2], `0bcb60e` [L1.4], `bc4807c`/`2c8a034` [PLAN], `2e97439` [CHORE]. 0.1 (rotación secretos, manual) y 0.2.1 (devDeps) en progreso. 2.1.1/2.1.5/2.1.6 y 2.4.1-2.4.4 verificados en el propio plan.
+> **Última actualización (2026-09-17)**: 0.2.1-0.2.11 ✔️ COMPLETO — Test infrastructure: pytest 38 tests + vitest 160 tests (4 files en `scripts/bots/test/`), `npm test` EXIT 0. 0.2.1: pytest/pytest-html son paquetes pip (no npm devDeps; el paquete npm "pytest" es bogus). 0.3.1-0.3.4 ✔️ (bots en `scripts/bots/`, Telegram+Discord conectados). Pendiente manual: 0.1 (rotación secretos). Bug evitado: devDeps edit manual + `--package-lock-only` (sin transitive deps re-flattened). 2.1.1/2.1.5/2.1.6 y 2.4.1-2.4.4 verificados en el propio plan. Siguiente: LAYER 1 (1.1.x extracción JS inline).
 
 ---
 
