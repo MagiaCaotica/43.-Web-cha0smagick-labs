@@ -30,25 +30,19 @@ def check_accessibility(filepath):
     
     return issues
 
-# Check all app pages
-total = {'missing_alt': 0, 'empty_alt': 0, 'heading_skips': 0}
-for f in glob.glob('apps/*.html'):
-    issues = check_accessibility(f)
-    for k, v in issues.items():
-        total[k] += v
+if __name__ == "__main__":
+    # Plan 1.4.3 — check ALL pages (no sample)
+    dirs = ['.', 'apps', 'books', 'tools', 'blog', 'landing-pages']
+    page_files = []
+    for d in dirs:
+        page_files.extend(sorted(glob.glob(d + '/*.html')))
 
-# Check all book pages
-for f in glob.glob('books/*.html'):
-    issues = check_accessibility(f)
-    for k, v in issues.items():
-        total[k] += v
+    total = {'missing_alt': 0, 'empty_alt': 0, 'heading_skips': 0}
+    for f in page_files:
+        issues = check_accessibility(f)
+        for k, v in issues.items():
+            total[k] += v
 
-# Check sample of blog pages
-for f in glob.glob('blog/*.html')[:50]:
-    issues = check_accessibility(f)
-    for k, v in issues.items():
-        total[k] += v
-
-print('Total issues (apps + books + 50 blog sample):')
-for k, v in total.items():
-    print('  ' + k + ': ' + str(v))
+    print(f'Accessibility check covered {len(page_files)} pages (ALL pages, no sample):')
+    for k, v in total.items():
+        print('  ' + k + ': ' + str(v))

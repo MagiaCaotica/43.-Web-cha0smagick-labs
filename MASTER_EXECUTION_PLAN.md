@@ -122,26 +122,26 @@ The system is **production ready for automated revenue** when ALL criteria pass:
 
 | Task | Owner | Effort | Verification |
 |------|-------|--------|--------------|
-| 1.3.1 Add noscript CSS fallback to ALL pages (copy `glossary.html` pattern) | Dev | 1h | `grep -r "noscript" --include="*.html" .` shows 400+ matches |
-| 1.3.2 Add `article:published_time` + `article:modified_time` meta to blog template (`generate_blog.py`) | Dev | 30m | 10 random articles have both meta tags |
-| 1.3.3 Add `twitter:site` (`@Cha0smagickLABS`) + `twitter:creator` (`@FraterAlek0s`) to all templates | Dev | 30m | All page types have both tags |
-| 1.3.4 Add JSON-LD Product/Offer to `landing-pages/*.html` (complete-access, apps-bundle, books-bundle, flash-sale) | Dev | 45m | Rich Results Test passes on landing pages |
-| 1.3.5 Replace hardcoded share buttons in blog template → use `conversion.js injectShareButtons()` | Dev | 45m | Blog articles use dynamic share row |
-| 1.3.6 Fix duplicate Article JSON-LD in blog articles (some have 2: one correct, one hardcoded to Zener) | Dev | 30m | `grep -c '"@type": "Article"' blog/*.html` = 379 (not 758) |
-| 1.3.7 Add `dateModified` to Article schema (use file mtime or current date) | Dev | 20m | All articles have dateModified |
-| 1.3.8 Run `add-giscus-to-articles.ps1` on all 379 articles | Dev | 10m | Spot-check 10 articles: all have Giscus |
-| 1.3.9 Run `add-cross-links.ps1` on all 379 articles | Dev | 10m | Spot-check 10 articles: all have Related Articles |
-| 1.3.10 Regenerate `sitemap.xml` via `generate_sitemap.py` | Dev | 5m | Sitemap has 400+ URLs, all lastmod current |
+| 1.3.1 Add noscript CSS fallback to ALL pages (copy `glossary.html` pattern) | Dev | 1h | ✔️ 194 páginas sin noscript recibieron el patrón (sync-link: noscript tras el link; sin link: preload+noscript antes de </head>); 324 ya lo tenían. TOTAL: 521 noscript matches |
+| 1.3.2 Add `article:published_time` + `article:modified_time` meta to blog template (`generate_blog.py`) | Dev | 30m | ✔️ En build_head() con date_iso (template) + bulk a 377 legacy files. TODOS los 467 archivos blog tienen article:published_time |
+| 1.3.3 Add `twitter:site` (`@Cha0smagickLABS`) + `twitter:creator` (`@FraterAlek0s`) to all templates | Dev | 30m | ✔️ Template + bulk (377 legacy). 467/467 archivos blog con twitter:site + twitter:creator |
+| 1.3.4 Add JSON-LD Product/Offer to `landing-pages/*.html` (complete-access, apps-bundle, books-bundle, flash-sale) | Dev | 45m | ✔️ 4/4 landings con Product JSON-LD (apps-bundle $29.99, books-bundle $19.99, complete-access $49.99, flash-sale $99.00). NOTA: las 4 NO tienen links hotmart reales (solo flash-sale con placeholder [HOTMART_FLASH_ID]) — offer url = la propia página; IDs reales al crear productos (2.2.x) |
+| 1.3.5 Replace hardcoded share buttons in blog template → use `conversion.js injectShareButtons()` | Dev | 45m | ✔️ Template ahora carga conversion.min.js + affiliate.min.js (regen los conserva); injectShareButtons() auto-runs en conversion.js init (idempotente, guard __cmShareInjected). Los 377 legacy ya tenían la ref (bulk 1.2.4) |
+| 1.3.6 Fix duplicate Article JSON-LD in blog articles (some have 2: one correct, one hardcoded to Zener) | Dev | 30m | ✔️ ROOT CAUSE: heads COMPLETOS duplicados (contenido de otro artículo concatenado), no solo JSON-LD. Fix: build_article reemplaza el head ENTERO (preservando <style>) + bulk dedup 139 archivos. RESULTADO: 466 Article JSON-LD, 0 dups (los 10 listicle sin schema recibieron Article JSON-LD nuevo; blog/index.html no lo necesita) |
+| 1.3.7 Add `dateModified` to Article schema (use file mtime or current date) | Dev | 20m | ✔️ Template ya lo tenía (L125 dateModified: date_iso) — regen lo aplica a los 90; bulk (139+10) usó datePublished/dateModified del JSON-LD o mtime del archivo |
+| 1.3.8 Run `add-giscus-to-articles.ps1` on all 379 articles | Dev | 10m | ✔️ Los .ps1 del plan NO existen — Giscus ya estaba: template lo incluye (regen lo conserva) + estado previo en legacy. 466/466 artículos con Giscus |
+| 1.3.9 Run `add-cross-links.ps1` on all 379 articles | Dev | 10m | ✔️ Los .ps1 NO existen — se usó `scripts/add_internal_links.py` (Related Resources): 466 artículos actualizados, 467/467 con related. Modificación quirúrgica in-place (no reescribe) |
+| 1.3.10 Regenerate `sitemap.xml` via `generate_sitemap.py` | Dev | 5m | ✔️ 491 URLs (400+ ✓), lastmod current |
 | 1.3.11 Add CARTO Basemaps API key to visitor map tiles in `js/visitor-map.js` (removes "API key required" watermark); key también en root `.env` como `CARTO_API_KEY` (clave pública by-design en tile URLs — NO cuenta como secreto git) | Dev | 5m | Tile URL lleva `?key=`; mapa renderiza tiles sin watermark |
 
 ### 1.4 Python Script Cleanup [P1]
 
 | Task | Owner | Effort | Verification |
 |------|-------|--------|--------------|
-| 1.4.1 Delete `scripts/generate_100_new.py` | Dev | 2m | File gone |
-| 1.4.2 Delete `scripts/generate-blog-articles.py` | Dev | 2m | File gone |
-| 1.4.3 Update `generate_blog.py` to run `check_a11y.py` on ALL pages (not sample) | Dev | 15m | Accessibility report covers 100% |
-| 1.4.4 Run full blog regeneration: `python scripts/generate_blog.py` | Dev | 5m | 379 articles regenerated cleanly |
+| 1.4.1 Delete `scripts/generate_100_new.py` | Dev | 2m | ✔️ File gone (leía de new_articles_*.py — mismo pipeline que generate_blog.py) |
+| 1.4.2 Delete `scripts/generate-blog-articles.py` | Dev | 2m | ✔️ File gone |
+| 1.4.3 Update `generate_blog.py` to run `check_a11y.py` on ALL pages (not sample) | Dev | 15m | ✔️ check_a11y.py reestructurado: bloque standalone en `if __name__ == "__main__"` + ALL pages (sin [:50]); generate_blog.py: import defensivo + walk de a11y en main() (., apps, books, tools, blog, landing-pages). Report: 518 páginas cubiertas |
+| 1.4.4 Run full blog regeneration: `python scripts/generate_blog.py` | Dev | 5m | ✔️ 90 artículos regenerados limpios (ALL_ARTICLES = 90 en new_articles_a-k, NO 379 como decía el plan — los otros 288 legacy se arreglaron vía bulk-fix 1.3.6). blog/ tiene 467 archivos (89 slugs NUEVOS generados — no tenían archivo previo) |
 
 ---
 
@@ -408,8 +408,8 @@ LAYER 3 (Parallel after Layer 2)
 [ ] 0.3.1-0.3.4 Bot Path Fix
 [x] 1.1.1-1.1.7 Inline JS Extraction
 [x] 1.2.1-1.2.6 Build System
-[ ] 1.3.1-1.3.10 SEO & HTML Fixes
-[ ] 1.4.1-1.4.4 Python Cleanup
+[x] 1.3.1-1.3.10 SEO & HTML Fixes
+[x] 1.4.1-1.4.4 Python Cleanup
 [ ] 2.1.3-2.1.10 Analytics Completion
 [ ] 2.2.1-2.2.7 Hotmart Product Creation
 [ ] 2.3.1-2.3.16 MailerLite Automation (9 automations)
@@ -438,7 +438,7 @@ LAYER 3 (Parallel after Layer 2)
 
 > **Update this table daily**. When a task moves to Done, increment the count.
 >
-> **Última actualización (2026-09-17)**: 0.2.1-0.2.11 ✔️ COMPLETO — Test infrastructure: pytest 38 tests + vitest 160 tests (4 files en `scripts/bots/test/`), `npm test` EXIT 0. 0.2.1: pytest/pytest-html son paquetes pip (no npm devDeps; el paquete npm "pytest" es bogus). 0.3.1-0.3.4 ✔️ (bots en `scripts/bots/`, Telegram+Discord conectados). **1.1.1-1.1.7 ✔️ COMPLETO — JS extraction: js/zener-trainer.js (221 líneas, handlers verificados) + js/visitor-map.js (59 entradas), 19 páginas transformadas, dup Product JSON-LD 3→1; verificado vía HTTP server + Playwright: mapa init (leaflet-container) + 58 circleMarkers en app / 61 en book, zener handlers bound, módulo carga sin CORS.** **1.2.1-1.2.6 ✔️ COMPLETO — Build system: esbuild 0.28.2 devDeps; build:js (6 entradas explícitas, artefactos .min.js fresh: -35KB payload total); addUTM consolidado (canónica shared.js, fallback apps-data eliminado, copia conversion.js conservada para 7 books, dup shared.min.js index eliminado); 379 refs HTML → .min.js en 378 archivos; build:css (67.8→50.9KB); prebuild wired. Verificado HTTP: addUTM funciona, appsData cross-file OK, 0 errores consola.** 1.3.11 ✔️ (CARTO basemap key). Pendiente manual: 0.1 (rotación secretos). Bug evitado: devDeps edit manual + `--package-lock-only` (sin transitive deps re-flattened). 2.1.1/2.1.5/2.1.6 y 2.4.1-2.4.4 verificados en el propio plan. Siguiente: 1.3.1-1.3.10 (SEO & HTML fixes).
+> **Última actualización (2026-09-17)**: 0.2.1-0.2.11 ✔️ COMPLETO — Test infrastructure: pytest 38 tests + vitest 160 tests (4 files en `scripts/bots/test/`), `npm test` EXIT 0. 0.2.1: pytest/pytest-html son paquetes pip (no npm devDeps; el paquete npm "pytest" es bogus). 0.3.1-0.3.4 ✔️ (bots en `scripts/bots/`, Telegram+Discord conectados). **1.1.1-1.1.7 ✔️ COMPLETO — JS extraction: js/zener-trainer.js (221 líneas, handlers verificados) + js/visitor-map.js (59 entradas), 19 páginas transformadas, dup Product JSON-LD 3→1; verificado vía HTTP server + Playwright: mapa init (leaflet-container) + 58 circleMarkers en app / 61 en book, zener handlers bound, módulo carga sin CORS.** **1.2.1-1.2.6 ✔️ COMPLETO — Build system: esbuild 0.28.2 devDeps; build:js (6 entradas explícitas, artefactos .min.js fresh: -35KB payload total); addUTM consolidado (canónica shared.js, fallback apps-data eliminado, copia conversion.js conservada para 7 books, dup shared.min.js index eliminado); 379 refs HTML → .min.js en 378 archivos; build:css (67.8→50.9KB); prebuild wired. Verificado HTTP: addUTM funciona, appsData cross-file OK, 0 errores consola.** 1.3.11 ✔️ (CARTO basemap key). **1.3.1-1.3.10 ✔️ + 1.4.1-1.4.4 ✔️ COMPLETO — SEO & Python cleanup: template (article meta, twitter:site/creator, noscript, refs conversion/affiliate, build_article reemplaza head ENTERO preservando style), regen (90 limpios con build_article fixed), bulk dedup 139 archivos (heads COMPLETOS duplicados removidos — root cause: contenido de otro artículo concatenado), 466 Article JSON-LD 0 dups, 10 listicle recibieron Article nuevo, 467/467 giscus + related, 521 noscript, 4 landings Product JSON-LD (offer url = propia página; sin hotmart real hasta 2.2.x), sitemap 491 URLs, check_a11y ALL pages (518 cubiertas), scripts muertos borrados. npm test EXIT 0 (38 pytest + 160 vitest). NOTA: blog ahora tiene 467 artículos (89 slugs NUEVOS generados).** Pendiente manual: 0.1 (rotación secretos) + 2.2.1-2.2.5 (productos Hotmart). Siguiente: LAYER 2 — Revenue Engine (2.1.x restante + 2.3.x MailerLite).
 
 ---
 
