@@ -1,0 +1,66 @@
+{
+  "productos": [
+    {
+      "dir": "nw-pre-gyp",
+      "title": "Node-webkit-based module test",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts/node_modules/@mapbox/node-pre-gyp/lib/util/nw-pre-gyp/index.html"
+    },
+    {
+      "dir": "lcov-report",
+      "title": "Code coverage report for All files",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts/node_modules/fluent-ffmpeg/coverage/lcov-report/index.html"
+    },
+    {
+      "dir": "src",
+      "title": "Code coverage report for src",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts/node_modules/fluent-ffmpeg/coverage/lcov-report/src/index.html"
+    },
+    {
+      "dir": "utils",
+      "title": "Code coverage report for src/utils",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts/node_modules/fluent-ffmpeg/coverage/lcov-report/src/utils/index.html"
+    },
+    {
+      "dir": "acceptance",
+      "title": "Code coverage report for tests/acceptance",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts/node_modules/fluent-ffmpeg/coverage/lcov-report/tests/acceptance/index.html"
+    },
+    {
+      "dir": "helpers",
+      "title": "Code coverage report for tests/helpers",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts/node_modules/fluent-ffmpeg/coverage/lcov-report/tests/helpers/index.html"
+    },
+    {
+      "dir": "integration",
+      "title": "Code coverage report for tests/integration",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts/node_modules/fluent-ffmpeg/coverage/lcov-report/tests/integration/index.html"
+    },
+    {
+      "dir": "doc",
+      "title": "JSDoc: Index",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts/node_modules/fluent-ffmpeg/doc/index.html"
+    },
+    {
+      "dir": "lunr",
+      "title": "lunr.js - A bit like Solr, but much smaller and not as bright",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts/node_modules/lunr/index.html"
+    },
+    {
+      "dir": "test",
+      "title": "Mocha Tests",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts/node_modules/lunr/test/index.html"
+    },
+    {
+      "dir": "docs",
+      "title": "Document",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts-full/packages/ffcreator/docs/index.html"
+    },
+    {
+      "dir": "examples",
+      "title": "InkPaint Web Examples",
+      "path": "D:/Paginas web/Cha0smagick Labs/43.-Web-cha0smagick-labs/projects/auto-shorts-full/packages/inkpaint/examples/index.html"
+    }
+  ],
+  "articulosBlog": 0,
+  "articulosMuestra": []
+}
