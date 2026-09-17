@@ -5,26 +5,11 @@
    utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=<slug> so GA4,
    Play Console and Hotmart can all attribute the sale back to this site.
 
-   addUTM() is the canonical helper for links built at RUNTIME (render code in
-   app-render.js / conversion.js). The definition below is a guarded fallback:
-   js/shared.js declares the same function, and whichever file loads first wins
-   — both implementations are identical, so load order is irrelevant.
+   addUTM() lives in js/shared.js (plan 1.2.3 — single canonical definition).
+   Runtime render code (app-render.js / conversion.js) delegates to
+   window.addUTM; conversion.js also carries its own guarded copy so the
+   7 book pages that omit shared.js stay self-sufficient.
    ======================================================================== */
-if (typeof window !== 'undefined' && typeof window.addUTM !== 'function') {
-    window.addUTM = function (url, campaign) {
-        if (!url || typeof url !== 'string') return url;
-        if (url.indexOf('utm_source=') !== -1) return url; // already attributed
-        if (/^(mailto:|tel:|javascript:|#)/i.test(url)) return url;
-        var hash = '';
-        var hashAt = url.indexOf('#');
-        if (hashAt !== -1) { hash = url.slice(hashAt); url = url.slice(0, hashAt); }
-        var camp = String(campaign || 'site_cta').replace(/[^a-zA-Z0-9_\-]/g, '_').slice(0, 64);
-        var sep = url.indexOf('?') !== -1 ? '&' : '?';
-        return url + sep +
-            'utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=' +
-            encodeURIComponent(camp) + hash;
-    };
-}
 
 const appsData = [
     {

@@ -3,6 +3,7 @@
     "@vitest/coverage-v8": "^5.0.1",
     "axe-core": "^4.13.0",
     "clean-css-cli": "^5.6.3",
+    "esbuild": "^0.28.2",
     "jsdom": "^29.1.1",
     "terser": "^5.48.0",
     "vitest": "^5.0.1"
@@ -51,6 +52,10 @@
   },
   "scripts": {
     "test": "pytest scripts/ && vitest run scripts/bots/test/",
+    "build:js": "esbuild js/affiliate.js js/app-render.js js/apps-data.js js/conversion.js js/shared.js js/visitor-map.js --minify --outdir=js --out-extension:.js=.min.js --target=es2020",
+    "build:css": "cleancss -o css/style.min.css css/style.css",
+    "prebuild": "npm run build:js",
+    "build": "npm run build:css",
     "bot:telegram": "node scripts/bots/telegram-bot.js",
     "bot:discord": "node scripts/bots/discord-bot.js",
     "bot:all": "node scripts/bots/run-bots.js all",
