@@ -52,7 +52,7 @@
   },
   "scripts": {
     "test": "pytest scripts/ && vitest run scripts/bots/test/",
-    "build:js": "esbuild js/affiliate.js js/app-render.js js/apps-data.js js/conversion.js js/shared.js js/visitor-map.js --minify --outdir=js --out-extension:.js=.min.js --target=es2020",
+    "build:js": "esbuild js/affiliate.js js/app-render.js js/apps-data.js js/conversion.js js/price-locale.js js/shared.js js/visitor-map.js --minify --outdir=js --out-extension:.js=.min.js --target=es2020",
     "build:css": "cleancss -o css/style.min.css css/style.css",
     "prebuild": "npm run build:js",
     "build": "npm run build:css",
