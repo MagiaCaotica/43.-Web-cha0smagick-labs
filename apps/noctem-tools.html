@@ -260,48 +260,9 @@
         }
     });
     
-    document.addEventListener('DOMContentLoaded', function() {
-        var mapEl = document.getElementById('visitor-map');
-        if (!mapEl || typeof L === 'undefined') return;
-        
-        var tileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
-        var tileAttr = '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>';
-        
-        var map = L.map('visitor-map', {
-            center: [20, 0],
-            zoom: 1,
-            zoomControl: true,
-            scrollWheelZoom: true,
-            dragging: true,
-            doubleClickZoom: false,
-            touchZoom: true,
-            keyboard: false,
-            attributionControl: true,
-            worldCopyJump: true
-        });
-        
-        L.tileLayer(tileUrl, { attribution: tileAttr, maxZoom: 8, minZoom: 1 }).addTo(map);
-        
-        var visitors = [[34.0584,-118.278,130,"Los Angeles, US"],[3.4372,-76.5225,89,"Santiago de Cali, Colombia"],[37.4043,-122.0748,76,"Mountain View, US"],[37.751,-97.822,73,"United States"],[51.2993,9.491,69,"Germany"],[51.4964,-0.1224,61,"United Kingdom"],[52.5155,13.4062,41,"Berlin, Germany"],[13.0878,80.2785,34,"Chennai, India"],[40.4172,-3.684,28,"Spain"],[55.7123,12.0564,28,"Denmark"],[53.2851,-6.3713,25,"Dublin, Ireland"],[60,-95,17,"Canada"],[36.6865,-6.1361,14,"Jerez de la Frontera, Spain"],[52.3824,4.8995,14,"Netherlands"],[54.6816,25.3225,11,"Vilnius, Lithuania"],[38.7057,-9.1359,9,"Portugal"],[35.698,51.4115,9,"Iran"],[50.0833,16.7667,9,"Czechia"],[23,-102,9,"Mexico"],[51.5077,-0.119,8,"London, UK"],[42.8333,12.8333,8,"Italy"],[37.3824,-5.9761,8,"Seville, Spain"],[46.4355,30.4104,7,"Ukraine"],[52.3759,4.8975,6,"Amsterdam, Netherlands"],[50.8509,4.3447,6,"Belgium"],[4.6358,-73.4664,6,"La Mesa, Colombia"],[40.7876,-74.06,6,"Secaucus, US"],[19.3837,-99.1757,5,"Mexico City, Mexico"],[49.685,11.415,5,"Betzenstein, Germany"],[-27,133,4,"Australia"],[44.8166,20.4721,4,"Belgrade, Serbia"],[40.4165,-3.7026,3,"Madrid, Spain"],[53.4663,-2.1342,3,"Manchester, UK"],[25,45,2,"Saudi Arabia"],[1.3248,103.8566,2,"Singapore"],[-34,-64,2,"Argentina"],[41.0214,28.9948,2,"Turkey"],[-34.8272,-58.3956,2,"Florencio Varela, Argentina"],[-33.7967,-59.5208,1,"Baradero, Argentina"],[-29,24,1,"South Africa"],[18.4667,-69.9,1,"Santo Domingo, Dominican Rep."],[-4.3,15.3,1,"Kinshasa, DR Congo"],[47.4984,19.0404,1,"Budapest, Hungary"],[45.8293,15.9793,1,"Zagreb, Croatia"],[-21.9065,-47.8747,1,"Sao Carlos, Brazil"],[14.6328,-90.5199,1,"Guatemala City"],[-10.3383,-62.8954,1,"Cacaulandia, Brazil"],[-30.1146,-51.1639,1,"Porto Alegre, Brazil"],[-36.8506,174.7679,1,"Auckland, New Zealand"],[-6.175,106.8286,1,"Indonesia"],[45.4643,9.1895,1,"Milan, Italy"],[-10,-55,1,"Brazil"],[55.8822,26.5268,1,"Latvia"],[52.2394,21.0362,1,"Poland"],[59.3247,18.056,1,"Sweden"],[33.874,35.5089,1,"Beirut, Lebanon"],[14.5667,-88.7333,1,"Belmopan, Belize"],[151.2093,-33.8688,1,"Sydney, Australia"],[46.5554,15.6444,1,"Maribor, Slovenia"],[4.6114,-74.0783,1,"Bogota, Colombia"],[57.7474,11.9675,1,"Gothenburg, Sweden"],[42.6523,-73.7562,1,"Albany, US"],[44.7872,20.4573,1,"Belgrade, Serbia"],[11.0142,124.6667,1,"Ormoc City, Philippines"],[36.1699,-115.1398,1,"Las Vegas, US"],[32.2226,-110.9747,1,"Tucson, US"],[50.7758,6.0836,1,"Aachen, Germany"],[50.1155,8.6842,1,"Frankfurt, Germany"],[55.8642,-4.2518,1,"Glasgow, UK"],[14.0831,100.735,1,"Thailand"],[28.6,77.2,1,"New Delhi, India"],[25.032,121.5654,1,"Taipei, Taiwan"],[19.0235,72.8644,1,"Navi Mumbai, India"],[30.0522,31.2447,1,"Cairo Governorate, Egypt"],[42.6975,23.3242,1,"Sofia, Bulgaria"],[52.2053,0.1218,1,"Cambridge, UK"],[43.6511,-79.3832,1,"Toronto, Canada"],[48.8567,2.3522,1,"Paris, France"],[51.752,-1.2558,1,"Oxford, UK"],[31.2058,29.9245,1,"Alexandria, Egypt"],[41.9028,12.4964,1,"Rome, Italy"],[51.1657,10.4515,1,"Germany"],[35.6892,51.389,1,"Tehran, Iran"],[55.6761,12.5683,1,"Copenhagen, Denmark"],[41.3874,2.1686,1,"Barcelona, Spain"],[53.5511,9.9937,1,"Hamburg, Germany"],[52.6362,4.742,1,"Alkmaar, Netherlands"],[60.1699,24.9384,1,"Helsinki, Finland"],[43.6532,-79.3832,1,"Toronto, Canada"],[28.6139,77.209,1,"New Delhi, India"],[41.0082,28.9784,1,"Istanbul, Turkey"],[47.3686,8.5392,1,"Zurich, Switzerland"],[50.0596,14.4694,1,"Prague, Czechia"],[51.389,30.0989,1,"Chernobyl, Ukraine"],[50.1109,8.6821,1,"Frankfurt am Main, Germany"],[48.6921,6.1845,1,"Nancy, France"],[52.52,13.405,1,"Berlin, Germany"]];
-        var maxVisits = 130;
-        
-        visitors.forEach(function(v) {
-            var lat = v[0], lng = v[1], visits = v[2], loc = v[3];
-            var radius = 3 + (visits / maxVisits) * 10;
-            var opacity = 0.4 + (visits / maxVisits) * 0.6;
-            L.circleMarker([lat, lng], {
-                radius: radius,
-                fillColor: '#ff4444', color: '#ff4444', weight: 1,
-                fillOpacity: opacity, opacity: 0.8
-            }).bindTooltip(loc + ' — ' + visits + ' visits', {
-                direction: 'top', offset: [0, -radius], className: 'visitor-tooltip'
-            }).addTo(map);
-        });
-        
-        setTimeout(function() { map.invalidateSize(); }, 500);
-        window.addEventListener('resize', function() { map.invalidateSize(); });
-    });
     </script>
+    <script>window.VISITOR_DATA = [[34.0584,-118.278,130,"Los Angeles, US"],[3.4372,-76.5225,89,"Santiago de Cali, Colombia"],[37.4043,-122.0748,76,"Mountain View, US"],[37.751,-97.822,73,"United States"],[51.2993,9.491,69,"Germany"],[51.4964,-0.1224,61,"United Kingdom"],[52.5155,13.4062,41,"Berlin, Germany"],[13.0878,80.2785,34,"Chennai, India"],[40.4172,-3.684,28,"Spain"],[55.7123,12.0564,28,"Denmark"],[53.2851,-6.3713,25,"Dublin, Ireland"],[60,-95,17,"Canada"],[36.6865,-6.1361,14,"Jerez de la Frontera, Spain"],[52.3824,4.8995,14,"Netherlands"],[54.6816,25.3225,11,"Vilnius, Lithuania"],[38.7057,-9.1359,9,"Portugal"],[35.698,51.4115,9,"Iran"],[50.0833,16.7667,9,"Czechia"],[23,-102,9,"Mexico"],[51.5077,-0.119,8,"London, UK"],[42.8333,12.8333,8,"Italy"],[37.3824,-5.9761,8,"Seville, Spain"],[46.4355,30.4104,7,"Ukraine"],[52.3759,4.8975,6,"Amsterdam, Netherlands"],[50.8509,4.3447,6,"Belgium"],[4.6358,-73.4664,6,"La Mesa, Colombia"],[40.7876,-74.06,6,"Secaucus, US"],[19.3837,-99.1757,5,"Mexico City, Mexico"],[49.685,11.415,5,"Betzenstein, Germany"],[-27,133,4,"Australia"],[44.8166,20.4721,4,"Belgrade, Serbia"],[40.4165,-3.7026,3,"Madrid, Spain"],[53.4663,-2.1342,3,"Manchester, UK"],[25,45,2,"Saudi Arabia"],[1.3248,103.8566,2,"Singapore"],[-34,-64,2,"Argentina"],[41.0214,28.9948,2,"Turkey"],[-34.8272,-58.3956,2,"Florencio Varela, Argentina"],[-33.7967,-59.5208,1,"Baradero, Argentina"],[-29,24,1,"South Africa"],[18.4667,-69.9,1,"Santo Domingo, Dominican Rep."],[-4.3,15.3,1,"Kinshasa, DR Congo"],[47.4984,19.0404,1,"Budapest, Hungary"],[45.8293,15.9793,1,"Zagreb, Croatia"],[-21.9065,-47.8747,1,"Sao Carlos, Brazil"],[14.6328,-90.5199,1,"Guatemala City"],[-10.3383,-62.8954,1,"Cacaulandia, Brazil"],[-30.1146,-51.1639,1,"Porto Alegre, Brazil"],[-36.8506,174.7679,1,"Auckland, New Zealand"],[-6.175,106.8286,1,"Indonesia"],[45.4643,9.1895,1,"Milan, Italy"],[-10,-55,1,"Brazil"],[55.8822,26.5268,1,"Latvia"],[52.2394,21.0362,1,"Poland"],[59.3247,18.056,1,"Sweden"],[33.874,35.5089,1,"Beirut, Lebanon"],[14.5667,-88.7333,1,"Belmopan, Belize"],[151.2093,-33.8688,1,"Sydney, Australia"],[46.5554,15.6444,1,"Maribor, Slovenia"],[4.6114,-74.0783,1,"Bogota, Colombia"],[57.7474,11.9675,1,"Gothenburg, Sweden"],[42.6523,-73.7562,1,"Albany, US"],[44.7872,20.4573,1,"Belgrade, Serbia"],[11.0142,124.6667,1,"Ormoc City, Philippines"],[36.1699,-115.1398,1,"Las Vegas, US"],[32.2226,-110.9747,1,"Tucson, US"],[50.7758,6.0836,1,"Aachen, Germany"],[50.1155,8.6842,1,"Frankfurt, Germany"],[55.8642,-4.2518,1,"Glasgow, UK"],[14.0831,100.735,1,"Thailand"],[28.6,77.2,1,"New Delhi, India"],[25.032,121.5654,1,"Taipei, Taiwan"],[19.0235,72.8644,1,"Navi Mumbai, India"],[30.0522,31.2447,1,"Cairo Governorate, Egypt"],[42.6975,23.3242,1,"Sofia, Bulgaria"],[52.2053,0.1218,1,"Cambridge, UK"],[43.6511,-79.3832,1,"Toronto, Canada"],[48.8567,2.3522,1,"Paris, France"],[51.752,-1.2558,1,"Oxford, UK"],[31.2058,29.9245,1,"Alexandria, Egypt"],[41.9028,12.4964,1,"Rome, Italy"],[51.1657,10.4515,1,"Germany"],[35.6892,51.389,1,"Tehran, Iran"],[55.6761,12.5683,1,"Copenhagen, Denmark"],[41.3874,2.1686,1,"Barcelona, Spain"],[53.5511,9.9937,1,"Hamburg, Germany"],[52.6362,4.742,1,"Alkmaar, Netherlands"],[60.1699,24.9384,1,"Helsinki, Finland"],[43.6532,-79.3832,1,"Toronto, Canada"],[28.6139,77.209,1,"New Delhi, India"],[41.0082,28.9784,1,"Istanbul, Turkey"],[47.3686,8.5392,1,"Zurich, Switzerland"],[50.0596,14.4694,1,"Prague, Czechia"],[51.389,30.0989,1,"Chernobyl, Ukraine"],[50.1109,8.6821,1,"Frankfurt am Main, Germany"],[48.6921,6.1845,1,"Nancy, France"],[52.52,13.405,1,"Berlin, Germany"]];</script>
+    <script src="../js/visitor-map.js"></script>
 <div id="google_translate_element" style="position:fixed;bottom:1rem;right:1rem;z-index:9999;"></div>
 <script>
 function googleTranslateElementInit() {

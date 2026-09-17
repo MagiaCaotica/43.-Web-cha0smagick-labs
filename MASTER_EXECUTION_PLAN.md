@@ -99,13 +99,13 @@ The system is **production ready for automated revenue** when ALL criteria pass:
 
 | Task | Owner | Effort | Verification |
 |------|-------|--------|--------------|
-| 1.1.1 Create `js/zener-trainer.js` from `tools/zener-esp-trainer.html` inline script (460 lines) | Dev | 1h | File exists, exports `initZenerTrainer()` |
-| 1.1.2 Update `tools/zener-esp-trainer.html` → load `../js/zener-trainer.js` via `<script type="module">` | Dev | 15m | Tool works identically |
-| 1.1.3 Create `js/visitor-map.js` from apps/books inline Leaflet init (~300 lines each) | Dev | 45m | File exists, exports `initVisitorMap()` |
-| 1.1.4 Update all 12 app pages → remove inline Leaflet, load `../js/visitor-map.js` | Dev | 30m | Maps render on all apps |
-| 1.1.5 Update all 7 book pages → remove inline Leaflet, load `../js/visitor-map.js` | Dev | 20m | Maps render on all books |
-| 1.1.6 Delete duplicate Leaflet init code from all 19 HTML files | Dev | 20m | `grep -r "L.map" apps/ books/` returns only visitor-map.js |
-| 1.1.7 Remove duplicate Product JSON-LD from `books/codex-chaoticus-pdf.html` (keep 1 of 3) | Dev | 10m | Rich Results Test passes |
+| 1.1.1 Create `js/zener-trainer.js` from `tools/zener-esp-trainer.html` inline script (460 lines) | Dev | 1h | ✔️ 221 líneas ES module, exporta `initZenerTrainer()`. Verificado HTTP: handlers bound (nextTrial/resetSession/newSession = function), statTrials "0 / 25" |
+| 1.1.2 Update `tools/zener-esp-trainer.html` → load `../js/zener-trainer.js` via `<script type="module">` | Dev | 15m | ✔️ Módulo carga sobre HTTP sin CORS error (file:// no soporta ES modules, esperado) |
+| 1.1.3 Create `js/visitor-map.js` from apps/books inline Leaflet init (~300 lines each) | Dev | 45m | ✔️ IIFE con `window.initVisitorMap(visitors, maxVisits)`, DEFAULT_VISITORS 59 entradas verbatim, auto-init DOMContentLoaded |
+| 1.1.4 Update all 12 app pages → remove inline Leaflet, load `../js/visitor-map.js` | Dev | 30m | ✔️ 12/12 páginas: `<script src="../js/visitor-map.js">` + bloque Leaflet inline eliminado (brace-matching desde primer L.map) |
+| 1.1.5 Update all 7 book pages → remove inline Leaflet, load `../js/visitor-map.js` | Dev | 20m | ✔️ 7/7 páginas transformadas. noctem-tools.html conserva sus 98 entradas vía `window.VISITOR_DATA` |
+| 1.1.6 Delete duplicate Leaflet init code from all 19 HTML files | Dev | 20m | ✔️ POST-CHECK: `L.map` restante en HTML files: NONE. Verificado HTTP: mapa init (leaflet-container) + 58 circleMarkers SVG en app, 61 en book |
+| 1.1.7 Remove duplicate Product JSON-LD from `books/codex-chaoticus-pdf.html` (keep 1 of 3) | Dev | 10m | ✔️ 3 JSON-LD byte-idénticos → 1. Verificado HTTP: productJsonLd = 1 |
 
 ### 1.2 Build System & Consolidation [P1]
 
@@ -405,7 +405,7 @@ LAYER 3 (Parallel after Layer 2)
 [ ] 0.1.1-0.1.11 Secret Rotation & Git Hygiene
 [x] 0.2.1-0.2.11 Test Infrastructure
 [ ] 0.3.1-0.3.4 Bot Path Fix
-[ ] 1.1.1-1.1.7 Inline JS Extraction
+[x] 1.1.1-1.1.7 Inline JS Extraction
 [ ] 1.2.1-1.2.6 Build System
 [ ] 1.3.1-1.3.10 SEO & HTML Fixes
 [ ] 1.4.1-1.4.4 Python Cleanup
@@ -437,7 +437,7 @@ LAYER 3 (Parallel after Layer 2)
 
 > **Update this table daily**. When a task moves to Done, increment the count.
 >
-> **Última actualización (2026-09-17)**: 0.2.1-0.2.11 ✔️ COMPLETO — Test infrastructure: pytest 38 tests + vitest 160 tests (4 files en `scripts/bots/test/`), `npm test` EXIT 0. 0.2.1: pytest/pytest-html son paquetes pip (no npm devDeps; el paquete npm "pytest" es bogus). 0.3.1-0.3.4 ✔️ (bots en `scripts/bots/`, Telegram+Discord conectados). Pendiente manual: 0.1 (rotación secretos). Bug evitado: devDeps edit manual + `--package-lock-only` (sin transitive deps re-flattened). 2.1.1/2.1.5/2.1.6 y 2.4.1-2.4.4 verificados en el propio plan. Siguiente: LAYER 1 (1.1.x extracción JS inline).
+> **Última actualización (2026-09-17)**: 0.2.1-0.2.11 ✔️ COMPLETO — Test infrastructure: pytest 38 tests + vitest 160 tests (4 files en `scripts/bots/test/`), `npm test` EXIT 0. 0.2.1: pytest/pytest-html son paquetes pip (no npm devDeps; el paquete npm "pytest" es bogus). 0.3.1-0.3.4 ✔️ (bots en `scripts/bots/`, Telegram+Discord conectados). **1.1.1-1.1.7 ✔️ COMPLETO — JS extraction: js/zener-trainer.js (221 líneas, handlers verificados) + js/visitor-map.js (59 entradas), 19 páginas transformadas, dup Product JSON-LD 3→1; verificado vía HTTP server + Playwright: mapa init (leaflet-container) + 58 circleMarkers en app / 61 en book, zener handlers bound, módulo carga sin CORS.** Pendiente manual: 0.1 (rotación secretos). Bug evitado: devDeps edit manual + `--package-lock-only` (sin transitive deps re-flattened). 2.1.1/2.1.5/2.1.6 y 2.4.1-2.4.4 verificados en el propio plan. Siguiente: LAYER 1.2.x (esbuild build system).
 
 ---
 
