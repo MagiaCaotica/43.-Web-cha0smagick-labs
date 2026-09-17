@@ -1,9 +1,11 @@
 {
   "devDependencies": {
+    "@vitest/coverage-v8": "^5.0.1",
     "axe-core": "^4.13.0",
     "clean-css-cli": "^5.6.3",
     "jsdom": "^29.1.1",
-    "terser": "^5.48.0"
+    "terser": "^5.48.0",
+    "vitest": "^5.0.1"
   },
   "name": "43.-web-cha0smagick-labs",
   "version": "1.0.0",
@@ -48,7 +50,7 @@
     "wrappy": "^1.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "pytest scripts/ && vitest run scripts/bots/test/",
     "bot:telegram": "node scripts/bots/telegram-bot.js",
     "bot:discord": "node scripts/bots/discord-bot.js",
     "bot:all": "node scripts/bots/run-bots.js all",
