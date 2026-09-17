@@ -12,7 +12,8 @@
         var mapEl = document.getElementById('visitor-map');
         if (!mapEl || typeof L === 'undefined') return;
 
-        var tileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+        // CARTO Basemaps key (plan 1.3.11): client-side public basemap key, rotation record in root .env (CARTO_API_KEY).
+        var tileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=cb1_3oz4_1_1a77bbfada7c8f46d51a0ac6';
         var tileAttr = '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>';
 
         var map = L.map('visitor-map', {
