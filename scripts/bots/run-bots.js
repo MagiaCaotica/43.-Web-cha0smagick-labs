@@ -7,7 +7,7 @@
  *   node scripts/run-bots.js all        # Both (default)
  */
 
-require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
+require('dotenv').config({ path: require('path').join(__dirname, '..', '..', '.env') });
 
 const mode = process.argv[2] || 'all';
 

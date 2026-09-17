@@ -49,10 +49,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bot:telegram": "node scripts/telegram-bot.js",
-    "bot:discord": "node scripts/discord-bot.js",
-    "bot:all": "node scripts/run-bots.js all",
-    "bot:start": "node scripts/run-bots.js all"
+    "bot:telegram": "node scripts/bots/telegram-bot.js",
+    "bot:discord": "node scripts/bots/discord-bot.js",
+    "bot:all": "node scripts/bots/run-bots.js all",
+    "bot:start": "node scripts/bots/run-bots.js all"
   },
   "repository": {
     "type": "git",

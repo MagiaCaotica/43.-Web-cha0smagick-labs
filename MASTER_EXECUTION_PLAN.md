@@ -69,11 +69,11 @@ The system is **production ready for automated revenue** when ALL criteria pass:
 
 | Task | Owner | Effort | Verification |
 |------|-------|--------|--------------|
-| 0.2.1 Add `pytest` + `pytest-html` to root `package.json` devDeps | Dev | 10m | `pytest --version` works |
+| 0.2.1 Add `pytest` + `pytest-html` to root `package.json` devDeps | Dev | 10m | `pytest --version` works — 🔄 En progreso (pytest 9.1.1 OK; falta devDeps en package.json) |
 | 0.2.2 Create `scripts/conftest.py` with fixtures (temp dirs, sample articles) | Dev | 30m | `pytest scripts/test_generate_blog.py -v` passes — ✔️. Verified |
-| 0.2.3 Write tests for `generate_blog.py` (dry-run, index update, sitemap update) | Dev | 1h | 5+ tests pass |
-| 0.2.4 Write tests for `add_internal_links.py` (keyword matching, no duplicates) | Dev | 45m | 3+ tests pass |
-| 0.2.5 Write tests for `add_structured_data.py` (schema injection, no duplicates) | Dev | 45m | 3+ tests pass |
+| 0.2.3 Write tests for `generate_blog.py` (dry-run, index update, sitemap update) | Dev | 1h | 5+ tests pass — ✔️. Verified |
+| 0.2.4 Write tests for `add_internal_links.py` (keyword matching, no duplicates) | Dev | 45m | 3+ tests pass — ✔️. Verified |
+| 0.2.5 Write tests for `add_structured_data.py` (schema injection, no duplicates) | Dev | 45m | 3+ tests pass — ✔️. Verified |
 | 0.2.6 Add `vitest` + `@vitest/coverage-v8` to root `package.json` devDeps | Dev | 10m | `npm test -- --run` works |
 | 0.2.7 Create `scripts/bots/test/bot-brain.test.js` (catalog integrity) | Dev | 1h | 10+ tests pass |
 | 0.2.8 Create `scripts/bots/test/groq-ai.test.js` (classifier, prompt building) | Dev | 1h | 5+ tests pass |
@@ -85,10 +85,10 @@ The system is **production ready for automated revenue** when ALL criteria pass:
 
 | Task | Owner | Effort | Verification |
 |------|-------|--------|--------------|
-| 0.3.1 Move `projects/scripts/` → `scripts/bots/` | Dev | 10m | `ls scripts/bots/` shows 5 files |
-| 0.3.2 Update `run-bots.js` imports to relative paths | Dev | 10m | No import errors |
-| 0.3.3 Update README.md bot commands to `node scripts/bots/run-bots.js` | Dev | 5m | README matches reality |
-| 0.3.4 Test: `node scripts/bots/run-bots.js all` starts both bots | Dev | 5m | Both bots log "connected" |
+| 0.3.1 Move `projects/scripts/` → `scripts/bots/` | Dev | 10m | `ls scripts/bots/` shows 5 files — ✔️. Verified (git mv; solo los 5 archivos de bots, los 165 scripts SEO/auditoría permanecen en projects/scripts/) |
+| 0.3.2 Update `run-bots.js` imports to relative paths | Dev | 10m | No import errors — ✔️. Verified (ya eran relativos `./bot-brain` etc.; sin cambios necesarios) |
+| 0.3.3 Update README.md bot commands to `node scripts/bots/run-bots.js` | Dev | 5m | README matches reality — ✔️. Verified (2 líneas README + 4 scripts npm en package.json) |
+| 0.3.4 Test: `node scripts/bots/run-bots.js all` starts both bots | Dev | 5m | Both bots log "connected" — ✔️. Verified (Telegram ready @cha0smagicklabs + Discord logged in LABS#5507; dotenv apunta a .env raíz) |
 
 ---
 
@@ -429,13 +429,15 @@ LAYER 3 (Parallel after Layer 2)
 
 | Layer | Tasks Total | Done | In Progress | Blocked | % Complete |
 |-------|-------------|------|-------------|---------|------------|
-| 0 Foundation | 25 | 0 | 0 | 0 | 0% |
-| 1 Code Quality | 33 | 0 | 0 | 0 | 0% |
-| 2 Revenue Engine | 52 | 0 | 0 | 0 | 0% |
+| 0 Foundation | 25 | 8 | 1 | 0 | 32% |
+| 1 Code Quality | 33 | 0 | 1 | 0 | 0% |
+| 2 Revenue Engine | 52 | 7 | 0 | 0 | 13% |
 | 3 Operations | 35 | 0 | 0 | 0 | 0% |
-| **TOTAL** | **145** | **0** | **0** | **0** | **0%** |
+| **TOTAL** | **145** | **15** | **2** | **0** | **10%** |
 
 > **Update this table daily**. When a task moves to Done, increment the count.
+>
+> **Última actualización (2025-09-16)**: 0.2.2-0.2.5 ✔️ (38 tests pytest OK) y 0.3.1-0.3.4 ✔️ (bots en `scripts/bots/`, Telegram+Discord conectados). Commits: `89a36df` [L0.2], `0bcb60e` [L1.4], `bc4807c`/`2c8a034` [PLAN], `2e97439` [CHORE]. 0.1 (rotación secretos, manual) y 0.2.1 (devDeps) en progreso. 2.1.1/2.1.5/2.1.6 y 2.4.1-2.4.4 verificados en el propio plan.
 
 ---
 
