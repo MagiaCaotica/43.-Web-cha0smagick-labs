@@ -71,7 +71,7 @@
     </div>
 
     <div class="your-price">
-      <div class="price-big">$49.99</div>
+      <div class="price-big" data-usd-price="49.99">$49.99</div>
       <div class="price-label">Tu precio final · Ahorro ~$125 · 71% OFF</div>
     </div>
 
@@ -139,5 +139,6 @@
       if (typeof fbq !== 'undefined') { fbq('track', 'InitiateCheckout', { content_ids: ['complete_access'], value: 49.99, currency: 'USD' }); }
     });
   </script>
+<script src="../js/price-locale.min.js" defer></script>
 </body>
 </html>

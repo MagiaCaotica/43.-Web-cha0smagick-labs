@@ -194,7 +194,7 @@ The system is **production ready for automated revenue** when ALL criteria pass:
 | 2.3.13 Configure Site Forms → MailerLite webhook (Google Forms / MailerLite forms) | Dev | 45m | Test form → subscriber created + tagged |
 | 2.3.14 Create Segment LATAM (language=es OR country in LATAM) | You | 15m | Segment populates correctly |
 | 2.3.15 Create Segment Global (language=en OR country not in LATAM) | You | 15m | Segment populates correctly |
-| 2.3.16 Add price localization (GeoIP → COP/ARS/MXN/BRL display on landing pages) — **R15** | Dev | 2h | Prices show local currency for LATAM visitors |
+| 2.3.16 Add price localization (GeoIP → COP/ARS/MXN/BRL display on landing pages) - **R15** | Dev | 2h | ✔ Interpreted: timezone-based (Intl API, no external calls - privacy-first + offline branding; external GeoIP avoided). js/price-locale.js (~70L vanilla, window.cmPriceLocale exposed) + build:js entry (7) → price-locale.min.js (1064b). data-usd-price on 3 landings (apps-bundle 29.99, complete-access 49.99, flash-sale 99; books-bundle has no USD price - only 50% OFF, nothing to localize). VERIFIED LIVE (Playwright, tz America/Bogota): price auto-localized on load → COP 120.000 (29.99x4000→119960→round 100); formats ARS 25.000, MXN 920, BRL 530. Approx rates 2026-09 - update periodically |
 
 ### 2.4 Conversion Optimization (Track B + R5, R6, R7, R16) [P1]
 
