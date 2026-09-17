@@ -132,6 +132,7 @@ The system is **production ready for automated revenue** when ALL criteria pass:
 | 1.3.8 Run `add-giscus-to-articles.ps1` on all 379 articles | Dev | 10m | Spot-check 10 articles: all have Giscus |
 | 1.3.9 Run `add-cross-links.ps1` on all 379 articles | Dev | 10m | Spot-check 10 articles: all have Related Articles |
 | 1.3.10 Regenerate `sitemap.xml` via `generate_sitemap.py` | Dev | 5m | Sitemap has 400+ URLs, all lastmod current |
+| 1.3.11 Add CARTO Basemaps API key to visitor map tiles in `js/visitor-map.js` (removes "API key required" watermark); key también en root `.env` como `CARTO_API_KEY` (clave pública by-design en tile URLs — NO cuenta como secreto git) | Dev | 5m | Tile URL lleva `?key=`; mapa renderiza tiles sin watermark |
 
 ### 1.4 Python Script Cleanup [P1]
 
