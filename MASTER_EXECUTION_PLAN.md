@@ -210,7 +210,7 @@ The system is **production ready for automated revenue** when ALL criteria pass:
 | 2.4.8 Alternative: Daily Play Console sales fetch script (`play-sales-report.py` → webhook simulation) — **R16** | Dev | 1h | Daily cron logs app sales → Sheets → MailerLite trigger |
 | 2.4.9 Create Inner Circle Telegram VIP group + invite link automation (Make.com) — **R5** | Dev | 1h | Test subscription → invite generated + emailed |
 | 2.4.10 Implement Flash Sale 20-slot limit enforcement (Hotmart API or Make counter) — **R6, R23** | Dev | 1h | 21st purchase rejected or waitlisted |
-| 2.4.11 Add Flash Sale real countdown sync (server time, not client) — **R6** | Dev | 45m | Countdown matches across all pages/bots |
+| 2.4.11 Add Flash Sale real countdown sync (server time, not client) — **R6** | Dev | 45m | ✔️ `landing-pages/flash-sale.html`: countdown anclado a server time (HTTP Date header corrige skew del reloj cliente, fetch HEAD a sí mismo, fallback offline), anclaje localStorage `flash_sale_start` (reload NO reinicia el timer), constante global `SALE_END_ISO` (UTC ISO, null = ventana per-visitor 72h), slots clamped a ventana 72h. Verificado con vm+stubs (jsdom 30.1.0 + Node 24 roto — incompatibilidad entorno, pre-existente): first visit 72:00:00+stored ✓, reload continúa ✓, offset aplicado 71:59:59→73:00:00 ✓, EXPIRADO ✓, slots clamp ✓. En launch real: setear SALE_END_ISO |
 
 ### 2.5 Affiliate Program Activation (R8) [P2]
 
@@ -267,10 +267,10 @@ The system is **production ready for automated revenue** when ALL criteria pass:
 
 | Task | Owner | Effort | Verification |
 |------|-------|--------|--------------|
-| 3.3.1 Add cron job for daily social publishing (Pinterest + X + Telegram channel) | Dev | 1h | Cron runs daily, posts published |
-| 3.3.2 Build evergreen content rotation (recycle best-performing pins/tweets) | Dev | 1.5h | Old content re-posted with variation |
-| 3.3.3 Connect blog → social auto-post (new article → auto-share to channels) | Dev | 1h | New blog post → appears on Telegram channel + X |
-| 3.3.4 Add analytics feedback loop (post performance → content calendar priority) | Dev | 1h | High-performing content gets boosted |
+| 3.3.1 Add cron job for daily social publishing (Pinterest + X + Telegram channel) | Dev | 1h | ✔️ `scripts/social-publish.js` (movido desde projects/scripts/, ~480 líneas) + `.github/workflows/social-publish.yml` (cron `0 13 * * *` = 08:00 Bogotá + workflow_dispatch; env secrets con `\|\| ''` fallback — ausentes NO fallan; commit state si cambió). Daily = blog auto-post + calendar (pin→Pinterest, tweet→X+TG). Dry-run EXIT 0 |
+| 3.3.2 Build evergreen content rotation (recycle best-performing pins/tweets) | Dev | 1.5h | ✔️ Rotación ponderada: sin scores → `entries[day % N]` (evergreen, 1/día); con scores → pool ponderado `(1+score)×` por item, `pool[day % pool.length]` (high performers más frecuentes, todos rotan). Scores via `record <id> <score>` → `data/social-performance.json`. 11 tests vitest EXIT 0 |
+| 3.3.3 Connect blog → social auto-post (new article → auto-share to channels) | Dev | 1h | ✔️ `autoPostBlog`: primera run SEEDS sin postear (467 artículos baseline); luego mtime > lastRun AND not published, max 3/run; Telegram (`@cha0smagicklabs`) + bridge X; state `data/social-state.json`. Dry-run verifica seeding |
+| 3.3.4 Add analytics feedback loop (post performance → content calendar priority) | Dev | 1h | ✔️ `recordScore(id, score)` → perf file; `pickCalendarItem` integra scores en la rotación ponderada (boost determinista, assertions en tests) |
 
 ### 3.4 Content Pipeline (Track D) [P2 - Parallelizable]
 
@@ -418,7 +418,7 @@ LAYER 3 (Parallel after Layer 2)
 [ ] 2.6.1-2.6.4 Revenue Attribution (R10, R25, R28, R29)
 [x] 3.1.1+3.1.7+3.1.11 Bot Hardening parcial (3.1.4/3.1.5/3.1.6/3.1.9/3.1.10/3.1.12 ✔️; pendiente usuario: 3.1.2 sales framing, 3.1.3 Imgur imágenes, 3.1.8 uptime monitor)
 [x] 3.2.1-3.2.7 CI/CD Pipeline (bot-deploy.yml + staging.yml + lighthouse.yml; activación bot-deploy = usuario: SSH_HOST/SSH_USER/SSH_KEY)
-[ ] 3.3.1-3.3.4 Social Publishing Automation (R9)
+[x] 3.3.1-3.3.4 Social Publishing Automation (R9) — scripts/social-publish.js + workflow social-publish.yml + tests (11); activación = usuario: PINTEREST_TOKEN, POST_BRIDGE_KEY (api.post-bridge.com 404 verificado 2026-09-21 — usar alternativa tipo Ayrshare con POST_BRIDGE_URL)
 [ ] 3.4.1-3.4.6 Content Pipeline (D2 + R24)
 [ ] 3.5.1-3.5.3 Tech Debt Verify
 [ ] 3.6.1-3.6.3 AutoShorts Separation
@@ -433,8 +433,8 @@ LAYER 3 (Parallel after Layer 2)
 | 0 Foundation | 25 | 25 | 0 | 0 | 100% |
 | 1 Code Quality | 33 | 33 | 0 | 0 | 100% |
 | 2 Revenue Engine | 52 | 11 | 0 | 0 | 21% |
-| 3 Operations | 35 | 10 | 0 | 0 | 29% |
-| **TOTAL** | **145** | **79** | **0** | **0** | **54%** |
+| 3 Operations | 35 | 14 | 0 | 0 | 40% |
+| **TOTAL** | **145** | **83** | **0** | **0** | **57%** |
 
 > **Update this table daily**. When a task moves to Done, increment the count.
 >
@@ -443,6 +443,8 @@ LAYER 3 (Parallel after Layer 2)
 > **Última actualización (2026-09-20)**: 0.1 ✔️ COMPLETO — 0.1.9 (11 secrets subidos a GitHub Repository Secrets por el usuario vía Web UI/CLI). 0.1.1-0.1.8 (rotación) y 0.1.11 (purge de historia git) OMITIDOS por decisión explícita del usuario: no se rotarán las credenciales. Layer 0 = 100%, Layer 1 = 100%. Siguiente: 2.1.7-2.1.10 (analytics), 3.1 (bot hardening), 3.2 (CI/CD).
 >
 > **Última actualización (2026-09-20, 2ª)**: **2.1.7-2.1.10 ✔️** — webhook-receiver.js (HMAC timing-safe, MailerLite tag, GA4 MP) + ga4-mp.js + ga4-play-purchases.js (googleapis lazy) selftests EXIT 0; 2.1.8 consent verificado estático. Activación = usuario: HOTMART_WEBHOOK_SECRET, GA4_MEASUREMENT_ID, GA4_MP_API_SECRET, GOOGLE_PLAY_SERVICE_ACCOUNT_JSON, GOOGLE_PLAY_PACKAGE_NAME. **3.1.1 ✔️** (data/offers.json + bot-brain dynamic fetch, 48/48 tests). **3.1.7 ✔️** (error-tracker.js Sentry/GlitchTip envelope vía fetch, sin dependencia, wiring run-bots.js). **3.1.11 ✔️** (ticket-bot.js GitHub Issues + /ticket wired en ambos bots). **3.2.1-3.2.7 ✔️ COMPLETO** (bot-deploy.yml appleboy/ssh-action + staging.yml gh-pages PR preview + lighthouse.yml con budgets; 3.2.1-3.2.4 preexistentes). Todo verificado: 7/7 YAML parse OK, npm test EXIT 0 (38 pytest + 160 vitest). Layer 2 = 11/52 21%, Layer 3 = 10/35 29%, TOTAL = 79/145 54%.
+>
+> **Última actualización (2026-09-21)**: **3.3.1-3.3.4 ✔️ COMPLETO — Social Publishing Automation (R9)**: `scripts/social-publish.js` (movido desde `projects/scripts/` vía git mv para alinear con README/PROJECT-BIBLE; ~480 líneas CommonJS, main-guard, 19 funciones exportadas). Calendarios preservados verbatim (13 pins + 30 tweets). Publishers: Telegram directo (require bots/telegram-bot.js), Pinterest API v5 (PINTEREST_TOKEN + PINTEREST_BOARD_ID, image_base64 desde pins/output), bridge X configurable (POST_BRIDGE_URL — DECISIÓN: api.post-bridge.com/v1 = 404 verificado 2026-09-21, no existe públicamente; usar alternativa tipo Ayrshare con POST_BRIDGE_URL configurable; el daily NUNCA falla por secrets ausentes). Rotación 3.3.2 ponderada por performance (sin scores → evergreen day%N; con scores → pool (1+score)×). Blog auto-post 3.3.3: primera run SEEDS sin postear (467 baseline), luego mtime-based max 3/run. Feedback 3.3.4: recordScore → social-performance.json → rotación ponderada. State: data/social-state.json. Workflow social-publish.yml (cron 08:00 Bogotá, secrets con fallback `|| ''`, commit state). Tests: scripts/social/test/ 11 vitest. Verificado: selftest EXIT 0, dry-run EXIT 0 (seeding + sin state escrito), npm test EXIT 0 (38 pytest + 171 vitest). npm scripts añadidos: social:daily/social:dry/social:selftest. .env.example: PINTEREST_TOKEN/PINTEREST_BOARD_ID/POST_BRIDGE_KEY/POST_BRIDGE_URL documentados (opcionales). Layer 3 = 14/35 40%, TOTAL = 83/145 57%. Siguiente: 3.4 Content Pipeline, 3.5 Tech Debt Verify, 3.6 AutoShorts Separation; **2.4.11 ✔️** flash-sale countdown server-time sync (Date header + localStorage + SALE_END_ISO; verificado vm+stubs — jsdom 30.1.0/Node 24 no ejecuta scripts, incompatibilidad entorno pre-existente; en launch real setear SALE_END_ISO en landing-pages/flash-sale.html). Pendiente usuario 2.4.x: activaciones MailerLite + productos Hotmart (2.2.x).
 
 ---
 
