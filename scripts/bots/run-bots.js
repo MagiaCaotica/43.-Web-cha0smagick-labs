@@ -9,9 +9,14 @@
 
 require('dotenv').config({ path: require('path').join(__dirname, '..', '..', '.env') });
 
+// Error tracking → Sentry/GlitchTip (3.1.7): global handlers + optional DSN reporting
+const { initErrorTracking } = require('./error-tracker');
+
 const mode = process.argv[2] || 'all';
 
 async function main() {
+  initErrorTracking();
+
   if (mode === 'all' || mode === 'telegram') {
     console.log('🌀 Starting Telegram bot...');
     try {
