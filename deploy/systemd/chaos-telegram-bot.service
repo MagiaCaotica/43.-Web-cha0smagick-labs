@@ -1,0 +1,17 @@
+[Unit]
+Description=Cha0smagick Telegram Bot (plan 3.1.9)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/cha0smagick-labs
+ExecStart=/usr/bin/node scripts/bots/telegram-bot.js
+Restart=always
+RestartSec=5
+EnvironmentFile=/opt/cha0smagick-labs/.env
+Environment=HEALTH_PORT_TELEGRAM=3000
+StandardOutput=append:/var/log/cha0s/telegram.log
+StandardError=append:/var/log/cha0s/telegram.err.log
+
+[Install]
+WantedBy=multi-user.target

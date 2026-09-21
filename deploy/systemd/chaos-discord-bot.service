@@ -1,0 +1,17 @@
+[Unit]
+Description=Cha0smagick Discord Bot (plan 3.1.9)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/cha0smagick-labs
+ExecStart=/usr/bin/node scripts/bots/discord-bot.js
+Restart=always
+RestartSec=5
+EnvironmentFile=/opt/cha0smagick-labs/.env
+Environment=HEALTH_PORT_DISCORD=3001
+StandardOutput=append:/var/log/cha0s/discord.log
+StandardError=append:/var/log/cha0s/discord.err.log
+
+[Install]
+WantedBy=multi-user.target
