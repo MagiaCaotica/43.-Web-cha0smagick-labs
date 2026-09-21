@@ -33,3 +33,12 @@ projects/playstore.json
 # Python caches
 __pycache__/
 *.pyc
+
+# AutoShorts (proyecto externo — plan 3.6.2; projects/auto-shorts es submodule TRACKED, su remoción real es 3.6.1)
+tools/auto-shorts/
+projects/auto-shorts/
+
+# Runtime garbage (accidentalmente trackeado / output local)
+logs/
+.opencode/goals/state.json.lock/
+undefined/
