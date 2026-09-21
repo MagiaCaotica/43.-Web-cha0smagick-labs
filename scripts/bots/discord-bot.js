@@ -17,7 +17,9 @@
 
 const { Client, GatewayIntentBits, SlashCommandBuilder, EmbedBuilder, Colors } = require('discord.js');
 const BRAIN = require('./bot-brain');
+const logger = require('./logger');
 const { askGroq, needsGroq } = require('./groq-ai');
+const { createSupportTicket } = require('./ticket-bot');
 
 // Load .env from project root
 const path = require('path');
@@ -26,7 +28,7 @@ require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 const TOKEN = process.env.DISCORD_BOT_TOKEN;
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 if (!TOKEN) {
-  console.error('❌ DISCORD_BOT_TOKEN not set in environment');
+  logger.error('discord-bot', '❌ DISCORD_BOT_TOKEN not set in environment');
   process.exit(1);
 }
 
@@ -80,7 +82,7 @@ function toolEmbed(tool) {
 // ── Ready ──
 
 client.once('ready', async () => {
-  console.log(`✅ Discord bot logged in as ${client.user.tag}`);
+  logger.info('discord-bot', `✅ Discord bot logged in as ${client.user.tag}`);
 
   // Register slash commands globally
   try {
@@ -103,10 +105,18 @@ client.once('ready', async () => {
             .setDescription('Your question')
             .setRequired(true)
             .setMaxLength(1000)),
+      new SlashCommandBuilder()
+        .setName('ticket')
+        .setDescription('🎫 Open a support ticket → GitHub Issues')
+        .addStringOption(option =>
+          option.setName('description')
+            .setDescription('Describe your issue or question')
+            .setRequired(true)
+            .setMaxLength(1000)),
     ]);
-    console.log('✅ Slash commands registered');
+    logger.info('discord-bot', '✅ Slash commands registered');
   } catch (err) {
-    console.error('❌ Failed to register slash commands:', err.message);
+    logger.error('discord-bot', '❌ Failed to register slash commands:', err.message);
   }
 });
 
@@ -212,14 +222,31 @@ client.on('interactionCreate', async (interaction) => {
             .setFooter({ text: 'Ask another question with /ask' });
           await interaction.editReply({ embeds: [embed] });
         } catch (err) {
-          console.error('❌ /ask error:', err.message);
+          logger.error('discord-bot', '❌ /ask error:', err.message);
           await interaction.editReply({ content: '⚠️ Sorry, I had trouble processing your question. Please try again.' });
+        }
+        break;
+      }
+
+      case 'ticket': {
+        const description = interaction.options.getString('description');
+        await interaction.deferReply({ ephemeral: true });
+        try {
+          const result = await createSupportTicket({
+            platform: 'discord',
+            user: interaction.user.tag,
+            text: description,
+          });
+          await interaction.editReply({ content: `🎫 Ticket created: **Issue #${result.issueNumber}**\n${result.url}` });
+        } catch (err) {
+          logger.error('discord-bot', '❌ /ticket error:', err.message);
+          await interaction.editReply({ content: `⚠️ ${err.message}` });
         }
         break;
       }
     }
   } catch (err) {
-    console.error(`❌ Error handling /${commandName}:`, err.message);
+    logger.error('discord-bot', `❌ Error handling /${commandName}:`, err.message);
     try {
       if (!interaction.replied) await interaction.reply({ content: '⚠️ Error processing command.', ephemeral: true });
     } catch (_) { /* ignore */ }
@@ -247,9 +274,9 @@ client.on('guildMemberAdd', async (member) => {
       .setFooter({ text: 'One-time purchases. No subscriptions. Ever.' });
 
     await channel.send({ embeds: [embed] });
-    console.log(`👋 Welcome message sent to ${member.displayName}`);
+    logger.info('discord-bot', `👋 Welcome message sent to ${member.displayName}`);
   } catch (err) {
-    console.error('❌ Welcome message error:', err.message);
+    logger.error('discord-bot', '❌ Welcome message error:', err.message);
   }
 });
 
@@ -274,7 +301,7 @@ client.on('messageCreate', async (message) => {
     try {
       await message.reply(reply);
     } catch (err) {
-      console.error('❌ Auto-reply error:', err.message);
+      logger.error('discord-bot', '❌ Auto-reply error:', err.message);
     }
   }
 });
@@ -282,14 +309,14 @@ client.on('messageCreate', async (message) => {
 // ── Error handling ──
 
 client.on('error', (err) => {
-  console.error('⚠️ Discord client error:', err.message);
+  logger.error('discord-bot', '⚠️ Discord client error:', err.message);
 });
 
 // ── Start ──
 
 function init() {
   client.login(TOKEN).catch((err) => {
-    console.error('❌ Discord login failed:', err.message);
+    logger.error('discord-bot', '❌ Discord login failed:', err.message);
     process.exit(1);
   });
 }
@@ -299,4 +326,49 @@ module.exports = { init, client };
 // Run if called directly
 if (require.main === module) {
   init();
+}
+
+// /health + /delete-my-data endpoints — plan 3.1.5 + 3.1.12
+// Skipped under vitest (no port binding in tests).
+if (!process.env.VITEST) {
+  const http = require('http');
+  const fs = require('fs');
+  const path = require('path');
+  const logger = require('./logger');
+  const HEALTH_PORT = Number(process.env.HEALTH_PORT_DISCORD || 3001);
+  const gdprLog = path.join(__dirname, '..', '..', 'logs', 'gdpr-deletion-requests.log');
+  http
+    .createServer((req, res) => {
+      const url = req.url || '/';
+      if (url.startsWith('/delete-my-data')) {
+        const userId = new URLSearchParams(url.split('?')[1] || '').get('user_id') || 'unknown';
+        const entry = JSON.stringify({
+          timestamp: new Date().toISOString(),
+          type: 'gdpr-deletion-request',
+          user_id: userId,
+          source: 'discord-bot',
+        });
+        try {
+          fs.mkdirSync(path.dirname(gdprLog), { recursive: true });
+          fs.appendFileSync(gdprLog, entry + '\n');
+        } catch (err) {
+          logger.error('discord-bot', 'GDPR log write failed:', err.message);
+        }
+        logger.info('discord-bot', 'GDPR deletion requested:', userId);
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ status: 'received', action: 'deletion-requested', user_id: userId }));
+        return;
+      }
+      if (url.startsWith('/health')) {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ status: 'ok', bot: 'discord', uptime: Math.round(process.uptime()) }));
+        return;
+      }
+      res.writeHead(404, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ status: 'not-found' }));
+    })
+    .on('error', (err) => {
+      logger.error('discord-bot', 'Health server error (bot continues):', err.message);
+    })
+    .listen(HEALTH_PORT);
 }
