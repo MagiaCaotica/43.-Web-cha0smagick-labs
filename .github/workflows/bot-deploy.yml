@@ -1,0 +1,61 @@
+name: Bot Deploy
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+# Secrets requeridos (configurar en GitHub Settings > Secrets and variables > Actions):
+# SSH_HOST          - Host/IP del servidor (ej: "192.168.1.100" o "miservidor.com")
+# SSH_USER          - Usuario SSH (ej: "ubuntu", "root", "deploy")
+# SSH_KEY           - Clave privada SSH (contenido completo de id_rsa, incluyendo headers)
+#
+# Secrets opcionales (con valores por defecto):
+# BOT_PATH          - Ruta absoluta al proyecto en el servidor (default: "/opt/cha0smagick-labs")
+# PM2_APP_NAME      - Nombre de la app en PM2 (default: "cha0smagick-bots")
+# NODE_VERSION      - Versión de Node en el servidor (default: "22")
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            set -e
+            BOT_PATH="${{ secrets.BOT_PATH || '/opt/cha0smagick-labs' }}"
+            PM2_APP_NAME="${{ secrets.PM2_APP_NAME || 'cha0smagick-bots' }}"
+            NODE_VERSION="${{ secrets.NODE_VERSION || '22' }}"
+
+            echo "=== Desplegando bots en $BOT_PATH ==="
+            cd "$BOT_PATH"
+
+            # Actualizar código
+            git fetch origin
+            git reset --hard origin/main
+
+            # Instalar dependencias de producción
+            npm ci --omit=dev
+
+            # Recargar PM2 (o iniciar si no existe)
+            if pm2 list | grep -q "$PM2_APP_NAME"; then
+              echo "Recargando $PM2_APP_NAME con PM2..."
+              pm2 reload "$PM2_APP_NAME" --update-env
+            else
+              echo "Iniciando $PM2_APP_NAME con PM2..."
+              pm2 start scripts/bots/run-bots.js --name "$PM2_APP_NAME" -- all
+            fi
+
+            # Guardar configuración PM2
+            pm2 save
+
+            echo "=== Despliegue completado ==="
+            pm2 status "$PM2_APP_NAME"
