@@ -276,12 +276,12 @@ The system is **production ready for automated revenue** when ALL criteria pass:
 
 | Task | Owner | Effort | Verification |
 |------|-------|--------|--------------|
-| 3.4.1 D2: Rewrite 136 thin articles (priority: highest traffic potential first) | Content | ~100h | Word count >1500, data/examples, internal links |
+| 3.4.1 D2: Rewrite 136 thin articles (priority: highest traffic potential first) | Content | ~100h | Tracker: `scripts/thin_articles_report.py` → `docs/thin-articles-progress.md` (thin real = 120, no 136; 194 done >1500, 153 expand 800-1500). Batch 1 en rebuild (2 stubs rotos head-only: astrology-apps-android-guide + love-spells-ethics-guide, 9/11 words) |
 | 3.4.2 D3: Schema.org Article markup (already done) | — | — | ✅ Verified |
 | 3.4.3 D4: Internal linking apps/books/tools (already done 378/379) | — | — | ✅ Verified |
 | 3.4.4 D5: Sitemap.xml + GSC submit (already done) | — | — | ✅ Verified |
 | 3.4.5 Ongoing: Weekly blog audit (check_a11y.py, check_lazy.py, schema validation) | Content | 30m/wk | Reports clean |
-| 3.4.6 Build article→product mapping (auto-generate "related product" from content) — **R24** | Dev | 2h | New articles auto-link to relevant products |
+| 3.4.6 Build article→product mapping (auto-generate "related product" from content) — **R24** | Dev | 2h | ✅ 2026-09-21: `scripts/map_products.py` (stdlib-only) — scoring title/desc(×2)+body(×1) vs offers.json tags, top 3 apps + top 2 books + bundle; idempotente (scoring excluye la sección propia; re-run mapped=0 already-current=453); 453/467 mapeados, 14 sin sección; re-runnable tras cada batch |
 
 ### 3.5 Technical Debt Verification (Track E) [P2]
 
@@ -433,8 +433,8 @@ LAYER 3 (Parallel after Layer 2)
 | 0 Foundation | 25 | 25 | 0 | 0 | 100% |
 | 1 Code Quality | 33 | 33 | 0 | 0 | 100% |
 | 2 Revenue Engine | 52 | 11 | 0 | 0 | 21% |
-| 3 Operations | 35 | 14 | 0 | 0 | 40% |
-| **TOTAL** | **145** | **83** | **0** | **0** | **57%** |
+| 3 Operations | 35 | 15 | 0 | 0 | 43% |
+| **TOTAL** | **145** | **84** | **0** | **0** | **58%** |
 
 > **Update this table daily**. When a task moves to Done, increment the count.
 >
@@ -445,6 +445,8 @@ LAYER 3 (Parallel after Layer 2)
 > **Última actualización (2026-09-20, 2ª)**: **2.1.7-2.1.10 ✔️** — webhook-receiver.js (HMAC timing-safe, MailerLite tag, GA4 MP) + ga4-mp.js + ga4-play-purchases.js (googleapis lazy) selftests EXIT 0; 2.1.8 consent verificado estático. Activación = usuario: HOTMART_WEBHOOK_SECRET, GA4_MEASUREMENT_ID, GA4_MP_API_SECRET, GOOGLE_PLAY_SERVICE_ACCOUNT_JSON, GOOGLE_PLAY_PACKAGE_NAME. **3.1.1 ✔️** (data/offers.json + bot-brain dynamic fetch, 48/48 tests). **3.1.7 ✔️** (error-tracker.js Sentry/GlitchTip envelope vía fetch, sin dependencia, wiring run-bots.js). **3.1.11 ✔️** (ticket-bot.js GitHub Issues + /ticket wired en ambos bots). **3.2.1-3.2.7 ✔️ COMPLETO** (bot-deploy.yml appleboy/ssh-action + staging.yml gh-pages PR preview + lighthouse.yml con budgets; 3.2.1-3.2.4 preexistentes). Todo verificado: 7/7 YAML parse OK, npm test EXIT 0 (38 pytest + 160 vitest). Layer 2 = 11/52 21%, Layer 3 = 10/35 29%, TOTAL = 79/145 54%.
 >
 > **Última actualización (2026-09-21)**: **3.3.1-3.3.4 ✔️ COMPLETO — Social Publishing Automation (R9)**: `scripts/social-publish.js` (movido desde `projects/scripts/` vía git mv para alinear con README/PROJECT-BIBLE; ~480 líneas CommonJS, main-guard, 19 funciones exportadas). Calendarios preservados verbatim (13 pins + 30 tweets). Publishers: Telegram directo (require bots/telegram-bot.js), Pinterest API v5 (PINTEREST_TOKEN + PINTEREST_BOARD_ID, image_base64 desde pins/output), bridge X configurable (POST_BRIDGE_URL — DECISIÓN: api.post-bridge.com/v1 = 404 verificado 2026-09-21, no existe públicamente; usar alternativa tipo Ayrshare con POST_BRIDGE_URL configurable; el daily NUNCA falla por secrets ausentes). Rotación 3.3.2 ponderada por performance (sin scores → evergreen day%N; con scores → pool (1+score)×). Blog auto-post 3.3.3: primera run SEEDS sin postear (467 baseline), luego mtime-based max 3/run. Feedback 3.3.4: recordScore → social-performance.json → rotación ponderada. State: data/social-state.json. Workflow social-publish.yml (cron 08:00 Bogotá, secrets con fallback `|| ''`, commit state). Tests: scripts/social/test/ 11 vitest. Verificado: selftest EXIT 0, dry-run EXIT 0 (seeding + sin state escrito), npm test EXIT 0 (38 pytest + 171 vitest). npm scripts añadidos: social:daily/social:dry/social:selftest. .env.example: PINTEREST_TOKEN/PINTEREST_BOARD_ID/POST_BRIDGE_KEY/POST_BRIDGE_URL documentados (opcionales). Layer 3 = 14/35 40%, TOTAL = 83/145 57%. Siguiente: 3.4 Content Pipeline, 3.5 Tech Debt Verify, 3.6 AutoShorts Separation; **2.4.11 ✔️** flash-sale countdown server-time sync (Date header + localStorage + SALE_END_ISO; verificado vm+stubs — jsdom 30.1.0/Node 24 no ejecuta scripts, incompatibilidad entorno pre-existente; en launch real setear SALE_END_ISO en landing-pages/flash-sale.html). Pendiente usuario 2.4.x: activaciones MailerLite + productos Hotmart (2.2.x).
+>
+> **Última actualización (2026-09-21, 2ª)**: **3.4 iniciado — 3.4.6 ✔️ COMPLETO (R24)**: `scripts/map_products.py` (stdlib-only) — scoring title/desc(×2)+body(×1) vs `scripts/bots/data/offers.json` (real location, no `data/`), top 3 apps + top 2 books + bundle en la sección `internal-links` de cada artículo; idempotente (scoring EXCLUYE la sección propia — fix: los nombres de producto de la sección generada alimentaban el corpus y desplazaban el ranking en re-run; re-run mapped=0 already-current=453); 453/467 mapeados, 14 sin sección. **3.4.1 batch 1 ✔️ (2 artículos)**: 2 stubs rotos head-only RECONSTRUIDOS (delegados writer): `astrology-apps-android-guide.html` (9→2,689 words, comparativa apps + Astral Lab review + matriz features + privacidad + protocolo 30 días) + `love-spells-ethics-guide.html` (11→3,264 words, ética + consentimiento + 15 protocolos + programa 30 días; cta-box añadido manualmente — el agente lo omitió). Head intacto verificado, estructura completa (header/nav/breadcrumb/FAQ/related/internal-links/Giscus), mapping re-aplicado. **Tracker 3.4.1**: `scripts/thin_articles_report.py` → `docs/thin-articles-progress.md` (thin real = 116 pending <800, 155 expand 800-1500, 196 done >1500 — discrepancia vs 136 del plan anotada; re-runnable, flipse pending→done automático >1500). Auditoría 3.4.5: lazy 224/0 clean; a11y hallazgos PRE-EXISTENTES (missing_alt 180, empty_alt 270, heading_skips 190 — el template blog usa h2 sin h1, patrón site-wide; no regresión de 3.4). Layer 3 = 15/35 43%, TOTAL = 84/145 58%. Siguiente 3.4.1: continuar batches de rewrites (114 pending restantes, cola en docs/thin-articles-progress.md).
 
 ---
 
