@@ -5,6 +5,52 @@
  * Single source of truth for both bots.
  */
 
+const fs = require('fs');
+const path = require('path');
+
+// ── Dynamic offers (3.1.1 — R21) ──
+// Source of truth: data/offers.json. Update the JSON to change what bots show —
+// no code change needed. Optional remote refresh via env OFFERS_API_URL.
+const OFFERS_FILE = path.join(__dirname, 'data', 'offers.json');
+
+function loadLocalCatalog() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(OFFERS_FILE, 'utf8'));
+    if (Array.isArray(raw.apps) && Array.isArray(raw.books) && raw.bundle) return raw;
+    console.warn('⚠️ offers.json invalid shape — using empty catalog');
+  } catch (err) {
+    console.warn('⚠️ offers.json not readable (' + err.message + ') — using empty catalog');
+  }
+  return { apps: [], books: [], bundle: {} };
+}
+
+const CATALOG = loadLocalCatalog();
+
+async function refreshOffers() {
+  const url = process.env.OFFERS_API_URL;
+  if (url) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const remote = await res.json();
+      if (!Array.isArray(remote.apps) || !Array.isArray(remote.books) || !remote.bundle) {
+        throw new Error('invalid catalog shape');
+      }
+      CATALOG.apps = remote.apps;
+      CATALOG.books = remote.books;
+      CATALOG.bundle = remote.bundle;
+      return { source: 'remote', apps: CATALOG.apps.length, books: CATALOG.books.length };
+    } catch (err) {
+      console.warn('⚠️ offers remote refresh failed (' + err.message + ') — keeping current catalog');
+    }
+  }
+  const local = loadLocalCatalog();
+  CATALOG.apps = local.apps;
+  CATALOG.books = local.books;
+  CATALOG.bundle = local.bundle;
+  return { source: 'local', apps: CATALOG.apps.length, books: CATALOG.books.length };
+}
+
 const BRAIN = {
   version: '1.0.0',
   
@@ -29,177 +75,16 @@ const BRAIN = {
   },
 
   // ── Apps (Google Play — one-time purchase, no subscriptions) ──
-  apps: [
-    {
-      id: 'psi-gym',
-      name: 'PSI GYM: Zener Cards & ESP',
-      price: '$3.99 USD',
-      url: 'https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards',
-      funnel: 'https://cha0smagicklabs.com/apps/psi-gym.html',
-      tags: ['esp', 'zener', 'intuition', 'psychic', 'training'],
-      shortDesc: 'Train your intuition with professional Zener cards and statistical ESP tracking.',
-      category: 'app',
-    },
-    {
-      id: 'arcana-goetia',
-      name: 'Arcana Goetia: Ritual & Sigils',
-      price: '$3.99 USD',
-      url: 'https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal',
-      funnel: 'https://cha0smagicklabs.com/apps/arcana-goetia.html',
-      tags: ['goetia', 'sigils', 'solomon', 'grimoire', 'ritual'],
-      shortDesc: 'Complete Goetic grimoire & sigil generator for the 72 spirits of Solomon.',
-      category: 'app',
-    },
-    {
-      id: 'norse-rune-oracle',
-      name: 'Norse Rune Oracle',
-      price: '$3.99 USD',
-      url: 'https://play.google.com/store/apps/details?id=com.japps.norse_oracle',
-      funnel: 'https://cha0smagicklabs.com/apps/norse-rune-oracle.html',
-      tags: ['runes', 'norse', 'viking', 'divination', 'oracle'],
-      shortDesc: 'Unlock Viking wisdom with 12+ rune spreads for love, wealth, protection.',
-      category: 'app',
-    },
-    {
-      id: 'dream-machine',
-      name: 'Dream Machine: Lucid Dreaming',
-      price: '$3.99 USD',
-      url: 'https://play.google.com/store/apps/details?id=com.japps.luciddream',
-      funnel: 'https://cha0smagicklabs.com/apps/dream-machine.html',
-      tags: ['dreams', 'lucid', 'astral', 'sleep', 'consciousness'],
-      shortDesc: 'Lucid dreaming app with reality checks, dream journal, and induction techniques.',
-      category: 'app',
-    },
-    {
-      id: 'chaos-sigil-generator',
-      name: 'Chaos Sigil Generator',
-      price: '$3.99 USD',
-      url: 'https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgenerator',
-      funnel: 'https://cha0smagicklabs.com/apps/chaos-sigil-generator.html',
-      tags: ['sigils', 'chaos-magick', 'generator', 'intention'],
-      shortDesc: 'Create powerful sigils from your intentions with this minimalist chaos magick tool.',
-      category: 'app',
-    },
-    {
-      id: 'astral-lab',
-      name: 'Astral Lab: Astrology',
-      price: '$3.99 USD',
-      url: 'https://play.google.com/store/apps/details?id=com.japps.astrallab',
-      funnel: 'https://cha0smagicklabs.com/apps/astral-lab.html',
-      tags: ['astrology', 'birth-chart', 'houses', 'planets', 'zodiac'],
-      shortDesc: 'Professional astrology app with natal charts, transits, and synastry.',
-      category: 'app',
-    },
-    {
-      id: 'eerieroads',
-      name: 'Eerie Roads: Haunted Map',
-      price: '$9.99 USD',
-      url: 'https://play.google.com/store/apps/details?id=com.japps.eerieroads',
-      funnel: 'https://cha0smagicklabs.com/apps/eerieroads.html',
-      tags: ['paranormal', 'haunted', 'ghosts', 'map', 'locations'],
-      shortDesc: 'Explore the world\'s most haunted locations with interactive maps and ghost stories.',
-      category: 'app',
-    },
-    {
-      id: 'iching-oracle',
-      name: 'I Ching Oracle',
-      price: '$3.99 USD',
-      url: 'https://play.google.com/store/apps/details?id=com.japps.iching_oracle',
-      funnel: 'https://cha0smagicklabs.com/apps/iching-oracle.html',
-      tags: ['iching', 'hexagrams', 'chinese', 'divination', 'wisdom'],
-      shortDesc: 'Cast hexagrams and read the ancient wisdom of the I Ching for guidance.',
-      category: 'app',
-    },
-    {
-      id: 'lunar-phase-calculator',
-      name: 'Lunar Phase Calculator',
-      price: '$3.99 USD',
-      url: 'https://play.google.com/store/apps/details?id=com.japps.lunar_phase_calculator',
-      funnel: 'https://cha0smagicklabs.com/apps/lunar-phase-calculator.html',
-      tags: ['moon', 'lunar', 'phases', 'magick', 'calendar'],
-      shortDesc: 'Track lunar phases and plan your rituals according to moon cycles.',
-      category: 'app',
-    },
-    {
-      id: 'unofficial-rider-waite-tarot',
-      name: 'Rider-Waite Tarot Complete',
-      price: '$9.99 USD',
-      url: 'https://play.google.com/store/apps/details?id=com.japps.riderwaitetarot',
-      funnel: 'https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html',
-      tags: ['tarot', 'rider-waite', 'divination', 'cards', 'reading'],
-      shortDesc: 'Complete 78-card Rider-Waite Tarot deck with interpretations and spreads.',
-      category: 'app',
-    },
-  ],
+  // Data lives in data/offers.json (source of truth, 3.1.1 R21)
+  apps: CATALOG.apps,
 
   // ── Books (PDF — one-time purchase, no subscriptions) ──
-  books: [
-    {
-      id: 'codex-chaoticus',
-      name: 'Codex Chaoticus',
-      price: '$4.99 USD',
-      url: 'https://cha0smagicklabs.com/books/codex-chaoticus.html',
-      tags: ['chaos-magick', 'theory', 'practice', 'grindho'],
-      shortDesc: 'Complete chaos magick grimoire by Grindho.',
-    },
-    {
-      id: 'tarot-chaos',
-      name: 'Tarot Chaos',
-      price: '$9.99 USD',
-      url: 'https://cha0smagicklabs.com/books/tarot-chaos.html',
-      tags: ['tarot', 'chaos-magick', 'divination', 'interpretation'],
-      shortDesc: 'Deep tarot knowledge from a chaos magick perspective.',
-    },
-    {
-      id: 'magical-servitors-manual',
-      name: 'Magical Servitors Manual',
-      price: '$4.99 USD',
-      url: 'https://cha0smagicklabs.com/books/magical-servitors-manual.html',
-      tags: ['servitors', 'chaos-magick', 'entities', 'creation'],
-      shortDesc: 'Create and work with magical servitors — artificial spirits.',
-    },
-    {
-      id: 'treatise-chaos-hunter-runes',
-      name: 'Treatise of Chaos Hunter Runes',
-      price: '$4.99 USD',
-      url: 'https://cha0smagicklabs.com/books/treatise-chaos-hunter-runes.html',
-      tags: ['runes', 'chaos-magick', 'hunting', 'symbols'],
-      shortDesc: 'Advanced rune system for chaos magick practitioners.',
-    },
-    {
-      id: 'ouija-cazadora',
-      name: 'Ouija Cazadora',
-      price: '$4.99 USD',
-      url: 'https://cha0smagicklabs.com/books/ouija-cazadora.html',
-      tags: ['ouija', 'spirits', 'communication', 'spanish'],
-      shortDesc: 'Complete guide to spirit communication through the ouija board. (Spanish)',
-    },
-    {
-      id: 'liber-lvpinux',
-      name: 'Liber Lvpinux',
-      price: '$4.99 USD',
-      url: 'https://cha0smagicklabs.com/books/liber-lvpinux.html',
-      tags: ['werewolf', 'lycanthropy', 'therianthropy', 'shapeshifting'],
-      shortDesc: 'The book of the wolf — werewolf occult philosophy and practice.',
-    },
-    {
-      id: 'mind-the-gap',
-      name: 'Mind The Gap',
-      price: '$9.99 USD',
-      url: 'https://cha0smagicklabs.com/books/mind-the-gap.html',
-      tags: ['consciousness', 'psychonaut', 'altered-states', 'exploration'],
-      shortDesc: 'A practical guide to altered states for the modern psychonaut.',
-    },
-  ],
+  // Data lives in data/offers.json (source of truth, 3.1.1 R21)
+  books: CATALOG.books,
 
   // ── Bundle ──
-  bundle: {
-    name: 'Esoteric Books Bundle',
-    price: '$19.99 USD',
-    originalPrice: '$41.93 USD',
-    url: 'https://cha0smagicklabs.com/bundle.html',
-    shortDesc: '7 esoteric books at 52% off. Complete occult library bundle.',
-  },
+  // Data lives in data/offers.json (source of truth, 3.1.1 R21)
+  bundle: CATALOG.bundle,
 
   // ── Free Tools ──
   freeTools: [
@@ -313,6 +198,12 @@ const BRAIN = {
       `We also have a free Chaos Magick Quickstart Guide available via email subscription.\n\n` +
       `Would you consider adding a link if it fits your readers?\n\n` +
       `Thanks,\nGrindho — Cha0smagick Labs`,
+
+    // Dynamic offers (3.1.1 — R21): get one offer by id from the live catalog
+    getOffer: (id) => CATALOG.apps.find((a) => a.id === id) || CATALOG.books.find((b) => b.id === id) || null,
+
+    // Refresh offers from remote API (env OFFERS_API_URL) or re-read local JSON
+    refreshOffers,
 
     // Groq-powered intelligent Q&A (imported in bot files)
     groqAsk: null, // Set by bot files: async (query, apiKey) => string
