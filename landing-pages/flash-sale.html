@@ -114,18 +114,53 @@
   </div>
 
   <script>
-    // 72h countdown from load
-    const EXPIRY = Date.now() + 72 * 60 * 60 * 1000;
+    // 72h flash sale countdown — server-time synced (2.4.11).
+    // The HTTP Date header corrects client clock skew; localStorage anchors the
+    // sale start so reloads don't restart the timer.
+    // Set SALE_END_ISO to the real sale end (UTC ISO) at launch, e.g. '2026-10-01T00:00:00Z'.
+    // null → per-visitor 72h window anchored at first visit.
+    const SALE_END_ISO = null;
+    const SALE_DURATION = 72 * 60 * 60 * 1000;
+    let clockOffset = 0; // serverTime - clientTime, refined async below
+    const serverNow = () => Date.now() + clockOffset;
+
+    function getStoredStart() {
+      try {
+        const v = localStorage.getItem('flash_sale_start');
+        return v ? parseInt(v, 10) : null;
+      } catch (e) { return null; } // storage blocked (privacy mode) → session-only
+    }
+
+    let SALE_START = getStoredStart();
+    if (SALE_START === null) {
+      SALE_START = serverNow();
+      try { localStorage.setItem('flash_sale_start', String(SALE_START)); }
+      catch (e) { console.debug('flash sale: storage blocked, timer restarts per visit'); }
+    }
+
+    const SALE_END = SALE_END_ISO
+      ? new Date(SALE_END_ISO).getTime()
+      : SALE_START + SALE_DURATION;
+
+    // Refine clock offset from the server Date header (HEAD to self, no body)
+    fetch(location.href, { method: 'HEAD', cache: 'no-store' })
+      .then(r => {
+        const d = r.headers.get('date');
+        const server = d ? new Date(d).getTime() : NaN;
+        if (!Number.isNaN(server)) clockOffset = server - Date.now();
+      })
+      .catch(err => console.debug('flash sale: server time sync unavailable, using client clock', err && err.message));
+
     let slots = 20;
     function update() {
-      const diff = EXPIRY - Date.now();
+      const diff = SALE_END - serverNow();
       if (diff <= 0) { document.getElementById('timer').textContent = 'EXPIRADO'; return; }
       const h = Math.floor(diff/3600000).toString().padStart(2,'0');
       const m = Math.floor((diff%3600000)/60000).toString().padStart(2,'0');
       const s = Math.floor((diff%60000)/1000).toString().padStart(2,'0');
       document.getElementById('timer').textContent = `${h}:${m}:${s}`;
-      // Visual slots decrease every ~3.6h
-      const elapsed = (72*3600000 - diff) / 3600000;
+      // Visual slots decrease every ~3.6h (clamped to the 72h sale window)
+      const elapsed = (SALE_DURATION - Math.min(diff, SALE_DURATION)) / 3600000;
       slots = Math.max(1, 20 - Math.floor(elapsed / 3.6));
       document.getElementById('slots').textContent = slots;
     }
