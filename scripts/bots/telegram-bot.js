@@ -22,12 +22,14 @@ require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 
 const { TelegramBot } = require('node-telegram-bot-api');
 const BRAIN = require('./bot-brain');
+const logger = require('./logger');
 const { askGroq, needsGroq } = require('./groq-ai');
+const { createSupportTicket } = require('./ticket-bot');
 
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 if (!TOKEN) {
-  console.error('❌ TELEGRAM_BOT_TOKEN not set in environment');
+  logger.error('telegram-bot', '❌ TELEGRAM_BOT_TOKEN not set in environment');
   process.exit(1);
 }
 
@@ -38,7 +40,7 @@ let bot;
 
 function init() {
   bot = new TelegramBot(TOKEN, { polling: true });
-  console.log('🤖 Telegram bot started (polling)...');
+  logger.info('telegram-bot', '🤖 Telegram bot started (polling)...');
 
   // ── Commands ──
 
@@ -153,8 +155,32 @@ function init() {
         reply_to_message_id: msg.message_id,
       });
     } catch (err) {
-      console.error('❌ /ask error:', err.message);
+      logger.error('telegram-bot', '❌ /ask error:', err.message);
       bot.sendMessage(chatId, '⚠️ Sorry, I had trouble processing your question. Please try again.', {
+        reply_to_message_id: msg.message_id,
+      });
+    }
+  });
+
+  // ── /ticket command — Support ticket → GitHub Issues (3.1.11 R26) ──
+  bot.onText(/\/ticket\s+([\s\S]+)/, async (msg, match) => {
+    const chatId = msg.chat.id;
+    const description = match?.[1]?.trim() || '';
+
+    try {
+      bot.sendChatAction(chatId, 'typing');
+      const result = await createSupportTicket({
+        platform: 'telegram',
+        user: msg.from?.username || msg.from?.first_name || 'anonymous',
+        text: description,
+      });
+      bot.sendMessage(chatId, `🎫 *Ticket created: Issue #${result.issueNumber}*\n${result.url}`, {
+        parse_mode: 'Markdown',
+        reply_to_message_id: msg.message_id,
+      });
+    } catch (err) {
+      logger.error('telegram-bot', '❌ /ticket error:', err.message);
+      bot.sendMessage(chatId, `⚠️ ${err.message}`, {
         reply_to_message_id: msg.message_id,
       });
     }
@@ -171,6 +197,7 @@ function init() {
       `/bundle — Books bundle (52% off)\n` +
       `/blog — Blog articles\n` +
       `/ask [question] — Ask AI anything about Cha0smagick Labs\n` +
+      `/ticket [description] — Open a support ticket → GitHub Issues\n` +
       `/subscribe — Free Chaos Magick guide PDF\n` +
       `/website — Visit our site\n` +
       `/contact — Contact info\n\n` +
@@ -212,10 +239,10 @@ function init() {
 
   // ── Error handling ──
   bot.on('polling_error', (err) => {
-    console.error('⚠️ Telegram polling error:', err.message);
+    logger.error('telegram-bot', '⚠️ Telegram polling error:', err.message);
   });
 
-  console.log(`✅ Telegram bot ready — channel: ${CHANNEL}`);
+  logger.info('telegram-bot', `✅ Telegram bot ready — channel: ${CHANNEL}`);
 }
 
 // ── Channel message poster (for future scheduled content) ──
@@ -227,10 +254,10 @@ async function postToChannel(text, options = {}) {
       disable_web_page_preview: options.noPreview || false,
       ...options,
     });
-    console.log(`📢 Posted to channel: ${result.message_id}`);
+    logger.info('telegram-bot', `📢 Posted to channel: ${result.message_id}`);
     return result;
   } catch (err) {
-    console.error('❌ Error posting to channel:', err.message);
+    logger.error('telegram-bot', '❌ Error posting to channel:', err.message);
     throw err;
   }
 }
@@ -241,4 +268,49 @@ module.exports = { init, postToChannel };
 // Run if called directly
 if (require.main === module) {
   init();
+}
+
+// /health + /delete-my-data endpoints — plan 3.1.5 + 3.1.12
+// Skipped under vitest (no port binding in tests).
+if (!process.env.VITEST) {
+  const http = require('http');
+  const fs = require('fs');
+  const path = require('path');
+  const logger = require('./logger');
+  const HEALTH_PORT = Number(process.env.HEALTH_PORT_TELEGRAM || 3000);
+  const gdprLog = path.join(__dirname, '..', '..', 'logs', 'gdpr-deletion-requests.log');
+  http
+    .createServer((req, res) => {
+      const url = req.url || '/';
+      if (url.startsWith('/delete-my-data')) {
+        const chatId = new URLSearchParams(url.split('?')[1] || '').get('chat_id') || 'unknown';
+        const entry = JSON.stringify({
+          timestamp: new Date().toISOString(),
+          type: 'gdpr-deletion-request',
+          chat_id: chatId,
+          source: 'telegram-bot',
+        });
+        try {
+          fs.mkdirSync(path.dirname(gdprLog), { recursive: true });
+          fs.appendFileSync(gdprLog, entry + '\n');
+        } catch (err) {
+          logger.error('telegram-bot', 'GDPR log write failed:', err.message);
+        }
+        logger.info('telegram-bot', 'GDPR deletion requested:', chatId);
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ status: 'received', action: 'deletion-requested', chat_id: chatId }));
+        return;
+      }
+      if (url.startsWith('/health')) {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ status: 'ok', bot: 'telegram', uptime: Math.round(process.uptime()) }));
+        return;
+      }
+      res.writeHead(404, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ status: 'not-found' }));
+    })
+    .on('error', (err) => {
+      logger.error('telegram-bot', 'Health server error (bot continues):', err.message);
+    })
+    .listen(HEALTH_PORT);
 }
