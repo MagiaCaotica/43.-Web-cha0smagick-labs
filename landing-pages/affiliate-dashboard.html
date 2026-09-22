@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de Afiliados — Cha0smagick Labs</title>
+<meta name="description" content="Panel de afiliados Cha0smagick Labs: clics, conversiones y ganancias. Datos anonimizados por seguridad.">
+<meta name="robots" content="noindex, follow">
+<link rel="preload" href="../css/style.min.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="../css/style.min.css"></noscript>
+<style>
+:root{--navy:#0B1026;--bg:#131A3A;--amber:#FFB03A;--white:#F5F7FF;--muted:#8A93B8;--green:#4ADE80;--cyan:#35C4D9}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--navy);color:var(--white);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.container{max-width:760px;width:100%;background:var(--bg);border-radius:16px;padding:40px;border:1px solid rgba(255,255,255,0.08)}
+.badge{display:inline-block;background:rgba(53,196,217,0.15);color:var(--cyan);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+h1{font-size:34px;font-weight:800;margin-bottom:8px}
+p.sub{color:var(--muted);font-size:15px;margin-bottom:28px}
+.totals{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px}
+.total-card{background:rgba(255,255,255,0.04);border-radius:12px;padding:18px;text-align:center}
+.total-card .num{font-size:26px;font-weight:800;color:var(--amber)}
+.total-card .lbl{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px;padding:10px 8px;border-bottom:1px solid rgba(255,255,255,0.12)}
+td{padding:12px 8px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.error{color:var(--muted);font-style:italic;text-align:center}
+.note{color:var(--muted);font-size:12px;margin-top:24px;line-height:1.6}
+.cta{display:inline-block;margin-top:24px;background:var(--amber);color:#0B1026;font-weight:700;padding:12px 24px;border-radius:8px;text-decoration:none}
+.cta.secondary{background:transparent;color:var(--amber);border:1px solid var(--amber);margin-left:12px}
+@media(max-width:600px){.container{padding:24px}.totals{grid-template-columns:1fr}h1{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="badge">Cha0smagick Labs · Programa de Afiliados</div>
+  <h1>Panel de Afiliados</h1>
+  <p class="sub">Clics, conversiones y ganancias — actualizado con cada venta registrada.</p>
+  <div class="totals">
+    <div class="total-card"><div class="num" id="t-clicks">—</div><div class="lbl">Clics</div></div>
+    <div class="total-card"><div class="num" id="t-conversions">—</div><div class="lbl">Conversiones</div></div>
+    <div class="total-card"><div class="num" id="t-earnings">—</div><div class="lbl">Ganancias</div></div>
+  </div>
+  <table>
+    <thead>
+      <tr><th>Afiliado</th><th>Clics</th><th>Conversiones</th><th>Tasa</th><th>Ganancias</th></tr>
+    </thead>
+    <tbody id="rows">
+      <tr><td colspan="5" class="error">Cargando…</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Los afiliados se muestran anonimizados (ID pseudo-aleatorio derivado del email) — el email y los datos de contacto de cada afiliado nunca se publican. Comisión: 30% apps · 35% apps-bundle · 40% books-bundle · 35% complete-access. Mínimo de pago $25 USD con carryover mensual.</p>
+  <a class="cta" href="affiliate-terms.html">Términos del programa</a>
+  <a class="cta secondary" href="flash-sale.html">Ver Flash Sale</a>
+</div>
+<script>
+(function () {
+  var rows = document.getElementById('rows');
+  fetch('/data/affiliate-stats.json', { headers: { 'Accept': 'application/json' } })
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function (data) {
+      var totals = data.totals || { clicks: 0, conversions: 0, earnings: 0 };
+      document.getElementById('t-clicks').textContent = totals.clicks;
+      document.getElementById('t-conversions').textContent = totals.conversions;
+      document.getElementById('t-earnings').textContent = '$' + Number(totals.earnings).toFixed(2);
+      var list = (data.affiliates || []).slice(0, 25);
+      if (!list.length) {
+        rows.innerHTML = '<tr><td colspan="5" class="error">Aún no hay actividad de afiliados registrada.</td></tr>';
+        return;
+      }
+      rows.innerHTML = list.map(function (s) {
+        return '<tr><td><strong>' + s.id + '</strong></td><td>' + s.clicks + '</td><td>' + s.conversions +
+          '</td><td>' + (Number(s.convRate || 0) * 100).toFixed(1) + '%</td><td>$' + Number(s.earnings).toFixed(2) + '</td></tr>';
+      }).join('');
+    })
+    .catch(function () {
+      rows.innerHTML = '<tr><td colspan="5" class="error">Aún no hay datos de afiliados disponibles. Genera stats con <code>node scripts/affiliate-stats.js</code>.</td></tr>';
+    });
+})();
+</script>
+</body>
+</html>

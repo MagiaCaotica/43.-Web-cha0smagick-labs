@@ -1,0 +1,11 @@
+{
+  "comment": "Tasas de comision de afiliados (plan 2.5.1/2.5.2) - slug de producto a tasa. Coincide con landing-pages/affiliate-terms.html. Productos no listados usan default_rate.",
+  "rates": {
+    "apps": 0.3,
+    "apps-bundle": 0.35,
+    "books-bundle": 0.4,
+    "complete-access": 0.35
+  },
+  "default_rate": 0.3,
+  "min_payout_usd": 25
+}
