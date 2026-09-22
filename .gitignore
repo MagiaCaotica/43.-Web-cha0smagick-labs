@@ -34,9 +34,10 @@ projects/playstore.json
 __pycache__/
 *.pyc
 
-# AutoShorts (proyecto externo — plan 3.6.2; projects/auto-shorts es submodule TRACKED, su remoción real es 3.6.1)
+# AutoShorts (proyecto externo — plan 3.6.1/3.6.2: index limpiado via git rm --cached, quedan solo en disco)
 tools/auto-shorts/
 projects/auto-shorts/
+projects/auto-shorts-full/
 
 # Runtime garbage (accidentalmente trackeado / output local)
 logs/
