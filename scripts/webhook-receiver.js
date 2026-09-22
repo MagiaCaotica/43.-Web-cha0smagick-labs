@@ -66,6 +66,10 @@ const CONFIG = {
   dryRun: process.env.WEBHOOK_DRYRUN === 'true' || process.argv.includes('--dryrun'),
   logDir: path.join(__dirname, '..', '..', 'logs'),
   logFile: path.join(__dirname, '..', '..', 'logs', 'hotmart-purchases.jsonl'),
+  // Flash Sale 20-slot limit enforcement (plan 2.4.10)
+  flashSaleProductId: process.env.FLASH_SALE_PRODUCT_ID || 'flash_sale',
+  flashSaleMaxSlots: Number(process.env.FLASH_SALE_MAX_SLOTS || 20),
+  slotFile: path.join(__dirname, '..', '..', 'logs', 'flash-sale-slots.json'),
 };
 
 // Validar configuración crítica
@@ -262,6 +266,58 @@ function logPurchaseToJSONL(purchaseData, mailerliteResult, ga4Result) {
   }
 }
 
+// === Flash Sale 20-slot limit enforcement (plan 2.4.10) ===
+
+// Determinar si la compra corresponde al producto Flash Sale
+function isFlashSalePurchase(purchaseData) {
+  return purchaseData.valid && purchaseData.productId === CONFIG.flashSaleProductId;
+}
+
+// Leer estado del contador de slots (persistente, idempotente)
+function readSlots() {
+  try {
+    const raw = fs.readFileSync(CONFIG.slotFile, 'utf8');
+    const state = JSON.parse(raw);
+    if (typeof state.count !== 'number' || !Array.isArray(state.orders)) {
+      return { count: 0, orders: [], updatedAt: null };
+    }
+    return { count: state.count, orders: state.orders, updatedAt: state.updatedAt || null };
+  } catch (err) {
+    // Archivo ausente o corrupto → estado limpio (primera venta o reset)
+    return { count: 0, orders: [], updatedAt: null };
+  }
+}
+
+// Registrar una venta en el contador de slots
+function recordSlot(purchaseData) {
+  const state = readSlots();
+  if (state.orders.includes(purchaseData.orderId)) {
+    // Reintento de Hotmart para una orden ya contada — idempotente
+    return { allowed: true, count: state.count, max: CONFIG.flashSaleMaxSlots, alreadyCounted: true };
+  }
+  state.count += 1;
+  state.orders.push(purchaseData.orderId);
+  state.updatedAt = new Date().toISOString();
+  try {
+    fs.mkdirSync(CONFIG.logDir, { recursive: true });
+    fs.writeFileSync(CONFIG.slotFile, JSON.stringify(state, null, 2) + '\n');
+    logger.info('flash-sale', `🎫 Slot registrado: ${state.count}/${CONFIG.flashSaleMaxSlots} (order: ${purchaseData.orderId})`);
+  } catch (err) {
+    logger.error('flash-sale', '❌ Error escribiendo contador de slots:', err.message);
+  }
+  return { allowed: true, count: state.count, max: CONFIG.flashSaleMaxSlots, alreadyCounted: false };
+}
+
+// Enforce: verificar si quedan slots antes de procesar la compra del Flash Sale
+function enforceFlashSaleSlots(purchaseData) {
+  const state = readSlots();
+  const allowed = state.count < CONFIG.flashSaleMaxSlots;
+  if (!allowed) {
+    logger.warn('flash-sale', `🚫 Flash Sale AGOTADO: ${state.count}/${CONFIG.flashSaleMaxSlots} slots vendidos — compra ${purchaseData.orderId} no recibirá bonus`);
+  }
+  return { allowed, count: state.count, max: CONFIG.flashSaleMaxSlots, soldOut: !allowed };
+}
+
 // Procesar webhook entrante
 async function processWebhook(req, res) {
   let body = '';
@@ -295,6 +351,26 @@ async function processWebhook(req, res) {
     
     logger.info('webhook', `✅ Compra aprobada detectada: ${purchaseData.orderId} — ${purchaseData.buyerEmail} — ${purchaseData.productId}`);
     
+    // Flash Sale 20-slot limit enforcement (plan 2.4.10)
+    let slotInfo = null;
+    if (isFlashSalePurchase(purchaseData)) {
+      const enforcement = enforceFlashSaleSlots(purchaseData);
+      if (!enforcement.allowed) {
+        // Slots agotados: responder 200 (evitar reintentos) SIN entregar bonus ni tagging
+        logPurchaseToJSONL(purchaseData, { success: false }, { success: false });
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({
+          status: 'sold_out',
+          order_id: purchaseData.orderId,
+          slots_sold: enforcement.count,
+          slots_max: enforcement.max,
+          message: 'Flash Sale agotado — unidades límite alcanzadas',
+        }));
+        return;
+      }
+      slotInfo = recordSlot(purchaseData);
+    }
+    
     // Ejecutar acciones en paralelo
     const [mailerliteResult, ga4Result] = await Promise.allSettled([
       tagBuyerInMailerLite(purchaseData.buyerEmail, purchaseData.buyerName, purchaseData.productId),
@@ -314,6 +390,7 @@ async function processWebhook(req, res) {
       order_id: purchaseData.orderId,
       mailerlite: mlResult.success ? 'tagged' : 'failed',
       ga4: ga4ResultValue.success ? 'sent' : 'failed',
+      flash_sale_slots: slotInfo ? `${slotInfo.count}/${slotInfo.max}` : undefined,
     }));
   });
 }
@@ -457,4 +534,8 @@ module.exports = {
   processWebhook,
   runSelfTest,
   CONFIG,
+  isFlashSalePurchase,
+  readSlots,
+  recordSlot,
+  enforceFlashSaleSlots,
 };
