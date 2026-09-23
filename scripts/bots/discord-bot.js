@@ -49,7 +49,7 @@ const RESOURCES_CHANNEL = 'resources';
 // ── Build embeds ──
 
 function appEmbed(app) {
-  return new EmbedBuilder()
+  const embed = new EmbedBuilder()
     .setColor(Colors.DarkPurple)
     .setTitle(`📱 ${app.name}`)
     .setDescription(app.shortDesc)
@@ -57,17 +57,19 @@ function appEmbed(app) {
       { name: '💰 Price', value: app.price, inline: true },
       { name: '🛒 Buy', value: `[Google Play](${app.url})`, inline: true },
       { name: '🔗 Info', value: `[Funnel Page](${app.funnel})`, inline: true },
-    )
-    .setFooter({ text: 'One-time purchase. No subscriptions.' });
+    );
+  if (app.image) embed.setImage(app.image);
+  return embed.setFooter({ text: 'One-time purchase. No subscriptions.' });
 }
 
 function bookEmbed(book) {
-  return new EmbedBuilder()
+  const embed = new EmbedBuilder()
     .setColor(Colors.Gold)
     .setTitle(`📖 ${book.name}`)
     .setDescription(book.shortDesc)
-    .addFields({ name: '💰 Price', value: book.price, inline: true })
-    .setFooter({ text: 'PDF — instant download.' });
+    .addFields({ name: '💰 Price', value: book.price, inline: true });
+  if (book.image) embed.setImage(book.image);
+  return embed.setFooter({ text: 'PDF — instant download.' });
 }
 
 function toolEmbed(tool) {
@@ -174,8 +176,9 @@ client.on('interactionCreate', async (interaction) => {
             { name: '🔥 Bundle Price', value: BRAIN.bundle.price, inline: true },
             { name: '📦 Includes', value: '7 esoteric PDF books — 52% off!' },
           )
-          .setURL(BRAIN.bundle.url)
-          .setFooter({ text: 'Limited offer. One-time purchase.' });
+          .setURL(BRAIN.bundle.url);
+        if (BRAIN.bundle.image) embed.setImage(BRAIN.bundle.image);
+        embed.setFooter({ text: 'Limited offer. One-time purchase.' });
         await interaction.reply({ embeds: [embed] });
         break;
       }

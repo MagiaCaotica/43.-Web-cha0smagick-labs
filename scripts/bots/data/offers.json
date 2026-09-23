@@ -18,7 +18,8 @@
         "training"
       ],
       "shortDesc": "Train your intuition with professional Zener cards and statistical ESP tracking.",
-      "category": "app"
+      "category": "app",
+      "image": null
     },
     {
       "id": "arcana-goetia",
@@ -34,7 +35,8 @@
         "ritual"
       ],
       "shortDesc": "Complete Goetic grimoire & sigil generator for the 72 spirits of Solomon.",
-      "category": "app"
+      "category": "app",
+      "image": null
     },
     {
       "id": "norse-rune-oracle",
@@ -50,7 +52,8 @@
         "oracle"
       ],
       "shortDesc": "Unlock Viking wisdom with 12+ rune spreads for love, wealth, protection.",
-      "category": "app"
+      "category": "app",
+      "image": null
     },
     {
       "id": "dream-machine",
@@ -66,7 +69,8 @@
         "consciousness"
       ],
       "shortDesc": "Lucid dreaming app with reality checks, dream journal, and induction techniques.",
-      "category": "app"
+      "category": "app",
+      "image": null
     },
     {
       "id": "chaos-sigil-generator",
@@ -81,7 +85,8 @@
         "intention"
       ],
       "shortDesc": "Create powerful sigils from your intentions with this minimalist chaos magick tool.",
-      "category": "app"
+      "category": "app",
+      "image": null
     },
     {
       "id": "astral-lab",
@@ -97,7 +102,8 @@
         "zodiac"
       ],
       "shortDesc": "Professional astrology app with natal charts, transits, and synastry.",
-      "category": "app"
+      "category": "app",
+      "image": null
     },
     {
       "id": "eerieroads",
@@ -113,7 +119,8 @@
         "locations"
       ],
       "shortDesc": "Explore the world's most haunted locations with interactive maps and ghost stories.",
-      "category": "app"
+      "category": "app",
+      "image": null
     },
     {
       "id": "iching-oracle",
@@ -129,7 +136,8 @@
         "wisdom"
       ],
       "shortDesc": "Cast hexagrams and read the ancient wisdom of the I Ching for guidance.",
-      "category": "app"
+      "category": "app",
+      "image": null
     },
     {
       "id": "lunar-phase-calculator",
@@ -145,7 +153,8 @@
         "calendar"
       ],
       "shortDesc": "Track lunar phases and plan your rituals according to moon cycles.",
-      "category": "app"
+      "category": "app",
+      "image": null
     },
     {
       "id": "unofficial-rider-waite-tarot",
@@ -161,7 +170,8 @@
         "reading"
       ],
       "shortDesc": "Complete 78-card Rider-Waite Tarot deck with interpretations and spreads.",
-      "category": "app"
+      "category": "app",
+      "image": null
     }
   ],
   "books": [
@@ -176,7 +186,8 @@
         "practice",
         "grindho"
       ],
-      "shortDesc": "Complete chaos magick grimoire by Grindho."
+      "shortDesc": "Complete chaos magick grimoire by Grindho.",
+      "image": null
     },
     {
       "id": "tarot-chaos",
@@ -189,7 +200,8 @@
         "divination",
         "interpretation"
       ],
-      "shortDesc": "Deep tarot knowledge from a chaos magick perspective."
+      "shortDesc": "Deep tarot knowledge from a chaos magick perspective.",
+      "image": null
     },
     {
       "id": "magical-servitors-manual",
@@ -202,7 +214,8 @@
         "entities",
         "creation"
       ],
-      "shortDesc": "Create and work with magical servitors — artificial spirits."
+      "shortDesc": "Create and work with magical servitors — artificial spirits.",
+      "image": null
     },
     {
       "id": "treatise-chaos-hunter-runes",
@@ -215,7 +228,8 @@
         "hunting",
         "symbols"
       ],
-      "shortDesc": "Advanced rune system for chaos magick practitioners."
+      "shortDesc": "Advanced rune system for chaos magick practitioners.",
+      "image": null
     },
     {
       "id": "ouija-cazadora",
@@ -228,7 +242,8 @@
         "communication",
         "spanish"
       ],
-      "shortDesc": "Complete guide to spirit communication through the ouija board. (Spanish)"
+      "shortDesc": "Complete guide to spirit communication through the ouija board. (Spanish)",
+      "image": null
     },
     {
       "id": "liber-lvpinux",
@@ -241,7 +256,8 @@
         "therianthropy",
         "shapeshifting"
       ],
-      "shortDesc": "The book of the wolf — werewolf occult philosophy and practice."
+      "shortDesc": "The book of the wolf — werewolf occult philosophy and practice.",
+      "image": null
     },
     {
       "id": "mind-the-gap",
@@ -254,7 +270,8 @@
         "altered-states",
         "exploration"
       ],
-      "shortDesc": "A practical guide to altered states for the modern psychonaut."
+      "shortDesc": "A practical guide to altered states for the modern psychonaut.",
+      "image": null
     }
   ],
   "bundle": {
@@ -262,6 +279,7 @@
     "price": "$19.99 USD",
     "originalPrice": "$41.93 USD",
     "url": "https://cha0smagicklabs.com/bundle.html",
-    "shortDesc": "7 esoteric books at 52% off. Complete occult library bundle."
+    "shortDesc": "7 esoteric books at 52% off. Complete occult library bundle.",
+    "image": null
   }
 }

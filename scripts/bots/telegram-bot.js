@@ -248,12 +248,16 @@ function init() {
 // ── Channel message poster (for future scheduled content) ──
 async function postToChannel(text, options = {}) {
   if (!bot) throw new Error('Bot not initialized');
+  const { imageUrl, ...sendOptions } = options;
   try {
-    const result = await bot.sendMessage(CHANNEL, text, {
-      parse_mode: 'Markdown',
-      disable_web_page_preview: options.noPreview || false,
-      ...options,
-    });
+    // 3.1.3: if imageUrl is present, send as photo with caption (real product images)
+    const result = imageUrl
+      ? await bot.sendPhoto(CHANNEL, imageUrl, { caption: text, parse_mode: 'Markdown', ...sendOptions })
+      : await bot.sendMessage(CHANNEL, text, {
+          parse_mode: 'Markdown',
+          disable_web_page_preview: options.noPreview || false,
+          ...sendOptions,
+        });
     logger.info('telegram-bot', `📢 Posted to channel: ${result.message_id}`);
     return result;
   } catch (err) {
