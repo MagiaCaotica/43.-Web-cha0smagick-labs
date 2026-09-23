@@ -1,6 +1,6 @@
 # Thin Articles Progress — task 3.4.1
 
-_Regenerated: 2026-09-23 20:05 UTC by `scripts/thin_articles_report.py`._
+_Regenerated: 2026-09-23 20:09 UTC by `scripts/thin_articles_report.py`._
 
 Re-runnable: an article flips from `pending` to `done` automatically
 once its visible-text word count exceeds 1500 (plan verification).
@@ -8,240 +8,236 @@ once its visible-text word count exceeds 1500 (plan verification).
 ## Summary
 
 - Total articles: **467**
-- Pending (<800 words): **69**
+- Pending (<800 words): **65**
 - Expand (800-1500): **157**
-- Done (>1500): **241**
+- Done (>1500): **245**
 
 ## Pending + Expand (rewrite queue, thinnest first)
 
 | # | File | Words | Status |
 |---|------|-------|--------|
-| 1 | [remote-viewing-explained-techniques-training.html](remote-viewing-explained-techniques-training.html) | 482 | pending |
-| 2 | [lunar-dream-incubation-before-sleep-guide.html](lunar-dream-incubation-before-sleep-guide.html) | 483 | pending |
-| 3 | [how-to-induce-lucid-dreams-techniques-guide.html](how-to-induce-lucid-dreams-techniques-guide.html) | 484 | pending |
-| 4 | [lunar-cycle-rhythm-women-health.html](lunar-cycle-rhythm-women-health.html) | 493 | pending |
-| 5 | [tarot-card-care-preservation-storage-guide.html](tarot-card-care-preservation-storage-guide.html) | 496 | pending |
-| 6 | [moon-gazing-meditation-practice-guide.html](moon-gazing-meditation-practice-guide.html) | 509 | pending |
-| 7 | [free-sigil-generator-online-guide.html](free-sigil-generator-online-guide.html) | 512 | pending |
-| 8 | [best-tarot-decks-collectors-guide-2026.html](best-tarot-decks-collectors-guide-2026.html) | 517 | pending |
-| 9 | [sigil-binding-unbinding-techniques-complete-guide.html](sigil-binding-unbinding-techniques-complete-guide.html) | 518 | pending |
-| 10 | [color-symbolism-sigil-design-meaning-guide.html](color-symbolism-sigil-design-meaning-guide.html) | 519 | pending |
-| 11 | [sigil-failure-common-mistakes-practitioners-make.html](sigil-failure-common-mistakes-practitioners-make.html) | 526 | pending |
-| 12 | [digital-vs-hand-drawn-sigils-which-works-better.html](digital-vs-hand-drawn-sigils-which-works-better.html) | 535 | pending |
-| 13 | [lucid-dreaming-meaning-definition-complete-guide.html](lucid-dreaming-meaning-definition-complete-guide.html) | 542 | pending |
-| 14 | [esp-phenomena-meaning-telepathy-clairvoyance.html](esp-phenomena-meaning-telepathy-clairvoyance.html) | 543 | pending |
-| 15 | [iching-daily-practice-routine-guided.html](iching-daily-practice-routine-guided.html) | 548 | pending |
-| 16 | [runic-tattoos-meaning-designs-popular-placements.html](runic-tattoos-meaning-designs-popular-placements.html) | 549 | pending |
-| 17 | [tarot-card-combinations-advanced-interpretation.html](tarot-card-combinations-advanced-interpretation.html) | 553 | pending |
-| 18 | [iching-vs-tarot-runes-comparison-guide.html](iching-vs-tarot-runes-comparison-guide.html) | 556 | pending |
-| 19 | [tarot-reversed-meanings-complete-guide-2026.html](tarot-reversed-meanings-complete-guide-2026.html) | 559 | pending |
-| 20 | [rune-rituals-protection-wealth-prosperity-spells.html](rune-rituals-protection-wealth-prosperity-spells.html) | 560 | pending |
-| 21 | [tarot-daily-draw-meaning-practice-guide.html](tarot-daily-draw-meaning-practice-guide.html) | 562 | pending |
-| 22 | [iching-completing-the-great-decline-explanation.html](iching-completing-the-great-decline-explanation.html) | 566 | pending |
-| 23 | [sigil-subconscious-programming-explained.html](sigil-subconscious-programming-explained.html) | 574 | pending |
-| 24 | [norse-rune-oracles-different-traditions.html](norse-rune-oracles-different-traditions.html) | 575 | pending |
-| 25 | [tarot-spiritual-psychological-meaning-jung.html](tarot-spiritual-psychological-meaning-jung.html) | 575 | pending |
-| 26 | [how-to-cleanse-and-charge-runes.html](how-to-cleanse-and-charge-runes.html) | 578 | pending |
-| 27 | [rune-casting-methods-tips-beginners.html](rune-casting-methods-tips-beginners.html) | 586 | pending |
-| 28 | [runes-vs-tarot-divination-comparison.html](runes-vs-tarot-divination-comparison.html) | 587 | pending |
-| 29 | [iching-5-elements-wood-fire-earth-metal-water.html](iching-5-elements-wood-fire-earth-metal-water.html) | 590 | pending |
-| 30 | [tarot-card-reading-spreads-techniques-2026.html](tarot-card-reading-spreads-techniques-2026.html) | 590 | pending |
-| 31 | [best-rune-sets-for-beginners-2026.html](best-rune-sets-for-beginners-2026.html) | 592 | pending |
-| 32 | [iching-tarot-combination-advanced-divination.html](iching-tarot-combination-advanced-divination.html) | 592 | pending |
-| 33 | [rune-meditation-deeper-connection-techniques.html](rune-meditation-deeper-connection-techniques.html) | 592 | pending |
-| 34 | [lucid-dream-app-review.html](lucid-dream-app-review.html) | 596 | pending |
-| 35 | [tarot-history-origins-ancient-egypt-occult.html](tarot-history-origins-ancient-egypt-occult.html) | 632 | pending |
-| 36 | [top-iching-hexagrams-meaning-interpretation-2026.html](top-iching-hexagrams-meaning-interpretation-2026.html) | 635 | pending |
-| 37 | [sigil-gym-app-review-digital-sigil-maker.html](sigil-gym-app-review-digital-sigil-maker.html) | 637 | pending |
-| 38 | [moon-phases-meaning-8-phases-explained.html](moon-phases-meaning-8-phases-explained.html) | 644 | pending |
-| 39 | [iching-reading-methods-coins-yarrow-sticks.html](iching-reading-methods-coins-yarrow-sticks.html) | 666 | pending |
-| 40 | [tarot-card-meaning-guide-essentials-beginners.html](tarot-card-meaning-guide-essentials-beginners.html) | 680 | pending |
-| 41 | [futhark-runes-meaning-complete-guide-2026.html](futhark-runes-meaning-complete-guide-2026.html) | 698 | pending |
-| 42 | [who-is-frater-alek0s-meet-the-author.html](who-is-frater-alek0s-meet-the-author.html) | 706 | pending |
-| 43 | [chaos-sigil-design-charge-forget-guide.html](chaos-sigil-design-charge-forget-guide.html) | 717 | pending |
-| 44 | [we-answer-every-support-email-heres-proof.html](we-answer-every-support-email-heres-proof.html) | 718 | pending |
-| 45 | [smartphone-paranormal-investigation-tools.html](smartphone-paranormal-investigation-tools.html) | 723 | pending |
-| 46 | [iching-oracle-meaning-complete-guide-trigrams-hexagrams.html](iching-oracle-meaning-complete-guide-trigrams-hexagrams.html) | 736 | pending |
-| 47 | [how-to-vet-an-occult-app-before-buying.html](how-to-vet-an-occult-app-before-buying.html) | 737 | pending |
-| 48 | [refund-policy-what-happens-if-you-dont-like-it.html](refund-policy-what-happens-if-you-dont-like-it.html) | 738 | pending |
-| 49 | [why-we-dont-do-subscriptions-and-never-will.html](why-we-dont-do-subscriptions-and-never-will.html) | 739 | pending |
-| 50 | [how-we-test-occult-apps-our-methodology.html](how-we-test-occult-apps-our-methodology.html) | 747 | pending |
-| 51 | [free-digital-pendulum-vs-tarot-apps.html](free-digital-pendulum-vs-tarot-apps.html) | 748 | pending |
-| 52 | [free-astrology-sign-calculator-vs-astral-lab.html](free-astrology-sign-calculator-vs-astral-lab.html) | 750 | pending |
-| 53 | [our-privacy-policy-explained-in-plain-english.html](our-privacy-policy-explained-in-plain-english.html) | 752 | pending |
-| 54 | [ghost-hunting-apps-comparison-android.html](ghost-hunting-apps-comparison-android.html) | 753 | pending |
-| 55 | [eerieroads-field-review-real-results.html](eerieroads-field-review-real-results.html) | 755 | pending |
-| 56 | [sigil-magic-statistics-does-it-work.html](sigil-magic-statistics-does-it-work.html) | 757 | pending |
-| 57 | [lunar-eclipse-rituals-2026.html](lunar-eclipse-rituals-2026.html) | 759 | pending |
-| 58 | [tarot-200-reading-challenge.html](tarot-200-reading-challenge.html) | 768 | pending |
-| 59 | [free-tengwar-transcriber-and-rune-identity.html](free-tengwar-transcriber-and-rune-identity.html) | 771 | pending |
-| 60 | [astral-lab-30-day-log.html](astral-lab-30-day-log.html) | 776 | pending |
-| 61 | [urban-exploration-paranormal-investigation-guide.html](urban-exploration-paranormal-investigation-guide.html) | 779 | pending |
-| 62 | [the-psychonauts-toolkit-dreams-obe-and-esp.html](the-psychonauts-toolkit-dreams-obe-and-esp.html) | 782 | pending |
-| 63 | [free-candle-color-calculator-vs-moon-apps.html](free-candle-color-calculator-vs-moon-apps.html) | 783 | pending |
-| 64 | [a-witchs-year-with-the-lunar-phase-app.html](a-witchs-year-with-the-lunar-phase-app.html) | 784 | pending |
-| 65 | [first-year-digital-tarot-practice.html](first-year-digital-tarot-practice.html) | 784 | pending |
-| 66 | [building-a-daily-occult-practice-in-15-minutes.html](building-a-daily-occult-practice-in-15-minutes.html) | 790 | pending |
-| 67 | [free-servitor-activator-vs-sigil-apps.html](free-servitor-activator-vs-sigil-apps.html) | 790 | pending |
-| 68 | [free-lunar-phase-vs-lunar-phase-calculator-app.html](free-lunar-phase-vs-lunar-phase-calculator-app.html) | 791 | pending |
-| 69 | [noctem-tools-app-review.html](noctem-tools-app-review.html) | 795 | pending |
-| 70 | [free-spell-builder-vs-occult-apps.html](free-spell-builder-vs-occult-apps.html) | 801 | expand |
-| 71 | [lunar-phase-year-test.html](lunar-phase-year-test.html) | 802 | expand |
-| 72 | [free-rune-oracle-vs-norse-rune-oracle-app.html](free-rune-oracle-vs-norse-rune-oracle-app.html) | 812 | expand |
-| 73 | [from-skeptic-to-practitioner-iching.html](from-skeptic-to-practitioner-iching.html) | 814 | expand |
-| 74 | [the-moon-as-your-manifestation-calendar.html](the-moon-as-your-manifestation-calendar.html) | 814 | expand |
-| 75 | [how-to-charge-sigil-without-meditation.html](how-to-charge-sigil-without-meditation.html) | 816 | expand |
-| 76 | [chaos-magick-for-skeptics-a-practical-intro.html](chaos-magick-for-skeptics-a-practical-intro.html) | 818 | expand |
-| 77 | [learning-to-read-runes-daily-practice.html](learning-to-read-runes-daily-practice.html) | 821 | expand |
-| 78 | [dream-machine-long-term-review.html](dream-machine-long-term-review.html) | 823 | expand |
-| 79 | [the-tech-witch-starter-pack-5-tools-plus-3-apps.html](the-tech-witch-starter-pack-5-tools-plus-3-apps.html) | 824 | expand |
-| 80 | [first-goetia-summoning-experience.html](first-goetia-summoning-experience.html) | 826 | expand |
-| 81 | [the-history-of-cha0smagick-labs-since-2025.html](the-history-of-cha0smagick-labs-since-2025.html) | 826 | expand |
-| 82 | [sigil-money-experiment.html](sigil-money-experiment.html) | 834 | expand |
-| 83 | [what-cybermancy-says-about-the-modern-practitioner.html](what-cybermancy-says-about-the-modern-practitioner.html) | 834 | expand |
-| 84 | [what-100-evp-sessions-taught-me-about-grief.html](what-100-evp-sessions-taught-me-about-grief.html) | 838 | expand |
-| 85 | [evp-vs-spirit-box-comparison-guide.html](evp-vs-spirit-box-comparison-guide.html) | 846 | expand |
-| 86 | [halloween-evp-night-how-to-run-a-public-session.html](halloween-evp-night-how-to-run-a-public-session.html) | 848 | expand |
-| 87 | [free-i-ching-vs-i-ching-oracle-app.html](free-i-ching-vs-i-ching-oracle-app.html) | 850 | expand |
-| 88 | [arcana-goetia-ritual-test.html](arcana-goetia-ritual-test.html) | 853 | expand |
-| 89 | [free-sigil-generator-vs-chaos-sigil-generator-app.html](free-sigil-generator-vs-chaos-sigil-generator-app.html) | 853 | expand |
-| 90 | [arcana-goetia-spirit-browser-guide.html](arcana-goetia-spirit-browser-guide.html) | 855 | expand |
-| 91 | [norse-rune-oracle-daily-practice.html](norse-rune-oracle-daily-practice.html) | 864 | expand |
-| 92 | [first-lucid-dream-3-weeks-dream-machine.html](first-lucid-dream-3-weeks-dream-machine.html) | 870 | expand |
-| 93 | [paranormal-investigation-step-by-step-guide.html](paranormal-investigation-step-by-step-guide.html) | 871 | expand |
-| 94 | [the-78-tarot-cards-complete-reference-list.html](the-78-tarot-cards-complete-reference-list.html) | 872 | expand |
-| 95 | [occult-apps-and-privacy-what-your-data-says.html](occult-apps-and-privacy-what-your-data-says.html) | 877 | expand |
-| 96 | [mercury-retrograde-2026-complete-survival-guide.html](mercury-retrograde-2026-complete-survival-guide.html) | 878 | expand |
-| 97 | [astral-lab-hypnagogia-to-projection.html](astral-lab-hypnagogia-to-projection.html) | 879 | expand |
-| 98 | [astral-projection-changed-my-fear-of-death.html](astral-projection-changed-my-fear-of-death.html) | 881 | expand |
-| 99 | [astral-travel-for-healing-old-wounds.html](astral-travel-for-healing-old-wounds.html) | 883 | expand |
-| 100 | [money-sigils-90-day-transformation.html](money-sigils-90-day-transformation.html) | 885 | expand |
-| 101 | [ai-machine-learning-paranormal-research.html](ai-machine-learning-paranormal-research.html) | 886 | expand |
-| 102 | [astral-lab-app-review.html](astral-lab-app-review.html) | 893 | expand |
-| 103 | [eclipse-season-astral-projection-opportunities.html](eclipse-season-astral-projection-opportunities.html) | 893 | expand |
-| 104 | [ouija-vs-digital-spirit-box-fear-compared.html](ouija-vs-digital-spirit-box-fear-compared.html) | 897 | expand |
-| 105 | [goetia-for-beginners-what-no-one-tells-you-first.html](goetia-for-beginners-what-no-one-tells-you-first.html) | 900 | expand |
-| 106 | [new-moon-dates-2026-2027-ritual-calendar.html](new-moon-dates-2026-2027-ritual-calendar.html) | 904 | expand |
-| 107 | [the-digital-grimoire-organizing-your-whole-practice.html](the-digital-grimoire-organizing-your-whole-practice.html) | 905 | expand |
-| 108 | [what-is-a-zener-card-definition-history-statistics.html](what-is-a-zener-card-definition-history-statistics.html) | 910 | expand |
-| 109 | [psi-gym-30-day-esp-training-log.html](psi-gym-30-day-esp-training-log.html) | 911 | expand |
-| 110 | [sigil-magic-meaning-origins-chaos-magick.html](sigil-magic-meaning-origins-chaos-magick.html) | 912 | expand |
-| 111 | [app-security-where-your-data-lives-it-doesnt.html](app-security-where-your-data-lives-it-doesnt.html) | 913 | expand |
-| 112 | [evp-recording-complete-guide.html](evp-recording-complete-guide.html) | 914 | expand |
-| 113 | [iching-career-questions.html](iching-career-questions.html) | 917 | expand |
-| 114 | [science-behind-sls-camera-ghost-hunting.html](science-behind-sls-camera-ghost-hunting.html) | 918 | expand |
-| 115 | [esp-test-statistics-explained-for-beginners.html](esp-test-statistics-explained-for-beginners.html) | 936 | expand |
-| 116 | [rune-divination-for-daily-guidance-a-gentle-start.html](rune-divination-for-daily-guidance-a-gentle-start.html) | 937 | expand |
-| 117 | [what-is-a-spirit-box-how-it-works-frequencies.html](what-is-a-spirit-box-how-it-works-frequencies.html) | 937 | expand |
-| 118 | [moon-phase-calculator-for-spells.html](moon-phase-calculator-for-spells.html) | 940 | expand |
-| 119 | [norse-rune-nine-rune-digital-cast.html](norse-rune-nine-rune-digital-cast.html) | 957 | expand |
-| 120 | [can-you-get-stuck-out-of-body-the-truth.html](can-you-get-stuck-out-of-body-the-truth.html) | 961 | expand |
-| 121 | [lucid-dreaming-statistics-what-research-shows.html](lucid-dreaming-statistics-what-research-shows.html) | 964 | expand |
-| 122 | [christmas-gift-guide-occult-apps-under-10.html](christmas-gift-guide-occult-apps-under-10.html) | 965 | expand |
-| 123 | [10-occult-myths-debunked-by-practitioners.html](10-occult-myths-debunked-by-practitioners.html) | 969 | expand |
-| 124 | [zener-training-30-day-score-journey.html](zener-training-30-day-score-journey.html) | 969 | expand |
-| 125 | [haunted-roads-guide.html](haunted-roads-guide.html) | 973 | expand |
-| 126 | [new-year-intention-setting-with-sigils.html](new-year-intention-setting-with-sigils.html) | 973 | expand |
-| 127 | [world-sleep-day-lucid-dreaming-as-sleep-science.html](world-sleep-day-lucid-dreaming-as-sleep-science.html) | 983 | expand |
-| 128 | [sls-camera-paranormal-investigation-guide.html](sls-camera-paranormal-investigation-guide.html) | 984 | expand |
-| 129 | [samhain-deep-dive-the-witches-new-year.html](samhain-deep-dive-the-witches-new-year.html) | 989 | expand |
-| 130 | [is-it-dangerous-to-make-a-money-sigil.html](is-it-dangerous-to-make-a-money-sigil.html) | 990 | expand |
-| 131 | [angels-spirits-and-you-a-framework-for-contact.html](angels-spirits-and-you-a-framework-for-contact.html) | 991 | expand |
-| 132 | [all-24-elder-futhark-runes-complete-reference.html](all-24-elder-futhark-runes-complete-reference.html) | 1007 | expand |
-| 133 | [moon-phases-explained-dates-energies-rituals.html](moon-phases-explained-dates-energies-rituals.html) | 1008 | expand |
-| 134 | [best-sigil-generator-app-onetime.html](best-sigil-generator-app-onetime.html) | 1012 | expand |
-| 135 | [zener-card-test-score-meaning.html](zener-card-test-score-meaning.html) | 1015 | expand |
-| 136 | [goetia-seals-and-sigils-guide.html](goetia-seals-and-sigils-guide.html) | 1018 | expand |
-| 137 | [best-offline-lucid-dreaming-app-2026.html](best-offline-lucid-dreaming-app-2026.html) | 1028 | expand |
-| 138 | [noctem-feature-tour-guide.html](noctem-feature-tour-guide.html) | 1035 | expand |
-| 139 | [full-moon-charging-nights-2026.html](full-moon-charging-nights-2026.html) | 1037 | expand |
-| 140 | [eerieroads-90-night-review.html](eerieroads-90-night-review.html) | 1039 | expand |
-| 141 | [psi-gym-vs-free-zener-test.html](psi-gym-vs-free-zener-test.html) | 1041 | expand |
-| 142 | [psi-gym-training-modes-guide.html](psi-gym-training-modes-guide.html) | 1049 | expand |
-| 143 | [best-offline-tarot-app-android.html](best-offline-tarot-app-android.html) | 1050 | expand |
-| 144 | [what-actually-happens-in-an-evp-session.html](what-actually-happens-in-an-evp-session.html) | 1063 | expand |
-| 145 | [can-anyone-learn-esp-the-science-says-maybe.html](can-anyone-learn-esp-the-science-says-maybe.html) | 1070 | expand |
-| 146 | [tarot-para-chaos-practitioner.html](tarot-para-chaos-practitioner.html) | 1071 | expand |
-| 147 | [sigil-backfire-myth-psychology-or-real.html](sigil-backfire-myth-psychology-or-real.html) | 1072 | expand |
-| 148 | [the-dark-moon-isnt-scary-a-witchs-perspective.html](the-dark-moon-isnt-scary-a-witchs-perspective.html) | 1079 | expand |
-| 149 | [why-stop-paying-subscription-occult-apps.html](why-stop-paying-subscription-occult-apps.html) | 1079 | expand |
-| 150 | [am-i-haunted-or-is-it-pareidolia.html](am-i-haunted-or-is-it-pareidolia.html) | 1082 | expand |
-| 151 | [the-psychic-abilities-you-already-have-and-how-to-train-them.html](the-psychic-abilities-you-already-have-and-how-to-train-them.html) | 1086 | expand |
-| 152 | [manifesting-wealth-why-money-sigils-work-for-some-people.html](manifesting-wealth-why-money-sigils-work-for-some-people.html) | 1087 | expand |
-| 153 | [best-goetia-app-comparison.html](best-goetia-app-comparison.html) | 1088 | expand |
-| 154 | [true-cost-tarot-app-subscription-vs-onetime.html](true-cost-tarot-app-subscription-vs-onetime.html) | 1094 | expand |
-| 155 | [astral-projection-safety-what-can-actually-go-wrong.html](astral-projection-safety-what-can-actually-go-wrong.html) | 1098 | expand |
-| 156 | [nightmares-lucid.html](nightmares-lucid.html) | 1099 | expand |
-| 157 | [two-card-tarot-spread.html](two-card-tarot-spread.html) | 1104 | expand |
-| 158 | [dark-moon-meaning-witchcraft.html](dark-moon-meaning-witchcraft.html) | 1107 | expand |
-| 159 | [fehu-rune-meaning.html](fehu-rune-meaning.html) | 1111 | expand |
-| 160 | [iching-vs-tarot.html](iching-vs-tarot.html) | 1116 | expand |
-| 161 | [what-the-i-ching-can-teach-you-about-difficult-choices.html](what-the-i-ching-can-teach-you-about-difficult-choices.html) | 1118 | expand |
-| 162 | [rune-spreads-for-beginners.html](rune-spreads-for-beginners.html) | 1126 | expand |
-| 163 | [dream-machine-dream-journal-guide.html](dream-machine-dream-journal-guide.html) | 1142 | expand |
-| 164 | [lunar-phase-year-tracking-guide.html](lunar-phase-year-tracking-guide.html) | 1152 | expand |
-| 165 | [why-people-fear-the-death-card.html](why-people-fear-the-death-card.html) | 1152 | expand |
-| 166 | [astral-projection-for-beginners.html](astral-projection-for-beginners.html) | 1157 | expand |
-| 167 | [dream-machine-vs-lucid-dream-app.html](dream-machine-vs-lucid-dream-app.html) | 1158 | expand |
-| 168 | [fools-journey-tarot-roadmap.html](fools-journey-tarot-roadmap.html) | 1166 | expand |
-| 169 | [ex-tarot-spread.html](ex-tarot-spread.html) | 1170 | expand |
-| 170 | [how-long-sigil-takes-to-work.html](how-long-sigil-takes-to-work.html) | 1170 | expand |
-| 171 | [how-to-cast-iching-digitally.html](how-to-cast-iching-digitally.html) | 1172 | expand |
-| 172 | [big-three-explained.html](big-three-explained.html) | 1173 | expand |
-| 173 | [goetia-beginners-ritual.html](goetia-beginners-ritual.html) | 1184 | expand |
-| 174 | [beginners-first-month-esp-training.html](beginners-first-month-esp-training.html) | 1185 | expand |
-| 175 | [new-moon-ritual-manifestation.html](new-moon-ritual-manifestation.html) | 1191 | expand |
-| 176 | [dream-machine-vs-awoken-comparison.html](dream-machine-vs-awoken-comparison.html) | 1195 | expand |
-| 177 | [lucid-dreaming-as-a-superpower-for-problem-solving.html](lucid-dreaming-as-a-superpower-for-problem-solving.html) | 1201 | expand |
-| 178 | [money-sigil-guide.html](money-sigil-guide.html) | 1207 | expand |
-| 179 | [angel-magic-archangels-grimoire-guide.html](angel-magic-archangels-grimoire-guide.html) | 1211 | expand |
-| 180 | [evp-spirit-box-session-setup.html](evp-spirit-box-session-setup.html) | 1214 | expand |
-| 181 | [kitchen-witchery-beginners-guide.html](kitchen-witchery-beginners-guide.html) | 1216 | expand |
-| 182 | [moon-magic-for-a-year-tracking-every-phase.html](moon-magic-for-a-year-tracking-every-phase.html) | 1218 | expand |
-| 183 | [ogham-divination-celtic-tree-alphabet-guide.html](ogham-divination-celtic-tree-alphabet-guide.html) | 1228 | expand |
-| 184 | [spirit-box-frequency-settings.html](spirit-box-frequency-settings.html) | 1233 | expand |
-| 185 | [zener-card-telepathy-test.html](zener-card-telepathy-test.html) | 1233 | expand |
-| 186 | [esp-test-for-kids.html](esp-test-for-kids.html) | 1234 | expand |
-| 187 | [crystal-magic-beginners-reference-guide.html](crystal-magic-beginners-reference-guide.html) | 1238 | expand |
-| 188 | [chakra-balancing-witches-guide.html](chakra-balancing-witches-guide.html) | 1242 | expand |
-| 189 | [psi-gym-app-review.html](psi-gym-app-review.html) | 1243 | expand |
-| 190 | [the-72-goetia-spirits-complete-ranked-list.html](the-72-goetia-spirits-complete-ranked-list.html) | 1247 | expand |
-| 191 | [numerology-beginners-life-path-guide.html](numerology-beginners-life-path-guide.html) | 1248 | expand |
-| 192 | [herbal-magic-correspondences-guide.html](herbal-magic-correspondences-guide.html) | 1278 | expand |
-| 193 | [free-tools-vs-premium-apps-occult.html](free-tools-vs-premium-apps-occult.html) | 1279 | expand |
-| 194 | [elemental-magic-air-fire-water-earth-guide.html](elemental-magic-air-fire-water-earth-guide.html) | 1282 | expand |
-| 195 | [the-fools-journey-is-your-life-a-hopeful-reading.html](the-fools-journey-is-your-life-a-hopeful-reading.html) | 1304 | expand |
-| 196 | [iching-changing-lines-guide.html](iching-changing-lines-guide.html) | 1306 | expand |
-| 197 | [goetia-spirits-faq.html](goetia-spirits-faq.html) | 1307 | expand |
-| 198 | [i-ching-hexagram-list-all-64-one-line-meanings.html](i-ching-hexagram-list-all-64-one-line-meanings.html) | 1313 | expand |
-| 199 | [binaural-beats-astral-projection.html](binaural-beats-astral-projection.html) | 1324 | expand |
-| 200 | [one-time-vs-subscription-calculator-occult.html](one-time-vs-subscription-calculator-occult.html) | 1325 | expand |
-| 201 | [divination-methods-beyond-tarot-guide.html](divination-methods-beyond-tarot-guide.html) | 1329 | expand |
-| 202 | [wheel-of-the-year-sabbat-guide.html](wheel-of-the-year-sabbat-guide.html) | 1329 | expand |
-| 203 | [which-goetia-spirit-for-love-money-knowledge.html](which-goetia-spirit-for-love-money-knowledge.html) | 1330 | expand |
-| 204 | [pendulum-divination-beginners-guide.html](pendulum-divination-beginners-guide.html) | 1347 | expand |
-| 205 | [ghost-hunting-at-home-guide.html](ghost-hunting-at-home-guide.html) | 1361 | expand |
-| 206 | [astral-projection-verification.html](astral-projection-verification.html) | 1380 | expand |
-| 207 | [dream-incubation-manifestation-guide-2026.html](dream-incubation-manifestation-guide-2026.html) | 1400 | expand |
-| 208 | [cyber-paganism-digital-spirituality-guide.html](cyber-paganism-digital-spirituality-guide.html) | 1407 | expand |
-| 209 | [iching-for-love-questions.html](iching-for-love-questions.html) | 1408 | expand |
-| 210 | [digital-spellcasting-technomancy-guide.html](digital-spellcasting-technomancy-guide.html) | 1429 | expand |
-| 211 | [astral-projection-app-guide.html](astral-projection-app-guide.html) | 1432 | expand |
-| 212 | [servitor-guide-2026.html](servitor-guide-2026.html) | 1436 | expand |
-| 213 | [history-of-chaos-magick.html](history-of-chaos-magick.html) | 1443 | expand |
-| 214 | [psychonaut-guide-consciousness-exploration.html](psychonaut-guide-consciousness-exploration.html) | 1456 | expand |
-| 215 | [lunar-eclipse-ritual.html](lunar-eclipse-ritual.html) | 1466 | expand |
-| 216 | [lucid-dreaming-control-techniques-advanced.html](lucid-dreaming-control-techniques-advanced.html) | 1468 | expand |
-| 217 | [lunar-phase-calculator-app-review.html](lunar-phase-calculator-app-review.html) | 1473 | expand |
-| 218 | [best-esp-training-schedule-daily-psi-practice.html](best-esp-training-schedule-daily-psi-practice.html) | 1476 | expand |
-| 219 | [lucid-dreaming-stopped-my-nightmares.html](lucid-dreaming-stopped-my-nightmares.html) | 1478 | expand |
-| 220 | [scrying-techniques-mirror-crystal-digital.html](scrying-techniques-mirror-crystal-digital.html) | 1483 | expand |
-| 221 | [lucid-dreaming-alarm-guide.html](lucid-dreaming-alarm-guide.html) | 1485 | expand |
-| 222 | [death-card-tarot-meaning.html](death-card-tarot-meaning.html) | 1488 | expand |
-| 223 | [remote-perception-training-zener-real-world.html](remote-perception-training-zener-real-world.html) | 1491 | expand |
-| 224 | [cryptographic-sigil-programming-code.html](cryptographic-sigil-programming-code.html) | 1494 | expand |
-| 225 | [magical-servitors-manual-pdf-review.html](magical-servitors-manual-pdf-review.html) | 1496 | expand |
-| 226 | [liber-lvpinux-pdf-review.html](liber-lvpinux-pdf-review.html) | 1497 | expand |
+| 1 | [tarot-card-care-preservation-storage-guide.html](tarot-card-care-preservation-storage-guide.html) | 496 | pending |
+| 2 | [moon-gazing-meditation-practice-guide.html](moon-gazing-meditation-practice-guide.html) | 509 | pending |
+| 3 | [free-sigil-generator-online-guide.html](free-sigil-generator-online-guide.html) | 512 | pending |
+| 4 | [best-tarot-decks-collectors-guide-2026.html](best-tarot-decks-collectors-guide-2026.html) | 517 | pending |
+| 5 | [sigil-binding-unbinding-techniques-complete-guide.html](sigil-binding-unbinding-techniques-complete-guide.html) | 518 | pending |
+| 6 | [color-symbolism-sigil-design-meaning-guide.html](color-symbolism-sigil-design-meaning-guide.html) | 519 | pending |
+| 7 | [sigil-failure-common-mistakes-practitioners-make.html](sigil-failure-common-mistakes-practitioners-make.html) | 526 | pending |
+| 8 | [digital-vs-hand-drawn-sigils-which-works-better.html](digital-vs-hand-drawn-sigils-which-works-better.html) | 535 | pending |
+| 9 | [lucid-dreaming-meaning-definition-complete-guide.html](lucid-dreaming-meaning-definition-complete-guide.html) | 542 | pending |
+| 10 | [esp-phenomena-meaning-telepathy-clairvoyance.html](esp-phenomena-meaning-telepathy-clairvoyance.html) | 543 | pending |
+| 11 | [iching-daily-practice-routine-guided.html](iching-daily-practice-routine-guided.html) | 548 | pending |
+| 12 | [runic-tattoos-meaning-designs-popular-placements.html](runic-tattoos-meaning-designs-popular-placements.html) | 549 | pending |
+| 13 | [tarot-card-combinations-advanced-interpretation.html](tarot-card-combinations-advanced-interpretation.html) | 553 | pending |
+| 14 | [iching-vs-tarot-runes-comparison-guide.html](iching-vs-tarot-runes-comparison-guide.html) | 556 | pending |
+| 15 | [tarot-reversed-meanings-complete-guide-2026.html](tarot-reversed-meanings-complete-guide-2026.html) | 559 | pending |
+| 16 | [rune-rituals-protection-wealth-prosperity-spells.html](rune-rituals-protection-wealth-prosperity-spells.html) | 560 | pending |
+| 17 | [tarot-daily-draw-meaning-practice-guide.html](tarot-daily-draw-meaning-practice-guide.html) | 562 | pending |
+| 18 | [iching-completing-the-great-decline-explanation.html](iching-completing-the-great-decline-explanation.html) | 566 | pending |
+| 19 | [sigil-subconscious-programming-explained.html](sigil-subconscious-programming-explained.html) | 574 | pending |
+| 20 | [norse-rune-oracles-different-traditions.html](norse-rune-oracles-different-traditions.html) | 575 | pending |
+| 21 | [tarot-spiritual-psychological-meaning-jung.html](tarot-spiritual-psychological-meaning-jung.html) | 575 | pending |
+| 22 | [how-to-cleanse-and-charge-runes.html](how-to-cleanse-and-charge-runes.html) | 578 | pending |
+| 23 | [rune-casting-methods-tips-beginners.html](rune-casting-methods-tips-beginners.html) | 586 | pending |
+| 24 | [runes-vs-tarot-divination-comparison.html](runes-vs-tarot-divination-comparison.html) | 587 | pending |
+| 25 | [iching-5-elements-wood-fire-earth-metal-water.html](iching-5-elements-wood-fire-earth-metal-water.html) | 590 | pending |
+| 26 | [tarot-card-reading-spreads-techniques-2026.html](tarot-card-reading-spreads-techniques-2026.html) | 590 | pending |
+| 27 | [best-rune-sets-for-beginners-2026.html](best-rune-sets-for-beginners-2026.html) | 592 | pending |
+| 28 | [iching-tarot-combination-advanced-divination.html](iching-tarot-combination-advanced-divination.html) | 592 | pending |
+| 29 | [rune-meditation-deeper-connection-techniques.html](rune-meditation-deeper-connection-techniques.html) | 592 | pending |
+| 30 | [lucid-dream-app-review.html](lucid-dream-app-review.html) | 596 | pending |
+| 31 | [tarot-history-origins-ancient-egypt-occult.html](tarot-history-origins-ancient-egypt-occult.html) | 632 | pending |
+| 32 | [top-iching-hexagrams-meaning-interpretation-2026.html](top-iching-hexagrams-meaning-interpretation-2026.html) | 635 | pending |
+| 33 | [sigil-gym-app-review-digital-sigil-maker.html](sigil-gym-app-review-digital-sigil-maker.html) | 637 | pending |
+| 34 | [moon-phases-meaning-8-phases-explained.html](moon-phases-meaning-8-phases-explained.html) | 644 | pending |
+| 35 | [iching-reading-methods-coins-yarrow-sticks.html](iching-reading-methods-coins-yarrow-sticks.html) | 666 | pending |
+| 36 | [tarot-card-meaning-guide-essentials-beginners.html](tarot-card-meaning-guide-essentials-beginners.html) | 680 | pending |
+| 37 | [futhark-runes-meaning-complete-guide-2026.html](futhark-runes-meaning-complete-guide-2026.html) | 698 | pending |
+| 38 | [who-is-frater-alek0s-meet-the-author.html](who-is-frater-alek0s-meet-the-author.html) | 706 | pending |
+| 39 | [chaos-sigil-design-charge-forget-guide.html](chaos-sigil-design-charge-forget-guide.html) | 717 | pending |
+| 40 | [we-answer-every-support-email-heres-proof.html](we-answer-every-support-email-heres-proof.html) | 718 | pending |
+| 41 | [smartphone-paranormal-investigation-tools.html](smartphone-paranormal-investigation-tools.html) | 723 | pending |
+| 42 | [iching-oracle-meaning-complete-guide-trigrams-hexagrams.html](iching-oracle-meaning-complete-guide-trigrams-hexagrams.html) | 736 | pending |
+| 43 | [how-to-vet-an-occult-app-before-buying.html](how-to-vet-an-occult-app-before-buying.html) | 737 | pending |
+| 44 | [refund-policy-what-happens-if-you-dont-like-it.html](refund-policy-what-happens-if-you-dont-like-it.html) | 738 | pending |
+| 45 | [why-we-dont-do-subscriptions-and-never-will.html](why-we-dont-do-subscriptions-and-never-will.html) | 739 | pending |
+| 46 | [how-we-test-occult-apps-our-methodology.html](how-we-test-occult-apps-our-methodology.html) | 747 | pending |
+| 47 | [free-digital-pendulum-vs-tarot-apps.html](free-digital-pendulum-vs-tarot-apps.html) | 748 | pending |
+| 48 | [free-astrology-sign-calculator-vs-astral-lab.html](free-astrology-sign-calculator-vs-astral-lab.html) | 750 | pending |
+| 49 | [our-privacy-policy-explained-in-plain-english.html](our-privacy-policy-explained-in-plain-english.html) | 752 | pending |
+| 50 | [ghost-hunting-apps-comparison-android.html](ghost-hunting-apps-comparison-android.html) | 753 | pending |
+| 51 | [eerieroads-field-review-real-results.html](eerieroads-field-review-real-results.html) | 755 | pending |
+| 52 | [sigil-magic-statistics-does-it-work.html](sigil-magic-statistics-does-it-work.html) | 757 | pending |
+| 53 | [lunar-eclipse-rituals-2026.html](lunar-eclipse-rituals-2026.html) | 759 | pending |
+| 54 | [tarot-200-reading-challenge.html](tarot-200-reading-challenge.html) | 768 | pending |
+| 55 | [free-tengwar-transcriber-and-rune-identity.html](free-tengwar-transcriber-and-rune-identity.html) | 771 | pending |
+| 56 | [astral-lab-30-day-log.html](astral-lab-30-day-log.html) | 776 | pending |
+| 57 | [urban-exploration-paranormal-investigation-guide.html](urban-exploration-paranormal-investigation-guide.html) | 779 | pending |
+| 58 | [the-psychonauts-toolkit-dreams-obe-and-esp.html](the-psychonauts-toolkit-dreams-obe-and-esp.html) | 782 | pending |
+| 59 | [free-candle-color-calculator-vs-moon-apps.html](free-candle-color-calculator-vs-moon-apps.html) | 783 | pending |
+| 60 | [a-witchs-year-with-the-lunar-phase-app.html](a-witchs-year-with-the-lunar-phase-app.html) | 784 | pending |
+| 61 | [first-year-digital-tarot-practice.html](first-year-digital-tarot-practice.html) | 784 | pending |
+| 62 | [building-a-daily-occult-practice-in-15-minutes.html](building-a-daily-occult-practice-in-15-minutes.html) | 790 | pending |
+| 63 | [free-servitor-activator-vs-sigil-apps.html](free-servitor-activator-vs-sigil-apps.html) | 790 | pending |
+| 64 | [free-lunar-phase-vs-lunar-phase-calculator-app.html](free-lunar-phase-vs-lunar-phase-calculator-app.html) | 791 | pending |
+| 65 | [noctem-tools-app-review.html](noctem-tools-app-review.html) | 795 | pending |
+| 66 | [free-spell-builder-vs-occult-apps.html](free-spell-builder-vs-occult-apps.html) | 801 | expand |
+| 67 | [lunar-phase-year-test.html](lunar-phase-year-test.html) | 802 | expand |
+| 68 | [free-rune-oracle-vs-norse-rune-oracle-app.html](free-rune-oracle-vs-norse-rune-oracle-app.html) | 812 | expand |
+| 69 | [from-skeptic-to-practitioner-iching.html](from-skeptic-to-practitioner-iching.html) | 814 | expand |
+| 70 | [the-moon-as-your-manifestation-calendar.html](the-moon-as-your-manifestation-calendar.html) | 814 | expand |
+| 71 | [how-to-charge-sigil-without-meditation.html](how-to-charge-sigil-without-meditation.html) | 816 | expand |
+| 72 | [chaos-magick-for-skeptics-a-practical-intro.html](chaos-magick-for-skeptics-a-practical-intro.html) | 818 | expand |
+| 73 | [learning-to-read-runes-daily-practice.html](learning-to-read-runes-daily-practice.html) | 821 | expand |
+| 74 | [dream-machine-long-term-review.html](dream-machine-long-term-review.html) | 823 | expand |
+| 75 | [the-tech-witch-starter-pack-5-tools-plus-3-apps.html](the-tech-witch-starter-pack-5-tools-plus-3-apps.html) | 824 | expand |
+| 76 | [first-goetia-summoning-experience.html](first-goetia-summoning-experience.html) | 826 | expand |
+| 77 | [the-history-of-cha0smagick-labs-since-2025.html](the-history-of-cha0smagick-labs-since-2025.html) | 826 | expand |
+| 78 | [sigil-money-experiment.html](sigil-money-experiment.html) | 834 | expand |
+| 79 | [what-cybermancy-says-about-the-modern-practitioner.html](what-cybermancy-says-about-the-modern-practitioner.html) | 834 | expand |
+| 80 | [what-100-evp-sessions-taught-me-about-grief.html](what-100-evp-sessions-taught-me-about-grief.html) | 838 | expand |
+| 81 | [evp-vs-spirit-box-comparison-guide.html](evp-vs-spirit-box-comparison-guide.html) | 846 | expand |
+| 82 | [halloween-evp-night-how-to-run-a-public-session.html](halloween-evp-night-how-to-run-a-public-session.html) | 848 | expand |
+| 83 | [free-i-ching-vs-i-ching-oracle-app.html](free-i-ching-vs-i-ching-oracle-app.html) | 850 | expand |
+| 84 | [arcana-goetia-ritual-test.html](arcana-goetia-ritual-test.html) | 853 | expand |
+| 85 | [free-sigil-generator-vs-chaos-sigil-generator-app.html](free-sigil-generator-vs-chaos-sigil-generator-app.html) | 853 | expand |
+| 86 | [arcana-goetia-spirit-browser-guide.html](arcana-goetia-spirit-browser-guide.html) | 855 | expand |
+| 87 | [norse-rune-oracle-daily-practice.html](norse-rune-oracle-daily-practice.html) | 864 | expand |
+| 88 | [first-lucid-dream-3-weeks-dream-machine.html](first-lucid-dream-3-weeks-dream-machine.html) | 870 | expand |
+| 89 | [paranormal-investigation-step-by-step-guide.html](paranormal-investigation-step-by-step-guide.html) | 871 | expand |
+| 90 | [the-78-tarot-cards-complete-reference-list.html](the-78-tarot-cards-complete-reference-list.html) | 872 | expand |
+| 91 | [occult-apps-and-privacy-what-your-data-says.html](occult-apps-and-privacy-what-your-data-says.html) | 877 | expand |
+| 92 | [mercury-retrograde-2026-complete-survival-guide.html](mercury-retrograde-2026-complete-survival-guide.html) | 878 | expand |
+| 93 | [astral-lab-hypnagogia-to-projection.html](astral-lab-hypnagogia-to-projection.html) | 879 | expand |
+| 94 | [astral-projection-changed-my-fear-of-death.html](astral-projection-changed-my-fear-of-death.html) | 881 | expand |
+| 95 | [astral-travel-for-healing-old-wounds.html](astral-travel-for-healing-old-wounds.html) | 883 | expand |
+| 96 | [money-sigils-90-day-transformation.html](money-sigils-90-day-transformation.html) | 885 | expand |
+| 97 | [ai-machine-learning-paranormal-research.html](ai-machine-learning-paranormal-research.html) | 886 | expand |
+| 98 | [astral-lab-app-review.html](astral-lab-app-review.html) | 893 | expand |
+| 99 | [eclipse-season-astral-projection-opportunities.html](eclipse-season-astral-projection-opportunities.html) | 893 | expand |
+| 100 | [ouija-vs-digital-spirit-box-fear-compared.html](ouija-vs-digital-spirit-box-fear-compared.html) | 897 | expand |
+| 101 | [goetia-for-beginners-what-no-one-tells-you-first.html](goetia-for-beginners-what-no-one-tells-you-first.html) | 900 | expand |
+| 102 | [new-moon-dates-2026-2027-ritual-calendar.html](new-moon-dates-2026-2027-ritual-calendar.html) | 904 | expand |
+| 103 | [the-digital-grimoire-organizing-your-whole-practice.html](the-digital-grimoire-organizing-your-whole-practice.html) | 905 | expand |
+| 104 | [what-is-a-zener-card-definition-history-statistics.html](what-is-a-zener-card-definition-history-statistics.html) | 910 | expand |
+| 105 | [psi-gym-30-day-esp-training-log.html](psi-gym-30-day-esp-training-log.html) | 911 | expand |
+| 106 | [sigil-magic-meaning-origins-chaos-magick.html](sigil-magic-meaning-origins-chaos-magick.html) | 912 | expand |
+| 107 | [app-security-where-your-data-lives-it-doesnt.html](app-security-where-your-data-lives-it-doesnt.html) | 913 | expand |
+| 108 | [evp-recording-complete-guide.html](evp-recording-complete-guide.html) | 914 | expand |
+| 109 | [iching-career-questions.html](iching-career-questions.html) | 917 | expand |
+| 110 | [science-behind-sls-camera-ghost-hunting.html](science-behind-sls-camera-ghost-hunting.html) | 918 | expand |
+| 111 | [esp-test-statistics-explained-for-beginners.html](esp-test-statistics-explained-for-beginners.html) | 936 | expand |
+| 112 | [rune-divination-for-daily-guidance-a-gentle-start.html](rune-divination-for-daily-guidance-a-gentle-start.html) | 937 | expand |
+| 113 | [what-is-a-spirit-box-how-it-works-frequencies.html](what-is-a-spirit-box-how-it-works-frequencies.html) | 937 | expand |
+| 114 | [moon-phase-calculator-for-spells.html](moon-phase-calculator-for-spells.html) | 940 | expand |
+| 115 | [norse-rune-nine-rune-digital-cast.html](norse-rune-nine-rune-digital-cast.html) | 957 | expand |
+| 116 | [can-you-get-stuck-out-of-body-the-truth.html](can-you-get-stuck-out-of-body-the-truth.html) | 961 | expand |
+| 117 | [lucid-dreaming-statistics-what-research-shows.html](lucid-dreaming-statistics-what-research-shows.html) | 964 | expand |
+| 118 | [christmas-gift-guide-occult-apps-under-10.html](christmas-gift-guide-occult-apps-under-10.html) | 965 | expand |
+| 119 | [10-occult-myths-debunked-by-practitioners.html](10-occult-myths-debunked-by-practitioners.html) | 969 | expand |
+| 120 | [zener-training-30-day-score-journey.html](zener-training-30-day-score-journey.html) | 969 | expand |
+| 121 | [haunted-roads-guide.html](haunted-roads-guide.html) | 973 | expand |
+| 122 | [new-year-intention-setting-with-sigils.html](new-year-intention-setting-with-sigils.html) | 973 | expand |
+| 123 | [world-sleep-day-lucid-dreaming-as-sleep-science.html](world-sleep-day-lucid-dreaming-as-sleep-science.html) | 983 | expand |
+| 124 | [sls-camera-paranormal-investigation-guide.html](sls-camera-paranormal-investigation-guide.html) | 984 | expand |
+| 125 | [samhain-deep-dive-the-witches-new-year.html](samhain-deep-dive-the-witches-new-year.html) | 989 | expand |
+| 126 | [is-it-dangerous-to-make-a-money-sigil.html](is-it-dangerous-to-make-a-money-sigil.html) | 990 | expand |
+| 127 | [angels-spirits-and-you-a-framework-for-contact.html](angels-spirits-and-you-a-framework-for-contact.html) | 991 | expand |
+| 128 | [all-24-elder-futhark-runes-complete-reference.html](all-24-elder-futhark-runes-complete-reference.html) | 1007 | expand |
+| 129 | [moon-phases-explained-dates-energies-rituals.html](moon-phases-explained-dates-energies-rituals.html) | 1008 | expand |
+| 130 | [best-sigil-generator-app-onetime.html](best-sigil-generator-app-onetime.html) | 1012 | expand |
+| 131 | [zener-card-test-score-meaning.html](zener-card-test-score-meaning.html) | 1015 | expand |
+| 132 | [goetia-seals-and-sigils-guide.html](goetia-seals-and-sigils-guide.html) | 1018 | expand |
+| 133 | [best-offline-lucid-dreaming-app-2026.html](best-offline-lucid-dreaming-app-2026.html) | 1028 | expand |
+| 134 | [noctem-feature-tour-guide.html](noctem-feature-tour-guide.html) | 1035 | expand |
+| 135 | [full-moon-charging-nights-2026.html](full-moon-charging-nights-2026.html) | 1037 | expand |
+| 136 | [eerieroads-90-night-review.html](eerieroads-90-night-review.html) | 1039 | expand |
+| 137 | [psi-gym-vs-free-zener-test.html](psi-gym-vs-free-zener-test.html) | 1041 | expand |
+| 138 | [psi-gym-training-modes-guide.html](psi-gym-training-modes-guide.html) | 1049 | expand |
+| 139 | [best-offline-tarot-app-android.html](best-offline-tarot-app-android.html) | 1050 | expand |
+| 140 | [what-actually-happens-in-an-evp-session.html](what-actually-happens-in-an-evp-session.html) | 1063 | expand |
+| 141 | [can-anyone-learn-esp-the-science-says-maybe.html](can-anyone-learn-esp-the-science-says-maybe.html) | 1070 | expand |
+| 142 | [tarot-para-chaos-practitioner.html](tarot-para-chaos-practitioner.html) | 1071 | expand |
+| 143 | [sigil-backfire-myth-psychology-or-real.html](sigil-backfire-myth-psychology-or-real.html) | 1072 | expand |
+| 144 | [the-dark-moon-isnt-scary-a-witchs-perspective.html](the-dark-moon-isnt-scary-a-witchs-perspective.html) | 1079 | expand |
+| 145 | [why-stop-paying-subscription-occult-apps.html](why-stop-paying-subscription-occult-apps.html) | 1079 | expand |
+| 146 | [am-i-haunted-or-is-it-pareidolia.html](am-i-haunted-or-is-it-pareidolia.html) | 1082 | expand |
+| 147 | [the-psychic-abilities-you-already-have-and-how-to-train-them.html](the-psychic-abilities-you-already-have-and-how-to-train-them.html) | 1086 | expand |
+| 148 | [manifesting-wealth-why-money-sigils-work-for-some-people.html](manifesting-wealth-why-money-sigils-work-for-some-people.html) | 1087 | expand |
+| 149 | [best-goetia-app-comparison.html](best-goetia-app-comparison.html) | 1088 | expand |
+| 150 | [true-cost-tarot-app-subscription-vs-onetime.html](true-cost-tarot-app-subscription-vs-onetime.html) | 1094 | expand |
+| 151 | [astral-projection-safety-what-can-actually-go-wrong.html](astral-projection-safety-what-can-actually-go-wrong.html) | 1098 | expand |
+| 152 | [nightmares-lucid.html](nightmares-lucid.html) | 1099 | expand |
+| 153 | [two-card-tarot-spread.html](two-card-tarot-spread.html) | 1104 | expand |
+| 154 | [dark-moon-meaning-witchcraft.html](dark-moon-meaning-witchcraft.html) | 1107 | expand |
+| 155 | [fehu-rune-meaning.html](fehu-rune-meaning.html) | 1111 | expand |
+| 156 | [iching-vs-tarot.html](iching-vs-tarot.html) | 1116 | expand |
+| 157 | [what-the-i-ching-can-teach-you-about-difficult-choices.html](what-the-i-ching-can-teach-you-about-difficult-choices.html) | 1118 | expand |
+| 158 | [rune-spreads-for-beginners.html](rune-spreads-for-beginners.html) | 1126 | expand |
+| 159 | [dream-machine-dream-journal-guide.html](dream-machine-dream-journal-guide.html) | 1142 | expand |
+| 160 | [lunar-phase-year-tracking-guide.html](lunar-phase-year-tracking-guide.html) | 1152 | expand |
+| 161 | [why-people-fear-the-death-card.html](why-people-fear-the-death-card.html) | 1152 | expand |
+| 162 | [astral-projection-for-beginners.html](astral-projection-for-beginners.html) | 1157 | expand |
+| 163 | [dream-machine-vs-lucid-dream-app.html](dream-machine-vs-lucid-dream-app.html) | 1158 | expand |
+| 164 | [fools-journey-tarot-roadmap.html](fools-journey-tarot-roadmap.html) | 1166 | expand |
+| 165 | [ex-tarot-spread.html](ex-tarot-spread.html) | 1170 | expand |
+| 166 | [how-long-sigil-takes-to-work.html](how-long-sigil-takes-to-work.html) | 1170 | expand |
+| 167 | [how-to-cast-iching-digitally.html](how-to-cast-iching-digitally.html) | 1172 | expand |
+| 168 | [big-three-explained.html](big-three-explained.html) | 1173 | expand |
+| 169 | [goetia-beginners-ritual.html](goetia-beginners-ritual.html) | 1184 | expand |
+| 170 | [beginners-first-month-esp-training.html](beginners-first-month-esp-training.html) | 1185 | expand |
+| 171 | [new-moon-ritual-manifestation.html](new-moon-ritual-manifestation.html) | 1191 | expand |
+| 172 | [dream-machine-vs-awoken-comparison.html](dream-machine-vs-awoken-comparison.html) | 1195 | expand |
+| 173 | [lucid-dreaming-as-a-superpower-for-problem-solving.html](lucid-dreaming-as-a-superpower-for-problem-solving.html) | 1201 | expand |
+| 174 | [money-sigil-guide.html](money-sigil-guide.html) | 1207 | expand |
+| 175 | [angel-magic-archangels-grimoire-guide.html](angel-magic-archangels-grimoire-guide.html) | 1211 | expand |
+| 176 | [evp-spirit-box-session-setup.html](evp-spirit-box-session-setup.html) | 1214 | expand |
+| 177 | [kitchen-witchery-beginners-guide.html](kitchen-witchery-beginners-guide.html) | 1216 | expand |
+| 178 | [moon-magic-for-a-year-tracking-every-phase.html](moon-magic-for-a-year-tracking-every-phase.html) | 1218 | expand |
+| 179 | [ogham-divination-celtic-tree-alphabet-guide.html](ogham-divination-celtic-tree-alphabet-guide.html) | 1228 | expand |
+| 180 | [spirit-box-frequency-settings.html](spirit-box-frequency-settings.html) | 1233 | expand |
+| 181 | [zener-card-telepathy-test.html](zener-card-telepathy-test.html) | 1233 | expand |
+| 182 | [esp-test-for-kids.html](esp-test-for-kids.html) | 1234 | expand |
+| 183 | [crystal-magic-beginners-reference-guide.html](crystal-magic-beginners-reference-guide.html) | 1238 | expand |
+| 184 | [chakra-balancing-witches-guide.html](chakra-balancing-witches-guide.html) | 1242 | expand |
+| 185 | [psi-gym-app-review.html](psi-gym-app-review.html) | 1243 | expand |
+| 186 | [the-72-goetia-spirits-complete-ranked-list.html](the-72-goetia-spirits-complete-ranked-list.html) | 1247 | expand |
+| 187 | [numerology-beginners-life-path-guide.html](numerology-beginners-life-path-guide.html) | 1248 | expand |
+| 188 | [herbal-magic-correspondences-guide.html](herbal-magic-correspondences-guide.html) | 1278 | expand |
+| 189 | [free-tools-vs-premium-apps-occult.html](free-tools-vs-premium-apps-occult.html) | 1279 | expand |
+| 190 | [elemental-magic-air-fire-water-earth-guide.html](elemental-magic-air-fire-water-earth-guide.html) | 1282 | expand |
+| 191 | [the-fools-journey-is-your-life-a-hopeful-reading.html](the-fools-journey-is-your-life-a-hopeful-reading.html) | 1304 | expand |
+| 192 | [iching-changing-lines-guide.html](iching-changing-lines-guide.html) | 1306 | expand |
+| 193 | [goetia-spirits-faq.html](goetia-spirits-faq.html) | 1307 | expand |
+| 194 | [i-ching-hexagram-list-all-64-one-line-meanings.html](i-ching-hexagram-list-all-64-one-line-meanings.html) | 1313 | expand |
+| 195 | [binaural-beats-astral-projection.html](binaural-beats-astral-projection.html) | 1324 | expand |
+| 196 | [one-time-vs-subscription-calculator-occult.html](one-time-vs-subscription-calculator-occult.html) | 1325 | expand |
+| 197 | [divination-methods-beyond-tarot-guide.html](divination-methods-beyond-tarot-guide.html) | 1329 | expand |
+| 198 | [wheel-of-the-year-sabbat-guide.html](wheel-of-the-year-sabbat-guide.html) | 1329 | expand |
+| 199 | [which-goetia-spirit-for-love-money-knowledge.html](which-goetia-spirit-for-love-money-knowledge.html) | 1330 | expand |
+| 200 | [pendulum-divination-beginners-guide.html](pendulum-divination-beginners-guide.html) | 1347 | expand |
+| 201 | [ghost-hunting-at-home-guide.html](ghost-hunting-at-home-guide.html) | 1361 | expand |
+| 202 | [astral-projection-verification.html](astral-projection-verification.html) | 1380 | expand |
+| 203 | [dream-incubation-manifestation-guide-2026.html](dream-incubation-manifestation-guide-2026.html) | 1397 | expand |
+| 204 | [cyber-paganism-digital-spirituality-guide.html](cyber-paganism-digital-spirituality-guide.html) | 1407 | expand |
+| 205 | [iching-for-love-questions.html](iching-for-love-questions.html) | 1408 | expand |
+| 206 | [digital-spellcasting-technomancy-guide.html](digital-spellcasting-technomancy-guide.html) | 1429 | expand |
+| 207 | [astral-projection-app-guide.html](astral-projection-app-guide.html) | 1432 | expand |
+| 208 | [servitor-guide-2026.html](servitor-guide-2026.html) | 1436 | expand |
+| 209 | [history-of-chaos-magick.html](history-of-chaos-magick.html) | 1443 | expand |
+| 210 | [psychonaut-guide-consciousness-exploration.html](psychonaut-guide-consciousness-exploration.html) | 1456 | expand |
+| 211 | [lucid-dreaming-control-techniques-advanced.html](lucid-dreaming-control-techniques-advanced.html) | 1466 | expand |
+| 212 | [lunar-eclipse-ritual.html](lunar-eclipse-ritual.html) | 1466 | expand |
+| 213 | [lunar-phase-calculator-app-review.html](lunar-phase-calculator-app-review.html) | 1473 | expand |
+| 214 | [best-esp-training-schedule-daily-psi-practice.html](best-esp-training-schedule-daily-psi-practice.html) | 1476 | expand |
+| 215 | [lucid-dreaming-stopped-my-nightmares.html](lucid-dreaming-stopped-my-nightmares.html) | 1478 | expand |
+| 216 | [scrying-techniques-mirror-crystal-digital.html](scrying-techniques-mirror-crystal-digital.html) | 1483 | expand |
+| 217 | [lucid-dreaming-alarm-guide.html](lucid-dreaming-alarm-guide.html) | 1485 | expand |
+| 218 | [death-card-tarot-meaning.html](death-card-tarot-meaning.html) | 1488 | expand |
+| 219 | [remote-perception-training-zener-real-world.html](remote-perception-training-zener-real-world.html) | 1491 | expand |
+| 220 | [cryptographic-sigil-programming-code.html](cryptographic-sigil-programming-code.html) | 1494 | expand |
+| 221 | [magical-servitors-manual-pdf-review.html](magical-servitors-manual-pdf-review.html) | 1496 | expand |
+| 222 | [liber-lvpinux-pdf-review.html](liber-lvpinux-pdf-review.html) | 1497 | expand |
 
 ## Done (rewritten)
 
@@ -340,151 +336,155 @@ once its visible-text word count exceeds 1500 (plan verification).
 | 91 | [how-to-banish-cleanse-space.html](how-to-banish-cleanse-space.html) | 4036 |
 | 92 | [how-to-charge-sigil-correctly.html](how-to-charge-sigil-correctly.html) | 2899 |
 | 93 | [how-to-create-magickal-servitor.html](how-to-create-magickal-servitor.html) | 1627 |
-| 94 | [how-to-lucid-dream-tonight.html](how-to-lucid-dream-tonight.html) | 1511 |
-| 95 | [how-to-make-digital-sigil-complete-guide.html](how-to-make-digital-sigil-complete-guide.html) | 1626 |
-| 96 | [hunter-runes-divination-practice.html](hunter-runes-divination-practice.html) | 2587 |
-| 97 | [hunter-runes-protection-prosperity-workings.html](hunter-runes-protection-prosperity-workings.html) | 3599 |
-| 98 | [hunter-runes-vs-elder-futhark-comparison.html](hunter-runes-vs-elder-futhark-comparison.html) | 2722 |
-| 99 | [i-ching-digital-guide.html](i-ching-digital-guide.html) | 1856 |
-| 100 | [i-ching-hexagram-meanings-complete-guide.html](i-ching-hexagram-meanings-complete-guide.html) | 1722 |
-| 101 | [i-ching-oracle-app-review.html](i-ching-oracle-app-review.html) | 1737 |
-| 102 | [i-ching-three-coin-probability-distribution.html](i-ching-three-coin-probability-distribution.html) | 1798 |
-| 103 | [identity-shift-behavior-change-framework.html](identity-shift-behavior-change-framework.html) | 2278 |
-| 104 | [increase-esp-accuracy-advanced-protocols.html](increase-esp-accuracy-advanced-protocols.html) | 1539 |
-| 105 | [index.html](index.html) | 18410 |
-| 106 | [intention-manifestation-guide-gps.html](intention-manifestation-guide-gps.html) | 1954 |
-| 107 | [intuitive-tarot-vs-meaning-based-reading.html](intuitive-tarot-vs-meaning-based-reading.html) | 2137 |
-| 108 | [king-paimon-goetia-demon.html](king-paimon-goetia-demon.html) | 3893 |
-| 109 | [liminal-space-gps-coordinates.html](liminal-space-gps-coordinates.html) | 1690 |
-| 110 | [love-spells-ethics-guide.html](love-spells-ethics-guide.html) | 3289 |
-| 111 | [lucid-dream-stabilization-stop-waking-up.html](lucid-dream-stabilization-stop-waking-up.html) | 1938 |
-| 112 | [lucid-dreaming-guide.html](lucid-dreaming-guide.html) | 2062 |
-| 113 | [lucid-dreaming-phobia-cure-therapy-guide.html](lucid-dreaming-phobia-cure-therapy-guide.html) | 1674 |
-| 114 | [lucid-dreaming-problem-solving-creative-breakthroughs.html](lucid-dreaming-problem-solving-creative-breakthroughs.html) | 1664 |
-| 115 | [lucid-dreaming-techniques-beginners-2026.html](lucid-dreaming-techniques-beginners-2026.html) | 2466 |
-| 116 | [lunar-magic-rituals-spells-complete-guide.html](lunar-magic-rituals-spells-complete-guide.html) | 1512 |
-| 117 | [lunar-phase-calculator-guide-methods-2026.html](lunar-phase-calculator-guide-methods-2026.html) | 1533 |
-| 118 | [lunar-phase-magic-guide.html](lunar-phase-magic-guide.html) | 1763 |
-| 119 | [lunar-zodiac-signs-moon-rules-signs-explained.html](lunar-zodiac-signs-moon-rules-signs-explained.html) | 1620 |
-| 120 | [lycanthropy-spiritual-transformation-path.html](lycanthropy-spiritual-transformation-path.html) | 2304 |
-| 121 | [magic-chess-matrix-runic-servitors.html](magic-chess-matrix-runic-servitors.html) | 2195 |
-| 122 | [magical-correspondences-tables-guide.html](magical-correspondences-tables-guide.html) | 2261 |
-| 123 | [mars-sign-ambition-drive-astrology.html](mars-sign-ambition-drive-astrology.html) | 1971 |
-| 124 | [meditation-for-psychic-development-step-guide.html](meditation-for-psychic-development-step-guide.html) | 2119 |
-| 125 | [mercury-retrograde-survival-guide.html](mercury-retrograde-survival-guide.html) | 2917 |
-| 126 | [mercury-sign-communication-thinking-style.html](mercury-sign-communication-thinking-style.html) | 2241 |
-| 127 | [mild-vs-wild-vs-wbtc-lucid-dreaming-techniques-compared.html](mild-vs-wild-vs-wbtc-lucid-dreaming-techniques-compared.html) | 2203 |
-| 128 | [monroe-method-hemi-sync-astral-travel.html](monroe-method-hemi-sync-astral-travel.html) | 1771 |
-| 129 | [moon-phase-generator-magic-guide.html](moon-phase-generator-magic-guide.html) | 1804 |
-| 130 | [moon-phases-spell-timing-guide.html](moon-phases-spell-timing-guide.html) | 3628 |
-| 131 | [moon-sign-astrology-guide.html](moon-sign-astrology-guide.html) | 2953 |
-| 132 | [moon-sign-meaning-emotions-astrology.html](moon-sign-meaning-emotions-astrology.html) | 2406 |
-| 133 | [natal-aspect-patterns-advanced.html](natal-aspect-patterns-advanced.html) | 2164 |
-| 134 | [natal-aspects-comprehensive.html](natal-aspects-comprehensive.html) | 3478 |
-| 135 | [natal-astrology-chart-reading-guide.html](natal-astrology-chart-reading-guide.html) | 3023 |
-| 136 | [natal-chart-interpretation-guide-beginners.html](natal-chart-interpretation-guide-beginners.html) | 1597 |
-| 137 | [natal-chart-software-tools.html](natal-chart-software-tools.html) | 2223 |
-| 138 | [natal-dominants-and-patterns.html](natal-dominants-and-patterns.html) | 3211 |
-| 139 | [natal-element-modes.html](natal-element-modes.html) | 3785 |
-| 140 | [natal-houses-explained.html](natal-houses-explained.html) | 1681 |
-| 141 | [natal-planets-explained.html](natal-planets-explained.html) | 4556 |
-| 142 | [natal-retrograde-planets.html](natal-retrograde-planets.html) | 3196 |
-| 143 | [near-death-experiences-science.html](near-death-experiences-science.html) | 1928 |
-| 144 | [neuroplasticity-magic-brain-hacking.html](neuroplasticity-magic-brain-hacking.html) | 2657 |
-| 145 | [new-moon-vs-full-moon-ritual-guide.html](new-moon-vs-full-moon-ritual-guide.html) | 1572 |
-| 146 | [norse-rune-oracle-app-review.html](norse-rune-oracle-app-review.html) | 1598 |
-| 147 | [norse-runes-beginners-guide.html](norse-runes-beginners-guide.html) | 1886 |
-| 148 | [obe-chaos-magick-sigil-work-integration.html](obe-chaos-magick-sigil-work-integration.html) | 1540 |
-| 149 | [offline-manifestation-app-guide.html](offline-manifestation-app-guide.html) | 1650 |
-| 150 | [oneironautics-science-practice-dream-exploration.html](oneironautics-science-practice-dream-exploration.html) | 1938 |
-| 151 | [ouija-board-divination-techniques.html](ouija-board-divination-techniques.html) | 1986 |
-| 152 | [ouija-board-history-origins-modern-practice.html](ouija-board-history-origins-modern-practice.html) | 2035 |
-| 153 | [ouija-board-planchette-movements-interpretation.html](ouija-board-planchette-movements-interpretation.html) | 2575 |
-| 154 | [ouija-board-safety-protection-rituals.html](ouija-board-safety-protection-rituals.html) | 1960 |
-| 155 | [ouija-cazadora-pdf-review.html](ouija-cazadora-pdf-review.html) | 1537 |
-| 156 | [paradigm-shift-belief-as-tool.html](paradigm-shift-belief-as-tool.html) | 2661 |
-| 157 | [paranormal-investigation-apps-vs-equipment-2026.html](paranormal-investigation-apps-vs-equipment-2026.html) | 2576 |
-| 158 | [paranormal-investigation-history.html](paranormal-investigation-history.html) | 2194 |
-| 159 | [paranormal-phenomena-types.html](paranormal-phenomena-types.html) | 3403 |
-| 160 | [pause-technique-stress-response-control.html](pause-technique-stress-response-control.html) | 2416 |
-| 161 | [pendulum-divination-beginners.html](pendulum-divination-beginners.html) | 2234 |
-| 162 | [pendulum-healing-guide.html](pendulum-healing-guide.html) | 2561 |
-| 163 | [planetary-magic-hours-guide.html](planetary-magic-hours-guide.html) | 4014 |
-| 164 | [planetary-magic-squares-sigil-creation.html](planetary-magic-squares-sigil-creation.html) | 1691 |
-| 165 | [planetary-transits-astrology-guide.html](planetary-transits-astrology-guide.html) | 2940 |
-| 166 | [poltergeist-cases.html](poltergeist-cases.html) | 2179 |
-| 167 | [pop-magick-modern-culture-magic.html](pop-magick-modern-culture-magic.html) | 2377 |
-| 168 | [primal-instinct-magic-occult-empowerment.html](primal-instinct-magic-occult-empowerment.html) | 2100 |
-| 169 | [privacy-first-navigation-magical-necessity.html](privacy-first-navigation-magical-necessity.html) | 1680 |
-| 170 | [privacy-paranormal-investigation-apps-guide.html](privacy-paranormal-investigation-apps-guide.html) | 3042 |
-| 171 | [protection-spells-guide.html](protection-spells-guide.html) | 2373 |
-| 172 | [psi-gym-app-review-digital-sigil-maker.html](psi-gym-app-review-digital-sigil-maker.html) | 2603 |
-| 173 | [psi-gym-zener-cards-app-review.html](psi-gym-zener-cards-app-review.html) | 1816 |
-| 174 | [psi-hitting-vs-psi-missing-score-patterns.html](psi-hitting-vs-psi-missing-score-patterns.html) | 1750 |
-| 175 | [psychic-cleansing-banishing-rituals-complete.html](psychic-cleansing-banishing-rituals-complete.html) | 2215 |
-| 176 | [psychic-development-for-beginners-guide-2026.html](psychic-development-for-beginners-guide-2026.html) | 1549 |
-| 177 | [psychic-navigation-intuition-gps.html](psychic-navigation-intuition-gps.html) | 1745 |
-| 178 | [psychic-protection-shield-techniques-2026.html](psychic-protection-shield-techniques-2026.html) | 1619 |
-| 179 | [reality-check-techniques-best-lucidity-methods.html](reality-check-techniques-best-lucidity-methods.html) | 1879 |
-| 180 | [reality-hacking-entropy-navigation.html](reality-hacking-entropy-navigation.html) | 1695 |
-| 181 | [reality-hacking-techniques.html](reality-hacking-techniques.html) | 1750 |
-| 182 | [remote-viewing-techniques-beginners.html](remote-viewing-techniques-beginners.html) | 1809 |
-| 183 | [response-gap-master-impulse-control.html](response-gap-master-impulse-control.html) | 2770 |
-| 184 | [rider-waite-tarot-app-review.html](rider-waite-tarot-app-review.html) | 1541 |
-| 185 | [rider-waite-tarot-beginners-guide.html](rider-waite-tarot-beginners-guide.html) | 1966 |
-| 186 | [rising-sign-meaning-ascendant-astrology.html](rising-sign-meaning-ascendant-astrology.html) | 3304 |
-| 187 | [runas-para-chaos-magick.html](runas-para-chaos-magick.html) | 1573 |
-| 188 | [rune-for-love-guide.html](rune-for-love-guide.html) | 1514 |
-| 189 | [scientific-studies-zener-cards-esp-validation.html](scientific-studies-zener-cards-esp-validation.html) | 1636 |
-| 190 | [servitor-creation-complete-lifecycle.html](servitor-creation-complete-lifecycle.html) | 2419 |
-| 191 | [shadow-beast-ritual-transformation.html](shadow-beast-ritual-transformation.html) | 2628 |
-| 192 | [sigil-creator-online-free-vs-premium.html](sigil-creator-online-free-vs-premium.html) | 1767 |
-| 193 | [sigil-engine-cryptographic-guide.html](sigil-engine-cryptographic-guide.html) | 1672 |
-| 194 | [sigil-magic-complete-theory-practice.html](sigil-magic-complete-theory-practice.html) | 3119 |
-| 195 | [sigil-maker-ultimate-guide.html](sigil-maker-ultimate-guide.html) | 1926 |
-| 196 | [sigil-vs-servitor-differences.html](sigil-vs-servitor-differences.html) | 2362 |
-| 197 | [sigil-walking-gps-manifestation.html](sigil-walking-gps-manifestation.html) | 1906 |
-| 198 | [sigilscribe-art-science-writing-sigils.html](sigilscribe-art-science-writing-sigils.html) | 1704 |
-| 199 | [signs-universe-responding-intentions.html](signs-universe-responding-intentions.html) | 1817 |
-| 200 | [silver-cord-theory-astral-projection-body-mind.html](silver-cord-theory-astral-projection-body-mind.html) | 1764 |
-| 201 | [spell-casting-complete-guide.html](spell-casting-complete-guide.html) | 4085 |
-| 202 | [stillness-meditation-cognitive-clarity.html](stillness-meditation-cognitive-clarity.html) | 2109 |
-| 203 | [sun-moon-ascendant-meaning.html](sun-moon-ascendant-meaning.html) | 3096 |
-| 204 | [supernatural-teleportation.html](supernatural-teleportation.html) | 3858 |
-| 205 | [surrender-control-paradox-freedom.html](surrender-control-paradox-freedom.html) | 2652 |
-| 206 | [synchronicity-hunting-beginners-guide.html](synchronicity-hunting-beginners-guide.html) | 1804 |
-| 207 | [synchronicity-journal-tracking-guide.html](synchronicity-journal-tracking-guide.html) | 1705 |
-| 208 | [tarot-as-gnosis-technology.html](tarot-as-gnosis-technology.html) | 2722 |
-| 209 | [tarot-astrology-correspondences-major-arcana.html](tarot-astrology-correspondences-major-arcana.html) | 3251 |
-| 210 | [tarot-card-combinations-reading-techniques.html](tarot-card-combinations-reading-techniques.html) | 3326 |
-| 211 | [tarot-card-meanings-major-arcana-complete-guide.html](tarot-card-meanings-major-arcana-complete-guide.html) | 1739 |
-| 212 | [tarot-card-reversed-meanings-guide.html](tarot-card-reversed-meanings-guide.html) | 2333 |
-| 213 | [tarot-deck-cleaning-energetic-maintenance.html](tarot-deck-cleaning-energetic-maintenance.html) | 2027 |
-| 214 | [tarot-intention-setting-manifestation.html](tarot-intention-setting-manifestation.html) | 3088 |
-| 215 | [tarot-journaling-track-readings-progress.html](tarot-journaling-track-readings-progress.html) | 1949 |
-| 216 | [tarot-paradigm-shifting-techniques.html](tarot-paradigm-shifting-techniques.html) | 2368 |
-| 217 | [tarot-pathworking-visualization-techniques.html](tarot-pathworking-visualization-techniques.html) | 2841 |
-| 218 | [tarot-reading-for-beginners-step-by-step.html](tarot-reading-for-beginners-step-by-step.html) | 2266 |
-| 219 | [tarot-servitor-creation-archetypal.html](tarot-servitor-creation-archetypal.html) | 2752 |
-| 220 | [tarot-shadow-work-archetypal-healing.html](tarot-shadow-work-archetypal-healing.html) | 2580 |
-| 221 | [tarot-spreads-beginners-guide.html](tarot-spreads-beginners-guide.html) | 1856 |
-| 222 | [tarot-spreads-for-love-relationships.html](tarot-spreads-for-love-relationships.html) | 1964 |
-| 223 | [tarot-suits-meaning-cups-wands-swords-pentacles.html](tarot-suits-meaning-cups-wands-swords-pentacles.html) | 3049 |
-| 224 | [technomancy-digital-magic-complete-guide.html](technomancy-digital-magic-complete-guide.html) | 2693 |
-| 225 | [theta-waves-lucid-dreaming-brainwave-science.html](theta-waves-lucid-dreaming-brainwave-science.html) | 1767 |
-| 226 | [urban-legends-paranormal.html](urban-legends-paranormal.html) | 3785 |
-| 227 | [venus-sign-astrology-love-relationships.html](venus-sign-astrology-love-relationships.html) | 2253 |
-| 228 | [vibrational-state-obe-precursor-recognition.html](vibrational-state-obe-precursor-recognition.html) | 1893 |
-| 229 | [viking-oracle-complete-guide.html](viking-oracle-complete-guide.html) | 1689 |
-| 230 | [wake-back-to-bed-protocol-step-by-step-wbtb.html](wake-back-to-bed-protocol-step-by-step-wbtb.html) | 1805 |
-| 231 | [what-is-cybermancy-digital-sorcery-guide.html](what-is-cybermancy-digital-sorcery-guide.html) | 1598 |
-| 232 | [what-is-gnosis-how-to-achieve.html](what-is-gnosis-how-to-achieve.html) | 5323 |
-| 233 | [what-is-magick-how-spells-work.html](what-is-magick-how-spells-work.html) | 5272 |
-| 234 | [what-is-technomancy-digital-magic.html](what-is-technomancy-digital-magic.html) | 1591 |
-| 235 | [witchcraft-for-beginners-guide.html](witchcraft-for-beginners-guide.html) | 2719 |
-| 236 | [wolf-archetype-psychology-shadow-work.html](wolf-archetype-psychology-shadow-work.html) | 2609 |
-| 237 | [yes-no-tarot-spread-guide.html](yes-no-tarot-spread-guide.html) | 2282 |
-| 238 | [zener-card-probability-calculator-esp-scores.html](zener-card-probability-calculator-esp-scores.html) | 1652 |
-| 239 | [zener-cards-esp-training-guide.html](zener-cards-esp-training-guide.html) | 2052 |
-| 240 | [zener-cards-online-esp-test.html](zener-cards-online-esp-test.html) | 1703 |
-| 241 | [zener-cards-probability-statistical-significance.html](zener-cards-probability-statistical-significance.html) | 1721 |
+| 94 | [how-to-induce-lucid-dreams-techniques-guide.html](how-to-induce-lucid-dreams-techniques-guide.html) | 1516 |
+| 95 | [how-to-lucid-dream-tonight.html](how-to-lucid-dream-tonight.html) | 1511 |
+| 96 | [how-to-make-digital-sigil-complete-guide.html](how-to-make-digital-sigil-complete-guide.html) | 1626 |
+| 97 | [hunter-runes-divination-practice.html](hunter-runes-divination-practice.html) | 2587 |
+| 98 | [hunter-runes-protection-prosperity-workings.html](hunter-runes-protection-prosperity-workings.html) | 3599 |
+| 99 | [hunter-runes-vs-elder-futhark-comparison.html](hunter-runes-vs-elder-futhark-comparison.html) | 2722 |
+| 100 | [i-ching-digital-guide.html](i-ching-digital-guide.html) | 1856 |
+| 101 | [i-ching-hexagram-meanings-complete-guide.html](i-ching-hexagram-meanings-complete-guide.html) | 1722 |
+| 102 | [i-ching-oracle-app-review.html](i-ching-oracle-app-review.html) | 1737 |
+| 103 | [i-ching-three-coin-probability-distribution.html](i-ching-three-coin-probability-distribution.html) | 1798 |
+| 104 | [identity-shift-behavior-change-framework.html](identity-shift-behavior-change-framework.html) | 2278 |
+| 105 | [increase-esp-accuracy-advanced-protocols.html](increase-esp-accuracy-advanced-protocols.html) | 1539 |
+| 106 | [index.html](index.html) | 18410 |
+| 107 | [intention-manifestation-guide-gps.html](intention-manifestation-guide-gps.html) | 1954 |
+| 108 | [intuitive-tarot-vs-meaning-based-reading.html](intuitive-tarot-vs-meaning-based-reading.html) | 2137 |
+| 109 | [king-paimon-goetia-demon.html](king-paimon-goetia-demon.html) | 3893 |
+| 110 | [liminal-space-gps-coordinates.html](liminal-space-gps-coordinates.html) | 1690 |
+| 111 | [love-spells-ethics-guide.html](love-spells-ethics-guide.html) | 3289 |
+| 112 | [lucid-dream-stabilization-stop-waking-up.html](lucid-dream-stabilization-stop-waking-up.html) | 1938 |
+| 113 | [lucid-dreaming-guide.html](lucid-dreaming-guide.html) | 2062 |
+| 114 | [lucid-dreaming-phobia-cure-therapy-guide.html](lucid-dreaming-phobia-cure-therapy-guide.html) | 1674 |
+| 115 | [lucid-dreaming-problem-solving-creative-breakthroughs.html](lucid-dreaming-problem-solving-creative-breakthroughs.html) | 1664 |
+| 116 | [lucid-dreaming-techniques-beginners-2026.html](lucid-dreaming-techniques-beginners-2026.html) | 2466 |
+| 117 | [lunar-cycle-rhythm-women-health.html](lunar-cycle-rhythm-women-health.html) | 1594 |
+| 118 | [lunar-dream-incubation-before-sleep-guide.html](lunar-dream-incubation-before-sleep-guide.html) | 1525 |
+| 119 | [lunar-magic-rituals-spells-complete-guide.html](lunar-magic-rituals-spells-complete-guide.html) | 1512 |
+| 120 | [lunar-phase-calculator-guide-methods-2026.html](lunar-phase-calculator-guide-methods-2026.html) | 1533 |
+| 121 | [lunar-phase-magic-guide.html](lunar-phase-magic-guide.html) | 1763 |
+| 122 | [lunar-zodiac-signs-moon-rules-signs-explained.html](lunar-zodiac-signs-moon-rules-signs-explained.html) | 1620 |
+| 123 | [lycanthropy-spiritual-transformation-path.html](lycanthropy-spiritual-transformation-path.html) | 2304 |
+| 124 | [magic-chess-matrix-runic-servitors.html](magic-chess-matrix-runic-servitors.html) | 2195 |
+| 125 | [magical-correspondences-tables-guide.html](magical-correspondences-tables-guide.html) | 2261 |
+| 126 | [mars-sign-ambition-drive-astrology.html](mars-sign-ambition-drive-astrology.html) | 1971 |
+| 127 | [meditation-for-psychic-development-step-guide.html](meditation-for-psychic-development-step-guide.html) | 2119 |
+| 128 | [mercury-retrograde-survival-guide.html](mercury-retrograde-survival-guide.html) | 2917 |
+| 129 | [mercury-sign-communication-thinking-style.html](mercury-sign-communication-thinking-style.html) | 2241 |
+| 130 | [mild-vs-wild-vs-wbtc-lucid-dreaming-techniques-compared.html](mild-vs-wild-vs-wbtc-lucid-dreaming-techniques-compared.html) | 2203 |
+| 131 | [monroe-method-hemi-sync-astral-travel.html](monroe-method-hemi-sync-astral-travel.html) | 1771 |
+| 132 | [moon-phase-generator-magic-guide.html](moon-phase-generator-magic-guide.html) | 1804 |
+| 133 | [moon-phases-spell-timing-guide.html](moon-phases-spell-timing-guide.html) | 3628 |
+| 134 | [moon-sign-astrology-guide.html](moon-sign-astrology-guide.html) | 2953 |
+| 135 | [moon-sign-meaning-emotions-astrology.html](moon-sign-meaning-emotions-astrology.html) | 2406 |
+| 136 | [natal-aspect-patterns-advanced.html](natal-aspect-patterns-advanced.html) | 2164 |
+| 137 | [natal-aspects-comprehensive.html](natal-aspects-comprehensive.html) | 3478 |
+| 138 | [natal-astrology-chart-reading-guide.html](natal-astrology-chart-reading-guide.html) | 3023 |
+| 139 | [natal-chart-interpretation-guide-beginners.html](natal-chart-interpretation-guide-beginners.html) | 1597 |
+| 140 | [natal-chart-software-tools.html](natal-chart-software-tools.html) | 2223 |
+| 141 | [natal-dominants-and-patterns.html](natal-dominants-and-patterns.html) | 3211 |
+| 142 | [natal-element-modes.html](natal-element-modes.html) | 3785 |
+| 143 | [natal-houses-explained.html](natal-houses-explained.html) | 1681 |
+| 144 | [natal-planets-explained.html](natal-planets-explained.html) | 4556 |
+| 145 | [natal-retrograde-planets.html](natal-retrograde-planets.html) | 3196 |
+| 146 | [near-death-experiences-science.html](near-death-experiences-science.html) | 1928 |
+| 147 | [neuroplasticity-magic-brain-hacking.html](neuroplasticity-magic-brain-hacking.html) | 2657 |
+| 148 | [new-moon-vs-full-moon-ritual-guide.html](new-moon-vs-full-moon-ritual-guide.html) | 1572 |
+| 149 | [norse-rune-oracle-app-review.html](norse-rune-oracle-app-review.html) | 1598 |
+| 150 | [norse-runes-beginners-guide.html](norse-runes-beginners-guide.html) | 1886 |
+| 151 | [obe-chaos-magick-sigil-work-integration.html](obe-chaos-magick-sigil-work-integration.html) | 1540 |
+| 152 | [offline-manifestation-app-guide.html](offline-manifestation-app-guide.html) | 1650 |
+| 153 | [oneironautics-science-practice-dream-exploration.html](oneironautics-science-practice-dream-exploration.html) | 1938 |
+| 154 | [ouija-board-divination-techniques.html](ouija-board-divination-techniques.html) | 1986 |
+| 155 | [ouija-board-history-origins-modern-practice.html](ouija-board-history-origins-modern-practice.html) | 2035 |
+| 156 | [ouija-board-planchette-movements-interpretation.html](ouija-board-planchette-movements-interpretation.html) | 2575 |
+| 157 | [ouija-board-safety-protection-rituals.html](ouija-board-safety-protection-rituals.html) | 1960 |
+| 158 | [ouija-cazadora-pdf-review.html](ouija-cazadora-pdf-review.html) | 1537 |
+| 159 | [paradigm-shift-belief-as-tool.html](paradigm-shift-belief-as-tool.html) | 2661 |
+| 160 | [paranormal-investigation-apps-vs-equipment-2026.html](paranormal-investigation-apps-vs-equipment-2026.html) | 2576 |
+| 161 | [paranormal-investigation-history.html](paranormal-investigation-history.html) | 2194 |
+| 162 | [paranormal-phenomena-types.html](paranormal-phenomena-types.html) | 3403 |
+| 163 | [pause-technique-stress-response-control.html](pause-technique-stress-response-control.html) | 2416 |
+| 164 | [pendulum-divination-beginners.html](pendulum-divination-beginners.html) | 2234 |
+| 165 | [pendulum-healing-guide.html](pendulum-healing-guide.html) | 2561 |
+| 166 | [planetary-magic-hours-guide.html](planetary-magic-hours-guide.html) | 4014 |
+| 167 | [planetary-magic-squares-sigil-creation.html](planetary-magic-squares-sigil-creation.html) | 1691 |
+| 168 | [planetary-transits-astrology-guide.html](planetary-transits-astrology-guide.html) | 2940 |
+| 169 | [poltergeist-cases.html](poltergeist-cases.html) | 2179 |
+| 170 | [pop-magick-modern-culture-magic.html](pop-magick-modern-culture-magic.html) | 2377 |
+| 171 | [primal-instinct-magic-occult-empowerment.html](primal-instinct-magic-occult-empowerment.html) | 2100 |
+| 172 | [privacy-first-navigation-magical-necessity.html](privacy-first-navigation-magical-necessity.html) | 1680 |
+| 173 | [privacy-paranormal-investigation-apps-guide.html](privacy-paranormal-investigation-apps-guide.html) | 3042 |
+| 174 | [protection-spells-guide.html](protection-spells-guide.html) | 2373 |
+| 175 | [psi-gym-app-review-digital-sigil-maker.html](psi-gym-app-review-digital-sigil-maker.html) | 2603 |
+| 176 | [psi-gym-zener-cards-app-review.html](psi-gym-zener-cards-app-review.html) | 1816 |
+| 177 | [psi-hitting-vs-psi-missing-score-patterns.html](psi-hitting-vs-psi-missing-score-patterns.html) | 1750 |
+| 178 | [psychic-cleansing-banishing-rituals-complete.html](psychic-cleansing-banishing-rituals-complete.html) | 2215 |
+| 179 | [psychic-development-for-beginners-guide-2026.html](psychic-development-for-beginners-guide-2026.html) | 1549 |
+| 180 | [psychic-navigation-intuition-gps.html](psychic-navigation-intuition-gps.html) | 1745 |
+| 181 | [psychic-protection-shield-techniques-2026.html](psychic-protection-shield-techniques-2026.html) | 1619 |
+| 182 | [reality-check-techniques-best-lucidity-methods.html](reality-check-techniques-best-lucidity-methods.html) | 1879 |
+| 183 | [reality-hacking-entropy-navigation.html](reality-hacking-entropy-navigation.html) | 1695 |
+| 184 | [reality-hacking-techniques.html](reality-hacking-techniques.html) | 1750 |
+| 185 | [remote-viewing-explained-techniques-training.html](remote-viewing-explained-techniques-training.html) | 1558 |
+| 186 | [remote-viewing-techniques-beginners.html](remote-viewing-techniques-beginners.html) | 1809 |
+| 187 | [response-gap-master-impulse-control.html](response-gap-master-impulse-control.html) | 2770 |
+| 188 | [rider-waite-tarot-app-review.html](rider-waite-tarot-app-review.html) | 1541 |
+| 189 | [rider-waite-tarot-beginners-guide.html](rider-waite-tarot-beginners-guide.html) | 1966 |
+| 190 | [rising-sign-meaning-ascendant-astrology.html](rising-sign-meaning-ascendant-astrology.html) | 3304 |
+| 191 | [runas-para-chaos-magick.html](runas-para-chaos-magick.html) | 1573 |
+| 192 | [rune-for-love-guide.html](rune-for-love-guide.html) | 1514 |
+| 193 | [scientific-studies-zener-cards-esp-validation.html](scientific-studies-zener-cards-esp-validation.html) | 1636 |
+| 194 | [servitor-creation-complete-lifecycle.html](servitor-creation-complete-lifecycle.html) | 2419 |
+| 195 | [shadow-beast-ritual-transformation.html](shadow-beast-ritual-transformation.html) | 2628 |
+| 196 | [sigil-creator-online-free-vs-premium.html](sigil-creator-online-free-vs-premium.html) | 1767 |
+| 197 | [sigil-engine-cryptographic-guide.html](sigil-engine-cryptographic-guide.html) | 1672 |
+| 198 | [sigil-magic-complete-theory-practice.html](sigil-magic-complete-theory-practice.html) | 3119 |
+| 199 | [sigil-maker-ultimate-guide.html](sigil-maker-ultimate-guide.html) | 1926 |
+| 200 | [sigil-vs-servitor-differences.html](sigil-vs-servitor-differences.html) | 2362 |
+| 201 | [sigil-walking-gps-manifestation.html](sigil-walking-gps-manifestation.html) | 1906 |
+| 202 | [sigilscribe-art-science-writing-sigils.html](sigilscribe-art-science-writing-sigils.html) | 1704 |
+| 203 | [signs-universe-responding-intentions.html](signs-universe-responding-intentions.html) | 1817 |
+| 204 | [silver-cord-theory-astral-projection-body-mind.html](silver-cord-theory-astral-projection-body-mind.html) | 1764 |
+| 205 | [spell-casting-complete-guide.html](spell-casting-complete-guide.html) | 4085 |
+| 206 | [stillness-meditation-cognitive-clarity.html](stillness-meditation-cognitive-clarity.html) | 2109 |
+| 207 | [sun-moon-ascendant-meaning.html](sun-moon-ascendant-meaning.html) | 3096 |
+| 208 | [supernatural-teleportation.html](supernatural-teleportation.html) | 3858 |
+| 209 | [surrender-control-paradox-freedom.html](surrender-control-paradox-freedom.html) | 2652 |
+| 210 | [synchronicity-hunting-beginners-guide.html](synchronicity-hunting-beginners-guide.html) | 1804 |
+| 211 | [synchronicity-journal-tracking-guide.html](synchronicity-journal-tracking-guide.html) | 1705 |
+| 212 | [tarot-as-gnosis-technology.html](tarot-as-gnosis-technology.html) | 2722 |
+| 213 | [tarot-astrology-correspondences-major-arcana.html](tarot-astrology-correspondences-major-arcana.html) | 3251 |
+| 214 | [tarot-card-combinations-reading-techniques.html](tarot-card-combinations-reading-techniques.html) | 3326 |
+| 215 | [tarot-card-meanings-major-arcana-complete-guide.html](tarot-card-meanings-major-arcana-complete-guide.html) | 1739 |
+| 216 | [tarot-card-reversed-meanings-guide.html](tarot-card-reversed-meanings-guide.html) | 2333 |
+| 217 | [tarot-deck-cleaning-energetic-maintenance.html](tarot-deck-cleaning-energetic-maintenance.html) | 2027 |
+| 218 | [tarot-intention-setting-manifestation.html](tarot-intention-setting-manifestation.html) | 3088 |
+| 219 | [tarot-journaling-track-readings-progress.html](tarot-journaling-track-readings-progress.html) | 1949 |
+| 220 | [tarot-paradigm-shifting-techniques.html](tarot-paradigm-shifting-techniques.html) | 2368 |
+| 221 | [tarot-pathworking-visualization-techniques.html](tarot-pathworking-visualization-techniques.html) | 2841 |
+| 222 | [tarot-reading-for-beginners-step-by-step.html](tarot-reading-for-beginners-step-by-step.html) | 2266 |
+| 223 | [tarot-servitor-creation-archetypal.html](tarot-servitor-creation-archetypal.html) | 2752 |
+| 224 | [tarot-shadow-work-archetypal-healing.html](tarot-shadow-work-archetypal-healing.html) | 2580 |
+| 225 | [tarot-spreads-beginners-guide.html](tarot-spreads-beginners-guide.html) | 1856 |
+| 226 | [tarot-spreads-for-love-relationships.html](tarot-spreads-for-love-relationships.html) | 1964 |
+| 227 | [tarot-suits-meaning-cups-wands-swords-pentacles.html](tarot-suits-meaning-cups-wands-swords-pentacles.html) | 3049 |
+| 228 | [technomancy-digital-magic-complete-guide.html](technomancy-digital-magic-complete-guide.html) | 2693 |
+| 229 | [theta-waves-lucid-dreaming-brainwave-science.html](theta-waves-lucid-dreaming-brainwave-science.html) | 1767 |
+| 230 | [urban-legends-paranormal.html](urban-legends-paranormal.html) | 3785 |
+| 231 | [venus-sign-astrology-love-relationships.html](venus-sign-astrology-love-relationships.html) | 2253 |
+| 232 | [vibrational-state-obe-precursor-recognition.html](vibrational-state-obe-precursor-recognition.html) | 1893 |
+| 233 | [viking-oracle-complete-guide.html](viking-oracle-complete-guide.html) | 1689 |
+| 234 | [wake-back-to-bed-protocol-step-by-step-wbtb.html](wake-back-to-bed-protocol-step-by-step-wbtb.html) | 1805 |
+| 235 | [what-is-cybermancy-digital-sorcery-guide.html](what-is-cybermancy-digital-sorcery-guide.html) | 1598 |
+| 236 | [what-is-gnosis-how-to-achieve.html](what-is-gnosis-how-to-achieve.html) | 5323 |
+| 237 | [what-is-magick-how-spells-work.html](what-is-magick-how-spells-work.html) | 5272 |
+| 238 | [what-is-technomancy-digital-magic.html](what-is-technomancy-digital-magic.html) | 1591 |
+| 239 | [witchcraft-for-beginners-guide.html](witchcraft-for-beginners-guide.html) | 2719 |
+| 240 | [wolf-archetype-psychology-shadow-work.html](wolf-archetype-psychology-shadow-work.html) | 2609 |
+| 241 | [yes-no-tarot-spread-guide.html](yes-no-tarot-spread-guide.html) | 2282 |
+| 242 | [zener-card-probability-calculator-esp-scores.html](zener-card-probability-calculator-esp-scores.html) | 1652 |
+| 243 | [zener-cards-esp-training-guide.html](zener-cards-esp-training-guide.html) | 2052 |
+| 244 | [zener-cards-online-esp-test.html](zener-cards-online-esp-test.html) | 1703 |
+| 245 | [zener-cards-probability-statistical-significance.html](zener-cards-probability-statistical-significance.html) | 1721 |
