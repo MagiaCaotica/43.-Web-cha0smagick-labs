@@ -348,4 +348,24 @@ describe('bot-brain — Catalog Integrity', () => {
       expect(BRAIN.mailerLite.es).toHaveProperty('group');
     });
   });
+
+  describe('getOfferImage (3.1.3)', () => {
+    it('returns image when offer has one', () => {
+      const app = BRAIN.apps[0];
+      const original = app.image;
+      app.image = 'https://example.com/test.png';
+      expect(BRAIN.helpers.getOfferImage(app.id)).toBe('https://example.com/test.png');
+      app.image = original;
+    });
+    it('returns null when offer has no image', () => {
+      const app = BRAIN.apps[0];
+      const original = app.image;
+      app.image = null;
+      expect(BRAIN.helpers.getOfferImage(app.id)).toBeNull();
+      app.image = original;
+    });
+    it('returns null for unknown id', () => {
+      expect(BRAIN.helpers.getOfferImage('nonexistent-xyz-123')).toBeNull();
+    });
+  });
 });

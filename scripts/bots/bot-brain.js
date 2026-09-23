@@ -201,6 +201,10 @@ const BRAIN = {
 
     // Dynamic offers (3.1.1 — R21): get one offer by id from the live catalog
     getOffer: (id) => CATALOG.apps.find((a) => a.id === id) || CATALOG.books.find((b) => b.id === id) || null,
+    getOfferImage: (id) => {
+      const offer = CATALOG.apps.find((a) => a.id === id) || CATALOG.books.find((b) => b.id === id) || null;
+      return (offer && offer.image) || null;
+    },
 
     // Refresh offers from remote API (env OFFERS_API_URL) or re-read local JSON
     refreshOffers,
