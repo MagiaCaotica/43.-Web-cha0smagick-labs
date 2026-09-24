@@ -31,7 +31,7 @@ describe('groq-ai — Classifier + Prompt Building', () => {
       expect(SYSTEM_PROMPT).toContain('no subscriptions');
     });
 
-    it('should mention all 11 apps by name', () => {
+    it('should mention all 12 apps by name', () => {
       const appNames = [
         'PSI GYM',
         'Arcana Goetia',
@@ -41,6 +41,7 @@ describe('groq-ai — Classifier + Prompt Building', () => {
         'Astral Lab',
         'Eerie Roads',
         'I Ching Oracle',
+        'Lucid Dream',
         'Lunar Phase Calculator',
         'Rider-Waite Tarot',
         'NOCTEM',
