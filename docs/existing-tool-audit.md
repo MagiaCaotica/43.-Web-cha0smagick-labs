@@ -1,7 +1,7 @@
 # Auditoría de herramientas existentes y matriz de mejora
 
-**Estado:** diagnóstico inicial — no modifica componentes de GitHub  
-**Alcance:** páginas HTML en `tools/`, excluyendo `tools/index.html` como página de colección  
+**Estado:** diagnóstico inicial — no modifica componentes de GitHub
+**Alcance:** páginas HTML en `tools/`, excluyendo `tools/index.html` como página de colección
 **Fecha:** 2026-09-24
 
 ## Resumen ejecutivo
