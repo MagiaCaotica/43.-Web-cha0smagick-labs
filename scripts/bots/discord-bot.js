@@ -205,7 +205,7 @@ client.on('interactionCreate', async (interaction) => {
 
       case 'pricing':
         await interaction.reply({
-          content: `💰 **Pricing**\n\n📱 Apps: $3.99–$9.99 USD (one-time)\n📖 Books: $4.99–$9.99 USD (PDF)\n🔧 Tools: FREE\n🎁 Bundle: $19.99 (52% off)\n\n**No subscriptions. No recurring fees.**\nYou buy once, you own it forever.`,
+          content: `💰 **Pricing**\n\n📱 Apps: $3.99–$14.99 USD (one-time)\n📖 Books: $4.99–$9.99 USD (PDF)\n🔧 Tools: FREE\n🎁 Bundle: $19.99 (52% off)\n\n**No subscriptions. No recurring fees.**\nYou buy once, you own it forever.`,
         });
         break;
 
@@ -268,10 +268,10 @@ client.on('guildMemberAdd', async (member) => {
       .setTitle(`🌟 Welcome to Cha0smagick Labs, ${member.displayName}!`)
       .setDescription(
         `We are an indie developer creating tools for magick, divination, and esoteric practice.\n\n` +
-        `• 📱 **11 Android apps** — one-time purchase\n` +
+        `• 📱 **12 Android apps** — one-time purchase\n` +
         `• 📖 **7 PDF books** — instant download\n` +
         `• 🔧 **10 free tools** — no registration\n` +
-        `• 📰 **134+ blog articles** — free reading\n\n` +
+        `• 📰 **467 blog articles** — free reading\n\n` +
         `Type \`/menu\` to explore everything we offer!`
       )
       .setFooter({ text: 'One-time purchases. No subscriptions. Ever.' });

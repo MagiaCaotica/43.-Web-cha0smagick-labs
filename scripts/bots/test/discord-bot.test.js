@@ -352,7 +352,7 @@ describe('discord-bot — Slash Commands + Welcome (pure function tests)', () =>
 
     it('should handle /apps command with app embeds', () => {
       const apps = BRAIN.default.apps;
-      expect(apps).toHaveLength(10);
+      expect(apps).toHaveLength(12);
       for (const app of apps) {
         expect(app).toHaveProperty('name');
         expect(app).toHaveProperty('price');
@@ -387,7 +387,7 @@ describe('discord-bot — Slash Commands + Welcome (pure function tests)', () =>
       expect(bundle.name).toBe('Esoteric Books Bundle');
       expect(bundle.price).toMatch(/^\$\d+(\.\d{2})? USD$/);
       expect(bundle.originalPrice).toMatch(/^\$\d+(\.\d{2})? USD$/);
-      expect(bundle.url).toMatch(/^https:\/\/cha0smagicklabs\.com\/bundle\.html$/);
+      expect(bundle.url).toBe('https://hotmart.com/es/marketplace/productos/bundle-todos-los-libros-esp/V107097103W');
     });
 
     it('should handle /blog command', () => {
@@ -415,7 +415,7 @@ describe('discord-bot — Slash Commands + Welcome (pure function tests)', () =>
     });
 
     it('should handle /pricing command', () => {
-      const pricingText = `💰 **Pricing**\n\n📱 Apps: $3.99–$9.99 USD (one-time)\n📖 Books: $4.99–$9.99 USD (PDF)\n🔧 Tools: FREE\n🎁 Bundle: $19.99 (52% off)\n\n**No subscriptions. No recurring fees.**\nYou buy once, you own it forever.`;
+      const pricingText = `💰 **Pricing**\n\n📱 Apps: $3.99–$14.99 USD (one-time)\n📖 Books: $4.99–$9.99 USD (PDF)\n🔧 Tools: FREE\n🎁 Bundle: $19.99 (52% off)\n\n**No subscriptions. No recurring fees.**\nYou buy once, you own it forever.`;
       expect(pricingText).toContain('No subscriptions');
       expect(pricingText).toContain('one-time');
     });
@@ -441,10 +441,10 @@ describe('discord-bot — Slash Commands + Welcome (pure function tests)', () =>
         .setTitle(`🌟 Welcome to Cha0smagick Labs, ${mockMember.displayName}!`)
         .setDescription(
           `We are an indie developer creating tools for magick, divination, and esoteric practice.\n\n` +
-          `• 📱 **11 Android apps** — one-time purchase\n` +
+          `• 📱 **12 Android apps** — one-time purchase\n` +
           `• 📖 **7 PDF books** — instant download\n` +
           `• 🔧 **10 free tools** — no registration\n` +
-          `• 📰 **134+ blog articles** — free reading\n\n` +
+          `• 📰 **467 blog articles** — free reading\n\n` +
           `Type \`/menu\` to explore everything we offer!`
         )
         .setFooter({ text: 'One-time purchases. No subscriptions. Ever.' });
@@ -453,7 +453,7 @@ describe('discord-bot — Slash Commands + Welcome (pure function tests)', () =>
       const embedInstance = EmbedBuilderMock.mock.results[0].value;
       expect(embedInstance.setColor).toHaveBeenCalledWith(Colors.DarkPurple);
       expect(embedInstance.setTitle).toHaveBeenCalledWith(expect.stringContaining('Welcome to Cha0smagick Labs'));
-      expect(embedInstance.setDescription).toHaveBeenCalledWith(expect.stringContaining('11 Android apps'));
+      expect(embedInstance.setDescription).toHaveBeenCalledWith(expect.stringContaining('12 Android apps'));
       expect(embedInstance.setFooter).toHaveBeenCalledWith({ text: 'One-time purchases. No subscriptions. Ever.' });
     });
 
