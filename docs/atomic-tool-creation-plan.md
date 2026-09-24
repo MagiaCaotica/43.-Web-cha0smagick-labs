@@ -1,9 +1,9 @@
 # Plan atómico para crear herramientas web gratuitas
 
-**Proyecto:** Cha0smagick Labs  
-**Ruta base:** `tools/`  
-**Estado:** PLANIFICACIÓN — no implementado  
-**Versión del plan:** 1.0  
+**Proyecto:** Cha0smagick Labs
+**Ruta base:** `tools/`
+**Estado:** PLANIFICACIÓN — no implementado
+**Versión del plan:** 1.0
 **Fecha de elaboración:** 2026-09-24
 
 > Este documento define **40 herramientas nuevas** para crear después de auditar y stabilizar las existentes. No es una afirmación de que ya estén publicadas. Cada herramienta se construye como una unidad pequeña, comprobable y reversible. No se deben modificar componentes de GitHub, workflows, bots, scripts de integración ni assets compartidos de terceros.
@@ -21,7 +21,7 @@ Construir una biblioteca de herramientas gratuitas, rápidas, privadas por defec
 1. No se pisan ni sobrescriben las herramientas actuales salvo que exista una tarea de corrección separada.
 2. No se modifican repositorios, enlaces, badges, workflows o automatizaciones que pertenezcan a GitHub.
 3. Cada herramienta se declara como **simbólica, formativa, de entretenimiento o de reflective planning** cuando corresponda. No se promete que un resultado materialice deseos, prediga el futuro, cure enfermedades, sustituya consejo médico, legal o financiero, ni permita afirmar que una práctica se comunica con entidades.
-4. Los datos de nacimiento, journaling, rituales y sesiones son locales al navegador salvo una decisión posterior explícita. No se envían a un servidor.
+4. Los datos de nacimiento, rituales y sesiones son locales al navegador salvo una decisión posterior explícita. No se envían a un servidor.
 5. No se raspa contenido, imágenes, textos o datos de terceros. Las cartas, símbolos y textos propios se escriben desde cero o se usan con licencia/atribución comprobable.
 6. No se publican ratings, testimonios, precios, usuarios o “verified purchaser” inventados.
 7. La documentación de cada herramienta debe poder leerse sin ejecutar JavaScript: título, propósito, entrada, salida, limitaciones y advertencia visible.
@@ -51,14 +51,14 @@ Una herramienta solo se marca como terminada cuando cumple todos estos puntos:
 La implementación futura debe añadir, sin reescribir el sistema compartido actual:
 
 ```text
-tools/<slug>.html                 Página independiente de la herramienta
-js/atomic-tools.js                Runtime compartido y estados de UI
-js/atomic-tools.min.js            Bundle de producción, si el build lo exige
-css/atomic-tools.css              Componentes visuales de las nuevas páginas
-css/atomic-tools.min.css          Bundle de producción
-data/atomic-tools.json            Registro central, textos, estados y versionado
-scripts/atomic-tools.test.js      Pruebas de lógica y contratos
-scripts/atomic-tools.e2e.spec.js  Pruebas de flujo crítico
+tools/<slug>.html Página independiente de la herramienta
+js/atomic-tools.jsRuntime compartido y estados de UI
+js/atomic-tools.min.jsBundle de producción, si el build lo exige
+css/atomic-tools.cssComponentes visuales de las nuevas páginas
+css/atomic-tools.min.cssBundle de producción
+data/atomic-tools.jsonRegistro central, textos, estados y versionado
+scripts/atomic-tools.test.jsPruebas de lógica y contratos
+scripts/atomic-tools.e2e.spec.jsPruebas de flujo crítico
 ```
 
 Reglas de arquitectura:
@@ -156,8 +156,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A01 — Full Birth Chart
 
-**Trabajo del usuario:** entender una lectura inicial de carta natal a partir de fecha, hora y lugar.  
-**Entrada:** fecha, hora, ciudad/coordenadas, zona horaria y opción de mostrar casas.  
+**Trabajo del usuario:** entender una lectura inicial de carta natal a partir de fecha, hora y lugar.
+**Entrada:** fecha, hora, ciudad/coordenadas, zona horaria y opción de mostrar casas.
 **Salida:** Sol, Luna, Ascendente, planetas, casas cuando el motor lo permita,.method y limitaciones.
 
 1. Elegir y documentar un motor de efemérides browser-safe; no calcularEfemérides a mano.
@@ -171,8 +171,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A02 — Rising Sign Calculator
 
-**Trabajo del usuario:** calcular el Ascendente sin abandonar una explicación legible.  
-**Entrada:** fecha, hora exacta, ciudad/coordenadas y zona horaria.  
+**Trabajo del usuario:** calcular el Ascendente sin abandonar una explicación legible.
+**Entrada:** fecha, hora exacta, ciudad/coordenadas y zona horaria.
 **Salida:** signo del Ascendente, cálculo, grados aproximados y advertencia de sensibilidad horaria.
 
 1. Reutilizar el motor de A01 mediante una función compartida, no copiar la implementación.
@@ -184,8 +184,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A03 — Moon Sign Calculator
 
-**Trabajo del usuario:** explorar el signo lunar con una explicación de método.  
-**Entrada:** fecha, hora y zona horaria.  
+**Trabajo del usuario:** explorar el signo lunar con una explicación de método.
+**Entrada:** fecha, hora y zona horaria.
 **Salida:** signo lunar aproximado, transición si la fecha queda cerca de un cambio de signo y fecha de cálculo.
 
 1. Implementar el cálculo con la misma base temporal de A01/A02.
@@ -197,8 +197,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A04 — Zodiac Cusp Calculator
 
-**Trabajo del usuario:** saber si una fecha cae en un signo o en una zona cuspídea.  
-**Entrada:** fecha de nacimiento o fecha consultada.  
+**Trabajo del usuario:** saber si una fecha cae en un signo o en una zona cuspídea.
+**Entrada:** fecha de nacimiento o fecha consultada.
 **Salida:** signo, intervalo de fechas, porcentaje aproximado de distancia al cusp cuando aplique y advertencia de tablas variables.
 
 1. Definir una tabla de límites con fuente, versión y zona horaria; no copiar una tabla sin atribución.
@@ -210,8 +210,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A05 — Planetary Retrograde Calendar
 
-**Trabajo del usuario:** consultar un calendario mensual de retrogradaciones con zona explícita.  
-**Entrada:** mes, año y zona horaria.  
+**Trabajo del usuario:** consultar un calendario mensual de retrogradaciones con zona explícita.
+**Entrada:** mes, año y zona horaria.
 **Salida:** lista de planetas, fechas de inicio/fin, estado y fuente de efemérides.
 
 1. Elegir efemérides versionadas y una estrategia de actualización documentada.
@@ -223,8 +223,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A06 — Planetary Day Calculator
 
-**Trabajo del usuario:** convertir una fecha y hora local en el día planetario tradicional.  
-**Entrada:** fecha, hora y zona horaria.  
+**Trabajo del usuario:** convertir una fecha y hora local en el día planetario tradicional.
+**Entrada:** fecha, hora y zona horaria.
 **Salida:** día planetario, intervalo, método y uso simbólico opcional.
 
 1. Definir el orden planetario y el inicio del día según la tradición elegida.
@@ -236,8 +236,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A07 — Tarot Card Reference
 
-**Trabajo del usuario:** consultar el significado de una carta sin_clickes infinitos.  
-**Entrada:** búsqueda, arcana y palo.  
+**Trabajo del usuario:** consultar el significado de una carta sin_clickes infinitos.
+**Entrada:** búsqueda, arcana y palo.
 **Salida:** índice de 78 cartas, filtros, significado original y relacionados.
 
 1. Escribir un dataset propio y revisable de 78 cartas, con derechos de arte separados.
@@ -249,21 +249,21 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A08 — Tarot Spread Builder
 
-**Trabajo del usuario:** elegir una tirada, posiciones y carta de enfoque.  
-**Entrada:** tipo de tirada, intención breve y cantidad de posiciones.  
+**Trabajo del usuario:** elegir una tirada, posiciones y carta de enfoque.
+**Entrada:** tipo de tirada, intención breve y cantidad de posiciones.
 **Salida:** plantilla de posiciones, selección aleatoria reproducible y printable layout.
 
 1. Crear formatos 1/3/5/7 cartas con posiciones visibles y nombres editables.
 2. Separar generador aleatorio de renderizado.
 3. Ofrecer seed opcional para repetir una tirada sin claiming mystical causality.
 4. Exportar imagen/texto limpio sin datos de terceros.
-5. Probar teclado, móvil,orientation y reset.
+5. Probar teclado, móvil, orientación y reinicio.
 6. Enlazar A07, A09 y el CTA de la app.
 
 ### A09 — Tarot Journal
 
-**Trabajo del usuario:** guardar la interpretación y el contexto de una tirada.  
-**Entrada:** fecha, pregunta, cartas, notas, mood y tags.  
+**Trabajo del usuario:** guardar la interpretación y el contexto de una tirada.
+**Entrada:** fecha, pregunta, cartas, notas, mood y tags.
 **Salida:** registro local, búsqueda, edición, exportación y borrado.
 
 1. Diseñar un esquema versionado y validar JSON importado.
@@ -275,8 +275,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A10 — Lenormand Card Draw
 
-**Trabajo del usuario:** hacer una tirada rápida de cartas Lenormand con significados editables.  
-**Entrada:** pregunta, número de cartas y orden.  
+**Trabajo del usuario:** hacer una tirada rápida de cartas Lenormand con significados editables.
+**Entrada:** pregunta, número de cartas y orden.
 **Salida:** cartas,Significados y una interpretación simbólica opcional.
 
 1. Escribir un dataset propio de 36 cartas, con aviso de que no es el deck oficial.
@@ -288,8 +288,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A11 — Sibilla Yes/No Oracle
 
-**Trabajo del usuario:** obtener una respuesta simbólica rápida a una pregunta cerrada.  
-**Entrada:** pregunta, nivel de detalle y baraja local.  
+**Trabajo del usuario:** obtener una respuesta simbólica rápida a una pregunta cerrada.
+**Entrada:** pregunta, nivel de detalle y baraja local.
 **Salida:** carta, significado, respuesta orientativa y registro opcional.
 
 1. Crear prompts originales que no copien la editorial de un baraja comercial.
@@ -301,8 +301,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A12 — Pendulum Question Builder
 
-**Trabajo del usuario:** preparar una consulta de péndulo neutral y registrar su práctica.  
-**Entrada:** pregunta, opciones sí/no, intention y notas.  
+**Trabajo del usuario:** preparar una consulta de péndulo neutral y registrar su práctica.
+**Entrada:** pregunta, opciones sí/no, intención y notas.
 **Salida:** pregunta revisable, plan neutral, registro de resultados y exportación.
 
 1. Mostrar una regla de seguridad: no usar sobre medicación, personas sin consentimiento o para sustituir decisiones importantes.
@@ -314,8 +314,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A13 — Elder Futhark Reference
 
-**Trabajo del usuario:** consultar runas, transliteraciones y significados de forma neutral.  
-**Entrada:** búsqueda, forma de runa y categoría.  
+**Trabajo del usuario:** consultar runas, transliteraciones y significados de forma neutral.
+**Entrada:** búsqueda, forma de runa y categoría.
 **Salida:** ficha de runa, transliteración, keywords y relaciones.
 
 1. Construir un dataset revisado con fuentes citadas y variantes separadas.
@@ -327,8 +327,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A14 — Runic Name Translator
 
-**Trabajo del usuario:** convertir un nombre a runas de forma explicable.  
-**Entrada:** nombre, sistema, fuente de caracteres y opción de invertir o no.  
+**Trabajo del usuario:** convertir un nombre a runas de forma explicable.
+**Entrada:** nombre, sistema, fuente de caracteres y opción de invertir o no.
 **Salida:** transliteración, runas dibujadas y secuencia de pasos.
 
 1. Definir un algoritmo de transliteración por grapheme/sonido, no por byte UTF-16.
@@ -340,8 +340,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A15 — Ogham Oracle
 
-**Trabajo del usuario:** explorar una consultaOgham con símbolos y contexto.  
-**Entrada:** pregunta, grupo, orientación y posición.  
+**Trabajo del usuario:** explorar una consulta de Ogham con símbolos y contexto.
+**Entrada:** pregunta, grupo, orientación y posición.
 **Salida:** símbolo, significado, lectura orientativa y registro opcional.
 
 1. Crear dataset propio de grupos y audio visual/Unicode validado.
@@ -353,8 +353,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A16 — Planetary Alphabet Cipher
 
-**Trabajo del usuario:** convertir texto en un código alfabético-planetario reproducible.  
-**Entrada:** texto, sistema y mayúsculas.  
+**Trabajo del usuario:** convertir texto en un código alfabético-planetario reproducible.
+**Entrada:** texto, sistema y mayúsculas.
 **Salida:** tabla letra/número/planeta, código y exportación.
 
 1. Definir el mapping A1Z26 y la correspondencia planetaria separada.
@@ -366,8 +366,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A17 — Sigil Intention Encoder
 
-**Trabajo del usuario:** convertir una intención en un sigil trazable según un método declarado.  
-**Entrada:** intención, método y configuración de stream.  
+**Trabajo del usuario:** convertir una intención en un sigil trazable según un método declarado.
+**Entrada:** intención, método y configuración de stream.
 **Salida:** letras normalizadas, trazado, pasos y SVG exportable.
 
 1. Implementar A-I-K-B-E-K-A-R como algoritmo determinista y documentado.
@@ -379,8 +379,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A18 — Magical Correspondence Finder
 
-**Trabajo del usuario:** encontrar correspondencias filtrables para una intención.  
-**Entrada:** intención, elemento, planeta, número, carta, runa o símbolo.  
+**Trabajo del usuario:** encontrar correspondencias filtrables para una intención.
+**Entrada:** intención, elemento, planeta, número, carta, runa o símbolo.
 **Salida:** tabla de coincidencias y explicación de fuentes.
 
 1. Modelar cada dimensión como datos, no como condicionales incrustados en la vista.
@@ -392,8 +392,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A19 — Moon Phase Calendar
 
-**Trabajo del usuario:** consultar fases lunares de un año en su zona.  
-**Entrada:** año, mes, zona y hemisferio/fecha de referencia.  
+**Trabajo del usuario:** consultar fases lunares de un año en su zona.
+**Entrada:** año, mes, zona y hemisferio/fecha de referencia.
 **Salida:** calendario mensual, fases principales, timestamps y fuente.
 
 1. Usar un algoritmo versionado o un dataset astronómico local con fecha de generación.
@@ -405,8 +405,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A20 — Moon Intention Planner
 
-**Trabajo del usuario:** elegir una intención para una fecha lunar y guardarla localmente.  
-**Entrada:** fecha, intención, fase, duración y recordatorio.  
+**Trabajo del usuario:** elegir una intención para una fecha lunar y guardarla localmente.
+**Entrada:** fecha, intención, fase, duración y recordatorio.
 **Salida:** plan, checklist, notas y exportación.
 
 1. Mostrar la fase y el cálculo como referencia, no como predicción.
@@ -418,8 +418,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A21 — Planetary Hours Planner
 
-**Trabajo del usuario:** consultar una tabla horaria planetaria para fecha y ubicación.  
-**Entrada:** fecha, ciudad/coordenadas, hemisferio y zona.  
+**Trabajo del usuario:** consultar una tabla horaria planetaria para fecha y ubicación.
+**Entrada:** fecha, ciudad/coordenadas, hemisferio y zona.
 **Salida:** tabla de horas, día, planeta, amanecer/atardecer y advertencias.
 
 1. Reutilizar motor de ephemeris yseparar cálculo solar de la tabla tradicional.
@@ -431,8 +431,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A22 — Ritual Timing Scorecard
 
-**Trabajo del usuario:** comparar opciones de momento con criterios visibles.  
-**Entrada:** fecha, criterio, pesos y notas.  
+**Trabajo del usuario:** comparar opciones de momento con criterios visibles.
+**Entrada:** fecha, criterio, pesos y notas.
 **Salida:** scorecard con pesos, resultado, explicación y exportación.
 
 1. Definir pesos editables y mostrar la fórmula de cada puntuación.
@@ -444,8 +444,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A23 — Candle Intention Planner
 
-**Trabajo del usuario:** convertir una intención en un plan de vela claro y seguro.  
-**Entrada:** intención, color, duración, espacio y contacto alternativo.  
+**Trabajo del usuario:** convertir una intención en un plan de vela claro y seguro.
+**Entrada:** intención, color, duración, espacio y contacto alternativo.
 **Salida:** plan, lista de preparación, recordatorio de seguridad y notas.
 
 1. Integrar la tabla de colores de `candle-color-calculator.html` mediante enlace, no mediante copia divergente.
@@ -457,8 +457,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A24 — Spell Ingredient Planner
 
-**Trabajo del usuario:** construir una lista de ingredientes con alternativas y motivo.  
-**Entrada:** intención, elementos disponibles, presupuesto y restricciones.  
+**Trabajo del usuario:** construir una lista de ingredientes con alternativas y motivo.
+**Entrada:** intención, elementos disponibles, presupuesto y restricciones.
 **Salida:** lista, sustituciones, preparación y registro.
 
 1. Crear dataset de correspondencias con licencia/fuente y separadores de tradition.
@@ -470,8 +470,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A25 — Banishing Ritual Builder
 
-**Trabajo del usuario:** preparar un ritual simbólico imprimible y reversible.  
-**Entrada:** intención, contexto, duración,Recordatorio de consent y simbolos.  
+**Trabajo del usuario:** preparar un ritual simbólico imprimible y reversible.
+**Entrada:** intención, contexto, duración, recordatorio de consentimiento y símbolos.
 **Salida:** secuencia, lista, texto imprimible y bitácora.
 
 1. Crear plantillas symbolically neutral con placeholders editables.
@@ -483,8 +483,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A26 — Elemental Balance Checker
 
-**Trabajo del usuario:** hacer una reflexión guiada sobre cuatro elementos.  
-**Entrada:** ratings opcionales, notas y fecha.  
+**Trabajo del usuario:** hacer una reflexión guiada sobre cuatro elementos.
+**Entrada:** ratings opcionales, notas y fecha.
 **Salida:** gráfico, preguntas de reflexión y entrada de journal local.
 
 1. Diseñar preguntas no diagnósticas y permitir omitir cada rating.
@@ -496,8 +496,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A27 — Lucid Dream Training Planner
 
-**Trabajo del usuario:** diseñar una práctica de sueños lúcidos con realism.  
-**Entrada:** horas de sueño,Recordatorio, técnica y objetivo.  
+**Trabajo del usuario:** diseñar una práctica de sueños lúcidos con realism.
+**Entrada:** horas de sueño, recordatorio, técnica y objetivo.
 **Salida:** plan de 7/14/21 días, checklist y registro de escenas reales.
 
 1. Crear calendario configurable sin asumir que todas las personas soñan igual.
@@ -509,12 +509,12 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A28 — Reality Check Technique Coach
 
-**Trabajo del usuario:** practicar chequeos de realidad de forma privada y estructurada.  
+**Trabajo del usuario:** practicar chequeos de realidad de forma privada y estructurada.
 **Entrada:** técnica, duración, escenas registradas y resultado.
 **Salida:** guía, temporizador, checklist ybitácora.
 
 1. Dividir la guía en pasos breves con “continuar/saltar”.
-2. Probar teclado, pantalla reader, pausa y reset.
+2. Probar teclado, lector de pantalla, pausa y reinicio.
 3. Mantener la herramienta como reflexión, no como evaluación de salud mental.
 4. Añadir advertencia de no usarla durante conducción o actividad insegura.
 5. Enlazar A27, A30 y `reality-check-tracker.html` sin duplicar datos.
@@ -522,9 +522,9 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A29 — Dream Symbol Dictionary
 
-**Trabajo del usuario:** anotar palabras e imágenes de un sueño y crear preguntas de reflexión.  
-**Entrada:** símbolo, notas, sentimiento y contexto.  
-**Salida:** diccionario personal local, prompted questions y exportación.
+**Trabajo del usuario:** anotar palabras e imágenes de un sueño y crear preguntas de reflexión.
+**Entrada:** símbolo, notas, sentimiento y contexto.
+**Salida:** diccionario personal local, preguntas sugeridas y exportación.
 
 1. No dictar significados universales; separar “registro” de “interpretación opcional”.
 2. Crear índices de búsqueda y tags; usar escape en cada render.
@@ -535,8 +535,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A30 — Astral Projection Session Timer
 
-**Trabajo del usuario:** seguir una sesión de práctica con fases claras.  
-**Entrada:** duración, fases, sonido de aviso y objetivo.  
+**Trabajo del usuario:** seguir una sesión de práctica con fases claras.
+**Entrada:** duración, fases, sonido de aviso y objetivo.
 **Salida:** timer, checklist, registro y export.
 
 1. Implementar el reloj con `requestAnimationFrame` o elapsed time, no con decrementos que se detengan en background.
@@ -548,8 +548,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A31 — Meditation Focus Timer
 
-**Trabajo del usuario:** practicar atención con intervalos y sin cargar datos.  
-**Entrada:** minutos, break, tipo de sesión, sonido.  
+**Trabajo del usuario:** practicar atención con intervalos y sin cargar datos.
+**Entrada:** minutos, break, tipo de sesión, sonido.
 **Salida:** timer, resumen local y opcional streak.
 
 1. Separar countdown de audio; audio opcional y generado con Web Audio/API browser.
@@ -560,11 +560,11 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A32 — Intention Achievement Tracker
 
-**Trabajo del usuario:** registrar acciones, hitos y evidencias, no promesas.  
-**Entrada:** intention, deadline, actions, status y notes.  
+**Trabajo del usuario:** registrar acciones, hitos y evidencias, no promesas.
+**Entrada:** intención, fecha límite, acciones, estado y notas.
 **Salida:** tablero, progreso, historial y export JSON.
 
-1. Modelar intention, action, milestone y evidence como datos separados.
+1. Modelar intención, acción, hito y evidencia como datos separados.
 2. Calcular progreso por acciones completadas, no por “manifestation”.
 3. Permitir delete/archive y no usar fechas del servidor.
 4. Crear vista móvil y accesibilidad de tablas.
@@ -573,8 +573,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A33 — Ritual Safety Checklist
 
-**Trabajo del usuario:** comprobar límites, consentimiento y precautions antes de una práctica.  
-**Entrada:** tipo de práctica, espacio, personas presentes, consent y fecha.  
+**Trabajo del usuario:** comprobar límites, consentimiento y precauciones antes de una práctica.
+**Entrada:** tipo de práctica, espacio, personas presentes, consentimiento y fecha.
 **Salida:** checklist con pendientes, advertencias y printable summary.
 
 1. Separar safety rules fijas de preferencias personales.
@@ -586,60 +586,60 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A34 — Consent Boundary Planner
 
-**Trabajo del usuario:** definir qué se puede observar, grabar, compartir o revocar.  
-**Entrada:** práctica, participantes, scope, canales, retención y revocación.  
+**Trabajo del usuario:** definir qué se puede observar, grabar, compartir o revocar.
+**Entrada:** práctica, participantes, scope, canales, retención y revocación.
 **Salida:** documento local imprimible y checklist de revocación.
 
 1. Crear campos de consentimiento affirmative; no usar checkbox premarcado.
 2. Explicar qué datos se guardan y permitir borrado completo.
-3. Añadir escenario de no consentimiento y “stop immediately”.
+3. Añadir escenario de no consentimiento y “detener inmediatamente”.
 4. Probar horarios, personas no identificables y exportación.
 5. Mantenerla como herramienta de reflexión, no legal advice.
 6. Enlazar A33, A36 y A35.
 
 ### A35 — Digital Grimoire Organizer
 
-**Trabajo del usuario:** organizar notas, símbolos y referencias con búsqueda.  
-**Entrada:** título, tags, body, favorite, source y attachments opcionales.  
-**Salida:** índice filtrable, detalle y export/import.
+**Trabajo del usuario:** organizar notas, símbolos y referencias con búsqueda.
+**Entrada:** título, tags, contenido, favorito, fuente y adjuntos opcionales.
+**Salida:** índice filtrable, detalle y exportación/importación.
 
 1. Crear schema versionado y sanitización estricta de Markdown/HTML.
 2. Renderizar texto como texto por defecto; no aceptar HTML arbitrario.
-3. Añadir búsqueda full-text local, tags, favoritos y límites de tamaño.
-4. Implementar import/export seguro y migración de datos.
+3. Añadir búsqueda texto completo local, tags, favoritos y límites de tamaño.
+4. Implementar una exportación e importación seguras y migración de datos.
 5. Probar archivos corruptos, nombres duplicados, Unicode y localStorage lleno.
 6. Enlazar A18, A29 y contenido de referits.
 
 ### A36 — Paranormal Session Prep Checklist
 
-**Trabajo del usuario:** preparar una sesión de investigación paranormal con protocolo honesto.  
-**Entrada:** lugar, equipos, consentimiento, hora, hipótesis y campos de observación.  
-**Salida:** checklist, timestamp log, export y post-session review.
+**Trabajo del usuario:** preparar una sesión de investigación paranormal con protocolo honesto.
+**Entrada:** lugar, equipos, consentimiento, hora, hipótesis y campos de observación.
+**Salida:** checklist, registro de fecha y hora, exportación y revisión posterior.
 
 1. Incluir “no fabricate evidence”, control de frío, hora del dispositivo y condiciones ambientales.
 2. Separar hechos, interpretación, anomalía no confirmada y sesgo del observador.
-3. Añadir audio/video only after consent y warning de storage.
+3. Añadir audio o vídeo solo después del consentimiento y advertencia de almacenamiento.
 4. No usar generators que produzcan señales falsas ni presentarlas como detector profesional.
 5. Probar checklists parciales, fallos de media y zonas horarias.
 6. Enlazar A33, A34 y privacy.
 
 ### A37 — Sigil Charging Planner
 
-**Trabajo del usuario:** preparar una práctica de carga/revisión de un sigil.  
-**Entrada:** sigil imported/created, intention, date, duration, method y notes.  
+**Trabajo del usuario:** preparar una práctica de carga/revisión de un sigil.
+**Entrada:** sigilo importado o creado, intención, fecha, duración, método y notas.
 **Salida:** plan, timer, steps y bitácora.
 
 1. Reutilizar A17 para crear/importar sin pisar `sigil-charging-timer.html`.
 2. Mostrar que la práctica es simbólica y no garantiza protección/resultado.
-3. Añadir alternative no-espiritual y pause.
+3. Añadir alternativa no espiritual y pausa.
 4. Guardar SVG solo si el usuario lo solicita; no ejecutarlo como HTML.
 5. Probar SVG malicioso, archivos grandes y storage deshabilitado.
 6. Enlazar A23, A32 y book CTA.
 
 ### A38 — Servitor Design Journal
 
-**Trabajo del usuario:** documentar el diseño, propósito, límites y revocación de un registro simbólico.  
-**Entrada:** nombre, propósito, límites, symbols, revisión y fecha.  
+**Trabajo del usuario:** documentar el diseño, propósito, límites y revocación de un registro simbólico.
+**Entrada:** nombre, propósito, límites, symbols, revisión y fecha.
 **Salida:** ficha local, printable y revocación checklist.
 
 1. Usar lenguaje de “registro simbólico/compulsión” y no afirmar entidad autónoma.
@@ -651,8 +651,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A39 — Results Tracking Dashboard
 
-**Trabajo del usuario:** observar acciones, práctica y cambios de estado sinOznačiti causalidad.  
-**Entrada:** fecha, métrica, notas, tags y objetivo.  
+**Trabajo del usuario:** observar acciones, práctica y cambios de estado sinOznačiti causalidad.
+**Entrada:** fecha, métrica, notas, tags y objetivo.
 **Salida:** dashboard local, filtros, gráficos y export.
 
 1. Separar métricas auto-contadas de notas subjetivas.
@@ -664,8 +664,8 @@ Cada ficha hereda los 12 pasos de la sección 4. Los pasos indicados abajo son l
 
 ### A40 — Sabbat Season Planner
 
-**Trabajo del usuario:** preparar un calendario estacional/ Wheel of the Year.  
-**Entrada:** hemisferio, año, tradición y tipo de planificación.  
+**Trabajo del usuario:** preparar un calendario estacional/ Wheel of the Year.
+**Entrada:** hemisferio, año, tradición y tipo de planificación.
 **Salida:** fechas, temas, journaling prompts, printable y calendar link.
 
 1. Definir fechas por hemisferio y no usar fechas universales sin explicarlo.
