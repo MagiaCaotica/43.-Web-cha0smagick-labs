@@ -2,12 +2,12 @@
 
 **Objetivo:** alcanzar y sostener **US$5.000 netos cobrados por mes**, no solamente tráfico, contenido o instalaciones.
 
-**Estado del documento:** backlog pendiente, reauditado y atómico. Ninguna tarea de este documento se considera terminada. El archivo anterior se conserva únicamente como antecedente contradictorio; este documento reemplaza cualquier checklist, porcentaje o claim histórico como fuente de verdad.
+**Estado del documento:** backlog pendiente, reauditado y atómico, con evidencia local parcial añadida el 2026-09-24. Ninguna tarea externa o gate incompleto se considera terminada. El archivo anterior se conserva únicamente como antecedente contradictorio; este documento reemplaza cualquier checklist, porcentaje o claim histórico como fuente de verdad.
 
-**Fecha de auditoría:** 2026-09-23
+**Fecha de auditoría:** 2026-09-24
 **Alcance:** repositorio local `43.-Web-cha0smagick-labs` y las fuentes externas que el equipo debe verificar durante la ejecución. El repositorio no demuestra por sí solo que una campaña, checkout, listing, webhook, automatización, dashboard o flujo de consentimiento esté activo en producción.
 
-**Restricción de esta pasada:** la ejecución local modificó sólo archivos de catálogo, bots, páginas de apps, landings y evidencia documentada; este plan sigue siendo el único documento de control de producto. Se preservan los cambios preexistentes de `docs/thin-articles-progress.md` y `_verify_nde_tmp.py`; no se sobrescriben, no se borran y no se incluyen en el diff de este plan.
+**Restricción de esta pasada:** la ejecución local modificó catálogo, páginas de apps, landings, artículos, páginas legales de borrador, consent local, inventario, contrato de eventos, pruebas y evidencia documentada; este plan sigue siendo el único documento de control de producto. Se preservan el cambio preexistente de `docs/thin-articles-progress.md` mediante su regenerador y el archivo no rastreado `_verify_nde_tmp.py`; no se sobrescribe, no se borra y no se incluye en el diff de este plan. No se crean commits.
 
 ---
 
@@ -84,26 +84,26 @@ El documento no presenta un porcentaje de mezcla como forecast. Si el equipo dec
 
 ### 2.1 Superficie del repositorio
 
-- Rama observada: `main`, sincronizada con `origin/main`, HEAD observado `6c98b15`.
+- Rama observada: `main`, sincronizada con `origin/main`, HEAD observado `751985d` (2026-09-23T22:15:23-05:00).
 - Working tree preexistente: `M docs/thin-articles-progress.md` y `?? _verify_nde_tmp.py`; se preservan.
 - Inventario tracked observado: 1.402 archivos, incluyendo 538 HTML, 124 JS, 111 Python, 18 JSON y 25 MD.
-- Superficie filesystem observada: 577 HTML; el reporte técnico.scan working set 524 páginas. La diferencia debe resolverse en P0-01 antes de comparar cualquier métrica.
-- `sitemap.xml` contiene 493 URLs observadas; `llms.txt` existe, pero no se debe inferir que sea completo, actualizado o suficiente para GEO.
+- Superficie filesystem observada: 582 HTML; el working set gobernado por el verificador tiene 529 páginas. La diferencia actual es 53 artefactos excluidos; el ledger v1.1.0 documenta el snapshot histórico 577/524 y el estado actual.
+- `sitemap.xml` contiene 492 URLs observadas; `llms.txt` existe, pero no se debe inferir que sea completo, actualizado o suficiente para GEO.
 - No se encontraron `llms-full.txt`, `indexnow.json`, `humans.txt` ni `security.txt`. Su ausencia es una decisión por documentar, no una tarea automática de publicación.
 
 ### 2.2 SEO, contenido y performance
 
-- El script local `scripts/verify_tech_debt.py` reportó 518 páginas con JSON-LD validado y cero errores de validación del script. Esto no prueba rich results, unicidad de metadata, indexabilidad ni rendimiento en buscadores.
-- Conteos de metadata sobre la superficie filesystem: canonical 514, description 526, hreflang 515, robots meta 274, author-like 537, published/modified 467, Open Graph 516, Twitter 517 y `noscript` 518. Son señales de cobertura, no de corrección.
-- El reporte de accesibilidad contiene 180 `missing_alt`, 270 `empty_alt` y 190 `heading_skips`. Es una brecha pendiente de remediar y volver a medir.
-- El reporte de imágenes contiene 4.183 imágenes; sólo 9 están en WebP, 412 tienen dimensiones declaradas y 68 tienen lazy loading. El trabajo de performance debe medirse por plantillas y no_hidden por una métrica global sin contexto.
-- `scripts/thin_articles_report.py` reporta 0 artículos por debajo de 800 palabras y 316 por encima de 1.500. La cola reportada de artículos entre 800 y 1.500 requiere clasificación editorial; el umbral no prueba intención, E-E-A-T, enlaces, conversión ni utilidad.
+- El script local `scripts/verify_tech_debt.py` reportó 523 páginas con JSON-LD y cero errores de validación del script. Esto no prueba rich results, unicidad de metadata, indexabilidad ni rendimiento en buscadores.
+- Conteos de metadata sobre la superficie filesystem después de la remediación local: canonical 529, description 529 y hreflang 529 en la superficie gobernada; la verificación exacta queda sujeta a medición de buscadores y Rich Results. Persisten 180 `missing_alt`, 270 `empty_alt` y el baseline de heading skips del reporte previo, que requieren una revisión manual de accesibilidad y no se deben corregir con un reemplazo ciego.
+- La auditoría local del 2026-09-24 corrigió 2 descripciones, 9 hreflang y 10 canonical en páginas concretas; no se cambiaron precios, claims ni URLs de venta.
+- El reporte de imágenes contiene 4.183 imágenes; sólo 9 están en WebP, 412 tienen dimensiones declaradas y 68 tienen lazy loading. El trabajo de performance debe medirse por plantillas, no_hidden y evidencia de carga real, no por una métrica global sin contexto.
+- `scripts/thin_articles_report.py` reporta ahora 0 artículos por debajo de 800 palabras, 0 entre 800 y 1.500 y 467 por encima de 1.500; el reporte fue regenerado el 2026-09-24. El umbral no prueba intención, E-E-A-T, enlaces, conversión ni utilidad.
 - El repositorio contiene `robots.txt` y sitemap, pero no hay evidencia en el repo de una auditoría completa de canonical recíproco, hreflang, indexabilidad, Core Web Vitals, Lighthouse real, backlinks o revenue orgánico.
 
 ### 2.3 GEO / AI Search
 
-- La presencia de `llms.txt` no demuestra que entidades, precios, autores, productos, fuentes o respuestas estén sincronizados.
-- No existe un crawler output, mapa de entidades, registro de consultas, fecha de última revisión ni log de citas/referrals de AI.
+- `llms.txt` existe, pero la decisión local en `docs/geo-surface-decision.md` documenta que no se publique `llms-full.txt` automáticamente hasta reconciliar entidades, precios y estados.
+- El mapa de entidades, crawler output, registro de consultas, fecha de última revisión y log de citas/referrals de AI siguen pendientes; la propuesta local no es evidencia de descubrimiento.
 - La GEO debe medirse como una hipótesis de descubrimiento y citas, no como ranking garantizado.
 
 ### 2.4 Catálogo, apps y ASO
@@ -133,7 +133,8 @@ El documento no presenta un porcentaje de mezcla como forecast. Si el equipo dec
 ### 2.7 Legal y confianza
 
 - Existe `privacy-policy.html`.
-- No existen en la raíz `terms.html`, `terms-of-service.html`, `cookie-policy.html`, `refund-policy.html` ni `disclaimer.html`.
+- La pasada local añadió borradores de trabajo `terms.html`, `cookie-policy.html`, `refund-policy.html`, `disclaimer.html` y `affiliate-disclosure.html`; están enlazados desde el footer local y marcados explícitamente como pendientes de revisión legal.
+- La revisión formal del owner legal, Data protection, consent accept/reject/withdrawal y claims de garantía/refund continúa sin verificarse.
 - `index.html` contiene claims de garantía/refund y comportamiento de consent que deben revisarse antes de capturar leads o cobrar.
 - La auditoría legal formal, Data protection y Policy de cada app no están probadas por el repositorio.
 
@@ -143,7 +144,7 @@ El documento no presenta un porcentaje de mezcla como forecast. Si el equipo dec
 - No hay evidencia suficiente de uptime, alertas, rollback, rotación de secrets, retención de logs, backups, soporte o respuesta a incidentes.
 - Los conteos de `docs/thin-articles-progress.md` son un reporte de umbral y no un sistema de calidad editorial o conversión.
 
-### 2.9 Implementación local de esta pasada
+### 2.9 Implementación local ejecutada y límites
 
 - `scripts/bots/data/offers.json` quedó reconciliado localmente con 12 páginas de apps, 12 package IDs/precios públicos, 7 libros y el bundle observado.
 - `docs/revenue-catalog-reconciliation.md` registra la matriz, límites, comandos de verificación y bloqueos externos.
@@ -151,6 +152,11 @@ El documento no presenta un porcentaje de mezcla como forecast. Si el equipo dec
 - Las 12 páginas de apps tienen default GA4 denied antes de `gtag('config', ...)`; esto es un guard técnico, no prueba legal completa.
 - `books-bundle.html` registra US$19.99 en el evento de checkout, no US$49.99.
 - `complete-access.html` y `flash-sale.html` ya no exponen hrefs placeholder; sus CTA Hotmart están bloqueados y no registran checkout.
+- Se actualizó `docs/canonical-asset-inventory.md` v1.1.0: el snapshot actual es 582 filesystem = 529 gobernados + 53 excluidos, sitemap 492, y conserva el histórico 577/524; registra oferta/URL/owner/estado y mantiene la limitación de publicación externa.
+- Se crearon cinco páginas legales de borrador, `docs/legal-vendor-matrix.md`, footer común, default denied en la portada y sitemap regenerado; falta owner legal y prueba de consent en producción.
+- Se creó `docs/event-contract.md` y se añadieron pruebas de comportamiento para `scripts/ga4-mp.js` y `scripts/webhook-receiver.js`; falta reconciliación con transacciones reales y consent reject en GA4.
+- `npm test` (38 pytest + 196 Vitest) y `npm run build` pasan localmente; el auditor de accesibilidad no puede cargar la stylesheet remota y reporta errores de contexto, por lo que no constituye evidencia de producción.
+- La cola generated thin quedó en 467/467 `done` tras el trabajo editorial; el word count sigue sin ser evidencia de intención, E-E-A-T, oferta, CTA o conversión.
 - Estos cambios no cierran P0-02 ni P0-03 completos: siguen pendientes los exports y pruebas de Hotmart, Google Play, consentimiento, ventas y ledger financiero.
 
 ---
@@ -190,7 +196,7 @@ Cada bloque es una unidad de trabajo. No se deben marcar dos tareas como `DONE` 
 - **Entregable:** inventario versionado de URLs públicas, páginas, apps, offers, package IDs, precios, checkout, owners y estado.
 - **Debe hacer:** elegir tracked/public o filesystem como superficie canónica; listar cada URL como live, draft, noindex, retired o pending; registrar fecha, commit, fuente y responsable.
 - **No debe hacer:** cambiar precios, publicar URLs, borrar páginas o corregir el working tree preexistente como parte de esta tarea.
-- **Aceptación:** cada activo tiene un `asset_id`, una URL canónica, un owner, un estado y una fecha de verificación; las discrepancias 524/577 quedan resueltas o explícitamente excluidas.
+- **Aceptación:** cada activo tiene un `asset_id`, una URL canónica, un owner, un estado y una fecha de verificación; las discrepancias históricas 524/577 y el estado actual 529/582 quedan resueltos o explícitamente excluidos.
 - **Evidencia:** archivo de inventario, export de URLs, commit y `git status` que pruebe que los cambios ajenos siguen intactos.
 
 #### [ ] P0-02 — Reconciliar catálogo de apps, páginas y Play
@@ -292,7 +298,7 @@ Cada bloque es una unidad de trabajo. No se deben marcar dos tareas como `DONE` 
 - **Owner:** SEO / Web.
 - **Dependencias:** P0-01, P0-10.
 - **Entregable:** registro de remediación para canonical, hreflang, robots, title, description, headings, indexability, sitemap, OG/Twitter, imágenes y Core Web Vitals.
-- **Debe hacer:** validar reciprocidad, aislar duplicados intencionales, corregir sólo URLs canónicas, atender los 63 signals sin description y 62 sin hreflang observados, remediar alt/headings y medir plantillas representativas.
+- **Debe hacer:** validar reciprocidad, aislar duplicados intencionales, corregir sólo URLs canónicas, mantener la cobertura local de description/hreflang/canonical, remediar los 180 missing alt y 270 empty alt sólo con revisión de accesibilidad, corregir heading skips y medir plantillas representativas.
 - **No debe hacer:** regenerar todo sin revisar impacto, canonicalizar a una URL incorrecta ni llamar “SEO completo” a JSON-LD válido.
 - **Aceptación:** todas las URLs indexables tienen canonical y description coherentes; no quedan errores elegibles de rich-results; existe baseline y budget de CWV.
 - **Evidencia:** export de GSC/Bing, rich-results test, Lighthouse CI, before/after y registro de excepciones.
@@ -565,7 +571,7 @@ Cada bloque es una unidad de trabajo. No se deben marcar dos tareas como `DONE` 
 
 Estos son pending work items, no tareas ya completadas:
 
-1. **P0-01:** declarar la superficie canónica y resolver la diferencia entre 524 y 577 HTML; la matriz local de apps ya fue creada, pero la superficie global sigue abierta.
+1. **P0-01:** declarar la superficie canónica y resolver el estado actual 529/582 HTML; la matriz local de apps ya fue creada, pero la superficie global sigue parcialmente abierta porque el export/commit final está pendiente.
 2. **P0-02:** la reconciliación local de 12 páginas ↔ 12 ofertas ya fue documentada; falta Play Console para cerrar el estado externo.
 3. **P0-03:** los placeholders de Hotmart ya se retiraron de los CTA públicos y las páginas quedaron bloqueadas; faltan IDs Hotmart reales y smoke de checkout para cerrarlo.
 4. **P0-04:** reconstruir el cierre de 30 días y calcular Gap-to-5k con cobros, refunds, fees y comisiones.
@@ -654,4 +660,49 @@ La meta se considera cumplida sólo cuando, durante un mes cerrado:
 
 **Orden de ejecución:** catálogo y checkout → baseline financiero y oferta neta → legal/consent → tracking → CRM/webhooks/listing → release smoke → CRO/SEO/GEO/ASO/partnerships → paid scale sólo con unit economics.
 
-**Estado de este documento:** todos los bloques P0, P1 y P2 enumerados arriba siguen pendientes hasta que exista la evidencia indicada en su gate de aceptación.
+## 11. Estado de ejecución local y blockers (2026-09-24)
+
+Esta tabla registra la evidencia local sin convertir artefactos en producción. `IN_PROGRESS` significa que existe trabajo local reproducible pero falta una parte del gate. `BLOCKED` significa que la siguiente evidencia depende de un sistema o owner externo. No se marca ningún bloque como `DONE`.
+
+| Tarea | Estado | Evidencia local actual | Evidencia externa que falta |
+|---|---|---|---|
+| P0-01 | `IN_PROGRESS` | `docs/canonical-asset-inventory.md` v1.1.0; 529/582 actual y 524/577 histórico documentados; HEAD `751985d` | URL export/commit cuando el owner autorice commit; exportación final de superficie |
+| P0-02 | `BLOCKED` | Matriz local de 12 apps y `offers.json` | Export de Play Console, listing URLs, screenshots y estados por app |
+| P0-03 | `BLOCKED` | CTAs sin placeholders; páginas bloqueadas sin inventar IDs | IDs Hotmart reales, apertura de checkout y transacción de prueba |
+| P0-04 | `BLOCKED` | Ningún número financiero inventado; fórmula documentada | Exports Hotmart/Play/pagos, refunds, fees, impuestos y commissions |
+| P0-05 | `BLOCKED` | Estructura de `net_price` pendiente de datos | Cierre financiero y decisión de oferta aprobada |
+| P0-06 | `IN_PROGRESS` | Cinco borradores legales, matriz vendor, footer, consent denied local y sitemap | Owner legal, revisión fechada y pruebas accept/reject/withdrawal en producción |
+| P0-07 | `IN_PROGRESS` | `docs/event-contract.md`; 8 pruebas de comportamiento de GA4/webhook | Consent reject real, debug logs GA4 y reconciliación de purchase con plataformas |
+| P0-08 | `BLOCKED` | Especificaciones y seams de webhook/CRM | IDs/endpoints MailerLite/Make, logs, idempotencia y flujo de unsubscribe en vivo |
+| P0-09 | `BLOCKED` | 12 package IDs y URLs Play locales | Export de Play Console, listing público y Data safety por app |
+| P0-10 | `IN_PROGRESS` | `npm test` y `npm run build` pasan; thin report 467/467; tech debt 0 errores | Deploy/commit, smoke del dominio real, Lighthouse/CWV y CTA/checkout externos |
+| P1-01 | `IN_PROGRESS` | `docs/seo-remediation-report.md` documenta la remediación de 2 descriptions, 9 hreflang y 10 canonical; `verify_tech_debt.py` queda en 0 errores | Revisión manual de 180 missing alt/270 empty alt, heading skips, GSC/Bing, Rich Results, Lighthouse field y before/after |
+| P1-02 | `IN_PROGRESS` | `docs/geo-surface-decision.md` v1.0.0; decisión de no publicar `llms-full.txt` automáticamente, campos de entidad y 20 queries propuestas | Aprobación de owner, mapa live completo, crawler output, 20 respuestas y citas/referrals |
+| P1-03 | `IN_PROGRESS` | `docs/content-registry.md` cubre los 151 archivos modificados; la cola thin está cerrada y clasificada por reglas | Enriquecer intent/oferta/CTA por fila, query evidence, owner de cada cluster y assisted revenue |
+| P1-04 | `BLOCKED` | No hay experimento CRO activo | Checkout real, net price, baseline, experiment log y QA de conversión |
+| P1-05 | `BLOCKED` | No hay listing claims inferidas desde artefactos | Play Console, experiments, installs, purchase/upgrade, retention y reviews |
+| P1-06 | `BLOCKED` | No se inventan automatizaciones ni PII | Campaign IDs, consent, cohortes, delivery/unsubscribe y reports |
+| P1-07 | `BLOCKED` | Event contract y data dictionary local | Dashboard live, exports Hotmart/Play/GA4, cohortes y monthly close |
+| P1-08 | `BLOCKED` | No se generan acuerdos ni payouts ficticios | Signed terms, link registry, attribution, payout sample y reverso |
+| P1-09 | `BLOCKED` | No hay precio neto ni elasticity inventada | Pricing experiment/cohort, refunds, AOV, retention y Finance approval |
+| P1-10 | `BLOCKED` | No se agregan testimonios, awards ni social proof falsos | Authorized proof registry, fechas, atribución, links live y policy approval |
+| P2-01 | `PENDING` | No se escala por word count | GSC, demanda, clusters priorizados y assisted revenue |
+| P2-02 | `PENDING` | No backlinks campaigns fabricated | Prospect list, outreach, editorial approval, backlink log y referral report |
+| P2-03 | `PENDING` | Catálogo no se usa para inflar portfolio | Play metrics, cohort report, cost ledger y business case por app |
+| P2-04 | `PENDING` | No paid scale launched | Unit economics, ad IDs, spend reconciliation, budget cap y stop rule |
+| P2-05 | `PENDING` | No se confunde one-time con subscription | Billing, benefits, cancellation, refund, cohort y retention |
+| P2-06 | `PENDING` | No se añade traducción automática sin QA | Market decision, localized legal/support/pricing y funnel report |
+| P2-07 | `PENDING` | No hay Runbooks/alertas implementados | Runbooks, thresholds, alert test, backup/restore y tabletop drill |
+| P2-08 | `PENDING` | No se crea dashboard ejecutivo ficticio | Monthly close, contribution margin, forecast versionado y decision log |
+| B-011 / 3.4.1 | `IN_PROGRESS` | `docs/thin-articles-progress.md` y `docs/content-registry.md` cubren la cola local | Enriquecer intent/offer/CTA por cluster, sample QA y revenue attribution |
+
+**Comandos de verificación local ejecutados el 2026-09-24:**
+
+- `python scripts/thin_articles_report.py` → 0 pending, 0 expand, 467 done; exit 0.
+- `python scripts/verify_tech_debt.py` → 529 páginas, 0 validation errors; exit 0.
+- `npm test` → 38 pytest y 196 Vitest passed; exit 0.
+- `npm run build` → exit 0.
+- `node scripts/accessibility-audit.js` → 0 violaciones, pero con advertencia de CSS remota y errores de contexto `window/document`; no se usa como evidencia de producción.
+- `git diff --check` → exit 0.
+
+**Estado de este documento:** `PENDING`/`IN_PROGRESS`/`BLOCKED` según la tabla anterior; ningún bloque P0, P1 o P2 se considera `DONE` hasta que exista la evidencia externa y de gate indicada.
