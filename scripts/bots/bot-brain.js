@@ -117,7 +117,7 @@ const BRAIN = {
 
   // ── Blog Stats ──
   blog: {
-    articleCount: 134,
+    articleCount: 467,
     categories: [
       'chaos-magick',
       'tarot',
@@ -157,7 +157,7 @@ const BRAIN = {
       `📱 /apps — Browse our Android apps\n` +
       `📖 /books — Esoteric PDF books\n` +
       `🔧 /tools — Free online tools\n` +
-      `📰 /blog — Read our articles (134+)\n` +
+      `📰 /blog — Read our articles (467)\n` +
       `🎁 /bundle — Books bundle (52% off!)\n` +
       `📧 /subscribe — Free PDF guide\n` +
       `🌐 /website — Visit our site\n` +
@@ -168,7 +168,7 @@ const BRAIN = {
     guestPostPitch: (blogName) =>
       `Hola equipo de ${blogName},\n\n` +
       `Soy el creador de Cha0smagick Labs, un estudio independiente de apps y libros esotéricos ` +
-      `(11 apps Android, 7 libros PDF, 10 herramientas gratuitas, 134+ artículos).\n\n` +
+      `(12 apps Android, 7 libros PDF, 10 herramientas gratuitas, 467 artículos).\n\n` +
       `Me encantaría ofrecer un guest post GRATIS para su blog sobre temas como:\n` +
       `• Magia del caos para principiantes\n` +
       `• Cómo crear sigilos efectivos\n` +
@@ -179,12 +179,12 @@ const BRAIN = {
 
     resourceSuggestion: (blogName) =>
       `Hello ${blogName} team,\n\n` +
-      `I run Cha0smagick Labs — an indie developer of 11 Android apps for the occult community ` +
+      `I run Cha0smagick Labs — an indie developer of 12 Android apps for the occult community ` +
       `(tarot, runes, goetia, sigils, astrology, lucid dreaming) plus 7 PDF books and 10 free tools.\n\n` +
       `I thought your audience might find value in some of our free resources:\n` +
       `• ${BRAIN.site.funnel('/tools/spell-builder.html')} — Interactive spell builder\n` +
       `• ${BRAIN.site.url}/tools/ — Free divination tools (I Ching, Runes, Pendulum)\n` +
-      `• ${BRAIN.site.blog} — 134+ free articles on chaos magick, tarot, astrology\n\n` +
+      `• ${BRAIN.site.blog} — 467 free articles on chaos magick, tarot, astrology\n\n` +
       `All our apps are one-time purchase, no subscriptions. We believe quality occult tools ` +
       `should be accessible, not a monthly bill.\n\n` +
       `Would you be open to including us in a resource roundup?\n\n` +
@@ -258,16 +258,16 @@ const BRAIN = {
         return `🔧 Free tools:\n• I Ching: ${BRAIN.site.funnel('/tools/iching-online.html')}\n• Runes: ${BRAIN.site.funnel('/tools/runes-online.html')}\n• Sigil Generator: ${BRAIN.site.funnel('/tools/sigil-generator.html')}\n• Spell Builder: ${BRAIN.site.funnel('/tools/spell-builder.html')}\n• Candle Color Calculator: ${BRAIN.site.funnel('/tools/candle-color-calculator.html')}\n• Pendulum: ${BRAIN.site.funnel('/tools/pendulum.html')}`;
       }
       if (q.includes('book') || q.includes('pdf') || q.includes('ebook')) {
-        return `📖 We have 7 esoteric PDF books:\n• Codex Chaoticus ($4.99)\n• Tarot Chaos ($9.99)\n• Magical Servitors Manual ($4.99)\n• And more!\nFull catalog: ${BRAIN.site.url}/books/\n🎁 Bundle (all 7 books) at 52% off: ${BRAIN.site.funnel('/bundle.html')}`;
+        return `📖 We have 7 esoteric PDF books:\n• Codex Chaoticus ($4.99)\n• Tarot Chaos ($9.99)\n• Magical Servitors Manual ($4.99)\n• And more!\nFull catalog: ${BRAIN.site.url}/books/\n🎁 Bundle (all 7 books) at 52% off: ${BRAIN.bundle.url}`;
       }
       if (q.includes('bundle') || q.includes('pack') || q.includes('oferta') || q.includes('descuento')) {
-        return `🎁 *Esoteric Books Bundle*\n7 books for only $19.99 USD (52% off!)\nIncludes: Codex Chaoticus, Tarot Chaos, Magical Servitors Manual, Treatise of Chaos Hunter Runes, Ouija Cazadora, Liber Lvpinux, Mind The Gap\n🔗 ${BRAIN.site.funnel('/bundle.html')}`;
+        return `🎁 *Esoteric Books Bundle*\n7 books for only $19.99 USD (52% off!)\nIncludes: Codex Chaoticus, Tarot Chaos, Magical Servitors Manual, Treatise of Chaos Hunter Runes, Ouija Cazadora, Liber Lvpinux, Mind The Gap\n🔗 ${BRAIN.bundle.url}`;
       }
       if (q.includes('precio') || q.includes('price') || q.includes('cost') || q.includes('cuanto') || q.includes('subscription') || q.includes('suscripcion') || q.includes('mensual')) {
-        return `💰 All our apps are $3.99-$9.99 USD. All books are $4.99-$9.99 USD.\n**One-time purchase. No subscriptions. No recurring fees.**\nYou buy once, you own it forever.`;
+        return `💰 All our apps are $3.99-$14.99 USD. All books are $4.99-$9.99 USD.\n**One-time purchase. No subscriptions. No recurring fees.**\nYou buy once, you own it forever.`;
       }
       if (q.includes('who') || q.includes('what is') || q.includes('chaos magick') || q.includes('magia del caos')) {
-        return `🌀 *Cha0smagick Labs* is an indie developer creating digital tools for magick, divination, and esoteric practice. We have 11 Android apps, 7 PDF books, 10 free tools, and 134+ blog articles. Founded by Grindho.\n\nWebsite: ${BRAIN.site.url}\nBlog: ${BRAIN.site.blog}`;
+        return `🌀 *Cha0smagick Labs* is an indie developer creating digital tools for magick, divination, and esoteric practice. We have 12 Android apps, 7 PDF books, 10 free tools, and 467 blog articles. Founded by Grindho.\n\nWebsite: ${BRAIN.site.url}\nBlog: ${BRAIN.site.blog}`;
       }
       return null; // No auto-reply matched
     },
@@ -276,7 +276,7 @@ const BRAIN = {
     blogCategories: () =>
       `📰 *Our Blog Categories:*\n` +
       `• Chaos Magick\n• Tarot & Divination\n• Runes & Norse\n• Astrology\n• Witchcraft\n• Lucid Dreaming\n• Goetia\n• Sigils\n• Spells & Rituals\n\n` +
-      `Read 134+ free articles: ${BRAIN.site.blog}`,
+      `Read 467 free articles: ${BRAIN.site.blog}`,
   },
 };
 
