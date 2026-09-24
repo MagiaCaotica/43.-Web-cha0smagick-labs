@@ -1,7 +1,7 @@
 # Analytics Event Contract
 
-**Contract version:** 1.0.0  
-**Evidence date:** 2026-09-24  
+**Contract version:** 1.0.0
+**Evidence date:** 2026-09-24
 **Scope:** browser funnel events and server-side purchase evidence in this repository
 
 This contract is an implementation and measurement specification. It does not prove that any event reached GA4, that a Play or Hotmart transaction occurred, or that a CRM/MailerLite automation ran in production.

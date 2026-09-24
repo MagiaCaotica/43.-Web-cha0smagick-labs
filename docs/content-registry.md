@@ -1,8 +1,8 @@
 # Editorial Content Registry
 
-**Registry version:** 0.1.0-local  
-**Evidence date:** 2026-09-24  
-**Owner:** Editorial / SEO  
+**Registry version:** 0.1.0-local
+**Evidence date:** 2026-09-24
+**Owner:** Editorial / SEO
 **Status:** `IN_PROGRESS` — cobertura local de los 151 artículos expandidos; la atribución y el QA de conversión siguen pendientes
 
 ## Scope and source of truth

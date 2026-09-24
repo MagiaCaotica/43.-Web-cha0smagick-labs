@@ -1,8 +1,8 @@
 # Canonical Asset Inventory
 
-**Inventory version:** 1.1.0  
-**Evidence date:** 2026-09-24  
-**Repository baseline:** HEAD `751985d`  
+**Inventory version:** 1.1.0
+**Evidence date:** 2026-09-24
+**Repository baseline:** HEAD `751985d`
 **Canonical production origin:** `https://cha0smagicklabs.com`
 
 ## 1. Purpose and evidence boundary
@@ -82,8 +82,8 @@ The following is the complete offer row set from `scripts/bots/data/offers.json`
 | `APP-NOCTEM` | NOCTEM: Professional Paranormal Investigation Suite | `com.cha0smagicklabs.noctemapp` | $14.99 | `https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp` |
 | `APP-RIDER-WAITE` | Rider-Waite Tarot Complete | `com.cha0smagick.unofficialraiderwaite` | $9.99 | `https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite` |
 
-**Owner:** repository maintainer for local catalog and app pages.  
-**Verified:** 2026-09-24 against `scripts/bots/data/offers.json`.  
+**Owner:** repository maintainer for local catalog and app pages.
+**Verified:** 2026-09-24 against `scripts/bots/data/offers.json`.
 **External limitation:** no Play Console export or transaction evidence is present.
 
 ### 4.2 Book offers
@@ -98,8 +98,8 @@ The following is the complete offer row set from `scripts/bots/data/offers.json`
 | `BOOK-LIBER-LVPINUX` | Liber Lvpinux | $4.99 | `https://cha0smagicklabs.com/books/liber-lvpinux.html` | `local_candidate` |
 | `BOOK-MIND-THE-GAP` | Mind The Gap | $9.99 | `https://cha0smagicklabs.com/books/mind-the-gap.html` | `local_candidate` |
 
-**Owner:** repository maintainer.  
-**Verified:** 2026-09-24 against the catalog.  
+**Owner:** repository maintainer.
+**Verified:** 2026-09-24 against the catalog.
 **External limitation:** catalog presence does not prove a successful digital delivery or sale.
 
 ### 4.3 Bundle offer

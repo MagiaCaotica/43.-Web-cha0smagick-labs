@@ -1,8 +1,8 @@
 # GEO / AI Surface Decision
 
-**Decision version:** 1.0.0  
-**Evidence date:** 2026-09-24  
-**Owner:** GEO / SEO / Editorial  
+**Decision version:** 1.0.0
+**Evidence date:** 2026-09-24
+**Owner:** GEO / SEO / Editorial
 **Status:** `IN_PROGRESS` — decisión local documentada; falta crawler output y evidencia de citas/referrals
 
 ## Decision

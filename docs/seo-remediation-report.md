@@ -1,8 +1,8 @@
 # SEO Technical Remediation Report
 
-**Version:** 0.1.0-local  
-**Evidence date:** 2026-09-24  
-**Owner:** SEO / Web  
+**Version:** 0.1.0-local
+**Evidence date:** 2026-09-24
+**Owner:** SEO / Web
 **Status:** `IN_PROGRESS` — metadata local remediada; accesibilidad y datos de buscadores pendientes
 
 ## Scope
