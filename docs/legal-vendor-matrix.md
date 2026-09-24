@@ -1,7 +1,7 @@
 # Legal and Data Vendor Matrix
 
-**Version:** 1.0.0  
-**Evidence date:** 2026-09-24  
+**Version:** 1.0.0
+**Evidence date:** 2026-09-24
 **Status:** Local working draft — pending review by the legal/privacy owner
 
 This matrix records vendors and data flows visible in the repository. It is not a legal opinion, privacy-policy approval, consent audit, or proof that a production integration is active.
