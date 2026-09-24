@@ -67,14 +67,67 @@
 - [Goetic Magic for Beginners](https://cha0smagicklabs.com/blog/goetic-magic-beginners-guide.html)
 - [Zener Cards ESP Training Guide](https://cha0smagicklabs.com/blog/zener-cards-esp-training-guide.html)
 
+## Atomic Tools (40 herramientas gratuitas)
+
+Estas páginas son herramientas estáticas, gratuitas y orientativas. Funcionan en el navegador, no sustituyen asesoramiento profesional y no deben interpretarse como predicciones. Los datos introducidos se procesan localmente por el motor de cada página.
+
+### Astrología y ciclos
+
+- [Carta Natal Gratuita](https://cha0smagicklabs.com/tools/full-birth-chart.html): aproximación de carta natal con fecha, hora y lugar.
+- [Calculadora de Ascendente](https://cha0smagicklabs.com/tools/rising-sign-calculator.html): aproximación del ascendente.
+- [Calculadora de Signo Lunar](https://cha0smagicklabs.com/tools/moon-sign-calculator.html): aproximación del signo lunar.
+- [Calculadora de Cúspides](https://cha0smagicklabs.com/tools/zodiac-cusp-calculator.html): lectura aproximada de cúspides.
+- [Calendario de Retrósos](https://cha0smagicklabs.com/tools/planetary-retrograde-calendar.html): fechas orientativas de retrocesos.
+- [Calculadora de Día Planetario](https://cha0smagicklabs.com/tools/planetary-day-calculator.html): asignación simbólica por fecha.
+- [Calendario Lunar](https://cha0smagicklabs.com/tools/moon-phase-calendar.html): fases y ciclos lunares aproximados.
+- [Planificador de Intenciones Lunares](https://cha0smagicklabs.com/tools/moon-intention-planner.html): intención reflexiva por ciclo.
+- [Planificador de Horas Planetarias](https://cha0smagicklabs.com/tools/planetary-hours-planner.html): agenda simbólica por hora.
+- [Planificador de Temporadas Sabáticas](https://cha0smagicklabs.com/tools/sabbat-season-planner.html): revisiones estacionales y cierres.
+
+### Tarot, oráculos y símbolos
+
+- [Referencia de Cartas de Tarot](https://cha0smagicklabs.com/tools/tarot-card-reference.html): búsqueda de cartas y significados.
+- [Constructor de Tiradas de Tarot](https://cha0smagicklabs.com/tools/tarot-spread-builder.html): diseño de tiradas y notas.
+- [Diario de Tarot](https://cha0smagicklabs.com/tools/tarot-journal.html): registro personal de preguntas y cartas.
+- [Lectura de Cartas Lenormand](https://cha0smagicklabs.com/tools/lenormand-card-draw.html): lectura simbólica breve.
+- [Oráculo Sibilla Sí/No](https://cha0smagicklabs.com/tools/sibilla-yes-no-oracle.html): pregunta breve y respuesta orientativa.
+- [Constructor de Preguntas para Péndulo](https://cha0smagicklabs.com/tools/pendulum-question-builder.html): preparación de preguntas.
+- [Referencia Elder Futhark](https://cha0smagicklabs.com/tools/elder-futhark-reference.html): runas, transliteración y contexto.
+- [Traductor de Nombres Rúnicos](https://cha0smagicklabs.com/tools/runic-name-translator.html): escritura rúnica de nombres.
+- [Oráculo Ogham](https://cha0smagicklabs.com/tools/ogham-oracle.html): referencia de Ogham para investigación.
+- [Cifra del Alfabeto Planetario](https://cha0smagicklabs.com/tools/planetary-alphabet-cipher.html): codificación simbólica.
+- [Codificador de Intención para Sigilo](https://cha0smagicklabs.com/tools/sigil-intention-encoder.html): organización de una intención.
+- [Buscador de Correspondencias](https://cha0smagicklabs.com/tools/magical-correspondence-finder.html): búsqueda por símbolo, elemento o intención.
+
+### Planificación, seguridad y seguimiento
+
+- [Tarjeta de Valoración Temporal](https://cha0smagicklabs.com/tools/ritual-timing-scorecard.html): revisión de preferencias de tiempo.
+- [Planificador de Intención para Velas](https://cha0smagicklabs.com/tools/candle-intention-planner.html): intención, duración y cierre.
+- [Planificador de Ingredientes](https://cha0smagicklabs.com/tools/spell-ingredient-planner.html): alternativas y seguridad.
+- [Constructor de Ritual de Banishing](https://cha0smagicklabs.com/tools/banishing-ritual-builder.html): ritual de cierre con límites.
+- [Verificador de Equilibrio Elemental](https://cha0smagicklabs.com/tools/elemental-balance-checker.html): revisión simbólica de elementos.
+- [Planificador de Entrenamiento de Sueños Lúcidos](https://cha0smagicklabs.com/tools/lucid-dream-training-planner.html): técnicas y seguimiento.
+- [Técnica de Chequeo de Realidad](https://cha0smagicklabs.com/tools/reality-check-technique-coach.html): práctica breve de comprobación.
+- [Diccionario de Símbolos de Sueño](https://cha0smagicklabs.com/tools/dream-symbol-dictionary.html): registro e interpretación personal.
+- [Temporizador de Sesión Astral](https://cha0smagicklabs.com/tools/astral-projection-session-timer.html): pausa con intención y cierre.
+- [Temporizador de Meditación](https://cha0smagicklabs.com/tools/meditation-focus-timer.html): duración y práctica de atención.
+- [Seguimiento de Intenciones](https://cha0smagicklabs.com/tools/intention-achievement-tracker.html): pasos, fechas y observaciones.
+- [Checklist de Seguridad Ritual](https://cha0smagicklabs.com/tools/ritual-safety-checklist.html): límites y consentimiento.
+- [Planificador de Consentimiento y Límites](https://cha0smagicklabs.com/tools/consent-boundary-planner.html): límites antes de una práctica.
+- [Organizador de Grimorio Digital](https://cha0smagicklabs.com/tools/digital-grimoire-organizer.html): notas, fuentes y registros.
+- [Checklist de Preparación para Sesiones](https://cha0smagicklabs.com/tools/paranormal-session-prep-checklist.html): preparación y cierre.
+- [Planificador de Carga de Sigilo](https://cha0smagicklabs.com/tools/sigil-charging-planner.html): método, duración e intención.
+- [Diario de Diseño de Servidores](https://cha0smagicklabs.com/tools/servitor-design-journal.html): diseño simbólico con revisión.
+- [Panel de Seguimiento de Resultados](https://cha0smagicklabs.com/tools/results-tracking-dashboard.html): registro y exportación de notas.
+
 ## Technical Notes
 
 - **Language:** Primary English (EN), some Spanish (ES) for activador-servidores
 - **Canonical URLs:** `https://cha0smagicklabs.com/` with `.html` suffix on all pages
 - **Schema types:** SoftwareApplication, WebApplication, FAQPage, QAPage, HowTo, Article, ContactPoint, AggregateRating
 - **Sitemap:** [sitemap.xml](https://cha0smagicklabs.com/sitemap.xml)
-- **CSS:** Single minified stylesheet (`style.min.css`)
-- **JS:** `app-render.min.js`, `apps-data.min.js`, `visitor-map.min.js`, `shared.min.js`
+- **CSS:** Shared minified stylesheet (`style.min.css`) plus independent `atomic-tools.css` for the new tools
+- **JS:** Shared bundles (`app-render.min.js`, `apps-data.min.js`, `visitor-map.min.js`, `shared.min.js`) plus independent `atomic-tools.js` for the new tools
 - **Analytics:** Google Analytics G-V6LHCPN9TK (privacy-first, denied by default)
 - **Theme:** Dark theme, mobile-responsive
 
