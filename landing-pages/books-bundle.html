@@ -175,8 +175,8 @@
     updateTimer(); setInterval(updateTimer, 1000);
 
     document.querySelector('.cta-primary').addEventListener('click', function() {
-      if (typeof gtag !== 'undefined') { gtag('event', 'begin_checkout', { currency: 'USD', value: 49.99, items: [{ item_id: 'bundle_all_books' }] }); }
-      if (typeof fbq !== 'undefined') { fbq('track', 'InitiateCheckout', { content_ids: ['bundle_all_books'], value: 49.99, currency: 'USD' }); }
+      if (typeof gtag !== 'undefined') { gtag('event', 'begin_checkout', { currency: 'USD', value: 19.99, items: [{ item_id: 'bundle_all_books' }] }); }
+      if (typeof fbq !== 'undefined') { fbq('track', 'InitiateCheckout', { content_ids: ['bundle_all_books'], value: 19.99, currency: 'USD' }); }
     });
   </script>
 </body>
