@@ -75,7 +75,7 @@ function init() {
 
   bot.onText(/\/books|📖 Books/, (msg) => {
     const lines = BRAIN.books.map((b) => BRAIN.helpers.formatBook(b));
-    const text = `*📖 Our Esoteric Books (PDF)*\n\n${lines.join('\n\n')}\n\n🎁 Bundle (52% off): ${BRAIN.site.funnel('/bundle.html')}`;
+    const text = `*📖 Our Esoteric Books (PDF)*\n\n${lines.join('\n\n')}\n\n🎁 Bundle (52% off): ${BRAIN.bundle.url}`;
     bot.sendMessage(msg.chat.id, text, {
       parse_mode: 'Markdown',
       disable_web_page_preview: true,
