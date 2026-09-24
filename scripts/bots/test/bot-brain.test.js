@@ -38,9 +38,9 @@ describe('bot-brain — Catalog Integrity', () => {
     });
   });
 
-  describe('Apps catalog (10 apps)', () => {
-    it('should have exactly 10 apps', () => {
-      expect(BRAIN.apps).toHaveLength(10);
+  describe('Apps catalog (12 apps)', () => {
+    it('should have exactly 12 apps', () => {
+      expect(BRAIN.apps).toHaveLength(12);
     });
 
     it('every app should have required fields', () => {
@@ -172,8 +172,8 @@ describe('bot-brain — Catalog Integrity', () => {
       expect(BRAIN.bundle.originalPrice).toMatch(/^\$\d+(\.\d{2})? USD$/);
     });
 
-    it('bundle URL should match cha0smagicklabs.com', () => {
-      expect(BRAIN.bundle.url).toMatch(/^https:\/\/cha0smagicklabs\.com\/bundle\.html$/);
+    it('bundle URL should point to the observed Hotmart checkout', () => {
+      expect(BRAIN.bundle.url).toBe('https://hotmart.com/es/marketplace/productos/bundle-todos-los-libros-esp/V107097103W');
     });
   });
 
