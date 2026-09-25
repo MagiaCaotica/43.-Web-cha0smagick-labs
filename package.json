@@ -20,7 +20,7 @@
     "puppeteer": "^25.4.0"
   },
   "scripts": {
-    "test": "pytest scripts/ && vitest run scripts/bots/test/ scripts/social/test/ scripts/affiliate/test/",
+    "test": "pytest scripts/ && vitest run scripts/bots/test/ scripts/social/test/ scripts/affiliate/test/ scripts/analytics/test/",
     "build:js": "esbuild js/affiliate.js js/app-render.js js/apps-data.js js/conversion.js js/price-locale.js js/shared.js js/visitor-map.js --minify --outdir=js --out-extension:.js=.min.js --target=es2020",
     "build:css": "cleancss -o css/style.min.css css/style.css",
     "prebuild": "npm run build:js",
@@ -31,7 +31,12 @@
     "bot:start": "node scripts/bots/run-bots.js all",
     "social:daily": "node scripts/social-publish.js daily",
     "social:dry": "node scripts/social-publish.js daily --dry-run",
-    "social:selftest": "node scripts/social-publish.js selftest"
+    "social:selftest": "node scripts/social-publish.js selftest",
+    "analytics:health": "node scripts/analytics-health.js",
+    "analytics:health:save": "node scripts/analytics-health.js --save",
+    "analytics:smoke": "node scripts/analytics-live-smoke.js",
+    "analytics:daily": "node scripts/analytics-daily.js --dry-run",
+    "analytics:daily:live": "node scripts/analytics-daily.js --live"
   },
   "repository": {
     "type": "git",

@@ -73,6 +73,7 @@
     const form = document.getElementById('atomic-form');
     form.addEventListener('submit', (event) => {
       event.preventDefault();
+      const startedAt = Date.now();
       const status = document.getElementById('atomic-form-status');
       const missing = fields.filter((field) => field.required && !getFieldValue(form, field));
       if (missing.length) {
@@ -80,12 +81,33 @@
         status.className = 'atomic-status is-error';
         return;
       }
+      if (window.Cha0Analytics && typeof window.Cha0Analytics.track === 'function') {
+        window.Cha0Analytics.track('tool_start', {
+          tool_id: toolId,
+          category: tool.category || 'tool',
+          source: 'atomic_tool'
+        });
+      }
       const values = fields.map((field) => ({ label: field.label || field.id, value: getFieldValue(form, field) })).filter((item) => item.value);
       const result = document.getElementById('atomic-result');
       result.hidden = false;
       result.innerHTML = `<p class="atomic-kicker">Resultado simbólico</p><h2>${escapeHtml(tool.name)}</h2><p class="atomic-lead">Tu registro está listo para interpretar con curiosidad y sin certezas forzadas.</p><div class="atomic-result-grid">${values.map((item) => `<div><span>${escapeHtml(item.label)}</span><strong>${escapeHtml(item.value)}</strong></div>`).join('')}</div><h3>${escapeHtml(tool.result || 'Lectura de referencia')}</h3><p>Usa estos datos para escribir una interpretación propia, revisar patrones y elegir una acción pequeña y reversible. Guarda la fecha y observa qué resulta útil con el tiempo.</p><button id="atomic-save" class="atomic-button atomic-button-secondary" type="button">Guardar resumen local</button><span id="atomic-save-status" class="atomic-status" role="status" aria-live="polite"></span>`;
       status.textContent = 'Resultado generado.';
       status.className = 'atomic-status is-success';
+      const durationSeconds = Math.max(0, Math.round((Date.now() - startedAt) / 1000));
+      const durationBucket = durationSeconds <= 30 ? '0-30'
+        : durationSeconds <= 60 ? '31-60'
+          : durationSeconds <= 180 ? '61-180'
+            : durationSeconds <= 600 ? '181-600' : '601+';
+      if (window.Cha0Analytics && typeof window.Cha0Analytics.track === 'function') {
+        window.Cha0Analytics.track('tool_complete', {
+          tool_id: toolId,
+          category: tool.category || 'tool',
+          result_present: true,
+          duration_bucket: durationBucket,
+          source: 'atomic_tool'
+        });
+      }
       result.scrollIntoView({ behavior: 'smooth', block: 'start' });
       document.getElementById('atomic-save').addEventListener('click', () => {
         try {

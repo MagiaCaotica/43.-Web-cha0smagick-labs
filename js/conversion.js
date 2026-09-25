@@ -1471,7 +1471,7 @@
             // Slug missing from tool-funnels.json (new tool, typo, or an
             // orphan page). Rather than showing nothing, surface one real app
             // from the catalogue and log so the entry gets added.
-            if (global.console && console.warn) {
+            if (window.console && console.warn) {
               console.warn('[cm-funnel] slug sin entrada en tool-funnels.json:', slug);
             }
             var fallback = firstAvailableApp(catalogue, slug);

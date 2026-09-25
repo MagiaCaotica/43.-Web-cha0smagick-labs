@@ -26,6 +26,8 @@ home-snap.md
 post-tweet*.md
 x-login-check.md
 projects/playstore.json
+_*_tmp.py
+_*_tmp.js
 
 # Checklist personal de ventas (no subir)
 /checklist-ventas.html
