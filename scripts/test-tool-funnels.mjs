@@ -141,7 +141,11 @@ for (const { slug, lang, kind } of PAGES) {
       // y se salta el Proxy del init script. Fusionamos ambas fuentes.
       ga: (window.__gaEvents || []).concat(
         Array.from(window.dataLayer || []).map((entry) => Array.from(entry))
-      )
+      ),
+      // Copia que escribe analytics-bridge.js: objetos planos en dataLayer.
+      // gtag empuja arrays de argumentos, asi que un objeto distingue la una
+      // de la otra sin ambiguedad.
+      bridge: (window.dataLayer || []).filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
     };
   });
 
@@ -198,6 +202,42 @@ for (const { slug, lang, kind } of PAGES) {
     })
     .filter(Boolean);
   check(slug, 'evento tool_funnel_view', evNames.includes('tool_funnel_view'), evNames.join(','));
+
+  // --- 5b. espejo en analytics-bridge.js ---
+  // La misma llamada debe llegar por las dos vias: gtag (ruta GA4) y el bridge
+  // (copia con allowlist y consentimiento). Si el espejo se rompe, la pagina
+  // sigue "funcionando" y no hay nada que lo delate salvo esto.
+  const ALLOWED = {
+    tool_funnel_view: ['tool_id', 'category', 'apps', 'has_book', 'related', 'source', 'surface', 'event', 'analytics_source'],
+    tool_funnel_click: ['tool_id', 'product_type', 'product_id', 'source', 'placement', 'event', 'analytics_source']
+  };
+  const view = dom.bridge.find((e) => e.event === 'tool_funnel_view');
+  check(slug, 'bridge registra tool_funnel_view', !!view, 'bridge=' + JSON.stringify(dom.bridge.map((e) => e.event)));
+  if (view) {
+    const extra = Object.keys(view).filter((k) => !ALLOWED.tool_funnel_view.includes(k));
+    check(slug, 'bridge filtra tool_funnel_view', extra.length === 0, 'claves no permitidas: ' + extra.join(','));
+    check(slug, 'bridge marca su origen', view.analytics_source === 'cha0_bridge', 'analytics_source=' + view.analytics_source);
+    check(slug, 'bridge lleva el slug', view.tool_id === slug, 'tool_id=' + view.tool_id);
+  }
+
+  // El click del funnel tambien debe quedar espejado. Se dispara sobre el
+  // primer boton de app; si no hay CTA de app en la pagina, se omite.
+  if (dom.appLinks.length) {
+    await page.click('#cm-funnel-root .cm-funnel-app');
+    await page.waitForTimeout(120);
+    const clickEvent = await page.evaluate(() => {
+      const rows = (window.dataLayer || []).filter(
+        (e) => e && typeof e === 'object' && !Array.isArray(e) && e.event === 'tool_funnel_click'
+      );
+      return rows.length ? rows[rows.length - 1] : null;
+    });
+    check(slug, 'bridge registra tool_funnel_click', !!clickEvent, 'sin copia en dataLayer');
+    if (clickEvent) {
+      const extra = Object.keys(clickEvent).filter((k) => !ALLOWED.tool_funnel_click.includes(k));
+      check(slug, 'bridge filtra tool_funnel_click', extra.length === 0, 'claves no permitidas: ' + extra.join(','));
+      check(slug, 'bridge identifica el producto', !!clickEvent.product_id, 'product_id=' + clickEvent.product_id);
+    }
+  }
 
   // --- 6. sin mojibake ni errores de consola ---
   const moji = dom.pageText.match(/[ÂÃâ€]{1,2}(?=[¿¡áéíóúñü£¥©™–—˜†”])/g);

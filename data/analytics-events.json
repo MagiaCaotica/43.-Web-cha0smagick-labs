@@ -61,6 +61,52 @@
     "conversion_import": {
       "required": ["source", "status"],
       "optional": ["transaction_id_hash", "value_bucket", "currency"]
+    },
+    "tool_funnel_view": {
+      "required": ["tool_id"],
+      "optional": ["category", "apps", "has_book", "related", "source", "surface"],
+      "emitted_by": "conversion.js initToolFunnel / injectToolsIndexFunnel"
+    },
+    "tool_funnel_click": {
+      "required": ["tool_id", "product_type", "product_id"],
+      "optional": ["source", "placement"],
+      "emitted_by": "conversion.js bindFunnelClicks"
+    },
+    "purchase_click": {
+      "required": ["currency", "destination"],
+      "optional": ["value", "link_url", "page", "page_type"],
+      "emitted_by": "conversion.js bindPurchaseTracking",
+      "note": "The gtag copy also carries an items array for item-level revenue. The bridge copy stays flat on purpose: safeValue() drops arrays, and the allowlist does not list items."
+    },
+    "begin_checkout": {
+      "required": ["currency"],
+      "optional": ["value", "link_url", "page"],
+      "emitted_by": "conversion.js bindPurchaseTracking"
+    },
+    "lead_magnet_view": {
+      "required": ["form_name"],
+      "optional": ["form_destination", "page", "page_type"],
+      "emitted_by": "conversion.js injectLeadMagnet"
+    },
+    "popup_view": {
+      "required": ["trigger"],
+      "optional": ["page", "page_type"],
+      "emitted_by": "conversion.js popup"
+    },
+    "popup_close": {
+      "required": ["reason"],
+      "optional": ["page"],
+      "emitted_by": "conversion.js popup"
+    },
+    "share": {
+      "required": ["method"],
+      "optional": ["content_type", "item_id", "content_id", "channel", "page"],
+      "emitted_by": "conversion.js injectShareButtons"
+    },
+    "affiliate_click": {
+      "required": ["affiliate_id"],
+      "optional": ["product", "page"],
+      "emitted_by": "conversion.js bindAffiliate"
     }
   },
   "enforcement": {
