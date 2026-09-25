@@ -257,6 +257,93 @@ for (const { slug, lang, kind } of PAGES) {
   console.log(`${kind} ${slug} (${lang}) -> steps=${dom.steps.join('+')} apps=${dom.appLinks.length} book=${dom.bookBlock ? 'si' : 'no'} related=${dom.related.length}`);
 }
 
+// --- Bootstrap site-wide: el bridge tambien debe existir fuera de /tools/ ---
+// shared.js lo inyecta, asi que la cobertura de la allowlist y del
+// consentimiento tiene que reachar home, blog y libros. Si el src se resuelve
+// mal (por ejemplo "js/analytics-bridge.js" en vez de una ruta junto a
+// shared.js) estas paginas se quedan sin bridge y en silencio.
+const BOOTSTRAP_PAGES = [
+  { path: '/index.html', name: 'home' },
+  { path: '/blog/near-death-experiences-science.html', name: 'blog' },
+  { path: '/books/tarot-chaos-pdf.html', name: 'books' },
+  { path: '/apps/psi-gym.html', name: 'apps' },
+  { path: '/landing-pages/flash-sale.html', name: 'landing' }
+];
+
+/* Un href con javascript:, vacio o relativo resuelve a un hostname vacio o al
+   propio, y el bridge lo ignora por diseño. El finder tiene que exigir http(s)
+   y un host externo real, si no mide un enlace que el codigo descarta.
+   El host propio se lee de location, no del dominio de produccion: el suite
+   corre en 127.0.0.1 y comparar contra "cha0smagicklabs.com" haria que TODO
+   el sitio pareciera externo. */
+const FIND_EXTERNAL = `(() => {
+  const own = String(location.hostname).toLowerCase();
+  const a = Array.from(document.querySelectorAll('a[href]')).find((el) => {
+    try {
+      const u = new URL(el.href, location.href);
+      return /^https?:$/.test(u.protocol) && u.hostname !== '' && u.hostname !== own;
+    } catch (_) { return false; }
+  });
+  if (!a) return null;
+  a.addEventListener('click', (e) => e.preventDefault());
+  a.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+  return a.id || a.getAttribute('class') || a.getAttribute('href').slice(0, 60);
+})()`;
+
+for (const { path, name } of BOOTSTRAP_PAGES) {
+  const page = await context.newPage();
+  const failures = [];
+  page.on('pageerror', (e) => failures.push('pageerror: ' + e.message));
+  await page.goto(`http://127.0.0.1:${PORT}${path}`, { waitUntil: 'domcontentloaded' });
+  // El script se inyecta con async: hay que esperar a que aparezca.
+  await page.waitForFunction(() => !!window.Cha0Analytics, null, { timeout: 8000 })
+    .catch(() => {});
+
+  const loaded = await page.evaluate(() => typeof window.Cha0Analytics);
+  check(name, 'bridge cargado por shared.js', loaded === 'object', 'typeof=' + loaded);
+
+  if (loaded === 'object') {
+    await page.evaluate(() => window.Cha0Analytics.setConsent(true));
+
+    // Un enlace externo real de la pagina debe producir outbound_click.
+    const external = await page.evaluate(FIND_EXTERNAL);
+
+    if (external) {
+      const out = await page.evaluate(() => {
+        const rows = (window.dataLayer || []).filter((e) => e && typeof e === 'object' && !Array.isArray(e) && e.event === 'outbound_click');
+        return rows.length ? rows[rows.length - 1] : null;
+      });
+      check(name, 'outbound_click al pulsar un enlace externo', !!out, 'ancla=' + external);
+      if (out) {
+        check(name, 'outbound_click con domain_class', !!out.domain_class, 'domain_class=' + out.domain_class);
+        check(name, 'outbound_click sin query string', !/[?&]/.test(out.destination_host || ''), 'host=' + out.destination_host);
+      }
+    } else {
+      check(name, 'la pagina tiene un enlace externo que probar', false, 'ninguno encontrado');
+    }
+
+    /* Consentimiento del bridge: tras setConsent(false) ningun objeto con
+       analytics_source debe entrar. Solo se cuentan los objetos del bridge.
+       Los pushes de gtag (arrays de argumentos) van por otra via y los regula
+       el Consent Mode de GA4, asi que mezclarlos mediria otra cosa. */
+    const blocked = await page.evaluate((finder) => {
+      const bridgeRows = () => (window.dataLayer || []).filter(
+        (e) => e && typeof e === 'object' && !Array.isArray(e) && e.analytics_source === 'cha0_bridge'
+      );
+      window.Cha0Analytics.setConsent(false);
+      const before = bridgeRows().length;
+      // eslint-disable-next-line no-eval
+      eval(finder);
+      return bridgeRows().length - before;
+    }, FIND_EXTERNAL);
+    check(name, 'consentimiento declined bloquea el bridge', blocked === 0, 'eventos nuevos=' + blocked);
+  }
+
+  const realFailures = failures.filter((f) => !/net::|Failed to load resource|ERR_FAILED/i.test(f));
+  check(name, 'sin errores JS', realFailures.length === 0, realFailures.slice(0, 2).join(' | '));
+  await page.close();
+}
+
 await browser.close();
 server.close();
 
