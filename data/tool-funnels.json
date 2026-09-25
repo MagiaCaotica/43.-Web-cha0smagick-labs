@@ -1,0 +1,1374 @@
+{
+  "version": 1,
+  "generated": "2026-09-25",
+  "products": {
+    "apps": [
+      {
+        "id": "psi-gym",
+        "name": "PSI GYM: Zener Cards & ESP",
+        "price": "$3.99",
+        "url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_psi_gym"
+      },
+      {
+        "id": "arcana-goetia",
+        "name": "Arcana Goetia: Ritual & Sigils",
+        "price": "$3.99",
+        "url": "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_arcana_goetia"
+      },
+      {
+        "id": "norse-rune-oracle",
+        "name": "Norse Rune Oracle",
+        "price": "$3.99",
+        "url": "https://play.google.com/store/apps/details?id=com.japps.norse_oracle&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_norse_rune_oracle"
+      },
+      {
+        "id": "lunar-phase-calculator",
+        "name": "Lunar Phase Calculator",
+        "price": "$3.99",
+        "url": "https://play.google.com/store/apps/details?id=com.lunarapp.app&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_lunar_phase_calculator"
+      },
+      {
+        "id": "iching-oracle",
+        "name": "I Ching Oracle",
+        "price": "$3.99",
+        "url": "https://play.google.com/store/apps/details?id=com.app.ichingoracle&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_iching_oracle"
+      },
+      {
+        "id": "chaos-sigil-generator",
+        "name": "Magick Chaos Sigil Generator",
+        "price": "$3.99",
+        "url": "https://play.google.com/store/apps/details?id=com.app.goetiansealsgeneratorapp&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_chaos_sigil_generator"
+      },
+      {
+        "id": "unofficial-rider-waite-tarot",
+        "name": "Unofficial Rider Waite Tarot",
+        "price": "$9.99",
+        "url": "https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_rider_waite_tarot"
+      },
+      {
+        "id": "dream-machine",
+        "name": "Dream Machine: Lucid Dreaming",
+        "price": "$3.99",
+        "url": "https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_dream_machine"
+      },
+      {
+        "id": "astral-lab",
+        "name": "Astral Lab: Natal Chart & Astrology",
+        "price": "$6.99",
+        "url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_astral_lab"
+      },
+      {
+        "id": "eerieroads",
+        "name": "Eerie Roads: Mysterious Paths",
+        "price": "$9.99",
+        "url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_eerie_roads"
+      },
+      {
+        "id": "lucid-dream",
+        "name": "Lucid Dream: Astral Projection",
+        "price": "$3.99",
+        "url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_lucid_dream"
+      },
+      {
+        "id": "noctem-tools",
+        "name": "NOCTEM: Professional Paranormal Investigation Suite",
+        "price": "$14.99",
+        "url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_noctem_tools"
+      }
+    ],
+    "books": [
+      {
+        "id": "manual-activacion-servidores-magicos-pdf",
+        "name": "Magical Servitors Manual",
+        "price": "$3.99",
+        "page": "../books/manual-activacion-servidores-magicos-pdf.html",
+        "checkout": "https://pay.hotmart.com/D104270399P?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_manual_servidores_magicos",
+        "language": "en"
+      },
+      {
+        "id": "tratado-runas-cazadoras-caos-pdf",
+        "name": "Treatise of Chaos Hunter Runes",
+        "price": "$3.99",
+        "page": "../books/tratado-runas-cazadoras-caos-pdf.html",
+        "checkout": "https://pay.hotmart.com/F104270966V?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_tratado_runas_cazadoras",
+        "language": "en"
+      },
+      {
+        "id": "ouija-cazadora-pdf",
+        "name": "Ouija Cazadora: Chaos Magic Guide",
+        "price": "$3.99",
+        "page": "../books/ouija-cazadora-pdf.html",
+        "checkout": "https://pay.hotmart.com/B104271332D?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_ouija_cazadora",
+        "language": "en"
+      },
+      {
+        "id": "liber-lvpinux-pdf",
+        "name": "Liber Lvpinux: Lycanthropic Path",
+        "price": "$3.99",
+        "page": "../books/liber-lvpinux-pdf.html",
+        "checkout": "https://pay.hotmart.com/O104271155J?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_liber_lvpinux",
+        "language": "en"
+      },
+      {
+        "id": "codex-chaoticus-pdf",
+        "name": "Codex Chaoticus: Complete Treatise on Chaos Magick",
+        "price": "$4.99",
+        "page": "../books/codex-chaoticus-pdf.html",
+        "checkout": "https://pay.hotmart.com/W106595764X?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_codex_chaoticus",
+        "language": "en"
+      },
+      {
+        "id": "tarot-chaos-pdf",
+        "name": "Tarot Chaos: Chaos Magick Applied to the Tarot",
+        "price": "$9.99",
+        "page": "../books/tarot-chaos-pdf.html",
+        "checkout": "https://pay.hotmart.com/J106598345U?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_tarot_chaos",
+        "language": "en"
+      },
+      {
+        "id": "mind-the-gap-pdf",
+        "name": "Mind The Gap: Master the 0.3 Seconds That Define Your Life",
+        "price": "$9.99",
+        "page": "../books/mind-the-gap-pdf.html",
+        "checkout": "https://pay.hotmart.com/V106730857R?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_mind_the_gap",
+        "language": "en"
+      }
+    ]
+  },
+  "angles": {
+    "Astrología": {
+      "es": {
+        "head": "¿Quieres tu carta natal completa, no un resultado parcial?",
+        "sub": "Astral Lab calcula posiciones, casas, aspectos y tránsitos con la misma precisión con la que estudiaste. La app guarda cada carta en tu dispositivo para comparar años."
+      },
+      "en": {
+        "head": "Want your full natal chart, not a partial result?",
+        "sub": "Astral Lab calculates positions, houses, aspects and transits with the precision you studied with, and keeps every chart on your device so you can compare across years."
+      }
+    },
+    "Tarot": {
+      "es": {
+        "head": "Lleva el tarot completo en el bolsillo",
+        "sub": "Rider-Waite con las 78 cartas, significado inverso y combinaciones, funcionando sin conexión. Esta herramienta cubre lo esencial; la app cubre el sistema entero."
+      },
+      "en": {
+        "head": "Carry the whole tarot deck in your pocket",
+        "sub": "Rider-Waite with all 78 cards, reversals and combinations, fully offline. This tool covers the essentials; the app covers the whole system."
+      }
+    },
+    "Oráculos": {
+      "es": {
+        "head": "¿Preguntas de sí o no? Lanza la runa",
+        "sub": "Norse Rune Oracle es un oráculo completo con su propio sistema de lectura, no un simple muestrario de cartas. Para cuando la respuesta es binaria y necesitas una sola runa."
+      },
+      "en": {
+        "head": "Yes-or-no question? Cast the rune",
+        "sub": "Norse Rune Oracle is a complete oracle with its own reading system, not a card sampler. For when the answer is binary and you need a single rune."
+      }
+    },
+    "Runas": {
+      "es": {
+        "head": "El Elder Futhark completo, con lectura de runas",
+        "sub": "Referencia completa de las 24 runas del Elder Futhark, con transliteración y las cuatro funciones de cadarunen la tirada. La app añade un motor de lectura, no solo una carta de referencia."
+      },
+      "en": {
+        "head": "The full Elder Futhark, with rune readings",
+        "sub": "All 24 runes, transliteration and layout readings. The app adds a reading engine, not just another reference card."
+      }
+    },
+    "Símbolos": {
+      "es": {
+        "head": "El Alfabeto Planetario, codificado y descifrado",
+        "sub": "La cifra del alfabeto planetario funciona mejor cuando puedes verificar y volver a descifrar. Astral Lab registra cada correspondencia usada en tu bitácora."
+      },
+      "en": {
+        "head": "The Planetary Alphabet, encoded and decoded",
+        "sub": "The planetary alphabet cipher works best when you can verify and decode again. Astral Lab logs every correspondence you use in your own record."
+      }
+    },
+    "Sigilos": {
+      "es": {
+        "head": "De la intención al sigilo, y del sigilo al ritual",
+        "sub": "Magick Chaos Sigil Generator automatiza la cifración, la carga y el registro de cada sigilo. Esta herramienta es el paso uno; la app cubre el ciclo completo."
+      },
+      "en": {
+        "head": "From intention to sigil, and sigil to ritual",
+        "sub": "Magick Chaos Sigil Generator automates encoding, charging and logging each sigil. This tool is step one; the app covers the full cycle."
+      }
+    },
+    "Correspondencias": {
+      "es": {
+        "head": "Correspondencias verificadas, no memorizadas a medias",
+        "sub": "Cada elemento, color, número y planeta con su correspondencia planetaria y su día. La app los guarda con nota propia para que los reutilices en ritual."
+      },
+      "en": {
+        "head": "Verified correspondences, not half-remembered ones",
+        "sub": "Every element, colour, number and planet with its planetary correspondence and day. The app saves them with your own notes so you reuse them in ritual."
+      }
+    },
+    "Lunar": {
+      "es": {
+        "head": "Luna, fases y horas planetarias con datos reales",
+        "sub": "Lunar Phase Calculator calcula fases, iluminación y horas planetarias con efemérides, no con aproximaciones. Funciona sin cobertura a la intemperie."
+      },
+      "en": {
+        "head": "Moon, phases and planetary hours on real data",
+        "sub": "Lunar Phase Calculator computes phases, illumination and planetary hours from ephemeris data, not approximations. Works with no signal at all."
+      }
+    },
+    "Rituales": {
+      "es": {
+        "head": "Rituales completos, no listas sueltas",
+        "sub": "Arcana Goetia reúne los 72 espíritus con su sello, su ofrenda y su hora. Esta herramienta planifica el ritual; la app ejecuta la consulta completa."
+      },
+      "en": {
+        "head": "Complete rituals, not loose checklists",
+        "sub": "Arcana Goetia gathers all 72 spirits with their seal, offering and hour. This tool plans the ritual; the app runs the full query."
+      }
+    },
+    "Sueños": {
+      "es": {
+        "head": "Registro de sueños que survive a la mañana",
+        "sub": "Dream Machine registra cada entrada en el momento en que te despiertas, con el temporizador de inducción lúcida y la técnica de chequeo de realidad al lado."
+      },
+      "en": {
+        "head": "A dream log that survives the morning",
+        "sub": "Dream Machine logs each entry the moment you wake, with the lucid induction timer and reality-check technique alongside."
+      }
+    },
+    "Bienestar": {
+      "es": {
+        "head": "Temporizadores que de verdad se detienen",
+        "sub": "Gnosis Timer es un temporizador de práctica con intervalos configurables y registro de sesiones. Sin anuncios ni rastreo."
+      },
+      "en": {
+        "head": "Timers that actually stop",
+        "sub": "Gnosis Timer is a practice timer with configurable intervals and session logging. No ads, no tracking."
+      }
+    },
+    "Seguimiento": {
+      "es": {
+        "head": "Registra lo que hiciste, no lo que planeaste",
+        "sub": "El seguimiento solo sirve si es continuo. estas herramientas de registro funcionan en el navegador; la app añade historial persistente y exportación."
+      },
+      "en": {
+        "head": "Track what you did, not what you planned",
+        "sub": "Tracking only works if it is continuous. These logging tools run in the browser; the app adds persistent history and export."
+      }
+    },
+    "Seguridad": {
+      "es": {
+        "head": "Magia responsable, con los límites escritos",
+        "sub": "Las listas de seguridad y consentimiento funcionan mejor cuando las revisas antes de cada sesión. NOCTEM incluye un modo de trabajo seguro con registro."
+      },
+      "en": {
+        "head": "Responsible magic, with the limits written down",
+        "sub": "Safety and consent checklists work best when you review them before each session. NOCTEM includes a safe working mode with logging."
+      }
+    },
+    "Organización": {
+      "es": {
+        "head": "Un grimorio que se puede consultar de verdad",
+        "sub": "Organiza servidores, sesiones y grimorio en un solo sitio, con búsqueda. La app añade diseño de servidores con seguimiento de cargas y expiraciones."
+      },
+      "en": {
+        "head": "A grimoire you can actually consult",
+        "sub": "Organise servitors, sessions and grimoire in one searchable place. The app adds servitor design with charge tracking and expiry."
+      }
+    }
+  },
+  "atomic": {
+    "full-birth-chart": {
+      "name": "Carta Natal Gratuita",
+      "category": "Astrología",
+      "lang": "es"
+    },
+    "rising-sign-calculator": {
+      "name": "Calculadora de Ascendente",
+      "category": "Astrología",
+      "lang": "es"
+    },
+    "moon-sign-calculator": {
+      "name": "Calculadora de Signo Lunar",
+      "category": "Astrología",
+      "lang": "es"
+    },
+    "zodiac-cusp-calculator": {
+      "name": "Calculadora de Cúspides",
+      "category": "Astrología",
+      "lang": "es"
+    },
+    "planetary-retrograde-calendar": {
+      "name": "Calendario de Retrósos",
+      "category": "Astrología",
+      "lang": "es"
+    },
+    "planetary-day-calculator": {
+      "name": "Calculadora de Día Planetario",
+      "category": "Astrología",
+      "lang": "es"
+    },
+    "tarot-card-reference": {
+      "name": "Referencia de Cartas de Tarot",
+      "category": "Tarot",
+      "lang": "es"
+    },
+    "tarot-spread-builder": {
+      "name": "Constructor de Tiradas de Tarot",
+      "category": "Tarot",
+      "lang": "es"
+    },
+    "tarot-journal": {
+      "name": "Diario de Tarot",
+      "category": "Tarot",
+      "lang": "es"
+    },
+    "lenormand-card-draw": {
+      "name": "Lectura de Cartas Lenormand",
+      "category": "Tarot",
+      "lang": "es"
+    },
+    "sibilla-yes-no-oracle": {
+      "name": "Oráculo Sibilla Sí/No",
+      "category": "Oráculos",
+      "lang": "es"
+    },
+    "pendulum-question-builder": {
+      "name": "Constructor de Preguntas para Péndulo",
+      "category": "Oráculos",
+      "lang": "es"
+    },
+    "elder-futhark-reference": {
+      "name": "Referencia Elder Futhark",
+      "category": "Runas",
+      "lang": "es"
+    },
+    "runic-name-translator": {
+      "name": "Traductor de Nombres Rúnicos",
+      "category": "Runas",
+      "lang": "es"
+    },
+    "ogham-oracle": {
+      "name": "Oráculo Ogham",
+      "category": "Runas",
+      "lang": "es"
+    },
+    "planetary-alphabet-cipher": {
+      "name": "Cifra del Alfabeto Planetario",
+      "category": "Símbolos",
+      "lang": "es"
+    },
+    "sigil-intention-encoder": {
+      "name": "Codificador de Intención para Sigilo",
+      "category": "Sigilos",
+      "lang": "es"
+    },
+    "magical-correspondence-finder": {
+      "name": "Buscador de Correspondencias",
+      "category": "Correspondencias",
+      "lang": "es"
+    },
+    "elemental-balance-checker": {
+      "name": "Verificador de Equilibrio Elemental",
+      "category": "Correspondencias",
+      "lang": "es"
+    },
+    "moon-phase-calendar": {
+      "name": "Calendario Lunar",
+      "category": "Lunar",
+      "lang": "es"
+    },
+    "moon-intention-planner": {
+      "name": "Planificador de Intenciones Lunares",
+      "category": "Lunar",
+      "lang": "es"
+    },
+    "planetary-hours-planner": {
+      "name": "Planificador de Horas Planetarias",
+      "category": "Lunar",
+      "lang": "es"
+    },
+    "ritual-timing-scorecard": {
+      "name": "Tarjeta de Valoración Temporal",
+      "category": "Lunar",
+      "lang": "es"
+    },
+    "sabbat-season-planner": {
+      "name": "Planificador de Temporadas Sabáticas",
+      "category": "Lunar",
+      "lang": "es"
+    },
+    "candle-intention-planner": {
+      "name": "Planificador de Intención para Velas",
+      "category": "Rituales",
+      "lang": "es"
+    },
+    "spell-ingredient-planner": {
+      "name": "Planificador de Ingredientes",
+      "category": "Rituales",
+      "lang": "es"
+    },
+    "banishing-ritual-builder": {
+      "name": "Constructor de Ritual de Banishing",
+      "category": "Rituales",
+      "lang": "es"
+    },
+    "lucid-dream-training-planner": {
+      "name": "Planificador de Entrenamiento de Sueños Lúcidos",
+      "category": "Sueños",
+      "lang": "es"
+    },
+    "reality-check-technique-coach": {
+      "name": "Coach de Técnica de Chequeo de Realidad",
+      "category": "Sueños",
+      "lang": "es"
+    },
+    "dream-symbol-dictionary": {
+      "name": "Diccionario de Símbolos de Sueño",
+      "category": "Sueños",
+      "lang": "es"
+    },
+    "astral-projection-session-timer": {
+      "name": "Temporizador de Sesión Astral",
+      "category": "Sueños",
+      "lang": "es"
+    },
+    "meditation-focus-timer": {
+      "name": "Temporizador de Meditación",
+      "category": "Bienestar",
+      "lang": "es"
+    },
+    "intention-achievement-tracker": {
+      "name": "Seguimiento de Intenciones",
+      "category": "Seguimiento",
+      "lang": "es"
+    },
+    "results-tracking-dashboard": {
+      "name": "Panel de Seguimiento de Resultados",
+      "category": "Seguimiento",
+      "lang": "es"
+    },
+    "ritual-safety-checklist": {
+      "name": "Checklist de Seguridad Ritual",
+      "category": "Seguridad",
+      "lang": "es"
+    },
+    "consent-boundary-planner": {
+      "name": "Planificador de Consentimiento y Límites",
+      "category": "Seguridad",
+      "lang": "es"
+    },
+    "digital-grimoire-organizer": {
+      "name": "Organizador de Grimorio Digital",
+      "category": "Organización",
+      "lang": "es"
+    },
+    "paranormal-session-prep-checklist": {
+      "name": "Checklist de Preparación para Sesiones",
+      "category": "Organización",
+      "lang": "es"
+    },
+    "sigil-charging-planner": {
+      "name": "Planificador de Carga de Sigilo",
+      "category": "Sigilos",
+      "lang": "es"
+    },
+    "servitor-design-journal": {
+      "name": "Diario de Diseño de Servidores",
+      "category": "Organización",
+      "lang": "es"
+    },
+    "activador-servidores": {
+      "name": "Activador Servidores",
+      "category": "Organización",
+      "lang": "es"
+    },
+    "astrology-sign-calculator": {
+      "name": "Astrology Sign Calculator",
+      "category": "Astrología",
+      "lang": "en"
+    },
+    "candle-color-calculator": {
+      "name": "Candle Color Calculator",
+      "category": "Rituales",
+      "lang": "en"
+    },
+    "digital-pendulum": {
+      "name": "Digital Pendulum",
+      "category": "Oráculos",
+      "lang": "en"
+    },
+    "gnosis-timer": {
+      "name": "Gnosis Timer",
+      "category": "Bienestar",
+      "lang": "en"
+    },
+    "goetic-spirit-selector": {
+      "name": "Goetic Spirit Selector",
+      "category": "Rituales",
+      "lang": "en"
+    },
+    "iching": {
+      "name": "Iching",
+      "category": "Oráculos",
+      "lang": "en"
+    },
+    "iching-changing-lines": {
+      "name": "Iching Changing Lines",
+      "category": "Oráculos",
+      "lang": "en"
+    },
+    "lunar-phase": {
+      "name": "Lunar Phase",
+      "category": "Lunar",
+      "lang": "en"
+    },
+    "moon-voc": {
+      "name": "Moon Voc",
+      "category": "Lunar",
+      "lang": "en"
+    },
+    "planetary-hours": {
+      "name": "Planetary Hours",
+      "category": "Lunar",
+      "lang": "en"
+    },
+    "planetary-kamea-sigil": {
+      "name": "Planetary Kamea Sigil",
+      "category": "Sigilos",
+      "lang": "en"
+    },
+    "reality-check-tracker": {
+      "name": "Reality Check Tracker",
+      "category": "Sueños",
+      "lang": "en"
+    },
+    "rune-drawer": {
+      "name": "Rune Drawer",
+      "category": "Runas",
+      "lang": "en"
+    },
+    "sigil-charging-timer": {
+      "name": "Sigil Charging Timer",
+      "category": "Sigilos",
+      "lang": "en"
+    },
+    "sigil-generator": {
+      "name": "Sigil Generator",
+      "category": "Sigilos",
+      "lang": "en"
+    },
+    "spell-builder": {
+      "name": "Spell Builder",
+      "category": "Rituales",
+      "lang": "en"
+    },
+    "tarot-yes-no": {
+      "name": "Tarot Yes No",
+      "category": "Tarot",
+      "lang": "en"
+    },
+    "tengwar-transcriber": {
+      "name": "Tengwar Transcriber",
+      "category": "Símbolos",
+      "lang": "en"
+    },
+    "viking-runes": {
+      "name": "Viking Runes",
+      "category": "Runas",
+      "lang": "en"
+    },
+    "zener-esp-trainer": {
+      "name": "Zener Esp Trainer",
+      "category": "Bienestar",
+      "lang": "en"
+    }
+  },
+  "tools": {
+    "full-birth-chart": {
+      "category": "Astrología",
+      "lang": "es",
+      "apps": [
+        "astral-lab"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "rising-sign-calculator",
+        "moon-sign-calculator",
+        "zodiac-cusp-calculator"
+      ]
+    },
+    "rising-sign-calculator": {
+      "category": "Astrología",
+      "lang": "es",
+      "apps": [
+        "astral-lab"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "full-birth-chart",
+        "moon-sign-calculator",
+        "zodiac-cusp-calculator"
+      ]
+    },
+    "moon-sign-calculator": {
+      "category": "Astrología",
+      "lang": "es",
+      "apps": [
+        "astral-lab",
+        "lunar-phase-calculator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "full-birth-chart",
+        "rising-sign-calculator",
+        "zodiac-cusp-calculator"
+      ]
+    },
+    "zodiac-cusp-calculator": {
+      "category": "Astrología",
+      "lang": "es",
+      "apps": [
+        "astral-lab"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "full-birth-chart",
+        "rising-sign-calculator",
+        "moon-sign-calculator"
+      ]
+    },
+    "planetary-retrograde-calendar": {
+      "category": "Astrología",
+      "lang": "es",
+      "apps": [
+        "astral-lab",
+        "lunar-phase-calculator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "full-birth-chart",
+        "rising-sign-calculator",
+        "moon-sign-calculator"
+      ]
+    },
+    "planetary-day-calculator": {
+      "category": "Astrología",
+      "lang": "es",
+      "apps": [
+        "astral-lab",
+        "lunar-phase-calculator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "full-birth-chart",
+        "rising-sign-calculator",
+        "moon-sign-calculator"
+      ]
+    },
+    "tarot-card-reference": {
+      "category": "Tarot",
+      "lang": "es",
+      "apps": [
+        "unofficial-rider-waite-tarot"
+      ],
+      "book": "tarot-chaos-pdf",
+      "related": [
+        "tarot-spread-builder",
+        "tarot-journal",
+        "lenormand-card-draw"
+      ]
+    },
+    "tarot-spread-builder": {
+      "category": "Tarot",
+      "lang": "es",
+      "apps": [
+        "unofficial-rider-waite-tarot"
+      ],
+      "book": "tarot-chaos-pdf",
+      "related": [
+        "tarot-card-reference",
+        "tarot-journal",
+        "lenormand-card-draw"
+      ]
+    },
+    "tarot-journal": {
+      "category": "Tarot",
+      "lang": "es",
+      "apps": [
+        "unofficial-rider-waite-tarot"
+      ],
+      "book": "tarot-chaos-pdf",
+      "related": [
+        "tarot-card-reference",
+        "tarot-spread-builder",
+        "lenormand-card-draw"
+      ]
+    },
+    "lenormand-card-draw": {
+      "category": "Tarot",
+      "lang": "es",
+      "apps": [
+        "unofficial-rider-waite-tarot"
+      ],
+      "book": "tarot-chaos-pdf",
+      "related": [
+        "tarot-card-reference",
+        "tarot-spread-builder",
+        "tarot-journal"
+      ]
+    },
+    "sibilla-yes-no-oracle": {
+      "category": "Oráculos",
+      "lang": "es",
+      "apps": [
+        "norse-rune-oracle"
+      ],
+      "book": "ouija-cazadora-pdf",
+      "related": [
+        "pendulum-question-builder",
+        "pendulum-question-builder",
+        "digital-pendulum"
+      ]
+    },
+    "pendulum-question-builder": {
+      "category": "Oráculos",
+      "lang": "es",
+      "apps": [
+        "psi-gym"
+      ],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "sibilla-yes-no-oracle",
+        "sibilla-yes-no-oracle",
+        "digital-pendulum"
+      ]
+    },
+    "elder-futhark-reference": {
+      "category": "Runas",
+      "lang": "es",
+      "apps": [
+        "norse-rune-oracle"
+      ],
+      "book": "tratado-runas-cazadoras-caos-pdf",
+      "related": [
+        "runic-name-translator",
+        "ogham-oracle",
+        "runic-name-translator"
+      ]
+    },
+    "runic-name-translator": {
+      "category": "Runas",
+      "lang": "es",
+      "apps": [
+        "norse-rune-oracle"
+      ],
+      "book": "tratado-runas-cazadoras-caos-pdf",
+      "related": [
+        "elder-futhark-reference",
+        "ogham-oracle",
+        "elder-futhark-reference"
+      ]
+    },
+    "ogham-oracle": {
+      "category": "Runas",
+      "lang": "es",
+      "apps": [
+        "norse-rune-oracle"
+      ],
+      "book": "tratado-runas-cazadoras-caos-pdf",
+      "related": [
+        "elder-futhark-reference",
+        "runic-name-translator",
+        "elder-futhark-reference"
+      ]
+    },
+    "planetary-alphabet-cipher": {
+      "category": "Símbolos",
+      "lang": "es",
+      "apps": [
+        "chaos-sigil-generator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "tengwar-transcriber"
+      ]
+    },
+    "sigil-intention-encoder": {
+      "category": "Sigilos",
+      "lang": "es",
+      "apps": [
+        "chaos-sigil-generator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "sigil-charging-planner",
+        "sigil-charging-planner",
+        "planetary-kamea-sigil"
+      ]
+    },
+    "magical-correspondence-finder": {
+      "category": "Correspondencias",
+      "lang": "es",
+      "apps": [
+        "arcana-goetia"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "elemental-balance-checker",
+        "elemental-balance-checker"
+      ]
+    },
+    "elemental-balance-checker": {
+      "category": "Correspondencias",
+      "lang": "es",
+      "apps": [
+        "arcana-goetia"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "magical-correspondence-finder",
+        "magical-correspondence-finder"
+      ]
+    },
+    "moon-phase-calendar": {
+      "category": "Lunar",
+      "lang": "es",
+      "apps": [
+        "lunar-phase-calculator"
+      ],
+      "book": null,
+      "related": [
+        "moon-intention-planner",
+        "planetary-hours-planner",
+        "ritual-timing-scorecard"
+      ]
+    },
+    "moon-intention-planner": {
+      "category": "Lunar",
+      "lang": "es",
+      "apps": [
+        "lunar-phase-calculator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "moon-phase-calendar",
+        "planetary-hours-planner",
+        "ritual-timing-scorecard"
+      ]
+    },
+    "planetary-hours-planner": {
+      "category": "Lunar",
+      "lang": "es",
+      "apps": [
+        "lunar-phase-calculator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "moon-phase-calendar",
+        "moon-intention-planner",
+        "ritual-timing-scorecard"
+      ]
+    },
+    "ritual-timing-scorecard": {
+      "category": "Lunar",
+      "lang": "es",
+      "apps": [
+        "lunar-phase-calculator",
+        "astral-lab"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "moon-phase-calendar",
+        "moon-intention-planner",
+        "planetary-hours-planner"
+      ]
+    },
+    "sabbat-season-planner": {
+      "category": "Lunar",
+      "lang": "es",
+      "apps": [
+        "lunar-phase-calculator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "moon-phase-calendar",
+        "moon-intention-planner",
+        "planetary-hours-planner"
+      ]
+    },
+    "candle-intention-planner": {
+      "category": "Rituales",
+      "lang": "es",
+      "apps": [
+        "arcana-goetia"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "spell-ingredient-planner",
+        "banishing-ritual-builder",
+        "spell-ingredient-planner"
+      ]
+    },
+    "spell-ingredient-planner": {
+      "category": "Rituales",
+      "lang": "es",
+      "apps": [
+        "arcana-goetia"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "candle-intention-planner",
+        "banishing-ritual-builder",
+        "candle-intention-planner"
+      ]
+    },
+    "banishing-ritual-builder": {
+      "category": "Rituales",
+      "lang": "es",
+      "apps": [
+        "arcana-goetia"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "candle-intention-planner",
+        "spell-ingredient-planner",
+        "candle-intention-planner"
+      ]
+    },
+    "lucid-dream-training-planner": {
+      "category": "Sueños",
+      "lang": "es",
+      "apps": [
+        "dream-machine",
+        "lucid-dream"
+      ],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "reality-check-technique-coach",
+        "dream-symbol-dictionary",
+        "astral-projection-session-timer"
+      ]
+    },
+    "reality-check-technique-coach": {
+      "category": "Sueños",
+      "lang": "es",
+      "apps": [
+        "lucid-dream",
+        "dream-machine"
+      ],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "lucid-dream-training-planner",
+        "dream-symbol-dictionary",
+        "astral-projection-session-timer"
+      ]
+    },
+    "dream-symbol-dictionary": {
+      "category": "Sueños",
+      "lang": "es",
+      "apps": [
+        "dream-machine"
+      ],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "lucid-dream-training-planner",
+        "reality-check-technique-coach",
+        "astral-projection-session-timer"
+      ]
+    },
+    "astral-projection-session-timer": {
+      "category": "Sueños",
+      "lang": "es",
+      "apps": [
+        "lucid-dream"
+      ],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "lucid-dream-training-planner",
+        "reality-check-technique-coach",
+        "dream-symbol-dictionary"
+      ]
+    },
+    "meditation-focus-timer": {
+      "category": "Bienestar",
+      "lang": "es",
+      "apps": [
+        "psi-gym"
+      ],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "gnosis-timer",
+        "zener-esp-trainer"
+      ]
+    },
+    "intention-achievement-tracker": {
+      "category": "Seguimiento",
+      "lang": "es",
+      "apps": [],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "results-tracking-dashboard",
+        "results-tracking-dashboard"
+      ]
+    },
+    "results-tracking-dashboard": {
+      "category": "Seguimiento",
+      "lang": "es",
+      "apps": [],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "intention-achievement-tracker",
+        "intention-achievement-tracker"
+      ]
+    },
+    "ritual-safety-checklist": {
+      "category": "Seguridad",
+      "lang": "es",
+      "apps": [
+        "noctem-tools"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "consent-boundary-planner",
+        "consent-boundary-planner"
+      ]
+    },
+    "consent-boundary-planner": {
+      "category": "Seguridad",
+      "lang": "es",
+      "apps": [
+        "noctem-tools"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "ritual-safety-checklist",
+        "ritual-safety-checklist"
+      ]
+    },
+    "digital-grimoire-organizer": {
+      "category": "Organización",
+      "lang": "es",
+      "apps": [
+        "arcana-goetia"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "paranormal-session-prep-checklist",
+        "servitor-design-journal",
+        "activador-servidores"
+      ]
+    },
+    "paranormal-session-prep-checklist": {
+      "category": "Organización",
+      "lang": "es",
+      "apps": [
+        "noctem-tools"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "digital-grimoire-organizer",
+        "servitor-design-journal",
+        "activador-servidores"
+      ]
+    },
+    "sigil-charging-planner": {
+      "category": "Sigilos",
+      "lang": "es",
+      "apps": [
+        "chaos-sigil-generator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "sigil-intention-encoder",
+        "sigil-intention-encoder",
+        "planetary-kamea-sigil"
+      ]
+    },
+    "servitor-design-journal": {
+      "category": "Organización",
+      "lang": "es",
+      "apps": [
+        "arcana-goetia"
+      ],
+      "book": "manual-activacion-servidores-magicos-pdf",
+      "related": [
+        "digital-grimoire-organizer",
+        "paranormal-session-prep-checklist",
+        "activador-servidores"
+      ]
+    },
+    "activador-servidores": {
+      "category": "Organización",
+      "lang": "es",
+      "apps": [
+        "arcana-goetia"
+      ],
+      "book": "manual-activacion-servidores-magicos-pdf",
+      "related": [
+        "digital-grimoire-organizer",
+        "paranormal-session-prep-checklist",
+        "servitor-design-journal"
+      ]
+    },
+    "astrology-sign-calculator": {
+      "category": "Astrología",
+      "lang": "en",
+      "apps": [
+        "astral-lab"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "full-birth-chart",
+        "rising-sign-calculator",
+        "moon-sign-calculator"
+      ]
+    },
+    "candle-color-calculator": {
+      "category": "Rituales",
+      "lang": "en",
+      "apps": [
+        "arcana-goetia"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "goetic-spirit-selector",
+        "spell-builder",
+        "candle-intention-planner"
+      ]
+    },
+    "digital-pendulum": {
+      "category": "Oráculos",
+      "lang": "en",
+      "apps": [
+        "psi-gym"
+      ],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "iching",
+        "iching-changing-lines",
+        "sibilla-yes-no-oracle"
+      ]
+    },
+    "gnosis-timer": {
+      "category": "Bienestar",
+      "lang": "en",
+      "apps": [
+        "psi-gym"
+      ],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "zener-esp-trainer",
+        "meditation-focus-timer",
+        "zener-esp-trainer"
+      ]
+    },
+    "goetic-spirit-selector": {
+      "category": "Rituales",
+      "lang": "en",
+      "apps": [
+        "arcana-goetia"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "candle-color-calculator",
+        "spell-builder",
+        "candle-intention-planner"
+      ]
+    },
+    "iching": {
+      "category": "Oráculos",
+      "lang": "en",
+      "apps": [
+        "iching-oracle"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "digital-pendulum",
+        "iching-changing-lines",
+        "sibilla-yes-no-oracle"
+      ]
+    },
+    "iching-changing-lines": {
+      "category": "Oráculos",
+      "lang": "en",
+      "apps": [
+        "iching-oracle"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "digital-pendulum",
+        "iching",
+        "sibilla-yes-no-oracle"
+      ]
+    },
+    "lunar-phase": {
+      "category": "Lunar",
+      "lang": "en",
+      "apps": [
+        "lunar-phase-calculator"
+      ],
+      "book": null,
+      "related": [
+        "moon-voc",
+        "planetary-hours",
+        "moon-phase-calendar"
+      ]
+    },
+    "moon-voc": {
+      "category": "Lunar",
+      "lang": "en",
+      "apps": [
+        "lunar-phase-calculator",
+        "astral-lab"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "lunar-phase",
+        "planetary-hours",
+        "moon-phase-calendar"
+      ]
+    },
+    "planetary-hours": {
+      "category": "Lunar",
+      "lang": "en",
+      "apps": [
+        "lunar-phase-calculator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "lunar-phase",
+        "moon-voc",
+        "moon-phase-calendar"
+      ]
+    },
+    "planetary-kamea-sigil": {
+      "category": "Sigilos",
+      "lang": "en",
+      "apps": [
+        "chaos-sigil-generator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "sigil-charging-timer",
+        "sigil-generator",
+        "sigil-intention-encoder"
+      ]
+    },
+    "reality-check-tracker": {
+      "category": "Sueños",
+      "lang": "en",
+      "apps": [
+        "lucid-dream",
+        "dream-machine"
+      ],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "lucid-dream-training-planner",
+        "reality-check-technique-coach",
+        "dream-symbol-dictionary"
+      ]
+    },
+    "rune-drawer": {
+      "category": "Runas",
+      "lang": "en",
+      "apps": [
+        "norse-rune-oracle"
+      ],
+      "book": "tratado-runas-cazadoras-caos-pdf",
+      "related": [
+        "viking-runes",
+        "elder-futhark-reference",
+        "runic-name-translator"
+      ]
+    },
+    "sigil-charging-timer": {
+      "category": "Sigilos",
+      "lang": "en",
+      "apps": [
+        "chaos-sigil-generator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "planetary-kamea-sigil",
+        "sigil-generator",
+        "sigil-intention-encoder"
+      ]
+    },
+    "sigil-generator": {
+      "category": "Sigilos",
+      "lang": "en",
+      "apps": [
+        "chaos-sigil-generator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "planetary-kamea-sigil",
+        "sigil-charging-timer",
+        "sigil-intention-encoder"
+      ]
+    },
+    "spell-builder": {
+      "category": "Rituales",
+      "lang": "en",
+      "apps": [
+        "arcana-goetia"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "candle-color-calculator",
+        "goetic-spirit-selector",
+        "candle-intention-planner"
+      ]
+    },
+    "tarot-yes-no": {
+      "category": "Tarot",
+      "lang": "en",
+      "apps": [
+        "unofficial-rider-waite-tarot",
+        "norse-rune-oracle"
+      ],
+      "book": "tarot-chaos-pdf",
+      "related": [
+        "tarot-card-reference",
+        "tarot-spread-builder",
+        "tarot-journal"
+      ]
+    },
+    "tengwar-transcriber": {
+      "category": "Símbolos",
+      "lang": "en",
+      "apps": [],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "planetary-alphabet-cipher"
+      ]
+    },
+    "viking-runes": {
+      "category": "Runas",
+      "lang": "en",
+      "apps": [
+        "norse-rune-oracle"
+      ],
+      "book": "tratado-runas-cazadoras-caos-pdf",
+      "related": [
+        "rune-drawer",
+        "elder-futhark-reference",
+        "runic-name-translator"
+      ]
+    },
+    "zener-esp-trainer": {
+      "category": "Bienestar",
+      "lang": "en",
+      "apps": [
+        "psi-gym"
+      ],
+      "book": "mind-the-gap-pdf",
+      "related": [
+        "gnosis-timer",
+        "meditation-focus-timer",
+        "gnosis-timer"
+      ]
+    }
+  }
+}

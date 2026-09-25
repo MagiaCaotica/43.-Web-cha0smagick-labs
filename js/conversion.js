@@ -563,14 +563,14 @@
 
     var lang = isSpanish();
     var headline = lang
-      ? 'âœ¨ La ColecciÃ³n Completa de Magia del Caos'
-      : 'âœ¨ The Complete Occult Collection';
+      ? '✨ La Colección Completa de Magia del Caos'
+      : '✨ The Complete Occult Collection';
     var text = lang
-      ? '11 Apps Android premium + 7 Libros PDF. Todo lo que necesitas para tu prÃ¡ctica de Magia del Caos, en un solo ecosistema. 100% offline, sin suscripciones.'
+      ? '11 Apps Android premium + 7 Libros PDF. Todo lo que necesitas para tu práctica de Magia del Caos, en un solo ecosistema. 100% offline, sin suscripciones.'
       : '11 Android apps + 7 PDF books. Everything for your Chaos Magick practice in one complete ecosystem. 100% offline, no subscriptions.';
     var cta = lang
-      ? 'Ver Todos los Productos â†”'
-      : 'Browse All Products â†”';
+      ? 'Ver Todos los Productos →'
+      : 'Browse All Products →';
 
     var html = '\
 <section id="cm-cta-collection" class="cm-section cm-collection-section">\
@@ -587,7 +587,7 @@
         <span class="cm-stat-label">PDF Books</span>\
       </div>\
       <div class="cm-stat">\
-        <span class="cm-stat-num">4.7 â˜…</span>\
+        <span class="cm-stat-num">4.7 ★</span>\
         <span class="cm-stat-label">128+ Reviews</span>\
       </div>\
     </div>\
@@ -600,6 +600,103 @@
     } else {
       insertBefore(target, html);
     }
+  }
+
+  // --- Tool sales funnel -------------------------------------------------
+  // The per-tool offer map lives in data/tool-funnels.json, NOT in this file,
+  // so a funnel can be re-pointed at a different app or book by editing JSON.
+  // Regenerate it with: node scripts/build-tool-funnels.mjs
+  // Las paginas de herramientas viven en /tools/, asi que el catalogo esta un nivel arriba.
+  var TOOL_FUNNELS_URL = '../data/tool-funnels.json';
+  var funnelState = { loaded: false, data: null, pending: [] };
+
+  // .../<root>/tools/<slug>.html -> <slug>
+  function toolSlugFromPath() {
+    var pathname = window.location.pathname || '';
+    var file = pathname.split('/').pop() || '';
+    if (!/\.html?$/i.test(file)) return '';
+    return decodeURIComponent(file.replace(/\.html?$/i, ''));
+  }
+
+  // Resolves relative to the current page so it works from /tools/*.html and
+  // from any other depth the funnel might later be reused at.
+  function funnelUrl() {
+    return new URL(TOOL_FUNNELS_URL, window.location.href).href;
+  }
+
+  function loadFunnelCatalogue() {
+    if (funnelState.loaded) {
+      if (funnelState.data) return Promise.resolve(funnelState.data);
+      return Promise.reject(new Error('funnel fetch failed'));
+    }
+    return fetch(funnelUrl(), { credentials: 'omit' })
+      .then(function (response) {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.json();
+      })
+      .then(function (data) {
+        funnelState.data = data;
+        funnelState.loaded = true;
+        return data;
+      })
+      .catch(function (error) {
+        console.error('[cm-funnel] no se pudo cargar ' + TOOL_FUNNELS_URL, error);
+        throw error;
+      });
+  }
+
+  // Returns the entry synchronously when the catalogue already arrived,
+  // otherwise registers a callback. getFunnelCatalogue() is the sync reader
+  // for callers that only need it if it happens to be cached.
+  function whenFunnelReady(callback) {
+    if (funnelState.data) { callback(funnelState.data); return; }
+    loadFunnelCatalogue().then(callback, function () { /* already logged */ });
+  }
+
+  function getFunnelCatalogue() {
+    return funnelState.data;
+  }
+
+  function getFunnel(slug) {
+    var data = funnelState.data;
+    if (!data || !slug) return null;
+    return (data.tools || {})[slug] || null;
+  }
+
+  // Resolves ids in `field` against the products block.
+  function resolveProducts(field, catalogue) {
+    var ids = Array.isArray(field) ? field : (field ? [field] : []);
+    var out = [];
+    for (var i = 0; i < ids.length; i++) {
+      var id = ids[i];
+      if (out.some(function (p) { return p.id === id; })) continue;
+      var app = (catalogue.products.apps || []).filter(function (p) { return p.id === id; })[0];
+      var book = (catalogue.products.books || []).filter(function (p) { return p.id === id; })[0];
+      if (app) out.push(app);
+      else if (book) out.push(book);
+    }
+    return out;
+  }
+
+  function fillTokens(text, tokens) {
+    return String(text || '').replace(/\{\{(\w+)\}\}/g, function (match, key) {
+      return Object.prototype.hasOwnProperty.call(tokens, key) ? tokens[key] : match;
+    });
+  }
+
+  // The category angle, in the page's language, with product names substituted.
+  function funnelAngle(funnel, catalogue, lang, tokens) {
+    var angles = catalogue.angles || {};
+    var angle = (angles[funnel.category] || {})[lang] || null;
+    if (!angle) return null;
+    return { head: fillTokens(angle.head, tokens), sub: fillTokens(angle.sub, tokens) };
+  }
+
+  function toolDisplayName(slug, catalogue) {
+    var atomic = (catalogue.atomic || {})[slug];
+    if (atomic && atomic.name) return atomic.name;
+    // Fall back to prettifying the slug: "rune-drawer" -> "Rune Drawer"
+    return String(slug || '').replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
   }
 
   // --- App-Specific Promotion (for tools pages) ---
@@ -622,9 +719,9 @@
     var html = '\
 <section id="cm-cta-tool-upgrade" class="cm-section cm-tool-cta">\
   <div class="cm-tool-cta-inner">\
-    <h3>' + (isSpanish() ? 'Â¿Te gusta esta herramienta?' : 'Love this tool?') + '</h3>\
+    <h3>' + (isSpanish() ? '¿Te gusta esta herramienta?' : 'Love this tool?') + '</h3>\
     <p>' + (isSpanish()
-      ? 'ObtÃ©n la app premium de ' + toolName + ' en Google Play. Sin anuncios, sin rastreo, 100% offline.'
+      ? 'Obtén la app premium de ' + toolName + ' en Google Play. Sin anuncios, sin rastreo, 100% offline.'
       : 'Get the premium ' + toolName + ' app on Google Play. No ads, no tracking, 100% offline.') + '</p>\
     <div class="cm-tool-cta-btns">\
       <a href="' + appUrl + '" class="cm-btn cm-btn-primary" target="_blank">\
@@ -632,7 +729,7 @@
         ' + (isSpanish() ? 'COMPRAR EN PLAY STORE' : 'GET IT ON PLAY STORE') + '\
       </a>\
     </div>\
-    <p class="cm-tool-price">' + (isSpanish() ? 'Solo ' : 'Just ') + appPrice + ' â€” ' + (isSpanish() ? 'pago Ãºnico' : 'one-time payment') + '</p>\
+    <p class="cm-tool-price">' + (isSpanish() ? 'Solo ' : 'Just ') + appPrice + ' — ' + (isSpanish() ? 'pago único' : 'one-time payment') + '</p>\
   </div>\
 </section>';
 
@@ -641,6 +738,261 @@
     } else {
       insertBefore(insertPoint, html);
     }
+  }
+
+  var PLAY_SVG = '<svg class="cm-play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>';
+
+  // Appends the funnel step directly after `node`, so the step can be
+  // positioned relative to the tool UI (before or after the result) rather
+  // than always landing above the footer.
+  function insertAfterNode(node, html) {
+    if (node && node.parentNode) node.parentNode.insertAdjacentHTML('afterend', html);
+    else appendHtml(document.body, html);
+  }
+
+  function bookCtaHtml(book, lang) {
+    var es = lang === 'es';
+    var title = es ? 'El libro que va más allá de la herramienta' : 'The book that goes deeper than the tool';
+    var sub = es
+      ? book.description
+      : (book.descriptionEn || book.description);
+    var cta = es ? 'VER EL LIBRO' : 'SEE THE BOOK';
+    var buy = es ? 'Comprar en Hotmart' : 'Buy on Hotmart';
+    return '\
+<section class="cm-funnel-step cm-book-cta" data-funnel-step="book" data-product-id="' + book.id + '">\
+  <div class="cm-funnel-inner">\
+    <p class="cm-funnel-kicker">' + (es ? 'Libro · Magia del Caos' : 'Book · Chaos Magick') + '</p>\
+    <h3>' + title + '</h3>\
+    <h4>' + book.name + '</h4>\
+    <p>' + (sub || '') + '</p>\
+    <div class="cm-funnel-btns">\
+      <a class="cm-btn cm-btn-book" href="' + book.page + '">' + cta + '</a>\
+      <a class="cm-btn cm-btn-book-alt" href="' + book.checkout + '" target="_blank" rel="noopener">' + buy + '</a>\
+    </div>\
+    <p class="cm-funnel-price">' + book.price + ' — ' + (es ? 'pago único' : 'one-time payment') + '</p>\
+  </div>\
+</section>';
+  }
+
+  function prePitchHtml(tool, apps, angle, lang) {
+    if (!apps.length) return '';
+    var es = lang === 'es';
+    var head = angle ? angle.head
+      : (es ? '¿Quieres esto en tu bolsillo?' : 'Want this in your pocket?');
+    var sub = angle ? angle.sub
+      : (es ? 'Todo el cálculo, sin conexión y sin anuncios.'
+            : 'All of the calculation, offline and ad-free.');
+    var buttons = '';
+    var prices = [];
+    for (var i = 0; i < apps.length; i++) {
+      var app = apps[i];
+      buttons += '\
+      <a class="cm-btn cm-btn-primary cm-funnel-app" href="' + app.url + '" target="_blank" rel="noopener" data-product-id="' + app.id + '">\
+        ' + PLAY_SVG + (es ? ' ' + app.name.toUpperCase() : ' ' + app.name) + '\
+        <span class="cm-funnel-app-price">' + (app.price || '') + '</span>\
+      </a>';
+      if (app.price && prices.indexOf(app.price) === -1) prices.push(app.price);
+    }
+    return '\
+<section class="cm-funnel-step cm-funnel-pitch" data-funnel-step="pitch">\
+  <div class="cm-funnel-inner">\
+    <p class="cm-funnel-kicker">' + (es ? 'Continúa en el móvil' : 'Take it further on mobile') + '</p>\
+    <h3>' + head + '</h3>\
+    <p>' + sub + '</p>\
+    <div class="cm-funnel-btns">' + buttons + '</div>\
+    <p class="cm-funnel-note">' + (es ? 'Pago único · Sin anuncios · Funciona sin internet' : 'One-time payment · No ads · Works offline') + (prices.length ? ' · ' + prices.join(' / ') : '') + '</p>\
+  </div>\
+</section>';
+  }
+
+  function relatedHtml(slug, related, catalogue, lang) {
+    if (!related.length) return '';
+    var es = lang === 'es';
+    var cards = '';
+    for (var i = 0; i < related.length; i++) {
+      var entry = (catalogue.tools || {})[related[i]];
+      if (!entry) continue;
+      var name = toolDisplayName(related[i], catalogue);
+      var angle = funnelAngle(entry, catalogue, lang, { tool: name });
+      cards += '\
+      <li class="cm-funnel-related-card">\
+        <a href="' + related[i] + '.html">' + name + '</a>\
+        <span>' + (angle ? angle.sub : (es ? 'Herramienta gratuita' : 'Free tool')) + '</span>\
+      </li>';
+    }
+    if (!cards) return '';
+    return '\
+<section class="cm-funnel-step cm-funnel-related" data-funnel-step="related">\
+  <div class="cm-funnel-inner">\
+    <h3>' + (es ? 'Sigue mapando tu práctica' : 'Keep mapping your practice') + '</h3>\
+    <p>' + (es ? 'Estas herramientas gratuitas van con el mismo sistema que las apps y los libros.'
+                  : 'These free tools share the same system as the apps and books.') + '</p>\
+    <ul class="cm-funnel-related-list">' + cards + '</ul>\
+  </div>\
+</section>';
+  }
+
+  function bindFunnelClicks(root) {
+    var nodes = (root || document).querySelectorAll('[data-product-id]');
+    for (var i = 0; i < nodes.length; i++) {
+      (function (node) {
+        node.addEventListener('click', function () {
+          track('tool_funnel_click', {
+            tool_id: toolSlugFromPath(),
+            product_type: /book/i.test(node.getAttribute('data-funnel-step') || '') ? 'book' : 'app',
+            product_id: node.getAttribute('data-product-id') || '',
+            source: 'tool_funnel'
+          });
+        });
+      })(nodes[i]);
+    }
+  }
+
+  // First real app offered by any OTHER tool in the catalogue. Used only when
+  // the current slug has no entry, so a page is never left with zero offers.
+  function firstAvailableApp(catalogue, excludeSlug) {
+    var tools = (catalogue && catalogue.tools) || {};
+    var keys = Object.keys(tools);
+    for (var i = 0; i < keys.length; i++) {
+      if (keys[i] === excludeSlug) continue;
+      var entry = tools[keys[i]];
+      if (entry.category === 'Seguimiento') continue; // tracking tools have no app by design
+      var apps = resolveProducts(entry.apps, catalogue);
+      if (apps.length) return apps[0];
+    }
+    return null;
+  }
+
+  // --- Tools index: catalogo completo de apps y libros -------------------
+  function indexFunnelHtml(catalogue, lang) {
+    var es = lang === 'es';
+    var apps = (catalogue.products && catalogue.products.apps) || [];
+    var books = (catalogue.products && catalogue.products.books) || [];
+    if (!apps.length && !books.length) return '';
+
+    var appCards = '';
+    for (var i = 0; i < apps.length; i++) {
+      var a = apps[i];
+      appCards += '\
+      <li class="cm-funnel-related-card cm-funnel-app-card">\
+        <a href="' + a.url + '" target="_blank" rel="noopener" data-product-id="' + a.id + '">' + PLAY_SVG + (es ? ' ' + a.name : ' ' + a.name) + '</a>\
+        <span>' + (a.price || '') + ' · ' + (es ? 'pago único, sin anuncios' : 'one-time, no ads') + '</span>\
+      </li>';
+    }
+
+    var bookCards = '';
+    for (var j = 0; j < books.length; j++) {
+      var b = books[j];
+      bookCards += '\
+      <li class="cm-funnel-related-card cm-funnel-book-card" data-product-id="' + b.id + '">\
+        <a href="' + b.page + '">' + b.name + '</a>\
+        <span>' + (b.price || '') + ' · ' + (es ? 'PDF descargable' : 'downloadable PDF') + '</span>\
+        <a class="cm-funnel-mini-buy" href="' + b.checkout + '" target="_blank" rel="noopener">' + (es ? 'Comprar' : 'Buy') + '</a>\
+      </li>';
+    }
+
+    return '\
+<section id="cm-funnel-catalog" class="cm-section cm-funnel-step cm-funnel-catalog" data-funnel-step="catalog">\
+  <div class="cm-funnel-inner">\
+    <p class="cm-funnel-kicker">' + (es ? 'De la pantalla a tu dispositivo' : 'From the screen to your device') + '</p>\
+    <h3>' + (es ? 'Estas herramientas gratuitas tienen versión app y libro' : 'These free tools have app and book versions') + '</h3>\
+    <p>' + (es ? 'Las ' + apps.length + ' apps funcionan sin conexión, sin anuncios y sin rastreo. Los ' + books.length + ' libros son PDF para leer cuando quieras.'
+                  : 'All ' + apps.length + ' apps work offline, ad-free and without tracking. The ' + books.length + ' books are PDFs you can read anywhere.') + '</p>\
+    <h4 class="cm-funnel-subhead">' + (es ? 'Apps para Android' : 'Android apps') + '</h4>\
+    <ul class="cm-funnel-related-list">' + appCards + '</ul>\
+    <h4 class="cm-funnel-subhead">' + (es ? 'Libros en PDF' : 'PDF books') + '</h4>\
+    <ul class="cm-funnel-related-list">' + bookCards + '</ul>\
+  </div>\
+</section>';
+  }
+
+  function injectToolsIndexFunnel(catalogue, lang) {
+    if (document.getElementById('cm-funnel-catalog')) return;
+    var html = indexFunnelHtml(catalogue, lang);
+    if (!html) return;
+    var host = document.getElementById('atomic-app') ||
+               document.querySelector('main') ||
+               document.querySelector('.container');
+    if (host) {
+      host.parentNode.insertAdjacentHTML('afterend', html);
+    } else {
+      var footer = document.querySelector('footer');
+      if (footer) insertBefore(footer, html);
+      else appendHtml(document.body, html);
+    }
+    var section = document.getElementById('cm-funnel-catalog');
+    if (section) bindFunnelClicks(section);
+    track('tool_funnel_view', {
+      source: 'tool_funnel',
+      surface: 'tools_index',
+      apps: (catalogue.products.apps || []).length,
+      books: (catalogue.products.books || []).length
+    });
+  }
+
+  // Assembles and injects the full funnel once the catalogue is available.
+  function initToolFunnel(funnel, catalogue) {
+    var slug = toolSlugFromPath();
+    if (!funnel || !catalogue) return;
+    if (document.getElementById('cm-funnel-root')) return; // already injected
+
+    var lang = funnel.lang === 'en' ? 'en' : 'es';
+    // The page's own lang wins when it disagrees, so a mistagged entry in
+    // tool-funnels.json cannot put Spanish copy on an English page.
+    if (isSpanish()) lang = 'es';
+    else if (document.documentElement.lang && /^en/i.test(document.documentElement.lang)) lang = 'en';
+
+    var toolName = toolDisplayName(slug, catalogue);
+    var apps = resolveProducts(funnel.apps, catalogue);
+    var book = funnel.book ? resolveProducts([funnel.book], catalogue)[0] : null;
+    var related = Array.isArray(funnel.related) ? funnel.related.filter(function (r) { return r !== slug; }) : [];
+    var angle = funnelAngle(funnel, catalogue, lang, { tool: toolName, book: book ? book.name : '' });
+
+    // Steps are inserted in reverse order after a single host node, so the
+    // final DOM order is pitch -> book -> related regardless of insert order.
+    // The chain must cover all three generations of tool markup:
+    //   Gen1 atomic  -> #atomic-app
+    //   Gen2 english -> .container (these pages ship no <main> at all)
+    //   fallback     -> body, inserted just above the footer
+    var host = document.getElementById('atomic-app') ||
+               document.querySelector('.tool-container, #results, .features') ||
+               document.querySelector('main') ||
+               document.querySelector('.container');
+    var useBody = !host;
+    if (!host) host = document.body;
+    if (!host) return;
+
+    var pitch = prePitchHtml(toolName, apps, angle, lang);
+    var bookBlock = book ? bookCtaHtml(book, lang) : '';
+    var relatedBlock = relatedHtml(slug, related, catalogue, lang);
+    if (!pitch && !bookBlock && !relatedBlock) return;
+
+    // 1. Pre-pitch: "the web tool worked, now go deeper" — placed after the
+    //    tool UI (atomic-app / .tool-container) but before the user's result.
+    // 2. Book CTA: the second offer, below the pitch.
+    // 3. Related tools: pure cross-sell, last so it never outranks the two
+    //    paid offers.
+    var emit = useBody
+      ? function (html) { insertBefore(document.querySelector('footer') || document.body, html); }
+      : function (html) { insertAfterNode(host, html); };
+
+    if (relatedBlock) emit(relatedBlock);
+    if (bookBlock) emit(bookBlock);
+    if (pitch) emit(pitch);
+
+    var steps = document.querySelectorAll('[data-funnel-step]');
+    if (steps.length) steps[0].setAttribute('id', 'cm-funnel-root');
+
+    bindFunnelClicks();
+
+    track('tool_funnel_view', {
+      tool_id: slug,
+      category: funnel.category || '',
+      apps: apps.length,
+      has_book: !!book,
+      related: related.length,
+      source: 'tool_funnel'
+    });
   }
 
   // --- Social Share Buttons (X · Pinterest · WhatsApp · Facebook) ---
@@ -1097,43 +1449,41 @@
                          !window.location.pathname.endsWith('/tools/index.html');
 
         if (isToolPage) {
-          // Determine which app to promote based on tool name
-          var path = window.location.pathname.toLowerCase();
-          var toolAppMap = {
-            'sigil': { name: 'Magick Chaos Sigil Generator', url: 'https://play.google.com/store/apps/details?id=com.chaosmagick.sigilgenerator', price: '$4.99' },
-            'rune': { name: 'Norse Rune Oracle', url: 'https://play.google.com/store/apps/details?id=com.cha0smagick.norone', price: '$4.99' },
-            'iching': { name: 'I Ching Oracle', url: 'https://play.google.com/store/apps/details?id=com.cha0smagick.iching', price: '$4.99' },
-            'candle': { name: 'Lunar Phase Calculator', url: 'https://play.google.com/store/apps/details?id=com.cha0smagick.lunar', price: '$3.99' },
-            'lunar': { name: 'Lunar Phase Calculator', url: 'https://play.google.com/store/apps/details?id=com.cha0smagick.lunar', price: '$3.99' },
-            'astrology': { name: 'Astral Lab', url: 'https://play.google.com/store/apps/details?id=com.cha0smagick.astrallab', price: '$4.99' },
-            'pendulum': { name: 'PSI GYM', url: 'https://play.google.com/store/apps/details?id=com.chaosmagick.psigym', price: '$4.99' },
-            'spell': { name: 'Chaos Sigil Generator', url: 'https://play.google.com/store/apps/details?id=com.chaosmagick.sigilgenerator', price: '$4.99' },
-            'tengwar': { name: 'Chaos Sigil Generator', url: 'https://play.google.com/store/apps/details?id=com.chaosmagick.sigilgenerator', price: '$4.99' },
-            'servidor': { name: 'Arcana Goetia', url: 'https://play.google.com/store/apps/details?id=com.cha0smagick.goetia', price: '$4.99' }
-          };
+          var slug = toolSlugFromPath();
+          var started = false;
 
-          var matched = null;
-          for (var key in toolAppMap) {
-            if (path.indexOf(key) !== -1) {
-              matched = toolAppMap[key];
-              break;
-            }
-          }
+          // The catalogue is a runtime fetch, so the router cannot resolve the
+          // funnel synchronously. whenFunnelReady() collapses both cases: it
+          // calls back immediately if the catalogue is already cached (a second
+          // conversion.js consumer) and otherwise once the JSON lands.
+          whenFunnelReady(function (catalogue) {
+            // Guard against a second init for the same page — a late-arriving
+            // catalogue plus a cached call would otherwise inject twice.
+            if (started) return;
+            started = true;
 
-          if (matched) {
-            // Inject upgrade CTA after tool results
-            injectToolUpgradeCTA(matched.name, matched.url, matched.price);
-          } else {
-            // Generic tool CTA
-            var apps = getAppsData();
-            if (apps && apps.length > 0) {
-              var randomApp = apps[Math.floor(Math.random() * apps.length)];
-              var price = randomApp.price ? randomApp.price.replace(/\sUSD.*$/, '').replace(/\(.*?\)/, '').trim() : '$4.99';
-              injectToolUpgradeCTA(randomApp.name, randomApp.url, price);
+            var funnel = getFunnel(slug);
+            if (funnel) {
+              initToolFunnel(funnel, catalogue);
+              return;
             }
-          }
+
+            // Slug missing from tool-funnels.json (new tool, typo, or an
+            // orphan page). Rather than showing nothing, surface one real app
+            // from the catalogue and log so the entry gets added.
+            if (global.console && console.warn) {
+              console.warn('[cm-funnel] slug sin entrada en tool-funnels.json:', slug);
+            }
+            var fallback = firstAvailableApp(catalogue, slug);
+            if (fallback) {
+              injectToolUpgradeCTA(fallback.name, fallback.url, fallback.price);
+            }
+          });
         } else {
-          // Tools index page - inject lead magnet at bottom
+          // Tools index page - catalogo de apps/libros + lead magnet al final
+          whenFunnelReady(function (catalogue) {
+            injectToolsIndexFunnel(catalogue, isSpanish() ? 'es' : 'en');
+          });
           var toolsFooter = document.querySelector('footer');
           if (toolsFooter) {
             injectLeadMagnet('footer', 'before');
@@ -1268,6 +1618,156 @@
   color: #666;\
   font-size: 0.75rem;\
   margin-top: 0.8rem;\
+}\
+\
+/* Tool sales funnel: pitch -> book -> related */\
+.cm-funnel-step {\
+  border: 1px solid #2a2a2a;\
+  border-radius: 14px;\
+  margin: 2rem auto;\
+  max-width: 920px;\
+  padding: clamp(1.1rem, 3vw, 2rem);\
+}\
+.cm-funnel-inner {\
+  text-align: center;\
+}\
+.cm-funnel-kicker {\
+  color: #d6ad55;\
+  font-size: 0.72rem;\
+  font-weight: 700;\
+  letter-spacing: 2px;\
+  margin: 0 0 0.6rem;\
+  text-transform: uppercase;\
+}\
+.cm-funnel-step h3 {\
+  color: #f5f1e8;\
+  font-size: 1.35rem;\
+  line-height: 1.25;\
+  margin: 0 0 0.6rem;\
+}\
+.cm-funnel-step p {\
+  color: #b4aa98;\
+  font-size: 0.95rem;\
+  line-height: 1.6;\
+  margin: 0 auto 1.1rem;\
+  max-width: 56ch;\
+}\
+.cm-funnel-btns {\
+  display: flex;\
+  flex-wrap: wrap;\
+  gap: 0.7rem;\
+  justify-content: center;\
+}\
+.cm-funnel-note, .cm-funnel-price {\
+  color: #8a8272 !important;\
+  font-size: 0.8rem !important;\
+  margin: 0.9rem 0 0 !important;\
+}\
+.cm-play-icon {\
+  height: 1.1em;\
+  margin-right: 0.45em;\
+  vertical-align: -0.18em;\
+  width: 1.1em;\
+}\
+.cm-funnel-pitch {\
+  background: linear-gradient(180deg, #14120c 0%, #0e0e0e 100%);\
+  border-color: #3b2d18;\
+}\
+.cm-funnel-app {\
+  align-items: center;\
+  display: inline-flex;\
+}\
+.cm-funnel-app-price {\
+  border-left: 1px solid currentColor;\
+  font-size: .82em;\
+  font-weight: 700;\
+  margin-left: .55rem;\
+  opacity: .85;\
+  padding-left: .55rem;\
+}\
+.cm-funnel-catalog {\
+  background: linear-gradient(160deg, #14120c 0%, #0e0e0e 70%);\
+  border-color: #4a3a1c;\
+}\
+.cm-funnel-subhead {\
+  color: #d6ad55;\
+  font-size: .8rem;\
+  letter-spacing: 2px;\
+  margin: 1.8rem 0 .7rem;\
+  text-transform: uppercase;\
+}\
+.cm-funnel-app-card a {\
+  align-items: center;\
+  display: flex;\
+}\
+.cm-funnel-book-card {\
+  background: #100f0c;\
+  border: 1px solid #33290f;\
+  border-radius: 10px;\
+  padding: .8rem;\
+}\
+.cm-funnel-mini-buy {\
+  color: #c0a060;\
+  display: inline-block;\
+  font-size: .78rem;\
+  font-weight: 700;\
+  margin-top: .45rem;\
+  text-transform: uppercase;\
+}\
+.cm-funnel-mini-buy:hover {\
+  color: #ffd700;\
+}\
+.cm-book-cta {\
+  background: #100f0c;\
+  border-color: #4a3a1c;\
+}\
+.cm-book-cta h4 {\
+  color: #ffd700;\
+  font-size: 1.1rem;\
+  margin: 0 0 0.7rem;\
+}\
+.cm-btn-book {\
+  background: #ffd700;\
+  border: 2px solid #ffd700;\
+  border-radius: 8px;\
+  color: #17120a;\
+  font-weight: 800;\
+  padding: 0.7rem 1.1rem;\
+}\
+.cm-btn-book-alt {\
+  background: transparent;\
+  border: 2px solid #c0a060;\
+  border-radius: 8px;\
+  color: #c0a060;\
+  font-weight: 700;\
+  padding: 0.7rem 1.1rem;\
+}\
+.cm-funnel-related {\
+  background: #0d0d0d;\
+}\
+.cm-funnel-related-list {\
+  display: grid;\
+  gap: 0.7rem;\
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));\
+  list-style: none;\
+  margin: 0;\
+  padding: 0;\
+}\
+.cm-funnel-related-card a {\
+  color: #d6ad55;\
+  display: block;\
+  font-weight: 700;\
+  margin-bottom: 0.25rem;\
+  text-decoration: none;\
+}\
+.cm-funnel-related-card a:hover {\
+  text-decoration: underline;\
+}\
+.cm-funnel-related-card span {\
+  color: #8a8272;\
+  display: block;\
+  font-size: 0.82rem;\
+  line-height: 1.5;\
 }\
 \
 /* Collection Section */\
@@ -1608,6 +2108,9 @@
 @media (max-width: 600px) {\
   .cm-popup-box { padding: 1.6rem 1.1rem 1.2rem; }\
   .cm-popup-title { font-size: 1.05rem; }\
+  .cm-funnel-btns { flex-direction: column; }\
+  .cm-funnel-btns .cm-btn { display: block; text-align: center; }\
+  .cm-funnel-related-list { grid-template-columns: 1fr; }\
 }\
 \
 /* Testimonials */\
