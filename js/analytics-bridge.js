@@ -4,7 +4,11 @@
   var EVENTS = [
     'tool_start', 'tool_complete', 'cta_click', 'app_store_click', 'book_click',
     'outbound_click', 'email_signup', 'content_share', 'experiment_exposure',
-    'conversion_import'
+    'conversion_import',
+    /* Mirrored from conversion.js so every funnel event lands in one
+       consent-gated, PII-filtered pipeline instead of only in gtag. */
+    'tool_funnel_view', 'tool_funnel_click', 'purchase_click', 'begin_checkout',
+    'lead_magnet_view', 'popup_view', 'popup_close', 'share', 'affiliate_click'
   ];
   // Union of data/analytics-events.json (required + optional) and the fields the
   // call sites actually send. Anything not listed here is dropped, so a key that
@@ -20,7 +24,19 @@
     email_signup: ['source', 'placement', 'content_id'],
     content_share: ['content_id', 'channel', 'source'],
     experiment_exposure: ['experiment_id', 'variant', 'surface', 'placement'],
-    conversion_import: ['source', 'status', 'metric', 'value_bucket', 'currency', 'transaction_id_hash']
+    conversion_import: ['source', 'status', 'metric', 'value_bucket', 'currency', 'transaction_id_hash'],
+    /* conversion.js funnel events. `items` is intentionally absent: it is an
+       array, so safeValue() would drop it anyway, and GA4 needs the raw gtag
+       copy for item-level revenue -- the bridge keeps the flat summary. */
+    tool_funnel_view: ['tool_id', 'category', 'apps', 'has_book', 'related', 'source', 'surface'],
+    tool_funnel_click: ['tool_id', 'product_type', 'product_id', 'source', 'placement'],
+    purchase_click: ['currency', 'value', 'destination', 'link_url', 'page', 'page_type'],
+    begin_checkout: ['currency', 'value', 'link_url', 'page'],
+    lead_magnet_view: ['form_name', 'form_destination', 'page', 'page_type'],
+    popup_view: ['trigger', 'page', 'page_type'],
+    popup_close: ['reason', 'page'],
+    share: ['method', 'content_type', 'item_id', 'content_id', 'channel', 'page'],
+    affiliate_click: ['affiliate_id', 'product', 'page']
   };
   /* The site's single source of truth for consent. shared.js (cmApplyConsent) and
      conversion.js (applyConsent) both read this cookie: collection is GRANTED

@@ -129,11 +129,69 @@ describe('analytics bridge -- payload', () => {
     expect(context.dataLayer ?? []).toEqual([]);
   });
 
+  it('accepts every funnel event conversion.js emits', () => {
+    const { context, bridge } = loadBridge();
+    const emitted = [
+      ['tool_funnel_view', { tool_id: 'tarot-journal', category: 'Tarot', apps: 1, has_book: true, related: 3, source: 'tool_funnel' }],
+      ['tool_funnel_click', { tool_id: 'tarot-journal', product_type: 'book', product_id: 'tarot-chaos-pdf', source: 'tool_funnel' }],
+      ['purchase_click', { currency: 'USD', value: 3.99, destination: 'hotmart', link_url: 'https://pay.hotmart.com/X', page: '/tools/tarot-journal.html' }],
+      ['begin_checkout', { currency: 'USD', value: 3.99 }],
+      ['lead_magnet_view', { form_name: 'google_forms_lead_magnet', page_type: 'tools' }],
+      ['popup_view', { trigger: 'timer_30s', page_type: 'tools' }],
+      ['popup_close', { reason: 'button' }],
+      ['share', { method: 'x', content_type: 'blog', item_id: '/blog/x' }],
+      ['affiliate_click', { affiliate_id: 'abc', product: 'psi-gym' }],
+    ];
+    for (const [name, params] of emitted) {
+      expect(bridge.track(name, params), `${name} fue rechazado`).toBe(true);
+    }
+    expect(context.dataLayer.map((e) => e.event)).toEqual(emitted.map(([n]) => n));
+    const click = context.dataLayer.find((e) => e.event === 'tool_funnel_click');
+    expect(click.product_id).toBe('tarot-chaos-pdf');
+    const purchase = context.dataLayer.find((e) => e.event === 'purchase_click');
+    expect(purchase.value).toBe(3.99);
+  });
+
+  it('drops the items array from purchase_click instead of stringifying it', () => {
+    const { context, bridge } = loadBridge();
+    bridge.track('purchase_click', {
+      currency: 'USD',
+      value: 9.99,
+      destination: 'google_play',
+      items: [{ item_id: 'tarot-chaos', item_name: 'Tarot Chaos', price: 9.99 }],
+    });
+    const event = context.dataLayer.at(-1);
+    expect(event.items).toBeUndefined();
+    expect(event.value).toBe(9.99);
+  });
+
   it('auto-binds the declarative channel and records clicked attributes', () => {
     const { context, listeners } = loadBridge();
     expect(listeners.filter((l) => l.type === 'click').length).toBeGreaterThan(0);
     click(listeners, 'book_click');
     expect(context.dataLayer.at(-1).event).toBe('book_click');
+  });
+});
+
+describe('conversion.js mirroring', () => {
+  it('mirrors every event through the bridge and keeps the gtag call', () => {
+    const source = fs.readFileSync(path.join(root, 'js', 'conversion.js'), 'utf8');
+    const body = source.slice(source.indexOf('function track(eventName, params)'));
+    const fn = body.slice(0, body.indexOf('\n  }'));
+    expect(fn, 'track() no llama al bridge').toContain('window.Cha0Analytics.track(eventName, params)');
+    expect(fn, 'track() perdio la llamada a gtag').toContain("window.gtag('event', eventName, params || {})");
+    // The mirror must not be able to take the page down.
+    expect(fn).toContain('catch');
+  });
+
+  it('mirrors only events the bridge declares', () => {
+    const source = fs.readFileSync(path.join(root, 'js', 'conversion.js'), 'utf8');
+    const names = new Set();
+    for (const m of source.matchAll(/\btrack\('([a-z_]+)'/g)) names.add(m[1]);
+    const { bridge } = loadBridge();
+    for (const name of names) {
+      expect(bridge.events, `conversion.js emite ${name} y el bridge no lo declara`).toContain(name);
+    }
   });
 });
 

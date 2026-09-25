@@ -73,7 +73,23 @@
   }
 
   // Safe GA4 dispatch.
+  /* Single choke point for every conversion event on the site.
+   *
+   * The gtag call is the GA4 path and stays exactly as it was. The bridge call
+   * is a second, PII-filtered copy: analytics-bridge.js owns the only allowlist,
+   * it honours the same cookie_consent rule as the rest of the site, and it
+   * writes objects to dataLayer instead of gtag's arguments array. Before this,
+   * funnel events reached GA4 with whatever the call site passed and nothing
+   * recorded a filtered copy anywhere.
+   *
+   * Both calls are wrapped: analytics must never break the page, and the bridge
+   * is absent on pages that do not load it. */
   function track(eventName, params) {
+    try {
+      if (window.Cha0Analytics && typeof window.Cha0Analytics.track === 'function') {
+        window.Cha0Analytics.track(eventName, params);
+      }
+    } catch (e) { /* bridge is optional */ }
     try {
       if (typeof window.gtag === 'function') window.gtag('event', eventName, params || {});
     } catch (e) { /* analytics must never break the page */ }
