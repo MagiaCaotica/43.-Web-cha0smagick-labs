@@ -1,0 +1,75 @@
+{
+  "version": "1.0",
+  "updated": "2026-09-24",
+  "privacy": {
+    "default": "granted_opt_out",
+    "default_note": "The site collects unless the visitor declines: shared.js (cmApplyConsent) and conversion.js (applyConsent) both read the cookie_consent cookie and only send 'denied' when it equals 'declined'. js/analytics-bridge.js enforces the same rule so the two systems cannot disagree. Change this value only together with those three files.",
+    "collect_pii": false,
+    "forbidden_fields": [
+      "email",
+      "phone",
+      "full_name",
+      "address",
+      "birth_date",
+      "birth_time",
+      "birth_location",
+      "free_text",
+      "raw_form_value",
+      "secret",
+      "api_key",
+      "authorization"
+    ],
+    "retention_note": "Store aggregate events and hashed identifiers only; never store raw tool inputs or payment credentials."
+  },
+  "events": {
+    "tool_start": {
+      "required": ["tool_id"],
+      "optional": ["category", "source", "consent_version"]
+    },
+    "tool_complete": {
+      "required": ["tool_id", "result_present"],
+      "optional": ["duration_bucket", "category", "source"]
+    },
+    "cta_click": {
+      "required": ["placement", "destination_type"],
+      "optional": ["tool_id", "app_id", "book_id"]
+    },
+    "app_store_click": {
+      "required": ["app_id", "placement"],
+      "optional": ["source", "campaign"]
+    },
+    "book_click": {
+      "required": ["book_id", "placement"],
+      "optional": ["source", "campaign"]
+    },
+    "outbound_click": {
+      "required": ["domain_class", "placement"],
+      "optional": ["tool_id"]
+    },
+    "email_signup": {
+      "required": ["source"],
+      "optional": ["placement", "content_id"]
+    },
+    "content_share": {
+      "required": ["channel", "content_id"],
+      "optional": ["source"]
+    },
+    "experiment_exposure": {
+      "required": ["experiment_id", "variant"],
+      "optional": ["placement"]
+    },
+    "conversion_import": {
+      "required": ["source", "status"],
+      "optional": ["transaction_id_hash", "value_bucket", "currency"]
+    }
+  },
+  "enforcement": {
+    "note": "js/analytics-bridge.js is the only allowlist enforcement point. Any parameter not present in its ALLOWED_KEYS map is dropped before the event reaches dataLayer, so a field added here must also be added there or it will never be recorded.",
+    "stripped_before_send": true,
+    "value_length_limit": 120
+  },
+  "value_buckets": {
+    "duration_seconds": ["0-30", "31-60", "61-180", "181-600", "601+"],
+    "value": ["0", "1-5", "6-20", "21-50", "51+"]
+  }
+}
