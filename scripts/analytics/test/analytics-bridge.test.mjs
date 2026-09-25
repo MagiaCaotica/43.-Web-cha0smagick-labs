@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
+import { JSDOM } from 'jsdom';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -192,6 +193,138 @@ describe('conversion.js mirroring', () => {
     for (const name of names) {
       expect(bridge.events, `conversion.js emite ${name} y el bridge no lo declara`).toContain(name);
     }
+  });
+});
+
+describe('derived, DOM-driven events', () => {
+  function mountDom({ url = 'https://cha0smagicklabs.com/blog/post.html', toolId = '' } = {}) {
+    const dom = new JSDOM(
+      `<!doctype html><html lang="es"><body>
+         ${toolId ? `<div data-atomic-tool="${toolId}"></div>` : ''}
+         <a id="to-app" href="https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards&utm_source=x">app</a>
+         <a id="to-book" href="/books/tarot-chaos-pdf.html">libro</a>
+         <a id="to-hotmart" href="https://pay.hotmart.com/D104270399P?checkoutMode=2">comprar</a>
+         <a id="to-social" href="https://t.me/cha0smagicklabs">telegram</a>
+         <a id="to-external" href="https://example.org/page">externo</a>
+         <a id="to-internal" href="/glossary.html">interno</a>
+         <a id="anchor-only" href="#faq">seccion</a>
+         <a id="mailto" href="mailto:a@b.c">correo</a>
+         <a id="share" data-cm-share="x" href="https://twitter.com/intent/tweet?text=hi">compartir</a>
+         <form id="ml" class="ml-embedded" data-form="I95d94"></form>
+       </body></html>`,
+      { url, runScripts: 'outside-only' }
+    );
+    const { window } = dom;
+    window.eval(fs.readFileSync(path.join(root, 'js', 'analytics-bridge.js'), 'utf8'));
+    window.Cha0Analytics.setConsent(true);
+    const events = () => (window.dataLayer || []).filter((e) => e && e.event);
+    /* Real events on real elements: the bridge reads tagName, className,
+       getAttribute and closest, so a hand-rolled fake target would test a
+       different code path than the browser runs. */
+    const fire = (type, selector) => {
+      const el = window.document.querySelector(selector);
+      // Stop jsdom from warning about unimplemented navigation.
+      el.addEventListener('click', (e) => e.preventDefault());
+      el.dispatchEvent(
+        type === 'submit' ? new window.Event('submit', { bubbles: true, cancelable: true })
+          : new window.MouseEvent('click', { bubbles: true, cancelable: true })
+      );
+    };
+    return { window, document: window.document, events, fire, toolId };
+  }
+
+  it('emits app_store_click with the real package id', () => {
+    const { events, fire } = mountDom();
+    fire('click', '#to-app');
+    const event = events().find((e) => e.event === 'app_store_click');
+    expect(event).toBeTruthy();
+    expect(event.app_id).toBe('com.cha0smagicklabs.zenercards');
+    expect(event.store).toBe('google_play');
+    expect(event.placement).toBe('to-app');
+  });
+
+  it('emits book_click for both /books/*.html and Hotmart links', () => {
+    const { events, fire } = mountDom();
+    fire('click', '#to-book');
+    fire('click', '#to-hotmart');
+    const books = events().filter((e) => e.event === 'book_click');
+    expect(books.length).toBe(2);
+    expect(books[0].book_id).toBe('tarot-chaos-pdf');
+    expect(books[1].book_id).toBe('D104270399P');
+  });
+
+  it('emits outbound_click only for external destinations, with a coarse class', () => {
+    const { events, fire } = mountDom();
+    fire('click', '#to-social');
+    fire('click', '#to-external');
+    fire('click', '#to-internal');
+    fire('click', '#anchor-only');
+    fire('click', '#mailto');
+    const out = events().filter((e) => e.event === 'outbound_click');
+    expect(out.length).toBe(2);
+    expect(out.map((e) => e.domain_class).sort()).toEqual(['external', 'social']);
+    // The raw host is kept, but never a full URL with a query string.
+    expect(out[0].destination_host).toMatch(/^[a-z0-9.-]+$/);
+  });
+
+  it('attributes derived clicks to the active tool when the page has one', () => {
+    const { events, fire } = mountDom({ url: 'https://cha0smagicklabs.com/tools/tarot-journal.html', toolId: 'A09' });
+    fire('click', '#to-external');
+    const out = events().find((e) => e.event === 'outbound_click');
+    expect(out.tool_id).toBe('A09');
+  });
+
+  it('emits content_share for a tagged share anchor', () => {
+    const { events, fire } = mountDom();
+    fire('click', '#share');
+    const event = events().find((e) => e.event === 'content_share');
+    expect(event.channel).toBe('x');
+    expect(event.content_id).toBe('/blog/post.html');
+  });
+
+  it('emits email_signup only for the MailerLite form', () => {
+    const { events, fire } = mountDom();
+    fire('submit', '#ml');
+    const event = events().find((e) => e.event === 'email_signup');
+    expect(event).toBeTruthy();
+    expect(event.source).toBe('mailerlite');
+  });
+
+  it('is inert when the visitor declined', () => {
+    const dom = new JSDOM('<!doctype html><body><a id="x" href="https://t.me/a">t</a></body>', {
+      url: 'https://cha0smagicklabs.com/', runScripts: 'outside-only',
+    });
+    dom.window.eval(fs.readFileSync(path.join(root, 'js', 'analytics-bridge.js'), 'utf8'));
+    dom.window.Cha0Analytics.setConsent(false);
+    const target = dom.window.document.querySelector('#x');
+    target.addEventListener('click', (e) => e.preventDefault());
+    target.dispatchEvent(new dom.window.MouseEvent('click', { bubbles: true, cancelable: true }));
+    expect((dom.window.dataLayer || []).filter((e) => e && e.event)).toEqual([]);
+  });
+
+  it('does not double-bind when shared.js and the page both load it', () => {
+    const dom = new JSDOM('<!doctype html><body><a id="x" href="https://t.me/a">t</a></body>', {
+      url: 'https://cha0smagicklabs.com/tools/x.html', runScripts: 'outside-only',
+    });
+    const source = fs.readFileSync(path.join(root, 'js', 'analytics-bridge.js'), 'utf8');
+    dom.window.eval(source);
+    dom.window.eval(source);
+    dom.window.Cha0Analytics.setConsent(true);
+    const target = dom.window.document.querySelector('#x');
+    target.addEventListener('click', (e) => e.preventDefault());
+    target.dispatchEvent(new dom.window.MouseEvent('click', { bubbles: true, cancelable: true }));
+    const outbound = (dom.window.dataLayer || []).filter((e) => e && e.event === 'outbound_click');
+    expect(outbound.length, 'outbound_click se disparo mas de una vez').toBe(1);
+  });
+});
+
+describe('shared.js bridge bootstrap', () => {
+  it('resolves the bridge next to shared.js, whatever the page depth', () => {
+    const source = fs.readFileSync(path.join(root, 'js', 'shared.js'), 'utf8');
+    expect(source).toContain('analytics-bridge.js');
+    // A literal relative path would 404 on /tools/ and /blog/.
+    expect(source).not.toMatch(/s\.src\s*=\s*'js\/analytics-bridge\.js'/);
+    expect(source).toContain('document.currentScript');
   });
 });
 

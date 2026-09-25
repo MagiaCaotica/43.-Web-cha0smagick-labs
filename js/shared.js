@@ -104,6 +104,26 @@ function cmIdIsReal(id, prefix) {
     return true;
 }
 
+// The analytics bridge owns the only PII allowlist and the only copy of the
+// consent rule, so it has to exist on every page, not just the tools. Loading
+// it from here gets it everywhere shared.js runs (blog, home, books, apps)
+// without touching a single page of markup. The tool pages also carry an
+// explicit <script> tag; the bridge guards against double-binding, so the
+// second load is a no-op.
+(function (self) {
+    if (window.Cha0Analytics) return;
+    var s = document.createElement('script');
+    // Resolve next to shared.js itself, whatever the page depth: on
+    // /tools/tarot-journal.html a plain "js/analytics-bridge.js" would ask for
+    // /tools/js/... and 404. document.currentScript is valid because this is a
+    // classic script executing synchronously.
+    s.src = self && self.src
+        ? self.src.replace(/[^/]*$/, 'analytics-bridge.js')
+        : '/js/analytics-bridge.js';
+    s.async = true;
+    document.head.appendChild(s);
+}(document.currentScript));
+
 // ========================================================================
 // 5. GA4 BOOTSTRAP + CONSENT (default GRANTED)
 // ------------------------------------------------------------------------

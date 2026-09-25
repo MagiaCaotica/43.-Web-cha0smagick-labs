@@ -135,18 +135,210 @@
     }, { passive: true });
   }
 
+  /* --- Derived, DOM-driven events ----------------------------------------
+   * These five need no markup. The bridge reads them off the elements the site
+   * already produces, so there is no `data-analytics-event` to forget and no
+   * diff across hundreds of anchors to rot. Hand-tagging links would be the
+   * same signal with a maintenance cost.
+   *
+   * Three contract entries are deliberately NOT wired here:
+   *   conversion_import   server-side by nature (Play sales, Hotmart, cohort
+   *                       CSVs). A page cannot honestly report a sale it did
+   *                       not observe; those live in the import scripts.
+   *   experiment_exposure there is no experiment running to expose. The event
+   *                       is armed in the contract, but emitting a variant that
+   *                       does not exist would invent data.
+   *   cta_click           "CTA" is undefined here, and the funnel already emits
+   *                       the precise version of it (tool_funnel_click).
+   *                       Counting both would double every funnel click.
+   * ---------------------------------------------------------------------- */
+  var OWN_HOSTS = { 'cha0smagicklabs.com': 1, 'www.cha0smagicklabs.com': 1 };
+  /* Matched per DNS label so short hosts work: t.me is two labels, x.com is
+     two, facebook.com is two. A substring test misses t.me entirely. */
+  var SOCIAL_LABELS = {
+    facebook: 1, instagram: 1, twitter: 1, telegram: 1, linkedin: 1, pinterest: 1,
+    reddit: 1, whatsapp: 1, discord: 1, youtube: 1, threads: 1, mastodon: 1,
+    tiktok: 1, wa: 1, x: 1, t: 1, me: 1
+  };
+  var EMAIL_HOSTS = /(mailerlite|mailchimp|convertkit|buttondown|klaviyo)/;
+  var MAILERLITE_FORM = /(mailerlite|ml-embedded)/i;
+
+  function hostOf(url) {
+    try {
+      return new URL(url, global.location.href).hostname.toLowerCase();
+    } catch (_) {
+      return '';
+    }
+  }
+
+  /* Coarse bucket, not the raw host: enough to segment, and it cannot leak a
+     full referrer into the analytics payload. */
+  function domainClass(host) {
+    if (!host) return 'unknown';
+    if (OWN_HOSTS[host]) return 'own_site';
+    if (/play\.google\.com$/.test(host)) return 'app_store';
+    if (/hotmart\./.test(host)) return 'checkout';
+    if (EMAIL_HOSTS.test(host)) return 'email';
+    var labels = host.split('.');
+    for (var i = 0; i < labels.length; i++) {
+      if (SOCIAL_LABELS[labels[i]]) return 'social';
+    }
+    return 'external';
+  }
+
+  /* Nearest id, else nearest first class. Enough to place a click without
+     inventing a placement taxonomy nobody agreed on. */
+  function placementOf(el) {
+    var node = el;
+    var guard = 0;
+    while (node && node !== global.document && guard < 25) {
+      if (node.id) return String(node.id).slice(0, 60);
+      if (node.getAttribute) {
+        var cls = node.getAttribute('class');
+        if (cls) return String(cls).split(/\s+/)[0].slice(0, 60);
+      }
+      node = node.parentNode;
+      guard += 1;
+    }
+    return 'page';
+  }
+
+  function appIdFrom(href) {
+    try {
+      return new URL(href, global.location.href).searchParams.get('id') || '';
+    } catch (_) {
+      return '';
+    }
+  }
+
+  /* Book id: from /books/<id>.html, or the Hotmart offer code in the query. */
+  function bookIdFrom(href) {
+    try {
+      var url = new URL(href, global.location.href);
+      var books = url.pathname.match(/\/books\/([a-z0-9-]+)\.html?$/i);
+      if (books) return books[1];
+      var offer = url.searchParams.get('checkout') || url.pathname.match(/\/([A-Z0-9]{6,})P?$/);
+      return offer ? String(offer[1] || offer[0]) : '';
+    } catch (_) {
+      return '';
+    }
+  }
+
+  /* Un enlace al propio host nunca es outbound, sea cual sea el host: comparar
+     solo contra la lista fija hacia que en staging, en localhost o en una
+     preview el sitio entero pareciera "externo" y cada clic se contara como
+     salida. */
+  function isOwnLink(href) {
+    var host = hostOf(href);
+    if (!host) return true;
+    if (OWN_HOSTS[host]) return true;
+    try {
+      return String(global.location.hostname || '').toLowerCase() === host;
+    } catch (_) {
+      return true;
+    }
+  }
+
+  function onAnchorClick(event) {
+    var el = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+    if (!el) return;
+    var href = el.getAttribute('href') || '';
+    // Ignore in-page anchors, mailto/tel/javascript and empty hrefs.
+    if (!href || /^(#|mailto:|tel:|javascript:)/i.test(href)) return;
+
+    var host = hostOf(href);
+    var placement = placementOf(el);
+
+    if (/play\.google\.com/.test(host)) {
+      track('app_store_click', {
+        tool_id: toolIdFromPage(),
+        app_id: appIdFrom(href),
+        store: 'google_play',
+        placement: placement
+      });
+    }
+
+    var looksLikeBook = /\/books\/[a-z0-9-]+\.html?$/i.test(href) || /hotmart\./.test(host);
+    if (looksLikeBook) {
+      track('book_click', { book_id: bookIdFrom(href), placement: placement });
+    }
+
+    if (!isOwnLink(href)) {
+      track('outbound_click', {
+        tool_id: toolIdFromPage(),
+        destination_host: host,
+        domain_class: domainClass(host),
+        placement: placement
+      });
+    }
+  }
+
+  /* The funnel stamps the active tool on the page; when present it lets every
+     derived click be attributed to a tool without a second data attribute. */
+  function toolIdFromPage() {
+    try {
+      var app = global.document.querySelector('[data-atomic-tool]');
+      if (app) return app.getAttribute('data-atomic-tool') || '';
+    } catch (_) {
+      // Ignore: attribution is best-effort.
+    }
+    return '';
+  }
+
+  /* conversion.js tags its own share anchors with data-cm-share, so the channel
+     is already in the DOM. A share click also produces an outbound_click (the
+     destination really is external) -- two true statements about one click, not
+     a double count. */
+  function onShareClick(event) {
+    var el = event.target && event.target.closest
+      ? event.target.closest('[data-cm-share]')
+      : null;
+    if (!el) return;
+    track('content_share', {
+      content_id: global.location.pathname,
+      channel: el.getAttribute('data-cm-share') || 'unknown',
+      source: 'share_buttons'
+    });
+  }
+
+  function onFormSubmit(event) {
+    var form = event.target;
+    if (!form || String(form.tagName || '').toUpperCase() !== 'FORM') return;
+    var identity = (form.className || '') + ' ' + ((form.getAttribute && form.getAttribute('data-form')) || '') +
+      ((form.closest && form.closest('.ml-embedded')) ? ' ml-embedded' : '');
+    if (!MAILERLITE_FORM.test(identity)) return;
+    track('email_signup', { source: 'mailerlite', placement: placementOf(form) });
+  }
+
+  var autoBound = false;
+  function autoBind(root) {
+    var scope = root || global.document;
+    if (!scope || typeof scope.addEventListener !== 'function') return;
+    if (autoBound) return;
+    autoBound = true;
+    // The declarative channel: data-analytics-event wins when present, so an
+    // explicit tag is never double-counted by the derived handlers below.
+    bind(scope);
+    scope.addEventListener('click', onAnchorClick, { passive: true, capture: true });
+    scope.addEventListener('click', onShareClick, { passive: true, capture: true });
+    scope.addEventListener('submit', onFormSubmit, { passive: true, capture: true });
+  }
+
+  /* Idempotent: shared.js also loads this file, and the tool pages carry an
+     explicit <script> tag. The flag has to be read BEFORE the object literal is
+     reassigned -- assigning first wipes the marker and the second evaluation
+     re-registers every delegated listener, firing each event twice. */
+  var alreadyInstalled = !!(global.Cha0Analytics && global.Cha0Analytics.__installed);
+
   global.Cha0Analytics = {
     events: EVENTS.slice(),
     setConsent: setConsent,
     track: track,
     bind: bind,
-    isConsentGranted: consentGranted
+    autoBind: autoBind,
+    isConsentGranted: consentGranted,
+    __installed: true
   };
 
-  /* Arm the declarative channel on load. Without this, bind() has to be called
-     by hand and every data-analytics-event attribute in the markup is inert.
-     Safe to call twice: the listener only ever records delegated clicks. */
-  if (global.document && typeof global.document.addEventListener === 'function') {
-    bind(global.document);
-  }
+  if (!alreadyInstalled) autoBind(global.document);
 }(window));
