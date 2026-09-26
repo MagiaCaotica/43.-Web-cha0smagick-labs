@@ -894,3 +894,64 @@ Lo que este smoke **no** prueba: no cubre 568 URLs, solo las **532** del sitemap
 `consent-browser-test.mjs` contra `https://cha0smagicklabs.com`: **PASS, 30 checks, 0 fallas, 0 inconclusas, exit 0**, Chrome 151. Continua observandose lo mismo que en §2.9.2: en la primera visita **sin cookie** el consentimiento resuelve a `granted` y hay peticiones a googletagmanager y doubleclick **antes** de que aparezca el banner y antes de cualquier decision del usuario; el Decline recien surte efecto en la vista de pagina siguiente. Decline deja `cookie_consent=declined`, `denied` en los cuatro campos de almacenamiento, `isConsentGranted()=false` y `track('tool_start')` **rechazado**, estable al recargar. Accept es el espejo. GA4 configurado con `G-V6LHCPN9TK`. Se despacharon 5 eventos sinteticos `tool_start` para leer el gate de `track()`, y eso esta declarado en la salida y en el JSON de evidencia. Lo que **no** prueba: que GA4 haya ingerido o procesado nada, que `denied` impida el envio del lado de Google (solo se midio el lado cliente), ni la rama de **retiro**, que no tiene banner.
 
 **Estado tras esta seccion: P0-10 sigue IN_PROGRESS, y el motivo ahora es preciso y no difuso.** El smoke, el consentimiento, el CLS y el build estan verificados contra el dominio real. Lo unico que impide cerrarlo es que **LCP falla en los dos form factors** y que el CWV de campo es inalcanzable sin la API key que es accion de owner (§7 de `docs/OWNER-MANUAL-CHECKLIST.md`). La buena noticia es que el defecto CLS, que era lo unico que estaba diagnosticado con certeza y sin arreglar, quedo cerrado y con control positivo.
+
+---
+
+### 11.4 IDs de Play Store inexistentes en el repo - 111 referencias, dos olas (2026-09-26)
+
+El owner entrego los 12 application ids reales y la regla que queda: **si no hay direccion de Play en registro, la app no existe, y son doce.** Cotejando esa lista contra el repo aparecieron **111 referencias a 31 package ids que no existen en Google Play**. Los 31 comprobados uno por uno contra `play.google.com`: **HTTP 404**. Los 12 reales: **HTTP 200**.
+
+#### 11.4.1 Por que esta clase de bug es la peor del repo
+
+Un enlace de Play roto **no se ve desde ningun lado del sitio**. El clic funciona, asi que no hay 404 propio, no hay error en analytics, y el smoke de URLs no lo detecta. El visitante sale de la pagina y aterriza en la pantalla de no-encontrado de Google. La venta se pierde sin dejar registro en ninguna parte. Un smoke que solo mira tus propias URLs jamas lo va a encontrar, porque el 404 ocurre en otro dominio.
+
+#### 11.4.2 Ola 1 - 49 referencias en 22 archivos, dentro de enlaces play.google.com
+
+`best-occult-apps-android.html` tenia **7** ids malos. Ocho articulos de blog, no cuatro, con `com.cha0smagick.astrallab`. Dos paginas de tools con `com.cha0smagick.lunarphase`. Y lo mas serio: **`email-sequences/post-purchase-upsell.json`, `email-sequences/quickstart-to-buyer.json`, `scripts/social-publish.js` y `projects/pinterest-pins/pin-data.json` apuntaban a apps inexistentes**, asi que si esa automatizacion se ejecuto alguna vez, se publico un enlace muerto.
+
+El primer barrido reporto 20 ubicaciones; el barrido exhaustivo encontro 22. La diferencia son los articulos de blog que el primer corte no listaba. **Un conteo reported no es un conteo verificado.**
+
+#### 11.4.3 Ola 2 - 62 referencias en 8 archivos, sin ningun enlace de por medio
+
+Esta la encontro el control posterior, y es **peor que la ola 1**. No son enlaces: son **consultas a la Play Developer API** con paquetes que no existen.
+
+| Archivo | IDs malos | Consecuencia |
+|---|---|---|
+| `scripts/play-sales-report.py` | 15 | El reporte de ventas consulta paquetes inexistentes |
+| `projects/scripts/gen_remaining.py` | 20 | Generacion de contenido sobre apps que no existen |
+| `projects/scripts/check-pkgs.py` | 8 | Verificacion de paquetes |
+| `projects/scripts/play-orders.py` | 8 | Consulta de ordenes |
+| `scripts/ga4-play-purchases.js` | 3 | Reconciliacion de compras a GA4 (P0-07) |
+| `telegram-bot/bot.py` | 2 | El bot responde con ids equivocados |
+| `deploy/cloud-function/rtdn-to-make/index.js` | 4 | La funcion de RTDN |
+| `email-sequences/post-purchase-upsell.json` | 2 | Sequences de email |
+
+El punto critico: **una consulta a un paquete inexistente no devuelve un error, devuelve nada.** Un reporte de ventas que lee cero es **indistinguible** de un reporte de ventas de un producto que vendio cero. Y `play-sales-report.py` es exactamente el archivo del que P0-04 depende para el baseline financiero. Es decir: **el Gap-to-5k se estaba construyendo sobre una consulta que nunca iba a traer una venta, y no habria dado ninguna señal de error.** Por eso P0-04 seguia marcado BLOCKED: no era falta de datos del owner, era que la consulta estaba mal dirigida.
+
+#### 11.4.4 La causa raiz y la parte que evita la repeticion
+
+No habia **una lista autoritativa que nada verificara**. Ese es el motivo de que 31 ids sobrevivieran sin contraste. Ahora:
+
+- **`data/play-catalog.json`** es la fuente de verdad unica: los 12 ids, su pagina, la fecha de verificacion, y un bloque explicito de lo que **no** es verificable desde aqui (estado en Play Console, ficha de Datos de seguridad, precio real por pais). El allowlist de terceros **arranca vacio a proposito**, porque una vez se uso ese mecanismo para meter ids propios inexistentes.
+- **`scripts/verify_play_catalog.mjs`** hace cumplir el catalogo, con **cuatro** chequeos: barrido de marca propia en todo el repo, barrido de enlaces, integridad del catalogo, y con `--online` que las 12 sigan respondiendo 200 en Play. Esta en `npm test`, primero, para fallar rapido.
+- Las exclusiones son **por nombre, con la razon escrita al lado**: un archivo excluido es donde un id equivocado se esconderia, asi que la exclusion tiene que justificarse.
+
+#### 11.4.5 El guard tenia un agujero y el control negativo lo demostro
+
+La primera version del guard solo buscaba ids **dentro de enlaces `play.google.com`**. Ese era exactamente el punto ciego que dejo pasar la ola 2, asi que se anadio el barrido de marca propia, que no exige enlace: un id de paquete en un script esta tan mal como uno en un `href`.
+
+Al provar ese barrido con un id falso inyectado en `scripts/play-sales-report.py`, **el guard dio PASS con el id falso presente.** La causa era un bug propio: el segmento del id usaba `[a-z0-9_]`, solo minusculas, asi que `com.cha0smagick.NOTAREALAPP` no casaba. Y los paquetes de Android **si** pueden llevar mayusculas y son case-sensitive: `com.martinberbesson.DreamlyApp` es un ejemplo real. Corregido a `[A-Za-z0-9_]+`, que sigue sin comerse el punto que cierra una frase, porque la clase excluye el punto.
+
+Repetido el control tras el arreglo: **FAIL exit 1** nombrando `com.cha0smagick.NOTAREALAPP` y `scripts/play-sales-report.py`; restaurado, **PASS exit 0**.
+
+**Leccion que queda escrita:** el control negativo no es un adorno. La primera version del guard parecio funcionar porque nunca se le dio un caso que no pudiera ver, y en el primer caso real fallo en silencio. Un guard que nunca ha fallado no esta probado, y un guard que no puede fallar es peor que no tener guard, porque da una confianza que no se gano.
+
+#### 11.4.6 Un hallazgo lateral que queda abierto para el owner
+
+`app-ads.txt` declara `google.com, pub-PONER_PUBLISHER_ID, DIRECT, ...`. **`pub-PONER_PUBLISHER_ID` es un placeholder, no un ID real.** Mientras siga asi, **la receita publicitaria no se puede atribuir a ninguna app.** Es un archivo de una linea y probablemente es el arreglo mas barato de toda la lista. No se toco porque el publisher ID solo lo tiene el owner, y porque el archivo tiene una linea de app especifica pendiente.
+
+#### 11.4.7 Estado
+
+**P0-02 y P0-09 siguen IN_PROGRESS, y ahora con el motivo preciso.** El owner atribuyo que las 12 estan en produccion, con ficha completa y disponibles en todos los paises con moneda local. Eso quedo registrado en el catalogo como **atribucion, no medicion**, que es la distincion que §8 exige. Falta lo que solo se ve desde el Play Console: la **ficha de Datos de seguridad por app**, que es obligacion de Google desde 2023 y puede despublicar una app aunque todo lo demas este bien, y el **precio real por pais**.
+
+Lo que si quedo cerrado: el catalogo de 12 apps esta reconciliado contra la realidad de Play, con las 12 verificadas una por una, y el repo no puede volver a usar un id que no este en el catalogo sin romper `npm test`.
