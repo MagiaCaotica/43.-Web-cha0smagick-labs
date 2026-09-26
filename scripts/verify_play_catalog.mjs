@@ -92,6 +92,13 @@ const EXCLUSIONS = {
   'docs/plan-tools-sales-funnels.md':
     'historical analysis that cites the bad ids as the documented defect; ' +
     'removing them would destroy the record that the problem was known',
+  'MASTER_EXECUTION_PLAN.md':
+    'the plan documents the wrong ids on purpose, in the wave 1 and wave 2 ' +
+    'mapping tables and in the record of the negative control. A guard that ' +
+    'cannot tell documentation from configuration will flag its own ' +
+    'post-mortem. This exclusion was added because CI caught exactly that: ' +
+    'section 11.4 was written listing the bad ids, and the guard failed on ' +
+    'the commit that documented the fix.',
   'app-ads.txt':
     'template comment showing the ads.txt wildcard format, not a real id; ' +
     'the publisher id in that file is a separate owner action',
