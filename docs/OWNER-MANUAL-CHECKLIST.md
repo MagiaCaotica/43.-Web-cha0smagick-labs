@@ -13,51 +13,43 @@
 
 Estas dos acciones son la vía crítica. Nada más en esta lista avanza hasta que estén hechas.
 
-### 0.1 Commitear y subir los 371 archivos corregidos
+### 0.1 Commitear y subir los archivos corregidos — HECHO 2026-09-26
 
-**Por qué:** el arreglo de CLS está verificado en local (CLS 0.000 medido, suite en verde) pero **no existe en producción**. Hasta que se despliegue, el gate de Lighthouse sigue abierto y el defecto sigue afectando a tus visitantes reales.
+**Estado:** ya está en `origin/main`. No tienes que hacer nada aquí.
 
-**Dónde:** GitHub, repositorio de `cha0smagicklabs.com`, rama de producción.
+Quedaron tres commits, en este orden y con la convención de mensajes del repo (`[P0] …`, cuerpo en ASCII sin tildes):
 
-1. Abre una terminal en la raíz del repo.
-2. Revisa qué va a subir antes de subir nada:
-   ```
-   git status --short
-   git --no-pager diff --stat
-   ```
-   Debes ver **370 archivos `.html` modificados** (una línea cada uno), `MASTER_EXECUTION_PLAN.md`, `blog/witchcraft-for-beginners-guide.html` (canonical), `docs/thin-articles-progress.md` (solo un timestamp), y **3 archivos nuevos**: `scripts/fix-async-css.mjs`, `scripts/analytics/cls-shift-probe.mjs`, y este checklist.
-3. Sube todo:
-   ```
-   git add -A
-   git commit -m "fix(perf): replace async CSS preload pattern with blocking stylesheet (CLS 1.09 -> 0.000)"
-   git push
-   ```
-4. Anota el **hash corto** del commit (sale en la salida de `git commit`) — el plan lo exige como evidencia.
+| Hash | Qué lleva |
+|---|---|
+| `3fd93b3` | El arreglo de CLS: 370 archivos `.html`, 377 inserciones, 743 borradores. Incluye el canonical de `blog/witchcraft-for-beginners-guide.html`, que iba en el mismo archivo y no se podía aislar. |
+| `886182d` | Las dos herramientas nuevas: `scripts/fix-async-css.mjs` y `scripts/analytics/cls-shift-probe.mjs`. |
+| `9590f51` | `MASTER_EXECUTION_PLAN.md` (791 → 825 líneas) y este checklist. |
 
-**Si prefieres un commit partido**, hazlo en tres, que es más fácil de revertir si algo sale mal:
-```
-git add scripts/fix-async-css.mjs scripts/analytics/cls-shift-probe.mjs docs/OWNER-MANUAL-CHECKLIST.md
-git commit -m "chore(tools): add async-CSS migration script and CLS shift attribution probe"
-git add -A ':!docs/thin-articles-progress.md'
-git commit -m "fix(perf): blocking stylesheet, fixes CLS 1.09 on desktop (371 files)"
-git add docs/thin-articles-progress.md
-git commit -m "chore(docs): regenerate thin-articles report"
-```
+Dos decisiones que tomé y conviene que conozcas:
 
-**Qué hago yo después:** en cuanto me digas el hash, re-corro el smoke de las 568 URLs contra el dominio real y Lighthouse, y cierro el gate de P0-10 con la evidencia de producción. No lo hago antes porque mediría el sitio viejo.
+- **El commit de `d11aa59` está equivocado y no lo borré.** Afirmaba que la causa del CLS era el popup de salida de `js/conversion.js`, como "confirmada". Era falso: el popup no se construye nunca en una corrida de laboratorio porque `CONFIG.popupDelayMs = 30000` y el único `setTimeout` está en L1383. Dejé el commit en la historia (reescribir historia ya publicado rompe los clones de otras personas) y lo refuté explícitamente en `3fd93b3` y en el §2.9.3 del plan. Si lees ese commit, léelo con la corrección al lado.
+- **`docs/thin-articles-progress.md` no se commiteó.** `thin_articles_report.py` lo regenera y lo único que había cambiado era la línea de timestamp; el contenido seguía siendo 467/467. Commitear eso era ruido, así que lo revertí antes de commitear. Si lo regeneras tú, vuelve a aparecer modificado y es esperado.
 
-### 0.2 Re-medir Lighthouse en producción
+### 0.2 Re-medir Lighthouse en producción — PENDIENTE, es lo único que bloquea
 
-**Dónde:** nada que hacer — es un comando. Pero **espera a que 0.1 termine**, o medirás el sitio viejo.
+**Por qué sigue abierto:** el gate de la §8 del plan exige evidencia **contra el dominio desplegado**. El arreglo está en `main`, pero hasta que GitHub Pages termine de construir y sirva el commit `9590f51`, el sitio real sigue teniendo el CSS asincrono. El defecto sigue afectando a tus visitantes.
 
-Una vez desplegado, yo corro:
+**Dónde:** tú solo tienes que confirmar que Pages ya publicó. En GitHub: repositorio → pestaña **Actions** → workflow **pages** → que el run de `9590f51` esté en verde. Tarda entre 1 y 5 minutos. Si tienes `gh` instalado: `gh run list --limit 3`.
+
+Yo no pude verificarlo desde mi lado por dos razones concretas, ambas externas: el resolvedor DNS local rechazó la consulta de `cha0smagicklabs.com` ("Se ha rechazado la operación DNS") mientras `github.com` respondía 200, o sea que es el bloque del resolver local, no el sitio; y no hay `gh` instalado en el entorno, así que no puedo ver el estado del workflow.
+
+**Una vez deployed, yo corro:**
 ```
 npm run build
 npm test
 node scripts/analytics/lighthouse-audit.mjs --url https://cha0smagicklabs.com
+node scripts/analytics/cls-shift-probe.mjs --url https://cha0smagicklabs.com --viewport desktop
 node scripts/analytics/consent-browser-test.mjs --url https://cha0smagicklabs.com
 ```
-**Lo esperado:** CLS de escritorio de 0.961 a cerca de 0.000, y `performance` de escritorio subiendo de 45 a hopefully 90+. Si el CLS **no** baja, el arreglo no llegó a producción y paramos ahí.
+
+**Lo esperado:** CLS de escritorio de ~1.09 a cerca de 0.000, y `performance` de escritorio subiendo de 45 a hopefully 90+. Si el CLS **no** baja, el arreglo no llegó a producción y paramos ahí para investigar el pipeline, no el código.
+
+**Importante, no te lo saltes:** una medición en producción no es lo mismo que la de local. En local medí 5 páginas representativas y todas dieron 0.000, pero eso **no** prueba que las 371 den 0. `blog/index.html` media 0.000 sin el arreglo, o sea que la magnitud del defecto depende de la plantilla. El smoke de las 568 URLs es lo que cubre el resto.
 
 **Lo que este arreglo NO arregla, y hay que mirar aparte:** el `TBT` de móvil (216–236 ms contra un umbral de 200 ms) y el `LCP` de escritorio (2769 ms) siguen abiertos. Son problemas distintos.
 
