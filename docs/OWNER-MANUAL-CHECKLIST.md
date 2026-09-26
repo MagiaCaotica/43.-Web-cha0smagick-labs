@@ -67,27 +67,27 @@ node scripts/analytics/consent-browser-test.mjs --url https://cha0smagicklabs.co
 ---
 
 
-## 1. Google Play Console — catálogo y disponibilidad (cierra P0-02 y P0-09)
+## 1. Google Play Console - HECHO 2026-09-26, ya no tienes que hacer nada
 
-**Por qué:** yo ya reconcilié localmente las 12 páginas de app contra `offers.json` y tengo los 12 package IDs. Lo que me falta es saber si cada app está **realmente publicada** en la tienda, o solo existe en local. Sin esto no puedo afirmar que un CTA de venta lleve a algo que existe.
+**El owner entrego los 12 package IDs reales y las URLs de listado, y confirmo que las 12 apps estan en produccion, con fichas completas, disponibles en todos los paises con moneda local.** Con eso queda cerrado el pedido de esta seccion.
 
-**Dónde:** `play.google.com/console` → tu proyecto.
+Lo que hice con eso, y que es lo que mas valor produjo:
 
-1. **Play Store → Apps.** Verás la lista de apps. Para cada una abre la app y entra a **Configuración → Presencia en la ficha de la tienda** (en inglés: *Main store listing*).
-2. Para cada app, anota exactamente estos 5 campos en una hoja o en un `.csv`:
-   - **Estado:** `Published` / `In draft` / `In review` / `Halted`
-   - **URL pública de la ficha** (la que empieza por `play.google.com/store/apps/details?id=`)
-   - **Versión publicada** (p.ej. `1.2.0`) y **fecha de última actualización**
-   - **Precio** (los productos son de pago único, no suscripción — confírmalo)
-   - **Si tiene screenshots o imagen de destacada cargadas** (sí/no, y cuántas)
-3. **Play Store → Anuncios / Promocionar** para cada app: si la ficha está publicada, debería existir un enlace "Enlace directo de la ficha". Cópialo.
-4. **App content → Data safety** por cada app: anota si está **completado** o **pendiente**. Esto es requisito de Google antes de publicar apps nuevas; si está pendiente, esa app **no** puede publicar.
-5. Revisa **Configuración de la tienda → countries**: la app debe estar disponible en Colombia si ese es tu mercado.
+**Habia 111 referencias a 31 package IDs que NO existen en Play**, todas verificadas una por una con HTTP 404 (los 12 reales, los 12 HTTP 200). Dos olas:
 
-**Qué necesito de vuelta:** el CSV con esos 5 campos por app. Con eso escribo `docs/aso-listing-catalog.md` y cierro P0-02 + P0-09, y además puedo decirte qué CTAs del sitio apuntan a apps que no existen.
+- **Ola 1, 49 referencias en 22 archivos**, dentro de enlaces `play.google.com`. El click funcionaba, asi que no habia 404 en el sitio, ni error en analytics, ni fallo en el smoke: el visitante caia en la pagina de "no encontrado" de Google y la venta se moria sin dejar rastro. Incluia `scripts/social-publish.js` y las dos secuencias de email, o sea que el publicador social y las automatizaciones apuntaban a apps que no existen.
+- **Ola 2, 62 referencias en 8 archivos, sin ningun enlace de Play.** Estas solo aparecieron al re-buscar de forma escéptica. Son **consultas a la Play Developer API** en `scripts/play-sales-report.py` (15), `projects/scripts/gen_remaining.py` (20), `check-pkgs.py` (8), `play-orders.py` (8), `scripts/ga4-play-purchases.js` (3), `telegram-bot/bot.py` (2), `deploy/cloud-function/rtdn-to-make/index.js` (4) y `email-sequences/post-purchase-upsell.json` (2). Peor que un enlace muerto: **una consulta a un paquete inexistente no devuelve un error, devuelve cero**, y un reporte de ventas en cero es indistinguible de un producto que vendio cero. `play-sales-report.py` es justo el archivo del que depende el baseline financiero de P0-04, asi que el Gap-to-5k se estaba construyendo sobre una consulta que nunca iba a registrar una venta y sin senal de error.
 
-**Lo que NO voy a hacer:** inventar un estado. Si una app no está publicada, la página y el CTA existen antes que el producto, y eso es una decisión comercial tuya, no una tarea de documentación.
+La causa de fondo era que **no existia ninguna lista autoritativa contra la cual verificar**. Eso se arreglo con dos piezas duraderas, no con un find-and-replace:
 
+- `data/play-catalog.json` — fuente unica de verdad, las 12 apps con nombre, package, pagina, `verified_at 2026-09-26`, `verified_by owner`.
+- `scripts/verify_play_catalog.mjs` — corre como **primer comando de `npm test`**, con 4 chequeos: barrido de IDs propios en todo el repo (no exige que haya enlace de Play, que es donde estaba el punto ciego), barrido de enlaces de Play, integridad del catalogo, y con `--online` que las 12 sigan dando HTTP 200.
+
+Tres defectos mios quedaron documentados porque losRevelo un control, no una inspeccion: un punto ciego del guard que cerro el barrido por marca propia; un **hueco de regex** donde `com.cha0smagick.NOTAREALAPP` pasaba el control negativo porque Android admite mayusculas en el nombre de paquete; y un falso PASS de `--limit` que ni siquiera tocaba la URL 404 del control.
+
+**Correccion de esta sesion:** deje "ficha de Datos de seguridad" como pendiente y eso estaba mal. **Google exige la declaracion de Datos de seguridad antes de publicar en un track de produccion**, asi que si las 12 apps estan publicadas, el formulario existe en las 12 por definicion. Mi propia nota de "Google puede despublicar sin el" era incompatible con el hecho que ya teniamos confirmado. No lo borre como "verificado" porque desde aqui no se observa: lo reclasifique en el catalogo como **implicado por el estado de produccion** (`entailed_by_production_status`), que es lo que realmente es.
+
+**Lo que queda, y no es un trabajo tuyo:** el estado de publicacion, el precio real por pais y la disponibilidad real son **atribucion del owner, no medicion mia**. No puedo verlos desde aqui y no voy a inventarlos. Vive en `verification.not_verifiable_from_here` del catalogo, con el motivo escrito, para que la diferencia entre "afirmado" y "medido" quede explicita y no se pierda el tiempo rehaciendolo.
 ---
 
 ## 2. Hotmart — IDs reales, checkout y finanzas (cierra P0-03, P0-04, P0-05)
