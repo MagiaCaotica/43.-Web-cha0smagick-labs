@@ -25,7 +25,7 @@
 <article class="article">
 <h2>Introduction</h2>
 <p>Choosing an astrology app for Android in 2026 means navigating a crowded marketplace where every developer claims precision, depth, and privacy. The reality is more nuanced. Some apps excel at natal chart calculation but lack transit tracking. Others offer beautiful daily horoscopes but store your birth data on remote servers without encryption. A few—like our own Astral Lab—prioritize offline-first architecture and one-time purchase pricing over subscription models.</p>
-<p>This guide compares the leading Android astrology applications across six categories: natal chart accuracy, transit and progression support, synastry and composite charts, daily forecasting features, data privacy architecture, and pricing model. We include a detailed review of Astral Lab (package <code>com.japps.astrallab</code>, $3.99 USD on Google Play), a feature matrix table, a privacy analysis framework, and a 30-day evaluation protocol you can apply to any app before committing.</p>
+<p>This guide compares the leading Android astrology applications across six categories: natal chart accuracy, transit and progression support, synastry and composite charts, daily forecasting features, data privacy architecture, and pricing model. We include a detailed review of Astral Lab (package <code>com.cha0smagicklabs.astralchart</code>, $3.99 USD on Google Play), a feature matrix table, a privacy analysis framework, and a 30-day evaluation protocol you can apply to any app before committing.</p>
 
 <h2>Evaluation Criteria</h2>
 <p>Every app in this comparison was tested against the same baseline: a known birth chart (January 15, 1990, 14:30, New York City, NY, USA) with verified planetary positions from the Swiss Ephemeris. We measured calculation precision to the arc-minute, assessed UI responsiveness on a Pixel 7a (Android 14), and audited network traffic via PCAP capture over 48 hours of background operation.</p>
@@ -139,7 +139,7 @@
 </table>
 
 <h2>Astral Lab Deep Review</h2>
-<p><strong>Astral Lab</strong> (Google Play: <code>com.japps.astrallab</code>, $3.99 USD) is Cha0smagick Labs' flagship astrology application. Built on the Swiss Ephemeris with a fully offline calculation engine, it targets practitioners who need professional-grade precision without subscription fatigue or data surveillance.</p>
+<p><strong>Astral Lab</strong> (Google Play: <code>com.cha0smagicklabs.astralchart</code>, $3.99 USD) is Cha0smagick Labs' flagship astrology application. Built on the Swiss Ephemeris with a fully offline calculation engine, it targets practitioners who need professional-grade precision without subscription fatigue or data surveillance.</p>
 <h3>Natal Chart Engine</h3>
 <p>The chart wheel renders at 60fps with anti-aliased glyphs for all 10 planets, Chiron, Lilith (true and mean), North/South Node, Part of Fortune, Vertex, East Point, and the four major asteroids (Ceres, Pallas, Juno, Vesta). House cusps display to the arc-minute. Twelve house systems are selectable: Placidus, Koch, Campanus, Regiomontanus, Porphyry, Whole Sign, Equal (Ascendant), Equal (MC), Meridian, Morinus, Polich-Page, and Alcabitius. The true/mean node toggle and sidereal zodiac offset (Lahiri, Fagan-Bradley, De Luce) are accessible from the chart settings drawer.</p>
 <h3>Transit and Progression Modules</h3>
@@ -149,7 +149,7 @@
 <h3>Daily Practice Features</h3>
 <p>The home screen shows current planetary positions, lunar phase with illumination percentage and void-of-course windows, planetary hours for the current location, and a personalized transit feed filtered by user-defined orb thresholds. Notifications fire at exact aspect perfection, station retrograde/direct, and sign ingress—each toggleable independently. The "Electional Finder" scans the next 30 days for windows matching user-specified criteria (e.g., "Venus trine Jupiter, Moon in Taurus, no void-of-course").</p>
 <h3>Privacy and Data Architecture</h3>
-<p>Astral Lab makes zero network requests on launch. No analytics SDK, no crash reporting, no license verification ping. The $3.99 purchase is verified via Google Play Billing Library at install time only. All charts, notes, and saved profiles reside in the app's private SQLite database (<code>/data/data/com.japps.astrallab/databases/astral.db</code>). Export functions write JSON, CSV, or PDF to the user-selected directory via <code>ACTION_OPEN_DOCUMENT_TREE</code>—no implicit storage permissions. The app declares <code>android:allowBackup="false"</code> and <code>android:fullBackupContent="@xml/backup_rules"</code> excluding the database from Google Drive backup.</p>
+<p>Astral Lab makes zero network requests on launch. No analytics SDK, no crash reporting, no license verification ping. The $3.99 purchase is verified via Google Play Billing Library at install time only. All charts, notes, and saved profiles reside in the app's private SQLite database (<code>/data/data/com.cha0smagicklabs.astralchart/databases/astral.db</code>). Export functions write JSON, CSV, or PDF to the user-selected directory via <code>ACTION_OPEN_DOCUMENT_TREE</code>—no implicit storage permissions. The app declares <code>android:allowBackup="false"</code> and <code>android:fullBackupContent="@xml/backup_rules"</code> excluding the database from Google Drive backup.</p>
 <h3>Limitations</h3>
 <p>No built-in interpretive text for aspects (by design—this is a calculation tool, not a cookbook). No widget or Wear OS companion. The learning curve is steeper than consumer apps; users unfamiliar with astrological terminology should pair it with a reference guide like our <a href="birth-chart-beginners-guide.html">Birth Chart Beginner's Guide</a>.</p>
 
@@ -302,7 +302,7 @@
 <li>JPL DE431/DE441 Planetary Ephemerides — <a href="https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/" target="_blank" rel="noopener">NAIF Archive</a></li>
 <li>IANA Time Zone Database — <a href="https://www.iana.org/time-zones" target="_blank" rel="noopener">https://www.iana.org/time-zones</a></li>
 <li>Google Play Billing Library — <a href="https://developer.android.com/google/play/billing" target="_blank" rel="noopener">Android Developers</a></li>
-<li>Astral Lab on Google Play — <a href="https://play.google.com/store/apps/details?id=com.japps.astrallab" target="_blank" rel="noopener">play.google.com/store/apps/details?id=com.japps.astrallab</a></li>
+<li>Astral Lab on Google Play — <a href="https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart" target="_blank" rel="noopener">play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart</a></li>
 <li>Co-Star Privacy Policy — <a href="https://costarastrology.com/privacy" target="_blank" rel="noopener">costarastrology.com/privacy</a></li>
 <li>The Pattern Privacy Policy — <a href="https://thepattern.com/privacy" target="_blank" rel="noopener">thepattern.com/privacy</a></li>
 <li>Time Nomad Website — <a href="https://timenomad.app/" target="_blank" rel="noopener">timenomad.app</a></li>

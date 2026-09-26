@@ -1,0 +1,82 @@
+{
+  "$comment": "Catalogo autoritativo de las apps de Cha0smagick Labs en Google Play. Fuente de verdad única. Si una app no está en este archivo, NO existe: no publiques su ID en ninguna página, email, script de redes sociales ni dato de Pinterest. Verificado por el owner el 2026-09-26 contra el dominio real y por HTTP 200 individual contra play.google.com. scripts/verify_play_catalog.mjs falla si el repo usa un ID que no está aquí.",
+  "verified_at": "2026-09-26",
+  "verified_by": "owner",
+  "verification": {
+    "play_listing_http_200": "12 de 12 comprobadas una por una contra https://play.google.com/store/apps/details?id=<package>",
+    "listing_state": "todas en produccion, fichas completas (atribucion del owner)",
+    "availability": "todos los paises, moneda local de cada pais, ajustada por region de la Play Store (atribucion del owner)",
+    "not_verifiable_from_here": [
+      "estado de publicacion dentro del Play Console",
+      "ficha de Datos de seguridad completa",
+      "precio real por pais (es un dato de la consola, no publico de forma estable)",
+      "disponibilidad por pais real, que depende del adjusted pricing del owner"
+    ]
+  },
+  "apps": [
+    {
+      "name": "Arcana Goetia",
+      "package": "com.cha0smagick.sigilgeneratorfinal",
+      "page": "apps/arcana-goetia.html"
+    },
+    {
+      "name": "Astral Lab",
+      "package": "com.cha0smagicklabs.astralchart",
+      "page": "apps/astral-lab.html"
+    },
+    {
+      "name": "Chaos Arcane Sigil Forge",
+      "package": "com.app.goetiansealsgeneratorapp",
+      "page": "apps/chaos-sigil-generator.html"
+    },
+    {
+      "name": "DreamMachine",
+      "package": "com.cha0smagick.dreammachine",
+      "page": "apps/dream-machine.html"
+    },
+    {
+      "name": "Eerie Roads",
+      "package": "com.cha0smagicklabs.eerieroads",
+      "page": "apps/eerieroads.html"
+    },
+    {
+      "name": "I Ching Oracle",
+      "package": "com.app.ichingoracle",
+      "page": "apps/iching-oracle.html"
+    },
+    {
+      "name": "Lucid Dream Astral Projection",
+      "package": "com.cha0smagicklabs.luciddreamer",
+      "page": "apps/lucid-dream.html"
+    },
+    {
+      "name": "Moon Phases Lunar Calendar",
+      "package": "com.lunarapp.app",
+      "page": "apps/lunar-phase-calculator.html"
+    },
+    {
+      "name": "Noctem Tools",
+      "package": "com.cha0smagicklabs.noctemapp",
+      "page": "apps/noctem-tools.html"
+    },
+    {
+      "name": "Norse Rune",
+      "package": "com.japps.norse_oracle",
+      "page": "apps/norse-rune-oracle.html"
+    },
+    {
+      "name": "Psi Gym",
+      "package": "com.cha0smagicklabs.zenercards",
+      "page": "apps/psi-gym.html"
+    },
+    {
+      "name": "Tarot Rider Waite",
+      "package": "com.cha0smagick.unofficialraiderwaite",
+      "page": "apps/unofficial-rider-waite-tarot.html"
+    }
+  ],
+  "third_party_allowlist": {
+    "$comment": "Apps de OTROS que el sitio cita en comparativas. No son nuestras y no generan venta. Deben justificarse: cada entrada indica donde se cita. Anadir una aqui es una decision editorial, no una conveniently. Antes se uso este mecanismo para meter IDs propios que no existian, por eso la lista arranca vacia.",
+    "packages": []
+  }
+}

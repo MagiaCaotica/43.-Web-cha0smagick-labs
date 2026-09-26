@@ -214,7 +214,7 @@ function selftest() {
 
   // 5. Allowlist
   process.env.PLAY_PACKAGE_NAMES = 'com.cha0smagick.tarot';
-  const r4 = processRtdn({ message: { data: Buffer.from(JSON.stringify({ version: '1.0', packageName: 'com.otro.app', testNotification: { version: '1.0' } })).toString('base64') } });
+  const r4 = processRtdn({ message: { data: Buffer.from(JSON.stringify({ version: '1.0', packageName: 'com.cha0smagick.sigilgeneratorfinal', testNotification: { version: '1.0' } })).toString('base64') } });
   check('allowlist rechaza paquete externo', !r4.ok && /allowlist/.test(r4.reason));
   delete process.env.PLAY_PACKAGE_NAMES;
 
