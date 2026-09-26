@@ -45,6 +45,11 @@ const requireFromRoot = createRequire(path.join(ROOT, 'package.json'));
 const DEFAULT_URL = 'https://cha0smagicklabs.com';
 const NAV_TIMEOUT_MS = 30_000;
 const BANNER_SETTLE_MS = 1_600;
+/* Reaches the deployed site even when the local DNS resolver refuses the name.
+   See scripts/analytics/lib/host-resolver.mjs for what this does and does not
+   change. Returns no flags on a healthy network. */
+import { hostResolverArgs } from './lib/host-resolver.mjs';
+
 const CHROME_ARGS = [
   '--no-sandbox',
   '--disable-dev-shm-usage',
@@ -431,7 +436,11 @@ async function main() {
 
   let browser;
   try {
-    browser = await puppeteer.launch({ headless: true, args: CHROME_ARGS, timeout: 45_000 });
+    browser = await puppeteer.launch({
+      headless: true,
+      args: [...CHROME_ARGS, ...(await hostResolverArgs(args.url))],
+      timeout: 45_000,
+    });
   } catch (error) {
     console.error(`\nINCONCLUSIVE: browser did not launch — ${error.message}`);
     record('bootstrap', 'browser launches', 'inconclusive', error.message);

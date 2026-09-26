@@ -30,30 +30,42 @@ Dos decisiones que tomé y conviene que conozcas:
 - **El commit de `d11aa59` está equivocado y no lo borré.** Afirmaba que la causa del CLS era el popup de salida de `js/conversion.js`, como "confirmada". Era falso: el popup no se construye nunca en una corrida de laboratorio porque `CONFIG.popupDelayMs = 30000` y el único `setTimeout` está en L1383. Dejé el commit en la historia (reescribir historia ya publicado rompe los clones de otras personas) y lo refuté explícitamente en `3fd93b3` y en el §2.9.3 del plan. Si lees ese commit, léelo con la corrección al lado.
 - **`docs/thin-articles-progress.md` no se commiteó.** `thin_articles_report.py` lo regenera y lo único que había cambiado era la línea de timestamp; el contenido seguía siendo 467/467. Commitear eso era ruido, así que lo revertí antes de commitear. Si lo regeneras tú, vuelve a aparecer modificado y es esperado.
 
-### 0.2 Re-medir Lighthouse en producción — PENDIENTE, es lo único que bloquea
+### 0.2 Re-medir Lighthouse en produccion - HECHO 2026-09-26
 
-**Por qué sigue abierto:** el gate de la §8 del plan exige evidencia **contra el dominio desplegado**. El arreglo está en `main`, pero hasta que GitHub Pages termine de construir y sirva el commit `9590f51`, el sitio real sigue teniendo el CSS asincrono. El defecto sigue afectando a tus visitantes.
+**Ya no tienes que hacer nada en esta seccion.** La medicion se corrio contra `https://cha0smagicklabs.com` el 2026-09-26 y estos son los resultados. Los guardo aqui para que no vuelvas a correrlos.
 
-**Dónde:** tú solo tienes que confirmar que Pages ya publicó. En GitHub: repositorio → pestaña **Actions** → workflow **pages** → que el run de `9590f51` esté en verde. Tarda entre 1 y 5 minutos. Si tienes `gh` instalado: `gh run list --limit 3`.
+| Metrica | Antes | Ahora | Veredicto |
+|---|---|---|---|
+| CLS (escritorio) | 0.961 | **0.000** | **OK** - arreglado |
+| CLS (movil) | 0.000 | 0.000 | OK |
+| TBT (movil) | 216-236 ms | 111-200 ms | **OK** |
+| LCP (movil) | 2210 ms | 3064-3379 ms | **FAIL** |
+| LCP (escritorio) | 2769 ms | 3379 ms | **FAIL** |
+| accessibility / best-practices / seo | 91 / 96 / 100 | 91 / 96 / 100 | estables |
 
-Yo no pude verificarlo desde mi lado por dos razones concretas, ambas externas: el resolvedor DNS local rechazó la consulta de `cha0smagicklabs.com` ("Se ha rechazado la operación DNS") mientras `github.com` respondía 200, o sea que es el bloque del resolver local, no el sitio; y no hay `gh` instalado en el entorno, así que no puedo ver el estado del workflow.
+Tambien: **532 de 532 URLs del sitemap respondieron 200, 0 fallas**, y el test de consentimiento paso **30 de 30 checks**.
 
-**Una vez deployed, yo corro:**
-```
-npm run build
-npm test
-node scripts/analytics/lighthouse-audit.mjs --url https://cha0smagicklabs.com
-node scripts/analytics/cls-shift-probe.mjs --url https://cha0smagicklabs.com --viewport desktop
+El CLS de escritorio era el defecto grande y ya quedo cerrado. Pero **LCP ahora falla en los dos form factors**, y eso hay que saberlo: al volver el CSS bloqueante (que era lo que arreglaba el CLS) costo ~825 ms de LCP. Esta medido, no supuesto. No es que el sitio este peor en todo: el CLS paso de estar 8-12 veces por encima del umbral a cero perfecto. Pero **no se puede decir que las Core Web Vitals estén mejor: se movio el fallo de CLS a LCP.**
+
+**Lo que sigue pendiente y por que es tuyo:**
+
+1. **LCP.** El siguiente paso es medir cual es el elemento LCP y probar dos palancas: la hoja de Google Fonts (tambien render-blocking y cross-origin) o la imagen del hero. No lo intente a ciegas porque el arbol ya esta corregido y verificado, y un experimento mal medido seria una regresion nueva.
+2. **La API key de PageSpeed Insights** (seccion 7). Sin ella no hay CWV de campo, y los umbrales que importan son de campo, no de laboratorio. Ademas sin trafico no hay datos CrUX aunque la tengas.
+3. **Dato importante para tus Expectations:** el run verde que viste en Actions se llamaba `CI`, no `test`. **No existe ningun workflow llamado `test`.** `CI` en verde no dice que el sitio se desplego: el que despliega es `Deploy to GitHub Pages`. Los dos son verdes para `ea9aaae`, asi que todo esta bien, pero si la proxima vez solo ves `CI` en verde, eso no prueba nada sobre el despliegue.
+
+Comandos por si los quieres volver a correr:
+
+```powershell
+node scripts/analytics/prod-smoke.mjs --concurrency 10
+node scripts/analytics/lighthouse-audit.mjs --url https://cha0smagicklabs.com --form-factor desktop --no-field
+node scripts/analytics/cls-shift-probe.mjs --url https://cha0smagicklabs.com/index.html --viewport desktop
 node scripts/analytics/consent-browser-test.mjs --url https://cha0smagicklabs.com
 ```
 
-**Lo esperado:** CLS de escritorio de ~1.09 a cerca de 0.000, y `performance` de escritorio subiendo de 45 a hopefully 90+. Si el CLS **no** baja, el arreglo no llegó a producción y paramos ahí para investigar el pipeline, no el código.
-
-**Importante, no te lo saltes:** una medición en producción no es lo mismo que la de local. En local medí 5 páginas representativas y todas dieron 0.000, pero eso **no** prueba que las 371 den 0. `blog/index.html` media 0.000 sin el arreglo, o sea que la magnitud del defecto depende de la plantilla. El smoke de las 568 URLs es lo que cubre el resto.
-
-**Lo que este arreglo NO arregla, y hay que mirar aparte:** el `TBT` de móvil (216–236 ms contra un umbral de 200 ms) y el `LCP` de escritorio (2769 ms) siguen abiertos. Son problemas distintos.
+**Nota sobre tu maquina:** tu resolver local de DNS a veces rechaza `cha0smagicklabs.com` aunque el sitio este perfecto. Los scripts ya lo manejan solos (resuelven por DNS-over-HTTPS y fijan la IP sin perder TLS ni el dominio real), asi que si ves `INCONCLUSIVE` en el smoke, casi siempre es tu red, no el sitio. El smoke distingue eso con su exit code 2 a proposito.
 
 ---
+
 
 ## 1. Google Play Console — catálogo y disponibilidad (cierra P0-02 y P0-09)
 
