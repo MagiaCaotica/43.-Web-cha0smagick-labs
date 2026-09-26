@@ -6,7 +6,7 @@
     "esbuild": "^0.28.2",
     "jsdom": "^29.1.1",
     "lighthouse": "^13.5.0",
-    "terser": "^5.48.0",
+    "terser": "^5.51.2",
     "vitest": "^5.0.1"
   },
   "name": "43.-web-cha0smagick-labs",
