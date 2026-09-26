@@ -1,9 +1,10 @@
 # Canonical Asset Inventory
 
-**Inventory version:** 1.2.0
+**Inventory version:** 1.3.0
 **Evidence date:** 2026-09-25
 **Repository baseline:** HEAD `f219f9d` (re-verified after the plan-sync commit)
 **Canonical production origin:** `https://cha0smagicklabs.com` (`CNAME` present)
+**Production status:** verified live by read-only HTTPS sweep on 2026-09-25 — all 568 canonical URLs reachable, see section 9
 **Supersedes:** inventory version 1.1.0, which was verified against the stale baseline `751985d` and understated every count below
 
 ## 1. Purpose and evidence boundary
@@ -70,7 +71,7 @@ Growth between v1.1.0 and v1.2.0 is **+40 governed** and **+40 filesystem**, and
 
 `git ls-files "*.html"` returns **583** tracked HTML files. Of those, **15 sit inside the section 7 exclusion paths** (under `projects/` and `tools/auto-shorts/`) and are nonetheless tracked on `main` — which means they *are* served by GitHub Pages even though this inventory excludes them from the governed surface.
 
-**Consequence that must not be glossed over:** the section 7 exclusion set is a *governance-scope* decision, not a *publication* fact. 38 of the 53 excluded files are untracked (genuinely not published); **15 are tracked and therefore live in production**. Treating "excluded" as "not published" would understate the real public surface. This is recorded here as a known, deliberate, and unresolved classification debt; retiring those 15 paths from `main` is out of scope for P0-01, which may not delete pages.
+**Consequence that must not be glossed over:** the section 7 exclusion set is a *governance-scope* decision, not a *publication* fact. 38 of the 53 excluded files are untracked (genuinely not published); **15 are tracked and therefore live in production** — and this was subsequently confirmed by direct HTTP measurement in section 9.2, where those exact 15 paths returned `200` and the other 38 returned `404`. Treating "excluded" as "not published" would understate the real public surface. This is recorded here as a known, deliberate, and unresolved classification debt; retiring those 15 paths from `main` is out of scope for P0-01, which may not delete pages.
 
 GitHub Pages automation present on this baseline: `.github/workflows/` contains `bot-deploy.yml`, `ci.yml`, `lighthouse.yml`, `pages.yml`, `security-scan.yml`, `social-publish.yml`, `staging.yml`.
 
@@ -184,20 +185,39 @@ The 37 files that have a correct canonical but no matching sitemap path are enum
 
 Note that `checklist-ventas.html` appears in this list while being gitignored and untracked, so it is neither in the sitemap nor deployable; its canonical tag is a local-only artifact.
 
-### 6.1 Open defect: `blog/witchcraft-for-beginners-guide.html` canonical points at the wrong origin
+### 6.1 Open defect: `blog/witchcraft-for-beginners-guide.html` canonical disagrees with the sitemap
 
-Found while re-verifying the canonical coverage on 2026-09-25. This is the single exception to the 569/569 canonical-tag coverage:
+Found while re-verifying the canonical coverage on 2026-09-24/25. This is the single exception to the 569/569 canonical-tag coverage:
 
 | Field | Observed value |
 |---|---|
 | File | `blog/witchcraft-for-beginners-guide.html` |
 | Emitted canonical | `https://www.cha0smagicklabs.com/blog/witchcraft-for-beginners-guide` |
-| Expected canonical | `https://cha0smagicklabs.com/blog/witchcraft-for-beginners-guide.html` |
-| Defects | (1) wrong host — `www.cha0smagicklabs.com` instead of the production origin in `CNAME`, which is `cha0smagicklabs.com` with no `www`; (2) extensionless path — the deployed file is a real `.html` path, so the canonical does not resolve to a served URL |
+| Sitemap entry for this page | `https://cha0smagicklabs.com/blog/witchcraft-for-beginners-guide.html` |
+| Two disagreements | (1) host — `www.cha0smagicklabs.com` instead of the `CNAME` origin `cha0smagicklabs.com`; (2) path — extensionless instead of the deployed `.html` path |
 
-Why this matters: a canonical on a different host instructs crawlers to consolidate the page's ranking signals onto `www.cha0smagicklabs.com`. If that host is not served, the page risks being dropped from the index entirely; if it is served, the page competes with itself. Either way this is a live SEO defect on a governed `blog/` asset.
+**Measured redirect behaviour against production (2026-09-25, 5/5 and 3/3 retries consistent):**
 
-**It was deliberately not fixed as part of P0-01.** This task's mandate is to freeze and record the canonical surface; it may not change pages, and a canonical rewrite is a page change that belongs to the separately scoped SEO remediation (P1-01). The defect is recorded here, not silently repaired, and no attempt was made to guess whether `www.` resolves in production — that check requires external DNS evidence that does not exist locally.
+```text
+https://www.cha0smagicklabs.com/blog/witchcraft-for-beginners-guide
+  -> 301 -> https://cha0smagicklabs.com/blog/witchcraft-for-beginners-guide
+  -> 200 (37061 B)
+
+https://cha0smagicklabs.com/blog/witchcraft-for-beginners-guide.html
+  -> 200 (37061 B)   [the real, sitemap-listed, canonical-surface URL]
+
+https://www.cha0smagicklabs.com/  -> 301 -> https://cha0smagicklabs.com/  -> 200
+```
+
+**Severity: moderate, and self-healing. This is not a deindex risk.** The `www` host is served and every `www` URL 301s cleanly to the apex, so a crawler that follows the declared canonical still lands on a live `200` page carrying the same content. An earlier draft of this section speculated that the page "risks being dropped from the index" if `www` were unserved; that speculation is now **disproved by measurement** and has been removed rather than softened.
+
+What genuinely remains wrong:
+
+1. The canonical points **through a redirect** to a different host. Search engines treat a canonical that resolves only via redirect as a weaker, less trustworthy signal than one pointing directly at the final `200` URL.
+2. The canonical and the sitemap **disagree about the identity of the same page** — one says `www` + extensionless, the other says apex + `.html`. Only the sitemap form is in the canonical public surface (section 2.2) and only that form was confirmed as the file's real URL.
+3. The extensionless form `https://cha0smagicklabs.com/blog/witchcraft-for-beginners-guide` also returns `200`, which means two distinct URLs serve identical content with no canonical enforcement between them — a duplicate-URL condition the correct canonical would resolve.
+
+**It was deliberately not fixed as part of P0-01.** This task's mandate is to freeze and record the canonical surface; it may not change pages, and a canonical rewrite is a page change that belongs to the separately scoped SEO remediation (P1-01). The defect is recorded, measured, and routed; no speculative repair was applied.
 
 `index.html` emits `https://cha0smagicklabs.com/` (bare origin, trailing slash). That is correct for a homepage and is **not** counted as a defect.
 
@@ -285,6 +305,9 @@ These 53 files are excluded from the governed public/operational inventory becau
 | 37 canonical-without-sitemap | canonical target set minus sitemap path set | 37, enumerated in section 6 |
 | 61 tools = 61 funnels = 61 `WebApplication` | `tools/*.html` minus `index.html`, `data/tool-funnels.json` keys, `verify_tech_debt.py` JSON-LD tally | 61 = 61 = 61 |
 | 12 apps / 7 books / 1 bundle | key count of `scripts/bots/data/offers.json` | 12 / 7 / 1 |
+| **568 canonical URLs reachable in production** | read-only HTTPS `GET` per canonical URL, see section 9.1 | **567 direct `200` + 1 via `301`; 0 `404`; 0 unreachable** |
+| **15/38 exclusion split confirmed live** | HTTPS `GET` per excluded file, see section 9.2 | 15 tracked → all `200`; 38 untracked → all `404` |
+| deployed sitemap is current | served vs local `<loc>` set and `<lastmod>` | 532 = 532, 0 asymmetric entries, identical `lastmod` |
 
 No working-tree file outside this ledger was modified, and no price, URL, page, package ID, or checkout configuration was altered. `git status --porcelain` at verification time reported exactly one entry, this ledger.
 
@@ -303,3 +326,51 @@ This ledger is a local evidence record. It closes the P0-01 requirement to freez
 | 3 | 37 correct canonicals absent from the 532-entry sitemap, unclassified as indexable / noindex / retired | P1-01 SEO remediation |
 | 4 | `checklist-ventas.html` is a governed page that gitignore prevents from ever shipping | P0-01 follow-up; either track it or drop it from the working set |
 | 5 | All 12 app and 1 bundle offer states remain `external_listing_unverified` / `sale_unverified` | P0-02 / P0-04 (external evidence) |
+
+## 9. Production verification against the live origin
+
+Executed 2026-09-25 against `https://cha0smagicklabs.com` with read-only HTTPS `GET` requests and an identifying user agent. **This section upgrades the inventory's central state from `local_candidate` (inferred) to `served_verified` (measured)** for the whole canonical surface. It is the evidence that was previously missing for P0-10's "smoke del dominio real" gate.
+
+### 9.1 Canonical public surface sweep — all 568 URLs
+
+Every one of the 568 canonical-surface files was requested at its declared canonical URL:
+
+| Result | Count | Detail |
+|---|---:|---|
+| `200` directly | **567** | Served, content returned |
+| Reachable only via `301` from `www` | **1** | `blog/witchcraft-for-beginners-guide.html`, see section 6.1 |
+| `404` | **0** | — |
+| **Unreachable** | **0** | — |
+
+**All 568 canonical URLs are reachable in production.** The single indirect case is the known section 6.1 defect, whose redirect chain terminates in a `200`. No canonical-surface page is missing from production.
+
+### 9.2 The exclusion set split is confirmed, not inferred
+
+Section 7 argued from `git ls-files` that the 53-file exclusion set splits into 15 published and 38 unpublished paths. Production confirms that inference exactly:
+
+| Subset | Count | Production result |
+|---|---:|---|
+| Excluded **and** git-tracked | 15 | **15 / 15 return `200`** — publicly served |
+| Excluded **and** untracked | 38 | **0 / 38 served; all 38 return `404`** |
+| Total | 53 | matches the local exclusion set exactly, 15 + 38 = 53 |
+
+The 15 publicly served paths are `projects/docs/email-welcome-sequence.html`, the 13 `projects/pinterest-pins/output/*.html` files, and `projects/pinterest-pins/pin-{batch,renderer,template}.html`. This is now **measured production exposure of demo and email-campaign artifacts on the revenue domain**, not a theoretical concern.
+
+### 9.3 Other production measurements
+
+| Check | Result |
+|---|---|
+| `GET /robots.txt` | `200`; declares `Sitemap: https://cha0smagicklabs.com/sitemap.xml` |
+| `GET /sitemap.xml` | `200`; **532 entries, byte-content equivalent to the local file** (532 local, 0 entries present in only one side, identical `<lastmod>`). The on-disk file is ~3.2 KB larger purely because the working tree uses CRLF line endings while the served blob uses LF — a checkout normalisation artefact, **not** content drift. The deployed sitemap is current. |
+| `GET /index.html` and `GET /` | `200`, 64.782 B, identical |
+| `GET /checklist-ventas.html` | **`404`** — confirms the section 2.2 analysis: `.gitignore` prevents this governed page from ever deploying |
+| DNS `cha0smagicklabs.com` | 185.199.108–111.153 (GitHub Pages) |
+| DNS `www.cha0smagicklabs.com` | same four GitHub Pages addresses; HTTPS served, `301` to apex |
+| `GET /apps/`, `/books/`, `/landing-pages/`, `/lead-magnet/`, `/pages/` | **`404` — no directory landing page exists for these five groups** |
+| `GET /tools/`, `/blog/` | `200` — landing pages exist for these two |
+
+The five missing directory landing pages are recorded, not fixed. The ledger's canonical URL rule is per-file (`/apps/<filename>`), so this is a navigation and internal-linking gap rather than a broken-asset gap; it is routed to P1-01 alongside the section 6.1 canonical.
+
+### 9.4 What production verification still does not prove
+
+A `200` proves a file is served. It proves nothing about revenue. Still unproven after this sweep: Play Store listing state and availability, Hotmart checkout completion, refunds, fees, taxes, affiliate commissions, net collected amounts, GA4 event delivery, consent behaviour in a real browser session, and search-engine indexation. The five offer states in section 4 are unchanged by anything in this section and remain `unverified`.
