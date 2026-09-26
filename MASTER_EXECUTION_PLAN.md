@@ -84,17 +84,17 @@ El documento no presenta un porcentaje de mezcla como forecast. Si el equipo dec
 
 ### 2.1 Superficie del repositorio
 
-- Rama observada: `main`, sincronizada con `origin/main`, HEAD observado `751985d` (2026-09-23T22:15:23-05:00).
+- Rama observada: `main`, sincronizada con `origin/main`, HEAD observado `751985d` (2026-09-23T22:15:23-05:00). **Actualizado 2026-09-25:** el HEAD vigente es `f219f9d`; `751985d` queda como referencia del baseline histórico de este bloque.
 - Working tree preexistente: `M docs/thin-articles-progress.md` y `?? _verify_nde_tmp.py`; se preservan.
-- Inventario tracked observado: 1.402 archivos, incluyendo 538 HTML, 124 JS, 111 Python, 18 JSON y 25 MD.
-- Superficie filesystem observada: 582 HTML; el working set gobernado por el verificador tiene 529 páginas. La diferencia actual es 53 artefactos excluidos; el ledger v1.1.0 documenta el snapshot histórico 577/524 y el estado actual.
-- `sitemap.xml` contiene 492 URLs observadas; `llms.txt` existe, pero no se debe inferir que sea completo, actualizado o suficiente para GEO.
+- Inventario tracked observado: 1.402 archivos, incluyendo 538 HTML, 124 JS, 111 Python, 18 JSON y 25 MD. **Actualizado 2026-09-25:** 583 HTML rastreados, de los cuales 568 pertenecen a la superficie canónica y 15 caen dentro de rutas excluidas que igual se publican.
+- Superficie filesystem observada: **622** HTML; el working set gobernado por el verificador tiene **569** páginas y la superficie canónica rastreada **568**. La diferencia es 53 artefactos excluidos, cifra que el ledger v1.2.0 verifica sin deriva. El ledger v1.2.0 documenta los tres snapshots (524/577, 529/582, 569/622) como un invariante.
+- `sitemap.xml` contiene **532** URLs observadas (SHA-256 `574d3a1d…`); `llms.txt` existe, pero no se debe inferir que sea completo, actualizado o suficiente para GEO.
 - No se encontraron `llms-full.txt`, `indexnow.json`, `humans.txt` ni `security.txt`. Su ausencia es una decisión por documentar, no una tarea automática de publicación.
 
 ### 2.2 SEO, contenido y performance
 
-- El script local `scripts/verify_tech_debt.py` reportó 523 páginas con JSON-LD y cero errores de validación del script. Esto no prueba rich results, unicidad de metadata, indexabilidad ni rendimiento en buscadores.
-- Conteos de metadata sobre la superficie filesystem después de la remediación local: canonical 529, description 529 y hreflang 529 en la superficie gobernada; la verificación exacta queda sujeta a medición de buscadores y Rich Results. Persisten 180 `missing_alt`, 270 `empty_alt` y el baseline de heading skips del reporte previo, que requieren una revisión manual de accesibilidad y no se deben corregir con un reemplazo ciego.
+- El script local `scripts/verify_tech_debt.py` reportó 563 páginas con JSON-LD y cero errores de validación del script, sobre 569 escaneadas. Esto no prueba rich results, unicidad de metadata, indexabilidad ni rendimiento en buscadores.
+- Conteos de metadata sobre la superficie gobernada: los **569** archivos gobernados emiten tag `rel="canonical"`, de los cuales **568** apuntan al origen de producción y **1** apunta al host equivocado (`blog/witchcraft-for-beginners-guide.html`, documentado en §6.1 del ledger y enrutado a P1-01). La verificación exacta queda sujeta a medición de buscadores y Rich Results. Persisten 180 `missing_alt`, 270 `empty_alt` y el baseline de heading skips del reporte previo, que requieren una revisión manual de accesibilidad y no se deben corregir con un reemplazo ciego.
 - La auditoría local del 2026-09-24 corrigió 2 descripciones, 9 hreflang y 10 canonical en páginas concretas; no se cambiaron precios, claims ni URLs de venta.
 - El reporte de imágenes contiene 4.183 imágenes; sólo 9 están en WebP, 412 tienen dimensiones declaradas y 68 tienen lazy loading. El trabajo de performance debe medirse por plantillas, no_hidden y evidencia de carga real, no por una métrica global sin contexto.
 - `scripts/thin_articles_report.py` reporta ahora 0 artículos por debajo de 800 palabras, 0 entre 800 y 1.500 y 467 por encima de 1.500; el reporte fue regenerado el 2026-09-24. El umbral no prueba intención, E-E-A-T, enlaces, conversión ni utilidad.
@@ -152,7 +152,7 @@ El documento no presenta un porcentaje de mezcla como forecast. Si el equipo dec
 - Las 12 páginas de apps tienen default GA4 denied antes de `gtag('config', ...)`; esto es un guard técnico, no prueba legal completa.
 - `books-bundle.html` registra US$19.99 en el evento de checkout, no US$49.99.
 - `complete-access.html` y `flash-sale.html` ya no exponen hrefs placeholder; sus CTA Hotmart están bloqueados y no registran checkout.
-- Se actualizó `docs/canonical-asset-inventory.md` v1.1.0: el snapshot actual es 582 filesystem = 529 gobernados + 53 excluidos, sitemap 492, y conserva el histórico 577/524; registra oferta/URL/owner/estado y mantiene la limitación de publicación externa.
+- Se actualizó `docs/canonical-asset-inventory.md` a **v1.2.0** (2026-09-25): el snapshot vigente es 622 filesystem = 569 gobernados + 53 excluidos, superficie canónica rastreada 568, sitemap 532, y conserva los históricos 577/524 y 582/529; registra oferta/URL/owner/estado y mantiene la limitación de publicación externa. La v1.1.0 declaraba 582/529 y sitemap 492 contra el baseline obsoleto `751985d`.
 - Se crearon cinco páginas legales de borrador, `docs/legal-vendor-matrix.md`, footer común, default denied en la portada y sitemap regenerado; falta owner legal y prueba de consent en producción.
 - Se creó `docs/event-contract.md` y se añadieron pruebas de comportamiento para `scripts/ga4-mp.js` y `scripts/webhook-receiver.js`; falta reconciliación con transacciones reales y consent reject en GA4.
 - `npm test` (38 pytest + 229 Vitest en 11 archivos) y `npm run build` pasan localmente; el auditor de accesibilidad no puede cargar la stylesheet remota y reporta errores de contexto, por lo que no constituye evidencia de producción.
@@ -169,7 +169,7 @@ El documento no presenta un porcentaje de mezcla como forecast. Si el equipo dec
 - Documentación nueva: `docs/analytics-credential-runbook.md`, `docs/analytics-growth-plan.md` y `docs/plan-tools-sales-funnels.md`.
 - Límite: instrumentar eventos y exponer CTAs no prueba que un evento llegue a GA4 ni que un CTA convierta. Sigue faltando consent reject real, logs de debug de GA4 y reconciliación de `purchase` con Hotmart/Play.
 
-**Nota de drift documental:** `docs/canonical-asset-inventory.md` v1.1.0 §8 declara verificación contra HEAD `751985d`, que quedó atrás de `88754bc`. Su snapshot (582 filesystem = 529 gobernados + 53 excluidos, sitemap 492) no se ha re-verificado contra el árbol actual.
+**Nota de drift documental — RESUELTA el 2026-09-25:** `docs/canonical-asset-inventory.md` v1.1.0 §8 declaraba verificación contra HEAD `751985d`, atrasado respecto al árbol real, y su snapshot (582 filesystem = 529 gobernados + 53 excluidos, sitemap 492) nunca se había re-verificado. **P0-01 lo cerró**: el ledger está en v1.2.0, verificado contra HEAD `f219f9d` con 19 afirmaciones comprobadas de forma independiente, y su §2.1 resuelve los tres snapshots históricos. El defecto que esa re-verificación destapó —un canonical que apunta al host `www.` equivocado— está en §6.1 del ledger y enrutado a P1-01.
 
 ---
 
@@ -201,7 +201,7 @@ Cada bloque es una unidad de trabajo. No se deben marcar dos tareas como `DONE` 
 
 ### P0 — Desbloqueo de oferta, confianza y medición (días 0–14)
 
-#### [ ] P0-01 — Congelar la superficie canónica y el ledger de evidencia
+#### [x] P0-01 — Congelar la superficie canónica y el ledger de evidencia — **DONE 2026-09-25** (`docs/canonical-asset-inventory.md` v1.2.0, HEAD `f219f9d`)
 
 - **Owner:** Revenue Ops / Web.
 - **Dependencias:** ninguna.
@@ -210,6 +210,14 @@ Cada bloque es una unidad de trabajo. No se deben marcar dos tareas como `DONE` 
 - **No debe hacer:** cambiar precios, publicar URLs, borrar páginas o corregir el working tree preexistente como parte de esta tarea.
 - **Aceptación:** cada activo tiene un `asset_id`, una URL canónica, un owner, un estado y una fecha de verificación; las discrepancias históricas 524/577 y el estado actual 529/582 quedan resueltos o explícitamente excluidos.
 - **Evidencia:** archivo de inventario, export de URLs, commit y `git status` que pruebe que los cambios ajenos siguen intactos.
+- **Cómo se Satisfizo la aceptación:**
+  - *Superficie canónica elegida:* se adoptó el conjunto **HTML rastreado y gobernado = 568 archivos** como superficie pública canónica, por ser lo que GitHub Pages publica desde `main`. El working set gobernado (569) y el filesystem (622) quedan registrados como conjuntos distintos y nombrados, no fusionados.
+  - *Estado por activo:* los 12 offers de apps están `external_listing_unverified`, los 7 libros y 6 landing pages `local_candidate` (estado comercial no verificado), el bundle `external_url_observed_sale_unverified`, las cinco páginas legales `legal_owner_pending`, y `checklist-ventas.html` con estado propio `local_candidate_untracked_gitignored`. No se afirma `live` para ningún activo sin evidencia externa.
+  - *Discrepancias 524/577 y 529/582:* resueltas en §2.1 del ledger. Los tres pares (524/577, 529/582, 569/622) cumplen el mismo invariante `filesystem = gobernado + 53`; no hay contradicción, solo crecimiento de +40 archivos, atribuible íntegramente a `tools/*.html` pasando de 22 a 62.
+  - *Fuente, fecha y commit:* cada tabla del ledger lleva columna de fuente y fecha `2026-09-25`, y el frontmatter fija `HEAD f219f9d` con el SHA-256 del sitemap como ancla reproducible.
+- **Defecto encontrado y deliberadamente NO corregido** (por estar fuera del alcance de P0-01, que prohíbe cambiar páginas): `blog/witchcraft-for-beginners-guide.html` emite canonical a `https://www.cha0smagicklabs.com/blog/witchcraft-for-beginners-guide` — host equivocado (`www.` frente al `CNAME` real `cha0smagicklabs.com`) y path sin extensión. Documentado en §6.1 del ledger y enrutado a P1-01.
+- **Deuda de clasificación descubierta:** 15 de los 53 archivos del set excluido están **rastreados en `main`**, luego GitHub Pages los publica. "Excluido" significa "fuera del alcance gobernado", **no** "no publicado". Se registra explícitamente para que nadie lea el set excluido como una garantía de no publicación.
+- **Pendiente que no es local (requiere owner):** decisión sobre los 15 archivos rastreados fuera de alcance, y sobre si `checklist-ventas.html` se rastrea o se retira del working set.
 
 #### [ ] P0-02 — Reconciliar catálogo de apps, páginas y Play
 
@@ -583,7 +591,7 @@ Cada bloque es una unidad de trabajo. No se deben marcar dos tareas como `DONE` 
 
 Estos son pending work items, no tareas ya completadas:
 
-1. **P0-01:** declarar la superficie canónica y resolver el estado actual 529/582 HTML; la matriz local de apps ya fue creada, pero la superficie global sigue parcialmente abierta porque el export/commit final está pendiente. Ojo: el ledger `docs/canonical-asset-inventory.md` §8 fue verificado contra HEAD `751985d` y su conteo 529/582 y sitemap 492 **no** se han re-verificado contra HEAD `88754bc` ni contra el total real de 569 páginas del auditor; re-verificar antes de usar sus números como baseline.
+1. **P0-01:** **cerrado.** La superficie canónica quedó declarada en `docs/canonical-asset-inventory.md` v1.2.0 y verificada contra HEAD `f219f9d` el 2026-09-25: se adoptó el conjunto **HTML rastreado y gobernado (568 archivos)** como superficie pública canónica, con el working set de 569 y el filesystem de 622 registrados por separado. La discrepancia histórica 524/577 y el estado 529/582 quedan resueltos en §2.1 del ledger como tres snapshots de un invariante (delta 53 constante), no como una contradicción. Lo que queda no es local: la decisión de owner sobre los 15 archivos rastreados que el set excluido considera fuera de alcance pero que GitHub Pages sí publica, y la reparación del canonical de `blog/witchcraft-for-beginners-guide.html`.
 2. **P0-02:** la reconciliación local de 12 páginas ↔ 12 ofertas ya fue documentada; falta Play Console para cerrar el estado externo.
 3. **P0-03:** los placeholders de Hotmart ya se retiraron de los CTA públicos y las páginas quedaron bloqueadas; faltan IDs Hotmart reales y smoke de checkout para cerrarlo.
 4. **P0-04:** reconstruir el cierre de 30 días y calcular Gap-to-5k con cobros, refunds, fees y comisiones.
@@ -678,7 +686,7 @@ Esta tabla registra la evidencia local sin convertir artefactos en producción. 
 
 | Tarea | Estado | Evidencia local actual | Evidencia externa que falta |
 |---|---|---|---|
-| P0-01 | `IN_PROGRESS` | `docs/canonical-asset-inventory.md` v1.1.0; 529/582 actual y 524/577 histórico documentados — **ledger verificado contra HEAD `751985d`, no contra el HEAD real `88754bc`** | Re-verificar el ledger contra `88754bc` (su conteo 529/582 y sitemap 492 no coinciden con las 569 páginas que escanea el auditor); URL export/commit cuando el owner autorice commit; exportación final de superficie |
+| P0-01 | `DONE` | `docs/canonical-asset-inventory.md` **v1.2.0**, re-verificado 2026-09-25 contra HEAD `f219f9d` con árbol limpio: superficie canónica **568** HTML rastreados, working set gobernado **569**, filesystem **622**, delta de exclusión **53** verificado con cero deriva en ambas direcciones; `python scripts/verify_tech_debt.py` confirma 569 de forma independiente; sitemap 532 con SHA-256 `574d3a1d…`; 0 archivos sin tag canonical y **1 canonical con origen equivocado** detectado y documentado | Decisión de owner sobre los **15 archivos rastreados dentro del set excluido que GitHub Pages sí publica**; decisión sobre `checklist-ventas.html`, página gobernada que `.gitignore:33` impide publicar; reparación del canonical de `blog/witchcraft-for-beginners-guide.html` (§6.1 del ledger: host `www.` equivocado y path sin `.html`) |
 | P0-02 | `BLOCKED` | Matriz local de 12 apps y `offers.json` | Export de Play Console, listing URLs, screenshots y estados por app |
 | P0-03 | `BLOCKED` | CTAs sin placeholders; páginas bloqueadas sin inventar IDs | IDs Hotmart reales, apertura de checkout y transacción de prueba |
 | P0-04 | `BLOCKED` | Ningún número financiero inventado; fórmula documentada | Exports Hotmart/Play/pagos, refunds, fees, impuestos y commissions |
@@ -717,6 +725,8 @@ Esta tabla registra la evidencia local sin convertir artefactos en producción. 
 - `node scripts/accessibility-audit.js` → 0 violaciones, pero con advertencia de CSS remota y errores de contexto `window/document`; no se usa como evidencia de producción.
 - `git diff --check` → exit 0.
 
-**Correcciones de baseline aplicadas el 2026-09-24 al comparar contra HEAD `88754bc`:** el conteo de páginas del auditor es **569**, no 529 (529 era el conteo del ledger `canonical-asset-inventory.md`, verificado contra HEAD `751985d`); y la suite es de **229 Vitest en 11 archivos**, no 196. Ambas cifras anteriores en este documento estaban desactualizadas y se sustituyeron por las observadas. `docs/canonical-asset-inventory.md` sigue necesitando re-verificación y su §8 debe actualizarse con el HEAD real.
+**Correcciones de baseline aplicadas el 2026-09-24 al comparar contra HEAD `88754bc`:** el conteo de páginas del auditor es **569**, no 529 (529 era el conteo del ledger `canonical-asset-inventory.md`, verificado contra HEAD `751985d`); y la suite es de **229 Vitest en 11 archivos**, no 196. Ambas cifras anteriores en este documento estaban desactualizadas y se sustituyeron por las observadas.
+
+**Segunda corrección de baseline, 2026-09-25 (P0-01 cerrado):** el ledger pasó a v1.2.0 y sus cifras se sustituyeron por las medidas —622 filesystem, 569 gobernados, **568** de superficie canónica rastreada, sitemap **532**—, verificadas contra HEAD `f219f9d` con 19 comprobaciones independientes. La frase anterior de que el ledger "sigue necesitando re-verificación" queda **superada**. Se añadió además el matiz que faltaba: el set de 53 exclusiones es un límite de alcance gobernado, no una garantía de no publicación, porque 15 de esos archivos están rastreados y GitHub Pages sí los sirve.
 
 **Estado de este documento:** `PENDING`/`IN_PROGRESS`/`BLOCKED` según la tabla anterior; ningún bloque P0, P1 o P2 se considera `DONE` hasta que exista la evidencia externa y de gate indicada.
