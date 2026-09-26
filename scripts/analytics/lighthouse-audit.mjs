@@ -53,6 +53,11 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, '..', '..');
 const requireFromRepo = createRequire(path.join(REPO, 'package.json'));
 
+/* Reaches the deployed site even when the local DNS resolver refuses the name.
+   See scripts/analytics/lib/host-resolver.mjs for what this does and does not
+   change. Returns no flags on a healthy network. */
+import { hostResolverArgs } from './lib/host-resolver.mjs';
+
 const CHROME_FLAGS = [
   '--headless=new',
   '--no-sandbox',
@@ -323,7 +328,7 @@ async function main() {
     browser = await puppeteer.launch({
       headless: true,
       executablePath: chrome.path,
-      args: CHROME_FLAGS,
+      args: [...CHROME_FLAGS, ...(await hostResolverArgs(args.url))],
     });
   } catch (err) {
     inconclusiveReason('L3.lighthouse-run', `puppeteer could not launch Chrome for the audit: ${err.message}`);

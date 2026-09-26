@@ -823,3 +823,74 @@ Umbral CLS ≤ 0.1. La fila de `blog/index.html` está a propósito: medía 0 **
 - `scripts/fix-async-css.mjs` — migración de una pasada, dry-run por defecto, `--apply`, `--json`. Dos invariantes que abortan la corrida: ningún `preload as="style"` sobreviviente y ningún `href` de hoja de estilos duplicado.
 
 **6. Lo que sigue abierto, y por qué no es cosa de este cierre.** El gate de Lighthouse contra `https://cha0smagicklabs.com` **no se ha re-corrido** porque el arreglo no está en producción; la medición local prueba el arreglo, no el gate. `TBT` de móvil (216–236 ms contra 200 ms) y `LCP` de escritorio (2769 ms) **no los toca este arreglo**. El CWV de campo sigue bloqueado por la cuota diaria cero de PageSpeed Insights sin API key, que es una acción de owner. Y las 371 páginas modificadas **no están commiteadas**: el commit es del owner, porque §8 exige identificar commit y despliegue y este árbol tiene 371 cambios sin commitear.
+
+---
+
+### 11.3 Verificacion en produccion del 2026-09-26 - el gate de Lighthouse YA CORRIO contra el dominio real
+
+Esta seccion cierra la pregunta que §11.2 dejo abierta. Los cuatro commits (`3fd93b3`, `886182d`, `9590f51`, `ea9aaae`) estan en `main` y `Deploy to GitHub Pages` salio **success** para `ea9aaae`, asi que el arreglo ya esta desplegado y por fin se puede medir de verdad.
+
+#### 11.3.1 Dos bloqueos de entorno que hubo que resolver primero
+
+**DNS local intermitente.** `Resolve-DnsName cha0smagicklabs.com` devolvia "Se ha rechazado la operacion DNS" mientras `https://github.com` respondia 200, y `Invoke-WebRequest https://cha0smagicklabs.com/index.html` fallaba con "No se puede resolver el nombre remoto". Diagnostico: el nombre **existe**. DNS-over-HTTPS (Google y Cloudflare, por separado) responde `185.199.109.153`, `185.199.110.153`, `185.199.111.153` y `185.199.108.153`, las cuatro direcciones de GitHub Pages. El defecto estaba en el resolver local, no en el sitio, y ningun reintento lo arregla. Detalle que importa: el rechazo es **intermitente**, no permanente; varias corridas posteriores resolvieron sin ayuda. Por eso "esta caido" y "no puedo medirlo" son la misma afirmacion aqui, y hay que distinguirlas antes de reportar cualquier cosa.
+
+Solucion: `scripts/analytics/lib/host-resolver.mjs`. Si el resolver del sistema ya responde, devuelve **cero** banderas, de modo que en una red sana el comportamiento es identico al anterior. Si no responde, resuelve por DoH y le pasa a Chrome un `--host-resolver-rules=MAP <host> <ip>`. **TLS, SNI y la cabecera `Host` siguen usando el host real**, asi que el certificado se valida contra el dominio real; solo se cortocircuita la resolucion de nombre. Para peticiones HTTPS sin navegador, el mismo modulo se conecta a la IP fijada pero envia `servername` y `Host` del host real. No desactiva validacion de certificado, no usa `http://` y no redirige trafico a ningun sitio salvo la direccion que respondio DoH.
+
+Un bug real durante la construccion: se pasaba el objeto `URL` como primer argumento de `https.request`, y Node **ignora `options.host` cuando recibe un `URL`** porque los componentes de la URL lo sobrescriben. La peticion seguia buscando el nombre por el resolver del sistema y devolvia `getaddrinfo ENOTFOUND` aunque la IP estuviera fijada. Se resolvio pasando todo explicitamente en `options` (`protocol`, `host`, `port`, `servername`, `path`) y **sin** el objeto `URL`.
+
+**Sin `gh` CLI.** No hace falta instalarla: el repositorio es **publico** (`private=false`, `has_pages=true`), asi que la API REST de GitHub responde sin token. `GET /repos/MagiaCaotica/43.-Web-cha0smagick-labs/actions/runs` dio el estado de todas las corridas.
+
+#### 11.3.2 Correccion importante sobre el workflow "test"
+
+El owner reporto que "el run de actions que se llama test salio verde". **No existe ningun workflow llamado `test`.** Los nombres reales en `.github/workflows/` son `Bot Deploy`, `CI`, `Lighthouse CI`, `Deploy to GitHub Pages`, `Security Scan`, `Social Publish Daily` y `Staging Deploy (PR Preview)`. El run verde que se vio es `CI`, y **`CI` verde no significa que el sitio se haya desplegado**: son dos workflows distintos. El que gobierna el despliegue es `Deploy to GitHub Pages`, y ese es el que habia que mirar. Para `ea9aaae`: `CI` success, `Deploy to GitHub Pages` **success**, `pages build and deployment` success, `Security Scan` failure, `Bot Deploy` failure. Las dos fallas existen **en todas las corridas, incluida la mas antigua**, asi que son preexistentes y este cierre no las arregla; que `Bot Deploy` falle es lo esperable porque `.env` aun no tiene `TELEGRAM_BOT_TOKEN` ni las credenciales de Discord.
+
+#### 11.3.3 El gate de Lighthouse, corrido de verdad
+
+| Metrica | Fuente | Umbral | Antes (`d11aa59`) | Ahora (produccion) | Veredicto |
+|---|---|---|---|---|---|
+| CLS | lab | 0.1 | **0.961** (escritorio, 8-12x) | **0.000** (4 de 4 corridas) | **OK** |
+| TBT | lab | 200 ms | 216-236 ms (movil) | 111-200 ms | **OK** |
+| LCP | lab | 2500 ms | 2210 ms (movil) / 2769 ms (escritorio) | **3064-3379 ms** | **FAIL** |
+| accessibility | lab | - | 91 | 91 | estable |
+| best-practices | lab | - | 96 | 96 | estable |
+| seo | lab | - | 100 | 100 | estable |
+| performance | lab | - | 93 movil / 45 escritorio | 85-87 movil / 64 escritorio | - |
+
+Cuatro corridas: escritorio `LCP=3379ms CLS=0.000 TBT=111ms`; movil `3069/0.000/200`, `3064/0.000/156` y `3376/0.000/131`. **CLS 0.000 en las cuatro, sin excepcion.** El defecto que arrastraba el escritorio desde 0.961 esta corregido y verificado en el dominio real, no solo en local. TBT tambien paso a OK.
+
+#### 11.3.4 El `CLS 0.000` NO se acepto por su cuenta, y esta es la parte que importa
+
+`cls-shift-probe.mjs` sale con **veredicto `inconclusive` y exit 2** cuando observa cero desplazamientos, porque cero entradas no distingue "la pagina esta estable" de "este build de Chrome no reporta `layout-shift`". Aceptar ese `0` sin mas habria sido exactamente el falso verde que ya se documento una vez en §2.9.2. Asi que se construyo un **control positivo**: se genero una copia de `index.html` con el patron asincrono de CSS restaurado (`index-prefix-control.html`, temporal, ya borrada) y se midio con la misma sonda, el mismo Chrome y la misma sesion.
+
+Resultado del control: `total_cls 0.91`, `entry_count 8`, `verdict fail`, con la firma identica (`body` de `x7 y8 w1335 h932` a `x0 y0 w1350 h940`). El observador **si** reporta desplazamientos en este entorno. Por lo tanto el `0.000` de produccion es un cero real. Sin este control, la afirmacion "CLS arreglado en produccion" no tendria fundamento.
+
+#### 11.3.5 Lo que este arreglo costo: una regresion de LCP que es culpa nuestra y hay que decir
+
+El CSS ahora es bloqueante, y un CSS bloqueante retrasa el primer pintado. Eso no es una hipotesis, se midio con un A/B local en la misma maquina y la misma sesion, movil:
+
+| Version | LCP lab | CLS | TBT |
+|---|---|---|---|
+| Pre-fix (CSS asincrono, control) | 4064 ms | 0.312 | 113 ms |
+| Corregido (CSS bloqueante) | 4889 ms | **0.000** | 92 ms |
+
+Delta: **+825 ms de LCP a cambio de -0.312 de CLS.** En produccion el mismo fenomeno aparece como que LCP movil paso de 2210 ms (OK) a 3064-3379 ms (FAIL). Los numeros absolutos en localhost son mas altos que en produccion porque el throttling de Lighthouse se comporta distinto ahi, asi que **el delta es la senal, no los absolutos**.
+
+Balance honesto: CLS paso de fallo catastrofico (8-12 veces el umbral) a cero perfecto, y TBT paso a OK, pero **LCP ahora falla en los dos form factors** y antes solo fallaba en escritorio. No se puede decir que esto mejoro el estado de Core Web Vitals: **movio el fallo**. El siguiente paso no es adivinar, es medir cual es el elemento LCP y probar palancas concretas; las dos candidatas son la hoja de Google Fonts, que tambien es render-blocking y es cross-origin, y la imagen o el bloque de texto del hero. **No se intenta ningun cambio a ciegas aqui**: con el arbol ya corregido y verificado, un experimento de LCP mal medido seria una regresion nueva.
+
+Esto es coherente con algo que ya estaba escrito y que no es nuevo: el CWV de campo sigue bloqueado. PageSpeed Insights sin API key devuelve `HTTP 429` con `limit "Queries per day"` y `quota_limit_value 0`, es decir cuota diaria **cero** para el proyecto consumidor anonimo, lo cual es terminal y no reintentable. Sin API key no hay datos de campo; y aun con API key, sin trafico no hay datos CrUX. Los umbrales p75 de web.dev (LCP 2500 ms, CLS 0.1, TBT 200 ms, INP 200 ms) son de **campo**, y el laboratorio no los reemplaza. Esta corrida declara `cwvComplete: false` y **no puede cerrar un gate de CWV con su exit code, pase o falle**. INP no es medible en laboratorio, y TBT es un proxy con otra semantica.
+
+#### 11.3.6 Smoke de produccion, ahora como script y no como one-liner
+
+La medicion anterior de 568 URLs se habia ejecutado desde una linea de comando suelta. **Una medicion que no se puede reproducir no es evidencia** (§7), asi que ahora es `scripts/analytics/prod-smoke.mjs`, commiteado. Hace GET de solo lectura, sigue redirecciones, y distingue tres salidas: `0` si todo responde 2xx/3xx, `1` si hay 4xx/5xx o un guard falla, y **`2` INCONCLUSIVE si el sitio no se puede alcanzar**, porque un sitio inalcanzable jamas debe resumirse como un aprobado.
+
+Resultado: **532 URLs del sitemap, 532 en 2xx, 0 fallas, slowest 550 ms, VERDICT PASS, exit 0.** `robots.txt` 200 y declara sitemap; `sitemap.xml` 200 con 532 entradas.
+
+Un defecto real del propio script, encontrado y corregido: la primera version comparaba el sitemap servido contra el local con **SHA-256 de bytes** y reportaba `identical: false`, lo que parece deriva de contenido pero no lo era. El archivo local tiene terminaciones **CRLF** y lo que se sirve normaliza a **LF**; el conjunto de URLs es identico (532 = 532, mismo orden, mismos elementos). Un hash de bytes sin normalizar hace llorar al watchdog en cada corrida por un motivo que no es un defecto. Ahora compara forma normalizada y reporta las dos cosas por separado: `same_entry_set`, `same_order`, `raw_identical`, `normalised_identical` y `line_endings_differ`. Post-correccion: `same set: true, normalised match: true`.
+
+Lo que este smoke **no** prueba: no cubre 568 URLs, solo las **532** del sitemap. La diferencia de 36 contra la superficie gobernada de 568 esta sin reconciliar, y `--source governed` existe pero **sale con FAIL a proposito** hasta que esa reconciliacion este escrita, en vez de adivinar el filtro. Tampoco ejecuta navegador, asi que prueba alcanzabilidad y status de codigo, no renderizado, consentimiento ni desplazamiento de layout.
+
+#### 11.3.7 Consentimiento re-verificado en produccion
+
+`consent-browser-test.mjs` contra `https://cha0smagicklabs.com`: **PASS, 30 checks, 0 fallas, 0 inconclusas, exit 0**, Chrome 151. Continua observandose lo mismo que en §2.9.2: en la primera visita **sin cookie** el consentimiento resuelve a `granted` y hay peticiones a googletagmanager y doubleclick **antes** de que aparezca el banner y antes de cualquier decision del usuario; el Decline recien surte efecto en la vista de pagina siguiente. Decline deja `cookie_consent=declined`, `denied` en los cuatro campos de almacenamiento, `isConsentGranted()=false` y `track('tool_start')` **rechazado**, estable al recargar. Accept es el espejo. GA4 configurado con `G-V6LHCPN9TK`. Se despacharon 5 eventos sinteticos `tool_start` para leer el gate de `track()`, y eso esta declarado en la salida y en el JSON de evidencia. Lo que **no** prueba: que GA4 haya ingerido o procesado nada, que `denied` impida el envio del lado de Google (solo se midio el lado cliente), ni la rama de **retiro**, que no tiene banner.
+
+**Estado tras esta seccion: P0-10 sigue IN_PROGRESS, y el motivo ahora es preciso y no difuso.** El smoke, el consentimiento, el CLS y el build estan verificados contra el dominio real. Lo unico que impide cerrarlo es que **LCP falla en los dos form factors** y que el CWV de campo es inalcanzable sin la API key que es accion de owner (§7 de `docs/OWNER-MANUAL-CHECKLIST.md`). La buena noticia es que el defecto CLS, que era lo unico que estaba diagnosticado con certeza y sin arreglar, quedo cerrado y con control positivo.
