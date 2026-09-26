@@ -54,12 +54,12 @@ const PINTEREST_API = 'https://api.pinterest.com/v5';
 const PIN_CALENDAR = [
   // WEEK 1: Brand Awareness
   { day: 1, board: 'Chaos Magick',     title: 'Your Reality Is a Canvas',          file: '01-chaos-magick-quote.png', link: 'https://cha0smagicklabs.com/blog/chaos-magick-beginners-guide.html' },
-  { day: 1, board: 'Occult Apps',       title: 'Full Tarot Deck in Your Pocket',     file: '02-tarot-app.png',         link: 'https://play.google.com/store/apps/details?id=com.cha0smagicklabs.unofficialriderwaitetarot' },
+  { day: 1, board: 'Occult Apps',       title: 'Full Tarot Deck in Your Pocket',     file: '02-tarot-app.png',         link: 'https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite' },
   { day: 2, board: 'Rune Meanings',     title: 'Elder Futhark Rune Guide',           file: '03-rune-meanings.png',     link: 'https://cha0smagicklabs.com/tools/viking-runes.html' },
   { day: 2, board: 'Sigil Magick',      title: 'Create Powerful Sigils',             file: '04-sigil-magic.png',       link: 'https://cha0smagicklabs.com/tools/sigil-generator.html' },
   { day: 3, board: 'Witchcraft Spells', title: 'Beginner Witch? Start Here',         file: '05-witchcraft-tips.png',   link: 'https://cha0smagicklabs.com/blog/witchcraft-for-beginners-guide.html' },
   { day: 3, board: 'Astrology Apps',    title: 'Your Natal Chart Decoded',           file: '06-astrology-app.png',     link: 'https://cha0smagicklabs.com/pages/app-details.html?id=astral-lab' },
-  { day: 4, board: 'Occult Apps',       title: '72 Spirits, 72 Sigils',               file: '07-goetia-sigils.png',     link: 'https://play.google.com/store/apps/details?id=com.cha0smagicklabs.goetia' },
+  { day: 4, board: 'Occult Apps',       title: '72 Spirits, 72 Sigils',               file: '07-goetia-sigils.png',     link: 'https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal' },
   { day: 4, board: 'Occult Apps',       title: 'Control Your Dreams Tonight',        file: '08-lucid-dreaming.png',    link: 'https://cha0smagicklabs.com/pages/app-details.html?id=dream-machine' },
   { day: 5, board: 'Esoteric Books',    title: '7 Esoteric Books',                   file: '09-esoteric-books.png',    link: 'https://cha0smagicklabs.com/#books-section' },
   { day: 5, board: 'Occult Apps',       title: 'Test Your PSI with Data',            file: '10-zener-esp.png',         link: 'https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards' },

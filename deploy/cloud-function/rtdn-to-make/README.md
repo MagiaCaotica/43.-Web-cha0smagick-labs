@@ -37,7 +37,7 @@ gcloud functions deploy rtdnHandler \
   --region=us-east1 \
   --trigger-http \
   --allow-unauthenticated \
-  --set-env-vars "RTDN_MAKE_WEBHOOK_URL=https://hook.eu.make.com/xxxx,RTDN_MAKE_WEBHOOK_SECRET=<secreto>,PLAY_PACKAGE_NAMES=com.cha0smagick.app1,com.cha0smagick.app2"
+  --set-env-vars "RTDN_MAKE_WEBHOOK_URL=https://hook.eu.make.com/xxxx,RTDN_MAKE_WEBHOOK_SECRET=<secreto>,PLAY_PACKAGE_NAMES=com.cha0smagick.sigilgeneratorfinal,com.cha0smagicklabs.astralchart  # ver data/play-catalog.json para las 12"
 
 # 4. Crear la push subscription (endpoint = URL de la función)
 gcloud pubsub subscriptions create play-rtdn-push \

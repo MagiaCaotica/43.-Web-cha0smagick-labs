@@ -52,17 +52,17 @@
           "upsell_book_recommendation": "Tu carta natal es el mapa. <strong>Codex Chaoticum</strong> te enseña a leerlo como grimorio operativo: casas = templos, planetas = entidades, aspectos = enlaces.",
           "upsell_book_url": "https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_astral_codex"
         },
-        "com.cha0smagicklabs.sigilgenerator": {
+        "com.cha0smagick.sigilgeneratorfinal": {
           "product_name": "Sigil Generator",
           "upsell_book_recommendation": "Generar sigilos es el 10%. <strong>Codex Chaoticum</strong> te da los otros 5 métodos (Silábico, Urobórico, Cuadrados, Spare) + carga/activación/nulificación completa.",
           "upsell_book_url": "https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_sigil_codex"
         },
-        "com.cha0smagicklabs.psigym": {
+        "com.cha0smagicklabs.zenercards": {
           "product_name": "PSI GYM: Train Your Intuition",
           "upsell_book_recommendation": "Entrenar intuición sin marco teórico es navegar sin brújula. <strong>Librería LV</strong> — el compendio de servidores y egregoros para canalizar tu percepción.",
           "upsell_book_url": "https://hotmart.com/en/marketplace/products/libreria-lv/W106595766X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_psi_lv"
         },
-        "com.cha0smagicklabs.dreammachine": {
+        "com.cha0smagick.dreammachine": {
           "product_name": "Dreamachine: Lucid Dreaming",
           "upsell_book_recommendation": "Los sueños lúcidos son la puerta. <strong>Tarot del Caos</strong> te enseña a usar el Tarot como sistema de navegación onírica controlada.",
           "upsell_book_url": "https://hotmart.com/en/marketplace/products/tarot-del-caos/W106595765X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_dream_tarot"
@@ -77,17 +77,17 @@
           "upsell_book_recommendation": "Las runas leen el wyrd. <strong>Codex Chaoticum</strong> incluye el sistema rúnico completo + integración con sigilos urobóricos para fijar destinos.",
           "upsell_book_url": "https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_rune_codex"
         },
-        "com.cha0smagicklabs.tarotchaos": {
+        "com.cha0smagick.unofficialraiderwaite": {
           "product_name": "Tarot Chaos",
           "upsell_book_recommendation": "El Tarot del Caos no es adivinación — es ingeniería de probabilidad. <strong>Tarot del Caos (libro)</strong> profundiza 20 spreads operativos + correspondencias caóticas.",
           "upsell_book_url": "https://hotmart.com/en/marketplace/products/tarot-del-caos/W106595765X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_tarot_book"
         },
-        "com.cha0smagicklabs.iching": {
+        "com.app.ichingoracle": {
           "product_name": "I Ching Oracle",
           "upsell_book_recommendation": "El I Ching es el sistema de decisión más antiguo. <strong>Codex Chaoticum</strong> incluye integración I Ching + Magia del Caos: hexagramas como matrices de probabilidad manipulable.",
           "upsell_book_url": "https://hotmart.com/en/marketplace/products/codex-chaoticum-a-complete-treatise-on-chaos-magick/W106595764X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_iching_codex"
         },
-        "com.cha0smagicklabs.goetiaguide": {
+        "com.cha0smagick.sigilgeneratorfinalguide": {
           "product_name": "Goetia Guide",
           "upsell_book_recommendation": "Las 72 entidades necesitan protocolo. <strong>Servidores Mágicos</strong> — creación de servidores goéticos personalizados con contratos, alimentación y banishment seguro.",
           "upsell_book_url": "https://hotmart.com/en/marketplace/products/servidores-magicos/W106595767X?sck=HOTMART_SITE&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_goetia_servidores"
@@ -132,12 +132,12 @@
         "codex-chaoticum": {
           "product_name": "Codex Chaoticum - Complete Treatise on Chaos Magick",
           "upsell_app_recommendation": "La teoría más completa necesita la herramienta más completa: <strong>Sigil Generator</strong> — automatiza los 5 métodos del Codex (Gráfico, Silábico, Urobórico, Cuadrados Mágicos, Spare) + carga/activación en 1 clic.",
-          "upsell_app_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.sigilgenerator&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_codex_sigil"
+          "upsell_app_url": "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_codex_sigil"
         },
         "tarot-del-caos": {
           "product_name": "Tarot del Caos",
           "upsell_app_recommendation": "Los spreads operativos del libro cobran vida en <strong>Tarot Chaos App</strong> — 20 spreads predefinidos, interpretaciones caóticas, journal automático, sin memorizar significados.",
-          "upsell_app_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.tarotchaos&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_tarot_app"
+          "upsell_app_url": "https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_tarot_app"
         },
         "servidores-magicos": {
           "product_name": "Servidores Mágicos",
@@ -147,7 +147,7 @@
         "libreria-lv": {
           "product_name": "Librería LV",
           "upsell_app_recommendation": "La librería de servidores/egregoros cobra vida en <strong>PSI GYM</strong> — entrena tu percepción para contactar y verificar tus constructos. Datos, no fe.",
-          "upsell_app_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.psigym&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_lv_psi"
+          "upsell_app_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards&utm_source=mailerlite&utm_medium=email&utm_campaign=post_purchase_upsell&utm_content=u1_lv_psi"
         },
         "magia-del-caos-practica": {
           "product_name": "Magia del Caos Práctica",
