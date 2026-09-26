@@ -43,5 +43,6 @@ projects/auto-shorts-full/
 
 # Runtime garbage (accidentalmente trackeado / output local)
 logs/
+out/
 .opencode/goals/state.json.lock/
 undefined/
