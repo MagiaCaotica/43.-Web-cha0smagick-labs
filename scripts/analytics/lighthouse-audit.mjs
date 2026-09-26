@@ -192,6 +192,17 @@ async function fetchField(url, formFactor) {
         res.on('end', () => {
           const body = Buffer.concat(chunks).toString('utf8');
           if (res.statusCode === 429) {
+            // A 429 is NOT always "try again later". Measured on 2026-09-25: the
+            // key-less endpoint answered 429 with
+            //   "limit 'Queries per day'" ... "quota_limit_value": "0"
+            // for the anonymous consumer project. A zero daily quota is a HARD
+            // block: retrying can never succeed and only burns wall clock, so
+            // this is terminal and names the actual fix (a PSI-enabled API key).
+            const zeroDaily = /"quota_limit_value"\s*:\s*"?0"?/.test(body) || /per day/i.test(body);
+            if (zeroDaily) {
+              done({ ok: false, retryable: false, why: 'PageSpeed Insights answered HTTP 429 with a DAILY quota exhaustion (limit "Queries per day", quota_limit_value 0) for the anonymous key-less consumer -- this is terminal, not a transient rate limit: retrying can never return field data. Obtaining field CWV requires a Google Cloud project with an API key and the PageSpeed Insights API enabled.' });
+              return;
+            }
             done({ ok: false, retryable: true, why: `PageSpeed Insights answered HTTP 429 (key-less endpoint, aggressively rate limited; 429 means "try again later", NOT that field data is bad)` });
             return;
           }
@@ -219,7 +230,11 @@ async function fetchField(url, formFactor) {
   });
 }
 
-/** One retry, because a 429 on a key-less endpoint is a rate limit, not a verdict. */
+/**
+ * One retry, but ONLY for a genuinely transient failure. `fetchField` already
+ * demotes a zero-daily-quota 429 to `retryable: false`, so this wrapper never
+ * sleeps on a block it cannot break.
+ */
 async function fetchFieldWithRetry(url, formFactor, attempts = 2) {
   let last = null;
   for (let i = 0; i < attempts; i += 1) {
