@@ -1,6 +1,20 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Consent Mode default: nothing is granted until the visitor accepts.
+     Self-contained and idempotent: safe whether or not gtag exists yet. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  window.gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="theme-color" content="#050505">
@@ -29,7 +43,7 @@
 <noscript><link rel="stylesheet" href="../css/style.min.css"></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
 <script>
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent',{'analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-V6LHCPN9TK');
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V6LHCPN9TK');
 </script>
 <meta name="twitter:site" content="@Cha0smagickLABS">
 <meta name="twitter:creator" content="@FraterAlek0s">

@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="es">
 <head>
+<!-- Consent Mode default: nothing is granted until the visitor accepts.
+     Self-contained and idempotent: safe whether or not gtag exists yet. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  window.gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Planificador de Entrenamiento de Sueños Lúcidos | Herramientas Ocultas</title>

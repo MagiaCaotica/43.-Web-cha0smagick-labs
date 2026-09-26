@@ -134,10 +134,12 @@
     }
   }
 
-  // Granted by default; denied only when the visitor opted out via the banner.
+  // Opt-in (owner decision D1). Must agree with cmApplyConsent in shared.js and
+  // consentGranted in analytics-bridge.js: only "accepted" grants anything, so a
+  // first-time visitor with no cookie is denied rather than granted.
   function applyConsent() {
     if (typeof window.gtag !== 'function') return;
-    var state = getCookie('cookie_consent') === 'declined' ? 'denied' : 'granted';
+    var state = getCookie('cookie_consent') === 'accepted' ? 'granted' : 'denied';
     window.gtag('consent', 'update', {
       'analytics_storage': state,
       'ad_storage': state,

@@ -22,7 +22,11 @@ function loadBridge(options = {}) {
       removeItem: (key) => storage.delete(key),
     },
     document: {
-      cookie: options.cookie || '',
+      // Default the jar to an ACCEPTED visitor so the payload and event-shape tests
+  // exercise payloads rather than re-testing consent on every case. Consent is
+  // opt-in (owner decision D1), so a visitor with no cookie is DENIED; the tests
+  // that care about that say so explicitly with `cookie: ''`.
+  cookie: 'cookie' in options ? options.cookie : 'cookie_consent=accepted; path=/',
       addEventListener: (type, handler) => { listeners.push({ type, handler }); },
     },
   };
@@ -40,11 +44,22 @@ function click(listeners, attributeValue) {
 }
 
 describe('analytics bridge -- consent', () => {
-  it('records events for a first-time visitor (site is granted unless declined)', () => {
-    const { context, bridge } = loadBridge();
-    expect(bridge.isConsentGranted()).toBe(true);
-    expect(bridge.track('tool_start', { tool_id: 'A01' })).toBe(true);
-    expect(context.dataLayer.at(-1).event).toBe('tool_start');
+  it('blocks events for a first-time visitor, because consent is opt-in', () => {
+    // Owner decision D1 inverted this. The previous version asserted that a
+    // visitor with no cookie was GRANTED, which is the defect itself: a
+    // first-time visitor had no way to have agreed to anything, and the banner's
+    // Decline could not take effect until the following page view. Do not
+    // restore the old expectation; if this test starts failing, the opt-out
+    // behaviour came back, not that the test was wrong.
+    const { context, bridge } = loadBridge({ cookie: '' });
+    expect(bridge.isConsentGranted()).toBe(false);
+    expect(bridge.track('tool_start', { tool_id: 'A01' })).toBe(false);
+    expect(context.dataLayer ?? []).toEqual([]);
+  });
+
+  it('treats an unrecognised cookie value as denied, not as consent', () => {
+    const { bridge } = loadBridge({ cookie: 'cookie_consent=corrupted; path=/' });
+    expect(bridge.isConsentGranted()).toBe(false);
   });
 
   it('blocks events when the visitor declined via cookie_consent', () => {
@@ -74,7 +89,7 @@ describe('analytics bridge -- consent', () => {
   });
 
   it('re-reads the cookie so a late decline is honoured', () => {
-    const { context, bridge } = loadBridge();
+    const { context, bridge } = loadBridge({ cookie: 'cookie_consent=accepted; path=/' });
     expect(bridge.isConsentGranted()).toBe(true);
     context.document.cookie = 'cookie_consent=declined';
     expect(bridge.isConsentGranted()).toBe(false);
