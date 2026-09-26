@@ -39,10 +39,13 @@
     affiliate_click: ['affiliate_id', 'product', 'page']
   };
   /* The site's single source of truth for consent. shared.js (cmApplyConsent) and
-     conversion.js (applyConsent) both read this cookie: collection is GRANTED
-     unless the visitor explicitly declined. This bridge must agree with them,
-     otherwise it either records nothing (opt-in) or records against a refusal
-     (opt-out). Only "declined" blocks. */
+     conversion.js (applyConsent) both read this cookie, and all three must agree.
+     Consent is OPT-IN (owner decision D1): only the explicit value "accepted"
+     grants collection. Any other state -- absent cookie, "declined", a corrupted
+     value -- resolves to denied. A previous version read `!== 'declined'`, which
+     made a first-time visitor (no cookie at all) count as consent and made the
+     banner's Decline unable to take effect until the following page view. Do not
+     "simplify" this back to an opt-out check: the opt-out form is the defect. */
   var CONSENT_COOKIE = 'cookie_consent';
   var consentKey = 'cha0_analytics_consent';
   var state = { consent: null };
@@ -78,7 +81,7 @@
     } catch (_) {
       // Storage is optional; fall back to the cookie.
     }
-    return readCookie(CONSENT_COOKIE) !== 'declined';
+    return readCookie(CONSENT_COOKIE) === 'accepted';
   }
 
   function safeValue(value) {

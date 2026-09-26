@@ -966,3 +966,54 @@ Contexto: ese identificador no existe en Play. Vive en `docs/plan-tools-sales-fu
 Esta decision ya esta sostenida por codigo: `docs/plan-tools-sales-funnels.md` esta en las `EXCLUSIONS` de `scripts/verify_play_catalog.mjs` con la razon escrita de que borrarlo destruiria el registro. Ese es el mecanismo correcto, porque una exclusion sin razon escrita es el lugar exacto donde una ID equivocada se esconde. Lo que se agrega aqui es la **atribucion**: la decision es del owner, no un criterio mio.
 
 **No reintroducir `com.cha0smagick.norone` como ID de producto en ninguna parte.** Sigue siendo un ejemplo citado, no una app.
+
+---
+
+### 11.5 Decision D1 (default de cookies) - diagnostico completo, ejecucion pendiente
+
+#### 11.5.1 Lo que el owner decidio y por que cambia el calculo
+
+El owner dijo, textualmente: **"ninguna de las apps tiene anuncios, por lo tanto ninguna tiene revenue por ads. venta unica obtiene dinero fin, ese es el modelo de negocio."** Y dijo: **"haz lo del default de cookies."**
+
+Eso decide **D1 = invertir el default a `denied`**, y ademas cierra el punto abierto de `app-ads.txt`: como el modelo de negocio es venta unica sin anuncios, **no hay revenue por ads que atribuir**, asi que el placeholder `pub-PONER_PUBLISHER_ID` en `app-ads.txt` no es revenue perdida, es un archivo vestigial. Se registra como tal y no como faltante. `GOOGLE_ADS_ID="PONER_AW_ID_AQUI"` y `META_PIXEL_ID="PONER_META_PIXEL_ID_AQUI"` en `js/shared.js` ya estan correctamente protegidos por `cmIdIsReal()`, que rechaza cualquier ID que empiece con `PONER_`, asi que **no hay pixel ni Google Ads cargandose hoy**. Eso refuerza el argumento: conceder `ad_storage` por defecto no compra ninguna medicion que no se este midiendo.
+
+#### 11.5.2 El defecto es mas grande de lo que decia el plan, y esta medido
+
+El plan (seccion 2.9.2) describia el problema como que "en la primera visita el consentimiento resuelve a granted". Es correcto pero incompleto. Barrido de los **622 HTML** del repo, buscando el bloque `gtag('consent','default', {...})` y clasificando los cuatro campos:
+
+| Resultado | Archivos |
+|---|---|
+| `ad_storage: 'granted'` (**el defecto**) | **1** (`index.html`) |
+| Los cuatro campos en `denied` | 13 |
+| **Sin `consent default` alguno** | **608** |
+
+`index.html` L20-25, textual:
+```
+gtag('consent', 'default', {
+  'analytics_storage': 'denied',
+  'ad_storage': 'granted',
+  'ad_user_data': 'granted',
+  'ad_personalization': 'granted'
+});
+```
+O sea: `analytics_storage` ya estaba en `denied` y **los tres campos de publicidad estaban en `granted`**. Ese es el vector real de la infraccion: no es que seDZ tracked analytics sin permiso, es que se **concede almacenamiento publicitario y personalizacion sin permiso**, que es exactamente lo que dispara los avisos de Cookies de Google en la UE.
+
+**El hallazgo de los 608 es el grande y no estaba en ningun sitio.** 608 de 622 paginas **no fijan `consent default` en absoluto**. En Consent Mode, si `gtag('consent','default')` nunca se llama, GA4 asume **granted** y ademas emite un warning en la consola. `js/shared.js` llama `cmApplyConsent()`, que hace `gtag('consent','update', {...})`, pero un `update` sin un `default` previo no protege el periodo anterior a ese `update`. Con la regla opt-out actual (`var declined = cmGetCookie("cookie_consent")==="declined"`), el `update` manda `granted` en la mayoria de las visitas, asi que el resultado practico es el mismo: permitted by default.
+
+#### 11.5.3 Los tres sitios que hay que cambiar, y por que ninguno basta solo
+
+1. `js/shared.js` L178 `cmApplyConsent()` -- hoy es **opt-out**: `cookie_consent === "declined" ? "denied" : "granted"`. Debe ser opt-in: solo `"accepted"` concede.
+2. `js/analytics-bridge.js` L72-82 `consentGranted()` -- hoy es **opt-out**: `return readCookie(CONSENT_COOKIE) !== 'declined'`. Debe ser `=== 'accepted'`. El comentario de L41-45, que dice literalmente *"collection is GRANTED unless the visitor explicitly declined... Only 'declined' blocks"*, esta equivocado y hay que reescribirlo, porque es la documentacion que va a leer el proximo que toque este archivo.
+3. `index.html` L20-25 -- los tres campos `ad_*` a `denied`.
+4. **Los 608 HTML sin `consent default`** -- hay que insertar el bloque, o al menos un `consent default` con los cuatro en `denied`, que es el unico estado que sirve de default cuando la visitora no ha decidido.
+5. `js/conversion.js` L138 `applyConsent()` -- tercer lector de la misma cookie, mentioned en el comentario del bridge; hay que revisarlo y alinearlo.
+6. **Tests que hoy afirman el defecto.** `scripts/analytics/test/analytics-bridge.test.mjs` tiene 385 lineas de pruebas de comportamiento y `scripts/analytics/consent-browser-test.mjs` afirma textualmente *"collection active before any decision"* y *"first gtag consent update is granted"*. **Esos dos checks no se borran: se invierten.** Un guard que afirma la vulnerabilidad es peor que un guard ausente, porque un dia alguien arregla el default y el test falla, y la leccion que se saca es "el fix estaba mal" en vez de "el test afirmaba el bug".
+7. **Rebuild de `js/shared.min.js` y `js/conversion.min.js`** (`npm run build:js`) y commitear los `.min.js`, que estan versionados.
+
+#### 11.5.4 Por que queda pendiente de ejecucion y no se hace a medias
+
+El cambio es atomico por definicion: tocar 3 JS + 622 HTML + 2 suites de tests y regenerar 2 `.min.js` sin `npm test` en medio deja el arbol en un estado donde `npm test` puede fallar sin que se sepa si por el cambio correcto o por una edicion a medias. Los 229 tests de Vitest y los 38 de pytest **son** el guard de este cambio, y el precedente ya esta escrito en 11.3.4: una medicion que no pasa por un control no es evidencia, y un guard que nunca se corrio sobre el arbol final no es un guard. Se ejecuta completo, con `npm test` antes y despues, y la corrida previa tiene que ser sobre el arbol **ya** con los 608 insertados, no despues.
+
+Nota de alcance: **no se puede afirmar que esto baje el riesgo legal**, y el owner lo debe saber. Invertir a `denied` es lo que la mayoria de los EURegulators exige y elimina la actividad pre-decision, pero **no es una opinion legal** y no sustituye la revision de un abogado. Lo que si hace, y es medible, es dejar de conceder publicidad y personalizacion sin permiso. Ese es el cambio verificable.
+
+**P0-06 sigue IN_PROGRESS.** La razon ya no es "falta la decision del owner": la decision esta tomada (D1 = denied, D2 sigue abierta, los 5 borradores sin firmar siguen sin firmar). La razon es que el cambio aun no esta implementado, verificado ni desplegado, y faltan las firmas.

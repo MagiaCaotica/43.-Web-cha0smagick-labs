@@ -174,11 +174,15 @@ function cmEnsureGtag() {
     }
 }
 
-// Applies granted-by-default consent, or denied when the visitor opted out.
+// Opt-in consent (owner decision D1): nothing is granted until the visitor
+// accepts. Before this, any cookie that was not literally "declined" counted as
+// consent, so a first-time visitor -- who has no cookie at all -- was granted
+// storage, and the banner's Decline could not take effect until the next page
+// view. Only the explicit "accepted" value grants anything.
 function cmApplyConsent() {
     if (typeof window.gtag !== 'function') return;
-    var declined = cmGetCookie('cookie_consent') === 'declined';
-    var state = declined ? 'denied' : 'granted';
+    var accepted = cmGetCookie('cookie_consent') === 'accepted';
+    var state = accepted ? 'granted' : 'denied';
     window.gtag('consent', 'update', {
         'analytics_storage': state,
         'ad_storage': state,

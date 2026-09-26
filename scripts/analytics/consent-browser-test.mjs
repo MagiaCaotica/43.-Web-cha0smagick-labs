@@ -324,16 +324,22 @@ async function scenarioFirstVisit(page, url, status) {
     record(name, 'banner appears without a decision', 'pass', 'banner was visibly rendered with no cookie set');
   }
 
+  // Owner decision D1 inverted these two. They previously asserted that
+  // collection was ALREADY LIVE and that the first consent update was GRANTED
+  // before the visitor had answered anything -- which is the defect, not a
+  // baseline. A first-time visitor has no cookie, so under opt-in consent they
+  // must be DENIED until they accept. If this starts failing, the opt-out
+  // default came back; the old expectation was never correct.
   const first = consentVerdict(state.consentUpdates[state.consentUpdates.length - 1]);
-  if (state.consentGranted !== true) {
-    record(name, 'collection active before any decision', 'fail', `isConsentGranted()=${state.consentGranted} on a first visit; the code resolves an absent cookie as granted, so this is unexpected`);
+  if (state.consentGranted === false) {
+    record(name, 'no collection before any decision', 'pass', 'isConsentGranted()=false on a first visit; nothing is collected until the visitor accepts');
   } else {
-    record(name, 'collection active before any decision', 'pass', 'isConsentGranted()=true and collection is live before the user answers');
+    record(name, 'no collection before any decision', 'fail', `isConsentGranted()=${state.consentGranted} on a first visit with no cookie; consent is opt-in, so this must be false`);
   }
-  if (first === 'granted') {
-    record(name, 'first gtag consent update is granted', 'pass', 'gtag("consent","update") fired granted before any user decision');
+  if (first === 'denied') {
+    record(name, 'first gtag consent update is denied', 'pass', 'gtag("consent","update") fired denied before any user decision');
   } else {
-    record(name, 'first gtag consent update is granted', 'fail', `expected granted, got ${first}`);
+    record(name, 'first gtag consent update is denied', 'fail', `expected denied before any decision, got ${first}`);
   }
   if (state.configuredIds.length > 0) {
     record(name, 'GA4 configured on the page', 'pass', `gtag config ids: ${state.configuredIds.join(', ')}`);
