@@ -1,5 +1,5 @@
 import urllib.request, json, re, concurrent.futures
-pkgs = ['com.cha0smagicklabs.astralchart','com.cha0smagicklabs.chaossigilgenerator','com.cha0smagicklabs.dreammachine','com.cha0smagicklabs.eerieroads','com.cha0smagicklabs.goetia','com.cha0smagicklabs.iching','com.cha0smagicklabs.luciddreamer','com.cha0smagicklabs.lunarphase','com.cha0smagicklabs.noctemapp','com.cha0smagicklabs.norseruneoracle','com.cha0smagicklabs.riderwaitetarot','com.cha0smagicklabs.unofficialriderwaitetarot','com.cha0smagicklabs.zenercards']
+pkgs = ['com.cha0smagicklabs.astralchart','com.app.goetiansealsgeneratorapp','com.cha0smagick.dreammachine','com.cha0smagicklabs.eerieroads','com.cha0smagick.sigilgeneratorfinal','com.app.ichingoracle','com.cha0smagicklabs.luciddreamer','com.lunarapp.app','com.cha0smagicklabs.noctemapp','com.japps.norse_oracle','com.cha0smagick.unofficialraiderwaite','com.cha0smagick.unofficialraiderwaite','com.cha0smagicklabs.zenercards']
 def check(p):
     url='https://play.google.com/store/apps/details?id='+p+'&hl=en'
     try:

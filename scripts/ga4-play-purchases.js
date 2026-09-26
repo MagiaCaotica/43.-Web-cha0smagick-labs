@@ -22,7 +22,7 @@
  *   GOOGLE_PLAY_SERVICE_ACCOUNT_JSON  — Ruta al archivo JSON O JSON string completo (requerido)
  *   GA4_MEASUREMENT_ID                — ID de medición GA4 (G-XXXXXXXXXX) (requerido)
  *   GA4_MP_API_SECRET                 — API Secret GA4 Measurement Protocol (requerido)
- *   GOOGLE_PLAY_PACKAGE_NAME          — Package name de la app (ej: com.cha0smagick.noctem) (requerido)
+ *   GOOGLE_PLAY_PACKAGE_NAME          — Package name de la app (ej: com.cha0smagicklabs.noctemapp) (requerido)
  *   PLAY_FETCH_DAYS                   — Días hacia atrás a consultar (default: 1 = ayer)
  *   PLAY_DRYRUN                       — 'true' para modo simulación
  * 
@@ -102,7 +102,7 @@ function validateConfig() {
     logger.error('config', '   GOOGLE_PLAY_SERVICE_ACCOUNT_JSON — Ruta al archivo JSON del Service Account O el JSON completo como string');
     logger.error('config', '   GA4_MEASUREMENT_ID — ID de medición GA4 (formato G-XXXXXXXXXX)');
     logger.error('config', '   GA4_MP_API_SECRET — API Secret de GA4 Measurement Protocol');
-    logger.error('config', '   GOOGLE_PLAY_PACKAGE_NAME — Package name de tu app en Play Console (ej: com.cha0smagick.noctem)');
+    logger.error('config', '   GOOGLE_PLAY_PACKAGE_NAME — Package name de tu app en Play Console (ej: com.cha0smagicklabs.noctemapp)');
     logger.error('config', '');
     logger.error('config', '🔧 Para crear el Service Account:');
     logger.error('config', '   1. Google Cloud Console → IAM → Service Accounts → Create Service Account');
@@ -457,7 +457,7 @@ Variables de entorno REQUERIDAS:
   GOOGLE_PLAY_SERVICE_ACCOUNT_JSON  — Ruta a archivo JSON O JSON string del Service Account
   GA4_MEASUREMENT_ID                — ID de medición GA4 (G-XXXXXXXXXX)
   GA4_MP_API_SECRET                 — API Secret de GA4 Measurement Protocol
-  GOOGLE_PLAY_PACKAGE_NAME          — Package name de la app (ej: com.cha0smagick.noctem)
+  GOOGLE_PLAY_PACKAGE_NAME          — Package name de la app (ej: com.cha0smagicklabs.noctemapp)
 
 Variables opcionales:
   PLAY_FETCH_DAYS     — Días hacia atrás (default: 1)

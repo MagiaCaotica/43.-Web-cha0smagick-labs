@@ -71,7 +71,7 @@ OFFERS = [
             "Protocolos Zener + Remote Viewing + Precognición + Análisis estadístico automático\n"
             "📊 Datos reales: 32% aciertos Zener (azar 20%) · p < 0.01\n"
             "⭐ 4.7★ · 100% offline\n\n"
-            "👉 <a href='https://play.google.com/store/apps/details?id=com.cha0smagicklabs.psigym&utm_source=telegram&utm_medium=bot&utm_campaign=daily_psi'>Descargar en Google Play</a>"
+            "👉 <a href='https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards&utm_source=telegram&utm_medium=bot&utm_campaign=daily_psi'>Descargar en Google Play</a>"
         ),
         "image_url": "https://i.imgur.com/PSI_IMG.jpg",
         "alt": "PSI GYM ESP Training Screenshot"
@@ -95,7 +95,7 @@ OFFERS = [
             "Gráfico · Silábico · Urobórico · Cuadrados Mágicos · Spare\n"
             "⚡ Carga/Activación automática · Gallery · Export PNG/SVG\n"
             "💰 COP 14.000 (one-time)\n\n"
-            "👉 <a href='https://play.google.com/store/apps/details?id=com.cha0smagicklabs.sigilgenerator&utm_source=telegram&utm_medium=bot&utm_campaign=daily_sigil'>Descargar en Google Play</a>"
+            "👉 <a href='https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal&utm_source=telegram&utm_medium=bot&utm_campaign=daily_sigil'>Descargar en Google Play</a>"
         ),
         "image_url": "https://i.imgur.com/SIGIL_IMG.jpg",
         "alt": "Sigil Generator App Screenshot"

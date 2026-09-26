@@ -246,11 +246,11 @@ def write_log(payload: dict) -> Path:
 # --- Embedded sample data for --selftest (no network calls) ---
 
 _SAMPLE_CSV_PRIMARY = """Description,Transaction Date,Product Title,Product ID,Amount (Merchant Currency),App ID
-Charge,2026-09-15,NOCTEM - Paranormal Suite,com.cha0smagick.noctem,US$14.99,com.cha0smagick.noctem
-Charge,2026-09-15,PSI GYM - Zener ESP Trainer,com.cha0smagick.psigym,US$3.99,com.cha0smagick.psigym
-Google fee,2026-09-15,PSI GYM - Zener ESP Trainer,com.cha0smagick.psigym,-US$0.57,com.cha0smagick.psigym
-Charge,2026-09-16,Rider-Waite Tarot Complete,com.cha0smagick.tarot,$9.99,com.cha0smagick.tarot
-Refund,2026-09-16,PSI GYM - Zener ESP Trainer,com.cha0smagick.psigym,US$3.99,com.cha0smagick.psigym
+Charge,2026-09-15,NOCTEM - Paranormal Suite,com.cha0smagicklabs.noctemapp,US$14.99,com.cha0smagicklabs.noctemapp
+Charge,2026-09-15,PSI GYM - Zener ESP Trainer,com.cha0smagicklabs.zenercards,US$3.99,com.cha0smagicklabs.zenercards
+Google fee,2026-09-15,PSI GYM - Zener ESP Trainer,com.cha0smagicklabs.zenercards,-US$0.57,com.cha0smagicklabs.zenercards
+Charge,2026-09-16,Rider-Waite Tarot Complete,com.cha0smagick.unofficialraiderwaite,$9.99,com.cha0smagick.unofficialraiderwaite
+Refund,2026-09-16,PSI GYM - Zener ESP Trainer,com.cha0smagicklabs.zenercards,US$3.99,com.cha0smagicklabs.zenercards
 """
 
 # Variant column names: no space in 'TransactionDate', no parens in the amount,
@@ -285,11 +285,11 @@ def run_selftest() -> None:
     rows = _parse_csv_text(_SAMPLE_CSV_PRIMARY)
     apps = aggregate(rows)
     by_key = {(a["app"], a["date"]): a for a in apps}
-    assert by_key[("com.cha0smagick.noctem", "2026-09-15")]["amount"] == 14.99
-    assert by_key[("com.cha0smagick.noctem", "2026-09-15")]["transactions"] == 1
-    assert by_key[("com.cha0smagick.psigym", "2026-09-15")]["amount"] == 3.99  # fee row excluded
-    assert by_key[("com.cha0smagick.tarot", "2026-09-16")]["amount"] == 9.99
-    assert by_key[("com.cha0smagick.psigym", "2026-09-16")]["amount"] == -3.99  # refund negated
+    assert by_key[("com.cha0smagicklabs.noctemapp", "2026-09-15")]["amount"] == 14.99
+    assert by_key[("com.cha0smagicklabs.noctemapp", "2026-09-15")]["transactions"] == 1
+    assert by_key[("com.cha0smagicklabs.zenercards", "2026-09-15")]["amount"] == 3.99  # fee row excluded
+    assert by_key[("com.cha0smagick.unofficialraiderwaite", "2026-09-16")]["amount"] == 9.99
+    assert by_key[("com.cha0smagicklabs.zenercards", "2026-09-16")]["amount"] == -3.99  # refund negated
     total = round(sum(a["amount"] for a in apps), 2)
     assert total == 24.98, f"total {total} != 24.98"
     assert sum(a["transactions"] for a in apps) == 4

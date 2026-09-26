@@ -20,17 +20,17 @@ PUB_API = "https://androidpublisher.googleapis.com/androidpublisher/v3"
 
 PACKAGES = [
     "com.cha0smagicklabs.astralchart",
-    "com.cha0smagicklabs.chaossigilgenerator",
-    "com.cha0smagicklabs.dreammachine",
+    "com.app.goetiansealsgeneratorapp",
+    "com.cha0smagick.dreammachine",
     "com.cha0smagicklabs.eerieroads",
-    "com.cha0smagicklabs.goetia",
-    "com.cha0smagicklabs.iching",
+    "com.cha0smagick.sigilgeneratorfinal",
+    "com.app.ichingoracle",
     "com.cha0smagicklabs.luciddreamer",
-    "com.cha0smagicklabs.lunarphase",
+    "com.lunarapp.app",
     "com.cha0smagicklabs.noctemapp",
-    "com.cha0smagicklabs.norseruneoracle",
-    "com.cha0smagicklabs.riderwaitetarot",
-    "com.cha0smagicklabs.unofficialriderwaitetarot",
+    "com.japps.norse_oracle",
+    "com.cha0smagick.unofficialraiderwaite",
+    "com.cha0smagick.unofficialraiderwaite",
     "com.cha0smagicklabs.zenercards",
 ]
 

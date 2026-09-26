@@ -176,12 +176,12 @@ function selftest() {
   // 1. Envelope base64 round-trip
   const sample = {
     version: '1.0',
-    packageName: 'com.cha0smagick.tarot',
+    packageName: 'com.cha0smagick.unofficialraiderwaite',
     eventTimeMillis: Date.now(),
     subscriptionNotification: { subscriptionId: 'inner_circle_monthly', notificationType: 4, purchaseToken: 'tok123' },
   };
   const r1 = processRtdn({ message: { data: Buffer.from(JSON.stringify(sample)).toString('base64') } });
-  check('envelope base64 → payload', r1.ok && r1.payload.packageName === 'com.cha0smagick.tarot');
+  check('envelope base64 → payload', r1.ok && r1.payload.packageName === 'com.cha0smagick.unofficialraiderwaite');
   check('subscription purchased → kind/nombre', r1.ok && r1.makePayload.kind === 'subscription' && r1.makePayload.notificationType === 'SUBSCRIPTION_PURCHASED');
   check('purchaseToken propagado', r1.ok && r1.makePayload.purchaseToken === 'tok123');
   check('eventTime ISO', r1.ok && typeof r1.makePayload.eventTime === 'string' && !Number.isNaN(Date.parse(r1.makePayload.eventTime)));
@@ -189,7 +189,7 @@ function selftest() {
   // 2. Voided purchase
   const sampleVoid = {
     version: '1.0',
-    packageName: 'com.cha0smagick.tarot',
+    packageName: 'com.cha0smagick.unofficialraiderwaite',
     eventTimeMillis: Date.now(),
     voidedPurchaseNotification: { purchaseToken: 'tok123', orderId: 'GPA.3300-1234' },
   };
@@ -213,7 +213,7 @@ function selftest() {
   delete process.env.RTDN_MAKE_WEBHOOK_SECRET;
 
   // 5. Allowlist
-  process.env.PLAY_PACKAGE_NAMES = 'com.cha0smagick.tarot';
+  process.env.PLAY_PACKAGE_NAMES = 'com.cha0smagick.unofficialraiderwaite';
   const r4 = processRtdn({ message: { data: Buffer.from(JSON.stringify({ version: '1.0', packageName: 'com.cha0smagick.sigilgeneratorfinal', testNotification: { version: '1.0' } })).toString('base64') } });
   check('allowlist rechaza paquete externo', !r4.ok && /allowlist/.test(r4.reason));
   delete process.env.PLAY_PACKAGE_NAMES;
