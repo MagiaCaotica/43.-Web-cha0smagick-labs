@@ -60,6 +60,7 @@ const DEFAULTS = {
   limit: 0,
   extra: '',
   source: 'sitemap',
+  retries: 2,
   json: '',
 };
 
@@ -71,6 +72,7 @@ function parseArgs(argv) {
     else if (a === '--concurrency') out.concurrency = Math.max(1, Number(argv[++i]) || 1);
     else if (a === '--timeout') out.timeoutMs = Number(argv[++i]) || DEFAULTS.timeoutMs;
     else if (a === '--limit') out.limit = Number(argv[++i]) || 0;
+    else if (a === '--retries') out.retries = Math.max(0, Number(argv[++i]) || 0);
     else if (a === '--extra') out.extra = argv[++i] || '';
     else if (a === '--source') out.source = argv[++i] || 'sitemap';
     else if (a === '--json') out.json = argv[++i] || '';
@@ -107,8 +109,10 @@ async function main() {
   if (args.help) {
     console.log(
       'Usage: node scripts/analytics/prod-smoke.mjs [--base <origin>] [--concurrency n]\n' +
-        '         [--timeout ms] [--limit n] [--source sitemap|governed]\n' +
-        '         [--extra /a,/b] [--json <path>]',
+        '         [--timeout ms] [--limit n] [--retries n] [--source sitemap|governed]\n' +
+        '         [--extra /a,/b] [--json <path>]\n' +
+        '  5xx and transport errors are retried up to --retries times (default 2).\n' +
+        '  4xx is never retried: a 404 is a fact about the site, not the edge.',
     );
     return EXIT.OK;
   }
@@ -200,19 +204,59 @@ async function main() {
     console.error('  --source governed is not implemented: the 532-vs-568 reconciliation is not written down yet.');
     return EXIT.FAIL;
   }
+  // --limit trims the sitemap portion only. Extras are always probed: a limit
+  // exists to make a quick pass over the surface, not to silently discard the
+  // URLs a caller explicitly asked about. Slicing after appending the extras
+  // meant `--limit 3 --extra /missing` probed three sitemap pages and never
+  // touched the 404, which turned the negative control into a false PASS.
+  if (args.limit > 0) targets = targets.slice(0, args.limit);
   for (const p of args.extra.split(',').map((s) => s.trim()).filter(Boolean)) {
     const abs = /^https?:\/\//i.test(p) ? p : join(args.base, p);
     if (!targets.includes(abs)) targets.push(abs);
     report.extra.push(abs);
   }
-  if (args.limit > 0) targets = targets.slice(0, args.limit);
   console.log(`  probing ${targets.length} URLs with concurrency ${args.concurrency}`);
 
   // ---- the probe --------------------------------------------------------
+  // A 5xx or a transport error is retried before it counts as a failure.
+  // Measured reason: a run against commit 3f09437 reported 531/532 with a
+  // single 503 on a blog page, and an immediate re-probe of that same URL
+  // returned 200, with a control page also at 200. A 5xx during or just after
+  // a Pages deploy is the edge, not the content, and a smoke that cries wolf
+  // over it stops being read. 4xx is never retried: a 404 is a fact about the
+  // site, and retrying it would only delay the report. Every retry is recorded
+  // in `retried` so a transient is visible instead of quietly smoothed away.
   const measured = await runPool(targets, args.concurrency, async (url) => {
-    const r = await httpsGetStatus(url, { timeoutMs: args.timeoutMs });
-    return { url, status: r.status, ms: r.ms, finalUrl: r.finalUrl, error: r.error };
+    let attempts = 0;
+    let r = null;
+    for (;;) {
+      attempts += 1;
+      r = await httpsGetStatus(url, { timeoutMs: args.timeoutMs });
+      const serverSide = r.status >= 500 || r.status === 0;
+      if (!serverSide || attempts > args.retries) break;
+      await new Promise((s) => setTimeout(s, 1_500 * attempts));
+    }
+    return {
+      url,
+      status: r.status,
+      ms: r.ms,
+      finalUrl: r.finalUrl,
+      error: r.error,
+      attempts,
+      retried: attempts > 1,
+    };
   });
+
+  const retried = measured.filter((m) => m.retried);
+  if (retried.length) {
+    console.log(
+      `  retried ${retried.length} URL(s) that answered 5xx or failed transport` +
+        ` (still failing after retries: ${retried.filter((m) => m.status >= 400 || m.status === 0).length})`,
+    );
+    for (const m of retried.slice(0, 10)) {
+      console.log(`    ${m.status || 'ERR'} after ${m.attempts} attempt(s)  ${m.url}`);
+    }
+  }
 
   const tally = {};
   for (const m of measured) {
@@ -232,6 +276,12 @@ async function main() {
     report.samples.redirects = redirected.slice(0, 20).map((m) => ({ url: m.url, status: m.status, to: m.finalUrl }));
   }
   report.redirected = redirected.length;
+  report.retries = {
+    configured: args.retries,
+    urls_retried: retried.length,
+    still_failing_after_retries: retried.filter((m) => m.status >= 400 || m.status === 0).length,
+    detail: retried.slice(0, 40).map((m) => ({ url: m.url, status: m.status, attempts: m.attempts })),
+  };
   report.finished_at = new Date().toISOString();
 
   console.log('\n  --- summary ---');
