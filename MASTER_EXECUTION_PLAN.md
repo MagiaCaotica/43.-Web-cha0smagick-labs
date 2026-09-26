@@ -155,9 +155,21 @@ El documento no presenta un porcentaje de mezcla como forecast. Si el equipo dec
 - Se actualizó `docs/canonical-asset-inventory.md` v1.1.0: el snapshot actual es 582 filesystem = 529 gobernados + 53 excluidos, sitemap 492, y conserva el histórico 577/524; registra oferta/URL/owner/estado y mantiene la limitación de publicación externa.
 - Se crearon cinco páginas legales de borrador, `docs/legal-vendor-matrix.md`, footer común, default denied en la portada y sitemap regenerado; falta owner legal y prueba de consent en producción.
 - Se creó `docs/event-contract.md` y se añadieron pruebas de comportamiento para `scripts/ga4-mp.js` y `scripts/webhook-receiver.js`; falta reconciliación con transacciones reales y consent reject en GA4.
-- `npm test` (38 pytest + 196 Vitest) y `npm run build` pasan localmente; el auditor de accesibilidad no puede cargar la stylesheet remota y reporta errores de contexto, por lo que no constituye evidencia de producción.
+- `npm test` (38 pytest + 229 Vitest en 11 archivos) y `npm run build` pasan localmente; el auditor de accesibilidad no puede cargar la stylesheet remota y reporta errores de contexto, por lo que no constituye evidencia de producción.
 - La cola generated thin quedó en 467/467 `done` tras el trabajo editorial; el word count sigue sin ser evidencia de intención, E-E-A-T, oferta, CTA o conversión.
 - Estos cambios no cierran P0-02 ni P0-03 completos: siguen pendientes los exports y pruebas de Hotmart, Google Play, consentimiento, ventas y ledger financiero.
+
+#### 2.9.1 Instrumentación de analytics y funnels de herramientas (2026-09-24, HEAD `88754bc`)
+
+- `data/tool-funnels.json` (v con 61 entradas bajo `tools`) mapea cada herramienta atómica a un producto, ángulo y CTA; las 61 coinciden con las 61 entidades `WebApplication` del JSON-LD.
+- `data/analytics-events.json` declara 19 eventos con secciones `privacy`, `enforcement` y `value_buckets`; el bridge aplica allowlist y consentimiento, no envío libre.
+- `js/analytics-bridge.js` deriva los eventos declarados en el DOM y los entrega a la ruta de ingreso; `scripts/analytics/test/analytics-bridge.test.mjs` (385 líneas) cubre ese contrato.
+- `js/conversion.js` (84.815 B) y `js/shared.js` (17.181 B) quedaron con sus `.min.js` regenerados y verificados más recientes que el origen.
+- Se añadieron `scripts/analytics-daily.js`, `scripts/analytics-health.js` y `scripts/analytics-live-smoke.js`; el smoke exige credenciales y no se ha ejecutado contra GA4 real.
+- Documentación nueva: `docs/analytics-credential-runbook.md`, `docs/analytics-growth-plan.md` y `docs/plan-tools-sales-funnels.md`.
+- Límite: instrumentar eventos y exponer CTAs no prueba que un evento llegue a GA4 ni que un CTA convierta. Sigue faltando consent reject real, logs de debug de GA4 y reconciliación de `purchase` con Hotmart/Play.
+
+**Nota de drift documental:** `docs/canonical-asset-inventory.md` v1.1.0 §8 declara verificación contra HEAD `751985d`, que quedó atrás de `88754bc`. Su snapshot (582 filesystem = 529 gobernados + 53 excluidos, sitemap 492) no se ha re-verificado contra el árbol actual.
 
 ---
 
@@ -169,11 +181,11 @@ El documento no presenta un porcentaje de mezcla como forecast. Si el equipo dec
 | B-002 | Catálogo local de 12 páginas y 12 ofertas ya fue reconciliado, pero el estado de Play sigue sin verificar | Bots, web y campañas pueden vender otra app | Matriz local más export verificable de Play Console |
 | B-003 | Complete Access y Flash Sale ya tienen CTA local bloqueado, pero falta el ID externo | Checkouts no accionables | URL real probada o página retirada/noindex con decisión |
 | B-004 | No existe ledger de net price, fees, refunds, impuestos y comisiones | No se puede saber Gap-to-5k | Cierre financiero mensual reproducible |
-| B-005 | Eventos de lead, checkout y compra no están probados | No hay atribución ni diagnóstico | Event contract y reconciliación con plataformas |
+| B-005 | Los 19 eventos están declarados en el DOM y en un bridge con allowlist, pero ninguno se ha observado llegar a GA4 | No hay atribución ni diagnóstico real | Consent reject real, logs de debug de GA4 y reconciliación de `purchase` con plataformas |
 | B-006 | Legal, consent y claims no están cerrados | Riesgo de rechazo, complaint y pérdida de confianza |Páginas públicas y test accept/reject |
 | B-007 | Webhooks y CRM son specs, no producción | Abandono, cross-sell y recovery no funcionan | Flujo real con logs e idempotencia |
 | B-008 | Listing/availability de Play no está demostrado | No hay oferta ASO confiable | URL y estado de cada listing |
-| B-009 | SEO tiene cobertura, no correctness/performance/conversion | Crecimiento orgánico no verificable | Auditoría before/after y revenue assisted |
+| B-009 | Las 61 herramientas tienen CTA de venta instrumentado, pero sin conversión observada | Crecimiento orgánico no verificable | Auditoría before/after y revenue assisted |
 | B-010 | GEO no tiene superficie, crawler ni registro de citas | No se mide descubrimiento por AI | Set reproducible de consultas y fuente |
 | B-011 | Contenido no tiene QA de intención, E-E-A-T, offer y CTA | Más páginas pueden producir cero ventas | Registry editorial y sample revisado |
 | B-012 | No hay experiments de pricing, AOV o retención | El precio no está optimizado | Decisión con margen y baseline |
@@ -571,13 +583,13 @@ Cada bloque es una unidad de trabajo. No se deben marcar dos tareas como `DONE` 
 
 Estos son pending work items, no tareas ya completadas:
 
-1. **P0-01:** declarar la superficie canónica y resolver el estado actual 529/582 HTML; la matriz local de apps ya fue creada, pero la superficie global sigue parcialmente abierta porque el export/commit final está pendiente.
+1. **P0-01:** declarar la superficie canónica y resolver el estado actual 529/582 HTML; la matriz local de apps ya fue creada, pero la superficie global sigue parcialmente abierta porque el export/commit final está pendiente. Ojo: el ledger `docs/canonical-asset-inventory.md` §8 fue verificado contra HEAD `751985d` y su conteo 529/582 y sitemap 492 **no** se han re-verificado contra HEAD `88754bc` ni contra el total real de 569 páginas del auditor; re-verificar antes de usar sus números como baseline.
 2. **P0-02:** la reconciliación local de 12 páginas ↔ 12 ofertas ya fue documentada; falta Play Console para cerrar el estado externo.
 3. **P0-03:** los placeholders de Hotmart ya se retiraron de los CTA públicos y las páginas quedaron bloqueadas; faltan IDs Hotmart reales y smoke de checkout para cerrarlo.
 4. **P0-04:** reconstruir el cierre de 30 días y calcular Gap-to-5k con cobros, refunds, fees y comisiones.
 5. **P0-05:** crear la tabla de `net_price` y seleccionar la oferta que puede cobrar más cerca del objetivo.
 6. **P0-06:** publicar/enlazar legal y consent antes de capturar leads o activar tracking publicitario.
-7. **P0-07:** probar `view_item → begin_checkout → purchase` y `lead_submit` con datos de prueba.
+7. **P0-07:** lo local ya existe — `data/analytics-events.json` declara 19 eventos con `privacy`, `enforcement` y `value_buckets`; `js/analytics-bridge.js` los une al DOM con allowlist y consentimiento; y `scripts/analytics/test/analytics-bridge.test.mjs` fija el contrato con 385 líneas de pruebas. Lo que falta es **ejecutar** el smoke contra GA4 real con credenciales (`scripts/analytics-live-smoke.js`), observar un consent reject real, capturar los debug logs de GA4 y reconciliar un `purchase` con la transacción. Hasta que eso pase, ningún evento está probado como entregado.
 8. **P0-08:** ejecutar un flujo de compra y uno de recuperación; guardar IDs, logs y timestamps.
 9. **P0-09/P0-10:** verificar listing y hacer release smoke test antes de cualquier campaña.
 10. **P1-03/P1-04:** seleccionar los primeros clusters y un solo experimento de hero/CTA sobre una oferta verificada.
@@ -666,16 +678,16 @@ Esta tabla registra la evidencia local sin convertir artefactos en producción. 
 
 | Tarea | Estado | Evidencia local actual | Evidencia externa que falta |
 |---|---|---|---|
-| P0-01 | `IN_PROGRESS` | `docs/canonical-asset-inventory.md` v1.1.0; 529/582 actual y 524/577 histórico documentados; HEAD `751985d` | URL export/commit cuando el owner autorice commit; exportación final de superficie |
+| P0-01 | `IN_PROGRESS` | `docs/canonical-asset-inventory.md` v1.1.0; 529/582 actual y 524/577 histórico documentados — **ledger verificado contra HEAD `751985d`, no contra el HEAD real `88754bc`** | Re-verificar el ledger contra `88754bc` (su conteo 529/582 y sitemap 492 no coinciden con las 569 páginas que escanea el auditor); URL export/commit cuando el owner autorice commit; exportación final de superficie |
 | P0-02 | `BLOCKED` | Matriz local de 12 apps y `offers.json` | Export de Play Console, listing URLs, screenshots y estados por app |
 | P0-03 | `BLOCKED` | CTAs sin placeholders; páginas bloqueadas sin inventar IDs | IDs Hotmart reales, apertura de checkout y transacción de prueba |
 | P0-04 | `BLOCKED` | Ningún número financiero inventado; fórmula documentada | Exports Hotmart/Play/pagos, refunds, fees, impuestos y commissions |
 | P0-05 | `BLOCKED` | Estructura de `net_price` pendiente de datos | Cierre financiero y decisión de oferta aprobada |
 | P0-06 | `IN_PROGRESS` | Cinco borradores legales, matriz vendor, footer, consent denied local y sitemap | Owner legal, revisión fechada y pruebas accept/reject/withdrawal en producción |
-| P0-07 | `IN_PROGRESS` | `docs/event-contract.md`; 8 pruebas de comportamiento de GA4/webhook | Consent reject real, debug logs GA4 y reconciliación de purchase con plataformas |
+| P0-07 | `IN_PROGRESS` | `docs/event-contract.md` + 8 pruebas de comportamiento de GA4/webhook; **HEAD `88754bc`**: `data/analytics-events.json` con 19 eventos (`privacy`, `enforcement`, `value_buckets`), `js/analytics-bridge.js` (344 líneas) con allowlist y consentimiento, `scripts/analytics/test/analytics-bridge.test.mjs` (385 líneas) y los scripts `analytics-daily.js` / `analytics-health.js` / `analytics-live-smoke.js` | Consent reject real, debug logs GA4 y reconciliación de purchase con plataformas — el smoke con credenciales nunca se ejecutó contra GA4 real, así que ningún evento está probado como entregado |
 | P0-08 | `BLOCKED` | Especificaciones y seams de webhook/CRM | IDs/endpoints MailerLite/Make, logs, idempotencia y flujo de unsubscribe en vivo |
 | P0-09 | `BLOCKED` | 12 package IDs y URLs Play locales | Export de Play Console, listing público y Data safety por app |
-| P0-10 | `IN_PROGRESS` | `npm test` y `npm run build` pasan; thin report 467/467; tech debt 0 errores | Deploy/commit, smoke del dominio real, Lighthouse/CWV y CTA/checkout externos |
+| P0-10 | `IN_PROGRESS` | `npm test` y `npm run build` pasan (38 pytest + 229 Vitest en 11 archivos); thin report 467/467; tech debt 0 errores sobre 569 páginas | Deploy/commit, smoke del dominio real, Lighthouse/CWV y CTA/checkout externos |
 | P1-01 | `IN_PROGRESS` | `docs/seo-remediation-report.md` documenta la remediación de 2 descriptions, 9 hreflang y 10 canonical; `verify_tech_debt.py` queda en 0 errores | Revisión manual de 180 missing alt/270 empty alt, heading skips, GSC/Bing, Rich Results, Lighthouse field y before/after |
 | P1-02 | `IN_PROGRESS` | `docs/geo-surface-decision.md` v1.0.0; decisión de no publicar `llms-full.txt` automáticamente, campos de entidad y 20 queries propuestas | Aprobación de owner, mapa live completo, crawler output, 20 respuestas y citas/referrals |
 | P1-03 | `IN_PROGRESS` | `docs/content-registry.md` cubre los 151 archivos modificados; la cola thin está cerrada y clasificada por reglas | Enriquecer intent/oferta/CTA por fila, query evidence, owner de cada cluster y assisted revenue |
@@ -699,10 +711,12 @@ Esta tabla registra la evidencia local sin convertir artefactos en producción. 
 **Comandos de verificación local ejecutados el 2026-09-24:**
 
 - `python scripts/thin_articles_report.py` → 0 pending, 0 expand, 467 done; exit 0.
-- `python scripts/verify_tech_debt.py` → 529 páginas, 0 validation errors; exit 0.
-- `npm test` → 38 pytest y 196 Vitest passed; exit 0.
+- `python scripts/verify_tech_debt.py` → **569 páginas escaneadas, 563 con JSON-LD, 0 validation errors**; imágenes total=4183 (lazy=68, sized=412, webp=9, raster=452); entidades JSON-LD: Article=467, BreadcrumbList=479, FAQPage=421, HowTo=314, **WebApplication=61**, SoftwareApplication=12, Product=36, QAPage=6, Book=7, WebPage=6, CollectionPage=2, Organization=2, WebSite=1, DefinedTermSet=1; exit 0.
+- `npm test` → **38 pytest passed + 229 Vitest passed en 11 archivos**; exit 0.
 - `npm run build` → exit 0.
 - `node scripts/accessibility-audit.js` → 0 violaciones, pero con advertencia de CSS remota y errores de contexto `window/document`; no se usa como evidencia de producción.
 - `git diff --check` → exit 0.
+
+**Correcciones de baseline aplicadas el 2026-09-24 al comparar contra HEAD `88754bc`:** el conteo de páginas del auditor es **569**, no 529 (529 era el conteo del ledger `canonical-asset-inventory.md`, verificado contra HEAD `751985d`); y la suite es de **229 Vitest en 11 archivos**, no 196. Ambas cifras anteriores en este documento estaban desactualizadas y se sustituyeron por las observadas. `docs/canonical-asset-inventory.md` sigue necesitando re-verificación y su §8 debe actualizarse con el HEAD real.
 
 **Estado de este documento:** `PENDING`/`IN_PROGRESS`/`BLOCKED` según la tabla anterior; ningún bloque P0, P1 o P2 se considera `DONE` hasta que exista la evidencia externa y de gate indicada.
