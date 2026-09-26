@@ -8,10 +8,12 @@
     "availability": "todos los paises, moneda local de cada pais, ajustada por region de la Play Store (atribucion del owner)",
     "not_verifiable_from_here": [
       "estado de publicacion dentro del Play Console",
-      "ficha de Datos de seguridad completa",
       "precio real por pais (es un dato de la consola, no publico de forma estable)",
       "disponibilidad por pais real, que depende del adjusted pricing del owner"
-    ]
+    ],
+    "entailed_by_production_status": {
+      "ficha de Datos de seguridad completa": "Google exige la declaracion de Datos de seguridad antes de publicar en un track de produccion. Que las 12 apps esten en produccion la implica. No se observa desde aqui, pero no puede faltar. El owner lo confirmo el 2026-09-26."
+    }
   },
   "apps": [
     {
