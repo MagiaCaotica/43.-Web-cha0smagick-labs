@@ -955,3 +955,14 @@ Repetido el control tras el arreglo: **FAIL exit 1** nombrando `com.cha0smagick.
 **P0-02 y P0-09 siguen IN_PROGRESS, y ahora con el motivo preciso.** El owner atribuyo que las 12 estan en produccion, con ficha completa y disponibles en todos los paises con moneda local. Eso quedo registrado en el catalogo como **atribucion, no medicion**, que es la distincion que §8 exige. Falta lo que solo se ve desde el Play Console: la **ficha de Datos de seguridad por app**, que es obligacion de Google desde 2023 y puede despublicar una app aunque todo lo demas este bien, y el **precio real por pais**.
 
 Lo que si quedo cerrado: el catalogo de 12 apps esta reconciliado contra la realidad de Play, con las 12 verificadas una por una, y el repo no puede volver a usar un id que no este en el catalogo sin romper `npm test`.
+
+
+#### 11.4.1 Decision del owner sobre `com.cha0smagick.norone` - se conserva como evidencia
+
+El owner decidio explicitamente (2026-09-26): **dejar `com.cha0smagick.norone` en el repo como evidencia historica.**
+
+Contexto: ese identificador no existe en Play. Vive en `docs/plan-tools-sales-funnels.md`, donde esta citado como ejemplo del defecto documentado. Se poderia borrar como "basura", pero hacerlo destruiria el registro de que el problema **fue identificado y diagnosticado antes de ser corregido**. Es la unica prueba de que el defecto se conocio, y sin ella el mismo error puede volver a introducirse sin que nadie sepa que ya se habia detectado.
+
+Esta decision ya esta sostenida por codigo: `docs/plan-tools-sales-funnels.md` esta en las `EXCLUSIONS` de `scripts/verify_play_catalog.mjs` con la razon escrita de que borrarlo destruiria el registro. Ese es el mecanismo correcto, porque una exclusion sin razon escrita es el lugar exacto donde una ID equivocada se esconde. Lo que se agrega aqui es la **atribucion**: la decision es del owner, no un criterio mio.
+
+**No reintroducir `com.cha0smagick.norone` como ID de producto en ninguna parte.** Sigue siendo un ejemplo citado, no una app.
