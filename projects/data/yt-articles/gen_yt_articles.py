@@ -243,10 +243,14 @@ def video_title(spec):
 
 
 def render_video(spec):
-    """Privacy-enhanced embed of the source video, plus a plain link to it.
+    """Embed of the source video, plus a plain link to it.
 
-    The nocookie host is used so a reader who never plays the video is not
-    tracked, and the caption carries the original URL so the embed is never
+    The markup is deliberately the exact shape YouTube's own "copy embed
+    code" button produces, because the player rejected anything else with a
+    configuration error: the standard www.youtube.com/embed host (NOT
+    youtube-nocookie.com, which failed), width/height attributes rather than
+    an absolutely-positioned fill, and the standard allow + referrerpolicy
+    sets. The caption carries the original watch URL so the embed is never
     the only route to the source.
     """
     vid = spec.get("vid")
@@ -260,19 +264,19 @@ def render_video(spec):
         stat = " \u00b7 %s views" % format(views, ",d")
     return (
         '<figure class="video-embed" style="margin: 2rem 0;">\r\n'
-        '  <div style="position: relative; padding-bottom: 56.25%%; height: 0; '
-        'overflow: hidden; border-radius: 8px; border: 1px solid var(--border-subtle);">\r\n'
-        '    <iframe src="https://www.youtube-nocookie.com/embed/%s" '
-        'title="%s" frameborder="0" loading="lazy" '
+        '  <div style="max-width: 100%%; line-height: 0;">\r\n'
+        '    <iframe width="560" height="315" '
+        'src="https://www.youtube.com/embed/%s" '
+        'title="YouTube video player" frameborder="0" '
         'allow="accelerometer; autoplay; clipboard-write; encrypted-media; '
         'gyroscope; picture-in-picture; web-share" '
         'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen '
-        'style="position: absolute; top: 0; left: 0; width: 100%%; height: 100%%;"></iframe>\r\n'
+        'style="max-width: 100%%; height: auto;"></iframe>\r\n'
         '  </div>\r\n'
         '  <figcaption style="font-size: 0.875rem; color: var(--text-secondary); '
         'margin-top: 0.5rem;">Source video: <a href="%s" target="_blank" '
         'rel="noopener">%s</a>%s</figcaption>\r\n'
-        '</figure>\r\n' % (vid, esc(title), esc(watch), esc(title), stat)
+        '</figure>\r\n' % (vid, esc(watch), esc(title), stat)
     )
 
 
@@ -288,7 +292,7 @@ def ldjson_video(spec, desc):
         "description": desc,
         "thumbnailUrl": ["https://i.ytimg.com/vi/%s/hqdefault.jpg" % vid],
         "uploadDate": spec.get("published", "2026-09-26"),
-        "embedUrl": "https://www.youtube-nocookie.com/embed/%s" % vid,
+        "embedUrl": "https://www.youtube.com/embed/%s" % vid,
         "contentUrl": spec.get("source_url")
         or ("https://www.youtube.com/watch?v=%s" % vid),
     }
