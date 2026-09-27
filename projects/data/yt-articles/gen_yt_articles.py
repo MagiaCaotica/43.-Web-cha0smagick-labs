@@ -93,7 +93,8 @@ def build_head1(c, spec, url, faq):
             "twitter:image": og}[name])
     h = set_tag(h, r'<meta property="article:published_time"[^>]*>', date)
     h = set_tag(h, r'<meta property="article:modified_time"[^>]*>', date)
-    return h + ldjson_article(c, spec, url, faq) + ldjson_faq(faq, url)
+    return (h + ldjson_article(c, spec, url, faq) + ldjson_faq(faq, url)
+            + ldjson_video(spec, c["description"]))
 
 
 def ldjson_article(c, spec, url, faq):
@@ -220,6 +221,81 @@ def render_tail(c, spec):
         '\r\n</div>\r\n</section>\r\n</article>\r\n</main>')
 
 
+def _load_video_titles():
+    """id -> title, so the embedded player gets a real accessible title."""
+    path = os.path.join(HERE, "..", "..", "research", "yt_videos_classified.json")
+    path = os.path.normpath(path)
+    if not os.path.exists(path):
+        return {}
+    with open(path, "r", encoding="utf-8") as fh:
+        rows = json.load(fh)
+    return {r["id"]: r.get("title", "") for r in rows if r.get("id")}
+
+
+VIDEOS = _load_video_titles()
+
+
+def video_title(spec):
+    raw = VIDEOS.get(spec.get("vid"), "")
+    if not raw:
+        return ""
+    return re.sub(r"\s+", " ", raw).strip()
+
+
+def render_video(spec):
+    """Privacy-enhanced embed of the source video, plus a plain link to it.
+
+    The nocookie host is used so a reader who never plays the video is not
+    tracked, and the caption carries the original URL so the embed is never
+    the only route to the source.
+    """
+    vid = spec.get("vid")
+    if not vid:
+        return ""
+    title = video_title(spec) or spec.get("h1") or "Source video"
+    watch = spec.get("source_url") or ("https://www.youtube.com/watch?v=%s" % vid)
+    views = spec.get("views") or 0
+    stat = ""
+    if isinstance(views, int) and views > 0:
+        stat = " \u00b7 %s views" % format(views, ",d")
+    return (
+        '<figure class="video-embed" style="margin: 2rem 0;">\r\n'
+        '  <div style="position: relative; padding-bottom: 56.25%%; height: 0; '
+        'overflow: hidden; border-radius: 8px; border: 1px solid var(--border-subtle);">\r\n'
+        '    <iframe src="https://www.youtube-nocookie.com/embed/%s" '
+        'title="%s" frameborder="0" loading="lazy" '
+        'allow="accelerometer; autoplay; clipboard-write; encrypted-media; '
+        'gyroscope; picture-in-picture; web-share" '
+        'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen '
+        'style="position: absolute; top: 0; left: 0; width: 100%%; height: 100%%;"></iframe>\r\n'
+        '  </div>\r\n'
+        '  <figcaption style="font-size: 0.875rem; color: var(--text-secondary); '
+        'margin-top: 0.5rem;">Source video: <a href="%s" target="_blank" '
+        'rel="noopener">%s</a>%s</figcaption>\r\n'
+        '</figure>\r\n' % (vid, esc(title), esc(watch), esc(title), stat)
+    )
+
+
+def ldjson_video(spec, desc):
+    vid = spec.get("vid")
+    if not vid:
+        return ""
+    title = video_title(spec) or spec.get("h1") or "Source video"
+    data = {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": title,
+        "description": desc,
+        "thumbnailUrl": ["https://i.ytimg.com/vi/%s/hqdefault.jpg" % vid],
+        "uploadDate": spec.get("published", "2026-09-26"),
+        "embedUrl": "https://www.youtube-nocookie.com/embed/%s" % vid,
+        "contentUrl": spec.get("source_url")
+        or ("https://www.youtube.com/watch?v=%s" % vid),
+    }
+    return ('<script type="application/ld+json">%s</script>\r\n'
+            % json.dumps(data, ensure_ascii=False))
+
+
 def render(n):
     path = os.path.join(CONTENT, "%d.json" % n)
     if not os.path.exists(path):
@@ -250,8 +326,9 @@ def render(n):
     parts = [head1, TPL["style"], TPL["gtag"], "\r\n", build_breadcrumb_ld(c, url),
              "\r\n", TPL["cssLink"], "\r\n</head>\r\n", header,
              '<main class="blog-post">\r\n<article>\r\n    <h1>%s</h1>\r\n    ' % esc(c["h1"]),
-             meta, "\r\n", para(c["lede"]),
-             render_sections(c["sections"]), "\r\n",
+              meta, "\r\n", para(c["lede"]), "\r\n",
+              render_video(spec),
+              render_sections(c["sections"]), "\r\n",
              render_faq(faq) if faq else "", "\r\n",
              render_tail(c, spec), TPL["footer"]]
 
