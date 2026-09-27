@@ -50,8 +50,12 @@ def check_one(n):
             problems.append("unbalanced <%s> open=%d close=%d" % (t, o, c))
     if "\ufffd" in html:
         problems.append("U+FFFD x%d" % html.count("\ufffd"))
-    if html.count("application/ld+json") != 3:
-        problems.append("ld+json count=%d (want 3)" % html.count("application/ld+json"))
+    if html.count("application/ld+json") != 4:
+        problems.append("ld+json count=%d (want 4)" % html.count("application/ld+json"))
+    if "youtube-nocookie.com/embed/" not in html:
+        problems.append("source video embed missing")
+    if '"@type": "VideoObject"' not in html:
+        problems.append("VideoObject ld+json missing")
 
     slug = rec["slug"]
     canon = "%s/blog/%s.html" % (SITE, slug)
