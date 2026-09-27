@@ -1,0 +1,113 @@
+{
+  "n": 224,
+  "slug": "soliloki-outsourcing-servitors-delegation-protocol",
+  "h1": "SOLILOKI and the Problem of Delegation: Building a Construct That Commands Other Constructs",
+  "seo_title": "SOLILOKI: Delegation to Servitors, With Verification",
+  "description": "A construct whose job is to command your other constructs is a management problem wearing a magical costume. The hard part was never building it. The hard part is that you cannot check its work.",
+  "keywords": [
+    "soliloki",
+    "soliloki egregore",
+    "outsourcing servitors",
+    "servitor of servitors",
+    "master servitor chaos magic",
+    "delegating magic tasks",
+    "hierarchical servitor design",
+    "how to build an egregore",
+    "chaos magic servitor chain",
+    "control other servitors",
+    "astral servers hierarchy",
+    "supervisor construct",
+    "servitor management",
+    "delegation protocol magic"
+  ],
+  "published": "2026-09-26",
+  "published_human": "September 26, 2026",
+  "lede": "Every practitioner who runs several constructs eventually wants one to supervise the rest, and the request sounds reasonable: assign the boring functions, have the supervisor hand them out, keep your attention for the live work. The problem is that supervision is the one job where the failure is invisible by construction. A delegate that does nothing and a delegate that did the work look identical from the outside, because the only witness is the thing you built to be untrustworthy. SOLILOKI is worth building for two reasons, and both of them are about what happens after you build it.",
+  "sections": [
+    {
+      "h2": "A hierarchy of constructs is an organisation, not a technique",
+      "p": [
+        "Nothing in the sources describes a construct that commands other constructs, and that absence is informative rather than discouraging. Every working tradition with a hierarchy arrived at one by accident: a student, then an assistant, then a name that later practitioners read as rank. What you are proposing is the same arrangement, chosen on purpose, which means you inherit the parts of the arrangement that are annoying.",
+        "The specifically difficult part is that a chain of constructs multiplies the places a working can quietly fail. One construct, reviewed directly, has a single failure surface. Three constructs with a supervisor have six relationships, and you cannot inspect any of them, so a working that does not happen is indistinguishable from a working that happened and produced nothing."
+      ]
+    },
+    {
+      "h2": "The specification, and why the refusal clause is most of it",
+      "p": [
+        "A supervisor construct needs a function in the imperative: it hands a named task to a named construct, it does not decide whether the task was worth doing, and it does not choose a different task. The clause that does the real work is the one that forbids it from performing the work itself. A supervisor that can also do the job will do the job, will enjoy doing the job, and will quietly absorb the whole function, and you will find a specialist instead of a manager.",
+        "The second clause forbids it from assigning anything you did not write down. A supervisor that can generate its own tasks is an independent agent with your resources, and the absence of a written queue is the absence of a budget. Third: it reports, but it does not assess. If it comes back with a judgement about whether the work was good, the judgement is its own and it will be agreeable, because a construct built to serve you will find your work agreeable."
+      ]
+    },
+    {
+      "h2": "What you lose the moment you delegate",
+      "p": [
+        "Delegation removes the thing that was making the work worth doing. The reason a small servitor practice holds up over a year is that every instance is reviewed by you, and the review is where the specification gets corrected. A construct that hands off the boring function also hands off the signal that told you the boring function needed correcting.",
+        "So the standard by which you judge whether the supervisor is working cannot be whether the tasks completed. It has to be whether your own review workload went down while the quality of your review of the things that remain went up. If the task count completed rises and your review count falls, nothing improved. The work moved from somewhere you could see into somewhere you could not, and the total is identical."
+      ]
+    },
+    {
+      "h2": "A verification design that can actually fail",
+      "p": [
+        "The verification problem is solvable, but not the way people usually try. You cannot ask the delegate, and you cannot ask the construct it delegated to, because the second one's account is filtered through the first. What is left is external evidence, and external evidence means choosing tasks whose completion is observable without asking anyone.",
+        "Take three tasks with a physical result that exists whether or not anyone acted: a file moved into a specific folder on a specific date, an email sent with a read receipt, an entry added to a list you can see from another device. Write down the expected state for each before you delegate. Give the supervisor the tasks and nothing about what counts as done. Then check the three states on a date you fixed in advance, and let the score be the number you would have got by doing the work yourself.",
+        "That number is the measurement. Run it again on the next batch. A supervisor that is genuinely delegating should score at or above your own rate in the first batch and drift downward after that, because the specification quality behind the tasks will not improve on its own and yours will not either."
+      ]
+    },
+    {
+      "h2": "Why the outrageous claims fail first",
+      "p": [
+        "A construct described as controlling or outsourcing other astral servers invites a specific mistake: reading it as a command structure with reach, when the honest version is a queue. The evidence for reach is that constructs respond, and constructs respond to you as well, and the same responsiveness produces a very different impression depending on what you expected. Expecting a command and getting a request is the most common source of the sense that something immense is happening.",
+        "The second temptation is scope. A supervisor that touches every construct is a natural first build and a bad one, because it takes over the small verified ones where the failure costs you nothing, and the small verified ones are what taught you how to verify. Build the supervisor for one boring function, on one construct, and let it be underpowered for months."
+      ]
+    },
+    {
+      "h2": "The four stages, in the order that makes them survivable",
+      "p": [
+        "Stage one is a written queue and nothing else. Before any construct is involved, write the list of tasks that could be delegated, in the imperative, with the physical result for each. If the list is hard to write, the delegation is not well defined yet, and you will find that out now rather than at the month-end review.",
+        "Stage two is a supervisor with one function, one refuse, and no memory of previous batches. Stage three is a second batch, with the verification numbers from the first written down before the second runs, so the comparison is against your own prior claim rather than a memory of how it felt. Stage four, and only then, a second construct under the same supervisor, at which point the interesting question stops being whether the supervisor works and becomes whether two delegates competing for one supervisor is a queue or a race."
+      ]
+    },
+    {
+      "h2": "Five ways a hierarchy goes wrong",
+      "p": [
+        "The first is absorption, where the supervisor does the work itself and becomes a specialist. The second is the agreeable report, where the construct that reviews the work is the one that assigned it. The third is the invisible duplicate, two supervisors running the same queue from a queue that was written once and never versioned. The fourth is the load-bearing delegate, a construct that quietly becomes the only thing doing a real function, so retiring it retires the function and nobody notices for weeks. The fifth is the flat one: the hierarchy produces no saved attention, all the bookkeeping moves up a level, and the net is negative, which is a result and should be recorded as one rather than explained away."
+      ]
+    },
+    {
+      "h2": "The question the construct cannot answer",
+      "p": [
+        "Ask yourself what you would do differently if the supervisor were doing nothing at all, and the honest answer is usually: I would do the work myself, and it would take the same total time. That is not an argument against delegation. It is the specification of what you are actually buying, which is the removal of a task from your attention, and that is worth having when the task is genuinely dull and worth nothing when the task is where your judgement is.",
+        "The construct is not the experiment. The experiment is whether a written queue plus an external check is a better way to run a small practice than doing the work in your head. If the answer is yes, the supervisor is a detail. If the answer is no, the supervisor is a way of not knowing, which is a thing worth a lot of money in this field and is rarely named as such."
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "Is SOLILOKI a real spirit or a channel construct?",
+      "There is no grimoire entry under that name, so treat it as a construct you are specifying rather than a spirit you are invoking, and the difference shows up in what you have to do yourself. No source text means no refusal clause was written for it, no day, no rank, no stated limit, which means the limits are entirely yours to state and they have to be written before the charge. That is a small job and it is the job."
+    ],
+    [
+      "Can one servitor really control other servitors?",
+      "Whether anything controls anything is not the useful question, because constructs respond to attention and yours will respond whether or not you have built a chain. The useful version is whether a written queue, handed to a construct, produces the same results as the queue worked by hand, and that is a comparison you can run and score on physical evidence. Run it before you build a second one."
+    ],
+    [
+      "How do I know my supervisor is not just doing nothing?",
+      "Use three tasks whose completion is observable without asking anyone, write the expected state down first, and score the batch against the rate you would have achieved yourself. A supervisor doing nothing scores zero on all three, and no amount of satisfied contact will change that number. Then run a second batch and compare against the first, because a supervisor that works once has not demonstrated anything yet."
+    ],
+    [
+      "How many servitors should one supervisor oversee?",
+      "Fewer than you expect, and the limit is set by the queue rather than by the constructs. Until the written queue is stable and you can see its state without reconstructing it, adding delegates adds relationships you cannot inspect. One delegate, three batches, a written score for each, and only then a second. The number that is safe is the number whose failure you would notice within a week."
+    ],
+    [
+      "Does a hierarchy of constructs need to be built in a particular order?",
+      "The order is the whole technique and it is not mystical: written queue, then supervisor with one function, then a scored batch, then a second batch with the first score written down before it runs, then a second delegate. The stage that gets skipped is writing the expected state of each task before delegating it, and that stage is the only thing standing between a hierarchy and an unexamined routine."
+    ]
+  ],
+  "related": [
+    ["how-to-create-magickal-servitor", "How to Create a Magickal Servitor: Complete Guide to Chaos Magick Thought Forms"],
+    ["how-many-chaos-magic-servitors-you-can-run", "How Many Chaos Magick Servitors You Can Run"],
+    ["how-many-servitors-you-can-actually-work-with", "How Many Servitors You Can Actually Work With"],
+    ["sigil-vs-servitor-differences", "Sigil vs Servitor: Complete Comparison Guide"],
+    ["servitor-creation-complete-lifecycle", "Magical Servitor Creation: Complete Lifecycle Protocol"]
+  ]
+}
