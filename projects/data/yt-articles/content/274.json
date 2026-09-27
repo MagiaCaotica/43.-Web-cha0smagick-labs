@@ -100,7 +100,7 @@
       "h2": "Where to keep the record, and what it should be",
       "p": [
         "A notebook, a spreadsheet, or a dedicated place in a planning app. The only properties that matter are that it is somewhere you will actually look, and that it can hold five fields per servitor: name, function in one sentence in the imperative, trigger, refusal clause, review date.",
-        "The refusal clause is the one field people drop when the count gets high, and it is the one that makes a collection manageable. A servitor without a refusal will expand to cover adjacent cases, the adjacent cases are always the ones you did not want, and an expanding collection of expanding specifications is the mechanism by which a practice becomes an unexamined life.",
+        "The refusal clause is the one field people drop when the count gets high, and it is the one that makes a collection manageable. A servitor without a refusal will expand to cover whatever sits immediately beside its function, and that expansion runs reliably in the direction you least wanted, which is how a growing pile of unbounded specifications turns a practice into an unexamined life.",
         "If you want the specification side handled in software rather than on paper, the servitor design and activation tooling in [NOCTEM](/apps/noctem-tools.html) covers the worksheet side, and the fuller method including the review and retirement cycle is in the [Magical Servitors Manual](/books/manual-activacion-servidores-magicos-pdf.html). The single-servitor version of all of this, done properly, is in [how to create a magickal servitor](/blog/how-to-create-magickal-servitor.html)."
       ]
     }
