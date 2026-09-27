@@ -46,3 +46,8 @@ logs/
 out/
 .opencode/goals/state.json.lock/
 undefined/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
