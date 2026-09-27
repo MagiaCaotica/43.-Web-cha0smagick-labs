@@ -52,7 +52,7 @@ def check_one(n):
         problems.append("U+FFFD x%d" % html.count("\ufffd"))
     if html.count("application/ld+json") != 4:
         problems.append("ld+json count=%d (want 4)" % html.count("application/ld+json"))
-    if "youtube-nocookie.com/embed/" not in html:
+    if "youtube.com/embed/" not in html:
         problems.append("source video embed missing")
     if '"@type": "VideoObject"' not in html:
         problems.append("VideoObject ld+json missing")
