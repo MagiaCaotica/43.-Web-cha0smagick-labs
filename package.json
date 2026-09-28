@@ -15,7 +15,7 @@
   "main": "sw.js",
   "dependencies": {
     "discord.js": "^14.27.0",
-    "dotenv": "^17.4.2",
+    "dotenv": "^18.0.3",
     "node-telegram-bot-api": "^1.2.0",
     "playwright": "^1.62.0",
     "puppeteer": "^25.4.0"
