@@ -1,0 +1,149 @@
+{
+  "n": 331,
+  "slug": "technomancy-and-cyber-occultism-technomancy-guide-6",
+  "h1": "Technomancy: Working Sigils Through Code and Screens",
+  "seo_title": "Technomancy Guide: Sigils Through Code and Screens",
+  "description": "Technomancy moves sigil work onto code and screens. What the framework borrows, what it adds, and how to run a first working without pretending code is a spell.",
+  "keywords": [
+    "what is technomancy",
+    "cyber occultism explained",
+    "technopaganism for beginners",
+    "digital sigil ritual",
+    "codex chaos magick guide",
+    "algorithmic sigil art",
+    "charging a sigil on a screen",
+    "cyber gothic occult practice",
+    "digital grimoire organization",
+    "sigils and cryptography comparison",
+    "moon intention planner",
+    "i ching changing lines tool",
+    "noctem tools for technomancy",
+    "screen ritual focus technique"
+  ],
+  "published": "2026-09-26",
+  "published_human": "September 26, 2026",
+  "lede": "The word technomancy is older than it sounds. It comes from a 1910 essay of the same name in which Aleister Crowley argued that the newest machines of his moment belonged to magic as much as to industry. The argument he never got to make is the one people make now: that a device is a ritual instrument, and that a screen is a perfectly good surface on which to do serious symbolic work. Technopaganism and cybergoth, the current names for that position, formed in the late 1980s and early 1990s out of chaos magic, industrial music culture, and the early ethics of hacker communities. The core practice is straightforward. You reduce a statement of intent to a sigil, you display it, and you interact with the interface deliberately rather than glancing at it. Generative code does the reduction, which is only a procedural change, and the interaction is where the frame goes to work. Whether the substrate matters is a question you can actually test, and that is the interesting part.",
+  "sections": [
+    {
+      "h2": "Where the Word Came From",
+      "p": [
+        "Crowley's 1910 essay proposed that electricity and the machine age were the next substrate for working, and that a practitioner ignoring them was behind the times. He did not live to see smartphones, which makes the essay read as more prescient than most people give it credit for. The argument was never that machines were secretly alive. It was that tools shape the form a practice can take, and a practice that refuses its own tools loses something.",
+        "Ninety years later the same idea returned under better names. Technopaganism names the spiritual framing; cybergoth names the aesthetic, which is mostly black clothing and a great deal of correct symbolism. Both drew on chaos magic rather than on ceremonial magic, which is why the frameworks are so light on apparatus. The lineages people cite run through industrial music, zine culture, and forums, not through a lodge.",
+        "What distinguishes technomancy from ordinary online occultism is not the medium. Using a phone to read tarot is ordinary online occultism. Technomancy is specifically the claim that computation is the interesting part, that a sigil rendered by an algorithm and charged through a screen interface is doing something different from a sigil rendered in ink and charged by candle flame."
+      ]
+    },
+    {
+      "h2": "Sigilisation as Information Compression",
+      "p": [
+        "Letter reduction takes a sentence and removes everything but the letters, then shapes the result into a single closed form. Austin Osman Spare documented the method in A Book of Gates in 1904, and it works because it forces you to distil a claim down to its skeleton before acting on it. The engineering reading is straightforward: it is a compression scheme with an aggressively high ratio and no reversibility requirement.",
+        "Generative sigil art has an honest structural analogy in cryptographic signing. A signature binds a message to a key, and a sigil binds an intention to a single visual object that cannot be mistaken for another intention. That is not a claim that the glyph contains power. It is a claim that the glyph removes ambiguity, and ambiguity removal is a real operational gain because a vague target cannot be worked with.",
+        "The compression framing also explains why sigil work resists bad handwriting. A beautiful sigil implies craft, but the function only asks that the form be stable and that you recognise it later. Rough marks drawn in five seconds, or a rendered glyph that took a script one afternoon to produce, serve the purpose equally well."
+      ]
+    },
+    {
+      "h2": "The Charge Is an Interface Interaction",
+      "p": [
+        "On paper the charge is gazing, tracing, burning, burying, or drumming. On a device the charge is a deliberate interaction: opening the file, holding the image, adjusting a parameter, watching the render complete, or signing the output with a key. None of that is mysterious, and the temptation is to say the mysticism has drained out. The more defensible claim is that deliberate, un-hurried interaction with an artifact you made is a different psychological state from glancing at a generated file.",
+        "There is a practical reason the screen helps. A lit display is emissive, high contrast, and unfamiliar as a ritual surface, which means it captures attention without being a page you have read a hundred times. A phone in a dark room is one of the best focus instruments available, and practitioners use it that way whether or not they call it technomancy.",
+        "The honest way to run the test is to hold the substrate constant. Do the same target twice, once in ink on paper and once as a generated glyph charged on a screen, and record both attempts with the same rigour. If the screen version produces a systematically better hit rate on something you can score, you have a finding worth keeping."
+      ]
+    },
+    {
+      "h2": "What Actually Needs Building",
+      "p": [
+        "Nothing, for a first working. A statement of intent, a method of reduction, a place to look at the result, and a moment of focus is the whole toolkit, and that has been true since the technique was written down. Technomancy does not require a rig, a cluster, or a soldering iron, whatever the aesthetic implies.",
+        "What is worth building is a record. A text file with a timestamp, the statement of intent, the sigil, what you did next, and what happened, costs nothing and turns a series of anecdotes into a dataset you can actually reason about. Most people who abandon sigil work abandon it because they never wrote anything down and therefore never had a single usable result to point at.",
+        "A second worthwhile build is a small collection of reductions under one visual grammar, so your sigils read as a set rather than as a pile of unrelated marks. Spare called such variants derivatives, and the logic is identical to a brand mark: a shared style makes each individual item faster for you to identify at a glance."
+      ]
+    },
+    {
+      "h2": "Scepticism That Is Not Hostility",
+      "p": [
+        "You can hold that the frame does the work and still use the frame. This is the standard position inside the tradition: belief is optional, the method is not. Someone who says ritual operates through attention and commitment rather than through an external agent can still run a working, log the attempt, and keep the result.",
+        "What makes technomancy unusually good for this position is that its own claims are testable. Does a charged glyph on a display outperform the same glyph on paper? A sceptic and a believer can run that experiment together, and neither has to concede anything in advance. Most esoteric fields are not built that way, and the difference is worth appreciating.",
+        "The failure mode is the opposite one, where scepticism about the substrate turns into a refusal to record anything. If you only log the workings that worked, the record becomes a collection of stories with no weight. Pre-register the prediction, set a deadline, and count every attempt, including the ones you would rather not count."
+      ]
+    },
+    {
+      "h2": "Consent Is the Load-Bearing Limit",
+      "p": [
+        "Almost every technomantic operation worth doing is a self-directed one: your own focus, your own availability, your own boundaries, your own output. Those are legitimate targets with a mechanism you can describe. Working on someone else's stated preferences is a different category, and no amount of technical framing changes what it is.",
+        "A sigil aimed at another person's behaviour overrides a preference they have already expressed. That is the entire objection, and it is the reason love and influence work sits at the centre of so much ethical debate in this field, technomancy included. A digital artifact does not become neutral because it is a file.",
+        "The workable boundary is simple to state. Operate on your own behaviour, your own schedule, your own availability, your own output quality. Do not build a working whose success condition is another adult ignoring something they said out loud. If the only way to score the operation is a change you have no right to expect, the operation is the problem."
+      ]
+    },
+    {
+      "h2": "A First Working, Step by Step",
+      "ol": [
+        "Pick one target phrased as an action under your control, phrased as an imperative with a measurable verb.",
+        "Write it out longhand, then reduce it to letters and close the form. Keep the original text visible while you do it.",
+        "Render or draw the glyph, and store it next to a plain text file holding the statement, the date, and your prediction.",
+        "Open the image deliberately, look at it without multitasking, and state the intent aloud once. This is the charge.",
+        "Log the attempt immediately, including your confidence that it will work, and then go do the action itself.",
+        "Review on a fixed date you wrote down beforehand, and record the outcome honestly, including a null result."
+      ],
+      "p": [
+        "The order matters more than most people expect. Writing the prediction before the charge is what stops the record from being written backwards, and the fixed review date is what stops a comfortable yes from becoming a permanent answer.",
+        "Repeat the same sequence across a dozen operations with the same grammar and you will have something more useful than an anecdote: a small dataset with a method, a scoring rule, and a known number of attempts. That is how the substrate question gets answered in either direction."
+      ]
+    },
+    {
+      "h2": "Cybergoth as Rehearsal for Attention",
+      "p": [
+        "The aesthetic is not decoration, whatever it looks like from outside. Building a practice environment out of black clothing, one specific album, a fixed hour and a single lamp is a way of reducing the number of decisions required to begin, and every decision removed is one fewer place for intention to leak out.",
+        "A screen-based practitioner has an equivalent problem in a different shape. The desktop full of notifications actively works against the state the ritual needs, so the ritual surface has to be constructed rather than assumed. That construction is the practice, and the app you choose for it matters far less than whether you set it up once and left it alone."
+      ]
+    },
+    {
+      "h2": "What to Leave Out",
+      "p": [
+        "Hardware, custom firmware, a home-lab of server infrastructure and elaborate dashboards describe commitment rather than method, and they are expensive ways to avoid the first attempt. Every one of them can be added later to a practice that has a record, and none of them can be added to one that does not.",
+        "The same applies to aesthetic detail. A more severe-looking rig does not produce a stronger working, and the belief that it does is worth examining directly, because it is a fairly reliable predictor of how long someone will stay with the practice."
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "Is using code for magic just programming?",
+      "Partly, and the honest answer separates the two halves. The reduction step is ordinary text processing; anyone who has written a letter-reduction script has written a piece of magic's encoding layer already. What makes the result magickal in the tradition's own terms is the frame around it, and the frame is doing most of the work in either case. Treat the code as a drafting tool and the ritual as the actual operation."
+    ],
+    [
+      "Does the digital substrate change the effect at all?",
+      "Nobody has established that, and the question is narrow enough to be worth your own attention. Run the same target twice, once charged on paper and once on a display, score both the same way, and see whether one substrate outperforms. Until someone does that carefully, claims in either direction are assertions. The practice is cheap either way, which is the practical answer."
+    ],
+    [
+      "Why use a screen rather than paper for a ritual?",
+      "Because a screen is an unusually good focus surface, and the reason is optical. A lit display is emissive and high contrast in a way that paper never is, it sits in a dark room without becoming a lamp, and it is physically unfamiliar as a writing surface so it does not trigger the automatic skip your eye gives a page it has seen before. A phone in a dim room is a considerably better ritual instrument than a candle on a crowded table."
+    ],
+    [
+      "What can I actually build with a script?",
+      "Letter reduction with a house style, a library of variants from one root reduction, batch rendering across a set of targets, and a log that pairs each sigil with its statement and outcome. The last of those does more for your practice than any of the others, because a record is what turns a run of impressions into something you can analyse. Everything else is convenience."
+    ],
+    [
+      "Is a subscription worth paying for to run this kind of practice?",
+      "This is the one place I will bend my own rule and recommend a purchase. The generation is free, the notebook is free, the pen is free, and none of the mechanism requires a licence. What genuinely costs money is a tool that keeps your sigil library, your statements and your review dates in one place, because the failure mode here is losing the record, not lacking software. If you want that, buy it once rather than renting access to it, since a practice journal you might stop paying for next month is a journal you will stop filling in."
+    ]
+  ],
+  "related": [
+    [
+      "austin-osman-spare-sigil-method",
+      "Austin Osman Spare and His Sigil Method"
+    ],
+    [
+      "the-digital-grimoire-organizing-your-whole-practice",
+      "The Digital Grimoire and Organising a Practice"
+    ],
+    [
+      "occult-apps-and-privacy-what-your-data-says",
+      "Occult Apps and What Your Data Reveals"
+    ],
+    [
+      "cyber-paganism-digital-spirituality-guide",
+      "Cyber Paganism and Digital Spirituality"
+    ],
+    [
+      "building-a-daily-occult-practice-in-15-minutes",
+      "Building a Daily Practice in Fifteen Minutes"
+    ]
+  ]
+}
