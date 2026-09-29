@@ -1,0 +1,137 @@
+{
+  "n": 25,
+  "slug": "technomancy-and-cyber-occultism-technomancy-guide-3",
+  "h1": "Technomancy and Cyber Occultism",
+  "seo_title": "Technomancy and Cyber Occultism | Technomancy and Cyber",
+  "description": "A complete working guide to technomancy and cyber occultism covering technomancy and cyber occultism. Includes step-by-step protocol, honest failure modes,...",
+  "keywords": [
+    "technomancy",
+    "cyberpunk magic",
+    "cyber pagans",
+    "digital sorcery",
+    "what is technomancy",
+    "code as ritual",
+    "techno-sorcery",
+    "cyber occultism explained",
+    "digital magic applied",
+    "framework technomancy"
+  ],
+  "published": "2026-09-26",
+  "published_human": "September 26, 2026",
+  "lede": "Computational and cryptographic practice offers something traditional magic never had, which is a vocabulary of exact, checkable operations performed on a thing that exists. A hash, a signature, a commit, a key. Each of these does something specific to a piece of data and nothing at all to the world, and mapping that vocabulary onto sigil work produces a set of useful analogies and a set of serious errors. This is an attempt at the mapping, written for someone who already makes sigils and wants to know what the computational framing actually contributes rather than what it flatters. The argument is that it contributes a great deal to method and rather little to mechanism, and that this is a better outcome than the usual alternative.",
+  "sections": [
+    {
+      "h2": "Compression is the real connection",
+      "p": [
+        "Sigilisation reduces a statement to a glyph. A hash reduces a document to a fixed-length digest. Neither preserves the content and both preserve something: the ability to check that the same input produced the same output. That is a genuinely close structural parallel, and it is closer than the more frequently drawn one about encryption, because a hash is not a secret at all and neither is a sigil.",
+        "The differences are instructive. A hash of a document lets you detect change, not recover content. A sigil is meant to be an instruction rather than a fingerprint, and it is meant to be usable rather than merely checkable. The parallel holds at the encoding step and stops at the activation step, which is where a computational frame has nothing further to offer and starts generating false confidence."
+      ]
+    },
+    {
+      "h2": "Signatures and what they bind",
+      "p": [
+        "A digital signature binds a piece of data to a key. After signing, verification proves two things: the data has not changed since signing, and the signer held the key. This is stronger than anything in ordinary sigil practice, and the reason is instructive. Ordinary sigil work binds an instruction to a practitioner only through their own memory, which is exactly the link that rots.",
+        "The tempting analogy is a charged sigil as a signature and the charge as the signing operation. It is a decent image and it is wrong in a specific place, because a signature proves the signature happened, not that it was received by anybody. A charge, on the same logic, proves you performed an act, not that the aim was affected. If you keep that distinction, the analogy sharpens the practice. If you drop it, the analogy becomes a way of feeling confident without a specification."
+      ]
+    },
+    {
+      "h2": "The commit as a ritual object",
+      "p": [
+        "Version control introduced a small object that turned out to suit working magic very well: the commit, which captures a state of the world, a time, an author and a message, and which is immutable and diffable. A working record in this form is better than a journal entry, because you can see exactly what changed between one attempt and the next and can revert.",
+        "Applied to a practice, it produces a discipline that has nothing mystical in it and a great deal of value. Record the intent, the glyph, the date, the duration and the outcome as one immutable entry. Never edit an old one; add a new one. The result is a history you can read, which is the thing that makes months of practice informative rather than merely long."
+      ]
+    },
+    {
+      "h2": "Generative work and the authorship question",
+      "p": [
+        "Generative art and generative sigil work share an unresolved question. If the output was produced by a process the practitioner designed and then selected among, the authorship is genuine and distributed. If it was produced by a process that selected for the practitioner, there is a felt difference, and the felt difference is real even though nothing about the mechanism changed.",
+        "The practical test is whether you can predict the output. If you can, the decision was yours and the process was a tool. If you cannot, something chose and you are reading its output. Both can be used in a working, and the second is closer to a divination than to a sigil, which is not a criticism. It only means you should know which one you are doing, because the two have different failure modes and different ways of being useful."
+      ]
+    },
+    {
+      "h2": "Where the analogy fails hardest",
+      "ul": [
+        "A hash detects change, it does not recover what the change was about.",
+        "A signature proves an act occurred, it does not prove anything was received.",
+        "Compression is lossy in both fields, and the loss is the working, not a defect.",
+        "Nothing in computation has a mechanism for reaching outside the machine, and nothing outside the machine reaches in."
+      ],
+      "p": [
+        "Four failures, listed because they are where most of the popular writing on this subject goes wrong. The first confuses checkability with meaning. The second confuses action with effect, which is the exact error that makes rituals feel more powerful than they are. The third is treated as a limitation in computing and is understood as a feature in ritual, which is a defensible position but should be stated as a choice. The fourth is the one that gets skipped: computation is closed. There is no reading of a hash that makes the machine aware of anything outside it, and any framing suggesting otherwise is decoration."
+      ]
+    },
+    {
+      "h2": "What the computer is genuinely better at",
+      "p": [
+        "Three real contributions, none of them about the supernatural. Timing, which paper does badly and machines do exactly, so a charge of a specified length is only actually specified on a device. Storage and retrieval, so a year of workings can be read together rather than remembered. And reproducibility of the reduction, so the same statement produces the same glyph and a change in your method is a change in your input rather than in your hand.",
+        "The third is underrated. A handwritten reduction varies every time, which makes it impossible to tell whether a difference in outcome came from the working or from the drawing. Pinning the reduction and varying only the charge is a genuine experimental improvement, and it is available to anyone with a text editor. It is a small thing that makes the rest of the practice interpretable."
+      ]
+    },
+    {
+      "h2": "Consent and the network again",
+      "p": [
+        "The device is connected, and connection is where the ethics live rather than the theology. A device that can reach other people turns a private working into a social act without any decision being made, and this happens through ordinary conveniences rather than through any supernatural framing. A sync, a screenshot, a share sheet, a link preview.",
+        "The rule that holds is a split rather than a prohibition. The part of a working that touches a device only you own can be elaborate. Anything that reaches another person's attention, data or money requires their agreement, obtained in a form you could show someone later. This is different from the usual ethics discussion, which is about intention, and it is more useful because it is checkable."
+      ]
+    },
+    {
+      "h2": "A structure that mixes the two",
+      "ol": [
+        "Write the intent as one sentence, and keep it in plain text so it can be versioned.",
+        "Reduce it by hand once, then store the reduction as a fixed reference you do not redraw.",
+        "Render that fixed reference on the device you will actually use.",
+        "Charge it to a machine timer, held on the meaning rather than the shape.",
+        "Record one immutable entry: intent, glyph reference, date, duration, outcome.",
+        "Dismiss irreversibly, and never edit an old record, only add to it."
+      ],
+      "p": [
+        "The ordering matters at four specific points. Reducing by hand first keeps the decision with the person. Fixing the reduction so the same input always produces the same mark removes the drawing as a variable. Timing by machine makes the duration real rather than remembered. And never editing a record is what stops the history from drifting in your own favour, which is the one way this practice reliably corrupts itself.",
+        "The result is a working that uses the computer for the three things it is genuinely better at and the person for the one thing the computer cannot do. It is less mystical than some versions and considerably more likely to tell you something true in six months."
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "Is a charged sigil like a digital signature?",
+      "Similar in structure and different in what they prove. A signature shows that data has not changed since the key signed it, and that the signer held the key. A charged sigil shows, at best, that you performed an act. Neither shows that the act was received or had any effect. The analogy is worth holding precisely because it makes the gap visible, and worth dropping precisely when it starts being used to imply a delivery that never happened."
+    ],
+    [
+      "Does a hash prove your sigil worked?",
+      "No, and this is the most common misuse of the comparison. A hash lets you detect whether a thing has changed. Your outcome is not in the hash, and a changed hash would not tell you whether the aim was affected. If you want the equivalent, you need a specification of the result and a date, written before the working. Hashes do not replace outcome definitions, they just sound like they do."
+    ],
+    [
+      "Is generative sigil work still yours?",
+      "It depends on whether you can predict the output. If the reduction was yours and a process rendered it, the authorship is distributed but real. If the process chose and you selected, something else decided, and the felt difference is real even though the mechanism is identical. Both are usable in a working. The second is closer to a divination, which is a different tool with a different set of failure modes rather than a lesser one."
+    ],
+    [
+      "What is the paid upgrade for computational workings actually buying?",
+      "Storage, mostly, and rendering, secondarily. A tool that keeps every working as an immutable entry with its intent, its glyph reference and its outcome is the thing that makes a practice interpretable over time, and that is bookkeeping rather than magic. Rendering from your own reduction is a convenience worth having cheaply. Anything that offers to render from an unreduced wish is doing the part of the process that is supposed to be yours."
+    ],
+    [
+      "What is the most useful thing to pin down first?",
+      "The reduction. Fixing it so that the same statement always yields the same glyph removes the drawing as a variable, and that is what makes two attempts comparable. Handwritten reduction varies every time, so a difference in outcome cannot be attributed to anything. Pinning the reduction and varying only the charge is a small, cheap change that makes every subsequent experiment interpretable rather than anecdotal."
+    ]
+  ],
+  "related": [
+    [
+      "what-is-cybermancy-digital-sorcery-guide",
+      "Cybermancy: Complete Guide to Digital Sorcery (2026)"
+    ],
+    [
+      "technomancy-digital-magic-complete-guide",
+      "Technomancy: Complete Protocol for Digital Magic & Cyber-Sorcery"
+    ],
+    [
+      "what-cybermancy-says-about-the-modern-practitioner",
+      "What Cybermancy Says About the Modern Practitioner (2026)"
+    ],
+    [
+      "the-digital-grimoire-organizing-your-whole-practice",
+      "The Digital Grimoire: Organizing Your Whole Practice (2026)"
+    ],
+    [
+      "technomancy-and-cyber-occultism-technomancy-guide-6",
+      "Technomancy: Working Sigils Through Code and Screens"
+    ]
+  ]
+}

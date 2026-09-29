@@ -1,0 +1,170 @@
+{
+  "n": 14,
+  "slug": "technomancy-and-cyber-occultism-technomancy-guide",
+  "h1": "Technomancy and Cyber Occultism",
+  "seo_title": "Technomancy and Cyber Occultism | Technomancy and Cyber",
+  "description": "A complete working guide to technomancy and cyber occultism covering technomancy and cyber occultism. Includes step-by-step protocol, honest failure modes,...",
+  "keywords": [
+    "technomancy",
+    "cyberpunk magic",
+    "cyber pagans",
+    "digital sorcery",
+    "what is technomancy",
+    "code as ritual",
+    "techno-sorcery",
+    "cyber occultism explained",
+    "digital magic applied",
+    "beginner path technomancy"
+  ],
+  "published": "2026-09-26",
+  "published_human": "September 26, 2026",
+  "lede": "Technomancy is a name for doing magic with the devices already sitting on your desk, and the name is newer than the practice. A phone that wakes you, a screen that renders a sigil, a terminal that signs a file, a speaker that plays a charge for you: each of these can be treated as an instrument rather than an obstacle. The people who use the term tend to care less about the hardware than about the gesture, because a screen makes the gesture visible, repeatable and timestamped in a way paper never was. What follows is a route in. It assumes you have done some ritual work already, or at least read enough to know that statements of intent, sigils and charge are the basic vocabulary. It does not assume you write code, though one section is about why the cryptographic analogy turns out to be closer to the truth than it first looks.",
+  "sections": [
+    {
+      "h2": "What technomancy is, stripped of the neon",
+      "p": [
+        "Every ritual tradition has needed a medium, whether vellum, sand, wax or paper, and each medium shaped the techniques built on top of it. A screen is a medium with unusual properties: it updates, it stores, it signs, it broadcasts, and it is already in the hand when you sit down to work. Treat it as substrate rather than as a display and the practice becomes ordinary, which is the point.",
+        "The definition that earns its keep is narrow. Technomancy is the use of a computational device as a deliberate ritual medium, in a sequence the practitioner could repeat and another person could audit. Drop the deliberate and you have automation. Drop the repeatable and you have a novelty. The word is worth using only when both halves survive."
+      ]
+    },
+    {
+      "h2": "Where the word came from, and where the movement did",
+      "p": [
+        "Crowley borrowed the term in a short 1910 essay that proposed treating modern technology as the next substrate for magic, which is roughly a century ahead of the people now using it as a job title. Nothing much happened for fifty years. The vocabulary that people actually mean by it arrived in the late eighties and nineties out of chaos magic, industrial music culture and the early hacker habit of treating a system as a text you can argue with.",
+        "By the late nineties you had cyberpunk, technopagan networks and the first web grimoires, and the pieces had started to mix. Understanding that the word has a long unused tail and a short busy life stops you from reading a Victorian attitude into it. Crowley was reaching forward. The people who picked the word up were reaching sideways, into a machine already running."
+      ]
+    },
+    {
+      "h2": "The device treated as an instrument, not an audience",
+      "p": [
+        "The most common beginner error is treating a screen as a window onto somewhere else. A better framing is that the screen is the surface of the working itself. A generated sigil is designed to be displayed rather than drawn. A charge performed by tapping, dragging or holding a contact is a gesture, and gestures are what ritual runs on. The interface is not decoration around the ritual. It is the part you are touching.",
+        "Once the device is an instrument, the question of what counts as deliberate interaction becomes operational rather than philosophical. Opening an app is a decision. Timing a change to land at a specific minute is a decision. Deleting a file so the glyph can no longer be read is a decision, and a fairly aggressive one. You can check all three by asking whether you would have done it in front of someone."
+      ]
+    },
+    {
+      "h2": "Why a screen behaves differently from paper",
+      "ul": [
+        "Paper is dead the moment you set it down, which makes the artifact the only record of the working.",
+        "A screen is alive and interruptible, so a charge can be suspended and resumed without erasing it.",
+        "Screens confirm themselves, which is a real risk and not only a convenience.",
+        "Paper is private by default; screens leak into backups, clouds and screenshots."
+      ],
+      "p": [
+        "Four differences matter in practice. Paper is inert once you set it down, so the artifact is the only record of what happened. A screen holds state, so a charge can be interrupted and picked up an hour later without any loss. Screens also confirm themselves, which is convenient and dangerous, because a glyph that renders beautifully tells you nothing about whether it worked. And paper is private by default while a screen is not.",
+        "The privacy point deserves more weight than it usually gets. A sigil in a notebook stays in the notebook. The same sigil in a photo library sits in three cloud backups and one sync folder. That is not a reason to avoid the medium. It is a reason to decide deliberately which working goes on a device and which goes on paper, and to write that decision down before you start rather than after you have already uploaded something."
+      ]
+    },
+    {
+      "h2": "A first working you could finish in one evening",
+      "ol": [
+        "Pick one small, checkable intent and write it as a single imperative sentence.",
+        "Reduce it to a glyph, by hand or with a generator, and check the reduction reads back.",
+        "Open it on the largest screen you have, in a room where you will not be disturbed.",
+        "Set a timer for ninety seconds and interact with the screen on purpose throughout.",
+        "Dismiss it, close the tab, and write the log entry before you touch anything else."
+      ],
+      "p": [
+        "The whole thing takes less than half an hour including the log. Choose an intent small enough that you will know within a week whether it happened, because an intent that takes a year to verify teaches you nothing except that you are patient. Reduce it to one glyph, put that glyph on screen, and interact with it deliberately for a fixed span. Ninety seconds is a common choice and it is arbitrary. What matters is that the number is decided in advance.",
+        "Then dismiss it properly. Closing a tab is not a dismissal. A dismissal is a small deliberate act that ends the working, and the reason to do one is that leaving a charge open on a device that keeps running is a real way to make your attention leak. The order matters too: log first, then close everything else. Otherwise the log becomes an account reconstructed three days later, and reconstruction is where honest notes turn into flattering ones."
+      ]
+    },
+    {
+      "h2": "Why the cryptographic analogy holds up",
+      "p": [
+        "Sigilisation is a compression scheme. You take a sentence with redundancy in it, reduce it to a glyph that carries the same instruction in fewer marks, and store the glyph. A checksum does exactly that to a file, and a digital signature does something rather more interesting: it binds a piece of data to a key so that later verification proves the data has not changed and was not produced by someone else. The parallel to a charged sigil is close enough to be worth thinking with, and it is close enough that you should know where it fails.",
+        "It fails at verification. A signature tells you a file has not been altered since the key signed it. It tells you nothing about whether the file does what its author hoped. Nor does a hash confirm that its input was worth hashing. This is the exact shape of the mistake that shows up in digital sigil practice: mistaking a coherent artifact for a demonstrated effect. The analogy sharpens the method. It does not license the conclusion, and holding both of those at once is the whole intellectual work of doing this carefully."
+      ]
+    },
+    {
+      "h2": "Consent, and who is actually in the room",
+      "p": [
+        "A screen ritual has an obvious fact that a paper ritual mostly avoids. The device is connected to other people. A message sent, a post published, a purchase completed, a call placed: the working has left the room and reached someone who never consented to be involved. Consent discipline here is not politeness, it is basic accuracy about what you did.",
+        "The workable rule is to separate the two halves of any digital working. The part that touches a device only you own can be as elaborate as you like. The part that touches another person's attention, data or money needs their agreement, and preferably needs it in a form you could show someone afterwards. A great many online rituals fail this quietly, by including a share button in the middle of what was supposed to be a private charge."
+      ]
+    },
+    {
+      "h2": "Failure modes specific to screen work",
+      "ul": [
+        "The beautiful render that proves only that the generator works.",
+        "The ritual built around a service that can quietly change or vanish.",
+        "The charge performed on a device you will touch again in forty other contexts.",
+        "The log kept in the same place as the notifications it should be separate from."
+      ],
+      "p": [
+        "Four failures recur often enough to name. The first is mistaking a competent artifact for a result, which the technology actively encourages because the artifact is the part that feels good. The second is depending on infrastructure you do not control, since an application that changes its glyph algorithm between versions will quietly alter your practice. The third is charging on a device you also use to argue with people. The fourth is keeping the log where the reminders live, so that the practice becomes a source of ambient pressure rather than of record.",
+        "None of these are reasons to stop. They are reasons to write the working down in a form that outlives the tool, to keep a paper copy of anything generated, and to reserve at least one device or account for the practice that has no other job. The habit is cheap and it removes most of the ways this material goes wrong in practice."
+      ]
+    },
+    {
+      "h2": "Recording a screen working honestly",
+      "p": [
+        "Write the log the same day and in the same shape you used before. Date, intent, glyph or its identifier, device, minutes, what you expected, what you noticed, and whether you would call it a result. The device field is the one people skip and the one that becomes decisive later, because it is what lets you notice that the thing that worked happened on the quiet evening and not the one where you also changed three other things.",
+        "Two habits make these records worth having months later. Write down what you expected before you start, not after, so the expectation cannot drift. And record the nulls, especially the workings where nothing happened and you were busy for two weeks anyway. A log containing only successes is useless for the only question people ever actually ask a log, which is whether any of this does anything at all."
+      ]
+    },
+    {
+      "h2": "The split inside the community",
+      "p": [
+        "The disagreement is not really about whether screens can be ritual. It is about whether a medium that was designed for efficiency can be made to carry attention, or whether it will always train attention away. One camp says the feed trains shallow switching, so nothing requiring sustained concentration can be done on a phone. The other says a page held still and chosen deliberately is no more fragmentary than a page of a book, and the fragmentation lives in the surrounding notifications rather than the device.",
+        "Both descriptions are accurate, which means the useful response is empirical rather than argumentative. Test on a quiet device, in a room with nothing else happening, and see whether you can hold a ninety second charge. Most people can. Then test on the device you actually use during the day and see whether you can do the same thing there. The difference between those two results is the most useful thing this material has to offer you."
+      ]
+    },
+    {
+      "h2": "What is worth building first",
+      "ol": [
+        "A single small intent, reduced to one glyph you can draw without looking.",
+        "A quiet device or a dedicated window with notifications actually switched off.",
+        "A fixed charge length decided in advance, somewhere between a minute and five.",
+        "A dismissal with a physical component, so the ending is not just a gesture.",
+        "A written log the same day, in a format you will still be able to read in a year."
+      ],
+      "p": [
+        "If you are starting, build the smallest version of this that you can actually repeat. One intent, one glyph, one device, one fixed length of time, one dismissal, one written note. None of that is impressive and all of it is load bearing, because a practice you repeat is a practice you can learn from and a practice you cannot repeat is a series of events you will misremember in your own favour. Add complexity only when the simple version has been done often enough that you are no longer noticing it."
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "Is technomancy real magic or just rebranding?",
+      "The honest answer is that the label does not settle the question, and the practice can be evaluated without it. Whether a screen-based working produces an effect is the same empirical question as for any other method, and it is answerable with a written prediction, a deadline and an honest log. What technomancy adds is a set of conventions about using computational media deliberately, which is worth having whether or not you believe anything about the substrate underneath."
+    ],
+    [
+      "Why use a screen instead of drawing on paper?",
+      "Three reasons, none of them mystical. A screen can render a glyph from a definition, so the reduction becomes repeatable rather than dependent on your hand. It can be timed to the minute, which makes a fixed-duration working practical. And it can be kept, copied and compared over years, which means your archive can be checked against your predictions instead of remembered."
+    ],
+    [
+      "Do I need to know how to code?",
+      "No. Most of what gets described as technomancy is gestures, images, timing and written intent, and none of it requires programming. The programming argument belongs to a narrower line of work where code is the sigil itself, generated rather than drawn. That version is genuinely interesting and it is also a separate discipline. You can spend a year on the non-programming version and never touch it."
+    ],
+    [
+      "Is it safe to do workings on a device I use every day?",
+      "It is safe in the ordinary sense, which is not the same as costless. The practical risks are attention fragmentation, records that end up synced somewhere you did not intend, and the slow loss of a ritual boundary once every screen becomes an altar. A dedicated device is the obvious answer and an expensive one. A dedicated window with notifications genuinely disabled achieves most of the same thing for nothing."
+    ],
+    [
+      "Is a paid tool worth it for a digital working?",
+      "The reduction, the drawing and the timing are free and can be done with paper, a timer and a pen. What a paid tool buys is bookkeeping: a library that keeps every glyph with its date and intent, so that months later you can ask which of them coincided with what. That is the unglamorous half of the practice and the half that most people abandon first. Buying the ritual itself is rarely worth it, because the ritual was never the scarce part."
+    ]
+  ],
+  "related": [
+    [
+      "cyber-paganism-digital-spirituality-guide",
+      "Cyber-Paganism: The New Techno-Spirituality Movement (2026)"
+    ],
+    [
+      "technomancy-and-cyber-occultism-technomancy-guide-6",
+      "Technomancy: Working Sigils Through Code and Screens"
+    ],
+    [
+      "digital-spellcasting-technomancy-guide",
+      "Digital Spellcasting: How to Build a Tech-Enhanced Ritual Technomancy Guide (2026)"
+    ],
+    [
+      "what-is-technomancy-digital-magic",
+      "Technomancy: Digital Magic for the Modern Mage (2026)"
+    ],
+    [
+      "chaos-sigil-generator-app-review",
+      "Chaos Sigil Generator App Review: Digital Sigil Making on Android (2026)"
+    ]
+  ]
+}
