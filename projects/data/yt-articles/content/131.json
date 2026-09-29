@@ -1,0 +1,193 @@
+{
+  "n": 131,
+  "slug": "cibermagia-technomancy",
+  "h1": "Cibermagia",
+  "seo_title": "Cibermagia | Technomancy and Cyber Occultism Critique",
+  "description": "A complete working guide to Cibermagia: what it is, the technomancy and cyber occultism structure behind it, and the full protocol. Includes step-by-step...",
+  "keywords": [
+    "cibermagia sigil",
+    "cibermagia ritual",
+    "cibermagia invocation",
+    "cibermagia chaos magic",
+    "technomancy",
+    "cyberpunk magic",
+    "cyber pagans",
+    "digital sorcery",
+    "what is technomancy",
+    "code as ritual",
+    "techno-sorcery",
+    "cyber occultism explained",
+    "digital magic applied",
+    "critique technomancy"
+  ],
+  "published": "2026-09-26",
+  "published_human": "September 26, 2026",
+  "lede": "Cibermagia is a word that arrived before anybody had decided what it should mean, and that is the whole of its problem. The term technomancy comes from a 1910 essay in which Crowley proposed that modern technology was the next substrate for magic, and the movement that grew up in the late eighties and nineties from chaos magic, industrial culture and early hacker ethics has been arguing about the definition ever since. This page takes the strong version of the claim seriously and then asks where it fails. Because it does fail, in specific and identifiable ways, and a practice that cannot say where its own edges are will eventually get somebody hurt. The argument below is arranged so that the case for the practice comes first and the objections come second, since the objections are more interesting when you have seen what the thing is actually trying to do.",
+  "sections": [
+    {
+      "h2": "Who supplied the vocabulary",
+      "p": [
+        "Crowley's essay is short, speculative and almost never read in full, which is a large part of why the term has drifted. What he proposed was modest: that the twentieth century's own artefacts would become the material of magic, in the way earlier centuries used their own.",
+        "Read that way, the proposal is unremarkable. Every tradition has used the material of its own moment. The claim becomes strange only when the substrate is treated as neutral, and it is not: a network is a very particular object with particular properties and particular failures."
+      ]
+    },
+    {
+      "h2": "The three things people mean by it",
+      "p": [
+        "There is technomancy as a design practice, where a device interface is built to make an action feel significant. There is technomancy as a ritual practice, where the device is treated as the instrument and the charge happens through deliberate interaction with the interface. And there is technomancy as a metaphor, where encryption and networks stand in for secrecy and transgression.",
+        "Only the middle of those three is a practice. The first is interface design with a vocabulary borrowed from ritual. The third is literary. Conflating them is the single most common way this material goes wrong, because a metaphor produces impressive sentences and no observable results."
+      ],
+      "ul": [
+        "As design language: interface dressed in ritual vocabulary.",
+        "As ritual practice: the device is the instrument, deliberately.",
+        "As metaphor: networks standing in for secrecy. Not a practice."
+      ]
+    },
+    {
+      "h2": "The strongest version of the claim",
+      "p": [
+        "The best argument for applied technomancy is that a screen is the best ritual surface most people have ever had. It is emissive, high contrast, familiar and physically unhygienic in the sense that it is not paper. You do not have a relationship with a window on a wall the way you have one with a sheet of paper.",
+        "The charge is then a deliberate interaction with an interface rather than a gesture made at an object, and the design constraint that follows is real: if the interface is doing the work, then changing the interface changes the practice, which is exactly what a practitioner of any tradition would expect and what almost nobody in this field is willing to test."
+      ]
+    },
+    {
+      "h2": "The computational analogies that hold",
+      "p": [
+        "Three of them are genuinely tight. Sigilisation is compression: a long statement becomes a short glyph that means it. A sigil is a signature: it authenticates a particular intention against a particular author. A charged glyph is a commit: an irreversible act that changes state.",
+        "Those three are not decorative analogies and the field is entitled to them. What they do not give you is any reason to think the compressed glyph has reached anything. Compression and signing are operations on information. The metaphor stops at the boundary where the question becomes whether meaning travels, and that is where the rest of this page is."
+      ]
+    },
+    {
+      "h2": "Where the computer comparison stops working",
+      "p": [
+        "A cryptographic signature is verified. It is either valid or it is not, and verification is a mechanical process that does not care who made it. A sigilised intention cannot be verified by anybody, including the person who made it, and in a practice where the maker is the only possible verifier, the analogy quietly inverts into a claim it cannot support.",
+        "The second failure is about irreversibility. Software commits are reversible in the ordinary sense that the repository keeps the history. A sigilised act is reversible only in the sense that you can forget about it, and forgetting is not the same as undoing. Any tradition built on irreversibility should be cautious about borrowing the vocabulary of version control."
+      ]
+    },
+    {
+      "h2": "Consent, and the fact that the device is not private",
+      "p": [
+        "This is the objection that matters most and it is a boundary rather than a measurement. A sigil on paper exists in a room you control. A sigil on a network is on infrastructure you do not control, which is observed, logged, sold and subpoenaed, and which is read by other people as behaviour rather than as a symbol.",
+        "The line is other people's autonomy. Work on your own conduct, your own availability, your own boundaries. Do not work on overriding somebody's stated preferences, and do not assume that a device in your hand is a private space, because the architecture says otherwise and the law agrees with the architecture more often than practitioners like."
+      ]
+    },
+    {
+      "h2": "How a screen-based practice fails, and in what sequence",
+      "p": [
+        "The first is the interface standing in for the practice. A beautiful app is used instead of a practice, and the practice never gets built. The second is the platform changing. Everything the ritual depends on is one product decision away from gone, and no amount of sincerity survives that.",
+        "The third is the account. Once the practice needs a login, the practice has a business model, and a business model has a retention curve that will eventually be aimed at you. The fourth is the drift into claims about the network itself, where a metaphor about infrastructure becomes a claim about reality."
+      ],
+      "ol": [
+        "The interface replaces the practice instead of carrying it.",
+        "The platform changes and takes the practice with it.",
+        "The practice acquires an account and a retention curve.",
+        "The metaphor about infrastructure hardens into a claim about reality."
+      ]
+    },
+    {
+      "h2": "A defensible version, if you want one",
+      "p": [
+        "Render the glyph on a screen if you like, charge it by a deliberate interaction, and log it on paper. That last part is not a compromise, it is the point: the record is the only part of the practice that is yours, and the screen is a good enough surface for the part that does not need an audit trail.",
+        "Then export everything. If the practice cannot leave the platform in a form you can still read in ten years, it is not a practice, it is a subscription with a ritual attached, and the difference matters more than the aesthetics."
+      ]
+    },
+    {
+      "h2": "What the field has not done",
+      "p": [
+        "Nobody has run the obvious experiment, which is to compare a screen-charged sigil against a paper-charged one on a pre-registered target, blind, over enough trials to matter. It would take a season and a notebook and it would settle a question the field has been arguing about for thirty years.",
+        "The likeliest explanation is the same one that applies throughout this area. The experiments are dull, the results will mostly be null, and nulls are harder to be talked about than anecdotes. That is not an argument against the practice. It is an argument for getting on with it, and for being honest about the parts nobody has measured."
+      ]
+    },
+    {
+      "h2": "The interface problem, stated plainly",
+      "p": [
+        "Every application of this practice depends on somebody having built an interface, and the interface will have a purpose that is not yours. Products are designed for retention, and a tool that helps you finish with it is a commercially awkward object.",
+        "The practical consequence is that the most polished tool in this space is likely to be the one least suited to a practice whose whole point is to produce a conclusion and move on. Judge any of them by whether it makes leaving easy, which is the one property that no retention-minded product will offer you."
+      ],
+      "ul": [
+        "Can the whole record be exported in a format you can still read?",
+        "Does the tool make it easy to stop, or easy to continue?",
+        "Is anything in the interface optimising for time-on-app?"
+      ]
+    },
+    {
+      "h2": "The three failures nobody publishes",
+      "p": [
+        "Platform drift is the first. A practice that depends on a specific app's behaviour is one product decision away from not working, and no amount of commitment survives a changed interface. The people who still have ten-year records are the ones who wrote in a notebook.",
+        "Account capture is the second. The moment a practice needs a login it has a business model, and business models eventually aim at people who have already committed, which is an unpleasant thing to have happen to something you were doing for your own sake. The third is the drift of the claim itself, where a metaphor about networks hardens into a statement about reality and nobody notices the transition because it happened gradually in conversation."
+      ]
+    },
+    {
+      "h2": "What the cryptography does and does not give you",
+      "p": [
+        "The compression analogy is exact and worth keeping: a long statement becomes a short glyph that means it, and anyone who can invert the reduction recovers the statement. That is a real structural parallel to what the practitioner is doing, and it is the reason the sigil tradition works as well as it does.",
+        "The signature analogy is the one that fails under load, because a cryptographic signature is verified mechanically and a sigilised intention is verified by nobody. Any tradition that leans on the signature image has to handle that asymmetry honestly, and most of the material does not."
+      ]
+    },
+    {
+      "h2": "A small experiment nobody has run",
+      "p": [
+        "Take one pre-registered target. Charge a screen-rendered sigil for it on one schedule. Charge a hand-drawn sigil for an equivalent target on an interleaved schedule. Log both blind, so you cannot tell them apart when you write the entries.",
+        "It takes a season and a notebook. It would settle a question this field has argued about for three decades, and the reason it has not been done is the reason the nulls in every corner of this area have not been published: the result is likely to be uninteresting and the conversation afterwards will be about anything else."
+      ]
+    },
+    {
+      "h2": "What the movement actually was, historically",
+      "p": [
+        "Technopaganism and the cybergoth scenes that carried the term into the nineties drew on chaos magic, industrial music and early hacker ethics at the same time, and all three of those had a DIY character that the term inherited. The practice was never going to be a lineage with a founding text, and it never was.",
+        "That is worth stating plainly because the later literature often describes a continuous tradition where there was an interruption and a reinvention. Crowley wrote the essay, almost nobody read it, and the people who did use the word in the nineties were mostly borrowing the name and bringing their own content."
+      ]
+    },
+    {
+      "h2": "A season, laid out",
+      "p": [
+        "One pre-registered target, four weekly workings, four interleaved uncharged controls, one log, one review at the end of the month. Screen for half the block, paper for the rest, and do not tell yourself which was which when you write the entries.",
+        "The exercise is not going to produce a dramatic result. It will produce a number, and the number is worth more than any anecdote because it is the only thing in this field that anybody could ever aggregate."
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "Is technomancy real magic or just a metaphor?",
+      "As a practice it is a coherent application of sigil method to a new substrate, and the substrate genuinely differs from paper. As a metaphor it produces good sentences and nothing else. The two get confused constantly, and the honest answer is that the ritual is real as a ritual and untested as a claim about the world."
+    ],
+    [
+      "Why use a screen when paper would work better?",
+      "Because a screen is a better ritual surface for most people, not because it is more powerful. It is emissive, high contrast and unfamiliar in exactly the way paper has become familiar. If you prefer paper, the practice still works and you have lost nothing except the specific thing the screen contributes."
+    ],
+    [
+      "Is using code for magic just programming?",
+      "The generative step is ordinary programming and there is no mystery in it. What makes the result magickal is the frame around it, and the frame is doing all the work. That is not a criticism, it is a description, and it means the interesting question is about the frame rather than the code."
+    ],
+    [
+      "What is the real risk in this material?",
+      "Other people. A device in your hand is not private, and the failure mode that matters is doing work aimed at somebody else's stated preferences. Work on your own conduct, your own availability and your own boundaries, and treat any practice that requires overriding someone as a different category of activity."
+    ],
+    [
+      "Should I pay for an app to do this?",
+      "Both the method and the record cost nothing. What money buys is tidier export and a log you can search later, and that is the least interesting half of anything. It is not worth a subscription half of any practice. It is not worth paying for a subscription to perform a working you can perform on paper, and the export requirement is the test."
+    ]
+  ],
+  "related": [
+    [
+      "cyber-paganism-digital-spirituality-guide",
+      "Cyber-Paganism: The New Techno-Spirituality Movement (2026)"
+    ],
+    [
+      "what-is-cybermancy-digital-sorcery-guide",
+      "Cybermancy: Complete Guide to Digital Sorcery (2026)"
+    ],
+    [
+      "digital-sigil-magic-guide",
+      "Digital Sigil Magic Guide: Code, Cryptography & Chaos Magick"
+    ],
+    [
+      "digital-spellcasting-technomancy-guide",
+      "Digital Spellcasting: How to Build a Tech-Enhanced Ritual Technomancy Guide (2026)"
+    ],
+    [
+      "chaos-sigil-design-charge-forget-guide",
+      "Design, Charge, Forget: The Complete Chaos Sigil Workflow (2026)"
+    ]
+  ]
+}
