@@ -85,7 +85,11 @@ def main():
     ns = [int(a) for a in sys.argv[1:]]
     if not ns:
         cdir = os.path.join(HERE, "content")
-        ns = sorted(int(f[:-5]) for f in os.listdir(cdir) if f.endswith(".json"))
+        ns = sorted(
+            int(f[:-5])
+            for f in os.listdir(cdir)
+            if f.endswith(".json") and not f.startswith("_")
+        )
     recs = {}
     for n in ns:
         recs[n] = json.load(open(os.path.join(HERE, "content", "%d.json" % n), encoding="utf-8"))

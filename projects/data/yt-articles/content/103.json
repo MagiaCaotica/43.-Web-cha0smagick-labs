@@ -74,7 +74,7 @@
       ]
     },
     {
-      "h2": "Five ways this goes wrong",
+      "h2": "Five failure modes, and what triggers them",
       "p": [
         "The first is dropping the termination condition, which produces a construct with no review and no way to end it. The second is treating the fiction as an entity to be contacted rather than a design to be borrowed, which produces a relationship with an imagined character instead of a specification. The third is specifying persistence when what you wanted was convenience, so you build something that cannot be retired and then resent it.",
         "The fourth is the scope drift. A construct designed to handle one recurring obligation and given a very long term will drift into handling things it was never specified for, because there is no adjacent case to refuse. The fifth is the hidden cost. Maintenance gets absorbed into your attention and never gets counted, and a construct that appears to cost nothing while consuming a weekly slot is the most expensive object in the practice. Write the weekly minutes down next to the annual price and the design usually improves on its own."

@@ -1,0 +1,145 @@
+{
+  "n": 24,
+  "slug": "technomancy-and-cyber-occultism-technomancy-guide-2",
+  "h1": "Technomancy and Cyber Occultism",
+  "seo_title": "Technomancy and Cyber Occultism | Technomancy and Cyber",
+  "description": "A complete working guide to technomancy and cyber occultism covering technomancy and cyber occultism. Includes step-by-step protocol, honest failure modes,...",
+  "keywords": [
+    "technomancy",
+    "cyberpunk magic",
+    "cyber pagans",
+    "digital sorcery",
+    "what is technomancy",
+    "code as ritual",
+    "techno-sorcery",
+    "cyber occultism explained",
+    "digital magic applied",
+    "protocol technomancy"
+  ],
+  "published": "2026-09-26",
+  "published_human": "September 26, 2026",
+  "lede": "A technomantic working is not a different kind of ritual performed with a gadget. It is a ritual in which the specific properties of a computational device carry the load, and getting that right is the whole difference between the version that works and the version that is merely a person tapping a phone. The sequence below assumes you have done a few paper workings already and want to move the practice onto a screen without losing anything. It is written as a procedure because that is what it is, and because the parts that get skipped are precisely the parts that determine whether the medium is doing any work. Nothing here requires a belief about the substrate, which is a deliberate omission rather than a reticence, since the method is testable on its own terms.",
+  "sections": [
+    {
+      "h2": "Step one, check the device is actually a ritual object",
+      "p": [
+        "Before anything else, decide whether the device is part of the working or merely the place you are standing. Most early attempts fail here and fail quietly, because the practitioner is performing a paper ritual and a paper ritual does not need the phone, so the phone turns out to be irrelevant. The fix is to make the device load-bearing. Its timing, its display, its storage and its interface should all be doing something.",
+        "A practical test is to ask whether the same working would work on paper. If the answer is yes, you are doing a paper working. If the answer is no, because the glyph is rendered rather than drawn, the charge runs to a machine clock, and the dismissal involves deleting or encrypting something, then the medium is carrying real weight and you can start asking what weight."
+      ]
+    },
+    {
+      "h2": "Step two, the intent in one sentence",
+      "p": [
+        "Write the intent as a single imperative sentence, in the present tense, addressed to yourself. Present tense because it is easier to reduce and more honest about what you are attempting. Imperative because a wish in the indicative is a description of a state and a description does not tell you what to do on a Tuesday morning.",
+        "Then check it against a specific objection. Who acts, what is the observable thing that will be different, and by when. If the sentence survives all three, you have an intention. If it does not, the problem is the specification and no amount of rendering will fix it. This step is the same in every medium, which is a useful reminder that moving to a screen does not change the hard part."
+      ]
+    },
+    {
+      "h2": "Step three, the reduction and the render",
+      "ol": [
+        "Reduce the sentence to letters, then to strokes, by hand before using any tool.",
+        "Check the reduction by reading it back against the sentence, after an hour rather than now.",
+        "Then render it, by hand on the device or with a generator fed your own reduction.",
+        "Fix the layout so the glyph fills the screen and nothing else competes with it.",
+        "Save the result somewhere the working will not see it again until the charge."
+      ],
+      "p": [
+        "The order matters and the middle step is the one that gets skipped. Reducing before rendering keeps the thinking with the person, which is the only place it can happen honestly. Rendering from a raw wish hands the decision to a random number, and the result is a glyph with no instruction in it. The hour-long check catches a surprising proportion of these, because your reading of your own reduction improves with distance.",
+        "The layout step is not decoration. A glyph occupying a small square in the corner of a screen with notifications on it is a different object from one that fills the display with everything else switched off, and only one of those is a ritual image. Most of the perceived difference between good and bad screen workings is this and not anything esoteric."
+      ]
+    },
+    {
+      "h2": "Step four, the charge, timed by the machine",
+      "p": [
+        "Start the charge using a device timer rather than your own count, since elapsed time is reconstructed from memory and your memory is generous about lengths of time you spent paying attention. Run it to the end without checking progress. A ninety second charge looked at repeatedly is not a ninety second charge.",
+        "Hold the meaning rather than the shape, and let the screen change during the charge if you want it to. A slow transition, a colour shift, anything that unfolds over the duration gives the device a role in the timing, which is the one thing paper cannot do. Afterwards, write down the actual duration you used. It will not match what you remembered."
+      ]
+    },
+    {
+      "h2": "Step five, the dismissal has to be irreversible",
+      "p": [
+        "This is where screen practice most clearly differs and most clearly needs thought. On paper you can burn, bury or tear the glyph. On a device you have options that are either weak or drastic, and the weak ones do not work, because a file you could reopen is not a closed working. Closing a tab, hiding a folder, moving a file are all reversible and all of them leave the attention loop open.",
+        "The methods that hold are irreversible. Delete the file and clear the trash. Encrypt it and lose the key. Photograph the glyph, verify you can read it, then delete the object. Each of these is a real act with a real cost, and that is the point, because the cost is what makes it a dismissal rather than a gesture. If it feels too drastic, that is a sign the charge was too small to need one."
+      ]
+    },
+    {
+      "h2": "Step six, the record, stored somewhere dull",
+      "p": [
+        "Write the log the same day: the intent, the glyph or its identifier, the device, the duration you actually used, and what you expected. Store it somewhere unremarkable. Notification-rich, synchronised, ambient places turn a practice into a source of low-grade pressure, and most people who abandon a working routine do so because the record became nagging rather than because the working failed.",
+        "Include the nulls. A log of successes is not a log, it is a mood. The value of the record is entirely in the comparison, and the comparison only works if the failures are in it. Recording them is also the only way to find out whether your specification was ever specific enough for a result to have been recognisable."
+      ]
+    },
+    {
+      "h2": "Why a screen is not just paper that glows",
+      "p": [
+        "Four properties do the work, and each one is unavailable on paper. A screen updates, so a charge can be suspended and resumed without loss. It stores, so a working can be reviewed later and compared against subsequent events. It signs, so a timestamped artifact exists that you did not have to create. And it broadcasts, which is the property that carries the consent problem as well as the reach.",
+        "A practice that uses even one of these properly is doing something paper cannot. A practice that uses none of them is a person looking at a phone. The distinction is not about modernity or preference. It is about whether the medium's characteristics are load-bearing, and you can answer that question about any single working you have done."
+      ]
+    },
+    {
+      "h2": "Consent, because the device is not private",
+      "p": [
+        "The screen reaches other people. A message, a post, a purchase, a call, a sync. If any of those happen during a working, the working has left the room and reached someone who did not agree to be part of it. This is the point where most online rituals fail without anybody noticing, because the share button sits in the middle of what was supposed to be a private act.",
+        "The workable rule is a hard line rather than a judgement call. The part of the working that touches a device you alone own can be as elaborate as you like. Anything that reaches another person's attention, data or money needs their agreement, obtained in a form you could show someone afterwards. Consent discipline is not politeness in this context. It is accuracy about what you did."
+      ]
+    },
+    {
+      "h2": "What to build first, and what to leave alone",
+      "ol": [
+        "One small intent, reduced by hand, rendered on a device with notifications off.",
+        "A charge of ninety seconds, started by a machine timer, held on the meaning.",
+        "An irreversible dismissal and a one-line log written the same day.",
+        "Nothing automated, because automation removes the decision you are trying to make.",
+        "Nothing published, because publishing converts a private act into an external one."
+      ],
+      "p": [
+        "Five things, in this order, and the ordering is the instruction. The reason nothing automated comes early is that automation is the most tempting part of this material and the part that removes the only element doing any work, which is a person making a deliberate decision at a specific moment. The reason nothing is published early is that publication is irreversible in the way that matters socially, even when the file is deleted.",
+        "Once that version has been done several times and written down, extensions are available and each should be judged against one question: does this make the decision more deliberate or less? Most extensions do neither, and the ones that make it less are usually the ones that sound most like innovation."
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "Is this real magic or just using a phone?",
+      "That depends entirely on whether the device's properties are load-bearing, and you can check that about any single working. If the glyph is rendered rather than drawn, the charge runs to a machine clock, the dismissal is irreversible and the artifact is timestamped, the medium is carrying the practice. If none of those is true, you are doing a paper ritual and looking at a screen, which is perfectly legitimate and simply not technomancy."
+    ],
+    [
+      "Why a screen rather than drawing on paper?",
+      "Paper offers three things a screen does not: the artifact is the only record, it stays private, and it is dead the moment you put it down. The screen offers four the other way: resumable state, reviewable history, machine timing and a signature you did not have to write. If your practice depends on the first set, use paper. If it depends on the second, use the screen. Most people who migrate to a screen have not decided which set they actually need."
+    ],
+    [
+      "Is using code for this just programming?",
+      "When the code is generating the glyph from an unreduced wish, it is. When the code is the sigil, generated rather than drawn, the boundary becomes interesting again and there is a defensible claim for it, since the process of making it is generative in the way a handmade sigil is not. The useful test is whether you made the decisions. If the reduction was yours and the rendering was the machine's, you have done a ritual with a tool. If the reduction was also the machine's, you have run a script."
+    ],
+    [
+      "Does buying software change what I can do with a screen working?",
+      "The two things that are actually inconvenient. Rendering a glyph from a reduction you have made, which costs very little because the thinking is the part you were doing anyway. And storing each working with its intent, its date and the outcome you recorded, which is the bookkeeping that makes a practice compound rather than accumulate. Anything offering to generate from an unreduced wish reduction is yours, you have done a ritual with a tool. If the reduction was also the machine's, you have run a script that happens to look like one."
+    ],
+    [
+      "How should I handle privacy in these workings?",
+      "Split the practice rather than restricting it. The part touching a device only you own can be elaborate, including timestamps, glyphs and any archive you keep. The part that reaches another person's attention, data or money needs their agreement, in a form you could show someone afterwards. Check for the ordinary conveniences rather than the dramatic ones, since sync, screenshots and link previews are what actually carry data outward."
+    ]
+  ],
+  "related": [
+    [
+      "what-is-technomancy-digital-magic",
+      "Technomancy: Digital Magic for the Modern Mage (2026)"
+    ],
+    [
+      "digital-spellcasting-technomancy-guide",
+      "Digital Spellcasting: How to Build a Tech-Enhanced Ritual Technomancy Guide (2026)"
+    ],
+    [
+      "cyber-paganism-digital-spirituality-guide",
+      "Cyber-Paganism: The New Techno-Spirituality Movement (2026)"
+    ],
+    [
+      "gps-manifestation-ritual-step-by-step",
+      "Complete Step-by-Step GPS Manifestation Ritual for Chaos Magicians"
+    ],
+    [
+      "chaos-magick-gps-manifestation-guide",
+      "Chaos Magick GPS Manifestation: How Entropy and Intention Create Measurable Reality Shifts"
+    ]
+  ]
+}

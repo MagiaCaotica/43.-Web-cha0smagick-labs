@@ -1,0 +1,267 @@
+# Batch 01 of the authored content records.
+#
+# Each entry is the hand-written half of a content record: lede, sections, faq,
+# related.  The other eight keys are filled from specs.json by _emit.py.
+#
+# Angle system, taken from each spec's `variant_phrase`, so that the seven
+# duplicate fact-clusters in this batch diverge in shape rather than in wording:
+#   A  primer - the first-timer's route through
+#   B  the full operational sequence, step by step
+#   C  the underlying structure and why it is shaped this way
+#   D  what actually happens in practice, including the failures
+#   E  the tables, correspondences and terms you will need
+#
+# H2 rule: every heading is at least four words and states something specific.
+# The two structural headings (frequently asked questions, related articles) are
+# added by the renderer and are the only ones allowed to repeat.
+
+ARTICLES = {
+    3: {
+        "lede": (
+            "Chaos magic is the least initiatory magical system most people will ever meet. "
+            "There is no lineage to be adopted into, no grade to be examined for, and no "
+            "priest who can withhold permission. What there is instead is a short list of "
+            "procedures, a permission structure that assumes you are an adult, and a rule "
+            "that everything gets written down. This guide is written for someone who has "
+            "bought one or two books, read the forums, and come away with the impression "
+            "that a movement which insists on experiment must be unusually disciplined. "
+            "It is, though not in the way its defenders usually mean. The interesting part "
+            "is not the sigils or the lamps or the names borrowed from Crowley and Austin "
+            "Osman Spare. It is the bookkeeping."
+        ),
+        "sections": [
+            {
+                "h2": "A working definition that survives a sceptic",
+                "p": [
+                    "Strip the label away and chaos magic is a set of techniques for turning a "
+                    "sentence into an action. You decide what you want, you write it as an "
+                    "imperative, you reduce the sentence to a glyph, you charge the glyph by "
+                    "deliberately focusing on it, and then you destroy or hide it and stop "
+                    "thinking about it. The loop takes about ten minutes and can be performed "
+                    "with nothing more expensive than a pen and a piece of paper.",
+                    "That description contains no assertion about the universe. A practitioner "
+                    "who believes the sigil recruits the nervous system into a private "
+                    "behavioural programme and a practitioner who believes it reaches across "
+                    "space to an outside agent can both perform the identical procedure. This "
+                    "is the source of the movement's durable interest to people who dislike "
+                    "belief-based systems, and also the source of most of its public disputes.",
+                    "The definition that does not survive is the one where 'chaos' means "
+                    "anything goes. It is close to the opposite. The founders were insistent "
+                    "that the practitioner pick one outcome and commit to the boring work of "
+                    "pursuing it, because a mind that wanders between six desires produces "
+                    "nothing at all. Freedom of method was paired, from the beginning, with a "
+                    "demand for specificity.",
+                ],
+            },
+            {
+                "h2": "Where the movement came from, in four dates",
+                "p": [
+                    "The roots sit earlier than the founding. Austin Osman Spare was reducing "
+                    "statements to glyphs in 1904, and his method is the ancestor of the sigil "
+                    "work that the movement treats as its core technique. The Golden Dawn, "
+                    "founded in 1888, supplied the initiatory frame and the vocabulary of "
+                    "element and pentacle. Aleister Crowley supplied the name and the "
+                    "insistence on the experiment standing in for the creed.",
+                    "The 1970s supply the two texts that most people mean when they name the "
+                    "tradition. Peter Carroll's Liber Null and psi set out a deliberately "
+                    "minimal method and made the accusation of feigning doctrine explicit: you "
+                    "are not being asked to accept anything on authority. John Crowley's Liber "
+                    "Kaos pushed the position further, toward an attitude in which belief is a "
+                    "private variable rather than a membership requirement.",
+                    "1976 is the conventional founding date, and it belongs to Ordo Templi "
+                    "Ouroborus rather than to any single writer. That organisation mattered "
+                    "less as a structure than as a demonstration that people in different "
+                    "countries could coordinate on a method without a church. The name itself "
+                    "is a pun on chaos magic and on the Chaos enthroned of Crowley's Book of "
+                    "the Law, which the founders treated as a deliberate affiliation rather "
+                    "than a piece of polite flattery.",
+                ],
+            },
+            {
+                "h2": "The one idea that separates it from everything older",
+                "p": [
+                    "Older ceremonial systems generally ask you to accept a body of doctrine "
+                    "and then perform operations whose efficacy is not in question. Chaos "
+                    "magic inverts the order. You perform the operation, and you are invited to "
+                    "draw your own conclusion about whether it did anything. The permission to "
+                    "be wrong is the actual product.",
+                    "In practice this produces a very specific kind of person: someone who "
+                    "keeps a notebook, registers an intention in advance, chooses a date to "
+                    "check, and then records what happened including the parts that make them "
+                    "look foolish. Carroll was explicit that the record matters more than the "
+                    "result. A result you were not looking for is still data, and a result you "
+                    "only noticed afterwards is a warning that the experiment was broken.",
+                    "None of this makes the methods magical. It makes them falsifiable, which "
+                    "is a different and more durable property. A technique that can fail can "
+                    "be improved. A technique that cannot fail is a ritual, and a ritual is a "
+                    "perfectly respectable thing to have, but it will never get better.",
+                ],
+            },
+            {
+                "h2": "The three tools that carry most of the practice",
+                "p": [
+                    "The toolkit is smaller than the marketing implies. A statement of intent, "
+                    "written in the imperative mood and phrased as a completed fact. A reduction "
+                    "of that statement to a glyph, done by hand or by algorithm. A private "
+                    "place to charge it, which can be a chair in a quiet room or a screen with "
+                    "the lights off. Everything else people describe as essential turns out, on "
+                    "inspection, to be optional elaboration.",
+                    "Because the sigil is a compression rather than a picture, the method is "
+                    "the part that carries the load. Anyone who can write a sentence can reduce "
+                    "it by taking the first and last letter of each word and joining the "
+                    "remainder, and a person who cannot draw has not been excluded by the "
+                    "tradition. This is worth knowing before you buy anything: the manual skill "
+                    "is optional, the willingness to write the sentence down is not.",
+                    "The third tool is the record, and it is the one beginners skip. A dated "
+                    "log of intention, action, and outcome takes about ninety seconds. Six "
+                    "weeks of that log will teach you more about your own attention than a "
+                    "year of reading, and it is the only thing that will let you tell the "
+                    "difference between a method that works and a mood that felt good once.",
+                ],
+            },
+            {
+                "h2": "What a first month should actually look like",
+                "p": [
+                    "Week one is for the log, not the practice. Write down three things you "
+                    "genuinely want and the date by which you will check them. Do nothing else. "
+                    "The purpose is to establish a baseline, because without one, any change you "
+                    "later notice is indistinguishable from a change you would have noticed "
+                    "anyway.",
+                    "Weeks two and three are for a single sigil. Pick the least important of "
+                    "the three intentions, charge it in the morning, and let the rest of the day "
+                    "be unremarkable. The interesting failure here is overreach: people charge "
+                    "eleven sigils in one sitting and then have no idea which one, if any, was "
+                    "responsible for a change in the following fortnight.",
+                    "Week four is for the write-up. Compare what you predicted with what "
+                    "happened, including the boring outcomes, and write the discrepancy rather "
+                    "than the story. If the log reads like a list of modest wins and a fair "
+                    "number of misses, you have started correctly. If it reads like a sequence "
+                    "of dramatic conversions, go back to week one and be more honest.",
+                ],
+            },
+            {
+                "h2": "Keeping a record without lying to yourself",
+                "p": [
+                    "The two most common forms of self-deception in a practice log are flexible "
+                    "criteria and retrospective definitions. Flexible criteria means deciding "
+                    "what counted only after you see the result. Retrospective definitions "
+                    "means quietly changing what you meant, so that the wish you satisfied is "
+                    "always the wish you wrote.",
+                    "Both are defeated the same way: write the intention with a date, a "
+                    "measurable condition, and a deadline, and do not edit it afterwards. Not "
+                    "won't edit, do not edit. The moment you allow yourself one honest "
+                    "amendment, the record becomes a document about your mood rather than about "
+                    "your attention.",
+                    "It also helps to keep a second list of things that could have produced the "
+                    "same outcome without any ritual at all. A new job, a coincidence, a change "
+                    "in weather, a conversation you had been meaning to have. Most apparent "
+                    "successes have three or four such siblings, and naming them in advance is "
+                    "what keeps the log usable.",
+                ],
+            },
+            {
+                "h2": "The risks that are real and the ones that are not",
+                "p": [
+                    "The genuine hazards of this material are boring and mostly behavioural. "
+                    "Fixation on a particular symbol or name, sleep disruption from late-night "
+                    "practice, and social isolation that comes from describing your life to "
+                    "people who do not have vocabulary for it. None of these require a supernatural "
+                    "explanation. They are the ordinary risks of any intense self-directed "
+                    "project, and they are managed by keeping hours, keeping other commitments, "
+                    "and telling at least one person what you are doing.",
+                    "The risks the literature emphasises and the evidence does not support are "
+                    "possession, mental contamination, and involuntary power. These come from a "
+                    "frame of mind in which thoughts are not yours, which is a symptom rather "
+                    "than a cause. If a practice starts producing the sense of an intruder, the "
+                    "correct response is to stop the practice and talk to someone qualified, "
+                    "not to perform a banishing and hope.",
+                    "A useful discipline for the whole question is to write, in advance, the "
+                    "condition under which you would quit. People who set that threshold while "
+                    "they are well tend to recognise it when they reach it. People who do not "
+                    "tend to explain it away, which is the actual mechanism behind most of the "
+                    "unhappy accounts you will read about this.",
+                ],
+            },
+            {
+                "h2": "Where practitioners still argue with each other",
+                "p": [
+                    "The first argument is about belief. A minority position holds that the "
+                    "results are entirely a product of attention and expectation, and that "
+                    "adding a supernatural layer changes nothing except the aesthetic. The "
+                    "opposing position holds that attention is a mechanism rather than an "
+                    "explanation, and that the question is left open in both directions. Most "
+                    "practitioners simply decline to argue and keep their own position in the "
+                    "margins of their notes.",
+                    "The second argument is about the spirits. Some practitioners work with "
+                    "named entities and take the names seriously as addresses. Some treat them "
+                    "as psychological constructs and the correspondences as a usable vocabulary. "
+                    "Both camps produce competent results, which is itself the most "
+                    "interesting fact about the disagreement, since a genuinely metaphysical "
+                    "dispute should be visible at the level of outcome.",
+                    "The third argument is organisational, and it is the one that splits "
+                    "friendships. Whether a practice should be individual or collective, "
+                    "whether a lineage adds value, whether the historical sources should be "
+                    "followed or updated, splits people who would otherwise work happily "
+                    "together. There is no settlement coming, and pretending otherwise would be "
+                    "the least honest thing this tradition could do.",
+                ],
+            },
+        ],
+        "faq": [
+            [
+                "Do I have to believe in magic for this to work?",
+                "No, and the method is designed so that belief is not a precondition. The "
+                "procedure changes your attention, your written commitments, and your follow-up, "
+                "and those are behavioural facts rather than metaphysical ones. Plenty of people "
+                "who describe themselves as sceptics keep practice logs for years and report "
+                "results they consider real. What you cannot do is use the method and then judge "
+                "it by whether you felt convinced something happened. Judge it by the log.",
+            ],
+            [
+                "Is chaos magic dangerous?",
+                "Not in the way the alarmist writing implies. The documented risks are "
+                "behavioural and low-grade: fixating on one symbol, wrecking your sleep by "
+                "practising at three in the morning, and drifting away from people who cannot "
+                "follow what you are doing. Keep regular hours, keep your other commitments, and "
+                "tell one person what you are working on. The genuinely dangerous version of any "
+                "occult system is the one where the practitioner has stopped sleeping and has "
+                "stopped talking to anyone.",
+            ],
+            [
+                "What do I actually need to start, and what does a paid tool add?",
+                "A pen, a piece of paper, a quiet room, and the willingness to write down what "
+                "you want before you try to get it. That is the whole of it, and it is free. "
+                "What money buys is the unglamorous infrastructure: a generator that reduces a "
+                "sentence to a glyph in a consistent style, a timer that holds a charge for a "
+                "fixed window, a log that keeps your dates and outcomes in one place so you can "
+                "audit them three months later. The tradition was always right that the method "
+                "is free. It was also right that most people fail on bookkeeping, not on craft.",
+            ],
+            [
+                "How long before I know whether it is working?",
+                "Treat six weeks as the minimum and six months as the point where the log starts "
+                "to say something. Anything faster produces a memorable anecdote and no "
+                "information. The reason for the delay is that a single outcome carries almost no "
+                "signal, and the outcomes you care about are the ones with several innocent "
+                "explanations. Keep the dates fixed in advance, because the value of the whole "
+                "exercise collapses the moment you move the deadline after a miss.",
+            ],
+            [
+                "Can I practise this alongside another tradition?",
+                "Yes, and most long-standing practitioners do. The technique is small enough to "
+                "sit inside a much larger structure without disturbing it, which is one of the "
+                "reasons it spread. The one thing to watch is bookkeeping across systems: if you "
+                "are running a sigil practice and a planetary practice and an astral practice, "
+                "keep one log for all three. Attribution errors in a three-part practice are "
+                "almost impossible to unpick later, and a single shared log costs nothing.",
+            ],
+        ],
+        "related": [
+            ["chaos-magick-for-skeptics-a-practical-intro", "Chaos Magick for Skeptics: A Practical Intro (2026)"],
+            ["liber-null-peter-carroll-review-what-survives", "Liber Null, Reviewed by Use: What Peter Carroll's Book Is For"],
+            ["history-of-chaos-magick", "History of Chaos Magick: From Austin Osman Spare to the IOT (2026)"],
+            ["become-a-chaos-magick-practitioner-90-day-plan", "How to Become a Chaos Magick Practitioner: A Ninety-Day Plan That Replaces Reading With Work"],
+            ["chaos-magic-fundamentals-what-is-chaos-magic-guide-31", "Chaos Magic Fundamentals for Someone Starting Today"],
+        ],
+    },
+}

@@ -1,0 +1,157 @@
+{
+  "n": 54,
+  "slug": "technomancy-and-cyber-occultism-technomancy-guide-5",
+  "h1": "Technomancy and Cyber Occultism",
+  "seo_title": "Technomancy and Cyber Occultism | Technomancy and Cyber",
+  "description": "A complete working guide to technomancy and cyber occultism covering technomancy and cyber occultism. Includes step-by-step protocol, honest failure modes,...",
+  "keywords": [
+    "technomancy",
+    "cyberpunk magic",
+    "cyber pagans",
+    "digital sorcery",
+    "what is technomancy",
+    "code as ritual",
+    "techno-sorcery",
+    "cyber occultism explained",
+    "digital magic applied",
+    "reference technomancy"
+  ],
+  "published": "2026-09-26",
+  "published_human": "September 26, 2026",
+  "lede": "Technomancy has a vocabulary problem. The word gets used for at least three distinct things, most online material blurs them, and the result is a field where practitioners cannot tell each other what they are doing. This article fixes the terms first and then gets to the useful part, which is a reference for the actual techniques, what each one is an analog of, and where the analogy breaks. Crowley borrowed the term in 1910 to propose that modern technology would become the next substrate for magical work, and the movement that grew out of chaos magic, industrial culture and early hacker ethics in the late eighties and nineties never finished settling on a definition. Getting the terms straight costs an afternoon and makes everything afterwards considerably easier to evaluate. It is written for practitioners who have already built something and now want to know what they built.",
+  "sections": [
+    {
+      "h2": "Three things people call technomancy",
+      "p": [
+        "The first is the historical position, which is Crowley's from 1910: technology is simply the next substrate, and a spell written for wax and a sigil drawn on a vellum has a direct equivalent rendered on glass. The second is the movement sense, technopaganism and cybergoth, which emerged in the late eighties and nineties out of chaos magic, industrial music, and the early hacker scene's distrust of institutional magic.",
+        "The third is the applied one, and it is the only one you can actually work from. Applied technomancy treats a device as a ritual instrument. The sigil is designed to be displayed on a screen, and the charge is a deliberate interaction with an interface rather than a mark made on a surface. Most disagreement about the field is really disagreement about which of these three things is meant."
+      ]
+    },
+    {
+      "h2": "Terms worth having precisely",
+      "p": [
+        "Digital spellcasting is performing a working through an application or a script rather than by hand. Cyber-sorcery is the looser popular term and carries no method with it. Technopaganism is the cultural identity rather than a technique, involving an aesthetic and a set of commitments. Cybergoth is a subgenre built on a particular visual language. Algorithmic art is generative work, and it is the part of this field with the most defensible claim to being new rather than translated.",
+        "Keeping them apart is not pedantry. When someone says they are doing digital ritual and their meaning is a mood board with a sigil on it, versus someone running a defined sequence against a defined target, the two will evaluate completely differently. You cannot review a practice whose unit of analysis is undefined, and most of the disappointment in this field comes from having reviewed the wrong thing."
+      ],
+      "ol": [
+        "Technomancy, the substrate claim, from Crowley in 1910 onward.",
+        "Technopaganism, an identity and aesthetic rather than a method.",
+        "Digital spellcasting, a performed working through software.",
+        "Algorithmic art, generative output with a genuine claim to novelty."
+      ]
+    },
+    {
+      "h2": "Compression, and why the analogy holds",
+      "p": [
+        "The strongest link between the two traditions is information compression. A sigil reduces a sentence of intent to a glyph by removing the vowels and collapsing what remains. That is literally a compression operation, and a machine does it better and faster than a hand, which is the entire argument for doing it on a device.",
+        "Cryptographic signing is the second link. A signature binds a message to a key in a way that makes alteration detectable, which is precisely the property a sigil claims for itself: that the shape carries the statement and cannot be read by anyone who does not already know the statement. Neither operation produces energy. Both produce a relationship between a small artefact and a piece of language, and that relationship is the whole content of the sigil method."
+      ]
+    },
+    {
+      "h2": "Signatures, and what they bind",
+      "p": [
+        "A digital signature is worth understanding properly if you are going to use the analogy, because it explains both the appeal and the limit. The signature does not encrypt anything. It proves that a specific key produced this specific output from this specific input, and nothing else.",
+        "Read that way, a sigil is a commitment device. It fixes an input at the moment of construction, in a form that cannot be quietly revised later. That is genuinely useful and it genuinely has a computational analog. What it does not do is cause anything. Nobody thinks a signature moves money or finds documents, and a practitioner who transfers the analogy should keep the same discipline about which half of it is being claimed."
+      ]
+    },
+    {
+      "h2": "Tying the commit to the machine",
+      "p": [
+        "Version control introduced most people to the idea of a recorded, irreversible action with a timestamp and an author. That object has properties a ritual record also wants: it is unforgeable in the sense that you cannot claim to have made it earlier than you did, and it cannot be edited without leaving evidence.",
+        "Making the commit the ritual object is a common move in this field and it is a defensible one. It supplies a timestamp, an author, and a permanence that a notebook cannot. What it does not supply is a deadline or a prediction, and those are the two fields that decide whether a practice can be evaluated. If you take one thing from the analogy, take the timestamp, and then add the two fields yourself."
+      ]
+    },
+    {
+      "h2": "Who authors the output, exactly",
+      "p": [
+        "Algorithmic art is where the field gets genuinely interesting, because it is the one place where a machine is not compressing your sentence but contributing something you did not specify. You choose a system, a parameter set, and a seed, and the output is downstream of choices that were partly yours and partly the system's.",
+        "That is a real authorship question and it is also the closest digital practice comes to something the traditional methods cannot do. In sigilisation you compress; in generative work you delegate part of the composition. Practitioners who enjoy this tend to be the ones who also enjoy the parabola, since both accept that the tool has no fixed character and the quality lives in the operating conditions rather than the artefact."
+      ]
+    },
+    {
+      "h2": "The point where the comparison stops working",
+      "p": [
+        "It fails on persistence. A sigil is drawn once, charged, and then actively forgotten, which is a whole stage of the method. A file on a screen is never forgotten. It sits in a folder, it is indexed, it turns up in search results, and it gets re-read whenever the device is opened. This is not a technicality, because forgetting is what makes the method work at all.",
+        "It also fails on substitution. A screenshot of a sigil is not a sigil in any sense the tradition recognises, because the artefact was never in the room. And it fails on ambient exposure: a device is full of other people's images, notifications, and requests, so a screen cannot be made to hold a single thing the way a sheet of paper can. Practitioners who work on paper report reaching the required state faster, and the reason is mechanical rather than spiritual."
+      ]
+    },
+    {
+      "h2": "What the machine is genuinely better at",
+      "p": [
+        "Precision of reduction. A generator applies a consistent letter-dropping rule to a long sentence without tiring, and it can produce several variants in the time a hand takes to draw one. Consistency of visual output, which matters if you are working in a series. And unfamiliarity, because a rendered glyph does not look like handwriting, and the strangeness is a legitimate part of the effect.",
+        "The last of these is the one practitioners cite most and defend least. A shape that is not yours can carry a sentence that is yours, and the mind's relationship to it is different from its relationship to a drawing you made. Whether that difference is useful is testable, in the same unromantic way everything else in this field is testable. Set a prediction, charge both a hand-drawn and a generated sigil for the same intent, and see."
+      ]
+    },
+    {
+      "h2": "Other people are not in the room with you",
+      "p": [
+        "A sheet of paper has one owner. A networked device has several, and the difference matters operationally. Telemetry, backups, cloud sync, and screen sharing all mean that a working done on a device is not necessarily done in private, and the consent question here is not a formality.",
+        "The line is other people's autonomy. Work on your own behaviour, your own availability, and your own boundaries. Do not build anything whose function is to override somebody's stated preference, and do not treat a refusal as a problem to be solved technically. In the occult applications of this material that line is regularly crossed, usually by people who have not noticed they crossed it, and it is the one place where a technomancy practitioner should be more careful than a paper one rather than less."
+      ],
+      "ul": [
+        "Turn off sync before doing anything you would not want mirrored.",
+        "Keep the record off the device if the device is shared or monitored.",
+        "Build nothing whose purpose is to change someone else's stated preference.",
+        "Treat a refusal as data, never as a problem to engineer around."
+      ]
+    },
+    {
+      "h2": "One design that uses both substrates",
+      "p": [
+        "The arrangement most practitioners converge on eventually is boring and it works. Paper for the statement and the record, because that is where writing and dating are reliable. A device for the reduction, because a machine does the letter-dropping better. A device for the charge if you want it, because the interface is unfamiliar enough to hold attention. Paper for the dismissal, because forgetting needs a surface you can put something on and then put away.",
+        "Splitting it that way gives you the best of each and avoids the two places the device is genuinely worse. It also means you can drop any one component and the practice still runs, which is the property you want, because a practice that needs all four parts to function is a practice that stops functioning the first time a phone is lost."
+      ]
+    },
+    {
+      "h2": "Building something, in the right order",
+      "p": [
+        "The right order is almost always later than people want. Get a practice that produces dated records first, because the records are what tell you which field to build. A tool built before the records exist is a beautiful object aimed at a requirement you had not identified yet, and you will not discover the real requirement until the tool has already absorbed a lot of your time.",
+        "Build narrow. One script that reduces a sentence and nothing else, or one page that logs a sitting and nothing else. Both take an evening. Both teach you something a general-purpose app cannot, because the design decisions are yours and the constraint is visible. Resist anything that wants to be a platform, and treat any urge to add a second feature as the signal to use the thing you already have for a month."
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "Why use a screen instead of paper for a sigil?",
+      "Three real reasons and one false one. A screen is emissive, high-contrast, and physically unfamiliar as a ritual surface, all of which help; a machine reduces a long sentence consistently and quickly. The false reason is that it is more powerful. A screenshot is not a sigil, because the artefact was never in the room, and many practitioners reach the required state faster on paper for mechanical reasons rather than spiritual ones."
+    ],
+    [
+      "Is using code for magic just programming?",
+      "Partly, and being clear about which half is doing the work is the whole skill. The generative step is ordinary code doing an ordinary thing. The ritual frame is what makes the operation magickal, and the frame is doing the actual work, which is why the same script means different things to someone running it deliberately and someone running it as an experiment."
+    ],
+    [
+      "Is technomancy real magic?",
+      "It is a coherent application of sigil and ritual method to a new substrate, and whether the substrate changes the effect is a genuinely interesting and testable question. Nothing about the practice requires the answer to be yes, and a practitioner who has fixed a prediction and a date has a way of finding out that most people in this field have not bothered to construct."
+    ],
+    [
+      "What am I actually paying for when I upgrade a digital ritual tool?",
+      "Into precision and portability, mostly. Buying a sigil generator outright, or a solid reference for a tradition you have already chosen, is reasonable. A pay-what-you-want tool beats both a subscription and a free one that runs adverts. Subscriptions are a poor fit for this field, because the artefacts need to be exportable and the record needs to be yours in a decade, not rented from a service that can change its terms."
+    ],
+    [
+      "Should I build my own tools or use existing apps?",
+      "Use existing apps until you have a practice that produces records, because building first is how most people arrive at a beautiful tool and no method. Once your logs have a month of entries, you will know precisely which field you need and it will be a small one. Building before then is enjoyable and it does not move the work forward."
+    ]
+  ],
+  "related": [
+    [
+      "technomancy-and-cyber-occultism-technomancy-guide-6",
+      "Technomancy: Working Sigils Through Code and Screens"
+    ],
+    [
+      "what-is-technomancy-digital-magic",
+      "Technomancy: Digital Magic for the Modern Mage (2026)"
+    ],
+    [
+      "digital-spellcasting-technomancy-guide",
+      "Digital Spellcasting: How to Build a Tech-Enhanced Ritual Technomancy Guide (2026)"
+    ],
+    [
+      "cyber-paganism-digital-spirituality-guide",
+      "Cyber-Paganism: The New Techno-Spirituality Movement (2026)"
+    ],
+    [
+      "what-is-cybermancy-digital-sorcery-guide",
+      "Cybermancy: Complete Guide to Digital Sorcery (2026)"
+    ]
+  ]
+}
