@@ -234,23 +234,51 @@ def _links(items, kind):
 
 
 def render_app_card(spec):
-    """A short, visible pitch placed immediately after the lede."""
+    """Hero purchase card: the app most related to this article, with a CTA.
+
+    spec["products"] is ordered by the builder, most topical first, so apps[0]
+    is the one that actually matches the article. It gets the hero slot and the
+    buy link; the rest are listed underneath. Books are shown only as a
+    secondary row, and a books-only article falls back to books[0] as hero.
+    """
     apps, books = _prod(spec)
     if not apps and not books:
         return ""
-    bits = []
     if apps:
-        bits.append("Android app%s: %s" % ("" if len(apps) == 1 else "s", _links(apps, "apps")))
-    if books:
-        bits.append("Book%s: %s" % ("" if len(books) == 1 else "s", _links(books, "books")))
-    return (
-        '<section class="internal-links" style="%s">\r\n'
+        hero, rest_apps, hero_kind = apps[0], apps[1:], "apps"
+    else:
+        hero, rest_apps, hero_kind = books[0], [], "books"
+    out = [
+        '<section class="internal-links" style="%s">\r\n' % CARD_STYLE,
         '<p style="margin: 0 0 .5rem 0; font-size: .95rem;"><strong '
-        'style="color: var(--accent-gold);">Put this into practice</strong></p>\r\n'
+        'style="color: var(--accent-gold);">Put this into practice</strong></p>\r\n',
         '<p style="margin: 0 0 .5rem 0; font-size: .95rem;">Everything described above '
         'costs nothing and works on paper. If you would rather the bookkeeping were handled for you, '
-        'these are the ones built for this kind of work. %s. One payment each, no subscription, '
-        'no account.</p>\r\n</section>\r\n' % (CARD_STYLE, " ".join(bits)))
+        'this is the app built for this particular kind of work.</p>\r\n',
+        '<p style="margin: 0 0 .35rem 0;">'
+        '<a href="../%s/%s.html"><strong>%s</strong></a> '
+        '<span style="color: var(--text-muted); font-size: .9rem;">%s</span><br>'
+        '<span style="font-size: .92rem;">%s</span></p>\r\n'
+        % (hero_kind, hero["id"], esc(hero["name"]),
+           esc(hero.get("price_pretty", "")), esc(PITCH.get(hero["id"], ""))),
+        '<p style="margin: 0 0 .5rem 0;"><a href="../%s/%s.html" '
+        'style="font-weight: 600;">%s</a></p>\r\n'
+        % (hero_kind, hero["id"], CTA_LABEL % esc(hero["name"])),
+    ]
+    if rest_apps or books:
+        bits = []
+        if rest_apps:
+            bits.append("Also: %s" % _links(rest_apps, "apps"))
+        shown_books = books if hero_kind == "apps" else books[1:]
+        if shown_books:
+            bits.append("Book%s: %s" % ("" if len(shown_books) == 1 else "s",
+                                        _links(shown_books, "books")))
+        out.append('<p style="margin: 0 0 .5rem 0; font-size: .9rem; '
+                   'color: var(--text-muted);">%s</p>\r\n' % " &nbsp; ".join(bits))
+    out.append('<p style="margin: 0; font-size: .9rem; color: var(--text-muted);">'
+               'One payment, no subscription, no account.</p>\r\n')
+    out.append('</section>\r\n')
+    return "".join(out)
 
 
 def _money_rows(spec):
