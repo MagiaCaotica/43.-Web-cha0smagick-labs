@@ -327,6 +327,34 @@ def _money_rows(spec):
         'payment.</p>')
     return rows
 
+COMMENTS_SECTION = (
+    '<!-- Comments (giscus) -->\r\n'
+    '<section id="comments" class="post-comments" aria-labelledby="comments-title">\r\n'
+    '  <h2 id="comments-title" class="post-comments-title">Discussion &amp; Comments</h2>\r\n'
+    '  <p class="post-comments-intro">Tried this practice? Tell us what happened below. '
+    'Reader results are the most useful feedback we get &mdash; they show other '
+    'practitioners what to expect and tell us which guides to write next.</p>\r\n'
+    '  <div class="giscus giscus-container" id="giscus-comments"></div>\r\n'
+    '</section>\r\n'
+    '<script src="https://giscus.app/client.js"\r\n'
+    '        data-repo="MagiaCaotica/43.-Web-cha0smagick-labs"\r\n'
+    '        data-repo-id="R_kgDOQ95-4g"\r\n'
+    '        data-category="General"\r\n'
+    '        data-category-id="DIC_kwDOQ95-4s4DCREq"\r\n'
+    '        data-mapping="pathname"\r\n'
+    '        data-strict="0"\r\n'
+    '        data-reactions-enabled="1"\r\n'
+    '        data-emit-metadata="0"\r\n'
+    '        data-input-position="top"\r\n'
+    '        data-theme="dark_dimmed"\r\n'
+    '        data-lang="en"\r\n'
+    '        data-loading="lazy"\r\n'
+    '        crossorigin="anonymous"\r\n'
+    '        async>\r\n'
+    '</script>\r\n'
+)
+
+
 def render_tail(c, spec):
     rel = "".join('<p><a href="../blog/%s.html">%s</a></p>\r\n' % (s, esc(t))
                   for s, t in c.get("related", []))
@@ -343,7 +371,13 @@ def render_tail(c, spec):
         'border-radius: 8px;">\r\n<h3 style="color: var(--accent-gold); '
         'margin-bottom: 1rem;">Related Resources</h3>\r\n'
         + "\r\n".join(rows) +
-        '\r\n</div>\r\n</section>\r\n</article>\r\n</main>')
+        '\r\n</div>\r\n</section>\r\n'
+        # El bloque de comentarios va DENTRO de </article>, igual que en los
+        # posts ya publicados. La plantilla (_template.json) tiene una clave
+        # `tail` con el mismo proposito, pero render_tail la ignora por
+        # completo, asi que la unica fuente de verdad es aqui.
+        + COMMENTS_SECTION +
+        '</article>\r\n</main>')
 
 
 def _load_video_titles():
