@@ -1580,18 +1580,28 @@ section.post-comments p.post-comments-intro {
   margin: 0 0 1.5rem;
   max-width: 60ch;
 }
+/* El widget ocupa TODO el ancho de la caja. Antes llevaba `max-width: 800px`
+   + `margin: 0 auto` + `padding: 0 1rem`, lo que dejaba el iframe de giscus 32px
+   mas corto que la seccion: se veía como una caja cuadrada centrada en vez de un
+   area de comentarios justificada a la columna del post. Sin tope de ancho, el
+   iframe se estira a los bordes y giscus lo re-adapta solo en cada resize
+   (vigila el contenedor), asi que el bloque es responsive sin JS propio. */
 .post-comments .giscus,
 .post-comments .giscus-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.post-comments .giscus iframe { color-scheme: dark; }
+.post-comments .giscus iframe {
+  color-scheme: dark;
+  width: 100%;
+  max-width: 100%;
+}
 
 @media (max-width: 600px) {
   .post-comments { padding: 1.2rem; }
-  .post-comments .giscus,
-  .post-comments .giscus-container { padding: 0; }
 }
 
 /* ========================================================================
