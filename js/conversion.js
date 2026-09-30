@@ -1351,8 +1351,27 @@
     return host;
   }
 
+  // ¿La seccion de comentarios esta dentro de la ventana?
+  // Un modal encima de la caja de comentarios tapa justo lo que el lector
+  // venia a ver: su feedback y el de otros lectores.
+  function commentsInView() {
+    var el = document.getElementById('comments');
+    if (!el || !el.getBoundingClientRect) return false;
+    var r = el.getBoundingClientRect();
+    if (!r || !r.height) return false;
+    var vh = window.innerHeight || document.documentElement.clientHeight || 0;
+    return r.top < vh * 0.9 && r.bottom > 0;
+  }
+
   function showPopup(trigger) {
     if (popupAlreadySeen()) return;
+
+    // No interrumpir la lectura de comentarios. Se comprueba ANTES de
+    // markPopupSeen() a proposito: si el lector esta en la seccion de
+    // feedback ahora, el popup se difiere (puede dispararse al seguir
+    // leyendo) en vez de gastarse la unica oportunidad de la sesion.
+    if (commentsInView()) return;
+
     markPopupSeen();
 
     // Build on first show; reuse the same host on any later call.

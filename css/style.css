@@ -1545,6 +1545,56 @@ nav ul li a[href*="glossary"]::before { content: "▤ "; }
 @media (max-width: 600px) { .share-buttons { gap: 0.5rem; } .share-btn span { display: none; } .share-btn { padding: 0.6rem; } }
 
 /* ========================================================================
+   POST COMMENTS (giscus)
+   Sección de feedback insertada antes de </article> en cada post. El
+   contenedor lleva `class="giscus"` para que giscus monte dentro de él en
+   lugar de crear un div huérfano al final de <body>.
+   ======================================================================== */
+.post-comments {
+  margin: 3rem 0 1rem;
+  padding: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  scroll-margin-top: 2rem;
+}
+/* Los selectores llevan `section.post-comments h2.post-comments-title` a
+   proposito: muchos posts envuelven el articulo en `.article`, cuya regla
+   `.article h2` (0,1,1) gana a un simple `.post-comments-title` (0,1,0) y
+   deja el titulo en blanco con barra lateral. Este selector (0,2,2) gana. */
+section.post-comments h2.post-comments-title {
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent-gold);
+  margin: 0 0 0.8rem;
+  padding: 0 0 0.8rem;
+  border-bottom: 1px solid var(--border-subtle);
+  border-left: none;
+  padding-left: 0;
+}
+section.post-comments p.post-comments-intro {
+  font-size: 0.95rem;
+  color: var(--text-muted, #999);
+  margin: 0 0 1.5rem;
+  max-width: 60ch;
+}
+.post-comments .giscus,
+.post-comments .giscus-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.post-comments .giscus iframe { color-scheme: dark; }
+
+@media (max-width: 600px) {
+  .post-comments { padding: 1.2rem; }
+  .post-comments .giscus,
+  .post-comments .giscus-container { padding: 0; }
+}
+
+/* ========================================================================
    RELATED ARTICLES (cross-links)
    ======================================================================== */
 .related-articles { margin: 3rem 0; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); }
