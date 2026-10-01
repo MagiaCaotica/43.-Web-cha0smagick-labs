@@ -4,7 +4,20 @@
   "h1": "ALEXIA",
   "seo_title": "ALEXIA | Clarity, Decisions and Focus Protocol",
   "description": "A complete working guide to ALEXIA: what it is, the clarity, decisions and focus structure behind it, and the full protocol. Includes step-by-step protocol, honest failure modes, and FAQ.",
-  "keywords": ["alexia sigil", "alexia ritual", "alexia invocation", "alexia chaos magic", "clarity sigil", "decision making sigil", "focus and concentration ritual", "how to clear the mind chaos magic", "wisdom sigil", "mental clarity magic", "sigil for studying", "protocol clarity sigil"],
+  "keywords": [
+    "alexia sigil",
+    "alexia ritual",
+    "alexia invocation",
+    "alexia chaos magic",
+    "clarity sigil",
+    "decision making sigil",
+    "focus and concentration ritual",
+    "how to clear the mind chaos magic",
+    "wisdom sigil",
+    "mental clarity magic",
+    "sigil for studying",
+    "protocol clarity sigil"
+  ],
   "published": "2026-09-26",
   "published_human": "September 26, 2026",
   "lede": "Clarity is the least dramatic request in this material and the one most people can actually work with, because it is the only aim here that reduces to a countable output. This is the full operational sequence for a clarity working, in order, with the point at which each stage stops being optional and the failure mode that costs the most at each one.",
@@ -13,7 +26,7 @@
       "h2": "Clarity Is a Task With a Countable Output",
       "p": [
         "Most aims in this material resist evaluation. You cannot check whether an entity granted anything, and a sigil aimed at someone's feelings produces effects you would struggle to describe without contaminating them first. Clarity is the exception, which is why it is worth building a first practice on.",
-        "The reason is that clarity questions have outputs. Not a feeling, but a decision made, a criterion written, an option eliminated, a sentence you can say out loud. Those are observable by someone who was not in the room, and that property is worth more than it sounds, because it is the difference between a practice that can be evaluated and one that can only be felt.",
+        "The reason is that clarity questions have outputs. Not a feeling, but a decision made, a criterion written, an option eliminated, a sentence you can say out loud. Someone who was not in the room can observe those, and that property is worth more than it sounds. It is the difference between a practice you can evaluate and one you can only feel.",
         "This also means a clarity working can fail cleanly. If the output is a written decision and the decision is not written by the deadline, the working did not produce it, and you find that out on schedule rather than in a year of vague dissatisfaction. Clean failure is underrated. Most practice in this area is built to avoid it.",
         "What clarity is not is a mood. People arrive wanting to feel clearer, and a sigil aimed at a feeling is a mood sigil with extra steps. The work is about producing the document or the decision, and the feeling, when it comes, is a side effect that is not available to schedule."
       ]
@@ -60,7 +73,7 @@
       "h2": "Gnosis Receptive, Visualisation Generative",
       "p": [
         "These two get treated as synonyms and they are opposites in how they function, and confusing them is the most frequent error in the beginner stages of this work.",
-        "Gnosis is receptive attention to what is actually happening. It is closer to noticing than to imagining, it has a long contemplative history that predates the modern movement by centuries, and its output is a description rather than an invention. The discipline is tolerating not knowing, which is hard and gets harder the more you want an answer.",
+        "Gnosis amounts to receptive attention to whatever is actually happening. It is closer to noticing than to imagining, it has a long contemplative history that predates the modern movement by centuries, and its output is a description rather than an invention. The discipline is tolerating not knowing, which is hard and gets harder the more you want an answer.",
         "Visualisation is generative. You are producing the content, and the content is under your control, which is why it feels good and why it proves nothing about the world. It is a legitimate technique for rehearsal, for emotional processing and for building a stable picture you intend to act from. What it is not is a way of contacting anything.",
         "The confusion has a practical cost. Someone who visualises during a gnosis attempt will get a vivid, pleasant, entirely self-generated experience and record it as contact. That is not a small error, because it produces a confident conclusion from an activity that could not have produced one.",
         "The operational distinction is simple enough to hold. During gnosis you are not supplying anything, and the sign that you have slipped is that the scene is interesting. A receptive contact is frequently dull, ambiguous and slightly uncomfortable, and dullness is the single most reliable sign that you are not generating."
@@ -113,8 +126,8 @@
       "Use it to surface what you already lean towards, not to outsource the choice. The instrument generates material you would not have reached, which is genuinely useful for finding the criterion you are avoiding, and useless for supplying a criterion you do not have. The test of a good reading is that it makes the decision easier to state rather than making the outcome seem already decided."
     ],
     [
-      "What is the difference between gnosis and visualisation?",
-      "Gnosis is receptive attention to what is actually happening, and its output is a description. Visualisation is generative, you are producing the content, and it proves nothing about anything outside your head. The practical test is dullness: a receptive attempt is usually ambiguous and slightly uncomfortable, and a vivid interesting scene almost always means you have slipped into generating instead of receiving."
+      "Where does gnosis sit apart from visualisation?",
+      "Receptive attention to whatever is actually happening is what gnosis is, and what comes out of it is a description. Visualisation is generative, you are producing the content, and it proves nothing about anything outside your head. The practical test is dullness: a receptive attempt is usually ambiguous and slightly uncomfortable, and a vivid interesting scene almost always means you have slipped into generating instead of receiving."
     ],
     [
       "Do clarity workings actually improve memory?",
@@ -130,10 +143,25 @@
     ]
   ],
   "related": [
-    ["clarity-decisions-and-focus-clarity-sigil-guide", "Clarity, Decisions and Focus: A Sigil Guide for Thinking"],
-    ["direction-clarity-purpose-framework", "Direction and Clarity: A Framework for Finding Purpose"],
-    ["habit-formation-neuroscience-willpower", "Habit Formation and Willpower: What the Evidence Supports"],
-    ["stillness-meditation-cognitive-clarity", "Stillness and Meditation for Genuine Cognitive Clarity"],
-    ["scientific-studies-zener-cards-esp-validation", "What the Zener Card Studies Actually Show About Validity"]
+    [
+      "clarity-decisions-and-focus-clarity-sigil-guide",
+      "Clarity, Decisions and Focus: A Sigil Guide for Thinking"
+    ],
+    [
+      "direction-clarity-purpose-framework",
+      "Direction and Clarity: A Framework for Finding Purpose"
+    ],
+    [
+      "habit-formation-neuroscience-willpower",
+      "Habit Formation and Willpower: What the Evidence Supports"
+    ],
+    [
+      "stillness-meditation-cognitive-clarity",
+      "Stillness and Meditation for Genuine Cognitive Clarity"
+    ],
+    [
+      "scientific-studies-zener-cards-esp-validation",
+      "What the Zener Card Studies Actually Show About Validity"
+    ]
   ]
 }

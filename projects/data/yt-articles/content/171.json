@@ -4,7 +4,21 @@
   "h1": "GLAMOUR MAGICK",
   "seo_title": "GLAMOUR MAGICK | The Mind Science of Practice Reference",
   "description": "A complete working guide to GLAMOUR MAGICK: what it is, the the mind science of practice structure behind it, and the full protocol. Includes step-by-step protocol, honest failure modes, and FAQ.",
-  "keywords": ["glamour magick sigil", "glamour magick ritual", "glamour magick invocation", "glamour magick chaos magic", "why does magic work placebo", "placebo effect and ritual", "ritual and the nervous system", "how does the placebo effect work", "statistical significance and spiritual claims", "costs and benefits ritual", "ritual for anxiety neuroscience", "the psychology of occult practice", "reference why does magic work placebo"],
+  "keywords": [
+    "glamour magick sigil",
+    "glamour magick ritual",
+    "glamour magick invocation",
+    "glamour magick chaos magic",
+    "why does magic work placebo",
+    "placebo effect and ritual",
+    "ritual and the nervous system",
+    "how does the placebo effect work",
+    "statistical significance and spiritual claims",
+    "costs and benefits ritual",
+    "ritual for anxiety neuroscience",
+    "the psychology of occult practice",
+    "reference why does magic work placebo"
+  ],
   "published": "2026-09-26",
   "published_human": "September 26, 2026",
   "lede": "A reference piece rather than an argument, because the vocabulary of this debate does more damage than most of the claims under dispute. It is built around four findings that are well replicated, one statistical demonstration that settles a specific case, and a glossary of terms that get used as if they were settled when they are not.",
@@ -41,7 +55,7 @@
       "p": [
         "Of everything in this area, the findings about the physiological response to structured ritual are the least equivocal, because they were not produced by people trying to vindicate magic. They come from clinical literature on stress, and they are consistent.",
         "Structured ritual reliably produces autonomic change. Heart-rate variability tends to fall as a session proceeds, respiration patterns change in characteristic ways, and the specific profile of that change differs depending on whether the ritual is described as demanding, restful or frightening. Learned and expected physiological patterns are being enacted, and they are doing so in a measurable direction.",
-        "That is a real effect and it is not a trivial one. Sustained autonomic arousal is associated with a long list of things people would rather avoid, and reliably moving a nervous system out of a state is worth having regardless of what caused it.",
+        "The effect is real, and it is not a small one. Sustained autonomic arousal is associated with a long list of things people would rather avoid, and reliably moving a nervous system out of a state is worth having regardless of what caused it.",
         "The temptation is to slide from physiological change to any outcome you like, and the slide is invalid in both directions. A practice that reliably calms you has not thereby been shown to affect anything outside your body, and a practice that does not calm you has not been shown to be ineffective at anything. The autonomic findings are solid and they are about the body, which is exactly the size of claim they can carry."
       ]
     },
@@ -117,7 +131,7 @@
   "faq": [
     [
       "How can I tell whether a result I got was real?",
-      "You usually cannot from a single instance, and no amount of sincerity substitutes for a design. Write down a falsifiable prediction before the attempt, attach a date, and count every attempt including the ones you were certain would fail. The test to apply first is whether the outcome would have been likely anyway, which is a base rate calculation rather than an intuition."
+      "You usually cannot from a single instance, and no amount of sincerity substitutes for a design. Put a falsifiable prediction in writing before the attempt, pin a date to it, and log every attempt, including the ones you were sure would fail. The test to apply first is whether the outcome would have been likely anyway, which is a base rate calculation rather than an intuition."
     ],
     [
       "Ritual does seem to help with anxiety. Is that magic?",
@@ -137,10 +151,25 @@
     ]
   ],
   "related": [
-    ["zener-cards-probability-statistical-significance", "Zener Cards: Probability and Statistical Significance Explained"],
-    ["what-is-a-zener-card-definition-history-statistics", "What a Zener Card Is and Where the Statistics Come From"],
-    ["esp-test-statistics-explained-for-beginners", "ESP Test Statistics Explained for Absolute Beginners"],
-    ["emotional-regulation-techniques-stoic-neuroscience", "Emotional Regulation Techniques Grounded in Neuroscience"],
-    ["neuroplasticity-magic-brain-hacking", "Neuroplasticity and Magic: What Brain Research Actually Shows"]
+    [
+      "zener-cards-probability-statistical-significance",
+      "Zener Cards: Probability and Statistical Significance Explained"
+    ],
+    [
+      "what-is-a-zener-card-definition-history-statistics",
+      "What a Zener Card Is and Where the Statistics Come From"
+    ],
+    [
+      "esp-test-statistics-explained-for-beginners",
+      "ESP Test Statistics Explained for Absolute Beginners"
+    ],
+    [
+      "emotional-regulation-techniques-stoic-neuroscience",
+      "Emotional Regulation Techniques Grounded in Neuroscience"
+    ],
+    [
+      "neuroplasticity-magic-brain-hacking",
+      "Neuroplasticity and Magic: What Brain Research Actually Shows"
+    ]
   ]
 }
