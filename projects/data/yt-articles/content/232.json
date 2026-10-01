@@ -1,0 +1,156 @@
+{
+  "n": 232,
+  "slug": "tecnomago-technomancy",
+  "h1": "TECNOMAGO",
+  "seo_title": "TECNOMAGO | Technomancy and Cyber Occultism Beginner Path",
+  "description": "A complete working guide to TECNOMAGO: what it is, the technomancy and cyber occultism structure behind it, and the full protocol. Includes step-by-step...",
+  "keywords": [
+    "tecnomago sigil",
+    "tecnomago ritual",
+    "tecnomago invocation",
+    "tecnomago chaos magic",
+    "technomancy",
+    "cyberpunk magic",
+    "cyber pagans",
+    "digital sorcery",
+    "what is technomancy",
+    "code as ritual",
+    "techno-sorcery",
+    "cyber occultism explained",
+    "digital magic applied",
+    "beginner path technomancy"
+  ],
+  "published": "2026-09-27",
+  "published_human": "September 27, 2026",
+  "lede": "A word from 1910, and a practice that has been waiting for its substrate. Technomancy is not a new invention dressed in old clothes; it is the continuation of an argument Aleister Crowley made a century ago about which material the magician should be working with. The short version is that every tradition treats some substance as more responsive than the last. For centuries that substrate was the astral plane. For a century it was a material language. Now it is a networked machine. The practitioner of technomancy is not doing something new so much as moving the address on the envelope. What follows is a working description: where the term comes from, what the late twentieth century added to it, how a device functions as a ritual instrument rather than a prop, what compression and digital signing already do that sigilisation has always claimed to do, and where the practice is ethically harder than anything in the previous chapters.",
+  "sections": [
+    {
+      "h2": "A word Crowley used in 1910",
+      "p": [
+        "The term technomancy appears in a short essay Crowley published in 1910, and the argument inside it is the reason the word still matters. Crowley was not claiming that machines had occult properties in some mystical sense. He was making a more practical argument: that the most advanced technological process available in his own century, the continuous self-organisation of the material world into coherent form, was the process a magician should be studying. The substrate changes. The technique of recognising and imposing form on a substrate does not.",
+        "This is why technomancy is better understood as a position than a technique. The historical record is thin, a handful of pages, and it was largely ignored for half a century. But the position it takes is durable. If you believe that intention expressed through form does something in the world, then the interesting question is never whether a particular material is magical. It is which material is currently carrying the most information, the most collective attention, and the most reliable feedback."
+      ]
+    },
+    {
+      "h2": "The late eighties and the people who wired it up",
+      "p": [
+        "The second wave arrived around the end of the 1980s and the beginning of the 1990s, and it came from an unusual intersection. Chaos magic supplied a method that was cheap, experimental, and indifferent to orthodoxy. Industrial culture supplied the hardware, the networks, and a population already accustomed to living inside a technical environment. Hacker ethics supplied the attitude, which is close to the magician's attitude in a way that is easy to miss: information is power, access to it is a decision, and the tools should be understood by the people holding them.",
+        "Terms in this space multiplied quickly and none of them standardised. Technopaganism, cybergoth, cyberoccultism and technomancy all describe overlapping scenes rather than distinct schools. The differences that matter are differences of practice. Some approaches treat the network as a sacred space to be entered respectfully. Some treat the device as an instrument to be tuned. Some treat code itself as the new grimoire. For a beginner, the useful thing is to pick one posture and stay inside it, because mixing them produces incoherent results and a lot of arguing about vocabulary."
+      ]
+    },
+    {
+      "h2": "Devices treated as ritual instruments",
+      "p": [
+        "An instrument is not the same as a tool. A tool extends what you can do. An instrument carries a relationship, a history, and a set of expectations about how it should be handled. The difference sounds like a distinction without a difference until you notice how a musician treats an instrument. It does not get thrown on a chair between pieces. It is not used for unrelated tasks. It has a maintenance routine that is not optional.",
+        "Applied technomancy works the same way with a device. The screen is the working surface. A glyph designed for a specific display, with a specific aspect ratio and a specific font size, is not decoration; it is the design of the visual field for that instrument. The charge then consists of deliberate interaction with the interface rather than staring at a symbol on paper. Opening the file, scrolling it, holding the image at a fixed distance, returning to it at a fixed hour. The ritual is the repeated, bounded relationship with the object."
+      ]
+    },
+    {
+      "h2": "Compression, signing, and what code already is",
+      "p": [
+        "Here is where the practice stops looking new. Sigilisation is compression. A sigil takes a long sentence and produces a short mark that will mean that sentence to the person who made it, and which will fail to mean it to anyone else. That is exactly the specification of a compressed representation with a private key. Cryptographic signing takes a document and produces a short mark that verifies the document has not changed and that it came from the holder of a particular key. That is the same operation performed for verification rather than for recall.",
+        "Generative code and algorithmic art sit in the same family. A small routine produces a large, complex, non-repeating field from a compact specification. So does a sigil drawn carefully from a letter-by-letter reduction. The honest conclusion is not that programmers are magicians by another name. It is that a working body of technical practice converged on techniques that practitioners of symbolic form have used for centuries, and that the convergence is worth taking seriously as a source of design ideas."
+      ]
+    },
+    {
+      "h2": "A technomantic working, start to charge",
+      "p": [
+        "A workable first working looks like this. Choose a single behaviour you want to make easier to start, expressed as an imperative sentence. Write it out longhand. Reduce it to a glyph by whatever method you use. Now render that glyph for the screen: a clean export at the resolution of the device you will actually read it on, with no browser chrome, no notifications, and nothing else competing for attention.",
+        "Place that image where the device rests, or set it as the only thing in a dedicated folder with a name that does not describe its content. Then define the charge. The charge is the moment of deliberate, uninterrupted contact, on a schedule you can keep, for a length of time you can sustain. Thirty seconds counts. What fails is the version where you tell yourself you will do it daily and then do it irregularly for two weeks and conclude the method does not work."
+      ]
+    },
+    {
+      "h2": "What a screen cannot do for the work",
+      "p": [
+        "Digital media have a specific weakness that practitioners ignore until the practice stalls: they are continuously available and therefore continuously interruptible. A paper sigil on a desk can be ignored for a week. A file on a desktop is visible every time you open the machine, and each exposure is a small demand on the part of the mind that is supposed to be doing the work.",
+        "There is also a flattening problem. A screen renders every mark in the same resolution and the same light, which means the distinctions that make a hand-drawn glyph meaningful, weight, pressure, hesitation, correction, are all discarded at the moment of digitisation. If you work this way, either render the reduction with enough fidelity that those distinctions survive, or accept that you are working with a different object and stop pretending it is the one you drew."
+      ]
+    },
+    {
+      "h2": "The interface as a ritual boundary",
+      "p": [
+        "Every interface makes an argument about attention. It tells you what is above the fold, what is one tap away, what will notify you. A ritual boundary is the same kind of statement, made deliberately rather than by default. Removing the notifications from the device that carries your glyph is not productivity advice. It is the equivalent of clearing a table.",
+        "There is a version of this practice that is largely about building an environment which does not fight you, and it is worth doing even if you never go further than that. The stronger version draws a line around when the instrument is engaged. The screen is off and the working is not happening. The working happens at a fixed hour with the device in a fixed state. A boundary that can be crossed by a notification is not a boundary."
+      ]
+    },
+    {
+      "h2": "Hardware, software, and the cost of a first system",
+      "p": [
+        "The first system is the expensive part, and most beginners spend it in the wrong place. They buy a dedicated device, or a drawing tablet, or a specific application, and then produce less than they would have with a notebook. The functions that matter are unglamorous. A way to produce a clean high-resolution image. A way to keep the reduced image identical across every screen it will appear on. A place to write the long sentence, which is usually the only piece of paper involved.",
+        "What is worth spending money on is the reduction itself, if you find a method that needs tools, and storage that you will not reorganise. What is not worth it is display hardware for a working that consists of one mark held at a fixed distance. Start with whatever you already own. Add a component only when you can name the specific friction it removes."
+      ]
+    },
+    {
+      "h2": "Keeping a working alive across device changes",
+      "p": [
+        "Devices get replaced, formats change, and a glyph that was legible on a phone in 2024 is illegible on a laptop two years later. The first thing to do is keep the source, not just the image. The long sentence, the intermediate reductions, the final export. A working that exists only as a picture on a device you no longer own is a working that has ended without anybody deciding it had ended.",
+        "The second thing is to keep the schedule rather than the file. A working that depended on a specific hour, in a specific place, on a specific device has always been a working on those conditions, and the loss of the device is a change in conditions rather than a failure of the practice. If the timing was doing the work, preserve the timing and let the medium change. If you cannot say which of the two was carrying the effect, you did not know what you were testing."
+      ]
+    },
+    {
+      "h2": "Signals that are not just latency",
+      "p": [
+        "In a networked practice the most interesting signals are the ones that arrive from outside your own attention. A version of a document you did not expect to be useful. A question that arrives at the moment you had drafted the answer. Someone else describing the exact obstruction you hit yesterday. The temptation is to sort all of this into a single category of evidence for the practice, and the discipline is to record each instance as a single data point with no interpretation attached.",
+        "What you are actually looking for is a change in the rate of these arrivals, and that is slow to detect from inside. A working that produces nothing observable for a month has not failed. It has produced a data point that is indistinguishable from a month in which you paid no attention at all. Keeping the two states distinguishable is the only way the record stays worth anything."
+      ]
+    },
+    {
+      "h2": "Consent inside a networked practice",
+      "p": [
+        "The ethical difficulty in this field is not the same one that dominates the older material, because nothing here operates on another person's mind. The difficulty is a consent problem about the network itself. A ritual performed entirely on your own device is a private act. The same ritual performed on a connected device, using a synchronised clock, a shared account, or a hosted application, involves other people's infrastructure and other people's attention, and often other people's data.",
+        "Decide before you start what you are and are not willing to route through someone else's system. If the working requires a service you have not audited, and the service is one you would not describe to the person whose data it carries, that is a reasonable place to stop. The historical occult traditions were not careful about consent because they were not thinking about networks. Technomancy has to think about it from the first working."
+      ]
+    },
+    {
+      "h2": "The failure mode of pure novelty",
+      "p": [
+        "The characteristic way for this practice to fail is not scepticism but enthusiasm that never becomes a schedule. Technological practice attracts people who enjoy configuring systems, and configuring a system is a far more pleasant activity than performing a working. The tell is that you can describe your setup in detail and cannot describe your last month of practice.",
+        "The cure is unglamorous. Set the standard low enough that you do not feel like negotiating with yourself, and high enough that it happens on most days. If your practice is three minutes of deliberate contact with a mark on a screen, done at the same hour, that is enough to find out whether anything is happening. Everything else, the specialised application, the second device, the custom firmware, is a reward for having done the three minutes consistently for a month."
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "Is technomancy a new invention or an old practice with new equipment?",
+      "The honest answer is that the equipment is new and the argument is not. Crowley made the case in 1910 that a magician's method should follow whatever material is currently doing the work of organising the world, and a networked device now occupies that position. Whether the substrate makes the practice more effective is a separate empirical question, and one that technomancers rarely test, which is a weakness rather than a feature."
+    ],
+    [
+      "Do I need to understand programming or electronics to work this way?",
+      "Not to begin. The reduction, the scheduling, and the boundary around the instrument are all things you can do with paper, an existing device, and discipline. Technical knowledge helps if you want the generative and cryptographic parallels to be more than analogies, and it becomes necessary the moment you start building your own tooling. Most working technomancers arrived through the symbolic end rather than the technical one."
+    ],
+    [
+      "What is the difference between a technomantic sigil and a desktop wallpaper?",
+      "The schedule and the reduction. A wallpaper is ambient, available to be ignored, and often chosen for how it looks. A technomantic sigil is reduced from a specific sentence that names a behaviour you have not yet managed, and it is contacted at a fixed time for a fixed length. If you can remove the image and the practice stops, the practice was never in the image."
+    ],
+    [
+      "Is using a hosted application or a synchronised cloud service a problem?",
+      "It is a decision rather than a prohibition. A working routed entirely through your own hardware keeps the material inside your control. A working that depends on a third-party service is entangled with that service's uptime, terms, data retention, and possibly other users' attention. Knowing which of the two you are doing, and being able to say why, is the whole of the requirement."
+    ],
+    [
+      "How long before I should expect to see any result from a technomantic working?",
+      "Set the threshold before you start, and prefer something behavioural and countable over something atmospheric. Something you attempt more often, something you finish rather than abandon, a change in how often you sit down at the appointed hour. A month of records is the minimum that can distinguish a practice from a good week, and three months is where a real pattern becomes arguable rather than merely possible."
+    ]
+  ],
+  "related": [
+    [
+      "austin-osman-spare-sigil-method",
+      "Austin Osman Spare Sigilization: The Original Method Explained"
+    ],
+    [
+      "austin-osman-spare-magic-of-disorder-critique",
+      "Austin Osman Spare and the Magic of Disorder: A Criticism"
+    ],
+    [
+      "technomancy-and-cyber-occultism-technomancy-guide",
+      "Technomancy and Cyber Occultism | Technomancy and Cyber"
+    ],
+    [
+      "cyber-paganism-digital-spirituality-guide",
+      "Cyber-Paganism: The New Techno-Spirituality Movement (2026)"
+    ],
+    [
+      "digital-spellcasting-technomancy-guide",
+      "Digital Spellcasting: How to Build a Tech-Enhanced Ritual Technomancy Guide (2026)"
+    ]
+  ]
+}
