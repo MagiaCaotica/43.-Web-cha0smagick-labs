@@ -1,0 +1,156 @@
+{
+  "n": 263,
+  "slug": "konspet-technomancy",
+  "h1": "KONSPET",
+  "seo_title": "KONSPET | Technomancy and Cyber Occultism Protocol",
+  "description": "A complete working guide to KONSPET: what it is, the technomancy and cyber occultism structure behind it, and the full protocol. Includes step-by-step...",
+  "keywords": [
+    "konspet sigil",
+    "konspet ritual",
+    "konspet invocation",
+    "konspet chaos magic",
+    "technomancy",
+    "cyberpunk magic",
+    "cyber pagans",
+    "digital sorcery",
+    "what is technomancy",
+    "code as ritual",
+    "techno-sorcery",
+    "cyber occultism explained",
+    "digital magic applied",
+    "protocol technomancy"
+  ],
+  "published": "2026-09-27",
+  "published_human": "September 27, 2026",
+  "lede": "A technomantic working is made of two materials that behave nothing alike: a piece of software and a physical object you own. The software is disposable and the object is not, and most of what goes wrong in this practice comes from treating them as one thing. The sequence below runs in the order it actually has to happen, from choosing the device through to the maintenance nobody schedules, and it ends on the part that is genuinely difficult, which is that the working usually depends on infrastructure belonging to somebody else. That last point is not a footnote. It is the only structural objection to the practice, and it deserves the same treatment as any other ethical question rather than being waved through because the practice is fun.",
+  "sections": [
+    {
+      "h2": "A working made of hardware and code",
+      "p": [
+        "You will need somewhere to keep a glyph for months, and you will need it to survive a phone replacement, a system update, a dropped service and an account being closed. That requirement is more demanding than it sounds, because the most convenient display device in your life is also the least durable and the least under your control. Decide at the start that the glyph will be backed up somewhere you own, or accept from the beginning that you may lose it and be ready to redraw it.",
+        "The second material is the glyph itself, and the same two-part logic applies to it. Draw it in something you can reproduce, and write down the sentence it came from in plain text, in the same place, in the same session. A glyph with no recorded source sentence is a shape. Only the pair is an instrument, and the pair is trivial to keep if you build it in from the start and impossible to reconstruct later."
+      ]
+    },
+    {
+      "h2": "Choosing the device that will hold the glyph",
+      "p": [
+        "Screen size is the practical constraint. A glyph designed to be glanced at on a phone in three seconds is a different drawing from one designed to be studied on a monitor, and the first kind is what a daily maintenance practice actually needs. Draw for the smallest surface you will use, and keep a larger version for the times when you want to look properly.",
+        "Beyond size, the requirements are dull and non-negotiable: it must be something you will still be using in six months, something you can see without unlocking anything that would pull you into the device, and something you can put down. A dedicated tablet propped against a wall, or a printed card in a drawer, satisfies all three better than a phone and is worth the minor inconvenience."
+      ]
+    },
+    {
+      "h2": "Designing the glyph for the size of a screen",
+      "p": [
+        "Reductions that work on paper frequently fail at small scale because the strokes close up. Draw it small, then draw it at the size it will actually be displayed, then decide what has to go. What has to go is usually the letters that carried the least of the sentence's weight. A shorter glyph that is legible at the intended size beats a more complete one that reads as a smudge.",
+        "Test it the way it will be used, which is from across a room or from a pocket for two seconds. If you cannot name the sentence from the shape alone, you have designed a picture rather than a compression, and the charge will not have anything to attach to."
+      ]
+    },
+    {
+      "h2": "The charge, which is an interaction",
+      "p": [
+        "In this tradition the charge is sustained attention held on the connection between the sentence and its shape, and on a screen that connection can be made physical in a way it cannot with ink. Open the device, display the glyph, run the sentence aloud, and interact with the interface while you do it: scroll it, scale it, dismiss something, do the small ordinary operations of using the thing.",
+        "The reason this works better than it sounds is that the deliberate use makes the device stop being ambient. You already carry a rectangle around all day and it has almost entirely faded into background; twenty minutes of using it on purpose, with a sentence attached, pulls it back into the foreground where attention can actually land on it. That is a real mechanism, it does not require a belief about anything, and it is the part of the practice that will still be doing something after the metaphysics have lost their appeal."
+      ]
+    },
+    {
+      "h2": "What compression already does",
+      "p": [
+        "Every time a file is zipped, a piece of text is folded down to a shorter form that a program can expand back. That is what a sigil does with a sentence, and the tradition's claim that sigilisation is meaningful is a claim about the compression step rather than about anything supernatural. Large enough compressions are hard to reverse by eye, which is exactly why a good glyph cannot simply be read back as a sentence.",
+        "Keeping the source text is the discipline that makes the analogy useful rather than decorative. A zip archive with no original is a broken archive, and a sigil with no recorded sentence is a shape you will not be able to interpret in six months. The parallel also explains the failure mode: if you cannot produce the source, you have a drawing, and a drawing does not hold the meaning."
+      ]
+    },
+    {
+      "h2": "A signature is a glyph anyone can verify",
+      "p": [
+        "Cryptographic signing is the same operation with one difference that is worth the whole comparison. A sigil compresses a statement and relies on the maker's memory to expand it. A signature compresses a statement and includes the means to check that it has not changed. Same compression, added verification, and that addition is what turns a private mark into something other people can rely on.",
+        "The practical use for a practitioner is concrete. Write the sentence in plain text, hash it, and keep the hash with the glyph. When you come back in six months and want to know whether the sentence you are working from is the one you originally made, you can check. It is a thirty-second routine that removes a category of doubt, and it is the closest thing in this practice to an audit."
+      ]
+    },
+    {
+      "h2": "The maintenance nobody schedules",
+      "p": [
+        "Nothing in the software will remind you. There is no notification for the day the chain breaks, and no alert for the week in which the sentence quietly stops meaning anything to you. The daily glance is therefore a manually maintained piece of infrastructure, and unmaintained infrastructure fails quietly enough that you will not notice until you try to use it.",
+        "Put the maintenance in the calendar rather than trusting intention, and put the source text and the hash in the same place as the glyph. The entire operational burden of this working is one calendar entry and one text file. Practitioners who skip both and rely on remembering tend to find that the device has been replaced and the sentence with it."
+      ]
+    },
+    {
+      "h2": "Replacing the phone without losing the working",
+      "p": [
+        "Plan for the replacement in advance, because it will happen without warning and the question you will face at two in the morning on a new device is not a spiritual one. The list is short: the source sentence, the glyph as a vector or a photograph, the date of the charge, and the hash if you made one. Four items, and any cloud account that is not yours is not a fifth option you can rely on.",
+        "A redraw during the first week on a new device is also fine, provided you compare it against the old one. If the reduction was done by eye, a redraw will differ slightly, and that difference is informative: it tells you how much of the shape was load-bearing and how much was accidental. Practitioners who keep the original tend to find a substantial fraction of the strokes are arbitrary."
+      ]
+    },
+    {
+      "h2": "When the network is the working",
+      "p": [
+        "At some point the practice drifts from a device you own to a service you do not. The glyph moves into a synced note, the daily glance becomes a page load, and the working now depends on somebody else's uptime, terms of service, monetisation decisions and moderation policy. Some of this is entirely reasonable and none of it should be a surprise, because the drift is gradual and each individual step looks harmless.",
+        "The practical response is to keep one part of the practice entirely local. One device you own, one file you can open with no network, one calendar entry. If the rest of your working ends up somewhere you do not control, you will still have a way to run the sentence, and that is the difference between a practice you own and a habit you are visiting."
+      ]
+    },
+    {
+      "h2": "Consent, and the infrastructure you do not own",
+      "p": [
+        "This is the part that is genuinely hard, and it is not about spirits. Running a working through a company's servers means running it through a system operated by people who have not agreed to be part of it and who may not have thought about it. Most such systems are passive infrastructure, which is a real distinction, and the burden falls on you to make it rather than on the provider to opt in.",
+        "Keep two limits and hold them. Do not use other people's data, accounts, behaviour or attention as the substrate of a working, because the moment you do, the material is being taken without consent by the only actor capable of taking it. And do not point a working at a person, for the reasons the love-work discussion sets out in detail. A technomantic practice is not a licence to automate either of those things."
+      ]
+    },
+    {
+      "h2": "The failure mode of novelty",
+      "p": [
+        "The characteristic failure here is configuring rather than practising. Buying a new app, building a better dashboard, generating a more elaborate glyph, migrating the whole system to a new platform, and producing no actual daily glance for a month. The work feels technical and productive and is not the practice at all. Technomancy attracts people who enjoy systems, and systems are the most comfortable possible substitute for the one boring action the technique requires.",
+        "The test is simple. Count the days in the last month on which you used the device deliberately with the sentence attached. If the number is small, the configuration is not serving the practice, and the honest move is to strip it back to a card in a drawer and get the count up before adding anything else."
+      ]
+    },
+    {
+      "h2": "What survives the upgrade",
+      "p": [
+        "The sentence and the habit. Everything else is replaceable: the device, the app, the glyph, the hash, the interface, the aesthetic. After a few cycles of running the working, the sentence has usually become the thing you do without consulting the screen, at which point the apparatus has completed its job and can be simplified as far as you like.",
+        "The reasonable end state is a text file, a card, and a daily ten minutes. Most practitioners arrive there within a year, and the ones who enjoy the technology tend to resist the simplification longest. The technology was the entry point. Keeping it after it stops being necessary is how a practice turns into a hobby."
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "What counts as the charge in a technomantic working?",
+      "Sustained attention on the connection between the sentence and its shape, with deliberate interaction with the interface while you hold it. Using the device on purpose pulls it out of the ambient background it normally occupies, which is the part that does real work. No special software is required for the charge itself."
+    ],
+    [
+      "Is cryptographic signing really comparable to sigilisation?",
+      "It is the same compression with one addition: a means of verifying that the statement has not changed. That addition is what turns a private mark into something other people can check, and for a practitioner it is a thirty-second routine that removes doubt about which sentence a stored glyph came from."
+    ],
+    [
+      "Where should I keep the source sentence?",
+      "In plain text, in the same place as the glyph, written in the same session, with at least one copy somewhere you own and can open without a network. A glyph with no recorded source is a drawing. If you store a hash as well, you can confirm later that the sentence has not been edited, which removes a category of doubt entirely."
+    ],
+    [
+      "Is using a company's servers a consent problem?",
+      "It is a real consideration, and the workable limits are simple. Do not make other people's data, accounts or behaviour the substrate of a working, and do not point a working at a person. Ordinary use of passive infrastructure is defensible; building a practice out of someone else's material without their agreement is not, and the burden of judgement sits with you."
+    ],
+    [
+      "How do I avoid spending all my time configuring instead of practising?",
+      "Count the days in the last month on which you used the device deliberately with the sentence attached. If that number is low, the configuration is not serving the practice. Strip it back to a printed card and a calendar entry until the count rises, and only add tooling once the daily action is reliably happening."
+    ]
+  ],
+  "related": [
+    [
+      "technomancy-and-cyber-occultism-technomancy-guide",
+      "Technomancy and Cyber Occultism | Technomancy and Cyber"
+    ],
+    [
+      "cyber-paganism-digital-spirituality-guide",
+      "Cyber-Paganism: The New Techno-Spirituality Movement (2026)"
+    ],
+    [
+      "digital-spellcasting-technomancy-guide",
+      "Digital Spellcasting: How to Build a Tech-Enhanced Ritual Technomancy Guide (2026)"
+    ],
+    [
+      "first-year-digital-tarot-practice",
+      "My First Year with a Digital Tarot Practice (2026)"
+    ],
+    [
+      "technomancy-digital-magic-complete-guide",
+      "Technomancy: Complete Protocol for Digital Magic & Cyber-Sorcery"
+    ]
+  ]
+}
