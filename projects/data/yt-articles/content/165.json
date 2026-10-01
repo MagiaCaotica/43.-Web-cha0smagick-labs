@@ -1,0 +1,135 @@
+{
+  "n": 165,
+  "slug": "arukah-invocation-ritual-entity",
+  "h1": "ARUKAH",
+  "seo_title": "ARUKAH | Entity Lore and Invocation Reference",
+  "description": "A complete working guide to ARUKAH: what it is, the entity lore and invocation structure behind it, and the full protocol. Includes step-by-step protocol, honest failure modes, and FAQ.",
+  "keywords": ["arukah sigil", "arukah ritual", "arukah invocation", "arukah chaos magic", "invocation ritual entity", "how to work with a spirit", "chaos magic entity invocation", "servitor vs spirit", "demon invocation guide", "theoretical entity working", "evocation protocol", "working with named spirits", "reference invocation ritual entity"],
+  "published": "2026-09-26",
+  "published_human": "September 26, 2026",
+  "lede": "Entity work borrows its grammar from sources that no practitioner reads, and most of the confusion in modern practice comes from taking that grammar on faith. This is the reference version: the terms, the fields a catalogue entry carries, the correspondences worth holding in memory, and what to do with a name that appears in no catalogue at all.",
+  "sections": [
+    {
+      "h2": "The Vocabulary Before the Practice",
+      "p": [
+        "Almost nobody learns this material properly, and the reason is that it arrives in fragments, quoted by practitioners who also learned it in fragments. What follows is the reference version, arranged so you can check a term rather than absorb a mood.",
+        "The smallest unit worth learning is the catalogue entry. When a source describes a named figure, it almost always supplies the same three fields beyond the name itself: a standing, a described appearance, and a job. The job is called the office, and the office is the only field you can actually act on, because appearance and standing are descriptive while the office is a claim about function.",
+        "Two further terms get used constantly and mean opposite things. One operation asks a named figure to present itself. The other asks that figure's function to operate through the practitioner for a period. Classical sources treat them as different acts with different preparations, different durations and different risks. Most modern writing uses the words interchangeably, which is the single largest source of avoidable confusion in the field.",
+        "If you take one thing from this piece, take that distinction. It changes what you are doing before you start, and therefore what you will think happened afterwards."
+      ]
+    },
+    {
+      "h2": "Reading an Office Statement Without Fooling Yourself",
+      "p": [
+        "An office statement is a short claim about capability. The first duty when you read one is to notice what kind of claim it is, because the categories need different levels of scepticism from you.",
+        "Some offices describe a domain, such as lending, discovery, or the movement of things. Those are broad and easy to test, which makes them useful and also easy to fool yourself with, because a domain is large enough that something will eventually look like a hit.",
+        "Some offices describe a domain plus a limit, such as working only within a stated range or only at a stated scale. The limit is the useful part, because a bounded claim is a falsifiable one. An unbounded claim cannot fail, and a claim that cannot fail is not information.",
+        "Some offices describe a mode of operation rather than an outcome, for example that a figure is said to teach or to instruct. These are the hardest to evaluate, because the evidence for them is usually a feeling of having understood something, and that feeling arrives in plenty of situations.",
+        "The practical rule that survives all three categories: write down what the office would look like if it were true, in terms you could check with someone who was not present. If you cannot, the claim has not been operationalised yet and any result you get is uninterpretable."
+      ]
+    },
+    {
+      "h2": "A Working Sheet Worth Reusing",
+      "p": [
+        "The single most useful artefact in this work is a one page sheet that you fill in before the working rather than after. Most people do it backwards, which is why their notes read like a story about themselves instead of a record of a test.",
+        "Fill in the name and where you obtained it, including the source and the date. Write the office in one sentence. Then write the bounded version of that office, meaning what you would expect to observe and by when. Then write the date you will look.",
+        "Add a second column for the prediction you are making about yourself rather than about the figure. This is where most working lives in practice, and pretending otherwise is the main source of self-deception. If you have predicted nothing about your own behaviour, a good session and a bad one look identical from the outside.",
+        "Keep one sheet per working rather than one per month. The cost of paper is not a factor and the value comes from being able to compare a second attempt against a first one. If you keep a single running sheet, the entries blur together within about six weeks and stop being comparable.",
+        "Write the source column honestly. A name copied from a video, a name from a book, a name you invented and a name you half-remember all carry very different amounts of information, and pretending they are equivalent is how people end up working with something they have not actually looked at."
+      ]
+    },
+    {
+      "h2": "Correspondences That Carry Their Weight",
+      "p": [
+        "Most correspondences in this material are decorative unless you use them to make a decision. The ones below earn their place because each one changes what you do, rather than because the association is old.",
+        "Days of the week map to a fixed planetary order running from Saturn through Jupiter, Mars, the Sun, Venus, Mercury and back to the Moon, which is Babylonian and Roman in origin. The decision it changes: when to do work you want to begin, continue or finish.",
+        "Planetary hours split each half of the day into twelve segments whose rulers rotate hour by hour. The decision it changes: matching the type of activity to the window rather than doing whatever you happen to have time for.",
+        "Numbers run seven, twelve and nine in most of the material, tied to the seven classical planets, the zodiacal twelve and the Hermetic nine. The decision it changes: which of several candidate names to use when you have more than one option.",
+        "Colours and metals are the weakest of the set, because almost nobody can use them in a way that produces a checkable difference. Treat them as aids to memory and to concentration rather than as causes. If a correspondence never changes a decision you make, it is decoration, and it is fine to keep it for that reason as long as you know which one you are doing."
+      ]
+    },
+    {
+      "h2": "How the Standing Signal Is Actually Used",
+      "p": [
+        "The catalogue this material comes from arranges seventy-two figures into three tiers. Nine hold the title of President, thirty-six are Dukes, and the remaining thirty are Kings. The titles read like a hierarchy and are usually treated as one, which wastes the most useful information in the structure.",
+        "A title tells you about frequency in the historical material rather than about power. Presidents appear in fewer surviving descriptions, because the sources that survive are mostly about the more prominent figures. So a higher title correlates with a thicker documentary record, and a thicker record makes a name easier to find and easier to write about.",
+        "That has a direct practical consequence. Names on the upper tier have been written about so often that any expectation you hold about them is partly borrowed from other practitioners. Names on the lower tier attract more independent checking, because there is less inherited material to absorb.",
+        "If you want a working that tests your own judgement rather than your memory of other people's writing, the lower tiers are the better place to look. If you want a working where a large body of prior description will help you form images quickly, the upper tiers serve that purpose well. Neither is more legitimate; they produce different kinds of knowledge.",
+        "A final note on family grouping. The seventy-two are sorted into houses that run in small groups, most of them containing two, three or four members who share an area of interest. The grouping is a finding aid rather than a claim about kinship, and it is a genuinely good one to browse when you do not know which name you want."
+      ]
+    },
+    {
+      "h2": "A Name That Appears in No Catalogue",
+      "p": [
+        "This is the situation the working in this piece sits in, and it is common enough to deserve its own treatment. The name is not in the standard seventy-two, it is not in the other widely circulated collections, and it does not appear anywhere in this repository's own reference material.",
+        "Four explanations are possible and they are not equally likely. It may come from a newer collection you have not read, which happens constantly and is unremarkable. It may be a transcription problem, since names in these sources get copied, miscopied and re-copied. It may be a coinage, either yours or someone else's. Or it may be a name you half remember and have been treating as certain.",
+        "The correct response to all four is the same: find out which, before you invest a year in it. Ten minutes in a library or a careful search will usually settle it, and if it does not settle it, that is itself information worth having before you begin.",
+        "Then decide what kind of thing you are working with. A name with a documented source gives you an office to read and a shape to visualise, which makes the work considerably easier. A name without one gives you neither, and you will have to supply the frame yourself, which is a legitimate choice and a heavier lift.",
+        "The failure mode to avoid is building a whole relationship on a name you have not verified, and then discovering in month four that the source was a misreading. Nothing about the practice is damaged, but the time is gone, and it usually happens to people who were moving fast precisely because the name was exciting."
+      ]
+    },
+    {
+      "h2": "Where the Sources Stop Agreeing",
+      "p": [
+        "A reference piece should be honest about the parts of the material that will not resolve. There are several, and knowing them prevents a lot of wasted certainty.",
+        "The oldest surviving material behind the Goetia is not the Goetia. It arrives through Jewish and Christian demonological writing of an earlier period, some of it apocryphal, and reaches the modern catalogue through a seventeenth-century compilation. Every step of that chain involves translation, editing and selection, and none of the steps was done to produce accuracy.",
+        "Within the catalogue itself, a figure described in one manuscript may carry a different office in another. Where they conflict, the manuscripts are both right about their own period, and choosing between them is a judgement about transmission rather than a fact-finding exercise.",
+        "The spell material attached to these figures is the weakest layer by a wide margin. Much of it is late, formulaic, and borrowed wholesale between entries. Where a ritual appears for many names in near-identical form, it is a template, not a specific instruction.",
+        "The conclusion is not that the material is worthless. It is that it is uneven in a patterned way: structure and offices are usable, later ritual prose is largely decorative, and a small number of the most frequently repeated claims deserve particular suspicion precisely because repetition is easy to confuse with corroboration."
+      ]
+    },
+    {
+      "h2": "What Terms To Use and What To Avoid",
+      "p": [
+        "Language does real work in this practice, mostly by accident, so it is worth being deliberate about it.",
+        "Avoid contact. It implies a receiver and a sender, which is a strong metaphysical claim to smuggle in through vocabulary. Availability and responsiveness are weaker claims and they are the ones you can actually test.",
+        "Avoid proof when you mean evidence. Proof is what you would need for a claim that cannot fail, and almost nothing in this material is of that kind. Evidence is what a working produces, sometimes weakly, and treating it as proof is how people end up defending a position they should have revised.",
+        "Prefer operating to acting, and function to entity, if you want the vocabulary to stay honest about what you are doing. The older terms are not wrong, they are just carrying commitments you may not have made.",
+        "One term worth keeping precisely because it is precise: frame. You are declaring the conditions under which an operation is meaningful, before the operation happens. That is a piece of experimental hygiene, and it is also what the older sources were doing when they described invoking a figure in a particular hour under a particular sky. The vocabulary changed, the discipline did not."
+      ]
+    },
+    {
+      "h2": "A Compact Card Worth Memorising",
+      "p": [
+        "If you keep nothing else, keep these, because they are the parts that change what you do.",
+        "An office is a claim about function, and a claim you cannot falsify is not a claim you can learn from.",
+        "The operation that asks a figure to appear and the operation that borrows its function are different acts with different costs.",
+        "Every session needs a prediction about your own behaviour, not only about the outcome you hope for.",
+        "Bounded claims are testable. Unbounded ones are not, and the larger they are the less they tell you.",
+        "A title signals how much was written down, not how much power was involved.",
+        "Repetition across sources is not the same as independent agreement, and most of what looks like consensus in this material is repetition.",
+        "Write down where a name came from before you work with it, and the date you will check the result against.",
+        "End the session deliberately. What you skip at the close is what you cannot read at the next one."
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "What is the practical difference between the two operations people call invocation?",
+      "One asks a named figure to present itself, which most sources treat as demanding, bounded and fairly short. The other asks that figure's stated function to run through you, which most sources treat as lighter but longer and harder to score. Because the second one produces effects that overlap heavily with ordinary intention, it is much harder to evaluate, which is the practical cost nobody mentions when it is described as the safer option."
+    ],
+    [
+      "Is working with a figure from a demonological catalogue a real risk?",
+      "There is no good evidence of external danger, and the historical office descriptions are administrative in character rather than punitive, which undermines the more dramatic readings. The genuine hazard is operational and much less dramatic: using a name you have not researched, so you are working with an unexamined assumption. Read the stated office first, and check that it matches the domain you actually need."
+    ],
+    [
+      "Do I need a circle, candles and a full kit of apparatus to do this properly?",
+      "No, and the reduction was deliberate rather than a degradation. The historically attested minimum for a personal operation is a stated aim, a name you have actually read, some form of marking the beginning and end, and somewhere you are not interrupted. Everything beyond that is optional structure, useful when you want it and skippable when you do not. Apparatus mostly buys consistency, and consistency is available for free through repetition."
+    ],
+    [
+      "How do I pick a name when I do not know which one I need?",
+      "Browse by area of interest rather than by fame, because the popular entries are the ones where your expectations are borrowed rather than your own. Write down three candidates, read the office of each, and pick the one whose stated domain sits closest to a problem you are actually trying to solve. A slightly mismatched name with a clear office usually outperforms a well-matched name you chose because you had already heard of it."
+    ],
+    [
+      "What if I work with a name and nothing happens at all?",
+      "That outcome is the most common one and it does not discriminate between the frameworks, which is why it is uninformative on its own. Check three things in order: whether you wrote a prediction before the session, whether you counted the attempt, and whether the name had a documented office. If all three are in order, a null result is a real result and goes in the log. If the prediction was written afterwards, you have a process problem to fix first and a question about the name only second."
+    ]
+  ],
+  "related": [
+    ["entity-lore-and-invocation-invocation-ritual-entity-gui-9", "Entity Lore and Invocation: A Working Reference for Beginners"],
+    ["complete-magickal-servitors-guide", "A Complete Guide to Building and Running Magickal Servitors"],
+    ["angels-spirits-and-you-a-framework-for-contact", "Angels, Spirits and You: A Framework for Deliberate Contact"],
+    ["goetia-evocation-basics", "Goetic Evocation Basics Without the Theatre"],
+    ["how-to-create-magickal-servitor", "How to Create a Magickal Servitor That Survives Contact With Life"]
+  ]
+}
