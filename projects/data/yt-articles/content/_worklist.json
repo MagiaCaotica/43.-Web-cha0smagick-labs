@@ -1,23 +1,13 @@
 {
   "total": 349,
-  "done": 236,
-  "remaining": 113,
+  "done": 246,
+  "remaining": 103,
   "batch_size": 26,
-  "batch_count": 5,
+  "batch_count": 4,
   "batches": [
     {
       "index": 1,
       "ns": [
-        222,
-        223,
-        226,
-        227,
-        228,
-        229,
-        230,
-        231,
-        232,
-        233,
         234,
         235,
         236,
@@ -33,13 +23,7 @@
         246,
         247,
         248,
-        249
-      ],
-      "count": 26
-    },
-    {
-      "index": 2,
-      "ns": [
+        249,
         250,
         251,
         253,
@@ -49,7 +33,13 @@
         257,
         258,
         259,
-        260,
+        260
+      ],
+      "count": 26
+    },
+    {
+      "index": 2,
+      "ns": [
         261,
         262,
         263,
@@ -65,13 +55,7 @@
         275,
         276,
         277,
-        278
-      ],
-      "count": 26
-    },
-    {
-      "index": 3,
-      "ns": [
+        278,
         279,
         280,
         282,
@@ -81,7 +65,13 @@
         286,
         287,
         288,
-        289,
+        289
+      ],
+      "count": 26
+    },
+    {
+      "index": 3,
+      "ns": [
         291,
         292,
         293,
@@ -97,13 +87,7 @@
         303,
         304,
         305,
-        307
-      ],
-      "count": 26
-    },
-    {
-      "index": 4,
-      "ns": [
+        307,
         309,
         310,
         311,
@@ -113,7 +97,13 @@
         315,
         316,
         317,
-        318,
+        318
+      ],
+      "count": 26
+    },
+    {
+      "index": 4,
+      "ns": [
         319,
         320,
         321,
@@ -129,13 +119,7 @@
         333,
         334,
         335,
-        337
-      ],
-      "count": 26
-    },
-    {
-      "index": 5,
-      "ns": [
+        337,
         338,
         339,
         340,
@@ -146,855 +130,10 @@
         347,
         348
       ],
-      "count": 9
+      "count": 25
     }
   ],
   "articles": [
-    {
-      "n": 222,
-      "slug": "the-mind-science-of-practice-why-does-magic-work-placeb-13",
-      "h1": "The Mind Science of Practice",
-      "domain": "mind-science",
-      "domain_label": "The Mind Science of Practice",
-      "intent": "informational",
-      "blog_category": "basics",
-      "entity": null,
-      "entity_source": null,
-      "focus": "the mind science of practice",
-      "outline": [
-        "the cognitive mechanics behind Magia Del Caos: what it actually is",
-        "Where the cognitive mechanics behind Magia Del Caos comes from",
-        "Building the cognitive mechanics behind Magia Del Caos from nothing",
-        "Charging the cognitive mechanics behind Magia Del Caos: the working sequence",
-        "the cognitive mechanics behind Magia Del Caos in practice, step by step",
-        "Why the cognitive mechanics behind Magia Del Caos fails, and what to change",
-        "Testing the cognitive mechanics behind Magia Del Caos without fooling yourself",
-        "the cognitive mechanics behind Magia Del Caos: tools, timing and materials",
-        "Keeping the cognitive mechanics behind Magia Del Caos alive after the first charge",
-        "Signs the cognitive mechanics behind Magia Del Caos is actually working",
-        "The ethics of working with the cognitive mechanics behind Magia Del Caos",
-        "the cognitive mechanics behind Magia Del Caos: the mistakes beginners make",
-        "When to abandon the cognitive mechanics behind Magia Del Caos",
-        "Repeating the cognitive mechanics behind Magia Del Caos without it going stale",
-        "How the cognitive mechanics behind Magia Del Caos fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Open-label placebo studies indicate that belief in a treatment is not always required for it to produce a measurable physiological effect, which complicates the simple 'it's all belief' account.",
-        "Predictive processing accounts of the brain treat perception as hypothesis management, which provides a mechanistic account for why expectation changes experience without requiring a conscious lie to oneself.",
-        "Ritual reliably produces measurable autonomic changes - lowered heart-rate variability, changed respiration - and these changes are the well-evidenced part of the 'ritual works' claim.",
-        "The Zener card deck used in Rhine's ESP research has a 5-card design with a 20% hit rate by chance, which makes it a clean teaching example for statistical reasoning about psychic claims."
-      ],
-      "spec_faq": [
-        [
-          "How do I know a result is real?",
-          "You usually cannot from a single instance. Pre-register a falsifiable prediction, set a deadline, and count all attempts including failures."
-        ],
-        [
-          "Does ritual help anxiety?",
-          "There is reasonable evidence that structured ritual reduces anxiety, and the mechanism is mostly predictability plus behavioural commitment rather than anything occult."
-        ],
-        [
-          "Is magic just placebo?",
-          "The placebo account captures part of the effect and misses the ritual and symbolic components, which work through commitment and attention rather than expectation of a medical outcome."
-        ]
-      ],
-      "products": [
-        "astral-lab",
-        "mind-the-gap-pdf",
-        "dream-machine"
-      ],
-      "tools": [
-        "goetic-spirit-selector",
-        "magical-correspondence-finder",
-        "paranormal-session-prep-checklist"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=h6vgy6qEHtE",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the full operational sequence, step by step",
-      "role_phrase": "the cognitive mechanics behind Magia Del Caos",
-      "subject": "Magia Del Caos",
-      "title_tag": "The Mind Science of Practice Protocol: The Mind Science of Practice",
-      "seo_title": "The Mind Science of Practice | The Mind Science of Practice",
-      "description": "A complete working guide to the mind science of practice covering the mind science of practice. Includes step-by-step protocol, honest failure modes, and FAQ.",
-      "keywords": [
-        "why does magic work placebo",
-        "placebo effect and ritual",
-        "ritual and the nervous system",
-        "how does the placebo effect work",
-        "statistical significance and spiritual claims",
-        "costs and benefits ritual",
-        "ritual for anxiety neuroscience",
-        "the psychology of occult practice",
-        "protocol why does magic work placebo"
-      ]
-    },
-    {
-      "n": 223,
-      "slug": "meditacion-neuroplasticidad-why-does-magic-work-placebo",
-      "h1": "MEDITACIÓN NEUROPLASTICIDAD",
-      "domain": "mind-science",
-      "domain_label": "The Mind Science of Practice",
-      "intent": "informational",
-      "blog_category": "basics",
-      "entity": "MEDITACIÓN NEUROPLASTICIDAD",
-      "entity_source": "declared",
-      "focus": "the mind science of practice",
-      "outline": [
-        "the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD: what it actually is",
-        "Where the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD comes from",
-        "Building the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD from nothing",
-        "Charging the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD: the working sequence",
-        "the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD in practice, step by step",
-        "Why the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD fails, and what to change",
-        "Testing the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD without fooling yourself",
-        "the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD: tools, timing and materials",
-        "Keeping the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD alive after the first charge",
-        "Signs the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD is actually working",
-        "The ethics of working with the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD",
-        "the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD: the mistakes beginners make",
-        "When to abandon the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD",
-        "Repeating the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD without it going stale",
-        "How the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Open-label placebo studies indicate that belief in a treatment is not always required for it to produce a measurable physiological effect, which complicates the simple 'it's all belief' account.",
-        "Predictive processing accounts of the brain treat perception as hypothesis management, which provides a mechanistic account for why expectation changes experience without requiring a conscious lie to oneself.",
-        "Ritual reliably produces measurable autonomic changes - lowered heart-rate variability, changed respiration - and these changes are the well-evidenced part of the 'ritual works' claim.",
-        "The Zener card deck used in Rhine's ESP research has a 5-card design with a 20% hit rate by chance, which makes it a clean teaching example for statistical reasoning about psychic claims."
-      ],
-      "spec_faq": [
-        [
-          "Does ritual help anxiety?",
-          "There is reasonable evidence that structured ritual reduces anxiety, and the mechanism is mostly predictability plus behavioural commitment rather than anything occult."
-        ],
-        [
-          "Is magic just placebo?",
-          "The placebo account captures part of the effect and misses the ritual and symbolic components, which work through commitment and attention rather than expectation of a medical outcome."
-        ],
-        [
-          "How do I know a result is real?",
-          "You usually cannot from a single instance. Pre-register a falsifiable prediction, set a deadline, and count all attempts including failures."
-        ]
-      ],
-      "products": [
-        "mind-the-gap-pdf",
-        "dream-machine",
-        "psi-gym"
-      ],
-      "tools": [
-        "iching-changing-lines",
-        "meditation-focus-timer",
-        "pendulum-question-builder"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=TYAVUWzvnGU",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the underlying structure and why it is shaped this way",
-      "role_phrase": "the cognitive mechanics behind MEDITACIÓN NEUROPLASTICIDAD",
-      "subject": "MEDITACIÓN NEUROPLASTICIDAD",
-      "title_tag": "MEDITACIÓN NEUROPLASTICIDAD: Complete Chaos Magic Guide to The Mind",
-      "seo_title": "MEDITACIÓN NEUROPLASTICIDAD | The Mind Science of Practice",
-      "description": "A complete working guide to MEDITACIÓN NEUROPLASTICIDAD: what it is, the the mind science of practice structure behind it, and the full protocol. Includes...",
-      "keywords": [
-        "meditacion neuroplasticidad sigil",
-        "meditacion neuroplasticidad ritual",
-        "meditacion neuroplasticidad invocation",
-        "meditacion neuroplasticidad chaos magic",
-        "why does magic work placebo",
-        "placebo effect and ritual",
-        "ritual and the nervous system",
-        "how does the placebo effect work",
-        "statistical significance and spiritual claims",
-        "costs and benefits ritual",
-        "ritual for anxiety neuroscience",
-        "the psychology of occult practice",
-        "framework why does magic work placebo"
-      ]
-    },
-    {
-      "n": 226,
-      "slug": "starlight-chaos-magic-money-ritual",
-      "h1": "STARLIGHT",
-      "domain": "money",
-      "domain_label": "Wealth and Abundance",
-      "intent": "commercial",
-      "blog_category": "advanced",
-      "entity": "STARLIGHT",
-      "entity_source": "declared",
-      "focus": "wealth and abundance",
-      "outline": [
-        "a money sigil for STARLIGHT: what it actually is",
-        "Where a money sigil for STARLIGHT comes from",
-        "Building a money sigil for STARLIGHT from nothing",
-        "Charging a money sigil for STARLIGHT: the working sequence",
-        "a money sigil for STARLIGHT in practice, step by step",
-        "Why a money sigil for STARLIGHT fails, and what to change",
-        "Testing a money sigil for STARLIGHT without fooling yourself",
-        "a money sigil for STARLIGHT: tools, timing and materials",
-        "Keeping a money sigil for STARLIGHT alive after the first charge",
-        "Signs a money sigil for STARLIGHT is actually working",
-        "The ethics of working with a money sigil for STARLIGHT",
-        "a money sigil for STARLIGHT: the mistakes beginners make",
-        "When to abandon a money sigil for STARLIGHT",
-        "Repeating a money sigil for STARLIGHT without it going stale",
-        "How a money sigil for STARLIGHT fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Occult literature has treated money as a favourable target for centuries because it is a strongly symbolic quantity: universal, quantifiable, and socially legible.",
-        "The number 741 is used in abundance work because 7+4+1 = 12, a figure that recurs across temperament and numerological charts; the practice borrows this rather than claiming a physical mechanism.",
-        "Sigilisation - reducing a statement of intent to a glyph - was formalised by Austin Osman Spare in the 1900s and is the standard charge method in modern chaos magic.",
-        "Chaos magic as a system is explicitly pragmatic: it does not require the practitioner to hold any particular belief about the mechanism for the operation to be considered valid.",
-        "A sigil is not a wish. It is an encoding of an imperative statement of intent, which is why chaos magicians phrase targets as commands rather than requests."
-      ],
-      "spec_faq": [
-        [
-          "Is wealth magic ever dangerous?",
-          "The practical risk is psychological: tying your sense of self-worth to a result can produce anxiety, compulsive checking, and in some cases financial decisions made from panic rather than judgement."
-        ],
-        [
-          "Do money sigils actually work?",
-          "There is no evidence that a sigil moves money by itself. What the practice reliably does is commit you to one specific action, remove the friction of doubt, and keep the goal salient at the moment a decision is available. Results come from that behavioural effect plus ordinary opportunity - not from the glyph."
-        ],
-        [
-          "How long does a money sigil take to work?",
-          "Treat it as a 30 to 90 day observation window. Anything faster is likely coincidence, and anything slower should trigger a review of whether the target was ever specific enough to act on."
-        ],
-        [
-          "Should I charge a money sigil on a particular day?",
-          "You can, but timing is secondary. A precisely timed sigil aimed at a vague goal underperforms a plain sigil aimed at a specific, measurable action you can take this week."
-        ]
-      ],
-      "products": [
-        "noctem-tools",
-        "chaos-sigil-generator",
-        "manual-activacion-servidores-magicos-pdf"
-      ],
-      "tools": [
-        "iching",
-        "moon-intention-planner",
-        "planetary-alphabet-cipher"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=Z6az04WWAzo",
-      "risk": "abundance-discipline",
-      "risk_note": "Wealth work fails most often when it becomes compulsive. Fix a review date, write down what you did, and if you find yourself checking daily, stop.",
-      "variant_phrase": "what actually happens in practice, including the failures",
-      "role_phrase": "a money sigil for STARLIGHT",
-      "subject": "STARLIGHT",
-      "title_tag": "STARLIGHT: Complete Chaos Magic Guide to Wealth and Abundance",
-      "seo_title": "STARLIGHT | Wealth and Abundance Field Notes",
-      "description": "A complete working guide to STARLIGHT: what it is, the wealth and abundance structure behind it, and the full protocol. Includes step-by-step protocol,...",
-      "keywords": [
-        "starlight sigil",
-        "starlight ritual",
-        "starlight invocation",
-        "starlight chaos magic",
-        "chaos magic money ritual",
-        "sigils to attract money",
-        "abundance ritual that works",
-        "prosperity sigil",
-        "how to manifest wealth chaos magic",
-        "money spell that works",
-        "sigils for financial prosperity",
-        "chaos magic abundance practice",
-        "field notes chaos magic money ritual"
-      ]
-    },
-    {
-      "n": 227,
-      "slug": "headhunter-sigils-for-job-success",
-      "h1": "Headhunter",
-      "domain": "career",
-      "domain_label": "Career, Clients and Study",
-      "intent": "commercial",
-      "blog_category": "advanced",
-      "entity": "Headhunter",
-      "entity_source": "declared",
-      "focus": "career, clients and study",
-      "outline": [
-        "a career working for Headhunter: what it actually is",
-        "Where a career working for Headhunter comes from",
-        "Building a career working for Headhunter from nothing",
-        "Charging a career working for Headhunter: the working sequence",
-        "a career working for Headhunter in practice, step by step",
-        "Why a career working for Headhunter fails, and what to change",
-        "Testing a career working for Headhunter without fooling yourself",
-        "a career working for Headhunter: tools, timing and materials",
-        "Keeping a career working for Headhunter alive after the first charge",
-        "Signs a career working for Headhunter is actually working",
-        "The ethics of working with a career working for Headhunter",
-        "a career working for Headhunter: the mistakes beginners make",
-        "When to abandon a career working for Headhunter",
-        "Repeating a career working for Headhunter without it going stale",
-        "How a career working for Headhunter fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Career outcomes sit downstream of other people's decisions, which makes them partially controllable - the ideal target for a ritual with a behavioural component.",
-        "The 'servitor for a task' pattern - a persistent thoughtform assigned to one repetitive job - is one of the most frequently documented modern chaos magic practices.",
-        "Implementation intentions ('if situation X arises, I will do Y') are among the most replicated findings in behavioural psychology and map exactly onto sigil commitment.",
-        "Study outcomes respond strongly to distributed practice and retrieval practice; a sigil aimed at 'better memory' performs worse than one aimed at a specific study schedule."
-      ],
-      "spec_faq": [
-        [
-          "Will a job sigil get me an interview?",
-          "It will make you apply consistently, which is the variable that matters. The interview decision belongs to someone else and is not yours to sigilise."
-        ],
-        [
-          "How many sigils can I run at once?",
-          "One or two. Most traditions warn that a large number of active sigils fragments attention - the effect is real and is the reason practitioners serialise their work."
-        ],
-        [
-          "Can a sigil help me pass an exam?",
-          "Use it as a commitment device for a study schedule. If you are not going to study, the sigil has nothing to amplify."
-        ]
-      ],
-      "products": [
-        "noctem-tools",
-        "chaos-sigil-generator",
-        "psi-gym"
-      ],
-      "tools": [
-        "astral-projection-session-timer",
-        "digital-pendulum",
-        "iching-changing-lines"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=xxzYRP7R0-w",
-      "risk": "clarity-discipline",
-      "risk_note": "The target must be specific enough to act on. 'Be happy' cannot be worked with; 'three client conversations this week' can.",
-      "variant_phrase": "the first-time practitioner's route through",
-      "role_phrase": "a career working for Headhunter",
-      "subject": "Headhunter",
-      "title_tag": "Headhunter: Complete Chaos Magic Guide to Career, Clients and Study",
-      "seo_title": "Headhunter | Career, Clients and Study Beginner Path",
-      "description": "A complete working guide to Headhunter: what it is, the career, clients and study structure behind it, and the full protocol. Includes step-by-step protocol,...",
-      "keywords": [
-        "headhunter sigil",
-        "headhunter ritual",
-        "headhunter invocation",
-        "headhunter chaos magic",
-        "sigils for job success",
-        "client acquisition sigil",
-        "study and exam sigil",
-        "career magic chaos",
-        "how to get more clients",
-        "professional success ritual",
-        "focus and concentration sigil",
-        "career sigil instructions",
-        "beginner path sigils for job success"
-      ]
-    },
-    {
-      "n": 228,
-      "slug": "viraceu-invocation-ritual-entity",
-      "h1": "VIRACEU",
-      "domain": "entity-lore",
-      "domain_label": "Entity Lore and Invocation",
-      "intent": "informational",
-      "blog_category": "goetia",
-      "entity": "VIRACEU",
-      "entity_source": "declared",
-      "focus": "entity lore and invocation",
-      "outline": [
-        "a magickal servitor for VIRACEU: what it actually is",
-        "Where a magickal servitor for VIRACEU comes from",
-        "Building a magickal servitor for VIRACEU from nothing",
-        "Charging a magickal servitor for VIRACEU: the working sequence",
-        "a magickal servitor for VIRACEU in practice, step by step",
-        "Why a magickal servitor for VIRACEU fails, and what to change",
-        "Testing a magickal servitor for VIRACEU without fooling yourself",
-        "a magickal servitor for VIRACEU: tools, timing and materials",
-        "Keeping a magickal servitor for VIRACEU alive after the first charge",
-        "Signs a magickal servitor for VIRACEU is actually working",
-        "The ethics of working with a magickal servitor for VIRACEU",
-        "a magickal servitor for VIRACEU: the mistakes beginners make",
-        "When to abandon a magickal servitor for VIRACEU",
-        "Repeating a magickal servitor for VIRACEU without it going stale",
-        "How a magickal servitor for VIRACEU fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "In classical ceremonial usage, 'evocation' means calling a spirit to appear, while 'invocation' means inviting its influence to operate through the operator - a distinction most modern usage collapses.",
-        "The Ars Goetia presents each of the 72 spirits with a rank, a visible form, an office, and specific powers, which makes it the most structured entity catalogue in Western grimoire literature.",
-        "Modern chaos magic deliberately relaxes the classical framework, treating entities as independent pattern fragments useful for disrupting a repetitive thought structure.",
-        "Peter Carroll's influential definition held that entities in chaos magic are best regarded as aspects of the magician's own mind rather than as external beings - a position that neutralises most of the risk without requiring scepticism."
-      ],
-      "spec_faq": [
-        [
-          "Do I need a full ritual circle?",
-          "No. Chaos magic reduced ritual apparatus drastically on purpose. A defined intention, a sigil, and a stated frame are historically sufficient."
-        ],
-        [
-          "Should I work with demons?",
-          "There is no reliable evidence of external danger, and working with a name you have never researched is the real hazard. Read the entity's stated office first and confirm it matches the domain you need."
-        ],
-        [
-          "What is the difference between evocation and invocation?",
-          "Evocation calls the entity to manifest. Invocation asks it to operate through you. Classical practice treats these as different operations with different risks."
-        ]
-      ],
-      "products": [
-        "eerieroads",
-        "arcana-goetia",
-        "noctem-tools"
-      ],
-      "tools": [
-        "moon-phase-calendar",
-        "planetary-day-calculator",
-        "results-tracking-dashboard"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=l-e342R7s78",
-      "risk": "grounding-discipline",
-      "risk_note": "If practice starts interfering with sleep, work, or relationships, reduce the intensity. The tradition's own advice is a short daily practice rather than an escalating one.",
-      "variant_phrase": "the honest limits, failure modes and counterarguments",
-      "role_phrase": "a magickal servitor for VIRACEU",
-      "subject": "VIRACEU",
-      "title_tag": "VIRACEU: Complete Chaos Magic Guide to Entity Lore and Invocation",
-      "seo_title": "VIRACEU | Entity Lore and Invocation Critique",
-      "description": "A complete working guide to VIRACEU: what it is, the entity lore and invocation structure behind it, and the full protocol. Includes step-by-step protocol,...",
-      "keywords": [
-        "viraceu sigil",
-        "viraceu ritual",
-        "viraceu invocation",
-        "viraceu chaos magic",
-        "invocation ritual entity",
-        "how to work with a spirit",
-        "chaos magic entity invocation",
-        "servitor vs spirit",
-        "demon invocation guide",
-        "theoretical entity working",
-        "evocation protocol",
-        "working with named spirits",
-        "critique invocation ritual entity"
-      ]
-    },
-    {
-      "n": 229,
-      "slug": "vharmon-clarity-sigil",
-      "h1": "VHARMON",
-      "domain": "clarity",
-      "domain_label": "Clarity, Decisions and Focus",
-      "intent": "informational",
-      "blog_category": "basics",
-      "entity": "VHARMON",
-      "entity_source": "declared",
-      "focus": "clarity, decisions and focus",
-      "outline": [
-        "a clarity working on VHARMON: what it actually is",
-        "Where a clarity working on VHARMON comes from",
-        "Building a clarity working on VHARMON from nothing",
-        "Charging a clarity working on VHARMON: the working sequence",
-        "a clarity working on VHARMON in practice, step by step",
-        "Why a clarity working on VHARMON fails, and what to change",
-        "Testing a clarity working on VHARMON without fooling yourself",
-        "a clarity working on VHARMON: tools, timing and materials",
-        "Keeping a clarity working on VHARMON alive after the first charge",
-        "Signs a clarity working on VHARMON is actually working",
-        "The ethics of working with a clarity working on VHARMON",
-        "a clarity working on VHARMON: the mistakes beginners make",
-        "When to abandon a clarity working on VHARMON",
-        "Repeating a clarity working on VHARMON without it going stale",
-        "How a clarity working on VHARMON fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Attentional control is among the best-studied cognitive faculties, with well-replicated training methods; a sigil aimed at 'clarity' is most effective when it commits you to those methods.",
-        "Decision paralysis is often a problem of criterion conflict rather than information deficit; writing a sigil forces the decision into an imperative sentence, which surfaces the conflict.",
-        "The Rorschach and projective tests were built to access material that conscious self-report misses, which is the same logic behind using cards as a thinking tool rather than a predictive one.",
-        "Chaos magic's 'gnosis' - the moment of sustained, non-abstract contact with an experience - is a contemplative discipline with roots far older than the modern movement."
-      ],
-      "spec_faq": [
-        [
-          "What is the difference between gnosis and visualisation?",
-          "Gnosis is receptive attention to what is actually happening. Visualisation is generative - you are producing the content. Confusing them is the most common beginner error."
-        ],
-        [
-          "Do clarity sigils improve memory?",
-          "They can improve it indirectly by committing you to spaced review. There is no direct effect on memory consolidation from the sigil itself."
-        ],
-        [
-          "Should I use divination to decide?",
-          "Use it to surface what you already lean toward, not to replace the decision. Divination is most useful as a structured thinking partner."
-        ]
-      ],
-      "products": [
-        "noctem-tools",
-        "mind-the-gap-pdf",
-        "psi-gym"
-      ],
-      "tools": [
-        "banishing-ritual-builder",
-        "elder-futhark-reference",
-        "intention-achievement-tracker"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=lPKH0fEi8vQ",
-      "risk": "grounding-discipline",
-      "risk_note": "If practice starts interfering with sleep, work, or relationships, reduce the intensity. The tradition's own advice is a short daily practice rather than an escalating one.",
-      "variant_phrase": "the underlying structure and why it is shaped this way",
-      "role_phrase": "a clarity working on VHARMON",
-      "subject": "VHARMON",
-      "title_tag": "VHARMON: Complete Chaos Magic Guide to Clarity, Decisions and Focus",
-      "seo_title": "VHARMON | Clarity, Decisions and Focus Framework",
-      "description": "A complete working guide to VHARMON: what it is, the clarity, decisions and focus structure behind it, and the full protocol. Includes step-by-step protocol,...",
-      "keywords": [
-        "vharmon sigil",
-        "vharmon ritual",
-        "vharmon invocation",
-        "vharmon chaos magic",
-        "clarity sigil",
-        "decision making sigil",
-        "focus and concentration ritual",
-        "how to clear the mind chaos magic",
-        "wisdom sigil",
-        "mental clarity magic",
-        "sigil for studying",
-        "framework clarity sigil"
-      ]
-    },
-    {
-      "n": 230,
-      "slug": "zeskia-invocation-ritual-entity",
-      "h1": "ZESKIA",
-      "domain": "entity-lore",
-      "domain_label": "Entity Lore and Invocation",
-      "intent": "informational",
-      "blog_category": "goetia",
-      "entity": "ZESKIA",
-      "entity_source": "declared",
-      "focus": "entity lore and invocation",
-      "outline": [
-        "a magickal servitor for ZESKIA: what it actually is",
-        "Where a magickal servitor for ZESKIA comes from",
-        "Building a magickal servitor for ZESKIA from nothing",
-        "Charging a magickal servitor for ZESKIA: the working sequence",
-        "a magickal servitor for ZESKIA in practice, step by step",
-        "Why a magickal servitor for ZESKIA fails, and what to change",
-        "Testing a magickal servitor for ZESKIA without fooling yourself",
-        "a magickal servitor for ZESKIA: tools, timing and materials",
-        "Keeping a magickal servitor for ZESKIA alive after the first charge",
-        "Signs a magickal servitor for ZESKIA is actually working",
-        "The ethics of working with a magickal servitor for ZESKIA",
-        "a magickal servitor for ZESKIA: the mistakes beginners make",
-        "When to abandon a magickal servitor for ZESKIA",
-        "Repeating a magickal servitor for ZESKIA without it going stale",
-        "How a magickal servitor for ZESKIA fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "In classical ceremonial usage, 'evocation' means calling a spirit to appear, while 'invocation' means inviting its influence to operate through the operator - a distinction most modern usage collapses.",
-        "The Ars Goetia presents each of the 72 spirits with a rank, a visible form, an office, and specific powers, which makes it the most structured entity catalogue in Western grimoire literature.",
-        "Modern chaos magic deliberately relaxes the classical framework, treating entities as independent pattern fragments useful for disrupting a repetitive thought structure.",
-        "Peter Carroll's influential definition held that entities in chaos magic are best regarded as aspects of the magician's own mind rather than as external beings - a position that neutralises most of the risk without requiring scepticism."
-      ],
-      "spec_faq": [
-        [
-          "Should I work with demons?",
-          "There is no reliable evidence of external danger, and working with a name you have never researched is the real hazard. Read the entity's stated office first and confirm it matches the domain you need."
-        ],
-        [
-          "What is the difference between evocation and invocation?",
-          "Evocation calls the entity to manifest. Invocation asks it to operate through you. Classical practice treats these as different operations with different risks."
-        ],
-        [
-          "Do I need a full ritual circle?",
-          "No. Chaos magic reduced ritual apparatus drastically on purpose. A defined intention, a sigil, and a stated frame are historically sufficient."
-        ]
-      ],
-      "products": [
-        "arcana-goetia",
-        "noctem-tools",
-        "manual-activacion-servidores-magicos-pdf"
-      ],
-      "tools": [
-        "moon-sign-calculator",
-        "planetary-hours-planner",
-        "rising-sign-calculator"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=aMsj0QHIYto",
-      "risk": "grounding-discipline",
-      "risk_note": "If practice starts interfering with sleep, work, or relationships, reduce the intensity. The tradition's own advice is a short daily practice rather than an escalating one.",
-      "variant_phrase": "the first-time practitioner's route through",
-      "role_phrase": "a magickal servitor for ZESKIA",
-      "subject": "ZESKIA",
-      "title_tag": "ZESKIA: Complete Chaos Magic Guide to Entity Lore and Invocation",
-      "seo_title": "ZESKIA | Entity Lore and Invocation Beginner Path",
-      "description": "A complete working guide to ZESKIA: what it is, the entity lore and invocation structure behind it, and the full protocol. Includes step-by-step protocol,...",
-      "keywords": [
-        "zeskia sigil",
-        "zeskia ritual",
-        "zeskia invocation",
-        "zeskia chaos magic",
-        "invocation ritual entity",
-        "how to work with a spirit",
-        "chaos magic entity invocation",
-        "servitor vs spirit",
-        "demon invocation guide",
-        "theoretical entity working",
-        "evocation protocol",
-        "working with named spirits",
-        "beginner path invocation ritual entity"
-      ]
-    },
-    {
-      "n": 231,
-      "slug": "tecelon-chaos-magic-money-ritual",
-      "h1": "TECELÓN",
-      "domain": "money",
-      "domain_label": "Wealth and Abundance",
-      "intent": "commercial",
-      "blog_category": "advanced",
-      "entity": "TECELÓN",
-      "entity_source": "declared",
-      "focus": "wealth and abundance",
-      "outline": [
-        "a money sigil for TECELÓN: what it actually is",
-        "Where a money sigil for TECELÓN comes from",
-        "Building a money sigil for TECELÓN from nothing",
-        "Charging a money sigil for TECELÓN: the working sequence",
-        "a money sigil for TECELÓN in practice, step by step",
-        "Why a money sigil for TECELÓN fails, and what to change",
-        "Testing a money sigil for TECELÓN without fooling yourself",
-        "a money sigil for TECELÓN: tools, timing and materials",
-        "Keeping a money sigil for TECELÓN alive after the first charge",
-        "Signs a money sigil for TECELÓN is actually working",
-        "The ethics of working with a money sigil for TECELÓN",
-        "a money sigil for TECELÓN: the mistakes beginners make",
-        "When to abandon a money sigil for TECELÓN",
-        "Repeating a money sigil for TECELÓN without it going stale",
-        "How a money sigil for TECELÓN fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Occult literature has treated money as a favourable target for centuries because it is a strongly symbolic quantity: universal, quantifiable, and socially legible.",
-        "The number 741 is used in abundance work because 7+4+1 = 12, a figure that recurs across temperament and numerological charts; the practice borrows this rather than claiming a physical mechanism.",
-        "Sigilisation - reducing a statement of intent to a glyph - was formalised by Austin Osman Spare in the 1900s and is the standard charge method in modern chaos magic.",
-        "Chaos magic as a system is explicitly pragmatic: it does not require the practitioner to hold any particular belief about the mechanism for the operation to be considered valid.",
-        "A sigil is not a wish. It is an encoding of an imperative statement of intent, which is why chaos magicians phrase targets as commands rather than requests."
-      ],
-      "spec_faq": [
-        [
-          "Do money sigils actually work?",
-          "There is no evidence that a sigil moves money by itself. What the practice reliably does is commit you to one specific action, remove the friction of doubt, and keep the goal salient at the moment a decision is available. Results come from that behavioural effect plus ordinary opportunity - not from the glyph."
-        ],
-        [
-          "How long does a money sigil take to work?",
-          "Treat it as a 30 to 90 day observation window. Anything faster is likely coincidence, and anything slower should trigger a review of whether the target was ever specific enough to act on."
-        ],
-        [
-          "Should I charge a money sigil on a particular day?",
-          "You can, but timing is secondary. A precisely timed sigil aimed at a vague goal underperforms a plain sigil aimed at a specific, measurable action you can take this week."
-        ],
-        [
-          "Is wealth magic ever dangerous?",
-          "The practical risk is psychological: tying your sense of self-worth to a result can produce anxiety, compulsive checking, and in some cases financial decisions made from panic rather than judgement."
-        ]
-      ],
-      "products": [
-        "chaos-sigil-generator",
-        "psi-gym",
-        "manual-activacion-servidores-magicos-pdf"
-      ],
-      "tools": [
-        "intention-achievement-tracker",
-        "moon-phase-calendar",
-        "planetary-day-calculator"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=UL1ZjNrSTzc",
-      "risk": "abundance-discipline",
-      "risk_note": "Wealth work fails most often when it becomes compulsive. Fix a review date, write down what you did, and if you find yourself checking daily, stop.",
-      "variant_phrase": "the tables, correspondences and terms you will need",
-      "role_phrase": "a money sigil for TECELÓN",
-      "subject": "TECELÓN",
-      "title_tag": "TECELÓN: Complete Chaos Magic Guide to Wealth and Abundance",
-      "seo_title": "TECELÓN | Wealth and Abundance Reference",
-      "description": "A complete working guide to TECELÓN: what it is, the wealth and abundance structure behind it, and the full protocol. Includes step-by-step protocol, honest...",
-      "keywords": [
-        "tecelon sigil",
-        "tecelon ritual",
-        "tecelon invocation",
-        "tecelon chaos magic",
-        "chaos magic money ritual",
-        "sigils to attract money",
-        "abundance ritual that works",
-        "prosperity sigil",
-        "how to manifest wealth chaos magic",
-        "money spell that works",
-        "sigils for financial prosperity",
-        "chaos magic abundance practice",
-        "reference chaos magic money ritual"
-      ]
-    },
-    {
-      "n": 232,
-      "slug": "tecnomago-technomancy",
-      "h1": "TECNOMAGO",
-      "domain": "technomancy",
-      "domain_label": "Technomancy and Cyber Occultism",
-      "intent": "informational",
-      "blog_category": "advanced",
-      "entity": "TECNOMAGO",
-      "entity_source": "declared",
-      "focus": "technomancy and cyber occultism",
-      "outline": [
-        "a technomantic working for TECNOMAGO: what it actually is",
-        "Where a technomantic working for TECNOMAGO comes from",
-        "Building a technomantic working for TECNOMAGO from nothing",
-        "Charging a technomantic working for TECNOMAGO: the working sequence",
-        "a technomantic working for TECNOMAGO in practice, step by step",
-        "Why a technomantic working for TECNOMAGO fails, and what to change",
-        "Testing a technomantic working for TECNOMAGO without fooling yourself",
-        "a technomantic working for TECNOMAGO: tools, timing and materials",
-        "Keeping a technomantic working for TECNOMAGO alive after the first charge",
-        "Signs a technomantic working for TECNOMAGO is actually working",
-        "The ethics of working with a technomantic working for TECNOMAGO",
-        "a technomantic working for TECNOMAGO: the mistakes beginners make",
-        "When to abandon a technomantic working for TECNOMAGO",
-        "Repeating a technomantic working for TECNOMAGO without it going stale",
-        "How a technomantic working for TECNOMAGO fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The term 'technomancy' was borrowed from Aleister Crowley's 1910 essay of the same name, where he proposed that modern technology was the next substrate for magic.",
-        "Technopaganism and cybergoth movements emerged in the late 1980s and 1990s, drawing on chaos magic, industrial culture and early hacker ethics.",
-        "Applied technomancy treats devices as ritual instruments - the sigil is designed to be displayed on a screen, the charge is a deliberate interaction with the interface.",
-        "Cryptographic signing, generative code and algorithmic art are all direct computational analogs of sigilisation, compression, and signature respectively."
-      ],
-      "spec_faq": [
-        [
-          "Is technomancy real magic?",
-          "It is a coherent application of sigil and ritual method to a new substrate. Whether the substrate changes the effect is the interesting question, and it is testable."
-        ],
-        [
-          "Why use a screen instead of paper?",
-          "A screen has a distinctive perceptual quality - emissive, high-contrast, and physically unfamiliar as a ritual surface - which many practitioners find useful for focus."
-        ],
-        [
-          "Is using code for magic just programming?",
-          "Partly. The generative step is ordinary code; the ritual frame around it is what makes it magickal, and the frame is doing the work."
-        ]
-      ],
-      "products": [
-        "astral-lab",
-        "psi-gym",
-        "noctem-tools"
-      ],
-      "tools": [
-        "digital-grimoire-organizer",
-        "goetic-spirit-selector",
-        "magical-correspondence-finder"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=gaTx_ELDddk",
-      "risk": "consent-discipline",
-      "risk_note": "The line here is other people's autonomy. Work on your own behaviour, your own availability, your own boundaries. Do not work on overriding somebody's stated preferences.",
-      "variant_phrase": "the first-time practitioner's route through",
-      "role_phrase": "a technomantic working for TECNOMAGO",
-      "subject": "TECNOMAGO",
-      "title_tag": "TECNOMAGO: Complete Chaos Magic Guide to Technomancy and Cyber",
-      "seo_title": "TECNOMAGO | Technomancy and Cyber Occultism Beginner Path",
-      "description": "A complete working guide to TECNOMAGO: what it is, the technomancy and cyber occultism structure behind it, and the full protocol. Includes step-by-step...",
-      "keywords": [
-        "tecnomago sigil",
-        "tecnomago ritual",
-        "tecnomago invocation",
-        "tecnomago chaos magic",
-        "technomancy",
-        "cyberpunk magic",
-        "cyber pagans",
-        "digital sorcery",
-        "what is technomancy",
-        "code as ritual",
-        "techno-sorcery",
-        "cyber occultism explained",
-        "digital magic applied",
-        "beginner path technomancy"
-      ]
-    },
-    {
-      "n": 233,
-      "slug": "ludibriel-luck-sigil",
-      "h1": "LUDIBRIEL",
-      "domain": "luck",
-      "domain_label": "Luck, Fortune and Chance",
-      "intent": "commercial",
-      "blog_category": "advanced",
-      "entity": "LUDIBRIEL",
-      "entity_source": "declared",
-      "focus": "luck, fortune and chance",
-      "outline": [
-        "a luck working for LUDIBRIEL: what it actually is",
-        "Where a luck working for LUDIBRIEL comes from",
-        "Building a luck working for LUDIBRIEL from nothing",
-        "Charging a luck working for LUDIBRIEL: the working sequence",
-        "a luck working for LUDIBRIEL in practice, step by step",
-        "Why a luck working for LUDIBRIEL fails, and what to change",
-        "Testing a luck working for LUDIBRIEL without fooling yourself",
-        "a luck working for LUDIBRIEL: tools, timing and materials",
-        "Keeping a luck working for LUDIBRIEL alive after the first charge",
-        "Signs a luck working for LUDIBRIEL is actually working",
-        "The ethics of working with a luck working for LUDIBRIEL",
-        "a luck working for LUDIBRIEL: the mistakes beginners make",
-        "When to abandon a luck working for LUDIBRIEL",
-        "Repeating a luck working for LUDIBRIEL without it going stale",
-        "How a luck working for LUDIBRIEL fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "If an outcome is genuinely random, no ritual can bias it; if a decision is marginal, a change in attention or timing can shift the distribution - which is where all practical luck work actually operates.",
-        "The Zener card and Rhine studies produced a body of literature on ESP that remains contested, but the card-deck structure survives as an excellent probability teaching tool.",
-        "Different traditions assign luck to different days of the week - Monday to the Moon, Thursday to Jupiter, Friday to Venus - so timing is used less to attract chance than to mark a decision point.",
-        "Practitioners who report durable luck almost always also report becoming more observant of weak signals, which is a real and trainable capacity."
-      ],
-      "spec_faq": [
-        [
-          "Is a luck sigil different from a money sigil?",
-          "Mechanically no - the charge method is identical. Psychologically the target differs: luck is diffuse, money is measurable, so luck sigils lose more to vagueness."
-        ],
-        [
-          "What is the most common luck mistake?",
-          "Casting for luck and then never doing the thing that luck would have arrived through. Luck sigils perform badly without a behavioural commitment attached."
-        ],
-        [
-          "Can you make yourself lucky?",
-          "You can make yourself more attentive to opportunities, which is the component of luck that is actually trainable. You cannot make a random dice roll land differently."
-        ]
-      ],
-      "products": [
-        "chaos-sigil-generator",
-        "lunar-phase-calculator",
-        "noctem-tools"
-      ],
-      "tools": [
-        "astrology-sign-calculator",
-        "dream-symbol-dictionary",
-        "iching"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=7i05xIVU94A",
-      "risk": "clarity-discipline",
-      "risk_note": "The target must be specific enough to act on. 'Be happy' cannot be worked with; 'three client conversations this week' can.",
-      "variant_phrase": "the full operational sequence, step by step",
-      "role_phrase": "a luck working for LUDIBRIEL",
-      "subject": "LUDIBRIEL",
-      "title_tag": "LUDIBRIEL: Complete Chaos Magic Guide to Luck, Fortune and Chance",
-      "seo_title": "LUDIBRIEL | Luck, Fortune and Chance Protocol",
-      "description": "A complete working guide to LUDIBRIEL: what it is, the luck, fortune and chance structure behind it, and the full protocol. Includes step-by-step protocol,...",
-      "keywords": [
-        "ludibriel sigil",
-        "ludibriel ritual",
-        "ludibriel invocation",
-        "ludibriel chaos magic",
-        "luck sigil",
-        "how to attract luck chaos magic",
-        "fortune sigil ritual",
-        "chance and probability magic",
-        "lucky sigil instructions",
-        "money and luck sigils",
-        "serendipity ritual",
-        "protocol luck sigil"
-      ]
-    },
     {
       "n": 234,
       "slug": "elon-musical-ritual",
