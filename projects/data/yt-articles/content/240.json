@@ -1,0 +1,155 @@
+{
+  "n": 240,
+  "slug": "mani-invocation-ritual-entity",
+  "h1": "MANI",
+  "seo_title": "MANI | Entity Lore and Invocation Reference",
+  "description": "A complete working guide to MANI: what it is, the entity lore and invocation structure behind it, and the full protocol. Includes step-by-step protocol,...",
+  "keywords": [
+    "mani sigil",
+    "mani ritual",
+    "mani invocation",
+    "mani chaos magic",
+    "invocation ritual entity",
+    "how to work with a spirit",
+    "chaos magic entity invocation",
+    "servitor vs spirit",
+    "demon invocation guide",
+    "theoretical entity working",
+    "evocation protocol",
+    "working with named spirits",
+    "reference invocation ritual entity"
+  ],
+  "published": "2026-09-27",
+  "published_human": "September 27, 2026",
+  "lede": "MANI is an entity working built the way a reference is built rather than the way a ritual is built, and the difference shows up in the first ten minutes. This article treats the tables, correspondences and terms as the actual content, because a catalogue entry is a piece of structured data and a name with no structure attached is a name you have to invent every time you sit down. The four ideas underneath are standard and worth stating once. Evocation asks for appearance; invocation asks for influence operating through the operator, and most modern usage collapses the two. The Ars Goetia remains useful here as a schema rather than as a source: a fixed set of fields per entry, seventy-two rows, every row filled in the same way, which is why it is still the first thing anyone reaches for when they need a format instead of a story. Modern chaos practice treats entities as independent pattern fragments rather than beings with biographies, so a table you have assembled yourself carries exactly the same authority as one printed in 1604. And Carroll's position, that such figures are facets of the practitioner's own mind, dissolves the risk question without requiring scepticism about the technique.",
+  "sections": [
+    {
+      "h2": "The vocabulary, defined once",
+      "p": [
+        "Four terms cover almost everything you need, and the errors come from using them loosely. Rank is position in a hierarchy. Form is the shape an entity is described as appearing in. Office is the function it serves. Powers are the abilities attributed to it. These are four different things and conflating them produces the usual muddle where a spirit of high rank is assumed to have broad authority.",
+        "Write the four definitions on the first page of the reference, in your own words, and check them against the source you are working from. This takes ten minutes and it is the highest-value ten minutes in the whole method, because every later decision, how wide the office can be, whether the entry suits your aim, whether you have inflated anything, depends on keeping the four apart."
+      ]
+    },
+    {
+      "h2": "Correspondence, and the job it is hired for",
+      "p": [
+        "Correspondence is the practice of linking things by shared attribute: name to name, number to number, planet to metal, colour to quality. Its practical function in entity work is to let you move from a function you want to a name that carries it, or from a name that attracts you to what it might actually be for.",
+        "That is a lookup job, not a causal one. Nothing about the links makes the entity more able to perform its office. What the links do is compress a large body of symbolic material into something you can search, and compression is a genuine service when the material is older than you are and does not fit in memory."
+      ]
+    },
+    {
+      "h2": "What a rank can and cannot tell you",
+      "p": [
+        "Rank tells you about the document, not about the entity. A president in the catalogue hierarchy sits above a duke in that document, which tells you about how the author organised a list and nothing about what either can do for you. Two entries of different rank with the same office will produce the same result, which is the practical test.",
+        "Rank also carries a social charge, which is where it starts doing harm. Higher rank reads as more powerful, and practitioners drift toward invoking the impressive entries and then getting less out of them, because an impressive office is harder to narrow to something you personally do. Use rank to organise the table. Do not use it to choose."
+      ]
+    },
+    {
+      "h2": "Building a table you will actually use",
+      "p": [
+        "Most correspondence tables fail because they are complete rather than useful. A full table of seventy-two entries across four fields is a reference, and references are not read at the moment of drafting, when you need one entry in under a minute.",
+        "Build the table around the use. Four columns, name, office, a one-phrase form note, and your own narrowing in a fifth column written a month later, not on the day. If a row is not an office you could plausibly invoke, delete it. You should end up with something like a dozen rows, and the deletions are more informative than the survivors because they mark the entries you have correctly identified as not yours."
+      ]
+    },
+    {
+      "h2": "The one-page reference",
+      "p": [
+        "The reference should fit on one page and be legible without magnification. That constraint is doing real work. A single page can be held in attention while a working is drafted, so the name, its office, and its narrowed sentence are all available at the moment they are needed rather than looked up later, which is when you have already made a decision.",
+        "Include the dismiss line on the same page, pre-written. Also include the count you will use and the date format, because a reference that leaves formatting to the moment is a reference that gets abandoned in week three for bureaucratic reasons rather than substantive ones."
+      ]
+    },
+    {
+      "h2": "Drafting from the table into a sentence",
+      "p": [
+        "The table gives you a function. The sentence makes it actionable, and the translation is where most entity work is lost. Office of offering financial insight becomes a sentence about reading the ledger. Office of clearing confusion becomes a sentence about writing the two criteria in a column before the end of the evening.",
+        "The narrowing rule is that the sentence must name an action, be completable in under ten minutes, and be something you personally do. If the sentence describes a state, or takes an hour, or depends on a third party's behaviour, the row goes back for rewriting. A table that hands you an un-actionable sentence is producing sentiment rather than technique, and it will produce the same sentiment every time you consult it."
+      ]
+    },
+    {
+      "h2": "Where a correspondence reading misleads",
+      "p": [
+        "The failure mode is false precision. If a number associates with a name, it feels like information, and it is not: the association is a cultural artefact with no more claim on reality than the pattern of letters in the name. The two feel identical from the inside, which is why the misuse is so common and so hard to notice.",
+        "Protect against it by keeping the reading and the action in separate sentences. The correspondence may legitimately tell you that an office fits your aim. It cannot tell you what to do on Thursday, and if it appears to, that is a signal to write the action down and check whether you would have written it without the table. A useful test is whether the sentence changes when you remove the symbolic layer entirely. If it does, the layer was decoration."
+      ]
+    },
+    {
+      "h2": "Instruments and the ones to skip",
+      "p": [
+        "A surface, a pen, a timer and a separate notebook. The timer converts a session into a measurable length, which is the difference between a practice and an occasion. The separate notebook matters because a working written on the same page as the day's notes is read as part of the day and loses its status as a record.",
+        "Skip the rest until a specific need appears. Pendulums, divination boards, rune sets and lunar calculators are all defensible tools, and all of them are also ways to postpone the part of the working that requires you to write a sentence about your own behaviour. If you find yourself researching correspondence sources instead of narrowing an office, that is what is happening."
+      ]
+    },
+    {
+      "h2": "A working built in an evening",
+      "p": [
+        "An hour, structured. Fifteen minutes to write the office sentence and check it against the three conditions. Five to clear the space and ground, meaning name the room, the hour, and what you will do next. Ten for the charge, five repetitions and then stop. Twenty for the working, timed, with the aim written in front of you rather than remembered. Ten for notes, in the same hand as everything else.",
+        "Total is about an hour and it should not grow. The temptation is to extend the working while the state is good, and every extension converts a measurement into a highlight reel. If the working is going to be longer, decide that in advance and change the count, not the duration in the moment."
+      ]
+    },
+    {
+      "h2": "Reconciling the reference against outcomes",
+      "p": [
+        "Every few weeks, read the reference and the log together, which is the only audit that matters. The question is not whether the entries were right. It is whether the table is being used to narrow aims, or whether it has become a browsing activity that supplies names faster than it supplies sentences.",
+        "There is a clean diagnostic. Count the rows that have been narrowed to a written sentence and charged, and count the rows that have been read. If the second number is much larger, the table is serving as entertainment rather than as a working tool, and the fix is to delete the unread rows. A smaller table with a higher charge rate will outperform a large one indefinitely."
+      ]
+    },
+    {
+      "h2": "What the tables will not decide",
+      "p": [
+        "Tables will not tell you which office to choose, whether an entity is real, or whether a working you did in good faith had any effect beyond the commitment it embodied. They are lookup structures for a symbolic material, and pretending otherwise is how correspondence work turns into a way of feeling informed without making decisions.",
+        "The three questions above are yours. The first is answered by the criterion conflict method, writing your competing priorities in a column and picking one. The second is not answerable and does not need to be. The third is answered by the log, months later, and it is the only one of the three that improves what you do next time."
+      ]
+    },
+    {
+      "h2": "Keeping the reference honest",
+      "p": [
+        "Once a month, delete one row. Not because the entry was wrong but because keeping a growing reference is itself a form of avoidance, and the table will otherwise expand to hold every name that caught your attention, which is a collection rather than a resource.",
+        "Keep the version history. Two or three dated copies, with a line on what changed and why, are enough to let you see whether your own thinking has moved or whether you are simply adding things. A reference that has only ever grown tells you nothing about your judgement, and judgement is the only thing in this practice that is actually yours."
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "What are the four fields in a Goetia entry?",
+      "Rank, form, office and powers, and they do different jobs. Rank is position in the catalogue hierarchy, form is the shape described, office is the function served, powers are the attributed abilities. Conflating them is the usual source of muddle, since a high rank gets assumed to mean broad authority. Write the four definitions down in your own words before you start working with them."
+    ],
+    [
+      "Is correspondence a way of choosing the right spirit?",
+      "It is a lookup method, not a causal one. Correspondence lets you move between a function and a name, which is a genuine service when the material is large and older than your memory. It cannot tell you which office to invoke, and where it seems to, that is false precision rather than information. Test it by removing the symbolic layer and checking whether the action sentence changes."
+    ],
+    [
+      "How many entries should a working reference contain?",
+      "About a dozen, on one page. Most correspondence tables fail because they are complete rather than useful, and completeness means the reference cannot be consulted at the moment of drafting. Delete any row whose office you could not plausibly invoke, and delete a row a month as maintenance, since a growing reference is a collection rather than a resource."
+    ],
+    [
+      "Do I need divination tools like pendulums or rune sets?",
+      "Not for the method, and they are a common way of postponing the part that needs work. A surface, a pen, a timer and a separate notebook are sufficient, and the timer is the one that changes the most: it converts a session into a measurable length. Add the rest when a specific need appears, not when the narrowing feels difficult."
+    ],
+    [
+      "How do I stop an entity reference becoming just browsing?",
+      "Count the rows you have read against the rows you have narrowed to a written sentence and charged. If reading far outpaces charging, the table is entertainment and the fix is to delete the unread rows. Also delete one row a month by default, and keep two or three dated versions of the whole file so you can see whether your thinking moved or you are only adding."
+    ]
+  ],
+  "related": [
+    [
+      "arcana-goetia-spirit-browser-guide",
+      "Browsing the 72 Spirits: Arcana Goetia App Guide (2026)"
+    ],
+    [
+      "aristeia-invocation-ritual-entity",
+      "ARISTEIA | Entity Lore and Invocation Critique"
+    ],
+    [
+      "asipu-el-milagroso-invocation-ritual-entity",
+      "ASIPU el MILAGROSO | Entity Working and Invocation, Step by Step"
+    ],
+    [
+      "clauneck-ars-goetia-arts-sciences-guide",
+      "Clauneck: Arts, Sciences and the Spirit the Wealth Rituals Misuse"
+    ],
+    [
+      "entity-lore-and-invocation-invocation-ritual-entity-gui-3",
+      "Entity Lore and Invocation | Entity Lore and Invocation"
+    ]
+  ]
+}
