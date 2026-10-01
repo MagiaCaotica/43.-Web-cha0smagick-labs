@@ -1,0 +1,49 @@
+{
+  "h2": "Reading a Chart the Way an Astrologer Does",
+  "lede": "An offline natal chart app is a document reader with arithmetic attached. The arithmetic is the easy part and it is already correct; what the tool cannot do for you is teach you the order in which a chart gets read, and that order is the whole difference between a wall of symbols and an argument. What follows is the reading order, the three places beginners get it wrong, and what to do with a chart once you can read it.",
+  "sections": [
+    {
+      "h3": "The order: three placements, then aspects, then transits",
+      "p": [
+        "The single most common mistake is reading a chart by hunting for the one thing you already wanted to know. The working order is fixed and it starts with the three placements, because they carry the most weight and the least ambiguity. [The big three, explained together](big-three-explained) is the shortest correct treatment, and [the fuller version](sun-moon-ascendant-meaning) works through what each of the three governs and where they contradict each other. A chart where sun and moon disagree is a chart with an actual question in it.",
+        "Only after the three do you look at aspects, because aspects are relationships between the placements and you cannot read a relationship before you know the terms. [Aspects explained](astrology-aspects-guide-conjunction-opposition-trine-square) sorts them by difficulty, which is the right order; the hard aspects carry more information precisely because they are the ones in tension. [Advanced pattern work](natal-aspect-patterns-advanced) is for after the basics have stopped being interesting."
+      ]
+    },
+    {
+      "h3": "Planets, signs and houses are three different axes",
+      "p": [
+        "Beginners consistently collapse the three axes, and the collapse produces readings that feel specific and are not. [Planets in natal charts](natal-planets-explained) gives each planet its job, and the job is a question the planet asks rather than a trait it owns. [Rising sign and the ascendant](rising-sign-meaning-ascendant-astrology) covers the third axis and includes the chart ruler, which is the piece that makes the whole system hang together and which almost nobody teaches first.",
+        "Signs are the third axis and they are the one people overuse. [Lunar zodiac signs](lunar-zodiac-signs-moon-rules-signs-explained) makes the point that the moon rules a sign does not make the moon the most important thing in your life. [Moon sign astrology](moon-sign-astrology-guide) and [moon sign as emotional blueprint](moon-sign-meaning-emotions-astrology) are the long versions, and both are careful to say the moon is a description of default weather rather than a verdict."
+      ]
+    },
+    {
+      "h3": "Transits are a separate document with a separate clock",
+      "p": [
+        "A natal chart is fixed and a transit overlay moves, and mixing the two produces most of the confident nonsense in amateur astrology. [Planetary transits](planetary-transits-astrology-guide) is the entry point, and the part beginners skip is the part that matters: transits are read against the natal chart, never alone. The overlay is a question being asked of a particular configuration, and a question with no chart underneath it is just an ephemeris.",
+        "This is also where the app earns its keep, because a natal chart is a fixed document and transiting positions are the one thing that genuinely needs a live or dated calculation. If your chart app cannot show you what moved on a given day, the rest of the reading is a snapshot you will misattribute. [A complete beginners guide to charts](birth-chart-beginners-guide) is the reference to sit alongside while you do your first few."
+      ]
+    },
+    {
+      "h3": "Timing practice with a chart in hand",
+      "p": [
+        "Once the reading works, the chart stops being the exercise and becomes the planning layer for the rest of the practice. [Practical planetary magic](practical-planetary-magic-seven-day-frame) is a seven-day frame that assumes you already have a working and want better timing, which is the correct order of operations. [Lunar and planetary magic](lunar-and-planetary-magic-moon-magic-rituals-guide) and [its longer treatment](lunar-and-planetary-magic-moon-magic-rituals-guide-3) give the correspondence layer, and [AIKENDÚ](aikendu-moon-magic-rituals) works from a different tradition entirely.",
+        "A caveat on speed that belongs in any honest timing work: [what an acceleration servitor actually changes](fastar-acceleration-servitor-accuracy-cost) and [what a construct can reach about time](fotamecus-time-what-a-construct-can-actually-control) both conclude that the price of a faster answer is paid in accuracy, and neither finds a mechanism worth the price. Read them before you build anything to move a deadline."
+      ]
+    },
+    {
+      "h3": "Using a chart as a thinking instrument",
+      "p": [
+        "Divination and chart work share a function that has nothing to do with prediction: both externalise a decision you have not yet made into a form you can argue with. [Aruspecía on how divination actually works](aruspecía-how-to-use-divination) and [divination as a thinking practice](divination-as-a-thinking-practice-how-to-use-divination) make that case from two directions, and both are more useful for the chart than they are for the deck. A chart you disagree with has done its job.",
+        "The place where this is easiest to forget is when a chart becomes a script. [Comparing the traditions](comparing-magical-traditions-chaos-magic-vs-thelema-guide) is the broad version and [the two narrower passes](comparing-magical-traditions-chaos-magic-vs-thelema-gui-2) and [a third](comparing-magical-traditions-chaos-magic-vs-thelema-gui-3) take different lines on what the comparison is for. On the altered-states side, [psychonautics and altered states](psychonautics-and-altered-states-psychonautics-guide-guide) and [the critique of infusing a servitor with consciousness](infusing-consciousness-into-a-servitor-critique) both belong in the same shelf: what happens when a chart, a practice and a state of mind are treated as more interchangeable than they are."
+      ]
+    },
+    {
+      "h3": "The neighbouring apps, and why the overlap is not redundancy",
+      "p": [
+        "Several tools in this library share raw material with a natal chart app and none of them duplicate it. [Lunar phase magic](lunar-phase-magic-guide) and [the complete lunar ritual set](lunar-magic-rituals-spells-complete-guide) use the moon's position rather than its sign. [Full moon charging nights](full-moon-charging-nights-2026) is a dated reference. [A witch's year with the lunar phase app](a-witchs-year-with-the-lunar-phase-app) is the long read on what a year of tracking actually changes.",
+        "If you are deciding what to install rather than what to read, the comparisons are already written. [Free lunar phase versus the paid calculator](free-lunar-phase-vs-lunar-phase-calculator-app) and [the free calculator guide](free-lunar-phase-calculator-guide) answer the narrow version, while [the best lunar calendar apps](best-lunar-calendar-apps-2026) and [the best moon phase journals](best-moon-phase-journal-apps-2026) cover the calendar side. The calculator's own review, [here](lunar-phase-calculator-app-review), and its [methods and accuracy](lunar-phase-calculator-guide-methods-2026) tell you what to check on the numbers before you trust them. An eclipse season reference is at [lunar eclipse rituals](lunar-eclipse-rituals-2026), and a single-night procedure at [the eclipse ritual](lunar-eclipse-ritual)."
+      ]
+    }
+  ],
+  "foot": "A chart is an argument about a life, written in a notation you have to learn. Learn the notation, then argue."
+}

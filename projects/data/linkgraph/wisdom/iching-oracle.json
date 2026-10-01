@@ -1,0 +1,49 @@
+{
+  "h2": "The Moving Line Is the Reading",
+  "lede": "Most people who open a Book of Changes app ask for a hexagram and get one. That request is a category error, and it is why the same cast produces such different reactions in different hands. The text is organised around a change, not a state. An app can cast accurately, enumerate the sixty-four, and still hand you something that answers the wrong question. Below is the structure that makes the cast usable, including the one piece of arithmetic that proves the method is honest.",
+  "sections": [
+    {
+      "h3": "A primary hexagram is a question, not an answer",
+      "p": [
+        "The working method that gets taught in ten minutes and takes a year to unlearn is the trap. [How to read the I Ching as a beginner](i-ching-reading-i-ching-how-to-read-guide) is the article to give someone in that stage, and its core correction is that the hexagram describes a situation rather than predicting an outcome. [A guide to the trigrams and hexagrams](iching-oracle-meaning-complete-guide-trigrams-hexagrams) is the systematic version, and [all sixty-four with one-line meanings](i-ching-hexagram-list-all-64-one-line-meanings) is the reference you keep open while you work.",
+        "The one-line meanings are the part most people skip and the part that carries the technique. [Top hexagrams, meaning and interpretation](top-iching-hexagrams-meaning-interpretation-2026) is a reasonable starting subset, and [the complete hexagram guide](i-ching-hexagram-meanings-complete-guide) is the one to have open when a cast lands somewhere you do not recognise."
+      ]
+    },
+    {
+      "h3": "Changing lines and how they are actually read",
+      "p": [
+        "This is the mechanism the whole text is built on, and it is the single most misread element in modern practice. [How to read changing lines](iching-changing-lines-guide) works through it properly, and the short version is that each changing line names the stage of the transition and the companion line it is moving toward, so a line is a position between two positions rather than a prediction.",
+        "[Completing the great decline](iching-completing-the-great-decline-explanation) is a full worked example of a hexagram with a changing line, and it is worth reading in full because watching a single interpretation unfold is faster than reading ten summaries. [The three-coin method in practice](how-to-cast-iching-digitally) covers the cast itself, including the version where the app does the coin work for you."
+      ]
+    },
+    {
+      "h3": "The arithmetic, which is the part that can be checked",
+      "p": [
+        "An oracle app makes a claim you can verify: that the coin method produces a particular distribution and not a uniform one. [The complete probability analysis](i-ching-three-coin-probability-distribution) works it out, and the result is that the classical three-coin method is not uniform and was never intended to be. Reading that page changes how you interpret a cast that keeps producing the same hexagram.",
+        "The casting variants are a separate matter. [Coins, yarrow stalks and plum blossoms](iching-reading-methods-coins-yarrow-sticks) is the survey of methods and what each one weights, and it matters because switching method silently changes the distribution you have learned to read. [A working casting method](rune-casting-and-the-futhark-how-to-read-runes-guide-2) is the same discipline applied to rune sets, where the method you choose has an outsized effect on the result."
+      ]
+    },
+    {
+      "h3": "A practice rather than a consultation",
+      "p": [
+        "The book rewards being read daily and badly on the evidence of most practitioners. [A guided daily routine](iching-daily-practice-routine-guided) is the version that survives contact with a real week, and [what the I Ching can teach you about difficult choices](what-the-i-ching-can-teach-you-about-difficult-choices) is the argument for using it as a thinking tool rather than a decision engine. [From sceptic to practitioner](from-skeptic-to-practitioner-iching) is an honest account of how that conversion usually happens, which is not by deciding the book is true.",
+        "The applied cases are the ones that show the structure under load. [Work decisions](iching-career-questions) and [relationships](iching-for-love-questions) cover the two questions people actually ask. [Divination as a thinking practice](divination-as-a-thinking-practice-how-to-use-divination) and [Aruspecía on how this actually works](aruspecía-how-to-use-divination) both make the general case, and [emotional regulation, stoic and neural](emotional-regulation-techniques-stoic-neuroscience) is the closest thing here to a secular parallel for the discipline a daily cast imposes."
+      ]
+    },
+    {
+      "h3": "Choosing between systems, and against a background hum",
+      "p": [
+        "If you already use tarot or runes, the honest question is whether a third system adds anything, and the answers are carefully done. [I Ching against tarot](iching-vs-tarot), [the three-way comparison](iching-vs-tarot-runes-comparison-guide) and [combining I Ching with tarot](iching-tarot-combination-advanced-divination) cover the practical side, including the combination methods that are worth the effort and the ones that produce mush. [Pendulum divination for yes and no](pendulum-divination-beginners) is the smaller, faster tool and a reasonable companion.",
+        "The five-elements layer underneath the hexagrams is a separate schema with its own vocabulary. [Wood, fire, earth, metal and water](iching-5-elements-wood-fire-earth-metal-water) is the reference, and [elements and modes in natal work](natal-element-modes) shows the same five-part structure arriving from a completely different tradition, which is a useful check on how much of the correspondence layer is convention."
+      ]
+    },
+    {
+      "h3": "What the app does, and what it does not",
+      "p": [
+        "A digital cast is faster, more consistent and records itself, and those are real gains that [the free online guide](free-i-ching-online-guide) and [the digital introduction](i-ching-digital-guide) both rely on. They are also the whole of the gain. [The app review](i-ching-oracle-app-review) is measured about the same way, and [free against paid, specifically for this app](free-i-ching-vs-i-ching-oracle-app) is the narrow question if you are deciding whether to install anything.",
+        "The wider questions are worth one look each. [What your data shows](occult-apps-and-privacy-what-your-data-says) covers what a local cast does and does not transmit, and [free tools against premium ones in general](free-tools-vs-premium-apps-occult) is the broader version. [The philosophy of the occult, first pass](philosophy-of-the-occult-nothing-is-true-everything-is), [second](philosophy-of-the-occult-nothing-is-true-everything-is-2) and [third](philosophy-of-the-occult-nothing-is-true-everything-is-3) are the three positions in this library most relevant to whether a cast means anything, and they disagree with each other on purpose. [Protection and banishing](protection-banishing-and-defense-banishing-ritual-guide) is where the other end of the practice sits, and [eight weeks of a wealth pact logged honestly](clauneck-wealth-pact-field-log-eight-weeks) is what a working looks like when it goes wrong in public. [Machine learning in paranormal research](ai-machine-learning-paranormal-research) is the piece to read if you want to know what the field actually looks like from the research side."
+      ]
+    }
+  ],
+  "foot": "You are reading a transition, not a forecast. The line that moves matters more than the hexagram that sits still."
+}

@@ -1,0 +1,49 @@
+{
+  "h2": "The Catalogue Behind the Interface",
+  "lede": "Arcana Goetia is a browser for seventy-two names, and the interesting question is not whether a spirit answers. It is what happens to a person who reads four fields for a name that no historical source documented carefully. The library treats that as the point of study rather than an embarrassment. Below, the working order the catalogue actually rewards, the distinction between a name that was recorded and a name that was coined, and the three questions worth asking before a charge.",
+  "sections": [
+    {
+      "h3": "What the four fields are for, and which one does the work",
+      "p": [
+        "Each entry in the catalogue carries four fields, and the reference material on how to read them is uneven. [Field notes on working with names](entity-lore-and-invocation-invocation-ritual-entity-gui-9) is the most useful single piece of writing on the question of what a modern entry with thin sources can honestly support, and its conclusion is uncomfortable for anyone who wants the names to be independent beings. Rank is inherited from the source text and rarely tells you anything you can act on. Form is the field most often inflated.",
+        "Office is the only field that can be tested, because an office describes a function that would show up in your own behaviour. That framing is developed carefully in [Holpe on the four fields](holpe-invocation-ritual-entity), where rank is read as a label that tells you nothing and office is read as the single actionable line. Powers, by contrast, is almost entirely borrowed language lifted from a source that was itself describing folklore."
+      ]
+    },
+    {
+      "h3": "Recorded names and coined names are not the same kind of object",
+      "p": [
+        "A name that appears in a printed catalogue with a page reference and a family grouping is a documented historical artefact. A name that was coined for a modern working has no such trail, and pretending otherwise is the failure mode the whole framework is designed to survive. [How Puck became the demon of modern witchcraft](how-puck-became-the-demon-of-modern-witchcraft) is a careful account of one case where a folklore figure acquired an entirely modern set of attributes, and it is worth reading before assuming a catalogue entry tells you what an entity has always been.",
+        "The distinction matters for a practical reason: a documented name can be cross-checked against a second source, and a coined one cannot. [The twenty kings audit](goetia-twenty-kings-audit-what-the-class-can-do) works through what a whole rank in the catalogue can and cannot be asked to do, which is a more useful exercise than reading one entry twice. [The lich and the phylactery](the-lich-phylactery-is-the-refusal-clause) makes the adjacent point in a different register: a refusal clause written into a tradition is information, not a limitation."
+      ]
+    },
+    {
+      "h3": "A sequence that survives a bad month",
+      "p": [
+        "The order below is the one that holds together when nothing happens. Start with the office, before the form, because the form is the part that seduces. [Escarlate on the working order](escarlate-invocation-ritual-entity) is the clearest statement of why the order is not negotiable: skip the office and you will spend the whole month admiring a drawing. Then write the call in one line. Then build the image. Then charge, briefly, with attention held flat rather than narratively.",
+        "Two entries cover the failure cases in more detail than the happy path does. [A second charge with a narrower office](kranvoc-invocation-ritual-entity) is a field diagnosis of a silent month, with three explanations and a way to distinguish a wide office from a weak charge. [Nightmare and the forbidden invocation](nightmare-invocation-working-within-not-sending) covers the case where the prohibition points inward, which is the reading that makes a refusal clause usable rather than merely obstructive."
+      ]
+    },
+    {
+      "h3": "Ranks, families, and the numbers people get wrong",
+      "p": [
+        "The catalogue is a classification, not a census of inhabitants, and the grouping into families of two to four carries no hierarchy. [The seventy-two read properly](oneiros-72-demons-of-goetia) is the article to hand to someone who has just discovered the numbers and wants to argue about them. [A catalogue and its limits](the-72-spirits-of-goetia-72-demons-of-goetia-guide-13) does the same work as a reference sheet, and [The catalogue as schema](the-72-spirits-of-goetia-72-demons-of-goetia-guide) treats the whole thing as a filing system rather than a bestiary.",
+        "For the specific rows that come up most often in practice, there is dedicated work. [Stolas as a working guide](stolas-prince-of-spirits-eagle-guide) treats a single entry at length, including the rank description that the popular summaries flatten. [The altar for seventy-two](altar-72-demons-of-goetia) is about physical arrangement, which is a different question from ontology and gets conflated with it constantly. [A further pass over the same material](the-72-spirits-of-goetia-72-demons-of-goetia-guide-12) covers the sourcing."
+      ]
+    },
+    {
+      "h3": "Names the library works on, and what each one is for",
+      "p": [
+        "The modern entries are short and should be read as exercises rather than biographies. [Lux](lux-invocation-ritual-entity) is a four-letter name whose authority comes entirely from a borrowed structure, and the article on it is mostly about that. [Mani](mani-invocation-ritual-entity) is the reference treatment of the same problem, with the tables laid out. [Zeskia](zeskia-invocation-ritual-entity) is written as a first hour, hour by hour, which is a better model for a first sitting than most.",
+        "The rest follow the same logic. [Arukah](arukah-invocation-ritual-entity), [Asipu el Milagroso](asipu-el-milagroso-invocation-ritual-entity), [Caotizador](caotizador-invocation-ritual-entity), [Cochicholupos](cochicholupos-invocation-ritual-entity), [Dev](dev-invocation-ritual-entity), [Dogepe](dogepe-invocation-ritual-entity), [Skrudranozcon](skrudranozcon-invocation-ritual-entity), [Sterion](sterion-invocation-ritual-entity), [Vimec Luce](vimec-luce-invocation-ritual-entity), [Viraceu](viraceu-invocation-ritual-entity) and [Lux Titanus](lux-titanus-invocation-ritual-entity) each take one angle on the apparatus. [The same name, twice, differently](lux-titanus-invocation-ritual-entity-2) is the demonstration that the office, not the name, is what you actually built."
+      ]
+    },
+    {
+      "h3": "What the browser is honestly for",
+      "p": [
+        "A reference tool earns its place by making you faster at the parts that should be fast and slower at the parts that should be slow. Looking up a rank, a form, and a family grouping in three seconds is a real gain. Skimming twenty entries to avoid work is not, and the difference is entirely in what you write down before you charge. The catalogue entries in the companion library that focus on the honest limit are collected in [Lilith](lilith-invocation-ritual-entity), [Mani](mani-invocation-ritual-entity) and [Sacerdote de Cydonia](sacerdote-de-cydonia-invocation-ritual-entity), and they are worth more than any single working.",
+        "If you want the wider frame, [the entity-lore index on invocation](entity-lore-and-invocation-invocation-ritual-entity-gui-3) and [its beginner route](entity-lore-and-invocation-invocation-ritual-entity-gui-4) start from different places and disagree productively. The classical distinction between appearing and operating through is set out in [the reference version](entity-lore-and-invocation-invocation-ritual-entity-gui-6) and again, from the structure side, in [the field notes](entity-lore-and-invocation-invocation-ritual-entity-gui-7). Build the record before you build the image, or you will remember the image and forget what you were asked to do."
+      ]
+    }
+  ],
+  "foot": "The catalogue is a filing system. Use it to fill a field, then close the tab and do the working."
+}
