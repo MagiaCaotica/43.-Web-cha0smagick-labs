@@ -68,18 +68,36 @@ def pick_related(n, self_slug, seeds):
         if score:
             scored.append((score, slug))
     scored.sort(key=lambda t: (-t[0], t[1]))
-    out = []
-    chosen = []
-    for score, slug in scored:
+    for thresh in (0.55, 0.70, 0.85, 1.01):
+        out = []
+        chosen = []
+        for score, slug in scored:
+            t = title_for(slug)
+            if not t or len(t.split()) < 5:
+                continue
+            w = slug_words(slug)
+            # keep the five targets from bunching into near-duplicates
+            if any(len(w & c) / max(1, len(w | c)) > thresh for c in chosen):
+                continue
+            chosen.append(w)
+            out.append([slug, t])
+            if len(out) == 5:
+                break
+        if len(out) == 5:
+            return out
+    # last resort: top up from any remaining article with a usable title
+    have = {s for s, _ in out}
+    for name in sorted(os.listdir(BLOG)):
+        if not name.endswith(".html"):
+            continue
+        slug = name[:-5]
+        if slug == self_slug or slug in have:
+            continue
         t = title_for(slug)
         if not t or len(t.split()) < 5:
             continue
-        w = slug_words(slug)
-        # keep the five targets from bunching into near-duplicates
-        if any(len(w & c) / max(1, len(w | c)) > 0.55 for c in chosen):
-            continue
-        chosen.append(w)
         out.append([slug, t])
+        have.add(slug)
         if len(out) == 5:
             break
     return out
