@@ -355,7 +355,28 @@ COMMENTS_SECTION = (
 )
 
 
+def _crossrefs(c):
+    """Los treinta cruces del grafo, o cadena vacia si el grafo no conoce el slug.
+
+    Se aislan aqui para que un fallo del grafo no tumbe el render de los 349
+    articulos: el bloque es navegacion, no contenido, y perderlo degrada la
+    pagina pero no la rompe.
+    """
+    try:
+        import crossrefs
+
+        return crossrefs.build(c.get("slug", ""), c.get("h1", ""))
+    except Exception as exc:  # pragma: no cover - red de seguridad
+        sys.stderr.write("crossrefs: %s: %s\n" % (c.get("slug", "?"), exc))
+        return ""
+
+
 def render_tail(c, spec):
+    # El bloque de "Related Articles" que vivia aqui (cinco enlaces por
+    # articulo) queda absorbido por el modulo de treinta cruces de
+    # crossrefs.build(), que ya incluye esos cinco porque el grafo los
+    # bonifica y los fija primero. Se conservan por si el grafo no llegara
+    # a tener entrada para este slug.
     rel = "".join('<p><a href="../blog/%s.html">%s</a></p>\r\n' % (s, esc(t))
                   for s, t in c.get("related", []))
     apps = [PROD[i] for i in spec["products"] if i in PROD and PROD[i]["kind"] == "apps"]
@@ -363,6 +384,7 @@ def render_tail(c, spec):
     tools = [TOOL[i] for i in spec.get("tools", []) if i in TOOL]
     rows = _money_rows(spec)
     return (
+        _crossrefs(c) +
         '<section class="related-articles">\r\n        <h2>Related Articles</h2>\r\n'
         '        <div class="related-links">\r\n' + rel +
         '        </div>\r\n    </section>\r\n'

@@ -274,7 +274,13 @@ def _body(html: str) -> str:
     # so leaving it in made each article look like a duplicate of the others on
     # both reused_h2 and reused_ngrams. Its title and intro are chrome, not
     # authored text.
+    # The crossrefs block joins them for the same reason and with more force:
+    # it is thirty one-line entries per article, drawn from a shared pool of
+    # titles, so the same run of words lands in many articles by construction.
+    # Measuring it would flag the navigation as if the author had repeated
+    # themselves.
     for pat in (r'(?is)<div class="meta">.*?</div>',
+                r'(?is)<section class="crossrefs".*?</section>',
                 r'(?is)<section class="related-articles">.*?</section>',
                 r'(?is)<section class="internal-links".*?</section>',
                 r'(?is)<section id="comments" class="post-comments".*?</section>'):
