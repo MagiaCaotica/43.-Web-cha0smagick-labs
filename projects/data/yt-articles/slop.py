@@ -269,9 +269,15 @@ def _body(html: str) -> str:
     # The byline, the auto-generated related list, and the product/tool link
     # block all live inside <article> and repeat by construction. The n-gram
     # gate exists to catch duplicated *prose*, so drop them here.
+    # The giscus comments block joins them: since commit c9895e6 every post
+    # carries the same heading, the same intro paragraph and the same widget,
+    # so leaving it in made each article look like a duplicate of the others on
+    # both reused_h2 and reused_ngrams. Its title and intro are chrome, not
+    # authored text.
     for pat in (r'(?is)<div class="meta">.*?</div>',
                 r'(?is)<section class="related-articles">.*?</section>',
-                r'(?is)<section class="internal-links".*?</section>'):
+                r'(?is)<section class="internal-links".*?</section>',
+                r'(?is)<section id="comments" class="post-comments".*?</section>'):
         body = re.sub(pat, " ", body)
     return body
 
