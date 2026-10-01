@@ -1,0 +1,49 @@
+{
+  "h2": "Building a Mechanism and Resisting the Vocabulary",
+  "lede": "A servitor builder produces one artefact: a written description of a task, a trigger, and a place to keep the description. Everything else in the surrounding literature is either a consequence of that description or a decoration on top of it. The catalogue supplies words. The mechanism does the work. Keeping those two apart is the whole skill, and the pages below are ordered by how much they help you keep them apart.",
+  "sections": [
+    {
+      "h3": "The design, written before any ritual",
+      "p": [
+        "A servitor is specified in four fields: the task, the trigger, the store, and the sign-off. [Building your first chaos magick servitor](build-your-first-chaos-magic-servitor) is the cleanest design document in this library, and its value is that it insists on the specification before the candle. [RELMUS](relmus-how-to-create-a-magical-servitor) walks the same build as a sequence, and [CHOTEK](chotek-how-to-create-a-magical-servitor) takes the same shape from a different angle.",
+        "The trigger is the field that carries the mechanism, and it is a conditional: when this condition holds, do this task. That single sentence is the entire invention. [How to dismiss one properly](descubre-como-desterrar-how-to-create-a-magical-servitor) is the other end of the same design, and it is the article most people need earlier than they expect, because the exit is where a servitor practice usually goes wrong."
+      ]
+    },
+    {
+      "h3": "The vocabulary is borrowed, and that is fine",
+      "p": [
+        "A great deal of servitor practice is written in the grammar of entity invocation, and importing that grammar is where the confusion starts. [Field notes on the two systems being mixed](entity-lore-and-invocation-invocation-ritual-entity-gui-9) is the most useful piece of writing in this library on the subject, and it draws the line cleanly: a catalogue gives you a role, a form and a reputation, none of which a mechanism needs. [A role is not a form](entity-lore-and-invocation-invocation-ritual-entity-gui-8) works the same seam from the servitor side.",
+        "The reverse move is equally available and equally underused. [Servitor craft and management](servitor-craft-and-management-how-to-create-a-magical-3) and [its companion treatment](servitor-craft-and-management-how-to-create-a-magical-6) keep the mechanism honest by refusing borrowed cosmology, and between them they cover the ceiling problem better than anything else here. The borrowed names remain available for colour: [ARISTEIA](aristeia-invocation-ritual-entity), [LILITH](lilith-invocation-ritual-entity), [LUX](lux-invocation-ritual-entity), [LUNARIA](lunaria-invocation-ritual-entity), [LUX TITANUS](lux-titanus-invocation-ritual-entity)."
+      ]
+    },
+    {
+      "h3": "Attention is the budget, and the budget is small",
+      "p": [
+        "The folklore says you can build as many as you like. Practice reports a ceiling far lower, and the reason is not mystical: each active servitor occupies a share of attention, and the share is not reclaimable. [The entry on the ceiling](servitor-craft-and-management-how-to-create-a-magical-6) states it plainly. What to do about it is arithmetic — count what you are already carrying before you build another, which is the practical content of [the management treatment](servitor-craft-and-management-how-to-create-a-magical-3).",
+        "The corollary is that a servitor whose task has quietly become your own work is a liability, not an asset. That diagnosis, and the two failures that produce it, are in [the dismissal article](descubre-como-desterrar-how-to-create-a-magical-servitor). If you find yourself checking whether it worked, that is the sign to read, and it is a sign about your monitoring habits rather than about the servitor."
+      ]
+    },
+    {
+      "h3": "Names, and the ones worth reading anyway",
+      "p": [
+        "The entity entries in this library are short and each takes one angle on the apparatus. They are worth reading as exercises in narrowing an office, which is the part of entity work that is actually actionable. [Escarlate](escarlate-invocation-ritual-entity) on the order of operations, [KRANVOC](kranvoc-invocation-ritual-entity) on diagnosing a silent month, [EYE](eye-invocation-ritual-entity) on what a single letter can carry, [ESPIRITUALMENTE](espiritualmente-invocation-ritual-entity) on an adverb that cannot be narrowed and therefore cannot fail.",
+        "[CAOTIZADOR](caotizador-invocation-ritual-entity), [DEV](dev-invocation-ritual-entity), [DOGEPE](dogepe-invocation-ritual-entity), [GYVU](gyvu-invocation-ritual-entity), [LIBELULA](libelula-invocation-ritual-entity), [ONCOFAGUS](oncofagus-invocation-ritual-entity), [ONIRONOMICON](onironomicon-invocation-ritual-entity), [SKRUDRANOZCON](skrudranozcon-invocation-ritual-entity), [STERION](sterion-invocation-ritual-entity), [VIMEC LUCE](vimec-luce-invocation-ritual-entity), [VIRACEU](viraceu-invocation-ritual-entity) and [LUX TITANUS again, differently](lux-titanus-invocation-ritual-entity-2) complete the set."
+      ]
+    },
+    {
+      "h3": "Three pieces of context that change how the borrowed grammar reads",
+      "p": [
+        "[How Puck became the demon of modern witchcraft](how-puck-became-the-demon-of-modern-witchcraft) traces a single folklore figure acquiring a complete modern set of attributes, and it is the best available demonstration that a catalogue entry is a document with a history rather than a description of a being. [The lich and the phylactery](the-lich-phylactery-is-the-refusal-clause) makes the complementary point: a prohibition written into a tradition is a design decision, and reading it as an obstacle is a misreading.",
+        "[Nightmare and the forbidden invocation](nightmare-invocation-working-within-not-sending) sits closer to practice and reaches the same conclusion from the inside, arguing that the prohibition points inward and is therefore the most useful clause in the working. [Clauneck on the arts and sciences](clauneck-ars-goetia-arts-sciences-guide) is worth reading alongside for the specific warning about borrowing a name whose scope is larger than your task, and it is the failure this whole page exists to prevent."
+      ]
+    },
+    {
+      "h3": "The reference frames, if you want the wider argument",
+      "p": [
+        "The beginner and structural entries in the entity-lore set are the ones that explain why the two systems are separable. [The filing-system version](entity-lore-and-invocation-invocation-ritual-entity-gui-4), [the reference treatment](entity-lore-and-invocation-invocation-ritual-entity-gui-6) and [the one written from a book's procedures](entity-lore-and-invocation-invocation-ritual-entity-gui-7) each reach it by a different route, and reading two of them is usually enough to stop conflating a role with a mechanism for good.",
+        "If the conclusion you want to draw from all of this is the practical one: keep a written list of what you have built, what task each entry serves, what its trigger is and when it retires. The date goes in at the moment of construction, not at the moment you remember. Everything else in this library is optional, and that list is not."
+      ]
+    }
+  ],
+  "foot": "Write the task, write the trigger, write the retirement date. The rest is decoration and the decoration is fine."
+}

@@ -1,0 +1,183 @@
+/* ==========================================================================
+   wisdom.css — "Plantilla de sabiduría" para las páginas de apps
+   Añadido para el rediseño de enlaces (Fase 1).
+   No modifica style.css / style.min.css: se enlaza como hoja aparte.
+   ========================================================================== */
+
+:root {
+  --wisdom-max: 78ch;
+  --wisdom-rule: rgba(255, 255, 255, 0.10);
+  --wisdom-amber: #FFB03A;
+  --wisdom-cyan: #35C4D9;
+}
+
+/* ---------- Contenedor ---------- */
+.wisdom {
+  margin: 3rem 0 1rem;
+  padding: 0 0 0.25rem;
+  max-width: var(--wisdom-max);
+  font-size: 1.03rem;
+  line-height: 1.72;
+  color: #E8ECFA;
+}
+
+.wisdom > h2 {
+  font-size: 1.72rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 0.6rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--wisdom-rule);
+  letter-spacing: -0.01em;
+}
+
+.wisdom > h2::after {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 6px;
+  margin-top: 0.85rem;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--wisdom-amber), rgba(255, 176, 58, 0));
+}
+
+/* ---------- Párrafos ---------- */
+.wisdom p {
+  margin: 0 0 1.05rem;
+}
+
+.wisdom p.wisdom-lede {
+  font-size: 1.14rem;
+  line-height: 1.6;
+  color: #C9D3F0;
+  margin-bottom: 1.8rem;
+}
+
+.wisdom p.wisdom-foot {
+  margin-top: 1.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--wisdom-rule);
+  font-size: 0.92rem;
+  color: #8A93B8;
+}
+
+/* ---------- Secciones temáticas ---------- */
+.wisdom h3 {
+  font-size: 1.16rem;
+  font-weight: 700;
+  color: var(--wisdom-cyan);
+  margin: 2.1rem 0 0.75rem;
+  letter-spacing: 0.005em;
+}
+
+.wisdom h3::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 0.6rem;
+  border-radius: 2px;
+  background: var(--wisdom-amber);
+  vertical-align: 0.15em;
+}
+
+/* ---------- Enlaces editoriales en el texto ---------- */
+.wisdom a[href^="../blog/"] {
+  color: #FFD79A;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 176, 58, 0.34);
+  transition: color .16s ease, border-color .16s ease, background-color .16s ease;
+  padding: 0 0.06em;
+}
+
+.wisdom a[href^="../blog/"]:hover,
+.wisdom a[href^="../blog/"]:focus-visible {
+  color: #FFFFFF;
+  border-bottom-color: var(--wisdom-amber);
+  background-color: rgba(255, 176, 58, 0.10);
+}
+
+.wisdom a[href^="../blog/"]:focus-visible {
+  outline: 2px solid var(--wisdom-cyan);
+  outline-offset: 2px;
+}
+
+/* ---------- Índice de la biblioteca ---------- */
+.wisdom-index {
+  margin: 2.2rem 0 0;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--wisdom-rule);
+  border-radius: 10px;
+  background: rgba(11, 16, 38, 0.55);
+}
+
+.wisdom-index > summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 1rem;
+  list-style: none;
+}
+
+.wisdom-index > summary::-webkit-details-marker { display: none; }
+
+.wisdom-index > summary::before {
+  content: "▸ ";
+  color: var(--wisdom-amber);
+}
+
+.wisdom-index[open] > summary::before { content: "▾ "; }
+
+.wisdom-index > summary:hover { color: var(--wisdom-amber); }
+
+.wisdom-index dl {
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.7rem 1.4rem;
+}
+
+.wisdom-index dt {
+  grid-column: 1;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #8A93B8;
+  margin: 0;
+}
+
+.wisdom-index dd {
+  grid-column: 2;
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: #C9D3F0;
+}
+
+.wisdom-index dd a {
+  color: #FFD79A;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 176, 58, 0.30);
+}
+
+.wisdom-index dd a:hover { color: #FFFFFF; border-bottom-color: var(--wisdom-amber); }
+
+.wisdom-index dd .wi-desc {
+  color: #8A93B8;
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .wisdom { font-size: 1rem; }
+  .wisdom > h2 { font-size: 1.4rem; }
+  .wisdom p.wisdom-lede { font-size: 1.05rem; }
+  .wisdom-index dl { grid-template-columns: 1fr; }
+  .wisdom-index dt { grid-column: 1; }
+  .wisdom-index dd { grid-column: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wisdom a[href^="../blog/"] { transition: none; }
+}

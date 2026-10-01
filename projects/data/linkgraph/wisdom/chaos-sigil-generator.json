@@ -1,0 +1,70 @@
+{
+  "h2": "Compression Is the Easy Part",
+  "lede": "A sigil generator takes a sentence you wrote and produces a compact mark for it in under a second. That is a real operation and it is the least interesting part of the practice. It replaces twenty minutes of clerical drawing, which is genuine, and it replaces nothing else, which is the part people tend to skip. The aim, the reduction choices, the hour after the drawing, and the fortnight that follows are what make a sigil work, and none of those happen because a button was pressed.",
+  "sections": [
+    {
+      "h3": "What the algorithm is actually doing",
+      "p": [
+        "Letter reduction is a compression scheme applied to language: remove the letters that carry no intent, then take the remaining skeleton and map it onto a fixed visual vocabulary of circles, lines and crossings. [How to make a sigil](sigils-theory-and-technique-how-to-make-a-sigil-guide) is the method, and [the origins of the practice](sigil-magic-meaning-origins-chaos-magick) is where it came from. Nothing in that pipeline is proprietary, and [another implementation](sigilkore-how-to-make-a-sigil) will produce a different mark for the same sentence, which is the proof that the algorithm is not the sigil.",
+        "That proof matters for a reason that is easy to state and easy to forget: if two different algorithms give two different glyphs for one aim, the glyph is not what carries the aim. [Choosing a reduction family](sigil-craft-choosing-a-reduction-family) is the version of this that is actually useful, because the choice of family is a choice about legibility and about how much of the sentence survives."
+      ]
+    },
+    {
+      "h3": "The twenty minutes you do not actually save",
+      "p": [
+        "The claim that a generator removes the work is where the practice gets weaker, because the twenty minutes were never clerical. They were the interval in which you decided what the sentence should say, where the redundancy went, and which words were load-bearing. Press a button and that interval disappears, along with the only part of the twenty minutes that was doing anything.",
+        "So the honest use of a generator is backwards from the obvious one: use it to produce several candidates and then choose which reduction you actually wanted, rather than using it to produce one. [The full theory and practice](sigil-magic-complete-theory-practice) is the long version of that argument, and [the design and charge sequence](chaos-sigil-design-charge-forget-guide) is what the twenty minutes are for."
+      ]
+    },
+    {
+      "h3": "The charge is what survives",
+      "p": [
+        "Everything that makes a sigil practice rather than a graphic is in the hour after the drawing: the attention held flat, the association made once and not rehearsed, the willingness to leave it alone. [Programming the subconscious, described plainly](sigil-subconscious-programming-explained) covers the mechanism that is usually invoked and the evidence for it, and [the charge step specifically](chaos-sigil-design-charge-forget-guide) is the instruction.",
+        "The [accelerated variants](hyper-accelerated-sigils-what-the-claim-survives) are worth reading as a stress test. What survives is the drawing, the association and the forgetting. What does not survive is the compression, and the claim that the compression is where the power is."
+      ]
+    },
+    {
+      "h3": "Where a generated sigil fails and a drawn one does not",
+      "p": [
+        "The failure mode of the generated version is that the glyph is not yours, and you can tell. A hand-drawn reduction carries the wobble of the hand, and the wobble is a memory of the moment of deciding. A generated one does not, which is not a defect in the mark but a loss in the object. People report finding generated sigils harder to hold in mind, and that is consistent with the forgetting step doing its work on a mark that was never fully yours.",
+        "For the same reason, [the specification-style approach](servitor-revolution-specification-became-writable) works well with generators and badly with hand-drawing, because a specification is a text and a text wants a machine. Different instruments, different jobs. [A working example](artpop-followers-sigil) shows the sequence end to end with the drawing done by hand, and [another](bonita-beauty-sigil-ritual) shows the same structure in a different domain."
+      ]
+    },
+    {
+      "h3": "The tradition you are borrowing from",
+      "p": [
+        "Sigilisation is a twentieth-century formalisation, and the tradition it sits in argued about it. [The fundamentals](chaos-magic-fundamentals-what-is-chaos-magic-guide) sets out the founding position, and [the structure of the claim](transformarte-what-is-chaos-magic) is the version worth reading before you decide how much weight to put on it. The four-question audit is the practical instrument here, and [that audit in full](supernatural-powers-claim-audit-four-question-test) is the one to use before you charge anything with a large claim attached.",
+        "The phrase [inner power](chaos-magic-inner-power-what-the-phrase-claims) is the one the marketing leans on hardest and it is worth reading precisely because the claim is vague in a way that is hard to falsify. [A more recent treatment of the same ground](chaos-magic-fundamentals-what-is-chaos-magic-guide-31) and [an earlier one](chaos-magic-fundamentals-what-is-chaos-magic-guide-2) bracket the range of positions the movement has held."
+      ]
+    },
+    {
+      "h3": "A sequence that uses the tool well",
+      "p": [
+        "The version that holds together: write the aim as an imperative sentence a bank would recognise; reduce it by hand once, slowly; run the generator to see two alternatives and reject both; draw the one you meant, badly; charge it once; then leave it for a fortnight. That sequence takes twenty-five minutes and the twenty minutes are the practice.",
+        "The [older and newer treatments of the basics](chaos-magic-fundamentals-what-is-chaos-magic-guide-27) and [the one aimed at people starting out](chaos-magic-fundamentals-what-is-chaos-magic-guide-29) both arrive at the same emphasis from different directions, and [the version on choosing a reduction family](sigil-craft-choosing-a-reduction-family) is the one that most improves a generated mark. If you take one thing from the tool, take that."
+      ]
+    },
+    {
+      "h3": "The parts of the page worth reading as instructions",
+      "p": [
+        "The output is a picture, so the only thing to read on it is the statement you typed. Keep that statement in front of you while the glyph is being built, because the generator will not tell you what it dropped. A reduction that collapses a preposition into a line and a negation into nothing can be correct and still be unreadable a fortnight later. The spell is not the image; it is the sentence, and the image is a handle you put on the sentence. The distinction is the whole reason the technique has a charge step at all, and it is spelled out in [How to make a sigil from first principles](sigils-theory-and-technique-how-to-make-a-sigil-guide-4), where the same letter-reduction rules are walked through by hand so you can see which letters survive. Read that page once and the generator stops being a novelty.",
+        "Before you generate anything, decide the office in a single sentence and write it down. An office is what the thoughtform is for, and it is the field that can be checked later; everything else about a sigil is either convention or taste. The pages on [designing a sigil and charging it](chaos-sigil-design-charge-forget-guide) and on [what a sigil claim survives](hyper-accelerated-sigils-what-the-claim-survives) both come back to that same point from different directions. If you take one habit from a tool that does nothing else for you, take the habit of naming the office first."
+      ]
+    },
+    {
+      "h3": "Two questions to ask before the first charge",
+      "p": [
+        "Ask whether the statement is specific enough to fail, and whether you would still write it in three months. A wish cannot fail; a command can. [Unifying the theory](chaos-magic-fundamentals-what-is-chaos-magic-guide-31) sets out why the imperative mood is the load-bearing part of a sigil rather than the shape, and [what a claim audit looks like](supernatural-powers-claim-audit-four-question-test) gives the four questions that keep a working from drifting into something you cannot check. A page on [a four-question test for power claims](chaos-magic-fundamentals-what-is-chaos-magic-guide-27) covers the same ground from the other direction, and [the basic terms](chaos-magic-fundamentals-what-is-chaos-magic-guide-26) is the shortest definition of charge, office and aim you will find in one place.",
+        "Then ask what the forgetting stage is doing, because that is the step the tool cannot help with at all. The method and the gap inside it are described in [a sigil design, charge and forget guide](chaos-sigil-design-charge-forget-guide) and in [the complete theory and practice of sigil magic](sigil-magic-complete-theory-practice), which is worth reading before the second working rather than before the first."
+      ]
+    },
+    {
+      "h3": "The library behind a mark you did not draw",
+      "p": [
+        "A generated glyph is a compression result, and compression only means something once the sentence going into it was yours. The writing below is what makes the aim legible before the algorithm touches it, which is the part the button cannot do for you. [Sigils: Theory and Technique](sigils-theory-and-technique-how-to-make-a-sigil-guide-5) [Sigil Theory and Technique: From Statement to Mark](sigils-theory-and-technique-how-to-make-a-sigil-guide-6) [Sigils: Theory and Technique](sigils-theory-and-technique-how-to-make-a-sigil-guide-7) [Chaos Magic Fundamentals](chaos-magic-fundamentals-what-is-chaos-magic-guide-12) [Chaos Magic Fundamentals](chaos-magic-fundamentals-what-is-chaos-magic-guide-13) [Chaos Magic Fundamentals](chaos-magic-fundamentals-what-is-chaos-magic-guide-16) [Chaos Magic Fundamentals](chaos-magic-fundamentals-what-is-chaos-magic-guide-17) [Chaos Magic Fundamentals](chaos-magic-fundamentals-what-is-chaos-magic-guide-18) [Chaos Magic Fundamentals](chaos-magic-fundamentals-what-is-chaos-magic-guide-21).",
+        "None of these replaces the others. Read the one that answers the question you actually arrived with, and leave the rest for the next time you find yourself back at this page without a question."
+      ]
+    }
+  ],
+  "foot": "A generator is a good first draft tool and a poor final one. The twenty minutes it appears to save are the twenty minutes that were doing the work, and the mark it hands you is not the mark that was yours."
+}
