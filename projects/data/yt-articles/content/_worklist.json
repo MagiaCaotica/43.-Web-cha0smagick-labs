@@ -1,23 +1,13 @@
 {
   "total": 349,
-  "done": 226,
-  "remaining": 123,
+  "done": 236,
+  "remaining": 113,
   "batch_size": 26,
   "batch_count": 5,
   "batches": [
     {
       "index": 1,
       "ns": [
-        212,
-        213,
-        214,
-        215,
-        216,
-        217,
-        218,
-        219,
-        220,
-        221,
         222,
         223,
         226,
@@ -33,13 +23,7 @@
         236,
         237,
         238,
-        239
-      ],
-      "count": 26
-    },
-    {
-      "index": 2,
-      "ns": [
+        239,
         240,
         241,
         242,
@@ -49,7 +33,13 @@
         246,
         247,
         248,
-        249,
+        249
+      ],
+      "count": 26
+    },
+    {
+      "index": 2,
+      "ns": [
         250,
         251,
         253,
@@ -65,13 +55,7 @@
         263,
         264,
         265,
-        266
-      ],
-      "count": 26
-    },
-    {
-      "index": 3,
-      "ns": [
+        266,
         267,
         269,
         270,
@@ -81,7 +65,13 @@
         275,
         276,
         277,
-        278,
+        278
+      ],
+      "count": 26
+    },
+    {
+      "index": 3,
+      "ns": [
         279,
         280,
         282,
@@ -97,13 +87,7 @@
         293,
         294,
         295,
-        296
-      ],
-      "count": 26
-    },
-    {
-      "index": 4,
-      "ns": [
+        296,
         297,
         298,
         299,
@@ -113,7 +97,13 @@
         303,
         304,
         305,
-        307,
+        307
+      ],
+      "count": 26
+    },
+    {
+      "index": 4,
+      "ns": [
         309,
         310,
         311,
@@ -129,13 +119,7 @@
         321,
         322,
         323,
-        324
-      ],
-      "count": 26
-    },
-    {
-      "index": 5,
-      "ns": [
+        324,
         325,
         326,
         327,
@@ -145,7 +129,13 @@
         333,
         334,
         335,
-        337,
+        337
+      ],
+      "count": 26
+    },
+    {
+      "index": 5,
+      "ns": [
         338,
         339,
         340,
@@ -156,821 +146,10 @@
         347,
         348
       ],
-      "count": 19
+      "count": 9
     }
   ],
   "articles": [
-    {
-      "n": 212,
-      "slug": "dreams-astral-projection-and-tulpas-how-to-lucid-dream--5",
-      "h1": "Dreams, Astral Projection and Tulpas",
-      "domain": "astral-dreams",
-      "domain_label": "Dreams, Astral Projection and Tulpas",
-      "intent": "commercial",
-      "blog_category": "dreaming",
-      "entity": null,
-      "entity_source": null,
-      "focus": "dreams, astral projection and tulpas",
-      "outline": [
-        "an astral working using Tulpa, It Work,: what it actually is",
-        "Where an astral working using Tulpa, It Work, comes from",
-        "Building an astral working using Tulpa, It Work, from nothing",
-        "Charging an astral working using Tulpa, It Work,: the working sequence",
-        "an astral working using Tulpa, It Work, in practice, step by step",
-        "Why an astral working using Tulpa, It Work, fails, and what to change",
-        "Testing an astral working using Tulpa, It Work, without fooling yourself",
-        "an astral working using Tulpa, It Work,: tools, timing and materials",
-        "Keeping an astral working using Tulpa, It Work, alive after the first charge",
-        "Signs an astral working using Tulpa, It Work, is actually working",
-        "The ethics of working with an astral working using Tulpa, It Work,",
-        "an astral working using Tulpa, It Work,: the mistakes beginners make",
-        "When to abandon an astral working using Tulpa, It Work,",
-        "Repeating an astral working using Tulpa, It Work, without it going stale",
-        "How an astral working using Tulpa, It Work, fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Lucid dreaming is a well-documented phenomenon with a measurable population base and reliable induction techniques, making it the most scientifically tractable item in this domain.",
-        "REM sleep periods lengthen through the night, which is why morning waking is the highest-yield window for lucid recall.",
-        "Out of body experiences are reported by a small percentage of the population and tend to occur near sleep onset or during illness and meditation - not usually at will.",
-        "Remote viewing as practised at research institutes such as Stargate is disputed; the prospective results have not replicated reliably, though the training does improve visual description ability.",
-        "Tulpa practice comes from Tibetan Buddhist traditions, where the method is used for visualisation and deity yoga rather than for creating a separate being."
-      ],
-      "spec_faq": [
-        [
-          "Is astral projection dangerous?",
-          "It is unusual rather than dangerous. Most people report neutral or pleasant experiences. If you are sleep-deprived, unwell, or prone to dissociation, prioritise ground routine first."
-        ],
-        [
-          "Can anyone learn to lucid dream?",
-          "Yes. It is a trainable skill and the standard induction methods have high reported success rates, usually after several weeks of consistent practice."
-        ],
-        [
-          "What is a tulpa really?",
-          "A visualisation sustained across meditation sessions until it acquires some degree of autonomy. The Tibetan originals are deity-visualisation practices, not servant creation."
-        ]
-      ],
-      "products": [
-        "dream-machine",
-        "astral-lab",
-        "lucid-dream"
-      ],
-      "tools": [
-        "consent-boundary-planner",
-        "gnosis-timer",
-        "lunar-phase"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=6YjplVQSOiU",
-      "risk": "grounding-discipline",
-      "risk_note": "If practice starts interfering with sleep, work, or relationships, reduce the intensity. The tradition's own advice is a short daily practice rather than an escalating one.",
-      "variant_phrase": "the honest limits, failure modes and counterarguments",
-      "role_phrase": "an astral working using Tulpa, It Work,",
-      "subject": "Tulpa, It Work,",
-      "title_tag": "Dreams, Astral Projection and Tulpas Critique: Dreams, Astral",
-      "seo_title": "Dreams, Astral Projection and Tulpas | Dreams, Astral",
-      "description": "A complete working guide to dreams, astral projection and tulpas covering dreams, astral projection and tulpas. Includes step-by-step protocol, honest...",
-      "keywords": [
-        "how to lucid dream",
-        "astral projection guide",
-        "what is a tulpa",
-        "remote viewing technique",
-        "how to astral project",
-        "lucid dreaming tips",
-        "out of body experience how to",
-        "tulpa creation guide",
-        "critique how to lucid dream"
-      ]
-    },
-    {
-      "n": 213,
-      "slug": "skrudranozcon-invocation-ritual-entity",
-      "h1": "SKRUDRANOZCON",
-      "domain": "entity-lore",
-      "domain_label": "Entity Lore and Invocation",
-      "intent": "informational",
-      "blog_category": "goetia",
-      "entity": "SKRUDRANOZCON",
-      "entity_source": "declared",
-      "focus": "entity lore and invocation",
-      "outline": [
-        "a magickal servitor for SKRUDRANOZCON: what it actually is",
-        "Where a magickal servitor for SKRUDRANOZCON comes from",
-        "Building a magickal servitor for SKRUDRANOZCON from nothing",
-        "Charging a magickal servitor for SKRUDRANOZCON: the working sequence",
-        "a magickal servitor for SKRUDRANOZCON in practice, step by step",
-        "Why a magickal servitor for SKRUDRANOZCON fails, and what to change",
-        "Testing a magickal servitor for SKRUDRANOZCON without fooling yourself",
-        "a magickal servitor for SKRUDRANOZCON: tools, timing and materials",
-        "Keeping a magickal servitor for SKRUDRANOZCON alive after the first charge",
-        "Signs a magickal servitor for SKRUDRANOZCON is actually working",
-        "The ethics of working with a magickal servitor for SKRUDRANOZCON",
-        "a magickal servitor for SKRUDRANOZCON: the mistakes beginners make",
-        "When to abandon a magickal servitor for SKRUDRANOZCON",
-        "Repeating a magickal servitor for SKRUDRANOZCON without it going stale",
-        "How a magickal servitor for SKRUDRANOZCON fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "In classical ceremonial usage, 'evocation' means calling a spirit to appear, while 'invocation' means inviting its influence to operate through the operator - a distinction most modern usage collapses.",
-        "The Ars Goetia presents each of the 72 spirits with a rank, a visible form, an office, and specific powers, which makes it the most structured entity catalogue in Western grimoire literature.",
-        "Modern chaos magic deliberately relaxes the classical framework, treating entities as independent pattern fragments useful for disrupting a repetitive thought structure.",
-        "Peter Carroll's influential definition held that entities in chaos magic are best regarded as aspects of the magician's own mind rather than as external beings - a position that neutralises most of the risk without requiring scepticism."
-      ],
-      "spec_faq": [
-        [
-          "What is the difference between evocation and invocation?",
-          "Evocation calls the entity to manifest. Invocation asks it to operate through you. Classical practice treats these as different operations with different risks."
-        ],
-        [
-          "Do I need a full ritual circle?",
-          "No. Chaos magic reduced ritual apparatus drastically on purpose. A defined intention, a sigil, and a stated frame are historically sufficient."
-        ],
-        [
-          "Should I work with demons?",
-          "There is no reliable evidence of external danger, and working with a name you have never researched is the real hazard. Read the entity's stated office first and confirm it matches the domain you need."
-        ]
-      ],
-      "products": [
-        "manual-activacion-servidores-magicos-pdf",
-        "eerieroads",
-        "arcana-goetia"
-      ],
-      "tools": [
-        "moon-intention-planner",
-        "planetary-alphabet-cipher",
-        "reality-check-tracker"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=z7eNRmrGyBw",
-      "risk": "grounding-discipline",
-      "risk_note": "If practice starts interfering with sleep, work, or relationships, reduce the intensity. The tradition's own advice is a short daily practice rather than an escalating one.",
-      "variant_phrase": "the tables, correspondences and terms you will need",
-      "role_phrase": "a magickal servitor for SKRUDRANOZCON",
-      "subject": "SKRUDRANOZCON",
-      "title_tag": "SKRUDRANOZCON: Complete Chaos Magic Guide to Entity Lore and",
-      "seo_title": "SKRUDRANOZCON | Entity Lore and Invocation Reference",
-      "description": "A complete working guide to SKRUDRANOZCON: what it is, the entity lore and invocation structure behind it, and the full protocol. Includes step-by-step...",
-      "keywords": [
-        "skrudranozcon sigil",
-        "skrudranozcon ritual",
-        "skrudranozcon invocation",
-        "skrudranozcon chaos magic",
-        "invocation ritual entity",
-        "how to work with a spirit",
-        "chaos magic entity invocation",
-        "servitor vs spirit",
-        "demon invocation guide",
-        "theoretical entity working",
-        "evocation protocol",
-        "working with named spirits",
-        "reference invocation ritual entity"
-      ]
-    },
-    {
-      "n": 214,
-      "slug": "chaos-magic-fundamentals-what-is-chaos-magic-guide-23",
-      "h1": "Chaos Magic Fundamentals",
-      "domain": "chaos-basics",
-      "domain_label": "Chaos Magic Fundamentals",
-      "intent": "informational",
-      "blog_category": "basics",
-      "entity": null,
-      "entity_source": null,
-      "focus": "chaos magic fundamentals",
-      "outline": [
-        "a first working built on Teoría De La MAGIA: what it actually is",
-        "Where a first working built on Teoría De La MAGIA comes from",
-        "Building a first working built on Teoría De La MAGIA from nothing",
-        "Charging a first working built on Teoría De La MAGIA: the working sequence",
-        "a first working built on Teoría De La MAGIA in practice, step by step",
-        "Why a first working built on Teoría De La MAGIA fails, and what to change",
-        "Testing a first working built on Teoría De La MAGIA without fooling yourself",
-        "a first working built on Teoría De La MAGIA: tools, timing and materials",
-        "Keeping a first working built on Teoría De La MAGIA alive after the first charge",
-        "Signs a first working built on Teoría De La MAGIA is actually working",
-        "The ethics of working with a first working built on Teoría De La MAGIA",
-        "a first working built on Teoría De La MAGIA: the mistakes beginners make",
-        "When to abandon a first working built on Teoría De La MAGIA",
-        "Repeating a first working built on Teoría De La MAGIA without it going stale",
-        "How a first working built on Teoría De La MAGIA fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Chaos magic emerged in the early 1970s, with the 1976 founding of the Ordo Templi Ouroborus as the conventional starting point of the modern movement.",
-        "Its foundational texts are Peter Carroll's Liber Null and psi and John Crowley's Liber Kaos, both of which insisted on experiment over doctrine.",
-        "The name is a play on 'chaos magic' and the Chaos enthroned motif of Aleister Crowley's book The Book of the Law, which the movement took as deliberate affiliation.",
-        "Chaos magic's most durable contribution is methodological rather than metaphysical: it made it acceptable to test claims rather than inherit them."
-      ],
-      "spec_faq": [
-        [
-          "Is chaos magic dangerous?",
-          "Not inherently. The risks are the same as any intense self-directed practice: fixation, isolation, and sleep disruption."
-        ],
-        [
-          "What do I need to start?",
-          "A statement of intent, a way to reduce it to a sigil, and a private place to charge it. That is genuinely the whole toolkit."
-        ],
-        [
-          "Do I have to believe in magic?",
-          "No. The movement's standard position is that belief is optional, and a sceptic can practise the methods and keep the results."
-        ]
-      ],
-      "products": [
-        "chaos-sigil-generator",
-        "psi-gym",
-        "tarot-chaos-pdf"
-      ],
-      "tools": [
-        "moon-intention-planner",
-        "planetary-alphabet-cipher",
-        "reality-check-tracker"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=Ezq36Za8HK0",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the tables, correspondences and terms you will need",
-      "role_phrase": "a first working built on Teoría De La MAGIA",
-      "subject": "Teoría De La MAGIA",
-      "title_tag": "Chaos Magic Fundamentals Reference: Chaos Magic Fundamentals",
-      "seo_title": "Chaos Magic Fundamentals | Chaos Magic Fundamentals",
-      "description": "A complete working guide to chaos magic fundamentals covering chaos magic fundamentals. Includes step-by-step protocol, honest failure modes, and FAQ.",
-      "keywords": [
-        "what is chaos magic",
-        "chaos magic for beginners",
-        "chaos magic basic principles",
-        "how to start chaos magic",
-        "chaos magic explained",
-        "chaos magic history",
-        "chaos magic vs traditional magic",
-        "how to become a chaos magician",
-        "reference what is chaos magic"
-      ]
-    },
-    {
-      "n": 215,
-      "slug": "hidden-lost-and-forbidden-knowledge-occult-secrets-guid-10",
-      "h1": "Hidden, Lost and Forbidden Knowledge",
-      "domain": "secret-knowledge",
-      "domain_label": "Hidden, Lost and Forbidden Knowledge",
-      "intent": "informational",
-      "blog_category": "advanced",
-      "entity": null,
-      "entity_source": null,
-      "focus": "hidden, lost and forbidden knowledge",
-      "outline": [
-        "a full Apophenion - Review + Free dossier: what it actually is",
-        "Where a full Apophenion - Review + Free dossier comes from",
-        "Building a full Apophenion - Review + Free dossier from nothing",
-        "Charging a full Apophenion - Review + Free dossier: the working sequence",
-        "a full Apophenion - Review + Free dossier in practice, step by step",
-        "Why a full Apophenion - Review + Free dossier fails, and what to change",
-        "Testing a full Apophenion - Review + Free dossier without fooling yourself",
-        "a full Apophenion - Review + Free dossier: tools, timing and materials",
-        "Keeping a full Apophenion - Review + Free dossier alive after the first charge",
-        "Signs a full Apophenion - Review + Free dossier is actually working",
-        "The ethics of working with a full Apophenion - Review + Free dossier",
-        "a full Apophenion - Review + Free dossier: the mistakes beginners make",
-        "When to abandon a full Apophenion - Review + Free dossier",
-        "Repeating a full Apophenion - Review + Free dossier without it going stale",
-        "How a full Apophenion - Review + Free dossier fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The Book of Enoch is among the oldest surviving fragments of Jewish apocalyptic literature, partly preserved in the Dead Sea Scrolls and known to some church fathers before it was excluded from most modern Bibles.",
-        "Liber Null and psi, published by Peter Carroll in 1977, is short, inexpensive, and still the most widely used entry point into chaos magic practice.",
-        "The Kybalion, published anonymously in 1908, is not attributed to any known author and its provenance claims are unsupported - a fact worth knowing before taking its seven principles as historical.",
-        "Grasping for a single definitive book is the most common error in self-directed occult study, because the tradition is inherently plural."
-      ],
-      "spec_faq": [
-        [
-          "Is the Kybalion real Hermeticism?",
-          "No. It was published in 1908 under no author attribution and its claims of provenance do not hold up."
-        ],
-        [
-          "How do I know a grimoire is genuine?",
-          "You usually cannot, and that is a normal condition of the field. Work with what is useful and keep your epistemic claims modest."
-        ],
-        [
-          "What is the best book to start with?",
-          "Liber Null for practice, a solid history for context, and a good introduction to one divinatory system. No single book covers the field."
-        ]
-      ],
-      "products": [
-        "liber-lvpinux-pdf",
-        "tarot-chaos-pdf",
-        "noctem-tools"
-      ],
-      "tools": [
-        "goetic-spirit-selector",
-        "magical-correspondence-finder",
-        "paranormal-session-prep-checklist"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=cN6-XS4CyJE",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the full operational sequence, step by step",
-      "role_phrase": "a full Apophenion - Review + Free dossier",
-      "subject": "Apophenion - Review + Free",
-      "title_tag": "Hidden, Lost and Forbidden Knowledge Protocol: Hidden, Lost and",
-      "seo_title": "Hidden, Lost and Forbidden Knowledge | Hidden, Lost and",
-      "description": "A complete working guide to hidden, lost and forbidden knowledge covering hidden, lost and forbidden knowledge. Includes step-by-step protocol, honest...",
-      "keywords": [
-        "occult secrets",
-        "hidden knowledge grimoires",
-        "forbidden books of magic",
-        "lost esoteric texts",
-        "the book of enoch explained",
-        "liber null pdf",
-        "necronomicon explained",
-        "secret teachings magic",
-        "ancient grimoire list",
-        "protocol occult secrets"
-      ]
-    },
-    {
-      "n": 216,
-      "slug": "gnosis-belief-and-paradigm-shift-what-is-gnosis-chaos-m-10",
-      "h1": "Gnosis, Belief and Paradigm Shift",
-      "domain": "reality-hacking",
-      "domain_label": "Gnosis, Belief and Paradigm Shift",
-      "intent": "informational",
-      "blog_category": "basics",
-      "entity": null,
-      "entity_source": null,
-      "focus": "gnosis, belief and paradigm shift",
-      "outline": [
-        "a reality-hacking script for Tu Imaginación Puede Cambiar: what it actually is",
-        "Where a reality-hacking script for Tu Imaginación Puede Cambiar comes from",
-        "Building a reality-hacking script for Tu Imaginación Puede Cambiar from nothing",
-        "Charging a reality-hacking script for Tu Imaginación Puede Cambiar: the working sequence",
-        "a reality-hacking script for Tu Imaginación Puede Cambiar in practice, step by step",
-        "Why a reality-hacking script for Tu Imaginación Puede Cambiar fails, and what to change",
-        "Testing a reality-hacking script for Tu Imaginación Puede Cambiar without fooling yourself",
-        "a reality-hacking script for Tu Imaginación Puede Cambiar: tools, timing and materials",
-        "Keeping a reality-hacking script for Tu Imaginación Puede Cambiar alive after the first charge",
-        "Signs a reality-hacking script for Tu Imaginación Puede Cambiar is actually working",
-        "The ethics of working with a reality-hacking script for Tu Imaginación Puede Cambiar",
-        "a reality-hacking script for Tu Imaginación Puede Cambiar: the mistakes beginners make",
-        "When to abandon a reality-hacking script for Tu Imaginación Puede Cambiar",
-        "Repeating a reality-hacking script for Tu Imaginación Puede Cambiar without it going stale",
-        "How a reality-hacking script for Tu Imaginación Puede Cambiar fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The parabola concept - magic as having no reality of its own, serving whatever end you apply it to - was central to early chaos magic theory in the 1970s.",
-        "The confirmation bias effect is robust and well documented; practices that reward noticing successes and ignoring failures will appear effective almost regardless of mechanism.",
-        "Expectancy effects have real measured influence on reported pain and some physiological outcomes, which is a genuine and limited effect - distinct from healing disease.",
-        "A Bayesian approach to practice - keeping a record, updating on disconfirming evidence - is entirely compatible with a sincere occult commitment and markedly improves its reliability."
-      ],
-      "spec_faq": [
-        [
-          "What is the difference between gnosis and visualisation?",
-          "Gnosis is receptive attention to what is actually occurring. Visualisation generates the content. Most beginners overuse the second and underuse the first."
-        ],
-        [
-          "Do you have to believe in magic for it to work?",
-          "No - the standard chaos magic position is that belief is optional and useful, and a non-believer can work symbolically and get the behavioural results."
-        ],
-        [
-          "How do I avoid fooling myself?",
-          "Pre-register a specific, falsifiable prediction and a deadline before you start. Then record failures as carefully as successes."
-        ]
-      ],
-      "products": [
-        "noctem-tools",
-        "psi-gym",
-        "mind-the-gap-pdf"
-      ],
-      "tools": [
-        "full-birth-chart",
-        "lucid-dream-training-planner",
-        "moon-voc"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=2qzKHN2STkc",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the honest limits, failure modes and counterarguments",
-      "role_phrase": "a reality-hacking script for Tu Imaginación Puede Cambiar",
-      "subject": "Tu Imaginación Puede Cambiar",
-      "title_tag": "Gnosis, Belief and Paradigm Shift Critique: Gnosis, Belief and",
-      "seo_title": "Gnosis, Belief and Paradigm Shift | Gnosis, Belief and",
-      "description": "A complete working guide to gnosis, belief and paradigm shift covering gnosis, belief and paradigm shift. Includes step-by-step protocol, honest failure...",
-      "keywords": [
-        "what is gnosis chaos magic",
-        "paradigm shift",
-        "belief as a tool",
-        "how does belief change reality",
-        "chaos magic belief system",
-        "reality hacking self experiment",
-        "placebo effect magic",
-        "confirmation bias occult",
-        "critique what is gnosis chaos magic"
-      ]
-    },
-    {
-      "n": 217,
-      "slug": "the-72-spirits-of-goetia-72-demons-of-goetia-guide-12",
-      "h1": "The 72 Spirits of Goetia",
-      "domain": "goetia-demons",
-      "domain_label": "The 72 Spirits of Goetia",
-      "intent": "informational",
-      "blog_category": "goetia",
-      "entity": null,
-      "entity_source": null,
-      "focus": "the 72 spirits of goetia",
-      "outline": [
-        "a Goetic working with La Magia Del Rey Salomón: what it actually is",
-        "Where a Goetic working with La Magia Del Rey Salomón comes from",
-        "Building a Goetic working with La Magia Del Rey Salomón from nothing",
-        "Charging a Goetic working with La Magia Del Rey Salomón: the working sequence",
-        "a Goetic working with La Magia Del Rey Salomón in practice, step by step",
-        "Why a Goetic working with La Magia Del Rey Salomón fails, and what to change",
-        "Testing a Goetic working with La Magia Del Rey Salomón without fooling yourself",
-        "a Goetic working with La Magia Del Rey Salomón: tools, timing and materials",
-        "Keeping a Goetic working with La Magia Del Rey Salomón alive after the first charge",
-        "Signs a Goetic working with La Magia Del Rey Salomón is actually working",
-        "The ethics of working with a Goetic working with La Magia Del Rey Salomón",
-        "a Goetic working with La Magia Del Rey Salomón: the mistakes beginners make",
-        "When to abandon a Goetic working with La Magia Del Rey Salomón",
-        "Repeating a Goetic working with La Magia Del Rey Salomón without it going stale",
-        "How a Goetic working with La Magia Del Rey Salomón fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The Ars Goetia presents 72 spirits organised into three ranks - nine Presidents, thirty-six Dukes and thirty Kings - and further grouped into families of two, three or four.",
-        "The material descends from Jewish and Christian demonological sources, particularly the Pseudepigrapha Book of Enoch, via the 17th century Conjuratio Ben-Maimon and the Lemuria.",
-        "Modern 'Goetia' as a brand - the video essays, the app, the grimoire commentary - is a 21st century phenomenon layered over that older material.",
-        "The media-heavy focus on Goetia has pushed the spirits out of their classical context: they were adminstrative or disciplinary officials in the original scheme, not torturers of the innocent."
-      ],
-      "spec_faq": [
-        [
-          "Which demon gives money?",
-          "In the Ars Goetia, Mammon is the spirit of wealth, and Clauneck is a duke said to grant riches. Paimon grants dignities and confirmations of favour. Always read the stated office in the source text."
-        ],
-        [
-          "What are the 9 Presidents of Goetia?",
-          "Bael, Agares, Vassago, Samigina, Marbas, Valefor, Aamon, Belphegor and Saleos - each with a documented rank, appearance and area of power."
-        ],
-        [
-          "Are the Goetia spirits demons in any real sense?",
-          "Historically they are entries in a demonological catalogue with no evidence of real agency. Practically, they are a rich and usable symbolic vocabulary."
-        ]
-      ],
-      "products": [
-        "codex-chaoticus-pdf",
-        "arcana-goetia",
-        "noctem-tools"
-      ],
-      "tools": [
-        "iching",
-        "moon-intention-planner",
-        "planetary-alphabet-cipher"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=oqIcWej1kws",
-      "risk": "grounding-discipline",
-      "risk_note": "If practice starts interfering with sleep, work, or relationships, reduce the intensity. The tradition's own advice is a short daily practice rather than an escalating one.",
-      "variant_phrase": "what actually happens in practice, including the failures",
-      "role_phrase": "a Goetic working with La Magia Del Rey Salomón",
-      "subject": "La Magia Del Rey Salomón",
-      "title_tag": "The 72 Spirits of Goetia Field Notes: The 72 Spirits of Goetia",
-      "seo_title": "The 72 Spirits of Goetia | The 72 Spirits of Goetia Field",
-      "description": "A complete working guide to the 72 spirits of goetia covering the 72 spirits of goetia. Includes step-by-step protocol, honest failure modes, and FAQ.",
-      "keywords": [
-        "72 demons of goetia",
-        "ars goetia spirit guide",
-        "goetia spirit domains",
-        "which demon for wealth",
-        "goetia spirit families",
-        "claurizan sanamon",
-        "great presidents of the goetia",
-        "malphas vs flauros",
-        "field notes 72 demons of goetia"
-      ]
-    },
-    {
-      "n": 218,
-      "slug": "hidden-lost-and-forbidden-knowledge-occult-secrets-guid-11",
-      "h1": "Hidden, Lost and Forbidden Knowledge",
-      "domain": "secret-knowledge",
-      "domain_label": "Hidden, Lost and Forbidden Knowledge",
-      "intent": "informational",
-      "blog_category": "advanced",
-      "entity": null,
-      "entity_source": null,
-      "focus": "hidden, lost and forbidden knowledge",
-      "outline": [
-        "a full Peter Carroll LIBER KAOS Review dossier: what it actually is",
-        "Where a full Peter Carroll LIBER KAOS Review dossier comes from",
-        "Building a full Peter Carroll LIBER KAOS Review dossier from nothing",
-        "Charging a full Peter Carroll LIBER KAOS Review dossier: the working sequence",
-        "a full Peter Carroll LIBER KAOS Review dossier in practice, step by step",
-        "Why a full Peter Carroll LIBER KAOS Review dossier fails, and what to change",
-        "Testing a full Peter Carroll LIBER KAOS Review dossier without fooling yourself",
-        "a full Peter Carroll LIBER KAOS Review dossier: tools, timing and materials",
-        "Keeping a full Peter Carroll LIBER KAOS Review dossier alive after the first charge",
-        "Signs a full Peter Carroll LIBER KAOS Review dossier is actually working",
-        "The ethics of working with a full Peter Carroll LIBER KAOS Review dossier",
-        "a full Peter Carroll LIBER KAOS Review dossier: the mistakes beginners make",
-        "When to abandon a full Peter Carroll LIBER KAOS Review dossier",
-        "Repeating a full Peter Carroll LIBER KAOS Review dossier without it going stale",
-        "How a full Peter Carroll LIBER KAOS Review dossier fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The Book of Enoch is among the oldest surviving fragments of Jewish apocalyptic literature, partly preserved in the Dead Sea Scrolls and known to some church fathers before it was excluded from most modern Bibles.",
-        "Liber Null and psi, published by Peter Carroll in 1977, is short, inexpensive, and still the most widely used entry point into chaos magic practice.",
-        "The Kybalion, published anonymously in 1908, is not attributed to any known author and its provenance claims are unsupported - a fact worth knowing before taking its seven principles as historical.",
-        "Grasping for a single definitive book is the most common error in self-directed occult study, because the tradition is inherently plural."
-      ],
-      "spec_faq": [
-        [
-          "How do I know a grimoire is genuine?",
-          "You usually cannot, and that is a normal condition of the field. Work with what is useful and keep your epistemic claims modest."
-        ],
-        [
-          "What is the best book to start with?",
-          "Liber Null for practice, a solid history for context, and a good introduction to one divinatory system. No single book covers the field."
-        ],
-        [
-          "Is the Kybalion real Hermeticism?",
-          "No. It was published in 1908 under no author attribution and its claims of provenance do not hold up."
-        ]
-      ],
-      "products": [
-        "tarot-chaos-pdf",
-        "noctem-tools",
-        "codex-chaoticus-pdf"
-      ],
-      "tools": [
-        "iching-changing-lines",
-        "meditation-focus-timer",
-        "pendulum-question-builder"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=fgOFkCsoJp0",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the underlying structure and why it is shaped this way",
-      "role_phrase": "a full Peter Carroll LIBER KAOS Review dossier",
-      "subject": "Peter Carroll LIBER KAOS Review",
-      "title_tag": "Hidden, Lost and Forbidden Knowledge Framework: Hidden, Lost and",
-      "seo_title": "Hidden, Lost and Forbidden Knowledge | Hidden, Lost and",
-      "description": "A complete working guide to hidden, lost and forbidden knowledge covering hidden, lost and forbidden knowledge. Includes step-by-step protocol, honest...",
-      "keywords": [
-        "occult secrets",
-        "hidden knowledge grimoires",
-        "forbidden books of magic",
-        "lost esoteric texts",
-        "the book of enoch explained",
-        "liber null pdf",
-        "necronomicon explained",
-        "secret teachings magic",
-        "ancient grimoire list",
-        "framework occult secrets"
-      ]
-    },
-    {
-      "n": 219,
-      "slug": "anarquia-chaos-magic-love-spell",
-      "h1": "ANARQUÍA",
-      "domain": "love",
-      "domain_label": "Love, Attraction and Relationships",
-      "intent": "commercial",
-      "blog_category": "advanced",
-      "entity": "ANARQUÍA",
-      "entity_source": "declared",
-      "focus": "love, attraction and relationships",
-      "outline": [
-        "a love working for ANARQUÍA: what it actually is",
-        "Where a love working for ANARQUÍA comes from",
-        "Building a love working for ANARQUÍA from nothing",
-        "Charging a love working for ANARQUÍA: the working sequence",
-        "a love working for ANARQUÍA in practice, step by step",
-        "Why a love working for ANARQUÍA fails, and what to change",
-        "Testing a love working for ANARQUÍA without fooling yourself",
-        "a love working for ANARQUÍA: tools, timing and materials",
-        "Keeping a love working for ANARQUÍA alive after the first charge",
-        "Signs a love working for ANARQUÍA is actually working",
-        "The ethics of working with a love working for ANARQUÍA",
-        "a love working for ANARQUÍA: the mistakes beginners make",
-        "When to abandon a love working for ANARQUÍA",
-        "Repeating a love working for ANARQUÍA without it going stale",
-        "How a love working for ANARQUÍA fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The classic ethical objection to love magic is the asymmetry of consent: a sigil aimed at a specific person overrides that person's stated preferences.",
-        "Chaos magic's stated position is that the practitioner's will is the operative ingredient, which is precisely what makes targeting a specific individual ethically fraught.",
-        "Reconciliation magic - aimed at restoring an existing bond rather than creating attraction - is generally considered lower-risk than attraction magic because a bond already existed.",
-        "Repeated love magic against the same target is widely described in occult sources as cascading - a claim worth respecting even if you reject the metaphysics, because it describes a real pattern of escalation."
-      ],
-      "spec_faq": [
-        [
-          "Is it manipulative to cast a love sigil on someone?",
-          "Yes, by most ethical frameworks including most occult ones. It removes the other person's ability to choose, and that is the core problem regardless of your intentions."
-        ],
-        [
-          "What is a reconciliation sigil?",
-          "A sigil aimed at restoring contact with someone you previously had a relationship with. It is still an influence operation, but it is weaker and more defensible than creating attraction where none existed."
-        ],
-        [
-          "Do love sigils work?",
-          "They reliably produce obsessive rumination, which is not the same as attraction. The only version with a defensible mechanism is one aimed at reciprocity - changing your own attractiveness, availability and communication - rather than overriding another will."
-        ]
-      ],
-      "products": [
-        "noctem-tools",
-        "chaos-sigil-generator",
-        "psi-gym"
-      ],
-      "tools": [
-        "digital-pendulum",
-        "iching-changing-lines",
-        "meditation-focus-timer"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=xzAP6l0fnpo",
-      "risk": "consent-discipline",
-      "risk_note": "The line here is other people's autonomy. Work on your own behaviour, your own availability, your own boundaries. Do not work on overriding somebody's stated preferences.",
-      "variant_phrase": "the full operational sequence, step by step",
-      "role_phrase": "a love working for ANARQUÍA",
-      "subject": "ANARQUÍA",
-      "title_tag": "ANARQUÍA: Complete Chaos Magic Guide to Love, Attraction and",
-      "seo_title": "ANARQUÍA | Love, Attraction and Relationships Protocol",
-      "description": "A complete working guide to ANARQUÍA: what it is, the love, attraction and relationships structure behind it, and the full protocol. Includes step-by-step...",
-      "keywords": [
-        "anarquia sigil",
-        "anarquia ritual",
-        "anarquia invocation",
-        "anarquia chaos magic",
-        "chaos magic love spell",
-        "sigils to attract love",
-        "how to make someone love you chaos magic",
-        "relationship sigil",
-        "how to get an ex back chaos magic",
-        "attraction ritual that works",
-        "love sigil instructions",
-        "magickal seduction",
-        "protocol chaos magic love spell"
-      ]
-    },
-    {
-      "n": 220,
-      "slug": "hidden-lost-and-forbidden-knowledge-occult-secrets-guid-12",
-      "h1": "Hidden, Lost and Forbidden Knowledge",
-      "domain": "secret-knowledge",
-      "domain_label": "Hidden, Lost and Forbidden Knowledge",
-      "intent": "informational",
-      "blog_category": "advanced",
-      "entity": null,
-      "entity_source": null,
-      "focus": "hidden, lost and forbidden knowledge",
-      "outline": [
-        "a full Discover Secret Customizing dossier: what it actually is",
-        "Where a full Discover Secret Customizing dossier comes from",
-        "Building a full Discover Secret Customizing dossier from nothing",
-        "Charging a full Discover Secret Customizing dossier: the working sequence",
-        "a full Discover Secret Customizing dossier in practice, step by step",
-        "Why a full Discover Secret Customizing dossier fails, and what to change",
-        "Testing a full Discover Secret Customizing dossier without fooling yourself",
-        "a full Discover Secret Customizing dossier: tools, timing and materials",
-        "Keeping a full Discover Secret Customizing dossier alive after the first charge",
-        "Signs a full Discover Secret Customizing dossier is actually working",
-        "The ethics of working with a full Discover Secret Customizing dossier",
-        "a full Discover Secret Customizing dossier: the mistakes beginners make",
-        "When to abandon a full Discover Secret Customizing dossier",
-        "Repeating a full Discover Secret Customizing dossier without it going stale",
-        "How a full Discover Secret Customizing dossier fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The Book of Enoch is among the oldest surviving fragments of Jewish apocalyptic literature, partly preserved in the Dead Sea Scrolls and known to some church fathers before it was excluded from most modern Bibles.",
-        "Liber Null and psi, published by Peter Carroll in 1977, is short, inexpensive, and still the most widely used entry point into chaos magic practice.",
-        "The Kybalion, published anonymously in 1908, is not attributed to any known author and its provenance claims are unsupported - a fact worth knowing before taking its seven principles as historical.",
-        "Grasping for a single definitive book is the most common error in self-directed occult study, because the tradition is inherently plural."
-      ],
-      "spec_faq": [
-        [
-          "What is the best book to start with?",
-          "Liber Null for practice, a solid history for context, and a good introduction to one divinatory system. No single book covers the field."
-        ],
-        [
-          "Is the Kybalion real Hermeticism?",
-          "No. It was published in 1908 under no author attribution and its claims of provenance do not hold up."
-        ],
-        [
-          "How do I know a grimoire is genuine?",
-          "You usually cannot, and that is a normal condition of the field. Work with what is useful and keep your epistemic claims modest."
-        ]
-      ],
-      "products": [
-        "noctem-tools",
-        "codex-chaoticus-pdf",
-        "liber-lvpinux-pdf"
-      ],
-      "tools": [
-        "iching",
-        "moon-intention-planner",
-        "planetary-alphabet-cipher"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=icirchhuKoQ",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "what actually happens in practice, including the failures",
-      "role_phrase": "a full Discover Secret Customizing dossier",
-      "subject": "Discover Secret Customizing",
-      "title_tag": "Hidden, Lost and Forbidden Knowledge Field Notes: Hidden, Lost and",
-      "seo_title": "Hidden, Lost and Forbidden Knowledge | Hidden, Lost and",
-      "description": "A complete working guide to hidden, lost and forbidden knowledge covering hidden, lost and forbidden knowledge. Includes step-by-step protocol, honest...",
-      "keywords": [
-        "occult secrets",
-        "hidden knowledge grimoires",
-        "forbidden books of magic",
-        "lost esoteric texts",
-        "the book of enoch explained",
-        "liber null pdf",
-        "necronomicon explained",
-        "secret teachings magic",
-        "ancient grimoire list",
-        "field notes occult secrets"
-      ]
-    },
-    {
-      "n": 221,
-      "slug": "creativity-and-artistic-output-creativity-sigil-guide",
-      "h1": "Creativity and Artistic Output",
-      "domain": "creativity",
-      "domain_label": "Creativity and Artistic Output",
-      "intent": "commercial",
-      "blog_category": "advanced",
-      "entity": null,
-      "entity_source": null,
-      "focus": "creativity and artistic output",
-      "outline": [
-        "a creativity working for La Magia Del Caos: what it actually is",
-        "Where a creativity working for La Magia Del Caos comes from",
-        "Building a creativity working for La Magia Del Caos from nothing",
-        "Charging a creativity working for La Magia Del Caos: the working sequence",
-        "a creativity working for La Magia Del Caos in practice, step by step",
-        "Why a creativity working for La Magia Del Caos fails, and what to change",
-        "Testing a creativity working for La Magia Del Caos without fooling yourself",
-        "a creativity working for La Magia Del Caos: tools, timing and materials",
-        "Keeping a creativity working for La Magia Del Caos alive after the first charge",
-        "Signs a creativity working for La Magia Del Caos is actually working",
-        "The ethics of working with a creativity working for La Magia Del Caos",
-        "a creativity working for La Magia Del Caos: the mistakes beginners make",
-        "When to abandon a creativity working for La Magia Del Caos",
-        "Repeating a creativity working for La Magia Del Caos without it going stale",
-        "How a creativity working for La Magia Del Caos fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The term 'muse' describes an external source of inspiration; sigil work describes an internal commitment mechanism. The substitution removes the excuse of waiting.",
-        "Specular writing and a fixed daily output were both promoted by Austin Osman Spare as practical methods for producing material on schedule.",
-        "Constraint - a fixed form, a word count, a deadline - reliably increases creative output, which is the same principle a sigil imposes.",
-        "The most common creative-block diagnosis in occult practice is that the block is a judgement about the work's quality, not a lack of ability."
-      ],
-      "spec_faq": [
-        [
-          "What is spec-fiction?",
-          "A method of writing from a pre-written plot outline, promoted by Austin Osman Spare. It produces drafting speed and removes the decision of 'what happens next' from the moment of writing."
-        ],
-        [
-          "Why do creative sigils feel more powerful than money sigils?",
-          "Because the feedback loop is short. You write a page today; you wait months for a financial result. Short loops make the practice feel effective."
-        ],
-        [
-          "Can a sigil give me ideas?",
-          "It can give you a time and a place to look for ideas, which is most of what a muse was ever reported to do."
-        ]
-      ],
-      "products": [
-        "tarot-chaos-pdf",
-        "psi-gym",
-        "noctem-tools"
-      ],
-      "tools": [
-        "astrology-sign-calculator",
-        "dream-symbol-dictionary",
-        "iching"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=aV1o-gPVHFs",
-      "risk": "clarity-discipline",
-      "risk_note": "The target must be specific enough to act on. 'Be happy' cannot be worked with; 'three client conversations this week' can.",
-      "variant_phrase": "the full operational sequence, step by step",
-      "role_phrase": "a creativity working for La Magia Del Caos",
-      "subject": "La Magia Del Caos",
-      "title_tag": "Creativity and Artistic Output Protocol: Creativity and Artistic",
-      "seo_title": "Creativity and Artistic Output | Creativity and Artistic",
-      "description": "A complete working guide to creativity and artistic output covering creativity and artistic output. Includes step-by-step protocol, honest failure modes, and...",
-      "keywords": [
-        "creativity sigil",
-        "sigils for writing",
-        "artist block ritual",
-        "how to unlock creativity chaos magic",
-        "monetize your art ritual",
-        "creative flow sigil",
-        "sigil for inspiration",
-        "protocol creativity sigil"
-      ]
-    },
     {
       "n": 222,
       "slug": "the-mind-science-of-practice-why-does-magic-work-placeb-13",
