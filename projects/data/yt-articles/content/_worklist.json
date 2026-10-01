@@ -1,23 +1,13 @@
 {
   "total": 349,
-  "done": 216,
-  "remaining": 133,
+  "done": 226,
+  "remaining": 123,
   "batch_size": 26,
-  "batch_count": 6,
+  "batch_count": 5,
   "batches": [
     {
       "index": 1,
       "ns": [
-        198,
-        199,
-        200,
-        201,
-        203,
-        204,
-        205,
-        207,
-        209,
-        210,
         212,
         213,
         214,
@@ -33,13 +23,7 @@
         226,
         227,
         228,
-        229
-      ],
-      "count": 26
-    },
-    {
-      "index": 2,
-      "ns": [
+        229,
         230,
         231,
         232,
@@ -49,7 +33,13 @@
         236,
         237,
         238,
-        239,
+        239
+      ],
+      "count": 26
+    },
+    {
+      "index": 2,
+      "ns": [
         240,
         241,
         242,
@@ -65,13 +55,7 @@
         253,
         254,
         255,
-        256
-      ],
-      "count": 26
-    },
-    {
-      "index": 3,
-      "ns": [
+        256,
         257,
         258,
         259,
@@ -81,7 +65,13 @@
         263,
         264,
         265,
-        266,
+        266
+      ],
+      "count": 26
+    },
+    {
+      "index": 3,
+      "ns": [
         267,
         269,
         270,
@@ -97,13 +87,7 @@
         282,
         283,
         284,
-        285
-      ],
-      "count": 26
-    },
-    {
-      "index": 4,
-      "ns": [
+        285,
         286,
         287,
         288,
@@ -113,7 +97,13 @@
         293,
         294,
         295,
-        296,
+        296
+      ],
+      "count": 26
+    },
+    {
+      "index": 4,
+      "ns": [
         297,
         298,
         299,
@@ -129,13 +119,7 @@
         311,
         312,
         313,
-        314
-      ],
-      "count": 26
-    },
-    {
-      "index": 5,
-      "ns": [
+        314,
         315,
         316,
         317,
@@ -145,7 +129,13 @@
         321,
         322,
         323,
-        324,
+        324
+      ],
+      "count": 26
+    },
+    {
+      "index": 5,
+      "ns": [
         325,
         326,
         327,
@@ -161,840 +151,15 @@
         340,
         341,
         342,
-        345
-      ],
-      "count": 26
-    },
-    {
-      "index": 6,
-      "ns": [
+        345,
         346,
         347,
         348
       ],
-      "count": 3
+      "count": 19
     }
   ],
   "articles": [
-    {
-      "n": 198,
-      "slug": "compotera-creativity-sigil",
-      "h1": "COMPOTERA",
-      "domain": "creativity",
-      "domain_label": "Creativity and Artistic Output",
-      "intent": "commercial",
-      "blog_category": "advanced",
-      "entity": "COMPOTERA",
-      "entity_source": "declared",
-      "focus": "creativity and artistic output",
-      "outline": [
-        "a creativity working for COMPOTERA: what it actually is",
-        "Where a creativity working for COMPOTERA comes from",
-        "Building a creativity working for COMPOTERA from nothing",
-        "Charging a creativity working for COMPOTERA: the working sequence",
-        "a creativity working for COMPOTERA in practice, step by step",
-        "Why a creativity working for COMPOTERA fails, and what to change",
-        "Testing a creativity working for COMPOTERA without fooling yourself",
-        "a creativity working for COMPOTERA: tools, timing and materials",
-        "Keeping a creativity working for COMPOTERA alive after the first charge",
-        "Signs a creativity working for COMPOTERA is actually working",
-        "The ethics of working with a creativity working for COMPOTERA",
-        "a creativity working for COMPOTERA: the mistakes beginners make",
-        "When to abandon a creativity working for COMPOTERA",
-        "Repeating a creativity working for COMPOTERA without it going stale",
-        "How a creativity working for COMPOTERA fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The term 'muse' describes an external source of inspiration; sigil work describes an internal commitment mechanism. The substitution removes the excuse of waiting.",
-        "Specular writing and a fixed daily output were both promoted by Austin Osman Spare as practical methods for producing material on schedule.",
-        "Constraint - a fixed form, a word count, a deadline - reliably increases creative output, which is the same principle a sigil imposes.",
-        "The most common creative-block diagnosis in occult practice is that the block is a judgement about the work's quality, not a lack of ability."
-      ],
-      "spec_faq": [
-        [
-          "Can a sigil give me ideas?",
-          "It can give you a time and a place to look for ideas, which is most of what a muse was ever reported to do."
-        ],
-        [
-          "What is spec-fiction?",
-          "A method of writing from a pre-written plot outline, promoted by Austin Osman Spare. It produces drafting speed and removes the decision of 'what happens next' from the moment of writing."
-        ],
-        [
-          "Why do creative sigils feel more powerful than money sigils?",
-          "Because the feedback loop is short. You write a page today; you wait months for a financial result. Short loops make the practice feel effective."
-        ]
-      ],
-      "products": [
-        "chaos-sigil-generator",
-        "tarot-chaos-pdf",
-        "psi-gym"
-      ],
-      "tools": [
-        "astral-projection-session-timer",
-        "digital-pendulum",
-        "iching-changing-lines"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=h1eGX03xlpE",
-      "risk": "clarity-discipline",
-      "risk_note": "The target must be specific enough to act on. 'Be happy' cannot be worked with; 'three client conversations this week' can.",
-      "variant_phrase": "the first-time practitioner's route through",
-      "role_phrase": "a creativity working for COMPOTERA",
-      "subject": "COMPOTERA",
-      "title_tag": "COMPOTERA: Complete Chaos Magic Guide to Creativity and Artistic",
-      "seo_title": "COMPOTERA | Creativity and Artistic Output Beginner Path",
-      "description": "A complete working guide to COMPOTERA: what it is, the creativity and artistic output structure behind it, and the full protocol. Includes step-by-step...",
-      "keywords": [
-        "compotera sigil",
-        "compotera ritual",
-        "compotera invocation",
-        "compotera chaos magic",
-        "creativity sigil",
-        "sigils for writing",
-        "artist block ritual",
-        "how to unlock creativity chaos magic",
-        "monetize your art ritual",
-        "creative flow sigil",
-        "sigil for inspiration",
-        "beginner path creativity sigil"
-      ]
-    },
-    {
-      "n": 199,
-      "slug": "gyvu-invocation-ritual-entity",
-      "h1": "GYVU",
-      "domain": "entity-lore",
-      "domain_label": "Entity Lore and Invocation",
-      "intent": "informational",
-      "blog_category": "goetia",
-      "entity": "GYVU",
-      "entity_source": "declared",
-      "focus": "entity lore and invocation",
-      "outline": [
-        "a magickal servitor for GYVU: what it actually is",
-        "Where a magickal servitor for GYVU comes from",
-        "Building a magickal servitor for GYVU from nothing",
-        "Charging a magickal servitor for GYVU: the working sequence",
-        "a magickal servitor for GYVU in practice, step by step",
-        "Why a magickal servitor for GYVU fails, and what to change",
-        "Testing a magickal servitor for GYVU without fooling yourself",
-        "a magickal servitor for GYVU: tools, timing and materials",
-        "Keeping a magickal servitor for GYVU alive after the first charge",
-        "Signs a magickal servitor for GYVU is actually working",
-        "The ethics of working with a magickal servitor for GYVU",
-        "a magickal servitor for GYVU: the mistakes beginners make",
-        "When to abandon a magickal servitor for GYVU",
-        "Repeating a magickal servitor for GYVU without it going stale",
-        "How a magickal servitor for GYVU fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "In classical ceremonial usage, 'evocation' means calling a spirit to appear, while 'invocation' means inviting its influence to operate through the operator - a distinction most modern usage collapses.",
-        "The Ars Goetia presents each of the 72 spirits with a rank, a visible form, an office, and specific powers, which makes it the most structured entity catalogue in Western grimoire literature.",
-        "Modern chaos magic deliberately relaxes the classical framework, treating entities as independent pattern fragments useful for disrupting a repetitive thought structure.",
-        "Peter Carroll's influential definition held that entities in chaos magic are best regarded as aspects of the magician's own mind rather than as external beings - a position that neutralises most of the risk without requiring scepticism."
-      ],
-      "spec_faq": [
-        [
-          "What is the difference between evocation and invocation?",
-          "Evocation calls the entity to manifest. Invocation asks it to operate through you. Classical practice treats these as different operations with different risks."
-        ],
-        [
-          "Do I need a full ritual circle?",
-          "No. Chaos magic reduced ritual apparatus drastically on purpose. A defined intention, a sigil, and a stated frame are historically sufficient."
-        ],
-        [
-          "Should I work with demons?",
-          "There is no reliable evidence of external danger, and working with a name you have never researched is the real hazard. Read the entity's stated office first and confirm it matches the domain you need."
-        ]
-      ],
-      "products": [
-        "eerieroads",
-        "arcana-goetia",
-        "noctem-tools"
-      ],
-      "tools": [
-        "lunar-phase",
-        "ogham-oracle",
-        "planetary-kamea-sigil"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=eEl6fcGWjFg",
-      "risk": "grounding-discipline",
-      "risk_note": "If practice starts interfering with sleep, work, or relationships, reduce the intensity. The tradition's own advice is a short daily practice rather than an escalating one.",
-      "variant_phrase": "the full operational sequence, step by step",
-      "role_phrase": "a magickal servitor for GYVU",
-      "subject": "GYVU",
-      "title_tag": "GYVU: Complete Chaos Magic Guide to Entity Lore and Invocation",
-      "seo_title": "GYVU | Entity Lore and Invocation Protocol",
-      "description": "A complete working guide to GYVU: what it is, the entity lore and invocation structure behind it, and the full protocol. Includes step-by-step protocol,...",
-      "keywords": [
-        "gyvu sigil",
-        "gyvu ritual",
-        "gyvu invocation",
-        "gyvu chaos magic",
-        "invocation ritual entity",
-        "how to work with a spirit",
-        "chaos magic entity invocation",
-        "servitor vs spirit",
-        "demon invocation guide",
-        "theoretical entity working",
-        "evocation protocol",
-        "working with named spirits",
-        "protocol invocation ritual entity"
-      ]
-    },
-    {
-      "n": 200,
-      "slug": "cochicholupos-invocation-ritual-entity",
-      "h1": "COCHICHOLUPOS",
-      "domain": "entity-lore",
-      "domain_label": "Entity Lore and Invocation",
-      "intent": "informational",
-      "blog_category": "goetia",
-      "entity": "COCHICHOLUPOS",
-      "entity_source": "declared",
-      "focus": "entity lore and invocation",
-      "outline": [
-        "a magickal servitor for COCHICHOLUPOS: what it actually is",
-        "Where a magickal servitor for COCHICHOLUPOS comes from",
-        "Building a magickal servitor for COCHICHOLUPOS from nothing",
-        "Charging a magickal servitor for COCHICHOLUPOS: the working sequence",
-        "a magickal servitor for COCHICHOLUPOS in practice, step by step",
-        "Why a magickal servitor for COCHICHOLUPOS fails, and what to change",
-        "Testing a magickal servitor for COCHICHOLUPOS without fooling yourself",
-        "a magickal servitor for COCHICHOLUPOS: tools, timing and materials",
-        "Keeping a magickal servitor for COCHICHOLUPOS alive after the first charge",
-        "Signs a magickal servitor for COCHICHOLUPOS is actually working",
-        "The ethics of working with a magickal servitor for COCHICHOLUPOS",
-        "a magickal servitor for COCHICHOLUPOS: the mistakes beginners make",
-        "When to abandon a magickal servitor for COCHICHOLUPOS",
-        "Repeating a magickal servitor for COCHICHOLUPOS without it going stale",
-        "How a magickal servitor for COCHICHOLUPOS fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "In classical ceremonial usage, 'evocation' means calling a spirit to appear, while 'invocation' means inviting its influence to operate through the operator - a distinction most modern usage collapses.",
-        "The Ars Goetia presents each of the 72 spirits with a rank, a visible form, an office, and specific powers, which makes it the most structured entity catalogue in Western grimoire literature.",
-        "Modern chaos magic deliberately relaxes the classical framework, treating entities as independent pattern fragments useful for disrupting a repetitive thought structure.",
-        "Peter Carroll's influential definition held that entities in chaos magic are best regarded as aspects of the magician's own mind rather than as external beings - a position that neutralises most of the risk without requiring scepticism."
-      ],
-      "spec_faq": [
-        [
-          "Do I need a full ritual circle?",
-          "No. Chaos magic reduced ritual apparatus drastically on purpose. A defined intention, a sigil, and a stated frame are historically sufficient."
-        ],
-        [
-          "Should I work with demons?",
-          "There is no reliable evidence of external danger, and working with a name you have never researched is the real hazard. Read the entity's stated office first and confirm it matches the domain you need."
-        ],
-        [
-          "What is the difference between evocation and invocation?",
-          "Evocation calls the entity to manifest. Invocation asks it to operate through you. Classical practice treats these as different operations with different risks."
-        ]
-      ],
-      "products": [
-        "arcana-goetia",
-        "noctem-tools",
-        "manual-activacion-servidores-magicos-pdf"
-      ],
-      "tools": [
-        "magical-correspondence-finder",
-        "paranormal-session-prep-checklist",
-        "planetary-retrograde-calendar"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=DlMw49ZEvJw",
-      "risk": "grounding-discipline",
-      "risk_note": "If practice starts interfering with sleep, work, or relationships, reduce the intensity. The tradition's own advice is a short daily practice rather than an escalating one.",
-      "variant_phrase": "the underlying structure and why it is shaped this way",
-      "role_phrase": "a magickal servitor for COCHICHOLUPOS",
-      "subject": "COCHICHOLUPOS",
-      "title_tag": "COCHICHOLUPOS: Complete Chaos Magic Guide to Entity Lore and",
-      "seo_title": "COCHICHOLUPOS | Entity Lore and Invocation Framework",
-      "description": "A complete working guide to COCHICHOLUPOS: what it is, the entity lore and invocation structure behind it, and the full protocol. Includes step-by-step...",
-      "keywords": [
-        "cochicholupos sigil",
-        "cochicholupos ritual",
-        "cochicholupos invocation",
-        "cochicholupos chaos magic",
-        "invocation ritual entity",
-        "how to work with a spirit",
-        "chaos magic entity invocation",
-        "servitor vs spirit",
-        "demon invocation guide",
-        "theoretical entity working",
-        "evocation protocol",
-        "working with named spirits",
-        "framework invocation ritual entity"
-      ]
-    },
-    {
-      "n": 201,
-      "slug": "soul-bonds-and-cutting-ties-cutting-cord-ritual-guide-2",
-      "h1": "Soul Bonds and Cutting Ties",
-      "domain": "karmic-bonds",
-      "domain_label": "Soul Bonds and Cutting Ties",
-      "intent": "informational",
-      "blog_category": "advanced",
-      "entity": null,
-      "entity_source": null,
-      "focus": "soul bonds and cutting ties",
-      "outline": [
-        "a cord-binding working on Invocación CONTACTO CERO Egregore: what it actually is",
-        "Where a cord-binding working on Invocación CONTACTO CERO Egregore comes from",
-        "Building a cord-binding working on Invocación CONTACTO CERO Egregore from nothing",
-        "Charging a cord-binding working on Invocación CONTACTO CERO Egregore: the working sequence",
-        "a cord-binding working on Invocación CONTACTO CERO Egregore in practice, step by step",
-        "Why a cord-binding working on Invocación CONTACTO CERO Egregore fails, and what to change",
-        "Testing a cord-binding working on Invocación CONTACTO CERO Egregore without fooling yourself",
-        "a cord-binding working on Invocación CONTACTO CERO Egregore: tools, timing and materials",
-        "Keeping a cord-binding working on Invocación CONTACTO CERO Egregore alive after the first charge",
-        "Signs a cord-binding working on Invocación CONTACTO CERO Egregore is actually working",
-        "The ethics of working with a cord-binding working on Invocación CONTACTO CERO Egregore",
-        "a cord-binding working on Invocación CONTACTO CERO Egregore: the mistakes beginners make",
-        "When to abandon a cord-binding working on Invocación CONTACTO CERO Egregore",
-        "Repeating a cord-binding working on Invocación CONTACTO CERO Egregore without it going stale",
-        "How a cord-binding working on Invocación CONTACTO CERO Egregore fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Cord-cutting is one of the few rituals in Western esotericism that is genuinely initiatory: it is described in Eleazar ben Pitcharubut's 18th century kabbalistic text Bahir ha-Levavot and in later ceremonial material.",
-        "The ritual is traditionally performed with a physical cord representing the bond, which is cut or burned - a concrete action mapped onto an abstract one.",
-        "Modern chaos magic adapts cord-cutting into sigil work by encoding the severance as an imperative statement.",
-        "A number of occult traditions hold that bonds severed by force re-form; this is the origin of the 'do it right or do it twice' warning that appears across the literature."
-      ],
-      "spec_faq": [
-        [
-          "Can you cut a bond with a family member?",
-          "Yes, but expect it to be emotionally harder. Family systems are typically the most persistent and the most entangled with obligation."
-        ],
-        [
-          "Does cord cutting work?",
-          "As a ritual it works reliably as a closure mechanism - it marks a decision, and the physical act plus the stated intent makes the decision feel completed. Whether it alters the other person's behaviour is a separate question with no supporting evidence."
-        ],
-        [
-          "How long does it take to feel different?",
-          "Allow 7 to 21 days. The ritual marks the boundary; the nervous system takes longer to reorganise around it."
-        ]
-      ],
-      "products": [
-        "chaos-sigil-generator",
-        "noctem-tools",
-        "manual-activacion-servidores-magicos-pdf"
-      ],
-      "tools": [
-        "banishing-ritual-builder",
-        "elder-futhark-reference",
-        "intention-achievement-tracker"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=AQqSAdyKEOA",
-      "risk": "closure-discipline",
-      "risk_note": "Severance rituals are for your own closure. They are not a method of controlling the other person, and treating them as one will not work.",
-      "variant_phrase": "the underlying structure and why it is shaped this way",
-      "role_phrase": "a cord-binding working on Invocación CONTACTO CERO Egregore",
-      "subject": "Invocación CONTACTO CERO Egregore",
-      "title_tag": "Soul Bonds and Cutting Ties Framework: Soul Bonds and Cutting Ties",
-      "seo_title": "Soul Bonds and Cutting Ties | Soul Bonds and Cutting Ties",
-      "description": "A complete working guide to soul bonds and cutting ties covering soul bonds and cutting ties. Includes step-by-step protocol, honest failure modes, and FAQ.",
-      "keywords": [
-        "cutting cord ritual",
-        "soul contract release",
-        "how to break a karmic bond",
-        "removing spiritual attachment",
-        "cut ties with someone ritual",
-        "sever an unhealthy bond",
-        "cord cutting chaos magic",
-        "framework cutting cord ritual"
-      ]
-    },
-    {
-      "n": 203,
-      "slug": "chaos-magic-fundamentals-what-is-chaos-magic-guide-20",
-      "h1": "Chaos Magic Fundamentals",
-      "domain": "chaos-basics",
-      "domain_label": "Chaos Magic Fundamentals",
-      "intent": "informational",
-      "blog_category": "basics",
-      "entity": null,
-      "entity_source": null,
-      "focus": "chaos magic fundamentals",
-      "outline": [
-        "a first working built on Chaos Theory Chaos Magic: what it actually is",
-        "Where a first working built on Chaos Theory Chaos Magic comes from",
-        "Building a first working built on Chaos Theory Chaos Magic from nothing",
-        "Charging a first working built on Chaos Theory Chaos Magic: the working sequence",
-        "a first working built on Chaos Theory Chaos Magic in practice, step by step",
-        "Why a first working built on Chaos Theory Chaos Magic fails, and what to change",
-        "Testing a first working built on Chaos Theory Chaos Magic without fooling yourself",
-        "a first working built on Chaos Theory Chaos Magic: tools, timing and materials",
-        "Keeping a first working built on Chaos Theory Chaos Magic alive after the first charge",
-        "Signs a first working built on Chaos Theory Chaos Magic is actually working",
-        "The ethics of working with a first working built on Chaos Theory Chaos Magic",
-        "a first working built on Chaos Theory Chaos Magic: the mistakes beginners make",
-        "When to abandon a first working built on Chaos Theory Chaos Magic",
-        "Repeating a first working built on Chaos Theory Chaos Magic without it going stale",
-        "How a first working built on Chaos Theory Chaos Magic fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Chaos magic emerged in the early 1970s, with the 1976 founding of the Ordo Templi Ouroborus as the conventional starting point of the modern movement.",
-        "Its foundational texts are Peter Carroll's Liber Null and psi and John Crowley's Liber Kaos, both of which insisted on experiment over doctrine.",
-        "The name is a play on 'chaos magic' and the Chaos enthroned motif of Aleister Crowley's book The Book of the Law, which the movement took as deliberate affiliation.",
-        "Chaos magic's most durable contribution is methodological rather than metaphysical: it made it acceptable to test claims rather than inherit them."
-      ],
-      "spec_faq": [
-        [
-          "Is chaos magic dangerous?",
-          "Not inherently. The risks are the same as any intense self-directed practice: fixation, isolation, and sleep disruption."
-        ],
-        [
-          "What do I need to start?",
-          "A statement of intent, a way to reduce it to a sigil, and a private place to charge it. That is genuinely the whole toolkit."
-        ],
-        [
-          "Do I have to believe in magic?",
-          "No. The movement's standard position is that belief is optional, and a sceptic can practise the methods and keep the results."
-        ]
-      ],
-      "products": [
-        "tarot-chaos-pdf",
-        "codex-chaoticus-pdf",
-        "noctem-tools"
-      ],
-      "tools": [
-        "lunar-phase",
-        "ogham-oracle",
-        "planetary-kamea-sigil"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=0rz2QwRzs0E",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the full operational sequence, step by step",
-      "role_phrase": "a first working built on Chaos Theory Chaos Magic",
-      "subject": "Chaos Theory Chaos Magic",
-      "title_tag": "Chaos Magic Fundamentals Protocol: Chaos Magic Fundamentals",
-      "seo_title": "Chaos Magic Fundamentals | Chaos Magic Fundamentals Protocol",
-      "description": "A complete working guide to chaos magic fundamentals covering chaos magic fundamentals. Includes step-by-step protocol, honest failure modes, and FAQ.",
-      "keywords": [
-        "what is chaos magic",
-        "chaos magic for beginners",
-        "chaos magic basic principles",
-        "how to start chaos magic",
-        "chaos magic explained",
-        "chaos magic history",
-        "chaos magic vs traditional magic",
-        "how to become a chaos magician",
-        "protocol what is chaos magic"
-      ]
-    },
-    {
-      "n": 204,
-      "slug": "heka-occult-secrets",
-      "h1": "HEKA",
-      "domain": "secret-knowledge",
-      "domain_label": "Hidden, Lost and Forbidden Knowledge",
-      "intent": "informational",
-      "blog_category": "advanced",
-      "entity": "HEKA",
-      "entity_source": "declared",
-      "focus": "hidden, lost and forbidden knowledge",
-      "outline": [
-        "a full HEKA dossier: what it actually is",
-        "Where a full HEKA dossier comes from",
-        "Building a full HEKA dossier from nothing",
-        "Charging a full HEKA dossier: the working sequence",
-        "a full HEKA dossier in practice, step by step",
-        "Why a full HEKA dossier fails, and what to change",
-        "Testing a full HEKA dossier without fooling yourself",
-        "a full HEKA dossier: tools, timing and materials",
-        "Keeping a full HEKA dossier alive after the first charge",
-        "Signs a full HEKA dossier is actually working",
-        "The ethics of working with a full HEKA dossier",
-        "a full HEKA dossier: the mistakes beginners make",
-        "When to abandon a full HEKA dossier",
-        "Repeating a full HEKA dossier without it going stale",
-        "How a full HEKA dossier fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The Book of Enoch is among the oldest surviving fragments of Jewish apocalyptic literature, partly preserved in the Dead Sea Scrolls and known to some church fathers before it was excluded from most modern Bibles.",
-        "Liber Null and psi, published by Peter Carroll in 1977, is short, inexpensive, and still the most widely used entry point into chaos magic practice.",
-        "The Kybalion, published anonymously in 1908, is not attributed to any known author and its provenance claims are unsupported - a fact worth knowing before taking its seven principles as historical.",
-        "Grasping for a single definitive book is the most common error in self-directed occult study, because the tradition is inherently plural."
-      ],
-      "spec_faq": [
-        [
-          "How do I know a grimoire is genuine?",
-          "You usually cannot, and that is a normal condition of the field. Work with what is useful and keep your epistemic claims modest."
-        ],
-        [
-          "What is the best book to start with?",
-          "Liber Null for practice, a solid history for context, and a good introduction to one divinatory system. No single book covers the field."
-        ],
-        [
-          "Is the Kybalion real Hermeticism?",
-          "No. It was published in 1908 under no author attribution and its claims of provenance do not hold up."
-        ]
-      ],
-      "products": [
-        "noctem-tools",
-        "codex-chaoticus-pdf",
-        "liber-lvpinux-pdf"
-      ],
-      "tools": [
-        "full-birth-chart",
-        "lucid-dream-training-planner",
-        "moon-voc"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=YwvtTB2zs04",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the honest limits, failure modes and counterarguments",
-      "role_phrase": "a full HEKA dossier",
-      "subject": "HEKA",
-      "title_tag": "HEKA: Complete Chaos Magic Guide to Hidden, Lost and Forbidden",
-      "seo_title": "HEKA | Hidden, Lost and Forbidden Knowledge Critique",
-      "description": "A complete working guide to HEKA: what it is, the hidden, lost and forbidden knowledge structure behind it, and the full protocol. Includes step-by-step...",
-      "keywords": [
-        "heka sigil",
-        "heka ritual",
-        "heka invocation",
-        "heka chaos magic",
-        "occult secrets",
-        "hidden knowledge grimoires",
-        "forbidden books of magic",
-        "lost esoteric texts",
-        "the book of enoch explained",
-        "liber null pdf",
-        "necronomicon explained",
-        "secret teachings magic",
-        "ancient grimoire list",
-        "critique occult secrets"
-      ]
-    },
-    {
-      "n": 205,
-      "slug": "libelula-invocation-ritual-entity",
-      "h1": "LIBELULA",
-      "domain": "entity-lore",
-      "domain_label": "Entity Lore and Invocation",
-      "intent": "informational",
-      "blog_category": "goetia",
-      "entity": "LIBELULA",
-      "entity_source": "declared",
-      "focus": "entity lore and invocation",
-      "outline": [
-        "a magickal servitor for LIBELULA: what it actually is",
-        "Where a magickal servitor for LIBELULA comes from",
-        "Building a magickal servitor for LIBELULA from nothing",
-        "Charging a magickal servitor for LIBELULA: the working sequence",
-        "a magickal servitor for LIBELULA in practice, step by step",
-        "Why a magickal servitor for LIBELULA fails, and what to change",
-        "Testing a magickal servitor for LIBELULA without fooling yourself",
-        "a magickal servitor for LIBELULA: tools, timing and materials",
-        "Keeping a magickal servitor for LIBELULA alive after the first charge",
-        "Signs a magickal servitor for LIBELULA is actually working",
-        "The ethics of working with a magickal servitor for LIBELULA",
-        "a magickal servitor for LIBELULA: the mistakes beginners make",
-        "When to abandon a magickal servitor for LIBELULA",
-        "Repeating a magickal servitor for LIBELULA without it going stale",
-        "How a magickal servitor for LIBELULA fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "In classical ceremonial usage, 'evocation' means calling a spirit to appear, while 'invocation' means inviting its influence to operate through the operator - a distinction most modern usage collapses.",
-        "The Ars Goetia presents each of the 72 spirits with a rank, a visible form, an office, and specific powers, which makes it the most structured entity catalogue in Western grimoire literature.",
-        "Modern chaos magic deliberately relaxes the classical framework, treating entities as independent pattern fragments useful for disrupting a repetitive thought structure.",
-        "Peter Carroll's influential definition held that entities in chaos magic are best regarded as aspects of the magician's own mind rather than as external beings - a position that neutralises most of the risk without requiring scepticism."
-      ],
-      "spec_faq": [
-        [
-          "Should I work with demons?",
-          "There is no reliable evidence of external danger, and working with a name you have never researched is the real hazard. Read the entity's stated office first and confirm it matches the domain you need."
-        ],
-        [
-          "What is the difference between evocation and invocation?",
-          "Evocation calls the entity to manifest. Invocation asks it to operate through you. Classical practice treats these as different operations with different risks."
-        ],
-        [
-          "Do I need a full ritual circle?",
-          "No. Chaos magic reduced ritual apparatus drastically on purpose. A defined intention, a sigil, and a stated frame are historically sufficient."
-        ]
-      ],
-      "products": [
-        "noctem-tools",
-        "manual-activacion-servidores-magicos-pdf",
-        "eerieroads"
-      ],
-      "tools": [
-        "meditation-focus-timer",
-        "pendulum-question-builder",
-        "reality-check-technique-coach"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=yZHHvS9jGYI",
-      "risk": "grounding-discipline",
-      "risk_note": "If practice starts interfering with sleep, work, or relationships, reduce the intensity. The tradition's own advice is a short daily practice rather than an escalating one.",
-      "variant_phrase": "what actually happens in practice, including the failures",
-      "role_phrase": "a magickal servitor for LIBELULA",
-      "subject": "LIBELULA",
-      "title_tag": "LIBELULA: Complete Chaos Magic Guide to Entity Lore and Invocation",
-      "seo_title": "LIBELULA | Entity Lore and Invocation Field Notes",
-      "description": "A complete working guide to LIBELULA: what it is, the entity lore and invocation structure behind it, and the full protocol. Includes step-by-step protocol,...",
-      "keywords": [
-        "libelula sigil",
-        "libelula ritual",
-        "libelula invocation",
-        "libelula chaos magic",
-        "invocation ritual entity",
-        "how to work with a spirit",
-        "chaos magic entity invocation",
-        "servitor vs spirit",
-        "demon invocation guide",
-        "theoretical entity working",
-        "evocation protocol",
-        "working with named spirits",
-        "field notes invocation ritual entity"
-      ]
-    },
-    {
-      "n": 207,
-      "slug": "history-of-the-occult-history-of-occultism-guide-8",
-      "h1": "History of the Occult",
-      "domain": "history-occult",
-      "domain_label": "History of the Occult",
-      "intent": "informational",
-      "blog_category": "advanced",
-      "entity": null,
-      "entity_source": null,
-      "focus": "history of the occult",
-      "outline": [
-        "the history behind Carl Jung Chaos Magic: what it actually is",
-        "Where the history behind Carl Jung Chaos Magic comes from",
-        "Building the history behind Carl Jung Chaos Magic from nothing",
-        "Charging the history behind Carl Jung Chaos Magic: the working sequence",
-        "the history behind Carl Jung Chaos Magic in practice, step by step",
-        "Why the history behind Carl Jung Chaos Magic fails, and what to change",
-        "Testing the history behind Carl Jung Chaos Magic without fooling yourself",
-        "the history behind Carl Jung Chaos Magic: tools, timing and materials",
-        "Keeping the history behind Carl Jung Chaos Magic alive after the first charge",
-        "Signs the history behind Carl Jung Chaos Magic is actually working",
-        "The ethics of working with the history behind Carl Jung Chaos Magic",
-        "the history behind Carl Jung Chaos Magic: the mistakes beginners make",
-        "When to abandon the history behind Carl Jung Chaos Magic",
-        "Repeating the history behind Carl Jung Chaos Magic without it going stale",
-        "How the history behind Carl Jung Chaos Magic fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The Ars Notoria, Ars Almadel and the Lemuria are among the earliest grimoires, compiled in medieval to early-modern Western Europe and drawing on Arabic, Jewish and Latin sources.",
-        "The Hermetic Corpus was translated into Latin in the 15th century and synthesised with Judaic and Christian material, producing the Renaissance magicians as we understand them.",
-        "The Golden Dawn, founded in 1888, was the most significant British occult order of the 19th century and its initiatory material shaped most later ceremonial practice.",
-        "The term 'occult' entered English in the 16th century from 'occultare' - to hide - which is a transcription of the same Latin root as 'occult science', a term now associated with hidden knowledge rather than hidden arts."
-      ],
-      "spec_faq": [
-        [
-          "Which grimoires matter most?",
-          "The Ars Goetia, the Lemuria, the Lesser Key of Solomon and the Grimorium Verum, plus the modern Liber Null and Liber Kaos for practice."
-        ],
-        [
-          "Is occult history mostly fraud?",
-          "Partly. There is genuine scholarly work in the field, and it is worth reading by people who interrogate their sources."
-        ],
-        [
-          "What is a grimoire?",
-          "A book of practical instruction, originally a term of disparagement - 'grimoire' comes from the Greek grimoire, grim, 'a black book'."
-        ]
-      ],
-      "products": [
-        "noctem-tools",
-        "codex-chaoticus-pdf",
-        "tarot-chaos-pdf"
-      ],
-      "tools": [
-        "digital-pendulum",
-        "iching-changing-lines",
-        "meditation-focus-timer"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=GvNqkeJJWW8",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the full operational sequence, step by step",
-      "role_phrase": "the history behind Carl Jung Chaos Magic",
-      "subject": "Carl Jung Chaos Magic",
-      "title_tag": "History of the Occult Protocol: History of the Occult",
-      "seo_title": "History of the Occult | History of the Occult Protocol",
-      "description": "A complete working guide to history of the occult covering history of the occult. Includes step-by-step protocol, honest failure modes, and FAQ.",
-      "keywords": [
-        "history of occultism",
-        "history of magic grimoires",
-        "satanic panic history",
-        "ceremonial magic history",
-        "hermetic tradition history",
-        "magic history timeline",
-        "western esotericism explained",
-        "grimmoire history",
-        "protocol history of occultism"
-      ]
-    },
-    {
-      "n": 209,
-      "slug": "history-of-the-occult-history-of-occultism-guide-9",
-      "h1": "History of the Occult",
-      "domain": "history-occult",
-      "domain_label": "History of the Occult",
-      "intent": "informational",
-      "blog_category": "advanced",
-      "entity": null,
-      "entity_source": null,
-      "focus": "history of the occult",
-      "outline": [
-        "the history behind Aleister Crowley, El Mago: what it actually is",
-        "Where the history behind Aleister Crowley, El Mago comes from",
-        "Building the history behind Aleister Crowley, El Mago from nothing",
-        "Charging the history behind Aleister Crowley, El Mago: the working sequence",
-        "the history behind Aleister Crowley, El Mago in practice, step by step",
-        "Why the history behind Aleister Crowley, El Mago fails, and what to change",
-        "Testing the history behind Aleister Crowley, El Mago without fooling yourself",
-        "the history behind Aleister Crowley, El Mago: tools, timing and materials",
-        "Keeping the history behind Aleister Crowley, El Mago alive after the first charge",
-        "Signs the history behind Aleister Crowley, El Mago is actually working",
-        "The ethics of working with the history behind Aleister Crowley, El Mago",
-        "the history behind Aleister Crowley, El Mago: the mistakes beginners make",
-        "When to abandon the history behind Aleister Crowley, El Mago",
-        "Repeating the history behind Aleister Crowley, El Mago without it going stale",
-        "How the history behind Aleister Crowley, El Mago fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "The Ars Notoria, Ars Almadel and the Lemuria are among the earliest grimoires, compiled in medieval to early-modern Western Europe and drawing on Arabic, Jewish and Latin sources.",
-        "The Hermetic Corpus was translated into Latin in the 15th century and synthesised with Judaic and Christian material, producing the Renaissance magicians as we understand them.",
-        "The Golden Dawn, founded in 1888, was the most significant British occult order of the 19th century and its initiatory material shaped most later ceremonial practice.",
-        "The term 'occult' entered English in the 16th century from 'occultare' - to hide - which is a transcription of the same Latin root as 'occult science', a term now associated with hidden knowledge rather than hidden arts."
-      ],
-      "spec_faq": [
-        [
-          "Is occult history mostly fraud?",
-          "Partly. There is genuine scholarly work in the field, and it is worth reading by people who interrogate their sources."
-        ],
-        [
-          "What is a grimoire?",
-          "A book of practical instruction, originally a term of disparagement - 'grimoire' comes from the Greek grimoire, grim, 'a black book'."
-        ],
-        [
-          "Which grimoires matter most?",
-          "The Ars Goetia, the Lemuria, the Lesser Key of Solomon and the Grimorium Verum, plus the modern Liber Null and Liber Kaos for practice."
-        ]
-      ],
-      "products": [
-        "codex-chaoticus-pdf",
-        "tarot-chaos-pdf",
-        "liber-lvpinux-pdf"
-      ],
-      "tools": [
-        "dream-symbol-dictionary",
-        "iching",
-        "moon-intention-planner"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=7gmcl8WsWS4",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the underlying structure and why it is shaped this way",
-      "role_phrase": "the history behind Aleister Crowley, El Mago",
-      "subject": "Aleister Crowley, El Mago",
-      "title_tag": "History of the Occult Framework: History of the Occult",
-      "seo_title": "History of the Occult | History of the Occult Framework",
-      "description": "A complete working guide to history of the occult covering history of the occult. Includes step-by-step protocol, honest failure modes, and FAQ.",
-      "keywords": [
-        "history of occultism",
-        "history of magic grimoires",
-        "satanic panic history",
-        "ceremonial magic history",
-        "hermetic tradition history",
-        "magic history timeline",
-        "western esotericism explained",
-        "grimmoire history",
-        "framework history of occultism"
-      ]
-    },
-    {
-      "n": 210,
-      "slug": "chaos-magic-fundamentals-what-is-chaos-magic-guide-21",
-      "h1": "Chaos Magic Fundamentals",
-      "domain": "chaos-basics",
-      "domain_label": "Chaos Magic Fundamentals",
-      "intent": "informational",
-      "blog_category": "basics",
-      "entity": null,
-      "entity_source": null,
-      "focus": "chaos magic fundamentals",
-      "outline": [
-        "a first working built on 3 REAL DELUSIONS CHAOS: what it actually is",
-        "Where a first working built on 3 REAL DELUSIONS CHAOS comes from",
-        "Building a first working built on 3 REAL DELUSIONS CHAOS from nothing",
-        "Charging a first working built on 3 REAL DELUSIONS CHAOS: the working sequence",
-        "a first working built on 3 REAL DELUSIONS CHAOS in practice, step by step",
-        "Why a first working built on 3 REAL DELUSIONS CHAOS fails, and what to change",
-        "Testing a first working built on 3 REAL DELUSIONS CHAOS without fooling yourself",
-        "a first working built on 3 REAL DELUSIONS CHAOS: tools, timing and materials",
-        "Keeping a first working built on 3 REAL DELUSIONS CHAOS alive after the first charge",
-        "Signs a first working built on 3 REAL DELUSIONS CHAOS is actually working",
-        "The ethics of working with a first working built on 3 REAL DELUSIONS CHAOS",
-        "a first working built on 3 REAL DELUSIONS CHAOS: the mistakes beginners make",
-        "When to abandon a first working built on 3 REAL DELUSIONS CHAOS",
-        "Repeating a first working built on 3 REAL DELUSIONS CHAOS without it going stale",
-        "How a first working built on 3 REAL DELUSIONS CHAOS fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Chaos magic emerged in the early 1970s, with the 1976 founding of the Ordo Templi Ouroborus as the conventional starting point of the modern movement.",
-        "Its foundational texts are Peter Carroll's Liber Null and psi and John Crowley's Liber Kaos, both of which insisted on experiment over doctrine.",
-        "The name is a play on 'chaos magic' and the Chaos enthroned motif of Aleister Crowley's book The Book of the Law, which the movement took as deliberate affiliation.",
-        "Chaos magic's most durable contribution is methodological rather than metaphysical: it made it acceptable to test claims rather than inherit them."
-      ],
-      "spec_faq": [
-        [
-          "What do I need to start?",
-          "A statement of intent, a way to reduce it to a sigil, and a private place to charge it. That is genuinely the whole toolkit."
-        ],
-        [
-          "Do I have to believe in magic?",
-          "No. The movement's standard position is that belief is optional, and a sceptic can practise the methods and keep the results."
-        ],
-        [
-          "Is chaos magic dangerous?",
-          "Not inherently. The risks are the same as any intense self-directed practice: fixation, isolation, and sleep disruption."
-        ]
-      ],
-      "products": [
-        "codex-chaoticus-pdf",
-        "noctem-tools",
-        "chaos-sigil-generator"
-      ],
-      "tools": [
-        "magical-correspondence-finder",
-        "paranormal-session-prep-checklist",
-        "planetary-retrograde-calendar"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=nEFyVCbiQUs",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the underlying structure and why it is shaped this way",
-      "role_phrase": "a first working built on 3 REAL DELUSIONS CHAOS",
-      "subject": "3 REAL DELUSIONS CHAOS",
-      "title_tag": "Chaos Magic Fundamentals Framework: Chaos Magic Fundamentals",
-      "seo_title": "Chaos Magic Fundamentals | Chaos Magic Fundamentals",
-      "description": "A complete working guide to chaos magic fundamentals covering chaos magic fundamentals. Includes step-by-step protocol, honest failure modes, and FAQ.",
-      "keywords": [
-        "what is chaos magic",
-        "chaos magic for beginners",
-        "chaos magic basic principles",
-        "how to start chaos magic",
-        "chaos magic explained",
-        "chaos magic history",
-        "chaos magic vs traditional magic",
-        "how to become a chaos magician",
-        "framework what is chaos magic"
-      ]
-    },
     {
       "n": 212,
       "slug": "dreams-astral-projection-and-tulpas-how-to-lucid-dream--5",
