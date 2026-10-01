@@ -1,0 +1,468 @@
+{
+ "offender_ngrams": 29,
+ "targets_to_rewrite": 37,
+ "articles": [
+  {
+   "n": 22,
+   "slug": "history-of-the-occult-history-of-occultism-guide-3",
+   "h1": "History of the Occult",
+   "cluster": "history/history-occult",
+   "targets": [
+    {
+     "tid": "t12",
+     "paths": [
+      ".sections[1].p[0]"
+     ],
+     "text": "Among the earliest grimoires are the Ars Notoria, the Ars Almadel and the Lemuria, assembled across medieval and early-modern Western Europe out of Arabic, Jewish and Latin material."
+    }
+   ]
+  },
+  {
+   "n": 50,
+   "slug": "wealth-and-abundance-chaos-magic-money-ritual-guide-3",
+   "h1": "Wealth and Abundance",
+   "cluster": "money/money",
+   "targets": [
+    {
+     "tid": "t36",
+     "paths": [
+      ".sections[4].p[0]"
+     ],
+     "text": "The technique of reducing a statement of intent to a glyph is documented in Austin Osman Spare's 1904 work, and it spread through the material that followed him rather than through any formal body of teaching."
+    }
+   ]
+  },
+  {
+   "n": 85,
+   "slug": "hidden-lost-and-forbidden-knowledge-occult-secrets-guid-3",
+   "h1": "Hidden, Lost and Forbidden Knowledge: A Reading Map",
+   "cluster": "money/secret-knowledge",
+   "targets": [
+    {
+     "tid": "t59",
+     "paths": [
+      ".sections[5].p[0]"
+     ],
+     "text": "Provenance usually cannot be established at all, which is the ordinary condition of the field rather than anything scandalous."
+    }
+   ]
+  },
+  {
+   "n": 106,
+   "slug": "hidden-lost-and-forbidden-knowledge-occult-secrets-guid-5",
+   "h1": "Hidden, Lost and Forbidden Knowledge",
+   "cluster": "books/secret-knowledge",
+   "targets": [
+    {
+     "tid": "t5",
+     "paths": [
+      ".sections[0].p[0]"
+     ],
+     "text": "Among the oldest surviving fragments of Jewish apocalyptic literature sits the Book of Enoch."
+    }
+   ]
+  },
+  {
+   "n": 108,
+   "slug": "history-of-the-occult-history-of-occultism-guide-5",
+   "h1": "History of the Occult",
+   "cluster": "podcast/history-occult",
+   "targets": [
+    {
+     "tid": "t28",
+     "paths": [
+      ".sections[3].p[0]"
+     ],
+     "text": "Its initiatory material shaped most of the ceremonial practice that followed, which means a great deal of what gets taught today carries a nineteenth-century British provenance however ancient its imagery."
+    }
+   ]
+  },
+  {
+   "n": 139,
+   "slug": "metatron-72-demons-of-goetia",
+   "h1": "METATRÓN",
+   "cluster": "chaos/entity-lore/goetia-demons",
+   "targets": [
+    {
+     "tid": "t20",
+     "paths": [
+      ".sections[2].p[0]"
+     ],
+     "text": "The modern Goetia as a brand, the video essays, the apps, the commentary layered on top, is a twenty-first century phenomenon sitting on older material that descends from Jewish and Christian demonological sources, the Book of Enoch among them, arriving through the seventeenth-century Conjuratio Ben-Maimon and the Lemuria."
+    }
+   ]
+  },
+  {
+   "n": 142,
+   "slug": "entity-lore-and-invocation-invocation-ritual-entity-gui-4",
+   "h1": "Entity Lore and Invocation",
+   "cluster": "chaos/entity-lore/entity-lore",
+   "targets": [
+    {
+     "tid": "t25",
+     "paths": [
+      ".sections[2].p[1]"
+     ],
+     "text": "The underlying material descends from Jewish and Christian demonological sources, the Pseudepigrapha Book of Enoch among them, and arrives in the seventeenth century through the Conjuratio Ben-Maimon and the Lemuria."
+    },
+    {
+     "tid": "t29",
+     "paths": [
+      ".sections[3].p[0]"
+     ],
+     "text": "Peter Carroll held that entities in chaos magic work best taken as aspects of the magician's own mind rather than as external beings."
+    }
+   ]
+  },
+  {
+   "n": 145,
+   "slug": "the-72-spirits-of-goetia-72-demons-of-goetia-guide-9",
+   "h1": "The 72 Spirits of Goetia",
+   "cluster": "chaos/entity-lore/goetia-demons",
+   "targets": [
+    {
+     "tid": "t16",
+     "paths": [
+      ".sections[2].p[0]"
+     ],
+     "text": "The material descends from Jewish and Christian demonological sources, particularly the Pseudepigrapha Book of Enoch, which lists a tribunal of fallen angels and the duties assigned to them."
+    },
+    {
+     "tid": "t85",
+     "paths": [
+      ".faq[0][1]"
+     ],
+     "text": "Seventy-two, divided into three ranks: nine Presidents, thirty-six Dukes, and thirty Kings."
+    },
+    {
+     "tid": "t88",
+     "paths": [
+      ".faq[0][0]",
+      ".faq[0][1]"
+     ],
+     "text": "How many spirits are in the Ars Goetia? Seventy-two, divided into three ranks: nine Presidents, thirty-six Dukes, and thirty Kings. The thirty Kings are the top of the hierarchy, so the numbering runs from thirty downward rather than ascending from one. That ordering is the usual source of confusion when people count the ranks and conclude the list is short."
+    }
+   ]
+  },
+  {
+   "n": 147,
+   "slug": "abraxas-annunaki",
+   "h1": "Abraxas",
+   "cluster": "creatures/mythology-ancient",
+   "targets": [
+    {
+     "tid": "t113",
+     "paths": [
+      ".sections[7].p[2]"
+     ],
+     "text": "Occasionally the frame will be right for reasons that have nothing to do with the frame, which is no argument against using it."
+    }
+   ]
+  },
+  {
+   "n": 156,
+   "slug": "hidden-lost-and-forbidden-knowledge-occult-secrets-guid-7",
+   "h1": "Hidden, Lost and Forbidden Knowledge",
+   "cluster": "chaos/gates/secret-knowledge",
+   "targets": [
+    {
+     "tid": "t24",
+     "paths": [
+      ".sections[2].p[0]"
+     ],
+     "text": "The oldest surviving fragments of Jewish apocalyptic literature include the Book of Enoch."
+    }
+   ]
+  },
+  {
+   "n": 157,
+   "slug": "the-72-spirits-of-goetia-72-demons-of-goetia-guide-11",
+   "h1": "The 72 Spirits of Goetia",
+   "cluster": "chaos/comparative/goetia-demons",
+   "targets": [
+    {
+     "tid": "t63",
+     "paths": [
+      ".sections[6].p[0]"
+     ],
+     "text": "Below the ranks the spirits are sorted into families of two, three or four, and those families are not decorative."
+    },
+    {
+     "tid": "t113",
+     "paths": [
+      ".faq[1][1]"
+     ],
+     "text": "Historically they are rows in a demonological catalogue, and not one of them has evidence of agency outside the page."
+    },
+    {
+     "tid": "t116",
+     "paths": [
+      ".faq[1][0]",
+      ".faq[1][1]"
+     ],
+     "text": "Is the word demon doing any real work here? Historically they are rows in a demonological catalogue, and not one of them has evidence of agency outside the page. That does not make them useless. As a symbolic vocabulary they are unusually well documented, which is exactly what a working needs: a figure with a defined office, a defined form and a defined set of powers gives attention somewhere specific to go, and most people get further with a good figure than with an unbounded intention."
+    }
+   ]
+  },
+  {
+   "n": 159,
+   "slug": "vimec-luce-invocation-ritual-entity",
+   "h1": "Vimec LUCE",
+   "cluster": "servitors/entity-lore",
+   "targets": [
+    {
+     "tid": "t44",
+     "paths": [
+      ".sections[4].p[0]"
+     ],
+     "text": "Peter Carroll's widely-cited definition treated entities in chaos magic as aspects of the magician's own mind rather than as external beings."
+    },
+    {
+     "tid": "t107",
+     "paths": [
+      ".faq[1][0]"
+     ],
+     "text": "Evocation and invocation are not the same thing. How do they differ?"
+    },
+    {
+     "tid": "t111",
+     "paths": [
+      ".faq[1][0]",
+      ".faq[1][1]"
+     ],
+     "text": "Evocation and invocation are not the same thing. How do they differ? Evocation calls a spirit to manifest, which is why the classical material attaches warnings to it and why every such working ends with a dismissal. Invocation asks the entity to operate through you, which makes it closer to borrowing a set of instructions for the duration than to summoning a guest. Almost all modern invocation material is the second operation described in the first one's terms, and naming it accurately is what keeps it workable at short notice."
+    }
+   ]
+  },
+  {
+   "n": 160,
+   "slug": "oneiros-72-demons-of-goetia",
+   "h1": "The Seventy-Two Spirits of Goetia, Read Properly",
+   "cluster": "chaos/servitors/goetia-demons",
+   "targets": [
+    {
+     "tid": "t13",
+     "paths": [
+      ".sections[1].p[0]"
+     ],
+     "text": "The material descends from Jewish and Christian demonological sources, the Pseudepigrapha Book of Enoch above all, and enters the grimoire lineage through the Lemuria and the Conjuratio Ben-Maimon of the seventeenth century."
+    },
+    {
+     "tid": "t59",
+     "paths": [
+      ".sections[6].p[0]"
+     ],
+     "text": "The seventy-two also sort into families of two, three or four, and that grouping is often the more useful unit because it shows which entries were designed to operate together."
+    },
+    {
+     "tid": "t69",
+     "paths": [
+      ".faq[0][1]"
+     ],
+     "text": "Historically they are rows in a demonological catalogue, with nothing behind them acting outside the page."
+    },
+    {
+     "tid": "t72",
+     "paths": [
+      ".faq[0][0]",
+      ".faq[0][1]"
+     ],
+     "text": "Is the word demon doing any real work here? Historically they are rows in a demonological catalogue, with nothing behind them acting outside the page. The category word arrives through a specific textual chain, and the figures at the head of it are ex-angels from apocalyptic literature rather than devils in the later popular sense. Practically, the catalogue is a rich symbolic vocabulary with a filing system, and it is genuinely more useful read that way than as a horror list."
+    }
+   ]
+  },
+  {
+   "n": 171,
+   "slug": "glamour-magick-why-does-magic-work-placebo",
+   "h1": "GLAMOUR MAGICK",
+   "cluster": "chaos/science-bridge/mind-science",
+   "targets": [
+    {
+     "tid": "t120",
+     "paths": [
+      ".faq[0][1]"
+     ],
+     "text": "Write down a falsifiable prediction before the attempt, attach a date, and count every attempt including the ones you were certain would fail."
+    },
+    {
+     "tid": "t122",
+     "paths": [
+      ".faq[0][0]",
+      ".faq[0][1]"
+     ],
+     "text": "How can I tell whether a result I got was real? You usually cannot from a single instance, and no amount of sincerity substitutes for a design. Write down a falsifiable prediction before the attempt, attach a date, and count every attempt including the ones you were certain would fail. The test to apply first is whether the outcome would have been likely anyway, which is a base rate calculation rather than an intuition."
+    }
+   ]
+  },
+  {
+   "n": 179,
+   "slug": "history-of-the-occult-history-of-occultism-guide-7",
+   "h1": "History of the Occult",
+   "cluster": "history/history-occult",
+   "targets": [
+    {
+     "tid": "t28",
+     "paths": [
+      ".sections[3].p[0]"
+     ],
+     "text": "Founded in 1888, the Golden Dawn was the most consequential British occult order of the nineteenth century, and its initiatory material shaped most of the ceremonial practice that came after."
+    },
+    {
+     "tid": "t57",
+     "paths": [
+      ".sections[6].p[1]"
+     ],
+     "text": "The Ars Notoria, the Ars Almadel and the Lemuria work well as first exercises precisely because they are short, formulaic, and largely borrowed."
+    },
+    {
+     "tid": "t109",
+     "paths": [
+      ".faq[3][1]"
+     ],
+     "text": "Often you cannot, and that describes the ordinary condition of the field rather than a personal failure."
+    },
+    {
+     "tid": "t112",
+     "paths": [
+      ".faq[3][0]",
+      ".faq[3][1]"
+     ],
+     "text": "How can I tell whether a text is a later forgery? Often you cannot, and that describes the ordinary condition of the field rather than a personal failure. Anachronistic ingredients are the most reliable giveaway: a manuscript using a material or an optical technique that post-dates its claimed origin, or a text complaining about printing presses in an era before presses arrived. Where no internal tell exists, treat the provenance as unresolved and let the content earn its place on practical usefulness instead."
+    }
+   ]
+  },
+  {
+   "n": 185,
+   "slug": "clauneck-occult-secrets",
+   "h1": "CLAUNECK",
+   "cluster": "money-goetia/secret-knowledge",
+   "targets": [
+    {
+     "tid": "t93",
+     "paths": [
+      ".faq[0][1]"
+     ],
+     "text": "Most of the long books in this category are long for reasons that have nothing to do with the material being any good."
+    },
+    {
+     "tid": "t95",
+     "paths": [
+      ".faq[0][0]",
+      ".faq[0][1]"
+     ],
+     "text": "Which book on hidden knowledge should I actually start with? Start with the shortest thing that a named person wrote in a year you can check, and read it in one sitting. Liber Null and psi fits that description and takes an evening. Use length as the first filter here. Most of the long books in this category are long for reasons that have nothing to do with the material being any good. If you want a second, read one book written to disagree with the first."
+    }
+   ]
+  },
+  {
+   "n": 190,
+   "slug": "sigils-theory-and-technique-how-to-make-a-sigil-guide-5",
+   "h1": "Sigils: Theory and Technique",
+   "cluster": "sigils/sigils",
+   "targets": [
+    {
+     "tid": "t95",
+     "paths": [
+      ".faq[0][1]"
+     ],
+     "text": "The method is documented in Austin Osman Spare's 1904 work."
+    },
+    {
+     "tid": "t97",
+     "paths": [
+      ".faq[0][0]",
+      ".faq[0][1]"
+     ],
+     "text": "What is letter reduction in sigil magic? It is the step of compressing a written statement into a minimal glyph by removing vowels, assigning shapes to the remaining consonants, and dropping duplicate shapes. The method is documented in Austin Osman Spare's 1904 work. Its practical purpose is to produce a figure compact enough to hold in mind, not to encode a meaning hidden in the letters."
+    }
+   ]
+  },
+  {
+   "n": 332,
+   "slug": "entity-lore-and-invocation-invocation-ritual-entity-gui-9",
+   "h1": "Entity Lore and Invocation: Field Notes on Working With Names",
+   "cluster": "servitors/entity-lore",
+   "targets": [
+    {
+     "tid": "t82",
+     "paths": [
+      ".faq[1][0]"
+     ],
+     "text": "Evocation and invocation are not the same thing. How do they differ?"
+    },
+    {
+     "tid": "t87",
+     "paths": [
+      ".faq[1][0]",
+      ".faq[1][1]"
+     ],
+     "text": "Evocation and invocation are not the same thing. How do they differ? Evocation calls the entity to appear and be perceived, which in the classical scheme means apparatus, containment and a circle. Invocation asks it to operate through you instead, which needs almost nothing and produces a narrower result. Modern usage collapses the two, and chaos magic collapsed them on purpose, dropping to a defined intention, a sigil and a stated frame. The distinction is worth keeping even in reduced practice, because it tells you which operation you are actually describing."
+    }
+   ]
+  },
+  {
+   "n": 349,
+   "slug": "chaos-magic-fundamentals-what-is-chaos-magic-guide-31",
+   "h1": "Chaos Magic Fundamentals for Someone Starting Today",
+   "cluster": "chaos/general/chaos-basics",
+   "targets": [
+    {
+     "tid": "t95",
+     "paths": [
+      ".faq[3][1]"
+     ],
+     "text": "Get the prediction down before you start, attach a date, and count every attempt including the failures."
+    },
+    {
+     "tid": "t97",
+     "paths": [
+      ".faq[3][0]",
+      ".faq[3][1]"
+     ],
+     "text": "How do I tell whether a sigil method works? You cannot tell from one attempt, and the framework has no way around that. Get the prediction down before you start, attach a date, and count every attempt including the failures. Thirty dated entries will tell you more than a year of impressions, and they cost nothing but the discipline of writing the same day you acted."
+    }
+   ]
+  }
+ ],
+ "missing": [
+  {
+   "ngram": "a small number of physiological outcomes that is",
+   "ns": [
+    110,
+    124,
+    117
+   ],
+   "slugs": [
+    "gnosis-belief-and-paradigm-shift-what-is-gnosis-chaos-m-4",
+    "gnosis-belief-and-paradigm-shift-what-is-gnosis-chaos-m-5",
+    "the-mind-science-of-practice-why-does-magic-work-placeb-9"
+   ]
+  },
+  {
+   "ngram": "number of physiological outcomes that is a genuine",
+   "ns": [
+    110,
+    124,
+    117
+   ],
+   "slugs": [
+    "gnosis-belief-and-paradigm-shift-what-is-gnosis-chaos-m-4",
+    "gnosis-belief-and-paradigm-shift-what-is-gnosis-chaos-m-5",
+    "the-mind-science-of-practice-why-does-magic-work-placeb-9"
+   ]
+  },
+  {
+   "ngram": "small number of physiological outcomes that is a",
+   "ns": [
+    110,
+    124,
+    117
+   ],
+   "slugs": [
+    "gnosis-belief-and-paradigm-shift-what-is-gnosis-chaos-m-4",
+    "gnosis-belief-and-paradigm-shift-what-is-gnosis-chaos-m-5",
+    "the-mind-science-of-practice-why-does-magic-work-placeb-9"
+   ]
+  }
+ ]
+}
