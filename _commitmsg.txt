@@ -1,0 +1,31 @@
+feat(blog): cinco artículos de YouTube pendientes
+
+Lote 2 del pipeline de articles derivados de YouTube. Cinco artículos
+escritos desde cero, con H2 propios (no el outline del spec, que está
+templateado y dispara reused_h2) y las cinco respuestas de FAQ
+reescritas con otras palabras, porque el faq del spec es idéntico entre
+artículos del mismo dominio y reutilizarlo suma 8-gramas duplicados al
+corpus.
+
+Artículos
+- 147  abraxas-annunaki
+- 149  gnosis-belief-and-paradigm-shift-what-is-gnosis-chaos-m-8
+- 150  the-72-spirits-of-goetia-72-demons-of-goetia-guide-10
+- 153  lunar-and-planetary-magic-moon-magic-rituals-guide-3
+- 154  onironomicon-invocation-ritual-entity
+
+Gates verificados
+- qa.py 147 149 150 153 154 -> ALL GREEN
+- slop: 0 banned phrases, 0 H2 prohibidos, 0 stubs
+- corpus: reused_h2 none, reused_ngrams none, reused_opening none
+- palabras visibles 2623-3538, dentro del rango histórico (media 2129, max 4242)
+- HTML generado: lang-sidebar con left:0;right:auto + align-items:flex-start
+  !important, 1 lang-globe SVG, 1 <section id="comments"> con
+  .giscus giscus-container sin style inline, 4 ld+json, 0 U+FFFD,
+  0 mojibake en los titulos de bandera, 1 sola caja Related Resources
+
+Nota de proceso: el primer render de 147 fallo con
+banned-phrases ['the world of']. Corregido en la prosa ("injustice among
+those who labour") y re-renderizado. El QA se ejecuta siempre sobre el
+HTML renderizado, no sobre el JSON, porque slop.py mide el texto visible
+incluido el chrome de la plantilla.
