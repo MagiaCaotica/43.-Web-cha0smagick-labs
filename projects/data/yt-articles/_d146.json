@@ -1,7 +1,4 @@
 {
-  "n": 146,
-  "slug": "asipu-el-milagroso-invocation-ritual-entity",
-  "h1": "ASIPU el MILAGROSO",
   "seo_title": "ASIPU el MILAGROSO | Entity Working and Invocation, Step by Step",
   "description": "ASIPU el MILAGROSO has no catalogue entry anywhere. This is the invocation framework behind the name, the evocation and invocation distinction, and a first-time route through.",
   "keywords": [
@@ -19,8 +16,6 @@
     "working with named spirits",
     "beginner path invocation ritual entity"
   ],
-  "published": "2026-09-27",
-  "published_human": "September 27, 2026",
   "lede": "ASIPU el MILAGROSO belongs to the same category as the other names circulating through recent chaos-magick material: no catalogue entry, no traceable origin, no documented lineage, and no way to confirm that the name refers to anything other than itself. That is stated up front because it changes what follows. Nothing here supplies a biography, a lineage, or a set of powers for the entity, and the absence is not a gap to be filled with plausible invention. What can be done is examine the invocation structure the name is attached to, the distinction between evocation and invocation that most modern usage throws away, and a first working that stays small enough to be evaluated.",
   "sections": [
     {
@@ -114,7 +109,7 @@
       "There is no historical entry for this name. It appears in recent chaos-magick material and not in the Ars Goetia, the Lemuria, the Pseudepigrapha, the Agrippa trilogy, the Grimoirs, or any order record. It is best treated as a label for a construct the practitioner defines, and any biography attached to it was invented afterwards to make the working feel founded."
     ],
     [
-      "Invocation and evocation are not interchangeable. What separates them?",
+      "What is the difference between evocation and invocation?",
       "Evocation calls a spirit to appear in a visible form and traditionally requires apparatus and a defined space, which is why it was understood to carry the risk. Invocation invites an entity's influence to operate through the operator with no appearance required. Modern usage merges the two words, which costs nothing functionally but hides what a reasonable result should look like."
     ],
     [
@@ -130,26 +125,19 @@
       "Start with a servitor. It has one narrow task, one date, and one yes-or-no outcome, so it can be evaluated. Entities are easy to begin with and easy to keep indefinitely because the feedback loop is weaker, and most people who never finish a course of practice end up there. Run a few servitors you could honestly call tests before working with a named entity."
     ]
   ],
-  "related": [
-    [
-      "entity-lore-and-invocation-invocation-ritual-entity-gui-3",
-      "Entity Lore and Invocation | Entity Lore and Invocation"
-    ],
-    [
-      "aristeia-invocation-ritual-entity",
-      "ARISTEIA | Entity Lore and Invocation Critique"
-    ],
-    [
-      "sacerdote-de-cydonia-invocation-ritual-entity",
-      "SACERDOTE de CYDONIA | Entity Lore and Invocation Beginner"
-    ],
-    [
-      "vimec-luce-invocation-ritual-entity",
-      "Vimec LUCE | Entity Lore and Invocation Framework"
-    ],
-    [
-      "abraxas-annunaki",
-      "Abraxas | Ancient Mythology and Speculation Framework"
-    ]
+  "related_seed": [
+    "entity",
+    "invocation",
+    "evocation",
+    "servitor",
+    "spirit",
+    "demon",
+    "working",
+    "ritual",
+    "sigil",
+    "chaos",
+    "lore",
+    "asipu",
+    "abraxas"
   ]
 }
