@@ -1,19 +1,13 @@
 {
   "total": 349,
-  "done": 210,
-  "remaining": 139,
+  "done": 216,
+  "remaining": 133,
   "batch_size": 26,
   "batch_count": 6,
   "batches": [
     {
       "index": 1,
       "ns": [
-        191,
-        192,
-        193,
-        194,
-        196,
-        197,
         198,
         199,
         200,
@@ -33,19 +27,19 @@
         218,
         219,
         220,
-        221
+        221,
+        222,
+        223,
+        226,
+        227,
+        228,
+        229
       ],
       "count": 26
     },
     {
       "index": 2,
       "ns": [
-        222,
-        223,
-        226,
-        227,
-        228,
-        229,
         230,
         231,
         232,
@@ -65,19 +59,19 @@
         246,
         247,
         248,
-        249
+        249,
+        250,
+        251,
+        253,
+        254,
+        255,
+        256
       ],
       "count": 26
     },
     {
       "index": 3,
       "ns": [
-        250,
-        251,
-        253,
-        254,
-        255,
-        256,
         257,
         258,
         259,
@@ -97,19 +91,19 @@
         275,
         276,
         277,
-        278
+        278,
+        279,
+        280,
+        282,
+        283,
+        284,
+        285
       ],
       "count": 26
     },
     {
       "index": 4,
       "ns": [
-        279,
-        280,
-        282,
-        283,
-        284,
-        285,
         286,
         287,
         288,
@@ -129,19 +123,19 @@
         303,
         304,
         305,
-        307
+        307,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314
       ],
       "count": 26
     },
     {
       "index": 5,
       "ns": [
-        309,
-        310,
-        311,
-        312,
-        313,
-        314,
         315,
         316,
         317,
@@ -161,518 +155,27 @@
         333,
         334,
         335,
-        337
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        345
       ],
       "count": 26
     },
     {
       "index": 6,
       "ns": [
-        338,
-        339,
-        340,
-        341,
-        342,
-        345,
         346,
         347,
         348
       ],
-      "count": 9
+      "count": 3
     }
   ],
   "articles": [
-    {
-      "n": 191,
-      "slug": "wealth-and-abundance-chaos-magic-money-ritual-guide-12",
-      "h1": "Wealth and Abundance",
-      "domain": "money",
-      "domain_label": "Wealth and Abundance",
-      "intent": "commercial",
-      "blog_category": "advanced",
-      "entity": null,
-      "entity_source": null,
-      "focus": "wealth and abundance",
-      "outline": [
-        "a money sigil for Invocando Abundancia Para La Riqueza: what it actually is",
-        "Where a money sigil for Invocando Abundancia Para La Riqueza comes from",
-        "Building a money sigil for Invocando Abundancia Para La Riqueza from nothing",
-        "Charging a money sigil for Invocando Abundancia Para La Riqueza: the working sequence",
-        "a money sigil for Invocando Abundancia Para La Riqueza in practice, step by step",
-        "Why a money sigil for Invocando Abundancia Para La Riqueza fails, and what to change",
-        "Testing a money sigil for Invocando Abundancia Para La Riqueza without fooling yourself",
-        "a money sigil for Invocando Abundancia Para La Riqueza: tools, timing and materials",
-        "Keeping a money sigil for Invocando Abundancia Para La Riqueza alive after the first charge",
-        "Signs a money sigil for Invocando Abundancia Para La Riqueza is actually working",
-        "The ethics of working with a money sigil for Invocando Abundancia Para La Riqueza",
-        "a money sigil for Invocando Abundancia Para La Riqueza: the mistakes beginners make",
-        "When to abandon a money sigil for Invocando Abundancia Para La Riqueza",
-        "Repeating a money sigil for Invocando Abundancia Para La Riqueza without it going stale",
-        "How a money sigil for Invocando Abundancia Para La Riqueza fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Occult literature has treated money as a favourable target for centuries because it is a strongly symbolic quantity: universal, quantifiable, and socially legible.",
-        "The number 741 is used in abundance work because 7+4+1 = 12, a figure that recurs across temperament and numerological charts; the practice borrows this rather than claiming a physical mechanism.",
-        "Sigilisation - reducing a statement of intent to a glyph - was formalised by Austin Osman Spare in the 1900s and is the standard charge method in modern chaos magic.",
-        "Chaos magic as a system is explicitly pragmatic: it does not require the practitioner to hold any particular belief about the mechanism for the operation to be considered valid.",
-        "A sigil is not a wish. It is an encoding of an imperative statement of intent, which is why chaos magicians phrase targets as commands rather than requests."
-      ],
-      "spec_faq": [
-        [
-          "Should I charge a money sigil on a particular day?",
-          "You can, but timing is secondary. A precisely timed sigil aimed at a vague goal underperforms a plain sigil aimed at a specific, measurable action you can take this week."
-        ],
-        [
-          "Is wealth magic ever dangerous?",
-          "The practical risk is psychological: tying your sense of self-worth to a result can produce anxiety, compulsive checking, and in some cases financial decisions made from panic rather than judgement."
-        ],
-        [
-          "Do money sigils actually work?",
-          "There is no evidence that a sigil moves money by itself. What the practice reliably does is commit you to one specific action, remove the friction of doubt, and keep the goal salient at the moment a decision is available. Results come from that behavioural effect plus ordinary opportunity - not from the glyph."
-        ],
-        [
-          "How long does a money sigil take to work?",
-          "Treat it as a 30 to 90 day observation window. Anything faster is likely coincidence, and anything slower should trigger a review of whether the target was ever specific enough to act on."
-        ]
-      ],
-      "products": [
-        "codex-chaoticus-pdf",
-        "noctem-tools",
-        "chaos-sigil-generator"
-      ],
-      "tools": [
-        "iching-changing-lines",
-        "meditation-focus-timer",
-        "pendulum-question-builder"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=r1XXkS5et5I",
-      "risk": "abundance-discipline",
-      "risk_note": "Wealth work fails most often when it becomes compulsive. Fix a review date, write down what you did, and if you find yourself checking daily, stop.",
-      "variant_phrase": "the underlying structure and why it is shaped this way",
-      "role_phrase": "a money sigil for Invocando Abundancia Para La Riqueza",
-      "subject": "Invocando Abundancia Para La Riqueza",
-      "title_tag": "Wealth and Abundance Framework: Wealth and Abundance",
-      "seo_title": "Wealth and Abundance | Wealth and Abundance Framework",
-      "description": "A complete working guide to wealth and abundance covering wealth and abundance. Includes step-by-step protocol, honest failure modes, and FAQ.",
-      "keywords": [
-        "chaos magic money ritual",
-        "sigils to attract money",
-        "abundance ritual that works",
-        "prosperity sigil",
-        "how to manifest wealth chaos magic",
-        "money spell that works",
-        "sigils for financial prosperity",
-        "chaos magic abundance practice",
-        "framework chaos magic money ritual"
-      ]
-    },
-    {
-      "n": 192,
-      "slug": "ritual-materials-and-correspondences-incense-in-ritual--3",
-      "h1": "Ritual Materials and Correspondences",
-      "domain": "ritual-craft",
-      "domain_label": "Ritual Materials and Correspondences",
-      "intent": "informational",
-      "blog_category": "basics",
-      "entity": null,
-      "entity_source": null,
-      "focus": "ritual materials and correspondences",
-      "outline": [
-        "a ritual technique for APRENDE Los SECRETOS: what it actually is",
-        "Where a ritual technique for APRENDE Los SECRETOS comes from",
-        "Building a ritual technique for APRENDE Los SECRETOS from nothing",
-        "Charging a ritual technique for APRENDE Los SECRETOS: the working sequence",
-        "a ritual technique for APRENDE Los SECRETOS in practice, step by step",
-        "Why a ritual technique for APRENDE Los SECRETOS fails, and what to change",
-        "Testing a ritual technique for APRENDE Los SECRETOS without fooling yourself",
-        "a ritual technique for APRENDE Los SECRETOS: tools, timing and materials",
-        "Keeping a ritual technique for APRENDE Los SECRETOS alive after the first charge",
-        "Signs a ritual technique for APRENDE Los SECRETOS is actually working",
-        "The ethics of working with a ritual technique for APRENDE Los SECRETOS",
-        "a ritual technique for APRENDE Los SECRETOS: the mistakes beginners make",
-        "When to abandon a ritual technique for APRENDE Los SECRETOS",
-        "Repeating a ritual technique for APRENDE Los SECRETOS without it going stale",
-        "How a ritual technique for APRENDE Los SECRETOS fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Correspondence - the linking of planets, metals, colours, numbers and days - is the organising principle of Western ceremonial magic and is codified in tables going back to the Agrippa's Three Books of Occult Philosophy in the 16th century.",
-        "Agrippa's three books, published 1533, were the first major printed Western synthesis of planetary, angelic and demonic hierarchies and remain a primary source for the tables.",
-        "Olfactory memory is unusually durable and largely independent of verbal memory, which explains why a distinctive incense becomes an effective ritual anchor.",
-        "Cannabis has documented use in multiple religious and magical traditions including some Hindu, Rastafarian and folk-Christian contexts - and its legal status varies sharply by jurisdiction, which is a real practical constraint."
-      ],
-      "spec_faq": [
-        [
-          "Do I need expensive ritual tools?",
-          "No. A pen, paper, and a private hour are sufficient for nearly all chaos magic work. Traditional apparatus is largely aesthetic and frame-setting."
-        ],
-        [
-          "Why does everyone say match instead of candle?",
-          "A match gives a small controllable flame plus a visible extinguishing action, which maps neatly onto the charge-and-dismiss structure. Candles work equally well."
-        ],
-        [
-          "Do correspondences matter mechanically?",
-          "They matter as a memory and coherence system. Using them consistently gives you a stable structure to build work inside."
-        ]
-      ],
-      "products": [
-        "tarot-chaos-pdf",
-        "noctem-tools",
-        "chaos-sigil-generator"
-      ],
-      "tools": [
-        "candle-color-calculator",
-        "elemental-balance-checker",
-        "lenormand-card-draw"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=W7ccEvRCs9w",
-      "risk": "grounding-discipline",
-      "risk_note": "If practice starts interfering with sleep, work, or relationships, reduce the intensity. The tradition's own advice is a short daily practice rather than an escalating one.",
-      "variant_phrase": "what actually happens in practice, including the failures",
-      "role_phrase": "a ritual technique for APRENDE Los SECRETOS",
-      "subject": "APRENDE Los SECRETOS",
-      "title_tag": "Ritual Materials and Correspondences Field Notes: Ritual Materials",
-      "seo_title": "Ritual Materials and Correspondences | Ritual Materials and",
-      "description": "A complete working guide to ritual materials and correspondences covering ritual materials and correspondences. Includes step-by-step protocol, honest...",
-      "keywords": [
-        "incense in ritual",
-        "ritual correspondences",
-        "magickal tools and supplies",
-        "planetary hours incense",
-        "elements in ritual",
-        "cannabis in magic",
-        "ritual of the eye",
-        "how to set up an altar",
-        "field notes incense in ritual"
-      ]
-    },
-    {
-      "n": 193,
-      "slug": "chaos-magic-fundamentals-what-is-chaos-magic-guide-18",
-      "h1": "Chaos Magic Fundamentals",
-      "domain": "chaos-basics",
-      "domain_label": "Chaos Magic Fundamentals",
-      "intent": "informational",
-      "blog_category": "basics",
-      "entity": null,
-      "entity_source": null,
-      "focus": "chaos magic fundamentals",
-      "outline": [
-        "a first working built on El Cristianismo Y La Magia: what it actually is",
-        "Where a first working built on El Cristianismo Y La Magia comes from",
-        "Building a first working built on El Cristianismo Y La Magia from nothing",
-        "Charging a first working built on El Cristianismo Y La Magia: the working sequence",
-        "a first working built on El Cristianismo Y La Magia in practice, step by step",
-        "Why a first working built on El Cristianismo Y La Magia fails, and what to change",
-        "Testing a first working built on El Cristianismo Y La Magia without fooling yourself",
-        "a first working built on El Cristianismo Y La Magia: tools, timing and materials",
-        "Keeping a first working built on El Cristianismo Y La Magia alive after the first charge",
-        "Signs a first working built on El Cristianismo Y La Magia is actually working",
-        "The ethics of working with a first working built on El Cristianismo Y La Magia",
-        "a first working built on El Cristianismo Y La Magia: the mistakes beginners make",
-        "When to abandon a first working built on El Cristianismo Y La Magia",
-        "Repeating a first working built on El Cristianismo Y La Magia without it going stale",
-        "How a first working built on El Cristianismo Y La Magia fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Chaos magic emerged in the early 1970s, with the 1976 founding of the Ordo Templi Ouroborus as the conventional starting point of the modern movement.",
-        "Its foundational texts are Peter Carroll's Liber Null and psi and John Crowley's Liber Kaos, both of which insisted on experiment over doctrine.",
-        "The name is a play on 'chaos magic' and the Chaos enthroned motif of Aleister Crowley's book The Book of the Law, which the movement took as deliberate affiliation.",
-        "Chaos magic's most durable contribution is methodological rather than metaphysical: it made it acceptable to test claims rather than inherit them."
-      ],
-      "spec_faq": [
-        [
-          "What do I need to start?",
-          "A statement of intent, a way to reduce it to a sigil, and a private place to charge it. That is genuinely the whole toolkit."
-        ],
-        [
-          "Do I have to believe in magic?",
-          "No. The movement's standard position is that belief is optional, and a sceptic can practise the methods and keep the results."
-        ],
-        [
-          "Is chaos magic dangerous?",
-          "Not inherently. The risks are the same as any intense self-directed practice: fixation, isolation, and sleep disruption."
-        ]
-      ],
-      "products": [
-        "chaos-sigil-generator",
-        "psi-gym",
-        "tarot-chaos-pdf"
-      ],
-      "tools": [
-        "lenormand-card-draw",
-        "moon-sign-calculator",
-        "planetary-hours-planner"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=IFkY7rq7Tyo",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the honest limits, failure modes and counterarguments",
-      "role_phrase": "a first working built on El Cristianismo Y La Magia",
-      "subject": "El Cristianismo Y La Magia",
-      "title_tag": "Chaos Magic Fundamentals Critique: Chaos Magic Fundamentals",
-      "seo_title": "Chaos Magic Fundamentals | Chaos Magic Fundamentals Critique",
-      "description": "A complete working guide to chaos magic fundamentals covering chaos magic fundamentals. Includes step-by-step protocol, honest failure modes, and FAQ.",
-      "keywords": [
-        "what is chaos magic",
-        "chaos magic for beginners",
-        "chaos magic basic principles",
-        "how to start chaos magic",
-        "chaos magic explained",
-        "chaos magic history",
-        "chaos magic vs traditional magic",
-        "how to become a chaos magician",
-        "critique what is chaos magic"
-      ]
-    },
-    {
-      "n": 194,
-      "slug": "chaos-magic-fundamentals-what-is-chaos-magic-guide-19",
-      "h1": "Chaos Magic Fundamentals",
-      "domain": "chaos-basics",
-      "domain_label": "Chaos Magic Fundamentals",
-      "intent": "informational",
-      "blog_category": "basics",
-      "entity": null,
-      "entity_source": null,
-      "focus": "chaos magic fundamentals",
-      "outline": [
-        "a first working built on Discover CHAOS Hidden: what it actually is",
-        "Where a first working built on Discover CHAOS Hidden comes from",
-        "Building a first working built on Discover CHAOS Hidden from nothing",
-        "Charging a first working built on Discover CHAOS Hidden: the working sequence",
-        "a first working built on Discover CHAOS Hidden in practice, step by step",
-        "Why a first working built on Discover CHAOS Hidden fails, and what to change",
-        "Testing a first working built on Discover CHAOS Hidden without fooling yourself",
-        "a first working built on Discover CHAOS Hidden: tools, timing and materials",
-        "Keeping a first working built on Discover CHAOS Hidden alive after the first charge",
-        "Signs a first working built on Discover CHAOS Hidden is actually working",
-        "The ethics of working with a first working built on Discover CHAOS Hidden",
-        "a first working built on Discover CHAOS Hidden: the mistakes beginners make",
-        "When to abandon a first working built on Discover CHAOS Hidden",
-        "Repeating a first working built on Discover CHAOS Hidden without it going stale",
-        "How a first working built on Discover CHAOS Hidden fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Chaos magic emerged in the early 1970s, with the 1976 founding of the Ordo Templi Ouroborus as the conventional starting point of the modern movement.",
-        "Its foundational texts are Peter Carroll's Liber Null and psi and John Crowley's Liber Kaos, both of which insisted on experiment over doctrine.",
-        "The name is a play on 'chaos magic' and the Chaos enthroned motif of Aleister Crowley's book The Book of the Law, which the movement took as deliberate affiliation.",
-        "Chaos magic's most durable contribution is methodological rather than metaphysical: it made it acceptable to test claims rather than inherit them."
-      ],
-      "spec_faq": [
-        [
-          "Do I have to believe in magic?",
-          "No. The movement's standard position is that belief is optional, and a sceptic can practise the methods and keep the results."
-        ],
-        [
-          "Is chaos magic dangerous?",
-          "Not inherently. The risks are the same as any intense self-directed practice: fixation, isolation, and sleep disruption."
-        ],
-        [
-          "What do I need to start?",
-          "A statement of intent, a way to reduce it to a sigil, and a private place to charge it. That is genuinely the whole toolkit."
-        ]
-      ],
-      "products": [
-        "psi-gym",
-        "tarot-chaos-pdf",
-        "codex-chaoticus-pdf"
-      ],
-      "tools": [
-        "lucid-dream-training-planner",
-        "moon-voc",
-        "planetary-hours"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=rwKc_sapt4s",
-      "risk": "epistemics-discipline",
-      "risk_note": "Keep your claims modest. Pre-register a falsifiable prediction, set a deadline, and record failures. This is not scepticism about the practice; it is the only way to know what it does.",
-      "variant_phrase": "the first-time practitioner's route through",
-      "role_phrase": "a first working built on Discover CHAOS Hidden",
-      "subject": "Discover CHAOS Hidden",
-      "title_tag": "Chaos Magic Fundamentals Beginner Path: Chaos Magic Fundamentals",
-      "seo_title": "Chaos Magic Fundamentals | Chaos Magic Fundamentals",
-      "description": "A complete working guide to chaos magic fundamentals covering chaos magic fundamentals. Includes step-by-step protocol, honest failure modes, and FAQ.",
-      "keywords": [
-        "what is chaos magic",
-        "chaos magic for beginners",
-        "chaos magic basic principles",
-        "how to start chaos magic",
-        "chaos magic explained",
-        "chaos magic history",
-        "chaos magic vs traditional magic",
-        "how to become a chaos magician",
-        "beginner path what is chaos magic"
-      ]
-    },
-    {
-      "n": 196,
-      "slug": "aurore-cutting-cord-ritual",
-      "h1": "AURORE",
-      "domain": "karmic-bonds",
-      "domain_label": "Soul Bonds and Cutting Ties",
-      "intent": "informational",
-      "blog_category": "advanced",
-      "entity": "AURORE",
-      "entity_source": "declared",
-      "focus": "soul bonds and cutting ties",
-      "outline": [
-        "a cord-binding working on AURORE: what it actually is",
-        "Where a cord-binding working on AURORE comes from",
-        "Building a cord-binding working on AURORE from nothing",
-        "Charging a cord-binding working on AURORE: the working sequence",
-        "a cord-binding working on AURORE in practice, step by step",
-        "Why a cord-binding working on AURORE fails, and what to change",
-        "Testing a cord-binding working on AURORE without fooling yourself",
-        "a cord-binding working on AURORE: tools, timing and materials",
-        "Keeping a cord-binding working on AURORE alive after the first charge",
-        "Signs a cord-binding working on AURORE is actually working",
-        "The ethics of working with a cord-binding working on AURORE",
-        "a cord-binding working on AURORE: the mistakes beginners make",
-        "When to abandon a cord-binding working on AURORE",
-        "Repeating a cord-binding working on AURORE without it going stale",
-        "How a cord-binding working on AURORE fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "Cord-cutting is one of the few rituals in Western esotericism that is genuinely initiatory: it is described in Eleazar ben Pitcharubut's 18th century kabbalistic text Bahir ha-Levavot and in later ceremonial material.",
-        "The ritual is traditionally performed with a physical cord representing the bond, which is cut or burned - a concrete action mapped onto an abstract one.",
-        "Modern chaos magic adapts cord-cutting into sigil work by encoding the severance as an imperative statement.",
-        "A number of occult traditions hold that bonds severed by force re-form; this is the origin of the 'do it right or do it twice' warning that appears across the literature."
-      ],
-      "spec_faq": [
-        [
-          "How long does it take to feel different?",
-          "Allow 7 to 21 days. The ritual marks the boundary; the nervous system takes longer to reorganise around it."
-        ],
-        [
-          "Can you cut a bond with a family member?",
-          "Yes, but expect it to be emotionally harder. Family systems are typically the most persistent and the most entangled with obligation."
-        ],
-        [
-          "Does cord cutting work?",
-          "As a ritual it works reliably as a closure mechanism - it marks a decision, and the physical act plus the stated intent makes the decision feel completed. Whether it alters the other person's behaviour is a separate question with no supporting evidence."
-        ]
-      ],
-      "products": [
-        "manual-activacion-servidores-magicos-pdf",
-        "chaos-sigil-generator",
-        "noctem-tools"
-      ],
-      "tools": [
-        "astrology-sign-calculator",
-        "dream-symbol-dictionary",
-        "iching"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=YbM8TmzXMrA",
-      "risk": "closure-discipline",
-      "risk_note": "Severance rituals are for your own closure. They are not a method of controlling the other person, and treating them as one will not work.",
-      "variant_phrase": "the full operational sequence, step by step",
-      "role_phrase": "a cord-binding working on AURORE",
-      "subject": "AURORE",
-      "title_tag": "AURORE: Complete Chaos Magic Guide to Soul Bonds and Cutting Ties",
-      "seo_title": "AURORE | Soul Bonds and Cutting Ties Protocol",
-      "description": "A complete working guide to AURORE: what it is, the soul bonds and cutting ties structure behind it, and the full protocol. Includes step-by-step protocol,...",
-      "keywords": [
-        "aurore sigil",
-        "aurore ritual",
-        "aurore invocation",
-        "aurore chaos magic",
-        "cutting cord ritual",
-        "soul contract release",
-        "how to break a karmic bond",
-        "removing spiritual attachment",
-        "cut ties with someone ritual",
-        "sever an unhealthy bond",
-        "cord cutting chaos magic",
-        "protocol cutting cord ritual"
-      ]
-    },
-    {
-      "n": 197,
-      "slug": "cocada-chaos-magic-healing-ritual",
-      "h1": "COCADA",
-      "domain": "health",
-      "domain_label": "Health, Healing and Mental State",
-      "intent": "informational",
-      "blog_category": "advanced",
-      "entity": "COCADA",
-      "entity_source": "declared",
-      "focus": "health, healing and mental state",
-      "outline": [
-        "a healing working for COCADA: what it actually is",
-        "Where a healing working for COCADA comes from",
-        "Building a healing working for COCADA from nothing",
-        "Charging a healing working for COCADA: the working sequence",
-        "a healing working for COCADA in practice, step by step",
-        "Why a healing working for COCADA fails, and what to change",
-        "Testing a healing working for COCADA without fooling yourself",
-        "a healing working for COCADA: tools, timing and materials",
-        "Keeping a healing working for COCADA alive after the first charge",
-        "Signs a healing working for COCADA is actually working",
-        "The ethics of working with a healing working for COCADA",
-        "a healing working for COCADA: the mistakes beginners make",
-        "When to abandon a healing working for COCADA",
-        "Repeating a healing working for COCADA without it going stale",
-        "How a healing working for COCADA fits into the rest of your practice",
-        "Frequently Asked Questions"
-      ],
-      "facts": [
-        "No controlled study has demonstrated that sigils or occult practices treat disease; occult health work is best understood as a psychological and behavioural intervention.",
-        "Placebo and meaning-response effects are robust in medicine; rituals that reduce stress and increase treatment adherence can therefore improve real outcomes indirectly.",
-        "Anxiety disorders respond measurably to behavioural interventions such as exposure and cognitive restructuring, both of which a determined sigil-wielder is likely to practise while waiting for results.",
-        "Historically, occultists were themselves warned about 'inflation' - identifying so strongly with a sick body that the mind worsens the condition. This is a documented historical concern, not a modern invention."
-      ],
-      "spec_faq": [
-        [
-          "Can magic cure a disease?",
-          "No. Do not use occult practice in place of diagnosis or treatment. What it can do is reduce the stress around a condition and help you stay consistent with the treatment that does work."
-        ],
-        [
-          "I have anxiety - is casting a sigil risky?",
-          "For most people it is a useful focus ritual. It becomes risky if you start checking the sigil compulsively or treating it as a diagnostic test, which turns it into a self-reinforcing worry loop."
-        ],
-        [
-          "What should I do while I wait?",
-          "Pick one concrete health behaviour - sleep timing, hydration, a walk, taking the medication - and treat the sigil as a commitment to that behaviour rather than a substitute for it."
-        ]
-      ],
-      "products": [
-        "dream-machine",
-        "noctem-tools",
-        "psi-gym"
-      ],
-      "tools": [
-        "astral-projection-session-timer",
-        "digital-pendulum",
-        "iching-changing-lines"
-      ],
-      "source_url": "https://www.youtube.com/watch?v=YWKtQasZVq8",
-      "risk": "medical-boundary",
-      "risk_note": "Nothing here replaces diagnosis or treatment. If you have a health concern, see a clinician first and use this work only alongside whatever they tell you.",
-      "variant_phrase": "the first-time practitioner's route through",
-      "role_phrase": "a healing working for COCADA",
-      "subject": "COCADA",
-      "title_tag": "COCADA: Complete Chaos Magic Guide to Health, Healing and Mental",
-      "seo_title": "COCADA | Health, Healing and Mental State Beginner Path",
-      "description": "A complete working guide to COCADA: what it is, the health, healing and mental state structure behind it, and the full protocol. Includes step-by-step...",
-      "keywords": [
-        "cocada sigil",
-        "cocada ritual",
-        "cocada invocation",
-        "cocada chaos magic",
-        "chaos magic healing ritual",
-        "sigils for health",
-        "anxiety sigil",
-        "how to heal with chaos magic",
-        "depression ritual sigil",
-        "magickal healing protocol",
-        "servitor for health",
-        "beginner path chaos magic healing ritual"
-      ]
-    },
     {
       "n": 198,
       "slug": "compotera-creativity-sigil",
