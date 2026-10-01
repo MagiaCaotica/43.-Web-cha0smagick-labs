@@ -17,7 +17,7 @@
   ],
   "published": "2026-09-26",
   "published_human": "September 26, 2026",
-  "lede": "The catalogue has a shape before it has a meaning, and learning the shape first is the difference between a working practice and a wall of names. Seventy-two entries sit in three ranks of nine Presidents, thirty-six Dukes and thirty Kings, and the ranks are grouped into families of two, three or four. Each entry gives a rank, a visible form, a stated office, and a set of powers, which makes this the most structured entity material in Western grimoire literature and the easiest to use badly. The failure mode is not evocation. It is shopping, treating a catalogue of jurisdictions like a list of products and reaching for the impressive one instead of the apt one. What follows builds the beginner path: how to read an office, how to choose one entry, how to run a short working that stays inside the source text, and how to notice when a name has been advertised to you as something it is not.",
+  "lede": "The catalogue has a shape before it has a meaning, and learning the shape first is the difference between a working practice and a wall of names. Three ranks hold seventy-two entries: nine Presidents, thirty-six Dukes, thirty Kings, and beneath the ranks, families of two, three or four. Each entry gives a rank, a visible form, a stated office, and a set of powers, which makes this the most structured entity material in Western grimoire literature and the easiest to use badly. The failure mode is not evocation. It is shopping, treating a catalogue of jurisdictions like a list of products and reaching for the impressive one instead of the apt one. What follows builds the beginner path: how to read an office, how to choose one entry, how to run a short working that stays inside the source text, and how to notice when a name has been advertised to you as something it is not.",
   "sections": [
     {
       "h2": "Read the Structure Before the Names",
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "h2": "Where the Material Came From",
+      "h2": "tracing the source material",
       "p": [
         "The genealogy runs through Jewish and Christian demonological writing rather than through any single folk tradition. The most significant ancestor is the Pseudepigrapha Book of Enoch, where a set of fallen watchers is instructed to bind an order of spirits, and the instruction produces a numbered list. The seventeenth-century Conjuratio Ben-Maimon builds on that structure, and the Lemuria add the domestic framing of a protective rite performed at a specific season. The compiled catalogue that survives is late relative to its sources and was shaped by the anxieties of the period that produced it.",
         "The entities were administrative or disciplinary officials in that scheme. They issue commands, they supply information, they control bounded domains. Nothing in the source material describes them as torturers of the innocent, and that characterisation is a modern addition with a long commercial history. The original entries read as a bureaucratic hierarchy, which is both stranger and more usable than the popular version."
@@ -45,7 +45,7 @@
     {
       "h2": "How to Choose One Entry",
       "p": [
-        "Choose from the office, not from the appearance. The source states what each entity is for, and the office is the load-bearing part of the entry. The visual description is striking and memorable, which is exactly why it is a poor selector. People choose the memorable form, discover they have a spirit who grants invisibility when what they needed was a bounded and specific favour, and conclude the material does not work."
+        "The final step is the whole practice. The catalogue rewards the entry that fits, and it punishes the entry that flatters. Every seasoned reader in this material has made the same mistake of choosing on the description rather than the office, and the repair is always the same: go back and read the office."
       ],
       "ol": [
         "Write the practical situation in one sentence, with no magical language in it at all.",
@@ -54,15 +54,12 @@
         "Check the rank and note it, because the rank tells you how the entry expects to be addressed.",
         "Read the powers in the source text twice, and mark anything that is a capability rather than a gift.",
         "Pick the least dramatic entry that fully covers the domain."
-      ],
-      "p": [
-        "The final step is the whole practice. The catalogue rewards the entry that fits, and it punishes the entry that flatters. Every seasoned reader in this material has made the same mistake of choosing on the description rather than the office, and the repair is always the same: go back and read the office."
       ]
     },
     {
       "h2": "A Short Working That Stays Inside the Source",
       "p": [
-        "Keep the apparatus small. The classical material asks for circles, names, and a formality that serves the text, but almost none of that is required for a beginner working and a great deal of it produces more anxiety than signal. What is required is a specification, a mark, a stated time, and somewhere to record what happened."
+        "The seventh step is what makes the practice cumulative. A working with no record is an event, and events teach you almost nothing. A working with a one-line record becomes a series, and a series is where you start being able to tell which framing produced which result."
       ],
       "ol": [
         "State the situation in one sentence, using the domain word rather than a wish.",
@@ -72,9 +69,6 @@
         "Speak the request in the first person, present tense, as a specification rather than as a plea.",
         "Close by releasing the working explicitly rather than just stopping.",
         "Write the time, the framing, and one line about your state during the working."
-      ],
-      "p": [
-        "The seventh step is what makes the practice cumulative. A working with no record is an event, and events teach you almost nothing. A working with a one-line record becomes a series, and a series is where you start being able to tell which framing produced which result."
       ]
     },
     {
@@ -134,11 +128,11 @@
     ],
     [
       "Who are the nine Presidents?",
-      "Bael, Agares, Vassago, Samigina, Marbas, Valefor, Aamon, Belphegor and Saleos, in that order, and each carries a documented rank, appearance and area of power in the source. The nine are given the broadest domains in the catalogue, which is why they appear most often in modern coverage and why beginners frequently start there, though a narrower entry is usually easier to work with."
+      "Read them down the page and you find Bael, Agares, Vassago, Samigina, Marbas, Valefor, Aamon, Belphegor, then Saleos. Each of them carries a documented rank, appearance and area of power in the source. The nine are given the broadest domains in the catalogue, which is why they appear most often in modern coverage and why beginners frequently start there, though a narrower entry is usually easier to work with."
     ],
     [
       "Are these spirits demons in any real sense?",
-      "Historically they are entries in a demonological catalogue assembled from earlier Jewish and Christian material, with no evidence that any of them act on anyone. Practically the catalogue is a rich symbolic vocabulary with unusually consistent structure, which is a perfectly good reason to use it and a poor reason to describe it as communication."
+      "They are, historically, rows in a demonological catalogue assembled from earlier Jewish and Christian material, and nothing suggests any of them acts on anybody. Practically the catalogue is a rich symbolic vocabulary with unusually consistent structure, which is a perfectly good reason to use it and a poor reason to describe it as communication."
     ],
     [
       "Do I need a circle of protection or a full traditional setup?",
@@ -150,10 +144,25 @@
     ]
   ],
   "related": [
-    ["the-72-goetia-spirits-complete-ranked-list", "The Complete Catalogue Ranked by Domain and Office"],
-    ["72-goetia-demons-complete-list", "All Seventy-Two Entries in Reference Order"],
-    ["goetia-for-beginners-what-no-one-tells-you-first", "What Nobody Tells You Before the First Working"],
-    ["goetia-evocation-basics", "Evocation Basics: Form, Frame and Closure"],
-    ["goetia-cabinet-classification", "How the Three Ranks and Their Families Divide"]
+    [
+      "the-72-goetia-spirits-complete-ranked-list",
+      "The Complete Catalogue Ranked by Domain and Office"
+    ],
+    [
+      "72-goetia-demons-complete-list",
+      "All Seventy-Two Entries in Reference Order"
+    ],
+    [
+      "goetia-for-beginners-what-no-one-tells-you-first",
+      "What Nobody Tells You Before the First Working"
+    ],
+    [
+      "goetia-evocation-basics",
+      "Evocation Basics: Form, Frame and Closure"
+    ],
+    [
+      "goetia-cabinet-classification",
+      "How the Three Ranks and Their Families Divide"
+    ]
   ]
 }

@@ -4,7 +4,18 @@
   "h1": "Philosophy of the Occult",
   "seo_title": "Philosophy of the Occult | Philosophy of the Occult Protocol",
   "description": "A protocol for holding an occult practice without collapsing into either naive belief or reflexive dismissal: separating the three positions hiding in one slogan, and testing the frame rather than the slogan.",
-  "keywords": ["nothing is true everything is permitted", "philosophy of the occult", "chaos magic philosophy", "epistemology of magic", "belief as tool", "book of the law crowley", "religious experience philosophy", "paradigm shift meaning", "occult epistemology", "practice without belief"],
+  "keywords": [
+    "nothing is true everything is permitted",
+    "philosophy of the occult",
+    "chaos magic philosophy",
+    "epistemology of magic",
+    "belief as tool",
+    "book of the law crowley",
+    "religious experience philosophy",
+    "paradigm shift meaning",
+    "occult epistemology",
+    "practice without belief"
+  ],
   "published": "2026-09-26",
   "published_human": "September 26, 2026",
   "lede": "One line from one poem is quoted more often than any other sentence in modern occult writing, and it is quoted almost exclusively as a permission slip. The line sits in the third stanza of the first verse of a poem published in 1904, and read in its actual context it says something considerably less convenient: it is a demand for honesty about one's own claims, not an exemption from them. That misreading has had fifty years to calcify, and unpicking it is the most useful philosophical work available to a practitioner, because almost every subsequent confusion in the field descends from it.",
@@ -82,7 +93,7 @@
   ],
   "faq": [
     [
-      "How do I know when I am being delusional rather than committed?",
+      "Where is the line between delusion and commitment?",
       "Measure the flexibility, not the content. Delusion presents as a claim that cannot be questioned, that has stopped making predictions, and where disagreement registers as an attack on you rather than as information. A person holding a completely unprovable frame who can say which result would change their mind, and who has actually changed their mind before, is not delusional by this measure. The single most useful habit is naming one claim you are willing to drop."
     ],
     [
@@ -94,7 +105,7 @@
       "It cannot mean that, because the sentence denies that anything holds universally, which includes moral rules. Anything goes is a claim of total licence; the passage is a claim about the provisional status of all claims. The two are opposites in practice even though they are adjacent in vocabulary. A person who reads it as permission has taken a philosophical humility and converted it into a metaphysical boast, which is the specific inversion the original wording was written to prevent."
     ],
     [
-      "Do I have to believe in magic for it to work?",
+      "Can magic work without belief?",
       "Belief is not a precondition, and the technical content of most systems does not require it. What the practitioner needs is a specified action, a timing, and a verification point, because those three are what make a practice learnable. Belief tends to shape attention and attention shapes behaviour, so a person who holds the frame loosely will still get those effects, just less consistently. What belief is not is a force that operates on the world on your behalf, and holding it as one is the mistake that makes the whole thing brittle."
     ],
     [
@@ -103,10 +114,25 @@
     ]
   ],
   "related": [
-    ["gnosis-protocol-four-questions", "The Gnosis Protocol: Four Questions That Change the Result"],
-    ["chaos-magick-belief-as-tool-paradigm-shifting", "Belief as Tool and the Work of Paradigm Shifting"],
-    ["philosophy-of-the-occult-nothing-is-true-everything-is", "Nothing Is True, Everything Is Permitted: A Close Reading"],
-    ["stillness-meditation-cognitive-clarity", "Stillness and Meditation as a Route to Cognitive Clarity"],
-    ["the-mind-science-of-practice-why-does-magic-work-placebo", "The Mind Science of Practice: Why Does Magic Work"]
+    [
+      "gnosis-protocol-four-questions",
+      "The Gnosis Protocol: Four Questions That Change the Result"
+    ],
+    [
+      "chaos-magick-belief-as-tool-paradigm-shifting",
+      "Belief as Tool and the Work of Paradigm Shifting"
+    ],
+    [
+      "philosophy-of-the-occult-nothing-is-true-everything-is",
+      "Nothing Is True, Everything Is Permitted: A Close Reading"
+    ],
+    [
+      "stillness-meditation-cognitive-clarity",
+      "Stillness and Meditation as a Route to Cognitive Clarity"
+    ],
+    [
+      "the-mind-science-of-practice-why-does-magic-work-placebo",
+      "The Mind Science of Practice: Why Does Magic Work"
+    ]
   ]
 }

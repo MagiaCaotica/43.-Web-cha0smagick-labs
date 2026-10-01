@@ -54,7 +54,8 @@
     {
       "h2": "A Script for Auditing a Belief You Inherited",
       "p": [
-        "The most useful deprogramming work is not a technique you apply to other people. It is a short written procedure you run against a single belief of your own that you suspect is running decisions you have not actually made. The output is a decision about what to do with it, not a feeling about it."
+        "The third step is the one that carries the weight. A belief with no dated instances behind it is usually not operating as a driver, and you can set it down immediately. A belief with three dated instances behind it is doing real work in your life, which means it deserves a test rather than a verdict.",
+        "Expect the first test to produce an ambiguous result. Ambiguity is the normal outcome of most single tests, and it is where the discipline lives. Record it anyway, then decide on one more test rather than declaring a result on evidence that could not have distinguished the outcomes."
       ],
       "ol": [
         "Write the belief as a sentence you would be willing to defend, in your own words, with no hedging.",
@@ -63,10 +64,6 @@
         "For each situation, write what you did instead and what the alternative would have cost.",
         "Mark which of the three had a real cost, and pick the single cheapest belief to test this month.",
         "Set a date, write a prediction about the test in advance, and record the result either way."
-      ],
-      "p": [
-        "The third step is the one that carries the weight. A belief with no dated instances behind it is usually not operating as a driver, and you can set it down immediately. A belief with three dated instances behind it is doing real work in your life, which means it deserves a test rather than a verdict.",
-        "Expect the first test to produce an ambiguous result. Ambiguity is the normal outcome of most single tests, and it is where the discipline lives. Record it anyway, then decide on one more test rather than declaring a result on evidence that could not have distinguished the outcomes."
       ]
     },
     {
@@ -88,7 +85,7 @@
     {
       "h2": "Timing, Tools and the Minimum Viable Setup",
       "p": [
-        "None of this needs apparatus. A notebook with a dated column, a pen, and twenty minutes on a weekday covers every procedure described here. Add a moon phase reference only if you want a scheduling rhythm, and add anything else only after the plain version has held up long enough for you to know it works for you."
+        "Timing matters less than consistency here in a way that surprises people. A short daily practice builds a habit that survives a bad week, and a long occasional practice builds a habit that only appears when conditions are already good. Both are defensible. Only one of them gets tested by reality at the times that matter."
       ],
       "ul": [
         "A dated ledger with a predictions column, kept on paper so it cannot be quietly edited.",
@@ -96,9 +93,6 @@
         "A one-line statement of the frame in force, rewritten whenever it changes.",
         "A monthly review where you change the estimate rather than the record.",
         "One practice only. Running two new systems at once makes attribution impossible."
-      ],
-      "p": [
-        "Timing matters less than consistency here in a way that surprises people. A short daily practice builds a habit that survives a bad week, and a long occasional practice builds a habit that only appears when conditions are already good. Both are defensible. Only one of them gets tested by reality at the times that matter."
       ]
     },
     {
@@ -124,7 +118,7 @@
   ],
   "faq": [
     [
-      "Do you have to believe in magic for it to work?",
+      "Does magic require belief before it will work?",
       "No. The standard position in this tradition is that belief is a design parameter rather than a requirement, and a sceptic working symbolically will still get the behavioural results, which are the ones actually available. What belief does change is how much attention a system will hold from you, so it matters for persistence far more than for outcomes."
     ],
     [
@@ -145,10 +139,25 @@
     ]
   ],
   "related": [
-    ["what-is-gnosis-how-to-achieve", "Getting Gnosis: Attention, Receptivity and the First Sit"],
-    ["the-mind-science-of-practice-why-does-magic-work-placebo", "Why Practice Works, and How Much of It Is Expectation"],
-    ["gnosis-protocol-four-questions", "A Four-Question Protocol for Reading a Situation Clearly"],
-    ["chaos-magick-belief-as-tool-paradigm-shifting", "Belief as a Tool Rather Than a Requirement"],
-    ["habit-formation-neuroscience-willpower", "What Habit Formation Research Says About Willpower"]
+    [
+      "what-is-gnosis-how-to-achieve",
+      "Getting Gnosis: Attention, Receptivity and the First Sit"
+    ],
+    [
+      "the-mind-science-of-practice-why-does-magic-work-placebo",
+      "Why Practice Works, and How Much of It Is Expectation"
+    ],
+    [
+      "gnosis-protocol-four-questions",
+      "A Four-Question Protocol for Reading a Situation Clearly"
+    ],
+    [
+      "chaos-magick-belief-as-tool-paradigm-shifting",
+      "Belief as a Tool Rather Than a Requirement"
+    ],
+    [
+      "habit-formation-neuroscience-willpower",
+      "What Habit Formation Research Says About Willpower"
+    ]
   ]
 }

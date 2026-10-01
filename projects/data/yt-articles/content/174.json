@@ -65,7 +65,7 @@
       "h2": "How to work with a President rather than command one",
       "p": [
         "Clauneck's rank is President, which means the working is a request to an entity with its own agenda and its own court, not a construction you assemble from parts. The grammar changes accordingly. You are not building a tool. You are asking someone who already does this to do a specific thing, for a reason, with a stated willingness to be told no.",
-        "That last clause is the part beginners leave out and it is the part that makes the working coherent. An unrefusable request has no answer, and a request with no possible no is not a request. Writing the refusal condition before you start is what turns an invocation into a transaction, and it is also what lets you notice a genuine no, which is often more useful than a yes you were going to argue with.",
+        "Beginners leave out that last clause, and it is the clause that makes the working coherent. An unrefusable request has no answer, and a request with no possible no is not a request. Writing the refusal condition before you start is what turns an invocation into a transaction, and it is also what lets you notice a genuine no, which is often more useful than a yes you were going to argue with.",
         "Give the reason for the ask. Presidents in this material respond to a stated purpose, and an ask with no purpose gives the court nothing to weigh. This costs nothing to write and it changes the character of the request from demand to petition.",
         "Ask once, in writing, then stop. The thirty legions are described as inspiring boldness, and boldness is his own word for the gift. Persistence is not the technique here. Boldness is."
       ]
@@ -161,10 +161,25 @@
     ]
   ],
   "related": [
-    ["how-to-charge-sigil-correctly", "How to Charge a Sigil Correctly: 7 Proven Methods"],
-    ["how-to-create-magickal-servitor", "How to Create a Magickal Servitor: Complete Guide to Chaos Magick Thought Forms"],
-    ["sigil-magic-complete-theory-practice", "Sigil Magic: Complete Theory and Practice for Chaos Magick"],
-    ["what-is-gnosis-how-to-achieve", "What is Gnosis? How to Achieve It in Chaos Magick"],
-    ["austin-osman-spare-sigil-method", "Austin Osman Spare Sigilization: The Original Method Explained"]
+    [
+      "how-to-charge-sigil-correctly",
+      "How to Charge a Sigil Correctly: 7 Proven Methods"
+    ],
+    [
+      "how-to-create-magickal-servitor",
+      "How to Create a Magickal Servitor: Complete Guide to Chaos Magick Thought Forms"
+    ],
+    [
+      "sigil-magic-complete-theory-practice",
+      "Sigil Magic: Complete Theory and Practice for Chaos Magick"
+    ],
+    [
+      "what-is-gnosis-how-to-achieve",
+      "What is Gnosis? How to Achieve It in Chaos Magick"
+    ],
+    [
+      "austin-osman-spare-sigil-method",
+      "Austin Osman Spare Sigilization: The Original Method Explained"
+    ]
   ]
 }

@@ -23,7 +23,7 @@
   ],
   "published": "2026-09-26",
   "published_human": "September 26, 2026",
-  "lede": "Every other branch of this material asks you to believe that a small mark can move the world, and every one of those asks is unfalsifiable from the outside. Memetic magic is the exception, and that is why it deserves more attention than it gets. A meme has a reproduction rate, a half-life, and a carrier, and all three are countable. The occult content in a viral occult image is not what makes it spread, and treating the two as the same thing is the single most common error in the genre. What the anonymous boards actually demonstrate is not that memes are magic. It is that the format is a vector and the payload is optional, which means the occult tradition can be carried by something nobody has to believe in order to reproduce. The useful question is not whether a meme changed reality. It is what a memetic engineer can design.",
+  "lede": "Every other branch of this material asks you to believe that a small mark can move the world, and every one of those asks is unfalsifiable from the outside. Memetic magic is the exception, and that is why it deserves more attention than it gets. A meme has a reproduction rate, a half-life, and a carrier, and all three are countable. What makes a viral occult image spread is not the occult content, and collapsing those two facts into one is the commonest error in the genre. What the anonymous boards actually demonstrate is not that memes are magic. It is that the format is a vector and the payload is optional, which means the occult tradition can be carried by something nobody has to believe in order to reproduce. The useful question is not whether a meme changed reality. It is what a memetic engineer can design.",
   "sections": [
     {
       "h2": "What memetic magic claims, stated precisely",
@@ -134,10 +134,25 @@
     ]
   ],
   "related": [
-    ["pop-magick-modern-culture-magic", "Pop Magick: Using Modern Culture as a Magical System"],
-    ["sigil-craft-choosing-a-reduction-family", "Sigil Craft: Choosing a Reduction Family"],
-    ["sigil-engine-cryptographic-guide", "Sigil Engine: Cryptographic Sigil Generation for Chaos"],
-    ["ouija-board-history-origins-modern-practice", "Ouija Board History: Complete Evolution from Parlor Game to Chaos Magick Instrument"],
-    ["free-sigil-generator-vs-chaos-sigil-generator-app", "Free Sigil Generator vs. Chaos Sigil Generator App: When to Upgrade (2026)"]
+    [
+      "pop-magick-modern-culture-magic",
+      "Pop Magick: Using Modern Culture as a Magical System"
+    ],
+    [
+      "sigil-craft-choosing-a-reduction-family",
+      "Sigil Craft: Choosing a Reduction Family"
+    ],
+    [
+      "sigil-engine-cryptographic-guide",
+      "Sigil Engine: Cryptographic Sigil Generation for Chaos"
+    ],
+    [
+      "ouija-board-history-origins-modern-practice",
+      "Ouija Board History: Complete Evolution from Parlor Game to Chaos Magick Instrument"
+    ],
+    [
+      "free-sigil-generator-vs-chaos-sigil-generator-app",
+      "Free Sigil Generator vs. Chaos Sigil Generator App: When to Upgrade (2026)"
+    ]
   ]
 }
