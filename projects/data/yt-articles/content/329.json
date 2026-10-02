@@ -106,7 +106,7 @@
   ],
   "faq": [
     [
-      "What is the difference between a servitor and an entity?",
+      "How does a servitor differ from an entity?",
       "A servitor is a mechanism: an attention bound to a task, with a trigger, a location, and a term. An entity is a described figure with a name, a form, an office, and a rank. The entity gives you vocabulary, which is genuinely useful, and the servitor gives you a conditional, which is what actually changes behaviour. The common failure is borrowing the entity's vocabulary and then expecting the servitor's mechanism, and the symptom is a working that looks complete and produces nothing attributable."
     ],
     [

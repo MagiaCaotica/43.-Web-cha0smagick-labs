@@ -89,7 +89,7 @@
       ]
     },
     {
-      "h2": "Reading a month against the sheet",
+      "h2": "A month, and only three things to read",
       "p": [
         "A month is the shortest unit in which the sheet tells you anything. One week is too short: a bad week is variance. A month is long enough for a pattern in compliance to show up, and short enough that you can still attribute it. Read three things and no more. The count of sessions completed, against the number committed. The count of sessions started at the scheduled time rather than after a delay. And the number of pieces that went into the folder, which is the only output measure that is not corrupted by your opinion of them.",
         "Do not read the month for evidence about whether the practice works in any larger sense. That question cannot be answered with a compliance count and any attempt to answer it will pull the reading towards whichever conclusion you arrived with. The sheet exists to be a record of what you did, and its value depends on staying a record."
