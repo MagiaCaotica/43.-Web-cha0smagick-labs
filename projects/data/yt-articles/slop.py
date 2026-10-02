@@ -285,8 +285,15 @@ def _body(html: str) -> str:
     # YouTube title sat in three articles and the gate read it as duplicated
     # prose. No author wrote it and it must not be edited to pass, so it is
     # dropped along with the rest of the chrome.
+    # The contextual CTA joins them, and for a sharper reason than the others:
+    # it is a commercial module parameterised by topic, not prose. Its framing
+    # sentence is chosen by domain, so the same sentence appears verbatim in
+    # every article on that domain by design, up to nineteen times. No author
+    # sat down and repeated themselves, and the gate is not measuring writing
+    # when it flags this. It is excluded for the same reason crossrefs is.
     for pat in (r'(?is)<div class="meta">.*?</div>',
                 r'(?is)<section class="crossrefs".*?</section>',
+                r'(?is)<section class="cta-contextual".*?</section>',
                 r'(?is)<section class="related-articles">.*?</section>',
                 r'(?is)<section class="internal-links".*?</section>',
                 r'(?is)<figcaption\b.*?</figcaption>',

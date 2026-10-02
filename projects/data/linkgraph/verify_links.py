@@ -43,6 +43,20 @@ MARK_START = "<!-- linkgraph:refs:start -->"
 MARK_END = "<!-- linkgraph:refs:end -->"
 W_START = "<!-- linkgraph:wisdom:start -->"
 W_END = "<!-- linkgraph:wisdom:end -->"
+C_START = "<!-- linkgraph:cta:start -->"
+C_END = "<!-- linkgraph:cta:end -->"
+
+# The contextual CTA is checked separately from the cross-reference block
+# because it answers a different question. Crossrefs ask "is the reader given
+# somewhere to go next"; the CTA asks "can this reader buy anything from this
+# page", and the audit of 2026-10-01 measured that 715 of 815 articles could
+# not answer that second question at all.
+CTA_HREF_RE = re.compile(
+    r'<a[^>]+class="cta-button primary"[^>]+href="(https://[^"]+)"', re.I)
+CTA_COUNT_RE = re.compile(r'<a[^>]+class="cta-button primary"', re.I)
+CTA_SECONDARY_RE = re.compile(r'<a[^>]+class="cta-secondary"[^>]+href="([^"]+)"', re.I)
+CHECKOUT_HOSTS = ("play.google.com", "pay.hotmart.com", "hotmart.com")
+VALID_CATALOG_URLS = None
 
 VOID = {
     "area", "base", "br", "col", "embed", "hr", "img", "input", "link",
@@ -164,6 +178,84 @@ def check_article(path, rel, failures, legacy):
     for t in uniq:
         if not os.path.isfile(os.path.join(BLOG, t + ".html")):
             failures.append(f"{rel}: destino inexistente blog/{t}.html")
+
+    check_cta(path, rel, html, slug, failures, st)
+    return st
+
+
+def catalog_urls():
+    """Checkout URLs published in catalog.json, as a set for prefix matching.
+
+    A URL that is not in the catalogue is a fail, not a warning: these are the
+    only endpoints verified against the real store, and inventing one is the
+    exact failure the two blocked landing pages already have.
+    """
+    global VALID_CATALOG_URLS
+    if VALID_CATALOG_URLS is not None:
+        return VALID_CATALOG_URLS
+    import json
+    path = os.path.join(REPO, "projects", "data", "yt-articles", "catalog.json")
+    with open(path, encoding="utf-8") as fh:
+        cat = json.load(fh)
+    out = set()
+    for item in cat.get("apps", []) + cat.get("books", []):
+        if item.get("url"):
+            out.add(item["url"].split("?")[0])
+    # the library bundle lives outside catalog.json; it is recorded in cta.py
+    sys.path.insert(0, HERE)
+    try:
+        import cta
+        out.add(cta.BUNDLE["url"].split("?")[0])
+    except Exception:
+        pass
+    VALID_CATALOG_URLS = out
+    return out
+
+
+def check_cta(path, rel, html, slug, failures, st):
+    """One purchasable CTA per article, pointing at a real checkout."""
+    st["cta"] = 0
+    cta_marks = html.count(C_START)
+    if cta_marks != 1 or html.count(C_END) != 1:
+        failures.append(f"{rel}: {cta_marks} marcadores de CTA (debe ser 1 par)")
+        return
+
+    block = slice_between(html, C_START, C_END)
+    if block is None:
+        m = re.search(r'(?is)<section class="cta-contextual".*?</section>', html)
+        block = m.group(0) if m else None
+    if block is None:
+        failures.append(f"{rel}: sin bloque de CTA")
+        return
+
+    buttons = CTA_COUNT_RE.findall(block)
+    hrefs = CTA_HREF_RE.findall(block)
+    if len(buttons) != 1:
+        failures.append(f"{rel}: {len(buttons)} botones primarios de CTA (debe ser 1)")
+    if len(hrefs) != 1:
+        failures.append(f"{rel}: {len(hrefs)} hrefs de checkout (debe ser 1)")
+        return
+    url = hrefs[0]
+    st["cta"] = 1
+
+    if not any(h in url for h in CHECKOUT_HOSTS):
+        failures.append(f"{rel}: el CTA no va a un checkout: {url[:80]}")
+    if not any(url.startswith(c) for c in catalog_urls()):
+        failures.append(f"{rel}: checkout fuera de catalog.json: {url[:80]}")
+    if "utm_content=" not in url:
+        failures.append(f"{rel}: el checkout no lleva utm_content (no se puede atribuir)")
+    elif "utm_content=%s" % slug not in url:
+        failures.append(f"{rel}: utm_content no corresponde al slug")
+    if 'rel="noopener nofollow"' not in block:
+        failures.append(f"{rel}: el CTA sale sin rel=noopener nofollow")
+
+    # the secondary links must resolve on disk
+    for href in CTA_SECONDARY_RE.findall(block):
+        if href.startswith("http"):
+            continue
+        target = os.path.normpath(os.path.join(os.path.dirname(path), href))
+        if not os.path.isfile(target):
+            failures.append(f"{rel}: enlace secundario roto {href}")
     return st
 
 
@@ -226,10 +318,13 @@ def main(argv):
 
     cr = [a["crossref"] for a in arts]
     it = [a["in_text"] for a in apps]
+    cta = [a.get("cta", 0) for a in arts]
     tot = sum(cr) + sum(it)
     print(f"articulos verificados : {len(arts)}")
     print(f"  cruces unicos       : min {min(cr) if cr else 0} "
           f"media {sum(cr)/len(cr):.1f} max {max(cr) if cr else 0}")
+    print(f"  CTA de compra       : {sum(cta)} de {len(arts)} articulos "
+          f"({100.0*sum(cta)/len(arts) if arts else 0:.1f}%)")
     print(f"apps verificadas      : {len(apps)}")
     print(f"  enlaces en el texto : min {min(it) if it else 0} "
           f"media {sum(it)/len(it):.1f} max {max(it) if it else 0}")
