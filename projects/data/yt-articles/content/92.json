@@ -47,7 +47,7 @@
       "p": [
         "Umbanda and candomblé are not loose folk practice. They are organised, urban, and role-structured, with a house or temple that has a formal name, a leader, a calendar, and a protocol for entry.",
         "That protocol is the part that surprises people coming from chaos magick. There is a process. There are conditions of entry. There is someone who has the standing to authorise you and who can also tell you that you are not ready, and that refusal is not a discouragement, it is the system working.",
-        "The calendar in the seven-by-seven pattern is documented and consistent, and it produces a frequency of contact that has nothing to do with enthusiasm. You are in contact on the schedule because the schedule says so. That single structural decision is the difference between a practice and a hobby, and it is the difference this site spends a lot of effort re-deriving in the absence of an institution.",
+        "The calendar in the seven-by-seven pattern is documented and consistent, and it produces a frequency of contact that has nothing to do with enthusiasm. You are in contact on the schedule because the schedule says so. That single structural decision is what separates a practice from a hobby, and it is the difference this site spends a lot of effort re-deriving in the absence of an institution.",
         "The blending with Catholic saints is usually cited as evidence of corruption. It is better read as an adaptation with a long history, and the read that matters is functional: a system that absorbed a majority religion's calendar and figures kept its own structure while gaining reach. Whether that is compromise or strategy is a question about a specific community, not about the system."
       ]
     },
@@ -122,10 +122,25 @@
     ]
   ],
   "related": [
-    ["chaos-magick-and-the-vampire-cult-history", "Chaos Magick and the Vampire Cult: A History"],
-    ["cyber-paganism-digital-spirituality-guide", "Cyber-Paganism: The New Techno-Spirituality Movement (2026)"],
-    ["servitor-revolution-specification-became-writable", "The Servitor Revolution Was About Writing, Not Power"],
-    ["become-a-chaos-magick-practitioner-90-day-plan", "Become a Chaos Magick Practitioner: A 90-Day Plan"],
-    ["history-of-chaos-magick", "History of Chaos Magick: Origins, Key Figures, and Modern Development"]
+    [
+      "chaos-magick-and-the-vampire-cult-history",
+      "Chaos Magick and the Vampire Cult: A History"
+    ],
+    [
+      "cyber-paganism-digital-spirituality-guide",
+      "Cyber-Paganism: The New Techno-Spirituality Movement (2026)"
+    ],
+    [
+      "servitor-revolution-specification-became-writable",
+      "The Servitor Revolution Was About Writing, Not Power"
+    ],
+    [
+      "become-a-chaos-magick-practitioner-90-day-plan",
+      "Become a Chaos Magick Practitioner: A 90-Day Plan"
+    ],
+    [
+      "history-of-chaos-magick",
+      "History of Chaos Magick: Origins, Key Figures, and Modern Development"
+    ]
   ]
 }

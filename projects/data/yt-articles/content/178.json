@@ -4,7 +4,18 @@
   "h1": "Hidden, Lost and Forbidden Knowledge",
   "seo_title": "Hidden, Lost and Forbidden Knowledge | Hidden, Lost and",
   "description": "Field notes from a year of reading occult material badly and better: which supposedly lost texts are real, which are marketing, and how to keep a reading log that does not lie to you.",
-  "keywords": ["occult secrets", "hidden knowledge grimoires", "forbidden books of magic", "lost esoteric texts", "the book of enoch explained", "liber null pdf", "necronomicon explained", "secret teachings magic", "ancient grimoire list", "field notes occult secrets"],
+  "keywords": [
+    "occult secrets",
+    "hidden knowledge grimoires",
+    "forbidden books of magic",
+    "lost esoteric texts",
+    "the book of enoch explained",
+    "liber null pdf",
+    "necronomicon explained",
+    "secret teachings magic",
+    "ancient grimoire list",
+    "field notes occult secrets"
+  ],
   "published": "2026-09-26",
   "published_human": "September 26, 2026",
   "lede": "A year of reading in this field produces a very specific kind of disappointment. The texts advertised as suppressed turn out to be in print, the texts advertised as ancient turn out to have a copyright page from the last century, and the genuinely old material is mostly boring administrative fragments that nobody has turned into a compelling practice. This is an account of that year rather than a list of treasures, because the list is available everywhere and almost none of it tells you what happened next.",
@@ -19,7 +30,7 @@
     {
       "h2": "The Enoch Problem Is a Transmission Problem",
       "p": [
-        "The Book of Enoch is the clearest case of a text being old and excluded at the same time. Fragments survive among the Dead Sea Scrolls, and several church fathers cite it as scripture, which means the exclusion was a decision made by a specific council for reasons that are documented and arguable rather than mysterious. It is one of the oldest surviving pieces of Jewish apocalyptic literature in any form.",
+        "The Book of Enoch is the clearest case of a text being old and excluded at the same time. Pieces of it is preserved among the Dead Sea Scrolls, and several church fathers cite it as scripture, which means the exclusion was a decision made by a specific council for reasons that are documented and arguable rather than mysterious. It is one of the oldest surviving pieces of Jewish apocalyptic literature in any form.",
         "What the popular presentation leaves out is the reason it does not function as a practice manual. Enoch is a heavenly travel narrative, a book of instructions for bringing divine figures to earth, written in a form that assumes its reader already holds a considerable theological framework. There is no protocol in it. What there is, if you want it, is a set of names and a cosmology. Reading it as a working method is a projection; reading it as a source document for later methods is a legitimate use."
       ]
     },
@@ -103,10 +114,25 @@
     ]
   ],
   "related": [
-    ["best-chaos-magick-books-essential-reading", "The Essential Chaos Magick Reading List, Ranked and Annotated"],
-    ["liber-null-peter-carroll-review-what-survives", "Liber Null, Reviewed by Use: What Peter Carroll's Book Is For"],
-    ["the-digital-grimoire-organizing-your-whole-practice", "The Digital Grimoire: Organizing Your Whole Practice (2026)"],
-    ["history-of-the-occult-history-of-occultism-guide-7", "History of the Occult: A Reading Path Through Eight Centuries"],
-    ["hidden-lost-and-forbidden-knowledge-occult-secrets-guid-3", "Hidden, Lost and Forbidden Knowledge: A Reading Map"]
+    [
+      "best-chaos-magick-books-essential-reading",
+      "The Essential Chaos Magick Reading List, Ranked and Annotated"
+    ],
+    [
+      "liber-null-peter-carroll-review-what-survives",
+      "Liber Null, Reviewed by Use: What Peter Carroll's Book Is For"
+    ],
+    [
+      "the-digital-grimoire-organizing-your-whole-practice",
+      "The Digital Grimoire: Organizing Your Whole Practice (2026)"
+    ],
+    [
+      "history-of-the-occult-history-of-occultism-guide-7",
+      "History of the Occult: A Reading Path Through Eight Centuries"
+    ],
+    [
+      "hidden-lost-and-forbidden-knowledge-occult-secrets-guid-3",
+      "Hidden, Lost and Forbidden Knowledge: A Reading Map"
+    ]
   ]
 }

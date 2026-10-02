@@ -279,10 +279,17 @@ def _body(html: str) -> str:
     # titles, so the same run of words lands in many articles by construction.
     # Measuring it would flag the navigation as if the author had repeated
     # themselves.
+    # The video caption joins them: its text is "Source video: <title>", where
+    # the title is copied verbatim out of specs.json. Several articles in the
+    # catalogue were resolved to the same upload, so the same eight words of a
+    # YouTube title sat in three articles and the gate read it as duplicated
+    # prose. No author wrote it and it must not be edited to pass, so it is
+    # dropped along with the rest of the chrome.
     for pat in (r'(?is)<div class="meta">.*?</div>',
                 r'(?is)<section class="crossrefs".*?</section>',
                 r'(?is)<section class="related-articles">.*?</section>',
                 r'(?is)<section class="internal-links".*?</section>',
+                r'(?is)<figcaption\b.*?</figcaption>',
                 r'(?is)<section id="comments" class="post-comments".*?</section>'):
         body = re.sub(pat, " ", body)
     return body
@@ -292,7 +299,7 @@ def _body(html: str) -> str:
 # one of these to count: the gate is looking for eight consecutive words of
 # prose the author wrote, and a run that begins in a heading and ends in the
 # paragraph underneath it is not that.
-_BLOCK_RE = re.compile(r"(?is)<(p|h2|h3|h4|h5|li|blockquote|figcaption)\b[^>]*>(.*?)</\1>")
+_BLOCK_RE = re.compile(r"(?is)<(p|h2|h3|h4|h5|li|blockquote)\b[^>]*>(.*?)</\1>")
 
 
 def _blocks_text(html: str) -> list[str]:

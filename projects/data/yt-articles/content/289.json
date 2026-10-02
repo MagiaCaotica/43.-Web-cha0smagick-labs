@@ -51,7 +51,7 @@
       "h2": "The record that stopped being written",
       "p": [
         "The record is the only component of this that can fail, and it fails in a direction that is always the same. Entries get shorter on bad days. The reasoning behind them gets vaguer. A day with a strong result gets three sentences and a day with nothing gets the word nothing, which is accurate and carries no information about the difference between the two days.",
-        "The fix is to constrain the record's shape rather than its quality. Three lines, every day, whether or not there is anything to report: what the practice was, what happened, and what I would have done in any case. That third line is the one that matters and the one everybody drops, because it requires a counterfactual and counterfactuals are uncomfortable. It is also the only line that distinguishes a day when the practice did nothing from a day when the practice did something with no visible result."
+        "The fix is to constrain the record's shape rather than its quality. Three lines, every day, whether or not there is anything to report: what the practice was, what happened, and what I would have done in any case. That third line is what matters, and the one everybody drops, because it requires a counterfactual and counterfactuals are uncomfortable. It is also the only line that distinguishes a day when the practice did nothing from a day when the practice did something with no visible result."
       ]
     },
     {

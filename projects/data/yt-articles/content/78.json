@@ -75,7 +75,7 @@
       "h2": "What to build instead, and why it is strictly better",
       "p": [
         "Build unavailability out of schedule rather than out of character. A person with a demanding week, real commitments, and a life that visibly does not revolve around any one person is unavailable as a side effect, at no cost in fatigue, with no management to be detected, and with the ordinary benefit of an interesting life.",
-        "This is not a consolation prize. It is the same mechanism the technique is reaching for, delivered by the route that does not require you to be someone you are not. The available-attention problem is solved by having other things to be available to, and the sincerely-occupied route also produces the practical result people are actually hoping for, which is a life with more in it.",
+        "this is no consolation prize; it is the same mechanism the technique is reaching for, delivered by the route that does not require you to be someone you are not. The available-attention problem is solved by having other things to be available to, and the sincerely-occupied route also produces the practical result people are actually hoping for, which is a life with more in it.",
         "The second thing to build is the skill the practice is usually a proxy for. The underlying want in nearly all of this material is to be chosen rather than pursued, and the way to get chosen is to be the sort of person worth choosing, which is a slower project with a real success rate. The technique routes around that project. It does not substitute for it, and it is usually attempted by people who have not yet spent a year on the direct version.",
         "The third thing is a record. Not of outcomes, which are somebody else's behaviour and mostly outside your control, but of your own side of it: how often you were available, how often you were not, and what you did with the time. That record is the only part of the practice you can be accountable for, and it is more useful than the technique by a wide margin."
       ]
@@ -131,10 +131,25 @@
     ]
   ],
   "related": [
-    ["goetia-ethics-and-safety", "Goetia Ethics and Safety: A Responsible Practitioner's Guide"],
-    ["how-to-create-magickal-servitor", "How to Create a Magickal Servitor: Complete Guide to Chaos Magick Thought Forms"],
-    ["how-to-charge-sigil-correctly", "How to Charge a Sigil Correctly: 7 Proven Methods"],
-    ["austin-osman-spare-sigil-method", "Austin Osman Spare Sigilization: The Original Method"],
-    ["sigil-magic-complete-theory-practice", "Sigil Magic: Complete Theory and Practice for Chaos Magick"]
+    [
+      "goetia-ethics-and-safety",
+      "Goetia Ethics and Safety: A Responsible Practitioner's Guide"
+    ],
+    [
+      "how-to-create-magickal-servitor",
+      "How to Create a Magickal Servitor: Complete Guide to Chaos Magick Thought Forms"
+    ],
+    [
+      "how-to-charge-sigil-correctly",
+      "How to Charge a Sigil Correctly: 7 Proven Methods"
+    ],
+    [
+      "austin-osman-spare-sigil-method",
+      "Austin Osman Spare Sigilization: The Original Method"
+    ],
+    [
+      "sigil-magic-complete-theory-practice",
+      "Sigil Magic: Complete Theory and Practice for Chaos Magick"
+    ]
   ]
 }

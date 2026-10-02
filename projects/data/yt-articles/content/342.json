@@ -50,7 +50,7 @@
     {
       "h2": "Ledger, and the column that keeps you honest",
       "p": [
-        "The ledger is a record of money, opened on the day of the first charge, with three columns: what came in, what went out, and what you would have done in any case. The third column is the whole instrument.",
+        "The ledger is a record of money, opened on the day of the first charge, with three columns: what came in, what went out, and what you would have done regardless. The third column is the whole instrument.",
         "The error is a two-column ledger, which is a mood in a spreadsheet. Without the third column you can attribute any month to the practice, because every month contains something you did. The third column forces you to subtract the things that would have happened anyway, and what is left is usually smaller than you expected."
       ]
     },
@@ -58,7 +58,7 @@
       "h2": "Abundance, the word too wide to fail",
       "p": [
         "Abundance is the most popular aim in the literature and one of the worst, because nothing in the world can contradict it. A good month is abundance. A bad month is abundance on its way. Any outcome is evidence for abundance, which means the practice cannot fail and cannot teach.",
-        "The fix is not to abandon the word but to subordinate it. Keep abundance as the reason and put a countable sentence underneath it: a specific amount by a specific date from a specific activity. The wide word is fine as a motivation and fatal as a measurement."
+        "The fix is not to abandon the word but to subordinate it. Keep abundance as the reason and put a countable sentence underneath it one particular amount by one particular date out of one specific activity. The wide word is fine as a motivation and fatal as a measurement."
       ]
     },
     {
@@ -107,7 +107,7 @@
   "faq": [
     [
       "What should an abundance aim actually say?",
-      "An imperative with an agent, a verb, an object and a time, and it has to survive the Tuesday test, which means you can name what you would count. Not I am abundant and not more clients. A specific amount by a specific date from a specific activity. Abundance is fine as the reason and useless as the measurement."
+      "An imperative with an agent, a verb, an object and a time, and it has to survive the Tuesday test, which means you can name what you would count. Not I am abundant and not more clients: one particular amount by one particular date out of one particular activity. Abundance is fine as the reason and useless as the measurement."
     ],
     [
       "Do I need to draw the sigil by hand or can a generator do it?",
@@ -115,7 +115,7 @@
     ],
     [
       "Why does the ledger need a third column?",
-      "Because a two-column ledger attributes everything to the practice. Every month contains something you did, so any month can be read as a result. The third column records what you would have done in any case, and subtracting it is the only way to find out what the working actually contributed. It is uncomfortable to fill in, which is why it works."
+      "Because a two-column ledger attributes everything to the practice. Every month contains something you did, so any month can be read as a result. The third column records what you would have done regardless, and subtracting it is the only way of finding out what the working actually contributed. It is uncomfortable to fill in, which is why it works."
     ],
     [
       "What does the number twelve actually do in an abundance practice?",
@@ -123,7 +123,7 @@
     ],
     [
       "Does a good month prove the practice worked?",
-      "No, and neither does a bad month disprove it. One month is a sample of one, and money moves for reasons that have nothing to do with symbols. What the month can tell you is whether the practice itself ran, which is the aim passing the Tuesday test, a real fortnight, and a third column that is actually filled in."
+      "No, and neither does a bad month disprove it. One month is a sample of one, and money moves for reasons that owe nothing to symbols. What the month can tell you is whether the practice itself ran, which is the aim passing the Tuesday test, a real fortnight, and a third column that is actually filled in."
     ]
   ],
   "related": [
