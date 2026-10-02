@@ -404,6 +404,24 @@ def _crossrefs(c):
         return ""
 
 
+def _cta(c, spec):
+    """El CTA contextual, o cadena vacia si el grafo o el catalogo fallan.
+
+    Va antes que los treinta cruces a proposito: primero se decide si se
+    compra, despues se navega. El aislamiento es el mismo que en _crossrefs
+    por la misma razon, pero aqui el bloque es comercial, asi que perderlo si
+    significa perder venta.
+    """
+    try:
+        sys.path.insert(0, os.path.normpath(os.path.join(HERE, "..", "linkgraph")))
+        import cta as cta_mod
+
+        return cta_mod.build(c.get("slug", ""), spec.get("domain", ""))
+    except Exception as exc:  # pragma: no cover - red de seguridad
+        sys.stderr.write("cta: %s: %s\n" % (c.get("slug", "?"), exc))
+        return ""
+
+
 def render_tail(c, spec):
     # El bloque de "Related Articles" que vivia aqui (cinco enlaces por
     # articulo) queda absorbido por el modulo de treinta cruces de
@@ -417,6 +435,7 @@ def render_tail(c, spec):
     tools = [TOOL[i] for i in spec.get("tools", []) if i in TOOL]
     rows = _money_rows(spec)
     return (
+        _cta(c, spec) +
         _crossrefs(c) +
         '<section class="related-articles">\r\n        <h2>Related Articles</h2>\r\n'
         '        <div class="related-links">\r\n' + rel +
