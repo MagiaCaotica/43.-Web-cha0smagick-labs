@@ -288,14 +288,42 @@ def _body(html: str) -> str:
     return body
 
 
+# Block-level containers inside the authored body. An n-gram has to sit inside
+# one of these to count: the gate is looking for eight consecutive words of
+# prose the author wrote, and a run that begins in a heading and ends in the
+# paragraph underneath it is not that.
+_BLOCK_RE = re.compile(r"(?is)<(p|h2|h3|h4|h5|li|blockquote|figcaption)\b[^>]*>(.*?)</\1>")
+
+
+def _blocks_text(html: str) -> list[str]:
+    """Visible text of each block element in the body, one entry per block.
+
+    Indexing the body as a single token stream let an n-gram straddle a block
+    boundary, because `visible_text` concatenates stripped tags without
+    inserting a separator. That produced 22 n-grams shared by three or more
+    articles which no author had written: "frequently asked questions what is
+    the difference between" is the FAQ heading welded to the first question,
+    and "the 72 spirits of goetia the seventy-two spirits" is a heading
+    followed by a paragraph that opens by restating the title. Those are
+    artefacts of how the text is flattened, so they are measured per block.
+    """
+    out = []
+    for _tag, inner in _BLOCK_RE.findall(_body(html)):
+        txt = visible_text(inner).strip()
+        if txt:
+            out.append(txt)
+    return out
+
+
 def ngram_index(pairs, n: int = NGRAM_N) -> dict[str, set[str]]:
     """Map each n-gram to the set of slugs containing it."""
     idx: dict[str, set[str]] = defaultdict(set)
     for slug, html in pairs:
         seen = set()
-        toks = words(visible_text(_body(html)).lower())
-        for i in range(len(toks) - n + 1):
-            seen.add(" ".join(toks[i:i + n]))
+        for block in _blocks_text(html):
+            toks = words(block.lower())
+            for i in range(len(toks) - n + 1):
+                seen.add(" ".join(toks[i:i + n]))
         for g in seen:
             idx[g].add(slug)
     return idx

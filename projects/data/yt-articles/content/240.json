@@ -31,7 +31,7 @@
       ]
     },
     {
-      "h2": "Correspondence, and the job it is hired for",
+      "h2": "A lookup table, not a causal chain",
       "p": [
         "Correspondence is the practice of linking things by shared attribute: name to name, number to number, planet to metal, colour to quality. Its practical function in entity work is to let you move from a function you want to a name that carries it, or from a name that attracts you to what it might actually be for.",
         "That is a lookup job, not a causal one. Nothing about the links makes the entity more able to perform its office. What the links do is compress a large body of symbolic material into something you can search, and compression is a genuine service when the material is older than you are and does not fit in memory."
@@ -66,7 +66,7 @@
       ]
     },
     {
-      "h2": "Where a correspondence reading misleads",
+      "h2": "False precision, and keeping the reading apart from the act",
       "p": [
         "The failure mode is false precision. If a number associates with a name, it feels like information, and it is not: the association is a cultural artefact with no more claim on reality than the pattern of letters in the name. The two feel identical from the inside, which is why the misuse is so common and so hard to notice.",
         "Protect against it by keeping the reading and the action in separate sentences. The correspondence may legitimately tell you that an office fits your aim. It cannot tell you what to do on Thursday, and if it appears to, that is a signal to write the action down and check whether you would have written it without the table. A useful test is whether the sentence changes when you remove the symbolic layer entirely. If it does, the layer was decoration."

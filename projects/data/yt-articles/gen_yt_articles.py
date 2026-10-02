@@ -149,21 +149,54 @@ def build_breadcrumb_ld(c, url):
 
 
 # ---------------------------------------------------------------- body markup
+# Some records carry inline markdown links, [text](url). They used to be
+# escaped like any other text, so the brackets and the parenthesis showed up
+# literally in the rendered article and the reference was dead. Converting them
+# here, before the escape pass, means the anchor is real and the href is still
+# escaped, and a future record cannot reintroduce the defect.
+MD_LINK = re.compile(r"\[([^\]\r\n]+)\]\(([^)\s]+)\)")
+
+
 def esc(s):
     return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
 
 
+def inline(s):
+    """Escape for text, but keep [text](url) as a real anchor."""
+    links = []
+
+    def stash(m):
+        links.append(m.group(0))
+        return "\x00%d\x00" % (len(links) - 1)
+
+    out = esc(MD_LINK.sub(stash, str(s)))
+    for i, raw in enumerate(links):
+        m = MD_LINK.match(raw)
+        href = m.group(2)
+        # the records write root-relative hrefs, and these pages live one
+        # directory down, so make them sibling-relative like every other
+        # href in the article. Resolves the same on GitHub Pages and on a
+        # plain local preview.
+        if href.startswith("/"):
+            href = "../" + href.lstrip("/")
+        out = out.replace(
+            "\x00%d\x00" % i,
+            '<a href="%s">%s</a>' % (_esc_attr(href), esc(m.group(1))),
+        )
+    return out
+
+
 def para(t):
-    return "<p>%s</p>" % esc(t)
+    return "<p>%s</p>" % inline(t)
 
 
 def ol(items):
-    return ("<ol>\r\n" + "\r\n".join("<li>%s</li>" % esc(i) for i in items)
+    return ("<ol>\r\n" + "\r\n".join("<li>%s</li>" % inline(i) for i in items)
             + "\r\n</ol>")
 
 
 def ul(items):
-    return ("<ul>\r\n" + "\r\n".join("<li>%s</li>" % esc(i) for i in items)
+    return ("<ul>\r\n" + "\r\n".join("<li>%s</li>" % inline(i) for i in items)
             + "\r\n</ul>")
 
 
