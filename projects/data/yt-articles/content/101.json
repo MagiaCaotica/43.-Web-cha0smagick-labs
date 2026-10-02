@@ -137,7 +137,7 @@
       "Because you would be inheriting a twentieth-century literary construction rather than an attested ancient office. The name Cernunnos rests on a single first-century altar, and the famous Horned God and Great Mother pairing comes from Robert Graves in 1948, who assembled it knowingly from fragments. That is not a reason to avoid the symbol. It is a reason to know that you are building from a text, and that the text was written by a poet who told you he was guessing."
     ],
     [
-      "What is the difference between a servitor and an egregore?",
+      "how does a servitor differ from an egregore?",
       "A servitor is a thoughtform you construct, so you control its permissions, its address and its end condition, and you can predict and dismiss it. An egregore is a shared thoughtform with a history and usually other contributors, which gives it more accumulated force and much less predictability. The two are not rivals. Working with a Goetia egregore and building a private servitor are different tools for different jobs, and the commonest confusion in this area is building one and expecting the behaviour of the other."
     ],
     [
@@ -150,10 +150,25 @@
     ]
   ],
   "related": [
-    ["servitor-creation-complete-lifecycle", "Magical Servitor Creation: Complete Lifecycle Protocol, Design to Dissolution"],
-    ["sigil-vs-servitor-differences", "Sigil vs Servitor: Complete Comparison Guide for Chaos Magick"],
-    ["egregore-creation-collective-thought-forms", "Egregore Creation: How Collective Thought Forms Gain Power"],
-    ["paradigm-shift-belief-as-tool", "Paradigm Shift and Belief as a Tool: Core Chaos Magick Concept"],
-    ["complete-magickal-servitors-guide", "Complete Magickal Servitors Guide: Create, Activate and Use"]
+    [
+      "servitor-creation-complete-lifecycle",
+      "Magical Servitor Creation: Complete Lifecycle Protocol, Design to Dissolution"
+    ],
+    [
+      "sigil-vs-servitor-differences",
+      "Sigil vs Servitor: Complete Comparison Guide for Chaos Magick"
+    ],
+    [
+      "egregore-creation-collective-thought-forms",
+      "Egregore Creation: How Collective Thought Forms Gain Power"
+    ],
+    [
+      "paradigm-shift-belief-as-tool",
+      "Paradigm Shift and Belief as a Tool: Core Chaos Magick Concept"
+    ],
+    [
+      "complete-magickal-servitors-guide",
+      "Complete Magickal Servitors Guide: Create, Activate and Use"
+    ]
   ]
 }

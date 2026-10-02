@@ -22,7 +22,7 @@
     {
       "h2": "A frequency you can check with an instrument",
       "p": [
-        "Start with the readout, because it changes what counts as a result. A phone application that reports a frequency reading has a noise floor. It will show a number when the room is silent and the phone is lying on a table, and that number is not a signal. Before you do anything else, spend ten minutes recording what the app claims when you are not playing anything. Write the figures down. That baseline is the only thing that will let you tell a real reading from a plausible one, and it costs you a coffee's worth of time.",
+        "Start with the readout, because it changes what counts as a result. A phone application that reports a frequency reading has a noise floor. It will show a number when the room is silent and the phone is lying on a table, and that number is not a signal. Before you do anything else, spend ten minutes recording what the app claims when you are not playing anything. Write the figures down. That baseline is the one thing that lets you tell a real reading from a plausible one, and it costs you a coffee's worth of time.",
         "The cheap tuner is a slightly better instrument and behaves the same way. It is accurate enough to tell you that a note is roughly right and not accurate enough to tell you anything about intention. That is fine. The point of the instrument is not to detect magic. The point is to separate the claim you can check from the claim you cannot, so that the rest of the practice can be arranged around the part where evidence is possible."
       ]
     },
@@ -36,14 +36,14 @@
     {
       "h2": "The four fields, and which one is doing the work",
       "p": [
-        "The catalogue format gives you four slots to fill: a rank, a visible form, an office, and a set of powers. For a working built on a frequency, three of those are decoration. A rank is a claim about status and status has no measurable consequence. A visible form is a drawing, and the drawing is not what you are playing. A list of powers is the field most likely to be copy-pasted from another entry and therefore the field most likely to be wrong.",
-        "The office is the only slot that does anything. An office is a description of a function, and a function can be stated so that you will know whether you did it. I write mine in the form a technician would accept: a condition, an action, and a number of repetitions. Nothing in that sentence requires a spirit, and everything in it can be checked on a Sunday."
+        "The catalogue format gives you four slots to fill in a rank, a visible form, an office, together with a listed set of powers, for a working built on a frequency, three of those are decoration. A rank is a claim about status and status has no measurable consequence. A visible form is a drawing, and the drawing is not what you are playing. A list of powers is the field most likely to be copy-pasted from another entry and therefore the field most likely to be wrong.",
+        "The office is the only slot that does anything. an office describes a function, and a function can be stated so that you will know whether you did it. I write mine in the form a technician would accept: a condition, an action, and a number of repetitions. Nothing in that sentence requires a spirit, and everything in it can be checked on a Sunday."
       ]
     },
     {
       "h2": "A trigger is a conditional, not a spirit",
       "p": [
-        "This is the whole of it, and it is worth saying plainly. A servitor is a conditional with a cue attached: when this sound plays, I do this thing. That is a mechanism. It has no hidden component. The apparent hidden component arrives later, when the cue fires and you cannot be certain whether the sound caused the action or the action made you reach for the sound, and you resolve that uncertainty by attributing it to something you built deliberately.",
+        "that is the entirety of it, and it is worth saying plainly. A servitor is a conditional with a cue attached: when this sound plays, I do this thing. That is a mechanism. It has no hidden component. The apparent hidden component arrives later, when the cue fires and you cannot be certain whether the sound caused the action or the action made you reach for the sound, and you resolve that uncertainty by attributing it to something you built deliberately.",
         "The consequence for practice is that you can strengthen the conditional without touching the metaphysics. Keep the cue short. Make it a single note rather than a track. Attach it to one action only. Repeat it enough times that it stops being a decision. A conditional with three actions attached to it is a wish, and a wish does not fire."
       ]
     },
@@ -65,7 +65,7 @@
       "h2": "Building the working in one evening",
       "p": [
         "Four steps, in this order, and the order is the working. First, write the office as a conditional with one action. Second, choose the cue and commit to one physical object. Third, set the repetitions to a number you have never once failed to reach in a sitting, which for most people is four and not twenty. Fourth, write the record page before you charge anything, and date it.",
-        "The fourth step is the one that makes the rest honest. A page carrying today's date, a blank column for the reading, a column for whether the four lines got written, and a third column for what you would have done anyway, cannot flatter you. Write it first, while you are still capable of imagining a disappointing result."
+        "The fourth step is the one that makes the rest honest. A page carrying today's date, a blank column for the reading, a column for whether the four lines got written, and a third column for whatever you would have done regardless cannot flatter you. Write it first, while you are still capable of imagining a disappointing result."
       ]
     },
     {
@@ -92,7 +92,7 @@
     {
       "h2": "Listening without hunting for confirmation",
       "p": [
-        "The failure mode here is not superstition, it is tuning. You will hear a harmonic that was not there last week and you will want it to mean something, because a harmonic is a small gift and gifts are pleasant. The way out is to decide in advance what would count as a result, write it down, and refuse to renegotiate when the gift arrives.",
+        "The failure mode here is not superstition, it is tuning. You will hear a harmonic that was not there last week and you will want it to mean something, because a harmonic is a small gift and gifts are pleasant. The way out is to decide beforehand what would count as a result; write it down, and refuse to renegotiate when the gift arrives.",
         "Decide it like this. The working succeeded if the office was performed on the stated number of nights. That is the criterion, it is checkable, and it was written before the first night. If the practice is only worth continuing when something unusual also happens, you have not built a conditional. You have built a superstition with a tuning fork attached to it."
       ]
     },
