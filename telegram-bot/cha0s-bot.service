@@ -1,5 +1,5 @@
 [Unit]
-Description=Cha0smagick Labs Telegram Daily Offer Bot
+Description=Cha0smagick Labs Telegram Bot (canal + grupo)
 After=network.target
 StartLimitIntervalSec=0
 
@@ -13,9 +13,21 @@ RestartSec=10
 StandardOutput=journal
 StandardError=journal
 
-# Environment variables (set via systemctl edit or EnvironmentFile)
-Environment=TG_TOKEN=YOUR_BOT_TOKEN_HERE
-Environment=ADMIN_USER_ID=YOUR_TELEGRAM_USER_ID_HERE
+# Secrets live in an EnvironmentFile, NOT in this unit.
+# Create /home/ubuntu/cha0s-bot/.env (chmod 600) with:
+#   TG_TOKEN=123456:ABC...
+#   ADMIN_USER_ID=11111111
+#   TELEGRAM_CHANNEL=@cha0smagicklabs
+#   TELEGRAM_GROUP_CHAT_ID=-1001234567890     # optional; bot must be group admin
+#   TG_CATALOG_PATH=/home/ubuntu/cha0s-bot/offers.json
+#   TG_STATE_DIR=/home/ubuntu/cha0s-bot
+#   TG_TIMEZONE=America/Bogota
+#   TG_POST_MINUTE=5
+#   TG_DRY_RUN=1                              # set to 1 to render without sending
+#
+# TG_CATALOG_PATH is required on this host: bot.py sits in
+# /home/ubuntu/cha0s-bot, so the repo-relative default will not resolve.
+EnvironmentFile=-/home/ubuntu/cha0s-bot/.env
 
 # Resource limits (Oracle Free Tier micro instance)
 MemoryLimit=400M
