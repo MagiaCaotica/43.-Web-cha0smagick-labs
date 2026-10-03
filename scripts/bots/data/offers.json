@@ -1,11 +1,19 @@
 {
   "_meta": {
-    "source": "scripts/bots/data/offers.json; reconciled against public apps/*.html on 2026-09-23",
+    "source": "scripts/bots/data/offers.json; apps reconciled 2026-09-23; books reconciled 2026-10-03",
     "scope": "Local public catalog only; does not prove external publication or sales",
-    "reconciledAt": "2026-09-23",
+    "reconciledAt": "2026-10-03",
     "externalListingStatus": "unverified",
-    "priceSource": "public app page",
-    "note": "Source of truth for bot offers. Update this file to change what bots show; no code change needed. External listing, availability, checkout and revenue must be verified separately."
+    "priceSource": "public app page / public book page",
+    "note": "Source of truth for bot offers. Update this file to change what bots show; no code change needed. External listing, availability, checkout and revenue must be verified separately.",
+    "booksCheckoutSource": "Each book's own pay.hotmart.com checkout ID was read from its public page in books/*.html on 2026-10-03. Every page also links D104270399P (Magical Servitors Manual) as a cross-sell; that ID is NOT each book's own checkout.",
+    "noAppsBundle": "There is no monetizable apps bundle. Google Play collections are not a checkout. Do not add an apps bundle offer.",
+    "rejectedOffers": {
+      "complete_access": "Does not exist in Hotmart. Removed from all surfaces on 2026-10-03. Do not re-add without a real product ID.",
+      "inner_circle": "Does not exist in Hotmart (no subscription product). Removed on 2026-10-03.",
+      "flash_sale_99": "Does not exist in Hotmart. Removed on 2026-10-03.",
+      "apps_bundle": "Never existed as a purchasable product; pointed at a Google Play collection. Removed on 2026-10-03."
+    }
   },
   "apps": [
     {
@@ -169,8 +177,14 @@
     {
       "id": "codex-chaoticus",
       "name": "Codex Chaoticus",
+      "subtitle": "Complete Treatise on Chaos Magick",
       "price": "$4.99 USD",
-      "url": "https://cha0smagicklabs.com/books/codex-chaoticus.html",
+      "url": "https://cha0smagicklabs.com/books/codex-chaoticus-pdf.html",
+      "funnel": "https://cha0smagicklabs.com/books/codex-chaoticus-pdf.html",
+      "checkoutUrl": "https://pay.hotmart.com/W106595764X?checkoutMode=2",
+      "hotmartProductId": "W106595764X",
+      "priceSource": "public book page (books/codex-chaoticus-pdf.html)",
+      "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
       "tags": ["chaos-magick", "theory", "practice", "grindho"],
       "shortDesc": "Complete chaos magick grimoire by Grindho.",
       "image": null
@@ -178,8 +192,14 @@
     {
       "id": "tarot-chaos",
       "name": "Tarot Chaos",
+      "subtitle": "Chaos Magick Applied to the Tarot",
       "price": "$9.99 USD",
-      "url": "https://cha0smagicklabs.com/books/tarot-chaos.html",
+      "url": "https://cha0smagicklabs.com/books/tarot-chaos-pdf.html",
+      "funnel": "https://cha0smagicklabs.com/books/tarot-chaos-pdf.html",
+      "checkoutUrl": "https://pay.hotmart.com/J106598345U?checkoutMode=2",
+      "hotmartProductId": "J106598345U",
+      "priceSource": "public book page (books/tarot-chaos-pdf.html)",
+      "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
       "tags": ["tarot", "chaos-magick", "divination", "interpretation"],
       "shortDesc": "Deep tarot knowledge from a chaos magick perspective.",
       "image": null
@@ -187,8 +207,14 @@
     {
       "id": "magical-servitors-manual",
       "name": "Magical Servitors Manual",
-      "price": "$4.99 USD",
-      "url": "https://cha0smagicklabs.com/books/magical-servitors-manual.html",
+      "subtitle": "Activation and Design Guide",
+      "price": "$3.99 USD",
+      "url": "https://cha0smagicklabs.com/books/manual-activacion-servidores-magicos-pdf.html",
+      "funnel": "https://cha0smagicklabs.com/books/manual-activacion-servidores-magicos-pdf.html",
+      "checkoutUrl": "https://pay.hotmart.com/D104270399P?checkoutMode=2",
+      "hotmartProductId": "D104270399P",
+      "priceSource": "public book page (books/manual-activacion-servidores-magicos-pdf.html)",
+      "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
       "tags": ["servitors", "chaos-magick", "entities", "creation"],
       "shortDesc": "Create and work with magical servitors — artificial spirits.",
       "image": null
@@ -196,8 +222,14 @@
     {
       "id": "treatise-chaos-hunter-runes",
       "name": "Treatise of Chaos Hunter Runes",
-      "price": "$4.99 USD",
-      "url": "https://cha0smagicklabs.com/books/treatise-chaos-hunter-runes.html",
+      "subtitle": "The Alphabet of Desire",
+      "price": "$3.99 USD",
+      "url": "https://cha0smagicklabs.com/books/tratado-runas-cazadoras-caos-pdf.html",
+      "funnel": "https://cha0smagicklabs.com/books/tratado-runas-cazadoras-caos-pdf.html",
+      "checkoutUrl": "https://pay.hotmart.com/F104270966V?checkoutMode=2",
+      "hotmartProductId": "F104270966V",
+      "priceSource": "public book page (books/tratado-runas-cazadoras-caos-pdf.html)",
+      "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
       "tags": ["runes", "chaos-magick", "hunting", "symbols"],
       "shortDesc": "Advanced rune system for chaos magick practitioners.",
       "image": null
@@ -205,8 +237,14 @@
     {
       "id": "ouija-cazadora",
       "name": "Ouija Cazadora",
-      "price": "$4.99 USD",
-      "url": "https://cha0smagicklabs.com/books/ouija-cazadora.html",
+      "subtitle": "Chaos Magic Guide to the Oracular Manual",
+      "price": "$3.99 USD",
+      "url": "https://cha0smagicklabs.com/books/ouija-cazadora-pdf.html",
+      "funnel": "https://cha0smagicklabs.com/books/ouija-cazadora-pdf.html",
+      "checkoutUrl": "https://pay.hotmart.com/B104271332D?checkoutMode=2",
+      "hotmartProductId": "B104271332D",
+      "priceSource": "public book page (books/ouija-cazadora-pdf.html)",
+      "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
       "tags": ["ouija", "spirits", "communication", "spanish"],
       "shortDesc": "Complete guide to spirit communication through the ouija board. (Spanish)",
       "image": null
@@ -214,8 +252,14 @@
     {
       "id": "liber-lvpinux",
       "name": "Liber Lvpinux",
-      "price": "$4.99 USD",
-      "url": "https://cha0smagicklabs.com/books/liber-lvpinux.html",
+      "subtitle": "Lycanthropic Transformation and Chaos Magic",
+      "price": "$3.99 USD",
+      "url": "https://cha0smagicklabs.com/books/liber-lvpinux-pdf.html",
+      "funnel": "https://cha0smagicklabs.com/books/liber-lvpinux-pdf.html",
+      "checkoutUrl": "https://pay.hotmart.com/O104271155J?checkoutMode=2",
+      "hotmartProductId": "O104271155J",
+      "priceSource": "public book page (books/liber-lvpinux-pdf.html)",
+      "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
       "tags": ["werewolf", "lycanthropy", "therianthropy", "shapeshifting"],
       "shortDesc": "The book of the wolf — werewolf occult philosophy and practice.",
       "image": null
@@ -223,8 +267,14 @@
     {
       "id": "mind-the-gap",
       "name": "Mind The Gap",
+      "subtitle": "Master the 0.3 Seconds That Define Your Life",
       "price": "$9.99 USD",
-      "url": "https://cha0smagicklabs.com/books/mind-the-gap.html",
+      "url": "https://cha0smagicklabs.com/books/mind-the-gap-pdf.html",
+      "funnel": "https://cha0smagicklabs.com/books/mind-the-gap-pdf.html",
+      "checkoutUrl": "https://pay.hotmart.com/V106730857R?checkoutMode=2",
+      "hotmartProductId": "V106730857R",
+      "priceSource": "public book page (books/mind-the-gap-pdf.html)",
+      "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
       "tags": ["consciousness", "psychonaut", "altered-states", "exploration"],
       "shortDesc": "A practical guide to altered states for the modern psychonaut.",
       "image": null
@@ -233,12 +283,14 @@
   "bundle": {
     "name": "Esoteric Books Bundle",
     "price": "$19.99 USD",
-    "originalPrice": "$41.93 USD",
+    "originalPrice": "$40.93 USD",
+    "discountLabel": "51% off",
     "url": "https://hotmart.com/es/marketplace/productos/bundle-todos-los-libros-esp/V107097103W",
     "funnel": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
     "hotmartProductId": "V107097103W",
     "checkoutStatus": "external_url_observed_sale_unverified",
-    "shortDesc": "7 esoteric books at 52% off. Complete occult library bundle.",
+    "originalPriceSource": "sum of the 7 public book page prices as of 2026-10-03",
+    "shortDesc": "7 esoteric books at 51% off. Complete occult library bundle.",
     "image": null
   }
 }
