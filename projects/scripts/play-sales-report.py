@@ -4,7 +4,7 @@ play-sales-report.py — Descarga los Sales Reports reales de Google Play
 usando la service account (playstore.json) y agrega ventas por app/día.
 
 Fuentes:
-  - Google Cloud Storage buckets pubsite_prod_rev_{accountId} (sales_report_*.csv)
+  - Google Cloud Storage bucket pubsite_prod_7178773232285214747 (sales/salesreport_*.zip)
   - Google Play Developer Reporting API como fallback (revenue:query)
 
 Uso:
@@ -38,19 +38,22 @@ def get_creds():
 def gcs_headers(creds):
     return {"Authorization": f"Bearer {creds.token}"}
 
+# Bucket unico de reports de Play para esta cuenta.
+# NOTA 2026-10-02: antes se buscaba un bucket "pubsite_prod_rev_*" que no existe
+# (HTTP 404). Verificado leyendo los 9 objects de earnings/ y los 11 de sales/.
+PLAY_BUCKET = "pubsite_prod_7178773232285214747"
+
+
 def find_rev_bucket(creds):
-    """Encuentra el bucket pubsite_prod_rev_* asociado a la cuenta."""
-    r = requests.get(f"{GCS_API}/b", params={"project": "cha0smagick-labs", "maxResults": 1000},
+    """Devuelve el bucket de reports de Play, verificado con una lectura real."""
+    r = requests.get(f"{GCS_API}/b/{PLAY_BUCKET}/o",
+                     params={"prefix": "sales/", "maxResults": 1},
                      headers=gcs_headers(creds), timeout=60)
     if r.status_code != 200:
-        print(f"[WARN] No se pudo listar buckets ({r.status_code}): {r.text[:200]}", file=sys.stderr)
+        print(f"[WARN] No se pudo leer {PLAY_BUCKET} ({r.status_code}): "
+              f"{r.text[:200]}", file=sys.stderr)
         return None
-    for b in r.json().get("items", []):
-        if b["name"].startswith("pubsite_prod_rev_"):
-            return b["name"]
-    # fallback: probar bucket por project id
-    cand = f"pubsite_prod_rev_{creds.service_account_email.split('@')[0]}"
-    return None
+    return PLAY_BUCKET
 
 def list_objects(creds, bucket, prefix="sales"):
     objs, page = [], None
@@ -142,7 +145,8 @@ def main():
     creds = get_creds()
     bucket = find_rev_bucket(creds)
     if not bucket:
-        print("[ERROR] No se encontró bucket pubsite_prod_rev_*. "
+        print("[ERROR] No se pudo leer el bucket de reports de Play "
+              f"({PLAY_BUCKET}). "
               "Verifica que la service account tenga acceso a Play Console > Reporting.")
         sys.exit(1)
     print(f"[INFO] Bucket de reportes: {bucket}", file=sys.stderr)
