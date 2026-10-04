@@ -30,7 +30,6 @@ PACKAGES = [
     "com.cha0smagicklabs.noctemapp",
     "com.japps.norse_oracle",
     "com.cha0smagick.unofficialraiderwaite",
-    "com.cha0smagick.unofficialraiderwaite",
     "com.cha0smagicklabs.zenercards",
 ]
 

@@ -51,3 +51,15 @@ undefined/
 __pycache__/
 *.pyc
 
+
+# Scratch / debug artifacts from the SEO n-gram + H2-dedup work (never commit)
+__agg.json
+__play_raw.json
+_probe*.py
+shot-lang-before.png
+projects/data/**/_*
+projects/data/**/ngram_work.txt
+projects/data/linkgraph/_debug_*.py
+
+# Play sales reports: business-sensitive, same policy as projects/playstore.json
+projects/salesreport_*.csv

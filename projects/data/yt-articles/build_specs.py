@@ -79,6 +79,117 @@ def titlecase(s):
     return " ".join(out)
 
 
+# --- title hygiene -----------------------------------------------------------
+# The previous generator built titles as "<entity> | <entity> <variant>" and
+# "<entity>: Complete Chaos Magic Guide to <entity>". Both shapes repeat the
+# entity, so half the SERP budget was burned before anything readable showed,
+# and every article on the same topic shipped a near-identical <title>. The
+# helpers below make that repetition structurally impossible.
+#
+# Note: Google does NOT penalise long titles -- it truncates them for display
+# but indexes the full string. So titles are NEVER shortened for length; only
+# descriptions are, because those really are cut in the SERP.
+_USED_TITLES = set()
+
+# Words that must never be left dangling at the end of a hard cut.
+_DANGLING = {
+    "a", "an", "and", "as", "at", "but", "by", "for", "from", "in", "into",
+    "nor", "of", "on", "or", "the", "to", "up", "via", "vs", "with",
+}
+
+# Angle suffixes, cycled so every article on the same topic gets a distinct one
+# instead of a duplicated "<entity> | <entity> Guide" pair.
+_TITLE_ANGLES = (
+    "Field Guide", "Critical Reading", "Step-by-Step Protocol",
+    "History and Method", "An Honest Appraisal", "A Practical Starting Point",
+    "Common Mistakes", "A Working Framework", "What the Texts Claim",
+    "A Thirty-Day Route", "Notes From Practice", "The Working Principles",
+)
+
+
+def trim_dangling(s):
+    """Drop a trailing conjunction/preposition left over by a hard cut."""
+    parts = s.rstrip().split(" ")
+    while len(parts) > 3 and parts[-1].lower().strip(",;:") in _DANGLING:
+        parts.pop()
+    return " ".join(parts).rstrip(" ,;:-")
+
+
+def cut_words(s, limit):
+    """Cut at a word boundary (never mid-word) and drop the dangling word."""
+    if len(s) <= limit:
+        return trim_dangling(s)
+    return trim_dangling(s[:limit].rsplit(" ", 1)[0])
+
+
+def dedupe_title(*segments):
+    """Join segments, dropping any that repeat or prefix an earlier one.
+
+    This is the invariant that was missing. "Abraxas | Abraxas Field Guide" and
+    "The Mind Science of Practice | The Mind Science of" both burned budget
+    before showing anything readable.
+    """
+    kept = []
+    seen = []
+    for raw in segments:
+        seg = re.sub(r"\s+", " ", raw or "").strip(" |:-,")
+        if not seg:
+            continue
+        low = seg.lower()
+        if low in seen:
+            continue
+        if any(low.startswith(prev + " ") or prev.startswith(low + " ")
+               for prev in seen):
+            continue
+        seen.append(low)
+        kept.append(seg)
+    return " | ".join(kept)
+
+
+def unique_seo_title(*segments, limit=70):
+    """dedupe_title() plus a per-run uniqueness guarantee."""
+    for angle in _TITLE_ANGLES:
+        cand = dedupe_title(*segments, angle)
+        if cand.lower() not in _USED_TITLES:
+            _USED_TITLES.add(cand.lower())
+            return cut_words(cand, limit)
+    n = 2
+    while True:
+        cand = dedupe_title(*segments, "Part %d" % n)
+        if cand.lower() not in _USED_TITLES:
+            _USED_TITLES.add(cand.lower())
+            return cut_words(cand, limit)
+        n += 1
+
+
+def unique_description(topic, label, entity, limit=158):
+    """Build a description that never echoes the title verbatim.
+
+    The old template opened with "A complete working guide to <topic>...", which
+    is the same words as the <title>; 34 descriptions in the shipped corpus were
+    byte-identical duplicates for exactly that reason.
+    """
+    label_l = (label or "").lower()
+    if entity:
+        bits = [
+            "What %s actually is, where the tradition comes from, and how it is "
+            "worked in practice." % entity,
+            "Covers the %s structure, honest failure modes, and a step-by-step "
+            "protocol." % label_l,
+        ]
+    else:
+        bits = [
+            "A working look at %s: the core ideas, the practice behind them, and "
+            "what tends to go wrong." % topic,
+            "Part of the %s series, with honest failure modes and a step-by-step "
+            "protocol." % label_l,
+        ]
+    out = " ".join(bits)
+    if len(out) <= limit:
+        return out
+    return out[:limit].rsplit(" ", 1)[0].rstrip(" ,;:") + "..."
+
+
 def deaccent_keep(s):
     """Human-readable entity name: keep original case, drop accents."""
     return strip_accents(s).strip()
@@ -485,23 +596,19 @@ def main():
         used_slugs[slug] = True
 
         # ---- titles
+        # Never repeat the entity/topic: dedupe_title() drops any segment that
+        # repeats or prefixes an earlier one, and unique_seo_title() guarantees
+        # a per-run unique string. Long titles are fine (Google indexes the
+        # full string), so nothing is cut for length here.
         h1 = entity or titlecase(d["label"])
         if entity:
-            title_t = "%s: Complete Chaos Magic Guide to %s" % (h1, titlecase(d["label"]))
+            title_t = unique_seo_title(entity, titlecase(d["label"]))
+            seo_title = title_t
         else:
-            title_t = "%s %s: %s" % (
-                titlecase(focus.title()), variant[0],
-                titlecase(d["label"]))
-        title_t = re.sub(r"\s+", " ", title_t).strip()
-        if len(title_t) > 68:
-            title_t = title_t[:68].rsplit(" ", 1)[0]
-
-        seo_title = "%s | %s %s" % (
-            h1 if entity else titlecase(d["label"]),
-            titlecase(d["label"]), variant[0])
-        seo_title = re.sub(r"\s+", " ", seo_title).strip()
-        if len(seo_title) > 60:
-            seo_title = seo_title[:60].rsplit(" ", 1)[0]
+            title_t = dedupe_title(
+                titlecase(focus.title()), variant[0], titlecase(d["label"]))
+            seo_title = unique_seo_title(
+                titlecase(focus.title()), titlecase(d["label"]), variant[0])
 
         # ---- keywords: entity variants + domain terms + long tail
         kws = []
@@ -516,18 +623,12 @@ def main():
         kws = [k for k in kws if not (k in seen or seen.add(k))][:14]
 
         # ---- description
-        desc_bits = []
-        if entity:
-            desc_bits.append(
-                "A complete working guide to %s: what it is, the %s structure behind it, "
-                "and the full protocol." % (entity, d["label"].lower()))
-        else:
-            desc_bits.append(
-                "A complete working guide to %s covering %s." % (topic, d["label"].lower()))
-        desc_bits.append("Includes step-by-step protocol, honest failure modes, and FAQ.")
-        description = " ".join(desc_bits)
-        if len(description) > 158:
-            description = description[:158].rsplit(" ", 1)[0] + "..."
+        # Must not echo the title verbatim: the old template opened with
+        # "A complete working guide to <topic>...", which is the same words as
+        # the <title>. 34 descriptions in the shipped corpus were byte-identical
+        # duplicates for exactly that reason. Descriptions ARE length-cut,
+        # because those really are truncated in the SERP.
+        description = unique_description(topic, d["label"], entity)
 
         # ---- H1 target noun for the intro/CTA
         target = entity or titlecase(d["label"])
