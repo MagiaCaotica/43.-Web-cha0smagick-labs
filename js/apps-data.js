@@ -1149,5 +1149,36 @@ const booksData = [
             <p><strong>"Between stimulus and response there is a space. In that space is our power to choose our response." — Viktor E. Frankl</strong></p>
             <p>One-time purchase. Lifetime access. Instant download.</p>
         `
-    }
+
+    },
+    {
+      id: "catholiconomicon-pdf",
+      name: "CATHOLICONOMICON — Chaos Magick for Catholic Practitioners",
+      author: "Frater Alek0s",
+      language: "English / Spanish",
+      languageFlag: "us,es",
+      price: "$9.99 USD",
+      type: "book",
+      status: "available",
+      image: "assets/images/catholiconomicon.png",
+      description: "A digital grimoire of Catholic chaos magick: sigils built from the Roman Rite, a working table of saint correspondences, pentacle workings, servitor design, and complete rituals.",
+      hotmartLink: "https://pay.hotmart.com/A107900946S?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_catholiconomicon",
+      seo: {
+        title: "CATHOLICONOMICON — Chaos Magick for Catholic Practitioners | PDF",
+        description: "Digital grimoire of Catholic chaos magick: Roman Rite sigils, saint correspondences, pentacle workings, servitors and full rites. EN and ES. Buy the PDF.",
+        keywords: "catholic chaos magick, catholic grimoire, roman rite sigils, saint correspondences, pentacle ritual, catholic servitors, chaos magic for catholics, spanish grimoire, latin ritual magic, sigils, ceremonial magic, PDF book"
+      },
+      detailedDescription: `<h1>CATHOLICONOMICON — Chaos Magick for Catholic Practitioners</h1>
+            <p>A digital grimoire for magicians who practice inside a Catholic frame. Every technique here is drawn from the Roman Rite and the wider Western ceremonial tradition, and every one of them is method rather than doctrine: nothing here asks you to stop believing what the Church teaches in order to start working.</p>
+            <h2>What You Will Master</h2>
+            <ul>
+                <li><strong>Sigils from the Roman Rite.</strong> How the traditional formulae are actually structured, which parts can be cut into a sigil, and where the boundaries sit.</li>
+                <li><strong>A saint correspondence table.</strong> Not a generic list. Each entry gives the saint, the traditional attribute, the planetary or angelic association, and a concrete use you can build on.</li>
+                <li><strong>Pentacle workings.</strong> Using the pentacle as a ritual frame rather than as decoration: orientation, the four watchtowers, and a full single-figure method.</li>
+                <li><strong>Servitor design.</strong> Choosing a sigil to carry a specific task, naming, and the maintenance that keeps it useful instead of decorative.</li>
+                <li><strong>Rites that hold together.</strong> Adaptation protocols for the Angelus, the Sign of the Cross, and using Latin and vernacular in the same working.</li>
+            </ul>
+            <h3>100% RISK-FREE 7-DAY GUARANTEE</h3>
+            <p>Read it. If it does not give you a working method you can actually use, get a full, unconditional refund via Hotmart. No questions asked.</p>
+            <p>One-time purchase. Lifetime access. Instant download. English and Spanish.</p>    `    }
 ];
