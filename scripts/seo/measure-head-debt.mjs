@@ -108,9 +108,23 @@ for (const f of files) {
     hasOgTitle: metaContent(h, 'og:title', 'property') !== '',
     hasOgDesc: metaContent(h, 'og:description', 'property') !== '',
     hasLdJson: /<script[^>]*type\s*=\s*["']application\/ld\+json["']/i.test(h),
-    hasArticleSchema: /"@type"\s*:\s*"?Article"?/i.test(h),
+    // `BlogPosting` es el tipo correcto de schema.org para un articulo de blog y
+    // es mas especifico que `Article`. Antes solo se aceptaba el literal
+    // "Article", asi que toda pagina que declarara BlogPosting contaba como
+    // deuda que no era deuda: por eso la cifra era 452 cuando solo 2 articles
+    // estaban realmente sin schema.
+    hasArticleSchema: /"@type"\s*:\s*"?(?:Article|BlogPosting)"?/i.test(h),
+    // Solo hay deuda de FAQPage si la pagina MUESTRA una FAQ. Exigirla donde no
+    // la hay es declarar schema sin respaldo, que es exactamente lo que
+    // reconcile-faq-schema.mjs borra del sitio.
     hasFaqPage: /FAQPage/i.test(h),
+    hasVisibleFaq: /<h[23][^>]*>[^<]*(?:FAQ|Frequently Asked|Preguntas Frecuentes|Common Questions)/i.test(html),
     hasBreadcrumbSchema: /BreadcrumbList/i.test(h),
+    // Igual que FAQPage: la deuda solo existe si el breadcrumb es visible. El
+    // commit 4c41d203 Convertsio 88 breadcrumbs que solo vivian en schema, y el
+    // criterio quedo al reves: schema es lo que accompanies a un breadcrumb que
+    // el usuario ya ve.
+    hasVisibleBreadcrumb: /class\s*=\s*["'][^"']*breadcrumb/i.test(h),
     hasH1: /<h1[\s>]/i.test(html),
     h1Count: (html.match(/<h1[\s>]/gi) || []).length,
     hasLang: /<html[^>]*\blang\s*=/i.test(html),
@@ -129,6 +143,23 @@ for (const f of files) {
 const yes = (k) => rows.filter((r) => r[k]).length
 const no = (k) => rows.filter((r) => !r[k]).length
 
+// Estas tres metricas necesitan un ambito, porque el tipo de schema que toca
+// depende de que sea la pagina correcta.
+//
+//   Article       solo tiene sentido en un articulo de blog. Exigirlo en una
+//                 tool, una landing o una pagina legal es inventar un tipo que
+//                 no describe la pagina.
+//   FAQPage       solo es deuda si la FAQ es VISIBLE. Si no hay FAQ en el
+//                 cuerpo, no se marca, porque declararla seria schema spam: lo
+//                 que reconcile-faq-schema.mjs elimina del sitio.
+//   BreadcrumbList solo es deuda si el breadcrumb es VISIBLE. Al reves del
+//                 criterio del commit 4c41d203, que hizo visibles 88
+//                 breadcrumbs que solo existian en schema.
+const isArticle = (r) => r.file.startsWith('blog/') && !r.file.endsWith('index.html')
+const missingArticle = rows.filter((r) => isArticle(r) && !r.hasArticleSchema).length
+const missingFaq = rows.filter((r) => r.hasVisibleFaq && !r.hasFaqPage).length
+const missingBreadcrumb = rows.filter((r) => r.hasVisibleBreadcrumb && !r.hasBreadcrumbSchema).length
+
 const report = {
   total: rows.length,
   title_missing: yes('titleMissing'),
@@ -141,9 +172,9 @@ const report = {
   missing_og_title: no('hasOgTitle'),
   missing_og_desc: no('hasOgDesc'),
   missing_schema: no('hasLdJson'),
-  missing_article_schema: no('hasArticleSchema'),
-  missing_faqpage: no('hasFaqPage'),
-  missing_breadcrumb_schema: no('hasBreadcrumbSchema'),
+  missing_article_schema: missingArticle,
+  missing_faqpage: missingFaq,
+  missing_breadcrumb_schema: missingBreadcrumb,
   missing_h1: no('hasH1'),
   multi_h1: rows.filter((r) => r.h1Count > 1).length,
   missing_lang: no('hasLang'),
