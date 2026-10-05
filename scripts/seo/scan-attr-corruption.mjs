@@ -24,6 +24,12 @@ const PATTERNS = [
   { name: 'double-description', re: /name="description"[^>]*<meta[^>]*name="description"/g },
   { name: 'tag-in-attr', re: /="[^"]*<(meta|link|script|title)\s/g },
   { name: 'unclosed-content', re: /content="[^"]*$/gm },
+  // Atributo partido: `<meta name="viewport"="...">` y
+  // `<meta property="og:description"="...">`. El `=` aparece antes del nombre del
+  // siguiente atributo, asi que nunca se genera `content` y la etiqueta se pierde
+  // entera. Sin viewport, Google renderiza la pagina a 980px en movil.
+  // Reparado por `fix-quote-attr-corruption.mjs`; aqui solo se reporta.
+  { name: 'quote-attr-split', re: /<(?:meta|link)\b[^>]*\s[a-zA-Z][a-zA-Z0-9:_-]*="[^"<>]*"="[^"<>]*"/g },
 ];
 
 const files = walk(ROOT);
