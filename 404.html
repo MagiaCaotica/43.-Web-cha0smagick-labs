@@ -109,7 +109,13 @@
         .error-subtitle {
             font-size: 1.1rem;
             color: #ccc;
-            margin-bottom: 0.8rem;
+            /* margin shorthand, no margin-bottom: el elemento paso de div a h1 y
+               el navegador aplica margin-block a los h1. Sin el margin-top
+               explicito la pagina 404 gana un hueco arriba del subtitulo.
+               OJO: este comentario no escribe literalmente la etiqueta h1
+               porque los gates que cuentan encabezados por regex contarian este
+               texto como un encabezado mas. */
+            margin: 0 0 0.8rem;
             font-weight: 300;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -225,7 +231,7 @@
     <div class="error-container">
         <div class="error-sigil">⛧ ◈ ⛧</div>
         <div class="error-code">404</div>
-        <div class="error-subtitle">Portal Sealed</div>
+        <h1 class="error-subtitle">Portal Sealed</h1>
         <div class="error-description">
             The dimensional portal you seek does not exist in this plane of reality. It may have been sealed, never created, or the sigil coordinates you used were incorrect.
             <br><br>

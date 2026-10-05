@@ -208,7 +208,8 @@ section.hero::after {
   left: 50%;
   transform: translateX(-50%);
 }
-section.hero h1 {
+section.hero h1,
+section.hero h2 {
   color: var(--text-primary);
   font-size: 1.5rem;
   font-weight: 200;
