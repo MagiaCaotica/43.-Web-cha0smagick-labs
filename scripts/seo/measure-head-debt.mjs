@@ -114,11 +114,20 @@ for (const f of files) {
     // deuda que no era deuda: por eso la cifra era 452 cuando solo 2 articles
     // estaban realmente sin schema.
     hasArticleSchema: /"@type"\s*:\s*"?(?:Article|BlogPosting)"?/i.test(h),
-    // Solo hay deuda de FAQPage si la pagina MUESTRA una FAQ. Exigirla donde no
-    // la hay es declarar schema sin respaldo, que es exactamente lo que
-    // reconcile-faq-schema.mjs borra del sitio.
+    // Solo hay deuda de FAQPage si la pagina MUESTRA una FAQ con preguntas
+    // reales. Un heading que dice "FAQ" y ya no tiene ninguna pregunta detras no
+    // es una FAQ sin marcar: es un titulo. Por eso no basta con el heading: se
+    // exigen al menos 2 pares, en cualquiera de las dos formas que usa el sitio
+    // (details/summary, que es la que anade add-faq-schema.mjs, o h4 con
+    // interrogacion, que es la que anade add-faq-schema-h4.mjs). Con solo el
+    // heading, la cifra daba 208 cuando el numero real era 0.
     hasFaqPage: /FAQPage/i.test(h),
-    hasVisibleFaq: /<h[23][^>]*>[^<]*(?:FAQ|Frequently Asked|Preguntas Frecuentes|Common Questions)/i.test(html),
+    hasVisibleFaq:
+      /<h[23][^>]*>[^<]*(?:FAQ|Frequently [Aa]sked|Preguntas Frecuentes|Common Questions)/i.test(html) &&
+      ((html.match(/<details\b/gi) || []).length >= 2 ||
+        ([...(html.matchAll(/<h4[^>]*>([\s\S]*?)<\/h4>/gi))]
+          .map((m) => m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim())
+          .filter((t) => t.length > 12 && /\?\s*$/.test(t)).length >= 2)),
     hasBreadcrumbSchema: /BreadcrumbList/i.test(h),
     // Igual que FAQPage: la deuda solo existe si el breadcrumb es visible. El
     // commit 4c41d203 Convertsio 88 breadcrumbs que solo vivian en schema, y el
