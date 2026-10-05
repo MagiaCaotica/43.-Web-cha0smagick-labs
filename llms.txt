@@ -139,7 +139,7 @@
 - [Goetic Magic for Beginners](https://cha0smagicklabs.com/blog/goetic-magic-beginners-guide.html)
 - [Zener Cards ESP Training Guide](https://cha0smagicklabs.com/blog/zener-cards-esp-training-guide.html)
 
-## Atomic Tools (40 herramientas gratuitas)
+## Atomic Tools (61 herramientas gratuitas)
 
 Estas páginas son herramientas estáticas, gratuitas y orientativas. Funcionan en el navegador, no sustituyen asesoramiento profesional y no deben interpretarse como predicciones. Los datos introducidos se procesan localmente por el motor de cada página.
 
@@ -191,6 +191,33 @@ Estas páginas son herramientas estáticas, gratuitas y orientativas. Funcionan 
 - [Planificador de Carga de Sigilo](https://cha0smagicklabs.com/tools/sigil-charging-planner.html): método, duración e intención.
 - [Diario de Diseño de Servidores](https://cha0smagicklabs.com/tools/servitor-design-journal.html): diseño simbólico con revisión.
 - [Panel de Seguimiento de Resultados](https://cha0smagicklabs.com/tools/results-tracking-dashboard.html): registro y exportación de notas.
+
+### Astrologia y ciclos
+- astrology sign calculator — /tools/astrology-sign-calculator.html
+- moon voc — /tools/moon-voc.html
+
+### Tarot, oraculos y simbolos
+- digital pendulum — /tools/digital-pendulum.html
+- goetic spirit selector — /tools/goetic-spirit-selector.html
+- tarot yes no — /tools/tarot-yes-no.html
+
+### Planificacion, seguridad y seguimiento
+- activador servidores — /tools/activador-servidores.html
+- candle color calculator — /tools/candle-color-calculator.html
+- gnosis timer — /tools/gnosis-timer.html
+- iching — /tools/iching.html
+- iching changing lines — /tools/iching-changing-lines.html
+- lunar phase — /tools/lunar-phase.html
+- planetary hours — /tools/planetary-hours.html
+- planetary kamea sigil — /tools/planetary-kamea-sigil.html
+- reality check tracker — /tools/reality-check-tracker.html
+- rune drawer — /tools/rune-drawer.html
+- sigil charging timer — /tools/sigil-charging-timer.html
+- sigil generator — /tools/sigil-generator.html
+- spell builder — /tools/spell-builder.html
+- tengwar transcriber — /tools/tengwar-transcriber.html
+- viking runes — /tools/viking-runes.html
+- zener esp trainer — /tools/zener-esp-trainer.html
 
 ## Technical Notes
 
