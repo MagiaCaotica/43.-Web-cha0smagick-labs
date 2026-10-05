@@ -75,14 +75,24 @@ function extract(html) {
     const rest = html.slice(h.end);
     const stop = rest.search(/<h2\b|<\/section>/i);
     const block = stop === -1 ? rest : rest.slice(0, stop);
-    // Cada <h4> abre una pregunta; su respuesta es lo que hay hasta el
-    // siguiente <h4> o hasta el final del bloque.
-    const parts = [...block.matchAll(/<h4\b[^>]*>([\s\S]*?)<\/h4>([\s\S]*?)(?=<h4\b|$)/gi)];
+    // Cada <h3> o <h4> abre una pregunta; su respuesta es lo que hay hasta el
+    // siguiente encabezado o hasta el final del bloque.
+    //
+    // Se aceptan ambos niveles porque el sitio usa los dos: hay paginas con las
+    // preguntas en <h4> y paginas con las preguntas en <h3> directamente
+    // debajo del heading. Aceptar solo <h4> dejaba 87 paginas sin marcar.
+    //
+    // El discriminador de "esto es una pregunta" NO es el nivel del tag: es que
+    // termine en interrogacion. Un <h3> que es un titulo de seccion ("Como
+    // elegir un spirit") no termina en '?' y por tanto no se emite.
+    const parts = [...block.matchAll(/<h([34])\b[^>]*>([\s\S]*?)<\/h\1>([\s\S]*?)(?=<h[34]\b|$)/gi)];
     for (const p of parts) {
-      const q = strip(p[1]);
+      const q = strip(p[2]);
       if (q.length <= 12 || !/\?\s*$/.test(q)) continue;
-      // La respuesta es el primer parrafo con texto real del tramo.
-      const paras = [...p[2].matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)]
+      // La respuesta es el primer parrafo con texto real del tramo. Ojo al
+      // indice: el regex usa backreference para el nivel del tag, asi que los
+      // grupos son p[1]=nivel, p[2]=pregunta, p[3]=tramo de respuesta.
+      const paras = [...p[3].matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)]
         .map((x) => strip(x[1]))
         .filter((t) => t.length >= 40);
       if (!paras.length) continue;
@@ -90,7 +100,24 @@ function extract(html) {
       out.push({ q, a: paras[0] });
     }
   }
-  return out;
+
+  // Deduplicar por pregunta normalizada. Hay paginas con DOS headings de FAQ
+  // (por ejemplo <h2 id="faq">FAQ</h2> y despues <h2>Frequently Asked
+  // Questions</h2>), y ambos bloques contienen las mismas preguntas. Sin esta
+  // deduplicacion se emitian 3 de cada 6 duplicadas, que es exactamente el
+  // schema spam que reconcile-faq-schema.mjs borra del sitio.
+  //
+  // Se conserva la PRIMERA aparicion: es la que esta mas cerca del inicio de la
+  // pagina, que es donde el lector la ve primero.
+  const seen = new Set();
+  const uniq = [];
+  for (const p of out) {
+    const key = p.q.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    uniq.push(p);
+  }
+  return uniq;
 }
 
 const files = walk(ROOT);
