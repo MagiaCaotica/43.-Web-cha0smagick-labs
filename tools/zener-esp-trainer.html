@@ -74,6 +74,38 @@
         .sticky-conversion-bar .price-tag{background:var(--gold);color:#000;padding:0.25rem 1rem;border-radius:20px;font-weight:700}
         @media(max-width:600px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
     </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the statistical calculation accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Uses exact binomial distribution: P(X ≥ k) = Σ C(n,i) × 0.2^i × 0.8^(n-i). For 25 trials, 5+ hits = p=0.1018, 8+ hits = p=0.0072, 10+ hits = p=0.0004. The app shows exact p-values at every trial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the premium app need internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. 100% offline. All calculations run locally. No accounts, no telemetry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this a subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One-time payment of $3.99. Own it forever."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header>
