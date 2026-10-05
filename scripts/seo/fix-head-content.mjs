@@ -177,7 +177,15 @@ for (const abs of files) {
   const dm = html.match(/<meta\s+name="description"\s+content="([^"]*)"\s*\/?>/i);
   const desc = dm ? stripTags(dm[1]) : null;
 
-  pages.push({ abs, rel, html, title, h1Text, desc, h2s: realH2s(html), para: firstParagraph(html) });
+  // No se calcula aqui si el title cambio. El desempate de titles colisionados
+  // muta p.title DESPUES de este push, asi que cualquier bandera puesta aqui
+  // quedaria obsoleta. La comparacion se hace en el bucle de escritura, y en
+  // crudo contra crudo, para no depender de como escape() normalice las
+  // entidades.
+  pages.push({
+    abs, rel, html, title,
+    h1Text, desc, h2s: realH2s(html), para: firstParagraph(html),
+  });
 }
 
 // Desempatar titles colisionados usando el angulo real (primer <h2> propio).
@@ -247,15 +255,48 @@ for (const p of pages) {
 
   if (p.title) {
     const t = escape(p.title);
-    out = out.replace(/<title>[\s\S]*?<\/title>/i, `<title>${t}</title>`);
-    out = out.replace(/(<meta\s+property="og:title"\s+content=")[^"]*(")/i, `$1${t}$2`);
-    out = out.replace(/(<meta\s+name="twitter:title"\s+content=")[^"]*(")/i, `$1${t}$2`);
+    // OJO: el segundo argumento de replace() es una cadena interpreted con
+    // sintaxis de grupos ($1, $2, $&, $$...). Si `t` contiene un precio como
+    // "$10", se lee como el grupo 1 seguido de "0" y el texto se rompe. Por eso
+    // todos los reemplazos de este archivo pasan una FUNCION, donde no hay nada
+    // que interpretar y el texto entra literal.
+    out = out.replace(/<title>[\s\S]*?<\/title>/i, () => `<title>${t}</title>`);
+    // og:title y twitter:title se sincronizan con el title SOLO si hoy son una
+    // copia de este. Si el autor los escribio mas largos a proposito, se dejan.
+    //
+    // Por que: 330 paginas de este sitio tienen un og:title deliberadamente mas
+    // descriptivo que el title. Ejemplo real: el title es "Arcana Goetia: Ritual &
+    // Sigils" (34 ch) y el og:title es "Arcana Goetia: Ritual & Sigils | Goetic
+    // Grimoire & 72 Spirits Sigil Generator App for Android" (101 ch). Open Graph
+    // tiene su propio margen y ese texto extra es el que se ve al compartir.
+    //
+    // Que pasaba antes: las dos lineas de abajo escribian `t` sin comparar nada,
+    // asi que en cada corrida pisaban los tres campos en las 974 paginas aunque
+    // no se hubiera recortado ni un titulo. El reporte decia titleResized: 0 y
+    // en cambio el git diff teaching 335 archivos modificados: el dano era
+    // invisible en el reporte y solo aparecia mirando el diff.
+    //
+    // La comparacion es en CRUDO contra CRUDO (lo que hay ahora en la etiqueta
+    // frente a lo que hay ahora en el title), sin pasar por escape() ni por
+    // stripTags(), porque esas dos funciones normalizan las entidades y
+    // cualquier diferencia de normalizacion haria que la comparacion fallara.
+    const rawTitleNow = (p.html.match(/<title>([\s\S]*?)<\/title>/i) || [, ''])[1];
+    const ogInSync = (re) => {
+      const m = p.html.match(re);
+      return m && m[1] === rawTitleNow;
+    };
+    if (ogInSync(/(<meta\s+property="og:title"\s+content=")([^"]*)(")/i)) {
+      out = out.replace(/(<meta\s+property="og:title"\s+content=")[^"]*(")/i, (_m, pre, post) => pre + t + post);
+    }
+    if (ogInSync(/(<meta\s+name="twitter:title"\s+content=")([^"]*)(")/i)) {
+      out = out.replace(/(<meta\s+name="twitter:title"\s+content=")[^"]*(")/i, (_m, pre, post) => pre + t + post);
+    }
   }
 
   if (p.h1Text && /^cha0smagick labs$/i.test(p.h1Text)) {
     const topic = (p.title || '').split('|')[0].trim();
     if (topic.length > 3) {
-      out = out.replace(/<h1([^>]*)>[\s\S]*?<\/h1>/i, `<h1$1>${escape(topic)}</h1>`);
+      out = out.replace(/<h1([^>]*)>[\s\S]*?<\/h1>/i, (_m, attrs) => `<h1${attrs}>${escape(topic)}</h1>`);
       p.h1Text = topic;
       stats.h1Fixed++;
     }
@@ -286,7 +327,7 @@ for (const p of pages) {
   if (desc) {
     const d = escapeAttr(desc);
     if (/<meta\s+name="description"/i.test(out)) {
-      out = out.replace(/(<meta\s+name="description"\s+content=")[^"]*("\s*\/?>)/i, `$1${d}$2`);
+      out = out.replace(/(<meta\s+name="description"\s+content=")[^"]*("\s*\/?>)/i, (_m, pre, post) => pre + d + post);
     } else {
       const te = out.match(/<\/title>/i);
       if (te) {
