@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Feed de Google Merchant Center. Fuente: schema Product de cada pagina del sitio.
+     Los 12 productos APP- enlazan a su ficha real de Google Play.
+     Los 8 productos BOOK- enlazan a su checkout de Hotmart: un PDF no tiene ficha en Play.
+     gtin: omitido. Solo GS1 lo emite y no existen para software ni PDF,
+     asi que declararlo seria inventar un identificador falso.
+     shipping: 0 USD porque son productos digitales (descarga inmediata). -->
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+<title>Cha0smagick Labs</title>
+<link>https://cha0smagicklabs.com</link>
+<description>Occult and esoteric apps for Android and digital PDF books.</description>
+<item>
+  <g:id>CHAOS-APP-001</g:id>
+  <g:title>Arcana Goetia: Ritual &amp; Sigils</g:title>
+  <g:description>Arcana Goetia: Ritual &amp; Sigils — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/GSG.webp</g:image_link>
+  <g:price>3.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-001</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-APP-002</g:id>
+  <g:title>Astral Lab: Natal Chart</g:title>
+  <g:description>Astral Lab: Natal Chart — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/astrallab.png</g:image_link>
+  <g:price>6.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-002</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-APP-003</g:id>
+  <g:title>Chaos Magick Sigil Forge !</g:title>
+  <g:description>Chaos Magick Sigil Forge ! — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.app.goetiansealsgeneratorapp</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/chaos-sigil.webp</g:image_link>
+  <g:price>3.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-003</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-APP-004</g:id>
+  <g:title>Dreamachine: Lucid Dreaming</g:title>
+  <g:description>Dreamachine: Lucid Dreaming — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/lucid.webp</g:image_link>
+  <g:price>3.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-004</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-APP-005</g:id>
+  <g:title>Eerie Roads: Search &amp; Find</g:title>
+  <g:description>Eerie Roads: Search &amp; Find — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/eerieroads.png</g:image_link>
+  <g:price>9.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-005</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-APP-006</g:id>
+  <g:title>I Ching Oracle Divination</g:title>
+  <g:description>I Ching Oracle Divination — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.app.ichingoracle</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/iching.webp</g:image_link>
+  <g:price>3.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-006</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-APP-007</g:id>
+  <g:title>Lucid Dream: Astral Projection</g:title>
+  <g:description>Lucid Dream: Astral Projection — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/luciddreamer.png</g:image_link>
+  <g:price>9.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-007</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-APP-008</g:id>
+  <g:title>Moon Phases &amp; Lunar Calendar</g:title>
+  <g:description>Moon Phases &amp; Lunar Calendar — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.lunarapp.app</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/lunar-phase.webp</g:image_link>
+  <g:price>3.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-008</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-APP-009</g:id>
+  <g:title>NOCTEM Tools: Ghost Hunting</g:title>
+  <g:description>NOCTEM Tools: Ghost Hunting — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/noctemnobg.png</g:image_link>
+  <g:price>14.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-009</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-APP-010</g:id>
+  <g:title>Norse Rune Reader Divination</g:title>
+  <g:description>Norse Rune Reader Divination — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.japps.norse_oracle</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/norse-rune.webp</g:image_link>
+  <g:price>3.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-010</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-APP-011</g:id>
+  <g:title>PSI GYM: Train Your Intuition</g:title>
+  <g:description>PSI GYM: Train Your Intuition — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/zener.webp</g:image_link>
+  <g:price>3.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-011</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-APP-012</g:id>
+  <g:title>Tarot Rider-Waite Complete</g:title>
+  <g:description>Tarot Rider-Waite Complete — occult and esoteric practice app for Android.</g:description>
+  <g:link>https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/tarotbutton.webp</g:image_link>
+  <g:price>9.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-APP-012</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-001</g:id>
+  <g:title>Codex Chaoticus: Complete Treatise on Chaos Magick</g:title>
+  <g:description>Codex Chaoticus: Complete Treatise on Chaos Magick — digital PDF download.</g:description>
+  <g:link>https://pay.hotmart.com/W106595764X?checkoutMode=2</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/codexchaoticus.png</g:image_link>
+  <g:price>4.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-001</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-002</g:id>
+  <g:title>Liber LVPINUX</g:title>
+  <g:description>Liber LVPINUX — digital PDF download.</g:description>
+  <g:link>https://pay.hotmart.com/O104271155J?checkoutMode=2</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/liber.png</g:image_link>
+  <g:price>3.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-002</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-003</g:id>
+  <g:title>Manual de Activacion de Servidores Magicos</g:title>
+  <g:description>Manual de Activacion de Servidores Magicos — digital PDF download.</g:description>
+  <g:link>https://pay.hotmart.com/D104270399P?checkoutMode=2</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/servidores.png</g:image_link>
+  <g:price>3.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-003</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-004</g:id>
+  <g:title>Mind the Gap</g:title>
+  <g:description>Mind the Gap — digital PDF download.</g:description>
+  <g:link>https://pay.hotmart.com/V106730857R?checkoutMode=2</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/mindthegap.PNG</g:image_link>
+  <g:price>9.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-004</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-005</g:id>
+  <g:title>Ouija Cazadora</g:title>
+  <g:description>Ouija Cazadora — digital PDF download.</g:description>
+  <g:link>https://pay.hotmart.com/B104271332D?checkoutMode=2</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/ouijacazadora.png</g:image_link>
+  <g:price>3.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-005</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-006</g:id>
+  <g:title>Tarot Chaos</g:title>
+  <g:description>Tarot Chaos — digital PDF download.</g:description>
+  <g:link>https://pay.hotmart.com/J106598345U?checkoutMode=2</g:link>
+  <g:image_link>https://cha0smagicklabs.com/images/tarotchaos.PNG</g:image_link>
+  <g:price>9.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-006</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-007</g:id>
+  <g:title>Tratado de Runas Cazadoras</g:title>
+  <g:description>Tratado de Runas Cazadoras — digital PDF download.</g:description>
+  <g:link>https://pay.hotmart.com/F104270966V?checkoutMode=2</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/runascazadoras.png</g:image_link>
+  <g:price>3.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-007</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-008</g:id>
+  <g:title>Catholiconomicon: Chaos Magick for Catholic Practitioners</g:title>
+  <g:description>Catholiconomicon: Chaos Magick for Catholic Practitioners — digital PDF download.</g:description>
+  <g:link>https://pay.hotmart.com/A107900946S?checkoutMode=2</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/catholiconomicon.png</g:image_link>
+  <g:price>9.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-008</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+</channel>
+</rss>
