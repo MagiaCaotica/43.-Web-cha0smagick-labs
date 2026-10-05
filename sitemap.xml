@@ -5436,12 +5436,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-  <url>
-    <loc>https://cha0smagicklabs.com/pages/app-details.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
+
   <url>
     <loc>https://cha0smagicklabs.com/landing-pages/affiliate-dashboard.html</loc>
     <lastmod>2026-09-26</lastmod>
