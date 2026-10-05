@@ -109,6 +109,18 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://cha0smagicklabs.com/books/catholiconomicon-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://cha0smagicklabs.com/books/catholiconomicon-es-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://cha0smagicklabs.com/books/codex-chaoticus-pdf.html</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -1173,6 +1185,36 @@
 <url>
     <loc>https://cha0smagicklabs.com/blog/chaos-magick-for-skeptics-a-practical-intro.html</loc>
     <lastmod>2026-10-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://cha0smagicklabs.com/blog/catholic-chaos-magick-beginners-guide.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://cha0smagicklabs.com/blog/catholic-sigil-magick-sacramental-symbols.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://cha0smagicklabs.com/blog/chaos-magick-and-the-roman-rites.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://cha0smagicklabs.com/blog/saint-correspondences-chaos-magick-working.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://cha0smagicklabs.com/blog/catholic-pentacle-ritual-chaos-magick.html</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
