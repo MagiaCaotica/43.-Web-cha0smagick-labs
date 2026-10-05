@@ -1,6 +1,6 @@
 # Cha0smagick Labs 🔮
 
-**Occult Android apps, esoteric PDF books, free web tools, and a 190+ article occult library.**
+**Occult Android apps, esoteric PDF books, free web tools, and an 800+ article occult library.**
 
 Static site (HTML/CSS/JS) — GitHub Pages — [cha0smagicklabs.com](https://cha0smagicklabs.com)
 
@@ -10,7 +10,7 @@ Static site (HTML/CSS/JS) — GitHub Pages — [cha0smagicklabs.com](https://cha
 |-------|-----------|
 | Hosting | GitHub Pages (static) |
 | Frontend | HTML5, CSS3, Vanilla JS |
-| Blog Engine | Python (`generate-articles.py`) — 190+ static HTML articles |
+| Blog Engine | Python (`generate-articles.py`) — 800+ static HTML articles |
 | Analytics | Google Analytics (G-V6LHCPN9TK) + Google Ads Conversion |
 | Email | MailerLite (EN + ES lead magnet workflows) |
 | Affiliates | `js/affiliate.js` — URL param capture + GA4 events |
@@ -19,7 +19,7 @@ Static site (HTML/CSS/JS) — GitHub Pages — [cha0smagicklabs.com](https://cha
 
 ## 📦 Products
 
-### Android Apps (11) — $3.99 to $14.99 — One-time purchase (no subs)
+### Android Apps (12) — $3.99 to $14.99 — One-time purchase (no subs)
 
 | App | Price | Funnel |
 |-----|-------|--------|
@@ -28,15 +28,16 @@ Static site (HTML/CSS/JS) — GitHub Pages — [cha0smagicklabs.com](https://cha
 | Norse Rune Oracle | $3.99 | [Apps](https://cha0smagicklabs.com/apps/norse-rune-oracle.html) |
 | Dream Machine | $3.99 | [Apps](https://cha0smagicklabs.com/apps/dream-machine.html) |
 | Chaos Sigil Generator | $3.99 | [Apps](https://cha0smagicklabs.com/apps/chaos-sigil-generator.html) |
-| Astral Lab | $3.99 | [Apps](https://cha0smagicklabs.com/apps/astral-lab.html) |
+| Astral Lab | $6.99 | [Apps](https://cha0smagicklabs.com/apps/astral-lab.html) |
 | Arcana Goetia | $3.99 | [Apps](https://cha0smagicklabs.com/apps/arcana-goetia.html) |
 | NOCTEM — Paranormal Suite | $14.99 | [Apps](https://cha0smagicklabs.com/apps/noctem-tools.html) |
 | Eerie Roads | $9.99 | [Apps](https://cha0smagicklabs.com/apps/eerieroads.html) |
 | I Ching Oracle | $3.99 | [Apps](https://cha0smagicklabs.com/apps/iching-oracle.html) |
 | Lunar Phase Calculator | $3.99 | [Apps](https://cha0smagicklabs.com/apps/lunar-phase-calculator.html) |
+| Lucid Dream: Astral Projection | $9.99 | [Apps](https://cha0smagicklabs.com/apps/lucid-dream.html) |
 
-### PDF Books (7) — $4.99 to $9.99 — Hotmart
-Bundle $19.99 (52% off) — [Buy](https://pay.hotmart.com/D93257466P)
+### PDF Books (7) — $3.99 to $9.99 — Hotmart
+Bundle $19.99 (51% off) — [Buy](https://pay.hotmart.com/D93257466P)
 
 ### Free Web Tools (10)
 Sigil Generator, I Ching Oracle, Rune Oracle, Lunar Phase Calculator, Spell Builder, Astrology Calculator (Astral Lab Web), Candle Color Calculator, Pendulum, Tengwar Transcriber, Servitor Activator
@@ -72,7 +73,7 @@ Sigil Generator, I Ching Oracle, Rune Oracle, Lunar Phase Calculator, Spell Buil
 
 | Script | Purpose |
 |--------|---------|
-| `scripts/generate-articles.py` | Blog article generator (190+ articles) |
+| `scripts/generate-articles.py` | Blog article generator (800+ articles) |
 | `scripts/bot-brain.js` | Shared catalog knowledge base for bots |
 | `scripts/groq-ai.js` | Groq-powered Q&A module |
 | `scripts/telegram-bot.js` | Telegram bot (polling, 11 commands) |
@@ -87,7 +88,7 @@ Sigil Generator, I Ching Oracle, Rune Oracle, Lunar Phase Calculator, Spell Buil
 
 ## 🗺️ Sitemap
 
-`sitemap.xml` — 176+ URLs covering all pages, apps, tools, and blog articles.
+`sitemap.xml` — 900+ URLs covering all pages, apps, tools, and blog articles.
 
 ## 📋 Strategic Plan Status
 

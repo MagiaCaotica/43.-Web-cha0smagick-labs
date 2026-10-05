@@ -696,7 +696,7 @@ const appsData = [
     {
         id: "lucid-dream",
         name: "Lucid Dream: Astral Projection",
-        price: "$3.99 USD",
+        price: "$9.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_lucid_dream",
         status: "available",
         description: "Learn to have lucid dreams, keep a dream journal, and master astral projection. 🌙",
@@ -749,7 +749,7 @@ const appsData = [
             </ul>
             
             <h2>One-Time Purchase. Lifetime Access.</h2>
-            <p><strong>Lucid Dream</strong> is available for a single payment of <strong>$3.99 USD</strong>. No subscriptions, no in-app purchases, no recurring fees. Take full control of your dreams. The portal awaits.</p>
+            <p><strong>Lucid Dream</strong> is available for a single payment of <strong>$9.99 USD</strong>. No subscriptions, no in-app purchases, no recurring fees. Take full control of your dreams. The portal awaits.</p>
         `
     },
     {

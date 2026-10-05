@@ -634,7 +634,7 @@ const appsData = [
     {
         id: "lucid-dream",
         name: "Lucid Dream: Astral Projection",
-        price: "$3.99 USD",
+        price: "$9.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer",
         status: "available",
         description: "Aprende a tener sueños lúcidos, lleva un registro de tus sueños y domina la proyección astral.",

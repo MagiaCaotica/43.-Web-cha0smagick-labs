@@ -584,8 +584,8 @@
       ? '✨ La Colección Completa de Magia del Caos'
       : '✨ The Complete Occult Collection';
     var text = lang
-      ? '11 Apps Android premium + 7 Libros PDF. Todo lo que necesitas para tu práctica de Magia del Caos, en un solo ecosistema. 100% offline, sin suscripciones.'
-      : '11 Android apps + 7 PDF books. Everything for your Chaos Magick practice in one complete ecosystem. 100% offline, no subscriptions.';
+      ? '12 Apps Android premium + 7 Libros PDF. Todo lo que necesitas para tu práctica de Magia del Caos, en un solo ecosistema. 100% offline, sin suscripciones.'
+      : '12 Android apps + 7 PDF books. Everything for your Chaos Magick practice in one complete ecosystem. 100% offline, no subscriptions.';
     var cta = lang
       ? 'Ver Todos los Productos →'
       : 'Browse All Products →';
@@ -597,7 +597,7 @@
     <p class="cm-collection-text">' + text + '</p>\
     <div class="cm-collection-stats">\
       <div class="cm-stat">\
-        <span class="cm-stat-num">11</span>\
+        <span class="cm-stat-num">12</span>\
         <span class="cm-stat-label">Android Apps</span>\
       </div>\
       <div class="cm-stat">\
@@ -1171,7 +1171,7 @@
     </div>\
     <div class="cm-tstat-sep"></div>\
     <div class="cm-tstat">\
-      <span class="cm-tstat-num">11</span>\
+      <span class="cm-tstat-num">12</span>\
       <span class="cm-tstat-label">' + (isSpanish() ? 'Apps' : 'Apps') + '</span>\
       <span class="cm-tstat-sub">' + (isSpanish() ? 'Premium sin publicidad' : 'Premium Ad-Free') + '</span>\
     </div>\

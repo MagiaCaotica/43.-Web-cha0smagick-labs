@@ -213,7 +213,7 @@ Estas páginas son herramientas estáticas, gratuitas y orientativas. Funcionan 
 - [I Ching Oracle](https://cha0smagicklabs.com/apps/iching-oracle.html): digital three-coin casting, all 64 hexagrams, changing lines, cast history, offline use, $3.99 one-time
 - [Lunar Phase Calculator](https://cha0smagicklabs.com/apps/lunar-phase-calculator.html): moon phase calendar, ritual timing, spell scheduling, offline use, $3.99 one-time
 - [Unofficial Rider-Waite Tarot](https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html): full 78-card Rider-Waite-Smith deck, spreads, reversed meanings, reading journal, $9.99 one-time
-- [Lucid Dream](https://cha0smagicklabs.com/apps/lucid-dream.html): lucid dreaming companion — dream recall tracking, lucidity reminders, offline use, $3.99 one-time
-- [Astral Lab](https://cha0smagicklabs.com/apps/astral-lab.html): astral projection training, vibrational-state guidance, session log, offline use, $3.99 one-time
+- [Lucid Dream](https://cha0smagicklabs.com/apps/lucid-dream.html): lucid dreaming companion — binaural beat engine, unlimited dream journal, statistics, hermetic ritual system, offline use, $9.99 one-time
+- [Astral Lab](https://cha0smagicklabs.com/apps/astral-lab.html): astrology and natal charts — VSOP87-precision natal charts, real-time transits, aspect grids, unlimited profiles, offline use, zero tracking, $6.99 one-time
 - [Eerie Roads](https://cha0smagicklabs.com/apps/eerieroads.html): paranormal investigation — EVP recording, spirit box, road-trip ghost hunts, $9.99 one-time
 - [NOCTEM](https://cha0smagicklabs.com/apps/noctem-tools.html): premium night/paranormal toolkit, $14.99 one-time

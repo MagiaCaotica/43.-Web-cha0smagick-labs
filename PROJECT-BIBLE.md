@@ -56,7 +56,7 @@ ROOT/  ← GitHub Pages deploy source
 │   ├── visitor-map.js                   # Mapa de visitantes (249 líneas)
 │   └── visitor-map.min.js               # Minified
 │
-├── apps/                                # 11 landing pages de apps Android
+├── apps/                                # 12 landing pages de apps Android
 │   ├── psi-gym.html
 │   ├── arcana-goetia.html
 │   ├── norse-rune-oracle.html
@@ -290,7 +290,7 @@ projects/  ← NO se despliega a GitHub Pages. Solo desarrollo/interno.
 | `best-occult-apps-android.html` | Comparativa mejores apps ocultas Android |
 | `privacy-policy.html` | Política privacidad + cookie consent |
 
-### 4.2 Landing Pages Apps Android (11)
+### 4.2 Landing Pages Apps Android (12)
 | Archivo | App | Precio | ID en apps-data.js |
 |---------|-----|--------|-------------------|
 | `apps/psi-gym.html` | PSI GYM: Zener ESP Trainer | $3.99 | `psi-gym` |
@@ -301,9 +301,10 @@ projects/  ← NO se despliega a GitHub Pages. Solo desarrollo/interno.
 | `apps/chaos-sigil-generator.html` | Magick Chaos Sigil Generator | $3.99 | `chaos-sigil-generator` |
 | `apps/unofficial-rider-waite-tarot.html` | Rider Waite Tarot Complete | $9.99 | `unofficial-rider-waite-tarot` |
 | `apps/dream-machine.html` | Dream Machine: Lucid Dreaming | $3.99 | `dream-machine` |
-| `apps/astral-lab.html` | Astral Lab | $3.99 | `astral-lab` |
+| `apps/astral-lab.html` | Astral Lab: Natal Chart & Astrology | $6.99 | `astral-lab` |
 | `apps/noctem-tools.html` | NOCTEM — Paranormal Suite | $14.99 | `noctem-tools` |
 | `apps/eerieroads.html` | Eerie Roads: Mysterious Paths | $9.99 | `eerieroads` |
+| `apps/lucid-dream.html` | Lucid Dream: Astral Projection | $9.99 | `lucid-dream` |
 
 ### 4.3 Landing Pages Libros PDF — Hotmart (7)
 | Archivo | Libro | Precio | ID en apps-data.js |
@@ -359,7 +360,7 @@ projects/  ← NO se despliega a GitHub Pages. Solo desarrollo/interno.
 
 Contiene **dos arrays globales** fuente de verdad del catálogo:
 
-#### `appsData[]` — Aplicaciones Android (11)
+#### `appsData[]` — Aplicaciones Android (12)
 | # | ID | Nombre | Precio |
 |---|-----|--------|--------|
 | 1 | `psi-gym` | PSI GYM: Zener Cards & ESP | $3.99 |
@@ -370,9 +371,10 @@ Contiene **dos arrays globales** fuente de verdad del catálogo:
 | 6 | `chaos-sigil-generator` | Magick Chaos Sigil Generator | $3.99 |
 | 7 | `unofficial-rider-waite-tarot` | Unofficial Rider Waite Tarot | $9.99 |
 | 8 | `dream-machine` | Dream Machine: Lucid Dreaming | $3.99 |
-| 9 | `astral-lab` | Astral Lab | $3.99 |
+| 9 | `astral-lab` | Astral Lab: Natal Chart & Astrology | $6.99 |
 | 10 | `noctem-tools` | NOCTEM — Paranormal Suite | $14.99 |
 | 11 | `eerieroads` | Eerie Roads: Mysterious Paths | $9.99 |
+| 12 | `lucid-dream` | Lucid Dream: Astral Projection | $9.99 |
 
 #### `booksData[]` — Libros PDF Hotmart (7)
 | # | ID | Nombre | Precio | Idioma |
@@ -382,7 +384,8 @@ Contiene **dos arrays globales** fuente de verdad del catálogo:
 | 3 | `ouija-cazadora-pdf` | Ouija Cazadora | $3.99 | Spanish |
 | 4 | `liber-lvpinux-pdf` | Liber Lvpinux | $3.99 | Spanish |
 | 5 | `codex-chaoticus-pdf` | Codex Chaoticus | $4.99 | EN/ES |
-| 6 | `tarot-chaos-pdf` | Tarot Chaos | $9.99 | EN/ES |
+| 6 | `mind-the-gap-pdf` | Mind The Gap (self-help) | $9.99 | Spanish |
+| 7 | `tarot-chaos-pdf` | Tarot Chaos | $9.99 | EN/ES |
 
 ---
 
@@ -415,7 +418,7 @@ Contiene **dos arrays globales** fuente de verdad del catálogo:
 |---------|----------|
 | **Páginas HTML totales (deployables)** | ~226 |
 | Artículos del blog | 194 |
-| Landing pages de apps | 11 |
+| Landing pages de apps | 12 |
 | Landing pages de libros | 7 |
 | Herramientas gratuitas | 10 |
 | Páginas core | 5 |
@@ -427,7 +430,7 @@ Contiene **dos arrays globales** fuente de verdad del catálogo:
 | **Scripts en `projects/scripts/`** | ~170 |
 | **Documentos en `projects/docs/`** | 21 |
 | **Pins Pinterest** | 137 |
-| **Apps Android publicadas** | 11 |
+| **Apps Android publicadas** | 12 |
 | **Libros PDF en Hotmart** | 7 (bundle $19.99) |
 
 ---
