@@ -63,3 +63,6 @@ projects/data/linkgraph/_debug_*.py
 
 # Play sales reports: business-sensitive, same policy as projects/playstore.json
 projects/salesreport_*.csv
+
+# SEO diagnostics throwaway (scripts/seo/_*.mjs are scratch probes, not committed tooling)
+scripts/seo/_*.mjs
