@@ -137,7 +137,7 @@
             <input type="time" id="birthTime" value="12:00">
         </div>
     </div>
-    <button class="calc-btn" id="calcBtn">? Calculate My Signs</button>
+    <button class="calc-btn" id="calcBtn">✦ Calculate My Signs</button>
 
     <div id="results" style="display:none">
         <div class="result-grid" id="signGrid"></div>
@@ -182,7 +182,7 @@
 </section>
 
 <section class="cta-box">
-    <h2 class="section-title cta-box">? Full Astrology Anywhere</h2>
+    <h2 class="section-title cta-box">✦ Full Astrology Anywhere</h2>
     <p>Try the free calculator, then unlock your complete birth chart with the <strong>Lunar Phase Calculator</strong> Android app. Transit tracking, planetary hours, and magical timing.</p>
     <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1rem 0;">
         <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">&#128202; Full Chart</span>
@@ -194,12 +194,12 @@
 </section>
 
 <div class="sticky-conversion-bar">
-    <span class="sticky-text">? Lunar Phase Calculator</span>
+    <span class="sticky-text">✦ Lunar Phase Calculator</span>
     <span class="price-tag">$3.99</span>
     <a href="https://play.google.com/store/apps/details?id=com.lunarapp.app" class="sticky-cta" target="_blank">Get the App ?</a>
 </div>
 
-<div class="back-link"><a href="index.html">? Back to All Free Tools</a></div>
+<div class="back-link"><a href="index.html">✦ Back to All Free Tools</a></div>
 </div>
 
 <footer id="site-footer" class="site-footer">
@@ -383,28 +383,28 @@ document.getElementById('calcBtn').onclick = function() {
     const grid = document.getElementById('signGrid');
     grid.innerHTML = `
         <div class="sign-card">
-            <div class="sign-icon">??</div>
+            <div class="sign-icon">☀️</div>
             <h3>Sun Sign</h3>
             <div class="sign-name">${sun.name}</div>
             <div class="sign-date">${sun.dates}</div>
             <div class="sign-desc">${sun.desc}</div>
-            <div class="sign-element ${elementClass(sun.element)}">$ — ${sun.ruler}</div>
+            <div class="sign-element ${elementClass(sun.element)}">${sun.element} — ${sun.ruler}</div>
         </div>
         <div class="sign-card">
-            <div class="sign-icon">??</div>
+            <div class="sign-icon">🌙</div>
             <h3>Moon Sign</h3>
             <div class="sign-name">${moon.name}</div>
-            <div class="sign-date">E</div>
+            <div class="sign-date">Not date-based</div>
             <div class="sign-desc">${moon.desc}</div>
-            <div class="sign-element ${elementClass(moon.element)}">$ — ${moon.ruler}</div>
+            <div class="sign-element ${elementClass(moon.element)}">${moon.element} — ${moon.ruler}</div>
         </div>
         <div class="sign-card">
-            <div class="sign-icon">??</div>
+            <div class="sign-icon">🌅</div>
             <h3>Rising Sign (Ascendant)</h3>
             <div class="sign-name">${asc.name}</div>
-            <div class="sign-date">P</div>
+            <div class="sign-date">From birth time</div>
             <div class="sign-desc">${asc.desc}</div>
-            <div class="sign-element ${elementClass(asc.element)}">$ — ${asc.ruler}</div>
+            <div class="sign-element ${elementClass(asc.element)}">${asc.element} — ${asc.ruler}</div>
         </div>
     `;
     

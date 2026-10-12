@@ -72,4 +72,14 @@ scripts/seo/_*.mjs
 .gsc*
 .play*
 _play*.json
+_play*.cjs
+_play-*.md
+
+# SEO diagnostics throwaway (scripts/seo/_* are scratch probes, not committed tooling)
+scripts/seo/_*
+
+
+# temp audit/gsc artifacts at repo root_n_gsc*.json
+_gsc-*.json
+_striking.json
 
