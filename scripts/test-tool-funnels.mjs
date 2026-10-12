@@ -88,6 +88,10 @@ await context.addInitScript(() => {
   gtag.cmd = [];
   gtag.loaded = true;
   window.gtag = gtag;
+  // El bridge es opt-in desde 1d7d9cba; sin consentimiento descarta
+  // tool_funnel_view/click por diseno y el espejo jamas aparece en dataLayer.
+  // Sembramos el opt-in de un visitante recurrente antes de los scripts.
+  try { localStorage.setItem('cha0_analytics_consent', 'granted'); } catch (_) {}
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push = new Proxy(window.dataLayer.push, {
     apply(t, self, args) { window.__gaEvents.push(args); return Reflect.apply(t, self, args); }
