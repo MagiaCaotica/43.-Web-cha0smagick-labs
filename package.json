@@ -30,7 +30,7 @@
     "bot:discord": "node scripts/bots/discord-bot.js",
     "bot:all": "node scripts/bots/run-bots.js all",
     "bot:start": "node scripts/bots/run-bots.js all",
-    "social:daily": "node scripts/gen-daily-pin.mjs && node scripts/social-publish.js daily",
+    "social:daily": "node --env-file=.env scripts/gen-daily-pin.mjs && node --env-file=.env scripts/social-publish.js daily",
     "social:dry": "node scripts/social-publish.js daily --dry-run",
     "indexnow": "node scripts/ping-indexnow.mjs",
     "social:selftest": "node scripts/social-publish.js selftest",
