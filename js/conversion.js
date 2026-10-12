@@ -1439,6 +1439,14 @@
   function run() {
     var pageType = getPageType();
 
+    // /apps/ product pages fall through to 'other' (getPageType has no case
+    // for them), but they are sales surfaces: give them the cross-sell
+    // funnel and stop before the admin/payment guard.
+    if (/\/apps\//.test(window.location.pathname)) {
+      initProductFunnel('app');
+      return;
+    }
+
     // Never run on admin/payment pages
     if (pageType === 'other') return;
 
@@ -1578,6 +1586,9 @@
       case 'books': {
         // Share row on book sales pages
         injectShareButtons();
+
+        // Cross-sell funnel: related apps + rest of the collection + bundle
+        initProductFunnel('book');
 
         // Book pages - inject lead magnet + collection CTA
         var bookFooter = document.querySelector('footer');
@@ -2551,6 +2562,161 @@
       window.__cmViewContent = slug;
       window.fbq('track', 'ViewContent', { content_name: slug, content_type: 'product' });
     } catch (e) { /* pixel is optional */ }
+  }
+
+  /* --- Product cross-sell funnel (books + apps pages) --------------------
+   * Product pages were dead ends: a book page sold only that book. This
+   * injects, from the tool-funnels reverse map:
+   *   book page -> related apps pitch + rest of the collection + bundle CTA
+   *   app page  -> related book CTA + other apps + bundle CTA
+   * Plus a sticky mobile buy bar on book pages (Hotmart checkout recovery).
+   * ---------------------------------------------------------------------- */
+
+  function cmProductStyles() {
+    if (document.getElementById('cm-product-styles')) return;
+    var css = '' +
+      '.cm-xlist{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px;}' +
+      '.cm-xlist a{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;' +
+      'border:1px solid rgba(255,255,255,.12);border-radius:10px;color:#F5F7FF;' +
+      'text-decoration:none;font:500 14px Helvetica,Arial,sans-serif;}' +
+      '.cm-xlist a:hover{border-color:#FFB03A;}' +
+      '.cm-xlist .cm-xprice{color:#FFB03A;font-weight:700;white-space:nowrap;}' +
+      '.cm-sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:9998;display:none;' +
+      'padding:10px 14px calc(10px + env(safe-area-inset-bottom));' +
+      'background:rgba(11,16,38,.97);border-top:1px solid rgba(255,176,58,.4);}' +
+      '.cm-sticky-buy a{display:block;text-align:center;padding:12px;border-radius:999px;' +
+      'background:#FFB03A;color:#0B1026;font:800 15px Helvetica,Arial,sans-serif;text-decoration:none;}' +
+      '@media (max-width:760px){.cm-sticky-buy{display:block;}}';
+    var st = document.createElement('style');
+    st.id = 'cm-product-styles';
+    st.textContent = css;
+    document.head.appendChild(st);
+  }
+
+  function cmProductSlug() {
+    return (location.pathname.replace(/\/+$/, '').split('/').pop() || '')
+      .replace(/\.html?$/i, '');
+  }
+
+  function productFunnelHtml(kind, catalogue, lang) {
+    var es = lang === 'es';
+    var data = catalogue || {};
+    var tools = data.tools || {};
+    var slug = cmProductSlug();
+    var inner = '';
+
+    if (kind === 'book') {
+      /* Apps related to THIS book: reverse map over tools[].book === slug */
+      var appIds = [];
+      for (var ts in tools) {
+        var f = tools[ts] || {};
+        var bid = f.book ? (f.book.id || f.book) : '';
+        if (bid && bid === slug) {
+          var fa = Array.isArray(f.apps) ? f.apps : [];
+          for (var k = 0; k < fa.length; k++) {
+            if (appIds.indexOf(fa[k]) === -1) appIds.push(fa[k]);
+          }
+        }
+      }
+      var apps = [];
+      for (var k2 = 0; k2 < appIds.length && apps.length < 3; k2++) {
+        var hit = (data.products.apps || []).filter(function (p) { return p.id === appIds[k2]; })[0];
+        if (hit) apps.push(hit);
+      }
+      if (apps.length) inner += prePitchHtml(slug, apps, null, lang);
+
+      /* The rest of the grimoire collection */
+      var others = (data.products.books || []).filter(function (b) { return b.id !== slug; }).slice(0, 6);
+      if (others.length) {
+        var rows = '';
+        for (var k3 = 0; k3 < others.length; k3++) {
+          rows += '<li><a href="' + viralEsc(others[k3].page) + '" data-funnel-step="book" data-product-id="' + viralEsc(others[k3].id) + '">' +
+            '<span>' + viralEsc(others[k3].name) + '</span><span class="cm-xprice">' + viralEsc(others[k3].price) + '</span></a></li>';
+        }
+        inner += '<div class="cm-product-sub">' +
+          '<p class="cm-funnel-kicker">' + (es ? 'La colección completa' : 'The full collection') + '</p>' +
+          '<h3>' + (es ? 'Otros grimorios del mismo sistema' : 'More grimoires from the same system') + '</h3>' +
+          '<ul class="cm-xlist">' + rows + '</ul>' +
+          '<div class="cm-funnel-btns" style="margin-top:14px;">' +
+          '<a class="cm-btn cm-btn-book" href="../landing-pages/books-bundle.html" data-funnel-step="book" data-product-id="books-bundle">' +
+          (es ? 'VER EL BUNDLE COMPLETO' : 'SEE THE FULL BUNDLE') + '</a></div></div>';
+      }
+    } else {
+      /* App page: the book that pairs with it (reverse map), else first book */
+      var book = null;
+      for (var ts2 in tools) {
+        var f2 = tools[ts2] || {};
+        var fa2 = Array.isArray(f2.apps) ? f2.apps : [];
+        if (fa2.indexOf(slug) !== -1 && f2.book) {
+          var bid2 = f2.book.id || f2.book;
+          var cand = (data.products.books || []).filter(function (b) { return b.id === bid2; })[0];
+          if (cand) { book = cand; break; }
+        }
+      }
+      if (!book) book = (data.products.books || [])[0] || null;
+      if (book) inner += bookCtaHtml(book, lang);
+
+      /* Other apps of the lab */
+      var otherApps = (data.products.apps || []).filter(function (p) { return p.id !== slug; }).slice(0, 3);
+      if (otherApps.length) {
+        var rows2 = '';
+        for (var k4 = 0; k4 < otherApps.length; k4++) {
+          rows2 += '<li><a href="' + viralEsc(otherApps[k4].url) + '" target="_blank" rel="noopener" data-funnel-step="pitch" data-product-id="' + viralEsc(otherApps[k4].id) + '">' +
+            '<span>' + viralEsc(otherApps[k4].name) + '</span><span class="cm-xprice">' + viralEsc(otherApps[k4].price) + '</span></a></li>';
+        }
+        inner += '<div class="cm-product-sub">' +
+          '<p class="cm-funnel-kicker">' + (es ? 'Completan el ritual' : 'Complete the ritual') + '</p>' +
+          '<h3>' + (es ? 'Otras apps del laboratorio' : 'More apps from the lab') + '</h3>' +
+          '<ul class="cm-xlist">' + rows2 + '</ul>' +
+          '<div class="cm-funnel-btns" style="margin-top:14px;">' +
+          '<a class="cm-btn cm-btn-primary" href="../landing-pages/apps-bundle.html" data-funnel-step="pitch" data-product-id="apps-bundle">' +
+          (es ? 'VER TODAS LAS APPS' : 'SEE ALL APPS') + '</a></div></div>';
+      }
+    }
+
+    if (!inner) return '';
+    return '<section class="cm-funnel-step cm-product-funnel" id="cm-product-funnel">' +
+      '<div class="cm-funnel-inner">' + inner + '</div></section>';
+  }
+
+  function initStickyBuy() {
+    if (document.querySelector('.cm-sticky-buy')) return;
+    if (!/\/books\//.test(location.pathname)) return;
+    /* Book pages link both pay.hotmart.com checkouts and hotmart.com
+     * marketplace product pages; both are buy intent. */
+    var pay = document.querySelector('a[href*="hotmart.com"]');
+    if (!pay) return;
+    var bar = document.createElement('div');
+    bar.className = 'cm-sticky-buy';
+    var a = document.createElement('a');
+    a.href = pay.href;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = isSpanish() ? 'COMPRAR AHORA' : 'BUY NOW';
+    a.setAttribute('data-funnel-step', 'book');
+    a.setAttribute('data-product-id', cmProductSlug());
+    bar.appendChild(a);
+    document.body.appendChild(bar);
+    bindFunnelClicks(bar);
+  }
+
+  function initProductFunnel(kind) {
+    if (document.getElementById('cm-product-funnel')) return;
+    cmProductStyles();
+    whenFunnelReady(function (catalogue) {
+      initStickyBuy();
+      if (document.getElementById('cm-product-funnel')) return;
+      var html = productFunnelHtml(kind, catalogue, isSpanish() ? 'es' : 'en');
+      if (!html) return;
+      var footer = document.querySelector('footer');
+      if (footer && footer.insertAdjacentHTML) footer.insertAdjacentHTML('beforebegin', html);
+      else {
+        var host = document.querySelector('main') || document.body;
+        host.insertAdjacentHTML('beforeend', html);
+      }
+      bindFunnelClicks(document.getElementById('cm-product-funnel'));
+      track('product_funnel_view', { kind: kind, product_id: cmProductSlug() });
+    });
   }
 
   /* ============================================================
