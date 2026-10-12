@@ -70,6 +70,46 @@ const hasVC = await page2.evaluate(() => (window.fbq && Array.isArray(window.fbq
 check('ViewContent disparado en books', hasVC);
 check('sin pageerror en books', errs2.length === 0);
 
+// 4. Product cross-sell funnel: book page -> apps + other books + bundle
+// (specific book page: books/index.html maps to no single book by design)
+const pageB = await ctx.newPage();
+await pageB.addInitScript(() => { window.fbq = function () { (window.fbq.queue = window.fbq.queue || []).push([].slice.call(arguments)); }; });
+const errsB = [];
+pageB.on('pageerror', e => errsB.push(String(e)));
+await pageB.goto(`${base}/books/manual-activacion-servidores-magicos-pdf.html`, { waitUntil: 'load' });
+await pageB.waitForTimeout(1500);
+check('funnel cruzado en book page', await pageB.locator('#cm-product-funnel').count() === 1);
+check('pitch de apps en book page', await pageB.locator('#cm-product-funnel .cm-funnel-pitch').count() === 1);
+check('otros libros listados', await pageB.locator('#cm-product-funnel .cm-xlist li').count() >= 5);
+check('bundle CTA presente', await pageB.locator('#cm-product-funnel a[href*="books-bundle"]').count() === 1);
+check('sin pageerror en book page', errsB.length === 0);
+const funEvt = await pageB.evaluate(() => new Promise(res => {
+  const seen = []; const orig = window.gtag;
+  window.gtag = function (t, name) { if (t === 'event') seen.push(name); if (orig) orig.apply(this, arguments); };
+  const link = document.querySelector('#cm-product-funnel .cm-xlist a');
+  link.addEventListener('click', e => e.preventDefault(), { once: true, capture: true });
+  link.click();
+  setTimeout(() => res(seen), 300);
+}));
+check('evento tool_funnel_click en cross-sell', funEvt.includes('tool_funnel_click'));
+
+// 5. Sticky buy bar (mobile viewport) on a book page
+const page3 = await ctx.newPage();
+await page3.setViewportSize({ width: 390, height: 844 });
+await page3.goto(`${base}/books/manual-activacion-servidores-magicos-pdf.html`, { waitUntil: 'load' });
+await page3.waitForTimeout(1500);
+check('sticky buy bar visible en móvil', await page3.locator('.cm-sticky-buy').isVisible());
+const stickyHref = await page3.locator('.cm-sticky-buy a').getAttribute('href');
+check('sticky apunta a Hotmart checkout', !!stickyHref && stickyHref.includes('hotmart.com'));
+
+// 6. App page: book CTA + other apps + bundle
+const page4 = await ctx.newPage();
+await page4.goto(`${base}/apps/psi-gym.html`, { waitUntil: 'load' });
+await page4.waitForTimeout(1500);
+check('book CTA en app page', await page4.locator('#cm-product-funnel .cm-book-cta').count() === 1);
+check('otras apps listadas', await page4.locator('#cm-product-funnel .cm-xlist li').count() === 3);
+check('apps bundle CTA en app page', await page4.locator('#cm-product-funnel a[href*="apps-bundle"]').count() === 1);
+
 await browser.close();
 server.close();
 const fails = results.filter(r => !r[0]).length;
