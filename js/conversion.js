@@ -2297,6 +2297,263 @@
   }
 
   /* ============================================================
+   * VIRAL GROWTH LAYER (plan 2026-10-12)
+   * 1. Share bar on every tool page: copy / WhatsApp / X / PNG card.
+   *    The PNG renders the visitor's own result as a branded card
+   *    (watermark + ref code + utm link), so every visitor can
+   *    become a distributor.
+   * 2. Social proof strip on /books/ + /apps/ pages: inline trust
+   *    badges (no network needed) + real testimonials pulled from
+   *    data/social-proof.json when present. Never fabricates copy.
+   * 3. Meta ViewContent on product pages so retargeting audiences
+   *    are built from real product-page traffic.
+   * ============================================================ */
+
+  function viralEsc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&' + 'amp;')
+      .replace(/</g, '&' + 'lt;')
+      .replace(/>/g, '&' + 'gt;')
+      .replace(/"/g, '&' + 'quot;')
+      .replace(/'/g, '&' + '#39;');
+  }
+
+  function viralToolSlug() {
+    var m = location.pathname.match(/\/tools\/([^/]+?)(?:\.html?)?\/?$/);
+    return m && m[1] !== 'index' ? m[1] : '';
+  }
+
+  function viralHost() {
+    return document.getElementById('atomic-app') ||
+      document.querySelector('.tool-container, #results, .features') ||
+      document.querySelector('main') ||
+      document.querySelector('.container') ||
+      document.body;
+  }
+
+  function viralShareUrl(slug) {
+    return location.origin + '/tools/' + slug + '.html' +
+      '?utm_source=tool&utm_medium=share&utm_campaign=' + encodeURIComponent(slug);
+  }
+
+  function viralEnsureStyles() {
+    if (document.getElementById('cm-viral-styles')) return;
+    var css = '' +
+      '.cm-share-bar{margin:28px 0;padding:18px 20px;border:1px solid rgba(255,176,58,.35);' +
+      'border-radius:14px;background:rgba(19,26,58,.85);color:#F5F7FF;}' +
+      '.cm-share-title{font:700 15px/1.3 Helvetica,Arial,sans-serif;color:#FFB03A;' +
+      'text-transform:uppercase;letter-spacing:.08em;margin:0 0 10px;}' +
+      '.cm-share-row{display:flex;flex-wrap:wrap;gap:8px;}' +
+      '.cm-share-btn{display:inline-block;padding:9px 14px;border-radius:999px;' +
+      'border:1px solid rgba(245,247,255,.25);background:#131A3A;color:#F5F7FF;' +
+      'font:600 13px Helvetica,Arial,sans-serif;cursor:pointer;text-decoration:none;}' +
+      '.cm-share-btn:hover{border-color:#FFB03A;color:#FFB03A;}' +
+      '.cm-share-note{margin:8px 0 0;font:400 12px/1.5 Helvetica,Arial,sans-serif;color:#8A93B8;}' +
+      '.cm-proof{margin:26px 0;padding:18px 20px;border:1px solid rgba(53,196,217,.3);' +
+      'border-radius:14px;background:rgba(19,26,58,.7);color:#F5F7FF;}' +
+      '.cm-proof-title{font:700 14px Helvetica,Arial,sans-serif;color:#35C4D9;' +
+      'letter-spacing:.06em;text-transform:uppercase;margin:0 0 10px;}' +
+      '.cm-proof-badges{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none;}' +
+      '.cm-proof-badges li{padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.06);' +
+      'font:500 12.5px Helvetica,Arial,sans-serif;}' +
+      '.cm-proof-quote{margin:12px 0 0;padding:12px 14px;border-left:3px solid #FFB03A;' +
+      'background:rgba(255,255,255,.04);font:400 14px/1.6 Helvetica,Arial,sans-serif;}' +
+      '.cm-proof-quote footer{margin-top:6px;color:#8A93B8;font-size:12.5px;}';
+    var style = document.createElement('style');
+    style.id = 'cm-viral-styles';
+    style.textContent = css;
+    document.head.appendChild(style);
+  }
+
+  function viralShareBarHtml(slug, lang) {
+    var es = lang !== 'en';
+    var t = es
+      ? { title: 'Comparte tu resultado', copy: 'Copiar enlace', wa: 'WhatsApp', x: 'X', png: 'Descargar imagen', note: 'Tu resultado se convierte en una imagen con el enlace: compártela y alguien más descubre la herramienta.' }
+      : { title: 'Share your result', copy: 'Copy link', wa: 'WhatsApp', x: 'X', png: 'Download image', note: 'Your result becomes a branded image with the link: share it and someone else discovers the tool.' };
+    var url = encodeURIComponent(viralShareUrl(slug));
+    var text = encodeURIComponent(es ? 'Mi resultado en Cha0smagick Labs' : 'My result on Cha0smagick Labs');
+    return '<div class="cm-share-bar" data-cm-share="' + viralEsc(slug) + '">' +
+      '<p class="cm-share-title">' + t.title + '</p>' +
+      '<div class="cm-share-row">' +
+      '<button type="button" class="cm-share-btn" data-share="copy">' + t.copy + '</button>' +
+      '<a class="cm-share-btn" data-share="wa" target="_blank" rel="noopener" href="https://wa.me/?text=' + text + '%20' + url + '">' + t.wa + '</a>' +
+      '<a class="cm-share-btn" data-share="x" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=' + text + '&url=' + url + '">' + t.x + '</a>' +
+      '<button type="button" class="cm-share-btn" data-share="png">' + t.png + '</button>' +
+      '</div><p class="cm-share-note">' + t.note + '</p></div>';
+  }
+
+  function viralResultText(host) {
+    var sels = ['[data-share-result]', '#result', '.result', '.result-box', '.output', '#output'];
+    for (var i = 0; i < sels.length; i++) {
+      var el = host.querySelector(sels[i]);
+      if (el) {
+        var txt = (el.textContent || '').replace(/\s+/g, ' ').trim();
+        if (txt.length > 3) return txt.slice(0, 600);
+      }
+    }
+    return '';
+  }
+
+  function viralRefCode(slug) {
+    var h = 5381, s = slug + '|' + location.host;
+    for (var i = 0; i < s.length; i++) h = ((h * 33) ^ s.charCodeAt(i)) >>> 0;
+    return h.toString(36).slice(0, 6).toUpperCase();
+  }
+
+  function viralWrap(ctx, text, x, y, maxW, lineH, maxLines) {
+    var words = String(text || '').split(' ');
+    var line = '', lines = 0;
+    for (var i = 0; i < words.length; i++) {
+      var test = line ? line + ' ' + words[i] : words[i];
+      if (ctx.measureText(test).width > maxW && line) {
+        ctx.fillText(line, x, y); y += lineH; line = words[i];
+        if (++lines >= maxLines - 1) { line += '…'; break; }
+      } else { line = test; }
+    }
+    if (line) ctx.fillText(line, x, y);
+    return y + lineH;
+  }
+
+  function dataURLtoBlob(dataUrl) {
+    var parts = dataUrl.split(',');
+    var mime = (parts[0].match(/:(.*?);/) || [])[1] || 'image/png';
+    var bin = atob(parts[1]);
+    var u8 = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) u8[i] = bin.charCodeAt(i);
+    return new Blob([u8], { type: mime });
+  }
+
+  function viralDownloadCard(slug, resultText) {
+    var c = document.createElement('canvas');
+    c.width = 1080; c.height = 1080;
+    var ctx = c.getContext('2d');
+    if (!ctx) return null;
+    ctx.fillStyle = '#0B1026'; ctx.fillRect(0, 0, 1080, 1080);
+    ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+    for (var gx = 0; gx <= 1080; gx += 60) { ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, 1080); ctx.stroke(); }
+    for (var gy = 0; gy <= 1080; gy += 60) { ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(1080, gy); ctx.stroke(); }
+    ctx.fillStyle = '#FFB03A'; ctx.fillRect(80, 96, 180, 8);
+    ctx.fillStyle = '#35C4D9'; ctx.font = '600 26px Helvetica, Arial, sans-serif';
+    ctx.fillText('CHA0SMAGICK LABS', 80, 160);
+    ctx.fillStyle = '#F5F7FF'; ctx.font = '800 54px Helvetica, Arial, sans-serif';
+    viralWrap(ctx, slug.replace(/-/g, ' '), 80, 250, 920, 62, 2);
+    ctx.fillStyle = '#F5F7FF'; ctx.font = '400 34px Helvetica, Arial, sans-serif';
+    var y = 420;
+    if (resultText) y = viralWrap(ctx, resultText, 80, y, 920, 46, 10);
+    ctx.fillStyle = '#8A93B8'; ctx.font = '500 28px Helvetica, Arial, sans-serif';
+    ctx.fillText('cha0smagick.com/tools/' + slug, 80, 952);
+    ctx.fillStyle = '#FFB03A'; ctx.font = '700 26px Helvetica, Arial, sans-serif';
+    ctx.fillText('REF ' + viralRefCode(slug), 80, 1000);
+    return c.toDataURL('image/png');
+  }
+
+  function initShareArtifact() {
+    var slug = viralToolSlug();
+    if (!slug || document.querySelector('.cm-share-bar')) return;
+    viralEnsureStyles();
+    var host = viralHost();
+    var lang = isSpanish() ? 'en' : 'es';
+    host.insertAdjacentHTML('afterend', viralShareBarHtml(slug, lang));
+    var bar = document.querySelector('.cm-share-bar');
+    if (!bar) return;
+    bar.addEventListener('click', function (ev) {
+      var el = ev.target && ev.target.closest ? ev.target.closest('[data-share]') : null;
+      if (!el) return;
+      var method = el.getAttribute('data-share');
+      var url = viralShareUrl(slug);
+      track('share_artifact', { method: method, tool_id: slug });
+      if (method === 'copy') {
+        var done = function () {
+          var original = lang === 'en' ? 'Copy link' : 'Copiar enlace';
+          el.textContent = lang === 'en' ? 'Copied!' : '¡Copiado!';
+          setTimeout(function () { el.textContent = original; }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, done);
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = url; document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy'); } catch (e) { /* best effort */ }
+          document.body.removeChild(ta); done();
+        }
+      } else if (method === 'png') {
+        var dataUrl = viralDownloadCard(slug, viralResultText(host));
+        if (!dataUrl) return;
+        var file = null;
+        try { file = dataURLtoBlob(dataUrl); } catch (e) { file = null; }
+        if (file && navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
+          navigator.share({ files: [file], title: 'Cha0smagick Labs', text: url })
+            .then(function () { track('share_artifact', { method: 'native', tool_id: slug }); })
+            .catch(function () { /* user cancelled */ });
+        } else {
+          var a = document.createElement('a');
+          a.href = dataUrl;
+          a.download = 'cha0smagick-' + slug + '-' + viralRefCode(slug).toLowerCase() + '.png';
+          document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        }
+      }
+    });
+  }
+
+  function viralProductSlug() {
+    var m = location.pathname.match(/\/(books|apps)\/([^/]+?)(?:\.html?)?\/?$/);
+    return m ? m[2] : '';
+  }
+
+  function initSocialProof() {
+    if (!/\/(books|apps)\//.test(location.pathname) || document.querySelector('.cm-proof')) return;
+    viralEnsureStyles();
+    var es = isSpanish();
+    var badges = es
+      ? ['Pago seguro vía Hotmart', 'Descarga inmediata', 'Actualizaciones incluidas', 'Soporte directo del autor']
+      : ['Secure checkout via Hotmart', 'Instant download', 'Updates included', 'Direct author support'];
+    var html = '<section class="cm-proof" aria-label="' + (es ? 'Confianza' : 'Trust') + '">' +
+      '<p class="cm-proof-title">' + (es ? 'Por qué los lectores confían' : 'Why readers trust it') + '</p>' +
+      '<ul class="cm-proof-badges">';
+    for (var i = 0; i < badges.length; i++) html += '<li>' + viralEsc(badges[i]) + '</li>';
+    html += '</ul><div class="cm-proof-quotes" hidden></div></section>';
+    var footer = document.querySelector('footer');
+    if (footer && footer.insertAdjacentHTML) footer.insertAdjacentHTML('beforebegin', html);
+    else {
+      var host = document.querySelector('main') || document.querySelector('.container') || document.body;
+      host.insertAdjacentHTML('beforeend', html);
+    }
+    /* Real testimonials only: rendered from data/social-proof.json, which
+     * ships empty. The owner fills it with genuine quotes; this code never
+     * invents copy. */
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../data/social-proof.json', true);
+    xhr.onload = function () {
+      if (xhr.status < 200 || xhr.status >= 300) return;
+      var data;
+      try { data = JSON.parse(xhr.responseText); } catch (e) { return; }
+      var quotes = (data && data.testimonials) || [];
+      if (!quotes.length) return;
+      var box = document.querySelector('.cm-proof-quotes');
+      if (!box) return;
+      var inner = '';
+      for (var j = 0; j < quotes.length && j < 3; j++) {
+        var q = quotes[j] || {};
+        if (!q.text) continue;
+        inner += '<blockquote class="cm-proof-quote">' + viralEsc(q.text) +
+          (q.author ? '<footer>' + viralEsc(q.author) + '</footer>' : '') + '</blockquote>';
+      }
+      if (inner) { box.removeAttribute('hidden'); box.innerHTML = inner; }
+    };
+    xhr.send();
+  }
+
+  function initProductPixel() {
+    try {
+      if (!/\/(books|apps)\//.test(location.pathname) || typeof window.fbq !== 'function') return;
+      var slug = viralProductSlug();
+      if (!slug || window.__cmViewContent === slug) return;
+      window.__cmViewContent = slug;
+      window.fbq('track', 'ViewContent', { content_name: slug, content_type: 'product' });
+    } catch (e) { /* pixel is optional */ }
+  }
+
+  /* ============================================================
    * INIT
    * ============================================================ */
 
@@ -2325,6 +2582,9 @@
   function onReady() {
     tagOutboundLinks(document); // UTM + affiliate on hard-coded HTML CTAs
     watchForNewLinks();         // ...and on anything injected later
+    initShareArtifact();        // viral share bar on every tool page
+    initSocialProof();          // trust strip + testimonials on product pages
+    initProductPixel();         // Meta ViewContent for retargeting audiences
     run();                      // page-type specific CTA injection
     initEmailPopup();           // 30s / 50% scroll / exit-intent capture
   }
