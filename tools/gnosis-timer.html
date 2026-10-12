@@ -404,7 +404,7 @@ function loadMethod(method) {
     timeRemaining = m.defaultMinutes * 60;
     totalTime = timeRemaining;
     phases = m.phases.map((p,i) => ({...p, start: i===0 ? 0 : phases.slice(0,i).reduce((a,b)=>a+b.duration,0)*60, end: 0}));
-    for(let i=0;i<phases.length;i++){phases[i].end = (i===0?0:phases.slice(0,i).reduce((a,b)=>a+b.duration,0)*60) + p.duration*60;}
+    for(let i=0;i<phases.length;i++){phases[i].end = (i===0?0:phases.slice(0,i).reduce((a,b)=>a+b.duration,0)*60) + phases[i].duration*60;}
     // Fix phase end times
     let cum = 0;
     phases.forEach((p,i) => { cum += p.duration*60; phases[i].end = cum; });
@@ -500,7 +500,10 @@ function pauseTimer() {
 function resetTimer() {
     isRunning = false;
     clearInterval(timerInterval);
-    loadMethod(currentMethod);
+    timeRemaining = METHODS[currentMethod].defaultMinutes * 60;
+    totalTime = timeRemaining;
+    currentPhase = 0;
+    updateTimerDisplay();
     startBtn.disabled = false;
     pauseBtn.disabled = true;
     resetBtn.disabled = true;

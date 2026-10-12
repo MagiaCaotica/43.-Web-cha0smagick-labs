@@ -296,10 +296,6 @@ const sigilForm = document.getElementById('sigilForm');
 const chargeLogList = document.getElementById('chargeLogList');
 const methodStatsGrid = document.getElementById('methodStatsGrid');
 
-let logs = [];
-let timerInterval = null;
-let timeElapsed = 0;
-let isRunning = false;
 
 function loadLogs() {
     const saved = localStorage.getItem('sigil_charge_logs');
@@ -400,17 +396,7 @@ function loadLogs() {
 
 function saveLogs() { localStorage.setItem('sigil_charge_logs', JSON.stringify(logs.slice(-200))); }
 
-// Timer logic
-let timerInterval = null;
-let timeElapsed = 0;
-let isRunning = false;
 
-const timerDisplay = document.getElementById('timerDisplay');
-const phaseLabel = document.getElementById('phaseLabel');
-const timerCircle = document.getElementById('timerCircle');
-const startBtn = document.getElementById('startBtn');
-const pauseBtn = document.getElementById('pauseBtn');
-const resetBtn = document.getElementById('resetBtn');
 
 function updateTimerDisplay() {
     const m = Math.floor(timeElapsed / 60).toString().padStart(2,'0');
@@ -523,7 +509,6 @@ function saveLogs() { localStorage.setItem('sigil_charge_logs', JSON.stringify(l
 // Initialize
 loadLogs();
 renderMethods();
-renderMethodTabs();
 renderTimerTabs();
 </script>
 <script src="../js/conversion.min.js"></script>

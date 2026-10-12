@@ -366,7 +366,7 @@ function getRandomPrompt() {
 function renderPrompt() {
     const p = getRandomPrompt();
     document.getElementById('promptCategory').textContent = p.category;
-    document.getElementById('promptText').innerHTML = `${p.icon} <strong>${m.name}</strong>: ${m.desc}`;
+    document.getElementById('promptText').innerHTML = `${p.icon} <strong>${p.name}</strong>: ${p.desc}`;
 }
 
 document.getElementById('nextPrompt').onclick = () => {
