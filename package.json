@@ -37,7 +37,9 @@
     "analytics:health:save": "node scripts/analytics-health.js --save",
     "analytics:smoke": "node scripts/analytics-live-smoke.js",
     "analytics:daily": "node scripts/analytics-daily.js --dry-run",
-    "analytics:daily:live": "node scripts/analytics-daily.js --live"
+    "analytics:daily:live": "node scripts/analytics-daily.js --live",
+    "links:scan": "node scripts/seo/link-opportunities.mjs",
+    "links:scan:offline": "node scripts/seo/link-opportunities.mjs --offline"
   },
   "repository": {
     "type": "git",
