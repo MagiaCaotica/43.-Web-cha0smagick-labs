@@ -217,6 +217,8 @@ Estas páginas son herramientas estáticas, gratuitas y orientativas. Funcionan 
 - [Zener Card ESP Trainer](https://cha0smagicklabs.com/tools/zener-esp-trainer.html): Free Zener Card ESP Trainer. Test your precognition, clairvoyance, and intuition with the classic 5-symbol Zener deck. Live scoring, hit-rate %, binomial
 
 
+> Full text index: https://cha0smagicklabs.com/llms-full.txt
+
 ## Technical Notes
 
 - **Language:** Primary English (EN), some Spanish (ES) for activador-servidores
