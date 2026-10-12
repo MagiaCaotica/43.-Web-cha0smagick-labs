@@ -237,6 +237,33 @@ body:has([data-atomic-tool]) main {
   border-color: var(--atomic-error);
 }
 
+.atomic-timer {
+  background: #0d0d0d;
+  border: 1px solid var(--atomic-line);
+  margin: 1.2rem 0;
+  padding: 1.4rem;
+  text-align: center;
+}
+
+.atomic-timer-display {
+  color: var(--atomic-gold);
+  font-size: clamp(2.6rem, 10vw, 4.4rem);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  letter-spacing: .04em;
+  line-height: 1.1;
+}
+
+.atomic-timer .atomic-actions {
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.atomic-timer .atomic-status {
+  color: var(--atomic-muted);
+  margin: .6rem 0 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto !important;
