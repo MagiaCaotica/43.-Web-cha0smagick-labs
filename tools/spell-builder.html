@@ -136,29 +136,29 @@
 </section>
 
 <div class="spell-container">
-    <h3 style="color:var(--gold);text-align:center">? Select Your Intentions</h3>
+    <h3 style="color:var(--gold);text-align:center">✦ Select Your Intentions</h3>
     <p style="text-align:center;color:#666;font-size:0.85rem;margin-bottom:0.5rem">Choose one or more — the builder will combine correspondences</p>
     
     <div class="intent-grid" id="intentGrid"></div>
     
     <div class="selected-list" id="selectedList"></div>
     
-    <button class="build-btn" id="buildBtn" disabled>? Build My Spell</button>
-    <div style="text-align:center"><button class="clear-btn" id="clearBtn">? Clear All Selections</button></div>
+    <button class="build-btn" id="buildBtn" disabled>✦ Build My Spell</button>
+    <div style="text-align:center"><button class="clear-btn" id="clearBtn">✦ Clear All Selections</button></div>
 
     <div class="spell-recipe" id="spellRecipe">
         <div class="recipe-header">
-            <h2 id="recipeTitle">? Your Custom Spell</h2>
+            <h2 id="recipeTitle">✦ Your Custom Spell</h2>
             <div class="subtitle" id="recipeSubtitle">Combined correspondences for your intentions</div>
         </div>
         <div class="recipe-grid" id="recipeGrid"></div>
         <div class="ritual-steps" id="ritualSteps">
-            <h3>? Ritual Steps</h3>
+            <h3>✦ Ritual Steps</h3>
             <ol id="stepsList"></ol>
         </div>
         <div style="text-align:center;margin-top:1rem">
-            <button class="clear-btn" onclick="document.getElementById('clearBtn').click()">? Start Over</button>
-            <button class="print-btn" onclick="window.print()">? Print Recipe</button>
+            <button class="clear-btn" onclick="document.getElementById('clearBtn').click()">✦ Start Over</button>
+            <button class="print-btn" onclick="window.print()">✦ Print Recipe</button>
         </div>
     </div>
 </div>
@@ -199,7 +199,7 @@
 </section>
 
 <section class="cta-box">
-    <h3>? Cast Spells Anywhere</h3>
+    <h3>✦ Cast Spells Anywhere</h3>
     <p>Try the free spell builder, then supercharge your practice with the <strong>Lunar Phase Calculator</strong> Android app. Ritual timer, spell journal, and offline access everywhere.</p>
     <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:1rem 0;">
         <span style="background:#1a1a1a;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;font-size:0.8rem;">&#9200; Ritual Timer</span>
@@ -211,12 +211,12 @@
 </section>
 
 <div class="sticky-conversion-bar">
-    <span class="sticky-text">? Lunar Phase Calculator</span>
+    <span class="sticky-text">✦ Lunar Phase Calculator</span>
     <span class="price-tag">$3.99</span>
     <a href="https://play.google.com/store/apps/details?id=com.lunarapp.app" class="sticky-cta" target="_blank">Get the App ?</a>
 </div>
 
-<div class="back-link"><a href="index.html">? Back to All Free Tools</a></div>
+<div class="back-link"><a href="index.html">✦ Back to All Free Tools</a></div>
 </div>
 
 <footer id="site-footer" class="site-footer">
@@ -347,11 +347,11 @@ document.getElementById('buildBtn').onclick = function() {
     document.getElementById('recipeSubtitle').textContent = selected.size + ' intention' + (selected.size > 1 ? 's combined' : '');
     
     document.getElementById('recipeGrid').innerHTML = `
-        <div class="recipe-item"><h4>? Candle Color</h4><p class="value">${combine('color')}</p></div>
-        <div class="recipe-item"><h4>? Herbs</h4><p class="value">${combine('herb')}</p></div>
-        <div class="recipe-item"><h4>? Crystals</h4><p class="value">${combine('crystal')}</p></div>
-        <div class="recipe-item"><h4>? Incense</h4><p class="value">${combine('incense')}</p></div>
-        <div class="recipe-item"><h4>? Best Day</h4><p class="value">${combine('day')}</p></div>
+        <div class="recipe-item"><h4>✦ Candle Color</h4><p class="value">${combine('color')}</p></div>
+        <div class="recipe-item"><h4>✦ Herbs</h4><p class="value">${combine('herb')}</p></div>
+        <div class="recipe-item"><h4>✦ Crystals</h4><p class="value">${combine('crystal')}</p></div>
+        <div class="recipe-item"><h4>✦ Incense</h4><p class="value">${combine('incense')}</p></div>
+        <div class="recipe-item"><h4>✦ Best Day</h4><p class="value">${combine('day')}</p></div>
         <div class="recipe-item"><h4>🌐 Planet</h4><p class="value">${combine('planet')}</p></div>
         <div class="recipe-item"><h4>🌙 Moon Phase</h4><p class="value">${combine('moon')}</p></div>
         <div class="recipe-item"><h4>⏰ Timing</h4><p class="value">${combine('day')} — ${combine('moon').split(',')[0]}</p></div>
