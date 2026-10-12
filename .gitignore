@@ -70,3 +70,6 @@ scripts/seo/_*.mjs
 
 # Search Console CLI: OAuth client + token (never commit)
 .gsc*
+.play*
+_play*.json
+
