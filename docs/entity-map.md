@@ -67,7 +67,7 @@
 
 | entity_id | name | state | external_state | canonical_url |
 |---|---|---|---|---|
-| `tool.activador-servidores` | Activador de Servidores M�gicos | published | — | https://cha0smagicklabs.com/tools/activador-servidores.html |
+| `tool.activador-servidores` | Activador de Servidores Mágicos | published | — | https://cha0smagicklabs.com/tools/activador-servidores.html |
 | `tool.astral-projection-session-timer` | Temporizador de Sesión Astral | published | — | https://cha0smagicklabs.com/tools/astral-projection-session-timer.html |
 | `tool.astrology-sign-calculator` | Free Astrology Sign Calculator | published | — | https://cha0smagicklabs.com/tools/astrology-sign-calculator.html |
 | `tool.banishing-ritual-builder` | Constructor de Ritual de Banishing | published | — | https://cha0smagicklabs.com/tools/banishing-ritual-builder.html |

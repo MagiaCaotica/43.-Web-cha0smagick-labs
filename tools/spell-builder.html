@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Spell Builder � Custom Spell Correspondences Generator</title>
+    <title>Free Spell Builder — Custom Spell Correspondences Generator</title>
     <meta name="description" content="Free spell builder tool. Select your magical intention and instantly get a complete spell recipe with candle color, herbs, crystals, incense, planetary day">
     <meta name="keywords" content="spell builder, spell correspondences, custom spell, magic recipe, spell ingredients, candle color, herbs for spells, crystals for spells, ritual planner, spell creator">
     <link rel="canonical" href="https://cha0smagicklabs.com/tools/spell-builder.html">
     <link rel="alternate" href="https://cha0smagicklabs.com/tools/spell-builder.html" hreflang="en"><link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#050505">
-    <meta property="og:title" content="Free Spell Builder � Custom Spell Correspondences Generator">
+    <meta property="og:title" content="Free Spell Builder — Custom Spell Correspondences Generator">
     <meta property="og:description" content="Free spell builder. Select your intention and get a complete spell recipe with candle color, herbs, crystals, incense, planetary timing and ritual steps.">
     <meta property="og:url" content="https://cha0smagicklabs.com/tools/spell-builder.html">
     <meta property="og:type" content="website">
@@ -117,7 +117,7 @@
 </ul>
 </nav>
 <div class="breadcrumb">
-    <a href="../index.html">Cha0smagick Labs</a> � <a href="index.html">Free Tools</a> � Spell Builder
+    <a href="../index.html">Cha0smagick Labs</a> — <a href="index.html">Free Tools</a> — Spell Builder
 </div>
 <div class="container">
 <section class="hero">
@@ -131,13 +131,13 @@
         <li>Candle color, herbs, crystals, incense, and planetary correspondences</li>
         <li>Optimal moon phase and planetary day for casting</li>
         <li>Step-by-step ritual instructions</li>
-        <li>Print-friendly format � save your spell recipe</li>
+        <li>Print-friendly format — save your spell recipe</li>
     </ul>
 </section>
 
 <div class="spell-container">
     <h3 style="color:var(--gold);text-align:center">? Select Your Intentions</h3>
-    <p style="text-align:center;color:#666;font-size:0.85rem;margin-bottom:0.5rem">Choose one or more � the builder will combine correspondences</p>
+    <p style="text-align:center;color:#666;font-size:0.85rem;margin-bottom:0.5rem">Choose one or more — the builder will combine correspondences</p>
     
     <div class="intent-grid" id="intentGrid"></div>
     
@@ -179,7 +179,7 @@
 
 <div class="funnel-testimonial">
     <p>"The free spell builder helped me understand correspondences. The Lunar Phase Calculator app's ritual timer and journal completely transformed how I track my spell work."</p>
-    <div class="author">� James L., verified purchaser</div>
+    <div class="author">— James L., verified purchaser</div>
 </div>
 
 <section class="funnel-faq">
@@ -224,7 +224,7 @@
     <div class="footer-section">
         <h4>Cha0smagick Labs</h4>
         <p>Explore the Art and Practice of the Occult.</p>
-        <p>Corporate Techno-Sorcery Solutions � since 2025.</p>
+        <p>Corporate Techno-Sorcery Solutions — since 2025.</p>
     </div>
     <div class="footer-section">
         <h4>Quick Links</h4>
@@ -235,7 +235,7 @@
         </ul>
     </div>
 </div>
-<div class="footer-bottom"><p>&copy; 2026 Cha0smagick Labs � Corporate Techno-Sorcery Solutions</p></div>
+<div class="footer-bottom"><p>&copy; 2026 Cha0smagick Labs — Corporate Techno-Sorcery Solutions</p></div>
 </footer>
 <script src="../js/shared.min.js"></script>
 <div id="lang-sidebar" class="lang-sidebar">
@@ -304,7 +304,7 @@ function updateUI() {
         const intent = intents.find(i => i.id === id);
         const tag = document.createElement('span');
         tag.className = 'selected-tag';
-        tag.innerHTML = `${intent.icon} ${intent.name} <span class="remove" onclick="removeIntent('${id}')">�</span>`;
+        tag.innerHTML = `${intent.icon} ${intent.name} <span class="remove" onclick="removeIntent('${id}')">×</span>`;
         selectedList.appendChild(tag);
     });
     document.getElementById('buildBtn').disabled = selected.size === 0;
@@ -352,20 +352,20 @@ document.getElementById('buildBtn').onclick = function() {
         <div class="recipe-item"><h4>? Crystals</h4><p class="value">${combine('crystal')}</p></div>
         <div class="recipe-item"><h4>? Incense</h4><p class="value">${combine('incense')}</p></div>
         <div class="recipe-item"><h4>? Best Day</h4><p class="value">${combine('day')}</p></div>
-        <div class="recipe-item"><h4>? Planet</h4><p class="value">${combine('planet')}</p></div>
-        <div class="recipe-item"><h4>? Moon Phase</h4><p class="value">${combine('moon')}</p></div>
-        <div class="recipe-item"><h4>? Timing</h4><p class="value">${combine('day')} � ${combine('moon').split(',')[0]}</p></div>
+        <div class="recipe-item"><h4>🌐 Planet</h4><p class="value">${combine('planet')}</p></div>
+        <div class="recipe-item"><h4>🌙 Moon Phase</h4><p class="value">${combine('moon')}</p></div>
+        <div class="recipe-item"><h4>⏰ Timing</h4><p class="value">${combine('day')} — ${combine('moon').split(',')[0]}</p></div>
     `;
     
     document.getElementById('stepsList').innerHTML = `
-        <li><strong>Cleanse your space</strong> � Use ${combine('incense').split(',')[0]} incense or sage smoke to purify your area.</li>
-        <li><strong>Set up your altar</strong> � Place a ${combine('color').split(',')[0].replace(/\(.*?\)/g,'').trim()} candle, ${combine('crystal').split(',')[0]}, and ${combine('herb').split(',')[0]}.</li>
-        <li><strong>Cast your circle</strong> � Ground yourself with three deep breaths. Visualize protective light around you.</li>
-        <li><strong>State your intention</strong> � Speak your desire clearly and with conviction. Visualize the outcome as already real.</li>
-        <li><strong>Light the candle</strong> � As the flame grows, project your energy into it. Recite: "${names.join(' and ')} manifest through me."</li>
-        <li><strong>Meditate on the flame</strong> � Focus on your intention for 5-10 minutes. Release attachment to the outcome.</li>
-        <li><strong>Close the ritual</strong> � Thank the elements. Ground again. Allow the candle to burn completely in a safe place.</li>
-        <li><strong>Record your results</strong> � Note the date, time, moon phase, and any signs or synchronicities in your grimoire.</li>
+        <li><strong>Cleanse your space</strong> — Use ${combine('incense').split(',')[0]} incense or sage smoke to purify your area.</li>
+        <li><strong>Set up your altar</strong> — Place a ${combine('color').split(',')[0].replace(/\(.*?\)/g,'').trim()} candle, ${combine('crystal').split(',')[0]}, and ${combine('herb').split(',')[0]}.</li>
+        <li><strong>Cast your circle</strong> — Ground yourself with three deep breaths. Visualize protective light around you.</li>
+        <li><strong>State your intention</strong> — Speak your desire clearly and with conviction. Visualize the outcome as already real.</li>
+        <li><strong>Light the candle</strong> — As the flame grows, project your energy into it. Recite: "${names.join(' and ')} manifest through me."</li>
+        <li><strong>Meditate on the flame</strong> — Focus on your intention for 5-10 minutes. Release attachment to the outcome.</li>
+        <li><strong>Close the ritual</strong> — Thank the elements. Ground again. Allow the candle to burn completely in a safe place.</li>
+        <li><strong>Record your results</strong> — Note the date, time, moon phase, and any signs or synchronicities in your grimoire.</li>
     `;
     
     document.getElementById('spellRecipe').classList.add('visible');
