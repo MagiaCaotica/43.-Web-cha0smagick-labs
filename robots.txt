@@ -6,5 +6,18 @@ Disallow: /submissions/
 
 Sitemap: https://cha0smagicklabs.com/sitemap.xml
 
+# AI crawlers and assistants
+# Machine-readable index of the site: https://llmstxt.org/
+# llms.txt is the curated entry point; llms-full.txt lists all 820 articles.
+# These are not listed in sitemap.xml because they are not HTML pages.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: CCBot
+User-agent: anthropic-ai
+User-agent: Applebot-Extended
+Allow: /
+
 # Crawl-delay for polite crawling
 Crawl-Delay: 5
