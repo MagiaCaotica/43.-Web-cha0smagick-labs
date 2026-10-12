@@ -66,3 +66,7 @@ projects/salesreport_*.csv
 
 # SEO diagnostics throwaway (scripts/seo/_*.mjs are scratch probes, not committed tooling)
 scripts/seo/_*.mjs
+
+
+# Search Console CLI: OAuth client + token (never commit)
+.gsc*
