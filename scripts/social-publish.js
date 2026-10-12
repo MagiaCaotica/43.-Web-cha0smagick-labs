@@ -91,7 +91,7 @@ const TWEET_CALENDAR = [
   'Chaos Magick belief: Nothing is true. Everything is permitted. Your beliefs are tools — switch them at will. The complete guide → https://cha0smagicklabs.com/blog/chaos-magick-beginners-guide.html #ChaosMagick',
 
   // Community engagement tweets
-  'We built 11 Android apps for the occult community. 4.7★ average. 128+ reviews. All one-time purchase, no subscriptions. Explore the collection → https://cha0smagicklabs.com',
+  'We built 11 Android apps for the occult community. 4.5★ average. 221 reviews. All one-time purchase, no subscriptions. Explore the collection → https://cha0smagicklabs.com',
 
   'Question for practitioners: What divination tool do you use most? Tarot, runes, I Ching, scrying, or something else? 👇',
 
