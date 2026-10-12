@@ -140,10 +140,10 @@
 
     <div class="pendulum-stage" id="pendulumStage">
         <div class="pendulum-string" id="pendulumString"></div>
-        <div class="pendulum-weight crystal" id="pendulumWeight">?</div>
+        <div class="pendulum-weight crystal" id="pendulumWeight"></div>
     </div>
 
-    <div class="answer-display" id="answerDisplay">?</div>
+    <div class="answer-display" id="answerDisplay">❓</div>
     <p class="calibration-hint" id="calibHint">Click "Calibrate" or the pendulum to see yes/no/maybe</p>
 
     <input class="question-input" id="questionInput" type="text" placeholder="Type your yes/no question..." maxlength="200">
@@ -327,9 +327,9 @@ function getRandomAnswer() {
 document.getElementById('swingBtn').onclick = function() {
     const q = document.getElementById('questionInput').value.trim();
     if (!q) {
-        document.getElementById('answerDisplay').textContent = '? Ask a question first';
+        document.getElementById('answerDisplay').textContent = '❓ Ask a question first';
         document.getElementById('answerDisplay').style.color = '#666';
-        setTimeout(() => { document.getElementById('answerDisplay').textContent = '?'; document.getElementById('answerDisplay').style.color = 'var(--gold)'; }, 2000);
+        setTimeout(() => { document.getElementById('answerDisplay').textContent = '❓'; document.getElementById('answerDisplay').style.color = 'var(--gold)'; }, 2000);
         return;
     }
     const answer = getRandomAnswer();
@@ -367,7 +367,7 @@ document.getElementById('calibrateBtn').onclick = function() {
 
 document.getElementById('clearBtn').onclick = function() {
     document.getElementById('questionInput').value = '';
-    document.getElementById('answerDisplay').textContent = '?';
+    document.getElementById('answerDisplay').textContent = '❓';
     document.getElementById('answerDisplay').style.color = 'var(--gold)';
     document.getElementById('calibHint').textContent = 'Click "Calibrate" or the pendulum to see yes/no/maybe';
     const w = document.getElementById('pendulumWeight');
