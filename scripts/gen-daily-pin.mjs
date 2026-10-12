@@ -60,7 +60,7 @@ const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
 await page.goto(`${base}/tools/${slug}.html`, { waitUntil: 'load' });
 await page.waitForTimeout(1500); // let tool JS render its demo UI
-const shot = await page.screenshot({ clip: { x: 0, y: 0, width: 1080, height: 1200 } });
+const shot = await page.screenshot({ clip: { x: 0, y: 0, width: 1080, height: 1260 } });
 const card = await page.evaluate(async ({ shotB64, pretty, slug, siteUrl, ref }) => {
   const c = document.createElement('canvas');
   c.width = 1080; c.height = 1920;
@@ -72,10 +72,11 @@ const card = await page.evaluate(async ({ shotB64, pretty, slug, siteUrl, ref })
   const img = new Image();
   img.src = 'data:image/png;base64,' + shotB64;
   await new Promise(r => { img.onload = r; img.onerror = r; });
-  // cover-fit the screenshot into a 980x1180 frame
-  const fw = 980, fh = 1180, fx = 50, fy = 320;
+  // cover-fit the screenshot into a 980x1090 frame (ratio matches the
+  // 1080x1200 clip so the cover-fit crops almost nothing)
+  const fw = 980, fh = 1090, fx = 50, fy = 330;
   const s = Math.max(fw / img.width, fh / img.height);
-  const sw = fw / s, sh = fh / s, sx = (img.width - sw) / 2, sy = (img.height - sh) / 2;
+  const sw = fw / s, sh = fh / s, sx = (img.width - sw) / 2, sy = 0; // top-anchored: crop slack at the bottom only
   ctx.save();
   ctx.beginPath(); ctx.roundRect ? ctx.roundRect(fx, fy, fw, fh, 24) : ctx.rect(fx, fy, fw, fh); ctx.clip();
   ctx.drawImage(img, sx, sy, sw, sh, fx, fy, fw, fh);
@@ -96,13 +97,13 @@ const card = await page.evaluate(async ({ shotB64, pretty, slug, siteUrl, ref })
     return y + lh;
   };
   ctx.fillStyle = '#F5F7FF'; ctx.font = '800 58px Helvetica, Arial, sans-serif';
-  wrap(pretty, 80, 245, 920, 64, 1);
+  wrap(pretty, 80, 300, 920, 64, 1);
   ctx.fillStyle = '#F5F7FF'; ctx.font = '400 34px Helvetica, Arial, sans-serif';
-  ctx.fillText('Úsala gratis ahora — sin registro', 80, 1660);
-  ctx.fillStyle = '#8A93B8'; ctx.font = '500 30px Helvetica, Arial, sans-serif';
-  ctx.fillText('cha0smagick.com/tools/' + slug, 80, 1770);
+  ctx.fillText('Úsala gratis ahora — sin registro', 80, 1520);
+  ctx.fillStyle = '#D9E0FF'; ctx.font = '500 30px Helvetica, Arial, sans-serif';
+  ctx.fillText('cha0smagick.com/tools/' + slug, 80, 1630);
   ctx.fillStyle = '#FFB03A'; ctx.font = '700 28px Helvetica, Arial, sans-serif';
-  ctx.fillText('REF ' + ref, 80, 1830);
+  ctx.fillText('REF ' + ref, 80, 1690);
   return c.toDataURL('image/png');
 }, { shotB64: shot.toString('base64'), pretty, slug, siteUrl, ref });
 

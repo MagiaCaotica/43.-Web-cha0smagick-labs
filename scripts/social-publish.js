@@ -428,6 +428,19 @@ async function postCalendar(state, now, opts = {}) {
     let r = await publishPinterestPin(pinEntry.item, process.env.PINTEREST_BOARD_ID);
     if (r.skipped) r = await publishViaBridge(pinEntry.item.title, ['pinterest'], [pinEntry.item.link]);
     results.pin = r;
+    // Extra pin (2/day total, different boards, no duplicates): when the
+    // daily tool pin took the primary slot, the day's themed calendar pin
+    // would otherwise never run — publish it to the extra board instead.
+    if (daily && process.env.PINTEREST_BOARD_ID_EXTRA) {
+      try {
+        const themed = pickCalendarItem(PIN_CALENDAR, perf, now, 'pin');
+        if (themed && themed.item) {
+          results.pinExtra = await publishPinterestPin(themed.item, process.env.PINTEREST_BOARD_ID_EXTRA);
+        }
+      } catch (err) {
+        errors.push(`pinExtra: ${err.message}`);
+      }
+    }
   } catch (err) {
     errors.push(`pin: ${err.message}`);
   }
