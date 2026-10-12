@@ -192,32 +192,30 @@ Estas páginas son herramientas estáticas, gratuitas y orientativas. Funcionan 
 - [Diario de Diseño de Servidores](https://cha0smagicklabs.com/tools/servitor-design-journal.html): diseño simbólico con revisión.
 - [Panel de Seguimiento de Resultados](https://cha0smagicklabs.com/tools/results-tracking-dashboard.html): registro y exportación de notas.
 
-### Astrologia y ciclos
-- astrology sign calculator — /tools/astrology-sign-calculator.html
-- moon voc — /tools/moon-voc.html
+### Herramientas interactivas completas
 
-### Tarot, oraculos y simbolos
-- digital pendulum — /tools/digital-pendulum.html
-- goetic spirit selector — /tools/goetic-spirit-selector.html
-- tarot yes no — /tools/tarot-yes-no.html
+- [Free Astrology Sign Calculator](https://cha0smagicklabs.com/tools/astrology-sign-calculator.html): Free astrology sign calculator. Enter your birth date and time to instantly discover your Sun sign, Moon sign, and Rising sign (Ascendant) with detailed
+- [Moon Void-of-Course Calculator](https://cha0smagicklabs.com/tools/moon-voc.html): Free Moon Void-of-Course Calculator. Precise VOC Moon periods for any date/location. Essential for timing magical operations — avoid starting new ventures
+- [Free Digital Pendulum for Divination](https://cha0smagicklabs.com/tools/digital-pendulum.html): Free digital pendulum for divination. Ask a yes/no question and swing the pendulum. Choose your pendulum type, calibrate it, and get instant answers. No signup
+- [Goetic Spirit Selector](https://cha0smagicklabs.com/tools/goetic-spirit-selector.html): Free Goetic Spirit Selector. Filter the 72 spirits of Solomon by purpose (money, love, protection, knowledge, etc.) → shows recommended spirit + seal preview
+- [Tarot Yes/No & Daily Card](https://cha0smagicklabs.com/tools/tarot-yes-no.html): Free Tarot Yes/No & Daily Card Drawer. Simple one-card or three-card spreads focused on yes/no and daily guidance using Rider-Waite meanings. No signup
+- [Activador de Servidores Mágicos](https://cha0smagicklabs.com/tools/activador-servidores.html): Activa tus servidores mágicos con esta herramienta digital gratuita. Energiza y potencia tus constructos mágicos de caos con un solo clic. Free online servitor
+- [Free Candle Color Calculator](https://cha0smagicklabs.com/tools/candle-color-calculator.html): Free candle color calculator. Select your magical intention and instantly get the perfect candle color, planetary hour, herb and crystal correspondences. No
+- [Gnosis / Altered State Timer](https://cha0smagicklabs.com/tools/gnosis-timer.html): Free Gnosis Timer for chaos magick. Customizable timer for breathwork, drumming, staring, hyperventilation with optional binaural beats suggestions. No signup
+- [Free Online I Ching Oracle](https://cha0smagicklabs.com/tools/iching.html): Cast the ancient I Ching with the authentic three-coin method. All 64 hexagrams with full interpretations. Free online oracle tool.
+- [I Ching Changing Lines Simulator](https://cha0smagicklabs.com/tools/iching-changing-lines.html): Free I Ching Changing Lines Simulator. Authentic three-coin method with visual changing lines, full 64 hexagrams, judgments, and moving line texts. No signup
+- [Free Online Lunar Phase Calculator](https://cha0smagicklabs.com/tools/lunar-phase.html): Track moon phases for magic, wellness, and biodynamic gardening. Free online lunar phase calculator with real-time data.
+- [Planetary Hour Calculator](https://cha0smagicklabs.com/tools/planetary-hours.html): Free Planetary Hour Calculator. Shows current and upcoming planetary hours for any location and date. Essential for timing magical operations. No signup
+- [Planetary Kamea Sigil Generator](https://cha0smagicklabs.com/tools/planetary-kamea-sigil.html): Free Planetary Kamea Sigil Generator. Enter your intention, select a planetary square (Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon), and generate a precise
+- [Reality Check Randomizer & Tracker](https://cha0smagicklabs.com/tools/reality-check-tracker.html): Free Reality Check Randomizer & Tracker. Generates random reality-check prompts throughout the day + simple log of lucid dream attempts and success rate. No
+- [Elder Futhark Rune Drawer](https://cha0smagicklabs.com/tools/rune-drawer.html): Free Elder Futhark Rune Drawer. Cast single rune, 3-rune (past/present/future), or 5-rune spreads with full meanings. Filter by aett (Freyr's, Hagalaz, Tyr's)
+- [Sigil Charging Timer & Log](https://cha0smagicklabs.com/tools/sigil-charging-timer.html): Free Sigil Charging Timer & Log. Timer for charging/activating sigils with method tracking (visual, mantra, sexual, etc.) + local log of all sigils charged. No
+- [Free Online Sigil Maker & Generator](https://cha0smagicklabs.com/tools/sigil-generator.html): Free sigil maker online. Generate unique sigils using cryptographic entropy and ancient alphabets. Create, download, and charge your sigils instantly. No signup
+- [Free Spell Builder](https://cha0smagicklabs.com/tools/spell-builder.html): Free spell builder tool. Select your magical intention and instantly get a complete spell recipe with candle color, herbs, crystals, incense, planetary day
+- [Free Online Tengwar Transcriber](https://cha0smagicklabs.com/tools/tengwar-transcriber.html): Translate English text into Tengwar — J.R.R. Tolkien's authentic Elvish writing system. Phonetic transcription with accurate calligraphy.
+- [Free Online Viking Runes Oracle](https://cha0smagicklabs.com/tools/viking-runes.html): Free Viking oracle for Norse rune divination. Cast Elder Futhark runes online for love, wealth, protection, and daily guidance. Instant rune readings.
+- [Zener Card ESP Trainer](https://cha0smagicklabs.com/tools/zener-esp-trainer.html): Free Zener Card ESP Trainer. Test your precognition, clairvoyance, and intuition with the classic 5-symbol Zener deck. Live scoring, hit-rate %, binomial
 
-### Planificacion, seguridad y seguimiento
-- activador servidores — /tools/activador-servidores.html
-- candle color calculator — /tools/candle-color-calculator.html
-- gnosis timer — /tools/gnosis-timer.html
-- iching — /tools/iching.html
-- iching changing lines — /tools/iching-changing-lines.html
-- lunar phase — /tools/lunar-phase.html
-- planetary hours — /tools/planetary-hours.html
-- planetary kamea sigil — /tools/planetary-kamea-sigil.html
-- reality check tracker — /tools/reality-check-tracker.html
-- rune drawer — /tools/rune-drawer.html
-- sigil charging timer — /tools/sigil-charging-timer.html
-- sigil generator — /tools/sigil-generator.html
-- spell builder — /tools/spell-builder.html
-- tengwar transcriber — /tools/tengwar-transcriber.html
-- viking runes — /tools/viking-runes.html
-- zener esp trainer — /tools/zener-esp-trainer.html
 
 ## Technical Notes
 
