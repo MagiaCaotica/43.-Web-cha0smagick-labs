@@ -33,7 +33,10 @@ if (cmd === 'url') {
   console.log('Abre esta URL en tu navegador, acepta los permisos y copia el valor de "code" de la URL de redireccion:\n');
   console.log(url);
   console.log(`\nscopes pedidos: ${SCOPES}`);
-  console.log('\nSi Pinterest devuelve scope solo de lectura, tu app no tiene permisos de escritura aprovados (ver docs).');
+  console.log('\nSi Pinterest devuelve scope solo de lectura, tu app no esta aprobada para escritura:');
+  console.log('  la app debe pasar la revision de developers.pinterest.com/docs/getting-started/connect-app/');
+  console.log('  (se revisa cada dia habil; da acceso Trial). Los tokens de prueba "product limited" duran 24h y son de solo lectura.');
+  console.log('  Sandbox: cambia la API a https://api-sandbox.pinterest.com y agrega tu cuenta como sandbox user.');
   process.exit(0);
 }
 
@@ -50,7 +53,10 @@ if (cmd === 'exchange') {
     client_id: need('PINTEREST_CLIENT_ID', CLIENT_ID),
   });
   if (CLIENT_SECRET) body.set('client_secret', CLIENT_SECRET);
-  const r = await fetch(`${API}/oauth/token`, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
+  // doc v5: el endpoint /oauth/token exige Authorization: Basic base64(client_id:client_secret)
+  const basic = Buffer.from(`${need('PINTEREST_CLIENT_ID', CLIENT_ID)}:${CLIENT_SECRET || ''}`).toString('base64');
+  const headers = { 'Content-Type': 'application/x-www-form-urlencoded', Authorization: `Basic ${basic}` };
+  const r = await fetch(`${API}/oauth/token`, { method: 'POST', headers, body });
   const j = await r.json().catch(() => ({}));
   if (!r.ok) {
     console.error(`Canje fallo (HTTP ${r.status}): ${JSON.stringify(j)}`);
