@@ -10,7 +10,7 @@ Static site (HTML/CSS/JS) — GitHub Pages — [cha0smagicklabs.com](https://cha
 |-------|-----------|
 | Hosting | GitHub Pages (static) |
 | Frontend | HTML5, CSS3, Vanilla JS |
-| Blog Engine | Python (`generate-articles.py`) — 800+ static HTML articles |
+| Blog Engine | Python (`generate_blog.py`) — 800+ static HTML articles |
 | Analytics | Google Analytics (G-V6LHCPN9TK) + Google Ads Conversion |
 | Email | MailerLite (EN + ES lead magnet workflows) |
 | Affiliates | `js/affiliate.js` — URL param capture + GA4 events |
@@ -73,7 +73,7 @@ Sigil Generator, I Ching Oracle, Rune Oracle, Lunar Phase Calculator, Spell Buil
 
 | Script | Purpose |
 |--------|---------|
-| `scripts/generate-articles.py` | Blog article generator (800+ articles) |
+| `scripts/generate_blog.py` | Blog article generator (800+ articles) |
 | `scripts/bot-brain.js` | Shared catalog knowledge base for bots |
 | `scripts/groq-ai.js` | Groq-powered Q&A module |
 | `scripts/telegram-bot.js` | Telegram bot (polling, 11 commands) |

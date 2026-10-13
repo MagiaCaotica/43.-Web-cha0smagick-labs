@@ -474,6 +474,16 @@ def build_article(a: Dict, template: str) -> str:
 </div>
 <script src="https://giscus.app/client.js" data-repo="MagiaCaotica/43.-Web-cha0smagick-labs" data-repo-id="R_kgDOQ95-4g" data-category="General" data-category-id="DIC_kwDOQ95-4s4DCREq" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="dark_dimmed" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
 </script>
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2539880');
+</script>
+<!-- End MailerLite Universal -->
 </body>
 </html>'''
     )

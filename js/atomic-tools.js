@@ -880,11 +880,11 @@
   }
 
   /* ---------- result renderer ---------- */
-  function renderResult(res, labels) {
+  function renderResult(res, labels, toolName) {
     var r = document.getElementById('atomic-result');
     if (!r) return;
     r.hidden = false;
-    var html = '<p class="atomic-kicker">Resultado</p><h2>' + esc(res.title) + '</h2><p class="atomic-lead">' + esc(res.lead) + '</p>';
+    var html = '<p class="atomic-kicker">Resultado' + (toolName ? ' · ' + esc(toolName) : '') + '</p><h2>' + esc(res.title) + '</h2><p class="atomic-lead">' + esc(res.lead) + '</p>';
     if (res.rows.length) {
       html += '<div class="atomic-result-grid">' + res.rows.map(function (x) {
         return '<div><span>' + esc(x.label) + '</span><strong>' + esc(x.value) + '</strong></div>';
@@ -995,7 +995,7 @@
       }
       if (!res) { res = R(tool.name, 'Lectura de referencia.'); res.rows.push({ label: 'Herramienta', value: tool.name }); }
 
-      renderResult(res, labels);
+      renderResult(res, labels, tool.name);
       if (widget) {
         var box = document.getElementById('atomic-result');
         var anchor = box.querySelector('.atomic-actions');

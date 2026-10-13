@@ -68,5 +68,28 @@ cada línea es `{"timestamp","level","context","message"}`. Levels: `info`, `war
 ## Deploy desde CI (plan 3.2.5, pendiente de servidor)
 
 El workflow `.github/workflows/bot-deploy.yml` requiere secrets de GitHub:
-`BOT_HOST` (IP/hostname), `BOT_SSH_KEY` (clave privada), `BOT_USER`. Push a `main`
+`BOT_HOST` (IP/hostname), `BOT_SSH_KEY` (clave privada), `BOT_USER`). Push a `main`
 → SSH + `pm2 reload ecosystem.config.js`.
+
+## Aviso: el stack Python de `telegram-bot/` esta obsoleto
+
+Hay dos implementaciones de bot de Telegram en el repo y solo una esta viva.
+
+| | Stack JS (**vivo**) | Stack Python (obsoleto) |
+|---|---|---|
+| Codigo | `scripts/bots/telegram-bot.js`, `scripts/bots/run-bots.js` | `telegram-bot/bot.py` |
+| Arranque | `npm run bot:telegram` → PM2 (`ecosystem.config.js`) | unit systemd propio `telegram-bot/cha0s-bot.service` |
+| CI | `bot-deploy.yml:54` → `pm2 start scripts/bots/run-bots.js` | sin workflow |
+| Deps | `node-telegram-bot-api`, `discord.js` (package.json) | `python-telegram-bot` fuera de package.json |
+
+**Regla: el stack vivo es el JS.** Cualquier cambio de funcionalidad del bot va en
+`scripts/bots/`. Si se toca `telegram-bot/bot.py`, ese codigo no llega a produccion.
+
+El directorio se conserva a proposito, no por olvido:
+
+- `telegram-bot/test_bot.py` lo ejecuta la suite (`pytest scripts/`,via la configuracion del
+  repo) y borrar el directorio rompe `npm test`.
+- Borrar codigo que nadie pidio borrar es irreversible en git solo con reflog.
+
+Cuando se quiera cerrar el hueco: mover `test_bot.py` a `scripts/` o a su propio test, y en el
+mismo commit `git rm -r telegram-bot/`. Es una operacion de un commit, no urgente.

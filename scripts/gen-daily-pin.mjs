@@ -54,7 +54,7 @@ const base = `http://localhost:${server.address().port}`;
 //    cover-fit, title, watermark URL, REF code. 1080x1920 (Pinterest 2:3.55).
 const ref = (() => { let h = 5381; const s = slug + '|pin'; for (let i = 0; i < s.length; i++) h = ((h * 33) ^ s.charCodeAt(i)) >>> 0; return h.toString(36).slice(0, 6).toUpperCase(); })();
 const pretty = slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-const siteUrl = 'https://cha0smagick.com/tools/' + slug + '.html?utm_source=pinterest&utm_medium=pin&utm_campaign=daily';
+const siteUrl = 'https://cha0smagicklabs.com/tools/' + slug + '.html?utm_source=pinterest&utm_medium=pin&utm_campaign=daily';
 
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
@@ -101,7 +101,7 @@ const card = await page.evaluate(async ({ shotB64, pretty, slug, siteUrl, ref })
   ctx.fillStyle = '#F5F7FF'; ctx.font = '400 34px Helvetica, Arial, sans-serif';
   ctx.fillText('Úsala gratis ahora — sin registro', 80, 1520);
   ctx.fillStyle = '#D9E0FF'; ctx.font = '500 30px Helvetica, Arial, sans-serif';
-  ctx.fillText('cha0smagick.com/tools/' + slug, 80, 1630);
+  ctx.fillText('cha0smagicklabs.com/tools/' + slug, 80, 1630);
   ctx.fillStyle = '#FFB03A'; ctx.font = '700 28px Helvetica, Arial, sans-serif';
   ctx.fillText('REF ' + ref, 80, 1690);
   return c.toDataURL('image/png');

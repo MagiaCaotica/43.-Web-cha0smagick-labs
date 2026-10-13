@@ -2003,3 +2003,10 @@ section.post-comments p.post-comments-intro {
   .collection-value-grid { grid-template-columns: 1fr; }
   .review-quotes-grid { grid-template-columns: 1fr; }
 }
+
+/* A11y: visible keyboard focus */
+:focus-visible { outline: 2px solid #FFB03A; outline-offset: 2px; }
+/* A11y: respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
