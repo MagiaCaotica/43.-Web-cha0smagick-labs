@@ -3,6 +3,7 @@
 //   node scripts/pinterest-token.mjs url       -> imprime la URL de autorización con los scopes de escritura
 //   node scripts/pinterest-token.mjs exchange  -> pide el code pegado y lo canjea por un access token
 //   node scripts/pinterest-token.mjs check     -> muestra scopes y usuario de un token (env PINTEREST_TOKEN)
+//   node scripts/pinterest-token.mjs boards    -> lista tus tableros y sus ids (para PINTEREST_BOARD_ID)
 //
 // Scopes de escritura: pins:write (crear pins), boards:read (leer el tablero destino),
 // user_account:read (identificar la cuenta). boards:write solo si quieres crear tableros nuevos.
@@ -87,5 +88,26 @@ if (cmd === 'check') {
   process.exit(0);
 }
 
-console.error('Comandos: url | exchange <code> | check <token>');
+if (cmd === 'boards') {
+  const token = process.argv[3] || process.env.PINTEREST_TOKEN || need('PINTEREST_TOKEN (arg o env)', '');
+  const base = process.env.PINTEREST_API_BASE || API;
+  const r = await fetch(`${base}/boards?page_size=100`, {
+    headers: { Authorization: `Bearer ${token}`, 'Pinterest-Agent-Version': '2024-04-01' },
+  });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) {
+    console.error(`No se pudieron listar los tableros (HTTP ${r.status}): ${JSON.stringify(j).slice(0, 200)}`);
+    process.exit(1);
+  }
+  const items = j.items || [];
+  if (!items.length) {
+    console.log('Tu cuenta no tiene tableros. Crea uno en pinterest.com y vuelve a ejecutar este comando.');
+    process.exit(0);
+  }
+  console.log('Elige el tablero destino y guarda su id como secret PINTEREST_BOARD_ID:\n');
+  for (const b of items) console.log(`  ${b.name}${b.privacy ? ' (' + b.privacy + ')' : ''}\n    id: ${b.id}`);
+  process.exit(0);
+}
+
+console.error('Comandos: url | exchange <code> | check <token> | boards <token>');
 process.exit(1);
