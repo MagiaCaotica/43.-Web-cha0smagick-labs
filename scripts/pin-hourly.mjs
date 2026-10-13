@@ -29,19 +29,20 @@ if (!(slot >= 0 && slot <= 10)) {
 
 const token = process.env.PINTEREST_TOKEN || '';
 const board = process.env.PINTEREST_BOARD_ID || '';
+console.log(`pin-hourly: slot=${slot} token=${token ? token.length + ' chars' : 'MISSING'} board=${board ? board : 'MISSING'}`);
 if (!token || !board) {
   console.warn('WARN pin-hourly: PINTEREST_TOKEN / PINTEREST_BOARD_ID missing — skip (no API call)');
   process.exit(0);
 }
 
-const postJson = (urlPath, body) => new Promise((resolve, reject) => {
-  const data = JSON.stringify(body);
+const request = (method, urlPath, body) => new Promise((resolve, reject) => {
+  const data = body == null ? null : JSON.stringify(body);
   const req = https.request(PINTEREST_API + urlPath, {
-    method: 'POST',
+    method,
     headers: {
       'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json',
-      'Content-Length': Buffer.byteLength(data),
+      ...(data ? { 'Content-Length': Buffer.byteLength(data) } : {}),
     },
   }, (res) => {
     let raw = '';
@@ -50,9 +51,11 @@ const postJson = (urlPath, body) => new Promise((resolve, reject) => {
   });
   req.on('error', reject);
   req.setTimeout(30000, () => { req.destroy(new Error('timeout')); });
-  req.write(data);
+  if (data) req.write(data);
   req.end();
 });
+const postJson = (urlPath, body) => request('POST', urlPath, body);
+const getJson = (urlPath) => request('GET', urlPath, null);
 
 let target = null;
 try {
@@ -78,6 +81,15 @@ const title = `${target.title} — herramienta gratuita de magia del caos`.slice
 const description = `${target.title} — ${target.url}`.slice(0, 500);
 
 (async () => {
+  const me = await getJson('/user/account');
+  if (me.status < 200 || me.status >= 300) {
+    console.error(`pin-hourly: token INVALID — Pinterest API ${me.status}: ${String(me.body).slice(0, 300)}`);
+    process.exit(1);
+  }
+  let username = '?';
+  try { username = JSON.parse(me.body).username || '?'; } catch { /* ignore */ }
+  console.log(`pin-hourly: token OK (${username})`);
+
   const res = await postJson('/pins', {
     board_id: board,
     title,
