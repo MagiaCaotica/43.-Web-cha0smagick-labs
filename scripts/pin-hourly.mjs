@@ -19,10 +19,13 @@ const dir = path.join(root, 'pins', 'output', 'daily');
 const PINTEREST_API = 'https://api.pinterest.com/v5';
 
 const hour = new Date().getUTCHours();
-const slot = process.env.PIN_SLOT != null
-  ? parseInt(process.env.PIN_SLOT, 10)
+// On scheduled runs the workflow passes an empty PIN_SLOT, so only use it when
+// it actually holds a number (manual dispatch).
+const rawSlot = (process.env.PIN_SLOT || '').trim();
+const slot = rawSlot !== ''
+  ? parseInt(rawSlot, 10)
   : (hour <= 12 ? hour - 11 : hour - 12);
-if (!(slot >= 0 && slot <= 10)) {
+if (!Number.isInteger(slot) || slot < 0 || slot > 10) {
   console.log(`pin-hourly: slot ${slot} out of range (no publish window)`);
   process.exit(0);
 }

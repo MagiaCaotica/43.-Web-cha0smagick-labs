@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 11-12,14-22 * * *'
   workflow_dispatch:
+    inputs:
+      slot:
+        description: 'Slot manual 0-10 (vacio = usar la hora UTC del cron)'
+        required: false
+        type: string
 
 permissions:
   contents: write
