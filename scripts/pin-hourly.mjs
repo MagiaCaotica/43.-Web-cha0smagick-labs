@@ -28,10 +28,10 @@ if (!(slot >= 0 && slot <= 10)) {
 }
 
 const token = process.env.PINTEREST_TOKEN || '';
-const board = process.env.PINTEREST_BOARD_ID || '';
-console.log(`pin-hourly: slot=${slot} token=${token ? token.length + ' chars' : 'MISSING'} board=${board ? board : 'MISSING'}`);
-if (!token || !board) {
-  console.warn('WARN pin-hourly: PINTEREST_TOKEN / PINTEREST_BOARD_ID missing — skip (no API call)');
+const boardEnv = process.env.PINTEREST_BOARD_ID || '';
+console.log(`pin-hourly: slot=${slot} token=${token ? token.length + ' chars' : 'MISSING'} board=${boardEnv ? boardEnv : 'auto-discover'}`);
+if (!token) {
+  console.warn('WARN pin-hourly: PINTEREST_TOKEN missing — skip (no API call)');
   process.exit(0);
 }
 
@@ -56,6 +56,27 @@ const request = (method, urlPath, body) => new Promise((resolve, reject) => {
 });
 const postJson = (urlPath, body) => request('POST', urlPath, body);
 const getJson = (urlPath) => request('GET', urlPath, null);
+
+// PINTEREST_BOARD_ID is optional: discover the board from the account so the
+// pipeline needs only one secret. PINTEREST_BOARD_NAME picks a board by name.
+async function resolveBoard() {
+  if (boardEnv) return boardEnv;
+  const want = (process.env.PINTEREST_BOARD_NAME || '').toLowerCase();
+  const res = await getJson('/boards?page_size=100');
+  if (res.status < 200 || res.status >= 300) {
+    console.error(`pin-hourly: cannot list boards — Pinterest API ${res.status}: ${String(res.body).slice(0, 200)}`);
+    return null;
+  }
+  let items = [];
+  try { items = JSON.parse(res.body).items || []; } catch { /* ignore */ }
+  if (!items.length) {
+    console.error('pin-hourly: the account has no boards — create one on pinterest.com');
+    return null;
+  }
+  const picked = (want && items.find((b) => String(b.name || '').toLowerCase().includes(want))) || items[0];
+  console.log(`pin-hourly: board auto-discovered: ${picked.name} (${picked.privacy}) id=${picked.id}`);
+  return picked.id;
+}
 
 let target = null;
 try {
@@ -89,6 +110,9 @@ const description = `${target.title} — ${target.url}`.slice(0, 500);
   let username = '?';
   try { username = JSON.parse(me.body).username || '?'; } catch { /* ignore */ }
   console.log(`pin-hourly: token OK (${username})`);
+
+  const board = await resolveBoard();
+  if (!board) process.exit(1);
 
   const res = await postJson('/pins', {
     board_id: board,
