@@ -300,7 +300,11 @@ function findPinImage(file) {
 function pickDailyPin() {
   const dir = path.join(ROOT, 'pins', 'output', 'daily');
   try {
-    const metas = fs.readdirSync(dir).filter((f) => f.endsWith('.json'))
+    // Hourly publishing system active (markers written by pin-hourly.mjs):
+    // skip the daily pin so the 13:00 job never double-pins today's slots.
+    const dirFiles = fs.readdirSync(dir);
+    if (dirFiles.some((f) => f.endsWith('.published'))) return null;
+    const metas = dirFiles.filter((f) => f.endsWith('.json'))
       .map((f) => ({ full: path.join(dir, f), mtime: fs.statSync(path.join(dir, f)).mtimeMs }))
       .filter((m) => Date.now() - m.mtime < 24 * 3600 * 1000)
       .sort((a, b) => b.mtime - a.mtime);
