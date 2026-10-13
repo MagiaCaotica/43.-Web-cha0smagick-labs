@@ -1,0 +1,47 @@
+name: Social Daily (Telegram + 1 pin)
+
+on:
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-daily
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish daily social content
+        env:
+          SOCIAL_ONESHOT: '1'
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
+          PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
+          PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
+          POST_BRIDGE_KEY: ${{ secrets.POST_BRIDGE_KEY }}
+          POST_BRIDGE_URL: ${{ secrets.POST_BRIDGE_URL }}
+        run: node scripts/social-publish.js daily
+
+      - name: Commit state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/social-state.json
+          git diff --staged --quiet || git commit -m 'social: daily state'
+          git push

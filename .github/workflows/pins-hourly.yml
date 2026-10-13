@@ -1,0 +1,39 @@
+name: Pins Hourly
+
+on:
+  schedule:
+    - cron: '0 11-12,14-22 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pins-hourly-${{ github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Publish scheduled pin
+        env:
+          PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
+          PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
+          PIN_SLOT: ${{ github.event.inputs.slot }}
+        run: node scripts/pin-hourly.mjs
+
+      - name: Commit published markers
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add pins/output/daily
+          git diff --staged --quiet || git commit -m 'pins: published marker'
+          git push

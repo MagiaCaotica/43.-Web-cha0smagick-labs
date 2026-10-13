@@ -30,7 +30,8 @@ const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 if (!TOKEN) {
   logger.error('telegram-bot', '❌ TELEGRAM_BOT_TOKEN not set in environment');
-  process.exit(1);
+  // throw (not exit): importing this module from a one-shot script must not kill the caller
+  throw new Error('TELEGRAM_BOT_TOKEN not set in environment');
 }
 
 const CHANNEL = process.env.TELEGRAM_CHANNEL || '@cha0smagicklabs';
@@ -38,8 +39,8 @@ const GROUP_INVITE = process.env.TELEGRAM_GROUP_INVITE || 'https://t.me/+krfQJgr
 
 let bot;
 
-function init() {
-  bot = new TelegramBot(TOKEN, { polling: true });
+function init(opts = {}) {
+  bot = new TelegramBot(TOKEN, { polling: opts.polling !== false });
   logger.info('telegram-bot', '🤖 Telegram bot started (polling)...');
 
   // ── Commands ──
@@ -266,8 +267,13 @@ async function postToChannel(text, options = {}) {
   }
 }
 
+// Stop polling + release handles so one-shot callers can exit.
+function shutdown() {
+  try { if (bot && bot.isPolling()) bot.stopPolling(); } catch { /* already stopped */ }
+}
+
 // Export for potential use by other scripts
-module.exports = { init, postToChannel };
+module.exports = { init, shutdown, postToChannel };
 
 // Run if called directly
 if (require.main === module) {
@@ -275,8 +281,9 @@ if (require.main === module) {
 }
 
 // /health + /delete-my-data endpoints — plan 3.1.5 + 3.1.12
-// Skipped under vitest (no port binding in tests).
-if (!process.env.VITEST) {
+// Skipped under vitest (no port binding in tests) and in SOCIAL_ONESHOT mode
+// (social-publish.js imports this module just to post one message).
+if (!process.env.VITEST && process.env.SOCIAL_ONESHOT !== '1') {
   const http = require('http');
   const fs = require('fs');
   const path = require('path');

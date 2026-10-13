@@ -280,10 +280,16 @@ async function publishTelegram(text, opts = {}) {
     log('WARN Telegram: TELEGRAM_BOT_TOKEN missing, skip');
     return { skipped: true, reason: 'no-token' };
   }
+  // one-shot: sin polling (mantiene el proceso vivo) ni servidor de salud, o el job nunca termina
+  process.env.SOCIAL_ONESHOT = '1';
   const tg = require('./bots/telegram-bot.js');
-  tg.init();
-  await tg.postToChannel(text, opts);
-  return { sent: true };
+  try {
+    tg.init({ polling: false });
+    await tg.postToChannel(text, opts);
+    return { sent: true };
+  } finally {
+    tg.shutdown?.();
+  }
 }
 
 function findPinImage(file) {
@@ -624,6 +630,9 @@ if (require.main === module) {
   })().catch((err) => {
     console.error(`FATAL: ${err.message}`);
     process.exitCode = 1;
+  }).then(() => {
+    // los writes de state son fs.writeFileSync (sincronos): es seguro cortar cualquier handle abierto
+    process.exit(process.exitCode || 0);
   });
 }
 
