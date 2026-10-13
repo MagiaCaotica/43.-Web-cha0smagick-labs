@@ -31,7 +31,7 @@ function scanDir(dir, urlBase, depth = 0) {
   }
 }
 
-for (const d of ['blog', 'tools', 'apps', 'books', 'landing-pages', 'compare']) {
+for (const d of ['blog', 'tools', 'apps', 'books', 'landing-pages', 'compare', 'es']) {
   const dir = path.join(ROOT, d);
   if (fs.existsSync(dir)) scanDir(dir, BASE + '/' + d);
 }

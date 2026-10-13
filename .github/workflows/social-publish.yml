@@ -1,19 +1,25 @@
-name: Social Publish Daily
+name: Social Publish
 
-# MASTER_EXECUTION_PLAN 3.3.1 — cron diario de publicación social
-# (Pinterest + X/Twitter + Telegram channel) con persistencia de state.
-# 08:00 America/Bogota = 13:00 UTC.
+# Pinterest: 12 pins/day max (safe ceiling, no spam) —
+#   10:00 UTC  generate 11 fresh pins (batch, Playwright)
+#   11,12,14-22 UTC  publish ONE new pin per hour (7am-5pm Bogotá, spaced)
+#   13:00 UTC  daily job: blog auto-post + calendar pin + Telegram/X (08:00 Bogotá)
+# pickDailyPin() in social-publish.js skips Pinterest when hourly markers exist,
+# so the daily job never double-pins. Telegram/X stay once per day.
 
 on:
   schedule:
     - cron: '0 13 * * *'
+    - cron: '0 10 * * *'
+    - cron: '0 11-12,14-22 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  publish:
+  daily:
+    if: github.event.schedule == '0 13 * * *' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,11 +31,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Generate daily tool pin (Playwright)
-        run: |
-          npx playwright install --with-deps chromium
-          node scripts/gen-daily-pin.mjs
 
       - name: Publish daily social content
         env:
@@ -47,4 +48,55 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/social-state.json
           git diff --cached --quiet || git commit -m "[3.3.1] update social publishing state"
+          git push
+
+  generate-pins:
+    if: github.event.schedule == '0 10 * * *'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate 11 daily pins (Playwright batch)
+        run: |
+          npx playwright install --with-deps chromium
+          node scripts/gen-daily-pin.mjs --batch 11
+
+      - name: Commit generated pins
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pins/output/daily
+          git diff --cached --quiet || git commit -m "pins: daily batch (11)"
+          git push
+
+  pin-hourly:
+    if: github.event.schedule == '0 11-12,14-22 * * *'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Publish one Pinterest pin (hourly slot)
+        env:
+          PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN || '' }}
+          PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID || '' }}
+        run: node scripts/pin-hourly.mjs
+
+      - name: Commit published marker
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pins/output/daily
+          git diff --cached --quiet || git commit -m "pin: hourly published"
           git push
