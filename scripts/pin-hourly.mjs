@@ -45,6 +45,7 @@ const request = (method, urlPath, body) => new Promise((resolve, reject) => {
     headers: {
       'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json',
+      'Pinterest-Agent-Version': '2024-04-01',
       ...(data ? { 'Content-Length': Buffer.byteLength(data) } : {}),
     },
   }, (res) => {
@@ -106,13 +107,13 @@ const description = `${target.title} — ${target.url}`.slice(0, 500);
 
 (async () => {
   const me = await getJson('/user/account');
-  if (me.status < 200 || me.status >= 300) {
-    console.error(`pin-hourly: token INVALID — Pinterest API ${me.status}: ${String(me.body).slice(0, 300)}`);
+  if (me.status === 401 || me.status === 403) {
+    console.error(`pin-hourly: token INVALID (${me.status}) — Pinterest API: ${String(me.body).slice(0, 300)}`);
     process.exit(1);
   }
   let username = '?';
   try { username = JSON.parse(me.body).username || '?'; } catch { /* ignore */ }
-  console.log(`pin-hourly: token OK (${username})`);
+  console.log(`pin-hourly: token accepted (/user/account ${me.status}, user=${username})`);
 
   const board = await resolveBoard();
   if (!board) process.exit(1);
