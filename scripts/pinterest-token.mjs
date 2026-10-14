@@ -9,7 +9,8 @@
 // user_account:read (identificar la cuenta). boards:write solo si quieres crear tableros nuevos.
 const API = 'https://api.pinterest.com/v5';
 const AUTH = 'https://www.pinterest.com/oauth/';
-const SCOPES = process.env.PINTEREST_SCOPES || 'pins:write,boards:read,user_account:read';
+// boards:write tambien se pide: la API de Pinterest lo exige al crear un pin sobre un tablero.
+const SCOPES = process.env.PINTEREST_SCOPES || 'pins:write,boards:write,boards:read,user_account:read';
 const REDIRECT = process.env.PINTEREST_REDIRECT_URI || 'https://developers.pinterest.com/myapps/';
 const CLIENT_ID = process.env.PINTEREST_CLIENT_ID || '';
 const CLIENT_SECRET = process.env.PINTEREST_CLIENT_SECRET || '';
