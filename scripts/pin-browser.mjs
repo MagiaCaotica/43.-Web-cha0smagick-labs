@@ -4,6 +4,8 @@
 // Uso: node scripts/pin-browser.mjs [--dry-run] [--only=s00]
 import fs from 'fs';
 import path from 'path';
+import http from 'http';
+import { spawn } from 'child_process';
 import { fileURLToPath } from 'url';
 import { chromium } from 'playwright';
 
@@ -17,6 +19,46 @@ const only = (process.argv.find((a) => a.startsWith('--only=')) || '').split('='
 
 const log = (...a) => console.log('pin-browser:', ...a);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+function cdpAlive() {
+  return new Promise((resolve) => {
+    const req = http.get(`${CDP}/json/version`, { timeout: 2500 }, (res) => {
+      res.resume();
+      resolve(res.statusCode === 200);
+    });
+    req.on('timeout', () => {
+      req.destroy();
+      resolve(false);
+    });
+    req.on('error', () => resolve(false));
+  });
+}
+
+// El job programado no puede depender de que el navegador este abierto: lo abrimos nosotros.
+async function ensureBrowser() {
+  if (await cdpAlive()) return true;
+  const exe =
+    process.env.BROWSEROS_EXE || path.join(process.env.LOCALAPPDATA || '', 'BrowserOS', 'Application', 'chrome.exe');
+  if (!fs.existsSync(exe)) {
+    log('No encuentro BrowserOS en', exe, '(define BROWSEROS_EXE)');
+    return false;
+  }
+  log('BrowserOS no esta corriendo. Abriendo con CDP...');
+  spawn(
+    exe,
+    [`--remote-debugging-port=${new URL(CDP).port || 9222}`, '--no-first-run', '--no-default-browser-check'],
+    { detached: true, stdio: 'ignore' }
+  ).unref();
+  for (let i = 0; i < 30; i++) {
+    await sleep(2000);
+    if (await cdpAlive()) {
+      log('BrowserOS listo.');
+      return true;
+    }
+  }
+  log('BrowserOS no respondio en 60 s.');
+  return false;
+}
 
 const pending = fs
   .readdirSync(DIR)
@@ -33,12 +75,13 @@ if (dryRun) {
 if (!pending.length) process.exit(0);
 
 let browser;
-try {
-  browser = await chromium.connectOverCDP(CDP);
-} catch (err) {
-  log('No se pudo conectar al navegador en', CDP, '->', err.message.split('\n')[0]);
-  log('Arranca BrowserOS y reintenta. El puerto debe quedar en 9222.');
-  process.exit(1);
+if (await ensureBrowser()) {
+  try {
+    browser = await chromium.connectOverCDP(CDP);
+  } catch (err) {
+    log('No se pudo conectar al navegador en', CDP, '->', err.message.split('\n')[0]);
+    process.exit(1);
+  }
 }
 
 const context = browser.contexts()[0];
