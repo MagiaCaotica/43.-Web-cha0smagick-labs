@@ -124,7 +124,7 @@ const description = `${target.title} — ${target.url}`.slice(0, 500);
     board_id: board,
     title,
     description,
-    media_source: { source_type: 'image_base64', cover_image_base64: pngB64, cover_image_content_type: 'image/png' },
+    media_source: { source_type: 'image_base64', content_type: 'image/png', data: pngB64 },
   });
   if (res.status >= 200 && res.status < 300) {
     fs.writeFileSync(path.join(dir, target.slug + '.published'), new Date().toISOString());
