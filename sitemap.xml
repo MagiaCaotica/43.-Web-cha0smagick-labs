@@ -5887,4 +5887,9 @@
   <url><loc>https://cha0smagicklabs.com/es/runas-app-vs-libro-de-runas.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cha0smagicklabs.com/es/apps-suenos-lucidos-comparativa.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cha0smagicklabs.com/es/libros-magia-del-caos-vs-cursos-online.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://cha0smagicklabs.com/sigil-maker.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
