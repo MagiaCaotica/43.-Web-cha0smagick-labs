@@ -77,7 +77,9 @@ async function resolveBoard() {
     console.error('pin-hourly: the account has no boards — create one on pinterest.com');
     return null;
   }
-  const picked = (want && items.find((b) => String(b.name || '').toLowerCase().includes(want))) || items[0];
+  const picked = (want && items.find((b) => String(b.name || '').toLowerCase().includes(want)))
+    || items.find((b) => /cha0smagick|tools|magia|grimorio|occult|sigil/i.test(String(b.name || '')))
+    || items[0];
   console.log(`pin-hourly: board auto-discovered: ${picked.name} (${picked.privacy}) id=${picked.id}`);
   return picked.id;
 }
