@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Cha0smagick Labs - Frater Alek0s">
+    
+    <title>Ephemeris Accuracy: Why Your Birth Chart Is Off</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="description" content="Why cheap ephemeris data shifts planets by days and ruins a birth chart. Simple approximation vs Swiss Ephemeris vs VSOP87, and when it matters.">
+    <meta name="keywords" content="ephemeris accuracy, swiss ephemeris vs approximation, accurate birth chart app, vsop87 accuracy, birth chart wrong ascendant">
+    <link rel="canonical" href="https://cha0smagicklabs.com/ephemeris-accuracy.html">
+    <link rel="alternate" hreflang="en" href="https://cha0smagicklabs.com/ephemeris-accuracy.html">
+    <meta property="og:title" content="Ephemeris Accuracy: Why Your Birth Chart Is Off">
+    <meta property="og:description" content="Why cheap ephemeris data shifts planets by days and ruins a birth chart. Simple approximation vs Swiss Ephemeris vs VSOP87, and when it matters.">
+    <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.png">
+    <meta property="og:image:width" content="319">
+    <meta property="og:image:height" content="316">
+    <meta property="og:url" content="https://cha0smagicklabs.com/ephemeris-accuracy.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="Cha0smagick Labs">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ephemeris Accuracy: Why Your Birth Chart Is Off">
+    <meta name="twitter:description" content="Why cheap ephemeris data shifts planets by days and ruins a birth chart. Simple approximation vs Swiss Ephemeris vs VSOP87, and when it matters.">
+    <meta name="twitter:image" content="https://cha0smagicklabs.com/assets/images/Banner.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/Banner.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', { 'analytics_storage': 'denied', 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied' });
+      gtag('js', new Date());
+      gtag('config', 'G-V6LHCPN9TK');
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://cha0smagicklabs.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ephemeris Accuracy: Why Cheap Data Shifts Your Birth Chart",
+      "item": "https://cha0smagicklabs.com/ephemeris-accuracy.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://cha0smagicklabs.com/ephemeris-accuracy.html#webpage",
+  "url": "https://cha0smagicklabs.com/ephemeris-accuracy.html",
+  "name": "Ephemeris Accuracy: Why Your Birth Chart Is Off",
+  "description": "Why cheap ephemeris data shifts planets by days and ruins a birth chart. Simple approximation vs Swiss Ephemeris vs VSOP87, and when it matters.",
+  "isPartOf": {
+    "@id": "https://cha0smagicklabs.com/#website"
+  },
+  "primaryImageOfPage": "https://cha0smagicklabs.com/assets/images/Banner.png",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Thing",
+    "name": "Ephemeris accuracy"
+  },
+  "breadcrumb": {
+    "@id": "https://cha0smagicklabs.com/ephemeris-accuracy.html#breadcrumb"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://cha0smagicklabs.com/ephemeris-accuracy.html#app",
+  "name": "Astral Lab",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "Android",
+  "description": "Professional natal charts on Android computed with VSOP87 planetary theory, live transits and an aspect grid.",
+  "offers": {
+    "@type": "Offer",
+    "price": "6.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "category": "PaidApplication"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "221",
+    "bestRating": "5"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Free Birth Chart",
+      "url": "https://cha0smagicklabs.com/tools/full-birth-chart.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Astrology Sign Calculator",
+      "url": "https://cha0smagicklabs.com/tools/astrology-sign-calculator.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Rising Sign Calculator",
+      "url": "https://cha0smagicklabs.com/tools/rising-sign-calculator.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Planetary Retrograde Calendar",
+      "url": "https://cha0smagicklabs.com/tools/planetary-retrograde-calendar.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://cha0smagicklabs.com/ephemeris-accuracy.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate does a birth chart need to be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Accurate enough that no planet sits within a rounding error of a sign or house boundary. In practice that means a real planetary theory such as VSOP87 rather than mean-position approximations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is VSOP87?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A semi-analytic planetary theory published by the Paris Observatory, accurate to roughly arcsecond level over the modern era. It is the default in serious astrology software, and it is what Astral Lab uses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a free birth chart calculator inaccurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The free chart tools on this site are symbolic approximations for exploration, not professional computation. They are fine for learning the shape of a chart and useless for arc-level precision."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ephemeris accuracy affect the Moon sign?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most of all, yes. The Moon moves about 13 degrees a day, so a small error can shift it into the previous sign. It is the position most sensitive to both data precision and birth-time error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it matter if my Ascendant is off by a degree?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lot. The Ascendant moves roughly one degree every four minutes, so a degree of error moves the entire house structure. Everything after the Ascendant is built on it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Swiss Ephemeris and NASA JPL data different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are different tools for different purposes and the difference between them is minor. The gap that actually changes charts is between either of them and a simple mean-position approximation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my chart disagree with another astrologer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually birth time, not software. Confirm the exact time first; a chart with the wrong Ascendant and wrong houses cannot be reconciled by interpretation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a paid app to get an accurate chart?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a correct chart, yes, some form of real ephemeris computation is needed. Free tools on this site are for exploration; a VSOP87 app is a single $6.99 payment with no subscription."
+      }
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://cha0smagicklabs.com/ephemeris-accuracy.html#speakable",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "#problem",
+      "#methods",
+      "#faq-heading"
+    ]
+  }
+}
+    </script>
+
+    <style>
+    .kicker { color: var(--accent-gold, #c0a060); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 .6rem; font-family: 'JetBrains Mono', monospace; }
+    .hero-box { border: 1px solid var(--border-card, #333); border-radius: var(--radius-md, 8px); background: var(--bg-card, #0a0a0a); padding: 1.6rem 1.5rem; margin-bottom: 2rem; }
+    .hero-box p { margin: .6rem 0 0; color: var(--text-secondary, #999); font-size: .95rem; }
+    h2 { margin-top: 2.4rem; }
+    .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
+    .tool-card { display: block; border: 1px solid var(--border-card, #333); border-radius: var(--radius-md, 8px); background: var(--bg-card, #0a0a0a); padding: 1.1rem 1.2rem; text-decoration: none; }
+    .tool-card b { display: block; color: var(--accent-gold, #c0a060); margin-bottom: .35rem; }
+    .tool-card span { color: var(--text-secondary, #999); font-size: .9rem; line-height: 1.5; }
+    .cta-box { border: 1px solid var(--accent-gold, #c0a060); border-radius: var(--radius-md, 8px); background: rgba(192,160,96,.06); padding: 1.6rem; margin: 2rem 0; }
+    .cta-box h3 { margin: 0 0 .6rem; color: var(--accent-gold, #c0a060); }
+    .cta-box p { color: var(--text-secondary, #999); font-size: .95rem; }
+    .btn-row { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.1rem; }
+    .play-store-btn { display: inline-block; background: var(--accent-gold, #c0a060); color: #000; padding: .7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none; }
+    .ghost-btn { display: inline-block; border: 1px solid var(--border-card, #333); color: var(--text-primary, #fff); padding: .7rem 1.2rem; border-radius: 6px; text-decoration: none; }
+    table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .92rem; }
+    th, td { border: 1px solid var(--border-card, #333); padding: .7rem .8rem; text-align: left; }
+    th { color: var(--accent-gold, #c0a060); }
+    .good { color: #7bd88f; }
+    .bad { color: #e08a8a; }
+    .faq-q { margin-top: 1.6rem; }
+    .faq-q h3 { margin-bottom: .4rem; color: var(--text-primary, #fff); font-size: 1rem; }
+    .faq-q p { color: var(--text-secondary, #999); margin: 0; }
+    .verdict { border-left: 3px solid var(--accent-gold, #c0a060); padding: .2rem 0 .2rem 1rem; margin: 1.6rem 0; }
+    .verdict p { margin: .4rem 0; color: var(--text-secondary, #999); }
+    @media (max-width: 520px) { .btn-row { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-link">
+            <span class="site-title">Cha0smagick Labs</span>
+            <p>Cybermancy · Techno-Sorcery · Cyberpaganism</p>
+        </a>
+    </header>
+    <main>
+        <div class="hero-box">
+            <p class="kicker">Ephemeris accuracy · the boring part that matters</p>
+            <h1>Ephemeris Accuracy: Why Cheap Data Shifts Your Birth Chart</h1>
+            <p>Most birth charts that "look wrong" are not wrong in the interpretation. They are wrong in the arithmetic. The difference between a cheap planetary approximation and a real ephemeris can move your Moon, your Ascendant and entire aspects across whole degrees.</p>
+        </div>
+
+<h2 id="problem">The problem: everyone rounds the planets down</h2>
+<p>A planet's position is not a nice number. Pluto at 14 degrees 47 minutes 22 seconds is not 14 degrees, and at certain points in the year the difference between the true value and the rounded one is not subtle.</p>
+<p>Where it bites hardest is the fast-moving and the boundary cases:</p>
+<ul>
+  <li><strong>The Moon.</strong> It moves about 13 degrees a day, so half a degree is nearly three hours of sign drift. If your birth was near midnight, a rounding error can put the Moon in the previous sign.</li>
+  <li><strong>The Ascendant.</strong> It can move a full degree every four minutes. Get the birth time slightly wrong, or the ephemeris slightly wrong, and the whole chart is built on a rotated base.</li>
+  <li><strong>Retrograde boundaries.</strong> Whether a planet is stationing direct or stationing retrograde decides which house it lands in. That is a binary outcome decided by seconds of arc.</li>
+</ul>
+<p>This is why the same birth data can produce two charts that disagree about everything, when both were computed on a phone.</p>
+
+<h2 id="methods">Three levels of accuracy, and what each buys you</h2>
+<p><strong>Level 1: mean positions.</strong> The classic approach averages a planet's orbit over time to get a smooth curve, then samples that curve. It is cheap and fast and it is wrong by a small amount that grows and shrinks depending on the planet and the century. For a Moon placement, the error can be large enough to change the sign.</p>
+<p><strong>Level 2: VSOP87.</strong> A semi-analytic theory of planetary motion with thousands of periodic terms, published by the Paris Observatory. It is accurate to arcseconds-level for the planets over the modern era and it is what serious astrology software uses by default. Astral Lab computes with VSOP87 for exactly this reason.</p>
+<p><strong>Level 3: numerical integration.</strong> You integrate the equations of motion numerically from an initial state. This is the most physically honest approach and also the slowest, which is why you mostly see it in research code rather than in apps.</p>
+<p>The practical gap between level 1 and level 2 is small in absolute terms and enormous in practical terms, because astrological interpretation cares about signs, houses and exact aspects, all of which are threshold decisions. A threshold plus a rounding error is a coin flip.</p>
+
+<h2>Where the "NASA vs Swiss Ephemeris" debate comes from</h2>
+<p>You will see forum arguments about JPL ephemerides versus Swiss Ephemeris. Both are real, both are accurate, and the argument is usually about the wrong thing. JPL publishes positions of solar system bodies for astronomy. Swiss Ephemeris is a precision astrology library. Neither is "more correct" in general: they serve different purposes, and the difference between them is far smaller than the difference between either of them and a mean-position approximation.</p>
+<p>The practical rule: if a chart is computed by hand-tapping formulas into a spreadsheet, expect the Moon to be wrong. If it is computed by a library implementing VSOP87 or equivalent, expect it to be right. Everything else is philosophy.</p>
+
+<div class="cta-box">
+  <h3>Astral Lab: VSOP87 natal charts, offline</h3>
+  <p>Professional chart computation with VSOP87 planetary theory, real-time transits and a full aspect grid. Single payment, no subscription, no account.</p>
+  <div class="btn-row">
+    <a class="play-store-btn" href="https://play.google.com/store/apps/developer?id=Cha0smagick+Labs" rel="noopener" target="_blank">Get Astral Lab on Google Play</a>
+    <a class="ghost-btn" href="/apps/astral-lab.html">See the features</a>
+  </div>
+  <p>Working through astrology in general? The 8-book bundle covers sigil magick, the occult tradition and the astronomy behind the symbols for one $19.99 payment: <a href="https://pay.hotmart.com/D93257466P" rel="noopener" target="_blank">get the books bundle</a>.</p>
+</div>
+
+<h2>What to do if your chart looks wrong</h2>
+<p>Work through it in order. Most apparent errors are one of these four, and none of them needs new software.</p>
+<ol>
+  <li><strong>Confirm the birth time.</strong> Most chart disputes are birth-time disputes. A chart certificate or a birth record beats a memory, especially for anything involving the Ascendant or houses.</li>
+  <li><strong>Check the Moon sign specifically.</strong> It is the single most sensitive position to both time and data precision. If the Moon is the only thing that looks off, suspect one or both.</li>
+  <li><strong>Look for planets within a degree of a sign boundary.</strong> A planet at 0 degrees 20 minutes could legitimately be read as either sign. That is a real ambiguity, not an error.</li>
+  <li><strong>Only then suspect the software.</strong> If the chart came from a reputable library and the data was right, the arithmetic was right. Do not blame the tool for a disagreement in interpretation.</li>
+</ol>
+
+<h2>Free chart first, paid app second</h2>
+<table>
+  <thead><tr><th>Need</th><th>Tool</th><th>Cost</th></tr></thead>
+  <tbody>
+    <tr><td>A chart to look at today</td><td class="good">Free Birth Chart</td><td class="good">Free</td></tr>
+    <tr><td>Sun, Moon and Ascendant in one instant</td><td class="good">Astrology Sign Calculator</td><td class="good">Free</td></tr>
+    <tr><td>Check the Ascendant specifically</td><td class="good">Rising Sign Calculator</td><td class="good">Free</td></tr>
+    <tr><td>Retros and stations for interpretation</td><td class="good">Planetary Retrograde Calendar</td><td class="good">Free</td></tr>
+    <tr><td>Professional-grade VSOP87 charts and transits</td><td>Astral Lab app</td><td>$6.99 one-time</td></tr>
+  </tbody>
+</table>
+
+<div class="verdict">
+  <p>Accuracy problems in birth charts are almost always precision problems, not software problems. Mean-position data plus a birth time near a boundary will produce a chart that no interpretation can rescue. If your chart matters to you, start with the free chart tool to see the shape of it, then use an app that computes with a real planetary theory like VSOP87 if you intend to work with it seriously. The $6.99 buys correctness that a free calculator will not give you, and nothing else.</p>
+</div>
+
+        <h2 id="faq-heading">Ephemeris and birth chart accuracy questions</h2>
+        <div class="faq-q"><h3>How accurate does a birth chart need to be?</h3><p>Accurate enough that no planet sits within a rounding error of a sign or house boundary. In practice that means a real planetary theory such as VSOP87 rather than mean-position approximations.</p></div>
+        <div class="faq-q"><h3>What is VSOP87?</h3><p>A semi-analytic planetary theory published by the Paris Observatory, accurate to roughly arcsecond level over the modern era. It is the default in serious astrology software, and it is what Astral Lab uses.</p></div>
+        <div class="faq-q"><h3>Is a free birth chart calculator inaccurate?</h3><p>The free chart tools on this site are symbolic approximations for exploration, not professional computation. They are fine for learning the shape of a chart and useless for arc-level precision.</p></div>
+        <div class="faq-q"><h3>Does ephemeris accuracy affect the Moon sign?</h3><p>Most of all, yes. The Moon moves about 13 degrees a day, so a small error can shift it into the previous sign. It is the position most sensitive to both data precision and birth-time error.</p></div>
+        <div class="faq-q"><h3>Does it matter if my Ascendant is off by a degree?</h3><p>A lot. The Ascendant moves roughly one degree every four minutes, so a degree of error moves the entire house structure. Everything after the Ascendant is built on it.</p></div>
+        <div class="faq-q"><h3>Are Swiss Ephemeris and NASA JPL data different?</h3><p>They are different tools for different purposes and the difference between them is minor. The gap that actually changes charts is between either of them and a simple mean-position approximation.</p></div>
+        <div class="faq-q"><h3>Why does my chart disagree with another astrologer?</h3><p>Usually birth time, not software. Confirm the exact time first; a chart with the wrong Ascendant and wrong houses cannot be reconciled by interpretation.</p></div>
+        <div class="faq-q"><h3>Do I need a paid app to get an accurate chart?</h3><p>For a correct chart, yes, some form of real ephemeris computation is needed. Free tools on this site are for exploration; a VSOP87 app is a single $6.99 payment with no subscription.</p></div>
+
+        <h2>Where to go next</h2>
+        <p>Start with the free Birth Chart tool to see the shape of your chart. If you are working with it seriously, Astral Lab computes with VSOP87 for a single $6.99 payment.</p>
+    </main>
+</footer>
+    
+    <script src="js/app-render.min.js"></script>
+<script src="js/visitor-map.min.js?v=20260701"></script>
+
+<script src="js/shared.min.js"></script>
+
+<div id="lang-sidebar" class="lang-sidebar">
+    <button id="lang-toggle-btn" class="lang-toggle-btn" onclick="toggleLangSidebar()" title="Select Language"><svg class="lang-globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.8 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.8-3.8-9S9.5 5.7 12 3z"/></svg></button>
+    <div id="lang-flag-list" class="lang-flag-list">
+        <button onclick="switchLang('en')" class="lang-btn" title="English"><img src="assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button>
+        <button onclick="switchLang('es')" class="lang-btn" title="Español"><img src="assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button>
+        <button onclick="switchLang('fr')" class="lang-btn" title="Français"><img src="assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button>
+        <button onclick="switchLang('de')" class="lang-btn" title="Deutsch"><img src="assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button>
+        <button onclick="switchLang('it')" class="lang-btn" title="Italiano"><img src="assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button>
+        <button onclick="switchLang('pt')" class="lang-btn" title="Português"><img src="assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button>
+        <button onclick="switchLang('ru')" class="lang-btn" title="Русский"><img src="assets/images/flags/ru.svg" alt="Russian" class="flag-icon"> RU</button>
+        <button onclick="switchLang('ja')" class="lang-btn" title="日本語"><img src="assets/images/flags/jp.svg" alt="Japanese" class="flag-icon"> JP</button>
+        <button onclick="switchLang('zh-CN')" class="lang-btn" title="中文"><img src="assets/images/flags/cn.svg" alt="Chinese" class="flag-icon"> ZH</button>
+    </div>
+</div>
+<div id="google_translate_element" style="display:none;"></div>
+<div class="sticky-play-bar" role="complementary" aria-label="Buy occult apps on Google Play">
+    <span>12 premium occult apps &#9679; 100% offline &#9679; from $3.99</span>
+    <a href="https://play.google.com/store/apps/collection/cluster?gsr=SmRqGEFUVW5TRWFZN0NicHVTeXJ6Zmw4UEE9PbICRAonCiNjb20uY2hhMHNtYWdpY2suc2lnaWxnZW5lcmF0b3JmaW5hbBAHEhcIARITNzE3ODc3MzIzMjI4NTIxNDc0NxgAsBIA:S:ANO1ljI1Hcg" class="play-store-btn pulse" target="_blank" rel="noopener"><svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg> VIEW ALL APPS</a>
+</div>
+    <script src="js/conversion.min.js"></script>
+</body>
+</html>

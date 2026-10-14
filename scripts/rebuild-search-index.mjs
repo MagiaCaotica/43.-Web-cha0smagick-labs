@@ -35,6 +35,11 @@ for (const d of ['blog', 'tools', 'apps', 'books', 'landing-pages', 'compare', '
   const dir = path.join(ROOT, d);
   if (fs.existsSync(dir)) scanDir(dir, BASE + '/' + d);
 }
+// paginas comerciales de raiz (/sigil-maker.html, /astrology-app-reviews.html, ...)
+for (const f of fs.readdirSync(ROOT)) {
+  if (!f.endsWith('.html') || f === 'index.html') continue;
+  extract(path.join(ROOT, f), `${BASE}/${f}`);
+}
 for (const f of ['index.html', 'es/index.html']) {
   const full = path.join(ROOT, f);
   if (fs.existsSync(full)) extract(full, `${BASE}/${f}`);
