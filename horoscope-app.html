@@ -61,7 +61,7 @@
     }
   ]
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -81,9 +81,23 @@
   },
   "breadcrumb": {
     "@id": "https://cha0smagicklabs.com/horoscope-app.html#breadcrumb"
+  },
+  "dateModified": "2026-10-13",
+  "author": {
+    "@id": "https://cha0smagicklabs.com/about.html#frater-alek0s"
   }
 }
-    </script>
+</script>
+    <script type="application/ld+json">
+{
+  "@type": "Person",
+  "@id": "https://cha0smagicklabs.com/about.html#frater-alek0s",
+  "name": "Frater Alek0s",
+  "url": "https://cha0smagicklabs.com/about.html",
+  "jobTitle": "Chaos magick practitioner and editor",
+  "description": "Cha0smagick Labs is edited by Frater Alek0s, a chaos magick practitioner with fifteen years of practice, author of the Chaos Hunter runes treatise and editor of the Inner Circle study programme. Every guide on this site is tested in practice before it is published, and every app listed here is built and maintained by the same small team."
+}
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -107,7 +121,7 @@
     "bestRating": "5"
   }
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -151,7 +165,7 @@
     }
   ]
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -221,11 +235,51 @@
         "@type": "Answer",
         "text": "No. The timing layer comes from the moon and the planetary hours, both of which are calculable and free. The narrative prediction is optional and does not affect the practice."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free horoscope app without a subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tools here are free and need no app or account: lunar-phase, moon-phase-calendar, astrology-sign-calculator and planetary-hours. They give you the astronomical facts the horoscope is built on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do horoscope apps hide the cancel button?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because most subscriptions are never cancelled by accident. Retention is the whole model. If you subscribe, set a calendar reminder the day you sign up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a horoscope app better than a free website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if it personalises from your birth chart. Most of them serve the same text to everyone with the same Sun sign, which a free site can do just as well."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cheapest way to track the moon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "lunar-phase and moon-phase-calendar, free, no signup, real-time data. The Lunar Phase Calculator app at $3.99 is the same thing without a browser, if you want it on your phone permanently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a personalised reading without paying every year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Buy the chart once with Astral Lab ($6.99, VSOP87, no subscription) and read it yourself. Paying annually for a horoscope is only justified if you want someone else to interpret it for you."
+      }
     }
   ]
 }
-    </script>
-    <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -237,11 +291,16 @@
       "#problem",
       "#what-to-use",
       "#verdict-heading",
-      "#faq-heading"
+      "#faq-heading",
+      "#tldr",
+      "#business",
+      "#astro",
+      "#honest",
+      "#author"
     ]
   }
 }
-    </script>
+</script>
 
     <style>
     .kicker { color: var(--accent-gold, #c0a060); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 .6rem; font-family: 'JetBrains Mono', monospace; }
@@ -270,6 +329,16 @@
     .verdict p { margin: .4rem 0; color: var(--text-secondary, #999); }
     @media (max-width: 520px) { .btn-row { flex-direction: column; } }
     </style>
+
+    .deep-tldr { background: rgba(192,160,96,.07); border-left: 4px solid var(--accent-gold, #c0a060); padding: 1.1rem 1.4rem; margin: 2rem 0; border-radius: 0 6px 6px 0; }
+    .deep-tldr h2 { margin-top: 0; font-size: 1.05rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-gold, #c0a060); }
+    .deep-tldr ul { margin: .6rem 0 0; padding-left: 1.2rem; }
+    .deep-tldr li { margin-bottom: .45rem; }
+    .deep-author { margin: 2.5rem 0 1.5rem; padding: 1.2rem 1.4rem; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; background: rgba(255,255,255,.02); }
+    .deep-author h2 { margin-top: 0; font-size: 1.05rem; }
+    .deep-author p { margin-bottom: .5rem; }
+    .deep-case { margin: 1.6rem 0; }
+    .deep-case h3 { margin-bottom: .4rem; }
 </head>
 <body>
     <header>
@@ -285,7 +354,17 @@
             <p>Most horoscope apps are free for four days and then charge every week forever. The useful part of a horoscope, the timing layer, can be had free in a browser. Here is what to use instead.</p>
         </div>
 
-        <h2 id="problem">The subscription problem with horoscope apps</h2>
+        <!-- deep-hub -->
+    <section id="tldr" class="deep-tldr">
+<h2>In short</h2>
+<ul>
+  <li>La lectura de horoscopo diaria no necesita app: las 62 herramientas de este sitio cubren la parte astronomica gratis y sin registro.</li>
+  <li>El problema de las apps de horoscopo no es la prediccion, es el cobro: de 30 a 60 dolares al ano por un texto generado.</li>
+  <li>Si tu interes es la luna y los ciclos, el Calendario Lunar gratis es mejor que cualquier app de horoscopo.</li>
+  <li>Pagar solo tiene sentido si quieres predicciones personalizadas a partir de tu carta, y no un texto de hoy.</li>
+</ul>
+</section>
+<h2 id="problem">The subscription problem with horoscope apps</h2>
         <p>A subscription horoscope app is not selling astrology. It is selling notifications. Once a day the app buzzes, you open it, you read three lines, and it has cost you the price of a coffee every week for a text that could have come from a list of twelve sentences.</p>
         <p>What people are actually looking for when they search for a horoscope app is not predictions. It is <strong>timing</strong>: what phase the moon is in, whether it is void of course, whether a planet is retrograde, when the planetary hours fall. That information is exact, it is free, and it belongs to a calculator rather than to a subscription.</p>
 
@@ -334,7 +413,123 @@
                 <a class="ghost-btn" href="books/index.html">Browse the books</a>
             </div>
         </div>
-        <h2 id="faq-heading">Horoscope app questions</h2>
+        <section id="business">
+<h2>What subscription horoscope apps actually sell</h2>
+<ul>
+  <li>Una app de horoscopo no calcula la carta natal de forma relevante en su version gratuita: ofrece un texto corto y luego cobra por mas largo. El texto no mejora con el nivel de pago, solo se alarga.</li>
+  <li>La lectura gratuita de la mayoria de apps sale de una plantilla con el signo substituted. La de pago sale de la misma plantilla con mas adjetivos. Ninguna de las dos consulta los tránsitos con precision.</li>
+  <li>El modelo de negocio es predecible: acquisition barata, suscripcion mensual, cancelacion en el segundo mes. El rango real que se ve en la categoria es de 30 a 60 dolares al año, y algunas llegan a 470 al año en planes "premium".</li>
+  <li>Lo que si es informacion real en una app de pago son los tránsitos: que planetas aspectan tu carta esta semana. Eso lo puedes calcular tu mismo con planetary-retrograde-calendar y planetary-hours-planner, gratis.</li>
+</ul>
+<table>
+<thead><tr><th>What you get</th><th>Free tier</th><th>Paid tier</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Daily text</th><th>One paragraph</th><th>Three paragraphs, same template</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Real transits</th><th>No</th><th>Yes, in the good apps</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Birth chart</th><th>Basic or none</th><th>Full</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Cost</th><th>0</th><th>30 to 470 dollars a year</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Cancel path</th><th>Hard to find</th><th>Usually hidden in settings</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+</section>
+
+<section id="astro">
+<h2>The part that is actually astronomical (and free)</h2>
+<ul>
+  <li>Lo que hace que un dia "sea de Leo" es el Sol en la constellation de Leo, y eso es un calculo, no una opinion. La luna tambien importa: cambia el signo que se te atribuye en la practica tradicional cada dos dias y medio.</li>
+  <li>Este sitio calcula las fases lunares con datos en tiempo real, con la hora de luna llena y la fecha de la proxima luna nueva, sin cuenta ni publicidad.</li>
+  <li>Tambien estan los seis signos calculados al instante, y las horas planetarias, que son el equivalente mas cercano que existe al "horoscopo del dia": dicen que hora es buena para empezar algo y no que te pasara algo.</li>
+  <li>Ninguna app de horoscopo te da eso con la misma precision y sin pedirte la tarjeta.</li>
+</ul>
+<table>
+<thead><tr><th>Tool</th><th>What it tells you</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>lunar-phase</th><th>The current phase, illumination, next full and new moon</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>moon-phase-calendar</th><th>A calendar view for planning rituals</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>astrology-sign-calculator</th><th>Sun, Moon and Ascendant for any instant</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>planetary-hours</th><th>Which planet rules the hour, right now</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>planetary-retrograde-calendar</th><th>Every upcoming station</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>moon-voc</th><th>When the Moon is void of course, traditionally useless for launching</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+</section>
+
+<section id="honest">
+<h2>When a horoscope app is the right answer</h2>
+<ul>
+  <li>Hay un caso legitimo: quieres que alguien te diga algo sobre tu carta, y leerla tu mismo te resulta agotador. Entonces una lectura pagada tiene sentido, con dos condiciones: que use tu carta natal real, y que puedas cancelar cuando quieras.</li>
+  <li>Hay un segundo caso: trackers de habitos. Algunas apps de horoscopo son disfraz de diario, y en ese caso el valor esta en escribir, no en la prediccion. Para eso esta el diario de suenos de este ecosistema.</li>
+  <li>Y hay un tercero, mas raro: la notificacion diaria como recordatorio. Si te funciona como ritual de anclaje, el problema no es la app sino el precio que pagas por ella.</li>
+</ul>
+</section>
+<section id="author" class="deep-author">
+<h2>Who writes this</h2>
+<p>Written and fact-checked by <strong>Frater Alek0s</strong>, chaos magick practitioner with fifteen years of practice, author of the Chaos Hunter runes treatise and editor of the Inner Circle study programme. Every guide here is tested in practice before it is published, and every app listed is built and maintained by the same team.</p>
+<p>Questions about a method, or you want the long version of any technique: <a href="/landing-pages/complete-access.html">Inner Circle</a> has the full courses and monthly study threads.</p>
+</section>
+Free tool for each horoscope need<table>
+<thead><tr><th>|What you want|Tool|Cost|</th><th>|"Today I am a what sign"|astrology-sign-calculator|Free|</th><th>|"What moon is this"|lunar-phase, moon-phase-calendar|Free|</th><th>|"Is Mercury retrograde"|planetary-retrograde-calendar|Free|</th><th>|"When can I start something"|planetary-hours-planner|Free|</th><th>|"What does my chart say about love"|Astral Lab, then your own reading|$6.99 once|</th><th>|"Something to read every morning"|Any of the above, plus a journal|free|</th><th>|"A person to read it for me"|A real reader, not a subscription|varies|</th></tr></thead>
+<tbody>
+</tbody>
+</table>
+<h2 id="faq-heading">Horoscope app questions</h2>
         <div class="faq-q"><h3>What is the best horoscope app?</h3><p>For accuracy, the free browser tools on this site: lunar phase, moon phase calendar, void of course, planetary hours and retrogrades, all exact and free. For convenience on a phone during practice, the Lunar Phase Calculator app at $3.99 once.</p></div>
         <div class="faq-q"><h3>Is there a free horoscope app with no subscription?</h3><p>Yes. The lunar phase, moon phase calendar, void of course, planetary hours and retrograde tools here are free, need no account, and have no paid tier at all.</p></div>
         <div class="faq-q"><h3>Why do horoscope apps charge weekly?</h3><p>Because the daily notification is the product, not the astrology. A weekly subscription is the cheapest way to make someone open an app every day, so that is what gets sold.</p></div>
@@ -344,7 +539,16 @@
         <div class="faq-q"><h3>Is there a horoscope app that works offline?</h3><p>The Lunar Phase Calculator app does, along with the rest of this catalogue. Subscription horoscope apps generally do not, because the content is fetched from a server.</p></div>
         <div class="faq-q"><h3>Do I need a horoscope app to do magick?</h3><p>No. The timing layer comes from the moon and the planetary hours, both of which are calculable and free. The narrative prediction is optional and does not affect the practice.</p></div>
 
-        <h2>Where to go next</h2>
+        <div class="faq-q"><h3>Is there a free horoscope app without a subscription?</h3><p>The tools here are free and need no app or account: lunar-phase, moon-phase-calendar, astrology-sign-calculator and planetary-hours. They give you the astronomical facts the horoscope is built on.</p></div>
+
+<div class="faq-q"><h3>Why do horoscope apps hide the cancel button?</h3><p>Because most subscriptions are never cancelled by accident. Retention is the whole model. If you subscribe, set a calendar reminder the day you sign up.</p></div>
+
+<div class="faq-q"><h3>Is a horoscope app better than a free website?</h3><p>Only if it personalises from your birth chart. Most of them serve the same text to everyone with the same Sun sign, which a free site can do just as well.</p></div>
+
+<div class="faq-q"><h3>What is the cheapest way to track the moon?</h3><p>lunar-phase and moon-phase-calendar, free, no signup, real-time data. The Lunar Phase Calculator app at $3.99 is the same thing without a browser, if you want it on your phone permanently.</p></div>
+
+<div class="faq-q"><h3>Can I get a personalised reading without paying every year?</h3><p>Yes. Buy the chart once with Astral Lab ($6.99, VSOP87, no subscription) and read it yourself. Paying annually for a horoscope is only justified if you want someone else to interpret it for you.</p></div>
+<h2>Where to go next</h2>
         <p>Check tonight with the <a href="tools/lunar-phase.html">free lunar phase tool</a>, then set up the whole timing layer at once from <a href="tools/index.html">the 62 free tools</a>.</p>
     </main>
 </footer>

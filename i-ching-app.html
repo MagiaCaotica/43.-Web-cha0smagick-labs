@@ -61,7 +61,7 @@
     }
   ]
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -81,9 +81,23 @@
   },
   "breadcrumb": {
     "@id": "https://cha0smagicklabs.com/i-ching-app.html#breadcrumb"
+  },
+  "dateModified": "2026-10-13",
+  "author": {
+    "@id": "https://cha0smagicklabs.com/about.html#frater-alek0s"
   }
 }
-    </script>
+</script>
+    <script type="application/ld+json">
+{
+  "@type": "Person",
+  "@id": "https://cha0smagicklabs.com/about.html#frater-alek0s",
+  "name": "Frater Alek0s",
+  "url": "https://cha0smagicklabs.com/about.html",
+  "jobTitle": "Chaos magick practitioner and editor",
+  "description": "Cha0smagick Labs is edited by Frater Alek0s, a chaos magick practitioner with fifteen years of practice, author of the Chaos Hunter runes treatise and editor of the Inner Circle study programme. Every guide on this site is tested in practice before it is published, and every app listed here is built and maintained by the same small team."
+}
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -107,7 +121,7 @@
     "bestRating": "5"
   }
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -139,7 +153,7 @@
     }
   ]
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -209,11 +223,51 @@
         "@type": "Answer",
         "text": "A free lunar phase calculator to check timing, and a quiet fifteen minutes. The 8-book bundle covers the tradition for $19.99 if you want the theory behind the hexagrams."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I really need an app to cast an I Ching reading?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The method is three coins and a question. The free tools here cast it, draw the changing lines and give the full interpretation of all 64 hexagrams, with no account and no connection required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many coins do I need, and which side counts for what?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three coins. The traditional convention gives 3 to the inscribed side and 2 to the plain side, and you add them up. The result can be 6, 7, 8 or 9, and each maps to one of the four line types."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which hexagram do I read if there are changing lines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Read the primary hexagram first, then the specific changing lines one by one, because they describe the mechanism of the change. The opposite hexagram built from those lines gives the outcome."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the I Ching every day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and practitioners often do. Cast once for the day with a clear question and read it properly rather than casting repeatedly for the same question, which tends to produce noise rather than insight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it worth paying for an I Ching app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only for the saved history. I Ching Oracle ($3.99, one time, no subscription) adds a searchable record of your castings, which is the one thing a free page cannot do. Everything else is covered free here."
+      }
     }
   ]
 }
-    </script>
-    <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -224,11 +278,16 @@
       "h1",
       "#need",
       "#free",
-      "#faq-heading"
+      "#faq-heading",
+      "#tldr",
+      "#coins",
+      "#reading",
+      "#keeping",
+      "#author"
     ]
   }
 }
-    </script>
+</script>
 
     <style>
     .kicker { color: var(--accent-gold, #c0a060); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 .6rem; font-family: 'JetBrains Mono', monospace; }
@@ -257,6 +316,16 @@
     .verdict p { margin: .4rem 0; color: var(--text-secondary, #999); }
     @media (max-width: 520px) { .btn-row { flex-direction: column; } }
     </style>
+
+    .deep-tldr { background: rgba(192,160,96,.07); border-left: 4px solid var(--accent-gold, #c0a060); padding: 1.1rem 1.4rem; margin: 2rem 0; border-radius: 0 6px 6px 0; }
+    .deep-tldr h2 { margin-top: 0; font-size: 1.05rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-gold, #c0a060); }
+    .deep-tldr ul { margin: .6rem 0 0; padding-left: 1.2rem; }
+    .deep-tldr li { margin-bottom: .45rem; }
+    .deep-author { margin: 2.5rem 0 1.5rem; padding: 1.2rem 1.4rem; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; background: rgba(255,255,255,.02); }
+    .deep-author h2 { margin-top: 0; font-size: 1.05rem; }
+    .deep-author p { margin-bottom: .5rem; }
+    .deep-case { margin: 1.6rem 0; }
+    .deep-case h3 { margin-bottom: .4rem; }
 </head>
 <body>
     <header>
@@ -272,6 +341,17 @@
             <p>The I Ching is three thousand years old and works with three coins. Some of the best tools for it are free and run in a browser. This is what each option is actually for, and when paying for one is worth it.</p>
         </div>
 
+<!-- deep-hub -->
+    <section id="tldr" class="deep-tldr">
+<h2>In short</h2>
+<ul>
+  <li>You do not need an app to cast an I Ching reading; you need three coins and a clear question.</li>
+  <li>The three-coin method is deterministic: same coins, same result, every time.</li>
+  <li>What an app adds is a saved history, instant interpretation and no fiddling with a page.</li>
+  <li>The free tools here cover the whole method, including changing lines.</li>
+  <li>I Ching Oracle ($3.99, one time) adds history and works with no connection at all.</li>
+</ul>
+</section>
 <h2 id="need">What an I Ching app is supposed to do</h2>
 <p>Strip away the ornament and an I Ching tool has exactly four jobs: cast, interpret, track changing lines and remember what you read before. Everything else in the category is decoration.</p>
 <p>Casting is trivial arithmetic: three coins, six tosses, six lines, one hexagram. Any competent program does it correctly. The parts that actually distinguish a good tool from a bad one are the interpretation text and the history, because those are the two things you cannot do in your head at 2am.</p>
@@ -343,7 +423,67 @@
   <p>The I Ching does not need an app. It needs three coins and somewhere to write down what you saw. The free tools on this site cover casting, interpretation and changing lines with no account, which is enough for anyone consulting weekly. The $3.99 app earns its place only when you want offline use and a history of your readings, not when you want a more accurate cast, because there is no such thing here.</p>
 </div>
 
-        <h2 id="faq-heading">I Ching app questions</h2>
+        <section id="coins">
+<h2>The three-coin method, exactly how it works</h2>
+<ul>
+  <li>Three coins, two faces. The classic convention assigns 3 to the inscribed side and 2 to the plain side. Toss all three and add the values. The sum can only be 6, 7, 8 or 9, and each sum has a fixed meaning.</li>
+  <li>A sum of 6 is an old yin line: broken and changing. It means the situation is at its end and is about to move. A sum of 7 is a young yang line: solid and stable. A sum of 8 is a young yin line: broken but stable, meaning the influence is present but not yet acting. A sum of 9 is an old yang line: solid and changing, at its peak and about to weaken.</li>
+  <li>The changing lines are the whole point of the method. When a line is changing you draw it as solid or broken with an extra mark beside it. Stack the six lines from the bottom up to build your primary hexagram. Then flip each changing line and rebuild to get your opposite hexagram. The lines that changed are read first and individually, because they describe the mechanism of the change.</li>
+  <li>Three coins give you every one of the 64 hexagrams with a fair probability and no repetition bias, which is why the method feels cleaner than drawing yarrow stalks. The sums are not equally likely in practice because the coins are not perfectly balanced, but the bias is small enough that practitioners ignore it.</li>
+</ul>
+<ul>
+  <li>|Toss|Sum|Line|Name|Meaning|</li>
+  <li>|TTT|9|Old yang|Solid, changing|Yang at its peak, about to weaken into yin|</li>
+  <li>|TTH or THT or HTT|8|Young yin|Broken, stable|Yin present but not yet acting|</li>
+  <li>|THH or HTH or HHT|7|Young yang|Solid, stable|Yang growing, nothing special happening|</li>
+  <li>|HHH|6|Old yin|Broken, changing|Yin at its peak, about to change into yang|</li>
+</ul>
+</section>
+
+<section id="reading">
+<h2>How to read the hexagram once you have it</h2>
+<ul>
+  <li>A hexagram is read as two trigrams stacked. The lower trigram is the situation as it is now, formed by the first three lines from the bottom. The upper trigram is what is moving it, formed by the top three. Reading the pair tells you the dynamic, not a verdict.</li>
+  <li>Beyond the primary hexagram there are three derived hexagrams, and each answers a different question. The nuclear hexagram, formed by the middle two lines of each trigram, describes the internal situation and what is not yet visible. The inverse hexagram, where you swap yin and yang in every line, describes where the situation is heading if nothing changes. And the opposite hexagram, built from your changing lines, is the specific outcome.</li>
+  <li>The ten wings are the interpretive texts traditionally attached to each hexagram. The Great Image describes the whole pattern. The Judgement gives the overall verdict. The Image describes the ideal. The six line texts describe the six stages of the process, and most of the nuance lives in the specific line you land on rather than in the hexagram as a whole.</li>
+  <li>This is why the line texts matter. Two people casting the same hexagram with a different changing line get materially different readings, because they are reading different stages of the same process.</li>
+</ul>
+<ul>
+  <li>|Hexagram|Formed from|What it answers|</li>
+  <li>|Primary|Bottom line up|Situation right now|</li>
+  <li>|Nuclear|Middle two lines of each trigram|What is happening below the surface|</li>
+  <li>|Inverse|Every line flipped|Where this goes if nothing changes|</li>
+  <li>|Opposite|Changing lines flipped|Specific outcome of the change|</li>
+  <li>|Line texts|Each of the six lines|Six stages of the process, read one at a time|</li>
+</ul>
+</section>
+
+<section id="keeping">
+<h2>Getting more out of every cast</h2>
+<ul>
+  <li>The single biggest improvement in I Ching practice is writing the question down before you throw the coins, and writing what you predicted afterwards. Ten minutes of that turns a random sequence into a trackable record.</li>
+  <li>Keep one line per reading: date, the question in your own words, the hexagram names, the changing line, and what happened. After a year you will have a much clearer sense of which hexagrams actually show up for you, and whether your reading accuracy depends on the question or on your state.</li>
+  <li>Cast once and read, then cast again if you genuinely do not know what to do. Casting repeatedly with the same question teaches you nothing, because you are reading your own impatience rather than the change.</li>
+  <li>If you work with the method regularly, a saved history is worth more than a prettier interface. That is the only thing a paid app genuinely adds over a free tool, and it is why I Ching Oracle costs $3.99 once rather than a subscription.</li>
+</ul>
+<ul>
+  <li>Cast a reading for a yes or no question.,/tools/iching.html</li>
+  <li>See the changing lines drawn as they come.,/tools/iching-changing-lines.html</li>
+  <li>Choose the right moment to start something.,/tools/planetary-hours.html</li>
+  <li>Read your library of recorded castings over time.,I Ching Oracle, $3.99 one time</li>
+</ul>
+</section>
+<section id="author" class="deep-author">
+<h2>Who writes this</h2>
+<p>Written and fact-checked by <strong>Frater Alek0s</strong>, chaos magick practitioner with fifteen years of practice, author of the Chaos Hunter runes treatise and editor of the Inner Circle study programme. Every guide here is tested in practice before it is published, and every app listed is built and maintained by the same team.</p>
+<p>Questions about a method, or you want the long version of any technique: <a href="/landing-pages/complete-access.html">Inner Circle</a> has the full courses and monthly study threads.</p>
+</section>
+What people use the I Ching for<table>
+<thead><tr><th>|Question type|Cast for|Read first|</th><th>|"Should I take this job"|Hexagram 1 and 4|Crossing line in the third place|</th><th>|"Is this relationship honest"|Hexagram 1 and 6|The second line, which governs the inner state|</th><th>|"When should I start"|Hexagram 1 and 2|The first line, which governs beginnings|</th><th>|"What am I missing"|Hexagram 4 and 5|Nuclear hexagram, for the hidden situation|</th><th>|"Is this safe to keep doing"|Hexagram 1 and 3|Third line, the one that carries the risk|</th><th>|"What happens if I wait"|Hexagram 1 and 4|Inverse hexagram, for the drift of waiting|</th></tr></thead>
+<tbody>
+</tbody>
+</table>
+<h2 id="faq-heading">I Ching app questions</h2>
         <div class="faq-q"><h3>Do I need an app to use the I Ching?</h3><p>No. Three coins and a surface to toss them on are the traditional method. Apps and online tools are conveniences for interpretation and record keeping, not requirements.</p></div>
         <div class="faq-q"><h3>Is there a free I Ching I can use online?</h3><p>Yes. The free I Ching tool on this site runs the authentic three-coin method with all 64 hexagrams, no signup and no account.</p></div>
         <div class="faq-q"><h3>What is the difference between a free and a paid I Ching app?</h3><p>Casting accuracy is identical. Paid versions add offline use, a saved reading history and multiple languages, which matter if you consult often.</p></div>
@@ -353,7 +493,16 @@
         <div class="faq-q"><h3>Does the app work offline?</h3><p>Yes. The paid Android app runs entirely offline, which some people prefer for ritual work. The free browser tools require a connection.</p></div>
         <div class="faq-q"><h3>What else should I have when I consult the I Ching?</h3><p>A free lunar phase calculator to check timing, and a quiet fifteen minutes. The 8-book bundle covers the tradition for $19.99 if you want the theory behind the hexagrams.</p></div>
 
-        <h2>Where to go next</h2>
+        <div class="faq-q"><h3>Do I really need an app to cast an I Ching reading?</h3><p>No. The method is three coins and a question. The free tools here cast it, draw the changing lines and give the full interpretation of all 64 hexagrams, with no account and no connection required.</p></div>
+
+<div class="faq-q"><h3>How many coins do I need, and which side counts for what?</h3><p>Three coins. The traditional convention gives 3 to the inscribed side and 2 to the plain side, and you add them up. The result can be 6, 7, 8 or 9, and each maps to one of the four line types.</p></div>
+
+<div class="faq-q"><h3>Which hexagram do I read if there are changing lines?</h3><p>Read the primary hexagram first, then the specific changing lines one by one, because they describe the mechanism of the change. The opposite hexagram built from those lines gives the outcome.</p></div>
+
+<div class="faq-q"><h3>Can I use the I Ching every day?</h3><p>Yes, and practitioners often do. Cast once for the day with a clear question and read it properly rather than casting repeatedly for the same question, which tends to produce noise rather than insight.</p></div>
+
+<div class="faq-q"><h3>Is it worth paying for an I Ching app?</h3><p>Only for the saved history. I Ching Oracle ($3.99, one time, no subscription) adds a searchable record of your castings, which is the one thing a free page cannot do. Everything else is covered free here.</p></div>
+<h2>Where to go next</h2>
         <p>Cast a free reading with the I Ching tool on this site. If you consult daily or want offline use and history, I Ching Oracle is $3.99 once on Google Play.</p>
     </main>
 </footer>

@@ -61,7 +61,7 @@
     }
   ]
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -81,9 +81,23 @@
   },
   "breadcrumb": {
     "@id": "https://cha0smagicklabs.com/birth-chart-app.html#breadcrumb"
+  },
+  "dateModified": "2026-10-13",
+  "author": {
+    "@id": "https://cha0smagicklabs.com/about.html#frater-alek0s"
   }
 }
-    </script>
+</script>
+    <script type="application/ld+json">
+{
+  "@type": "Person",
+  "@id": "https://cha0smagicklabs.com/about.html#frater-alek0s",
+  "name": "Frater Alek0s",
+  "url": "https://cha0smagicklabs.com/about.html",
+  "jobTitle": "Chaos magick practitioner and editor",
+  "description": "Cha0smagick Labs is edited by Frater Alek0s, a chaos magick practitioner with fifteen years of practice, author of the Chaos Hunter runes treatise and editor of the Inner Circle study programme. Every guide on this site is tested in practice before it is published, and every app listed here is built and maintained by the same small team."
+}
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -107,7 +121,7 @@
     "bestRating": "5"
   }
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -151,7 +165,7 @@
     }
   ]
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -221,11 +235,51 @@
         "@type": "Answer",
         "text": "For the chart itself, yes: same wheel, same aspects, same precision. The paid app adds transit alerts, saved history and the full meanings library."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a birth chart app accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is as accurate as its ephemeris and your birth time. A chart calculated with VSOP87 and an exact birth time is reliable; a chart calculated with mean positions and a rounded time can be wrong by a whole sign."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I do not know my birth time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You still get your Sun sign, and your Moon sign if you know it approximately. The Ascendant and the houses need an exact time. Try the hospital record or a birth certificate before you give up on it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to give my birth data to a website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not for the free tools here. full-birth-chart and astrology-sign-calculator calculate in your browser and send nothing. This is the reason we built them as web tools instead of only as apps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is VSOP87?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A complete mathematical theory of planetary motion published by the Paris Observatory in 1988. Astrology programs that use it produce positions accurate to fractions of a degree instead of to a degree."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I pay for a chart app or compute it free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compute it free first. If the free chart already answers your question, you do not need the app. Astral Lab is worth $6.99 when you read charts weekly, want aspects, or want the chart to work offline."
+      }
     }
   ]
 }
-    </script>
-    <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -237,11 +291,16 @@
       "#what-you-get",
       "#table-heading",
       "#verdict-heading",
-      "#faq-heading"
+      "#faq-heading",
+      "#tldr",
+      "#time",
+      "#method",
+      "#reading",
+      "#author"
     ]
   }
 }
-    </script>
+</script>
 
     <style>
     .kicker { color: var(--accent-gold, #c0a060); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 .6rem; font-family: 'JetBrains Mono', monospace; }
@@ -270,6 +329,16 @@
     .verdict p { margin: .4rem 0; color: var(--text-secondary, #999); }
     @media (max-width: 520px) { .btn-row { flex-direction: column; } }
     </style>
+
+    .deep-tldr { background: rgba(192,160,96,.07); border-left: 4px solid var(--accent-gold, #c0a060); padding: 1.1rem 1.4rem; margin: 2rem 0; border-radius: 0 6px 6px 0; }
+    .deep-tldr h2 { margin-top: 0; font-size: 1.05rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-gold, #c0a060); }
+    .deep-tldr ul { margin: .6rem 0 0; padding-left: 1.2rem; }
+    .deep-tldr li { margin-bottom: .45rem; }
+    .deep-author { margin: 2.5rem 0 1.5rem; padding: 1.2rem 1.4rem; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; background: rgba(255,255,255,.02); }
+    .deep-author h2 { margin-top: 0; font-size: 1.05rem; }
+    .deep-author p { margin-bottom: .5rem; }
+    .deep-case { margin: 1.6rem 0; }
+    .deep-case h3 { margin-bottom: .4rem; }
 </head>
 <body>
     <header>
@@ -285,7 +354,17 @@
             <p>A full natal chart with real ephemeris data, aspect patterns, placement meanings and transit alerts. One payment. Works with no connection. And a free browser version if you want to look before you buy.</p>
         </div>
 
-        <h2 id="what-you-get">What a birth chart app should actually give you</h2>
+        <!-- deep-hub -->
+    <section id="tldr" class="deep-tldr">
+<h2>In short</h2>
+<ul>
+  <li>Una carta natal gratuita sirve para el signo solar y poco mas. La precision de la hora de nacimiento solo aparece cuando el Ascendente importa.</li>
+  <li>El error mas comun no es de la app: es de la hora. Sin la hora exacta, la casa ascendente es una suposicion.</li>
+  <li>El factor que mas cambia el resultado es la efemeride: VSOP87 frente a posiciones medias cambia hasta dos signos en los bordes.</li>
+  <li>Astral Lab ($6.99, pago unico) calcula VSOP87 en el dispositivo, con rejilla de aspectos y sin suscripcion.</li>
+</ul>
+</section>
+<h2 id="what-you-get">What a birth chart app should actually give you</h2>
         <p>Most of them give you the Sun sign and hold the rest. You tap on the app, you get a glyph, you get a paragraph about being creative, and the moment you ask what your Moon sign does the app asks for a subscription.</p>
         <p>A real natal chart is not a Sun sign. It is a wheel of about thirty positions: Sun, Moon and rising sign, the personal planets, the angles, the houses, and every aspect formed between them. Two people born in the same month can have completely different charts, and the differences between them are where the actual information is.</p>
         <p>What you need from an app, then, is the whole wheel, the aspects drawn as patterns rather than listed as noise, the meanings attached to each placement, and a way to see what is moving now. That is the list this app is judged against.</p>
@@ -334,7 +413,146 @@
                 <a class="ghost-btn" href="books/index.html">Browse the books</a>
             </div>
         </div>
-        <h2 id="faq-heading">Birth chart app questions</h2>
+        <section id="time">
+<h2>Get your birth time right before you blame the app</h2>
+<ul>
+  <li>Si tu hora de nacimiento se redondea a la hora mas cercana, tu Ascendente puede moverse hasta quince grados: media casa. Media casa en el eje de las casas es suficiente para que un planeta cambie de signo.</li>
+  <li>La hora mas comun que se registra mal es la de un nacimiento cerca de medianoche. Un registro de 23:52 frente a 00:08 es la diferencia entre un signo ascendente y otro.</li>
+  <li>Tres fuentes, en este orden: el certificado de nacimiento, el registro hospitalario, y como ultima opcion la hora aproximada que te da un familiar. Anota tambien la zona horaria y si habia horario de verano, porque eso desplaza el reloj.</li>
+</ul>
+<table>
+<thead><tr><th>Source</th><th>Reliability</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Birth certificate</th><th>Exact, includes the timezone</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Hospital record</th><th>Exact, usually same day</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>A relative remembering "around noon"</th><th>Fine for the Sun sign, useless for the Ascendant</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>A site that asks only the date</th><th>Only calculates Sun and Moon</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+</section>
+
+<section id="method">
+<h2>Mean positions, VSOP87, and why the difference is visible</h2>
+<ul>
+  <li>Las efemerides se calculan de dos formas. Las posiciones medias usan orbitas circulares promediadas, rapidas, con error de hasta un grado. VSOP87 integra la teoria planetaria completa y baja de esa a centimas de grado.</li>
+  <li>Un grado no parece nada hasta que te fijas en que el zodiaco son 30 grados por signo. Un grado es doce minutos de tiempo. La conclusion es distinta.</li>
+  <li>El caso peor es el Ascendente: se mueve un grado cada cuatro minutos de tiempo. Un error de dos grados son ocho minutos de reloj, y en un borde de signo eso es un signo entero equivocado.</li>
+  <li>En una carta con planetas cerca de los limites, la diferencia se ve. En una carta con planetas bien puestos, ninguna de las dos te va a dar una respuesta diferente. Ahi la decision no importa, y conviene decirlo claro para no vender humo.</li>
+</ul>
+<table>
+<thead><tr><th>Ephemeris</th><th>Error</th><th>Matters most for</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Mean positions (abbreviated)</th><th>Up to 1 degree</th><th>Ascendants and planets near sign edges</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>VSOP87</th><th>Less than 0.01 degree</th><th>Everything, but only visibly at the edges</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Swiss Ephemeris (library)</th><th>Depends on the build used</th><th>If the app says which one, ask why</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+</section>
+
+<section id="reading">
+<h2>What to look at first in your own chart</h2>
+<ul>
+  <li>El orden de lectura correcto evita el 90 por ciento de las lecturas superficiales. Empieza por el Sol: describe lo que haces de forma visible. Luego la Luna: como lo llevas por dentro. Tercero el Ascendente: como te presentas al mundo.</li>
+  <li>La cuarta posicion es el Parte de Fortuna, que en la tradicion hellenistica es el punto mas util y casi nunca se muestra. Se calcula con la relacion entre el Sol y el Ascendente.</li>
+  <li>Los aspectos entre planetas son lo que convierte una lista de posiciones en una lectura. Trigo y Marte en trígono es una cosa; en quintiles es otra muy distinta, y la mayoria de las apps gratuitas no distingue entre las dos.</li>
+</ul>
+<table>
+<thead><tr><th>Position</th><th>What it describes</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Sun</th><th>Visible behaviour, purpose</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Moon</th><th>Internal emotional life, needs</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Ascendant</th><th>How you approach the world, appearance</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Mercury</th><th>How you think and speak</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Venus</th><th>What you value and how you relate</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Mars</th><th>How you assert and act</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Part of Fortune</th><th>Bodily wellbeing, often omitted</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+</section>
+<section id="author" class="deep-author">
+<h2>Who writes this</h2>
+<p>Written and fact-checked by <strong>Frater Alek0s</strong>, chaos magick practitioner with fifteen years of practice, author of the Chaos Hunter runes treatise and editor of the Inner Circle study programme. Every guide here is tested in practice before it is published, and every app listed is built and maintained by the same team.</p>
+<p>Questions about a method, or you want the long version of any technique: <a href="/landing-pages/complete-access.html">Inner Circle</a> has the full courses and monthly study threads.</p>
+</section>
+Free first, or pay first<table>
+<thead><tr><th>|Your situation|Best route|</th><th>|"I just want my Sun sign"|astrology-sign-calculator, free, no signup|</th><th>|"Sun, Moon and a rough chart"|full-birth-chart, free, on device|</th><th>|"My Ascendant looks wrong"|Check the birth time first, then compare in Astral Lab|</th><th>|"Aspects and a printable chart"|Astral Lab, $6.99 once, VSOP87|</th><th>|"Retrogrades for planning"|planetary-retrograde-calendar, free|</th><th>|"The moment for a ritual"|planetary-hours-planner, free|</th><th>|"Nothing, I just want the free chart"|full-birth-chart and rise with rising-sign-calculator|</th></tr></thead>
+<tbody>
+</tbody>
+</table>
+<h2 id="faq-heading">Birth chart app questions</h2>
         <div class="faq-q"><h3>What is the best birth chart app?</h3><p>Astral Lab at Cha0smagick Labs. Full natal wheel, aspect patterns shown as patterns, meanings for every placement, transit flags, $6.99 once, works with no connection.</p></div>
         <div class="faq-q"><h3>Is there a free birth chart app?</h3><p>The free browser chart on this site gives you the full wheel with aspect information and no account, no signup and no cost. It is the same computation the app uses.</p></div>
         <div class="faq-q"><h3>What is the most accurate birth chart app?</h3><p>Accuracy comes from the ephemeris, not the interface. Both the free browser chart and Astral Lab compute positions properly instead of using approximate tables, which is why a planet near a sign edge is labelled correctly.</p></div>
@@ -344,7 +562,16 @@
         <div class="faq-q"><h3>What is the difference between a natal chart app and a horoscope app?</h3><p>A natal chart app calculates your fixed placements from birth data. A horoscope app gives predictions for a date. One is a chart, the other is a daily feed; only one of them is worth installing.</p></div>
         <div class="faq-q"><h3>Is the free chart as good as the paid app?</h3><p>For the chart itself, yes: same wheel, same aspects, same precision. The paid app adds transit alerts, saved history and the full meanings library.</p></div>
 
-        <h2>Where to go next</h2>
+        <div class="faq-q"><h3>Is a birth chart app accurate?</h3><p>It is as accurate as its ephemeris and your birth time. A chart calculated with VSOP87 and an exact birth time is reliable; a chart calculated with mean positions and a rounded time can be wrong by a whole sign.</p></div>
+
+<div class="faq-q"><h3>What if I do not know my birth time?</h3><p>You still get your Sun sign, and your Moon sign if you know it approximately. The Ascendant and the houses need an exact time. Try the hospital record or a birth certificate before you give up on it.</p></div>
+
+<div class="faq-q"><h3>Do I need to give my birth data to a website?</h3><p>Not for the free tools here. full-birth-chart and astrology-sign-calculator calculate in your browser and send nothing. This is the reason we built them as web tools instead of only as apps.</p></div>
+
+<div class="faq-q"><h3>What is VSOP87?</h3><p>A complete mathematical theory of planetary motion published by the Paris Observatory in 1988. Astrology programs that use it produce positions accurate to fractions of a degree instead of to a degree.</p></div>
+
+<div class="faq-q"><h3>Should I pay for a chart app or compute it free?</h3><p>Compute it free first. If the free chart already answers your question, you do not need the app. Astral Lab is worth $6.99 when you read charts weekly, want aspects, or want the chart to work offline.</p></div>
+<h2>Where to go next</h2>
         <p>Cast the <a href="tools/full-birth-chart.html">free full birth chart</a> now, then read <a href="horoscope-app.html">how a horoscope app differs</a> if you also want the daily layer.</p>
     </main>
 </footer>

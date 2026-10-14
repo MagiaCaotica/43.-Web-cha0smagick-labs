@@ -61,7 +61,7 @@
     }
   ]
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -81,9 +81,23 @@
   },
   "breadcrumb": {
     "@id": "https://cha0smagicklabs.com/ephemeris-accuracy.html#breadcrumb"
+  },
+  "dateModified": "2026-10-13",
+  "author": {
+    "@id": "https://cha0smagicklabs.com/about.html#frater-alek0s"
   }
 }
-    </script>
+</script>
+    <script type="application/ld+json">
+{
+  "@type": "Person",
+  "@id": "https://cha0smagicklabs.com/about.html#frater-alek0s",
+  "name": "Frater Alek0s",
+  "url": "https://cha0smagicklabs.com/about.html",
+  "jobTitle": "Chaos magick practitioner and editor",
+  "description": "Cha0smagick Labs is edited by Frater Alek0s, a chaos magick practitioner with fifteen years of practice, author of the Chaos Hunter runes treatise and editor of the Inner Circle study programme. Every guide on this site is tested in practice before it is published, and every app listed here is built and maintained by the same small team."
+}
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -107,7 +121,7 @@
     "bestRating": "5"
   }
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -139,7 +153,7 @@
     }
   ]
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -209,11 +223,51 @@
         "@type": "Answer",
         "text": "For a correct chart, yes, some form of real ephemeris computation is needed. Free tools on this site are for exploration; a VSOP87 app is a single $6.99 payment with no subscription."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my birth chart wrong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost never because of the software. In order of likelihood the error is the birth time, the timezone, the daylight saving flag, then the house system. Only after all four are correct is it worth suspecting the ephemeris."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is more accurate, NASA JPL or Swiss Ephemeris?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the raw planetary positions they agree closely. Swiss Ephemeris adds traditional quantities that JPL does not publish, such as the Part of Fortune and named fixed stars. If you need those, Swiss is the only option. If you need pure modern planets, either one is fine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need my birth time to the minute?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the Ascendant and the house cusps, yes. For the Sun sign and the slow planets, no. If you only know the hour, you can still build a usable chart, but treat the Ascendant as approximate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is VSOP87?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VSOP87 is a semi-analytic theory of planetary motion that models each planet as a long series of periodic terms. It is more precise than averaging a planet over its orbit, and it is what apps that advertise degree-accurate charts are usually using."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Astral Lab use VSOP87?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Astral Lab ($6.99, one time purchase, no subscription) computes VSOP87 planetary positions and real-time transits, which is why its ascendant and cusp positions stay stable instead of drifting by rounding."
+      }
     }
   ]
 }
-    </script>
-    <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -224,11 +278,16 @@
       "h1",
       "#problem",
       "#methods",
-      "#faq-heading"
+      "#faq-heading",
+      "#tldr",
+      "#precision",
+      "#sources",
+      "#check",
+      "#author"
     ]
   }
 }
-    </script>
+</script>
 
     <style>
     .kicker { color: var(--accent-gold, #c0a060); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 .6rem; font-family: 'JetBrains Mono', monospace; }
@@ -257,6 +316,16 @@
     .verdict p { margin: .4rem 0; color: var(--text-secondary, #999); }
     @media (max-width: 520px) { .btn-row { flex-direction: column; } }
     </style>
+
+    .deep-tldr { background: rgba(192,160,96,.07); border-left: 4px solid var(--accent-gold, #c0a060); padding: 1.1rem 1.4rem; margin: 2rem 0; border-radius: 0 6px 6px 0; }
+    .deep-tldr h2 { margin-top: 0; font-size: 1.05rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-gold, #c0a060); }
+    .deep-tldr ul { margin: .6rem 0 0; padding-left: 1.2rem; }
+    .deep-tldr li { margin-bottom: .45rem; }
+    .deep-author { margin: 2.5rem 0 1.5rem; padding: 1.2rem 1.4rem; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; background: rgba(255,255,255,.02); }
+    .deep-author h2 { margin-top: 0; font-size: 1.05rem; }
+    .deep-author p { margin-bottom: .5rem; }
+    .deep-case { margin: 1.6rem 0; }
+    .deep-case h3 { margin-bottom: .4rem; }
 </head>
 <body>
     <header>
@@ -272,6 +341,17 @@
             <p>Most birth charts that "look wrong" are not wrong in the interpretation. They are wrong in the arithmetic. The difference between a cheap planetary approximation and a real ephemeris can move your Moon, your Ascendant and entire aspects across whole degrees.</p>
         </div>
 
+<!-- deep-hub -->
+    <section id="tldr" class="deep-tldr">
+<h2>In short</h2>
+<ul>
+  <li>Most "wrong" birth charts are wrong because of the birth time, not the software.</li>
+  <li>Mean positions and VSOP87 differ by minutes of arc, which is enough to move a house cusp.</li>
+  <li>NASA JPL and Swiss Ephemeris are both excellent; they use different models and different licences.</li>
+  <li>You can check your own chart against two independent sources in under five minutes.</li>
+  <li>Astral Lab ($6.99, one time) computes VSOP87 instead of rounding to whole degrees.</li>
+</ul>
+</section>
 <h2 id="problem">The problem: everyone rounds the planets down</h2>
 <p>A planet's position is not a nice number. Pluto at 14 degrees 47 minutes 22 seconds is not 14 degrees, and at certain points in the year the difference between the true value and the rounded one is not subtle.</p>
 <p>Where it bites hardest is the fast-moving and the boundary cases:</p>
@@ -327,7 +407,63 @@
   <p>Accuracy problems in birth charts are almost always precision problems, not software problems. Mean-position data plus a birth time near a boundary will produce a chart that no interpretation can rescue. If your chart matters to you, start with the free chart tool to see the shape of it, then use an app that computes with a real planetary theory like VSOP87 if you intend to work with it seriously. The $6.99 buys correctness that a free calculator will not give you, and nothing else.</p>
 </div>
 
-        <h2 id="faq-heading">Ephemeris and birth chart accuracy questions</h2>
+        <section id="precision">
+<h2>What "accurate" actually means in a birth chart</h2>
+<ul>
+  <li>When people say a chart is inaccurate, they almost always mean one of two different things. The first is a data error: the software took the wrong time, the wrong place, or applied the wrong timezone. That is a bug and it is fixable. The second is a method difference: two programs use different planetary models and land on positions that differ by a fraction of a degree. Neither is a bug.</li>
+  <li>The magnitude matters more than most people realise. The Moon moves about 13 degrees per day, roughly half a degree per hour. An error of two hours in the birth time shifts the Moon by a full degree, which can move it into a different sign. The Ascendant moves about one degree every four minutes, so it is the fastest point in the chart and the first to break when the time is uncertain.</li>
+  <li>House cusps amplify the problem. Many programs round to whole degrees or to whole minutes of arc before plotting cusps. If a cusp lands at 29 degrees and 58 minutes and gets rounded to 0 degrees 00, the house changes. This single rounding step is the most common source of a chart that "looks wrong" to an experienced reader.</li>
+  <li>Positions of the outer planets are far less sensitive. Uranus, Neptune and Pluto drift so slowly that a birth time error of an hour moves them by a fraction of an arc-minute. If your birth time is uncertain, the slow planets are still reliable. Planets with a high daily motion, meaning the Moon, the Sun, Mercury and Venus, are the ones worth being careful about.</li>
+</ul>
+</section>
+
+<section id="sources">
+<h2>Which ephemeris to trust, and why the NASA and Swiss debate is not really a debate</h2>
+<ul>
+  <li>The JPL ephemerides are the reference solution produced by NASA Jet Propulsion Laboratory. The current high-precision model is called DE440. It is fitted to radar observations of the planets and to historical observations going back centuries. JPL publishes it openly and free, and it is the input that most serious astronomy software ends up using.</li>
+  <li>Swiss Ephemeris is a commercial library by Astrodienst. It is not a rival model; it is an implementation. It uses JPL data underneath for the most part and adds a very large set of traditional and historical quantities that JPL does not publish, such as planetary nodes in several definitions, the Part of Fortune, house systems beyond Placidus, and the full catalogue of fixed stars with their names.</li>
+  <li>Meeus algorithms are the third option you will meet. Jean Meeus published astronomical algorithms in books that anyone can read and implement. They are accurate enough for astrology, typically to a few arc-seconds, and they are completely free to use with no licence question. This is why many small astrology apps use them.</li>
+  <li>The debate that circulates online treats these as rivals with different accuracy. In practice they agree far more often than the arguments suggest. When two programs give you different Ascendants, the cause is almost always house system or timezone, not ephemeris. Check those two before you suspect the maths.</li>
+</ul>
+<ul>
+  <li>|Source|Model|Precision|What it adds|Licence|</li>
+  <li>|JPL DE440 (NASA)|Fitted to radar and historical data|Very high|Nothing extra, pure reference data|Free, public domain|</li>
+  <li>|Swiss Ephemeris|JPL data plus Astrodienst extensions|High|Nodes, Part of Fortune, fixed stars, extra house systems|Commercial, paid library|</li>
+  <li>|Meeus algorithms|Analytical series in printed form|Arc-second level|Nothing extra|Free to implement|</li>
+  <li>|Rounded "mean position"|Planets averaged over their orbit|Lowest|Round numbers that are easy to compute|Free but lossy|</li>
+  <li>|Online free chart sites|Varies, often Meeus or rounded|Unknown|Usually a lead-in to a subscription|Varies|</li>
+</ul>
+</section>
+
+<section id="check">
+<h2>How to check your own chart in five minutes</h2>
+<ul>
+  <li>You do not need to buy anything to audit a chart. The method is comparison: compute the same birth data in two independent places and look at where they disagree.</li>
+  <li>Start with the Ascendant, because it is the fastest-moving point and the most diagnostic. Compute the chart twice. If the two Ascendants differ by more than two degrees, the problem is your birth time or your timezone, not the ephemeris. If they differ by less than a degree, your time is fine and any remaining difference is rounding.</li>
+  <li>Then check the Moon. The Moon moves so fast that it is the second fastest test. Two charts that agree on the Ascendant but put the Moon in different signs usually differ in how they treat daylight saving time.</li>
+  <li>Finally check whether the slow planets agree. If Uranus, Neptune and Pluto match between two programs, you have confirmed that both are using real ephemeris data and that the disagreement is a rounding artefact rather than a modelling difference.</li>
+  <li>Only after all three checks should you suspect the ephemeris itself. In my experience that is the rarest cause by a wide margin.</li>
+</ul>
+<ul>
+  <li>Compare your Ascendant in two free charts. More than two degrees apart means your birth time or timezone is wrong, not the software.,/tools/full-birth-chart.html plus any second free calculator</li>
+  <li>Compare the Moon position. If the charts agree on the Ascendant but not the Moon, check daylight saving time for the year you were born.,/tools/full-birth-chart.html</li>
+  <li>Check the slow planets. If Uranus, Neptune and Pluto agree, both programs use real ephemeris data and the difference is rounding.,/tools/planetary-retrograde-calendar.html</li>
+  <li>Check the house system. Equal houses and Placidus give different cusps from the same data; this is a setting, not an error.,/tools/rising-sign-calculator.html</li>
+  <li>If your birth time is genuinely unknown, treat the Moon and the Ascendant as a range rather than a point, and rely on the slow planets.,/tools/astrology-sign-calculator.html</li>
+  <li>For a chart you will keep and read repeatedly, use one that computes VSOP87 and does not round cusps.,Astral Lab, $6.99 one time</li>
+</ul>
+</section>
+<section id="author" class="deep-author">
+<h2>Who writes this</h2>
+<p>Written and fact-checked by <strong>Frater Alek0s</strong>, chaos magick practitioner with fifteen years of practice, author of the Chaos Hunter runes treatise and editor of the Inner Circle study programme. Every guide here is tested in practice before it is published, and every app listed is built and maintained by the same team.</p>
+<p>Questions about a method, or you want the long version of any technique: <a href="/landing-pages/complete-access.html">Inner Circle</a> has the full courses and monthly study threads.</p>
+</section>
+Symptom to cause to tool<table>
+<thead><tr><th>|Symptom|Most likely cause|Where to look|</th><th>|Ascendant differs by more than 2 degrees between programs|Birth time or timezone error|Two free charts, compare the Ascendant|</th><th>|Charts agree on Ascendant but not Moon|Daylight saving applied wrongly|Compare Moon position in two charts|</th><th>|Planets match but house cusps look wrong|Rounding to whole degrees|Check house system, then try VSOP87|</th><th>|A planet appears in the wrong sign only in one program|House system mismatch, not ephemeris|Switch between Placidus and Equal|</th><th>|Whole chart shifts by about one sign|All four birth inputs are wrong|Time, date, place and timezone together|</th><th>|You only need the slow planets|Birth time uncertainty is fine|Use Uranus, Neptune and Pluto as the reliable core|</th></tr></thead>
+<tbody>
+</tbody>
+</table>
+<h2 id="faq-heading">Ephemeris and birth chart accuracy questions</h2>
         <div class="faq-q"><h3>How accurate does a birth chart need to be?</h3><p>Accurate enough that no planet sits within a rounding error of a sign or house boundary. In practice that means a real planetary theory such as VSOP87 rather than mean-position approximations.</p></div>
         <div class="faq-q"><h3>What is VSOP87?</h3><p>A semi-analytic planetary theory published by the Paris Observatory, accurate to roughly arcsecond level over the modern era. It is the default in serious astrology software, and it is what Astral Lab uses.</p></div>
         <div class="faq-q"><h3>Is a free birth chart calculator inaccurate?</h3><p>The free chart tools on this site are symbolic approximations for exploration, not professional computation. They are fine for learning the shape of a chart and useless for arc-level precision.</p></div>
@@ -337,7 +473,16 @@
         <div class="faq-q"><h3>Why does my chart disagree with another astrologer?</h3><p>Usually birth time, not software. Confirm the exact time first; a chart with the wrong Ascendant and wrong houses cannot be reconciled by interpretation.</p></div>
         <div class="faq-q"><h3>Do I need a paid app to get an accurate chart?</h3><p>For a correct chart, yes, some form of real ephemeris computation is needed. Free tools on this site are for exploration; a VSOP87 app is a single $6.99 payment with no subscription.</p></div>
 
-        <h2>Where to go next</h2>
+        <div class="faq-q"><h3>Is my birth chart wrong?</h3><p>Almost never because of the software. In order of likelihood the error is the birth time, the timezone, the daylight saving flag, then the house system. Only after all four are correct is it worth suspecting the ephemeris.</p></div>
+
+<div class="faq-q"><h3>Which is more accurate, NASA JPL or Swiss Ephemeris?</h3><p>For the raw planetary positions they agree closely. Swiss Ephemeris adds traditional quantities that JPL does not publish, such as the Part of Fortune and named fixed stars. If you need those, Swiss is the only option. If you need pure modern planets, either one is fine.</p></div>
+
+<div class="faq-q"><h3>Do I need my birth time to the minute?</h3><p>For the Ascendant and the house cusps, yes. For the Sun sign and the slow planets, no. If you only know the hour, you can still build a usable chart, but treat the Ascendant as approximate.</p></div>
+
+<div class="faq-q"><h3>What is VSOP87?</h3><p>VSOP87 is a semi-analytic theory of planetary motion that models each planet as a long series of periodic terms. It is more precise than averaging a planet over its orbit, and it is what apps that advertise degree-accurate charts are usually using.</p></div>
+
+<div class="faq-q"><h3>Does Astral Lab use VSOP87?</h3><p>Yes. Astral Lab ($6.99, one time purchase, no subscription) computes VSOP87 planetary positions and real-time transits, which is why its ascendant and cusp positions stay stable instead of drifting by rounding.</p></div>
+<h2>Where to go next</h2>
         <p>Start with the free Birth Chart tool to see the shape of your chart. If you are working with it seriously, Astral Lab computes with VSOP87 for a single $6.99 payment.</p>
     </main>
 </footer>
