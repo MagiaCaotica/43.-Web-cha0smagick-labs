@@ -61,7 +61,7 @@
     }
   ]
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -81,9 +81,23 @@
   },
   "breadcrumb": {
     "@id": "https://cha0smagicklabs.com/astrology-app-reviews.html#breadcrumb"
+  },
+  "dateModified": "2026-10-13",
+  "author": {
+    "@id": "https://cha0smagicklabs.com/about.html#frater-alek0s"
   }
 }
-    </script>
+</script>
+    <script type="application/ld+json">
+{
+  "@type": "Person",
+  "@id": "https://cha0smagicklabs.com/about.html#frater-alek0s",
+  "name": "Frater Alek0s",
+  "url": "https://cha0smagicklabs.com/about.html",
+  "jobTitle": "Chaos magick practitioner and editor",
+  "description": "Cha0smagick Labs is edited by Frater Alek0s, a chaos magick practitioner with fifteen years of practice, author of the Chaos Hunter runes treatise and editor of the Inner Circle study programme. Every guide on this site is tested in practice before it is published, and every app listed here is built and maintained by the same small team."
+}
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -107,7 +121,7 @@
     "bestRating": "5"
   }
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -151,7 +165,7 @@
     }
   ]
 }
-    </script>
+</script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -221,11 +235,51 @@
         "@type": "Answer",
         "text": "All twelve do. They are installed on the phone, they read no server, and none of them phone home. That is deliberate, because the moment you most want the chart is usually the moment you have no signal."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free astrology app that does not need an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. astrology-sign-calculator, rising-sign-calculator and full-birth-chart work entirely in the browser with no signup, and the charts are calculated on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do most apps charge $60 a year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the subscription is the business model, not the software. The calculation is the cheap part; the recurring revenue comes from features that would cost almost nothing to ship once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which app in this list is the most accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Astral Lab. It is the only one that states it uses VSOP87 planetary theory rather than mean positions, which is the difference between a chart that holds up and one that shifts a sign at the edges. See our ephemeris accuracy page for the full explanation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need my exact birth time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the Ascendant and the houses, yes. Without a time you still get your Sun and Moon sign, but the rest of the chart is an estimate. Most people find their birth time on a birth certificate rather than guessing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a $6.99 app really better than a free website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Different, not better. The free tools are enough for a Sun sign, a Moon sign and a rough chart. The paid app adds aspect precision, a printable chart and offline use. It is worth it if you read charts weekly, not if you read one a year."
+      }
     }
   ]
 }
-    </script>
-    <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -237,11 +291,16 @@
       "#why-list",
       "#table-heading",
       "#verdict-heading",
-      "#faq-heading"
+      "#faq-heading",
+      "#tldr",
+      "#offline",
+      "#store",
+      "#privacy",
+      "#author"
     ]
   }
 }
-    </script>
+</script>
 
     <style>
     .kicker { color: var(--accent-gold, #c0a060); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 .6rem; font-family: 'JetBrains Mono', monospace; }
@@ -270,6 +329,16 @@
     .verdict p { margin: .4rem 0; color: var(--text-secondary, #999); }
     @media (max-width: 520px) { .btn-row { flex-direction: column; } }
     </style>
+
+    .deep-tldr { background: rgba(192,160,96,.07); border-left: 4px solid var(--accent-gold, #c0a060); padding: 1.1rem 1.4rem; margin: 2rem 0; border-radius: 0 6px 6px 0; }
+    .deep-tldr h2 { margin-top: 0; font-size: 1.05rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-gold, #c0a060); }
+    .deep-tldr ul { margin: .6rem 0 0; padding-left: 1.2rem; }
+    .deep-tldr li { margin-bottom: .45rem; }
+    .deep-author { margin: 2.5rem 0 1.5rem; padding: 1.2rem 1.4rem; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; background: rgba(255,255,255,.02); }
+    .deep-author h2 { margin-top: 0; font-size: 1.05rem; }
+    .deep-author p { margin-bottom: .5rem; }
+    .deep-case { margin: 1.6rem 0; }
+    .deep-case h3 { margin-bottom: .4rem; }
 </head>
 <body>
     <header>
@@ -285,7 +354,17 @@
             <p>Most astrology apps are the same three features wrapped in a subscription. These are the ones that do something different, what each one costs, and the honest reason to skip the rest.</p>
         </div>
 
-        <h2 id="why-list">Why most astrology apps are not worth installing</h2>
+        <!-- deep-hub -->
+    <section id="tldr" class="deep-tldr">
+<h2>In short</h2>
+<ul>
+  <li>La mayoria de las apps de astrologia que dominan las tiendas cobran una suscripcion de 30 a 60 dolares al ano por funciones que puedes calcular gratis en el navegador.</li>
+  <li>Solo hay tres razones reales para pagar una app: precision de efemerides, modo avion y un mazo de tarot completo offline.</li>
+  <li>Astral Lab ($6.99, pago unico) es la unica de la lista que calcula con VSOP87 y no tiene suscripcion.</li>
+  <li>Si tu pregunta es "que signo soy", ninguna app te va a decir nada que un gratis no te diga mejor.</li>
+</ul>
+</section>
+<h2 id="why-list">Why most astrology apps are not worth installing</h2>
         <p>The app stores are full of astrology products that offer one calculation, three free interpretations, and then a weekly subscription for everything else. The subscription is the product. The chart is the funnel. If you open an app, cast your chart, and hit a paywall before you get a single line of interpretation, you have been sold a preview.</p>
         <p>There is a second problem: almost none of them work without a connection. A subscription app in a temple, in a ritual, or on a train is useless, because the moment you need it is exactly the moment there is no signal.</p>
         <p>The apps that survive a year of use in this catalogue solve at least one of those two problems: they either give the whole thing away once, or they keep working with no network.</p>
@@ -347,7 +426,116 @@
                 <a class="ghost-btn" href="books/index.html">Browse the books</a>
             </div>
         </div>
-        <h2 id="faq-heading">Astrology app questions</h2>
+        <section id="offline">
+<h2>What actually makes an astrology app worth paying for</h2>
+<ul>
+  <li>Un buen programa de astrologia hace tres cosas: calcula posiciones planetarias, las cruza en aspectos y las dibuja en una carta legible. Las tres se pueden hacer gratis, pero la primera es la unica donde la calidad de la libreria importa de verdad.</li>
+  <li>La posicion de un planeta sale de una efemeride: una tabla de donde estaba cada cuerpo celeste dia a dia. Las hay de tres Precision. La mayoria de apps usan la version abreviada, calculada con promedios. Las mejores usan VSOP87, que es la teoria planetary completa publicada por el Observatorio de Paris.</li>
+  <li>La diferencia no es academica. En una carta natal el error se nota cuando un planeta cae justo sobre el borde de un signo o de una casa: el signo entero puede cambiar. Con promedios, tu Ascendente puede quedar dos signos desplazado.</li>
+  <li>Por eso, antes de comparar caracteristicas, compara la efemeride que usa la app. Si no la dice en la ficha tecnica, asumeme la peor.</li>
+</ul>
+<table>
+<thead><tr><th>What to check</th><th>Why it matters</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Ephemeris used</th><th>A first planet on the edge of a sign can shift the whole reading</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Offline mode</th><th>Your chart works on a plane, in a ritual, or when the server is down</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>One-time vs subscription</th><th>A $6.99 purchase you own beats a $60 annual fee you rent</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Aspect grid</th><th>See every angle at once instead of hunting for it</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Retrograde calendar</th><th>Know before you plan, not after</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Export to PDF</th><th>Bring the chart to your grimoire journal</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+</section>
+
+<section id="store">
+<h2>What the Play Store listings actually promise (and hide)</h2>
+<ul>
+  <li>Las fichas de la tienda dicen muy poco y esconden lo importante. En las doce apps de astrologia que revisamos, la mayoria no menciona quePrecision de efemeride usa, si funciona sin conexion, ni si hay suscripcion oculta.</li>
+  <li>Tres señales de alerta en cualquier ficha: un boton "Desbloquear" sin precio visible, un "Subscribe" en la pantalla de inicio, y un precio de suscripcion tan bajo que parece un anzuelo. Las tres aparecen en la mayoria de la categoria.</li>
+  <li>La senal positiva es la opuesta: un precio unico visible en la propia ficha, sin asteriscos, y un boton que dice "Comprar" y no "Empezar prueba". Es exactamente lo que hacen las apps de este ecosistema.</li>
+</ul>
+<table>
+<thead><tr><th>Signal in the listing</th><th>What it actually tells you</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>"Free" with an unlock button</th><th>A trial disguised as free</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>Weekly or monthly subscription</th><th>Monthly bait: the annual price is 5 to 7 times the monthly one</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>"Offline" not mentioned anywhere</th><th>Your chart dies when the server does</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+<table>
+<thead><tr><th>One clear purchase price, no asterisks</th><th>An app you own</th><th></th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+</section>
+
+<section id="privacy">
+<h2>Why we do not read your birth data from a server</h2>
+<ul>
+  <li>Tu fecha, hora y lugar de nacimiento son datos que identifican a una persona concreta en cualquier combinacion, y muchos servidores de astrologia los guardan para siempre porque son el producto.</li>
+  <li>Una app que calcula en tu telefono no tiene por que enviar nada. En Astral Lab el calculo ocurre en el dispositivo; el unico dato que sale es el evento de analitica anonimo.</li>
+  <li>Si te preocupa esto de forma concreta, elige una app que funcione sin cuenta. La nuestra no te pide registro ni correo electronico en ningun punto.</li>
+</ul>
+</section>
+<section id="author" class="deep-author">
+<h2>Who writes this</h2>
+<p>Written and fact-checked by <strong>Frater Alek0s</strong>, chaos magick practitioner with fifteen years of practice, author of the Chaos Hunter runes treatise and editor of the Inner Circle study programme. Every guide here is tested in practice before it is published, and every app listed is built and maintained by the same team.</p>
+<p>Questions about a method, or you want the long version of any technique: <a href="/landing-pages/complete-access.html">Inner Circle</a> has the full courses and monthly study threads.</p>
+</section>
+Which one fits your actual question<table>
+<thead><tr><th>|Your question|What to use|Cost|</th><th>|"What sign am I?"|astrology-sign-calculator, then rise with rising-sign-calculator|Free|</th><th>|"Full chart with real aspects"|Astral Lab|$6.99 once|</th><th>|"Chart on the moon-phase you are ritualing for"|moon-phase-calendar + planetary-hours|Free|</th><th>|"Is Mercury retrograde?"|planetary-retrograde-calendar|Free|</th><th>|"Tarot reading, no birth data"|Unofficial Rider Waite Tarot|$9.99 once|</th><th>|"Dreams, not stars"|Dream Machine or Lucid Dream|$3.99 to $9.99 once|</th><th>|"Psi test for friends"|Psi Gym|$3.99 once|</th></tr></thead>
+<tbody>
+</tbody>
+</table>
+<h2 id="faq-heading">Astrology app questions</h2>
         <div class="faq-q"><h3>What is the best astrology app for Android?</h3><p>Astral Lab at Cha0smagick Labs. It calculates a full natal chart with aspect patterns and transit flags, gives the meanings for each placement, costs $6.99 once and works with no connection.</p></div>
         <div class="faq-q"><h3>Are there free astrology apps that are actually usable?</h3><p>The browser tools on this site are free and complete: the full birth chart, the sign calculators, the lunar phase data and the planetary hours table all run without an account. The apps are the offline, portable version of the same work.</p></div>
         <div class="faq-q"><h3>Do any of these apps have subscriptions?</h3><p>No. Every app in this catalogue is a single payment with no recurring fee, no trial and no monthly unlock. That is the whole point of the model.</p></div>
@@ -357,7 +545,16 @@
         <div class="faq-q"><h3>Can I try an astrology app before paying?</h3><p>Yes. The free birth chart and the free tools on this site do the same core calculation. If the free version is enough for you, you never need to buy anything.</p></div>
         <div class="faq-q"><h3>Is there an astrology app that works without internet?</h3><p>All twelve do. They are installed on the phone, they read no server, and none of them phone home. That is deliberate, because the moment you most want the chart is usually the moment you have no signal.</p></div>
 
-        <h2>Where to go next</h2>
+        <div class="faq-q"><h3>Is there a free astrology app that does not need an account?</h3><p>Yes. astrology-sign-calculator, rising-sign-calculator and full-birth-chart work entirely in the browser with no signup, and the charts are calculated on your device.</p></div>
+
+<div class="faq-q"><h3>Why do most apps charge $60 a year?</h3><p>Because the subscription is the business model, not the software. The calculation is the cheap part; the recurring revenue comes from features that would cost almost nothing to ship once.</p></div>
+
+<div class="faq-q"><h3>Which app in this list is the most accurate?</h3><p>Astral Lab. It is the only one that states it uses VSOP87 planetary theory rather than mean positions, which is the difference between a chart that holds up and one that shifts a sign at the edges. See our ephemeris accuracy page for the full explanation.</p></div>
+
+<div class="faq-q"><h3>Do I need my exact birth time?</h3><p>For the Ascendant and the houses, yes. Without a time you still get your Sun and Moon sign, but the rest of the chart is an estimate. Most people find their birth time on a birth certificate rather than guessing.</p></div>
+
+<div class="faq-q"><h3>Is a $6.99 app really better than a free website?</h3><p>Different, not better. The free tools are enough for a Sun sign, a Moon sign and a rough chart. The paid app adds aspect precision, a printable chart and offline use. It is worth it if you read charts weekly, not if you read one a year.</p></div>
+<h2>Where to go next</h2>
         <p>Open the <a href="tools/full-birth-chart.html">free full birth chart</a> to see what a complete chart looks like before you spend anything, then read the <a href="best-occult-apps-android.html">buyers guide to the occult apps</a> if you want the wider picture.</p>
     </main>
 </footer>
