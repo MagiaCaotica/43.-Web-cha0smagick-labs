@@ -89,7 +89,7 @@ Base: `docs/PLAN-VENTA-MERCADEO-GSC.md` (2026-10-14). Tráfico acelerando (91% d
 - [ ] **Activar secuencia "Quickstart to Buyer"** (escrita en `email-sequences/quickstart-to-buyer.json`, 0 emails enviados) + `post-purchase-upsell.json`.
 - [ ] **Publicar app OAuth en GCP** (o service account): si no, el token GSC muere cada 7 días y no hay GA4 API.
 - [ ] **Meta Pixel + Google Ads**: `PONER_META_PIXEL_ID_AQUI` / `PONER_AW_ID_AQUI` en `js/conversion.js` (l.44-45) → retargeting y conversiones OFF.
-- [ ] **ads.txt / app-ads.txt** con `pub-PONER_PUBLISHER_ID` y no hay ningún `adsbygoogle` en el sitio → o rellenar o eliminar (son ficheros rotos públicos).
+- [x] **ads.txt / app-ads.txt** con `pub-PONER_PUBLISHER_ID` y no hay ningún `adsbygoogle` en el sitio → o rellenar o eliminar (son ficheros rotos públicos). **HECHO 2026-10-15: eliminados ambos.**
 
 ### F-5 · Email capture en apps/books
 El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.js l.50). En apps/books hay botones de compra pero **cero captura de email** para quien no compra hoy.
