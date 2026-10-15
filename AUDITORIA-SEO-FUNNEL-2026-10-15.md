@@ -115,7 +115,7 @@ El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.j
 - [ ] **F-16 · `checklist-ventas.html`** (root, ES, "Venta Automatizada", indexable, en sitemap, sin GA4): decidir — si es interna → `noindex` + fuera de sitemap; si es contenido → terminar y medir.
 
 ### Links rotos (12 en total — único arreglo puntual)
-- [ ] F-17: 5 phantom `/es/es-*.html` (los artículos viven en `/blog/es-*`), `/blog/es-libro-codex-chaoticus.html`, `/books/best-chaos-magick-books-essential-reading.html`, `/blog/tarot-chaos-pdf.html`, `/blog/chaos-tarot-spreads.html`, `/blog/tarot-shadow-work.html`, `/tools/free-sigil-generator.html` → corregir href o crear redirect.
+- [x] F-17: 5 phantom `/es/es-*.html` (los artículos viven en `/blog/es-*`), `/blog/es-libro-codex-chaoticus.html`, `/books/best-chaos-magick-books-essential-reading.html`, `/blog/tarot-chaos-pdf.html`, `/blog/chaos-tarot-spreads.html`, `/blog/tarot-shadow-work.html`, `/tools/free-sigil-generator.html` → corregir href o crear redirect. **HECHO 2026-10-15: 66 hrefs corregidos, verificador en 0 rotos** — 7 phantom/mapped (fase 1), 56 extensionless → .html, 3 mapeos (codex→books, best-books→blog, app-details→apps/psi-gym). El escaneo amplió la lista: también /privacy-policy, /tools/* y ~25 /blog/es-* sin extensión (GH Pages no resuelve sin .html).
 
 ---
 

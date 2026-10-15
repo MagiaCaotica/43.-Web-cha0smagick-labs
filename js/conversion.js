@@ -49,7 +49,7 @@
     // Email popup behaviour
     popupDelayMs: 30000,      // (a) 30s dwell
     popupScrollPct: 50,       // (a) or 50% scroll depth
-    popupPages: ['homepage', 'blog', 'tools']
+    popupPages: ['homepage', 'blog', 'tools', 'apps', 'books', 'es-page']
   };
 
   /* ============================================================
@@ -422,6 +422,7 @@
     if (path.indexOf('/tools/') !== -1) return 'tools';
     if (path.indexOf('/pages/app-details.html') !== -1) return 'app-details';
     if (path === '/' || path === '/index.html') return 'homepage';
+    if (path.indexOf('/apps/') !== -1) return 'apps';
     if (path.indexOf('/books/') !== -1) return 'books';
 
     return 'other';
