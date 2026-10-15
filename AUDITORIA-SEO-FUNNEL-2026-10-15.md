@@ -123,15 +123,15 @@ El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.j
 
 - [x] **F-18 · `llms.txt` obsoleto:** lista **10 tools de 71**. Regenerar completo (tools, apps 12, books 9, hubs, guías). **HECHO 2026-10-15:** 71 tools + 13 apps + 10 books + comparativas + guías + 820 art. EN + 32 ES, vía `scripts/gen_llms.py` (repetible).
 - [x] **F-19 · `llms-full.txt` obsoleto:** lista **820 de 853 artículos** (faltan exactamente los 32 ES). Regenerar + los 71 tools. **HECHO 2026-10-15:** mismo script, versión con descripciones (262 KB, 1002 entradas).
-- [ ] **F-20 · Sitemap de llms:** añadir `llms.txt` como referencia en robots.txt (comentario ya existe; dejarlo explícito no hace falta — solo regenerar).
-- [ ] **F-21 · `robots.txt`:** `Disallow: /submissions/` apunta a un dir que no existe en root (está en `projects/`, no deployado) → limpiar la línea. Añadir `Disallow: /tools/auto-shorts/` (ver F-22).
+- [x] **F-20 · Sitemap de llms:** añadir `llms.txt` como referencia en robots.txt (comentario ya existe; dejarlo explícito no hace falta — solo regenerar). **VERIFICADO 2026-10-15:** comentario presente y números actualizados (852).
+- [x] **F-21 · `robots.txt`:** `Disallow: /submissions/` apunta a un dir que no existe en root (está en `projects/`, no deployado) → limpiar la línea. Añadir `Disallow: /tools/auto-shorts/` (ver F-22). **HECHO 2026-10-15.**
 
 ---
 
 ## 5. ASO (Play Store) — on-site y store
 
 - [x] Verificado: 12 apps con `details?id=com.cha0smagicklabs.*` correctos en `apps/*.html` (psi-gym: 7 refs Play), schema SoftwareApplication+image+descripción en cada una.
-- [ ] **F-22 · Deploy contamina producción:** GitHub Actions (`pages.yml`) sube **TODO el root** → **37.163 ficheros** de `tools/auto-shorts/` (con node_modules) y `undefined/.config/...` quedan públicos. → En pages.yml, subir un artefacto limpio (exclude `tools/auto-shorts`, `undefined`, `docs`, `logs`, `scripts`, `deploy`, `.gsc*`, `telegram-bot`, `webhooks`, `email-sequences`, `content-calendar`, `kpi-dashboard`, `pins`) o mover auto-shorts fuera del root. BONUS: deploy más rápido.
+- [x] **F-22 · Deploy contamina producción:** GitHub Actions (`pages.yml`) sube **TODO el root** → **37.163 ficheros** de `tools/auto-shorts/` (con node_modules) y `undefined/.config/...` quedan públicos. → En pages.yml, subir un artefacto limpio (exclude `tools/auto-shorts`, `undefined`, `docs`, `logs`, `scripts`, `deploy`, `.gsc*`, `telegram-bot`, `webhooks`, `email-sequences`, `content-calendar`, `kpi-dashboard`, `pins`) o mover auto-shorts fuera del root. BONUS: deploy más rápido. **HECHO 2026-10-15:** paso "Prepare clean artifact" con rsync + excludes, artefacto desde /tmp/site.
 - [ ] **F-23 · Dos developer IDs de Play distintos:** manifest.json usa `dev?id=5224914033326414083`, conversion.js `dev?id=7060930672313565766`. Verificar en Play Console cuál es el real y unificar (uno de los dos apunta a una cuenta vacía).
 - [ ] **F-24 · Aplicar los 12 títulos ASO de `docs/ASO-play-titles.md`** en Play Console (acción externa, doc ya existe). `aggregateRating` solo con reseñas reales (correcto hoy).
 - [ ] **F-25 · app-ads.txt** requiere package IDs reales si se activa AdMob (hoy placeholder).
@@ -143,7 +143,7 @@ El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.j
 - [ ] **F-26 · `glossary.html` = 224 KB** single page (533 términos). Para #1 en "occult glossary" conviene, pero valorar paginar por letras o lazy-render si LCP sufre.
 - [ ] **F-27 · CSP** permite `unsafe-inline`/`unsafe-eval` (necesario hoy por inline snippets); no bloquear, anotar como deuda.
 - [ ] **F-28 · `CNAME`/canonicals** consistentes (sin www, https) — verificado OK en muestras.
-- [ ] **F-29 · Carpeta `undefined/`** (log de opencode dentro del deploy) → borrar del repo.
+- [x] **F-29 · Carpeta `undefined/`** (log de opencode dentro del deploy) → borrar del repo. **HECHO 2026-10-15.**
 
 ---
 

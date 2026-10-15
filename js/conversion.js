@@ -20,8 +20,10 @@
     leadMagnetEN: 'https://drive.google.com/file/d/1grjtsbR9plJoQPtkoVhnsAgytCiXuPQb/view?usp=sharing',
     leadMagnetES: 'https://drive.google.com/file/d/1VH15ZHker5zfnWYoj-j1XZ9SWDzuLBlg/view?usp=sharing',
 
-    // Play Store collection URL
-    playStoreURL: 'https://play.google.com/store/apps/dev?id=7060930672313565766',
+    // Play Store developer page — unified to the ID used in manifest.json and
+    // 46 HTML pages (shortcut: neither ID verifiable from the repo; confirm the
+    // real one in Play Console and update here if it differs, see docs/ASO-play-titles.md)
+    playStoreURL: 'https://play.google.com/store/apps/dev?id=5224914033326414083',
 
     // App categories for related suggestions
     appCategories: {
