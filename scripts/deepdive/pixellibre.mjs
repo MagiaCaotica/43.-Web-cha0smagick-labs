@@ -138,7 +138,7 @@ export const PIXELLIBRE = {
       h3s: [
         {
           h3: 'The workflow that pairs with this',
-          text: 'If the image is a symbol rather than a photograph — a sigil, an icon, a card face — the export step is only the last part. The <a href="sigil-generator.html">sigil generator</a> produces the mark, this editor renders it as a transparent PNG at the right size with the frame or rounded corners you want, and <a href="../books/codex-chaoticus-pdf.html">Codex Chaoticus</a> covers the method behind the symbol itself.'
+          text: 'If the image is a symbol rather than a photograph — a sigil, an icon, a card face — the export step is only the last part. The <a href="sigil-generator.html">sigil generator</a> produces the mark, this editor renders it as a transparent PNG at the right size with the frame or rounded corners you want, and the <a href="../apps/chaos-sigil-generator.html">Magick Chaos Sigil Generator app</a> adds the library, the intent journal and the ritual timer. <a href="../books/codex-chaoticus-pdf.html">Codex Chaoticus</a> covers the method behind the symbol itself.'
         }
       ]
     }
