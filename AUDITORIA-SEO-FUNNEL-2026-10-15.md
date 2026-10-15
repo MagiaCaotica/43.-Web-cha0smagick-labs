@@ -108,8 +108,8 @@ El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.j
 - [x] **F-9 · Descriptions <70ch en 43 páginas** (series con teaser truncado tipo "…what it f"). Rellenar a 140-155ch con keyword. **HECHO 2026-10-15: 42 descs extendidas** con la primera frase real del contenido + og:description.
 - [ ] **F-10 · `mind-the-gap-pdf.html` desc 232ch** → recortar a 160.
 - [x] **F-11 · 450 imágenes sin alt en 50 artículos** (series astral-projection/psi/best-*: 9 imgs sin alt cada una). → Regenerar con alt descriptivo (el generador es scripts propios). **VERIFICADO 2026-10-15: 0 imágenes sin alt en todo blog/ — ya resuelto por commits previos.**
-- [ ] **F-12 · twitter:card:** 55 págs sin card y 40 con `summary` → normalizar todo a `summary_large_image`.
-- [ ] **F-13 · OG incompleto en 5 págs:** buscar.html, search.html, es/index.html (+2 junk). Las 3 reales → completar og:title/desc/image.
+- [x] **F-12 · twitter:card:** 55 págs sin card y 40 con `summary` → normalizar todo a `summary_large_image`. **HECHO 2026-10-15: 40 summary→large + 53 añadidas; 0 restantes.**
+- [x] **F-13 · OG incompleto en 5 págs:** buscar.html, search.html, es/index.html (+2 junk). Las 3 reales → completar og:title/desc/image. **HECHO 2026-10-15: 11 páginas completadas** (og:url en blog/index, es/index +og:image, landings, lead-magnets; OG completo en buscar/search). 404 y checklist-ventas se dejan sin og:url deliberadamente (noindex/junk).
 - [ ] **F-14 · 11 págs <300 palabras** reales: 3 tools (digital-grimoire-organizer 299, elemental-balance-checker 299, magical-correspondence-finder 296, ogham-oracle 298) + affiliate-dashboard 276 + app-details 103 (dinámica, OK). → 200-300 palabras únicas en las 4 tools + dashboard.
 - [ ] **F-15 · FAQPage en 926 págs:** muestrear 20: si la FAQ es boilerplate idéntico entre artículos de una serie, diversificar (riesgo de spam schema penalizable).
 - [ ] **F-16 · `checklist-ventas.html`** (root, ES, "Venta Automatizada", indexable, en sitemap, sin GA4): decidir — si es interna → `noindex` + fuera de sitemap; si es contenido → terminar y medir.
