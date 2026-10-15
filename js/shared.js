@@ -125,13 +125,10 @@ function cmIdIsReal(id, prefix) {
 }(document.currentScript));
 
 // ========================================================================
-// 5. GA4 BOOTSTRAP + CONSENT (default GRANTED)
+// 5. GA4 BOOTSTRAP + CONSENT (opt-in, owner decision D1)
 // ------------------------------------------------------------------------
-// Historically the inline page snippet set consent default to 'denied', which
-// made the vast majority of sessions invisible in GA4 (nothing is sent until
-// the user clicks Accept, and most never do). We now default to 'granted' and
-// keep the banner purely informative with a working opt-out: Decline pushes a
-// consent 'update' to 'denied' and stops collection from that point on.
+// Consent is opt-in site-wide: nothing is granted until the visitor accepts
+// (cmApplyConsent below). conversion.js applyConsent() must agree with this.
 // ========================================================================
 function cmGetCookie(name) {
     var m = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
@@ -239,7 +236,7 @@ function addUTM(url, campaign) {
 window.addUTM = addUTM;
 
 // ========================================================================
-// 8. COOKIE CONSENT BANNER (informative — collection is already active)
+// 8. COOKIE CONSENT BANNER (opt-in: hidden until the visitor chooses)
 // ========================================================================
 cmEnsureGtag();
 cmInitMetaPixel();
@@ -249,6 +246,7 @@ cmInitMetaPixel();
         if (cmGetCookie('cookie_consent')) return; // already chose
         setTimeout(function () {
             var banner = document.getElementById('cookie-consent-banner');
+            if (!banner) banner = cmBuildBanner();
             if (banner) banner.style.display = 'block';
         }, 1000);
     }
@@ -258,6 +256,24 @@ cmInitMetaPixel();
         showBannerIfNeeded();
     }
 })();
+
+// Some page templates (apps/, books/, landing-pages/, the older generated blog
+// series) never carried the static banner markup. Without it the visitor cannot
+// accept, and under opt-in consent GA4 stays dark. Build a self-contained
+// banner instead of relying on every template shipping its own markup.
+function cmBuildBanner() {
+    var el = document.createElement('div');
+    el.id = 'cookie-consent-banner';
+    el.setAttribute('style', 'display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:640px;margin:0 auto;padding:14px 18px;background:#131A3A;color:#F5F7FF;border:1px solid rgba(255,255,255,.14);border-radius:10px;font:14px/1.5 Helvetica,Arial,sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.45)');
+    el.innerHTML =
+        '<p style="margin:0 0 10px;color:inherit">This site uses cookies for analytics and to improve your experience. <a href="/privacy-policy.html" style="color:#FFB03A">Review our Privacy Policy</a></p>' +
+        '<div style="display:flex;gap:10px">' +
+        '<button type="button" onclick="acceptCookies()" style="padding:8px 18px;border:0;border-radius:6px;background:#FFB03A;color:#0B1026;font-weight:700;cursor:pointer">Accept</button>' +
+        '<button type="button" onclick="declineCookies()" style="padding:8px 18px;border:1px solid rgba(255,255,255,.25);border-radius:6px;background:transparent;color:#F5F7FF;cursor:pointer">Decline</button>' +
+        '</div>';
+    document.body.appendChild(el);
+    return el;
+}
 
 function acceptCookies() {
     document.cookie = "cookie_consent=accepted; max-age=31536000; path=/; SameSite=Lax";
