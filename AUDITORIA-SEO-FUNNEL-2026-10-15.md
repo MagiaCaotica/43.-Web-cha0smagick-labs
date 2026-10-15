@@ -75,8 +75,8 @@ Base: `docs/PLAN-VENTA-MERCADEO-GSC.md` (2026-10-14). Tráfico acelerando (91% d
 - `js/shared.js` (l.133-252): consent **default GRANTED**, banner "informativo" con Decline.
 - `js/conversion.js` (l.137-148): `applyConsent()` **DENIED salvo cookie `cookie_consent=accepted`**. shared carga ANTES que conversion en todas las páginas → gana conversion: **opt-in real**.
 - Resultado: **134 páginas sin banner** (12 apps + 10 books + 11 es/ + 6 landing + 2 lead-magnet + 88 blog + 3 root + 1 compare) donde el visitante **no puede aceptar** → GA4 permanentemente apagado exactamente en las páginas de venta.
-- [ ] Elegir UN modelo (recomendado: opt-in como conversion.js) y unificar: banner en las 134 páginas (extender plantilla de shared a apps/books/landing/lead-magnet), comentarios corregidos, un solo dueño del consent.
-- [ ] Los 88 blog sin shared.js: identificar (son las series generadas) y regenerar con plantilla actual.
+- [x] Elegir UN modelo (recomendado: opt-in como conversion.js) y unificar: banner en las 134 páginas (extender plantilla de shared a apps/books/landing/lead-magnet), comentarios corregidos, un solo dueño del consent. **HECHO 2026-10-15:** el modelo opt-in ya estaba en el código (commit previo 1d7d9cba); lo que faltaba era el banner — ahora `shared.js` lo CONSTRUYE si falta (auto-banner autocontenido), los comentarios obsoletos de shared.js corregidos y `shared.min.js` regenerado.
+- [x] Los 88 blog sin shared.js: identificar (son las series generadas) y regenerar con plantilla actual. **HECHO 2026-10-15:** 124 páginas recibieron `<script src="/js/shared.min.js" defer>` (apps, books, blog series, es/, compare, buscar/search, checklist). Con el auto-banner ya no hace falta regenerar plantilla: el banner aparece en todas.
 
 ### F-3 · BUG: hreflang de los 20 artículos ES apunta a URLs inexistentes (`.html.html`)
 `blog/es-*.html` (20 de 32) declaran `hreflang="en"` y `x-default` hacia `…html.html` (p. ej. `blog/es-como-hacer-un-sigilo-paso-a-paso.html` → `free-sigil-generator-online-guide.html.html`). Google **descarta el set completo** cuando un alternate da 404 → el mercado ES (oportunidad nº1 según GSC) sigue bloqueado.
