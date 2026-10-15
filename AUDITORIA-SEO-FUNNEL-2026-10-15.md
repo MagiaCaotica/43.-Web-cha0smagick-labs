@@ -35,7 +35,7 @@ Base: `docs/PLAN-VENTA-MERCADEO-GSC.md` (2026-10-14). Tráfico acelerando (91% d
 | K5 | `best astrology apps 2026` | 46 | 8,7 | 0 | Misma página que K2. |
 | K6 | `chaos magic sigil generator` | 44 | 6,8 | 5 | Casi top-3: pulir title/H1 de `apps/chaos-sigil-generator.html` + tool. |
 
-- [ ] K1→K6 aplicadas (una PR por página, marcar cada una).
+- [x] K1→K6 aplicadas (una PR por página, marcar cada una). **HECHO 2026-10-15:** K1 — generador ya tenía H1/FAQ (~1.500 palabras); añadido link a la app de pago en la FAQ. K2/K5 — title con año ya presente; añadida sección "Where to Get Each App" con los 12 anchors a `/apps/*.html` (antes solo estaban en JSON-LD). K3 — verificado: title nuevo, FAQPage y 3 links a la app ya existentes, nada que hacer. K4 — bloque "Practice now" con anchor a `/sigil-maker.html` insertado en 5 blogs de sigilo + ya enlazada desde free-sigil-generator-online-guide (6/6) y desde la home (F-8). K6 — title/H1 ya óptimos, sin cambio.
 
 ### 1.2 Clusters por volumen de impresiones (dónde pelear el #1)
 
@@ -104,7 +104,7 @@ El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.j
 ## 3. SEO ON-PAGE — defectos concretos (por página)
 
 - [ ] **F-7 · Titles <30ch en ~20 artículos** de series con títulos genéricos idénticos entre sí ("Chaos Magic Fundamentals", "Entity Lore and Invocation", "History of the Occult"… 28-39 artículos por serie). Canibalización segura. → Diferenciar cada title con su subtema ("Chaos Magic Fundamentals: Gnosis, Sigils & Paradigm Shift").
-- [ ] **F-8 · Home (index.html):** desc caducada ("61 free tools" → son **71**; "8 books" → hay **9** ficheros de libro). Añadir links texto visibles a: sigil-maker, sigil-generator, astrology guide, goetic guide, best-occult-apps, glossary (las 6 striking-distance) + H1 con "chaos magick apps" etc. *(pendiente)*
+- [x] **F-8 · Home (index.html):** desc caducada ("61 free tools" → son **71**; "8 books" → hay **9** ficheros de libro). Añadir links texto visibles a: sigil-maker, sigil-generator, astrology guide, goetic guide, best-occult-apps, glossary (las 6 striking-distance) + H1 con "chaos magick apps" etc. **HECHO 2026-10-15:** desc/og/twitter con números reales, H1 "Chaos Magick Apps, Occult Books & 71 Free Tools", bloque "Start Here" con las 6 rutas.
 - [ ] **F-9 · Descriptions <70ch en 43 páginas** (series con teaser truncado tipo "…what it f"). Rellenar a 140-155ch con keyword.
 - [ ] **F-10 · `mind-the-gap-pdf.html` desc 232ch** → recortar a 160.
 - [ ] **F-11 · 450 imágenes sin alt en 50 artículos** (series astral-projection/psi/best-*: 9 imgs sin alt cada una). → Regenerar con alt descriptivo (el generador es scripts propios).
