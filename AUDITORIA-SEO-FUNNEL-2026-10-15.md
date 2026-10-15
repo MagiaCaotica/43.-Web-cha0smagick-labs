@@ -93,10 +93,10 @@ Base: `docs/PLAN-VENTA-MERCADEO-GSC.md` (2026-10-14). Tráfico acelerando (91% d
 
 ### F-5 · Email capture en apps/books
 El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.js l.50). En apps/books hay botones de compra pero **cero captura de email** para quien no compra hoy.
-- [ ] Añadir 'apps' y 'books' al popup (o un bloque inline "antes de irte: guía gratis") en esas plantillas.
+- [x] Añadir 'apps' y 'books' al popup (o un bloque inline "antes de irte: guía gratis") en esas plantillas. **HECHO 2026-10-15:** popupPages = homepage, blog, tools, apps, books, es-page + nuevo tipo 'apps' en getPageType(). El popup ya localiza headline vía isSpanish().
 
 ### F-6 · Spanish funnel
-- [ ] Popup/CTAs de conversion.js respetan `es-page` pero las 10 comparativas `/es/` no reciben popup (solo las 32 en /blog/). Añadir es-page a popupPages.
+- [x] Popup/CTAs de conversion.js respetan `es-page` pero las 10 comparativas `/es/` no reciben popup (solo las 32 en /blog/). Añadir es-page a popupPages. **HECHO 2026-10-15:** 'es-page' añadido a popupPages; cubre /es/ y las ES de /blog/.
 - [ ] Las 62 tools top (71−9 sin demanda) **solo en inglés** — traducir las 10 con demanda ES (lista en plan GSC fase 3).
 
 ---
