@@ -179,14 +179,14 @@ export const EMBED_TOOLS = [
     },
     title: 'INWO Online — Play Illuminati New World Order Free',
     description:
-      'Play Illuminati: New World Order (INWO) in your browser against the machine: place secret societies, control groups and complete your project. Free, no install.',
+      'Play Illuminati: New World Order online free: the full 421-card deck from 1995 in your browser. Three modes, tutorial included, no signup and no download.',
     keywords:
-      'illuminati new world order game online, INWO online, play INWO free, secret society card game online, how to play illuminati new world order, INWO card game rules, digital card game solo play, card game with AI opponent, free card game no download, inwo card list',
-    h1: 'INWO Online: Play Illuminati New World Order Free',
+      'illuminati new world order game online, INWO online, play INWO free, play illuminati new world order online free, secret society card game online, how to play illuminati new world order, INWO card game rules, inwo card list, card game with AI opponent, digital card game free play',
+    h1: 'INWO Online: Play Illuminati New World Order Free in Your Browser',
     lede:
-      'The browser version of Illuminati: New World Order. You take control of a secret society, place and fight over groups, and race to complete your own project — against an automatic opponent, with the full deck and the rules built in.',
+      'The complete Illuminati: New World Order card game, playable free in your browser with all 421 original cards. Play against the computer, hot-seat with someone else, or watch two AIs play it out. No download, no account, full tutorial included.',
     tldr:
-      'INWO is the Illuminati: New World Order card game playable in your browser: control secret societies, fight over groups on a three-level board, and complete your project before the machine does, with no install and no signup.',
+      'INWO is Illuminati: New World Order, the 1995 Steve Jackson Games card game, playable free in your browser with the complete 421-card deck: run secret societies, attack groups with dice, and win by controlling twelve of them including your own Illuminati.',
     compare: [
       { feature: 'Full deck, board and action log', free: true, premium: true },
       { feature: 'Built-in quick rules reference', free: true, premium: true },
