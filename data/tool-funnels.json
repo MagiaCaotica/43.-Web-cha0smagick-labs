@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-09-25",
+  "generated": "2026-10-15",
   "products": {
     "apps": [
       {
@@ -131,6 +131,14 @@
         "price": "$9.99",
         "page": "../books/mind-the-gap-pdf.html",
         "checkout": "https://pay.hotmart.com/V106730857R?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_mind_the_gap",
+        "language": "en"
+      },
+      {
+        "id": "catholiconomicon-pdf",
+        "name": "CATHOLICONOMICON — Chaos Magick for Catholic Practitioners",
+        "price": "$9.99",
+        "page": "../books/catholiconomicon-pdf.html",
+        "checkout": "https://pay.hotmart.com/A107900946S?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_catholiconomicon",
         "language": "en"
       }
     ]
@@ -274,6 +282,56 @@
       "en": {
         "head": "A grimoire you can actually consult",
         "sub": "Organise servitors, sessions and grimoire in one searchable place. The app adds servitor design with charge tracking and expiry."
+      }
+    },
+    "Probabilidad": {
+      "es": {
+        "head": "Conoce las probabilidades antes de arriesgar",
+        "sub": "Los dados, las cartas y el azar no distinguen entre el ocio y el ritual: la misma aritmética decide ambas cosas. El Codex recoge el método completo por escrito."
+      },
+      "en": {
+        "head": "Know the odds before you take the risk",
+        "sub": "Cards, dice and chance do not distinguish between a gamble and a working: the same arithmetic decides both. The Codex gathers the complete method in writing."
+      }
+    },
+    "Rol y ambientación": {
+      "es": {
+        "head": "El mundo de la campaña, ordenado y completo",
+        "sub": "Este sitio resuelve el material de consulta. NOCTEM cubre el trabajo de campo con registro y export, y Codex Chaoticus da el sistema escrito detrás de todo lo demás."
+      },
+      "en": {
+        "head": "The campaign world, ordered and complete",
+        "sub": "This site handles the reference material. NOCTEM covers the fieldwork with logging and export, and Codex Chaoticus supplies the written system behind everything else."
+      }
+    },
+    "Imagen": {
+      "es": {
+        "head": "Exporta tu trabajo sin registrarte en nada",
+        "sub": "PixelLibre cubre el archivo; la app añade la biblioteca de sigilos, el registro de intenciones y el trabajo sin conexión."
+      },
+      "en": {
+        "head": "Export your work without registering anywhere",
+        "sub": "PixelLibre covers the file; the app adds the sigil library, intent journaling and offline working."
+      }
+    },
+    "Juegos de mesa": {
+      "es": {
+        "head": "Cuando el juego de cartas te pide más",
+        "sub": "Si el sistema de cartas te interesa de verdad, Tarot Chaos lleva las 78 cartas al caos aplicado, y la app las lleva al móvil sin conexión."
+      },
+      "en": {
+        "head": "When the card game asks for more",
+        "sub": "If the card system genuinely interests you, Tarot Chaos applies chaos magick to all 78 cards, and the app takes them offline on your phone."
+      }
+    },
+    "Datos": {
+      "es": {
+        "head": "Del dato a la acción, con método",
+        "sub": "Un panel enseña lo que pasó; Codex Chaoticus enseña qué hacer con la lectura, que es la parte que ningún dashboard te da."
+      },
+      "en": {
+        "head": "From the data to the decision, with method",
+        "sub": "A dashboard shows what happened; Codex Chaoticus shows what to do with the reading, which is the part no dashboard gives you."
       }
     }
   },
@@ -483,6 +541,26 @@
       "category": "Organización",
       "lang": "es"
     },
+    "pixellibre": {
+      "name": "PixelLibre",
+      "category": "Imagen",
+      "lang": "es"
+    },
+    "inwo-illuminati": {
+      "name": "INWO — Illuminati: New World Order",
+      "category": "Juegos de mesa",
+      "lang": "es"
+    },
+    "verbo-hecho-codigo": {
+      "name": "El Verbo Hecho Código",
+      "category": "Rol y ambientación",
+      "lang": "es"
+    },
+    "dashboard-colombia": {
+      "name": "Dashboard de Violencia y Crimen en Colombia",
+      "category": "Datos",
+      "lang": "es"
+    },
     "astrology-sign-calculator": {
       "name": "Astrology Sign Calculator",
       "category": "Astrología",
@@ -581,6 +659,31 @@
     "zener-esp-trainer": {
       "name": "Zener Esp Trainer",
       "category": "Bienestar",
+      "lang": "en"
+    },
+    "beat-the-dealer": {
+      "name": "Beat the Dealer",
+      "category": "Probabilidad",
+      "lang": "en"
+    },
+    "roulette-lab": {
+      "name": "Roulette Lab",
+      "category": "Probabilidad",
+      "lang": "en"
+    },
+    "schrecknet-nosferatu": {
+      "name": "SchreckNET",
+      "category": "Rol y ambientación",
+      "lang": "en"
+    },
+    "pentex-werewolf": {
+      "name": "Pentex Industries",
+      "category": "Rol y ambientación",
+      "lang": "en"
+    },
+    "synthetic-gods": {
+      "name": "The Synthetic Gods",
+      "category": "Rol y ambientación",
       "lang": "en"
     }
   },
@@ -1111,6 +1214,44 @@
         "servitor-design-journal"
       ]
     },
+    "pixellibre": {
+      "category": "Imagen",
+      "lang": "es",
+      "apps": [
+        "chaos-sigil-generator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": []
+    },
+    "inwo-illuminati": {
+      "category": "Juegos de mesa",
+      "lang": "es",
+      "apps": [
+        "unofficial-rider-waite-tarot"
+      ],
+      "book": "tarot-chaos-pdf",
+      "related": []
+    },
+    "verbo-hecho-codigo": {
+      "category": "Rol y ambientación",
+      "lang": "es",
+      "apps": [
+        "chaos-sigil-generator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "schrecknet-nosferatu",
+        "pentex-werewolf",
+        "synthetic-gods"
+      ]
+    },
+    "dashboard-colombia": {
+      "category": "Datos",
+      "lang": "es",
+      "apps": [],
+      "book": "codex-chaoticus-pdf",
+      "related": []
+    },
     "astrology-sign-calculator": {
       "category": "Astrología",
       "lang": "en",
@@ -1368,6 +1509,65 @@
         "gnosis-timer",
         "meditation-focus-timer",
         "gnosis-timer"
+      ]
+    },
+    "beat-the-dealer": {
+      "category": "Probabilidad",
+      "lang": "en",
+      "apps": [],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "roulette-lab",
+        "roulette-lab"
+      ]
+    },
+    "roulette-lab": {
+      "category": "Probabilidad",
+      "lang": "en",
+      "apps": [],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "beat-the-dealer",
+        "beat-the-dealer"
+      ]
+    },
+    "schrecknet-nosferatu": {
+      "category": "Rol y ambientación",
+      "lang": "en",
+      "apps": [
+        "noctem-tools"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "pentex-werewolf",
+        "synthetic-gods",
+        "verbo-hecho-codigo"
+      ]
+    },
+    "pentex-werewolf": {
+      "category": "Rol y ambientación",
+      "lang": "en",
+      "apps": [
+        "noctem-tools"
+      ],
+      "book": "liber-lvpinux-pdf",
+      "related": [
+        "schrecknet-nosferatu",
+        "synthetic-gods",
+        "verbo-hecho-codigo"
+      ]
+    },
+    "synthetic-gods": {
+      "category": "Rol y ambientación",
+      "lang": "en",
+      "apps": [
+        "chaos-sigil-generator"
+      ],
+      "book": "codex-chaoticus-pdf",
+      "related": [
+        "schrecknet-nosferatu",
+        "pentex-werewolf",
+        "verbo-hecho-codigo"
       ]
     }
   }
