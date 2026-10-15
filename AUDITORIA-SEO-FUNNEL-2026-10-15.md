@@ -103,11 +103,11 @@ El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.j
 
 ## 3. SEO ON-PAGE — defectos concretos (por página)
 
-- [ ] **F-7 · Titles <30ch en ~20 artículos** de series con títulos genéricos idénticos entre sí ("Chaos Magic Fundamentals", "Entity Lore and Invocation", "History of the Occult"… 28-39 artículos por serie). Canibalización segura. → Diferenciar cada title con su subtema ("Chaos Magic Fundamentals: Gnosis, Sigils & Paradigm Shift").
+- [x] **F-7 · Titles <30ch en ~20 artículos** de series con títulos genéricos idénticos entre sí ("Chaos Magic Fundamentals", "Entity Lore and Invocation", "History of the Occult"… 28-39 artículos por serie). Canibalización segura. → Diferenciar cada title con su subtema ("Chaos Magic Fundamentals: Gnosis, Sigils & Paradigm Shift"). **HECHO 2026-10-15: 20 titles diferenciados** (H1 largo donde existía, subtema del slug en el resto) + og:title actualizado.
 - [x] **F-8 · Home (index.html):** desc caducada ("61 free tools" → son **71**; "8 books" → hay **9** ficheros de libro). Añadir links texto visibles a: sigil-maker, sigil-generator, astrology guide, goetic guide, best-occult-apps, glossary (las 6 striking-distance) + H1 con "chaos magick apps" etc. **HECHO 2026-10-15:** desc/og/twitter con números reales, H1 "Chaos Magick Apps, Occult Books & 71 Free Tools", bloque "Start Here" con las 6 rutas.
-- [ ] **F-9 · Descriptions <70ch en 43 páginas** (series con teaser truncado tipo "…what it f"). Rellenar a 140-155ch con keyword.
+- [x] **F-9 · Descriptions <70ch en 43 páginas** (series con teaser truncado tipo "…what it f"). Rellenar a 140-155ch con keyword. **HECHO 2026-10-15: 42 descs extendidas** con la primera frase real del contenido + og:description.
 - [ ] **F-10 · `mind-the-gap-pdf.html` desc 232ch** → recortar a 160.
-- [ ] **F-11 · 450 imágenes sin alt en 50 artículos** (series astral-projection/psi/best-*: 9 imgs sin alt cada una). → Regenerar con alt descriptivo (el generador es scripts propios).
+- [x] **F-11 · 450 imágenes sin alt en 50 artículos** (series astral-projection/psi/best-*: 9 imgs sin alt cada una). → Regenerar con alt descriptivo (el generador es scripts propios). **VERIFICADO 2026-10-15: 0 imágenes sin alt en todo blog/ — ya resuelto por commits previos.**
 - [ ] **F-12 · twitter:card:** 55 págs sin card y 40 con `summary` → normalizar todo a `summary_large_image`.
 - [ ] **F-13 · OG incompleto en 5 págs:** buscar.html, search.html, es/index.html (+2 junk). Las 3 reales → completar og:title/desc/image.
 - [ ] **F-14 · 11 págs <300 palabras** reales: 3 tools (digital-grimoire-organizer 299, elemental-balance-checker 299, magical-correspondence-finder 296, ogham-oracle 298) + affiliate-dashboard 276 + app-details 103 (dinámica, OK). → 200-300 palabras únicas en las 4 tools + dashboard.

@@ -35,10 +35,41 @@ jobs:
           npm run build:css
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Prepare clean artifact (F-22: excluye tooling, secretos y junk)
+        run: |
+          mkdir -p /tmp/site
+          rsync -a \
+            --exclude '.git' \
+            --exclude 'node_modules' \
+            --exclude 'docs' \
+            --exclude 'logs' \
+            --exclude 'scripts' \
+            --exclude 'deploy' \
+            --exclude 'projects' \
+            --exclude 'undefined' \
+            --exclude 'tools/auto-shorts' \
+            --exclude 'telegram-bot' \
+            --exclude 'webhooks' \
+            --exclude 'email-sequences' \
+            --exclude 'content-calendar' \
+            --exclude 'kpi-dashboard' \
+            --exclude 'pins' \
+            --exclude 'submissions' \
+            --exclude '.gsc*' \
+            --exclude '.env*' \
+            --exclude '.vscode' \
+            --exclude 'package.json' \
+            --exclude 'package-lock.json' \
+            --exclude 'vitest.config.*' \
+            --exclude 'pytest.ini' \
+            --exclude 'AUDITORIA-*' \
+            --exclude 'PLAN-*' \
+            ./ /tmp/site/
+          echo "artifact files: $(find /tmp/site -type f | wc -l)"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: /tmp/site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

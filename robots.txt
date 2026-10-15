@@ -2,13 +2,13 @@ User-agent: *
 Allow: /
 
 Disallow: /404.html
-Disallow: /submissions/
+Disallow: /tools/auto-shorts/
 
 Sitemap: https://cha0smagicklabs.com/sitemap.xml
 
 # AI crawlers and assistants
 # Machine-readable index of the site: https://llmstxt.org/
-# llms.txt is the curated entry point; llms-full.txt lists all 820 articles.
+# llms.txt is the curated entry point; llms-full.txt lists all 852 articles.
 # These are not listed in sitemap.xml because they are not HTML pages.
 User-agent: GPTBot
 User-agent: ClaudeBot
