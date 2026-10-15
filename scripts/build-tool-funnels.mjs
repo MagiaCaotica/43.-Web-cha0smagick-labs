@@ -218,6 +218,57 @@ const ANGLES = {
       head: 'A grimoire you can actually consult',
       sub: 'Organise servitors, sessions and grimoire in one searchable place. The app adds servitor design with charge tracking and expiry.'
     }
+  },
+  // --- Categorias Gen3 (paginas de embed externo: build-embed-funnels.mjs) ---
+  Probabilidad: {
+    es: {
+      head: 'Conoce las probabilidades antes de arriesgar',
+      sub: 'Los dados, las cartas y el azar no distinguen entre el ocio y el ritual: la misma aritmética decide ambas cosas. El Codex recoge el método completo por escrito.'
+    },
+    en: {
+      head: 'Know the odds before you take the risk',
+      sub: 'Cards, dice and chance do not distinguish between a gamble and a working: the same arithmetic decides both. The Codex gathers the complete method in writing.'
+    }
+  },
+  'Rol y ambientación': {
+    es: {
+      head: 'El mundo de la campaña, ordenado y completo',
+      sub: 'Este sitio resuelve el material de consulta. NOCTEM cubre el trabajo de campo con registro y export, y Codex Chaoticus da el sistema escrito detrás de todo lo demás.'
+    },
+    en: {
+      head: 'The campaign world, ordered and complete',
+      sub: 'This site handles the reference material. NOCTEM covers the fieldwork with logging and export, and Codex Chaoticus supplies the written system behind everything else.'
+    }
+  },
+  Imagen: {
+    es: {
+      head: 'Exporta tu trabajo sin registrarte en nada',
+      sub: 'PixelLibre cubre el archivo; la app añade la biblioteca de sigilos, el registro de intenciones y el trabajo sin conexión.'
+    },
+    en: {
+      head: 'Export your work without registering anywhere',
+      sub: 'PixelLibre covers the file; the app adds the sigil library, intent journaling and offline working.'
+    }
+  },
+  'Juegos de mesa': {
+    es: {
+      head: 'Cuando el juego de cartas te pide más',
+      sub: 'Si el sistema de cartas te interesa de verdad, Tarot Chaos lleva las 78 cartas al caos aplicado, y la app las lleva al móvil sin conexión.'
+    },
+    en: {
+      head: 'When the card game asks for more',
+      sub: 'If the card system genuinely interests you, Tarot Chaos applies chaos magick to all 78 cards, and the app takes them offline on your phone.'
+    }
+  },
+  Datos: {
+    es: {
+      head: 'Del dato a la acción, con método',
+      sub: 'Un panel enseña lo que pasó; Codex Chaoticus enseña qué hacer con la lectura, que es la parte que ningún dashboard te da.'
+    },
+    en: {
+      head: 'From the data to the decision, with method',
+      sub: 'A dashboard shows what happened; Codex Chaoticus shows what to do with the reading, which is the part no dashboard gives you.'
+    }
   }
 };
 
@@ -286,7 +337,12 @@ const MAP_ES = {
   'servitor-design-journal': { apps: ['arcana-goetia'], book: 'manual-activacion-servidores-magicos-pdf' },
   // --- Organizacion (3) ---
   // Esta pagina es la unica de la generacion "en" que nace en espanol: ver <html lang="es">.
-  'activador-servidores': { apps: ['arcana-goetia'], book: 'manual-activacion-servidores-magicos-pdf' }
+  'activador-servidores': { apps: ['arcana-goetia'], book: 'manual-activacion-servidores-magicos-pdf' },
+  // --- Gen3: embeds externos (los HTML los genera build-embed-funnels.mjs) ---
+  'pixellibre': { apps: ['chaos-sigil-generator'], book: 'codex-chaoticus-pdf' },
+  'inwo-illuminati': { apps: ['unofficial-rider-waite-tarot'], book: 'tarot-chaos-pdf' },
+  'verbo-hecho-codigo': { apps: ['chaos-sigil-generator'], book: 'codex-chaoticus-pdf' },
+  'dashboard-colombia': { apps: [], book: 'codex-chaoticus-pdf' }
 };
 
 const MAP_EN = {
@@ -309,7 +365,13 @@ const MAP_EN = {
   'tarot-yes-no': { apps: ['unofficial-rider-waite-tarot', 'norse-rune-oracle'], book: 'tarot-chaos-pdf' },
   'tengwar-transcriber': { apps: [], book: 'codex-chaoticus-pdf' },
   'viking-runes': { apps: ['norse-rune-oracle'], book: 'tratado-runas-cazadoras-caos-pdf' },
-  'zener-esp-trainer': { apps: ['psi-gym'], book: 'mind-the-gap-pdf' }
+  'zener-esp-trainer': { apps: ['psi-gym'], book: 'mind-the-gap-pdf' },
+  // --- Gen3: embeds externos (los HTML los genera build-embed-funnels.mjs) ---
+  'beat-the-dealer': { apps: [], book: 'codex-chaoticus-pdf' },
+  'roulette-lab': { apps: [], book: 'codex-chaoticus-pdf' },
+  'schrecknet-nosferatu': { apps: ['noctem-tools'], book: 'codex-chaoticus-pdf' },
+  'pentex-werewolf': { apps: ['noctem-tools'], book: 'liber-lvpinux-pdf' },
+  'synthetic-gods': { apps: ['chaos-sigil-generator'], book: 'codex-chaoticus-pdf' }
 };
 
 // ===========================================================================
@@ -471,6 +533,7 @@ function resolveCategory(slug) {
 function atomicName(slug) {
   const entry = Object.values(loadAtomicCache().tools || {}).find((t) => t.slug === slug);
   if (entry && entry.name) return entry.name;
+  if (EMBED_DISPLAY_NAMES[slug]) return EMBED_DISPLAY_NAMES[slug];
   const words = slug.replace(/-/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
   return words.replace(/\b[a-z]/g, (c) => c.toUpperCase());
 }
@@ -496,7 +559,35 @@ const GEN2_CATEGORY = {
   'tengwar-transcriber': 'Símbolos',
   'viking-runes': 'Runas',
   'zener-esp-trainer': 'Bienestar',
-  'activador-servidores': 'Organización'
+  'activador-servidores': 'Organización',
+  // --- Gen3: embeds externos ---
+  'beat-the-dealer': 'Probabilidad',
+  'roulette-lab': 'Probabilidad',
+  'pixellibre': 'Imagen',
+  'inwo-illuminati': 'Juegos de mesa',
+  'schrecknet-nosferatu': 'Rol y ambientación',
+  'pentex-werewolf': 'Rol y ambientación',
+  'synthetic-gods': 'Rol y ambientación',
+  'verbo-hecho-codigo': 'Rol y ambientación',
+  'dashboard-colombia': 'Datos'
+};
+
+/**
+ * Marcas Gen3. El fallback humaniza el slug ("pixellibre" -> "Pixellibre",
+ * "inwo-illuminati" -> "Inwo Illuminati") y para tools generados a mano eso es
+ * un bug visible: el nombre que se imprime en el pitch y en las cruzadas sale
+ * distinto del que hay en el <title>. Estas son las excepciones.
+ */
+const EMBED_DISPLAY_NAMES = {
+  'beat-the-dealer': 'Beat the Dealer',
+  'roulette-lab': 'Roulette Lab',
+  pixellibre: 'PixelLibre',
+  'inwo-illuminati': 'INWO — Illuminati: New World Order',
+  'schrecknet-nosferatu': 'SchreckNET',
+  'pentex-werewolf': 'Pentex Industries',
+  'synthetic-gods': 'The Synthetic Gods',
+  'verbo-hecho-codigo': 'El Verbo Hecho Código',
+  'dashboard-colombia': 'Dashboard de Violencia y Crimen en Colombia'
 };
 
 main();
