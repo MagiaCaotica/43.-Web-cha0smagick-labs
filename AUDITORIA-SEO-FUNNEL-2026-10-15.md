@@ -48,8 +48,8 @@ Base: `docs/PLAN-VENTA-MERCADEO-GSC.md` (2026-10-14). Tráfico acelerando (91% d
 | **Wealth / abundance** | 18 artículos — competitive, no priorizar sobre sigil. |
 | **Español** | 0 clics aún (32 posts ES + 10 comparativas muy recientes). Oportunidad intacta: bloqueada por el bug hreflang (F-3). |
 
-- [ ] Crear **hub de cluster "Sigil"** (página pilar enlazando: sigil-maker, sigil-generator, los 6+ artículos de sigilo, app chaos-sigil-generator).
-- [ ] Hub Goetia y hub Lucid/Astral (mismo patrón, solo links existentes).
+- [x] Crear **hub de cluster "Sigil"** (página pilar enlazando: sigil-maker, sigil-generator, los 6+ artículos de sigilo, app chaos-sigil-generator). **HECHO 2026-10-15: `/sigil-magic.html`** — 50 links curados (tools, método, carga, dinero, free-vs-app, ES), FAQPage, CollectionPage JSON-LD, en sitemap y enlazado desde la home.
+- [x] Hub Goetia y hub Lucid/Astral (mismo patrón, solo links existentes). **HECHO 2026-10-15: `/goetia.html` (47 links) y `/lucid-dreaming.html` (51 links)**, con cross-links entre los 3 hubs. Verificador de links: 0 rotos en todo el sitio.
 
 ### 1.3 Home casi no indexa
 
@@ -97,7 +97,7 @@ El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.j
 
 ### F-6 · Spanish funnel
 - [x] Popup/CTAs de conversion.js respetan `es-page` pero las 10 comparativas `/es/` no reciben popup (solo las 32 en /blog/). Añadir es-page a popupPages. **HECHO 2026-10-15:** 'es-page' añadido a popupPages; cubre /es/ y las ES de /blog/.
-- [ ] Las 62 tools top (71−9 sin demanda) **solo en inglés** — traducir las 10 con demanda ES (lista en plan GSC fase 3).
+- [ ] Las 62 tools top (71−9 sin demanda) **solo en inglés** — traducir las 10 con demanda ES (lista en plan GSC fase 3). **PARCIAL 2026-10-15: 4 de 10 ya en ES** (tarot-card-reference, tarot-spread-builder, elder-futhark-reference, dream-symbol-dictionary). **PENDIENTE (6):** sigil-generator, iching, rune-drawer, zener-esp-trainer, lunar-phase, gnosis-timer — no se traducen a mano aquí: (a) el sitio ya sirve 9 idiomas vía widget de Google Translate en las tool pages, y (b) los tools reales viven en HuggingFace Spaces externos, no en el repo. El arreglo correcto es crear páginas `/es/` reales con hreflang (la infra ya está tras F-3), no invertir el `lang` de una URL EN (que es el defecto que la auditoría señala en otra sección).
 
 ---
 
@@ -133,15 +133,15 @@ El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.j
 - [x] Verificado: 12 apps con `details?id=com.cha0smagicklabs.*` correctos en `apps/*.html` (psi-gym: 7 refs Play), schema SoftwareApplication+image+descripción en cada una.
 - [x] **F-22 · Deploy contamina producción:** GitHub Actions (`pages.yml`) sube **TODO el root** → **37.163 ficheros** de `tools/auto-shorts/` (con node_modules) y `undefined/.config/...` quedan públicos. → En pages.yml, subir un artefacto limpio (exclude `tools/auto-shorts`, `undefined`, `docs`, `logs`, `scripts`, `deploy`, `.gsc*`, `telegram-bot`, `webhooks`, `email-sequences`, `content-calendar`, `kpi-dashboard`, `pins`) o mover auto-shorts fuera del root. BONUS: deploy más rápido. **HECHO 2026-10-15:** paso "Prepare clean artifact" con rsync + excludes, artefacto desde /tmp/site.
 - [x] **F-23 · Dos developer IDs de Play distintos:** manifest.json usa `dev?id=5224914033326414083`, conversion.js `dev?id=7060930672313565766`. Verificar en Play Console cuál es el real y unificar (uno de los dos apunta a una cuenta vacía). **HECHO 2026-10-15 (repo): unificado a 5224914033326414083** (el estándar: manifest + 46 HTML); Play Console inaccesible desde aquí (404 a bots) — confirmar externamente, nota dejada en conversion.js.
-- [ ] **F-24 · Aplicar los 12 títulos ASO de `docs/ASO-play-titles.md`** en Play Console (acción externa, doc ya existe). `aggregateRating` solo con reseñas reales (correcto hoy).
-- [ ] **F-25 · app-ads.txt** requiere package IDs reales si se activa AdMob (hoy placeholder).
+- [ ] **F-24 · Aplicar los 12 títulos ASO de `docs/ASO-play-titles.md`** en Play Console (acción externa, doc ya existe). `aggregateRating` solo con reseñas reales (correcto hoy). **PENDIENTE EXTERNO 2026-10-15:** requiere acceso a Play Console; el repo no puede aplicarlo. Doc listo.
+- [x] **F-25 · app-ads.txt** requiere package IDs reales si se activa AdMob (hoy placeholder). **RESUELTO 2026-10-15 por F-4:** el placeholder se eliminó; recrearlo con package IDs reales solo si se activa AdMob (decisión externa).
 
 ---
 
 ## 6. RENDIMIENTO / INFRA (menor, anotado)
 
-- [ ] **F-26 · `glossary.html` = 224 KB** single page (533 términos). Para #1 en "occult glossary" conviene, pero valorar paginar por letras o lazy-render si LCP sufre.
-- [ ] **F-27 · CSP** permite `unsafe-inline`/`unsafe-eval` (necesario hoy por inline snippets); no bloquear, anotar como deuda.
+- [x] **F-26 · `glossary.html` = 224 KB** single page (533 términos). Para #1 en "occult glossary" conviene, pero valorar paginar por letras o lazy-render si LCP sufre. **MEDIDO 2026-10-15: no hay defecto.** 219 KB de HTML que comprime a ~1/5 en el borde, ~1.350 nodos DOM (el umbral "pobre" son 8.000), sin JS pesado y solo 10 imágenes. Paginar destruiría los 238 anchors que son justamente el activo SEO. Se deja como está.
+- [x] **F-27 · CSP** permite `unsafe-inline`/`unsafe-eval` (necesario hoy por inline snippets); no bloquear, anotar como deuda. **ANOTADO 2026-10-15 como deuda:** se mantiene a propósito (consent inline + snippets por página). Quitar `unsafe-inline` exige nonces/hashes por página: coste alto, valor bajo hoy.
 - [ ] **F-28 · `CNAME`/canonicals** consistentes (sin www, https) — verificado OK en muestras.
 - [x] **F-29 · Carpeta `undefined/`** (log de opencode dentro del deploy) → borrar del repo. **HECHO 2026-10-15.**
 
@@ -157,3 +157,13 @@ El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.j
 - **Errores de consola en navegador real**: petición explícita de no usar browser/pty; se sustituyó por chequeo estático completo (sintaxis JS, srcs, DOM deps de plantillas). Si tras F-1/F-2 quieres paseo de consola en vivo, se hace aparte.
 - **Play Store listings reales** (títulos/desc store): requieren acceso Play Console; existe `docs/ASO-play-titles.md` como fuente.
 - **Contenido ES pendiente de indexar**: decisión de Google, no del repo; lo accionable (hreflang, lastmod, links) está en F-3/F-6.
+- **Traducción de 6 tools a ES** (F-6, 2ª casilla): pendiente a propósito. Los tools funcionales son HuggingFace Spaces externos y el sitio ya sirve 9 idiomas por widget; el arreglo correcto son páginas `/es/` con hreflang, no invertir el `lang` de una URL EN.
+- **F-24 (títulos ASO) / AdMob (F-25)**: requieren Play Console y decisión de monetización. Fuera del repo.
+- **conversion.js en 78 páginas de blog/ES**: verificado que NO es un hueco — todas tienen CTA propio + MailerLite + links a Play; añadir el popup duplicaría la captura. No se toca.
+
+## 9. ESTADO FINAL 2026-10-15
+
+Cerrado en repo: F-1, F-2, F-3, F-4, F-5, F-6 (1ª casilla), F-7, F-8, F-9, F-10, F-11, F-12, F-13, F-14, F-15, F-16, F-17, F-18, F-19, F-20, F-21, F-22, F-23, F-25, F-26, F-27, F-29, K1–K6 y los 3 hubs de cluster.
+Verificación global: 993 HTML, 0 links internos rotos, 0 JSON-LD inválidos, 0 titles cortos, 0 descs cortas, 0 imágenes sin alt, 0 sin twitter:card, 0 sin hreflang.
+Extra no auditado: 14 páginas con schema/breadcrumb de servitores corregidas; `llms.txt` regenerable; deploy limpio.
+Pendiente externo: F-24 (Play Console), AdMob (F-25), token GSC, pixel/Ads IDs, webhook Hotmart, activación MailerLite, 6 traducciones ES de tools.
