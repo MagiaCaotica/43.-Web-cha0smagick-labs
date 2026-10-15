@@ -65,6 +65,7 @@ export const EMBED_TOOLS = [
       { feature: 'Card counting explained with its real conditions', free: true, premium: true },
       { feature: 'Bankroll and bet-sizing rules covered', free: true, premium: true },
       { feature: 'Lab exercises and glossary reference', free: true, premium: false },
+      { feature: 'An attention drill that works without a table or money', free: false, premium: true },
       { feature: 'A written system for acting under uncertainty', free: false, premium: true }
     ],
     bookAdds: [
@@ -72,7 +73,10 @@ export const EMBED_TOOLS = [
       'The probability and intention material the labs only gesture at: why an outcome is not guaranteed by sincerity.',
       'One-time payment, PDF, yours to keep and re-read.'
     ],
-    apps: [],
+    appPitch:
+      'This course teaches you to read hidden information and act on a probability. The Zener card drills train the same faculty with no table, no money and no risk: guess the card behind the screen, track the run, learn when your own attention is lying to you. Same training, different stakes.',
+    appNote: 'Works offline — No ads — One-time payment',
+    apps: ['psi-gym'],
     book: 'codex-chaoticus-pdf',
     related: ['roulette-lab', 'zener-esp-trainer', 'digital-pendulum']
   },

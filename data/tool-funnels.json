@@ -1514,7 +1514,9 @@
     "beat-the-dealer": {
       "category": "Probabilidad",
       "lang": "en",
-      "apps": [],
+      "apps": [
+        "psi-gym"
+      ],
       "book": "codex-chaoticus-pdf",
       "related": [
         "roulette-lab",

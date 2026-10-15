@@ -367,7 +367,7 @@ const MAP_EN = {
   'viking-runes': { apps: ['norse-rune-oracle'], book: 'tratado-runas-cazadoras-caos-pdf' },
   'zener-esp-trainer': { apps: ['psi-gym'], book: 'mind-the-gap-pdf' },
   // --- Gen3: embeds externos (los HTML los genera build-embed-funnels.mjs) ---
-  'beat-the-dealer': { apps: [], book: 'codex-chaoticus-pdf' },
+  'beat-the-dealer': { apps: ['psi-gym'], book: 'codex-chaoticus-pdf' },
   'roulette-lab': { apps: [], book: 'codex-chaoticus-pdf' },
   'schrecknet-nosferatu': { apps: ['noctem-tools'], book: 'codex-chaoticus-pdf' },
   'pentex-werewolf': { apps: ['noctem-tools'], book: 'liber-lvpinux-pdf' },
