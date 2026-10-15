@@ -80,9 +80,9 @@ Base: `docs/PLAN-VENTA-MERCADEO-GSC.md` (2026-10-14). Tráfico acelerando (91% d
 
 ### F-3 · BUG: hreflang de los 20 artículos ES apunta a URLs inexistentes (`.html.html`)
 `blog/es-*.html` (20 de 32) declaran `hreflang="en"` y `x-default` hacia `…html.html` (p. ej. `blog/es-como-hacer-un-sigilo-paso-a-paso.html` → `free-sigil-generator-online-guide.html.html`). Google **descarta el set completo** cuando un alternate da 404 → el mercado ES (oportunidad nº1 según GSC) sigue bloqueado.
-- [ ] Corregir los 20 (quitar el `.html` duplicado o apuntar al gemelo EN real).
-- [ ] Unificar conjuntos: hoy hay 5 variantes (712 págs solo `en`, 77 `en+x-default`, 32 `en+es`, 45 SIN hreflang, 19 solo `es`). Estándar propuesto: cada página declara `en` + `x-default`; las que tienen gemelo ES añaden `es` (y el ES recíproco).
-- [ ] Los 45 sin hreflang (lista: apps/index, books/index, compare/astral-lab-vs-co-star, 6+ tools nuevas) → añadir.
+- [x] Corregir los 20 (quitar el `.html` duplicado o apuntar al gemelo EN real). **HECHO 2026-10-15:** 17 reparados con gemelo real, 6 sin gemelo EN limpiados (quedan es-self).
+- [x] Unificar conjuntos: hoy hay 5 variantes (712 págs solo `en`, 77 `en+x-default`, 32 `en+es`, 45 SIN hreflang, 19 solo `es`). Estándar propuesto: cada página declara `en` + `x-default`; las que tienen gemelo ES añaden `es` (y el ES recíproco). **HECHO 2026-10-15:** x-default añadido a 252 págs; estándar en+x-default en todo el sitio (hallazgo: ~40 tools ya están traducidas a ES y ahora declaran `es`+`x-default`).
+- [x] Los 45 sin hreflang (lista: apps/index, books/index, compare/astral-lab-vs-co-star, 6+ tools nuevas) → añadir. **HECHO 2026-10-15:** 43 páginas recibieron bloque completo.
 
 ### F-4 · Cero atribución de ventas (acciones FUERA del repo, bloquean todo el funnel medible)
 - [ ] **Webhook Hotmart → MailerLite + GA4** (`webhooks/` solo tiene un .md de configs). Sin esto: comprador no entra en email, `purchase` nunca dispara.
