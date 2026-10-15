@@ -46,7 +46,7 @@ compare = scan('compare')
 es_pages = scan('es')
 lead = scan('lead-magnet')
 land = [x for x in scan('landing-pages') if 'affiliate' not in x[1] and 'flash-sale' not in x[1]]
-root_pages = [x for x in scan('') if x[1].endswith(('index.html', 'glossary.html', 'best-occult-apps-android.html', 'birth-chart-app.html', 'astrology-app-reviews.html', 'privacy-policy.html', 'affiliate-disclosure.html'))]
+root_pages = [x for x in scan('') if x[1].endswith(('index.html', 'glossary.html', 'best-occult-apps-android.html', 'birth-chart-app.html', 'astrology-app-reviews.html', 'privacy-policy.html', 'affiliate-disclosure.html', 'sigil-magic.html', 'goetia.html', 'lucid-dreaming.html', 'sigil-maker.html', 'goetic-sigil.html'))]
 
 def clean_tools(lst):
     # tools/index.html ya viene incluido en scan('tools')
