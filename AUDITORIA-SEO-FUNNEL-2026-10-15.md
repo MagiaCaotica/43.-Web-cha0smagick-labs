@@ -104,7 +104,7 @@ El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.j
 ## 3. SEO ON-PAGE — defectos concretos (por página)
 
 - [ ] **F-7 · Titles <30ch en ~20 artículos** de series con títulos genéricos idénticos entre sí ("Chaos Magic Fundamentals", "Entity Lore and Invocation", "History of the Occult"… 28-39 artículos por serie). Canibalización segura. → Diferenciar cada title con su subtema ("Chaos Magic Fundamentals: Gnosis, Sigils & Paradigm Shift").
-- [ ] **F-8 · Home (index.html):** desc caducada ("61 free tools" → son **71**; "8 books" → hay **9** ficheros de libro). Añadir links texto visibles a: sigil-maker, sigil-generator, astrology guide, goetic guide, best-occult-apps, glossary (las 6 striking-distance) + H1 con "chaos magick apps" etc.
+- [ ] **F-8 · Home (index.html):** desc caducada ("61 free tools" → son **71**; "8 books" → hay **9** ficheros de libro). Añadir links texto visibles a: sigil-maker, sigil-generator, astrology guide, goetic guide, best-occult-apps, glossary (las 6 striking-distance) + H1 con "chaos magick apps" etc. *(pendiente)*
 - [ ] **F-9 · Descriptions <70ch en 43 páginas** (series con teaser truncado tipo "…what it f"). Rellenar a 140-155ch con keyword.
 - [ ] **F-10 · `mind-the-gap-pdf.html` desc 232ch** → recortar a 160.
 - [ ] **F-11 · 450 imágenes sin alt en 50 artículos** (series astral-projection/psi/best-*: 9 imgs sin alt cada una). → Regenerar con alt descriptivo (el generador es scripts propios).
@@ -121,8 +121,8 @@ El popup solo dispara en `popupPages: ['homepage','blog','tools']` (conversion.j
 
 ## 4. GEO (LLMs/IA) — el activo más barato de mejorar
 
-- [ ] **F-18 · `llms.txt` obsoleto:** lista **10 tools de 71**. Regenerar completo (tools, apps 12, books 9, hubs, guías).
-- [ ] **F-19 · `llms-full.txt` obsoleto:** lista **820 de 853 artículos** (faltan exactamente los 32 ES). Regenerar + los 71 tools.
+- [x] **F-18 · `llms.txt` obsoleto:** lista **10 tools de 71**. Regenerar completo (tools, apps 12, books 9, hubs, guías). **HECHO 2026-10-15:** 71 tools + 13 apps + 10 books + comparativas + guías + 820 art. EN + 32 ES, vía `scripts/gen_llms.py` (repetible).
+- [x] **F-19 · `llms-full.txt` obsoleto:** lista **820 de 853 artículos** (faltan exactamente los 32 ES). Regenerar + los 71 tools. **HECHO 2026-10-15:** mismo script, versión con descripciones (262 KB, 1002 entradas).
 - [ ] **F-20 · Sitemap de llms:** añadir `llms.txt` como referencia en robots.txt (comentario ya existe; dejarlo explícito no hace falta — solo regenerar).
 - [ ] **F-21 · `robots.txt`:** `Disallow: /submissions/` apunta a un dir que no existe en root (está en `projects/`, no deployado) → limpiar la línea. Añadir `Disallow: /tools/auto-shorts/` (ver F-22).
 
