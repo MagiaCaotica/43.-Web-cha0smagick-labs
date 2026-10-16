@@ -7,11 +7,11 @@
 export function initZenerTrainer() {
 // === ZENER ESP TRAINER LOGIC ===
 const SYMBOLS = [
-    {id:'circle', label:'Circle', emoji:'⭕', css:'symbol-circle'},
-    {id:'cross', label:'Cross', emoji:'✚', css:'symbol-plus'},
-    {id:'waves', label:'Waves', emoji:'🌊', css:'symbol-waves'},
-    {id:'square', label:'Square', emoji:'◼', css:'symbol-square'},
-    {id:'star', label:'Star', emoji:'⭐', css:'symbol-star'}
+    {id:'circle', label:'Circulo', emoji:'⭕', css:'symbol-circle'},
+    {id:'cross', label:'Cruz', emoji:'✚', css:'symbol-plus'},
+    {id:'waves', label:'Ondas', emoji:'🌊', css:'symbol-waves'},
+    {id:'square', label:'Cuadrado', emoji:'◼', css:'symbol-square'},
+    {id:'star', label:'Estrella', emoji:'⭐', css:'symbol-star'}
 ];
 
 const TRIALS_PER_SESSION = 25;
@@ -38,7 +38,7 @@ function saveHistory() {
 function renderHistory() {
     const list = document.getElementById('historyList');
     if (history.length === 0) {
-        list.innerHTML = '<div style="text-align:center;color:#666;padding:1rem">No sessions yet</div>';
+        list.innerHTML = '<div style="text-align:center;color:#666;padding:1rem">Todavia no hay sesiones</div>';
         return;
     }
     list.innerHTML = history.slice().reverse().map((h, i) => `
@@ -81,10 +81,10 @@ function combination(n, k) {
 }
 
 function getSignificance(pval) {
-    if (pval < 0.001) return {label:'Highly Significant ***', color:'var(--green)'};
-    if (pval < 0.01) return {label:'Significant **', color:'var(--green)'};
-    if (pval < 0.05) return {label:'Significant *', color:'var(--green)'};
-    return {label:'Not Significant', color:'var(--text)'};
+    if (pval < 0.001) return {label:'Muy significativo ***', color:'var(--green)'};
+    if (pval < 0.01) return {label:'Significativo **', color:'var(--green)'};
+    if (pval < 0.05) return {label:'Significativo *', color:'var(--green)'};
+    return {label:'No significativo', color:'var(--text)'};
 }
 
 function setMode(newMode) {
