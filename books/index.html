@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="x-default" href="https://cha0smagicklabs.com/books/">
 <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
 <link rel="manifest" href="../manifest.json">
-<meta name="theme-color" content="#0B1026">
+<meta name="theme-color" content="#030303">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="9 Chaos Magick Books in PDF — One-Time Purchase">
@@ -171,43 +171,74 @@
   ]
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.min.css">
+<noscript><link rel="stylesheet" href="../css/style.min.css"></noscript>
 <style>
-:root{--navy:#0B1026;--bg:#131A3A;--amber:#FFB03A;--cyan:#35C4D9;--text:#F5F7FF;--muted:#8A93B8;--ok:#4ADE80}
-*{box-sizing:border-box}
-body{margin:0;background:var(--navy);color:var(--text);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;line-height:1.6}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-nav.breadcrumb{background:var(--bg);padding:14px 0;font-size:14px}
-nav.breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0}
-nav.breadcrumb li+li::before{content:'/';color:var(--muted);margin-right:8px}
-nav.breadcrumb a{color:var(--cyan);text-decoration:none}
-nav.breadcrumb a:hover{text-decoration:underline}
-header.hero{padding:56px 0 32px;border-bottom:1px solid rgba(255,255,255,.08)}
-.kicker{color:var(--cyan);text-transform:uppercase;letter-spacing:6px;font-size:13px;margin:0 0 12px}
-h1{font-size:44px;line-height:1.15;margin:0 0 16px;font-weight:800}
-.bar{width:220px;height:6px;background:var(--amber);margin:0 0 24px}
-.lede{font-size:19px;color:var(--muted);max-width:62ch;margin:0 0 8px}
-section{padding:40px 0}
-h2{font-size:28px;margin:0 0 20px;font-weight:800}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-.card{background:var(--bg);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;display:flex;flex-direction:column}
-.card h3{font-size:19px;margin:0 0 8px}
-.card p{margin:0 0 16px;color:var(--muted);font-size:15px;flex:1}
-.card .meta{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:15px;flex-wrap:wrap}
-.price{color:var(--amber);font-weight:700;font-size:20px}
-.card a.cta{color:var(--cyan);text-decoration:none;font-weight:600}
+/* Catalog index: reuses the site stylesheet (css/style.min.css) and only adds
+   what that sheet does not already provide, in the site own tokens. */
+.wrap{max-width:var(--max-width);margin:0 auto;padding:0 2rem}
+header.hero{padding:4rem 0 2.5rem;border-bottom:1px solid var(--border-subtle)}
+.kicker{font-family:var(--font-mono);color:var(--accent-gold);text-transform:uppercase;letter-spacing:3px;font-size:0.72rem;margin:0 0 1rem}
+.hero h1{font-family:var(--font-main);color:var(--text-primary);text-transform:uppercase;letter-spacing:2px;line-height:1.25;margin:0 0 1rem;font-size:2.1rem}
+.bar{width:180px;height:3px;background:var(--accent-gold);margin:0 0 1.5rem}
+.lede{font-size:1.05rem;color:var(--text-secondary);max-width:70ch;margin:0}
+main section{padding:3rem 0}
+main h2{font-family:var(--font-mono);color:var(--text-primary);text-transform:uppercase;letter-spacing:2px;font-size:1.1rem;margin:0 0 2rem}
+.grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.card{background:var(--bg-card);border:1px solid var(--border-card);border-radius:var(--radius-lg);padding:1.5rem;display:flex;flex-direction:column;transition:border-color var(--transition-slow),transform var(--transition-slow)}
+.card:hover{border-color:var(--accent-gold);transform:translateY(-2px)}
+.card h3{color:var(--text-primary);font-size:1.02rem;margin:0 0 0.75rem;line-height:1.4}
+.card p{margin:0 0 1rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.7}
+.card .meta{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:auto;padding-top:1rem;border-top:1px solid var(--border-subtle)}
+.price{font-family:var(--font-mono);color:var(--accent-gold);font-weight:700;font-size:1rem}
+.card a.cta{color:var(--accent-gold);text-decoration:none;font-weight:600;font-size:0.9rem}
 .card a.cta:hover{text-decoration:underline}
-.tag{display:inline-block;font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:2px 9px;margin:0 5px 5px 0}
-.new-badge{display:inline-block;background:linear-gradient(135deg,#cc3300 0%,#ff4400 100%);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;letter-spacing:.5px;margin-left:8px;vertical-align:middle;box-shadow:0 1px 4px rgba(204,51,0,.4)}
-.note{background:rgba(255,176,58,.08);border-left:4px solid var(--amber);padding:16px 18px;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
-.note strong{color:var(--amber)}
-.faq-item{border-bottom:1px solid rgba(255,255,255,.08)}
-.faq-item h3{font-size:18px;margin:0}
-.faq-item p{margin:8px 0 20px;color:var(--muted)}
-footer{border-top:1px solid rgba(255,255,255,.08);padding:32px 0;color:var(--muted);font-size:14px}
-footer a{color:var(--cyan)}
+.new-badge{display:inline-block;background:linear-gradient(135deg,#cc3300 0%,#ff4400 100%);color:#fff;font-family:var(--font-mono);font-size:0.62rem;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;letter-spacing:.5px;margin-left:8px;vertical-align:middle;box-shadow:0 1px 4px rgba(204,51,0,.4)}
+.tag{display:inline-block;font-family:var(--font-mono);font-size:0.68rem;color:var(--text-muted);border:1px solid var(--border-mid);border-radius:999px;padding:2px 9px;margin:0 4px 4px 0}
+.note{background:rgba(192,160,96,.06);border-left:3px solid var(--accent-gold);padding:1rem 1.25rem;border-radius:0 var(--radius-md) var(--radius-md) 0;font-size:0.9rem;color:var(--text-secondary)}
+.note strong{color:var(--accent-gold)}
+.faq-item{border-bottom:1px solid var(--border-subtle)}
+.faq-item h3{color:var(--text-primary);font-size:0.98rem;margin:0;padding-top:1.5rem}
+.faq-item p{margin:0.5rem 0 1.5rem;color:var(--text-secondary);font-size:0.92rem}
+main p,main li{color:var(--text-secondary)}
+main ul{padding-left:1.2rem}
+main li{margin-bottom:0.4rem}
+footer{background:var(--bg-footer);color:var(--text-dim);text-align:center;padding:3rem 1rem;border-top:1px solid #111;font-size:0.75rem;letter-spacing:2px;text-transform:uppercase}
+footer a{color:var(--accent-gold);text-decoration:none}
+@media (max-width:640px){.hero h1{font-size:1.45rem}.wrap{padding:0 1.25rem}}
 </style>
 </head>
 <body>
+<header class="site-header">
+    <picture>
+        <source srcset="../assets/images/Banner.webp" type="image/webp">
+        <img src="../assets/images/Banner.png" alt="Cha0smagick Labs" class="header-logo" width="200" height="200" loading="eager">
+    </picture>
+    <div itemscope itemtype="https://schema.org/Organization">
+        <span class="site-title" itemprop="name">Cha0smagick Labs</span>
+        <p itemprop="description">Corporate Techno-Sorcery Solutions | Occult Apps | Cybermancy | Cyberpaganism</p>
+        <meta itemprop="url" content="https://cha0smagicklabs.com/">
+    </div>
+</header>
+
+<nav aria-label="Main navigation">
+    <ul>
+        <li><a href="../index.html">↑ Home</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li><a href="../tools/">Free Tools</a></li>
+        <li><a href="../apps/">Apps</a></li>
+        <li><a href="../books/">Books</a></li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../glossary.html">Glossary</a></li>
+        <li><a href="../search.html">Search</a></li>
+        <li><a href="/es/">Espa&ntilde;ol</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="wrap"><ol><li><a href="/">Home</a></li><li aria-current="page">Books PDF</li></ol></div>
 </nav>
