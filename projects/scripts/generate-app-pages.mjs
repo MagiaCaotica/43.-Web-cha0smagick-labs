@@ -885,6 +885,35 @@ const booksData = [
             
             <p>One-time purchase. Lifetime access. Instant download.</p>
         `
+    },
+    {
+        id: "complete-practical-treatise-magical-servitors-pdf",
+        name: "The Complete Practical Treatise on Magical Servitors",
+        price: "$9.99 USD",
+        hotmartLink: "https://pay.hotmart.com/U108075109V?checkoutMode=2",
+        image: "assets/images/covertps.webp",
+        description: "368-page operational treatise on the creation, maintenance and banishing of magical servitors. 8 parts, 35 chapters, 211 figures, 227 verified sources. Every claim labelled.",
+        seo: {
+            title: "The Complete Practical Treatise on Magical Servitors | PDF",
+            description: "A 368-page treatise on creating, maintaining and banishing magical servitors. 35 chapters, 211 figures, 227 verified sources, and every claim labelled. Buy the PDF.",
+            keywords: "magical servitors, servitor creation, servitor banishing, servitor drift, chaos magick, thought form, egregore, servitor maintenance, magick safety, grimoire pdf, digital grimoire, frater alekos, esoteric book pdf"
+        },
+        detailedDescription: `
+            <h3>The Complete Practical Treatise on the Creation and Elimination of Magical Servitors</h3>
+            <p>A 368-page operational treatise on the creation, maintenance and banishing of magical servitors — the full working lifecycle, documented end to end. <strong>8 parts, 35 chapters, 211 figures, 6 appendices.</strong></p>
+            <p><strong>The book documents a practice. It does not assert that the practice works.</strong> Wherever it discusses mechanism it names which of three levels it is speaking at: operational claim, empirical claim, or interpretive claim.</p>
+
+            <h4>What Makes This Book Unique</h4>
+            <ul>
+                <li><strong>The three-level spine:</strong> every mechanism statement is labelled, so you can audit the book instead of taking it on tone.</li>
+                <li><strong>The complete lifecycle:</strong> design, construction, charging, maintenance, monitoring and drift, banishing, failure recovery.</li>
+                <li><strong>Safety as doctrine:</strong> 17 contraindications, a 5-level emergency protocol, a taxonomy of drift, and an automatic self-dissolving servitor.</li>
+                <li><strong>Verifiable bibliography:</strong> 227 sources with DOI or Wikidata identifiers, audited in Appendix D, plus a disclosure of what it omits.</li>
+                <li><strong>Built as a reference:</strong> figure index and quick-reference appendices, A4 dark-ground edition at 16.3:1 contrast.</li>
+            </ul>
+
+            <p>One-time purchase. Lifetime access. Instant download. English and Spanish.</p>
+        `
     }
 ];
 
