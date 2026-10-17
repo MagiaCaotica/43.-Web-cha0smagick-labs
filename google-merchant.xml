@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Feed de Google Merchant Center. Fuente: schema Product de cada pagina del sitio.
      Los 12 productos APP- enlazan a su ficha real de Google Play.
-     Los 8 productos BOOK- enlazan a su checkout de Hotmart: un PDF no tiene ficha en Play.
+     Los 9 productos BOOK- enlazan a su checkout de Hotmart: un PDF no tiene ficha en Play.
      gtin: omitido. Solo GS1 lo emite y no existen para software ni PDF,
      asi que declararlo seria inventar un identificador falso.
      shipping: 0 USD porque son productos digitales (descarga inmediata). -->
@@ -268,6 +268,19 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-008</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-009</g:id>
+  <g:title>The Complete Practical Treatise on the Creation and Elimination of Magical Servitors (EN/ES Edition)</g:title>
+  <g:description>368-page operational treatise on the full magical servitor lifecycle: creation, maintenance, drift, banishing and recovery. 35 chapters, 211 figures, 227 verified sources. Every claim labelled. EN and ES.</g:description>
+  <g:link>https://pay.hotmart.com/U108075109V?checkoutMode=2</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/covertps.png</g:image_link>
+  <g:price>9.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-009</g:mpn>
   <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 </channel>

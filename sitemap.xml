@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cha0smagicklabs.com/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url><url>
@@ -141,6 +141,18 @@
 <url>
     <loc>https://cha0smagicklabs.com/books/codex-chaoticus-pdf.html</loc>
     <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://cha0smagicklabs.com/books/complete-practical-treatise-magical-servitors-pdf.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://cha0smagicklabs.com/books/complete-practical-treatise-magical-servitors-es-pdf.html</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -776,7 +788,7 @@
   </url>
 <url>
     <loc>https://cha0smagicklabs.com/blog/best-chaos-magick-books-essential-reading.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -806,7 +818,7 @@
   </url>
 <url>
     <loc>https://cha0smagicklabs.com/blog/best-goetia-books-essential-reading-2026.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -830,7 +842,7 @@
   </url>
 <url>
     <loc>https://cha0smagicklabs.com/blog/best-occult-books-beginners-2026.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -872,7 +884,7 @@
   </url>
 <url>
     <loc>https://cha0smagicklabs.com/blog/best-witchcraft-books-beginners-2026.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -3224,7 +3236,7 @@
   </url>
 <url>
     <loc>https://cha0smagicklabs.com/blog/paranormal-investigation-apps-vs-equipment-2026.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -4544,7 +4556,7 @@
   </url>
   <url>
     <loc>https://cha0smagicklabs.com/landing-pages/books-bundle.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -4730,7 +4742,7 @@
   </url>
   <url>
     <loc>https://cha0smagicklabs.com/books/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -5564,7 +5576,7 @@
   </url>
   <url>
     <loc>https://cha0smagicklabs.com/es/index.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -5760,53 +5772,53 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://cha0smagicklabs.com/es/mejores-apps-magia-del-caos.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cha0smagicklabs.com/es/astral-lab-vs-co-star.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cha0smagicklabs.com/es/noctem-vs-apps-individuales.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cha0smagicklabs.com/es/generador-sigilos-app-vs-hacerlo-a-mano.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cha0smagicklabs.com/es/tarot-rider-waite-app-vs-mazo-fisico.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cha0smagicklabs.com/es/tarot-gratis-vs-pago.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cha0smagicklabs.com/es/iching-app-vs-monedas-fisicas.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cha0smagicklabs.com/es/runas-app-vs-libro-de-runas.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cha0smagicklabs.com/es/apps-suenos-lucidos-comparativa.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cha0smagicklabs.com/es/libros-magia-del-caos-vs-cursos-online.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cha0smagicklabs.com/es/mejores-apps-magia-del-caos.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cha0smagicklabs.com/es/astral-lab-vs-co-star.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cha0smagicklabs.com/es/noctem-vs-apps-individuales.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cha0smagicklabs.com/es/generador-sigilos-app-vs-hacerlo-a-mano.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cha0smagicklabs.com/es/tarot-rider-waite-app-vs-mazo-fisico.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cha0smagicklabs.com/es/tarot-gratis-vs-pago.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cha0smagicklabs.com/es/iching-app-vs-monedas-fisicas.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cha0smagicklabs.com/es/runas-app-vs-libro-de-runas.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cha0smagicklabs.com/es/apps-suenos-lucidos-comparativa.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cha0smagicklabs.com/es/libros-magia-del-caos-vs-cursos-online.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url>
-    <loc>https://cha0smagicklabs.com/sigil-maker.html</loc>
+    <loc>https://cha0smagicklabs.com/sigil-maker.html</loc><lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cha0smagicklabs.com/astrology-app-reviews.html</loc>
+    <loc>https://cha0smagicklabs.com/astrology-app-reviews.html</loc><lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cha0smagicklabs.com/birth-chart-app.html</loc>
+    <loc>https://cha0smagicklabs.com/birth-chart-app.html</loc><lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cha0smagicklabs.com/horoscope-app.html</loc>
+    <loc>https://cha0smagicklabs.com/horoscope-app.html</loc><lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cha0smagicklabs.com/goetic-sigil.html</loc>
+    <loc>https://cha0smagicklabs.com/goetic-sigil.html</loc><lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cha0smagicklabs.com/ephemeris-accuracy.html</loc>
+    <loc>https://cha0smagicklabs.com/ephemeris-accuracy.html</loc><lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cha0smagicklabs.com/i-ching-app.html</loc>
+    <loc>https://cha0smagicklabs.com/i-ching-app.html</loc><lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cha0smagicklabs.com/celtic-cross.html</loc>
+    <loc>https://cha0smagicklabs.com/celtic-cross.html</loc><lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

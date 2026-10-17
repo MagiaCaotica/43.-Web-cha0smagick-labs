@@ -69,14 +69,19 @@ ROOT/  ← GitHub Pages deploy source
 │   ├── noctem-tools.html
 │   └── eerieroads.html
 │
-├── books/                               # 7 landing pages de libros PDF (Hotmart)
+├── books/                               # 9 landing pages de libros PDF (Hotmart)
+│   ├── complete-practical-treatise-magical-servitors-pdf.html
+│   ├── complete-practical-treatise-magical-servitors-es-pdf.html
+│   ├── catholiconomicon-pdf.html
+│   ├── catholiconomicon-es-pdf.html
 │   ├── manual-activacion-servidores-magicos-pdf.html
 │   ├── tratado-runas-cazadoras-caos-pdf.html
 │   ├── ouija-cazadora-pdf.html
 │   ├── liber-lvpinux-pdf.html
 │   ├── mind-the-gap-pdf.html
 │   ├── codex-chaoticus-pdf.html
-│   └── tarot-chaos-pdf.html
+│   ├── tarot-chaos-pdf.html
+│   └── index.html                       # Catálogo de libros
 │
 ├── blog/                                # 194 artículos + index
 │   ├── index.html                       # Blog index con filtros por categoría
@@ -306,9 +311,13 @@ projects/  ← NO se despliega a GitHub Pages. Solo desarrollo/interno.
 | `apps/eerieroads.html` | Eerie Roads: Mysterious Paths | $9.99 | `eerieroads` |
 | `apps/lucid-dream.html` | Lucid Dream: Astral Projection | $9.99 | `lucid-dream` |
 
-### 4.3 Landing Pages Libros PDF — Hotmart (7)
+### 4.3 Landing Pages Libros PDF — Hotmart (9)
 | Archivo | Libro | Precio | ID en apps-data.js |
 |---------|-------|--------|-------------------|
+| `books/complete-practical-treatise-magical-servitors-pdf.html` | The Complete Practical Treatise on Magical Servitors (EN) | $9.99 | `complete-practical-treatise-magical-servitors-pdf` |
+| `books/complete-practical-treatise-magical-servitors-es-pdf.html` | El Tratado Práctico Completo sobre Servidores Mágicos (ES) | $9.99 | (mismo producto, página ES) |
+| `books/catholiconomicon-pdf.html` | Catholiconomicon (EN/ES) | $9.99 | `catholiconomicon-pdf` |
+| `books/catholiconomicon-es-pdf.html` | Catholicónomicon (ES) | $9.99 | (mismo producto, página ES) |
 | `books/manual-activacion-servidores-magicos-pdf.html` | Magical Servitors Manual | $3.99 | `manual-activacion-servidores-magicos-pdf` |
 | `books/tratado-runas-cazadoras-caos-pdf.html` | Treatise of Chaos Hunter Runes | $3.99 | `tratado-runas-cazadoras-caos-pdf` |
 | `books/ouija-cazadora-pdf.html` | Ouija Cazadora | $3.99 | `ouija-cazadora-pdf` |
@@ -376,7 +385,7 @@ Contiene **dos arrays globales** fuente de verdad del catálogo:
 | 11 | `eerieroads` | Eerie Roads: Mysterious Paths | $9.99 |
 | 12 | `lucid-dream` | Lucid Dream: Astral Projection | $9.99 |
 
-#### `booksData[]` — Libros PDF Hotmart (7)
+#### `booksData[]` — Libros PDF Hotmart (9)
 | # | ID | Nombre | Precio | Idioma |
 |---|-----|--------|--------|--------|
 | 1 | `manual-activacion-servidores-magicos-pdf` | Magical Servitors Manual | $3.99 | Spanish |
@@ -384,8 +393,10 @@ Contiene **dos arrays globales** fuente de verdad del catálogo:
 | 3 | `ouija-cazadora-pdf` | Ouija Cazadora | $3.99 | Spanish |
 | 4 | `liber-lvpinux-pdf` | Liber Lvpinux | $3.99 | Spanish |
 | 5 | `codex-chaoticus-pdf` | Codex Chaoticus | $4.99 | EN/ES |
-| 6 | `mind-the-gap-pdf` | Mind The Gap (self-help) | $9.99 | Spanish |
+| 6 | `mind-the-gap-pdf` | Mind The Gap (self-help) | $9.99 | EN/ES |
 | 7 | `tarot-chaos-pdf` | Tarot Chaos | $9.99 | EN/ES |
+| 8 | `catholiconomicon-pdf` | Catholiconomicon | $9.99 | EN/ES |
+| 9 | `complete-practical-treatise-magical-servitors-pdf` | The Complete Practical Treatise on Magical Servitors | $9.99 | EN/ES |
 
 ---
 
@@ -416,10 +427,10 @@ Contiene **dos arrays globales** fuente de verdad del catálogo:
 
 | Métrica | Cantidad |
 |---------|----------|
-| **Páginas HTML totales (deployables)** | ~226 |
+| **Páginas HTML totales (deployables)** | ~228 |
 | Artículos del blog | 194 |
 | Landing pages de apps | 12 |
-| Landing pages de libros | 7 |
+| Landing pages de libros | 9 |
 | Herramientas gratuitas | 10 |
 | Páginas core | 5 |
 | Lead magnets | 2 |
@@ -431,7 +442,7 @@ Contiene **dos arrays globales** fuente de verdad del catálogo:
 | **Documentos en `projects/docs/`** | 21 |
 | **Pins Pinterest** | 137 |
 | **Apps Android publicadas** | 12 |
-| **Libros PDF en Hotmart** | 7 (bundle $19.99) |
+| **Libros PDF en Hotmart** | 9 (bundle $24.99, 9 libros, 59% off) |
 
 ---
 

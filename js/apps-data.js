@@ -1180,5 +1180,45 @@ const booksData = [
             </ul>
             <h3>100% RISK-FREE 7-DAY GUARANTEE</h3>
             <p>Read it. If it does not give you a working method you can actually use, get a full, unconditional refund via Hotmart. No questions asked.</p>
-            <p>One-time purchase. Lifetime access. Instant download. English and Spanish.</p>    `    }
+            <p>One-time purchase. Lifetime access. Instant download. English and Spanish.</p>    `    },
+    {
+      id: "complete-practical-treatise-magical-servitors-pdf",
+      name: "The Complete Practical Treatise on Magical Servitors",
+      author: "Frater Alek0s",
+      language: "English / Spanish",
+      languageFlag: "us,es",
+      price: "$9.99 USD",
+      type: "book",
+      status: "available",
+      image: "assets/images/covertps.webp",
+      description: "368-page operational treatise on the creation, maintenance and banishing of magical servitors. 8 parts, 35 chapters, 211 figures, 227 verified sources. Every claim labelled.",
+      hotmartLink: "https://pay.hotmart.com/U108075109V?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_servitors_treatise",
+      seo: {
+        title: "The Complete Practical Treatise on Magical Servitors | PDF",
+        description: "A 368-page treatise on creating, maintaining and banishing magical servitors. 35 chapters, 211 figures, 227 verified sources, and every claim labelled. Buy the PDF.",
+        keywords: "magical servitors, servitor creation, servitor banishing, servitor drift, chaos magick, thought form, egregore, servitor maintenance, magick safety, grimoire pdf, digital grimoire, frater alekos, esoteric book pdf"
+      },
+      detailedDescription: `<h1>The Complete Practical Treatise on the Creation and Elimination of Magical Servitors</h1>
+            <p>A 368-page operational treatise on the creation, maintenance and banishing of magical servitors. The full working lifecycle, documented end to end: <strong>8 parts, 35 chapters, 211 figures and 6 appendices.</strong></p>
+            <p><strong>The book documents a practice. It does not assert that the practice works.</strong> Wherever it discusses mechanism it names which of three levels it is speaking at — operational claim, empirical claim, or interpretive claim. That distinction is the spine of the volume, and it is what makes the book arguable instead of merely authoritative.</p>
+            <h2>What You Will Master</h2>
+            <ul>
+                <li><strong>The three-level spine.</strong> Every mechanism statement is filed as an operational, empirical or interpretive claim, so you can audit the book instead of taking it on tone.</li>
+                <li><strong>The complete lifecycle.</strong> Design and specification, construction, charging and activation, maintenance and feeding, monitoring and drift, banishing, and failure recovery.</li>
+                <li><strong>Safety as doctrine.</strong> Seventeen contraindications, a five-level emergency protocol, a taxonomy of drift, and an automatic self-dissolving servitor for the cases the operator cannot handle.</li>
+                <li><strong>A verifiable bibliography.</strong> 227 sources, each carrying a DOI or Wikidata identifier, the printed list audited in Appendix D, plus a disclosure of what the list deliberately does not contain.</li>
+                <li><strong>Built as a reference.</strong> Figure index and quick-reference appendices so the volume keeps working after you finish reading it.</li>
+            </ul>
+            <h2>The Edition</h2>
+            <ul>
+                <li>A4 dark-ground: near-black page, cream body text at 16.3:1 contrast</li>
+                <li>Contrast verified by a rendered-pixel census of the actual PDF</li>
+                <li>368 pages &middot; 211 figures &middot; 6 appendices</li>
+                <li>Second edition &middot; Volume I of the Chaos Magic Trilogy</li>
+                <li>English and Spanish included</li>
+            </ul>
+            <h3>Who This Is For</h3>
+            <p>Practitioners who already work with servitors and want the lifecycle in one place, readers who want mechanism separated from interpretation, and anyone who needs a protocol instead of improvisation when a working goes wrong. It is a technical manual and deliberately non-hierarchical.</p>
+            <p>One-time purchase. Lifetime access. Instant download. English and Spanish.</p>    `
+    }
 ];
