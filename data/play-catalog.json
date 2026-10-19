@@ -19,66 +19,171 @@
     {
       "name": "Arcana Goetia",
       "package": "com.cha0smagick.sigilgeneratorfinal",
-      "page": "apps/arcana-goetia.html"
+      "page": "apps/arcana-goetia.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "Arcana Goetia (Grimoire Goetia)",
+        "rating": null,
+        "rating_count": 0,
+        "installs_tier": "50+",
+        "price_usd": "3.99"
+      }
     },
     {
       "name": "Astral Lab",
       "package": "com.cha0smagicklabs.astralchart",
-      "page": "apps/astral-lab.html"
+      "page": "apps/astral-lab.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "Astral Lab",
+        "rating": null,
+        "rating_count": 0,
+        "installs_tier": "5+",
+        "price_usd": "3.99"
+      }
     },
     {
       "name": "Chaos Arcane Sigil Forge",
       "package": "com.app.goetiansealsgeneratorapp",
-      "page": "apps/chaos-sigil-generator.html"
+      "page": "apps/chaos-sigil-generator.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "Chaos Magick Sigil Generator",
+        "rating": 5.0,
+        "rating_count": 22,
+        "installs_tier": "50+",
+        "price_usd": "3.99"
+      }
     },
     {
       "name": "DreamMachine",
       "package": "com.cha0smagick.dreammachine",
-      "page": "apps/dream-machine.html"
+      "page": "apps/dream-machine.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "Dream Machine",
+        "rating": null,
+        "rating_count": 0,
+        "installs_tier": "10+",
+        "price_usd": "3.99"
+      }
     },
     {
       "name": "Eerie Roads",
       "package": "com.cha0smagicklabs.eerieroads",
-      "page": "apps/eerieroads.html"
+      "page": "apps/eerieroads.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "Eerie Roads",
+        "rating": null,
+        "rating_count": 0,
+        "installs_tier": "1+",
+        "price_usd": "9.99"
+      }
     },
     {
       "name": "I Ching Oracle",
       "package": "com.app.ichingoracle",
-      "page": "apps/iching-oracle.html"
+      "page": "apps/iching-oracle.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "I Ching Oracle",
+        "rating": null,
+        "rating_count": 0,
+        "installs_tier": "10+",
+        "price_usd": "3.99"
+      }
     },
     {
       "name": "Lucid Dream Astral Projection",
       "package": "com.cha0smagicklabs.luciddreamer",
-      "page": "apps/lucid-dream.html"
+      "page": "apps/lucid-dream.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "Lucid Dream",
+        "rating": null,
+        "rating_count": 0,
+        "installs_tier": "10+",
+        "price_usd": "9.99"
+      }
     },
     {
       "name": "Moon Phases Lunar Calendar",
       "package": "com.lunarapp.app",
-      "page": "apps/lunar-phase-calculator.html"
+      "page": "apps/lunar-phase-calculator.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "Moon Phases",
+        "rating": null,
+        "rating_count": 0,
+        "installs_tier": "10+",
+        "price_usd": "3.99"
+      }
     },
     {
       "name": "Noctem Tools",
       "package": "com.cha0smagicklabs.noctemapp",
-      "page": "apps/noctem-tools.html"
+      "page": "apps/noctem-tools.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "NOCTEM",
+        "rating": null,
+        "rating_count": 0,
+        "installs_tier": "10+",
+        "price_usd": "14.99"
+      }
     },
     {
       "name": "Norse Rune",
       "package": "com.japps.norse_oracle",
-      "page": "apps/norse-rune-oracle.html"
+      "page": "apps/norse-rune-oracle.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "Norse Rune Oracle",
+        "rating": null,
+        "rating_count": 0,
+        "installs_tier": "10+",
+        "price_usd": "3.99"
+      }
     },
     {
       "name": "Psi Gym",
       "package": "com.cha0smagicklabs.zenercards",
-      "page": "apps/psi-gym.html"
+      "page": "apps/psi-gym.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "PSI GYM",
+        "rating": null,
+        "rating_count": 0,
+        "installs_tier": "10+",
+        "price_usd": "3.99"
+      }
     },
     {
       "name": "Tarot Rider Waite",
       "package": "com.cha0smagick.unofficialraiderwaite",
-      "page": "apps/unofficial-rider-waite-tarot.html"
+      "page": "apps/unofficial-rider-waite-tarot.html",
+      "play": {
+        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "store_title": "Tarot Rider Waite",
+        "rating": null,
+        "rating_count": 0,
+        "installs_tier": "10+",
+        "price_usd": "9.99"
+      }
     }
   ],
   "third_party_allowlist": {
     "$comment": "Apps de OTROS que el sitio cita en comparativas. No son nuestras y no generan venta. Deben justificarse: cada entrada indica donde se cita. Anadir una aqui es una decision editorial, no una conveniently. Antes se uso este mecanismo para meter IDs propios que no existian, por eso la lista arranca vacia.",
     "packages": []
+  },
+  "verified_from_play": {
+    "verified_at": "2026-10-19",
+    "source": "Google Play Store, fichas publicas, hl=en&gl=US, aggregateRating del JSON-LD",
+    "tool": "BrowserOS neo (MCP) evaluate sobre play.google.com",
+    "not_accessible": [
+      "Play Developer Console: metricas internas (conversion de ficha, adquisicion por keyword, ventas por pais, rese�as por version)",
+      "Requieren sesion de Google abierta en BrowserOS neo; el navegador no tenia sesion al momento de la auditoria"
+    ]
   }
 }
