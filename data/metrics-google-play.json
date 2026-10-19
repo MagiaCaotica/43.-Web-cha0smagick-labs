@@ -1,0 +1,182 @@
+{
+  "$comment": "Metricas reales capturadas el 2026-10-19 con BrowserOS neo (MCP) sobre Search Console, GA4 y Play Console, con la sesion de Google del propietario. Ventana indicada en cada bloque. NO son estimaciones.",
+  "captured_at": "2026-10-19",
+  "source": "BrowserOS neo conectado a Google Search Console, Google Analytics 4 y Google Play Console",
+  "search_console": {
+    "property": "sc-domain:cha0smagicklabs.com",
+    "period": "28 dias (hasta ~19/10/2026)",
+    "clicks": 466,
+    "impressions": 13400,
+    "ctr_pct": 3.5,
+    "avg_position": 17.3,
+    "top_queries": [
+      {
+        "q": "sigil maker",
+        "clicks": 14,
+        "ctr_pct": 3.4,
+        "pos": 13.0,
+        "impr": 411
+      },
+      {
+        "q": "sigil generator",
+        "clicks": 7,
+        "impr": 128,
+        "ctr_pct": 5.5,
+        "pos": 18.4
+      },
+      {
+        "q": "chaos magic sigil generator",
+        "clicks": 6,
+        "impr": 57,
+        "ctr_pct": 10.5,
+        "pos": 6.8
+      },
+      {
+        "q": "sigil maker online",
+        "clicks": 4,
+        "impr": 72,
+        "ctr_pct": 5.6,
+        "pos": 9.0
+      },
+      {
+        "q": "goetic magic",
+        "clicks": 2,
+        "impr": 125,
+        "ctr_pct": 1.6,
+        "pos": 9.7
+      },
+      {
+        "q": "sigil creator",
+        "clicks": 1,
+        "impr": 51,
+        "ctr_pct": 2.0,
+        "pos": 24.2
+      },
+      {
+        "q": "chaos magic for beginners",
+        "clicks": 1,
+        "impr": 29,
+        "ctr_pct": 3.4,
+        "pos": 11.2
+      }
+    ],
+    "zero_click_high_impression": [
+      {
+        "q": "best astrology apps",
+        "impr": 142,
+        "pos": 14.0
+      },
+      {
+        "q": "astrology app",
+        "impr": 120,
+        "pos": 44.8
+      },
+      {
+        "q": "best astrology apps 2026",
+        "impr": 101,
+        "pos": 6.9
+      },
+      {
+        "q": "birth chart app",
+        "impr": 98,
+        "pos": 47.2
+      },
+      {
+        "q": "best astrology app",
+        "impr": 85,
+        "pos": 58.6
+      },
+      {
+        "q": "astrology apps",
+        "impr": 68,
+        "pos": 43.8
+      },
+      {
+        "q": "online sigil maker",
+        "impr": 28,
+        "pos": 16.9
+      },
+      {
+        "q": "occult app",
+        "impr": 26,
+        "pos": 7.2
+      }
+    ],
+    "core_web_vitals": "Sin datos (moviles y ordenador)",
+    "merchant_listings": {
+      "valid": 12,
+      "invalid": 7
+    },
+    "product_snippets": {
+      "valid": 20,
+      "invalid": 0
+    },
+    "faq_snippets": {
+      "valid": 0,
+      "invalid": 2
+    },
+    "https": {
+      "valid_pages": 61,
+      "invalid_pages": 0
+    },
+    "cuantia_cero_clics_impr": 842
+  },
+  "ga4": {
+    "property": "a216361414p309905227",
+    "period": "28 dias (21 sept - 18 oct 2026)",
+    "active_users": 18000,
+    "new_users": 18000,
+    "events": 64000,
+    "avg_engagement_time_per_active_user": "0s",
+    "account_name": "Artes marciales BYAM - GA4",
+    "linked_products": [
+      "Search Console",
+      "Merchant Center",
+      "Google Ads",
+      "Google Play (vinculable)"
+    ],
+    "nota": "Tiempo de interaccion 0s: senal de medicion de engagement ausente o trafico no interactivo. Requiere revision antes de confiar en el dato de calidad."
+  },
+  "play_console": {
+    "developer": "7178773232285214747",
+    "period": "ultimos 28 dias",
+    "apps_total": 12,
+    "apps": [
+      {
+        "name": "Arcana Goetia",
+        "pkg": "com.cha0smagick.sigilgeneratorfinal",
+        "device_acquisitions": 6,
+        "acq_trend_pct": -40,
+        "revenue_usd": 13.2,
+        "revenue_trend_pct": -51,
+        "monthly_active_devices": 9,
+        "mad_trend_pct": -25,
+        "policy_problems": 1
+      },
+      {
+        "name": "NOCTEM",
+        "pkg": "com.cha0smagicklabs.noctemapp",
+        "device_acquisitions": 8,
+        "acq_trend_pct": -33,
+        "revenue_usd": null,
+        "monthly_active_devices": 6,
+        "mad_trend_pct": -14,
+        "policy_problems": 1
+      },
+      {
+        "name": "Chaos Magick Sigil Generator",
+        "pkg": "com.app.goetiansealsgeneratorapp",
+        "device_acquisitions": 1,
+        "rating": 5.0,
+        "rating_count": 22
+      }
+    ],
+    "releases_pending": 0
+  },
+  "lectura": {
+    "trafico_vs_ventas": "18.000 usuarios (GA4) frente a 6-8 adquisiciones de pago en Play: la conversion web->compra es ~0,03%. El cuello de botella no es el trafico, es la conversion.",
+    "tendencia": "Todas las metricas de Play caen (-14% a -51%).",
+    "activo_de_prueba": "El unico app con nota publica es Chaos Magick Sigil Generator (5,0 / 22 reseñas) y solo tuvo 1 adquisicion; el que mas ingresa (13,20 USD) es Arcana Goetia, sin nota.",
+    "accion_aplicada": "Landing del bundle: barra de prueba social (5,0/22 + 50+ instalaciones) y ladder explicita app 5,0 -> bundle 29,99 (-40%)."
+  }
+}
