@@ -244,11 +244,14 @@ cmInitMetaPixel();
 (function () {
     function showBannerIfNeeded() {
         if (cmGetCookie('cookie_consent')) return; // already chose
+        // Sin retardo: el banner debe verse para poder elegir. Con el retardo de
+        // 1s la tasa de aceptacion caia y GA4 se quedaba sin consentimiento, que
+        // es lo que dejaba el tiempo de interaccion en 0s.
         setTimeout(function () {
             var banner = document.getElementById('cookie-consent-banner');
             if (!banner) banner = cmBuildBanner();
             if (banner) banner.style.display = 'block';
-        }, 1000);
+        }, 0);
     }
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', showBannerIfNeeded);

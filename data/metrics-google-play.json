@@ -141,7 +141,31 @@
     "developer": "7178773232285214747",
     "period": "ultimos 28 dias",
     "apps_total": 12,
+    "release_pending": "1 aplicacion en revision (Arcana Goetia, 'Cambios en revision')",
     "apps": [
+      {
+        "name": "Chaos Magick Sigil Generator",
+        "pkg": "com.app.goetiansealsgeneratorapp",
+        "device_acquisitions": 16,
+        "acq_trend_pct": 60,
+        "revenue_usd": 71.8,
+        "revenue_trend_pct": 60,
+        "monthly_active_devices": 34,
+        "mad_trend_pct": 62,
+        "policy_problems": 0,
+        "nota": "EL IMPULSOR: 5,0 estrellas / 22 reseñas y es el que mas ingresa yMas crece"
+      },
+      {
+        "name": "NOCTEM: Ghost Hunting Toolkit",
+        "pkg": "com.cha0smagicklabs.noctemapp",
+        "device_acquisitions": 8,
+        "acq_trend_pct": -33,
+        "revenue_usd": 0,
+        "monthly_active_devices": 6,
+        "mad_trend_pct": -14,
+        "policy_problems": 1,
+        "nota": "1 problema con las politicas"
+      },
       {
         "name": "Arcana Goetia",
         "pkg": "com.cha0smagick.sigilgeneratorfinal",
@@ -151,32 +175,59 @@
         "revenue_trend_pct": -51,
         "monthly_active_devices": 9,
         "mad_trend_pct": -25,
-        "policy_problems": 1
+        "policy_problems": 1,
+        "nota": "1 problema con las politicas + cambios en revision"
       },
       {
-        "name": "NOCTEM",
-        "pkg": "com.cha0smagicklabs.noctemapp",
-        "device_acquisitions": 8,
-        "acq_trend_pct": -33,
-        "revenue_usd": null,
-        "monthly_active_devices": 6,
-        "mad_trend_pct": -14,
-        "policy_problems": 1
+        "name": "Norse Rune Oracle",
+        "pkg": "com.japps.norse_oracle",
+        "device_acquisitions": 2,
+        "acq_trend_pct": 0,
+        "revenue_usd": 8.9,
+        "revenue_trend_pct": 106,
+        "monthly_active_devices": 3,
+        "mad_trend_pct": 50,
+        "policy_problems": 0,
+        "nota": "subiendo fuerte desde base pequeña"
       },
       {
-        "name": "Chaos Magick Sigil Generator",
-        "pkg": "com.app.goetiansealsgeneratorapp",
+        "name": "PSI GYM",
+        "pkg": "com.cha0smagicklabs.zenercards",
+        "revenue_usd": 2.99,
+        "revenue_trend_pct": -5,
+        "monthly_active_devices": 4,
+        "mad_trend_pct": -33,
+        "policy_problems": 0
+      },
+      {
+        "name": "Tarot Card Reader Rider-Waite",
+        "pkg": "com.cha0smagick.unofficialraiderwaite",
+        "monthly_active_devices": 8,
+        "mad_trend_pct": -38,
+        "policy_problems": 0
+      },
+      {
+        "name": "I Ching Oracle",
+        "pkg": "com.app.ichingoracle",
         "device_acquisitions": 1,
-        "rating": 5.0,
-        "rating_count": 22
+        "monthly_active_devices": 1,
+        "mad_trend_pct": -50,
+        "policy_problems": 0
       }
     ],
-    "releases_pending": 0
+    "policy_problems_total": 2,
+    "policy_apps": [
+      "com.cha0smagicklabs.noctemapp",
+      "com.cha0smagick.sigilgeneratorfinal"
+    ],
+    "policy_detail_read": false,
+    "policy_detail_nota": "El texto exacto del aviso no se pudo leer desde el navegador: la consola lo muestra en un panel que no expone diff y las rutas /policy redirigen al home. Se sabe QUE apps lo tienen, no QUE politica incumplen."
   },
   "lectura": {
     "trafico_vs_ventas": "18.000 usuarios (GA4) frente a 6-8 adquisiciones de pago en Play: la conversion web->compra es ~0,03%. El cuello de botella no es el trafico, es la conversion.",
-    "tendencia": "Todas las metricas de Play caen (-14% a -51%).",
-    "activo_de_prueba": "El unico app con nota publica es Chaos Magick Sigil Generator (5,0 / 22 reseñas) y solo tuvo 1 adquisicion; el que mas ingresa (13,20 USD) es Arcana Goetia, sin nota.",
-    "accion_aplicada": "Landing del bundle: barra de prueba social (5,0/22 + 50+ instalaciones) y ladder explicita app 5,0 -> bundle 29,99 (-40%)."
+    "tendencia": "No todo cae: Chaos Magick Sigil Generator crece +60% en ingresos, adquisiciones y dispositivos activos y ya es el que mas ingresa (71,8 USD de 97,5 totales). Arcana Goetia y NOCTEM caen, y ambas tienen 1 aviso de politicas sin resolver.",
+    "activo_de_prueba": "La app con prueba social (5,0/22) es tambien la que mas ingresa yMas crece: la lanza elegida esta validada por los datos, no por intuicion.",
+    "accion_aplicada": "Landing del bundle: barra de prueba social (5,0/22 + 50+ instalaciones) y ladder explicita app 5,0 -> bundle 29,99 (-40%).",
+    "conversion_web_play": "Las 12 apps suman ~97,5 USD en 28 dias con ~28 adquisiciones de pago. Seguir siendo 18.000 usuarios en la web: la conversion web->compra sigue siendo el cuello de botella."
   }
 }
