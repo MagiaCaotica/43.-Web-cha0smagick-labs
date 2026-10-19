@@ -1,6 +1,7 @@
 {
+  "$comment": "Feedback loop 3.3.4: score por id de contenido. Se rellena con 'node scripts/social-publish.js record <id> <score>'. null rompia el esquema; el codigo lo leia como 0 (rotacion ciclica sin datos). Pendiente: automatizar la llamada con metricas de Pinterest (impresiones/saves/clks por pin), bloqueada hoy por el Trial access de la app. Hasta entonces el score 0 es honesto: no hay datos, no se inventan.",
   "pinterest-pin": {
-    "score": null,
-    "updatedAt": "2026-10-12T23:30:56.776Z"
+    "score": 0,
+    "updatedAt": "2026-10-19T00:00:00.000Z"
   }
 }
