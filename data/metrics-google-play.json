@@ -221,7 +221,16 @@
       "com.cha0smagick.sigilgeneratorfinal"
     ],
     "policy_detail_read": false,
-    "policy_detail_nota": "El texto exacto del aviso no se pudo leer desde el navegador: la consola lo muestra en un panel que no expone diff y las rutas /policy redirigen al home. Se sabe QUE apps lo tienen, no QUE politica incumplen."
+    "policy_detail_nota": "El texto exacto del aviso no se pudo leer desde el navegador: la consola lo muestra en un panel que no expone diff y las rutas /policy redirigen al home. Se sabe QUE apps lo tienen, no QUE politica incumplen.",
+    "policy_status": {
+      "apps_con_aviso": [
+        "com.cha0smagicklabs.noctemapp",
+        "com.cha0smagick.sigilgeneratorfinal"
+      ],
+      "estado_en_consola": "El owner los resolvio (2026-10-19). La consola sigue mostrando '1 problema con las politicas' en ambas tras recarga completa: Google reevalua en 24-72h, o queda algo pendiente.",
+      "nota": "No se puede marcar como resuelto desde el repo: es una accion del panel de Play. Verificado con recarga completa, no es cache.",
+      "revision_arcan_goetia": "RESUELTO: 'Cambios en revision' ya no aparece; la actualizacion del 19 oct entro en produccion."
+    }
   },
   "lectura": {
     "trafico_vs_ventas": "18.000 usuarios (GA4) frente a 6-8 adquisiciones de pago en Play: la conversion web->compra es ~0,03%. El cuello de botella no es el trafico, es la conversion.",
@@ -229,5 +238,27 @@
     "activo_de_prueba": "La app con prueba social (5,0/22) es tambien la que mas ingresa yMas crece: la lanza elegida esta validada por los datos, no por intuicion.",
     "accion_aplicada": "Landing del bundle: barra de prueba social (5,0/22 + 50+ instalaciones) y ladder explicita app 5,0 -> bundle 29,99 (-40%).",
     "conversion_web_play": "Las 12 apps suman ~97,5 USD en 28 dias con ~28 adquisiciones de pago. Seguir siendo 18.000 usuarios en la web: la conversion web->compra sigue siendo el cuello de botella."
-  }
+  },
+  "indexacion": {
+    "bloqueador_encontrado": "El sitemap se habia enviado el 24 de junio y GSC no lo habia vuelto a leer: solo 39 paginas descubiertas de las 1.001 que contenia. Ese era el techo de la visibilidad.",
+    "accion": "Sitemap reenviado hoy desde GSC. Resultado: 'Paginas descubiertas: 1.001'. Estado: Correcto.",
+    "sostenimiento": "Nuevo workflow .github/workflows/sitemap.yml: regenera el sitemap en cada push, commitea solo si cambia y avisa a Google e IndexNow.",
+    "descartado": [
+      "hreflang: 0 bugs reales (solo 1 par ES/EN sin reciprocidad). Mi analisis previo de '84 relaciones rotas' estaba equivocado.",
+      "canonical y noindex: 853/853 correctos, 0 canonicals a la raiz, 0 noindex.",
+      "enlazado interno: 0 articulos huerfanos; blog/index.html enlaza 825."
+    ]
+  },
+  "core_web_vitals": {
+    "que_es": "LCP (cuanto tarda en verse lo principal), CLS (cuanto salta el contenido al cargar) e INP (cuanto tarda la pagina en responder). Google las usa como senal de experiencia de pagina.",
+    "antes": "GSC mostraba 'Sin datos' en movil y escritorio: no habia ninguna medida real.",
+    "ahora": "js/shared.js mide las tres con PerformanceObserver (sin dependencias) y las envia a GA4 como web_vital_LCP/CLS/INP. Se vera en GA4 (Informes > Interaccion > Eventos).",
+    "nota": "Para que GSC muestre field data hacen falta visitantes reales suficientes; si el trafico es mayoritariamente bot, no habra datos aunque el codigo este bien."
+  },
+  "pendientes_de_usuario": [
+    "Pinterest: pedir acceso de produccion en https://developers.pinterest.com/apps/ (la app esta en Trial: por eso el 403 code 29). Mientras tanto, fijar la variable de repo PINTEREST_API_BASE=https://api-sandbox.pinterest.com para que los pins salgan al sandbox y el job pase en verde.",
+    "Play: confirmar en 24-72h que los 2 avisos de politicas se han limpiado.",
+    "Bot Deploy: crear los secrets SSH_HOST, SSH_USER y SSH_KEY para que los bots se redeployen solos en cada push.",
+    "Medir si el trafico de 18.000 usuarios de GA4 es real o bot (0s de engagement + 0 usuarios que vuelven es firma de trafico no humano)."
+  ]
 }
