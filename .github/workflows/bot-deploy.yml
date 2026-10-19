@@ -22,6 +22,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check deploy secrets
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        run: |
+          if [ -z "$SSH_HOST" ] || [ -z "$SSH_USER" ] || [ -z "$SSH_KEY" ]; then
+            echo "::error::Deploy por CI deshabilitado: faltan los secrets SSH_HOST, SSH_USER o SSH_KEY en el repo (Settings > Secrets and variables > Actions > Repository secrets)."
+            echo "::error::Los bots NO se tocan: siguen corriendo en el servidor con el codigo del ultimo deploy manual. Para reactivarlo, configura los 3 secrets y re-ejecuta."
+            exit 1
+          fi
+          echo "Secrets de deploy presentes: $SSH_USER@$SSH_HOST"
+
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.0
         with:
