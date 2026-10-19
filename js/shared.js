@@ -434,3 +434,66 @@ function loadLeaflet(callback) {
         }
     }, true); // capture phase: runs before any stopPropagation() on the anchor
 })();
+
+// ========================================================================
+// Core Web Vitals (LCP, CLS, INP) -> dataLayer/GA4.
+// Por que: GSC mostraba "Sin datos" en Core Web Vitals, asi que no hay
+// ninguna medida real de la experiencia de pagina. Con esto, cada visita
+// real reporta sus tres metricas y se pueden atacar las que fellan.
+// Sin dependencias: PerformanceObserver nativo.
+// ========================================================================
+(function () {
+    if (typeof PerformanceObserver === 'undefined' || typeof window.gtag !== 'function') return;
+
+    function report(name, value, id) {
+        try {
+            window.gtag('event', name, {
+                metric_name: name.replace('web_vital_', ''),
+                metric_value: Math.round(value),
+                metric_id: id || 0,
+                value: Math.round(value),
+                page_path: location.pathname
+            });
+        } catch (e) {}
+    }
+
+    // LCP: el elemento mas grande visible. Se reporta en el primer input o al salir.
+    try {
+        var lcp = 0, lcpId = 0;
+        new PerformanceObserver(function (list) {
+            var es = list.getEntries();
+            var last = es[es.length - 1];
+            lcp = last.startTime; lcpId = last.id || 0;
+        }).observe({ type: 'largest-contentful-paint', buffered: true });
+        function sendLCP() { if (lcp > 0) report('web_vital_LCP', lcp, lcpId); }
+        addEventListener('keydown', sendLCP, { once: true, capture: true });
+        addEventListener('pointerdown', sendLCP, { once: true, capture: true });
+        addEventListener('visibilitychange', function () {
+            if (document.visibilityState === 'hidden') { sendLCP(); }
+        });
+    } catch (e) {}
+
+    // CLS: suma de los desplazamientos sin input del usuario.
+    try {
+        var cls = 0, clsId = 0;
+        new PerformanceObserver(function (list) {
+            list.getEntries().forEach(function (e) {
+                if (!e.hadRecentInput) { cls += e.value; clsId = e.id || 0; }
+            });
+        }).observe({ type: 'layout-shift', buffered: true });
+        addEventListener('visibilitychange', function () {
+            if (document.visibilityState === 'hidden' && cls > 0) report('web_vital_CLS', cls, clsId);
+        });
+    } catch (e) {}
+
+    // INP: la interaccion mas lenta observada.
+    try {
+        var inp = 0, inpId = 0;
+        new PerformanceObserver(function (list) {
+            list.getEntries().forEach(function (e) {
+                if (e.duration > inp) { inp = e.duration; inpId = e.interactionId || 0; }
+            });
+            report('web_vital_INP', inp, inpId);
+        }).observe({ type: 'event', durationThreshold: 40, buffered: true });
+    } catch (e) {}
+})();

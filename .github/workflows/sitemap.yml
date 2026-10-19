@@ -1,0 +1,63 @@
+name: Sitemap
+
+# Por que este workflow existe: el sitemap se generaba a mano y se quedaba
+# congelado. GSC lo habia leido por ultima vez el 24 de junio y solo habia
+# descubierto 39 paginas de las 1.001 que contenia. Sin regenerarlo, cada
+# pagina nueva nace invisible y las fechas lastmod se congelan, asi que
+# Google deja de volver a rastrear el sitio.
+#
+# Que hace, en cada push a main:
+#   1. regenera sitemap.xml (scripts/generate_sitemap.py, aditivo e idempotente)
+#   2. lo commitea SOLO si cambio (sin loops: si no cambia, no hay commit)
+#   3. avisa a Google y a Bing/IndexNow de que el sitemap cambio
+#
+# El commit lleva [sitemap] en el mensaje para que este workflow no se
+# auto-dispare: GitHub no vuelve a lanzar workflows por el push de un bot.
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - "data/social-state.json"
+      - "pins/**"
+      - "data/metrics-google-play.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sitemap
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Regenerar sitemap.xml
+        run: python scripts/generate_sitemap.py
+
+      - name: Commit si cambio
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add sitemap.xml
+          git diff --staged --quiet || git commit -m 'sitemap: refresh [sitemap]'
+
+      - name: Ping a Google e IndexNow
+        continue-on-error: true
+        run: |
+          # Google: avisar de que el sitemap cambio (no requiere autenticacion).
+          curl -sS -o /dev/null -w 'google ping: %{http_code}\n' \
+            'https://www.google.com/ping?sitemap=https://cha0smagicklabs.com/sitemap.xml' || true
+          # Bing/IndexNow: el repo ya tiene scripts/ping-indexnow.mjs para esto.
+          if [ -f scripts/ping-indexnow.mjs ] && [ -n "$INDEXNOW_KEY" ]; then
+            node scripts/ping-indexnow.mjs || true
+          fi
