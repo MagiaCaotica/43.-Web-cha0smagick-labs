@@ -1,8 +1,13 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: ["main"]
+  # Manual a proposito: hoy Pages esta en build_type=legacy (publica la rama main
+  # tal cual) y este workflow NO puede desplegar mientras no se migre a
+  # build_type=workflow. Ademas su lista de rsync excluye /pins/, /projects/,
+  # /scripts/, /docs/ y /logs/, rutas que la web referencia: desplegarlo ahora
+  # dejaria la web sin esas imagenes y paginas.
+  # Para activarlo: Settings > Pages > Source = "GitHub Actions", quitar de
+  # --exclude las rutas que la web use, y restoring el trigger de push.
   workflow_dispatch:
 
 permissions:
@@ -35,7 +40,7 @@ jobs:
           npm run build:css
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Prepare clean artifact (F-22: excluye tooling, secretos y junk)
+      - name: "Prepare clean artifact (F-22: excluye tooling, secretos y junk)"
         run: |
           mkdir -p /tmp/site
           rsync -a \
