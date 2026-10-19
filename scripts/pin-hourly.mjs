@@ -8,15 +8,32 @@
 // Slot mapping (UTC): 11->s00, 12->s01, 14->s02 ... 22->s10
 // (13:00 UTC is reserved for the daily blog/calendar job).
 //
-// Env: PINTEREST_TOKEN, PINTEREST_BOARD_ID, optional PIN_SLOT override.
+// Env: PINTEREST_TOKEN, PINTEREST_BOARD_ID, PINTEREST_API_BASE (sandbox while
+// the app is on Trial access), optional PIN_SLOT override.
 import fs from 'node:fs';
 import path from 'node:path';
+import http from 'node:http';
 import https from 'node:https';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dir = path.join(root, 'pins', 'output', 'daily');
-const PINTEREST_API = 'https://api.pinterest.com/v5';
+// PINTEREST_API_BASE may be given without the /v5 suffix (e.g.
+// https://api-sandbox.pinterest.com) — always talk to the v5 API.
+const apiBase = (process.env.PINTEREST_API_BASE || 'https://api.pinterest.com').replace(/\/+$/, '');
+const PINTEREST_API = apiBase.endsWith('/v5') ? apiBase : apiBase + '/v5';
+// Plain http only for loopback (the local test server); never leak the token.
+const isLoopback = /^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/.test(apiBase);
+const client = PINTEREST_API.startsWith('http://') && isLoopback ? http : https;
+// Pinterest code 29: Trial apps may not create pins on production API.
+const TRIAL_ACCESS = /Trial access|"code"\s*:\s*29/i;
+
+// Account-state blocks never self-heal on the next hourly run, so warn (visible
+// as a run annotation) instead of turning the whole schedule red 10x/day.
+const blocked = (msg) => {
+  console.warn(`::warning::pin-hourly: ${msg}`);
+  process.exit(0);
+};
 
 const hour = new Date().getUTCHours();
 // On scheduled runs the workflow passes an empty PIN_SLOT, so only use it when
@@ -32,7 +49,7 @@ if (!Number.isInteger(slot) || slot < 0 || slot > 10) {
 
 const token = process.env.PINTEREST_TOKEN || '';
 const boardEnv = process.env.PINTEREST_BOARD_ID || '';
-console.log(`pin-hourly: slot=${slot} token=${token ? token.length + ' chars' : 'MISSING'} board=${boardEnv ? boardEnv : 'auto-discover'}`);
+console.log(`pin-hourly: slot=${slot} token=${token ? token.length + ' chars' : 'MISSING'} board=${boardEnv ? boardEnv : 'auto-discover'} api=${PINTEREST_API}`);
 if (!token) {
   console.warn('WARN pin-hourly: PINTEREST_TOKEN missing — skip (no API call)');
   process.exit(0);
@@ -40,7 +57,7 @@ if (!token) {
 
 const request = (method, urlPath, body) => new Promise((resolve, reject) => {
   const data = body == null ? null : JSON.stringify(body);
-  const req = https.request(PINTEREST_API + urlPath, {
+  const req = client.request(PINTEREST_API + urlPath, {
     method,
     headers: {
       'Authorization': `Bearer ${token}`,
@@ -68,15 +85,15 @@ async function resolveBoard() {
   const want = (process.env.PINTEREST_BOARD_NAME || '').toLowerCase();
   const res = await getJson('/boards?page_size=100');
   if (res.status < 200 || res.status >= 300) {
+    if (res.status === 403 && TRIAL_ACCESS.test(res.body)) {
+      blocked('Pinterest en Trial access (code 29) al listar tableros: la API de produccion no es accesible. Pide acceso production en el developer portal, o prueba con PINTEREST_API_BASE=https://api-sandbox.pinterest.com');
+    }
     console.error(`pin-hourly: cannot list boards — Pinterest API ${res.status}: ${String(res.body).slice(0, 200)}`);
     return null;
   }
   let items = [];
   try { items = JSON.parse(res.body).items || []; } catch { /* ignore */ }
-  if (!items.length) {
-    console.error('pin-hourly: the account has no boards — create one on pinterest.com');
-    return null;
-  }
+  if (!items.length) return { none: true };
   const picked = (want && items.find((b) => String(b.name || '').toLowerCase().includes(want)))
     || items.find((b) => /cha0smagick|tools|magia|grimorio|occult|sigil/i.test(String(b.name || '')))
     || items[0];
@@ -108,17 +125,9 @@ const title = `${target.title} — herramienta gratuita de magia del caos`.slice
 const description = `${target.title} — ${target.url}`.slice(0, 500);
 
 (async () => {
-  const me = await getJson('/user/account');
-  if (me.status === 401 || me.status === 403) {
-    console.error(`pin-hourly: token INVALID (${me.status}) — Pinterest API: ${String(me.body).slice(0, 300)}`);
-    process.exit(1);
-  }
-  let username = '?';
-  try { username = JSON.parse(me.body).username || '?'; } catch { /* ignore */ }
-  console.log(`pin-hourly: token accepted (/user/account ${me.status}, user=${username})`);
-
   const board = await resolveBoard();
-  if (!board) process.exit(1);
+  if (board === null) process.exit(1);
+  if (board && board.none) blocked('la cuenta no tiene tableros — crea uno en pinterest.com (o usa PINTEREST_BOARD_ID)');
 
   const res = await postJson('/pins', {
     board_id: board,
@@ -130,6 +139,9 @@ const description = `${target.title} — ${target.url}`.slice(0, 500);
     fs.writeFileSync(path.join(dir, target.slug + '.published'), new Date().toISOString());
     console.log(`pin-hourly: published ${target.slug} (slot ${slot}) -> board ${board}`);
     process.exit(0);
+  }
+  if (res.status === 403 && TRIAL_ACCESS.test(res.body)) {
+    blocked('Pinterest en Trial access (code 29): no se pueden crear pins en produccion. Pide acceso production en el developer portal, o prueba con PINTEREST_API_BASE=https://api-sandbox.pinterest.com');
   }
   console.error(`pin-hourly: Pinterest API ${res.status}: ${String(res.body).slice(0, 300)}`);
   process.exit(1);

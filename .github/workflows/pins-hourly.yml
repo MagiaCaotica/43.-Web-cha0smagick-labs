@@ -32,6 +32,7 @@ jobs:
         env:
           PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
           PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
+          PINTEREST_API_BASE: ${{ vars.PINTEREST_API_BASE }}
           PIN_SLOT: ${{ github.event.inputs.slot }}
         run: node scripts/pin-hourly.mjs
 
