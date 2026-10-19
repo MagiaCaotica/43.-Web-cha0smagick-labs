@@ -3,6 +3,12 @@ Allow: /
 
 Disallow: /404.html
 Disallow: /tools/auto-shorts/
+# Directorios internos que el deploy legacy publica pero que no deben competir
+# con el contenido indexable (no estan en el sitemap).
+Disallow: /projects/
+Disallow: /output/
+Disallow: /pins/
+Disallow: /pinterest-pins/
 
 Sitemap: https://cha0smagicklabs.com/sitemap.xml
 
@@ -19,5 +25,5 @@ User-agent: anthropic-ai
 User-agent: Applebot-Extended
 Allow: /
 
-# Crawl-delay for polite crawling
-Crawl-Delay: 5
+# Sin Crawl-Delay: Google lo ignora y Bing/Yandex lo acatan, limitando el
+# rastreo de 1001 URLs (5s entre peticiones). El servidor ya responde rapido.
