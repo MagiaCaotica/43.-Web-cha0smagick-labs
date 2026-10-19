@@ -18,7 +18,7 @@
 | **Mapa** | Leaflet.js (lazy-loaded con IntersectionObserver) |
 | **PWA** | `manifest.json` + `sw.js` (cache-first assets, network-first HTML) |
 | **Pagos** | Google Play Store (apps) + Hotmart (PDF books) |
-| **Build** | `terser` (JS minification) + `clean-css-cli` (CSS minification) |
+| **Build** | `terser` (JS minification) + `esbuild` (CSS minification) |
 
 ---
 
@@ -122,7 +122,7 @@ ROOT/  ← GitHub Pages deploy source
 ├── .github/workflows/
 │   └── pages.yml                        # GitHub Actions deploy
 │
-└── node_modules/                        # Solo para devDeps (terser, clean-css)
+└── node_modules/                        # Solo para devDeps (terser, esbuild)
 ```
 
 ---
