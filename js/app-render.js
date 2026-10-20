@@ -114,7 +114,7 @@ function renderAppsGrid() {
                 ${buildPictureHtml(app.image, altText, 'app-image img-' + app.id.replace(/-/g, '-'), loadingStrategy.includes('fetchpriority') ? 'eager' : 'lazy', '300', '220')}
             </div>
             <div class="card-content">
-                <h4>${app.name}${(app.id === 'psi-gym' || app.id === 'dream-machine' || app.id === 'astral-lab' || app.id === 'eerieroads' || app.id === 'lucid-dream' || app.id === 'noctem-tools') ? ' <span class="discount-badge">NEW!</span>' : ''}</h4>
+                <h3>${app.name}${(app.id === 'psi-gym' || app.id === 'dream-machine' || app.id === 'astral-lab' || app.id === 'eerieroads' || app.id === 'lucid-dream' || app.id === 'noctem-tools') ? ' <span class="discount-badge">NEW!</span>' : ''}</h3>
                 <p>${app.description}</p>
                 <div class="card-footer">
                     <div class="status-container">
@@ -207,7 +207,7 @@ function renderBooksSection() {
                     ${buildPictureHtml(book.image, book.name, 'app-image', 'lazy', '300', '220')}
                 </div>
                 <div class="card-content">
-                    <h4>${book.name}${(book.id === 'codex-chaoticus-pdf' || book.id === 'tarot-chaos-pdf' || book.id === 'mind-the-gap-pdf' || book.id === 'complete-practical-treatise-magical-servitors-pdf') ? ' <span class="discount-badge">NEW!</span>' : ''}</h4>
+                    <h3>${book.name}${(book.id === 'codex-chaoticus-pdf' || book.id === 'tarot-chaos-pdf' || book.id === 'mind-the-gap-pdf' || book.id === 'complete-practical-treatise-magical-servitors-pdf') ? ' <span class="discount-badge">NEW!</span>' : ''}</h3>
                     <p>${book.description}</p>
                     ${book.author ? `<div class="author-info">AUTHOR: ${book.author}</div>` : ''}
                     ${book.language ? `
@@ -632,7 +632,7 @@ function renderAlsoLike(currentId) {
                 ${buildPictureHtml('../' + app.image, appAltText[app.id] || app.name, 'app-image', 'lazy', '300', '220')}
             </div>
             <div class="card-content">
-                <h4>${app.name}</h4>
+                <h3>${app.name}</h3>
                 <p>${app.description}</p>
                 <div class="card-footer">
                     <div class="status-container">

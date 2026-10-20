@@ -15,8 +15,8 @@
   --text-primary: #f0f0f0;
   --text-body: #a0a0a0;
   --text-secondary: #999;
-  --text-muted: #666;
-  --text-dim: #444;
+  --text-muted: #7a7a7a;
+  --text-dim: #7a7a7a;
 
   --accent-gold: #c0a060;
   --accent-light: #ffd700;
@@ -233,7 +233,7 @@ section.hero p {
   margin-top: 0.5rem;
   padding: 0.6rem 1.8rem;
   background: var(--accent-gold);
-  color: #000 !important;
+  color: #000;
   text-decoration: none !important;
   border-radius: 6px;
   font-weight: 700;
@@ -350,7 +350,7 @@ section.apps-section p {
   flex-direction: column;
 }
 
-.app-card h4 {
+.app-card h3, .app-card h4 {
   color: #e0e0e0;
   margin-top: 0;
   font-size: 1.1rem;
@@ -652,7 +652,7 @@ footer a:hover { color: var(--accent-white); }
   margin: 0 auto 3rem;
   text-align: left;
 }
-.footer-section h4 {
+.footer-section h2, .footer-section h4 {
   color: var(--accent-gold);
   font-family: var(--font-mono);
   font-size: 0.85rem;
@@ -713,7 +713,7 @@ footer a:hover { color: var(--accent-white); }
 .footer-content { display:flex; flex-wrap:wrap; gap:3rem; text-align:left; }
 
 .footer-links h4,
-.footer-social h4 {
+.footer-social h2, .footer-social h4 {
   color: var(--accent-gold);
   font-family: var(--font-mono);
   font-size: 0.85rem;
@@ -1539,7 +1539,7 @@ nav ul li a[href*="glossary"]::before { content: "▤ "; }
 .share-btn .share-icon { width: 18px; height: 18px; flex-shrink: 0; }
 .share-twitter { background: #000; } .share-twitter:hover { background: #1a1a1a; }
 .share-reddit { background: #ff4500; } .share-reddit:hover { background: #ff5414; }
-.share-telegram { background: #0088cc; } .share-telegram:hover { background: #0099dd; }
+.share-telegram { background: #0369a1; } .share-telegram:hover { background: #0b7fb8; }
 .share-tumblr { background: #35465c; } .share-tumblr:hover { background: #3e536b; }
 .share-facebook { background: #1877f2; } .share-facebook:hover { background: #1a7ff2; }
 .share-pinterest { background: #e60023; } .share-pinterest:hover { background: #ff0023; }
@@ -2010,3 +2010,8 @@ section.post-comments p.post-comments-intro {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
+
+/* Los <a> con color en linea (texto enlazado dentro de parrafos) solo se
+   distinguian por color: Lighthouse lo marca como link-in-text-block.
+   Se subraya para que el enlace se reconozca sin depender del color. */
+a[style*="color:"] { text-decoration: underline; }

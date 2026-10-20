@@ -784,7 +784,7 @@
   <div class="cm-funnel-inner">\
     <p class="cm-funnel-kicker">' + (es ? 'Libro · Magia del Caos' : 'Book · Chaos Magick') + '</p>\
     <h3>' + title + '</h3>\
-    <h4>' + book.name + '</h4>\
+    <h3>' + book.name + '</h3>\
     <p>' + (sub || '') + '</p>\
     <div class="cm-funnel-btns">\
       <a class="cm-btn cm-btn-book" href="' + book.page + '">' + cta + '</a>\
@@ -919,9 +919,9 @@
     <h3>' + (es ? 'Estas herramientas gratuitas tienen versión app y libro' : 'These free tools have app and book versions') + '</h3>\
     <p>' + (es ? 'Las ' + apps.length + ' apps funcionan sin conexión, sin anuncios y sin rastreo. Los ' + books.length + ' libros son PDF para leer cuando quieras.'
                   : 'All ' + apps.length + ' apps work offline, ad-free and without tracking. The ' + books.length + ' books are PDFs you can read anywhere.') + '</p>\
-    <h4 class="cm-funnel-subhead">' + (es ? 'Apps para Android' : 'Android apps') + '</h4>\
+    <h3 class="cm-funnel-subhead">' + (es ? 'Apps para Android' : 'Android apps') + '</h4>\
     <ul class="cm-funnel-related-list">' + appCards + '</ul>\
-    <h4 class="cm-funnel-subhead">' + (es ? 'Libros en PDF' : 'PDF books') + '</h4>\
+    <h3 class="cm-funnel-subhead">' + (es ? 'Libros en PDF' : 'PDF books') + '</h4>\
     <ul class="cm-funnel-related-list">' + bookCards + '</ul>\
   </div>\
 </section>';
@@ -1255,7 +1255,7 @@
       <img src="' + imgSrc + '" alt="' + app.name + '" loading="lazy" width="80" height="80">\
     </div>\
     <div class="cm-app-card-body">\
-      <h4>' + app.name + '</h4>\
+      <h3>' + app.name + '</h3>\
       <p>' + app.shortDescription + '</p>\
       <span class="cm-app-price">' + price + '</span>\
     </div>\
@@ -2288,13 +2288,13 @@
   color: #fff;\
 }\
 .cm-community-telegram {\
-  background: #0088cc;\
+  background: #0369a1;\
 }\
 .cm-community-telegram:hover {\
   background: #0077b5;\
 }\
 .cm-community-telegram-group {\
-  background: #179cde;\
+  background: #0b6fa4;\
 }\
 .cm-community-telegram-group:hover {\
   background: #1489c9;\
