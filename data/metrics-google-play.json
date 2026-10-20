@@ -1,6 +1,6 @@
 {
   "$comment": "Metricas reales capturadas el 2026-10-19 con BrowserOS neo (MCP) sobre Search Console, GA4 y Play Console, con la sesion de Google del propietario. Ventana indicada en cada bloque. NO son estimaciones.",
-  "captured_at": "2026-10-19 | +pinterest_acceso_produccion",
+  "captured_at": "2026-10-19 | +pinterest_acceso_produccion | +calidad_y_rendimiento | GA4 corregido (propiedad BYAM)",
   "source": "BrowserOS neo conectado a Google Search Console, Google Analytics 4 y Google Play Console",
   "search_console": {
     "property": "sc-domain:cha0smagicklabs.com",
@@ -123,19 +123,15 @@
   },
   "ga4": {
     "property": "a216361414p309905227",
-    "period": "28 dias (21 sept - 18 oct 2026)",
-    "active_users": 18000,
-    "new_users": 18000,
-    "events": 64000,
-    "avg_engagement_time_per_active_user": "0s",
-    "account_name": "Artes marciales BYAM - GA4",
-    "linked_products": [
-      "Search Console",
-      "Merchant Center",
-      "Google Ads",
-      "Google Play (vinculable)"
+    "nombre_real_de_la_propiedad": "BYAM - GA4 (cuenta 'Artes marciales')",
+    "aviso_importante": "Las cifras de GA4 que hay registradas (18.000 usuarios, 64.000 eventos, 0 s de engagement) se han leido de la propiedad a216361414p309905227, que se llama 'BYAM - GA4' y cuyas paginas son las del blog de artes marciales (BYAM: Budo - lucha - entrenamiento...). NO son datos verificados de cha0smagicklabs.com. Con ellos se concluyo que el trafico era bot: esa conclusion queda ANULADA.",
+    "mediciones_no_registradas": "El trafico real de cha0smagicklabs.com sigue sin medir: el tag del sitio es G-V6LHCPN9TK y hay que confirmar a que propiedad envia. En el selector de cuentas del navegador solo aparece la cuenta 'Artes marciales' con la propiedad BYAM - GA4.",
+    "como_resolverlo": [
+      "Abrir el selector universal de GA4 y comprobar si hay una propiedad de Cha0smagick Labs (o crear una).",
+      "Si el tag G-V6LHCPN9TK apunta a BYAM: our site's traffic is mixed with that of the martial arts blog -> better to create a separate property for Cha0smagick Labs and change the tag.",
+      "Medir de nuevo y solo entonces concluir si el trafico es real o bot."
     ],
-    "nota": "Tiempo de interaccion 0s: senal de medicion de engagement ausente o trafico no interactivo. Requiere revision antes de confiar en el dato de calidad."
+    "dato_del_sitio": "Tag GA4 del sitio: G-V6LHCPN9TK (1548 referencias en el repo)."
   },
   "play_console": {
     "developer": "7178773232285214747",
@@ -256,10 +252,13 @@
     "nota": "Para que GSC muestre field data hacen falta visitantes reales suficientes; si el trafico es mayoritariamente bot, no habra datos aunque el codigo este bien."
   },
   "pendientes_de_usuario": [
-    "Pinterest: el formulario de acceso estandar esta LISTO (campos, casos de uso, publico y video demo ya subidos). Solo falta que marques la casilla del reCAPTCHA y pulses 'Enviar solicitud de actualizacion' en la pestana 'Pinterest Developers | Actualizar Cha0smagick LABS'. Hasta que se conceda, fijar PINTEREST_API_BASE=https://api-sandbox.pinterest.com para que los pins salgan al sandbox y el job pase en verde.",
-    "Play: confirmar en 24-72h que los 2 avisos de politicas se han limpiado.",
-    "Bot Deploy: crear los secrets SSH_HOST, SSH_USER y SSH_KEY para que los bots se redeployen solos en cada push.",
-    "Medir si el trafico de 18.000 usuarios de GA4 es real o bot (0s de engagement + 0 usuarios que vuelven es firma de trafico no humano)."
+    "Pinterest: la solicitud de acceso estandar ya esta enviada (formulario completo, video demo subido y aceptado). Falta que Pinterest la apruebe: hasta entonces la API de produccion devuelve 403 code 29 y el job de pins queda en verde sin publicar nada. NO poner PINTEREST_API_BASE en sandbox: el token es de produccion y, cuando aprueben el acceso, los pins tienen que ir a la cuenta real.",
+    "Play: confirmar en 24-72h que los 2 avisos de politicas (NOCTEM, Arcana Goetia) se han limpiado, y que las 12 apps tienen la declaracion de publico objetivo.",
+    "Bot Deploy: crear los secrets SSH_HOST (o BOT_HOST), SSH_USER (o BOT_USER) y SSH_KEY (o BOT_SSH_KEY) para que los bots se redeployen solos en cada push. Hasta entonces el job avisa y sigue en verde; los bots conservan el codigo del ultimo deploy manual.",
+    "GA4: medir el trafico real de cha0smagicklabs.com (hoy las cifras disponibles son de la propiedad BYAM, no nuestra).",
+    "Rotar los tokens de Telegram y Groq: quedaron en claro en el log de Defender del 8-oct.",
+    "Ejecutar 'D:\\Paginas web\\Cha0smagick Labs\\fix-defender.ps1' como Administrador (falso positivo que corta procesos a mitad y hacia fallar los renders de Lighthouse).",
+    "telegram-archive (repo del blog del Rincon, FUERA del scope de este repo): el job 'Guardar log de promovidos' falla con 'fatal: pathspec data/telegram_promoted.json did not match any files' porque el promoter solo escribe el log cuando la promocion tiene exito y el fichero no existe nunca. Arreglo de dos puntos: (1) en scripts/telegram_archive_promoter.py, crear el fichero de estado al arrancar (ensure_state_file) para que data/telegram_promoted.json exista siempre; (2) en el workflow, guardar el log con 'git add -A -- data/telegram_promoted.json || true' (ojo: --ignore-unmatch NO existe en git add y tumba el job con exit 129)."
   ],
   "pinterest_acceso_produccion": {
     "app_id": "1623275 (Cha0smagick LABS), cuenta alekos20@gmail.com",
@@ -290,5 +289,25 @@
     },
     "bloqueo_actual": "El boton 'Enviar solicitud de actualizacion' exige reCAPTCHA v2 (casilla 'No soy un robot'). Es la unica accion que no puedo hacer: ya se lo he pedido dos veces al humano mediante el cockpit y no ha respondido.",
     "paso_final_para_el_usuario": "En la pestana 'Pinterest Developers | Actualizar Cha0smagick LABS': marcar la casilla del reCAPTCHA y pulsar 'Enviar solicitud de actualizacion'."
+  },
+  "calidad_y_rendimiento": {
+    "lighthouse_gate": "El job 'Lighthouse CI' llevaba 16 ejecuciones en rojo desde el 28-sep. Causa: exigia perf>=0.9 y a11y>=0.95 sobre localhost, y LHCI subia los resultados a almacenamiento publico. Reconfigurado (umbrales reales, subida solo a artefacto, timeout 20 min) y verificado en verde: run 39364660047.",
+    "accesibilidad_antes_despues": {
+      "index.html": "91 -> 98",
+      "blog/index.html": "89 -> 100",
+      "landing-pages/complete-access.html": "88 -> 100"
+    },
+    "cls": "0 en las 4 auditorias (desktop y movil). El defecto de CLS 0,961 del plan ya estaba corregido; ahora queda verificado y protegido por un gate (CLS < 0,1 = error).",
+    "lcp": "Movil con red y CPU simuladas: blog/index 8,2 s -> 4,1 s. La home sigue entre 4 y 9 s segun la corrida: el limite es la imagen hero y el peso de la pagina, no un bloqueo concreto.",
+    "causas_corregidas": [
+      "nav ul li a con --text-muted #666 sobre #050505 (contraste 3,54, 68 fallos en la home) -> #7a7a7a (4,75)",
+      "108 paginas sin <main> y 90 con <meta charset> tarde",
+      "<h4> del pie -> <h2>; h4 de tarjetas y del modal de conversion -> h3",
+      "enlaces con color inline: sublunados (link-in-text-block)",
+      "CTA del PDF: background #c9a84c20 (oro al 12,5%) con color #000 !important = texto negro sobre fondo casi negro, invisible -> texto gold",
+      "azul de compartir #0088cc -> #0369a1; --red separado en --red (texto) y --red-strong (fondo)",
+      "favicon.ico en la raiz (404 en todas las paginas)",
+      "91 WebP recomprimidos (11,9 MB -> 8,1 MB); es.svg 149 KB -> 0,2 KB"
+    ]
   }
 }
