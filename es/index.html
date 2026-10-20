@@ -18,38 +18,45 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Cha0smagick Labs en Español","description":"El sistema #1 de magia del caos en español: 12 apps, 9 libros, 61 herramientas gratis y 32 guías.","url":"https://cha0smagicklabs.com/es/index.html","inLanguage":"es","publisher":{"@type":"Organization","name":"Cha0smagick Labs","url":"https://cha0smagicklabs.com"}}</script>
-<style>:root{--bg:#0a0a12;--card:#141424;--amber:#ffb03a;--cyan:#35c4d9;--txt:#e8e8f4;--mut:#9aa0c0;--bd:#2a2a44;--green:#4ade80}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.7 'Helvetica Neue',Arial,sans-serif}
-.wrap{max-width:900px;margin:0 auto;padding:0 20px}
-.hero{background:linear-gradient(135deg,#0f0f1e,#1a1a30);border-bottom:2px solid var(--amber);padding:56px 0 36px;text-align:center}
-.kicker{color:var(--cyan);text-transform:uppercase;letter-spacing:4px;font-size:13px;margin:0 0 12px}
-h1{font-size:38px;line-height:1.2;margin:0 0 14px}
-.lede{color:var(--mut);font-size:19px;margin:0 auto;max-width:640px}
+  <style>
+/* Estilos propios de esta pagina. Los tokens de color, tipografia y
+   radios vienen de css/style.min.css para que se vea igual que el resto del
+   sitio (antes esta pagina traia su propia paleta y se veía distinta). */
+*{box-sizing:border-box}
+.wrap{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+.hero{background:var(--bg-header);border-bottom:1px solid var(--border-subtle);padding:46px 0 32px;text-align:center}
+h1{font-family:var(--font-mono);font-size:32px;letter-spacing:.5px;margin:0 0 10px;color:var(--text-primary)}
+.lede{color:var(--text-body);margin:0}
+.searchbox input{width:100%;background:var(--bg-card);border:1px solid var(--border-mid);border-radius:var(--radius-md);padding:14px 18px;color:var(--text-primary);font-family:var(--font-main);font-size:17px;outline:none}
+.searchbox input:focus{border-color:var(--accent-gold)}
+#search-count{color:var(--text-secondary);font-size:14px;margin:14px 0 0}
+main{padding:26px 0 48px}
+footer{border-top:1px solid var(--border-subtle);padding:24px 0 40px;color:var(--text-secondary);font-size:14px}
+footer a{margin-right:14px;color:var(--text-body)}
+
+.kicker{color:var(--accent-gold);text-transform:uppercase;letter-spacing:4px;font-size:13px;margin:0 0 12px}
 .searchbox{margin:26px auto 0;max-width:520px;display:flex}
-.searchbox input{flex:1;background:var(--card);border:1px solid var(--bd);border-radius:8px 0 0 8px;padding:13px 16px;color:var(--txt);font-size:16px;outline:none}
-.searchbox input:focus{border-color:var(--cyan)}
-.searchbox button{background:var(--amber);color:#14100a;border:none;border-radius:0 8px 8px 0;padding:0 20px;font-weight:700;font-size:16px;cursor:pointer}
+.searchbox button{background:var(--accent-gold);color:#14100a;border:none;border-radius:0 var(--radius-md) var(--radius-md) 0;padding:0 20px;font-weight:700;font-size:16px;cursor:pointer;font-family:var(--font-main)}
 .stats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:26px 0 0}
-.stat{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 20px;text-align:center}
-.stat b{display:block;font-size:24px;color:var(--amber)}
-.stat span{font-size:13px;color:var(--mut)}
-main{padding:36px 0 48px}
-h2{font-size:26px;margin:40px 0 14px;color:var(--amber)}
+.stat{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:12px 20px;text-align:center}
+.stat b{display:block;font-size:24px;color:var(--accent-gold);font-family:var(--font-mono)}
+.stat span{font-size:13px;color:var(--text-secondary)}
+h2{font-family:var(--font-mono);font-size:24px;margin:40px 0 14px;color:var(--accent-gold)}
 h2:first-child{margin-top:0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 16px;text-decoration:none;color:var(--txt)}
-.card:hover{border-color:var(--amber)}
-.card b{color:var(--amber);font-size:15px;display:block;margin-bottom:4px}
-.card span{font-size:13px;color:var(--mut)}
-.pill{display:inline-block;background:#1c1408;border:1px solid var(--amber);color:var(--amber);border-radius:20px;padding:4px 14px;font-size:13px;font-weight:700;margin:0 6px 8px 0;text-decoration:none}
-.pill.cyan{border-color:var(--cyan);color:var(--cyan)}
-.cta{background:var(--card);border:1px solid var(--amber);border-radius:12px;padding:22px;margin:36px 0;text-align:center}
-.btn{display:inline-block;background:var(--amber);color:#14100a;font-weight:700;padding:13px 24px;border-radius:8px;text-decoration:none;margin:6px 8px 0 0}
-.btn.ghost{background:transparent;color:var(--cyan);border:1px solid var(--cyan)}
-footer{border-top:1px solid var(--bd);padding:24px 0 40px;color:var(--mut);font-size:14px}
-footer a{margin-right:14px}</style>
+.card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:16px 18px;text-decoration:none;color:var(--text-primary);transition:border-color var(--transition-fast)}
+.card:hover{border-color:var(--accent-gold)}
+.card b{color:var(--accent-gold);font-size:15px;display:block;margin-bottom:4px}
+.card span{font-size:13px;color:var(--text-secondary)}
+.pill{display:inline-block;background:rgba(192,160,96,.08);border:1px solid var(--accent-gold);color:var(--accent-gold);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700;margin:0 6px 8px 0;text-decoration:none}
+.pill.cyan{border-color:var(--text-secondary);color:var(--text-secondary)}
+.cta{background:var(--bg-card);border:1px solid var(--accent-gold);border-radius:var(--radius-lg);padding:22px;margin:36px 0;text-align:center}
+.btn{display:inline-block;background:var(--accent-gold);color:#14100a;font-weight:700;padding:13px 24px;border-radius:var(--radius-md);text-decoration:none;margin:6px 8px 0 0;font-family:var(--font-main)}
+.btn.ghost{background:transparent;color:var(--text-primary);border:1px solid var(--border-mid)}
+  </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
+  <link rel="stylesheet" href="../../css/style.min.css">
 </head>
 <body>
 <div class="hero"><div class="wrap">

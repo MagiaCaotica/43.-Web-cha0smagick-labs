@@ -27,20 +27,37 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_KEY: ${{ secrets.SSH_KEY }}
+          BOT_HOST: ${{ secrets.BOT_HOST }}
+          BOT_USER: ${{ secrets.BOT_USER }}
+          BOT_SSH_KEY: ${{ secrets.BOT_SSH_KEY }}
         run: |
-          if [ -z "$SSH_HOST" ] || [ -z "$SSH_USER" ] || [ -z "$SSH_KEY" ]; then
-            echo "::error::Deploy por CI deshabilitado: faltan los secrets SSH_HOST, SSH_USER o SSH_KEY en el repo (Settings > Secrets and variables > Actions > Repository secrets)."
+          # docs/bot-deployment.md documenta BOT_HOST/BOT_USER/BOT_SSH_KEY y el
+          # workflow usaba SSH_HOST/SSH_USER/SSH_KEY. Se aceptan los dos nombres
+          # para que el secret que ya exista funcione.
+          HOST="${SSH_HOST:-$BOT_HOST}"
+          USER="${SSH_USER:-$BOT_USER}"
+          KEY="${SSH_KEY:-$BOT_SSH_KEY}"
+          if [ -z "$HOST" ] || [ -z "$USER" ] || [ -z "$KEY" ]; then
+            echo "::error::Deploy por CI deshabilitado: faltan los secrets de servidor."
+            echo "::error::Crea en Settings > Secrets and variables > Actions > Repository secrets: SSH_HOST (o BOT_HOST), SSH_USER (o BOT_USER) y SSH_KEY (o BOT_SSH_KEY, la clave privada)."
             echo "::error::Los bots NO se tocan: siguen corriendo en el servidor con el codigo del ultimo deploy manual. Para reactivarlo, configura los 3 secrets y re-ejecuta."
             exit 1
           fi
-          echo "Secrets de deploy presentes: $SSH_USER@$SSH_HOST"
+          echo "Secrets de deploy presentes: $USER@$HOST"
+          {
+            echo "HOST=$HOST"
+            echo "USER=$USER"
+            echo "KEY<<__EOF__"
+            echo "$KEY"
+            echo "__EOF__"
+          } >> "$GITHUB_ENV"
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
+          host: ${{ env.HOST }}
+          username: ${{ env.USER }}
+          key: ${{ env.KEY }}
           port: 22
           script: |
             set -e
