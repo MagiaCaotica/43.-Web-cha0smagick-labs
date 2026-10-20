@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head><meta charset="UTF-8">
+
     <!-- Consent Mode default: nothing is granted until the visitor accepts.
          Self-contained and idempotent: safe whether or not gtag exists yet. -->
     <script>
@@ -20,7 +21,7 @@
     <link rel="alternate" hreflang="es" href="https://cha0smagicklabs.com/landing-pages/complete-access.html"><link rel="alternate" hreflang="x-default" href="https://cha0smagicklabs.com/landing-pages/complete-access.html">
 
     <link rel="canonical" href="https://cha0smagicklabs.com/landing-pages/complete-access.html">
-  <meta charset="UTF-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Complete Access - Apps + Libros</title>
   <meta name="description" content="Acceso completo: 12 Apps + 9 Libros = $49.99. Todo el ecosistema Cha0smagick. Oferta sujeta a confirmación de checkout.">
@@ -40,12 +41,12 @@
       --white: #F5F7FF;
       --muted: #8A93B8;
       --green: #4ADE80;
-      --red: #F87171;
+      --red: #F87171; --red-strong: #B91C1C;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: var(--navy); color: var(--white); line-height: 1.6; }
     .container { max-width: 720px; margin: 0 auto; padding: 40px 24px; }
-    .badge { display: inline-block; background: var(--red); color: var(--white); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; margin-bottom: 16px; animation: pulse 1.5s infinite; }
+    .badge { display: inline-block; background: var(--red-strong); color: var(--white); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; margin-bottom: 16px; animation: pulse 1.5s infinite; }
     @keyframes pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(248,113,113,0.7); } 50% { opacity: 0.85; box-shadow: 0 0 0 8px rgba(248,113,113,0); } }
     h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 800; line-height: 1.15; margin-bottom: 12px; }
     .subtitle { color: var(--cyan); font-size: 18px; margin-bottom: 24px; font-weight: 400; }
@@ -59,7 +60,7 @@
     .your-price { text-align: center; margin: 24px 0; }
     .price-big { font-size: clamp(48px, 8vw, 72px); font-weight: 800; color: var(--amber); line-height: 1; }
     .price-label { color: var(--muted); font-size: 14px; margin-top: 4px; }
-    .countdown { background: var(--red); border-radius: 12px; padding: 20px; text-align: center; margin: 32px 0; box-shadow: 0 8px 32px rgba(248,113,113,0.3); }
+    .countdown { background: var(--red-strong); border-radius: 12px; padding: 20px; text-align: center; margin: 32px 0; box-shadow: 0 8px 32px rgba(248,113,113,0.3); }
     .countdown-label { font-size: 13px; color: rgba(255,255,255,0.9); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
     .countdown-timer { font-size: clamp(32px, 6vw, 48px); font-weight: 800; color: var(--white); font-variant-numeric: tabular-nums; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
     .cta-primary { display: block; width: 100%; text-align: center; background: linear-gradient(135deg, #F87171, #EF4444); color: var(--white); font-size: 20px; font-weight: 800; padding: 20px 24px; border-radius: 8px; text-decoration: none; margin: 16px 0; box-shadow: 0 6px 24px rgba(248,113,113,0.4); transition: transform 0.15s; animation: glow 2s infinite alternate; }
@@ -81,6 +82,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Complete Access — 12 Apps + 9 Libros (sujeta a checkout)","description":"Acceso completo: 12 Apps + 9 Libros = $49.99. Todo el ecosistema Cha0smagick. La oferta requiere un producto Hotmart externo verificado.","brand":{"@type":"Brand","name":"Cha0smagick Labs"},"image":"https://cha0smagicklabs.com/assets/images/Banner.webp","offers":{"@type":"Offer","url":"https://cha0smagicklabs.com/landing-pages/complete-access.html","priceCurrency":"USD","price":"49.99","availability":"https://schema.org/OutOfStock","seller":{"@type":"Organization","name":"Cha0smagick Labs"},"hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":["US","ES","MX","AR","CO","CL","PE"],"returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":7,"returnMethod":"https://schema.org/ReturnByEmail","returnFees":"https://schema.org/FreeReturn"},"itemCondition":"https://schema.org/NewCondition","isAccessibleForFree":false,"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":"0","currency":"USD"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":["US","ES","MX","AR","CO","CL","PE"]},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":0,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":0,"unitCode":"DAY"}}}}}</script>
 </head>
 <body>
+<main>
+
   <div class="container">
     <div class="badge">UPSELL EXCLUSIVO · 12 HORAS</div>
     <div class="checkout-warning" role="status">Oferta no disponible todavía: falta configurar y verificar el producto externo de Hotmart. No se ha definido un ID de checkout.</div>
@@ -109,7 +112,7 @@
 
     <div class="what-includes">
       <div class="include-card">
-        <h3>📱 12 Apps Android</h3>
+        <h2>📱 12 Apps Android</h2>
         <ul>
           <li>Sigil Generator (5 métodos)</li>
           <li>NOCTEM (EVP/EMF/Spirit Box)</li>
@@ -126,7 +129,7 @@
         </ul>
       </div>
       <div class="include-card">
-        <h3>📚 9 Libros PDF</h3>
+        <h2>📚 9 Libros PDF</h2>
         <ul>
           <li>Codex Chaoticum (500+ pág)</li>
           <li>Tarot del Caos</li>
@@ -172,5 +175,7 @@
 <script src="../js/analytics-bridge.js"></script>
 <script src="/js/shared.min.js" defer></script>
 <script src="/js/conversion.min.js" defer></script>
+
+</main>
 </body>
 </html>

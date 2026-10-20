@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head><meta charset="UTF-8">
+
     <!-- Consent Mode default: nothing is granted until the visitor accepts.
          Self-contained and idempotent: safe whether or not gtag exists yet. -->
     <script>
@@ -20,7 +21,7 @@
     <link rel="alternate" hreflang="es" href="https://cha0smagicklabs.com/landing-pages/apps-bundle.html"><link rel="alternate" hreflang="x-default" href="https://cha0smagicklabs.com/landing-pages/apps-bundle.html">
 
     <link rel="canonical" href="https://cha0smagicklabs.com/landing-pages/apps-bundle.html">
-  <meta charset="UTF-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Las 12 Apps Ocultas — Cha0smagick Labs (Google Play)</title>
   <meta name="description" content="Las 12 apps de Cha0smagick Labs en Google Play, de $3.99 a $14.99 cada una. Sigilos, Goetia, cazafantasmas, sueños lúcidos, astrología, ESP, runas, tarot e I Ching.">
@@ -41,7 +42,7 @@
       --white: #F5F7FF;
       --muted: #8A93B8;
       --green: #4ADE80;
-      --red: #F87171;
+      --red: #F87171; --red-strong: #B91C1C;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: var(--navy); color: var(--white); line-height: 1.6; }
@@ -52,7 +53,7 @@
     .price-row { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }
     .price-new { font-size: clamp(36px, 6vw, 56px); font-weight: 800; color: var(--amber); }
     .price-old { font-size: 20px; color: var(--muted); text-decoration: line-through; }
-    .save-badge { background: var(--red); color: var(--white); font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 4px; }
+    .save-badge { background: var(--red-strong); color: var(--white); font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 4px; }
     .trust { display: flex; gap: 24px; flex-wrap: wrap; margin: 24px 0; font-size: 14px; color: var(--muted); }
     .trust-item { display: flex; align-items: center; gap: 6px; }
     .countdown { background: var(--bg-light); border: 1px solid rgba(255,176,58,0.3); border-radius: 12px; padding: 20px; text-align: center; margin: 32px 0; }
@@ -112,6 +113,8 @@
 </script>
 </head>
 <body>
+<main>
+
   <div class="container">
     <nav class="crumbs" aria-label="Migas de pan">
       <a href="/">Inicio</a> / <a href="../apps/">Apps Android</a> / Las 12 apps
@@ -223,5 +226,7 @@
 <script src="../js/analytics-bridge.js"></script>
 <script src="/js/shared.min.js" defer></script>
 <script src="/js/conversion.min.js" defer></script>
+
+</main>
 </body>
 </html>
