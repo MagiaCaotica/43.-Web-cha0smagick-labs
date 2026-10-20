@@ -40,9 +40,19 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          # --ignore-unmatch: si el script no dejo marcadores, no revienta el job
-          # con "fatal: pathspec did not match any files".
-          git add --ignore-unmatch pins/output/daily
+          # pins/output/daily esta versionado, asi que 'git add' a pelo funciona.
+          # No usar --ignore-unmatch: esa opcion NO existe en git add
+          # ("unknown option", exit 129) y tumbaba el job cada hora.
+          git add pins/output/daily
           git diff --staged --quiet || git commit -m 'pins: published marker'
-          git pull --rebase origin main
-          git push
+          # Reintento: si otro push entra entre el commit y el push, el rebase y
+          # el push se pelean y el job cae en rojo sin motivo aparente.
+          for i in 1 2 3; do
+            if git pull --rebase origin main && git push; then
+              echo "Marcadores guardados."
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep 10
+          done
+          echo "::warning::No se pudieron guardar los marcadores tras 3 intentos."
