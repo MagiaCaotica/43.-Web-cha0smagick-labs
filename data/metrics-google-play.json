@@ -1,6 +1,6 @@
 {
   "$comment": "Metricas reales capturadas el 2026-10-19 con BrowserOS neo (MCP) sobre Search Console, GA4 y Play Console, con la sesion de Google del propietario. Ventana indicada en cada bloque. NO son estimaciones.",
-  "captured_at": "2026-10-19",
+  "captured_at": "2026-10-19 | +pinterest_acceso_produccion",
   "source": "BrowserOS neo conectado a Google Search Console, Google Analytics 4 y Google Play Console",
   "search_console": {
     "property": "sc-domain:cha0smagicklabs.com",
@@ -256,9 +256,39 @@
     "nota": "Para que GSC muestre field data hacen falta visitantes reales suficientes; si el trafico es mayoritariamente bot, no habra datos aunque el codigo este bien."
   },
   "pendientes_de_usuario": [
-    "Pinterest: pedir acceso de produccion en https://developers.pinterest.com/apps/ (la app esta en Trial: por eso el 403 code 29). Mientras tanto, fijar la variable de repo PINTEREST_API_BASE=https://api-sandbox.pinterest.com para que los pins salgan al sandbox y el job pase en verde.",
+    "Pinterest: el formulario de acceso estandar esta LISTO (campos, casos de uso, publico y video demo ya subidos). Solo falta que marques la casilla del reCAPTCHA y pulses 'Enviar solicitud de actualizacion' en la pestana 'Pinterest Developers | Actualizar Cha0smagick LABS'. Hasta que se conceda, fijar PINTEREST_API_BASE=https://api-sandbox.pinterest.com para que los pins salgan al sandbox y el job pase en verde.",
     "Play: confirmar en 24-72h que los 2 avisos de politicas se han limpiado.",
     "Bot Deploy: crear los secrets SSH_HOST, SSH_USER y SSH_KEY para que los bots se redeployen solos en cada push.",
     "Medir si el trafico de 18.000 usuarios de GA4 es real o bot (0s de engagement + 0 usuarios que vuelven es firma de trafico no humano)."
-  ]
+  ],
+  "pinterest_acceso_produccion": {
+    "app_id": "1623275 (Cha0smagick LABS), cuenta alekos20@gmail.com",
+    "motivo_del_403": "Trial: la API de produccion devuelve 403 code 29 hasta que se conceda el acceso estandar.",
+    "estado_del_formulario": "Listo para enviar en https://developers.pinterest.com/apps/1623275/upgrade/",
+    "campos_rellenos": [
+      "Nombre de la aplicacion: Cha0smagick LABS",
+      "Nombre de la empresa: Cha0smagick Labs",
+      "Sitio web: https://cha0smagicklabs.com/",
+      "Politica de privacidad: https://cha0smagicklabs.com/privacy-policy.html (verificada, HTTP 200)",
+      "Objetivo: publicacion de contenido de ocultismo y adivinacion (sigilos, runas, tarot, I Ching) como Pins"
+    ],
+    "casos_de_uso_marcados": [
+      "Creacion y programacion de Pins",
+      "Informes",
+      "Comercio electronico"
+    ],
+    "publico_marcado": [
+      "Usuarios de Pinterest",
+      "Creadores"
+    ],
+    "video_demo": {
+      "estado": "Subido y aceptado: el formulario muestra 'Se ha cargado correctamente'",
+      "upload_id": "3960346761055370368",
+      "flujo_verificado": "register_media_upload -> POST https://pinterest-media-upload.s3-accelerate.amazonaws.com/ (HTTP 204) -> get_media_uploads",
+      "fichero": "remotion-demo/out/pinterest-demo.mp4 (h264, 1280x720, 30fps, 72 s, 11 MB) - vive FUERA del repo de ventas",
+      "escena": "6 escenas con datos y capturas reales de la web"
+    },
+    "bloqueo_actual": "El boton 'Enviar solicitud de actualizacion' exige reCAPTCHA v2 (casilla 'No soy un robot'). Es la unica accion que no puedo hacer: ya se lo he pedido dos veces al humano mediante el cockpit y no ha respondido.",
+    "paso_final_para_el_usuario": "En la pestana 'Pinterest Developers | Actualizar Cha0smagick LABS': marcar la casilla del reCAPTCHA y pulsar 'Enviar solicitud de actualizacion'."
+  }
 }
