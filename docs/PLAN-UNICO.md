@@ -111,6 +111,9 @@ Sin esto, las fases siguientes no se pueden medir ni cerrar.
 > libreria. Se restauro el bloque que ya funciona en index.html: ahora **997 de 1011 paginas
 > desplegadas tienen GA4 operativo** (antes 556). Instrumentos: `audit-ga4-coverage.mjs`,
 > `fix-ga4-init.mjs`, `fix-ga4-dup-consent.mjs`.
+> **PROBADO EN PRODUCCION (2026-10-21):** en `tools/tarot-journal.html` se ven las peticiones
+> `page_view` **y `tool_funnel_view`** a `google-analytics.com/g/collect` con `tid=G-V6LHCPN9TK`;
+> en `blog/abraxas-annunaki.html`, `page_view` y `scroll`. Antes no salia ninguna.
 
 ### [ ] P0-07b — Reconciliar purchase contra los exports de Hotmart y Play
 

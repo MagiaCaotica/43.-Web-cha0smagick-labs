@@ -341,3 +341,27 @@ es el de un documento, no el de la web.
 publicar. Son 266 ficheros modificados, y 994 páginas cambian de aspecto al
 desplegar. Dime y lo subo (`git add -A && git commit && git push`); hasta
 entonces la web en vivo sigue sirviendo el CSS viejo.
+
+---
+
+## 10. Hallazgo del 2026-10-21: GA4 no medía nada en 419 páginas
+
+El checklist deMedición arrastraba una frase: *"19 eventos instrumentados y **ninguno ha
+llegado nunca** a GA4"*. No era un problema de instrumentación: era de **inicialización**.
+
+| Qué pasaba | Páginas |
+|---|---|
+| Cargaban la librería gtag pero **nunca llamaban a `gtag('config', 'G-V6LHCPN9TK')`** → GA4 no arrancaba, ni un `page_view` | 350 (el blog) |
+| **No cargaban la librería gtag** en absoluto, aunque los eventos sí se instrumentaban en el código | 69 (40 tools atómicas, 25 artículos, 3 de la raíz, 1 de compare) |
+| Con GA4 funcionando | 997 de 1011 desplegadas (antes 556) |
+
+Lo grave no era el tráfico perdido: era que **no se podía medir nada**, y por eso
+P0-07 (instrumentar el embudo) llevaba semanas atascado sin poder cerrarse. Ahora, en
+producción, se ven `page_view`, `tool_funnel_view`, `scroll` y el resto de eventos
+llegando a `google-analytics.com/g/collect` con el `tid` correcto.
+
+**Corolario**: antes de añadir un evento, hay que comprobar que la página **inicializa**
+GA4. Instrumentar en una página que no arranca GA4 es escribir en el vacío.
+
+Instrumentos: `projects/scripts/audit-ga4-coverage.mjs` (inventario), `fix-ga4-init.mjs`
+(restituye la inicialización), `fix-ga4-dup-consent.mjs` (quita el consent duplicado).
