@@ -258,8 +258,8 @@ autoridad, no código.
   la inglesa — justo el contenido que va al público LATAM. Corregidas, más
   `x-default` en las 36 páginas EN que no lo declaraban, 4 pares ES↔EN
   recíprocos y la home declarando su versión ES.
-  `python projects/scripts/audit-hreflang.py` → 1.565 declaraciones, 0 rotas,
-  0 incoherentes, 0 sin vuelta.
+  `python projects/scripts/audit-hreflang.py` → 1.453 declaraciones, 0 rotas,
+  0 incoherentes, 0 sin vuelta, 0 en páginas `noindex` y 0 autorreferencias.
 - **22 URLs que Google muestra y el sitemap no declaraba**: 18 son solo
   fragmentos `#ancla` (la misma página) y 4 son URLs con query string de
   páginas `noindex` — correcto.
