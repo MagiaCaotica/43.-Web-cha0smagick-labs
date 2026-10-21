@@ -413,6 +413,21 @@ Cada punto estaba pendiente en un plan que se ha absorbido aquí. La columna
 
 ---
 
+## Automatización ya montada
+
+| Qué | Cómo | Dónde |
+|---|---|---|
+| Campaña diaria | Tarea programada de Windows **"Cha0smagick Campana"**, 09:00 cada día, límites de la tarea | `%USERPROFILE%\bin\cha0smagick-campaign.cmd` |
+| Política de envío | 50/día con rampa (20 → 30 → 40 → 50), pausa 3-8 min, 1 por dominio, ventana 09:00-20:00, watchdog de quejas y rebotes | `projects/scripts/guerrilla-policy.mjs` |
+| Preflight | Si BrowserOS no responde, el runner lo arranca; si no puede, sale sin hacer nada | `guerrilla-run.mjs` |
+| Auditoría de entregabilidad | Comprueba los 783 emails contra los criterios de spam (asunto, cuerpo, dirección, opt-out, links, duplicados) | `projects/scripts/audit-deliverability.mjs` |
+
+La tarea corre a las 09:00 y va hasta ~14:00 (50 correos a 3-8 min cada uno), muy
+dentro de la ventana. El presupuesto diario rota solo por fecha, así que mañana
+empieza con el tope de la rampa sin intervention.
+
+---
+
 ## Reglas de ejecución
 
 1. **Una tarea a la vez.** Depende de la anterior si dice que depende.

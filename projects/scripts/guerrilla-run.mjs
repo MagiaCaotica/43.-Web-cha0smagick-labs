@@ -102,6 +102,39 @@ return r;
   return parseSnapshot('inbox-snapshot.txt')
 }
 
+// ---------- preflight: sin navegador no se puede enviar ----------
+async function preflight() {
+  const probe = async (port) => {
+    try {
+      const ac = new AbortController()
+      const t = setTimeout(() => ac.abort(), 2500)
+      const r = await fetch('http://127.0.0.1:' + port + '/mcp', {
+        method: 'POST',
+        headers: { Accept: 'application/json, text/event-stream', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2024-11-05', capabilities: {}, clientInfo: { name: 'preflight', version: '1' } } }),
+        signal: ac.signal,
+      })
+      clearTimeout(t)
+      return r.ok
+    } catch { return false }
+  }
+  if (await probe(9210) || await probe(9010)) return true
+  // intentar arrancar BrowserOS
+  const link = path.join(process.env.USERPROFILE || '', 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'BrowserOS neo.lnk')
+  if (fs.existsSync(link)) {
+    console.log('BrowserOS no responde: se intenta arrancar...')
+    try { execFileSync('cmd', ['/c', 'start', '', link], { stdio: 'ignore' }) } catch {}
+    for (let i = 0; i < 20; i++) {
+      await new Promise((r) => setTimeout(r, 3000))
+      if (await probe(9210) || await probe(9010)) { console.log('BrowserOS arrancado.'); return true }
+    }
+  }
+  console.log('\n=== NO SE PUEDE ENVIAR: BrowserOS no esta disponible. ===')
+  console.log('Abre BrowserOS neo y vuelve a lanzar el runner.')
+  return false
+}
+if (!(await preflight())) process.exit(0)
+
 const queue = JSON.parse(fs.readFileSync(path.join(DIR, 'queue2.json'), 'utf8'))
 const sentLog = path.join(DIR, 'sent-log.jsonl')
 let budget = loadBudget()
@@ -182,5 +215,6 @@ for (const seg of SEGMENTS) {
     }
   }
 }
-console.log(`\n=== TOTAL ENVIADOS ESTA SESION: ${total} | HOY: ${budget.sent.length}/${maxForToday(budget)} ===`)
+const cap = maxForToday(budget)
+console.log(`\n=== TOTAL ENVIADOS ESTA SESION: ${total} | HOY: ${budget.sent.length} enviados (tope del dia segun la rampa: ${cap}${budget.sent.length > cap ? ', ya superado' : ''}) ===`)
 if (maxed) console.log('Mañana: node projects/scripts/guerrilla-run.mjs --check-every 10')
