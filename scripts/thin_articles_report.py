@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Thin-articles progress tracker (task 3.4.1, MASTER_EXECUTION_PLAN.md).
+"""Thin-articles progress tracker (task 3.4.1, docs/PLAN-UNICO.md).
 
 Scans blog/*.html, computes visible-text word counts, and regenerates
 docs/thin-articles-progress.md on demand. Re-runnable after every rewrite

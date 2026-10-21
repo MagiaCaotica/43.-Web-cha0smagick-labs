@@ -18,7 +18,7 @@
  * cannot do this job: consent is a runtime decision in the browser, not a
  * property of the HTTP response.
  *
- * WHAT THIS DOES NOT PROVE (see MASTER_EXECUTION_PLAN.md, P0-10):
+ * WHAT THIS DOES NOT PROVE (see docs/PLAN-UNICO.md, P0-10):
  *   - That GA4 ingested, processed or reported the hits. A request leaving the
  *     browser is not delivery, and delivery is not processing.
  *   - That no client-side storage was written. gtag storage behaviour belongs to

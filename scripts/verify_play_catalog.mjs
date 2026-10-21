@@ -89,10 +89,10 @@ const SCAN_EXT = /\.(html|json|js|mjs|py|md|txt|yml|yaml)$/i;
 const EXCLUSIONS = {
   'data/play-catalog.json': 'the catalog itself declares the ids',
   'scripts/verify_play_catalog.mjs': 'this file contains the id patterns',
-  'docs/plan-tools-sales-funnels.md':
+  'docs/PLAN-UNICO.md':
     'historical analysis that cites the bad ids as the documented defect; ' +
     'removing them would destroy the record that the problem was known',
-  'MASTER_EXECUTION_PLAN.md':
+  'docs/PLAN-UNICO.md':
     'the plan documents the wrong ids on purpose, in the wave 1 and wave 2 ' +
     'mapping tables and in the record of the negative control. A guard that ' +
     'cannot tell documentation from configuration will flag its own ' +

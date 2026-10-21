@@ -2,7 +2,7 @@
 /**
  * Social Publishing Automation - Cha0smagick LABS
  *
- * MASTER_EXECUTION_PLAN 3.3.1-3.3.4:
+ * docs/PLAN-UNICO.md (Fase C) 3.3.1-3.3.4:
  *   3.3.1  Cron daily social publishing (Pinterest + X/Twitter + Telegram channel)
  *   3.3.2  Evergreen content rotation with performance boost
  *   3.3.3  Blog auto-post (new article -> Telegram channel + X)

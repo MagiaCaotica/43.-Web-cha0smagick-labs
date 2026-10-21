@@ -118,7 +118,7 @@ for (const abs of locs) {
 // Una pagina indexable fuera del sitemap no es un defecto de SEO: el sitemap es
 // una ayuda de descubrimiento, no un requisito de indexacion. Estas tres se
 // excluyen porque su checkout es un PLACEHOLDER (`BLOCKED_EXTERNAL_ID`) y
-// MASTER_EXECUTION_PLAN.md P0-03 exige no anunciarlas hasta tener el ID real de
+// docs/PLAN-UNICO.md P0-03 exige no anunciarlas hasta tener el ID real de
 // Hotmart. No se les pone `noindex`: el plan prohibe explicitamente "ocultar una
 // oferta no disponible", asi que la decision es "no anunciar todavia", no
 // "esconder". Cuando se consigan los IDs, se borran de esta lista y se anaden
