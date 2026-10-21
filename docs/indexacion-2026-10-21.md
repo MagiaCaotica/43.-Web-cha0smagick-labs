@@ -166,6 +166,25 @@ El workflow `.github/workflows/sitemap.yml` regenera el sitemap en cada push
 a `main`, lo commitea solo si cambia, avisa a Google con
 `/ping?sitemap=...` y avisa a Bing/Yandex/Seznam con IndexNow.
 
+## 6.1 Verificado en producción (2026-10-21, tras el deploy)
+
+Con el navegador real, contra `https://cha0smagicklabs.com`:
+
+- `sitemap.xml` → **200**, **994 URLs**, 0 duplicadas, 0 con `/index.html`,
+  0 `noindex`, `lastmod` con 3 fechas reales (2026-10-21 / 10-19 / 10-17),
+  última entrada `.../es/tools/gnosis-timer.html` (ya no
+  `checklist-ventas.html`).
+- 20 URLs del sitemap muestreadas al azar → **20/20 respondieron 200**, 0 con
+  `noindex`, **20/20 con el canonical correcto**.
+- `/blog/` y `/es/` → canonical `https://cha0smagicklabs.com/blog/` y
+  `https://cha0smagicklabs.com/es/` (antes apuntaban a `.../index.html`).
+- `/affiliate-disclosure.html` → enlaza ya a los términos del programa de
+  afiliados, que hasta entonces no tenía ningún enlace entrante.
+
+> Ojo al medir en vivo: el CDN de GitHub Pages sirve HTML cacheado. Una
+> lectura sin cache-busting puede mostrar la versión anterior. Con
+> `?cb=<timestamp>` devuelve el archivo actual.
+
 ## 7. Tarea del plan
 
 `P1-11 — Auditar y desbloquear la indexación de las URLs del sitemap` →
