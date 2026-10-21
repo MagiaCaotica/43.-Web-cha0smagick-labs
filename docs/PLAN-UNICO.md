@@ -122,7 +122,9 @@ Sin esto, las fases siguientes no se pueden medir ni cerrar.
 - **Aceptación:** lead de prueba recorre cada flujo; compra crea customer/tag correctos; webhook responde, es idempotente, no duplica y suprime bajas.
 - **Evidencia:** IDs de automatización, logs de entrega, transaction de prueba, payload sanitizado y reconciliación de estados.
 
-### [ ] P0-09 — Verificar listings y disponibilidad de Google Play
+### [x] P0-09 — Verificar listings y disponibilidad de Google Play
+
+> **HECHO 2026-10-21 — Las 12 fichas de Play verificadas EN VIVO (BrowserOS, sesion del owner, hl=es&gl=US): titulo, boton de compra, nota y tier de instalaciones. Detectadas 2 promociones activas que el sitio no refleja (PSI GYM \.99, Lucidez \.99). Corregido el precio de Astral Lab en data/play-catalog.json (\.99 -> \.99) y refresh de todo el catalogo con fecha. Queda solo el export de Play Console (puerta G9)**
 
 - **Responsable:** ASO / Android.
 - **Depende de:** P0-02, P0-06, P0-07.
