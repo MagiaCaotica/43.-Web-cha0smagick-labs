@@ -345,11 +345,11 @@ Cada punto estaba pendiente en un plan que se ha absorbido aquí. La columna
 
 | Pendiente | Va en |
 |---|---|
-| F-8 · reforzar la home con keywords y links a las 6 de striking distance | **P1-01** |
-| F-10 · `books/mind-the-gap-pdf.html` description de 232 ch → 160 | **P1-01** |
-| F-16 · `checklist-ventas.html`: decidir si es interna, noindex o se retira (está en `.gitignore`) | **P0-03** |
+| F-8 · reforzar la home con keywords y links a las 6 de striking distance | **PENDIENTE** | **HECHO (2026-10-21)** — la home ya enlazaba 5 de 6; falta anadido el enlace al articulo goetic-magic-beginners-guide.html
+| F-10 · `books/mind-the-gap-pdf.html` description de 232 ch → 160 | **PENDIENTE** | **HECHO (2026-10-21)** — desc de mind-the-gap-pdf.html a 141 chars (ya estaba, verificado)
+| F-16 · `checklist-ventas.html`: decidir si es interna, noindex o se retira (está en `.gitignore`) | **PENDIENTE** | **HECHO (2026-10-21)** — checklist-ventas.html ya con noindex,nofollow y en .gitignore (decision tomada: interno, no indexable)
 | F-24 · aplicar los 12 títulos ASO de `docs/ASO-play-titles.md` en Play Console | **P0-09** |
-| F-28 · CNAME y canonicals consistentes (sin `www`, https) | **P1-01** |
+| F-28 · CNAME y canonicals consistentes (sin `www`, https) | **PENDIENTE** | **HECHO (2026-10-21)** — 1017 canonicals revisados, 0 con www o http
 | F-4 · secuencia "Quickstart to Buyer" activada (0 emails enviados hoy) | **P0-08** |
 | F-5 · Meta Pixel + Google Ads IDs reales | **P2-04** |
 | GSC · conectar GA4 y token de GSC que no muere a los 7 días | **P1-01** |
