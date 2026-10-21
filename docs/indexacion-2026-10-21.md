@@ -107,6 +107,10 @@ ahora avisa **solo de las páginas que cambiaron en el push** en vez de las
 - **Hosts duplicados:** `www` redirige al canónico; `cha0smagick.com` y
   `cha0smagicklabs.blogspot.com` no resuelven.
 - **Errores de rastreo:** 30/30 páginas de la muestra en 200, media 339 ms.
+- **Enlaces internos rotos: 0** y **contenido mixto: 0** (revisadas las 1.016
+  páginas: cada `href`/`src` interno apunta a un fichero que existe, y ningún
+  recurso `http://` en páginas `https://`).
+- **Redirecciones:** `www` → apex en un solo salto; no hay cadenas.
 
 ## 4. Lo que queda, y por qué no lo arregla el código
 
