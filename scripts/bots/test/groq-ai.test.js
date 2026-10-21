@@ -51,7 +51,7 @@ describe('groq-ai — Classifier + Prompt Building', () => {
       }
     });
 
-    it('should mention all 7 books by name', () => {
+    it('should mention all 9 books by name', () => {
       const bookNames = [
         'Codex Chaoticus',
         'Tarot Chaos',
@@ -60,6 +60,8 @@ describe('groq-ai — Classifier + Prompt Building', () => {
         'Ouija Cazadora',
         'Liber Lvpinux',
         'Mind The Gap',
+        'CATHOLICONOMICON',
+        'The Complete Practical Treatise on Magical Servitors',
       ];
       for (const name of bookNames) {
         expect(SYSTEM_PROMPT).toContain(name);
@@ -67,8 +69,8 @@ describe('groq-ai — Classifier + Prompt Building', () => {
     });
 
     it('should mention bundle price and discount', () => {
-      expect(SYSTEM_PROMPT).toContain('$19.99');
-      expect(SYSTEM_PROMPT).toContain('52%');
+      expect(SYSTEM_PROMPT).toContain('$24.99');
+      expect(SYSTEM_PROMPT).toContain('59%');
     });
 
     it('should mention free tools URLs', () => {

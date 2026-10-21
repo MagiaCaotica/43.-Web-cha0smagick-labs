@@ -76,7 +76,7 @@ function init(opts = {}) {
 
   bot.onText(/\/books|📖 Books/, (msg) => {
     const lines = BRAIN.books.map((b) => BRAIN.helpers.formatBook(b));
-    const text = `*📖 Our Esoteric Books (PDF)*\n\n${lines.join('\n\n')}\n\n🎁 Bundle (52% off): ${BRAIN.bundle.url}`;
+    const text = `*📖 Our Esoteric Books (PDF)*\n\n${lines.join('\n\n')}\n\n🎁 Bundle (59% off): ${BRAIN.bundle.url}`;
     bot.sendMessage(msg.chat.id, text, {
       parse_mode: 'Markdown',
       disable_web_page_preview: true,
@@ -93,7 +93,7 @@ function init(opts = {}) {
   });
 
   bot.onText(/\/bundle|🎁 Bundle/, (msg) => {
-    const text = `🎁 *${BRAIN.bundle.name}*\n\n${BRAIN.bundle.shortDesc}\n\n💵 ~~${BRAIN.bundle.originalPrice}~~ → *${BRAIN.bundle.price}*\n📦 7 books, 52% off!\n\n🔗 ${BRAIN.bundle.url}`;
+    const text = `🎁 *${BRAIN.bundle.name}*\n\n${BRAIN.bundle.shortDesc}\n\n💵 ~~${BRAIN.bundle.originalPrice}~~ → *${BRAIN.bundle.price}*\n📦 9 books, 59% off!\n\n🔗 ${BRAIN.bundle.url}`;
     bot.sendMessage(msg.chat.id, text, {
       parse_mode: 'Markdown',
       reply_markup: {
@@ -195,7 +195,7 @@ function init(opts = {}) {
       `/apps — Browse Android apps\n` +
       `/books — Browse PDF books\n` +
       `/tools — Free online tools\n` +
-      `/bundle — Books bundle (52% off)\n` +
+      `/bundle — Books bundle (59% off)\n` +
       `/blog — Blog articles\n` +
       `/ask [question] — Ask AI anything about Cha0smagick Labs\n` +
       `/ticket [description] — Open a support ticket → GitHub Issues\n` +

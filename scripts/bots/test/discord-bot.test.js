@@ -275,7 +275,7 @@ describe('discord-bot — Slash Commands + Welcome (pure function tests)', () =>
     it('autoReply should match bundle keywords', () => {
       const reply = BRAIN.default.helpers.autoReply('bundle offer');
       expect(reply).toContain('Esoteric Books Bundle');
-      expect(reply).toContain('52% off');
+      expect(reply).toContain('59% off');
     });
 
     it('autoReply should match price/subscription keywords', () => {
@@ -364,7 +364,7 @@ describe('discord-bot — Slash Commands + Welcome (pure function tests)', () =>
 
     it('should handle /books command with book embeds', () => {
       const books = BRAIN.default.books;
-      expect(books).toHaveLength(7);
+      expect(books).toHaveLength(9);
       for (const book of books) {
         expect(book).toHaveProperty('name');
         expect(book).toHaveProperty('price');
@@ -415,7 +415,7 @@ describe('discord-bot — Slash Commands + Welcome (pure function tests)', () =>
     });
 
     it('should handle /pricing command', () => {
-      const pricingText = `💰 **Pricing**\n\n📱 Apps: $3.99–$14.99 USD (one-time)\n📖 Books: $4.99–$9.99 USD (PDF)\n🔧 Tools: FREE\n🎁 Bundle: $19.99 (52% off)\n\n**No subscriptions. No recurring fees.**\nYou buy once, you own it forever.`;
+      const pricingText = `💰 **Pricing**\n\n📱 Apps: $3.99–$14.99 USD (one-time)\n📖 Books: $3.99–$9.99 USD (PDF)\n🔧 Tools: FREE\n🎁 Bundle: $24.99 (59% off)\n\n**No subscriptions. No recurring fees.**\nYou buy once, you own it forever.`;
       expect(pricingText).toContain('No subscriptions');
       expect(pricingText).toContain('one-time');
     });

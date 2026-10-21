@@ -109,9 +109,9 @@ describe('bot-brain — Catalog Integrity', () => {
     });
   });
 
-  describe('Books catalog (7 books)', () => {
-    it('should have exactly 7 books', () => {
-      expect(BRAIN.books).toHaveLength(7);
+  describe('Books catalog (9 books)', () => {
+    it('should have exactly 9 books', () => {
+      expect(BRAIN.books).toHaveLength(9);
     });
 
     it('every book should have required fields', () => {
@@ -319,7 +319,7 @@ describe('bot-brain — Catalog Integrity', () => {
     it('autoReply should match bundle keywords', () => {
       const reply = BRAIN.helpers.autoReply('bundle offer');
       expect(reply).toContain('Esoteric Books Bundle');
-      expect(reply).toContain('52% off');
+      expect(reply).toContain('59% off');
     });
 
     it('autoReply should match price/subscription keywords', () => {

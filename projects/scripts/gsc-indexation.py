@@ -25,6 +25,7 @@ from datetime import date, timedelta
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SA = os.path.join(ROOT, "projects", "playstore.json")
 PROP = "https://cha0smagicklabs.com/"
+DOMAIN = "cha0smagicklabs.com"
 SCOPE = "https://www.googleapis.com/auth/webmasters"
 
 
@@ -58,6 +59,7 @@ def main():
         sys.exit(2)
 
     print("=== SITIOS ===")
+    sites = []
     try:
         sites = get("https://www.googleapis.com/webmasters/v3/sites", tok).get("siteEntry", [])
         for s in sites:
@@ -68,15 +70,33 @@ def main():
         print("  error", e.code, e.read()[:200].decode(errors="replace"))
         return
 
+    # La propiedad puede ser de dominio (sc-domain:...) o de prefijo de URL.
+    # Se usa la que exista de verdad, si no la API responde 403.
+    prop = None
+    for s in sites:
+        u = s.get("siteUrl", "")
+        if u.startswith("sc-domain:") and DOMAIN in u:
+            prop = u
+            break
+    if not prop:
+        for s in sites:
+            if s.get("siteUrl") == PROP:
+                prop = PROP
+                break
+    if not prop:
+        print("\n  No encuentro una propiedad de", DOMAIN, "-> no puedo seguir.")
+        return
+    print(f"\n  usando la propiedad: {prop}")
+    qprop = urllib.parse.quote(prop, safe="")
+
     print("\n=== SITEMAPS (lo que Google ha indexado de cada uno) ===")
-    url = "https://www.googleapis.com/webmasters/v3/sites/" + urllib.parse.quote(PROP, safe="") + "/sitemaps"
+    url = f"https://www.googleapis.com/webmasters/v3/sites/{qprop}/sitemaps"
     try:
         for s in get(url, tok).get("sitemap", []):
             print(f"  {s.get('path')}")
             print(f"     enviadas={s.get('submitted')}  indexadas={s.get('indexed')}  errores={s.get('errors')}  ultimo={s.get('lastSubmitted')}")
     except urllib.error.HTTPError as e:
         print("  error", e.code, e.read()[:200].decode(errors="replace"))
-        print("  -> Falta el gate G13: anadir la service account como usuario de la propiedad.")
         return
 
     print("\n=== ULTIMOS 28 DIAS (Search Analytics) ===")
@@ -90,9 +110,7 @@ def main():
     }
     try:
         d = get(
-            "https://www.googleapis.com/webmasters/v3/sites/"
-            + urllib.parse.quote(PROP, safe="")
-            + "/searchAnalytics/query",
+            f"https://www.googleapis.com/webmasters/v3/sites/{qprop}/searchAnalytics/query",
             tok,
             body,
         )

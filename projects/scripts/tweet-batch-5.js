@@ -1,6 +1,6 @@
 async (page) => {
   const tweets = [
-    "11 Android apps + 7 books. $52.93 separately. $19.99 bundled. That's the whole occult library of a serious practitioner, for the price of one dinner. https://cha0smagicklabs.com/",
+    "12 Android apps + 9 books. $60.91 separately. $24.99 bundled. That's the whole occult library of a serious practitioner, for the price of one dinner. https://cha0smagicklabs.com/",
     "Unpopular opinion: sigils work better than affirmations because you stop thinking about the result. The forgetting is the magic. I built a tool for it. $3.99. One-time. https://cha0smagicklabs.com/apps/chaos-sigil-generator.html",
     "Applied for 100 jobs with no reply? Stop sending resumes. Start sending sigils. The universe opens doors for intention, not desperation. https://cha0smagicklabs.com/apps/chaos-sigil-generator.html"
   ];
