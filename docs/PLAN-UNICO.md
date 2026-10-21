@@ -33,6 +33,7 @@ qué se necesita de vuelta) está en [`OWNER-MANUAL-CHECKLIST.md`](OWNER-MANUAL-
 | G10 | **Código promo de Google Play** | campaña de email | para que la app gratis sea inmediata; hoy el email la pide por respuesta |
 | G11 | **Añadir el bot de Telegram** a `@magiacaotica` y a los dos grupos | Telegram | 1 acción por destino; después el bot publica solo |
 | G12 | **Consentimiento legal** (matriz de proveedores) | P0-06 | decidir y firmar los 9 puntos de la matriz legal |
+| G13 | **Acceso de la service account a la propiedad de GSC** | P1-01, P1-11 | anadir `cha0smagick-labs@cha0smagick-labs.iam.gserviceaccount.com` como usuario (LECTURA) en Search Console > Configuracion > Usuarios y permisos; verificar con `python projects/scripts/gsc-indexation.py` |
 
 ---
 
@@ -273,6 +274,18 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 - **Aceptación:** cada proof tiene source, date, approval, scope y review date; ningún claim queda sin evidencia.
 - **Evidencia:** proof registry, autorizaciones, links live y revisión editorial fechada.
 
+### [x] P1-11 — Auditar y desbloquear la indexación de las URLs del sitemap
+
+> **HECHO 2026-10-21 — auditoria completa en docs/indexacion-2026-10-21.md: sitemap 1002->994 URLs, 0 noindex, 0 duplicadas, 0 404, 0 canonical contradictorio, 0 huerfanas, 994/994 alcanzables en <=3 clics (41,8 inlinks/URL); 5 bugs corregidos (noindex y 404 fuera del sitemap, canonical /blog/ y /es/, lastmod con fecha real de commit, IndexNow con el host correcto); gate G13 para medir en GSC**
+
+- **Responsable:** SEO / Web.
+- **Depende de:** P0-01.
+- **Entregable:** auditoría reproducible de indexación + sitemap coherente + señales de rastreo vivas (`docs/indexacion-2026-10-21.md`).
+- **Debe hacer:** quitar del sitemap lo que sea `noindex` o no se publique; anunciar exactamente la URL que la página declara como canonical; `lastmod` = fecha real del último commit; IndexNow con el host correcto y solo de lo que cambió; medir con Search Console.
+- **No debe hacer:** llamar «SEO completo» a un JSON-LD válido, usar la Indexing API para páginas de blog (es para empleo/eventos y puede abrir un procedimiento manual) ni añadir URLs al sitemap sin comprobar que existen en producción.
+- **Aceptación:** `node projects/scripts/audit-indexation.mjs` sale con 0 contradicciones y 0 huérfanas; el sitemap no repite URLs ni anuncia páginas `noindex` o inexistentes; GSC muestra las URLs descubiertas.
+- **Evidencia:** `docs/indexacion-2026-10-21.md`, salida de `audit-indexation.mjs`, `projects/scripts/gsc-indexation.py`.
+
 ---
 
 ## Fase C — Escala, diversificación y eficiencia (días 46–90)
@@ -392,7 +405,7 @@ Cada punto estaba pendiente en un plan que se ha absorbido aquí. La columna
 | 145 artículos que faltan (59 del cluster `servitors` = 40% del hueco) → subbloque de P1-03 | **P1-03** |
 | Aftermarket kit: 8 plantillas de Canva, guía PDF de 1 página, `swipe-emails` y `swipe-social` con disclosure y UTM por plataforma | **P1-08** |
 | Especificación de artículos para YouTube (spec: `projects/plans/YT_ARTICLES_ATOMIC_PLAN.md`; aún sin ejecutar) | **P1-03** |
-| Matriz legal de proveedores: 9 puntos de consentimiento y产权 (owner firma) | **P0-06** |
+| Matriz legal de proveedores: 9 puntos de consentimiento y propiedad (owner firma) | **P0-06** |
 | MailerLite: 6 grupos/forms/automaciones del checklist (owner) | **P0-08** |
 | Traffic autopilot: 4 jobs registrados en el scheduler (código ya listo) | **P2-07** |
 | Decidir el canal Telegram canónico — RESUELTO: hay 2 canales y 2 grupos, todos en los emails | **P1-08** |

@@ -260,6 +260,26 @@ Lo medido el 2026-09-25 en el dominio real, navegador real:
 
 **Qué necesito:** que me confirmes que quedó submitted. No necesito acceso a tu cuenta: yo puedo leer los datos si tú los pegas como CSV, o me das acceso como propietario secundario.
 
+### 6.1b Dar acceso a la service account (G13) — 1 minuto, y con esto se mide solo
+
+**Por qué:** el sitio ya está dado de alta y el sitemap ya se reenvió (el 19/10/2026 Google pasó de 39 a 1.001 páginas descubiertas). Lo que falta es **leer** el informe de cobertura: con la cuenta del navegador no se puede, porque la propiedad es de otra cuenta de Google. Con la service account del repo, la lectura es automática.
+
+**Dónde:** `search.google.com/search-console` → abre la propiedad `cha0smagicklabs.com` → **Configuración → Usuarios y permisos → Añadir usuario**.
+
+1. Tipo: **Grupo** (no es un correo real, es una identidad de servicio).
+2. Correo: `cha0smagick-labs@cha0smagick-labs.iam.gserviceaccount.com`
+3. Permiso: **LECTURA**. Con lectura basta para ver cuántas URLs ha indexado Google y cuáles ve.
+
+**Verificación (la hago yo, en local, sin internet):**
+
+```
+python projects/scripts/gsc-indexation.py
+```
+
+Si responde `403` es que falta este paso. Si responde, imprime por sitemap `enviadas` / `indexadas` — esa es la cifra real que hace falta para saber si el trabajo está llegando.
+
+> **Aviso:** con ese acceso también se podría pedir indexación con la **Indexing API**, pero esa API es solo para páginas de empleo o de eventos. Usarla con las ~994 páginas del blog va contra la política de Google y puede abrir un procedimiento manual. **No lo he hecho y recomiendo no hacerlo.**
+
 ### 6.2 Bing Webmaster
 
 **Dónde:** `bing.com/webmasters`. Se **importa desde GSC** en un clic, una vez que GSC esté verificado. Tiene un `IndexNow` que avisa a Bing al publicar.
