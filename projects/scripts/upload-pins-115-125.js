@@ -11,7 +11,7 @@ async (page) => {
     { n: 122, t: 'Digital Pendulum - Online Dowsing & Divination Tool', b: 'Occult Apps' },
     { n: 123, t: 'Spell Builder - Create Custom Spells with Android App', b: 'Occult Apps' },
     { n: 124, t: 'Astral Chart Calculator - Your Complete Birth Chart App', b: 'Occult Apps' },
-    { n: 125, t: 'The Complete Occult Collection - 11 Android Apps & 7 Books', b: 'Occult Apps' }
+    { n: 125, t: 'The Complete Occult Collection - 12 Android Apps & 9 Books', b: 'Occult Apps' }
   ];
   
   const results = [];

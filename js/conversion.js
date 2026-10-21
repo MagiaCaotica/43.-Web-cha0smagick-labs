@@ -587,7 +587,7 @@
       ? '✨ La Colección Completa de Magia del Caos'
       : '✨ The Complete Occult Collection';
     var text = lang
-      ? '12 Apps Android premium + 7 Libros PDF. Todo lo que necesitas para tu práctica de Magia del Caos, en un solo ecosistema. 100% offline, sin suscripciones.'
+      ? '12 Apps Android premium + 9 Libros PDF. Todo lo que necesitas para tu práctica de Magia del Caos, en un solo ecosistema. 100% offline, sin suscripciones.'
       : '12 Android apps + 7 PDF books. Everything for your Chaos Magick practice in one complete ecosystem. 100% offline, no subscriptions.';
     var cta = lang
       ? 'Ver Todos los Productos →'

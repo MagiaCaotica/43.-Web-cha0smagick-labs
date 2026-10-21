@@ -158,7 +158,7 @@ const BRAIN = {
       `📖 /books — Esoteric PDF books\n` +
       `🔧 /tools — Free online tools\n` +
       `📰 /blog — Read our articles (467)\n` +
-      `🎁 /bundle — Books bundle (52% off!)\n` +
+      `🎁 /bundle — Books bundle (59% off!)\n` +
       `📧 /subscribe — Free PDF guide\n` +
       `🌐 /website — Visit our site\n` +
       `💬 /contact — Get in touch\n\n` +
@@ -168,7 +168,7 @@ const BRAIN = {
     guestPostPitch: (blogName) =>
       `Hola equipo de ${blogName},\n\n` +
       `Soy el creador de Cha0smagick Labs, un estudio independiente de apps y libros esotéricos ` +
-      `(12 apps Android, 7 libros PDF, 10 herramientas gratuitas, 467 artículos).\n\n` +
+      `(12 apps Android, 9 libros PDF, 10 herramientas gratuitas, 467 artículos).\n\n` +
       `Me encantaría ofrecer un guest post GRATIS para su blog sobre temas como:\n` +
       `• Magia del caos para principiantes\n` +
       `• Cómo crear sigilos efectivos\n` +
@@ -258,10 +258,10 @@ const BRAIN = {
         return `🔧 Free tools:\n• I Ching: ${BRAIN.site.funnel('/tools/iching-online.html')}\n• Runes: ${BRAIN.site.funnel('/tools/runes-online.html')}\n• Sigil Generator: ${BRAIN.site.funnel('/tools/sigil-generator.html')}\n• Spell Builder: ${BRAIN.site.funnel('/tools/spell-builder.html')}\n• Candle Color Calculator: ${BRAIN.site.funnel('/tools/candle-color-calculator.html')}\n• Pendulum: ${BRAIN.site.funnel('/tools/pendulum.html')}`;
       }
       if (q.includes('book') || q.includes('pdf') || q.includes('ebook')) {
-        return `📖 We have 7 esoteric PDF books:\n• Codex Chaoticus ($4.99)\n• Tarot Chaos ($9.99)\n• Magical Servitors Manual ($4.99)\n• And more!\nFull catalog: ${BRAIN.site.url}/books/\n🎁 Bundle (all 7 books) at 52% off: ${BRAIN.bundle.url}`;
+        return `📖 We have 9 esoteric PDF books:\n• Codex Chaoticus ($4.99)\n• Tarot Chaos ($9.99)\n• Magical Servitors Manual ($3.99)\n• And more!\nFull catalog: ${BRAIN.site.url}/books/\n🎁 Bundle (all 9 books) at 59% off: ${BRAIN.bundle.url}`;
       }
       if (q.includes('bundle') || q.includes('pack') || q.includes('oferta') || q.includes('descuento')) {
-        return `🎁 *Esoteric Books Bundle*\n7 books for only $19.99 USD (52% off!)\nIncludes: Codex Chaoticus, Tarot Chaos, Magical Servitors Manual, Treatise of Chaos Hunter Runes, Ouija Cazadora, Liber Lvpinux, Mind The Gap\n🔗 ${BRAIN.bundle.url}`;
+        return `🎁 *Esoteric Books Bundle*\n9 books for only $24.99 USD (59% off!)\nIncludes: Codex Chaoticus, Tarot Chaos, Magical Servitors Manual, Treatise of Chaos Hunter Runes, Ouija Cazadora, Liber Lvpinux, Mind The Gap\n🔗 ${BRAIN.bundle.url}`;
       }
       if (q.includes('precio') || q.includes('price') || q.includes('cost') || q.includes('cuanto') || q.includes('subscription') || q.includes('suscripcion') || q.includes('mensual')) {
         return `💰 All our apps are $3.99-$14.99 USD. All books are $4.99-$9.99 USD.\n**One-time purchase. No subscriptions. No recurring fees.**\nYou buy once, you own it forever.`;

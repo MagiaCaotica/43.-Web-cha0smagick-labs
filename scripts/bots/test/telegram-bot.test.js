@@ -160,7 +160,7 @@ describe('telegram-bot — Command Routing + Auto-Reply (pure function tests)', 
     it('autoReply should match bundle keywords', () => {
       const reply = BRAIN.default.helpers.autoReply('bundle offer');
       expect(reply).toContain('Esoteric Books Bundle');
-      expect(reply).toContain('52% off');
+      expect(reply).toContain('59% off');
     });
 
     it('autoReply should match price/subscription keywords', () => {

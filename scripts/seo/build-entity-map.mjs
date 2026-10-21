@@ -138,7 +138,7 @@ add({
   discount_label: offers.bundle.discountLabel,
   hotmart_product_id: offers.bundle.hotmartProductId,
   known_limitations:
-    `Bundle of the 7 books. Original price ${offers.bundle.originalPrice} is the arithmetic sum of the 7 public book prices, not an independent MSRP. Sale unverified. There is NO equivalent apps bundle (see rejected offers).`,
+    `Bundle of the 9 books. Original price ${offers.bundle.originalPrice} is the arithmetic sum of the 9 public book prices, not an independent MSRP. Sale unverified. There is NO equivalent apps bundle (see rejected offers).`,
 });
 
 /* ---------------------------------------------------------------- tools */

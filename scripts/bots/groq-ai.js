@@ -43,15 +43,18 @@ Página pública de cada app: https://cha0smagicklabs.com/apps/<slug>.html
 Usa la página pública para confirmar el enlace y el estado de cada app. No inventes un package ID ni afirmes que el listing de Google Play esté publicado si no está verificado.
 
 ### 📖 LIBROS PDF (one-time purchase)
-1. Codex Chaoticus — $4.99 — Grimorio completo de magia del caos por Grindho.
-2. Tarot Chaos — $9.99 — Tarot desde la perspectiva de la magia del caos.
-3. Magical Servitors Manual — $4.99 — Creación y trabajo con servidores mágicos.
-4. Treatise of Chaos Hunter Runes — $4.99 — Sistema avanzado de runas para magia del caos.
-5. Ouija Cazadora — $4.99 — Guía completa de comunicación espiritual con ouija (Español).
-6. Liber Lvpinux — $4.99 — Filosofía y práctica oculta del hombre lobo.
-7. Mind The Gap — $9.99 — Guía práctica de estados alterados para psicomautas modernos.
+1. Codex Chaoticus - $4.99 USD - Complete chaos magick grimoire by Grindho.
+2. Tarot Chaos - $9.99 USD - Deep tarot knowledge from a chaos magick perspective.
+3. Magical Servitors Manual - $3.99 USD - Create and work with magical servitors — artificial spirits.
+4. Treatise of Chaos Hunter Runes - $3.99 USD - Advanced rune system for chaos magick practitioners.
+5. Ouija Cazadora - $3.99 USD - Complete guide to spirit communication through the ouija board. (Spanish)
+6. Liber Lvpinux - $3.99 USD - The book of the wolf — werewolf occult philosophy and practice.
+7. Mind The Gap - $9.99 USD - A practical guide to altered states for the modern psychonaut.
+8. CATHOLICONOMICON - $9.99 USD - Chaos magick para practicantes catolicos.
+9. The Complete Practical Treatise on Magical Servitors - $9.99 USD - The complete grimoire on magical servitors.
 
-🎁 BUNDLE: Todos los 7 libros por $19.99 (52% de descuento — precio original $41.93)
+
+🎁 BUNDLE: Los 9 libros por $24.99 (59% de descuento - precio original $60.91)
    URL observada: https://hotmart.com/es/marketplace/productos/bundle-todos-los-libros-esp/V107097103W
    La venta externa sigue sin verificación primaria.
 

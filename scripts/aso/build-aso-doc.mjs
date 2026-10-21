@@ -199,7 +199,7 @@ catálogo, no de este documento: si cambia un precio en la tienda, se regenera e
    para reforzar el ecosistema (blog → apps → books).
 5. **Cross-sell en descripciones:** mención orgánica del bundle de libros
    (${priceOnly(offers.bundle.price)}, ${offers.books.length} libros) solo donde fluya naturalmente
-   (p. ej. en Chaos Sigil y Arcana Goetia: "complementa tu práctica con los 7 libros del bundle").
+   (p. ej. en Chaos Sigil y Arcana Goetia: "complementa tu práctica con los 9 libros del bundle").
 6. **Localización:** crear ficha EN como primaria y ES como secundaria; el resto de idiomas
    (DE/FR/PT/IT) solo para Rider Waite Tarot (que es 7 idiomas).
 7. **Assets:** ícono consistente en toda la familia (mismo fondo oscuro + símbolo); feature

@@ -27,17 +27,17 @@ describe('affiliate-stats — agregación y anonimización (2.5.3)', () => {
       { type: 'click', affiliate: 'a@example.com' },
       { type: 'click', affiliate: 'a@example.com' },
       { type: 'conversion', affiliate: 'a@example.com', product: 'apps', amount: 3.99 },
-      { type: 'conversion', affiliate: 'a@example.com', product: 'books-bundle', amount: 19.99 },
+      { type: 'conversion', affiliate: 'a@example.com', product: 'books-bundle', amount: 24.99 },
     ];
     const { affiliates, totals } = aggregateEvents(events, rates);
     expect(affiliates).toHaveLength(1);
     expect(affiliates[0].clicks).toBe(2);
     expect(affiliates[0].conversions).toBe(2);
-    expect(affiliates[0].earnings).toBe(9.19); // 3.99*0.30 + 19.99*0.40
+    expect(affiliates[0].earnings).toBe(11.19); // 3.99*0.30 + 24.99*0.40
     expect(affiliates[0].convRate).toBe(1);
     expect(totals.clicks).toBe(2);
     expect(totals.conversions).toBe(2);
-    expect(totals.earnings).toBe(9.19);
+    expect(totals.earnings).toBe(11.19);
   });
 
   it('producto desconocido usa default_rate y convRate 0 sin clicks', () => {
@@ -62,7 +62,7 @@ describe('affiliate-stats — agregación y anonimización (2.5.3)', () => {
   it('ordena afiliados por earnings descendente', () => {
     const events = [
       { type: 'conversion', affiliate: 'low@example.com', product: 'apps', amount: 3.99 },
-      { type: 'conversion', affiliate: 'high@example.com', product: 'books-bundle', amount: 19.99 },
+      { type: 'conversion', affiliate: 'high@example.com', product: 'books-bundle', amount: 24.99 },
     ];
     const { affiliates } = aggregateEvents(events, rates);
     expect(affiliates[0].id).toBe(pseudoId('high@example.com'));

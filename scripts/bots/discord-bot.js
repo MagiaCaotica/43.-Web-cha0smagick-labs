@@ -93,7 +93,7 @@ client.once('ready', async () => {
       new SlashCommandBuilder().setName('apps').setDescription('📱 List our Android apps'),
       new SlashCommandBuilder().setName('books').setDescription('📖 List our PDF books'),
       new SlashCommandBuilder().setName('tools').setDescription('🔧 Free online tools'),
-      new SlashCommandBuilder().setName('bundle').setDescription('🎁 Esoteric Books Bundle (52% off)'),
+      new SlashCommandBuilder().setName('bundle').setDescription('🎁 Esoteric Books Bundle (59% off)'),
       new SlashCommandBuilder().setName('blog').setDescription('📰 Blog categories and info'),
       new SlashCommandBuilder().setName('subscribe').setDescription('📧 Free PDF guide subscription'),
       new SlashCommandBuilder().setName('website').setDescription('🌐 Visit our website'),
@@ -174,7 +174,7 @@ client.on('interactionCreate', async (interaction) => {
           .addFields(
             { name: '💵 Original Price', value: BRAIN.bundle.originalPrice, inline: true },
             { name: '🔥 Bundle Price', value: BRAIN.bundle.price, inline: true },
-            { name: '📦 Includes', value: '7 esoteric PDF books — 52% off!' },
+            { name: '📦 Includes', value: '9 esoteric PDF books — 59% off!' },
           )
           .setURL(BRAIN.bundle.url);
         if (BRAIN.bundle.image) embed.setImage(BRAIN.bundle.image);
@@ -205,7 +205,7 @@ client.on('interactionCreate', async (interaction) => {
 
       case 'pricing':
         await interaction.reply({
-          content: `💰 **Pricing**\n\n📱 Apps: $3.99–$14.99 USD (one-time)\n📖 Books: $4.99–$9.99 USD (PDF)\n🔧 Tools: FREE\n🎁 Bundle: $19.99 (52% off)\n\n**No subscriptions. No recurring fees.**\nYou buy once, you own it forever.`,
+          content: `💰 **Pricing**\n\n📱 Apps: $3.99–$14.99 USD (one-time)\n📖 Books: $3.99–$9.99 USD (PDF)\n🔧 Tools: FREE\n🎁 Bundle: $24.99 (59% off)\n\n**No subscriptions. No recurring fees.**\nYou buy once, you own it forever.`,
         });
         break;
 
