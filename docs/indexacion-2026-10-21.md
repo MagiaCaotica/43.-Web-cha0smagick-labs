@@ -114,6 +114,12 @@ ahora avisa **solo de las páginas que cambiaron en el push** en vez de las
 
 ## 4. Lo que queda, y por qué no lo arregla el código
 
+> **Actualizado tras la medición de Search Console (§7):** el «163» no era
+> real. Con GSC midiendo, el **76,2 % de las URLs está indexado** (~760 de
+> 994) y lo que queda son 38 páginas que Google aún no ha rastreado y 9 con
+> un veredicto `noindex` rancio de agosto. El diagnóstico de abajo se
+> confirma; las correcciones de §2 son las que lo han desbloqueado.
+
 **Google no indexa por sitemap: indexa por rastreo.** El sitemap solo dice
 «existen». Lo que mueve la aguja es cuántas veces Google vuelve, y eso
 depende de la demanda de rastreo del dominio y de su autoridad. Con 994
@@ -189,7 +195,94 @@ Con el navegador real, contra `https://cha0smagicklabs.com`:
 > lectura sin cache-busting puede mostrar la versión anterior. Con
 > `?cb=<timestamp>` devuelve el archivo actual.
 
-## 7. Tarea del plan
+## 7. Lo que dice Search Console (la medición real)
+
+**Acceso:** gate G13 cerrado. La service account
+`cha0smagick-labs@cha0smagick-labs.iam.gserviceaccount.com` es **siteOwner**
+de `sc-domain:cha0smagicklabs.com`. Herramientas nuevas:
+`projects/scripts/gsc-indexation.py` (sitemaps + Search Analytics),
+`projects/scripts/gsc-inspect.py` (inspección de URLs, una a una) y
+`projects/scripts/gsc-gap.py` (cruce de los datos con el sitemap).
+
+### El «163» era un dato rancio
+
+Muestra aleatoria del sitemap + las páginas que más imprimen: **261 URLs
+inspeccionadas** una a una con la API de inspección (28 minutos, dentro de la
+cuota diaria de 2.000):
+
+| Veredicto de Google | URLs | Qué es |
+|---|---|---|
+| Submitted and indexed | **199 (76,2 %)** | indexadas |
+| Discovered - currently not indexed | 26 | Google las conoce y **no las ha rastreado** |
+| URL is unknown to Google | 12 | nunca las ha visto |
+| Excluded by «noindex» tag | 9 | **veredicto rancio**: último rastreo del 15/08 al 04/09, y el HTML ya dice `index, follow` |
+| Crawled - currently not indexed | 4 | juicio de calidad (rastreadas entre el 07/08 y el 18/10) |
+| error de DNS de este entorno | 11 | no es de Google |
+
+Extrapolado sobre las 994 URLs: **~760 indexadas**, no 163. Y lo corrobora
+Search Analytics (22/09–19/10): **380 URLs con impresiones, 225 clics,
+7.060 impresiones**.
+
+### Por qué era 163: la cadena completa
+
+1. El sitemap se había enviado el **24 de junio** y Google no lo volvió a
+   leer en cuatro meses → 39 páginas descubiertas. Reenviado el 19/10 →
+   **1.001 descubiertas**.
+2. `lastmod` congelado (14 fechas viejas) → Google veía el sitio como
+   quieto y no volvía a pasar. Corregido: 988 de 994 URLs con la fecha real
+   del último commit.
+3. 9 páginas queodon `noindex` y ya lo quitaron en el HTML, pero **cuyo
+   veredicto sigue siendo el de agosto porque nunca se han vuelto a
+   rastrear**.
+4. 38 páginas que Google **aún no ha rastreado** (26 + 12), sin fecha de
+   rastreo.
+
+O sea: el 163 era el estado de un sitio al que Google llevaba cuatro meses
+sin releer el sitemap. Con el sitemap releído, el `lastmod` honesto y el
+ping a Google en cada push, **lo que queda es dejar que Google rastree**: no
+hay ningún otro bloqueo técnico.
+
+### Las 4 páginas con juicio de calidad
+
+`i-ching-hexagram-list-all-64-one-line-meanings`, `new-year-intention-setting-with-sigils`,
+`austin-osman-spare-sigil-method` y `how-to-banish-cleanse-space`. Ninguna
+tiene un defecto técnico: 2.015–4.454 palabras, JSON-LD `Article`,
+`FAQPage`, 65–68 enlaces salientes, title y H1 limpios. Es contenido y
+autoridad, no código.
+
+### Lo que la medición destapó y ya está corregido
+
+- **64 declaraciones hreflang apuntaban a URLs inexistentes** (les faltaba la
+  extensión `.html`). Google descarta un hreflang cuyo destino no existe:
+  el par EN↔ES estaba roto y las 32 páginas en español perdían la señal de
+  la inglesa — justo el contenido que va al público LATAM. Corregidas, más
+  `x-default` en las 36 páginas EN que no lo declaraban, 4 pares ES↔EN
+  recíprocos y la home declarando su versión ES.
+  `python projects/scripts/audit-hreflang.py` → 1.565 declaraciones, 0 rotas,
+  0 incoherentes, 0 sin vuelta.
+- **22 URLs que Google muestra y el sitemap no declaraba**: 18 son solo
+  fragmentos `#ancla` (la misma página) y 4 son URLs con query string de
+  páginas `noindex` — correcto.
+- **24 páginas con ≥30 impresiones y menos del 5 % de clics**. La mayor:
+  `/blog/astrology-apps-android-guide.html`, 629 impresiones, 3 clics, 0,5 %
+  de CTR. Es un problema de title/description, no de indexación.
+- **El bot vendía el bundle viejo** (7 libros, $19.99, 52 %, dos precios de
+  libro equivocados) y **CI llevaba rojo desde `29ed498a`** porque los tests
+  assertaban 7 libros. Corregidos el prompt, Telegram, Discord, el CTA del
+  sitio, el mapa de entidades, dos artículos publicados y los tests.
+  `npm test`: 38 pytest + 230 vitest en verde.
+
+### Cómo volver a medirlo
+
+```
+python projects/scripts/gsc-indexation.py     # sitemaps + Search Analytics
+python projects/scripts/gsc-inspect.py 250    # veredicto de Google, URL a URL
+python projects/scripts/gsc-gap.py            # huecos entre sitemap y lo que ve
+```
+
+Las tres necesitan el gate G13 y escriben su evidencia en `data/guerrilla/`.
+
+## 8. Tarea del plan
 
 `P1-11 — Auditar y desbloquear la indexación de las URLs del sitemap` →
 **hecha** (este informe). `P1-01` sigue abierta: le faltan los `alt` que
