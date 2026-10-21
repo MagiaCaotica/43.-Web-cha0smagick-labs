@@ -1,0 +1,11 @@
+{
+  "steps": [
+    {
+      "tool": "run",
+      "args": {
+        "code": "const p = await browser.open('https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart&hl=es&gl=US');\nawait sleep(7000);\nconst raw = await p.evaluate(() => { try {\n  const body = String((document.body && document.body.textContent) || '').replace(/\\s+/g, ' ');\n  const btns = Array.from(document.querySelectorAll('button, a, [role=button]')).map(b => String(b.innerText || b.getAttribute('aria-label') || '').replace(/\\s+/g, ' ').trim()).filter(t => /comprar|buy|instalar|install|\\$|US\\$|gratis|free|ver en|open/i.test(t)).slice(0, 8);\n  const ld = Array.from(document.querySelectorAll('script[type=\"application/ld+json\"]')).map(s => { try { return JSON.parse(s.textContent) } catch { return null } }).filter(Boolean);\n  const meta = document.querySelector('meta[property=\"product:price:amount\"]')?.content || document.querySelector('meta[itemprop=\"price\"]')?.content || null;\n  const cur = document.querySelector('meta[property=\"product:price:currency\"]')?.content || null;\n  return { title: document.title.slice(0, 70), h1: (document.querySelector('h1')||{}).innerText || null, priceMeta: meta, curMeta: cur, btns, ldRaw: JSON.stringify(ld).slice(0, 500), bodyHead: body.slice(0, 420), notFound: /Item not found|We're sorry/i.test(body.slice(0, 400)) };\n} catch (e) { return { err: String(e.message).slice(0, 80) } } });\nconsole.log('ASTRAL ' + JSON.stringify(raw));\nconst p2 = await browser.open('https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart&hl=es&gl=CO');\nawait sleep(7000);\nconst raw2 = await p2.evaluate(() => { try { const body = String((document.body && document.body.textContent) || '').replace(/\\s+/g, ' '); const m = body.match(/\\$\\s?[\\d.,]+\\s?[A-Z]{0,3}|COP\\s?\\d[\\d.,]*/g); return { title: document.title.slice(0, 70), prices: m ? m.slice(0, 6) : [], body: body.slice(0, 300) }; } catch (e) { return { err: String(e.message).slice(0, 80) } } });\nconsole.log('ASTRAL_CO ' + JSON.stringify(raw2));\nreturn 'ok';"
+      },
+      "max": 9000
+    }
+  ]
+}

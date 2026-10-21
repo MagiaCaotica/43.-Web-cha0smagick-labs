@@ -50,7 +50,9 @@ Sin esto, las fases siguientes no se pueden medir ni cerrar.
 - **Aceptación:** cada activo tiene un `asset_id`, una URL canónica, un owner, un estado y una fecha de verificación; las discrepancias históricas 524/577 y el estado actual 529/582 quedan resueltos o explícitamente excluidos.
 - **Evidencia:** archivo de inventario, export de URLs, commit y `git status` que pruebe que los cambios ajenos siguen intactos.
 
-### [ ] P0-02 — Reconciliar catálogo de apps, páginas y Play
+### [x] P0-02 — Reconciliar catálogo de apps, páginas y Play
+
+> **HECHO 2026-10-21 — Matriz de las 12 apps y 9 libros entre js/apps-data.js, scripts/bots/data/offers.json, data/play-catalog.json y las paginas: 0 discrepancias. Corregidos 2 bugs reales del bot (le faltaban 2 libros y cotizaba el bundle a \.99/7 libros cuando son \.99/9). Salida: data/catalog-reconciliation.json y docs/reconciliacion-catalogo.md**
 
 - **Responsable:** ASO / Android.
 - **Depende de:** P0-01.

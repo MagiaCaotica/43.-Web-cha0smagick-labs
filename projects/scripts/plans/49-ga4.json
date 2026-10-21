@@ -1,0 +1,11 @@
+{
+  "steps": [
+    {
+      "tool": "run",
+      "args": {
+        "code": "const p = await browser.open('https://analytics.google.com/analytics/');\nawait sleep(9000);\nconst raw = await p.evaluate(() => { try { const body = String((document.body && document.body.textContent) || '').replace(/\\s+/g, ' '); return { url: String(location.href).slice(0, 80), title: String(document.title || '').slice(0, 50), head: body.slice(0, 700), hasPropertyPicker: /propiedad|property/i.test(body), accounts: Array.from(document.querySelectorAll('[aria-label*=\"property\" i], .name, [role=button]')).map(e => String(e.getAttribute('aria-label') || e.innerText || '').trim()).filter(t => t.length < 60).slice(0, 15) }; } catch (e) { return { err: String(e.message).slice(0, 80) } } });\nconsole.log('GA4 ' + JSON.stringify((raw && 'value' in raw) ? raw.value : raw));\nreturn 'ok';"
+      },
+      "max": 9000
+    }
+  ]
+}

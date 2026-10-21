@@ -1,0 +1,10 @@
+import fs from "node:fs"
+const j = JSON.parse(fs.readFileSync("scripts/bots/data/offers.json", "utf8"))
+console.log("--- _meta ---")
+console.log(JSON.stringify(j._meta, null, 1))
+console.log("--- un libro completo ---")
+console.log(JSON.stringify(j.books[0], null, 1))
+console.log("--- bundle completo ---")
+console.log(JSON.stringify(j.bundle, null, 1))
+console.log("--- una app completa ---")
+console.log(JSON.stringify(j.apps[0], null, 1))

@@ -1,0 +1,11 @@
+{
+  "steps": [
+    {
+      "tool": "run",
+      "args": {
+        "code": "const pages = await browser.pages.list();\nconst ga = pages.filter(x => (x.url || '').includes('analytics.google.com'));\nif (!ga.length) { console.log('NO GA4 TAB'); return 'no'; }\nconst p = await browser.page(ga[ga.length - 1].pageId);\nawait p.goto('https://analytics.google.com/analytics/web/#/a216361414p382217277/reports/explorer?params=%5B%5B%5D%5D');\nawait sleep(13000);\nconst raw = await p.evaluate(() => { try {\n  const body = String((document.body && document.body.textContent) || '').replace(/\\s+/g, ' ');\n  const rows = Array.from(document.querySelectorAll('tr')).map(tr => Array.from(tr.querySelectorAll('td,th')).map(td => String(td.innerText||'').replace(/\\s+/g,' ').trim())).filter(c => c.some(x => x));\n  return { url: String(location.href).slice(0, 100), head: body.slice(0, 260), rows: rows.slice(0, 30) };\n} catch (e) { return { err: String(e.message).slice(0, 80) } } });\nconst v = (raw && 'value' in raw) ? raw.value : raw;\nconsole.log('CHA0S_EVENTS ' + JSON.stringify(v));\nreturn 'ok';"
+      },
+      "max": 12000
+    }
+  ]
+}
