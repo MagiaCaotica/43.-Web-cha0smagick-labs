@@ -39,6 +39,7 @@ export const APPS = slice('appsData')
 export const BOOKS = slice('booksData')
 const appById = (id) => APPS.find((a) => a.id === id)
 const bookById = (id) => BOOKS.find((b) => b.id === id)
+const appLink = (id) => (APPS.find((a) => a.id === id) || {}).playUrl || ''
 
 // Coleccion completa de las 12 apps: landing propia (link corto y legible).
 export const APPS_BUNDLE_PAGE = `${SITE}/landing-pages/apps-bundle.html`
@@ -267,7 +268,7 @@ export function orgName(lead) {
     }
     //_sobras_ con significado: "paranormalmingle" -> "Mingle", "a2" se descarta
     const leftovers = rest.split(/[^a-z0-9]+/i).map((w) => w.trim())
-      .filter((w) => w.length >= 4 && !NOISE.has(w.toLowerCase()))
+      .filter((w) => w.length >= 4 && /[a-z]/i.test(w) && !NOISE.has(w.toLowerCase()))
     const name = [topic, ...leftovers, role].filter(Boolean).join(' ')
     if (!name) return ''
     if (BLOCKED.has(name.toLowerCase())) return ''
@@ -333,6 +334,43 @@ export function leadSignal(lead, grounding) {
     (g.search || []).map((s) => s.title).join(' '),
   ]
   return parts.filter(Boolean).join(' ')
+}
+
+/**
+ * Codigos promo de Google Play por app.
+ *
+ * Si rellenas aqui el codigo de una app, el email la ofrece como regalo
+ * INSTANTANEO y con enlace de la tienda: el lead no escribe nada y no hace
+ * falta que nadie mande el codigo a mano.
+ *
+ *   PROMO_CODES['noctem-tools'] = 'ABC123XYZ'
+ *
+ * Mientras este vacio, el email ofrece la app gratis a cambio de que
+ * conteste, y anade ademas una herramienta libre (que si es inmediata).
+ */
+export const PROMO_CODES = {}
+
+/**
+ * Comunidad de Telegram: a donde lleva el email para que el lead entre en el
+ * grupo. Son los assets que ya enlaza el sitio (1.937 suscriptores en el canal
+ * y 686 miembros en el grupo COVEN), no el canal de 5.
+ */
+export const COMMUNITY = {
+  // La comunidad son DOS canales y DOS grupos. El mas grande de cada familia
+  // es el de la biblioteca; el mas vacio es el oficial de la marca. Se
+  // empujan los cuatro, no solo uno.
+  oficial: {
+    channel: 'https://t.me/cha0smagicklabs',
+    group: 'https://t.me/+krfQJgro4hBkNTE5',
+    channelName: 'Cha0smagick Labs',
+    groupName: 'Cha0smagick Labs Enviroment',
+  },
+  biblioteca: {
+    channel: 'https://t.me/magiacaotica',
+    group: 'https://t.me/magiacaoticacoven',
+    channelName: 'Magia Caótica: Magia del Caos Práctica (Biblioteca)',
+    groupName: 'COVEN',
+  },
 }
 
 export function trackFor(text) {
@@ -525,7 +563,7 @@ export function buildEmailAdHoc(lead, opts = {}) {
   const freeWhy = descFor(freeApp, lang, track.why?.[freeApp.id])
 
   const lines = []
-  lines.push(lang === 'EN' ? `Hi ${sal || 'there'},` : (sal ? `Hola ${sal}:` : 'Hola,'))
+  lines.push(lang === 'EN' ? `Hi ${sal || 'there'},` : (sal ? `Hola ${sal}:` : 'Hola:'))
 
   // apertura: algo real de su web (o de su nombre si no hay web)
   const site = siteLine(g)
@@ -550,10 +588,18 @@ export function buildEmailAdHoc(lead, opts = {}) {
   }
 
   // LA OFERTA: una app gratis
+  const promo = PROMO_CODES[freeApp.id]
   lines.push('')
-  lines.push(lang === 'EN'
-    ? `I'm giving away ${freeApp.name} (${freeApp.price}) — ${freeWhy}. Say the word and I'll send you the Google Play promo code.`
-    : `Te dejo ${freeApp.name} (${freeApp.price}) gratis: ${freeWhy}. Si la quieres, contéstame a este correo y te paso el código de promo de Google Play.`)
+  if (promo) {
+    // con codigo: el regalo es inmediato y no depende de que conteste nadie
+    lines.push(lang === 'EN'
+      ? `${freeApp.name} (${freeApp.price}) is yours: ${freeWhy}. Use the code ${promo} in Google Play: ${utm(appLink(freeApp.id), { source, content })}`
+      : `${freeApp.name} (${freeApp.price}) es tuyo: ${freeWhy}. Usa el código ${promo} en Google Play: ${utm(appLink(freeApp.id), { source, content })}`)
+  } else {
+    lines.push(lang === 'EN'
+      ? `I'm giving away ${freeApp.name} (${freeApp.price}) — ${freeWhy}. Say the word and I'll send you the Google Play promo code.`
+      : `Te dejo ${freeApp.name} (${freeApp.price}) gratis: ${freeWhy}. Si la quieres, contéstame a este correo y te paso el código de promo de Google Play.`)
+  }
 
   // apps y libros que encajan (para compra)
   const offer = []
@@ -607,6 +653,27 @@ export function buildEmailAdHoc(lead, opts = {}) {
       productLabel = bookList[0].name
       productPrice = bookList[0].price
     }
+  }
+
+  // regalo inmediato que no depende de que conteste nadie
+  if (!promo) {
+    const tool = TOOL_FOR_TRACK[track.key] || 'sigil-intention-encoder'
+    lines.push('')
+    lines.push(lang === 'EN'
+      ? `And this one needs no signup at all: ${utm(SITE + '/tools/' + tool + '.html', { source, content })}`
+      : `Y esto no necesita registro ni cuenta: ${utm(SITE + '/tools/' + tool + '.html', { source, content })}`)
+  }
+
+  // embudo a la comunidad: los DOS canales y los DOS grupos
+  lines.push('')
+  lines.push(lang === 'EN'
+    ? `On Telegram there are two channels and two groups where this is worked on:`
+    : `En Telegram hay dos canales y dos grupos donde se trabaja esto:`)
+  for (const k of ['oficial', 'biblioteca']) {
+    const tg = COMMUNITY[k]
+    lines.push(lang === 'EN'
+      ? `- ${tg.channelName}: ${tg.channel}  |  group: ${tg.group}`
+      : `- ${tg.channelName}: ${tg.channel}  |  grupo: ${tg.group}`)
   }
 
   const cta = pick(CTAS[isPartner ? `partner${lang}` : isGrupo ? `grupo${lang}` : `dev${lang}`], lead.email)
