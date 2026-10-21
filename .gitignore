@@ -83,3 +83,8 @@ scripts/seo/_*
 _gsc-*.json
 _striking.json
 
+# Sesiones MCP de BrowserOS (tienen token, no se versionan)
+.browseros-session*
+
+# Campana: datos operacionales con correos de terceros (no se versionan)
+data/guerrilla/
