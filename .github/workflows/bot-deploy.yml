@@ -14,6 +14,10 @@ on:
 # BOT_PATH          - Ruta absoluta al proyecto en el servidor (default: "/opt/cha0smagick-labs")
 # PM2_APP_NAME      - Nombre de la app en PM2 (default: "cha0smagick-bots")
 # NODE_VERSION      - Versión de Node en el servidor (default: "22")
+# TELEGRAM_BOT_TOKEN- Token del bot de Telegram (para verificar que responde)
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
@@ -58,6 +62,32 @@ jobs:
             echo "__EOF__"
           } >> "$GITHUB_ENV"
 
+      # Sin esto el job salia en verde con "Deploy via SSH: skipped" y nadie
+      # se enteraba de que el bot llevaba dias sin desplegarse. Aqui se comprueba
+      # que el token de Telegram responde; si esta caducado o mal copiado, el
+      # bot esta muerto aunque PM2 diga "online".
+      - name: Verify Telegram bot token
+        id: verify
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ]; then
+            echo "::warning::TELEGRAM_BOT_TOKEN no configurado: no se puede verificar el bot desde CI."
+            echo "TOKEN_OK=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          code=$(curl -sS -o /tmp/getme.json -w '%{http_code}' --max-time 20 \
+            "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getMe" || echo 000)
+          if [ "$code" != "200" ]; then
+            echo "::error::El token de Telegram no responde (HTTP $code). El bot NO esta operativo."
+            head -c 400 /tmp/getme.json || true
+            echo ""
+            echo "TOKEN_OK=false" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+          echo "::notice::Telegram OK: $(grep -o '"username":"[^"]*"' /tmp/getme.json | head -1)"
+          echo "TOKEN_OK=true" >> "$GITHUB_OUTPUT"
+
       - name: Deploy via SSH
         if: steps.check.outputs.DEPLOY == 'true'
         uses: appleboy/ssh-action@v1.2.0
@@ -96,3 +126,61 @@ jobs:
 
             echo "=== Despliegue completado ==="
             pm2 status "$PM2_APP_NAME"
+
+      # El deploy puede "completarse" y dejar el bot caido (token caducado,
+      # .env ausente, dependencia que no compila). Esto verifica que hay al
+      # menos un proceso PM2 online y que el token del servidor responde.
+      - name: Post-deploy health check
+        if: steps.check.outputs.DEPLOY == 'true'
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ env.HOST }}
+          username: ${{ env.USER }}
+          key: ${{ env.KEY }}
+          port: 22
+          script: |
+            set -e
+            BOT_PATH="${{ secrets.BOT_PATH || '/opt/cha0smagick-labs' }}"
+            cd "$BOT_PATH"
+            pm2 status
+
+            ONLINE=$(pm2 jlist | node -e '
+              let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{
+                try{const p=JSON.parse(s);console.log(p.filter(x=>x.pm2_env&&x.pm2_env.status==="online").length)}catch(e){console.log(0)}})')
+            if [ "${ONLINE:-0}" -lt 1 ]; then
+              echo "::error::Ningun proceso PM2 quedo online tras el deploy. El bot esta caido."
+              pm2 logs --lines 40 --nostream || true
+              exit 1
+            fi
+            echo "::notice::Procesos PM2 online: $ONLINE"
+
+            if [ -f .env ] && grep -q '^TELEGRAM_BOT_TOKEN=' .env; then
+              set -a; . ./.env; set +a
+              CODE=$(curl -sS -o /tmp/getme.json -w '%{http_code}' --max-time 20 \
+                "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getMe" || echo 000)
+              if [ "$CODE" != "200" ]; then
+                echo "::error::El token de Telegram del servidor no responde (HTTP $CODE)."
+                head -c 400 /tmp/getme.json || true
+                exit 1
+              fi
+              echo "::notice::Telegram responde desde el servidor: $(grep -o '"username":"[^"]*"' /tmp/getme.json | head -1)"
+            else
+              echo "::warning::No se encontro TELEGRAM_BOT_TOKEN en el .env del servidor: no se pudo verificar Telegram."
+            fi
+
+      - name: Resumen
+        if: always()
+        env:
+          DEPLOYED: ${{ steps.check.outputs.DEPLOY }}
+          TOKEN_OK: ${{ steps.verify.outputs.TOKEN_OK }}
+        run: |
+          {
+            echo "### Bot Deploy"
+            echo ""
+            echo "- Deploy por SSH: $([ "$DEPLOYED" = "true" ] && echo 'ejecutado' || echo 'OMITIDO - faltan los secrets SSH')"
+            echo "- Token de Telegram: $([ "$TOKEN_OK" = "true" ] && echo 'valido' || echo 'no verificado')"
+            echo ""
+            if [ "$DEPLOYED" != "true" ]; then
+              echo "El job esta en verde pero NO se desplego nada. Configura SSH_HOST/SSH_USER/SSH_KEY (o BOT_HOST/BOT_USER/BOT_SSH_KEY) en los secrets del repo."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

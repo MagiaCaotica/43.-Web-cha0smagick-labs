@@ -1,0 +1,55 @@
+# listmonk — la ruta a volumen (10.000+ contactos/mes) sin depender de Gmail personal.
+#
+# Por que: con un Gmail personal el tope real son ~500 envios/dia antes de que
+# Google lo ponga en cuarentena. listmonk es self-hosted, tiene unsubscribe real
+# (RFC8058), plantillas, segmentacion y API. El servidor donde ya corren los
+# bots de PM2 es donde va esto.
+#
+# Uso:
+#   cp .env.example .env   # SMTP_USER, SMTP_PASS, SMTP_HOST, SMTP_PORT
+#   docker compose up -d
+#   # panel en http://localhost:9000  (crear admin en el primer arranque)
+#
+# Importar la lista de la campana:
+#   curl -u listmonk:APIKEY -F "file=@data/guerrilla/leads-clean.csv" \
+#        -F "name=guerrilla-2026-10" http://localhost:9000/api/import
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: listmonk
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?define POSTGRES_PASSWORD en .env}
+      POSTGRES_DB: listmonk
+    volumes:
+      - listmonk-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U listmonk"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  listmonk:
+    image: listmonk/listmonk:latest
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:9000:9000"
+    environment:
+      LISTMONK_app__address: ":9000"
+      LISTMONK_db__host: db
+      LISTMONK_db__port: "5432"
+      LISTMONK_db__user: listmonk
+      LISTMONK_db__password: ${POSTGRES_PASSWORD}
+      LISTMONK_db__database: listmonk
+      LISTMONK_app__admin_username: ${LISTMONK_ADMIN_USER:-listmonk}
+      LISTMONK_app__admin_password: ${LISTMONK_ADMIN_PASS:?define LISTMONK_ADMIN_PASS en .env}
+    volumes:
+      - listmonk-assets:/listmonk/.assets
+
+volumes:
+  listmonk-db:
+  listmonk-assets:
