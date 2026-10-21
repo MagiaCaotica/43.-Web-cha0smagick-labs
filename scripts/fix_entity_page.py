@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fix Article JSON-LD missing mainEntityOfPage (finding 3.5.1, MASTER_EXECUTION_PLAN.md).
+"""Fix Article JSON-LD missing mainEntityOfPage (finding 3.5.1, docs/PLAN-UNICO.md).
 
 148 of 467 blog articles have Article JSON-LD without mainEntityOfPage
 (Rich Results validator treats this as incomplete). Adds

@@ -2,7 +2,7 @@
 
 - **Creado:** 2026-09-26
 - **Dueño:** Frater Alek0s (owner) — ejecución local: OpenCode
-- **Fuente:** `MASTER_EXECUTION_PLAN.md` §11 (tabla de bloqueos) y §11.2 (cierre local del 2026-09-26)
+- **Fuente:** `docs/PLAN-UNICO.md` §11 (tabla de bloqueos) y §11.2 (cierre local del 2026-09-26)
 - **Alcance:** exclusivamente acciones que dependen de una credencial, una plataforma externa o una decisión de contenido que no puedo tomar yo. **Todo lo demás ya está hecho y verificado en local.**
 - **Convención de nombres de evidencia:** cuando algo de esta lista produzca un documento o una captura, guárdala con esta forma: `AAAA-MM-DD-<plataforma>-<qué>.json|.png|.csv`. Sin fecha no se acepta como evidencia (§7 del plan).
 - **Conocido y no resuelto:** esto cubre los gates externos. Ninguna tarea que aparece aquí está "a medio hacer": o tiene todo el trabajo local hecho y solo le falta tu evidencia, o es una decisión que es tuya por diseño.
@@ -23,7 +23,7 @@ Quedaron tres commits, en este orden y con la convención de mensajes del repo (
 |---|---|
 | `3fd93b3` | El arreglo de CLS: 370 archivos `.html`, 377 inserciones, 743 borradores. Incluye el canonical de `blog/witchcraft-for-beginners-guide.html`, que iba en el mismo archivo y no se podía aislar. |
 | `886182d` | Las dos herramientas nuevas: `scripts/fix-async-css.mjs` y `scripts/analytics/cls-shift-probe.mjs`. |
-| `9590f51` | `MASTER_EXECUTION_PLAN.md` (791 → 825 líneas) y este checklist. |
+| `9590f51` | `docs/PLAN-UNICO.md` (791 → 825 líneas) y este checklist. |
 
 Dos decisiones que tomé y conviene que conozcas:
 

@@ -82,7 +82,7 @@
 - **Acción:** 10 nuevas: tarot-chaos-vs-rider-waite, psi-gym-vs-zener-tradicional, dream-machine-vs-suenos-app, etc.
 
 ### Landing pages
-- flash-sale/apps-bundle/books-bundle correctos tras la corrección de bundle (ver AUDITORIA-1-venta-por-hora.md).
+- flash-sale/apps-bundle/books-bundle correctos tras la corrección de bundle (ver docs/PLAN-UNICO.md).
 - affiliate-terms L83: fila "Apps Bundle ($29.99)" obsoleta — limpiar cuando se reactive el programa de afiliados (punto 6 diferido).
 
 ## 5. GEO — MOTOR DE RESPUESTAS IA (ChatGPT, Perplexity, Google AI Overviews)
@@ -202,4 +202,4 @@ Acciones restantes:
 
 ---
 
-*Auditoría generada sobre estado real del repo: 924 URLs sitemap, ~950 HTML, 62 tools, 12 apps, schema inventory completo (sección 3). Complementa: docs/AUDITORIA-1-venta-por-hora.md (conversión) y docs/MAILERLITE-setup.md (email).*
+*Auditoría generada sobre estado real del repo: 924 URLs sitemap, ~950 HTML, 62 tools, 12 apps, schema inventory completo (sección 3). Complementa: docs/PLAN-UNICO.md (conversión) y docs/MAILERLITE-setup.md (email).*

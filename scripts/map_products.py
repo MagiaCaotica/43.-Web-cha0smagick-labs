@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Article -> product mapping (task 3.4.6, MASTER_EXECUTION_PLAN.md).
+"""Article -> product mapping (task 3.4.6, docs/PLAN-UNICO.md).
 
 Reads scripts/bots/data/offers.json (source of truth, task 3.1.1), scores
 each product against every blog article's title/description/body keywords,
