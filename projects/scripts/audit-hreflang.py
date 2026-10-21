@@ -57,12 +57,19 @@ def hreflangs_de(p):
 
 
 roto, incoherente, sin_vuelta = [], [], []
+en_noindex, autorreferente = [], []
 declaraciones = 0
 for p in ARCHIVOS:
     propias = hreflangs_de(p)
     mi_canonical = canonical_de(p)
+    es_noindex = bool(re.search(r'<meta[^>]+name=["\']robots["\'][^>]*noindex', leer(p), re.I))
+    if es_noindex and propias:
+        en_noindex.append((str(p), sorted(propias)))
     for lang, url in propias.items():
         declaraciones += 1
+        # 'es' que apunta a si misma: no hay version en espanol
+        if lang == "es" and mi_canonical and url.rstrip("/") == mi_canonical.rstrip("/"):
+            autorreferente.append((str(p), url))
         destino = url_a_fichero(url)
         if destino is None:
             roto.append((str(p), lang, url))
@@ -78,8 +85,12 @@ print(f"paginas revisadas: {len(ARCHIVOS)} | declaraciones: {declaraciones}")
 print(f"destino inexistente                : {len(roto)}")
 print(f"canonical del destino distinto     : {len(incoherente)}")
 print(f"la pagina destino no declara vuelta: {len(sin_vuelta)}")
+print(f"hreflang en paginas noindex         : {len(en_noindex)}")
+print(f"'es' que se apunta a si misma        : {len(autorreferente)}")
 
-for etiqueta, lista in (("DESTINO INEXISTENTE", roto), ("CANONICAL DISTINTO", incoherente), ("SIN VUELTA", sin_vuelta)):
+for etiqueta, lista in (("DESTINO INEXISTENTE", roto), ("CANONICAL DISTINTO", incoherente),
+                        ("SIN VUELTA", sin_vuelta), ("EN PAGINAS NOINDEX", en_noindex),
+                        ("ES AUTOREFERENTE", autorreferente)):
     if not lista:
         continue
     print(f"\n-- {etiqueta} --")
@@ -87,11 +98,14 @@ for etiqueta, lista in (("DESTINO INEXISTENTE", roto), ("CANONICAL DISTINTO", in
         if etiqueta == "CANONICAL DISTINTO":
             a, l, u, c = item
             print(f"   {a}\n      {l} -> {u}\n      canonical: {c}")
+        elif etiqueta == "EN PAGINAS NOINDEX":
+            a, l = item
+            print(f"   {a}\n      declara: {', '.join(l)}")
         else:
             a, l, u = item
             print(f"   {a}\n      {l} -> {u}")
 
-if not (roto or incoherente or sin_vuelta):
-    print("\nOK: todos los pares hreflang son coherentes y reciprocos.")
+if not (roto or incoherente or sin_vuelta or en_noindex or autorreferente):
+    print("\nOK: todos los pares hreflang son coherentes, reciprocos y no apuntan a paginas noindex.")
 
-sys.exit(0 if not (roto or incoherente or sin_vuelta) else 1)
+sys.exit(0 if not (roto or incoherente or sin_vuelta or en_noindex or autorreferente) else 1)
