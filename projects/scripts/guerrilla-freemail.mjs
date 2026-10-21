@@ -1,0 +1,26 @@
+// Dominios de correo gratuit o de webmail. No sirven para personalizar
+// ("me tope con X en su gmail" no dice nada): el lead con web propia si.
+export const FREE_MAIL = new Set([
+  'gmail.com', 'hotmail.com', 'outlook.com', 'yahoo.com', 'live.com', 'msn.com', 'protonmail.com',
+  'proton.me', 'aol.com', 'gmx.com', 'gmx.de', 'gmx.es', 'gmx.net', 'gmx.at', 'gmx.ch', 'mail.com',
+  'y7mail.com', 'yandex.com', 'zoho.com', 'icloud.com', 'me.com', 'mac.com', 'frontier.com',
+  'fastmail.com', 'hushmail.com', 'inbox.com', 'free.fr', 'orange.fr', 'wanadoo.fr', 'sfr.fr', 'web.de',
+  't-online.de', 'freenet.de', 'seznam.cz', 'libero.it', 'virgilio.it', 'terra.com.br', 'uol.com.br',
+  'bol.com.br', 'qq.com', '163.com', '126.com', 'foxmail.com', 'wp.pl', 'o2.pl', 'onet.pl',
+  'interia.pl', 'wp.com', 'mail.ru', 'bk.ru', 'inbox.ru', 'rambler.ru', 'list.ru', 'nate.com',
+  'hanmail.net', 'naver.com', 'daum.net', 'op.pl', 'onet.eu', 'mail.pl', 'nada.cz', 'gmail.es',
+  'terra.es', 'hotmail.es', 'outlook.es', 'yahoo.es', 'bluewin.ch', 'orange.es', 'movistar.es',
+  's.plus', 'telenet.be', 'ziggo.nl', 'kpnmail.nl', 'home.nl', 'planet.nl', 'chello.nl', 'quicknet.nl',
+  'casema.nl', 'hetnet.nl', 'xs4all.nl', 'telia.net', 'runbox.com', 'zoho.eu', 'zohomail.eu',
+  'vmail.me', 'tutanota.com', 'posteo.de', 'mailbox.org', 'aol.de', 'mail.bg', 'abv.bg', 'yandex.by',
+  'yandex.kz', 'i.ua', 'meta.ua', 'ukr.net', 'inbox.lv', 'sve.lv', 'gmail.co.uk', 'btinternet.com',
+  'virginmedia.com', 'sky.com', 'talktalk.net', 'blueyonder.co.uk', 'tiscali.co.uk', 'wanadoo.co.uk',
+  'demon.co.uk', 'plus.net', 'nttcom.net', 'biglobe.ne.jp', 'ocn.ne.jp', 'softbank.ne.jp',
+  'nttdata.net', 'yandex.com.tr', 'turk.net', 'ttmail.net', 'gmail.co.jp', 'ezweb.ne.jp', 'auone.jp',
+  'muc.ne.jp', 'gmail.com.br', 'uol.com.br', 'bol.com.br', 'ig.com.br', 'terra.com.br', 'globo.com',
+  'prodigy.net', 'uol.com', 'terra.com.ar', 'live.com.ar', 'hotmail.com.ar', 'yahoo.com.ar',
+  'gmail.com.mx', 'hotmail.com.mx', 'yahoo.com.mx', 'live.com.mx', 'gmail.com.co', 'outlook.com.co',
+  'yahoo.com.co', 'hotmail.com.co', 'live.com.co', 'yahoo.com.pe', 'hotmail.com.pe', 'gmail.com.pe',
+  'live.com.pe', 'gmail.com.ve', 'hotmail.com.ve', 'yahoo.com.ve', 'gmail.com.uy', 'hotmail.com.uy',
+  'yahoo.com.uy', 'gmail.cl', 'hotmail.cl', 'yahoo.cl',
+])

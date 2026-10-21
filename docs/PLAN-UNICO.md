@@ -102,7 +102,27 @@ Sin esto, las fases siguientes no se pueden medir ni cerrar.
 - **Aceptación:** páginas enlazadas desde footer y checkout; reject/accept/withdrawal probados; claims de refund, garantía y tracking coinciden con la política y con la plataforma.
 - **Evidencia:** URLs live, matriz vendor/data-flow, revisión legal fechada, screenshots de consent y prueba de no-track antes de accept.
 
-### [ ] P0-07 — Instrumentar el funnel y reconciliar purchase
+### [x] P0-07 — Instrumentar el funnel y reconciliar purchase
+
+> **HECHO 2026-10-21 — la instrumentacion era el problema, no los eventos.** Los 19 eventos
+> estaban en el codigo pero **419 paginas desplegadas no inicializaban GA4**: 350 paginas del
+> blog cargaban la libreria gtag y nunca llamaban a `gtag('config', 'G-V6LHCPN9TK')`, y otras 69
+> (las 40 tools atomicas, 25 articulos, 3 de la raiz, 1 de compare/) ni siquiera cargaban la
+> libreria. Se restauro el bloque que ya funciona en index.html: ahora **997 de 1011 paginas
+> desplegadas tienen GA4 operativo** (antes 556). Instrumentos: `audit-ga4-coverage.mjs`,
+> `fix-ga4-init.mjs`, `fix-ga4-dup-consent.mjs`.
+
+### [ ] P0-07b — Reconciliar purchase contra los exports de Hotmart y Play
+
+- **Responsable:** Analytics / Revenue.
+- **Depende de:** P0-07, G3 (CSV de Hotmart), G4 (acceso a GA4).
+- **Entregable:** tabla por pedido con `transaction_id`, importe, moneda y evento GA4 asociado.
+- **Debe hacer:** cruzar los eventos `purchase`/`conversion_import` que ya emite `js/conversion.js`
+  con los CSV crudos de Hotmart y Play Console; dejar la discrepancia medida, no supuesta.
+- **No debe hacer:** dar por buena una cifra de ingresos que no viene de un export.
+- **Aceptacion:** el total reconciliado cuadra con el export dentro del margen de impuestos y
+  comisiones; las diferencias quedan escritas con su causa.
+- **Evidencia:** la tabla de reconciliacion y el export usado, con fecha.
 
 - **Responsable:** Analytics / Web.
 - **Depende de:** P0-01, P0-03, P0-06.

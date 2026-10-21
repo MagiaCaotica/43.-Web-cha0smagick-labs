@@ -355,6 +355,9 @@ export const PROMO_CODES = {}
  * grupo. Son los assets que ya enlaza el sitio (1.937 suscriptores en el canal
  * y 686 miembros en el grupo COVEN), no el canal de 5.
  */
+import { OPT_OUT_MAILTO, OPT_OUT_MAILTO_EN } from './guerrilla-policy.mjs'
+import { FREE_MAIL } from './guerrilla-freemail.mjs'
+
 export const COMMUNITY = {
   // La comunidad son DOS canales y DOS grupos. El mas grande de cada familia
   // es el de la biblioteca; el mas vacio es el oficial de la marca. Se
@@ -579,12 +582,18 @@ export function buildEmailAdHoc(lead, opts = {}) {
     lines.push(lang === 'EN'
       ? `I came across ${g.domain} — ${site} — and thought this was worth sending.`
       : `Estuve en ${g.domain} — ${site} — y me pareció que esto te encaja.`)
-  } else if (sal) {
-    lines.push(openerObj[lang].replace('{org}', sal).replace('{trackWhy}', freeWhy))
   } else {
+    // Toda apertura lleva un identificador unico del lead: su nombre, su
+    // dominio o su buzon. 23 correos identicos es justo el patron que hace
+    // que una cuenta la marquen como lista.
+    const dom = (lead.email.split('@')[1] || '').toLowerCase()
+    const local = (lead.email.split('@')[0] || '').toLowerCase()
+    // en webmail el buzon es lo que distingue a la org: el nombre deducido se repite
+    const ident = FREE_MAIL.has(dom) ? (local.length > 2 ? local : (sal || dom)) : (sal || dom)
+    const web = FREE_MAIL.has(dom) ? '' : ' (' + dom + ')'
     lines.push(lang === 'EN'
-      ? 'I build occult apps and thought of you.'
-      : 'Hago apps de ocultismo y me acordé de ti.')
+      ? `I came across ${ident}${web} and thought this was worth sending.`
+      : `Me topé con ${ident}${web} y me pareció que esto te encaja.`)
   }
 
   // LA OFERTA: una app gratis
@@ -685,9 +694,13 @@ export function buildEmailAdHoc(lead, opts = {}) {
   // pie legal (CAN-SPAM): identidad + opt-out
   const foot = ['', '---', `Cha0smagick Labs · ${SITE} · magiacaoticapractica@gmail.com`]
   if (POSTAL_ADDRESS) foot.push(POSTAL_ADDRESS)
+  // el opt-out es un enlace real: un clic y fuera, sin tener que responder
+  const optOut = lang === 'EN'
+    ? `<a href="${OPT_OUT_MAILTO_EN}">Unsubscribe</a>`
+    : `<a href="${OPT_OUT_MAILTO}">BAJA / unsubscribe</a>`
   foot.push(lang === 'EN'
-    ? 'You get this because you publish or work on occult and paranormal stuff. Reply "unsubscribe" and I will stop writing to you.'
-    : 'Recibes este correo porque publicas o trabajas en lo de ocultismo y paranormal. Responde "BAJA" y dejo de escribirte.')
+    ? `You get this because you publish or work on occult and paranormal stuff. ${optOut} and I will stop writing to you.`
+    : `Recibes este correo porque publicas o trabajas en lo de ocultismo y paranormal. ${optOut} y dejo de escribirte.`)
 
   return {
     to: lead.email,
@@ -709,7 +722,9 @@ function subjectFor(lead, track, freeApp, lang) {
   // Asunto con el nombre de la organizacion: es la senal de personalizacion mas
   // fuerte que hay, y baja el score de spam. Sin palabras de oferta, sin
   // mayusculas, sin puntuacion~, sin signos de exclamacion.
-  const sal = salutation(lead)
+  // el asunto se recorta a ~70 caracteres en Gmail: el nombre va recortado
+  const salFull = salutation(lead)
+  const sal = salFull.length > 30 ? salFull.split(/\s+/).slice(0, 2).join(' ').slice(0, 30) : salFull
   const short = freeApp.name.replace(/:.*$/, '').trim()
   // Sin nombre de organizacion no se inventa: el asunto nombra el producto.
   if (!sal) {
@@ -738,24 +753,24 @@ function subjectFor(lead, track, freeApp, lang) {
   }
   if (lang === 'EN') {
     const byTrack = {
-      investigacion: 'a paranormal investigation app for you to try',
-      ocultismo: 'a sigil generator for you to try',
-      tarot: 'a full Rider-Waite tarot for you to try',
-      astrologia: 'an offline natal chart app for you to try',
-      runas: 'a Norse rune oracle for you to try',
-      suenos: 'a lucid dreaming app for you to try',
-      ufo: 'an EVP recorder for you to try',
+      investigacion: 'a paranormal investigation app',
+      ocultismo: 'a sigil generator',
+      tarot: 'a full Rider-Waite tarot',
+      astrologia: 'an offline natal chart app',
+      runas: 'a Norse rune oracle',
+      suenos: 'a lucid dreaming app',
+      ufo: 'an EVP recorder',
     }
     return `${sal} — ${byTrack[track.key] || short}`
   }
   const byTrack = {
-    investigacion: 'una app de investigación paranormal para que la pruebes',
-    ocultismo: 'un generador de sigilos para que lo pruebes',
-    tarot: 'un tarot Rider-Waite completo para que lo pruebes',
-    astrologia: 'una carta natal offline para que la pruebes',
-    runas: 'un oráculo de runas para que lo pruebes',
-    suenos: 'una app de sueños lúcidos para que la pruebes',
-    ufo: 'un grabador EVP para que lo pruebes',
+    investigacion: 'app de investigación paranormal',
+    ocultismo: 'generador de sigilos',
+    tarot: 'tarot Rider-Waite completo',
+    astrologia: 'carta natal offline',
+    runas: 'oráculo de runas',
+    suenos: 'app de sueños lúcidos',
+    ufo: 'grabador EVP',
   }
   return `${sal} — ${byTrack[track.key] || short}`
 }

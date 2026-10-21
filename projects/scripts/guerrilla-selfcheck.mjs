@@ -56,7 +56,12 @@ ok('cuerpos casi unicos', bodies.size / queue.length > 0.9, `${bodies.size}/${qu
 
 // ---------- 6) topes de envio ----------
 const b = loadBudget()
-ok('tope diario = 50', maxForToday(b) === 50 && POLICY.MAX_DAY_1 === 50 && POLICY.MAX_DAY_N === 50, `dia ${b.days}`)
+ok('tope diario: 50 maximo con rampa de calentamiento', POLICY.MAX_DAY === 50 && POLICY.RAMP_START === 20 && POLICY.RAMP_STEP === 10
+  && maxForToday({ days: 1 }) === 20 && maxForToday({ days: 2 }) === 30 && maxForToday({ days: 4 }) === 50,
+  `dia ${b.days} -> tope ${maxForToday(b)}`)
+ok('1 correo por dominio y dia', POLICY.MAX_PER_DOMAIN === 1)
+ok('pausa de 3 a 8 minutos entre correos', POLICY.MIN_GAP_SECONDS >= 180 && POLICY.MAX_GAP_SECONDS >= 480)
+ok('watchdog de rebotes activo', POLICY.BOUNCE_THRESHOLD > 0 && POLICY.COMPLAINT_THRESHOLD > 0)
 const fake = { date: b.date, sent: Array(50).fill('x@y.z'), domains: {}, days: b.days }
 const chk = canSend('nuevo@dominio.com', fake)
 ok('el tope diario bloquea al llegar a 50', !chk.ok, chk.reason || '')
@@ -116,6 +121,19 @@ if (fs.existsSync(wf)) {
   ok('bot-deploy verifica el token de Telegram', t.includes('getMe'), '')
   ok('bot-deploy tiene health check post-deploy', t.includes('Post-deploy health check'), '')
 } else ok('existe bot-deploy.yml', false)
+
+// ---------- 11) auditoria de entregabilidad (que no parezca spam) ----------
+try {
+  const { execFileSync } = await import('node:child_process')
+  const out = execFileSync('node', [path.join('projects', 'scripts', 'audit-deliverability.mjs')], { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
+  const m = out.match(/problemas totales: (\d+)/)
+  const n = m ? Number(m[1]) : -1
+  ok('auditoria de entregabilidad sin problemas', n === 0, n + ' problemas')
+} catch (e) {
+  const msg = String(e.stdout || e.message)
+  const m = msg.match(/problemas totales: (\d+)/)
+  ok('auditoria de entregabilidad sin problemas', m ? Number(m[1]) === 0 : false, m ? m[1] + ' problemas' : msg.slice(0, 60))
+}
 
 console.log(`\n=== ${fails.length === 0 ? 'TODO OK' : fails.length + ' FALLOS'} ===`)
 if (fails.length) console.log(fails.join('\n'))
