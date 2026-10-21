@@ -33,7 +33,7 @@ qué se necesita de vuelta) está en [`OWNER-MANUAL-CHECKLIST.md`](OWNER-MANUAL-
 | G10 | **Código promo de Google Play** | campaña de email | para que la app gratis sea inmediata; hoy el email la pide por respuesta |
 | G11 | **Añadir el bot de Telegram** a `@magiacaotica` y a los dos grupos | Telegram | 1 acción por destino; después el bot publica solo |
 | G12 | **Consentimiento legal** (matriz de proveedores) | P0-06 | decidir y firmar los 9 puntos de la matriz legal |
-| G13 | **Acceso de la service account a la propiedad de GSC** | P1-01, P1-11 | anadir `cha0smagick-labs@cha0smagick-labs.iam.gserviceaccount.com` como usuario (LECTURA) en Search Console > Configuracion > Usuarios y permisos; verificar con `python projects/scripts/gsc-indexation.py` |
+| G13 | ~~Acceso de la service account a la propiedad de GSC~~ **CERRADO 2026-10-21** (siteOwner de sc-domain:cha0smagicklabs.com) | P1-01, P1-11 | anadir `cha0smagick-labs@cha0smagick-labs.iam.gserviceaccount.com` como usuario (LECTURA) en Search Console > Configuracion > Usuarios y permisos; verificar con `python projects/scripts/gsc-indexation.py` |
 
 ---
 
@@ -277,6 +277,13 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 ### [x] P1-11 — Auditar y desbloquear la indexación de las URLs del sitemap
 
 > **HECHO 2026-10-21 — auditoria completa en docs/indexacion-2026-10-21.md: sitemap 1002->994 URLs, 0 noindex, 0 duplicadas, 0 404, 0 canonical contradictorio, 0 huerfanas, 994/994 alcanzables en <=3 clics (41,8 inlinks/URL); 5 bugs corregidos (noindex y 404 fuera del sitemap, canonical /blog/ y /es/, lastmod con fecha real de commit, IndexNow con el host correcto); gate G13 para medir en GSC**
+
+> **MEDIDO en Search Console (2026-10-21, gate G13 cerrado):** 261 URLs inspeccionadas una a una
+> con la API de inspeccion: **199 indexadas (76,2 %)** -> ~760 de las 994. Las 380 URLs con
+> impresiones en 28 dias (225 clics, 7.060 impresiones) lo corroboran. El '163' era un dato
+> rancio de antes del reenvio del sitemap del 19/10. Lo que queda: 38 URLs que Google aun no ha
+> rastreado (prioridad) y 9 con veredicto 'noindex' RANCIOS de agosto, cuyo HTML ya dice
+> 'index, follow'. Sin ningun bloqueo tecnico pendiente.
 
 - **Responsable:** SEO / Web.
 - **Depende de:** P0-01.
