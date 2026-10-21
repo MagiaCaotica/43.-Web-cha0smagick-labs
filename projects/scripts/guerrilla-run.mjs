@@ -14,7 +14,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { execFileSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
-import { loadBudget, saveBudget, canSend, recordSent, gapMs, maxForToday, POLICY } from './guerrilla-policy.mjs'
+import { loadBudget, saveBudget, canSend, recordSent, gapMs, maxForToday, sendingWindow, detectComplaints, detectBounces, POLICY } from './guerrilla-policy.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..')
 const DIR = path.join(ROOT, 'data', 'guerrilla')
@@ -112,9 +112,16 @@ let maxed = false
 let sinceCheck = 0
 let lastSent = new Set(sentSnapshot())
 
+const win = sendingWindow()
+if (!win.ok) {
+  console.log('\n=== FUERA DE HORARIO DE ENVIO (' + win.why + '). No se envia nada. ===')
+  console.log('La campana solo manda de 09:00 a 20:00 hora local, dias laborables.')
+}
+
 for (const seg of SEGMENTS) {
   if (maxed) break
   const segQ = queue.filter((q) => q.segment === seg)
+    if (!win.ok) break
   for (const q of segQ) {
     if (maxed) break
     if (MAX && total >= MAX) { console.log(`\n=== tope de sesion alcanzado (${MAX}) ===`); break }
@@ -159,13 +166,19 @@ for (const seg of SEGMENTS) {
     if (sinceCheck >= CHECK_EVERY) {
       sinceCheck = 0
       const inbox = complaintWatch()
-      const spam = inbox.filter((t) => /spam|basura|estafa|scam|unsubscribe|dar de baja/i.test(t))
-      if (spam.length >= POLICY.COMPLAINT_THRESHOLD) {
-        console.log(`\n!!! ${spam.length} queja(s) de spam detectada(s). PARANDO la campana.`)
-        for (const s of spam.slice(0, 3)) console.log('   ', s.slice(0, 160))
+      const spam = detectComplaints(inbox)
+      const bnc = detectBounces(inbox)
+      if (spam.complaints >= POLICY.COMPLAINT_THRESHOLD) {
+        console.log(`\n!!! ${spam.complaints} queja(s) de spam detectada(s). PARANDO la campana.`)
+        for (const x of spam.samples) console.log('   ', x.slice(0, 160))
         break
       }
-      console.log(`   watchdog: ${spam.length} queja(s) de spam`)
+      if (bnc.bounces >= POLICY.BOUNCE_THRESHOLD) {
+        console.log(`\n!!! ${bnc.bounces} rebote(s) detectados. PARANDO la campana (lista a direcciones muertas).`)
+        for (const x of bnc.samples) console.log('   ', x.slice(0, 160))
+        break
+      }
+      console.log(`   watchdog: ${spam.complaints} queja(s) de spam, ${bnc.bounces} rebote(s)`)
     }
   }
 }
