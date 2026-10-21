@@ -53,11 +53,15 @@ jobs:
 
       - name: Ping a Google e IndexNow
         continue-on-error: true
+        env:
+          # Commit base del push: lo que cambio de verdad en este push.
+          INDEXNOW_BASE: ${{ github.event.before }}
         run: |
           # Google: avisar de que el sitemap cambio (no requiere autenticacion).
           curl -sS -o /dev/null -w 'google ping: %{http_code}\n' \
             'https://www.google.com/ping?sitemap=https://cha0smagicklabs.com/sitemap.xml' || true
-          # Bing/IndexNow: el repo ya tiene scripts/ping-indexnow.mjs para esto.
-          if [ -f scripts/ping-indexnow.mjs ] && [ -n "$INDEXNOW_KEY" ]; then
-            node scripts/ping-indexnow.mjs || true
-          fi
+          # Bing/Yandex/Seznam: se avisa SOLO de las paginas que cambiaron.
+          # Antes este paso no se ejecutaba NUNCA: la condicion exigia la
+          # variable de entorno INDEXNOW_KEY, que no existe en el repo, y el
+          # script apuntaba a cha0smagick.com, un dominio que no resuelve.
+          node scripts/ping-indexnow.mjs || true
