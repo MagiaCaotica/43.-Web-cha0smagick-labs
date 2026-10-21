@@ -36,6 +36,12 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Historial COMPLETO: generate_sitemap.py saca el lastmod de la fecha
+          # del ultimo commit que toco cada fichero. Con el clon shallow
+          # (fetch-depth 1, el default) no hay historial y todas las paginas
+          # cairian en "hoy", cambiando el sitemap en cada push.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
