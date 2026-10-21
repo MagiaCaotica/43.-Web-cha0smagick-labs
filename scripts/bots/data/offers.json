@@ -1,9 +1,9 @@
 {
   "_meta": {
-    "source": "scripts/bots/data/offers.json; apps reconciled 2026-09-23; books reconciled 2026-10-03",
+    "source": "scripts/bots/data/offers.json; apps reconciled 2026-10-21 (12/12 fichas de Play verificadas en vivo con BrowserOS); books reconciled 2026-10-21",
     "scope": "Local public catalog only; does not prove external publication or sales",
-    "reconciledAt": "2026-10-03",
-    "externalListingStatus": "unverified",
+    "reconciledAt": "2026-10-21",
+    "externalListingStatus": "apps live_verified_2026-10-21; books checkout_url_observed_in_page_sale_unverified",
     "priceSource": "public app page / public book page",
     "note": "Source of truth for bot offers. Update this file to change what bots show; no code change needed. External listing, availability, checkout and revenue must be verified separately.",
     "booksCheckoutSource": "Each book's own pay.hotmart.com checkout ID was read from its public page in books/*.html on 2026-10-03. Every page also links D104270399P (Magical Servitors Manual) as a cross-sell; that ID is NOT each book's own checkout.",
@@ -23,8 +23,14 @@
       "price": "$3.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards",
       "funnel": "https://cha0smagicklabs.com/apps/psi-gym.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["esp", "zener", "intuition", "psychic", "training"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "esp",
+        "zener",
+        "intuition",
+        "psychic",
+        "training"
+      ],
       "shortDesc": "Train your intuition with professional Zener cards and statistical ESP tracking.",
       "category": "app",
       "image": null
@@ -36,8 +42,14 @@
       "price": "$3.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal",
       "funnel": "https://cha0smagicklabs.com/apps/arcana-goetia.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["goetia", "sigils", "solomon", "grimoire", "ritual"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "goetia",
+        "sigils",
+        "solomon",
+        "grimoire",
+        "ritual"
+      ],
       "shortDesc": "Complete Goetic grimoire & sigil generator for the 72 spirits of Solomon.",
       "category": "app",
       "image": null
@@ -49,8 +61,14 @@
       "price": "$3.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.japps.norse_oracle",
       "funnel": "https://cha0smagicklabs.com/apps/norse-rune-oracle.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["runes", "norse", "viking", "divination", "oracle"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "runes",
+        "norse",
+        "viking",
+        "divination",
+        "oracle"
+      ],
       "shortDesc": "Unlock Viking wisdom with 12+ rune spreads for love, wealth, protection.",
       "category": "app",
       "image": null
@@ -62,8 +80,14 @@
       "price": "$3.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine",
       "funnel": "https://cha0smagicklabs.com/apps/dream-machine.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["dreams", "lucid", "astral", "sleep", "consciousness"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "dreams",
+        "lucid",
+        "astral",
+        "sleep",
+        "consciousness"
+      ],
       "shortDesc": "Lucid dreaming app with reality checks, dream journal, and induction techniques.",
       "category": "app",
       "image": null
@@ -75,8 +99,13 @@
       "price": "$3.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.app.goetiansealsgeneratorapp",
       "funnel": "https://cha0smagicklabs.com/apps/chaos-sigil-generator.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["sigils", "chaos-magick", "generator", "intention"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "sigils",
+        "chaos-magick",
+        "generator",
+        "intention"
+      ],
       "shortDesc": "Create powerful sigils from your intentions with this minimalist chaos magick tool.",
       "category": "app",
       "image": null
@@ -88,8 +117,14 @@
       "price": "$6.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart",
       "funnel": "https://cha0smagicklabs.com/apps/astral-lab.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["astrology", "birth-chart", "houses", "planets", "zodiac"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "astrology",
+        "birth-chart",
+        "houses",
+        "planets",
+        "zodiac"
+      ],
       "shortDesc": "Professional astrology app with natal charts, transits, and synastry.",
       "category": "app",
       "image": null
@@ -101,8 +136,14 @@
       "price": "$9.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads",
       "funnel": "https://cha0smagicklabs.com/apps/eerieroads.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["paranormal", "haunted", "ghosts", "map", "locations"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "paranormal",
+        "haunted",
+        "ghosts",
+        "map",
+        "locations"
+      ],
       "shortDesc": "Explore the world's most haunted locations with interactive maps and ghost stories.",
       "category": "app",
       "image": null
@@ -114,8 +155,14 @@
       "price": "$3.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.app.ichingoracle",
       "funnel": "https://cha0smagicklabs.com/apps/iching-oracle.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["iching", "hexagrams", "chinese", "divination", "wisdom"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "iching",
+        "hexagrams",
+        "chinese",
+        "divination",
+        "wisdom"
+      ],
       "shortDesc": "Cast hexagrams and read the ancient wisdom of the I Ching for guidance.",
       "category": "app",
       "image": null
@@ -127,8 +174,14 @@
       "price": "$9.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer",
       "funnel": "https://cha0smagicklabs.com/apps/lucid-dream.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["dreams", "lucid", "astral", "projection", "sleep"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "dreams",
+        "lucid",
+        "astral",
+        "projection",
+        "sleep"
+      ],
       "shortDesc": "Lucid dreaming and astral projection companion with guided practice.",
       "category": "app",
       "image": null
@@ -140,8 +193,14 @@
       "price": "$3.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.lunarapp.app",
       "funnel": "https://cha0smagicklabs.com/apps/lunar-phase-calculator.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["moon", "lunar", "phases", "magick", "calendar"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "moon",
+        "lunar",
+        "phases",
+        "magick",
+        "calendar"
+      ],
       "shortDesc": "Track lunar phases and plan your rituals according to moon cycles.",
       "category": "app",
       "image": null
@@ -153,8 +212,14 @@
       "price": "$14.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp",
       "funnel": "https://cha0smagicklabs.com/apps/noctem-tools.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["paranormal", "investigation", "spirit", "research", "tools"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "paranormal",
+        "investigation",
+        "spirit",
+        "research",
+        "tools"
+      ],
       "shortDesc": "Professional paranormal investigation suite for structured field research.",
       "category": "app",
       "image": null
@@ -166,8 +231,14 @@
       "price": "$9.99 USD",
       "url": "https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite",
       "funnel": "https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html",
-      "listingStatus": "external_listing_unverified",
-      "tags": ["tarot", "rider-waite", "divination", "cards", "reading"],
+      "listingStatus": "live_verified_2026-10-21",
+      "tags": [
+        "tarot",
+        "rider-waite",
+        "divination",
+        "cards",
+        "reading"
+      ],
       "shortDesc": "Complete 78-card Rider-Waite Tarot deck with interpretations and spreads.",
       "category": "app",
       "image": null
@@ -185,7 +256,12 @@
       "hotmartProductId": "W106595764X",
       "priceSource": "public book page (books/codex-chaoticus-pdf.html)",
       "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
-      "tags": ["chaos-magick", "theory", "practice", "grindho"],
+      "tags": [
+        "chaos-magick",
+        "theory",
+        "practice",
+        "grindho"
+      ],
       "shortDesc": "Complete chaos magick grimoire by Grindho.",
       "image": null
     },
@@ -200,7 +276,12 @@
       "hotmartProductId": "J106598345U",
       "priceSource": "public book page (books/tarot-chaos-pdf.html)",
       "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
-      "tags": ["tarot", "chaos-magick", "divination", "interpretation"],
+      "tags": [
+        "tarot",
+        "chaos-magick",
+        "divination",
+        "interpretation"
+      ],
       "shortDesc": "Deep tarot knowledge from a chaos magick perspective.",
       "image": null
     },
@@ -215,7 +296,12 @@
       "hotmartProductId": "D104270399P",
       "priceSource": "public book page (books/manual-activacion-servidores-magicos-pdf.html)",
       "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
-      "tags": ["servitors", "chaos-magick", "entities", "creation"],
+      "tags": [
+        "servitors",
+        "chaos-magick",
+        "entities",
+        "creation"
+      ],
       "shortDesc": "Create and work with magical servitors — artificial spirits.",
       "image": null
     },
@@ -230,7 +316,12 @@
       "hotmartProductId": "F104270966V",
       "priceSource": "public book page (books/tratado-runas-cazadoras-caos-pdf.html)",
       "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
-      "tags": ["runes", "chaos-magick", "hunting", "symbols"],
+      "tags": [
+        "runes",
+        "chaos-magick",
+        "hunting",
+        "symbols"
+      ],
       "shortDesc": "Advanced rune system for chaos magick practitioners.",
       "image": null
     },
@@ -245,7 +336,12 @@
       "hotmartProductId": "B104271332D",
       "priceSource": "public book page (books/ouija-cazadora-pdf.html)",
       "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
-      "tags": ["ouija", "spirits", "communication", "spanish"],
+      "tags": [
+        "ouija",
+        "spirits",
+        "communication",
+        "spanish"
+      ],
       "shortDesc": "Complete guide to spirit communication through the ouija board. (Spanish)",
       "image": null
     },
@@ -260,7 +356,12 @@
       "hotmartProductId": "O104271155J",
       "priceSource": "public book page (books/liber-lvpinux-pdf.html)",
       "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
-      "tags": ["werewolf", "lycanthropy", "therianthropy", "shapeshifting"],
+      "tags": [
+        "werewolf",
+        "lycanthropy",
+        "therianthropy",
+        "shapeshifting"
+      ],
       "shortDesc": "The book of the wolf — werewolf occult philosophy and practice.",
       "image": null
     },
@@ -275,22 +376,68 @@
       "hotmartProductId": "V106730857R",
       "priceSource": "public book page (books/mind-the-gap-pdf.html)",
       "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
-      "tags": ["consciousness", "psychonaut", "altered-states", "exploration"],
+      "tags": [
+        "consciousness",
+        "psychonaut",
+        "altered-states",
+        "exploration"
+      ],
       "shortDesc": "A practical guide to altered states for the modern psychonaut.",
+      "image": null
+    },
+    {
+      "id": "catholiconomicon",
+      "name": "CATHOLICONOMICON",
+      "subtitle": "Chaos Magick for Catholic Practitioners",
+      "price": "$9.99 USD",
+      "url": "https://cha0smagicklabs.com/books/catholiconomicon-pdf.html",
+      "funnel": "https://cha0smagicklabs.com/books/catholiconomicon-pdf.html",
+      "checkoutUrl": "https://pay.hotmart.com/A107900946S?checkoutMode=2",
+      "hotmartProductId": "A107900946S",
+      "priceSource": "public book page (books/catholiconomicon-pdf.html)",
+      "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
+      "tags": [
+        "chaos-magick",
+        "catholic",
+        "practitioner",
+        "ritual"
+      ],
+      "shortDesc": "Chaos magick para practicantes catolicos.",
+      "image": null
+    },
+    {
+      "id": "complete-practical-treatise-servitors",
+      "name": "The Complete Practical Treatise on Magical Servitors",
+      "subtitle": "Design, activation and maintenance",
+      "price": "$9.99 USD",
+      "url": "https://cha0smagicklabs.com/books/complete-practical-treatise-magical-servitors-pdf.html",
+      "funnel": "https://cha0smagicklabs.com/books/complete-practical-treatise-magical-servitors-pdf.html",
+      "checkoutUrl": "https://pay.hotmart.com/U108075109V?checkoutMode=2",
+      "hotmartProductId": "U108075109V",
+      "priceSource": "public book page (books/complete-practical-treatise-magical-servitors-pdf.html)",
+      "checkoutStatus": "checkout_url_observed_in_page_sale_unverified",
+      "tags": [
+        "servitors",
+        "chaos-magick",
+        "practice",
+        "grindho"
+      ],
+      "shortDesc": "The complete grimoire on magical servitors.",
       "image": null
     }
   ],
   "bundle": {
     "name": "Esoteric Books Bundle",
-    "price": "$19.99 USD",
-    "originalPrice": "$40.93 USD",
-    "discountLabel": "51% off",
+    "price": "$24.99 USD",
+    "originalPrice": "$60.91 USD",
+    "discountLabel": "59% off",
     "url": "https://hotmart.com/es/marketplace/productos/bundle-todos-los-libros-esp/V107097103W",
     "funnel": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
     "hotmartProductId": "V107097103W",
     "checkoutStatus": "external_url_observed_sale_unverified",
-    "originalPriceSource": "sum of the 7 public book page prices as of 2026-10-03",
-    "shortDesc": "7 esoteric books at 51% off. Complete occult library bundle.",
-    "image": null
+    "originalPriceSource": "sum of the 9 public book page prices as of 2026-10-21",
+    "shortDesc": "9 esoteric books at 59% off. Complete occult library bundle.",
+    "image": null,
+    "priceSource": "public books-bundle landing page (landing-pages/books-bundle.html), verified 2026-10-21"
   }
 }

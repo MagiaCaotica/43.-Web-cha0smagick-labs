@@ -1,7 +1,7 @@
 {
   "$comment": "Catalogo autoritativo de las apps de Cha0smagick Labs en Google Play. Fuente de verdad única. Si una app no está en este archivo, NO existe: no publiques su ID en ninguna página, email, script de redes sociales ni dato de Pinterest. Verificado por el owner el 2026-09-26 contra el dominio real y por HTTP 200 individual contra play.google.com. scripts/verify_play_catalog.mjs falla si el repo usa un ID que no está aquí.",
-  "verified_at": "2026-09-26",
-  "verified_by": "owner",
+  "verified_at": "2026-10-21",
+  "verified_by": "BrowserOS neo (sesion de Google del owner, ficha publica de Play, hl=es&gl=US)",
   "verification": {
     "play_listing_http_200": "12 de 12 comprobadas una por una contra https://play.google.com/store/apps/details?id=<package>",
     "listing_state": "todas en produccion, fichas completas (atribucion del owner)",
@@ -21,12 +21,15 @@
       "package": "com.cha0smagick.sigilgeneratorfinal",
       "page": "apps/arcana-goetia.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "Arcana Goetia (Grimoire Goetia)",
         "rating": null,
-        "rating_count": 0,
+        "rating_count": null,
         "installs_tier": "50+",
-        "price_usd": "3.99"
+        "price_usd": "3.99",
+        "store_title_es": "Arcana Goetia: 72 Espiritus",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.cha0smagick.sigilgeneratorfinal"
       }
     },
     {
@@ -34,12 +37,15 @@
       "package": "com.cha0smagicklabs.astralchart",
       "page": "apps/astral-lab.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "Astral Lab",
         "rating": null,
-        "rating_count": 0,
+        "rating_count": null,
         "installs_tier": "5+",
-        "price_usd": "3.99"
+        "price_usd": "6.99",
+        "store_title_es": "Astral Lab: Carta Natal",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart"
       }
     },
     {
@@ -47,12 +53,15 @@
       "package": "com.app.goetiansealsgeneratorapp",
       "page": "apps/chaos-sigil-generator.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "Chaos Magick Sigil Generator",
-        "rating": 5.0,
-        "rating_count": 22,
+        "rating": 5,
+        "rating_count": 23,
         "installs_tier": "50+",
-        "price_usd": "3.99"
+        "price_usd": "3.99",
+        "store_title_es": "Generador de Sigilos Caos",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.app.goetiansealsgeneratorapp"
       }
     },
     {
@@ -60,12 +69,15 @@
       "package": "com.cha0smagick.dreammachine",
       "page": "apps/dream-machine.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "Dream Machine",
         "rating": null,
-        "rating_count": 0,
+        "rating_count": null,
         "installs_tier": "10+",
-        "price_usd": "3.99"
+        "price_usd": "3.99",
+        "store_title_es": "Dreamachine: Lucidez con IA",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.cha0smagick.dreammachine"
       }
     },
     {
@@ -73,12 +85,15 @@
       "package": "com.cha0smagicklabs.eerieroads",
       "page": "apps/eerieroads.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "Eerie Roads",
         "rating": null,
-        "rating_count": 0,
+        "rating_count": null,
         "installs_tier": "1+",
-        "price_usd": "9.99"
+        "price_usd": "9.99",
+        "store_title_es": "Eerie Roads: Rutas Malditas",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.eerieroads"
       }
     },
     {
@@ -86,12 +101,15 @@
       "package": "com.app.ichingoracle",
       "page": "apps/iching-oracle.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "I Ching Oracle",
         "rating": null,
-        "rating_count": 0,
+        "rating_count": null,
         "installs_tier": "10+",
-        "price_usd": "3.99"
+        "price_usd": "3.99",
+        "store_title_es": "I Ching: Guia de Hexagramas",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.app.ichingoracle"
       }
     },
     {
@@ -99,12 +117,17 @@
       "package": "com.cha0smagicklabs.luciddreamer",
       "page": "apps/lucid-dream.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "Lucid Dream",
         "rating": null,
-        "rating_count": 0,
-        "installs_tier": "10+",
-        "price_usd": "9.99"
+        "rating_count": null,
+        "installs_tier": "0+",
+        "price_usd": "9.99",
+        "store_title_es": "Lucidez: Proyeccion Astral",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer",
+        "promo_price_usd": "8.99",
+        "promo_note": "Promocion activa en Play el 2026-10-21: el boton muestra 8.99 USD. El precio de lista es 9.99 USD."
       }
     },
     {
@@ -112,12 +135,15 @@
       "package": "com.lunarapp.app",
       "page": "apps/lunar-phase-calculator.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "Moon Phases",
         "rating": null,
-        "rating_count": 0,
+        "rating_count": null,
         "installs_tier": "10+",
-        "price_usd": "3.99"
+        "price_usd": "3.99",
+        "store_title_es": "Fase Lunar: Calendario",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.lunarapp.app"
       }
     },
     {
@@ -125,12 +151,15 @@
       "package": "com.cha0smagicklabs.noctemapp",
       "page": "apps/noctem-tools.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "NOCTEM",
         "rating": null,
-        "rating_count": 0,
+        "rating_count": null,
         "installs_tier": "10+",
-        "price_usd": "14.99"
+        "price_usd": "14.99",
+        "store_title_es": "NOCTEM: Kit Cazafantasmas",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.noctemapp"
       }
     },
     {
@@ -138,12 +167,15 @@
       "package": "com.japps.norse_oracle",
       "page": "apps/norse-rune-oracle.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "Norse Rune Oracle",
         "rating": null,
-        "rating_count": 0,
+        "rating_count": null,
         "installs_tier": "10+",
-        "price_usd": "3.99"
+        "price_usd": "3.99",
+        "store_title_es": "Oraculo Runico Nordico Futhark",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.japps.norse_oracle"
       }
     },
     {
@@ -151,12 +183,17 @@
       "package": "com.cha0smagicklabs.zenercards",
       "page": "apps/psi-gym.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "PSI GYM",
         "rating": null,
-        "rating_count": 0,
+        "rating_count": null,
         "installs_tier": "10+",
-        "price_usd": "3.99"
+        "price_usd": "3.99",
+        "store_title_es": "PSI GYM: Zener e Intuicion",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards",
+        "promo_price_usd": "2.99",
+        "promo_note": "Promocion activa en Play el 2026-10-21: el boton muestra 2.99 USD. El precio de lista es 3.99 USD."
       }
     },
     {
@@ -164,12 +201,15 @@
       "package": "com.cha0smagick.unofficialraiderwaite",
       "page": "apps/unofficial-rider-waite-tarot.html",
       "play": {
-        "$comment": "Verificado el 2026-10-19 via BrowserOS neo sobre la ficha publica de Play Store (aggregateRating del JSON-LD). rating=null significa que Play no muestra nota publica (por debajo del umbral o sin rese�as).",
+        "$comment": "Verificado el 2026-10-21 via BrowserOS neo sobre la ficha publica de Play Store (hl=es&gl=US): titulo del h1, boton de compra, aggregateRating y tier de instalaciones. price_usd es el precio de LISTA; promo_price_usd, si existe, es una promocion activa en ese momento.",
         "store_title": "Tarot Rider Waite",
         "rating": null,
-        "rating_count": 0,
+        "rating_count": null,
         "installs_tier": "10+",
-        "price_usd": "9.99"
+        "price_usd": "9.99",
+        "store_title_es": "Tarot: Lector Rider-Waite",
+        "listing_state": "live",
+        "play_url": "https://play.google.com/store/apps/details?id=com.cha0smagick.unofficialraiderwaite"
       }
     }
   ],

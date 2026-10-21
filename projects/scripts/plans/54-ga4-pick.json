@@ -1,0 +1,11 @@
+{
+  "steps": [
+    {
+      "tool": "run",
+      "args": {
+        "code": "const pages = await browser.pages.list();\nconst ga = pages.filter(x => (x.url || '').includes('analytics.google.com'));\nif (!ga.length) { console.log('NO GA4 TAB'); return 'no'; }\nconst p = await browser.page(ga[ga.length - 1].pageId);\nawait p.evaluate(() => { const b = Array.from(document.querySelectorAll('button,[role=button]')).find(x => /Todas las cuentas|accounts/i.test(String(x.innerText||''))); if (b) b.click(); });\nawait sleep(3500);\nconst clicked = await p.evaluate(() => { try { const els = Array.from(document.querySelectorAll('[role=option],[role=menuitem],li,[class*=account],[class*=property]')); const t = els.find(e => /Cha0smagick Labs/i.test(String(e.innerText||''))); if (t) { t.click(); return String(t.innerText||'').replace(/\\s+/g,' ').trim().slice(0,60); } return 'no-encontrado'; } catch (e) { return 'err'; } });\nconsole.log('CLICK ' + clicked);\nawait sleep(9000);\nconst raw = await p.evaluate(() => { try { return { url: String(location.href).slice(0, 100), head: String((document.body&&document.body.textContent)||'').replace(/\\s+/g,' ').slice(0, 220) }; } catch (e) { return { err: String(e.message).slice(0,60) } } });\nconsole.log('AHORA ' + JSON.stringify((raw && 'value' in raw) ? raw.value : raw));\nreturn 'ok';"
+      },
+      "max": 10000
+    }
+  ]
+}
