@@ -74,7 +74,15 @@ descripción**. La descripción que hay que pegar es la misma en todos (ver §5)
 
 ---
 
-## 4. Reddit — el directorio de grupos de grupos
+## 4. Reddit — DESCARTADO (baneado)
+
+> **No es una vía viable**: la cuenta está baneada de varios subreddits de magia del caos
+> y en otros la autopromoción está prohibida por norma (r/witchcraft: *"Self promotion
+> & spam"* y *"AI generated content"*; r/LucidDreaming: *"No advertising!"*;
+> r/TelegramR4R: *"Exchanges for money, goods, or services are strictly prohibited"*).
+> Se leyeron las reglas de los 12 subs candidatos con el navegador y solo 2 permitían
+> autopromoción, y en ambos el riesgo de baneo era alto. **No se publica nada en Reddit.**
+
 
 Reddit **sí** es accesible desde esta red (r/Groups4Reddit, r/Telegram cargan),
 pero **este perfil de navegador no tiene sesión de Reddit iniciada**, así que no
