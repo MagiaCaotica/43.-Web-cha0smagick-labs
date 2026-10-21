@@ -284,10 +284,15 @@ Mientras tanto, **este repo ya no tiene ese fallo**: en
 
 ### 8.3 Estado de hoy
 
-- **Enviados hoy: 30/50** (el runner sigue; se para solo al llegar a 50).
-- **Acumulado**: 36 (plantilla vieja) + 30 (copy ad-hoc) = 66 enviados.
+- **Enviados hoy: 45/50** (el runner sigue; se para solo al llegar a 50 y el
+  presupuesto rota solo al día siguiente).
+- **Acumulado**: 36 con la plantilla vieja + 45 con el copy ad-hoc = 81 enviados.
 - **Watchdog**: 0 quejas de spam detectadas.
-- **Pendientes en cola**: 717.
+- **Pendientes en cola**: ~700.
+- **Telegram**: 10 posts en el canal oficial (IDs 121-130) con botón al grupo.
+- **Nota de cumplimiento**: los 42 primeros emails de hoy salieron antes de
+  añadir la dirección postal al pie. A partir de ahí (y desde mañana) todos la
+  llevan. Los 36 de la plantilla vieja no la llevan.
 
 ### 8.4 Cómo continuar (mañana y siguientes días)
 
