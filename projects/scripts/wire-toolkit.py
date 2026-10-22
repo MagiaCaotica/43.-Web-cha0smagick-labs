@@ -21,10 +21,8 @@ for p in sorted(list((ROOT / "tools").glob("*.html")) + list((ROOT / "es" / "too
     if p.name == "index.html":
         continue
     src = p.read_text(encoding="utf-8", errors="ignore")
-    if "<iframe" in src:
-        n["omitidas"] += 1
-        continue
-
+    # las embebidas tambien se conectan: reciben el bloque de confianza, el
+    # camino al producto, el aviso si el iframe no carga y el enlace directo
     original = src
 
     if "toolkit.css" not in src:

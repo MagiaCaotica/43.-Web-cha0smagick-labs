@@ -27,9 +27,9 @@ n = 0
 for p in sorted(list((ROOT / "tools").glob("*.html")) + list((ROOT / "es" / "tools").glob("*.html"))):
     s = p.read_text(encoding="utf-8", errors="ignore")
     o = s
-    s = re.sub(r'(toolkit\.css)\?v=[0-9a-zA-Z]+', rf'\1?v={VERSION}', s)
-    s = re.sub(r'(toolkit\.js)\?v=[0-9a-zA-Z]+', rf'\1?v={VERSION}', s)
-    s = re.sub(r'(atomic-tools\.css)\?v=[0-9a-zA-Z]+', rf'\1?v={VERSION}', s)
+    s = re.sub(r'(toolkit\.css)(?:\?v=[0-9a-zA-Z]+)?', rf'\1?v={VERSION}', s)
+    s = re.sub(r'(toolkit\.js)(?:\?v=[0-9a-zA-Z]+)?', rf'\1?v={VERSION}', s)
+    s = re.sub(r'(atomic-tools\.css)(?:\?v=[0-9a-zA-Z]+)?', rf'\1?v={VERSION}', s)
     if s != o:
         p.write_text(s, encoding="utf-8")
         n += 1

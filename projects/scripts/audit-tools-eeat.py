@@ -43,12 +43,10 @@ for p in sorted(list((ROOT / "tools").glob("*.html")) + list((ROOT / "es" / "too
     if p.name == "index.html":
         continue
     s = p.read_text(encoding="utf-8", errors="ignore")
-    if "<iframe" in s:
-        continue
     nativas.append((p, s))
 
 print("=" * 80)
-print(f"AUDITORIA DE LAS {len(nativas)} HERRAMIENTAS NATIVAS")
+print(f"AUDITORIA DE LAS {len(nativas)} HERRAMIENTAS")
 print("=" * 80)
 
 filas = []
