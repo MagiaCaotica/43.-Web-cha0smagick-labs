@@ -317,6 +317,17 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 - **Aceptación:** auditoría `audit-tools-eeat.py` sin hallazgos en visual, práctico ni E-E-A-T; valor propio (límites, expectativa y siguiente paso) en las 58; nada de desbordamiento horizontal.
 - **Evidencia:** `docs/herramientas-gratis-2026-10-21.md`, `projects/scripts/audit-tools-eeat.py`, `projects/scripts/bump-toolkit-version.py`.
 
+
+### [x] P1-14 - Cerrar el embudo: snippets que clicquean, precio visible y analitica con allowlist real
+
+- **Responsable:** SEO / Web / Growth.
+- **Depende de:** P1-12.
+- **Entregable:** snippets reescritos en las paginas que ya rankean en pagina 1 sin clics; barra de precio fija en las 12 fichas de app y en la landing del bundle; oferta no disponible sin escasez fabricada y fuera del indice; allowlist de eventos aplicada en las 1.011 paginas; assets versionados por hash.
+- **Debe hacer:** reescribir titulo y descripcion con la intencion real de la query y los nombres de las entidades; no prometer en el titulo lo que la pagina no sostiene; mantener el precio a la vista; que ningun evento llegue a GA4 sin pasar la allowlist y sin duplicarse.
+- **No debe hacer:** escribir 'we tested' si no se ha probado; dejar una cuenta atras que se reinicie con cada recarga; anadir el bridge sin quitar antes el envio duplicado por gtag; tocar el precio a mano en vez de tomarlo de la ficha verificada.
+- **Aceptacion:** en vivo, un evento llega una vez al dataLayer y el campo fuera de la allowlist se descarta; la barra sticky se ve en las 12 fichas de app; la pagina de la oferta pendiente no esta indexada y no tiene contador.
+- **Evidencia:** `docs/herramientas-gratis-2026-10-21.md` (secciones 11 a 13), `projects/scripts/rewrite-snippets.py`, `projects/scripts/version-assets.py`, `projects/scripts/add-analytics-bridge.py`.
+
 ---
 
 ---
