@@ -1,0 +1,434 @@
+/* =============================================================================
+   TOOLKIT: capa comun de las 58 herramientas nativas.
+
+   Dos cosas a la vez:
+   1. Los componentes nuevos de valor (acciones del resultado, lecturas
+      guardadas, siguiente paso, barra movil).
+   2. La elevacion visual de las 15 herramientas propias, que hasta ahora
+      usaban el CSS general del sitio y se veian como formularios dentro de
+      una pagina. Aqui pasan a usar el mismo lenguaje que las 40 del motor
+      comun: negro profundo, oro, tarjetas con sombra, jerarquia clara.
+   ========================================================================== */
+
+:root {
+  --tk-bg: #050505;
+  --tk-panel: #101010;
+  --tk-panel-2: #16130d;
+  --tk-line: #2a2620;
+  --tk-line-strong: #3d3527;
+  --tk-gold: #d6ad55;
+  --tk-gold-soft: #f0d28a;
+  --tk-text: #f6f2e9;
+  --tk-muted: #a9a196;
+  --tk-dim: #6f6a62;
+  --tk-radius: 14px;
+  --tk-radius-sm: 9px;
+}
+
+/* ------------------------------------------------------------- tarjetas */
+.tk-card {
+  background: linear-gradient(180deg, var(--tk-panel), #0d0d0d);
+  border: 1px solid var(--tk-line);
+  border-radius: var(--tk-radius);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .5);
+  margin: 1.4rem 0;
+  padding: clamp(1.1rem, 3.2vw, 2rem);
+}
+
+.tk-card h2 {
+  color: var(--tk-text);
+  font-size: clamp(1.3rem, 2.9vw, 1.7rem);
+  font-weight: 750;
+  letter-spacing: -.012em;
+  line-height: 1.2;
+  margin: 0 0 .55rem;
+}
+
+.tk-muted {
+  color: var(--tk-muted);
+  font-size: .95rem;
+  line-height: 1.65;
+  margin: 0 0 1rem;
+}
+
+/* -------------------------------------------------------------- botones */
+.tk-btn {
+  background: linear-gradient(180deg, var(--tk-gold-soft), var(--tk-gold));
+  border: 1px solid var(--tk-gold);
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(214, 173, 85, .18);
+  color: #17120a;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  font-weight: 800;
+  line-height: 1.2;
+  min-height: 46px;
+  padding: .78rem 1.3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .14s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.tk-btn:hover {
+  box-shadow: 0 10px 28px rgba(214, 173, 85, .3);
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+
+.tk-btn-ghost {
+  background: transparent;
+  border-color: var(--tk-line-strong);
+  box-shadow: none;
+  color: var(--tk-gold);
+  font-weight: 700;
+  min-height: 42px;
+  padding: .55rem 1rem;
+}
+
+.tk-btn-ghost:hover {
+  background: rgba(214, 173, 85, .08);
+  border-color: var(--tk-gold);
+  box-shadow: none;
+}
+
+.tk-btn:focus-visible,
+.tk-btn:focus {
+  border-color: var(--tk-gold);
+  box-shadow: 0 0 0 3px rgba(214, 173, 85, .32);
+  outline: none;
+}
+
+/* ------------------------------------------------- acciones del resultado */
+.tk-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--tk-line);
+}
+
+.tk-status {
+  color: var(--tk-success);
+  font-size: .88rem;
+  flex-basis: 100%;
+  min-height: 1.2em;
+}
+
+/* --------------------------------------------------- lecturas guardadas */
+.tk-saved {
+  border-left: 3px solid var(--tk-gold);
+}
+
+.tk-saved-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tk-saved-list li {
+  align-items: center;
+  border-top: 1px solid var(--tk-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  padding: .7rem 0;
+}
+
+.tk-saved-title {
+  color: var(--tk-text);
+  flex: 1 1 200px;
+  font-weight: 650;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tk-saved-date {
+  color: var(--tk-dim);
+  font-size: .82rem;
+}
+
+/* ------------------------------------------------------------ siguiente */
+.tk-next {
+  background:
+    radial-gradient(720px 260px at 10% -50%, rgba(214, 173, 85, .1), transparent 70%),
+    linear-gradient(180deg, var(--tk-panel-2), #0c0c0c);
+  border-color: var(--tk-line-strong);
+  border-left: 3px solid var(--tk-gold);
+}
+
+.tk-next-value {
+  border-left: 2px solid var(--tk-gold);
+  color: var(--tk-text);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 1rem 0 1.3rem;
+  padding-left: .9rem;
+}
+
+.tk-next .tk-btn {
+  width: 100%;
+}
+
+/* --------------------------------------------------------- barra movil */
+.tk-mobilebar {
+  align-items: center;
+  background: rgba(10, 9, 7, .96);
+  border-top: 1px solid var(--tk-line-strong);
+  bottom: 0;
+  display: flex;
+  gap: .8rem;
+  left: 0;
+  padding: .6rem .9rem calc(.6rem + env(safe-area-inset-bottom));
+  position: fixed;
+  right: 0;
+  z-index: 60;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.tk-mobilebar-label {
+  color: var(--tk-muted);
+  font-size: .82rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.tk-mobilebar .tk-btn {
+  flex: 1;
+}
+
+/* =============================================================================
+   ELEVACION DE LAS HERRAMIENTAS PROPIAS (misma familia visual)
+   ========================================================================== */
+
+body:has(.sticky-conversion-bar) {
+  background:
+    radial-gradient(1100px 520px at 50% -180px, rgba(214, 173, 85, .07), transparent 70%),
+    #050505;
+}
+
+body:has(.sticky-conversion-bar) .hero {
+  border-bottom: 1px solid var(--tk-line);
+  margin: 0 0 1.6rem;
+  padding: 0 0 1.6rem;
+}
+
+body:has(.sticky-conversion-bar) .hero h1 {
+  color: var(--tk-text);
+  font-size: clamp(2rem, 5.2vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -.022em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+body:has(.sticky-conversion-bar) .hero h1::after {
+  background: linear-gradient(90deg, var(--tk-gold), transparent);
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 1rem;
+  width: 62px;
+}
+
+body:has(.sticky-conversion-bar) .hero p {
+  color: var(--tk-muted);
+  font-size: clamp(1rem, 2.2vw, 1.08rem);
+  line-height: 1.65;
+  max-width: 64ch;
+}
+
+body:has(.sticky-conversion-bar) .benefits,
+body:has(.sticky-conversion-bar) .compare-section,
+body:has(.sticky-conversion-bar) .faq-answer,
+body:has(.sticky-conversion-bar) .cta-box {
+  background: linear-gradient(180deg, var(--tk-panel), #0d0d0d);
+  border: 1px solid var(--tk-line);
+  border-radius: var(--tk-radius);
+  margin: 1.3rem 0;
+  padding: clamp(1.05rem, 3vw, 1.9rem);
+}
+
+body:has(.sticky-conversion-bar) .section-title {
+  color: var(--tk-text);
+  font-size: clamp(1.3rem, 2.9vw, 1.7rem);
+  font-weight: 750;
+  letter-spacing: -.012em;
+}
+
+body:has(.sticky-conversion-bar) .benefits li {
+  color: var(--tk-muted);
+  line-height: 1.6;
+  margin-bottom: .5rem;
+}
+
+body:has(.sticky-conversion-bar) .benefits li::marker {
+  color: var(--tk-gold);
+}
+
+body:has(.sticky-conversion-bar) .btn {
+  background: linear-gradient(180deg, var(--tk-gold-soft), var(--tk-gold));
+  border: 1px solid var(--tk-gold);
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(214, 173, 85, .18);
+  color: #17120a;
+  font-weight: 800;
+  min-height: 46px;
+  padding: .7rem 1.25rem;
+  transition: transform .14s ease, box-shadow .18s ease;
+}
+
+body:has(.sticky-conversion-bar) .btn:hover {
+  box-shadow: 0 10px 28px rgba(214, 173, 85, .3);
+  transform: translateY(-1px);
+}
+
+body:has(.sticky-conversion-bar) .btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(214, 173, 85, .32);
+  outline: none;
+}
+
+body:has(.sticky-conversion-bar) .btn.secondary,
+body:has(.sticky-conversion-bar) .btn-secondary {
+  background: transparent;
+  border-color: var(--tk-line-strong);
+  box-shadow: none;
+  color: var(--tk-gold);
+}
+
+body:has(.sticky-conversion-bar) label {
+  color: var(--tk-text);
+  font-weight: 700;
+}
+
+body:has(.sticky-conversion-bar) input:not([type="checkbox"]),
+body:has(.sticky-conversion-bar) select,
+body:has(.sticky-conversion-bar) textarea {
+  background: #08080a;
+  border: 1px solid var(--tk-line-strong);
+  border-radius: var(--tk-radius-sm);
+  box-sizing: border-box;
+  color: var(--tk-text);
+  font: inherit;
+  min-height: 48px;
+  padding: .7rem .85rem;
+  width: 100%;
+}
+
+body:has(.sticky-conversion-bar) input:focus,
+body:has(.sticky-conversion-bar) select:focus,
+body:has(.sticky-conversion-bar) textarea:focus {
+  border-color: var(--tk-gold);
+  box-shadow: 0 0 0 3px rgba(214, 173, 85, .32);
+  outline: none;
+}
+
+/* el resultado de las propias: mismo tratamiento que el motor comun */
+body:has(.sticky-conversion-bar) .card-display,
+body:has(.sticky-conversion-bar) .result-grid,
+body:has(.sticky-conversion-bar) .results-grid,
+body:has(.sticky-conversion-bar) .reading-summary,
+body:has(.sticky-conversion-bar) .rune-result,
+body:has(.sticky-conversion-bar) .answer-display,
+body:has(.sticky-conversion-bar) .candle-display,
+body:has(.sticky-conversion-bar) .sigil-display,
+body:has(.sticky-conversion-bar) .timer-display {
+  background: rgba(0, 0, 0, .38);
+  border: 1px solid var(--tk-line);
+  border-radius: var(--tk-radius-sm);
+  color: var(--tk-gold-soft);
+  font-size: 1.12rem;
+  font-weight: 750;
+  line-height: 1.35;
+  padding: .9rem 1rem;
+}
+
+body:has(.sticky-conversion-bar) .result-item {
+  background: rgba(0, 0, 0, .38);
+  border: 1px solid var(--tk-line);
+  border-radius: var(--tk-radius-sm);
+  padding: .85rem .95rem;
+}
+
+body:has(.sticky-conversion-bar) .result-item .label {
+  color: var(--tk-dim);
+  display: block;
+  font-size: .76rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+body:has(.sticky-conversion-bar) .result-item .value {
+  color: var(--tk-gold-soft);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+body:has(.sticky-conversion-bar) .sticky-conversion-bar {
+  background: rgba(10, 9, 7, .96);
+  border-top: 1px solid var(--tk-line-strong);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+body:has(.sticky-conversion-bar) .sticky-conversion-bar .price {
+  color: var(--tk-gold-soft);
+  font-weight: 800;
+}
+
+/* ------------------------------------------------------------------ movil */
+@media (max-width: 640px) {
+  .tk-actions .tk-btn-ghost {
+    flex: 1 1 calc(50% - .3rem);
+  }
+
+  .tk-saved-list li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .4rem;
+  }
+
+  .tk-saved-list li .tk-btn-ghost {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+
+  .tk-btn,
+  body:has(.sticky-conversion-bar) .btn {
+    transition: none !important;
+  }
+
+  .tk-btn:hover,
+  body:has(.sticky-conversion-bar) .btn:hover {
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------- impresion */
+@media print {
+  .tk-actions,
+  .tk-next,
+  .tk-saved,
+  .tk-mobilebar,
+  .sticky-conversion-bar,
+  .cta-box,
+  .funnel-testimonial,
+  body:has(.sticky-conversion-bar) .compare-section {
+    display: none !important;
+  }
+
+  body:has([data-atomic-tool]),
+  body:has(.sticky-conversion-bar) {
+    background: #fff !important;
+    color: #111 !important;
+  }
+}

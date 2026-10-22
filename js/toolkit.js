@@ -1,0 +1,362 @@
+/* =============================================================================
+   TOOLKIT: la capa de valor comun a todas las herramientas gratuitas.
+
+   Que la herramienta sea gratis no significa que el resultado se quede
+   dentro de la pagina. Este script anade tres cosas a CUALQUIER herramienta
+   (las del motor comun y las propias):
+
+   1. ACCIONES DE RESULTADO: copiar, descargar el texto, descargar la imagen
+      cuando hay lienzo, e imprimir. Sin esto, el resultado de un generador
+      de sigilos es un juguete: no te lo puedes llevar.
+   2. LECTURAS GUARDADAS: lo que se guarda tiene que poder recuperarse, con
+      fecha, y poder abrirse otra vez. Antes se guardaba en el navegador y no
+      habia forma de volver a verlo.
+   3. SIGUIENTE PASO: que hacer con el resultado, y cual es la version que
+      hace esto mejor. Sin una puerta, la herramienta gratuita es un callejon
+      sin salida.
+
+   Ademas: una barra de accion fija en movil, para no tener que subir a
+   pulsar el boton.
+
+   Se carga en todas las herramientas nativas. No depende de nada.
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  var TOOLS = {};       // slug -> { result, next, value, app }
+  // La ruta de datos depende de la profundidad: /tools/x.html esta a un
+  // nivel del raiz y /es/tools/x.html a dos.
+  var UP = (function () {
+    var dirs = location.pathname.split('/').length - 2;
+    var s = '';
+    for (var i = 0; i < dirs; i++) s += '../';
+    return s || './';
+  })();
+  var DATA_URL = UP + 'data/toolkit.json';
+  var slug = (function () {
+    var m = location.pathname.match(/\/tools\/([^/]+)\.html/i);
+    return m ? m[1].toLowerCase() : '';
+  })();
+
+  /* --------------------------------------------------------- utilidades */
+  function $(sel, root) { return (root || document).querySelector(sel); }
+  function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function store(key, value) {
+    try {
+      if (value === undefined) {
+        var raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : null;
+      }
+      localStorage.setItem(key, JSON.stringify(value));
+      return true;
+    } catch (e) { return false; }
+  }
+  function stamp() {
+    var d = new Date();
+    return d.toLocaleDateString('es-ES', { day: '2-digit', month: 'short', year: 'numeric' }) +
+      ' ' + d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  /* ------------------------------------------------- area de resultado */
+  function resultArea() {
+    var meta = TOOLS[slug] || {};
+    if (meta.result) {
+      var r = $(meta.result);
+      if (r) return r;
+    }
+    var cand = $('#atomic-result, .tool-result, .result-panel, .results-panel, .result, .output');
+    for (var i = 0; i < cand.length; i++) {
+      if (cand[i] && cand[i].offsetParent !== null) return cand[i];
+    }
+    return cand[0] || null;
+  }
+
+  function resultText(area) {
+    if (!area) return '';
+    var clone = area.cloneNode(true);
+    $$('button, .tk-actions, .tk-saved, script, style', clone).forEach(function (n) { n.remove(); });
+    return (clone.innerText || clone.textContent || '').replace(/\n{3,}/g, '\n\n').trim();
+  }
+
+  /* ------------------------------------------------------ acciones */
+  function buildActions(area) {
+    if (!area) return;
+
+    // Si el area ya tiene una fila de acciones (la del motor comun), se
+    // anaden los botones ahi en vez de crear una segunda fila.
+    var existing = $('.atomic-actions', area);
+    var bar = existing || el('div', 'tk-actions');
+    if (!existing) {
+      bar.setAttribute('role', 'group');
+      bar.setAttribute('aria-label', 'Acciones sobre el resultado');
+    }
+    if (existing && existing.dataset.tkDone) return;
+    if (existing) existing.dataset.tkDone = '1';
+
+    var status = el('span', 'tk-status');
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
+
+    function feedback(msg) {
+      status.textContent = msg;
+      window.setTimeout(function () { status.textContent = ''; }, 6000);
+    }
+
+    var txt = resultText(area);
+
+    var copy = el('button', 'tk-btn tk-btn-ghost', 'Copiar resultado');
+    copy.type = 'button';
+    copy.addEventListener('click', function () {
+      var text = resultText(area);
+      if (!text) { feedback('No hay resultado que copiar todavia.'); return; }
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+        document.body.removeChild(ta);
+        feedback(ok ? 'Resultado copiado al portapapeles.' : 'No se pudo copiar. Usa Descargar texto.');
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          feedback('Resultado copiado al portapapeles.');
+        }, fallback);
+      } else {
+        fallback();
+      }
+    });
+    bar.appendChild(copy);
+
+    var dl = el('button', 'tk-btn tk-btn-ghost', 'Descargar texto');
+    dl.type = 'button';
+    dl.addEventListener('click', function () {
+      var text = resultText(area);
+      if (!text) { feedback('No hay resultado que descargar todavia.'); return; }
+      var head = (TOOLS[slug] && TOOLS[slug].name) || 'Resultado';
+      var blob = new Blob([head + '\n' + stamp() + '\n\n' + text + '\n\ncha0smagicklabs.com/tools/' + slug + '\n'], { type: 'text/plain;charset=utf-8' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = slug + '-resultado.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.setTimeout(function () { URL.revokeObjectURL(a.href); }, 1500);
+      feedback('Texto descargado.');
+    });
+    bar.appendChild(dl);
+
+    var canvas = $('canvas', area);
+    if (canvas) {
+      var png = el('button', 'tk-btn tk-btn-ghost', 'Descargar imagen');
+      png.type = 'button';
+      png.addEventListener('click', function () {
+        try {
+          var url = canvas.toDataURL('image/png');
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = slug + '.png';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          feedback('Imagen descargada.');
+        } catch (e) {
+          feedback('El navegador no permite exportar este lienzo. Usa Captura de pantalla.');
+        }
+      });
+      bar.appendChild(png);
+    }
+
+    var print = el('button', 'tk-btn tk-btn-ghost', 'Imprimir');
+    print.type = 'button';
+    print.addEventListener('click', function () { window.print(); });
+    // El motor comun ya pone su propio boton de imprimir dentro del
+    // resultado: no se duplica.
+    var yaHayImprimir = $$('button', area).some(function (b) {
+      return /imprimir|print/i.test(b.textContent || '');
+    });
+    if (!yaHayImprimir) bar.appendChild(print);
+
+    bar.appendChild(status);
+    // Si aun no hay resultado, la barra se oculta: un boton de "copiar" sobre
+    // un area vacia parece un fallo.
+    if (!resultText(area)) bar.hidden = true;
+    if (!existing) area.appendChild(bar);
+  }
+
+  /* ------------------------------------------- lecturas guardadas */
+  var KEY = 'tk:reading:' + slug;
+
+  function buildSaved() {
+    if (document.querySelector('.tk-saved')) return;
+    var list = store(KEY);
+    if (!list || !list.length) return;
+
+    var section = el('section', 'tk-card tk-saved');
+    var h = el('h2', null, 'Tus lecturas guardadas');
+    section.appendChild(h);
+    var p = el('p', 'tk-muted', 'Se guardan solo en este navegador. No se envian a ningun sitio.');
+    section.appendChild(p);
+
+    var ul = el('ul', 'tk-saved-list');
+    list.slice().reverse().forEach(function (item) {
+      var li = el('li');
+      var b = el('button', 'tk-btn tk-btn-ghost tk-saved-open', 'Abrir');
+      b.type = 'button';
+      b.addEventListener('click', function () {
+        var area = resultArea();
+        if (!area) return;
+        area.innerHTML = item.html || '';
+        area.hidden = false;
+        buildActions(area);
+        area.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+      li.appendChild(b);
+      var t = el('span', 'tk-saved-title', item.title || 'Lectura');
+      li.appendChild(t);
+      var d = el('span', 'tk-saved-date', item.at || '');
+      li.appendChild(d);
+      var del = el('button', 'tk-btn tk-btn-ghost tk-saved-del', 'Borrar');
+      del.type = 'button';
+      del.addEventListener('click', function () {
+        var rest = (store(KEY) || []).filter(function (x) { return x.id !== item.id; });
+        store(KEY, rest);
+        section.remove();
+        if (!rest.length) return;
+        buildSaved();
+      });
+      li.appendChild(del);
+      ul.appendChild(li);
+    });
+    section.appendChild(ul);
+    var main = $('main') || document.body;
+    main.appendChild(section);
+  }
+
+  function watchSaves() {
+    // El motor comun guarda con su propio boton; se intercepta para que
+    // tambien aparezca en la lista.
+    var main = $('main') || document.body;
+    var observer = new MutationObserver(function () {
+      var btn = $('#atomic-save');
+      if (!btn || btn.dataset.tkHooked) return;
+      btn.dataset.tkHooked = '1';
+      btn.addEventListener('click', function () {
+        window.setTimeout(function () {
+          var area = resultArea();
+          if (!area) return;
+          var list = store(KEY) || [];
+          list.push({
+            id: Date.now(),
+            at: stamp(),
+            title: ($('h2', area) ? $('h2', area).textContent : 'Lectura'),
+            html: area.innerHTML
+          });
+          if (list.length > 12) list = list.slice(-12);
+          store(KEY, list);
+          buildSaved();
+        }, 60);
+      });
+    });
+    observer.observe(main, { childList: true, subtree: true });
+  }
+
+  /* ---------------------------------------------------- siguiente paso */
+  function buildNext() {
+    var meta = TOOLS[slug];
+    if (!meta || !meta.next) return;
+    if (document.querySelector('.tk-next')) return;
+
+    var section = el('section', 'tk-card tk-next');
+    var h = el('h2', null, meta.next.title || 'Y ahora que');
+    section.appendChild(h);
+    if (meta.next.text) section.appendChild(el('p', 'tk-muted', meta.next.text));
+
+    if (meta.value) {
+      var v = el('p', 'tk-next-value', meta.value);
+      section.appendChild(v);
+    }
+
+    if (meta.next.link && meta.next.label) {
+      var a = el('a', 'tk-btn', meta.next.label);
+      a.href = meta.next.link;
+      if (meta.next.external) {
+        a.target = '_blank';
+        a.rel = 'noopener';
+      }
+      section.appendChild(a);
+    }
+    var main = $('main') || document.body;
+    main.appendChild(section);
+  }
+
+  /* ------------------------------------------- barra de accion movil */
+  function buildMobileBar() {
+    if (window.matchMedia('(min-width: 761px)').matches) return;
+    var form = $('#atomic-form');
+    if (!form || document.querySelector('.tk-mobilebar')) return;
+    var submit = $('.atomic-actions .atomic-button[type="submit"]', form);
+    if (!submit) return;
+
+    var bar = el('div', 'tk-mobilebar');
+    var label = el('span', 'tk-mobilebar-label', 'Tu lectura');
+    var b = el('button', 'tk-btn', submit.textContent || 'Generar resultado');
+    b.type = 'button';
+    b.addEventListener('click', function () {
+      var status = $('#atomic-form-status');
+      if (status) status.textContent = 'Revisa los campos marcados y pulsa Generar resultado.';
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    bar.appendChild(label);
+    bar.appendChild(b);
+    document.body.appendChild(bar);
+  }
+
+  /* ------------------------------------------------------ arranque */
+  function enhance() {
+    buildActions(resultArea());
+    buildSaved();
+    buildNext();
+    buildMobileBar();
+  }
+
+  /* El motor comun reescribe el HTML del resultado al enviar el formulario:
+     si no se observase, la barra de acciones se perderia en cada calculo. */
+  function watchResult() {
+    var area = resultArea();
+    if (!area || area.dataset.tkWatched) return;
+    area.dataset.tkWatched = '1';
+    var pending = null;
+    new MutationObserver(function () {
+      window.clearTimeout(pending);
+      pending = window.setTimeout(function () {
+        var bar = $('.tk-actions', area);
+        if (bar) bar.remove();
+        buildActions(area);
+        var nuevo = $('.tk-actions', area);
+        if (nuevo) nuevo.hidden = !resultText(area);
+      }, 60);
+    }).observe(area, { childList: true, subtree: true });
+  }
+
+  fetch(DATA_URL)
+    .then(function (r) { return r.ok ? r.json() : { tools: {} }; })
+    .then(function (data) {
+      TOOLS = (data && data.tools) || {};
+      enhance();
+      watchResult();
+      watchSaves();
+      document.documentElement.classList.add('tk-ready');
+    })
+    .catch(function () { enhance(); });
+})();
