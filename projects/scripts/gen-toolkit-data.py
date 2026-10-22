@@ -235,7 +235,7 @@ def main():
             },
         }
 
-    out = {"versión": 2, "site": SITE, "tools": tools}
+    out = {"version": 2, "site": SITE, "tools": tools}
     (ROOT / "data" / "toolkit.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"data/toolkit.json: {len(tools)} herramientas con bloque E-E-A-T")
 
