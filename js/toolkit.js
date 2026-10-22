@@ -32,7 +32,11 @@
     for (var i = 0; i < dirs; i++) s += '../';
     return s || './';
   })();
-  var DATA_URL = UP + 'data/toolkit.json';
+  // Version del catalogo de herramientas: hay que subirla cuando cambie
+  // data/toolkit.json, o el CDN sirvira el JSON viejo y el bloque de
+  // confianza saldra vacio.
+  var DATA_VERSION = '20261021b';
+  var DATA_URL = UP + 'data/toolkit.json?v=' + DATA_VERSION;
   var slug = (function () {
     var m = location.pathname.match(/\/tools\/([^/]+)\.html/i);
     return m ? m[1].toLowerCase() : '';
