@@ -27,6 +27,10 @@ ASSETS = {
     "atomic-tools.css": "css/atomic-tools.css",
     "toolkit.css": "css/toolkit.css",
     "toolkit.js": "js/toolkit.js",
+    "analytics-bridge.js": "js/analytics-bridge.js",
+    "shared.min.js": "js/shared.min.js",
+    "conversion.min.js": "js/conversion.min.js",
+    "atomic-tools.js": "js/atomic-tools.js",
 }
 
 
@@ -54,7 +58,7 @@ for p in sorted(ROOT.rglob("*.html")):
         return f'{prefijo}{nombre}?v={v}"'
 
     src = re.sub(r'(href="[^"]*?)(style\.min\.css|wisdom\.css|atomic-tools\.css|toolkit\.css)(?:\?v=[0-9a-zA-Z]+)?"', fix, src)
-    src = re.sub(r'(src="[^"]*?)(toolkit\.js)(?:\?v=[0-9a-zA-Z]+)?"', fix, src)
+    src = re.sub(r'(src="[^"]*?)(toolkit\.js|analytics-bridge\.js|shared\.min\.js|conversion\.min\.js|atomic-tools\.js)(?:\?v=[0-9a-zA-Z]+)?"', fix, src)
     if src != o:
         p.write_text(src, encoding="utf-8")
         n["paginas"] += 1
