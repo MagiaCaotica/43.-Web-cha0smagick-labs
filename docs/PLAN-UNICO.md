@@ -306,6 +306,19 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 
 ---
 
+
+### [x] P1-13 — Auditar y elevar las herramientas gratuitas: valor, E-E-A-T y diseño
+
+- **Responsable:** SEO / Web / Editorial.
+- **Depende de:** P1-12.
+- **Entregable:** capa de valor común para las 58 herramientas nativas, con bloque de confianza por herramienta y sistema visual propio (`docs/herramientas-gratis-2026-10-21.md`).
+- **Debe hacer:** que el resultado se pueda copiar, descargar e imprimir; que lo guardado se pueda recuperar; un camino honesto a la versión de pago con la ventaja concreta; declarar el conflicto de intereses; decir qué es y qué NO es cada herramienta; señalar quién la hizo, la política editorial y la fecha de revisión; y que el resultado no se quede dentro de la página.
+- **No debe hacer:** prometer resultados, ocultar que la app recomendada es nuestra, ni rellenar con texto genérico que podría decir cualquier herramienta.
+- **Aceptación:** auditoría `audit-tools-eeat.py` sin hallazgos en visual, práctico ni E-E-A-T; valor propio (límites, expectativa y siguiente paso) en las 58; nada de desbordamiento horizontal.
+- **Evidencia:** `docs/herramientas-gratis-2026-10-21.md`, `projects/scripts/audit-tools-eeat.py`, `projects/scripts/bump-toolkit-version.py`.
+
+---
+
 ---
 
 ## Fase C — Escala, diversificación y eficiencia (días 46–90)
