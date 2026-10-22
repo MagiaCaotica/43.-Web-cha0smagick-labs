@@ -46,6 +46,14 @@ def canonical_de(p):
     return m.group(1) if m else None
 
 
+def lang_de(p):
+    """idioma real de la pagina (html lang)."""
+    if p is None:
+        return ""
+    m = re.search(r'(?i)<html[^>]+lang=["\']([^"\']+)', leer(p))
+    return (m.group(1).lower() if m else "")
+
+
 def hreflangs_de(p):
     src = leer(p)
     out = {}
@@ -77,8 +85,14 @@ for p in ARCHIVOS:
         can = canonical_de(destino)
         if can and can.rstrip("/") != url.rstrip("/"):
             incoherente.append((str(p), lang, url, can))
+        # Solo es un error si el destino NO declara la vuelta Y ademas esta
+        # en otro idioma: un par entre dos idiomas distintos tiene que ser
+        # reciproco, un enlace al mismo idioma no.
         if mi_canonical and mi_canonical not in hreflangs_de(destino).values():
-            sin_vuelta.append((str(p), lang, url))
+            mi_lang = lang_de(p)
+            destino_lang = lang_de(destino)
+            if mi_lang and destino_lang and mi_lang != destino_lang:
+                sin_vuelta.append((str(p), lang, url))
 
 print("=== hreflang en todo el sitio ===")
 print(f"paginas revisadas: {len(ARCHIVOS)} | declaraciones: {declaraciones}")
