@@ -113,6 +113,20 @@ SIGUIENTE = {
 PROPIAS = {
     "gnosis-timer": ("suenos", "#timerDisplay", {
         "limits": "Mide el tiempo de una sesión de gnosis. No mide si la sesión funcionó, no registra lo que viste y no es un método de inducción: es un cronometro con la respiración de fondo.",
+        "faq": [
+                [
+                        "¿Qué es una sesión de gnosis?",
+                        "Es un rato de práctica enfocada, con los ojos cerrados y una sola pregunta en la cabeza. La herramienta solo mide el tiempo y marca la pauta de respiración; el resto lo pones tú."
+                ],
+                [
+                        "¿Cuánto debe durar?",
+                        "Entre 10 y 20 minutos es lo habitual. Por eso hay tres duraciones y no una: no existe la duración correcta, existe la que puedas sostener sin forzar."
+                ],
+                [
+                        "¿Y si no me pasa nada?",
+                        "Entonces no te pasó nada, y eso también es un dato. Anótalo con la fecha. La práctica se entrena, y una sesión vacía junto a una buena informa más que una sola buena."
+                ]
+        ],
         "expect": "Un temporizador con la pauta de respiración. Lo que salga de ahí depende de tu práctica, no de la página.",
     }),
     "rune-drawer": ("runas", "#runeResult", {
@@ -161,6 +175,20 @@ PROPIAS = {
     }),
     "sigil-charging-timer": ("sigilos", "#resultRating", {
         "limits": "Es un temporizador de carga con una escala de intensidad para que anotes cómo la viviste. No carga nada por si mismo, no verifica la fuerza del sigilo y el resultado que anotaste es una opinion, no una medida.",
+        "faq": [
+                [
+                        "¿El temporizador carga el sigilo?",
+                        "No. El temporizador solo da una pauta de tiempo y una escala para anotar cómo lo viviste. La carga la haces tú, con la atención."
+                ],
+                [
+                        "¿Qué intensidad debo anotar?",
+                        "La que sentiste, no la que crees que debería ser. La escala sirve para compararte contigo mismo la semana pasada, no con nadie más."
+                ],
+                [
+                        "¿Cuánto tiempo conviene cargar?",
+                        "El que puedas sostener sin tensión. Más tiempo con tensión no es más carga: es más esfuerzo."
+                ]
+        ],
         "expect": "Un temporizador con una escala de intensidad y una nota final. La escala es tuya: lo único comparable es lo que anotaste la semana anterior.",
     }),
     "spell-builder": ("rituales", "#spellResult", {
@@ -224,6 +252,7 @@ def main():
                 "method": metodo,
                 "expect": extra["expect"],
                 "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+                "faq": extra.get("faq", []),
                 "reviewed": REVISADO,
             },
             "next": {
