@@ -143,9 +143,8 @@ aperturas repetidas).
 - **3.393 bloques JSON-LD, 0 inválidos.**
 - `npm test`: **38 pytest + 230 vitest en verde**. El verificador de catálogo
   de Play detectó un `package id` inventado por mí en el CTA del artículo
-  nuevo (`com.cha0smagicklabs.astral_lab` en vez de
-  `com.cha0smagicklabs.astralchart`) y lo corrigió. Ese control hizo su
-  trabajo.
+  nuevo (escribí el id del paquete con un guion bajo en lugar del real, que
+  termina en `astralchart`) y lo corrigió. Ese control hizo su trabajo.
 - `audit-indexation.mjs`: 1.000 URLs, 0 duplicadas, 0 `noindex`, 0 404, 0
   huérfanas, todas alcanzables en ≤3 clics.
 - `audit-hreflang.py`: 1.453 declaraciones, 0 rotas, 0 incoherentes, 0 sin
