@@ -195,3 +195,107 @@ conectadas, versionadas por hash de contenido y comprobadas en vivo con
 navegador real: bloque de confianza con sus cuatro apartados, método,
 transparencia, autor, política editorial, fecha de revisión, camino al
 producto y acciones de resultado, sin desbordamiento horizontal.
+
+## 11. Cuarta ronda: lo que faltaba para que el camino se convierta en venta
+
+La ronda anterior dejo las herramientas con valor y confianza. Faltaba lo que
+pasa despues: que el usuario llegue a la app y compre. Tres cosas:
+
+### 11.1 Los snippets de las paginas que ya rankean y no clic
+
+Search Console, 28 dias: **24 paginas con 30 o mas impresiones y menos del 5 %
+de CTR**. Seis de ellas estan **en pagina 1** (posicion 5,6 a 8,9) y son las
+que mas impressions acumulan:
+
+| Pagina | Impr. | Clics | Pos. | Query principal |
+|---|---|---|---|---|
+| astrology-apps-android-guide | 629 | 3 | 14,6 | best astrology apps 2026 (107 a pos 6,2) |
+| sigil-vs-servitor-differences | 93 | 1 | 6,4 | sigil vs servitor |
+| planetary-magic-hours-guide | 21 | 0 | 5,6 | planetary magic hours |
+| ai-machine-learning-paranormal-research | 18 | 0 | 7,6 | machine learning paranormal research |
+| paranormal-investigation-step-by-step-guide | 17 | 0 | 7,4 | paranormal investigation guide |
+| evp-vs-spirit-box-comparison-guide | 15 | 0 | 7,6 | evp vs spirit box |
+
+Se estudio la SERP real de esas queries (con navegador) y el patron ganador
+del nicho es claro: el ano en el titulo, **los nombres de los competidores en
+la descripcion** y una respuesta directa, porque la AI Overview de Google ya
+ocupa la posicion 1 y cita.Co-Star, The Pattern y CHANI.
+
+**Lo que NO se hizo, y es lo importante:** el titulo ganador de la
+competencia es «Best Astrology App 2026: **We Tested 7** (Co-Star, CHANI, ...)».
+Our pagina no puede decir eso: no afirma haber probado las apps, dice que los
+criterios se aplicaron a las fichas de Play comprobadas el 21 de octubre de
+2026. Poner «We Tested» seria una mentira, y una mentira en el titulo es
+justo lo que hace que un revisor de confianza deje de fiarse. El titulo nuevo
+es «Best Astrology Apps for Android 2026: 6 Compared», y en la descripcion
+van los seis nombres.
+
+### 11.2 La barra de precio fija
+
+El precio y el CTA estaban arriba del todo, pero en cuanto el lector bajaba
+se perdian. Las herramientas ya tenian barra sticky; **las 12 fichas de app
+no**. Ahora si, con el precio tomado de la ficha verificada de Play
+(`data/play-catalog.json`), no escrito a mano. Tambien en la landing del
+bundle de libros, que es la pagina del embudo de compra.
+
+### 11.3 Una oferta que no existia, con un contador de 12 horas
+
+`landing-pages/complete-access.html` tenia un contador de cuenta atras de
+11:59:59 que **se reiniciaba con cada recarga**, un badge de «UPSELL
+EXCLUSIVO - 12 HORAS» y un 71% OFF, para una oferta que la propia pagina
+declara no disponible («falta configurar y verificar el producto externo de
+Hotmart», «NO PUBLICAR»). Y estaba **en el sitemap, indexada**.
+
+Eso es escasez fabricada, que la politica editorial del propio sitio enumera
+como lo que se rechaza, y ademas es una promesa sin forma de cumplirse.
+Ahora: sin contador, con una linea honesta que ofrece las 12 apps por separado
+y el bundle de libros, en `noindex` y fuera del sitemap.
+
+Revisado el resto: el contador del flash-sale cuenta hasta una fecha fija con
+la hora del servidor (legitimo) y los temporizadores de las herramientas son
+herramientas, no urgencia fabricada.
+
+## 12. Quinta ronda: la analitica no estaba en el 87% del sitio
+
+Auditando el embudo aparecio un defecto de fondo:
+
+- `data/analytics-events.json` dice, literalmente, que **«js/analytics-bridge.js
+  is the only allowlist enforcement point»**.
+- El bridge estaba en **109 de 1.011 paginas**. En las otras 902,
+  `conversion.js` enviaba los parametros **sin filtrar** a GA4
+  (`gtag('event', ...)` con los parametros en crudo). La allowlist no existia
+  en el 87% del sitio.
+- Y con el bridge cargado, cada evento se encolaba **dos veces** en
+  dataLayer: una por el bridge (sanitizada) y otra por gtag (sin sanear). Es
+  decir, en esas 109 paginas las metricas de GA4 contaban los eventos por
+  dos. Anadir el bridge al resto habria duplicado las metricas de todo el
+  sitio.
+
+**Arreglado:**
+- `track()` delega en el bridge cuando esta y solo usa gtag si no lo hay: el
+  bridge decide si el evento pasa la allowlist y si hay consentimiento.
+- El bridge se carga **antes** de `conversion.min.js`, para que exista desde
+  el primer momento.
+- Las 902 paginas quedan con la allowlist real.
+
+**Verificado en vivo:** con el consentimiento concedido, un evento llega
+**una sola vez** al dataLayer, y el campo que no esta en la allowlist se
+descarta:
+
+```
+veces: 1
+conCampoProhibido: 0
+evento: {"event":"tool_funnel_click","analytics_source":"cha0_bridge",
+         "tool_id":"prueba","placement":"prueba","gtm.uniqueEventId":17}
+```
+
+## 13. El problema que hacia irresoluble todo lo demas: la cache
+
+Tres cambios de esta sesion parecieron no aplicarse. La causa era la misma:
+**el CSS se cargaba sin parametro de version**, asi que el navegador y el CDN
+seguyan sirviendo la copia anterior. El fichero nuevo estaba en el servidor y
+no se veia.
+
+Ahora todos los assets locales (css y js) se referencian con el **hash de su
+contenido**: cada cambio genera una URL nueva y el navegador la pide. Un
+unico script escribe las versiones, para que dos scripts no se pisen.
