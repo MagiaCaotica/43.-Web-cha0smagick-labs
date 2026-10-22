@@ -130,3 +130,68 @@ de resultado (ya no confunde un encabezado con un resultado).
 - **El texto de valor está escrito por familia, no por herramienta**: 12
   familias cubren las 58. Las que más lo necesitan son las de tarot, sigilos
   y suenos, donde el resultado es más rico y merece instrucciones propias.
+
+## 8. Las 18 embebidas (segunda ronda)
+
+**Auditoría previa:** las 15 apps externas están **vivas** (los dos fallos
+iniciales eran del `fetch` sin CORS, no del servidor). La 기사 embebida son
+las que viven en un `iframe` externo: seis de HuggingFace Spaces, siete de
+GitHub Pages, una de Streamlit y una de GitHub Pages con subcarpeta.
+
+**Lo que les faltaba era todo:** ninguna tenía declaración de conflicto de
+intereses, límites, «qué puedes esperar», autor, fecha de revisión ni camino
+al producto. La capa de valor se les conectó igual que a las nativas, con
+**una diferencia real**: el resultado de una embebida vive dentro del iframe,
+así que «copiar resultado» no sirve de nada.
+
+**Lo que se les ha puesto:**
+- **Abrir en una pestaña nueva** y **copiar el enlace** (las dos acciones
+  que sí tienen sentido con contenido de otro origen).
+- **Aviso automático con el enlace directo** si el iframe no carga en 9
+  segundos. Es una dependencia de terceros: hoy funcionan, pero si mañana un
+  Space de HuggingFace se duerme, el usuario ve un aviso útil en vez de un
+  marco en blanco.
+- El bloque de confianza completo, con método, límites y expectativa propios.
+- El **camino al producto según la familia**:
+  - las occultas (I Ching, fases lunares, sigilos, servidores, tengwar, runas
+    vikingas) → su app, con la ventaja concreta;
+  - las que **no son occultas** (blackjack, INWO, werewolf, editor de
+    imágenes, ruleta, compendios de RPG, panel de datos de Colombia) →
+    **no tienen nada que vender**, y su puerta honesta es la comunidad. Poner
+    un producto de pago detrás de un simulador de ruleta habría sido una
+    tontería.
+
+## 9. El texto ad hoc por herramienta (tercera ronda)
+
+El texto de valor estaba **escrito por familia**: 12 frases para 58
+herramientas, y cuatro compartían incluso la misma línea. Eso es exactamente
+lo que el editorial policy llama relleno.
+
+Ahora hay **70 herramientas con texto propio** (`projects/scripts/toolkit_content.py`):
+70 valores distintos, 70 límites distintos, 70 expectativas distintas.
+
+| Herramienta | Qué hacer con el resultado (ahora) |
+|---|---|
+| Carta natal | «Anota el Sol, la Luna y el Ascendente con el grado, y la fecha. Con tres cartas tuyas en 30 días verás cuáles de los tres se mueve.» |
+| Entrenador Zener | «Practica series largas, no tiradas sueltas: el acierto por azar es de una entre cinco.» |
+| Sorteo de runas | «Anota el resultado y lo que hiciste después. La runa no dice nada: lo que dice es lo que tú hiciste con ella.» |
+| Kamea planetaria | «El valor de la kamea está en que el trazo se recuerda: un sigilo que no sabes repetir no sirve.» |
+| Tarot sí/no | «Anota la carta, la pregunta y lo que decidiste después. En tres meses, el diario muestra más que las tiradas.» |
+| Generador de sigilos | «Genera el sigilo y anota, con la fecha, qué acción mundana lo acompaña.» |
+| Regla de seguridad | «Úsala antes de empezar y guárdala. Una lista de seguridad que se lee después del ritual ya no es una lista de seguridad.» |
+| … | (70 en total) |
+
+## 10. Estado final
+
+| | Motor común | Propias | Embebidas |
+|---|---|---|---|
+| Herramientas | 40 | 18 | 18 |
+| Sistema visual | 40/40 | 36/36 | 36/36 |
+| E-E-A-T (7 señales) | 7/7 | 7/7 | 7/7 |
+| Texto de valor propio | 40/40 | 36/36 | 36/36 |
+
+**Las 76 herramientas** (las 3 copias en español comparten slug) están
+conectadas, versionadas por hash de contenido y comprobadas en vivo con
+navegador real: bloque de confianza con sus cuatro apartados, método,
+transparencia, autor, política editorial, fecha de revisión, camino al
+producto y acciones de resultado, sin desbordamiento horizontal.
