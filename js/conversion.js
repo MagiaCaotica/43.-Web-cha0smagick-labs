@@ -86,15 +86,19 @@
    *
    * Both calls are wrapped: analytics must never break the page, and the bridge
    * is absent on pages that do not load it. */
-  function track(eventName, params) {
+    function track(eventName, params) {
+    // Con el bridge presente, el bridge es el unico que envia: el aplica la
+    // allowlist y el consentimiento. Antes se enviaba tambien por gtag, con
+    // los parametros sin filtrar, y cada evento se contaba dos veces.
     try {
       if (window.Cha0Analytics && typeof window.Cha0Analytics.track === 'function') {
         window.Cha0Analytics.track(eventName, params);
+        return;
       }
-    } catch (e) { /* bridge is optional */ }
+    } catch (e) { /* el bridge no debe romper la pagina */ }
     try {
       if (typeof window.gtag === 'function') window.gtag('event', eventName, params || {});
-    } catch (e) { /* analytics must never break the page */ }
+    } catch (e) { /* la analitica no debe romper la pagina */ }
   }
 
   /* --- GA4 bootstrap + consent -------------------------------------------
