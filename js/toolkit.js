@@ -35,7 +35,7 @@
   // Version del catalogo de herramientas: hay que subirla cuando cambie
   // data/toolkit.json, o el CDN sirvira el JSON viejo y el bloque de
   // confianza saldra vacio.
-  var DATA_VERSION = 'f72d119646';
+  var DATA_VERSION = '0e08394dfa';
   var DATA_URL = UP + 'data/toolkit.json?v=' + DATA_VERSION;
   var slug = (function () {
     var m = location.pathname.match(/\/tools\/([^/]+)\.html/i);
@@ -376,6 +376,29 @@
     main.appendChild(section);
   }
 
+  /* --------------------------------------------------- FAQ cuando falta
+     Las herramientas propias que no traian preguntas frecuentes reciben las
+     suyas, del catalogo. Si la pagina ya tiene <details>, no se duplica nada. */
+  function buildFaq() {
+    var meta = TOOLS[slug];
+    if (!meta || !meta.about || !meta.about.faq || !meta.about.faq.length) return;
+    if (document.querySelector('.tk-faq')) return;
+    if ($$('details').length) return;
+
+    var section = el('section', 'tk-card tk-faq');
+    section.appendChild(el('h2', null, 'Preguntas frecuentes'));
+    var lista = el('div', 'tk-faq-list');
+    meta.about.faq.forEach(function (par) {
+      var d = el('details');
+      d.appendChild(el('summary', null, par[0]));
+      d.appendChild(el('p', 'tk-about-text', par[1]));
+      lista.appendChild(d);
+    });
+    section.appendChild(lista);
+    var main = $('main') || document.body;
+    main.appendChild(section);
+  }
+
   /* ------------------------------------------- barra de accion movil */
   function buildMobileBar() {
     if (window.matchMedia('(min-width: 761px)').matches) return;
@@ -403,6 +426,7 @@
     buildActions(resultArea());
     buildSaved();
     buildAbout();
+    buildFaq();
     buildNext();
     buildMobileBar();
   }

@@ -976,6 +976,20 @@
     ],
     "expect": "Un temporizador con la pauta de respiración. Lo que salga de ahí depende de tu práctica, no de la página.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [
+     [
+      "¿Qué es una sesión de gnosis?",
+      "Es un rato de práctica enfocada, con los ojos cerrados y una sola pregunta en la cabeza. La herramienta solo mide el tiempo y marca la pauta de respiración; el resto lo pones tú."
+     ],
+     [
+      "¿Cuánto debe durar?",
+      "Entre 10 y 20 minutos es lo habitual. Por eso hay tres duraciones y no una: no existe la duración correcta, existe la que puedas sostener sin forzar."
+     ],
+     [
+      "¿Y si no me pasa nada?",
+      "Entonces no te pasó nada, y eso también es un dato. Anótalo con la fecha. La práctica se entrena, y una sesión vacía junto a una buena informa más que una sola buena."
+     ]
+    ],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1000,6 +1014,7 @@
     ],
     "expect": "Una runa con su significado y una pregunta para responder. El valor está en la reflexión que hagas con ella, no en el resultado.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1024,6 +1039,7 @@
     ],
     "expect": "Una serie con aciertos, fallos y el porcentaje de acierto. Un resultado alto puede ser suerte; por eso se práctica con series largas y con control.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1048,6 +1064,7 @@
     ],
     "expect": "Tu signo solar y su elemento en una frase. Es el punto de partida, no una carta.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1072,6 +1089,7 @@
     ],
     "expect": "El color con su correspondencia y una justificacion para elegirlo.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1096,6 +1114,7 @@
     ],
     "expect": "Una respuesta de una lista de respuestas posibles, con el matiz de cada una para que elijas tu, no la que te gusta.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1120,6 +1139,7 @@
     ],
     "expect": "Los espíritus que mejor encajan con lo que describes, con su ámbito y sus notas. Es una orientación, no una invocación.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1144,6 +1164,7 @@
     ],
     "expect": "El hexagrama con sus líneas que cambian y su lectura tradicional.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1168,6 +1189,7 @@
     ],
     "expect": "La luna del dia, su signo y una invitacion breve para el trabajo ritual de ese dia.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1192,6 +1214,7 @@
     ],
     "expect": "La hora planetaria vigente, que planeta rige y hasta cuándo. Sirve para elegir el momento de un trabajo, no para decidir el contenido.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1216,6 +1239,7 @@
     ],
     "expect": "El sigilo de la kamea elegida, con el trazado paso a paso para repasarlo.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1240,6 +1264,7 @@
     ],
     "expect": "Una lista de comprobaciones con su resultado y el recuento de aciertos. El valor esta en comparar semanas.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1264,6 +1289,20 @@
     ],
     "expect": "Un temporizador con una escala de intensidad y una nota final. La escala es tuya: lo único comparable es lo que anotaste la semana anterior.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [
+     [
+      "¿El temporizador carga el sigilo?",
+      "No. El temporizador solo da una pauta de tiempo y una escala para anotar cómo lo viviste. La carga la haces tú, con la atención."
+     ],
+     [
+      "¿Qué intensidad debo anotar?",
+      "La que sentiste, no la que crees que debería ser. La escala sirve para compararte contigo mismo la semana pasada, no con nadie más."
+     ],
+     [
+      "¿Cuánto tiempo conviene cargar?",
+      "El que puedas sostener sin tensión. Más tiempo con tensión no es más carga: es más esfuerzo."
+     ]
+    ],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1288,6 +1327,7 @@
     ],
     "expect": "Un hechizo estructurado: intencion, elementos, pasos y un cierre. Útil cómo borrador, nunca cómo receta cerrada.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
@@ -1312,6 +1352,7 @@
     ],
     "expect": "Las cartas, su interpretación y una pregunta para responder. La parte útil es la reflexión que escribas después.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
+    "faq": [],
     "reviewed": "2026-10-21"
    },
    "next": {
