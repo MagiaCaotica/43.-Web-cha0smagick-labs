@@ -1025,11 +1025,24 @@
   // ship an empty one); otherwise a row is created at the TOP of the article,
   // where share intent is highest. Guarded by window.__cmShareInjected, the
   // same flag app-render.js uses, so only one row can ever exist.
+  // El primer <article> de una pagina de catalogo es una ficha de libro, no un
+  // articulo: inyectar ahi metia el bloque social dentro de la tarjeta (426px)
+  // y desbordaba el ancho en movil. Se exige cuerpo real de articulo.
+  function findArticleBody() {
+    var named = document.querySelector('article.article, .blog-post');
+    if (named) return named;
+    var all = document.querySelectorAll('main article');
+    for (var i = 0; i < all.length; i++) {
+      if (all[i].querySelector('h2') && (all[i].textContent || '').length > 1200) return all[i];
+    }
+    return null;
+  }
+
   function injectShareButtons() {
     if (window.__cmShareInjected) return;
     if (document.getElementById('cm-social-share')) return;
 
-    var article = document.querySelector('article.article, .blog-post, article');
+    var article = findArticleBody();
     if (!article) return;
 
     var rawUrl = window.location.href;
@@ -1155,7 +1168,7 @@
   function injectTestimonials() {
     if (document.getElementById('cm-testimonials')) return;
 
-    var article = document.querySelector('article.article, .blog-post, article');
+    var article = findArticleBody();
     if (!article) return;
 
     // Aggregate stats from our Play Store presence

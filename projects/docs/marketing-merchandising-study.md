@@ -50,7 +50,7 @@ will not move it.
 ```
    free tools (62)          blog (820)          landing pages (6)
    53 have a funnel CTA ──► 741 of 820 can    ──► apps-bundle ($29.99)
-                             sell BOTH books       books-bundle ($24.99)
+                             sell BOTH books       books-bundle ($29.99)
                              and apps             per-app Play pages
                              (was 19 of 820)
 ```
@@ -89,7 +89,7 @@ traffic. Both are listed below as separate tracks.
 | NOCTEM | $14.99 | Flagship |
 | **12-app bundle** | **$29.99** | vs $79.88 list = **62% off**, arithmetically true |
 | Books | $3.99–$9.99 | 8 titles |
-| **8-book bundle** | **$24.99** | vs $50.92 list |
+| **8-book bundle** | **$29.99** | vs $50.92 list |
 
 **The strongest argument the site has and it is buried.** Co-Star is $7.99
 *per month*. Astral Lab is $6.99 *once*. Over two years that is $6.99 against

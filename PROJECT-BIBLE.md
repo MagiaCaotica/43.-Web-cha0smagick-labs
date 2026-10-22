@@ -442,7 +442,7 @@ Contiene **dos arrays globales** fuente de verdad del catálogo:
 | **Documentos en `projects/docs/`** | 21 |
 | **Pins Pinterest** | 137 |
 | **Apps Android publicadas** | 12 |
-| **Libros PDF en Hotmart** | 9 (bundle $24.99, 9 libros, 59% off) |
+| **Libros PDF en Hotmart** | 9 (bundle $29.99, 9 libros, 59% off) |
 
 ---
 

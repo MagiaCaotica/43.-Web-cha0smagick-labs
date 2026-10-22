@@ -35,7 +35,7 @@
   // Version del catalogo de herramientas: hay que subirla cuando cambie
   // data/toolkit.json, o el CDN sirvira el JSON viejo y el bloque de
   // confianza saldra vacio.
-  var DATA_VERSION = '28813ca00d';
+  var DATA_VERSION = '3485041e0c';
   var DATA_URL = UP + 'data/toolkit.json?v=' + DATA_VERSION;
   var slug = (function () {
     var m = location.pathname.match(/\/tools\/([^/]+)\.html/i);
@@ -93,10 +93,11 @@
   /* ------------------------------------------------------ acciones */
   function buildActions(area) {
     if (!area) return;
+    var host = area.parentElement || area;
 
     // Si el area ya tiene una fila de acciones (la del motor comun), se
     // anaden los botones ahi en vez de crear una segunda fila.
-    var existing = $('.atomic-actions', area);
+    var existing = $('.atomic-actions', host);
     var bar = existing || el('div', 'tk-actions');
     if (!existing) {
       bar.setAttribute('role', 'group');
@@ -197,7 +198,7 @@
     // Si aun no hay resultado, la barra se oculta: un boton de "copiar" sobre
     // un area vacia parece un fallo.
     if (!resultText(area)) bar.hidden = true;
-    if (!existing) area.appendChild(bar);
+    if (!existing) host.appendChild(bar);
   }
 
   /* ------------------------------------------- lecturas guardadas */
@@ -513,10 +514,10 @@
     new MutationObserver(function () {
       window.clearTimeout(pending);
       pending = window.setTimeout(function () {
-        var bar = $('.tk-actions', area);
+        var bar = $('.tk-actions', area.parentElement || area);
         if (bar) bar.remove();
         buildActions(area);
-        var nuevo = $('.tk-actions', area);
+        var nuevo = $('.tk-actions', area.parentElement || area);
         if (nuevo) nuevo.hidden = !resultText(area);
       }, 60);
     }).observe(area, { childList: true, subtree: true });

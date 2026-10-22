@@ -1111,6 +1111,18 @@ section.bottom-cta a:hover { background:var(--accent-light); transform:translate
   .tool-frame iframe { height:380px; }
 }
 
+@media (max-width: 600px) {
+  .breadcrumb, .breadcrumb-nav { display: none; }
+}
+
+/* El encabezado de marca ocupaba 384px de los 844 de un movil: media pantalla
+   antes del contenido. Aqui baja a ~235px y el titular de la pagina se ve. */
+@media (max-width: 600px) {
+  header { padding: 1rem 0.75rem 0.9rem; }
+  .header-logo { width: 84px; height: 84px; margin-bottom: 0.6rem; }
+  header .site-title, header h1 { font-size: 1.35rem; letter-spacing: 1.5px; }
+}
+
 /* ========================================================================
    UTILITIES
    ======================================================================== */
