@@ -1,0 +1,976 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NASA JPL vs Swiss Ephemeris: which one gives you the right planetary positions?</title>
+<meta name="description" content="Both are professional grade and the difference is invisible in a natal chart. What really moves a planet between houses is the timezone, the house system and the equinox. A comparison from a studio that ships an astrology app.">
+<meta name="keywords" content="nasa jpl vs swiss ephemeris, jpl ephemeris, swiss ephemeris, vsop87, elp2000, astrology app accuracy, planetary positions, astral lab, jpl horizons, ephemeris accuracy comparison">
+<link rel="canonical" href="https://cha0smagicklabs.com/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.html">
+<link rel="alternate" href="https://cha0smagicklabs.com/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.html" hreflang="en">
+<link rel="alternate" href="https://cha0smagicklabs.com/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.html" hreflang="x-default">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#050505">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LHCPN9TK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', { 'analytics_storage': 'denied' });
+      gtag('config', 'G-V6LHCPN9TK');
+    </script>
+<meta property="og:title" content="NASA JPL vs Swiss Ephemeris: which one gives you the right planetary positions?">
+<meta property="og:description" content="Both are professional grade and the difference is invisible in a natal chart. What really moves a planet between houses is the timezone, the house system and the equinox. A comparison from a studio that ships an astrology app.">
+<meta property="og:url" content="https://cha0smagicklabs.com/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://cha0smagicklabs.com/assets/images/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.png">
+<meta name="twitter:card" content="summary_large_image">
+        <style>
+        /* CRITICAL CSS INLINED */
+:root{--bg-body: #030303;
+  --bg-header: #050505;
+  --bg-nav: rgba(5,5,5,0.9);
+  --bg-card: #0a0a0a;
+  --bg-section: transparent;
+  --bg-footer: #030303;
+  --bg-code: #0a0a0a;
+
+  --text-primary: #f0f0f0;
+  --text-body: #a0a0a0;
+  --text-secondary: #999;
+  --text-muted: #666;
+  --text-dim: #444;
+
+  --accent-gold: #c0a060;
+  --accent-light: #ffd700;
+  --accent-white: #fff;
+
+  --border-subtle: #1a1a1a;
+  --border-mid: #333;
+  --border-card: #1a1a1a;
+
+  --font-main: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.4s ease;
+
+  --max-width: 1200px;}
+*, *::before, *::after{margin:0; padding:0; box-sizing:border-box;}
+body{font-family: var(--font-main);
+  background-color: var(--bg-body);
+  color: var(--text-body);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;}
+.header-link{color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;}
+a:hover{color: var(--accent-light);}
+img{max-width:100%; height:auto;}
+.header-logo{width: 200px; height: 200px;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  opacity: 0.7;
+  border: 1px solid transparent;
+  transition: all var(--transition-normal);
+  margin-bottom: 1.5rem;}
+.header-logo:hover{opacity: 1;}
+header .site-title,
+header h1{margin: 0;
+  font-size: 3rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: var(--accent-white);
+  text-shadow: 0 0 20px rgba(255,255,255,0.1);}
+nav ul{list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  flex-wrap: wrap;}
+nav ul li a{display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1.2rem 2rem;
+  transition: all var(--transition-normal);
+  border-bottom: 1px solid transparent;}
+nav ul li a:hover{color: var(--accent-white);
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--accent-white);}
+section h2, section h3{color: var(--text-primary);
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-left: 2px solid var(--border-mid);
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: none;}
+section.hero{text-align: center;
+  padding: 3rem 0 2rem;
+  border-bottom: none;
+  position: relative;
+  margin-bottom: 4rem;}
+section.hero::after{content: '';
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: var(--accent-gold);
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);}
+section.hero h1{color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 200;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  max-width: 900px;
+  margin: 0 auto 1.2rem;
+  border: none;
+  padding: 0;
+  line-height: 1.5;}
+section.hero p{color: var(--text-secondary);
+  max-width: 750px;
+  margin: 1rem auto;
+  font-size: 1rem;
+  line-height: 1.7;}
+.hero-cta-link{display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.8rem;
+  background: var(--accent-gold);
+  color: #000 !important;
+  text-decoration: none !important;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;}
+.hero-cta-link:hover{background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);}
+section.ceo-bio{padding: 1rem 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 4rem;}
+section.ceo-bio p{color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 0.95rem;}
+section.ceo-bio a,
+a.inline-link{color: var(--accent-gold);
+  text-decoration: underline;}
+section.ceo-bio a:hover,
+a.inline-link:hover{color: var(--accent-light);}
+@media (max-width: 600px) { .trust-bar }{gap: 0.8rem; flex-direction: column; align-items: center;}
+@media (max-width: 600px) { .trust-item }{white-space: normal; text-align: center;}
+section.apps-section{margin-bottom: 4rem;}
+section.apps-section p{color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;}
+.cta-button{display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;}
+.cta-button:hover{background: var(--accent-gold);
+  color: var(--bg-body);}
+.cta-button.primary{background: var(--accent-gold);
+  color: var(--bg-body);
+  border: 1px solid var(--accent-gold);
+  padding: 0.85rem 2rem;
+  font-size: 0.95rem;}
+.cta-button.primary:hover{background: var(--accent-light);
+  border-color: var(--accent-light);}
+.cta-button.small{padding: 0.5rem 1.2rem;
+  font-size: 0.8rem;}
+a.play-store-btn,
+span.play-store-btn,
+.play-store-btn{display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #3DDC84;
+  color: #000 !important;
+  text-decoration: none !important;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(61, 220, 132, 0.3);}
+.play-store-btn:hover{background: #2DBD6E;
+  color: #000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(61, 220, 132, 0.5);}
+.play-store-btn:active{transform: translateY(0);}
+.play-store-btn .play-icon{width: 22px;
+  height: 22px;
+  flex-shrink: 0;}
+.play-store-btn.pulse{animation: play-pulse 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform, box-shadow;}
+.cta-button.primary.google-play-btn,
+a.cta-button.primary[href*="play.google.com"],
+.google-play-btn{display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: #3DDC84 !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.5px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 12px 28px !important;
+  cursor: pointer !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 2px 8px rgba(61, 220, 132, 0.3) !important;
+  animation: play-pulse 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+  will-change: transform, box-shadow;}
+.cta-button.primary.google-play-btn:hover,
+a.cta-button.primary[href*="play.google.com"]:hover,
+.google-play-btn:hover{background: #2DBD6E !important;
+  color: #000 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(61, 220, 132, 0.5) !important;}
+.play-store-btn.compact{padding: 8px 16px;
+  font-size: 0.75rem;
+  gap: 6px;}
+.card-content .play-store-btn,
+.card-content .google-play-btn,
+.card-content .cta-button.primary.google-play-btn{margin-top: 1.5rem !important;}
+.play-store-btn.compact .play-icon{width: 16px;
+  height: 16px;}
+.breadcrumb, .breadcrumb-nav{max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);}
+.breadcrumb a:hover{text-decoration: underline;}
+.breadcrumb-list{list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;}
+.breadcrumb-list li{color: var(--text-dim);}
+.breadcrumb-list li::before{content: "|";
+  margin-right: 0.5rem;
+  color: var(--accent-gold);}
+.breadcrumb-list li:first-child::before{content: none;}
+.breadcrumb-list a{color: var(--accent-gold); text-decoration: none;}
+.breadcrumb-list a:hover{text-decoration: underline;}
+footer{background-color: var(--bg-footer);
+  color: var(--text-dim);
+  text-align: center;
+  padding: 4rem 1rem;
+  border-top: 1px solid #111;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;}
+footer a{color: #777; text-decoration: none;}
+footer a:hover{color: var(--accent-white);}
+.site-footer{letter-spacing: 0; text-transform: none;}
+.footer-grid{display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto 3rem;
+  text-align: left;}
+.footer-section h4{color: var(--accent-gold);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;}
+.footer-section p{color: var(--text-dim);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-bottom: 0.5rem;}
+.footer-section ul{list-style: none; padding: 0; margin: 0;}
+.footer-section li{margin-bottom: 0.4rem;}
+.footer-section a{color: var(--text-dim);
+  font-size: 0.8rem;
+  text-transform: none;
+  letter-spacing: 0;}
+.footer-section a:hover{color: var(--accent-gold);}
+.footer-visitor .visitor-count{color: var(--text-dim);
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  text-transform: none;}
+.footer-visitor #visitor-count{color: var(--accent-gold);
+  font-family: var(--font-mono);
+  letter-spacing: 2px;}
+.footer-bottom{border-top: 1px solid #111;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;}
+.footer-parallel-container{display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: var(--max-width);
+  margin: 0 auto 3rem;}
+.footer-left-side{flex: 0 1 300px; display:flex; flex-direction:column; align-items:center;}
+.footer-right-side{flex:1; min-width:320px; max-width:600px; display:flex; flex-direction:column;}
+.footer-content{display:flex; flex-wrap:wrap; gap:3rem; text-align:left;}
+.footer-links h4,
+.footer-social h4{color: var(--accent-gold);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;}
+.footer-links ul,
+.footer-social ul{list-style:none; padding:0; margin:0;}
+.footer-links li,
+.footer-social li{margin-bottom:0.5rem;}
+.footer-links a,
+.footer-social a{color: var(--text-dim); font-size:0.85rem;}
+.footer-links a:hover,
+.footer-social a:hover{color: var(--accent-gold);}
+.visitor-leaflet-map .leaflet-control-zoom a:hover{background:var(--bg-card); color:var(--accent-gold);}
+#faq-section{max-width: var(--max-width);
+  margin: 4rem auto;
+  padding: 2rem;
+  border-top: 1px solid var(--border-subtle);}
+#faq-section h2{color: var(--text-primary);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-left: none;
+  padding-left: 0;}
+.collapsible-section.active .collapsible-content{max-height: 5000px;
+  opacity: 1;
+  padding-bottom: 2rem;}
+.collapsible-section.active .section-toggle::after{content: '[ - ]';}
+@media (max-width:900px) { .screenshot-item }{max-width:110px;}
+@media (max-width:500px) { .screenshot-item }{max-width:90px;}
+.blog-post, .article{max-width:800px; margin:0 auto; padding:2rem 1rem;}
+.blog-post h2, .article h2{color:var(--text-primary); font-weight:200; text-transform:uppercase; letter-spacing:3px; margin:2rem 0 1rem;}
+.blog-post h3, .article h3{color:var(--text-primary); font-weight:300; margin:1.5rem 0 0.8rem;}
+.blog-post p, .article p{color:var(--text-secondary); margin-bottom:1.2rem; line-height:1.8;}
+.blog-post ul, .blog-post ol, .article ul, .article ol{margin-bottom:1.5rem; padding-left:1.5rem; color:var(--text-secondary);}
+.blog-post li, .article li{margin-bottom:0.5rem;}
+.blog-meta, .article .meta{color:var(--text-dim); font-size:0.85rem; margin-bottom:2rem; font-family:var(--font-mono);}
+.blog-nav a{color:var(--accent-gold); font-size:0.9rem;}
+.blog-nav a:hover{color:var(--accent-light);}
+.article h1{color:var(--accent-light); font-size:2rem; margin-bottom:.5rem;}
+.article .cta-box{background:var(--bg-card); border:1px solid var(--accent-gold); border-radius:var(--radius-lg); padding:1.5rem; margin:2rem 0; text-align:center;}
+.article .cta-box p{color:var(--text-body); margin-bottom:.8rem;}
+.article .cta-box a{display:inline-block; padding:.7rem 1.8rem; background:var(--accent-gold); color:var(--bg-body); text-decoration:none; border-radius:6px; font-weight:700; transition:background var(--transition-normal);}
+.article .cta-box a:hover{background:var(--accent-light);}
+.share a:hover{color:var(--accent-light);}
+section.intro{text-align:center; max-width:700px; margin:2rem auto; padding:0 1rem;}
+section.intro h2{color:var(--text-primary); font-size:1.3rem; margin-bottom:0.8rem;}
+section.intro p{color:var(--text-secondary); font-size:0.95rem; line-height:1.7;}
+section.bottom-cta{text-align:center; max-width:650px; margin:3rem auto; padding:2rem 1rem; border-top:1px solid var(--border-subtle);}
+section.bottom-cta h3{color:var(--accent-gold); font-size:1.1rem; margin-bottom:0.8rem;}
+section.bottom-cta p{color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.2rem;}
+section.bottom-cta a{display:inline-block; background:var(--accent-gold); color:var(--bg-body); padding:0.7rem 1.8rem; border-radius:6px; font-weight:700; text-decoration:none; transition:all 0.3s;}
+section.bottom-cta a:hover{background:var(--accent-light); transform:translateY(-2px);}
+@media (max-width:650px) { .tools-grid }{grid-template-columns:1fr;}
+@media (max-width:650px) { .blog-grid }{grid-template-columns:1fr;}
+.ads-info a:hover{color: var(--accent-white);}
+@media (max-width: 768px) { header }{padding: 2rem 1rem;}
+@media (max-width: 768px) { header .site-title, header h1 }{font-size: 2rem; letter-spacing: 3px;}
+@media (max-width: 768px) { .header-logo }{width: 140px; height: 140px;}
+@media (max-width: 768px) { main }{padding: 2rem 1rem;}
+@media (max-width: 768px) { section }{margin-bottom: 4rem;}
+@media (max-width: 768px) { nav ul li a }{padding: 1rem 0.8rem; font-size: 0.75rem;}
+@media (max-width: 768px) { .contact-links }{justify-content: center;}
+@media (max-width: 768px) { .contact-btn }{width: 100%; justify-content: center;}
+@media (max-width: 768px) { .detail-header-layout }{flex-direction:column; align-items:center; text-align:center;}
+@media (max-width: 768px) { .detail-main-image }{margin-bottom:1rem;}
+@media (max-width: 768px) { #app-detailed-info }{padding:1.5rem;}
+@media (max-width: 768px) { .footer-parallel-container }{flex-direction:column; align-items:center; gap:2rem;}
+@media (max-width: 768px) { .footer-left-side }{order:2;}
+@media (max-width: 768px) { .footer-right-side }{order:1;}
+@media (max-width: 768px) { .footer-content }{gap:2rem; text-align:center;}
+@media (max-width: 768px) { .faq-item }{padding:1rem;}
+@media (max-width: 768px) { #faq-section, #features }{padding:1.5rem 1rem;}
+@media (max-width: 768px) { .author-links }{flex-direction:column;}
+@media (max-width: 768px) { .author-links .contact-btn }{width:100%; text-align:center;}
+@media (max-width: 768px) { .tools-grid }{grid-template-columns:1fr;}
+@media (max-width: 768px) { .blog-grid }{grid-template-columns:1fr;}
+@media (max-width: 768px) { .tool-frame iframe }{height:380px;}
+.cta-centered-wrapper .play-store-btn + .cta-button,
+.cta-centered-wrapper .play-store-btn + .play-store-btn{margin-left: 12px;}
+.card-footer{display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;}
+.container .cta-box .play-store-btn{display:inline-flex; align-items:center; gap:0.5rem; background:#3DDC84; color:#000 !important; padding:0.7rem 1.8rem; border-radius:6px; font-weight:700; font-size:0.9rem; text-decoration:none; text-transform:uppercase; transition:all 0.3s; box-shadow:0 2px 8px rgba(61,220,132,0.3);}
+.container .cta-box .play-store-btn:hover{background:#2DBD6E; transform:translateY(-2px); box-shadow:0 6px 20px rgba(61,220,132,0.5);}
+.back-link{text-align:center; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border-subtle);}
+.back-link a{color:#888; font-size:0.85rem; text-decoration:none; transition:color 0.2s;}
+.back-link a:hover{color:var(--accent-light);}
+@media (max-width:600px) { .container }{padding:0 1rem 2rem;}
+@media (max-width:600px) { .container .hero h2 }{font-size:1.2rem;}
+@media (max-width:600px) { .container .benefits ul }{grid-template-columns:1fr;}
+@media (max-width:600px) { .container .tool-frame iframe }{height:380px;}
+@media (max-width:600px) { .container .cta-box }{padding:1.5rem;}
+@media (max-width:600px) { .container .cta-box .price }{font-size:1.6rem;}
+.sticky-conversion-bar .sticky-cta:hover{background:#2DBD6E; transform:scale(1.05); box-shadow:0 4px 15px rgba(61,220,132,0.5);}
+@media (max-width:600px) { .sticky-conversion-bar }{padding:0.5rem 1rem; gap:0.5rem;}
+@media (max-width:600px) { .sticky-conversion-bar .sticky-text }{font-size:0.7rem;}
+@media (max-width:600px) { .sticky-conversion-bar .price-tag }{font-size:1rem;}
+@media (max-width:600px) { .compare-table }{font-size:0.8rem;}
+@media (max-width:600px) { .compare-table th, .compare-table td }{padding:0.5rem;}
+body{top: 0px !important;}
+#cookie-consent-banner{display: none; position: fixed; bottom: 0; left: 0; right: 0;
+  background: rgba(10,10,10,0.97); border-top: 1px solid #333;
+  padding: 1rem 1.5rem; z-index: 999999;
+  backdrop-filter: blur(10px); text-align: center;}
+#cookie-consent-banner p{color: #aaa; font-size: 0.85rem; margin-bottom: 0.8rem;}
+#cookie-consent-banner .cookie-buttons{display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap;}
+.blog-intro{text-align: center; padding: 1.5rem 1rem; color: #888; font-size: 1rem; margin-bottom: 1rem;}
+.post-card h2 a:hover{color: var(--accent-light);}
+.post-card .post-meta span{margin-right: 0.8rem;}
+.breadcrumb-nav{margin-bottom: 1.2rem;}
+.breadcrumb-nav ol,
+.breadcrumb-list{list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem;
+  font-size: 0.8rem; color: var(--text-dim); padding: 0; margin: 0;
+  line-height: 1.6;}
+.breadcrumb-list li{display: flex; align-items: center;}
+.breadcrumb-list li:not(:first-child)::before{content: "|"; margin-right: 0.5rem; color: var(--text-dim);}
+nav ul li a[href="/"]::before{content: "| ";}
+nav ul li a[href*="/apps/"]::before,
+nav ul li a[href*="apps/app-details"]::before{content: "✦ ";}
+nav ul li a[href*="/tools/"]::before{content: "✦ ";}
+nav ul li a[href*="/blog/"]::before{content: "✦ ";}
+nav ul li a[href*="about"]::before{content: "✦ ";}
+nav ul li a[href*="best-occult-apps"]::before{content: "✦ ";}
+nav ul li a[href*="complete"]::before{content: "✦ ";}
+nav ul li a[href*="privacy"]::before{content: "✦ ";}
+nav ul li a[href*="glossary"]::before{content: "✦ ";}
+.tool-card h3 a:hover{color: var(--accent-light);}
+@media (max-width: 600px) { .share-buttons }{gap: 0.5rem;}
+@media (max-width: 600px) { .share-btn span }{display: none;}
+@media (max-width: 600px) { .share-btn }{padding: 0.6rem;}
+.related-links a:hover{color: var(--accent-light); text-decoration: underline;}
+@media (max-width: 600px) { .related-articles }{padding: 1.2rem;}
+.table-of-contents{background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem 1.5rem; margin: 1.5rem 0 2rem; font-size: 0.95rem;}
+.table-of-contents summary{cursor: pointer; font-weight: 600; color: var(--accent); padding: 0.25rem 0; user-select: none; font-size: 1.05rem;}
+.table-of-contents summary::-webkit-details-marker{color: var(--accent);}
+.table-of-contents[open] summary{margin-bottom: 0.75rem;}
+.table-of-contents nav ol{padding-left: 1.5rem; margin: 0;}
+.table-of-contents nav ol li{margin: 0.35rem 0;}
+.table-of-contents nav ol li a{color: var(--text); text-decoration: none; transition: color var(--transition-fast);}
+.table-of-contents nav ol li a:hover{color: var(--accent-light); text-decoration: underline;}
+    </style>
+
+    <link rel="stylesheet" href="../css/style.min.css">
+<meta name="twitter:site" content="@Cha0smagickLABS">
+<meta name="twitter:creator" content="@FraterAlek0s">
+<meta property="article:published_time" content="2026-06-24">
+<meta property="article:modified_time" content="2026-06-24">
+<link rel="stylesheet" href="../css/wisdom.css">
+<meta name="author" content="Cha0smagick Labs - Frater Alek0s">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "@id": "https://cha0smagicklabs.com/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.html#article", "headline": "NASA JPL vs Swiss Ephemeris: which one actually gives you the right planetary positions?", "description": "Both are professional grade and the difference is invisible in a natal chart. What really moves a planet between houses is the timezone, the house system and the equinox. A comparison from a studio that ships an astrology app.", "image": "https://cha0smagicklabs.com/assets/images/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.png", "author": {"@type": "Person", "@id": "https://cha0smagicklabs.com/pages/frater-alek0s.html#person", "name": "Frater Alek0s", "url": "https://cha0smagicklabs.com/pages/frater-alek0s.html", "jobTitle": "Founder", "sameAs": ["https://x.com/Cha0smagickLABS", "https://www.instagram.com/cha0smagick.labs/", "https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA", "https://t.me/cha0smagicklabs"]}, "publisher": {"@type": "Organization", "@id": "https://cha0smagicklabs.com/#organization", "name": "Cha0smagick Labs", "url": "https://cha0smagicklabs.com", "logo": {"@type": "ImageObject", "url": "https://cha0smagicklabs.com/assets/images/Banner.png"}}, "datePublished": "2026-10-21", "dateModified": "2026-10-21", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://cha0smagicklabs.com/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.html"}, "inLanguage": "en"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://cha0smagicklabs.com/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.html#faq", "mainEntity": [{"@type": "Question", "name": "Which is more accurate, JPL or Swiss Ephemeris?", "acceptedAnswer": {"@type": "Answer", "text": "For a natal chart the difference between a full implementation of either one is not visible. Both projects publish their own accuracy figures, and the practical difference for an app builder is the licence: the JPL series are public domain, and Swiss Ephemeris is AGPL or a commercial licence."}}, {"@type": "Question", "name": "Does the ephemeris change my horoscope?", "acceptedAnswer": {"@type": "Answer", "text": "Almost never. It can change a house placement when a planet sits within about an arcminute of a cusp, and it can change the computed minute of a lunar phase or a solar return. Everything else that differs between two apps comes from the timezone, the daylight saving rule, the house system or the zodiac."}}, {"@type": "Question", "name": "Is Swiss Ephemeris free to use in an app?", "acceptedAnswer": {"@type": "Answer", "text": "It is published under the GNU Affero General Public License. An app that complies with the AGPL can use it, and an app that cannot has to buy a commercial licence from Astrodienst. Ask any vendor which one you are getting."}}, {"@type": "Question", "name": "Why does my Moon sign differ between two apps?", "acceptedAnswer": {"@type": "Answer", "text": "Almost always the birth time rather than the ephemeris. Check the timezone and the daylight saving rule for the date and place of birth, then check whether one of the apps uses a different house system. A Moon one sign off is a time problem, not a series problem."}}, {"@type": "Question", "name": "Does Astral Lab use Swiss Ephemeris?", "acceptedAnswer": {"@type": "Answer", "text": "No. Astral Lab implements VSOP87 for the planets and ELP-2000 for the Moon, the same series behind the JPL Development Ephemeris. The accuracy is equivalent for a natal chart and the licence keeps the app free of AGPL obligations."}}, {"@type": "Question", "name": "How do I check a planetary position myself?", "acceptedAnswer": {"@type": "Answer", "text": "Use JPL Horizons. Match the UTC time, the observer type and the coordinate convention, and compare the ecliptic longitude. Ten minutes of work settles whether an app is right, including ours."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "@id": "https://cha0smagicklabs.com/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.html#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cha0smagicklabs.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://cha0smagicklabs.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "NASA JPL vs Swiss Ephemeris: which one actually gives you the right planetary positions?", "item": "https://cha0smagicklabs.com/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.html"}]}</script>
+</head><div class="share-section">
+    <h3 style="text-align:center;color:#c5a059;margin-bottom:1.5rem;">Share This Article</h3>
+    <div class="share-buttons">
+        <a href="https://twitter.com/intent/tweet?text=NASA%20JPL%20vs%20Swiss%20Ephemeris%3A%20which%20one%20gives%20you%20the%20rightagick%20Thought%20Forms&url=https%3A//cha0smagicklabs.com/blog/how-to-create-magickal-servitor.html" target="_blank" class="share-btn share-twitter" title="Share on Twitter/X">
+            <svg class="share-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>Share on X</span>
+        </a>
+        <a href="https://www.reddit.com/submit?url=https%3A//cha0smagicklabs.com/blog/how-to-create-magickal-servitor.html&title=NASA%20JPL%20vs%20Swiss%20Ephemeris%3A%20which%20one%20gives%20you%20the%20rightagick%20Thought%20Forms" target="_blank" class="share-btn share-reddit" title="Share on Reddit">
+            <svg class="share-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.633 4.906 1.544.604-.48 1.354-.76 2.174-.76 1.863 0 3.374 1.51 3.374 3.373a3.36 3.36 0 0 1-1.352 2.695c.064.27.1.558.1.846 0 3.22-3.604 5.834-8.05 5.834-4.444 0-8.05-2.614-8.05-5.834 0-.285.034-.57.094-.838A3.36 3.36 0 0 1 3.754 12c0-1.863 1.51-3.373 3.373-3.373.813 0 1.554.275 2.154.736 1.406-.89 3.033-1.44 4.823-1.516l.949-4.437a.3.3 0 0 1 .186-.222l3.664-1.039a.3.3 0 0 1 .237.028zm-3.609 7.48a.44.44 0 0 0-.462.442c0 .245.2.442.462.442s.462-.197.462-.442a.44.44 0 0 0-.462-.442zm5.022.008a.44.44 0 0 0-.462.443c0 .244.2.441.462.441s.462-.197.462-.441a.44.44 0 0 0-.462-.443zm-5.022 1.537c-.521 0-.867.604-.867 1.359 0 .754.346 1.358.867 1.358s.867-.604.867-1.358c0-.755-.346-1.359-.867-1.359zm5.022.008c-.521 0-.867.604-.867 1.359 0 .754.346 1.358.867 1.358s.867-.604.867-1.358c0-.755-.346-1.359-.867-1.359zm-3.552 3.047a2.12 2.12 0 0 0-.604.096c-.558.2-1.008.667-1.216 1.254a3.1 3.1 0 0 0 3.623-.003 2.17 2.17 0 0 0-1.803-1.347z"/></svg>
+            <span>Share on Reddit</span>
+        </a>
+        <a href="https://t.me/share/url?url=https%3A//cha0smagicklabs.com/blog/how-to-create-magickal-servitor.html&text=NASA%20JPL%20vs%20Swiss%20Ephemeris%3A%20which%20one%20gives%20you%20the%20rightagick%20Thought%20Forms" target="_blank" class="share-btn share-telegram" title="Share on Telegram">
+            <svg class="share-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.5.5 0 0 1 .172.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            <span>Share on Telegram</span>
+        </a>
+        <a href="https://www.tumblr.com/share/link?url=https%3A//cha0smagicklabs.com/blog/how-to-create-magickal-servitor.html&name=NASA%20JPL%20vs%20Swiss%20Ephemeris%3A%20which%20one%20gives%20you%20the%20rightagick%20Thought%20Forms" target="_blank" class="share-btn share-tumblr" title="Share on Tumblr">
+            <svg class="share-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.563 18.198c.965 0 2.168-.322 2.73-.677l.906 2.678c-.677.484-2.458.874-4.203.874-4.287 0-6.174-2.488-6.174-6.174V9.788H5.572V7.39c2.54-.839 3.602-3.072 3.789-5.663h2.683v4.936h4.485v2.525h-4.485v4.424c0 1.45.484 2.586 2.519 2.586"/></svg>
+            <span>Share on Tumblr</span>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//cha0smagicklabs.com/blog/how-to-create-magickal-servitor.html" target="_blank" class="share-btn share-facebook" title="Share on Facebook">
+            <svg class="share-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <span>Share on Facebook</span>
+        </a>
+        <a href="https://pinterest.com/pin/create/button/?url=https%3A//cha0smagicklabs.com/blog/how-to-create-magickal-servitor.html&description=NASA%20JPL%20vs%20Swiss%20Ephemeris%3A%20which%20one%20gives%20you%20the%20rightagick%20Thought%20Forms" target="_blank" class="share-btn share-pinterest" title="Share on Pinterest">
+            <svg class="share-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.936 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.67.968-2.916 2.174-2.916 1.025 0 1.52.769 1.52 1.692 0 1.03-.656 2.571-.995 4.001-.283 1.196.599 2.173 1.777 2.173 2.133 0 3.772-2.25 3.772-5.496 0-2.873-2.064-4.882-5.011-4.882-3.413 0-5.418 2.561-5.418 5.207 0 1.03.396 2.133.892 2.734.098.119.112.223.083.345l-.333 1.36c-.053.222-.174.27-.402.163-1.5-.698-2.438-2.891-2.438-4.65 0-3.788 2.752-7.265 7.935-7.265 4.166 0 7.403 2.968 7.403 6.937 0 4.141-2.61 7.473-6.233 7.473-1.216 0-2.36-.631-2.752-1.381l-.75 2.855c-.27 1.045-1.002 2.353-1.491 3.154C9.807 23.382 10.877 24 12 24c6.628 0 12-5.373 12-12 0-6.628-5.372-12-12-12z"/></svg>
+            <span>Share on Pinterest</span>
+        </a>
+    </div>
+</div>
+<footer id="site-footer" class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-section">
+            <h2>Cha0smagick Labs</h2>
+            <p>Explore the Art and Practice of Chaos Magick.</p>
+            <p>Corporate Cybermancy Solutions | since 2025.</p>
+        </div>
+        <div class="footer-section">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="../index.html">Home Page</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#products">Premium Apps
+                </li>
+                <li><a href="../apps/">All 12 Android Apps</a></li>
+                <li><a href="../books/">All 8 PDF Books</a>
+                <li><a href="../tools/">Free Online Tools</a></li>
+                <li><a href="index.html">Read Blog</a></li>
+                <li><a href="../best-occult-apps-android.html">Best Occult Apps</a></li>
+                <li><a href="../glossary.html">Magick Glossary</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h2>Legal</h2>
+            <ul>
+                <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="../index.html#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-visitor">
+            <h2>Visitor Count</h2>
+            <div class="visitor-count">Visitors: <span id="visitor-count">000000</span></div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Cha0smagick Labs | Corporate Cybermancy Solutions</p>
+    </div>
+<div class="footer-section"><h2>Trust</h2><ul><li><a href="../pages/frater-alek0s.html">About the author</a></li><li><a href="../pages/editorial-policy.html">Editorial policy</a></li><li><a href="../contact.html">Contact</a></li></ul></div></footer>
+<script>if('serviceWorker'in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js');});}</script>
+
+<script src="../js/shared.min.js"></script>
+
+<div id="lang-sidebar" class="lang-sidebar">
+    <button id="lang-toggle-btn" class="lang-toggle-btn" onclick="toggleLangSidebar()" title="Select Language"><svg class="lang-globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.8 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.8-3.8-9S9.5 5.7 12 3z"/></svg></button>
+    <div id="lang-flag-list" class="lang-flag-list">
+        <button onclick="switchLang('en')" class="lang-btn" title="English"><img src="../assets/images/flags/gb.svg" alt="English" class="flag-icon"> EN</button>
+        <button onclick="switchLang('es')" class="lang-btn" title="Español"><img src="../assets/images/flags/es.svg" alt="Spanish" class="flag-icon"> ES</button>
+        <button onclick="switchLang('fr')" class="lang-btn" title="Français"><img src="../assets/images/flags/fr.svg" alt="French" class="flag-icon"> FR</button>
+        <button onclick="switchLang('de')" class="lang-btn" title="Deutsch"><img src="../assets/images/flags/de.svg" alt="German" class="flag-icon"> DE</button>
+        <button onclick="switchLang('it')" class="lang-btn" title="Italiano"><img src="../assets/images/flags/it.svg" alt="Italian" class="flag-icon"> IT</button>
+        <button onclick="switchLang('pt')" class="lang-btn" title="Português"><img src="../assets/images/flags/pt.svg" alt="Portuguese" class="flag-icon"> PT</button>
+        <button onclick="switchLang('ru')" class="lang-btn" title="Русский"><img src="../assets/images/flags/ru.svg" alt="Russian" class="flag-icon"> RU</button>
+        <button onclick="switchLang('ja')" class="lang-btn" title="日本語"><img src="../assets/images/flags/jp.svg" alt="Japanese" class="flag-icon"> JP</button>
+        <button onclick="switchLang('zh-CN')" class="lang-btn" title="中文"><img src="../assets/images/flags/cn.svg" alt="Chinese" class="flag-icon"> ZH</button>
+    </div>
+</div>
+<div id="google_translate_element" style="display:none;"></div>
+<div id="cookie-consent-banner">
+    <p>This site uses cookies for analytics and to improve your experience. <a href="../privacy-policy.html" style="color:#ffd700;">Review our Privacy Policy</a></p>
+    <div class="cookie-buttons">
+        <button class="cookie-btn-accept" onclick="acceptCookies()">Accept</button>
+        <button class="cookie-btn-decline" onclick="declineCookies()">Decline</button>
+    </div>
+</div>
+    <script src="../js/conversion.min.js"></script>
+
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2539880');
+</script>
+<!-- End MailerLite Universal -->
+
+<main class="blog-post">
+<article class="article">
+<div class="blog-nav">
+            <a href="index.html">&larr; Back to Blog</a>
+        </div>
+
+        
+        <picture>
+            <source srcset="../assets/images/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.webp" type="image/webp">
+            <img src="../assets/images/blog/nasa-jpl-vs-swiss-ephemeris-accuracy.png" alt="NASA JPL vs Swiss Ephemeris: which one actually gives you the right planetary positions?" class="blog-featured-image" width="800" height="420" loading="eager" style="width:100%;max-width:800px;height:auto;border-radius:8px;margin-bottom:2rem;border:1px solid #333;">
+        </picture>
+
+        <h1>NASA JPL vs Swiss Ephemeris: which one actually gives you the right planetary positions?</h1>
+<div class="meta">By <a href="https://cha0smagicklabs.com/pages/frater-alek0s.html" rel="author">Frater Alek0s</a> | <time datetime="2026-10-21">2026-10-21</time> | 12 min read</div>
+
+        <details class="table-of-contents" open>
+            <summary>Table of Contents</summary>
+            <nav aria-label="Table of Contents">
+                <ol>
+            <li><a href="#short-answer">The short answer</a></li>
+            <li><a href="#what-an-ephemeris-is">What an ephemeris actually is</a></li>
+            <li><a href="#the-two-things">The two things people call JPL and Swiss Ephemeris</a></li>
+            <li><a href="#how-big-is-the-difference">How big is the difference in arcminutes</a></li>
+            <li><a href="#where-it-shows-up">Where the difference shows up in a real chart</a></li>
+            <li><a href="#why-your-chart-changes">The real reason your chart changes between apps</a></li>
+            <li><a href="#what-we-chose">What we chose for Astral Lab, and why</a></li>
+            <li><a href="#check-your-own-chart">How to check your own chart</a></li>
+            <li><a href="#what-we-have-not-done">What we have not done</a></li>
+            <li><a href="#ephemeris-faq">FAQ</a></li>
+            <li><a href="#references">References</a></li>
+</ol>
+            </nav>
+        </details>
+
+<h2 id="short-answer">The short answer</h2>
+<p>Both are professional grade. A full VSOP87 plus ELP-2000 implementation and a
+Swiss Ephemeris implementation agree on planetary positions to well under one
+arcminute over the period that matters for a natal chart, and an arcminute of
+ecliptic longitude is about four seconds of birth time. If you are choosing
+between two astrology apps, the ephemeris is the least interesting thing that
+separates them.</p>
+<p>What actually moves a planet from one house to the other, or a Moon sign from
+one sign to the next, is the boring part: the timezone you typed, the daylight
+saving flag, whether the app used Placidus or whole sign, and whether it
+returned the apparent or the mean position. Those produce differences of
+degrees. The ephemeris produces differences of seconds.</p>
+<p>There is one case where the source genuinely matters, and it comes up
+constantly in forums: when you compare your chart against a table you generated
+yourself, and the two disagree by about fifty arcseconds. That is almost never
+an error. It is the difference between the mean equinox of date and the
+apparent equinox of date, and it accounts for roughly the precession of the
+equinox in longitude over the years between your birth and now. The rest of
+this page explains how to tell the two apart.</p>
+
+<h2 id="what-an-ephemeris-is">What an ephemeris actually is</h2>
+<p>An ephemeris is a table of where the planets were, at a given moment, for a
+long span of time. When people ask which ephemeris an app uses, they are
+really asking three separate questions that get bundled into one:</p>
+<ol>
+<li><strong>Which mathematical theory</strong> produces the positions: a
+semi-analytic planetary theory, or a numerical integration of the equations of
+motion.</li>
+<li><strong>Which data files</strong> carry those numbers: the JPL Development
+Ephemeris series, or the tables compiled by Astrodienst.</li>
+<li><strong>Which implementation</strong> the app runs: how many terms of the
+series it kept, and how it handles time, nutation, aberration, light-time and
+the observer's coordinates.</li>
+</ol>
+<p>The third point is where most of the real-world variation lives. A library
+that ships the first four hundred terms of a series that has ten thousand will
+be faster and less accurate than one that ships the whole thing, and the
+documentation of the popular astronomy packages is usually explicit about
+which they do.</p>
+
+<h2 id="the-two-things">The two things people call JPL and Swiss Ephemeris</h2>
+<h3>What "JPL" means</h3>
+<p>JPL is the Jet Propulsion Laboratory, and the thing its name refers to is
+the Development Ephemeris, the sequence of files (DE200, DE430, DE440 and
+successors) that describe the motion of the solar system over long spans. Those
+files are not hand-entered tables. The planetary positions inside them come
+from <strong>VSOP87</strong>, a semi-analytic theory by Pierre Bretagnon and
+Gerard Francou of the Bureau des Longitudes in Paris, published in 1988. The
+Moon comes from <strong>ELP-2000/82b</strong>, the lunar theory by Chapront and
+Toublat, from the same institution.</p>
+<p>The practical consequence is that when a piece of astronomy software says it
+uses JPL ephemerides, it is usually loading a DE file and evaluating VSOP87
+and ELP against it. Horizons, the public interface the JPL exposes for
+computing positions of solar system bodies, works the same way. So does
+Skyfield, the Python library used in a large share of modern astronomy code.</p>
+<h3>What "Swiss Ephemeris" means</h3>
+<p>Swiss Ephemeris is an independent implementation by Astrodienst, in Zurich,
+developed since the 1980s. It did not come from a space agency and it was not
+built for astronomy. It was built for astrology, it became the reference
+implementation in professional astrology software, and it is the reason most
+astrology programs give the same positions for the same birth data.</p>
+<p>Its licence is the other half of the comparison. The source is published
+under the GNU Affero General Public License, with a commercial licence
+available for applications that cannot comply with the AGPL. That is a real
+constraint for a closed-source commercial app, and it is part of why the
+choice is not always free.</p>
+<h3>Side by side</h3>
+<table>
+<thead><tr><th>Source</th><th>What it is</th><th>Licence</th><th>Where it shows up</th></tr></thead>
+<tbody>
+<tr><td>VSOP87 (full series) + ELP-2000/82b</td><td>Semi-analytic planetary and lunar theory, Bureau des Longitudes, 1988 and 1983</td><td>Public domain</td><td>JPL Development Ephemeris, Horizons, Skyfield, and a growing number of astrology apps</td></tr>
+<tr><td>VSOP87 (truncated)</td><td>The same theory with most of the terms dropped for speed</td><td>Public domain</td><td>Many open-source ephemeris libraries. The truncation is the usual reason for a discrepancy of tens of arcseconds</td></tr>
+<tr><td>Swiss Ephemeris</td><td>Independent high-precision implementation, Astrodienst, Zurich</td><td>AGPL, or a commercial licence for closed-source use</td><td>The de facto standard in professional astrology software</td></tr>
+</tbody>
+</table>
+<p>On the accuracy figures themselves, the honest thing is to read the
+documentation of each project rather than a blog post, including this one. What
+is not in dispute is the order of magnitude: a full implementation sits in the
+arcsecond class over its validity window, and a truncated series sits in the
+tens-of-arcseconds class. Both are far better than anything a consumer astrology
+app needs. The documentation of the Swiss Ephemeris and of the JPL ephemerides
+states its own figures, and those are the ones worth quoting.</p>
+
+<h2 id="how-big-is-the-difference">How big is the difference in arcminutes</h2>
+<p>One degree of ecliptic longitude is 60 arcminutes. The houses and the
+Ascendant rotate through the whole zodiac in about a day, which works out at
+roughly 0.25 degrees for every minute of time, or 4 minutes of time for every
+degree. Put the two together and you get the number that actually matters for
+reading a chart:</p>
+<ul>
+<li><strong>1 arcsecond</strong> of longitude error is about 0.07 seconds of birth time.</li>
+<li><strong>1 arcminute</strong> of longitude error is about 4 seconds of birth time.</li>
+<li><strong>1 arcminute</strong> of latitude error on the Moon moves it about 1 degree across the sky, and moves its house placement if it sat close to a cusp.</li>
+</ul>
+<p>The Moon is the body where this shows, because it covers 13 degrees a day
+against the Sun's one degree. An error of one arcminute in the Moon's
+longitude is about eleven seconds of lunar motion. In a natal chart with a
+birth time given to the minute, that is noise. In a transiting chart computed
+for a specific hour, it is also noise. It becomes interesting only for things
+computed to the second: the exact moment of a lunar phase, the exact minute of
+a solar return, and a birth time that lands within a few seconds of a house
+cusp.</p>
+
+<h2 id="where-it-shows-up">Where the difference shows up in a real chart</h2>
+<p>Three situations, in decreasing order of how often they matter:</p>
+<ol>
+<li><strong>A planet sitting within an arcminute of a house cusp.</strong> Here a
+one-arcminute difference can put the planet in a different house. This is the
+only case in a natal chart where the ephemeris source changes the reading, and
+it happens to a few charts in a hundred rather than to most of them.</li>
+<li><strong>The exact time of a lunar phase or a solar return.</strong> A solar
+return defined to the minute is sensitive to a few arcseconds, and the
+difference between the two series is a small part of the error budget there.
+The larger part is usually the definition of the return itself.</li>
+<li><strong>Nothing at all.</strong> For the overwhelming majority of charts,
+the two series produce the same reading, and a chart that differs between two
+apps differs because of something else.</li>
+</ol>
+<p>This is also why the folklore about professional astrology software being
+more accurate than an app is largely about the other layers. A program that
+lets you choose the house system, shows the exact degrees and minutes, and
+displays the time zone it used will serve a practitioner better than a program
+with a more precise ephemeris and a fixed set of defaults.</p>
+
+<h2 id="why-your-chart-changes">The real reason your chart changes between apps</h2>
+<p>This is the part that generates most of the forum threads. In rough order of
+how much damage they do:</p>
+<table>
+<thead><tr><th>Cause</th><th>Size of the difference</th><th>How to spot it</th></tr></thead>
+<tbody>
+<tr><td>Daylight saving mishandled</td><td>About 15 degrees of Ascendant</td><td>The Ascendant is off by roughly a quarter of the circle while everything else matches</td></tr>
+<tr><td>House system</td><td>Several degrees, sometimes a whole sign</td><td>Whole sign and Placidus disagree for a large share of birth times. A planet sitting near a cusp in one system and a sign away in the other is the usual giveaway</td></tr>
+<tr><td>Timezone</td><td>Arbitrary</td><td>Everything shifts together, including the Ascendant</td></tr>
+<tr><td>Tropical versus sidereal zodiac</td><td>About 0.014 degrees per year, so roughly a degree across a human lifetime</td><td>Every planet is off by the same amount</td></tr>
+<tr><td>Mean versus apparent position</td><td>About 50 arcseconds</td><td>A small, constant offset on every body, growing with the distance in time from J2000</td></tr>
+<tr><td>Geocentric versus topocentric</td><td>Up to about 1 degree for the Moon</td><td>Only the Moon moves noticeably</td></tr>
+</tbody>
+</table>
+<p>The daylight saving row is the one that catches almost everyone. If a chart
+was computed with the birth time taken from a hospital record or an old
+passport, and the app applies a daylight saving rule that did not apply on
+that date in that country, the Ascendant moves a quarter of the circle and the
+whole reading changes with it.</p>
+
+<h2 id="what-we-chose">What we chose for Astral Lab, and why</h2>
+<p>Astral Lab implements <strong>VSOP87</strong> for the planets and
+<strong>ELP-2000</strong> for the Moon, the same series that sit behind the JPL
+Development Ephemeris. Three reasons, in order of weight:</p>
+<ol>
+<li><strong>The accuracy is in the class that a natal chart needs.</strong> A
+truncated series would have been plenty for a chart, and we did not want to
+carry a truncation error for a feature users never asked to be approximate.</li>
+<li><strong>The licence keeps the app free of a constraint.</strong> The JPL
+series are public domain. Swiss Ephemeris is AGPL, or a commercial licence for
+closed-source applications. Either route is possible, and either route costs
+something: one of them is a licence, the other is a rate limit on how many
+positions an app can compute per day under a free tier. For a one-time
+purchase app that runs entirely on the device, the public domain series are
+the straightforward choice.</li>
+<li><strong>It makes verification easy.</strong> The tools a curious reader
+already has, Horizons and the Astronomical Almanac, work from the same series.
+A reader can check a position from the app against a reference they generated
+themselves, without installing anything.</li>
+</ol>
+<p>Astral Lab runs the calculation on the device, works with no account, and
+keeps no data. It is
+<a href="../apps/astral-lab.html">available on Google Play</a> for a
+one-time purchase of $6.99.</p>
+
+<h2 id="check-your-own-chart">How to check your own chart</h2>
+<p>You do not need to trust anybody's app, including ours. This takes about ten
+minutes and settles the question for any body, on any date.</p>
+<ol>
+<li><strong>Get the position from the app.</strong> Pick a planet, note its
+ecliptic longitude, and note the exact UTC date and time it used. Make sure
+the app is showing apparent or geocentric position if it offers the choice, and
+write down which.</li>
+<li><strong>Go to Horizons</strong> at horizons.jpl.nasa.gov, or use its API.
+Set the same UTC time, the same observer type, and the same coordinate
+convention.</li>
+<li><strong>Read the ecliptic longitude</strong> from the observer table. For
+the Moon, use the apparent geocentric longitude to match an app that reports
+apparent positions.</li>
+<li><strong>Compare in the right frame.</strong> If the app uses the mean
+equinox of date, ask Horizons for the mean equinox of date. Comparing a mean
+position with an apparent one puts a constant offset of about fifty arcseconds
+between them, and that offset grows with the years between the date and
+J2000. It looks exactly like a bug in the app and is not one.</li>
+<li><strong>Expect agreement within a few arcseconds for the Moon</strong> and
+within a couple of arcseconds for the inner planets. If you are seeing more
+than that, the cause is one of the five in the table above, and the timezone
+row is the first one to check.</li>
+</ol>
+<p>The same procedure works for the Ascendant, with one addition: give Horizons
+the latitude and longitude of the birth place, and use the same house system
+in both tools, because the house system is a choice made after the Ascendant is
+computed.</p>
+
+<h2 id="what-we-have-not-done">What we have not done</h2>
+<p>Stating this plainly, because a page that only lists strengths is worth
+nothing:</p>
+<ul>
+<li>We have not published a full error analysis of our own implementation.</li>
+<li>We have not had a third party audit it.</li>
+<li>We have not published a head-to-head table of our output against Swiss
+Ephemeris for a set of reference dates.</li>
+<li>We have not compared our Moon against ELP at the sub-arcsecond level, and
+we do not claim that accuracy. We claim the class of accuracy that the
+underlying series provides.</li>
+</ul>
+<p>That work is worth doing, and it is not on the schedule because it is not
+what readers have asked for. If you want it, say so and we will do it, and
+publish the result whatever it shows. If you find a position that disagrees
+with a reference by more than the figures above, email it and we will publish
+the fix and the correction.</p>
+
+<h2 id="ephemeris-faq">FAQ</h2>
+<h3>Which is more accurate, JPL or Swiss Ephemeris?</h3>
+<p>For a natal chart, the difference between a full implementation of either one
+is not visible. Both projects publish their own accuracy figures and they are
+worth reading directly. The practical difference for an app builder is the
+licence: the JPL series are public domain, and Swiss Ephemeris is AGPL or
+commercial.</p>
+<h3>Does the ephemeris change my horoscope?</h3>
+<p>Almost never. It changes a house placement if a planet sits within about an
+arcminute of a cusp, and it changes the computed minute of a lunar phase or a
+solar return. Everything else that differs between two apps comes from the
+timezone, the daylight saving rule, the house system or the zodiac
+convention.</p>
+<h3>Is Swiss Ephemeris free to use in an app?</h3>
+<p>It is published under the AGPL. An app that complies with the AGPL can use
+it, and an app that cannot has to buy a commercial licence from Astrodienst.
+Ask the vendor which one you are getting.</p>
+<h3>Why does my Moon sign differ between two apps?</h3>
+<p>Almost always the time, not the ephemeris. Check the timezone and the
+daylight saving rule for the date and place of birth, then check whether one
+of the apps is using a different house system. A Moon one sign off is a
+birth-time problem, not a series problem.</p>
+<h3>Does Astral Lab use Swiss Ephemeris?</h3>
+<p>No. It implements VSOP87 for the planets and ELP-2000 for the Moon, the
+same series behind the JPL Development Ephemeris. The accuracy is equivalent
+for a natal chart and the licence keeps the app free of AGPL obligations.</p>
+<h3>How do I check a planetary position myself?</h3>
+<p>Use Horizons. Match the UTC time, the observer type, and the coordinate
+convention, and compare the ecliptic longitude. Ten minutes of work settles
+whether an app is right, including ours.</p>
+
+
+<section id="references">
+<h2>References</h2>
+<ul>
+<li>Bretagnon, P. and Francou, G. (1988). "Planetary theories in rectangular and spherical variables. VSOP87 solutions." <em>Astronomy and Astrophysics</em>, 202, 309-315. The VSOP87 solutions and their documentation are published by the Bureau des Longitudes.</li>
+<li>Chapront-Toublat, M. and Chapront, J. (1983). "ELP 2000-85: semi-analytic ephemeris of the Moon." <em>Astronomy and Astrophysics</em>, 128, 61-84.</li>
+<li>Jet Propulsion Laboratory, Solar System Dynamics. Development Ephemerides and the Horizons interface, horizons.jpl.nasa.gov. The DE series and the Horizons user documentation.</li>
+<li>United States Naval Observatory. <em>The Astronomical Almanac</em>, annual edition. The printed reference tables for positions, which are independent of both implementations above.</li>
+<li>Astrodienst. Swiss Ephemeris: technical documentation and licence terms, astro.com/swisseph. Read the accuracy section and the licence section separately. They answer different questions.</li>
+<li>Pierce, B. (2016). "Skyfield: Elegant astronomy for Python." Journal of Open Source Software, 1(12), 1517. For how the JPL series are consumed in practice by open astronomy code.</li>
+</ul>
+</section>
+
+
+<section class="internal-links" style="margin: 2rem 0; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px;">
+<h3 style="color: var(--accent-gold); margin-bottom: 1rem;">Related Resources</h3>
+<div style="margin-bottom: 1rem;">
+<strong style="color: var(--text-primary);">Apps:</strong> <a href="../apps/astral-lab.html">Astral Lab</a> | <a href="../apps/lunar-phase-calculator.html">Lunar Phase Calculator</a> | <a href="../apps/psi-gym.html">PSI GYM</a>
+</div>
+<div style="margin-bottom: 1rem;">
+<strong style="color: var(--text-primary);">Guides:</strong> <a href="astrology-apps-android-guide.html">Best astrology apps for Android compared</a> | <a href="moon-phases-meaning-8-phases-explained.html">The eight moon phases and what they mean</a> | <a href="tarot-card-meaning-guide-essentials-beginners.html">Tarot card meanings for beginners</a>
+</div>
+<div>
+<strong style="color: var(--text-primary);">Free tools:</strong> <a href="../tools/lunar-phase.html">Lunar phase calculator</a> | <a href="../glossary.html">Magick glossary</a>
+</div>
+</section>
+
+
+<section class="cta-contextual" id="try-it" style="margin: 2rem 0; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px;">
+<h3 style="color: var(--accent-gold); margin-top: 0;">Try it on your own chart</h3>
+<p style="margin-bottom: 1rem;"><strong>Astral Lab</strong> computes natal charts, transits and aspect grids
+with VSOP87 and ELP-2000 precision, entirely on the device. No account, no
+tracking, and it works with the plane.</p>
+<p style="margin-bottom: 0;">
+<a class="cta-button primary" href="https://play.google.com/store/apps/details?id=com.cha0smagicklabs.astralchart" rel="noopener">Astral Lab on Google Play ($6.99, one-time)</a>
+</p>
+</section>
+
+
+<section class="related-articles" style="margin: 2rem 0;">
+<h2 style="color: var(--accent-gold);">Read next</h2>
+<div class="related-links">
+<ul>
+<li><a href="astrology-apps-android-guide.html">Best Astrology Apps for Android 2026: 6 Ranked by Price</a></li>
+<li><a href="astral-lab-hypnagogia-to-projection.html">Astral Lab: 30 days of hypnagogia work</a></li>
+<li><a href="moon-phases-meaning-8-phases-explained.html">Moon Phases Meaning: 8 Lunar Phases Explained</a></li>
+<li><a href="tarot-card-meaning-guide-essentials-beginners.html">Tarot Card Meaning: Essential Guide for Beginners</a></li>
+</ul>
+</div>
+</section>
+
+<!-- Comments (giscus) -->
+<section id="comments" class="post-comments" aria-labelledby="comments-title">
+  <h2 id="comments-title" class="post-comments-title">Discussion &amp; Comments</h2>
+  <p class="post-comments-intro">Tried this practice? Tell us what happened below. Reader results are the most useful
+    feedback we get &mdash; they show other practitioners what to expect and tell us which guides to write next.</p>
+  <div class="giscus giscus-container" id="giscus-comments"></div>
+</section>
+<script src="https://giscus.app/client.js"
+        data-repo="MagiaCaotica/43.-Web-cha0smagick-labs"
+        data-repo-id="R_kgDOQ95-4g"
+        data-category="General"
+        data-category-id="DIC_kwDOQ95-4s4DCREq"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="dark_dimmed"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+</article>
+</main></body></html>
