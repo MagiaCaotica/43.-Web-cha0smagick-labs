@@ -293,6 +293,19 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 - **Aceptación:** `node projects/scripts/audit-indexation.mjs` sale con 0 contradicciones y 0 huérfanas; el sitemap no repite URLs ni anuncia páginas `noindex` o inexistentes; GSC muestra las URLs descubiertas.
 - **Evidencia:** `docs/indexacion-2026-10-21.md`, salida de `audit-indexation.mjs`, `projects/scripts/gsc-indexation.py`.
 
+
+### [x] P1-12 — Auditar y elevar E-E-A-T, confianza y calidad de contenido
+
+- **Responsable:** SEO / Editorial.
+- **Depende de:** P0-01, P1-11.
+- **Entregable:** señales de confianza measures y contenido nuevo decidido con datos de Search Console (`docs/eeat-contenido-2026-10-21.md`).
+- **Debe hacer:** página de autor, política editorial y contacto; `Person` y `Organization` con entidad definida una vez y referenciada por `@id`; fecha de revisión visible solo donde existe; hreflang coherente y recíproco; contenido nuevo donde hay demanda medida y no hay página.
+- **No debe hacer:** publicar afirmaciones que no se puedan sostener (la dirección física es decisión del propietario), escribir comparativas de apps que no tienen la función, ni llamar "revisado" a lo que no se ha revisado.
+- **Aceptación:** `audit-eeat.mjs` y `audit-hreflang.py` sin hallazgos; JSON-LD válido en todas las páginas; artículos nuevos enlazados desde la página que ya posiciona para esa sección.
+- **Evidencia:** `docs/eeat-contenido-2026-10-21.md`, `projects/scripts/audit-eeat.mjs`, `projects/scripts/audit-hreflang.py`, `projects/scripts/gsc-queries.py`.
+
+---
+
 ---
 
 ## Fase C — Escala, diversificación y eficiencia (días 46–90)
