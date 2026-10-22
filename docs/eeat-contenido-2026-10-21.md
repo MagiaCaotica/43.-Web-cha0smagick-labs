@@ -180,3 +180,91 @@ escriben su evidencia en `data/guerrilla/`.
   impresiones, 4 clics) y `paranormal` (254 impresiones, 3 clics). En ambos
   casos la posición media está en páginas 4-9, así que el trabajo es de
   autoridad y de profundidad, no de snippet.
+
+## 9. Segunda ronda: astrologia y paranormal en profundidad
+
+Los dos clusters con mas demanda y menos cobertura: **astrologia** (826
+impresiones, 4 clics) y **paranormal** (254, 3 clics). Con las posiciones
+medidas, el diagnostico se partio en dos:
+
+| Query | Impr. | Pos. | Que hacia falta |
+|---|---|---|---|
+| `best astrology apps` (+4 variantes) | 152 | 6,2 a 18 | La pagina estaba en pagina 1 con 0 clics: no era el titulo, era la confianza |
+| `nasa jpl vs swiss ephemeris reddit` | 14 | 4,6 | Articulo propio, desde la experiencia de Astral Lab |
+| `site.astro.com swisseph sidereal lahiri houses documentation` | 4 | 9,2 | Nadie cubria el ayanamsa ni los sistemas de casas |
+| `natal chart app`, `birth chart app` | 14 | 27 a 44 | Intentos comerciales sin pagina propia |
+| `best ghost app for android` (+3) | 18 | 9,3 a 11 | Mismo patron que astrologia: nuestra app sin decirlo |
+| `evp recording` | 6 | 8,7 | La guia existia pero sin la parte tecnica |
+
+### 9.1 El hallazgo de fondo: conflicto de intereses no declarado
+
+Los dos comparativos recomendaban **apps que fabrica este estudio** sin
+decirlo. El de astrologia afirmaba ademas estar "verified to the arc-minute
+against Swiss Ephemeris reference data", sin que exista ninguna verificacion
+publicada. Eso es exactamente lo que un revisor de confianza marca, y
+contradice la politica editorial que este mismo trabajo escribio.
+
+**Arreglado en las cuatro paginas comerciales** (los dos comparativos, el
+pillar de investigacion y la guia EVP):
+
+- Una declaracion de conflicto de intereses al principio: "two of the apps in
+  this comparison are ours", con la fecha y la fuente de los datos.
+- La afirmacion no comprobada sustituida por lo que si se sostiene: la
+  implementacion (VSOP87 y ELP-2000) con enlace al metodo para comprobarlo.
+- Los datos de la tabla pasan a ser verificables y fechados: precio de lista,
+  precio en promocion, nivel de instalaciones y estado del listing, leidos de
+  la ficha de Play el **21 de octubre de 2026** para las apps que publicamos
+  y para las que no.
+
+### 9.2 Astrologia: dos articulos nuevos
+
+**`blog/sidereal-vs-tropical-zodiac-lahiri-ayanamsa.html`** (2.125 palabras,
+2 tablas). Cubre el tema del que entra la gente por la documentacion de
+Swiss Ephemeris, y que el sitio no tenia: que es el ayanamsa, cuanto se ha
+movido (unos 24,2 grados en 2026, partiendo del valor Lahiri de 2000 mas la
+precesion anual), que ayanamsas hay, y los sistemas de casas con donde
+fallan. La parte que casi todos los articulos explican mal: **los aspectos
+son identicos en los dos zodiacos**, porque la separacion angular no depende
+de donde se ponga el cero; lo que se mueve son las etiquetas de signo y las
+casas.
+
+**`blog/birth-chart-app-accuracy-comparison.html`** (2.035 palabras). Las
+cuatro preguntas que deciden si una app de carta natal sirve: el instante
+(zona horaria, horario de verano, hora ausente), las efemerides, el marco
+(sideral o tropical) y la division (sistema de casas). Con el metodo para
+comprobar cualquier app en diez minutos, y que hacer cuando la hora de
+nacimiento es incorrecta. Cubre `natal chart app`, `birth chart app` y
+`astrology birth chart app`.
+
+### 9.3 Paranormal: el pillar pasa a ser indice del cluster
+
+**`blog/paranormal-investigation-step-by-step-guide.html`** era una guia de
+2.067 palabras que mencionaba NOCTEM 23 veces sin declarar que es nuestro.
+Ahora lleva la declaracion, y sobre todo un **indice curado del cluster**:
+catorce entradas agrupadas (antes de ir, recordings, trabajo de campo,
+herramientas), cada una con una linea de que sirve y con su limitacion
+honesta. Eso es lo que convierte una pila de articulos en un cluster, y es
+lo que reparte la autoridad interna.
+
+**`blog/evp-recording-complete-guide.html`** (3.041 palabras, 2 tablas). La
+introduccion separaba mal el metodo de la hipotesis; ahora lo hace. Y se
+anaden las dos secciones que dan autoridad:
+
+- **Que mide de verdad cada equipo**: movil, lavaller, micro externo, grabadora
+  de mano, camara, sweep de radio y grabador de sesion, con la limitacion
+  honesta de cada uno (el procesado automatico del movil borra justo los
+  sonidos irregulares que una afirmacion necesita, y el ruido de fondo
+  sintetico de un spirit box fabrica formas de voz por su cuenta).
+- **Las explicaciones ordinarias a descartar antes de usar la palabra voz**:
+  red a 50/60 Hz y sus armonicos, fluorescentes y dimmers, vibracion del
+  edificio, ruido de manos, interferencia de otro dispositivo, radio, y
+  paracusia, con el diagnostico de cada una y la revision a ciegas como
+  control.
+
+### 9.4 Verificacion
+
+- 1.002 URLs en el sitemap, 0 duplicadas, 0 `noindex`, 0 huerfanas, 0 enlaces
+  rotos, 0 contenido mixto.
+- hreflang: 1.468 declaraciones, 0 rotas, 0 incoherentes, 0 sin reciprocidad.
+- `npm test`: 38 pytest + 230 vitest en verde. Verificador de Play: PASS.
+- Comprobado en vivo con navegador real: las seis paginas y el sitemap.
