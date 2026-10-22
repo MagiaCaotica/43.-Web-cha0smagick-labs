@@ -151,9 +151,69 @@
   font-size: .82rem;
 }
 
+/* ------------------------------------------------- bloque sobre la herramienta */
+.tk-about h3 {
+  color: var(--tk-gold);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  margin: 1.5rem 0 .45rem;
+}
+
+.tk-about-text {
+  color: var(--tk-muted);
+  font-size: .97rem;
+  line-height: 1.7;
+  margin: 0 0 .4rem;
+  max-width: 74ch;
+}
+
+.tk-about-steps {
+  color: var(--tk-muted);
+  line-height: 1.65;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.tk-about-steps li {
+  margin-bottom: .45rem;
+}
+
+.tk-about-steps li::marker {
+  color: var(--tk-gold);
+}
+
+.tk-disclosure-inline {
+  background: rgba(214, 173, 85, .07);
+  border: 1px solid var(--tk-line-strong);
+  border-left: 3px solid var(--tk-gold);
+  border-radius: var(--tk-radius-sm);
+  color: var(--tk-muted);
+  font-size: .92rem;
+  line-height: 1.6;
+  margin: .2rem 0 1.4rem;
+  padding: .8rem 1rem;
+}
+
+.tk-disclosure-inline strong {
+  color: var(--tk-gold);
+}
+
+.tk-about-foot {
+  border-top: 1px solid var(--tk-line);
+  color: var(--tk-dim);
+  font-size: .85rem;
+  line-height: 1.6;
+  margin: 1.6rem 0 0;
+  padding-top: 1rem;
+}
+
+.tk-about-foot a {
+  color: var(--tk-gold);
+}
+
 /* ------------------------------------------------------------ siguiente */
-.tk-next {
-  background:
+.tk-next {  background:
     radial-gradient(720px 260px at 10% -50%, rgba(214, 173, 85, .1), transparent 70%),
     linear-gradient(180deg, var(--tk-panel-2), #0c0c0c);
   border-color: var(--tk-line-strong);
@@ -270,24 +330,67 @@ body:has(.sticky-conversion-bar) .benefits li::marker {
   color: var(--tk-gold);
 }
 
-body:has(.sticky-conversion-bar) .btn {
+body:has(.sticky-conversion-bar) .btn,
+body:has(.sticky-conversion-bar) .cta-button,
+body:has(.sticky-conversion-bar) .play-store-btn,
+body:has(.sticky-conversion-bar) .draw-btn,
+body:has(.sticky-conversion-bar) .sticky-cta {
   background: linear-gradient(180deg, var(--tk-gold-soft), var(--tk-gold));
   border: 1px solid var(--tk-gold);
   border-radius: 10px;
   box-shadow: 0 8px 22px rgba(214, 173, 85, .18);
   color: #17120a;
+  cursor: pointer;
+  font: inherit;
   font-weight: 800;
   min-height: 46px;
   padding: .7rem 1.25rem;
   transition: transform .14s ease, box-shadow .18s ease;
 }
 
-body:has(.sticky-conversion-bar) .btn:hover {
+body:has(.sticky-conversion-bar) .btn:hover,
+body:has(.sticky-conversion-bar) .cta-button:hover,
+body:has(.sticky-conversion-bar) .play-store-btn:hover,
+body:has(.sticky-conversion-bar) .draw-btn:hover {
   box-shadow: 0 10px 28px rgba(214, 173, 85, .3);
   transform: translateY(-1px);
 }
 
-body:has(.sticky-conversion-bar) .btn:focus-visible {
+/* los selectores de modo (una carta, tres cartas, diario) son botones
+   secundarios: no compiten con la accion principal */
+body:has(.sticky-conversion-bar) .spread-btn,
+body:has(.sticky-conversion-bar) .daily-card-btn {
+  background: rgba(214, 173, 85, .08);
+  border: 1px solid var(--tk-line-strong);
+  border-radius: 9px;
+  color: var(--tk-muted);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+  min-height: 44px;
+  padding: .55rem .9rem;
+  transition: background .16s ease, border-color .16s ease, color .16s ease;
+}
+
+body:has(.sticky-conversion-bar) .spread-btn:hover,
+body:has(.sticky-conversion-bar) .daily-card-btn:hover {
+  border-color: var(--tk-gold);
+  color: var(--tk-gold);
+}
+
+body:has(.sticky-conversion-bar) .spread-btn.active,
+body:has(.sticky-conversion-bar) .spread-btn[aria-pressed="true"] {
+  background: linear-gradient(180deg, var(--tk-gold-soft), var(--tk-gold));
+  border-color: var(--tk-gold);
+  color: #17120a;
+}
+
+body:has(.sticky-conversion-bar) .btn:focus-visible,
+body:has(.sticky-conversion-bar) .cta-button:focus-visible,
+body:has(.sticky-conversion-bar) .play-store-btn:focus-visible,
+body:has(.sticky-conversion-bar) .draw-btn:focus-visible,
+body:has(.sticky-conversion-bar) .spread-btn:focus-visible,
+body:has(.sticky-conversion-bar) .daily-card-btn:focus-visible {
   box-shadow: 0 0 0 3px rgba(214, 173, 85, .32);
   outline: none;
 }

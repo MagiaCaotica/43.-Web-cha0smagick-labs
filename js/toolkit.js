@@ -80,7 +80,9 @@
   function resultText(area) {
     if (!area) return '';
     var clone = area.cloneNode(true);
-    $$('button, .tk-actions, .tk-saved, script, style', clone).forEach(function (n) { n.remove(); });
+    // se quitan los titulos: un encabezado fijo no es un resultado, y hacia
+    // que la barra de acciones apareciera antes de tener nada que copiar.
+    $$('button, .tk-actions, .tk-saved, script, style, h1, h2, h3, h4, h5, h6', clone).forEach(function (n) { n.remove(); });
     return (clone.innerText || clone.textContent || '').replace(/\n{3,}/g, '\n\n').trim();
   }
 
@@ -300,6 +302,76 @@
     main.appendChild(section);
   }
 
+  /* ------------------------------------------- bloque sobre la herramienta
+     E-E-A-T: que mide y que NO mide, como se usa, que puede esperar el
+     usuario, donde acaban sus datos, quien lo hizo y cuando se reviso.
+     El motor comun ya pone metodo, expectativa y uso responsable; aqui solo
+     se anade lo que falta, para no repetir. */
+  function buildAbout() {
+    var meta = TOOLS[slug];
+    if (!meta || !meta.about) return;
+    if (document.querySelector('.tk-about')) return;
+
+    var atomico = !!document.querySelector('[data-atomic-tool]');
+    var a = meta.about;
+    var section = el('section', 'tk-card tk-about');
+    section.appendChild(el('h2', null, 'Sobre esta herramienta'));
+
+    // 1. conflicto de intereses: la app que se recomienda la hacemos nosotros
+    if (meta.next && meta.next.label) {
+      var d = el('p', 'tk-disclosure-inline');
+      d.appendChild(el('strong', null, 'Transparencia: '));
+      d.appendChild(document.createTextNode('la versión de pago que aparece más abajo es nuestra, '));
+      d.appendChild(document.createTextNode('Cha0smagick Labs. La herramienta gratuita sigue siendo gratuita y sin cuentas; no cobramos por usarla ni guardamos tus datos.'));
+      section.appendChild(d);
+    }
+
+    // 2. limites
+    if (a.limits) {
+      section.appendChild(el('h3', null, 'Qué es y qué no es'));
+      section.appendChild(el('p', 'tk-about-text', a.limits));
+    }
+
+    // 3. metodo, expectativa y uso responsable (solo si la pagina no los trae)
+    if (!atomico) {
+      if (a.method && a.method.length) {
+        section.appendChild(el('h3', null, 'Cómo se usa'));
+        var ol = el('ol', 'tk-about-steps');
+        a.method.forEach(function (m) { ol.appendChild(el('li', null, m)); });
+        section.appendChild(ol);
+      }
+      if (a.expect) {
+        section.appendChild(el('h3', null, 'Qué puedes esperar'));
+        section.appendChild(el('p', 'tk-about-text', a.expect));
+      }
+      if (a.safety) {
+        section.appendChild(el('h3', null, 'Uso responsable'));
+        section.appendChild(el('p', 'tk-about-text', a.safety));
+      }
+    }
+
+    // 4. pie: autor, politica editorial, revision y datos
+    var foot = el('p', 'tk-about-foot');
+    foot.appendChild(document.createTextNode('Herramienta hecha por '));
+    var au = el('a', null, 'Frater Alek0s');
+    au.href = '../pages/frater-alek0s.html';
+    au.rel = 'author';
+    foot.appendChild(au);
+    foot.appendChild(document.createTextNode('. '));
+    var pol = el('a', null, 'Política editorial');
+    pol.href = '../pages/editorial-policy.html';
+    foot.appendChild(pol);
+    if (a.reviewed) {
+      var f = new Date(a.reviewed + 'T12:00:00');
+      foot.appendChild(document.createTextNode('. Revisada el ' + f.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }) + '.'));
+    }
+    foot.appendChild(document.createTextNode(' Todo se calcula en tu navegador: no se envía lo que escribes a ningún servidor y no hace falta cuenta.'));
+    section.appendChild(foot);
+
+    var main = $('main') || document.body;
+    main.appendChild(section);
+  }
+
   /* ------------------------------------------- barra de accion movil */
   function buildMobileBar() {
     if (window.matchMedia('(min-width: 761px)').matches) return;
@@ -326,6 +398,7 @@
   function enhance() {
     buildActions(resultArea());
     buildSaved();
+    buildAbout();
     buildNext();
     buildMobileBar();
   }
