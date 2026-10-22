@@ -1,0 +1,105 @@
+{
+ "generated": "2026-10-22",
+ "seasons": [
+  {
+   "nombre": "Halloween",
+   "fecha": "31 de octubre",
+   "dias": 9,
+   "publicar": "31 de octubre",
+   "antelacion": 6,
+   "slug": "halloween-evp-night-how-to-run-a-public-session",
+   "idioma": "en",
+   "par_es": ""
+  },
+  {
+   "nombre": "Día de Muertos",
+   "fecha": "2 de noviembre",
+   "dias": 11,
+   "publicar": "20 de octubre",
+   "antelacion": 6,
+   "slug": "",
+   "idioma": "es",
+   "par_es": ""
+  },
+  {
+   "nombre": "Black Friday",
+   "fecha": "27 de noviembre",
+   "dias": 36,
+   "publicar": "3 de noviembre",
+   "antelacion": 6,
+   "slug": "black-friday-occult-books-2026",
+   "idioma": "en",
+   "par_es": "es-black-friday-libros-ocultismo-2026"
+  },
+  {
+   "nombre": "Navidad",
+   "fecha": "25 de diciembre",
+   "dias": 64,
+   "publicar": "15 de noviembre",
+   "antelacion": 6,
+   "slug": "christmas-occult-books-gift-guide-2026",
+   "idioma": "en",
+   "par_es": "es-regalos-ocultismo-navidad-2026"
+  },
+  {
+   "nombre": "Año Nuevo",
+   "fecha": "1 de enero",
+   "dias": 71,
+   "publicar": "15 de diciembre",
+   "antelacion": 5,
+   "slug": "",
+   "idioma": "en",
+   "par_es": ""
+  },
+  {
+   "nombre": "San Valentín",
+   "fecha": "14 de febrero",
+   "dias": 115,
+   "publicar": "15 de enero",
+   "antelacion": 5,
+   "slug": "",
+   "idioma": "es",
+   "par_es": ""
+  },
+  {
+   "nombre": "Equinoccio de primavera",
+   "fecha": "20 de marzo",
+   "dias": 149,
+   "publicar": "20 de febrero",
+   "antelacion": 5,
+   "slug": "",
+   "idioma": "en",
+   "par_es": ""
+  },
+  {
+   "nombre": "Solsticio de verano",
+   "fecha": "21 de junio",
+   "dias": 242,
+   "publicar": "21 de mayo",
+   "antelacion": 5,
+   "slug": "",
+   "idioma": "en",
+   "par_es": ""
+  },
+  {
+   "nombre": "Equinoccio de otoño",
+   "fecha": "22 de septiembre",
+   "dias": 335,
+   "publicar": "22 de agosto",
+   "antelacion": 5,
+   "slug": "",
+   "idioma": "en",
+   "par_es": ""
+  },
+  {
+   "nombre": "Solsticio de invierno",
+   "fecha": "21 de diciembre",
+   "dias": 60,
+   "publicar": "21 de noviembre",
+   "antelacion": 5,
+   "slug": "",
+   "idioma": "en",
+   "par_es": ""
+  }
+ ]
+}

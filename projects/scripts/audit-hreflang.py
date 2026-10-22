@@ -115,6 +115,10 @@ for etiqueta, lista in (("DESTINO INEXISTENTE", roto), ("CANONICAL DISTINTO", in
         elif etiqueta == "EN PAGINAS NOINDEX":
             a, l = item
             print(f"   {a}\n      declara: {', '.join(l)}")
+        elif etiqueta == "ES AUTOREFERENTE":
+            # (ruta, url): el 'es' apunta a la propia pagina
+            a, u = item
+            print(f"   {a}\n      es -> {u}")
         else:
             a, l, u = item
             print(f"   {a}\n      {l} -> {u}")

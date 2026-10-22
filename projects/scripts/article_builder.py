@@ -40,9 +40,19 @@ PUBLISHER = {
 }
 
 
+MESES_EN = ["January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"]
+
+
+def _fecha_larga(iso):
+    y, m, d = iso.split("-")
+    return f"{MESES_EN[int(m) - 1]} {int(d)}, {y}"
+
+
 def construir(slug, titulo, h1, descripcion, keywords, fecha, lectura, imagen,
               toc, cuerpo, faq, referencias, enlaces_internos, cta, related, jsonld_extra=None):
     tpl = TEMPLATE.read_text(encoding="utf-8", errors="ignore")
+    fecha_larga = _fecha_larga(fecha)
 
     # ---------- head ----------
     head = tpl[: tpl.find("</head>") + 7]
@@ -129,7 +139,7 @@ def construir(slug, titulo, h1, descripcion, keywords, fecha, lectura, imagen,
         </picture>
 
         <h1>{h1}</h1>
-<div class="meta">By <a href="{SITE}/pages/frater-alek0s.html" rel="author">Frater Alek0s</a> | <time datetime="{fecha}">{fecha}</time> | {lectura} min read</div>
+<div class="meta">By <a href="{SITE}/pages/frater-alek0s.html" rel="author">Frater Alek0s</a> | <time datetime="{fecha}">{fecha_larga}</time> | {lectura} min read</div>
 
         <details class="table-of-contents" open>
             <summary>Table of Contents</summary>
@@ -149,7 +159,13 @@ def construir(slug, titulo, h1, descripcion, keywords, fecha, lectura, imagen,
 </main>"""
 
     # ---------- pie + scripts ----------
-    cola = tpl[tpl.find('<div class="share-section">'):]
+    cola = tpl[tpl.find('<div class="share-section>'):]
+    # los enlaces de compartir de la plantilla apuntan a su articulo: se
+    # sustituyen por el nuevo
+    cola = cola.replace("https%3A//cha0smagicklabs.com/blog/how-to-create-magickal-servitor.html",
+                        "https%3A//cha0smagicklabs.com/blog/" + slug + ".html")
+    cola = cola.replace("https://cha0smagicklabs.com/blog/how-to-create-magickal-servitor.html",
+                        "https://cha0smagicklabs.com/blog/" + slug + ".html")
     # el share lleva el titulo en el enlace de twitter
     cola = cola.replace(
         "How%20to%20Create%20a%20Magickal%20Servitor%3A%20Complete%20Guide%20to%20Chaos%20M",
