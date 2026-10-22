@@ -1,14 +1,14 @@
 {
- "version": 2,
+ "version": 3,
  "site": "https://cha0smagicklabs.com",
  "tools": {
   "full-birth-chart": {
    "name": "Carta Natal Gratuita",
    "family": "astrologia",
    "result": "#atomic-result",
-   "value": "Guarda la lectura, revísala en 30 días y compara: eso es lo que convierte una lectura en un registro.",
+   "value": "Anota el Sol, la Luna y el Ascendente con el grado, y la fecha. Con tres cartas tuyas en 30 dias veras cuales de los tres se mueve y cuales no: eso ya es un mapa, no una foto.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Calcula tres posiciones con la media de los elementos orbitales, sin efemerides completas: sirve para orientarse, no para rectificar. La hora de nacimiento es el dato que más pesa, y con la hora equivocada el Ascendente se va de sitio.",
     "method": [
      "Introduce fecha, hora y ciudad.",
      "La herramienta estima tres posiciones symbólicas.",
@@ -30,9 +30,9 @@
    "name": "Calculadora de Ascendente",
    "family": "astrologia",
    "result": "#atomic-result",
-   "value": "Guarda la lectura, revísala en 30 días y compara: eso es lo que convierte una lectura en un registro.",
+   "value": "Apunta el Ascendente y la hora de nacimiento. Si en tres semanas la lectura no te encaja, el error mas probable esta en la hora, no en el signo: eso ya te dice por donde mirar.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Usa la hora local sin correccion de zona ni horario de verano, y el calculo es aproximado. Sirve para saber por donde empieza tu casa, no para trabajo de horoscopo profesional.",
     "method": [
      "Indica la fecha y hora de nacimiento.",
      "Usa la hora y el signo solar como referencia.",
@@ -54,9 +54,9 @@
    "name": "Calculadora de Signo Lunar",
    "family": "astrologia",
    "result": "#atomic-result",
-   "value": "Guarda la lectura, revísala en 30 días y compara: eso es lo que convierte una lectura en un registro.",
+   "value": "La Luna cambia de signo cada dos dias y medio: anota la fecha de cada consulta y en un mes tendras el patron de tu propio ritmo, que es mas util que el signo.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Calcula la posicion lunar aproximada con la media de los elementos, sin las correcciones de luz y nutacion. El signo puede quedar en el borde de un cambio de signo si tu nacimiento cae a Few horas de ese limite.",
     "method": [
      "Introduce tu fecha de nacimiento.",
      "Consulta la interpretación del signo resultante.",
@@ -78,9 +78,9 @@
    "name": "Calculadora de Cúspides",
    "family": "astrologia",
    "result": "#atomic-result",
-   "value": "Guarda la lectura, revísala en 30 días y compara: eso es lo que convierte una lectura en un registro.",
+   "value": "Anota si caes dentro o fuera del cuspide y con cuantos minutos. Es el dato que explica por que dos personas con la misma fecha tienen lecturas distintas.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Calcula el cuspide con la media de los elementos y el zodiaco tropical. Los minutos de margen son aproximados y no substituyen el calculo con efemerides completas.",
     "method": [
      "Introduce la fecha que quieres explorar.",
      "Consulta los signos vecinos.",
@@ -102,9 +102,9 @@
    "name": "Calendario de Retrósos",
    "family": "astrologia",
    "result": "#atomic-result",
-   "value": "Guarda la lectura, revísala en 30 días y compara: eso es lo que convierte una lectura en un registro.",
+   "value": "Marca en el calendario los periodos retroros que te afectan y, al final de cada uno, anota que paso. En un año tienes el patron real de que te frena y que no.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Las fechas de inicio y fin son aproximadas, con un margen de algunos dias. Un planeta se retroro igual: la fecha exacta no cambia lo que hagas con ella.",
     "method": [
      "Selecciona año y mes.",
      "Revisa el esquema explicativo.",
@@ -126,9 +126,9 @@
    "name": "Calculadora de Día Planetario",
    "family": "astrologia",
    "result": "#atomic-result",
-   "value": "Guarda la lectura, revísala en 30 días y compara: eso es lo que convierte una lectura en un registro.",
+   "value": "Cada dia, antes de empezar, anota el planeta que rige y la tarea que le toca. Al mes, tendras un registro de que tareas se te hacen pesadas y cuales se te dan bien.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "El dia planetario se calcula con el zodiaco tropical y no tiene en cuenta la hora ni el lugar. Es un criterio de planificacion, no una causa.",
     "method": [
      "Introduce una fecha.",
      "Consulta el día planetario.",
@@ -150,9 +150,9 @@
    "name": "Referencia de Cartas de Tarot",
    "family": "tarot",
    "result": "#atomic-result",
-   "value": "Anota la carta, la pregunta y lo que decidiste después. En tres meses, el patrón se ve solo.",
+   "value": "No la uses para mirar cartas: usala para consultar el significado de la que ya te salió. Y anota cuando el significado te discrepan: esa lista es tu propio mazo.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Es una referencia de meanings tradicionalizados, no una interpretacion de tu tirada. El mazo Rider-Waite tiene lecturas discutidas; cada una se concreta con el tiempo.",
     "method": [
      "Busca por nombre o significado.",
      "Lee la síntesis de la carta.",
@@ -174,9 +174,9 @@
    "name": "Constructor de Tiradas de Tarot",
    "family": "tarot",
    "result": "#atomic-result",
-   "value": "Anota la carta, la pregunta y lo que decidiste después. En tres meses, el patrón se ve solo.",
+   "value": "Define la tirada con su pregunta antes de tirar, y despues escribe la respuesta en los espacios que dejaste. La estructura es lo que hace comparable una tirada con otra.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Construye la estructura de la tirada; no tira las cartas ni las interpreta. Y una estructura no es una lectura: la posicion tiene que significar algo para tu pregunta.",
     "method": [
      "Escribe la intención.",
      "Elige cuántas posiciones usar.",
@@ -198,9 +198,9 @@
    "name": "Diario de Tarot",
    "family": "tarot",
    "result": "#atomic-result",
-   "value": "Anota la carta, la pregunta y lo que decidiste después. En tres meses, el patrón se ve solo.",
+   "value": "Una entrada por tirada con la fecha, la pregunta y que decidiste despues. En tres meses, el diario muestra mas que las tiradas: muestra tus patrones de decision.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Es un diario: guarda lo que escribas, no lo interpreta. Lo que se guarde en este navegador no sale de el, y no hay copia de seguridad automatica.",
     "method": [
      "Registra la fecha y la pregunta.",
      "Anota las cartas y tu interpretación.",
@@ -222,9 +222,9 @@
    "name": "Lectura de Cartas Lenormand",
    "family": "tarot",
    "result": "#atomic-result",
-   "value": "Anota la carta, la pregunta y lo que decidiste después. En tres meses, el patrón se ve solo.",
+   "value": "Sortea, lee la carta y anota que la relacionas con la pregunta. Las Lenormand tienen un lenguaje de oficios: usarlas es aprender ese idioma, no sortear a ciegas.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "El mazo Lenormand necesita su libro para leerse; aqui tienes el significado de la carta, no la lectura completa. Es un sistema de codigos, no una prediccion.",
     "method": [
      "Escribe una pregunta breve.",
      "Sortea las cartas.",
@@ -246,9 +246,9 @@
    "name": "Oráculo Sibilla Sí/No",
    "family": "oraculos",
    "result": "#atomic-result",
-   "value": "Pregunta, anota la respuesta y lo que cambiaste después. Sin la tercera parte no hay registro.",
+   "value": "Formula una sola pregunta de si o no, tira y anota. Anotar la pregunta es lo que separa la Sibilla de un{quote} casualmente comodo.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "La Sibilla responde a preguntas de si o no, con el metodo antiguo: la carta mas la posicion que ocupa. Fuera de ese uso, el metodo no dice nada.",
     "method": [
      "Formula una pregunta concreta.",
      "Pulsa la consulta.",
@@ -270,9 +270,9 @@
    "name": "Constructor de Preguntas para Péndulo",
    "family": "oraculos",
    "result": "#atomic-result",
-   "value": "Pregunta, anota la respuesta y lo que cambiaste después. Sin la tercera parte no hay registro.",
+   "value": "Escribe la pregunta en una sola linea, con una sola palabra clave. El pendulo contesta mejor a lo que se pregunta con una frase que a lo que se pregunta con un tema.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Construye la pregunta y su lista de respuestas posibles; no hay pendulo ni simulacion. La honestidad del metodo depende de que las respuestas esten escritas antes de tirar, no despues.",
     "method": [
      "Escribe el tema.",
      "Añade opciones A y B.",
@@ -294,9 +294,9 @@
    "name": "Referencia Elder Futhark",
    "family": "runas",
    "result": "#atomic-result",
-   "value": "Anota el resultado y lo que hiciste después. La runa no dice nada: la accion que la acompaña si.",
+   "value": "Consulta la runa que te toco y vuelve a ella cuando la situation cambie. Las runas son un diccionario de símbolos y no un oráculo: lo que decide es la pregunta.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Referencia de las 24 runas del Elder Futhark con su significado tradicional; no cubre los sistemas Young Futhark, runicas vikingas ni los codigos Aett, que son otra cosa.",
     "method": [
      "Busca una runa.",
      "Lee su campo semántico.",
@@ -318,9 +318,9 @@
    "name": "Traductor de Nombres Rúnicos",
    "family": "runas",
    "result": "#atomic-result",
-   "value": "Anota el resultado y lo que hiciste después. La runa no dice nada: la accion que la acompaña si.",
+   "value": "Traduce un nombre y anota el resultado. Un nombre en runas no es un nombre mas: es un recordatorio con forma, y merece un significado que puedas sostener.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Traduce al Elder Futhark con transliteracion simple, sin staves ni ligaduras: el resultado es legible, no caligrafico. Los nombres propios runicos reales usan otros criterios.",
     "method": [
      "Escribe un nombre.",
      "Revisa la transliteración.",
@@ -342,9 +342,9 @@
    "name": "Oráculo Ogham",
    "family": "runas",
    "result": "#atomic-result",
-   "value": "Anota el resultado y lo que hiciste después. La runa no dice nada: la accion que la acompaña si.",
+   "value": "Sortea, lee y anota con la fecha. El Ogham funciona por familias, asi que la posicion de la runa en el grupo dice tanto como el trazo.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Ogham de una sola linea, con los grupos de sonido y los 20 signos; no incluye los Ogham de mas de una linea ni las formas de data illuminated.",
     "method": [
      "Formula la pregunta.",
      "Sortea una letra.",
@@ -366,9 +366,9 @@
    "name": "Cifra del Alfabeto Planetario",
    "family": "rituales",
    "result": "#atomic-result",
-   "value": "Anota el ritual, la intención y el resultado. Con el mismo ritual dos veces, la comparación es posible.",
+   "value": "Cifra un texto y anota la clave que usaste. Un cifrado sin clave anotada no es un cifrado: es un dibujo.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Cifra con el alfabeto planetario y una clave de una palabra. Es un ejercicio de correspondencia, no criptografia: el metodo es reversible por diseño y no protege nada.",
     "method": [
      "Escribe la frase.",
      "Revisa la representación.",
@@ -390,9 +390,9 @@
    "name": "Codificador de Intención para Sigilo",
    "family": "sigilos",
    "result": "#atomic-result",
-   "value": "Guarda la imagen del sigilo, la fecha de carga y la acción mundana. Eso es un registro revisable.",
+   "value": "Escribe la intencion, saca el sigilo y anota el resultado con la fecha. El sigilo no se guarda solo: lo que importa es la accion que decidiste con el.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Reduce la intencion a trazos y los coloca en la circunferencia, con los metodos de reduccion mas comunes. El glifo es una herramienta de foco, no una garantia de nada.",
     "method": [
      "Escribe una intención positiva y ética.",
      "Genera la secuencia de letras.",
@@ -414,9 +414,9 @@
    "name": "Buscador de Correspondencias",
    "family": "correspondencias",
    "result": "#atomic-result",
-   "value": "Usa la tabla cómo referencia, no cómo resultado. El valor está en volver a ella.",
+   "value": "Busca la correspondencia de un elemento y usala para elegir, no para justificar. Anota por que la elegiste: en una semana, la justificacion se vuelve la practica.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Usa las correspondencias clasicas de la tradition hermetica. No son leyes de la naturaleza ni una tabla de equivalentes exacta: son un lenguaje para pensar con simbolos.",
     "method": [
      "Elige una intención y un elemento.",
      "Consulta la tabla.",
@@ -438,9 +438,9 @@
    "name": "Calendario Lunar",
    "family": "lunar",
    "result": "#atomic-result",
-   "value": "Anota la fecha de cada fase que uses. Con tres meses seguidos ya tienes un patrón propio, no una opinión.",
+   "value": "Anota la fase de cada dia que trabajes y que hiciste en ella. Con un mes de anotaciones tienes tu propio calendario, que vale mas que el general.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Las fases se calculan con la media de los elementos, con un margen de unas horas. Para el calculo exacto de un instante concreto, usa una efemeride.",
     "method": [
      "Selecciona el mes.",
      "Consulta la fase aproximada.",
@@ -462,9 +462,9 @@
    "name": "Planificador de Intenciones Lunares",
    "family": "lunar",
    "result": "#atomic-result",
-   "value": "Anota la fecha de cada fase que uses. Con tres meses seguidos ya tienes un patrón propio, no una opinión.",
+   "value": "Escribe la intencion el dia que te toca y vuelve a ella en la fase siguiente: comparar la intencion con lo que paso es el unico trabajo que da valor a un planner lunar.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "El calendario es orientativo y el momento de la intencion lo eliges tu. El ritmo lunar no decide por ti: la accion sigue siendo tuya.",
     "method": [
      "Define la intención.",
      "Selecciona la fecha.",
@@ -486,9 +486,9 @@
    "name": "Planificador de Horas Planetarias",
    "family": "lunar",
    "result": "#atomic-result",
-   "value": "Anota la fecha de cada fase que uses. Con tres meses seguidos ya tienes un patrón propio, no una opinión.",
+   "value": "Elige una hora planetaria para un trabajo y anota el resultado. En tres repeticiones de la misma tarea en horas distintas, la comparacion empieza a decirte algo.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Las horas se calculan con el reloj local, no con el tiempo solar, y en latitudes altas la duracion real se desvía de la regla. Sirve como criterio de planificacion, no como exactitud.",
     "method": [
      "Indica fecha y ciudad.",
      "Consulta la franja sugerida.",
@@ -510,9 +510,9 @@
    "name": "Tarjeta de Valoración Temporal",
    "family": "lunar",
    "result": "#atomic-result",
-   "value": "Anota la fecha de cada fase que uses. Con tres meses seguidos ya tienes un patrón propio, no una opinión.",
+   "value": "Puntua cada trabajo con los cuatro criterios y compara semanas. La puntuación no dice si el ritual funciono: te dice cual de tus metodos se sostiene mejor.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Es una hoja de puntuacion, no un metodo. No sabe nada de tu practica ni de lo que ocurre fuera: solo ordena lo que tu mismo anotas.",
     "method": [
      "Valora cada criterio.",
      "Revisa los puntos débiles.",
@@ -534,9 +534,9 @@
    "name": "Planificador de Intención para Velas",
    "family": "rituales",
    "result": "#atomic-result",
-   "value": "Anota el ritual, la intención y el resultado. Con el mismo ritual dos veces, la comparación es posible.",
+   "value": "Define que quieres mover de un elemento a otro y con que accion mundane lo acompanias. Sin la accion mundane, el trabajo no tiene donde aterrizar.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Planifica: no enciende, no compra ni marca el color. El significado de un color de vela es una tradicion, y lo que funciona es lo que tu has comprobado.",
     "method": [
      "Escribe la intención.",
      "Elige un color y entorno.",
@@ -558,9 +558,9 @@
    "name": "Planificador de Ingredientes",
    "family": "rituales",
    "result": "#atomic-result",
-   "value": "Anota el ritual, la intención y el resultado. Con el mismo ritual dos veces, la comparación es posible.",
+   "value": "Elige los ingredientes y anota por que los eliges y que esperabas. Al mes, la lista de ingredientes es mas informativa que cualquier hechizo.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Sugiere ingredientes por correspondencia y disponibilidad, y no puedes saber si son apropiados para tu caso: revisa siempre seguridad e intencion antes de usarlos.",
     "method": [
      "Define la intención.",
      "Elige ingredientes disponibles.",
@@ -582,9 +582,9 @@
    "name": "Constructor de Ritual de Banishing",
    "family": "rituales",
    "result": "#atomic-result",
-   "value": "Anota el ritual, la intención y el resultado. Con el mismo ritual dos veces, la comparación es posible.",
+   "value": "Construye el ritual con su intencion, su recorrido y su cierre, y anota el resultado. Un banning sin registro no se puede comparar con el siguiente.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Es una estructura de ritual de limpieza segun usos comunes, no una instruccion de un grimorio. Hazlo con criterio y sin objetos que no sean tuyos.",
     "method": [
      "Define el límite.",
      "Elige un método simbólico.",
@@ -606,9 +606,9 @@
    "name": "Verificador de Equilibrio Elemental",
    "family": "correspondencias",
    "result": "#atomic-result",
-   "value": "Usa la tabla cómo referencia, no cómo resultado. El valor está en volver a ella.",
+   "value": "Comprueba el equilibrio de los elementos de una intencion o de un espacio y anota que corriges. Es una forma de mirar antes de hacer, no un diagnostico.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Cuenta los elementos por presencia y por polaridad, con una ponderacion simple. No hay medicion fisica detras: es un recuento symbolic para reflection.",
     "method": [
      "Valora cada elemento.",
      "Calcula el reparto.",
@@ -630,9 +630,9 @@
    "name": "Planificador de Entrenamiento de Sueños Lúcidos",
    "family": "suenos",
    "result": "#atomic-result",
-   "value": "Escribe el sueño antes de interpretarlo. La interpretación cambia cuándo la memoria ya esta reescrita.",
+   "value": "Elige una tecnica, una hora de práctica y una fecha de revision, y anota cada noche si la usaste. La revision a las tres semanas es la que enseña.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Planifica la practica del sueno lucido: no registra el sueno ni comprueba que haya ocurrido. La tecnica depende de ti y de tu ritmo de sueño.",
     "method": [
      "Elige una técnica.",
      "Define duración y frecuencia.",
@@ -654,9 +654,9 @@
    "name": "Coach de Técnica de Chequeo de Realidad",
    "family": "suenos",
    "result": "#atomic-result",
-   "value": "Escribe el sueño antes de interpretarlo. La interpretación cambia cuándo la memoria ya esta reescrita.",
+   "value": "Practica las comprobaciones fuera del sueno primero y anota cuantas haces. La tecnica solo sirve si ya la sabes hacer despierta.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Explica y propone comprobaciones de realidad; no las hace por ti ni mide el resultado. La eficacia depende de que las hagas tu, y a menudo dentro del sueno.",
     "method": [
      "Elige el contexto.",
      "Repite la frase de chequeo.",
@@ -678,9 +678,9 @@
    "name": "Diccionario de Símbolos de Sueño",
    "family": "suenos",
    "result": "#atomic-result",
-   "value": "Escribe el sueño antes de interpretarlo. La interpretación cambia cuándo la memoria ya esta reescrita.",
+   "value": "Busca el simbolo tal como lo recordaste, no como crees que era. El diccionario es el punto de partida: lo que significa de verdad lo ves en tres suenos seguidos.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Diccionario de simbolos oniricos con Associations shedding. No es un lenguaje de signos fijo: cada persona tiene sus propios simbolos y las claves aqui son un punto de partida, no un codigo.",
     "method": [
      "Escribe el símbolo.",
      "Consulta sus Associations.",
@@ -702,9 +702,9 @@
    "name": "Temporizador de Sesión Astral",
    "family": "suenos",
    "result": "#atomic-result",
-   "value": "Escribe el sueño antes de interpretarlo. La interpretación cambia cuándo la memoria ya esta reescrita.",
+   "value": "Anota la duracion, la tecnica y lo que recordaste al despertar. La sesionProjection sin registro es una sensacion que se cuenta a si misma.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Es un temporizador con pauta de respiracion. No mide si hubo proyeccion ni verifica ninguna experiencia: la experiencia no se puede comprobar desde aquí.",
     "method": [
      "Define minutos.",
      "Inicia el temporizador.",
@@ -726,9 +726,9 @@
    "name": "Temporizador de Meditación",
    "family": "bienestar",
    "result": "#atomic-result",
-   "value": "El temporizador es la parte fácil. Lo que cambia el resultado es lo que anotas al terminar.",
+   "value": "Usa el mismo sonido y la misma duracion cada vez, y anota cuanto te costo. La constancia del entorno es lo que hace comparable la practica.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Un temporizador con una campana de cierre. No mide concentracion, ni pulso, ni nada: la valoracion es tuya y conviene escribirla a mano.",
     "method": [
      "Elige la duración.",
      "Inicia la sesión.",
@@ -750,9 +750,9 @@
    "name": "Seguimiento de Intenciones",
    "family": "seguimiento",
    "result": "#atomic-result",
-   "value": "El registro solo sirve si se vuelve a leer. Ponle fecha de revisión a la entrada.",
+   "value": "Registra la intencion, la accion y el resultado con fecha, y revisala a los 30 dias. Lo que no se anota no se puede mejorar: la repeticion no es el metodo, la comparacion si.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Un registro de intenciones con estado. No mide resultados ni puede saber si un cambio se produjo: la relation entre lo que hiciste y lo que pasó la pones tu.",
     "method": [
      "Crea un objetivo.",
      "Añade un paso pequeño.",
@@ -774,9 +774,9 @@
    "name": "Checklist de Seguridad Ritual",
    "family": "seguridad",
    "result": "#atomic-result",
-   "value": "Guarda la lista de esta sesión. Las reglas se olvidan; la lista no.",
+   "value": "Usala antes de empezar y guardala. Una lista de seguridad que se lee despues del ritual ya no es una lista de seguridad.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Lista de comprobacion de uso prudente segun criterios generales, no un protocolo de seguridad de una tradicion concreta. No sustituye leer la documentacion de la propia practica.",
     "method": [
      "Revisa cada punto.",
      "Detén la práctica si falta seguridad.",
@@ -798,9 +798,9 @@
    "name": "Planificador de Consentimiento y Límites",
    "family": "seguridad",
    "result": "#atomic-result",
-   "value": "Guarda la lista de esta sesión. Las reglas se olvidan; la lista no.",
+   "value": "Escribe que no aceptas antes de la sesion, y revisalo despues. Los limites que no se escriben antes, en el momento, se pierden.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Herramienta de reflexion sobre consentimiento y limites. No tiene ninguna capacidad de hacer cumplir nada: es un documento, y su valor esta en que lo leas antes.",
     "method": [
      "Describe el contexto.",
      "Define qué no es aceptable.",
@@ -822,9 +822,9 @@
    "name": "Organizador de Grimorio Digital",
    "family": "organizacion",
    "result": "#atomic-result",
-   "value": "Lo que organizas aquí es el trabajo de dentro: vuelve a él cuándo la sesión termine.",
+   "value": "Ordena una vez y vuelve a el cada mes. Un grimorio que se consulta es un grimorio; uno que se archiva es un carpeta.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Organiza y etiqueta lo que tu registras en el navegador. No importa nada de fuera, no hace busquedas ni sincroniza: es un indice, no una biblioteca.",
     "method": [
      "Crea una entrada.",
      "Añade etiquetas.",
@@ -846,9 +846,9 @@
    "name": "Checklist de Preparación para Sesiones",
    "family": "organizacion",
    "result": "#atomic-result",
-   "value": "Lo que organizas aquí es el trabajo de dentro: vuelve a él cuándo la sesión termine.",
+   "value": "Usala antes de cada sesion y guardala con la fecha. La mitad del valor de una sesion esta en lo que se preparó antes de empezar.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Lista de preparacion para una sesion de investigacion, con criterios prudentes. No instrumenta nada y no comprueba que occurri nada: es preparacion, no evidencia.",
     "method": [
      "Comprueba los puntos.",
      "Define unGround rule.",
@@ -870,9 +870,9 @@
    "name": "Planificador de Carga de Sigilo",
    "family": "sigilos",
    "result": "#atomic-result",
-   "value": "Guarda la imagen del sigilo, la fecha de carga y la acción mundana. Eso es un registro revisable.",
+   "value": "Define la intencion, el tiempo de carga y la accion mundana antes de empezar, y luego compara lo que anotaste con lo que paso. Sin ese registro, cargar es un gesto.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Es una hoja de planificacion: no dibuja, no carga y no mide nada. El unico juicio que hace es el tuyo, y por eso conviene escribir el criterio antes.",
     "method": [
      "Define la intención.",
      "Elige el método.",
@@ -918,9 +918,9 @@
    "name": "Panel de Seguimiento de Resultados",
    "family": "seguimiento",
    "result": "#atomic-result",
-   "value": "El registro solo sirve si se vuelve a leer. Ponle fecha de revisión a la entrada.",
+   "value": "Mira el panel con una sola pregunta: que metodo se sostiene mejor en mis propios terminos. Sin esa pregunta, un panel es ruido bonito.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "Agrega lo que registras en el navegador: no sabe nada de lo que ocurre fuera. El panel no demuestra nada; solo ordena lo que tu ya anotaste.",
     "method": [
      "Registra ejercicios.",
      "Filtra por intention.",
@@ -942,9 +942,9 @@
    "name": "Planificador de Temporadas Sabáticas",
    "family": "lunar",
    "result": "#atomic-result",
-   "value": "Anota la fecha de cada fase que uses. Con tres meses seguidos ya tienes un patrón propio, no una opinión.",
+   "value": "Marca los ocho sabbats del año con lo que quieres trabajar en cada uno. Con el año completo, las fechas dejan de ser teoria y se convierten en un plan.",
    "about": {
-    "limits": "Lo que sale de aquí es una lectura simbólica para reflexionar, no una predicción. No hay acertado ni equivocado, y esta página no sustituye atención médica, psicológica, jurídica ni financiera.",
+    "limits": "El calendario sabbatico es una tradition, no un calendario astronómico: las fechas siguen al sol equinoccial y a las fases lunares, pero el reparto es cultural.",
     "method": [
      "Selecciona el año y la estación.",
      "Consulta fechas referenciales.",
@@ -966,15 +966,15 @@
    "name": "gnosis timer",
    "family": "suenos",
    "result": "#timerDisplay",
-   "value": "Escribe el sueño antes de interpretarlo. La interpretación cambia cuándo la memoria ya esta reescrita.",
+   "value": "Anota la duracion, la tecnica y que recuerdas al despertar. Con el registro de 20 sesiones, la gnosis deja de ser una experiencia suelta y se vuelve una practica con curva.",
    "about": {
-    "limits": "Mide el tiempo de una sesión de gnosis. No mide si la sesión funcionó, no registra lo que viste y no es un método de inducción: es un cronometro con la respiración de fondo.",
+    "limits": "Mide el tiempo de una sesion de gnosis. No mide si la sesion funciono, no registra lo que viste y no es un metodo de induccion: es un cronometro con la pauta de respiracion.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
      "Vuelve a ella en 30 dias: el patrón aparece en la repetición."
     ],
-    "expect": "Un temporizador con la pauta de respiración. Lo que salga de ahí depende de tu práctica, no de la página.",
+    "expect": "Un temporizador con la pauta de respiracion. Lo que salga de ahi depende de tu practica, no de la pagina.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
     "faq": [
      [
@@ -1004,15 +1004,15 @@
    "name": "rune drawer",
    "family": "runas",
    "result": "#runeResult",
-   "value": "Anota el resultado y lo que hiciste después. La runa no dice nada: la accion que la acompaña si.",
+   "value": "Sortea, lee la runa y anota que cambias despues. La runa no dice nada: lo que dice es lo que tu hiciste con ella.",
    "about": {
-    "limits": "Sortea una runa al azar y devuelve su significado. No es una predicción, no tiene en cuenta tu carta, tu situación ni el momento, y las runas no son adivinatorias.",
+    "limits": "Sortea una runa al azar y devuelve su significado. No es una prediccion, no tiene en cuenta tu carta, tu situacion ni el momento.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
      "Vuelve a ella en 30 dias: el patrón aparece en la repetición."
     ],
-    "expect": "Una runa con su significado y una pregunta para responder. El valor está en la reflexión que hagas con ella, no en el resultado.",
+    "expect": "Una runa con su significado y una pregunta para responder. El valor esta en la reflexion que hagas con ella.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
     "faq": [],
     "reviewed": "2026-10-21"
@@ -1029,7 +1029,7 @@
    "name": "zener esp trainer",
    "family": "bienestar",
    "result": "#resultsPanel",
-   "value": "El temporizador es la parte fácil. Lo que cambia el resultado es lo que anotas al terminar.",
+   "value": "Practica series largas, no tiradas sueltas: el acierto por azar es de una entre cinco, y solo una serie de treinta deja ver algo. Anota la serie completa, no el porcentaje.",
    "about": {
     "limits": "Practica percepcion extrasensorial con cartas de Zener: aciertos, fallos y la serie completa. No mide telepatia ni don, y la probabilidad de acierto por azar es de una entre cinco.",
     "method": [
@@ -1037,7 +1037,7 @@
      "Haz la operación y anota el resultado con la fecha.",
      "Vuelve a ella en 30 dias: el patrón aparece en la repetición."
     ],
-    "expect": "Una serie con aciertos, fallos y el porcentaje de acierto. Un resultado alto puede ser suerte; por eso se práctica con series largas y con control.",
+    "expect": "Una serie con aciertos, fallos y el porcentaje de acierto. Un resultado alto puede ser suerte; por eso se practica con series largas y con control.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
     "faq": [],
     "reviewed": "2026-10-21"
@@ -1054,9 +1054,9 @@
    "name": "astrology sign calculator",
    "family": "astrologia",
    "result": "#results",
-   "value": "Guarda la lectura, revísala en 30 días y compara: eso es lo que convierte una lectura en un registro.",
+   "value": "Sirve para saber por donde empezar. Cuando passes a calcular una carta entera, vuelve a la hora de nacimiento: ahi esta el 90 % de la precision.",
    "about": {
-    "limits": "Calcula el signo solar a partir de la fecha. No usa la hora ni el lugar, así que no puede decirte tu Ascendente ni tu Luna, y el signo solar cambia según el criterio que se use.",
+    "limits": "Calcula el signo solar a partir de la fecha. No usa la hora ni el lugar, asi que no puede decirte tu Ascendente ni tu Luna.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
@@ -1079,9 +1079,9 @@
    "name": "candle color calculator",
    "family": "correspondencias",
    "result": "#resultDisplay",
-   "value": "Usa la tabla cómo referencia, no cómo resultado. El valor está en volver a ella.",
+   "value": "Elige un color y anota por que. En tres velas, la eleccion se vuelve criterio propio y ya no tradicion prestada.",
    "about": {
-    "limits": "Relaciona el color de una vela con su correspondencia tradicional. Son asociaciones de tradición, no reglas universales, y el color final depende del aceite, del paves y de la luz de la habitacion.",
+    "limits": "Relaciona el color de una vela con su correspondencia tradicional. Son asociaciones de tradicion, no reglas universales, y el color final depende del aceite, del paves y de la luz.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
@@ -1104,7 +1104,7 @@
    "name": "digital pendulum",
    "family": "oraculos",
    "result": "#answerDisplay",
-   "value": "Pregunta, anota la respuesta y lo que cambiaste después. Sin la tercera parte no hay registro.",
+   "value": "Escribe las respuestas posibles antes de tirar, y despues elige una y anota por que. Si cambias de respuesta cada vez, no es el pendulo: eres tu.",
    "about": {
     "limits": "Simula un pendulo con una secuencia aleatoria ponderada. No mide un pendulo real, no es intuitivo y no debe usarse para decidir sobre salud, dinero ni relaciones.",
     "method": [
@@ -1129,15 +1129,15 @@
    "name": "goetic spirit selector",
    "family": "rituales",
    "result": "#resultsCount",
-   "value": "Anota el ritual, la intención y el resultado. Con el mismo ritual dos veces, la comparación es posible.",
+   "value": "Guarda el espectro que te devuelve y revisa en 30 dias. La repeticion del criterio es lo que separa una seleccion util de una lectura de inmediato.",
    "about": {
-    "limits": "Selecciona los espíritus de la Goetia a partir de criterios que tú le describes. No evoca a nadie, no verifica que el espíritu corresponda a tu caso, y la tradición goética tiene reglas propias de seguridad que hay que leer antes de usarla.",
+    "limits": "Selecciona los espiritus de la Goetia a partir de criterios que tu le describes. No evoca a nadie, no verifica que el espiritu corresponda a tu caso, y la tradicion goetica tiene reglas propias de seguridad que hay que leer antes de usarla.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
      "Vuelve a ella en 30 dias: el patrón aparece en la repetición."
     ],
-    "expect": "Los espíritus que mejor encajan con lo que describes, con su ámbito y sus notas. Es una orientación, no una invocación.",
+    "expect": "Los espiritus que mejor encajan con lo que describes, con su ambito y sus notas. Es una orientacion, no una invocacion.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
     "faq": [],
     "reviewed": "2026-10-21"
@@ -1154,15 +1154,15 @@
    "name": "iching changing lines",
    "family": "oraculos",
    "result": "#hexagramDisplay",
-   "value": "Pregunta, anota la respuesta y lo que cambiaste después. Sin la tercera parte no hay registro.",
+   "value": "Tira las lineas una a una y anota el hexagrama con su fecha. El hexagrama con lineas mutantes es un patron de momento, y se relee mejor con el registro.",
    "about": {
-    "limits": "Convierte monedas en líneas mutantes y en hexagramas. No consulta una secuencia autorizada, no es un oráculo con estado, y las líneas se tiran una a una y en orden.",
+    "limits": "Convierte monedas en lineas mutantes y en hexagramas. No consulta una secuencia autorizada, no es un oraculo con estado, y las lineas se tiran una a una y en orden.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
      "Vuelve a ella en 30 dias: el patrón aparece en la repetición."
     ],
-    "expect": "El hexagrama con sus líneas que cambian y su lectura tradicional.",
+    "expect": "El hexagrama con sus lineas que cambian y su lectura tradicional.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
     "faq": [],
     "reviewed": "2026-10-21"
@@ -1179,9 +1179,9 @@
    "name": "moon voc",
    "family": "lunar",
    "result": "#nextVocCard",
-   "value": "Anota la fecha de cada fase que uses. Con tres meses seguidos ya tienes un patrón propio, no una opinión.",
+   "value": "Anota la invitacion de cada dia con lo que hiciste. En un mes, la luna deja de ser un calendario y es un registro de tu ritmo.",
    "about": {
-    "limits": "Calcula la vocacion lunar de un dia: la luna y su signo, con la invitacion tradicional. Es astronomia de posición, no una predicción, y no depende de tu lugar.",
+    "limits": "Calcula la vocacion lunar de un dia: la luna y su signo, con la invitacion tradicional. Es astronomia de posicion, no una prediccion, y no depende de tu lugar.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
@@ -1204,15 +1204,15 @@
    "name": "planetary hours",
    "family": "astrologia",
    "result": "#locationDisplay",
-   "value": "Guarda la lectura, revísala en 30 días y compara: eso es lo que convierte una lectura en un registro.",
+   "value": "Usa la hora planetaria para una tarea concreta y anota el resultado. Con la misma tarea en tres horas distintas, la comparacion empieza a enseñar.",
    "about": {
-    "limits": "Calcula las horas planetarias a partir de la hora del reloj. Usa el tiempo local y no el tiempo solar, y en latitudes altas las duraciones se desvían de la regla traditional.",
+    "limits": "Calcula las horas planetarias a partir de la hora del reloj. Usa el tiempo local y no el solar, y en latitudes altas las duraciones se desvian de la regla traditional.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
      "Vuelve a ella en 30 dias: el patrón aparece en la repetición."
     ],
-    "expect": "La hora planetaria vigente, que planeta rige y hasta cuándo. Sirve para elegir el momento de un trabajo, no para decidir el contenido.",
+    "expect": "La hora planetaria vigente, que planeta rige y hasta cuando. Sirve para elegir el momento de un trabajo, no para decidir el contenido.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
     "faq": [],
     "reviewed": "2026-10-21"
@@ -1229,9 +1229,9 @@
    "name": "planetary kamea sigil",
    "family": "sigilos",
    "result": "#sigilDisplay",
-   "value": "Guarda la imagen del sigilo, la fecha de carga y la acción mundana. Eso es un registro revisable.",
+   "value": "Dibuja el sigilo y repasa el trazado paso a paso. El valor de la kamea esta en que el trazo se recuerda: un sigilo que no sabes repetir no sirve.",
    "about": {
-    "limits": "Dibuja el sigilo de una kamea planetaria concreta, con la disposicion traditional de trazos. No verifica que la kamea este bien trazada ni que el trazo sea correcto: eso se aprende a mano y se revisa.",
+    "limits": "Dibuja el sigilo de una kamea planetaria concreta, con la disposicion tradicional de trazos. No verifica que la kamea este bien trazada ni que el trazo sea correcto: eso se aprende a mano y se revisa.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
@@ -1254,9 +1254,9 @@
    "name": "reality check tracker",
    "family": "suenos",
    "result": "#entryResult",
-   "value": "Escribe el sueño antes de interpretarlo. La interpretación cambia cuándo la memoria ya esta reescrita.",
+   "value": "Registra cada comprobacion y revisa el recuento cada dos semanas. El numero de aciertos con el tiempo dice mas que la sensacion de una noche suelta.",
    "about": {
-    "limits": "Registra las comprobaciones de realidad de una sesión. No las evalua: no distingue una comprobacion eficaz de una que falló, y no guarda nada fuera de tu navegador.",
+    "limits": "Registra las comprobaciones de realidad de una sesion. No las evalua: no distingue una comprobacion eficaz de una que fallo, y no guarda nada fuera de tu navegador.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
@@ -1279,15 +1279,15 @@
    "name": "sigil charging timer",
    "family": "sigilos",
    "result": "#resultRating",
-   "value": "Guarda la imagen del sigilo, la fecha de carga y la acción mundana. Eso es un registro revisable.",
+   "value": "Anota la intensidad cada vez y compara con la semana anterior. La escala no vale nada comparada con nadie: vale comparada contigo.",
    "about": {
-    "limits": "Es un temporizador de carga con una escala de intensidad para que anotes cómo la viviste. No carga nada por si mismo, no verifica la fuerza del sigilo y el resultado que anotaste es una opinion, no una medida.",
+    "limits": "Es un temporizador de carga con una escala de intensidad para que anotes como la viviste. No carga nada por si mismo, no verifica la fuerza del sigilo, y el resultado que anotaste es una opinion, no una medida.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
      "Vuelve a ella en 30 dias: el patrón aparece en la repetición."
     ],
-    "expect": "Un temporizador con una escala de intensidad y una nota final. La escala es tuya: lo único comparable es lo que anotaste la semana anterior.",
+    "expect": "Un temporizador con una escala de intensidad y una nota final. La escala es tuya: lo unico comparable es lo que anotaste la semana anterior.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
     "faq": [
      [
@@ -1317,15 +1317,15 @@
    "name": "spell builder",
    "family": "rituales",
    "result": "#spellResult",
-   "value": "Anota el ritual, la intención y el resultado. Con el mismo ritual dos veces, la comparación es posible.",
+   "value": "Guarda el hechizo con la fecha y con lo que decidiste despues. Un hechizo anotado vale mas que un hechizo perfecto olvidado.",
    "about": {
-    "limits": "Compone un hechizo a partir de elementos que eliges y te devuelve una estructura con pasos. No verifica que la combinacion tenga fundamento, no evalua si es seguro en tu caso y no es un substituto de consultar un libro de ocultismo.",
+    "limits": "Compone un hechizo a partir de elementos que eliges y te devuelve una estructura con pasos. No verifica que la combinacion tenga fundamento, no evalua si es seguro en tu caso, y no es un substituto de consultar un libro de ocultismo.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
      "Vuelve a ella en 30 dias: el patrón aparece en la repetición."
     ],
-    "expect": "Un hechizo estructurado: intencion, elementos, pasos y un cierre. Útil cómo borrador, nunca cómo receta cerrada.",
+    "expect": "Un hechizo estructurado: intencion, elementos, pasos y un cierre. Util como borrador, nunca como receta cerrada.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
     "faq": [],
     "reviewed": "2026-10-21"
@@ -1342,15 +1342,15 @@
    "name": "tarot yes no",
    "family": "tarot",
    "result": "#readingSummary",
-   "value": "Anota la carta, la pregunta y lo que decidiste después. En tres meses, el patrón se ve solo.",
+   "value": "Anota la carta, la pregunta y lo que decidiste despues. En tres meses, el diario muestra mas que las tiradas: muestra como decides.",
    "about": {
-    "limits": "Tira una o tres cartas del Rider-Waite con su significado al derecho y al revés. No es una predicción, no sabe nada de tu situación y las cartas no tienen respuestas fijas: el significado es un punto de partida, no un veredicto.",
+    "limits": "Tira una o tres cartas del Rider-Waite con su significado al derecho y al reves. No es una prediccion, no sabe nada de tu situacion, y las cartas no tienen respuestas fijas: el significado es un punto de partida, no un veredicto.",
     "method": [
      "Escribe lo que quieres saber antes de usar la herramienta.",
      "Haz la operación y anota el resultado con la fecha.",
      "Vuelve a ella en 30 dias: el patrón aparece en la repetición."
     ],
-    "expect": "Las cartas, su interpretación y una pregunta para responder. La parte útil es la reflexión que escribas después.",
+    "expect": "Las cartas, su interpretacion y una pregunta para responder. La parte util es la reflexion que escribas despues.",
     "safety": "No uses esta herramienta para sustituir decisiones importantes, ni para obtener datos de terceros sin su consentimiento. Lo que sale de aquí es material de reflexión.",
     "faq": [],
     "reviewed": "2026-10-21"
@@ -1361,6 +1361,516 @@
     "label": "Tarot Rider Waite en Google Play ($9.99, una vez)",
     "link": "https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html",
     "external": false
+   }
+  },
+  "iching": {
+   "name": "Oraculo del I Ching",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Tira las monedas con la pregunta escrita y anota el hexagrama con su fecha. Con seis meses de hexagramas anotados, la practica empieza a tener memoria.",
+   "about": {
+    "limits": "El lanzador de monedas y la lectura del hexagrama. La conversion de lineas en hexagrama y su lectura tradicional se hacen con el criterio estandar del Libro de los Cambios: no es un metodo deDy(c) con pretensiones de oraculo con estado.",
+    "method": [
+     "Escribe la pregunta en una sola linea, con una palabra clave.",
+     "Lanza las monedas seis veces, en orden, y anota el resultado.",
+     "Mira el hexagrama con sus lineas y vuelve a el en 30 dias."
+    ],
+    "faq": [
+     [
+      "¿Por qué hay que tirar las monedas en orden?",
+      "Porque el orden de las líneas es lo que distingue un hexagrama de su inverso. Tiradas en desorden dan un resultado que no se puede leer."
+     ],
+     [
+      "¿El resultado depende de la pregunta?",
+      "Depende de la pregunta que llevas, no del azar. Por eso el orden de la pregunta es el orden del método: primero la pregunta, después las monedas."
+     ]
+    ],
+    "expect": "El hexagrama con su nombre, sus lineas y la lectura tradicional de cada una.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "El oraculo completo, sin conexion",
+    "text": "Aqui consultas el hexagrama en el navegador. La app I Ching Oracle lleva el metodo completo, las 64 lecturas y el registro de tiradas, y funciona sin internet.",
+    "label": "I Ching Oracle en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/iching-oracle.html",
+    "external": false
+   }
+  },
+  "lunar-phase": {
+   "name": "Calculadora de fases lunares",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Anota la fase de cada dia que ritualizas y que hiciste. Con un mes de anotaciones, la luna deja de ser un dato del calendario y pasa a ser tu propio ritmo.",
+   "about": {
+    "limits": "Calcula la fase lunar y el nombre de la fase para una fecha. No calcula la hora exacta de los cambios de fase ni la altura de la luna sobre el horizonte, que dependen del lugar.",
+    "method": [
+     "Elige la fecha que te interesa y comprueba la fase.",
+     "Anota la fase y lo que hiciste ese dia.",
+     "Al mes, mira la serie: hay un patron que no es el del calendario."
+    ],
+    "faq": [
+     [
+      "¿La fase que da la herramienta es exacta?",
+      "Es aproximada: se calcula con la media de los elementos orbitales, con un margen de algunas horas. Para el instante exacto de un cambio de fase, hace falta una efeméride."
+     ],
+     [
+      "¿Sirve para planificar rituales?",
+      "Para elegir la ventana, sí. El momento exacto lo eliges tú, mirando el calendario local y el horizonte donde estés."
+     ]
+    ],
+    "expect": "La fase, el porcentaje iluminado, la edad de la luna y los dias que faltan para la fase siguiente.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "La luna real, en tu cielo",
+    "text": "Aqui calculas una fase. La app Lunar Phase Calculator dibuja la luna real en tu ubicacion y te dice cuando caen las siguientes, sin conexion.",
+    "label": "Lunar Phase Calculator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lunar-phase-calculator.html",
+    "external": false
+   }
+  },
+  "sigil-generator": {
+   "name": "Generador de sigilos goeticos",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Genera el sigilo y anota, con la fecha, que accion mundana lo acompana. Un sigilo sin accion anotada no deja registro: se pierde en la memoria.",
+   "about": {
+    "limits": "Genera el sigilo de un espiritu de la Goetia con los metodos de reduccion mas comunes. Es una herramienta de foco y no una invocacion: no verifica el resultado ni su garantias.",
+    "method": [
+     "Elige el espiritu y comprueba que su ambito es el que buscas.",
+     "Genera el sigilo y revisalo: el glifo se traza a mano, la maquina solo lo propone.",
+     "Descargalo, cargalo y anota el resultado con la fecha y la accion mundana."
+    ],
+    "faq": [
+     [
+      "¿El sigilo generado sirve tal cual?",
+      "Sirve como punto de partida para tu propia traza. La geometría es la propuesta de la máquina; el trazo final es tuyo, y por eso hay que rehacerlo a mano."
+     ],
+     [
+      "¿Genera los sellos de los 72 espíritus?",
+      "Sí, con los métodos de reducción más comunes. La lectura del sello y su Invocation son un trabajo aparte, con su propia guía."
+     ]
+    ],
+    "expect": "El sigilo del espiritu elegido, listo para descargar y para imprimir.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "El sigilo, guardado y con temporizador de carga",
+    "text": "Aqui lo generas. La app Chaos Sigil Generator lo dibuja, lo guarda como imagen y trae el temporizador de carga, para que no dependas de la pagina.",
+    "label": "Chaos Sigil Generator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/chaos-sigil-generator.html",
+    "external": false
+   }
+  },
+  "activador-servidores": {
+   "name": "Activador de servidores magicos",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Diseña el servidor con su intencion y su frase de activacion, y anota el resultado con la fecha. El diseño escrito es lo que hace comparable un servidor con otro.",
+   "about": {
+    "limits": "Ayuda a diseñar y activar un servidor magico con su intencion, su simbolo y su frase. Es una guia de trabajo, no una instruccion de un grimorio, y no verifica ningun resultado.",
+    "method": [
+     "Define la intencion y el ambito del servidor: que hace y hasta donde llega.",
+     "Disena el simbolo y la frase de activacion, y anota el trabajo.",
+     "Revisalo a los 30 dias: lo que se escribe es lo que se puede comparar."
+    ],
+    "faq": [
+     [
+      "¿Un servidor necesita un ritual de activación?",
+      "Necesita un momento y una frase, y sobre todo un diseño pensado. La activación ritual es la parte que se puede hacer con cuidado y con intención clara."
+     ],
+     [
+      "¿Cuál es el error más común?",
+      "Diseñar un servidor con un ambito demasiado amplio, que no se puede mantener y que acaba pesando. Un ambito pequeño y revisado funciona mejor que uno grande y olvidado."
+     ]
+    ],
+    "expect": "El diseno del servidor con sus elementos, su frase de activacion y los pasos de trabajo.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "El protocolo de servidores, por escrito",
+    "text": "Si lo que te sirve es el metodo, el libro lo tiene completo: creacion, activacion, alimentacion y mantenimiento, con lo que fallo incluido.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "tengwar-transcriber": {
+   "name": "Transcriptor de Tengwar",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Transcribe tu nombre en tengwar y anota la forma que te gusta. El tengwar se aprende usandolo: tres nombres propios ya te dan mas que cualquier tabla.",
+   "about": {
+    "limits": "Transcribe del ingles al tengwar con el modo estandar. No cubre tengwar de Quenya ni de Sindarin con sus reglas propias, ni la caligrafia con staves.",
+    "method": [
+     "Escribe el texto en ingles, tal como se pronunciaria.",
+     "Transcribe y compara las formas: el tengwar tiene varias para el mismo sonido.",
+     "Elige la que mejor te funcione y usala siempre igual."
+    ],
+    "faq": [
+     [
+      "¿Traduce a Quenya o a Sindarin?",
+      "A tengwar estándar, que es el modo que se usa para escribir nombres y frases en el uso corriente. Quenya y Sindarin tienen reglas propias, más precisas y bastante distintas."
+     ],
+     [
+      "¿Puedo usar el resultado en un tatuaje?",
+      "Puedes, pero el trazo de una caligrafía con staves es otra cosa: la transcripción es plana y legible, no caligráfica. Para un tatuaje, conviene llevarla a un calígrafo que entienda el sistema."
+     ]
+    ],
+    "expect": "La palabra en tengwar, lista para copiar.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "La comunidad, donde se habla de esto",
+    "text": "Aqui transcribes. Donde si hay algo que ofrecerte es la comunidad: cada dia se comenta sobre scripts, tengwar y cosas parecidas.",
+    "label": "La comunidad de Cha0smagick Labs (Telegram)",
+    "link": "https://t.me/cha0smagicklabs",
+    "external": true
+   }
+  },
+  "viking-runes": {
+   "name": "Oraculo de runas vikingas",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Sortea, lee la runa y anota que cambias despues. Las runas vikingas (Futhark joven) no son el Elder Futhark: son otro sistema con otros usos, y la diferencia importa.",
+   "about": {
+    "limits": "Oraculo de runas vikingas con el Futhark joven de 16 signos. No es el sistema del Elder Futhark de 24 runas, y no incluye los codigos Aett ni las formas runicas de inscriptions.",
+    "method": [
+     "Haz la pregunta antes de tirar, con una sola palabra clave.",
+     "Sortea la runa y lee su significado y su posicion en la tirada.",
+     "Anota con la fecha: las runas no dicen nada por si solas."
+    ],
+    "faq": [
+     [
+      "¿Qué sistema de runas usa?",
+      "El Futhark joven, de 16 signos, que es el de las inscripciones vikingas. No es el Elder Futhark de 24 runas, que es otro sistema y otra época."
+     ],
+     [
+      "¿Las runas vikingas se usan para adivinar?",
+      "En su uso histórico se grababan, no se sorteaban para adivinar. El uso oracular es moderno. Si te interesa la historia, el libro del estudio la cuenta con fuentes."
+     ]
+    ],
+    "expect": "La runa sorteada con su significado y la posicion que ocupaba en la tirada.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "Las 24 runas del Elder Futhark, con su significado",
+    "text": "Aqui sorteas runas vikingas. La app Norse Rune Oracle lleva el Elder Futhark completo con significados, tirada y registro, offline.",
+    "label": "Norse Rune Oracle en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/norse-rune-oracle.html",
+    "external": false
+   }
+  },
+  "beat-the-dealer": {
+   "name": "Beat the Dealer: estrategia de blackjack",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Apunta la mano y lo que habrias hecho. Una estrategia de blackjack se aprende con el error anotado, no con la regla memorizada.",
+   "about": {
+    "limits": "Simulador de blackjack para practicar estrategia basica. No es un casino, no hay dinero real y ninguna estrategia garantiza resultado: el azar manda en cada mano.",
+    "method": [
+     "Elige la mesa y la apuesta antes de repartir.",
+     "Juega la mano y anota que habrias hecho distinto.",
+     "Simula miles de manos: la estrategia es una esperanza, la varianza es el resultado."
+    ],
+    "faq": [
+     [
+      "¿Hay una estrategia que gane siempre?",
+      "No. La estrategia básica reduce la ventaja de la casa; no la elimina. Por eso el simulador es la herramienta útil: muestra la varianza en mil manos."
+     ],
+     [
+      "¿Sirve para jugar dinero real?",
+      "Sirve para practicar. Jugar con dinero real con la estrategia del simulador no funciona: las decisiones cambian cuando hay dinero en la mesa."
+     ]
+    ],
+    "expect": "La mano, la recomendacion basica y el resultado, con la opcion de jugar miles de manos para ver la varianza.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "La comunidad, donde esto se comenta",
+    "text": "Esta es una herramienta de practica y no hay nada que venderte aqui. Donde si hay contenido es la comunidad: cada dia se habla de estas cosas y de las nuestras.",
+    "label": "La comunidad de Cha0smagick Labs (Telegram)",
+    "link": "https://t.me/cha0smagicklabs",
+    "external": true
+   }
+  },
+  "roulette-lab": {
+   "name": "Roulette Lab: simulador de probabilidades",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Simula miles de spins y anota la desviacion. Es la forma de ver la varianza con tus propios ojos en lugar de leerla en una tabla.",
+   "about": {
+    "limits": "Simulador de la ruleta europea con probabilidades calculadas. No es un casino, no hay dinero real, y ningun sistema de apuesta anula la ventaja de la casa: eso es justo lo que se ve al simular.",
+    "method": [
+     "Elige la ruleta y el sistema que quieres probar.",
+     "Simula el numero de spins que te interesa, no diez.",
+     "Mira la desviacion final: ahi esta la leccion que no se aprende en un casino."
+    ],
+    "faq": [
+     [
+      "¿Se puede ganar en la ruleta?",
+      "No con un sistema de apuestas: la ventaja de la casa es estructural y ningún sistema la cambia. La herramienta sirve para verlo, no para verificarlo."
+     ],
+     [
+      "¿Qué ruleta usa?",
+      "La europea, con un solo cero. La americana, con dos, tiene una ventaja de la casa mayor."
+     ]
+    ],
+    "expect": "La simulacion, las probabilidades por tipo de apuesta y el resultado a largo plazo de cada sistema.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "La comunidad, donde esto se comenta",
+    "text": "Herramienta de simulacion, sin nada que vender. Lo que si hay es la comunidad, donde se habla de estas cosas con detalle.",
+    "label": "La comunidad de Cha0smagick Labs (Telegram)",
+    "link": "https://t.me/cha0smagicklabs",
+    "external": true
+   }
+  },
+  "pixellibre": {
+   "name": "PixelLibre: editor de imagenes",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Sirve para preparar las imagenes de tus rituales y de tus notas. Exporta y ya esta: el valor esta en tener la imagen lista, no en el editor.",
+   "about": {
+    "limits": "Editor de imagenes en el navegador: recorta, redimensiona y convierte. No es un sustituto de un editor profesional, y las imagenes se procesan en tu equipo.",
+    "method": [
+     "Sube la imagen y ajusta lo que necesites.",
+     "Exporta en el formato que vas a usar y guardala.",
+     "La herramienta no guarda nada: el archivo exportado es tuyo."
+    ],
+    "faq": [
+     [
+      "¿Las imágenes se suben a algún sitio?",
+      "El procesamiento ocurre en tu navegador. La herramienta no tiene servidor de imágenes, y el archivo exportado es tuyo."
+     ],
+     [
+      "¿Es un sustituto de un editor profesional?",
+      "No. Recorta, redimensiona y convierte. Para retoque fino, hace falta otra cosa."
+     ]
+    ],
+    "expect": "La imagen editada, lista para descargar en el formato que elijas.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "La comunidad, donde esto se comenta",
+    "text": "Es una utilidad libre y no hay nada que venderte. Donde hay contenido nuestro es la comunidad, y en YouTube cada dia de la semana.",
+    "label": "La comunidad de Cha0smagick Labs (Telegram)",
+    "link": "https://t.me/cha0smagicklabs",
+    "external": true
+   }
+  },
+  "inwo-illuminati": {
+   "name": "INWO: Illuminati New World Order",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Juega una partida y anota las decisiones que te hicieron perder. El juego es un termometro: lo que te hace perder dice mas de lo que crees.",
+   "about": {
+    "limits": "Juego de rol collaborative en linea. Es una|No es un simulador de nada real, y las decisiones del grupo no predicen ninguna consecuencia fuera del juego.",
+    "method": [
+     "Cread la partida y repartid los roles.",
+     "Jugad con el registro al lado: las decisiones se anotan.",
+     "Repasad en que fase se decidio: casi siempre en la primera votacion."
+    ],
+    "faq": [
+     [
+      "¿Es el juego oficial?",
+      "No es el juego de mesa: es una versión web gratuita para jugar en grupo, sin caja ni componentes. El oficial tiene reglas que aquí no están."
+     ],
+     [
+      "¿Cuántos jugadores hacen falta?",
+      "Los que el grupo tenga. El reparto de roles se genera solo y las decisiones se toman por mayoría, que es donde está la gracia."
+     ]
+    ],
+    "expect": "Una partida completa con los roles repartidos y el marcador del grupo.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "La comunidad, donde esto se juega",
+    "text": "El juego es lo nuestro, lo que no es nuestro es un producto que venderte. La comunidad es donde se juega esto y donde avisamos de lo demas.",
+    "label": "La comunidad de Cha0smagick Labs (Telegram)",
+    "link": "https://t.me/cha0smagicklabs",
+    "external": true
+   }
+  },
+  "pentex-werewolf": {
+   "name": "Pentex: Werewolf the Apocalypse",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Una partida teaches como se juega mejor que un manual. Anota en que fase se decide la partida: casi siempre en la primera votacion.",
+   "about": {
+    "limits": "Generador de personajes y gestion de partida para un juego de rol de mesa. No tiene nada que ver con la realidad ni con el mundo que estas leyendo en el resto del sitio.",
+    "method": [
+     "Cread la partida y repartid los personajes.",
+     "Anotad las habilidades y quien las activo.",
+     "Cerrad con una valoracion de la partida: el grupo aprende de eso."
+    ],
+    "faq": [
+     [
+      "¿Sirve para jugar sin libros?",
+      "Sirve para gestionar la partida: reparto, habilidades y estado. Las reglas y el contenido del juego siguen estando en los libros."
+     ],
+     [
+      "¿Tiene el juego completo?",
+      "No. Es un gestor de partida para un juego de mesa concreto: el valor está en el reparto y el estado, no en las reglas."
+     ]
+    ],
+    "expect": "Los personajes repartidos, las habilidades y el estado de la partida.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "La comunidad, donde esto se juega",
+    "text": "Utilidad gratuita de juego, sin producto detras. Lo que si hay es la comunidad y, si te interesa el tema, los libros.",
+    "label": "La comunidad de Cha0smagick Labs (Telegram)",
+    "link": "https://t.me/cha0smagicklabs",
+    "external": true
+   }
+  },
+  "schrecknet-nosferatu": {
+   "name": "SchreckNET: compendio de clanes",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Sirve de referencia rapida: elige un clan y ten sus numeros a mano. Es un indice, no un manual de reglas.",
+   "about": {
+    "limits": "Compendio de consulta de clanes con sus Discharge y caracteristicas. No incluye las reglas completas del juego ni sus suplementos, y el uso de marca depende de cada editorial.",
+    "method": [
+     "Elige el clan y anota su Discharge.",
+     "Usa la ficha como referencia rapida en la sesion.",
+     "Es un indice, no un manual: las reglas completas estan en el libro."
+    ],
+    "faq": [
+     [
+      "¿Incluye las reglas del juego?",
+      "No: es un índice de clanes con sus números y sus características. Las reglas están en los libros de cada editorial."
+     ],
+     [
+      "¿Puedo usarlo para mi personaje?",
+      "Sí, como referencia rápida durante la partida. Los nombres y las descripciones son los de la edición que el estudio ha consultado."
+     ]
+    ],
+    "expect": "La ficha del clan con sus numeros y su descripcion.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "La comunidad, donde esto se comenta",
+    "text": "Referencia gratuita, sin nada que vender. Donde hay contenido nuestro y de otros es la comunidad.",
+    "label": "La comunidad de Cha0smagick Labs (Telegram)",
+    "link": "https://t.me/cha0smagicklabs",
+    "external": true
+   }
+  },
+  "synthetic-gods": {
+   "name": "The Synthetic Gods: cronica de Mage the Ascension",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Lee la cronica como se lee un capitulo: con el registro de la sesion al lado. Una cronica sin anotaciones se pierde al cambiar de grupo.",
+   "about": {
+    "limits": "Cronica de campanha para jugar en grupo. Es material de ficcion y juego, no una guia de ocultismo ni de magia real, aunque el vocabulario se lo preste a la tradicion.",
+    "method": [
+     "Cread el grupo y repartid los personajes.",
+     "Leed la cronica por sesiones, con el registro al lado.",
+     "Anotad las decisiones del grupo: son el hilo de la campana."
+    ],
+    "faq": [
+     [
+      "¿Es una campaña completa?",
+      "Es una crónica con un hilo argumental y personajes, pensada para jugar en grupo y narrator. La extensión de la campaña la ponéis vosotros."
+     ],
+     [
+      "¿Tiene que ver con el ocultismo real?",
+      "No. Es juego de rol con vocabulario de la tradición: sirve para jugar, no para saber nada de la magia ni de la historia de las仪."
+     ]
+    ],
+    "expect": "La cronica, los personajes y el hilo de la campana.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "La comunidad, donde esto se juega",
+    "text": "Material de juego, sin producto detras. Lo que si hay es la comunidad, donde se juega esto y donde estan las apps del estudio.",
+    "label": "La comunidad de Cha0smagick Labs (Telegram)",
+    "link": "https://t.me/cha0smagicklabs",
+    "external": true
+   }
+  },
+  "verbo-hecho-codigo": {
+   "name": "The Word Made Code: campana de Mage the Ascension",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Es un escenario para jugar con el grupo, y funciona porque el grupo escribe lo que pasa. Anota las decisiones y las consecuencias: ese es el registro.",
+   "about": {
+    "limits": "Escenario de campana para un juego de rol. Es ficcion y juego, no una guia de ocultismo ni de magia real, aunque use el vocabulario de la tradicion.",
+    "method": [
+     "Cread el grupo y leed el escenario con calma.",
+     "Anotad las decisiones y las consecuencias de cada sesion.",
+     "Cerrad la campana con una valoracion escrita: es la memoria del grupo."
+    ],
+    "faq": [
+     [
+      "¿Es un escenario o una campaña?",
+      "Es un escenario: una premisa, un grupo de personajes y un conflicto. La campaña la construís a partir de ahí."
+     ],
+     [
+      "¿Necesito el libro de reglas?",
+      "Para jugar con el sistema, sí. El escenario no incluye las reglas, y sus datos no sustituyen a la documentación del juego."
+     ]
+    ],
+    "expect": "El escenario con sus personajes, sus trasfondos y su premisa.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "La comunidad, donde esto se juega",
+    "text": "Escenario gratuito, sin nada que vender. La comunidad es donde se juega esto y donde estan nuestras apps.",
+    "label": "La comunidad de Cha0smagick Labs (Telegram)",
+    "link": "https://t.me/cha0smagicklabs",
+    "external": true
+   }
+  },
+  "dashboard-colombia": {
+   "name": "Panel de violencia y crimen en Colombia",
+   "family": "embebida",
+   "result": "iframe",
+   "value": "Mira la serie de tu departamento y anota que lees en ella. Los datos frios往往 dicen mas de un titular: la tendencia es lo importante, no el dia.",
+   "about": {
+    "limits": "Visualiza datos oficiales de violencia y crimen en Colombia por departamento y año. No explica causas ni predice nada, y las cifras se quedan en lo que el registro oficial publica.",
+    "method": [
+     "Elige tu departamento y el rango de anos.",
+     "Lee la serie y anota la tendencia, no el dia.",
+     "Si quieres el contexto, los datos oficiales estan en la propia ficha."
+    ],
+    "faq": [
+     [
+      "¿De dónde salen los datos?",
+      "De las series oficiales de Guanajuato y del archivo de violencia y criminalidad, tal como se publican. La ficha indica la fuente de cada serie."
+     ],
+     [
+      "¿Sirve para sacar conclusiones sobre un caso concreto?",
+      "No. Son datos agregados por departamento y año: sirven para ver tendencias, no para atribuir causas ni para investigar un caso."
+     ]
+    ],
+    "expect": "Las series por departamento, con el total y laevolucion por ano.",
+    "safety": "Esta herramienta es gratuita y no guarda nada en tus cuentas. No sustituye criterio propio ni ayuda profesional.",
+    "reviewed": "2026-10-21"
+   },
+   "next": {
+    "title": "La comunidad, donde esto se comenta",
+    "text": "Panel de datos, sin producto detras. Lo que si hay es la comunidad y, si te interesa el tema, los libros del estudio.",
+    "label": "La comunidad de Cha0smagick Labs (Telegram)",
+    "link": "https://t.me/cha0smagicklabs",
+    "external": true
    }
   }
  }

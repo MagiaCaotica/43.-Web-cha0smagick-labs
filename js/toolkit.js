@@ -35,7 +35,7 @@
   // Version del catalogo de herramientas: hay que subirla cuando cambie
   // data/toolkit.json, o el CDN sirvira el JSON viejo y el bloque de
   // confianza saldra vacio.
-  var DATA_VERSION = '0e08394dfa';
+  var DATA_VERSION = '2ad2583560';
   var DATA_URL = UP + 'data/toolkit.json?v=' + DATA_VERSION;
   var slug = (function () {
     var m = location.pathname.match(/\/tools\/([^/]+)\.html/i);
@@ -277,6 +277,77 @@
     observer.observe(main, { childList: true, subtree: true });
   }
 
+  /* --------------------------------------------------- herramientas embebidas
+     La app vive en un iframe externo: no se puede copiar su resultado desde
+     aqui. Lo que si sirve es abrirla aparte y llevar el enlace, y avisar si
+     el servidor externo no responde. */
+  function buildEmbed() {
+    var frame = $('iframe');
+    if (!frame) return;
+    var src = frame.getAttribute('src') || '';
+    if (!src) return;
+
+    var cont = frame.closest('.tool-frame') || frame.parentElement;
+    if (!cont || cont.querySelector('.tk-embed')) return;
+
+    var box = el('div', 'tk-embed');
+    var p = el('p', 'tk-about-text',
+      'La herramienta se ejecuta en su propia aplicación, incrustada aquí. Si prefieres usarla en una pestaña aparte, o si no carga, puedes abrirla directamente.');
+    box.appendChild(p);
+
+    var fila = el('div', 'tk-actions');
+    var abrir = el('a', 'tk-btn tk-btn-ghost', 'Abrir en una pestaña nueva');
+    abrir.href = src;
+    abrir.target = '_blank';
+    abrir.rel = 'noopener';
+    fila.appendChild(abrir);
+
+    var copiar = el('button', 'tk-btn tk-btn-ghost', 'Copiar el enlace');
+    copiar.type = 'button';
+    copiar.addEventListener('click', function () {
+      var texto = src;
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = texto;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+        document.body.removeChild(ta);
+        estado.textContent = ok ? 'Enlace copiado.' : 'No se pudo copiar: abre la herramienta y copia la direccion.';
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(function () { estado.textContent = 'Enlace copiado.'; }, fallback);
+      } else { fallback(); }
+    });
+    fila.appendChild(copiar);
+
+    var estado = el('span', 'tk-status');
+    estado.setAttribute('role', 'status');
+    fila.appendChild(estado);
+    box.appendChild(fila);
+    cont.appendChild(box);
+
+    // si la app externa no carga en 9 segundos, se avisa con el enlace directo
+    var cargado = false;
+    frame.addEventListener('load', function () { cargado = true; });
+    window.setTimeout(function () {
+      if (cargado) return;
+      var aviso = el('p', 'tk-embed-fallback');
+      aviso.appendChild(el('strong', null, 'La herramienta incrustada no ha cargado. '));
+      aviso.appendChild(document.createTextNode('Puede que el servidor externo este lento o caido. Puedes '));
+      var a = el('a', null, 'abrirla directamente');
+      a.href = src;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      aviso.appendChild(a);
+      aviso.appendChild(document.createTextNode(' o probar con la version para Android.'));
+      box.insertBefore(aviso, box.firstChild);
+    }, 9000);
+  }
+
   /* ---------------------------------------------------- siguiente paso */
   function buildNext() {
     var meta = TOOLS[slug];
@@ -423,6 +494,7 @@
 
   /* ------------------------------------------------------ arranque */
   function enhance() {
+    buildEmbed();
     buildActions(resultArea());
     buildSaved();
     buildAbout();

@@ -213,6 +213,37 @@
 }
 
 /* ------------------------------------------------------ faq inyectada */
+.tk-embed {
+  border-top: 1px solid var(--tk-line);
+  margin-top: 1.2rem;
+  padding-top: 1.1rem;
+}
+
+.tk-embed .tk-actions {
+  border-top: 0;
+  margin-top: .6rem;
+  padding-top: 0;
+}
+
+.tk-embed-fallback {
+  background: rgba(255, 155, 145, .08);
+  border: 1px solid rgba(255, 155, 145, .35);
+  border-radius: var(--tk-radius-sm);
+  color: var(--tk-muted);
+  font-size: .92rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  padding: .8rem 1rem;
+}
+
+.tk-embed-fallback strong {
+  color: var(--tk-error);
+}
+
+.tk-embed-fallback a {
+  color: var(--tk-gold);
+}
+
 .tk-faq-list details {
   border-top: 1px solid var(--tk-line);
   padding: .85rem 0;
