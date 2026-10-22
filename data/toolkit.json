@@ -1,0 +1,721 @@
+{
+ "version": 1,
+ "site": "https://cha0smagicklabs.com",
+ "tools": {
+  "full-birth-chart": {
+   "name": "Carta Natal Gratuita",
+   "family": "astrologia",
+   "result": "#atomic-result",
+   "value": "Guarda la lectura, revisala en 30 dias y compara: eso es lo que convierte una lectura en un registro.",
+   "next": {
+    "title": "La misma carta, sin depender del movil",
+    "text": "Si lo que te sirve de esta pagina es la carta, la app la calcula igual y la guarda contigo. No es mejor: es la misma, y ademas funciona sin conexion.",
+    "label": "Astral Lab en Google Play ($6.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/astral-lab.html",
+    "external": false
+   }
+  },
+  "rising-sign-calculator": {
+   "name": "Calculadora de Ascendente",
+   "family": "astrologia",
+   "result": "#atomic-result",
+   "value": "Guarda la lectura, revisala en 30 dias y compara: eso es lo que convierte una lectura en un registro.",
+   "next": {
+    "title": "La misma carta, sin depender del movil",
+    "text": "Si lo que te sirve de esta pagina es la carta, la app la calcula igual y la guarda contigo. No es mejor: es la misma, y ademas funciona sin conexion.",
+    "label": "Astral Lab en Google Play ($6.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/astral-lab.html",
+    "external": false
+   }
+  },
+  "moon-sign-calculator": {
+   "name": "Calculadora de Signo Lunar",
+   "family": "astrologia",
+   "result": "#atomic-result",
+   "value": "Guarda la lectura, revisala en 30 dias y compara: eso es lo que convierte una lectura en un registro.",
+   "next": {
+    "title": "La misma carta, sin depender del movil",
+    "text": "Si lo que te sirve de esta pagina es la carta, la app la calcula igual y la guarda contigo. No es mejor: es la misma, y ademas funciona sin conexion.",
+    "label": "Astral Lab en Google Play ($6.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/astral-lab.html",
+    "external": false
+   }
+  },
+  "zodiac-cusp-calculator": {
+   "name": "Calculadora de Cúspides",
+   "family": "astrologia",
+   "result": "#atomic-result",
+   "value": "Guarda la lectura, revisala en 30 dias y compara: eso es lo que convierte una lectura en un registro.",
+   "next": {
+    "title": "La misma carta, sin depender del movil",
+    "text": "Si lo que te sirve de esta pagina es la carta, la app la calcula igual y la guarda contigo. No es mejor: es la misma, y ademas funciona sin conexion.",
+    "label": "Astral Lab en Google Play ($6.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/astral-lab.html",
+    "external": false
+   }
+  },
+  "planetary-retrograde-calendar": {
+   "name": "Calendario de Retrósos",
+   "family": "astrologia",
+   "result": "#atomic-result",
+   "value": "Guarda la lectura, revisala en 30 dias y compara: eso es lo que convierte una lectura en un registro.",
+   "next": {
+    "title": "La misma carta, sin depender del movil",
+    "text": "Si lo que te sirve de esta pagina es la carta, la app la calcula igual y la guarda contigo. No es mejor: es la misma, y ademas funciona sin conexion.",
+    "label": "Astral Lab en Google Play ($6.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/astral-lab.html",
+    "external": false
+   }
+  },
+  "planetary-day-calculator": {
+   "name": "Calculadora de Día Planetario",
+   "family": "astrologia",
+   "result": "#atomic-result",
+   "value": "Guarda la lectura, revisala en 30 dias y compara: eso es lo que convierte una lectura en un registro.",
+   "next": {
+    "title": "La misma carta, sin depender del movil",
+    "text": "Si lo que te sirve de esta pagina es la carta, la app la calcula igual y la guarda contigo. No es mejor: es la misma, y ademas funciona sin conexion.",
+    "label": "Astral Lab en Google Play ($6.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/astral-lab.html",
+    "external": false
+   }
+  },
+  "tarot-card-reference": {
+   "name": "Referencia de Cartas de Tarot",
+   "family": "tarot",
+   "result": "#atomic-result",
+   "value": "Anota la carta, la pregunta y lo que decidiste despues. En tres meses, el patron se ve solo.",
+   "next": {
+    "title": "El mazo entero, sin conexion",
+    "text": "Aqui tienes acceso a las cartas que necesitas. La app lleva el mazo Rider-Waite completo con meanings al derecho y al reves, y funciona en el metro.",
+    "label": "Tarot Rider Waite en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html",
+    "external": false
+   }
+  },
+  "tarot-spread-builder": {
+   "name": "Constructor de Tiradas de Tarot",
+   "family": "tarot",
+   "result": "#atomic-result",
+   "value": "Anota la carta, la pregunta y lo que decidiste despues. En tres meses, el patron se ve solo.",
+   "next": {
+    "title": "El mazo entero, sin conexion",
+    "text": "Aqui tienes acceso a las cartas que necesitas. La app lleva el mazo Rider-Waite completo con meanings al derecho y al reves, y funciona en el metro.",
+    "label": "Tarot Rider Waite en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html",
+    "external": false
+   }
+  },
+  "tarot-journal": {
+   "name": "Diario de Tarot",
+   "family": "tarot",
+   "result": "#atomic-result",
+   "value": "Anota la carta, la pregunta y lo que decidiste despues. En tres meses, el patron se ve solo.",
+   "next": {
+    "title": "El mazo entero, sin conexion",
+    "text": "Aqui tienes acceso a las cartas que necesitas. La app lleva el mazo Rider-Waite completo con meanings al derecho y al reves, y funciona en el metro.",
+    "label": "Tarot Rider Waite en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html",
+    "external": false
+   }
+  },
+  "lenormand-card-draw": {
+   "name": "Lectura de Cartas Lenormand",
+   "family": "tarot",
+   "result": "#atomic-result",
+   "value": "Anota la carta, la pregunta y lo que decidiste despues. En tres meses, el patron se ve solo.",
+   "next": {
+    "title": "El mazo entero, sin conexion",
+    "text": "Aqui tienes acceso a las cartas que necesitas. La app lleva el mazo Rider-Waite completo con meanings al derecho y al reves, y funciona en el metro.",
+    "label": "Tarot Rider Waite en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html",
+    "external": false
+   }
+  },
+  "sibilla-yes-no-oracle": {
+   "name": "Oráculo Sibilla Sí/No",
+   "family": "oraculos",
+   "result": "#atomic-result",
+   "value": "Pregunta, anota la respuesta y lo que cambiaste despues. Sin la tercera parte no hay registro.",
+   "next": {
+    "title": "El mazo y las tiradas, sin conexion",
+    "text": "La app lleva las 78 cartas, la tirada de una carta y la de tres, y el estado de la partida guardados.",
+    "label": "Tarot Rider Waite en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html",
+    "external": false
+   }
+  },
+  "pendulum-question-builder": {
+   "name": "Constructor de Preguntas para Péndulo",
+   "family": "oraculos",
+   "result": "#atomic-result",
+   "value": "Pregunta, anota la respuesta y lo que cambiaste despues. Sin la tercera parte no hay registro.",
+   "next": {
+    "title": "El mazo y las tiradas, sin conexion",
+    "text": "La app lleva las 78 cartas, la tirada de una carta y la de tres, y el estado de la partida guardados.",
+    "label": "Tarot Rider Waite en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html",
+    "external": false
+   }
+  },
+  "elder-futhark-reference": {
+   "name": "Referencia Elder Futhark",
+   "family": "runas",
+   "result": "#atomic-result",
+   "value": "Anota el resultado y lo que hiciste despues. La runa no dice nada: la accion accompanying si.",
+   "next": {
+    "title": "Las 24 runas, con su significado",
+    "text": "Aqui sorteas. La app trae las 24 runas con su significado y su posicion, para usarlas sin internet.",
+    "label": "Norse Rune Oracle en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/norse-rune-oracle.html",
+    "external": false
+   }
+  },
+  "runic-name-translator": {
+   "name": "Traductor de Nombres Rúnicos",
+   "family": "runas",
+   "result": "#atomic-result",
+   "value": "Anota el resultado y lo que hiciste despues. La runa no dice nada: la accion accompanying si.",
+   "next": {
+    "title": "Las 24 runas, con su significado",
+    "text": "Aqui sorteas. La app trae las 24 runas con su significado y su posicion, para usarlas sin internet.",
+    "label": "Norse Rune Oracle en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/norse-rune-oracle.html",
+    "external": false
+   }
+  },
+  "ogham-oracle": {
+   "name": "Oráculo Ogham",
+   "family": "runas",
+   "result": "#atomic-result",
+   "value": "Anota el resultado y lo que hiciste despues. La runa no dice nada: la accion accompanying si.",
+   "next": {
+    "title": "Las 24 runas, con su significado",
+    "text": "Aqui sorteas. La app trae las 24 runas con su significado y su posicion, para usarlas sin internet.",
+    "label": "Norse Rune Oracle en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/norse-rune-oracle.html",
+    "external": false
+   }
+  },
+  "planetary-alphabet-cipher": {
+   "name": "Cifra del Alfabeto Planetario",
+   "family": "simbolos",
+   "result": "#atomic-result",
+   "value": "Guarda la cifra, anota la fecha y usala en el mundo. Una cifra sin fecha no es un registro.",
+   "next": {
+    "title": "La cifra, guardada y lista",
+    "text": "La app dibuja el resultado y lo deja en el carrete del telefono, con el temporizador de carga al lado.",
+    "label": "Chaos Sigil Generator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/chaos-sigil-generator.html",
+    "external": false
+   }
+  },
+  "sigil-intention-encoder": {
+   "name": "Codificador de Intención para Sigilo",
+   "family": "sigilos",
+   "result": "#atomic-result",
+   "value": "Guarda la imagen del sigilo, la fecha de carga y la accion mundana. Eso es un registro que se puede revisar.",
+   "next": {
+    "title": "El sigilo, guardado como imagen",
+    "text": "Aqui generas el simbolo. La app lo dibuja, lo guarda como imagen y trae el temporizador de carga, para que no dependas de la pagina.",
+    "label": "Chaos Sigil Generator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/chaos-sigil-generator.html",
+    "external": false
+   }
+  },
+  "magical-correspondence-finder": {
+   "name": "Buscador de Correspondencias",
+   "family": "correspondencias",
+   "result": "#atomic-result",
+   "value": "Usa la tabla como referencia, no como resultado. El valor esta en volver a ella.",
+   "next": {
+    "title": "Las correspondencias, con su metodo",
+    "text": "La tabla de esta pagina es la referencia. En el libro esta la tabla con el metodo que la hace util y el aviso de donde falla.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "moon-phase-calendar": {
+   "name": "Calendario Lunar",
+   "family": "lunar",
+   "result": "#atomic-result",
+   "value": "Anota la fecha de cada fase que uses. Con tres meses seguidos ya tienes un patron propio, no una opinion.",
+   "next": {
+    "title": "La misma fase, en el aire",
+    "text": "Aqui calculas una fase. La app dibuja la luna real en tu ubicacion y te dice cuando caen las siguientes, sin conexion.",
+    "label": "Lunar Phase Calculator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lunar-phase-calculator.html",
+    "external": false
+   }
+  },
+  "moon-intention-planner": {
+   "name": "Planificador de Intenciones Lunares",
+   "family": "lunar",
+   "result": "#atomic-result",
+   "value": "Anota la fecha de cada fase que uses. Con tres meses seguidos ya tienes un patron propio, no una opinion.",
+   "next": {
+    "title": "La misma fase, en el aire",
+    "text": "Aqui calculas una fase. La app dibuja la luna real en tu ubicacion y te dice cuando caen las siguientes, sin conexion.",
+    "label": "Lunar Phase Calculator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lunar-phase-calculator.html",
+    "external": false
+   }
+  },
+  "planetary-hours-planner": {
+   "name": "Planificador de Horas Planetarias",
+   "family": "lunar",
+   "result": "#atomic-result",
+   "value": "Anota la fecha de cada fase que uses. Con tres meses seguidos ya tienes un patron propio, no una opinion.",
+   "next": {
+    "title": "La misma fase, en el aire",
+    "text": "Aqui calculas una fase. La app dibuja la luna real en tu ubicacion y te dice cuando caen las siguientes, sin conexion.",
+    "label": "Lunar Phase Calculator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lunar-phase-calculator.html",
+    "external": false
+   }
+  },
+  "ritual-timing-scorecard": {
+   "name": "Tarjeta de Valoración Temporal",
+   "family": "lunar",
+   "result": "#atomic-result",
+   "value": "Anota la fecha de cada fase que uses. Con tres meses seguidos ya tienes un patron propio, no una opinion.",
+   "next": {
+    "title": "La misma fase, en el aire",
+    "text": "Aqui calculas una fase. La app dibuja la luna real en tu ubicacion y te dice cuando caen las siguientes, sin conexion.",
+    "label": "Lunar Phase Calculator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lunar-phase-calculator.html",
+    "external": false
+   }
+  },
+  "candle-intention-planner": {
+   "name": "Planificador de Intención para Velas",
+   "family": "rituales",
+   "result": "#atomic-result",
+   "value": "Anota el ritual, la intencion y el resultado. Con el mismo ritual dos veces, la comparacion empieza a ser posible.",
+   "next": {
+    "title": "El protocolo completo, por escrito",
+    "text": "Si lo que te sirve es el procedimiento entero, esta es la version escrita: nueve libros con los pasos, lo que fallo y los limites de cada metodo.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "spell-ingredient-planner": {
+   "name": "Planificador de Ingredientes",
+   "family": "rituales",
+   "result": "#atomic-result",
+   "value": "Anota el ritual, la intencion y el resultado. Con el mismo ritual dos veces, la comparacion empieza a ser posible.",
+   "next": {
+    "title": "El protocolo completo, por escrito",
+    "text": "Si lo que te sirve es el procedimiento entero, esta es la version escrita: nueve libros con los pasos, lo que fallo y los limites de cada metodo.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "banishing-ritual-builder": {
+   "name": "Constructor de Ritual de Banishing",
+   "family": "rituales",
+   "result": "#atomic-result",
+   "value": "Anota el ritual, la intencion y el resultado. Con el mismo ritual dos veces, la comparacion empieza a ser posible.",
+   "next": {
+    "title": "El protocolo completo, por escrito",
+    "text": "Si lo que te sirve es el procedimiento entero, esta es la version escrita: nueve libros con los pasos, lo que fallo y los limites de cada metodo.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "elemental-balance-checker": {
+   "name": "Verificador de Equilibrio Elemental",
+   "family": "correspondencias",
+   "result": "#atomic-result",
+   "value": "Usa la tabla como referencia, no como resultado. El valor esta en volver a ella.",
+   "next": {
+    "title": "Las correspondencias, con su metodo",
+    "text": "La tabla de esta pagina es la referencia. En el libro esta la tabla con el metodo que la hace util y el aviso de donde falla.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "lucid-dream-training-planner": {
+   "name": "Planificador de Entrenamiento de Sueños Lúcidos",
+   "family": "suenos",
+   "result": "#atomic-result",
+   "value": "Escribe el sueno antes de interpretarlo. Lainterpretation cambia cuando la memoria ya esta reescrita.",
+   "next": {
+    "title": "El diario, en el bolsillo",
+    "text": "La herramienta te ayuda a practicar. La app guarda el sueno, la comprobacion de realidad y el tiempo de sesion, y todo se queda en el dispositivo.",
+    "label": "Lucid Dream en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lucid-dream.html",
+    "external": false
+   }
+  },
+  "reality-check-technique-coach": {
+   "name": "Coach de Técnica de Chequeo de Realidad",
+   "family": "suenos",
+   "result": "#atomic-result",
+   "value": "Escribe el sueno antes de interpretarlo. Lainterpretation cambia cuando la memoria ya esta reescrita.",
+   "next": {
+    "title": "El diario, en el bolsillo",
+    "text": "La herramienta te ayuda a practicar. La app guarda el sueno, la comprobacion de realidad y el tiempo de sesion, y todo se queda en el dispositivo.",
+    "label": "Lucid Dream en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lucid-dream.html",
+    "external": false
+   }
+  },
+  "dream-symbol-dictionary": {
+   "name": "Diccionario de Símbolos de Sueño",
+   "family": "suenos",
+   "result": "#atomic-result",
+   "value": "Escribe el sueno antes de interpretarlo. Lainterpretation cambia cuando la memoria ya esta reescrita.",
+   "next": {
+    "title": "El diario, en el bolsillo",
+    "text": "La herramienta te ayuda a practicar. La app guarda el sueno, la comprobacion de realidad y el tiempo de sesion, y todo se queda en el dispositivo.",
+    "label": "Lucid Dream en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lucid-dream.html",
+    "external": false
+   }
+  },
+  "astral-projection-session-timer": {
+   "name": "Temporizador de Sesión Astral",
+   "family": "suenos",
+   "result": "#atomic-result",
+   "value": "Escribe el sueno antes de interpretarlo. Lainterpretation cambia cuando la memoria ya esta reescrita.",
+   "next": {
+    "title": "El diario, en el bolsillo",
+    "text": "La herramienta te ayuda a practicar. La app guarda el sueno, la comprobacion de realidad y el tiempo de sesion, y todo se queda en el dispositivo.",
+    "label": "Lucid Dream en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lucid-dream.html",
+    "external": false
+   }
+  },
+  "meditation-focus-timer": {
+   "name": "Temporizador de Meditación",
+   "family": "bienestar",
+   "result": "#atomic-result",
+   "value": "El temporizador es la parte facil. Lo que cambia el resultado es lo que anotas al terminar.",
+   "next": {
+    "title": "La sesion, registrada",
+    "text": "La app guarda el tiempo de meditacion, las comprobaciones y el diario, con lo que la pagina no puede guardarte.",
+    "label": "Lucid Dream en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lucid-dream.html",
+    "external": false
+   }
+  },
+  "intention-achievement-tracker": {
+   "name": "Seguimiento de Intenciones",
+   "family": "seguimiento",
+   "result": "#atomic-result",
+   "value": "El registro solo sirve si se vuelve a leer. Ponle fecha de revision a la entrada.",
+   "next": {
+    "title": "El sistema de registro, hecho para durar",
+    "text": "Aqui guardas una entrada. El libro tiene el sistema completo: que se anota, como se compara y cuando se revisa.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "ritual-safety-checklist": {
+   "name": "Checklist de Seguridad Ritual",
+   "family": "seguridad",
+   "result": "#atomic-result",
+   "value": "Guarda la lista de esta sesion. Las reglas se olvidan; la lista no.",
+   "next": {
+    "title": "Los limites, explicados",
+    "text": "Las listas de esta pagina sirven. El libro explica el porque de cada limite y como decidir cuando parar.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "consent-boundary-planner": {
+   "name": "Planificador de Consentimiento y Límites",
+   "family": "seguridad",
+   "result": "#atomic-result",
+   "value": "Guarda la lista de esta sesion. Las reglas se olvidan; la lista no.",
+   "next": {
+    "title": "Los limites, explicados",
+    "text": "Las listas de esta pagina sirven. El libro explica el porque de cada limite y como decidir cuando parar.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "digital-grimoire-organizer": {
+   "name": "Organizador de Grimorio Digital",
+   "family": "organizacion",
+   "result": "#atomic-result",
+   "value": "Lo que organizas aqui es el trabajo de dentro: vuelve a el cuando la sesion termine.",
+   "next": {
+    "title": "Las plantillas, listas para imprimir",
+    "text": "Aqui ordenas. En el libro estan las plantillas de trabajo del grimorio, para imprimir y usar sin pantalla.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "paranormal-session-prep-checklist": {
+   "name": "Checklist de Preparación para Sesiones",
+   "family": "organizacion",
+   "result": "#atomic-result",
+   "value": "Lo que organizas aqui es el trabajo de dentro: vuelve a el cuando la sesion termine.",
+   "next": {
+    "title": "Las plantillas, listas para imprimir",
+    "text": "Aqui ordenas. En el libro estan las plantillas de trabajo del grimorio, para imprimir y usar sin pantalla.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "sigil-charging-planner": {
+   "name": "Planificador de Carga de Sigilo",
+   "family": "sigilos",
+   "result": "#atomic-result",
+   "value": "Guarda la imagen del sigilo, la fecha de carga y la accion mundana. Eso es un registro que se puede revisar.",
+   "next": {
+    "title": "El sigilo, guardado como imagen",
+    "text": "Aqui generas el simbolo. La app lo dibuja, lo guarda como imagen y trae el temporizador de carga, para que no dependas de la pagina.",
+    "label": "Chaos Sigil Generator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/chaos-sigil-generator.html",
+    "external": false
+   }
+  },
+  "servitor-design-journal": {
+   "name": "Diario de Diseño de Servidores",
+   "family": "organizacion",
+   "result": "#atomic-result",
+   "value": "Lo que organizas aqui es el trabajo de dentro: vuelve a el cuando la sesion termine.",
+   "next": {
+    "title": "Las plantillas, listas para imprimir",
+    "text": "Aqui ordenas. En el libro estan las plantillas de trabajo del grimorio, para imprimir y usar sin pantalla.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "results-tracking-dashboard": {
+   "name": "Panel de Seguimiento de Resultados",
+   "family": "seguimiento",
+   "result": "#atomic-result",
+   "value": "El registro solo sirve si se vuelve a leer. Ponle fecha de revision a la entrada.",
+   "next": {
+    "title": "El sistema de registro, hecho para durar",
+    "text": "Aqui guardas una entrada. El libro tiene el sistema completo: que se anota, como se compara y cuando se revisa.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "sabbat-season-planner": {
+   "name": "Planificador de Temporadas Sabáticas",
+   "family": "lunar",
+   "result": "#atomic-result",
+   "value": "Anota la fecha de cada fase que uses. Con tres meses seguidos ya tienes un patron propio, no una opinion.",
+   "next": {
+    "title": "La misma fase, en el aire",
+    "text": "Aqui calculas una fase. La app dibuja la luna real en tu ubicacion y te dice cuando caen las siguientes, sin conexion.",
+    "label": "Lunar Phase Calculator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lunar-phase-calculator.html",
+    "external": false
+   }
+  },
+  "gnosis-timer": {
+   "name": "gnosis timer",
+   "family": "suenos",
+   "result": "#timerDisplay",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "El diario, en el bolsillo",
+    "text": "La herramienta te ayuda a practicar. La app guarda el sueno, la comprobacion de realidad y el tiempo de sesion, y todo se queda en el dispositivo.",
+    "label": "Lucid Dream en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lucid-dream.html",
+    "external": false
+   }
+  },
+  "rune-drawer": {
+   "name": "rune drawer",
+   "family": "runas",
+   "result": "#runeResult",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "Las 24 runas, con su significado",
+    "text": "Aqui sorteas. La app trae las 24 runas con su significado y su posicion, para usarlas sin internet.",
+    "label": "Norse Rune Oracle en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/norse-rune-oracle.html",
+    "external": false
+   }
+  },
+  "zener-esp-trainer": {
+   "name": "zener esp trainer",
+   "family": "bienestar",
+   "result": "#resultsPanel",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "La sesion, registrada",
+    "text": "La app guarda el tiempo de meditacion, las comprobaciones y el diario, con lo que la pagina no puede guardarte.",
+    "label": "Lucid Dream en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lucid-dream.html",
+    "external": false
+   }
+  },
+  "astrology-sign-calculator": {
+   "name": "astrology sign calculator",
+   "family": "astrologia",
+   "result": "#results",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "La misma carta, sin depender del movil",
+    "text": "Si lo que te sirve de esta pagina es la carta, la app la calcula igual y la guarda contigo. No es mejor: es la misma, y ademas funciona sin conexion.",
+    "label": "Astral Lab en Google Play ($6.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/astral-lab.html",
+    "external": false
+   }
+  },
+  "candle-color-calculator": {
+   "name": "candle color calculator",
+   "family": "correspondencias",
+   "result": "#resultDisplay",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "Las correspondencias, con su metodo",
+    "text": "La tabla de esta pagina es la referencia. En el libro esta la tabla con el metodo que la hace util y el aviso de donde falla.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "digital-pendulum": {
+   "name": "digital pendulum",
+   "family": "oraculos",
+   "result": "#answerDisplay",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "El mazo y las tiradas, sin conexion",
+    "text": "La app lleva las 78 cartas, la tirada de una carta y la de tres, y el estado de la partida guardados.",
+    "label": "Tarot Rider Waite en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html",
+    "external": false
+   }
+  },
+  "goetic-spirit-selector": {
+   "name": "goetic spirit selector",
+   "family": "rituales",
+   "result": "#resultsCount",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "El protocolo completo, por escrito",
+    "text": "Si lo que te sirve es el procedimiento entero, esta es la version escrita: nueve libros con los pasos, lo que fallo y los limites de cada metodo.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "iching-changing-lines": {
+   "name": "iching changing lines",
+   "family": "oraculos",
+   "result": "#hexagramDisplay",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "El mazo y las tiradas, sin conexion",
+    "text": "La app lleva las 78 cartas, la tirada de una carta y la de tres, y el estado de la partida guardados.",
+    "label": "Tarot Rider Waite en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html",
+    "external": false
+   }
+  },
+  "moon-voc": {
+   "name": "moon voc",
+   "family": "lunar",
+   "result": "#nextVocCard",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "La misma fase, en el aire",
+    "text": "Aqui calculas una fase. La app dibuja la luna real en tu ubicacion y te dice cuando caen las siguientes, sin conexion.",
+    "label": "Lunar Phase Calculator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lunar-phase-calculator.html",
+    "external": false
+   }
+  },
+  "planetary-hours": {
+   "name": "planetary hours",
+   "family": "astrologia",
+   "result": "#locationDisplay",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "La misma carta, sin depender del movil",
+    "text": "Si lo que te sirve de esta pagina es la carta, la app la calcula igual y la guarda contigo. No es mejor: es la misma, y ademas funciona sin conexion.",
+    "label": "Astral Lab en Google Play ($6.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/astral-lab.html",
+    "external": false
+   }
+  },
+  "planetary-kamea-sigil": {
+   "name": "planetary kamea sigil",
+   "family": "sigilos",
+   "result": "#sigilDisplay",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "El sigilo, guardado como imagen",
+    "text": "Aqui generas el simbolo. La app lo dibuja, lo guarda como imagen y trae el temporizador de carga, para que no dependas de la pagina.",
+    "label": "Chaos Sigil Generator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/chaos-sigil-generator.html",
+    "external": false
+   }
+  },
+  "reality-check-tracker": {
+   "name": "reality check tracker",
+   "family": "suenos",
+   "result": "#entryResult",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "El diario, en el bolsillo",
+    "text": "La herramienta te ayuda a practicar. La app guarda el sueno, la comprobacion de realidad y el tiempo de sesion, y todo se queda en el dispositivo.",
+    "label": "Lucid Dream en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/lucid-dream.html",
+    "external": false
+   }
+  },
+  "sigil-charging-timer": {
+   "name": "sigil charging timer",
+   "family": "sigilos",
+   "result": "#resultRating",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "El sigilo, guardado como imagen",
+    "text": "Aqui generas el simbolo. La app lo dibuja, lo guarda como imagen y trae el temporizador de carga, para que no dependas de la pagina.",
+    "label": "Chaos Sigil Generator en Google Play ($3.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/chaos-sigil-generator.html",
+    "external": false
+   }
+  },
+  "spell-builder": {
+   "name": "spell builder",
+   "family": "rituales",
+   "result": "#spellResult",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "El protocolo completo, por escrito",
+    "text": "Si lo que te sirve es el procedimiento entero, esta es la version escrita: nueve libros con los pasos, lo que fallo y los limites de cada metodo.",
+    "label": "Los 9 libros en PDF ($24.99, 59% de descuento)",
+    "link": "https://cha0smagicklabs.com/landing-pages/books-bundle.html",
+    "external": false
+   }
+  },
+  "tarot-yes-no": {
+   "name": "tarot yes no",
+   "family": "tarot",
+   "result": "#readingSummary",
+   "value": "Guarda la lectura y revisala en 30 dias: eso convierte una lectura en un registro.",
+   "next": {
+    "title": "El mazo entero, sin conexion",
+    "text": "Aqui tienes acceso a las cartas que necesitas. La app lleva el mazo Rider-Waite completo con meanings al derecho y al reves, y funciona en el metro.",
+    "label": "Tarot Rider Waite en Google Play ($9.99, una vez)",
+    "link": "https://cha0smagicklabs.com/apps/unofficial-rider-waite-tarot.html",
+    "external": false
+   }
+  }
+ }
+}

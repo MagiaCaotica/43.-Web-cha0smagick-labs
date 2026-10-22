@@ -1,93 +1,152 @@
-/* Independent layout for the data-driven atomic tools. */
+/* =============================================================================
+   SISTEMA VISUAL DE LAS HERRAMIENTAS (motor comun, 40 herramientas)
+   -----------------------------------------------------------------------------
+   Objetivo: que la herramienta parezca un instrumento, no un formulario.
+   Jerarquia en tres niveles: heroe (que es esto), panel (configura), resultado
+   (esto es lo que obtienes). El resultado es el protagonista: se trata como
+   una hoja sobre la mesa, con filete de oro y datos en grande.
+
+   Paleta heredada del sitio (negro profundo + oro) con mas contraste y aire.
+   Todo en rem, escala fluida con clamp(), y sin animacion que no se pueda
+   desactivar.
+   ========================================================================== */
+
 :root {
-  --atomic-bg: #090909;
-  --atomic-panel: #121212;
-  --atomic-panel-2: #1a1711;
-  --atomic-line: #3b2d18;
-  --atomic-gold: #d6ad55;
-  --atomic-text: #f5f1e8;
-  --atomic-muted: #b4aa98;
-  --atomic-error: #ff8a80;
-  --atomic-success: #a8e6a1;
+  --tk-bg: #050505;
+  --tk-bg-2: #0b0a08;
+  --tk-panel: #101010;
+  --tk-panel-2: #16130d;
+  --tk-panel-3: #1c1810;
+  --tk-line: #2a2620;
+  --tk-line-strong: #3d3527;
+  --tk-gold: #d6ad55;
+  --tk-gold-soft: #f0d28a;
+  --tk-gold-deep: #8a6f33;
+  --tk-text: #f6f2e9;
+  --tk-muted: #a9a196;
+  --tk-dim: #6f6a62;
+  --tk-success: #a8e6a1;
+  --tk-error: #ff9b91;
+  --tk-radius: 14px;
+  --tk-radius-sm: 9px;
+  --tk-shadow: 0 18px 44px rgba(0, 0, 0, .55);
+  --tk-ring: 0 0 0 3px rgba(214, 173, 85, .32);
 }
 
-.atomic-shell,
 body:has([data-atomic-tool]) {
-  background: var(--atomic-bg);
-  color: var(--atomic-text);
+  background:
+    radial-gradient(1100px 520px at 50% -180px, rgba(214, 173, 85, .07), transparent 70%),
+    var(--tk-bg);
+  color: var(--tk-text);
 }
 
 body:has([data-atomic-tool]) main {
-  max-width: 920px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2.5rem 1.25rem 4rem;
+  padding: clamp(1.25rem, 4vw, 2.75rem) 1.15rem 5rem;
 }
 
+/* --------------------------------------------------------------- heroe */
 .atomic-hero {
-  padding: 1rem 0 1.5rem;
+  padding: 0 0 1.6rem;
 }
 
 .atomic-kicker {
-  color: var(--atomic-gold);
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: .14em;
+  color: var(--tk-gold);
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .18em;
   text-transform: uppercase;
-}
-
-.atomic-hero h1,
-.atomic-card h2,
-.atomic-card h3 {
-  color: var(--atomic-text);
-  line-height: 1.15;
+  margin: 0 0 .5rem;
 }
 
 .atomic-hero h1 {
-  font-size: clamp(2rem, 6vw, 3.8rem);
-  margin: .4rem 0 1rem;
+  font-size: clamp(2.05rem, 5.4vw, 3.35rem);
+  font-weight: 800;
+  letter-spacing: -.022em;
+  line-height: 1.06;
+  margin: 0 0 .85rem;
+  color: var(--tk-text);
+  text-wrap: balance;
+}
+
+.atomic-hero h1::after {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 2px;
+  margin-top: 1rem;
+  background: linear-gradient(90deg, var(--tk-gold), transparent);
 }
 
 .atomic-lead {
-  color: var(--atomic-muted);
-  font-size: 1.1rem;
-  max-width: 70ch;
+  color: var(--tk-muted);
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  line-height: 1.65;
+  max-width: 64ch;
+  margin: 0;
 }
 
 .atomic-notice {
-  background: var(--atomic-panel-2);
-  border: 1px solid var(--atomic-line);
-  border-left: 3px solid var(--atomic-gold);
-  color: var(--atomic-muted);
-  margin-top: 1.25rem;
-  padding: .9rem 1rem;
+  background: linear-gradient(180deg, var(--tk-panel-2), var(--tk-panel));
+  border: 1px solid var(--tk-line);
+  border-left: 3px solid var(--tk-gold);
+  border-radius: var(--tk-radius-sm);
+  color: var(--tk-muted);
+  font-size: .92rem;
+  line-height: 1.6;
+  margin: 1.35rem 0 0;
+  padding: .85rem 1.05rem;
 }
 
 .atomic-notice strong {
-  color: var(--atomic-gold);
+  color: var(--tk-gold);
   margin-right: .35rem;
 }
 
+/* ---------------------------------------------------------------- panel */
 .atomic-card {
-  background: var(--atomic-panel);
-  border: 1px solid #292929;
-  border-radius: 14px;
-  margin: 1rem 0;
-  padding: clamp(1rem, 3vw, 2rem);
+  background: linear-gradient(180deg, var(--tk-panel), #0d0d0d);
+  border: 1px solid var(--tk-line);
+  border-radius: var(--tk-radius);
+  box-shadow: var(--tk-shadow);
+  margin: 1.15rem 0;
+  padding: clamp(1.1rem, 3.2vw, 2.1rem);
 }
 
 .atomic-card h2 {
-  margin-top: 0;
+  color: var(--tk-text);
+  font-size: clamp(1.3rem, 2.9vw, 1.7rem);
+  font-weight: 750;
+  letter-spacing: -.012em;
+  line-height: 1.2;
+  margin: 0 0 .5rem;
+}
+
+.atomic-card h3 {
+  color: var(--tk-gold);
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 1.6rem 0 .5rem;
 }
 
 .atomic-muted,
 .atomic-card small,
 .atomic-field small {
-  color: var(--atomic-muted);
+  color: var(--tk-dim);
+  font-size: .88rem;
+  line-height: 1.55;
 }
 
+/* --------------------------------------------------------------- campos */
 .atomic-field {
-  border-top: 1px solid #2b2b2b;
-  padding: 1rem 0 .2rem;
+  border-top: 1px solid var(--tk-line);
+  padding: 1.05rem 0 .3rem;
+}
+
+.atomic-field:first-of-type {
+  border-top: 0;
+  padding-top: .35rem;
 }
 
 .atomic-label-row {
@@ -98,39 +157,53 @@ body:has([data-atomic-tool]) main {
 }
 
 .atomic-field label {
+  color: var(--tk-text);
   font-weight: 700;
+  letter-spacing: .004em;
 }
 
 .atomic-field input:not([type="checkbox"]),
 .atomic-field select,
 .atomic-field textarea {
-  background: #0d0d0d;
-  border: 1px solid #4a4a4a;
-  border-radius: 8px;
+  background: #08080a;
+  border: 1px solid var(--tk-line-strong);
+  border-radius: var(--tk-radius-sm);
   box-sizing: border-box;
-  color: var(--atomic-text);
+  color: var(--tk-text);
   display: block;
   font: inherit;
-  margin: .55rem 0 .3rem;
+  margin: .6rem 0 .25rem;
   max-width: 100%;
-  padding: .75rem;
+  min-height: 48px;
+  padding: .7rem .85rem;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
   width: 100%;
+}
+
+.atomic-field textarea {
+  line-height: 1.6;
+  min-height: 118px;
+  resize: vertical;
+}
+
+.atomic-field input::placeholder,
+.atomic-field textarea::placeholder {
+  color: #55504a;
 }
 
 .atomic-field input:focus,
 .atomic-field select:focus,
-.atomic-field textarea:focus,
-.atomic-button:focus-visible,
-.atomic-card summary:focus-visible {
-  border-color: var(--atomic-gold);
-  outline: 2px solid color-mix(in srgb, var(--atomic-gold) 45%, transparent);
-  outline-offset: 2px;
+.atomic-field textarea:focus {
+  background: #0b0b0d;
+  border-color: var(--tk-gold);
+  box-shadow: var(--tk-ring);
+  outline: none;
 }
 
 .atomic-field.checkbox-control {
   align-items: center;
   display: flex;
-  gap: .65rem;
+  gap: .7rem;
 }
 
 .atomic-field.checkbox-control .atomic-label-row {
@@ -138,9 +211,9 @@ body:has([data-atomic-tool]) main {
 }
 
 .atomic-field.checkbox-control input {
-  accent-color: var(--atomic-gold);
-  height: 1.15rem;
-  width: 1.15rem;
+  accent-color: var(--tk-gold);
+  height: 1.25rem;
+  width: 1.25rem;
 }
 
 .atomic-field.checkbox-control small {
@@ -149,109 +222,187 @@ body:has([data-atomic-tool]) main {
 }
 
 .field-optional {
-  color: var(--atomic-muted);
-  font-size: .8rem;
+  color: var(--tk-dim);
+  font-size: .76rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
 }
 
+/* -------------------------------------------------------------- botones */
 .atomic-actions {
   display: flex;
   flex-wrap: wrap;
   gap: .7rem;
-  margin-top: 1.5rem;
+  margin-top: 1.7rem;
 }
 
 .atomic-button {
-  background: var(--atomic-gold);
-  border: 2px solid var(--atomic-gold);
-  border-radius: 8px;
+  background: linear-gradient(180deg, var(--tk-gold-soft), var(--tk-gold));
+  border: 1px solid var(--tk-gold);
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(214, 173, 85, .18);
   color: #17120a;
   cursor: pointer;
   font: inherit;
   font-weight: 800;
-  padding: .7rem 1rem;
+  letter-spacing: .006em;
+  min-height: 48px;
+  padding: .78rem 1.35rem;
+  transition: transform .14s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.atomic-button:hover {
+  box-shadow: 0 10px 28px rgba(214, 173, 85, .3);
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+
+.atomic-button:active {
+  transform: translateY(0);
 }
 
 .atomic-button-secondary {
   background: transparent;
-  color: var(--atomic-gold);
+  border-color: var(--tk-line-strong);
+  box-shadow: none;
+  color: var(--tk-gold);
+}
+
+.atomic-button-secondary:hover {
+  background: rgba(214, 173, 85, .08);
+  border-color: var(--tk-gold);
+  box-shadow: none;
+}
+
+.atomic-button:focus-visible,
+.atomic-card summary:focus-visible,
+.atomic-faq summary:focus-visible,
+.atomic-button:focus {
+  border-color: var(--tk-gold);
+  box-shadow: var(--tk-ring);
+  outline: none;
 }
 
 .atomic-status {
+  color: var(--tk-muted);
+  font-size: .9rem;
   min-height: 1.4em;
 }
 
 .atomic-status.is-error {
-  color: var(--atomic-error);
+  color: var(--tk-error);
 }
 
 .atomic-status.is-success {
-  color: var(--atomic-success);
+  color: var(--tk-success);
+}
+
+/* -------------------------------------------------------------- resultado */
+.atomic-result {
+  border-color: var(--tk-line-strong);
+  border-left: 3px solid var(--tk-gold);
+  background:
+    radial-gradient(700px 260px at 12% -40%, rgba(214, 173, 85, .09), transparent 70%),
+    linear-gradient(180deg, var(--tk-panel-2), #0c0c0c);
+}
+
+.atomic-result h2 {
+  font-size: clamp(1.35rem, 3.2vw, 1.85rem);
+  margin-bottom: .6rem;
+}
+
+.atomic-result .atomic-kicker {
+  margin-bottom: .35rem;
 }
 
 .atomic-result-grid {
   display: grid;
   gap: .7rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  margin: 1.2rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  margin: 1.3rem 0 1.5rem;
 }
 
 .atomic-result-grid > div {
-  background: #0d0d0d;
-  border: 1px solid #303030;
+  background: rgba(0, 0, 0, .38);
+  border: 1px solid var(--tk-line);
+  border-radius: var(--tk-radius-sm);
   display: flex;
   flex-direction: column;
-  gap: .35rem;
-  padding: .8rem;
+  gap: .3rem;
+  padding: .85rem .95rem;
 }
 
 .atomic-result-grid span {
-  color: var(--atomic-muted);
-  font-size: .8rem;
+  color: var(--tk-dim);
+  font-size: .76rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
 }
 
 .atomic-result-grid strong {
+  color: var(--tk-gold-soft);
+  font-size: 1.08rem;
+  font-weight: 750;
+  line-height: 1.35;
   overflow-wrap: anywhere;
 }
 
 .atomic-steps {
-  color: var(--atomic-muted);
-  padding-left: 1.3rem;
+  color: var(--tk-muted);
+  padding-left: 1.25rem;
 }
 
 .atomic-steps li + li {
-  margin-top: .6rem;
+  margin-top: .65rem;
 }
 
+.atomic-steps li::marker {
+  color: var(--tk-gold);
+}
+
+/* ------------------------------------------------------------------ faq */
 .atomic-faq details {
-  border-top: 1px solid #2b2b2b;
-  padding: .8rem 0;
+  border-top: 1px solid var(--tk-line);
+  padding: .95rem 0;
 }
 
 .atomic-faq summary {
-  color: var(--atomic-text);
+  color: var(--tk-text);
   cursor: pointer;
   font-weight: 700;
+  list-style-position: outside;
+  margin-left: .9rem;
 }
 
+.atomic-faq details p {
+  color: var(--tk-muted);
+  margin: .7rem 0 .2rem 1.4rem;
+  max-width: 70ch;
+}
+
+/* ---------------------------------------------------------------- error */
 .atomic-error {
-  border-color: var(--atomic-error);
+  border-color: var(--tk-error);
 }
 
+/* --------------------------------------------------------------- timer */
 .atomic-timer {
-  background: #0d0d0d;
-  border: 1px solid var(--atomic-line);
+  background: radial-gradient(460px 200px at 50% 0%, rgba(214, 173, 85, .1), transparent 70%), #08080a;
+  border: 1px solid var(--tk-line-strong);
+  border-radius: var(--tk-radius);
   margin: 1.2rem 0;
-  padding: 1.4rem;
+  padding: 1.8rem 1.4rem;
   text-align: center;
 }
 
 .atomic-timer-display {
-  color: var(--atomic-gold);
-  font-size: clamp(2.6rem, 10vw, 4.4rem);
+  color: var(--tk-gold-soft);
+  font-size: clamp(2.9rem, 11vw, 4.8rem);
   font-variant-numeric: tabular-nums;
   font-weight: 800;
-  letter-spacing: .04em;
-  line-height: 1.1;
+  letter-spacing: .03em;
+  line-height: 1.05;
+  text-shadow: 0 0 28px rgba(214, 173, 85, .22);
 }
 
 .atomic-timer .atomic-actions {
@@ -260,12 +411,42 @@ body:has([data-atomic-tool]) main {
 }
 
 .atomic-timer .atomic-status {
-  color: var(--atomic-muted);
+  color: var(--tk-muted);
   margin: .6rem 0 0;
+}
+
+/* ---------------------------------------------------------------- movil */
+@media (max-width: 640px) {
+  .atomic-hero h1::after {
+    margin-top: .75rem;
+  }
+
+  .atomic-card {
+    border-radius: 12px;
+  }
+
+  .atomic-actions .atomic-button {
+    flex: 1 1 100%;
+  }
+
+  .atomic-result-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto !important;
+  }
+
+  .atomic-button,
+  .atomic-field input,
+  .atomic-field select,
+  .atomic-field textarea {
+    transition: none !important;
+  }
+
+  .atomic-button:hover {
+    transform: none;
   }
 }
