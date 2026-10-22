@@ -2015,3 +2015,21 @@ section.post-comments p.post-comments-intro {
    distinguian por color: Lighthouse lo marca como link-in-text-block.
    Se subraya para que el enlace se reconozca sin depender del color. */
 a[style*="color:"] { text-decoration: underline; }
+
+/* La barra fija ocupa el final de la pantalla: sin este hueco, el pie
+   queda tapado y no se puede leer. */
+body:has(.sticky-conversion-bar) {
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 640px) {
+  body:has(.sticky-conversion-bar) {
+    padding-bottom: 4.5rem;
+  }
+}
+
+@media print {
+  .sticky-conversion-bar {
+    display: none !important;
+  }
+}
