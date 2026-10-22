@@ -1113,6 +1113,8 @@ section.bottom-cta a:hover { background:var(--accent-light); transform:translate
 
 @media (max-width: 600px) {
   .breadcrumb, .breadcrumb-nav { display: none; }
+  .cookie-btn-accept, .cookie-btn-decline { min-height: 44px; padding: 0.75rem 1.5rem; }
+  .brand, nav a { min-height: 44px; }
 }
 
 /* El encabezado de marca ocupaba 384px de los 844 de un movil: media pantalla
@@ -1388,9 +1390,9 @@ body { top: 0px !important; }
 }
 #cookie-consent-banner p { color: #aaa; font-size: 0.85rem; margin-bottom: 0.8rem; }
 #cookie-consent-banner .cookie-buttons { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
-.cookie-btn-accept { background: #3DDC84; color: #000; border: none; padding: 0.5rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+.cookie-btn-accept { background: #3DDC84; color: #000; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
 .cookie-btn-accept:hover { background: #2DBD6E; }
-.cookie-btn-decline { background: transparent; color: #888; border: 1px solid #444; padding: 0.5rem 1.5rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+.cookie-btn-decline { background: transparent; color: #888; border: 1px solid #444; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
 .cookie-btn-decline:hover { border-color: #ff4444; color: #ff4444; }
 
 /* ========================================================================
