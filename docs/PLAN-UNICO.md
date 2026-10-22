@@ -336,7 +336,7 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 - **Debe hacer:** publicar con antelación real, no la semana del pico; que cada página en español diga lo que solo un lector hispanohablante necesita; que el enlace de compra apunte al producto en el idioma de la página (EN → `N108147778I`, ES → `V107097103W`); unificar cifras contra la fuente de verdad (`data/toolkit.json`, `scripts/bots/data/offers.json`).
 - **No debe hacer:** inventar una fecha de fin de rebaja, un descuento o una escasez que el checkout no sostiene; traducir un artículo del inglés y llamarlo local; dejar una experimento ocupando una URL del catálogo principal; mandar tráfico inglés a una página de venta en español.
 - **Aceptación:** `python projects/scripts/check-seasonal-claims.py` → 0 afirmaciones sin fuente; `python projects/scripts/fix-bundle-lang.py --check` → 0 páginas inglesas con el producto español; `python projects/scripts/audit-hreflang.py` y `node projects/scripts/audit-indexation.mjs` sin hallazgos; los 4 artículos nuevos indexables, con FAQ y enlaces internos sin roturas.
-- **Evidencia:** `projects/scripts/es_article_builder.py`, `projects/scripts/gen-seasonal-hub.py`, `projects/scripts/fix-acentos-es.py`, `projects/scripts/fix-toc-es.py`, `projects/scripts/fix-bundle-lang.py`, `projects/scripts/fix-bundle-en-copy.py`, `projects/scripts/fix-bundle-links.py`, `projects/scripts/check-seasonal-claims.py`, `projects/scripts/fix-counts.py`. Precios leídos en el checkout el 2026-10-22: `N108147778I` = US$29.99 («BUNDLE: All PDFs in ENGLISH»), `V107097103W` = US$24.99 («BUNDLE Todos Los Libros ESP»).
+- **Evidencia:** `projects/scripts/es_article_builder.py`, `projects/scripts/gen-seasonal-hub.py`, `projects/scripts/fix-acentos-es.py`, `projects/scripts/fix-toc-es.py`, `projects/scripts/fix-bundle-lang.py`, `projects/scripts/fix-bundle-en-copy.py`, `projects/scripts/fix-bundle-links.py`, `projects/scripts/check-seasonal-claims.py`, `projects/scripts/fix-counts.py`. Precios leídos en el checkout el 2026-10-22: `N108147778I` = US$29.99 («BUNDLE: All PDFs in ENGLISH»), `V107097103W` = US$29.99 («BUNDLE Todos Los Libros ESP»).
 
 ---
 
@@ -443,7 +443,7 @@ Cada punto estaba pendiente en un plan que se ha absorbido aquí. La columna
 | F-4 · secuencia "Quickstart to Buyer" activada (0 emails enviados hoy) | **P0-08** |
 | F-5 · Meta Pixel + Google Ads IDs reales | **P2-04** |
 | GSC · conectar GA4 y token de GSC que no muere a los 7 días | **P1-01** |
-| Homepage: bundle $24.99 arriba, garantía Hotmart visible, OTO de complete-access | **P1-04** |
+| Homepage: bundle $29.99 arriba, garantía Hotmart visible, OTO de complete-access | **P1-04** |
 | Pedir testimonios reales a compradores previos → `data/social-proof.json` (mínimo 3) | **P1-10** |
 | `flash-sale.html` conectado como destino de los emails de oferta, mensual | **P1-04** |
 | Eventos de conversión de compra (`purchase`, `checkout_click`) activos y reconciliados | **P0-07** |

@@ -55,8 +55,8 @@
 
 ## Bundle
 
-- bot: **$24.99 USD** (59% off), 9 esoteric books at 59% off. Complete occult library bundle.
-- sitio: $24.99 (59% off), 9 libros
+- bot: **$29.99 USD** (59% off), 9 esoteric books at 59% off. Complete occult library bundle.
+- sitio: $29.99 (59% off), 9 libros
 
 ## Discrepancias
 
