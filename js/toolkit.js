@@ -35,7 +35,7 @@
   // Version del catalogo de herramientas: hay que subirla cuando cambie
   // data/toolkit.json, o el CDN sirvira el JSON viejo y el bloque de
   // confianza saldra vacio.
-  var DATA_VERSION = '684e2ef3da';
+  var DATA_VERSION = '5068ebafff';
   var DATA_URL = UP + 'data/toolkit.json?v=' + DATA_VERSION;
   var slug = (function () {
     var m = location.pathname.match(/\/tools\/([^/]+)\.html/i);

@@ -2047,3 +2047,7 @@ body:has(.sticky-conversion-bar) {
     display: none !important;
   }
 }
+
+/* Social proof + flagship badge for app pages */
+.social-proof { color: var(--text-dim, #888); font-size: 0.85rem; margin: 0.5rem 0 1rem; letter-spacing: 0.02em; }
+.flagship-badge { background: linear-gradient(135deg,#f59e0b,#d97706); color: #000; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px; margin-right: 0.5rem; vertical-align: middle; text-transform: uppercase; letter-spacing: 0.05em; }
