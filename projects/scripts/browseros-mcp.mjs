@@ -145,6 +145,11 @@ try {
     const args = rest[1] ? JSON.parse(rest[1]) : {}
     const res = await client.call(tool, args)
     console.log(compact(render(res)))
+  } else if (cmd === 'callfile') {
+    const tool = rest[0]
+    const args = rest[1] ? JSON.parse(fs.readFileSync(rest[1], 'utf8')) : {}
+    const res = await client.call(tool, args)
+    console.log(compact(render(res)))
   } else if (cmd === 'plan') {
     const plan = JSON.parse(fs.readFileSync(rest[0], 'utf8').replace(/^\uFEFF/, ''))
     const steps = plan.steps || []
