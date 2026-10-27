@@ -3,22 +3,29 @@ import os
 from datetime import datetime
 
 base = 'https://cha0smagicklabs.com'
-root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Site root is two levels up from projects/scripts/
+root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+EXCLUDE_DIRS = {
+    'node_modules', 'auto-shorts', 'scripts', 'data', 'projects',
+    'pinterest-pins', '.git', '__pycache__', 'venv', 'env',
+    'ffmpeg_extracted', 'tools', 'es/tools'
+}
 
 pages = []
 for dirpath, dirnames, filenames in os.walk(root):
+    # Skip excluded directories
+    rel_dir = os.path.relpath(dirpath, root).replace('\\', '/')
+    if any(rel_dir.startswith(excl) or excl in rel_dir.split('/') for excl in EXCLUDE_DIRS):
+        dirnames[:] = []  # Don't recurse into subdirs
+        continue
+    
     for fn in filenames:
         if not fn.endswith('.html'):
             continue
         abspath = os.path.join(dirpath, fn)
         relpath = os.path.relpath(abspath, root).replace('\\', '/')
         if relpath == '404.html':
-            continue
-        # Skip non-HTML template files
-        if relpath.startswith('scripts/') or relpath.startswith('node_modules/'):
-            continue
-        # Skip duplicate root-level articles that exist in blog/
-        if relpath == 'what-is-magick-how-spells-work.html':
             continue
         # Skip non-web directories
         pages.append(relpath)
@@ -38,6 +45,10 @@ def get_priority(p):
         return 0.6
     if p in ('glossary.html', 'best-occult-apps-android.html', 'privacy-policy.html'):
         return 0.7
+    if p == 'dark-fantasy-gallery.html' or p == 'es/dark-fantasy-gallery.html':
+        return 0.9
+    if p.startswith('dark-fantasy/') or p.startswith('es/dark-fantasy/'):
+        return 0.8
     return 0.8
 
 pages.sort(key=lambda p: (-get_priority(p), p))
@@ -60,3 +71,7 @@ with open(sitemap_path, 'w', encoding='utf-8') as f:
 print(f'Sitemap generated: {len(pages)} URLs -> {sitemap_path}')
 for p in pages:
     print(f'  {get_priority(p):.1f} {base if p == "index.html" else f"{base}/{p}"}')
+
+# Also copy to projects/ for reference
+import shutil
+shutil.copy2(sitemap_path, os.path.join(os.path.dirname(__file__), 'sitemap.xml'))
