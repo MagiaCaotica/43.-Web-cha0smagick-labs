@@ -13,6 +13,18 @@
 > plataforma y la normativa de consentimiento. Se usa para contacto individual
 > (P2-02), no para newsletter.
 
+> **Importación ejecutada 2026-11-07 (orden del dueño).** Se importaron a
+> MailerLite en el grupo Partners YouTube (outreach) con
+> utoresponders: false: **298 contactos** de los 843. El resto no entró
+> porque la cuenta está en el **plan Free con máximo 250 suscriptores**
+> (/account: plan Free, max_subscribers 250) y porque 14+2+8+4 direcciones
+> fueron rechazadas (role-based, formato sospechoso o inválidas). La cuenta
+> tiene double_optin: false, así que no se envió ningún correo de
+> confirmación; tampoco hay campañas (0) y las 2 automatizaciones pertenecen
+> a los grupos de lead magnet, no a este. Para alojar los 843 hace falta
+> subir de plan; no se hizo ningún cargo.
+
+
 
 ---
 
