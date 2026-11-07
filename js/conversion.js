@@ -374,6 +374,9 @@
         items: items
       });
       track('begin_checkout', { currency: 'USD', value: price, items: items });
+      if (isPlay) {
+        track('app_download', { app_id: productId, app_name: name, page: location.pathname });
+      }
 
       if (typeof window.fbq === 'function') {
         window.fbq('track', 'InitiateCheckout', {
@@ -2739,6 +2742,47 @@
     });
   }
 
+  /* --- Product view (view_item) for app / book pages ----------------------
+   * Fires once per page load on /apps/*.html and /books/*.html so GA4 sees
+   * which product was viewed. Safe no-op when the product data isn't loaded.
+   * ---------------------------------------------------------------------- */
+  function initProductView() {
+    if (window.__cmProductViewFired) return;
+    var type = getPageType();
+    if (type !== 'apps' && type !== 'books') return;
+    var pathname = window.location.pathname;
+    var pool = [];
+    try { pool = pool.concat(getAppsData() || []); } catch (e) {}
+    try { pool = pool.concat(getBooksData() || []); } catch (e) {}
+    var found = null;
+    for (var i = 0; i < pool.length; i++) {
+      var p = pool[i];
+      if (!p) continue;
+      var pPage = p.page || p.url || '';
+      // Normalise: strip leading ./, ../ and trailing /index.html
+      var norm = pPage.replace(/^\.\//, '').replace(/^\.\.\//, '').replace(/\/index\.html$/, '');
+      if (norm === pathname || norm === '/' + pathname || pPage === pathname) {
+        found = p;
+        break;
+      }
+    }
+    if (!found) return;
+    window.__cmProductViewFired = true;
+    track('view_item', {
+      currency: 'USD',
+      value: priceNum(found.price),
+      items: [{
+        item_id: found.id,
+        item_name: found.name,
+        item_category: found.type || type === 'books' ? 'book' : 'app',
+        item_brand: 'Cha0smagick Labs',
+        price: priceNum(found.price),
+        currency: 'USD',
+        quantity: 1
+      }]
+    });
+  }
+
   /* ============================================================
    * INIT
    * ============================================================ */
@@ -2773,6 +2817,7 @@
     initProductPixel();         // Meta ViewContent for retargeting audiences
     run();                      // page-type specific CTA injection
     initEmailPopup();           // 30s / 50% scroll / exit-intent capture
+    initProductView();          // GA4 view_item on app / book pages
   }
 
   init();

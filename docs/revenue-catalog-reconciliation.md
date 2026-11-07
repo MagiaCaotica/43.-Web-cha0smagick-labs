@@ -35,6 +35,8 @@ Las 12 páginas `apps/*.html` son la superficie local de catálogo. Los siguient
 
 ## 3. Libros y bundle
 
+> **SUPERSEDED 2026-11-07:** estas cifras son anteriores al catálogo actual. Hoy: 9 títulos en catálogo (11 páginas, con ediciones ES/EN) y bundle de **6 libros por US$29.99** (39% off sobre US$48.94). Ver la corrección fechada al final de `PROJECT-BIBLE.md`. Se conserva el resto del documento por su registro de evidencia.
+
 - El catálogo conserva 7 libros.
 - Bundle local: US$19.99; precio original local: US$41.93.
 - URL Hotmart observada en la landing canónica: `https://hotmart.com/es/marketplace/productos/bundle-todos-los-libros-esp/V107097103W`.
