@@ -9,7 +9,7 @@
        consent-gated, PII-filtered pipeline instead of only in gtag. */
     'tool_funnel_view', 'tool_funnel_click', 'purchase_click', 'begin_checkout',
     'lead_magnet_view', 'popup_view', 'popup_close', 'share', 'affiliate_click',
-'share_artifact', 'product_funnel_view'
+'share_artifact', 'product_funnel_view', 'app_download', 'view_item'
   ];
   // Union of data/analytics-events.json (required + optional) and the fields the
   // call sites actually send. Anything not listed here is dropped, so a key that
@@ -39,7 +39,10 @@
     share: ['method', 'content_type', 'item_id', 'content_id', 'channel', 'page'],
     share_artifact: ['method', 'tool_id'],
     affiliate_click: ['affiliate_id', 'product', 'page'],
-    product_funnel_view: ['kind', 'product_id']
+    product_funnel_view: ['kind', 'product_id'],
+    app_download: ['app_id', 'app_name', 'page'],
+    /* `items` omitted for the same reason as begin_checkout. */
+    view_item: ['currency', 'value']
   };
   /* The site's single source of truth for consent. shared.js (cmApplyConsent) and
      conversion.js (applyConsent) both read this cookie, and all three must agree.

@@ -174,6 +174,7 @@ def discover():
         ("books", "monthly", "0.9"),
         ("blog", "weekly", "0.8"),
         ("es", "weekly", "0.7"),
+        ("es/tools", "monthly", "0.8"),
         ("tools", "monthly", "0.8"),
         ("landing-pages", "monthly", "0.7"),
         ("lead-magnet", "monthly", "0.6"),

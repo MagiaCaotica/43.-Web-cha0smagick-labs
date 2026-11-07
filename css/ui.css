@@ -1,0 +1,108 @@
+/* ==========================================================================
+   ui.css — Componentes unificados de interfaz (cha0smagick Labs)
+   Usa exclusivamente variables de style.min.css para que los bloques
+   inyectados (objeción, garantía, CTA, tarjetas, distintivos) compartan
+   el mismo lenguaje visual en home, apps, books, tools y landing pages.
+   No reemplaza style.min.css, wisdom.css ni toolkit.css: se enlaza como
+   hoja adicional sobre ellos.
+   ========================================================================== */
+
+/* ---------- Bloque objeción: "Why not the free one?" ---------- */
+.cm-objection {
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+  padding: 1.2rem;
+  background: rgba(var(--accent-gold-rgb, 192, 160, 96), 0.08);
+  border: 1px solid rgba(var(--accent-gold-rgb, 192, 160, 96), 0.25);
+  border-radius: var(--radius-md);
+  text-align: center;
+  color: var(--text-muted);
+}
+.cm-objection strong {
+  color: var(--accent-gold);
+}
+.cm-objection span {
+  color: var(--text-dim);
+  font-size: 0.95em;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* ---------- Bloque garantía: 7-day money-back ---------- */
+.cm-guarantee {
+  max-width: 700px;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.9em;
+}
+.cm-guarantee strong {
+  color: var(--accent-gold);
+}
+
+/* ---------- CTA primario unificado ---------- */
+.cm-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.8rem;
+  background: var(--accent-gold);
+  color: #000;
+  text-decoration: none !important;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.cm-cta-primary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}
+
+/* ---------- Tarjeta de producto (app / libro) ---------- */
+.cm-product-card {
+  display: block;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.cm-product-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+}
+.cm-product-card strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+.cm-product-card span {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- Distintivo de confianza ---------- */
+.cm-trust-badge {
+  display: inline-block;
+  background: rgba(var(--accent-gold-rgb, 192, 160, 96), 0.1);
+  border: 1px solid rgba(var(--accent-gold-rgb, 192, 160, 96), 0.2);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  color: var(--accent-gold);
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .cm-objection, .cm-guarantee { padding: 1rem; font-size: 0.9em; }
+  .cm-cta-primary { width: 100%; justify-content: center; padding: 1rem 0; }
+}

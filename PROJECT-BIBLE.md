@@ -523,3 +523,20 @@ Ver secciones 7.1–7.4 en versión anterior del PROJECT-BIBLE.md para:
 ---
 
 *Fin del mapeo. Este documento refleja el estado tras la reorganización del 2026-08-08.*
+
+---
+
+## Corrección fechada — 2026-11-07
+
+Los conteos de arriba quedaron obsoletos. Cifras verificadas contra el repositorio y el sitemap generado ese día:
+
+| Dato | Bible (2026-08-08) | Real 2026-11-07 |
+|------|--------------------|-----------------|
+| URLs en `sitemap.xml` | ~176 | 1.055 |
+| Artículos de blog | 194 | 865 (+ índice = 866 URLs) |
+| Herramientas gratis | — | 70 en inglés + 6 en español |
+| Apps Android | — | 12 |
+| Títulos de libros | 9 | 9 títulos (11 páginas, hay ediciones ES/EN) |
+| Bundle de libros | "9 libros, 59% off" | 6 libros por US$29.99 (39% off sobre US$48.94) |
+
+Un solo generador de sitemap: `scripts/generate_sitemap.py` (usado por `.github/workflows/sitemap.yml`). El duplicado `projects/scripts/gen_sitemap.py`, que excluía `tools/` y `es/tools/` y sellaba `lastmod` con la fecha del día, se eliminó. El objetivo de ingresos es US$5.000 netos/mes según `docs/PLAN-UNICO.md` §10; el resto de este documento sigue siendo válido como mapa de carpetas y schemas.
