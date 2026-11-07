@@ -66,3 +66,13 @@ de golpe). Medible en GSC por cluster, no por número de artículos.
   Por eso el ritmo y el freno están en el plan.
 - Los 145 títulos son una estimación del gap, no una cuota. Si un cluster no
   tiene impresiones, no se escribe.
+
+## Registro
+- 2026-11-07: lote 1 de la Fase 2 publicado. Tres articulos nuevos con intencion
+  distinta y sin duplicar los 25 existentes: servitor-sigil-binding.html
+  (1.663 palabras), servitor-witchcraft.html (1.434) y
+  servitor-names-and-feeding.html (1.505). Cada uno con Article + FAQPage +
+  BreadcrumbList, 4 preguntas, referencias reales y enlaces a los articulos
+  existentes. Pasado por qa/ai-writing-auditor y corregidas sus 10
+  observaciones. Enlazados desde la herramienta de diseno de servidores.
+  Verificado: JSON-LD 0 problemas, indexacion 0 contradicciones, 1.037 URLs.
