@@ -33,6 +33,39 @@ Play público (2026-11-07): 12 fichas vivas; solo Sigil Maker tiene
 valoraciones (5,0 con 23); PSI GYM $2,99 y Lucid Dream $8,99 ya corregidos
 en el sitio.
 
+## Hallazgo que cambia el orden de prioridades (2026-11-07)
+
+La página de la herramienta de sigilos **se hundió el 2026-10-28** y no se ha
+recuperado. Comando: `python -c` sobre GSC, dimensión `date` y filtro `page`.
+
+```
+2026-10-16   63 impr   pos  7.3
+2026-10-17   96 impr   pos  7.1
+2026-10-22  128 impr   pos  6.8
+2026-10-27   79 impr   pos  7.9
+2026-10-28   18 impr   pos 19.4
+2026-10-29    8 impr   pos 30.4
+2026-11-04    5 impr   pos 19.6
+```
+
+No es solo esa página: el sitio entero pasó de 1.045 impresiones/día
+(2026-10-26) a ~500 (2026-11-04). Las tres cosas que ocurrieron en las 72
+horas previas:
+
+1. 2026-10-24: enlazado interno masivo y 3 pillar pages.
+2. 2026-10-27: +42 páginas deep-dive y +43 galerías dark-fantasy; sitemap
+   regenerado con 986 URLs.
+3. 2026-10-27: commit `c17858d6` (auditoría SEO/GEO/ASO).
+
+Contexto externo: la spam update de septiembre corrió del 24-sep al 8-oct y
+no hay actualización de octubre confirmada en el Search Status Dashboard.
+La subida empezó el 16-oct (después de esa update) y el descenso el 28-oct,
+así que la hipótesis principal es una reevaluación del sitio tras ampliar la
+superficie indexable en ~85 páginas, no un cambio de algoritmo confirmado.
+
+**Consecuencia:** no se persigue el top-3 hasta estabilizar. Perseguirlo
+sobre una caída abierta confunde causa y efecto.
+
 ## Supuestos y cómo se comprueban
 
 | Supuesto | Comprobación |
@@ -43,6 +76,18 @@ en el sitio.
 | Los títulos nuevos mueven CTR en las 4 consultas de página 1 sin clics | GSC el 2026-11-10: comparar CTR 7d antes/después de esas URLs |
 
 ## Pasos
+
+### 0. Estabilizar antes de empujar (prioridad sobre todo lo demás)
+- Archivos: las 42 páginas deep-dive y las 43 galerías `dark-fantasy/*`
+  añadidas el 2026-10-27; `scripts/generate_sitemap.py`.
+- Acción: auditar cuáles aportan contenido único (≥300 palabras propias y
+  una intención de búsqueda distinta). Las que no, `noindex` y fuera del
+  sitemap. No se añade ninguna página nueva hasta que la tendencia diaria
+  deje de caer.
+- Verificación: `python scripts/seo/cluster-report.py 7` dos semanas
+  seguidas; las impresiones diarias del sitio dejan de bajar y la posición
+  del cluster vuelve por debajo de 15. Comando diario:
+  `python -c "..."` con la consulta `date` de GSC (ver hallazgo arriba).
 
 ### 1. Seguimiento semanal del cluster
 - Archivo: `scripts/seo/cluster-report.py` (ya creado).
