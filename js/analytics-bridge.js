@@ -110,11 +110,18 @@
 
   function track(eventName, params) {
     if (!consentGranted() || EVENTS.indexOf(eventName) === -1) return false;
+    var payload = sanitize(eventName, params || {});
     global.dataLayer = global.dataLayer || [];
     global.dataLayer.push(Object.assign({
       event: eventName,
       analytics_source: 'cha0_bridge'
-    }, sanitize(eventName, params || {})));
+    }, payload));
+    /* gtag.js no es GTM: no interpreta los push al dataLayer, solo los
+       comandos Array (['event', ...]). Sin esta llamada directa el evento se
+       queda en la cola y no llega nunca a GA4 -- es lo que pasaba con
+       app_store_click, book_click y outbound_click: 0 en 28 dias con CTAs
+       pulsados. El push se mantiene por compatibilidad con GTM. */
+    if (typeof global.gtag === 'function') global.gtag('event', eventName, payload);
     return true;
   }
 

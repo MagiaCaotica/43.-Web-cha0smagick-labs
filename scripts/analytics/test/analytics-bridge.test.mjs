@@ -30,6 +30,7 @@ function loadBridge(options = {}) {
       addEventListener: (type, handler) => { listeners.push({ type, handler }); },
     },
   };
+  if (typeof options.gtag === 'function') context.gtag = options.gtag;
   context.window = context;
   vm.runInNewContext(source, context);
   return { context, bridge: context.Cha0Analytics, listeners, storage };
@@ -94,6 +95,23 @@ describe('analytics bridge -- consent', () => {
     context.document.cookie = 'cookie_consent=declined';
     expect(bridge.isConsentGranted()).toBe(false);
     expect(bridge.track('tool_start', { tool_id: 'A01' })).toBe(false);
+  });
+
+  it('forwards the event to gtag, because gtag.js does not read dataLayer pushes', () => {
+    const calls = [];
+    const { bridge } = loadBridge({ gtag: (...args) => calls.push(args) });
+    expect(bridge.track('app_store_click', { app_id: 'com.x', store: 'google_play' })).toBe(true);
+    expect(calls).toHaveLength(1);
+    expect(calls[0][0]).toBe('event');
+    expect(calls[0][1]).toBe('app_store_click');
+    expect(calls[0][2]).toMatchObject({ app_id: 'com.x', store: 'google_play' });
+  });
+
+  it('does not call gtag when consent is denied', () => {
+    const calls = [];
+    const { bridge } = loadBridge({ cookie: '', gtag: (...args) => calls.push(args) });
+    expect(bridge.track('app_store_click', { app_id: 'com.x' })).toBe(false);
+    expect(calls).toHaveLength(0);
   });
 });
 
