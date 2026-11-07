@@ -76,3 +76,14 @@ de golpe). Medible en GSC por cluster, no por número de artículos.
   existentes. Pasado por qa/ai-writing-auditor y corregidas sus 10
   observaciones. Enlazados desde la herramienta de diseno de servidores.
   Verificado: JSON-LD 0 problemas, indexacion 0 contradicciones, 1.037 URLs.
+
+- 2026-11-07 (lote 2): seis articulos mas, publicados y auditados:
+  servitor-magick-for-money (1.258), servitor-for-protection (1.238),
+  how-to-make-a-servitor-without-a-sigil (1.149),
+  servitor-task-design-and-stop-conditions (1.150),
+  servitor-journal-what-to-record (1.031) y
+  servitors-and-ai-language-models (1.107).
+  qa/ai-writing-auditor señalo dos defectos objetivos (TOC desincronizado y
+  FAQ extra fuera de su seccion) y seis plantillas retoricas; corregidos.
+  Cuatro quedan por debajo del minimo de 1.200 del plan y se registran como
+  deuda: ampliar o aceptar el umbral. Total del cluster: 9 de 59.
