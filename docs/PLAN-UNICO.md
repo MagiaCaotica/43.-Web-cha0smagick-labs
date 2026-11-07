@@ -146,9 +146,15 @@ Sin esto, las fases siguientes no se pueden medir ni cerrar.
 - **Aceptación:** lead de prueba recorre cada flujo; compra crea customer/tag correctos; webhook responde, es idempotente, no duplica y suprime bajas.
 - **Evidencia:** IDs de automatización, logs de entrega, transaction de prueba, payload sanitizado y reconciliación de estados.
 
+> **Progreso 2026-11-07 — MailerLite responde 200 con la key del repo (antes daba 401).** Estado real de la cuenta: 2 grupos (Lead Magnet EN/ES), 8 campos, 2 automatizaciones, 0 campañas y **7 suscriptores, todos `unconfirmed`**. No hay lista de 843 leads: esa cifra no existe en esta cuenta. Sin contactos confirmados no se puede ejecutar la campaña ni medir entrega; el bloqueo ya no es la API sino la lista.
+
+
 ### [x] P0-09 — Verificar listings y disponibilidad de Google Play
 
 > **HECHO 2026-10-21 — Las 12 fichas de Play verificadas EN VIVO (BrowserOS, sesion del owner, hl=es&gl=US): titulo, boton de compra, nota y tier de instalaciones. Detectadas 2 promociones activas que el sitio no refleja (PSI GYM \.99, Lucidez \.99). Corregido el precio de Astral Lab en data/play-catalog.json (\.99 -> \.99) y refresh de todo el catalogo con fecha. Queda solo el export de Play Console (puerta G9)**
+
+> **Progreso 2026-11-07 — API de Play (`androidpublisher`) operativa con la service account del repo.** Leídas las 24 fichas (12 apps × en-US/es-ES) y corregidas 4 descripciones cortas con errores objetivos: "a entropy engine" → "an entropy engine" (sigilo), "One-time buy" → "One-time purchase" (tarot y lúcido), "sinastría" sin tilde (Astral Lab ES), y reescrita la de Lucid Dream (frase rota y minúscula tras punto). Los tres edits se commitearon y se verificaron releyendo la ficha. Pendiente de decisión del dueño: los títulos "Rider-Waite Tarot AI Reader" y "Dreamachine: Lucidez con IA" afirman IA sin que el sitio lo respalde; no se tocan sin confirmación.
+
 
 - **Responsable:** ASO / Android.
 - **Depende de:** P0-02, P0-06, P0-07.
@@ -204,6 +210,9 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 - **No debe hacer:** publicar más volumen para superar contadores, enlazar a un producto incorrecto ni llamar calidad a un simple word count.
 - **Aceptación:** cada cluster incluido tiene QA editorial, oferta/CTA válidos, owner y método para medir assisted conversion.
 - **Evidencia:** content registry, export de queries, muestra revisada y before/after de engagement y revenue.
+
+> **Progreso 2026-11-07 — Plan de contenido escrito en `.opencode/plans/contenido-p1-03.md`.** Decisión: no se reescriben las 48 herramientas (ya tienen ≥480 palabras, FAQ, schema y rampa; las 48 eran las que no enlazaban a su app, ya corregido 70/70). La segunda capa se aplica solo a las 12 con más sesiones orgánicas. Los 145 artículos se producen por cluster (servitors 59 → goetia 31 → sigil 22 → astrología 18 → lunar 15), máximo 10/semana, con freno si la serie diaria de GSC vuelve a caer. Pendiente de aprobación antes de producir.
+
 
 ### [ ] P1-04 — Implementar CRO controlado en landing pages y checkout
 
