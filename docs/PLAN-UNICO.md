@@ -151,6 +151,9 @@ Sin esto, las fases siguientes no se pueden medir ni cerrar.
 
 > **Progreso 2026-11-07 — MailerLite responde 200 con la key del repo (antes daba 401).** Estado real de la cuenta: 2 grupos (Lead Magnet EN/ES), 8 campos, 2 automatizaciones, 0 campañas y **7 suscriptores, todos `unconfirmed`**. No hay lista de 843 leads: esa cifra no existe en esta cuenta. Sin contactos confirmados no se puede ejecutar la campaña ni medir entrega; el bloqueo ya no es la API sino la lista.
 
+> **Importación 2026-11-07 (orden del dueño).** Se cargaron **298 de 843** contactos de `leads.csv` en el grupo propio "Partners YouTube (outreach)" con `autoresponders: false`. El resto no entra porque la cuenta está en **plan Free (máximo 250 suscriptores)** y porque 28 direcciones fueron rechazadas (role-based o formato sospechoso). No se envió ningún correo: `double_optin` está desactivado, hay 0 campañas y las 2 automatizaciones pertenecen a los grupos de lead magnet. Para alojar los 843 hace falta subir de plan; no se hizo ningún cargo.
+
+
 
 ### [x] P0-09 — Verificar listings y disponibilidad de Google Play
 
