@@ -40,7 +40,7 @@ KEYWORDS = [
     "sigil creator", "sigil maker online", "online sigil maker",
 ]
 
-days = int(sys.argv[1]) if len(sys.argv) > 1 else 28
+days = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 28
 
 info = json.load(open(ROOT / "projects" / "playstore.json", encoding="utf-8"))
 creds = service_account.Credentials.from_service_account_info(
