@@ -66,6 +66,9 @@ Estaban en `projects/docs/archive/`. Se listan aquí para que se sepa que existe
 | `docs/MAILERLITE-setup.md` | Sus 7 pasos de panel → puerta G6 (P0-08). |
 | `docs/plan-traffic-autopilot.md` | Sus 6 pasos (código ya listo, faltan los jobs del scheduler) → P2-07. |
 | `docs/telegram-marketing-strategy.md` | Sus decisiones pendientes (canal canónico, ofertas sin ID) → G11, P0-03 y P1-08. |
+| `docs/MEGA-AUDIT-5K.md` | Sus 15 acciones se reparten entre P1-01 (CWV/SEO), P1-03 (contenido), P2-02 (backlinks), P2-04 (paid), P2-07 (operación) y las puertas G8–G11. Lo ejecutado (títulos, ratings reales, UTM, garantía, pillar) está en el registro de commits. |
+| `docs/EXPERT-AUDIT.md` | Las 12 perspectivas: lo local (schema, internal linking, proof, CTA, garantía) está ejecutado; calificación de leads y automatización son P1-06/P0-08; code splitting es P1-01. |
+| `docs/AUDITORIA-SEO-GEO-ASO.md` | Inventario y mapa de oportunidad ya ejecutado (títulos, schema, sitemap, GEO, ASO). Lo abierto es autoridad/backlinks (P2-02) y paid (P2-04). |
 
 ## D. Planes que siguen vivos (no se tocan)
 
