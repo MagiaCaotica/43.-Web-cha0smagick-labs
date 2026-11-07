@@ -87,3 +87,10 @@ de golpe). Medible en GSC por cluster, no por número de artículos.
   FAQ extra fuera de su seccion) y seis plantillas retoricas; corregidos.
   Cuatro quedan por debajo del minimo de 1.200 del plan y se registran como
   deuda: ampliar o aceptar el umbral. Total del cluster: 9 de 59.
+
+- 2026-11-07 (lote 3): seis mas. Creatividad (1.153), cambio de habito (1.049),
+  aprendizaje (950), ofrendas (1.062), sueno (999) y etica/consentimiento
+  (1.021). Auditoria aplicada: regla duplicada en ofrendas, FAQ contradictoria
+  en aprendizaje, duplicado literal creatividad/habito, contradiccion en etica
+  y encabezado Checklist repetido. Total del cluster: 15 de 59. Los seis
+  quedan por debajo de 1.200 palabras; deuda registrada.
