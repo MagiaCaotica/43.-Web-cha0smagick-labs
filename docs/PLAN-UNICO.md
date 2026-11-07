@@ -183,6 +183,7 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 - **No debe hacer:** regenerar todo sin revisar impacto, canonicalizar a una URL incorrecta ni llamar “SEO completo” a JSON-LD válido.
 - **Aceptación:** todas las URLs indexables tienen canonical y description coherentes; no quedan errores elegibles de rich-results; existe baseline y budget de CWV.
 - **Evidencia:** export de GSC/Bing, rich-results test, Lighthouse CI, before/after y registro de excepciones.
+- **Progreso 2026-11-07 (parcial, en producción):** un solo generador de sitemap (`scripts/generate_sitemap.py`); eliminado el duplicado que excluía `tools/`; sitemap en 1.055 URLs con 70 herramientas EN + 6 ES. Titles y descripciones reescritos en las páginas de consultas con 842 impresiones y 0 clics. `availability` corregido en JSON-LD de producto. Pendiente: alt text, heading skips y baseline de CWV.
 
 ### [ ] P1-02 — Construir la superficie GEO/AI verificable
 
@@ -213,6 +214,7 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 - **No debe hacer:** usar scarcity, testimonios o claims no demostrados, declarar ganador por CTR ni lanzar sin baseline y stop rule.
 - **Aceptación:** cada experimento tiene hypothesis, primary metric, guardrail, muestra o criterio de decisión; conversion, AOV, refunds y net revenue se reportan juntos.
 - **Evidencia:** experiment log, funnel report, screenshots, transaction QA y recomendación go/no-go.
+- **Progreso 2026-11-07 (parcial, en producción):** hero de portada reescrito a "Occult Apps That Don't Charge You Monthly"; bloque "Why not the free one?" y garantía de 7 días en las 12 fichas de apps (`css/ui.css`); CTA del bundle en español en fichas ES y herramientas ES; corregido "9 libros" → 6 libros ($29.99) en fichas, comparativas y Black Friday. Sin A/B: cambios monotónicos, no experimento. Pendiente el experiment log con baseline.
 
 ### [ ] P1-05 — Completar ASO y experimentación por app
 
