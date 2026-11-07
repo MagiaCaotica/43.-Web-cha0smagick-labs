@@ -56,6 +56,9 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add sitemap.xml
           git diff --staged --quiet || git commit -m 'sitemap: refresh [sitemap]'
+          # Sin el push el commit se queda en el runner y se descarta: eso es lo
+          # que mantenia el sitemap congelado aunque el workflow saliera verde.
+          git push
 
       - name: Ping a Google e IndexNow
         continue-on-error: true
