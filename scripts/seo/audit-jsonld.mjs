@@ -60,7 +60,16 @@ function validateProduct(product, file) {
   const offers = product.offers || [];
   const offerList = Array.isArray(offers) ? offers : [offers];
   if (offerList.length === 0) problems.push('missing offers');
-  offerList.forEach(o => { if (typeof o === 'object') problems.push(...validateOffer(o, file)); });
+  offerList.forEach(o => {
+    if (typeof o !== 'object') return;
+    if (o['@type'] === 'AggregateOffer') {
+      if (!o.lowPrice && !o.price) problems.push('missing lowPrice');
+      if (!o.highPrice && !o.price) problems.push('missing highPrice');
+      if (!o.priceCurrency) problems.push('missing priceCurrency');
+      return;
+    }
+    problems.push(...validateOffer(o, file));
+  });
   return problems;
 }
 
@@ -122,7 +131,12 @@ function main() {
 
       const aggOffers = findByType(j, 'AggregateOffer');
       aggOffers.forEach(ao => {
-        const probs = validateOffer(ao, file);
+        /* Un AggregateOffer no tiene `price`: su contrato es lowPrice/highPrice.
+           Validarlo con validateOffer lo marcaba siempre como roto. */
+        const probs = [];
+        if (!ao.lowPrice && !ao.price) probs.push('missing lowPrice');
+        if (!ao.highPrice && !ao.price) probs.push('missing highPrice');
+        if (!ao.priceCurrency) probs.push('missing priceCurrency');
         if (probs.length) {
           report.push({ file, type: 'AggregateOffer', name: ao.name, problems: probs });
           fileProblems += probs.length;
