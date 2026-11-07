@@ -1,0 +1,126 @@
+{
+  "$comment": "PageSpeed Insights: loadingExperience es dato de campo (CrUX p75); lighthouseResult es laboratorio. Generado por scripts/seo/psi-report.py.",
+  "captured_at": "2026-11-07",
+  "results": [
+    {
+      "path": "/",
+      "strategy": "mobile",
+      "field_overall": "FAST",
+      "field_lcp": "1278 (FAST)",
+      "field_cls": "0 (FAST)",
+      "field_inp": "-",
+      "lab_performance": 77,
+      "lab_lcp_s": 4.41,
+      "lab_cls": 0.171,
+      "lab_tbt_ms": 34
+    },
+    {
+      "path": "/",
+      "strategy": "desktop",
+      "field_overall": null,
+      "field_lcp": "-",
+      "field_cls": "-",
+      "field_inp": "-",
+      "lab_performance": 98,
+      "lab_lcp_s": 1.16,
+      "lab_cls": 0.023,
+      "lab_tbt_ms": 24
+    },
+    {
+      "path": "/tools/sigil-generator.html",
+      "strategy": "mobile",
+      "field_overall": "FAST",
+      "field_lcp": "1278 (FAST)",
+      "field_cls": "0 (FAST)",
+      "field_inp": "-",
+      "lab_performance": 84,
+      "lab_lcp_s": 3.82,
+      "lab_cls": 0.0,
+      "lab_tbt_ms": 230
+    },
+    {
+      "path": "/tools/sigil-generator.html",
+      "strategy": "desktop",
+      "field_overall": null,
+      "field_lcp": "-",
+      "field_cls": "-",
+      "field_inp": "-",
+      "lab_performance": 90,
+      "lab_lcp_s": 1.0,
+      "lab_cls": 0.0,
+      "lab_tbt_ms": 238
+    },
+    {
+      "path": "/blog/chaos-magick-beginners-complete-guide.html",
+      "strategy": "mobile",
+      "field_overall": "FAST",
+      "field_lcp": "1278 (FAST)",
+      "field_cls": "0 (FAST)",
+      "field_inp": "-",
+      "lab_performance": 73,
+      "lab_lcp_s": 6.23,
+      "lab_cls": 0.07,
+      "lab_tbt_ms": 31
+    },
+    {
+      "path": "/blog/chaos-magick-beginners-complete-guide.html",
+      "strategy": "desktop",
+      "field_overall": null,
+      "field_lcp": "-",
+      "field_cls": "-",
+      "field_inp": "-",
+      "lab_performance": 100,
+      "lab_lcp_s": 0.71,
+      "lab_cls": 0.008,
+      "lab_tbt_ms": 32
+    },
+    {
+      "path": "/apps/chaos-sigil-generator.html",
+      "strategy": "mobile",
+      "field_overall": "FAST",
+      "field_lcp": "1278 (FAST)",
+      "field_cls": "0 (FAST)",
+      "field_inp": "-",
+      "lab_performance": 98,
+      "lab_lcp_s": 0.91,
+      "lab_cls": 0.0,
+      "lab_tbt_ms": 155
+    },
+    {
+      "path": "/apps/chaos-sigil-generator.html",
+      "strategy": "desktop",
+      "field_overall": null,
+      "field_lcp": "-",
+      "field_cls": "-",
+      "field_inp": "-",
+      "lab_performance": 100,
+      "lab_lcp_s": 0.24,
+      "lab_cls": 0.0,
+      "lab_tbt_ms": 44
+    },
+    {
+      "path": "/books/tarot-chaos-pdf.html",
+      "strategy": "mobile",
+      "field_overall": "FAST",
+      "field_lcp": "1278 (FAST)",
+      "field_cls": "0 (FAST)",
+      "field_inp": "-",
+      "lab_performance": 99,
+      "lab_lcp_s": 0.9,
+      "lab_cls": 0.001,
+      "lab_tbt_ms": 92
+    },
+    {
+      "path": "/books/tarot-chaos-pdf.html",
+      "strategy": "desktop",
+      "field_overall": null,
+      "field_lcp": "-",
+      "field_cls": "-",
+      "field_inp": "-",
+      "lab_performance": 100,
+      "lab_lcp_s": 0.41,
+      "lab_cls": 0.0,
+      "lab_tbt_ms": 0
+    }
+  ]
+}
