@@ -88,3 +88,7 @@ _striking.json
 
 # Campana: datos operacionales con correos de terceros (no se versionan)
 data/guerrilla/
+
+# credenciales temporales de scripts
+.hotmart-*
+scripts/finance/.hotmart-*

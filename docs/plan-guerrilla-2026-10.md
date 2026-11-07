@@ -3,6 +3,17 @@
 > Todo lo de este documento está comprobado contra el repo y contra la web real.
 > Los enlaces se han verificado uno a uno (`data/guerrilla/links-verified.json`: 81/81 OK).
 
+> **Estado 2026-11-07 — el bloqueo cambió de sitio.** La API de MailerLite ya
+> responde 200, pero la cuenta tiene **7 suscriptores, todos `unconfirmed`**, 2
+> grupos, 2 automatizaciones y 0 campañas. Los **843 contactos no son una lista
+> de suscriptores**: `data/guerrilla/leads.csv` son 843 canales de YouTube y
+> partners (`segment=partner-youtube`, `sources=base:mails2_nombrado`), es decir,
+> una lista de prospección scrapeada, no de personas que hayan dado consentimiento.
+> Importarla a MailerLite para enviar correo masivo incumpliría la política de la
+> plataforma y la normativa de consentimiento. Se usa para contacto individual
+> (P2-02), no para newsletter.
+
+
 ---
 
 ## 1. Diagnóstico honesto del techo actual

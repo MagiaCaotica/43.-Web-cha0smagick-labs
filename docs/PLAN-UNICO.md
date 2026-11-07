@@ -93,6 +93,9 @@ Sin esto, las fases siguientes no se pueden medir ni cerrar.
 - **Aceptación:** cada oferta live tiene `net_price` reproducible; la suma de oportunidades puede cerrar US$5.000 o muestra exactamente el Gap-to-5k y su dependencia.
 - **Evidencia:** pricing table, sensitivity analysis, approved price source y cálculo de órdenes.
 
+> **Progreso 2026-11-07 — Baseline real de Hotmart (API oficial).** `scripts/finance/hotmart-report.py` lee la API con las credenciales del repo y pagina correctamente. Resultado 2026-01-01 → 2026-11-08: **9 ventas, todas COMPLETE**. Por mes: marzo 1 (MXN 219,24), junio 2 (MXN 171,68), septiembre 2 (MXN 103,24 + USD 4,99), octubre 4 (USD 28,98 + BRL 22 + AUD 7,70). Neto de comisión: MXN 493,96 · USD 29,41 · BRL 21,50 · AUD 7,14. Productos: 3× Manual de servidores, 2× Codex Chaoticus, y uno de Tratado de runas, Liber LVXinux, bundle ES y Ouija. Con Play (~97,5 USD brutos/28d a 19-oct) el negocio está en el orden de **100–150 USD/mes**, no en 5.000. El gap ya no es una estimación.
+
+
 ### [ ] P0-06 — Cerrar legal, consent y trust antes de capturar leads
 
 - **Responsable:** Legal/Privacy + Web.
