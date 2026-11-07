@@ -1,0 +1,151 @@
+{
+  "$comment": "Datos publicos de las fichas de Google Play, capturados el 2026-11-07 desde la pagina publica de cada app (hl=en, gl=US). No son datos de Play Console: no hay instalaciones netas, ingresos ni avisos de politica. Las 12 respondieron HTTP 200.",
+  "captured_at": "2026-11-07",
+  "source": "https://play.google.com/store/apps/details?id=<pkg>&hl=en&gl=US",
+  "apps": [
+    {
+      "app": "Chaos Sigil Generator",
+      "pkg": "com.app.goetiansealsgeneratorapp",
+      "title": "Sigil Maker: Chaos Magick",
+      "rating_value": "5",
+      "rating_count": 23,
+      "price_usd": "3.99",
+      "developer": "Cha0smagick",
+      "updated": "Oct 28, 2026",
+      "downloads_bucket": "50+",
+      "http": 200
+    },
+    {
+      "app": "PSI GYM",
+      "pkg": "com.cha0smagicklabs.zenercards",
+      "title": "Psi Gym: Test Zener & PSI",
+      "rating_value": null,
+      "rating_count": 0,
+      "price_usd": "2.99",
+      "developer": "Cha0smagick",
+      "updated": "Oct 21, 2026",
+      "downloads_bucket": "10+",
+      "http": 200
+    },
+    {
+      "app": "Arcana Goetia",
+      "pkg": "com.cha0smagick.sigilgeneratorfinal",
+      "title": "Goetia: 72 Spirits Guide",
+      "rating_value": null,
+      "rating_count": 0,
+      "price_usd": "3.99",
+      "developer": "Cha0smagick",
+      "updated": "Oct 19, 2026",
+      "downloads_bucket": "50+",
+      "http": 200
+    },
+    {
+      "app": "Norse Rune Oracle",
+      "pkg": "com.japps.norse_oracle",
+      "title": "Viking Runes: 24 Futhark",
+      "rating_value": null,
+      "rating_count": 0,
+      "price_usd": "3.99",
+      "developer": "Cha0smagick",
+      "updated": "Oct 20, 2026",
+      "downloads_bucket": "10+",
+      "http": 200
+    },
+    {
+      "app": "Lunar Phase Calculator",
+      "pkg": "com.lunarapp.app",
+      "title": "Moon: Phases and Spells",
+      "rating_value": null,
+      "rating_count": 0,
+      "price_usd": "3.99",
+      "developer": "Cha0smagick",
+      "updated": "Oct 22, 2026",
+      "downloads_bucket": "10+",
+      "http": 200
+    },
+    {
+      "app": "I Ching Oracle",
+      "pkg": "com.app.ichingoracle",
+      "title": "I Ching: 3-Coin Oracle",
+      "rating_value": null,
+      "rating_count": 0,
+      "price_usd": "3.99",
+      "developer": "Cha0smagick",
+      "updated": "Oct 21, 2026",
+      "downloads_bucket": "10+",
+      "http": 200
+    },
+    {
+      "app": "Unofficial Rider Waite Tarot",
+      "pkg": "com.cha0smagick.unofficialraiderwaite",
+      "title": "Rider-Waite Tarot AI Reader",
+      "rating_value": null,
+      "rating_count": 0,
+      "price_usd": "9.99",
+      "developer": "Cha0smagick",
+      "updated": "Oct 22, 2026",
+      "downloads_bucket": "10+",
+      "http": 200
+    },
+    {
+      "app": "Dream Machine",
+      "pkg": "com.cha0smagick.dreammachine",
+      "title": "Dream Machine: Lucid Dreams",
+      "rating_value": null,
+      "rating_count": 0,
+      "price_usd": "3.99",
+      "developer": "Cha0smagick",
+      "updated": "Oct 28, 2026",
+      "downloads_bucket": "10+",
+      "http": 200
+    },
+    {
+      "app": "Astral Lab",
+      "pkg": "com.cha0smagicklabs.astralchart",
+      "title": "Astral Lab: Natal Chart Reader",
+      "rating_value": null,
+      "rating_count": 0,
+      "price_usd": "6.99",
+      "developer": "Cha0smagick",
+      "updated": "Sep 21, 2026",
+      "downloads_bucket": "5+",
+      "http": 200
+    },
+    {
+      "app": "Eerie Roads",
+      "pkg": "com.cha0smagicklabs.eerieroads",
+      "title": "Eerie Roads: Paranormal Map",
+      "rating_value": null,
+      "rating_count": 0,
+      "price_usd": "9.99",
+      "developer": "Cha0smagick",
+      "updated": "Oct 24, 2026",
+      "downloads_bucket": "5+",
+      "http": 200
+    },
+    {
+      "app": "Lucid Dream",
+      "pkg": "com.cha0smagicklabs.luciddreamer",
+      "title": "Lucid Dream: Astral Projection",
+      "rating_value": null,
+      "rating_count": 0,
+      "price_usd": "8.99",
+      "developer": "Cha0smagick",
+      "updated": "Jul 23, 2026",
+      "downloads_bucket": "0+",
+      "http": 200
+    },
+    {
+      "app": "NOCTEM",
+      "pkg": "com.cha0smagicklabs.noctemapp",
+      "title": "NOCTEM: Ghost Hunting Toolkit",
+      "rating_value": null,
+      "rating_count": 0,
+      "price_usd": "14.99",
+      "developer": "Cha0smagick",
+      "updated": "Oct 31, 2026",
+      "downloads_bucket": "10+",
+      "http": 200
+    }
+  ]
+}
