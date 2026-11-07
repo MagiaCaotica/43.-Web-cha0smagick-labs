@@ -16,7 +16,7 @@ Primary local sources:
 - `sitemap.xml` — 532 URL entries; SHA-256 `574d3a1d84903a1c06513f19efdb65bac3091f2a2b738b6651a866327df9d584`; last regenerated `2026-09-24T19:05:20Z` (i.e. *after* inventory v1.1.0 was written, which is why v1.1.0 recorded 492 entries).
 - `robots.txt` — declares `https://cha0smagicklabs.com/sitemap.xml`.
 - `scripts/bots/data/offers.json` — reconciled offer catalog; source does not prove publication or sales.
-- `docs/revenue-catalog-reconciliation.md` — catalog reconciliation and external blockers.
+- `docs/plans-completados.md` — catalog reconciliation and external blockers.
 - `scripts/verify_tech_debt.py` — defines the governed HTML working set.
 - `docs/thin-articles-progress.md` — generated content inventory; last regenerated `2026-09-24T16:47:38Z`.
 

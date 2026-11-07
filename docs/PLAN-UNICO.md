@@ -71,7 +71,7 @@ Sin esto, las fases siguientes no se pueden medir ni cerrar.
 - **Debe hacer:** mantener las dos páginas sin href placeholder y con estado `BLOCKED_EXTERNAL_ID`; obtener y verificar los IDs reales de Complete Access y Flash Sale; verificar `V107097103W`; revisar `complete-access`, `flash-sale`, `books-bundle`, `apps-bundle` y CTAs de libros y apps.
 - **No debe hacer:** inventar IDs, mandar a un checkout roto, tratar una colección de Play como checkout de un bundle ni ocultar una oferta no disponible.
 - **Aceptación:** cada página live contiene una URL real, sandbox explícito o estado de retirada; cada oferta live tiene prueba de apertura y, cuando aplique, transacción de prueba.
-- **Evidencia:** matriz local en `docs/revenue-catalog-reconciliation.md`, HTML renderizado, enlaces extraídos, transaction IDs, resultado de checkout y decisión de retiro/noindex.
+- **Evidencia:** matriz local en `docs/plans-completados.md`, HTML renderizado, enlaces extraídos, transaction IDs, resultado de checkout y decisión de retiro/noindex.
 
 ### [ ] P0-04 — Reconstruir el baseline financiero y el Gap-to-5k
 
@@ -278,7 +278,7 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 
 ### [x] P1-11 — Auditar y desbloquear la indexación de las URLs del sitemap
 
-> **HECHO 2026-10-21 — auditoria completa en docs/indexacion-2026-10-21.md: sitemap 1002->994 URLs, 0 noindex, 0 duplicadas, 0 404, 0 canonical contradictorio, 0 huerfanas, 994/994 alcanzables en <=3 clics (41,8 inlinks/URL); 5 bugs corregidos (noindex y 404 fuera del sitemap, canonical /blog/ y /es/, lastmod con fecha real de commit, IndexNow con el host correcto); gate G13 para medir en GSC**
+> **HECHO 2026-10-21 — auditoria completa en docs/plans-completados.md: sitemap 1002->994 URLs, 0 noindex, 0 duplicadas, 0 404, 0 canonical contradictorio, 0 huerfanas, 994/994 alcanzables en <=3 clics (41,8 inlinks/URL); 5 bugs corregidos (noindex y 404 fuera del sitemap, canonical /blog/ y /es/, lastmod con fecha real de commit, IndexNow con el host correcto); gate G13 para medir en GSC**
 
 > **MEDIDO en Search Console (2026-10-21, gate G13 cerrado):** 261 URLs inspeccionadas una a una
 > con la API de inspeccion: **199 indexadas (76,2 %)** -> ~760 de las 994. Las 380 URLs con
@@ -289,22 +289,22 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 
 - **Responsable:** SEO / Web.
 - **Depende de:** P0-01.
-- **Entregable:** auditoría reproducible de indexación + sitemap coherente + señales de rastreo vivas (`docs/indexacion-2026-10-21.md`).
+- **Entregable:** auditoría reproducible de indexación + sitemap coherente + señales de rastreo vivas (`docs/plans-completados.md`).
 - **Debe hacer:** quitar del sitemap lo que sea `noindex` o no se publique; anunciar exactamente la URL que la página declara como canonical; `lastmod` = fecha real del último commit; IndexNow con el host correcto y solo de lo que cambió; medir con Search Console.
 - **No debe hacer:** llamar «SEO completo» a un JSON-LD válido, usar la Indexing API para páginas de blog (es para empleo/eventos y puede abrir un procedimiento manual) ni añadir URLs al sitemap sin comprobar que existen en producción.
 - **Aceptación:** `node projects/scripts/audit-indexation.mjs` sale con 0 contradicciones y 0 huérfanas; el sitemap no repite URLs ni anuncia páginas `noindex` o inexistentes; GSC muestra las URLs descubiertas.
-- **Evidencia:** `docs/indexacion-2026-10-21.md`, salida de `audit-indexation.mjs`, `projects/scripts/gsc-indexation.py`.
+- **Evidencia:** `docs/plans-completados.md`, salida de `audit-indexation.mjs`, `projects/scripts/gsc-indexation.py`.
 
 
 ### [x] P1-12 — Auditar y elevar E-E-A-T, confianza y calidad de contenido
 
 - **Responsable:** SEO / Editorial.
 - **Depende de:** P0-01, P1-11.
-- **Entregable:** señales de confianza measures y contenido nuevo decidido con datos de Search Console (`docs/eeat-contenido-2026-10-21.md`).
+- **Entregable:** señales de confianza measures y contenido nuevo decidido con datos de Search Console (`docs/plans-completados.md`).
 - **Debe hacer:** página de autor, política editorial y contacto; `Person` y `Organization` con entidad definida una vez y referenciada por `@id`; fecha de revisión visible solo donde existe; hreflang coherente y recíproco; contenido nuevo donde hay demanda medida y no hay página.
 - **No debe hacer:** publicar afirmaciones que no se puedan sostener (la dirección física es decisión del propietario), escribir comparativas de apps que no tienen la función, ni llamar "revisado" a lo que no se ha revisado.
 - **Aceptación:** `audit-eeat.mjs` y `audit-hreflang.py` sin hallazgos; JSON-LD válido en todas las páginas; artículos nuevos enlazados desde la página que ya posiciona para esa sección.
-- **Evidencia:** `docs/eeat-contenido-2026-10-21.md`, `projects/scripts/audit-eeat.mjs`, `projects/scripts/audit-hreflang.py`, `projects/scripts/gsc-queries.py`.
+- **Evidencia:** `docs/plans-completados.md`, `projects/scripts/audit-eeat.mjs`, `projects/scripts/audit-hreflang.py`, `projects/scripts/gsc-queries.py`.
 
 ---
 
@@ -313,11 +313,11 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 
 - **Responsable:** SEO / Web / Editorial.
 - **Depende de:** P1-12.
-- **Entregable:** capa de valor común para las 58 herramientas nativas, con bloque de confianza por herramienta y sistema visual propio (`docs/herramientas-gratis-2026-10-21.md`).
+- **Entregable:** capa de valor común para las 58 herramientas nativas, con bloque de confianza por herramienta y sistema visual propio (`docs/plans-completados.md`).
 - **Debe hacer:** que el resultado se pueda copiar, descargar e imprimir; que lo guardado se pueda recuperar; un camino honesto a la versión de pago con la ventaja concreta; declarar el conflicto de intereses; decir qué es y qué NO es cada herramienta; señalar quién la hizo, la política editorial y la fecha de revisión; y que el resultado no se quede dentro de la página.
 - **No debe hacer:** prometer resultados, ocultar que la app recomendada es nuestra, ni rellenar con texto genérico que podría decir cualquier herramienta.
 - **Aceptación:** auditoría `audit-tools-eeat.py` sin hallazgos en visual, práctico ni E-E-A-T; valor propio (límites, expectativa y siguiente paso) en las 58; nada de desbordamiento horizontal.
-- **Evidencia:** `docs/herramientas-gratis-2026-10-21.md`, `projects/scripts/audit-tools-eeat.py`, `projects/scripts/bump-toolkit-version.py`.
+- **Evidencia:** `docs/plans-completados.md`, `projects/scripts/audit-tools-eeat.py`, `projects/scripts/bump-toolkit-version.py`.
 
 
 ### [x] P1-14 - Cerrar el embudo: snippets que clicquean, precio visible y analitica con allowlist real
@@ -328,7 +328,7 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 - **Debe hacer:** reescribir titulo y descripcion con la intencion real de la query y los nombres de las entidades; no prometer en el titulo lo que la pagina no sostiene; mantener el precio a la vista; que ningun evento llegue a GA4 sin pasar la allowlist y sin duplicarse.
 - **No debe hacer:** escribir 'we tested' si no se ha probado; dejar una cuenta atras que se reinicie con cada recarga; anadir el bridge sin quitar antes el envio duplicado por gtag; tocar el precio a mano en vez de tomarlo de la ficha verificada.
 - **Aceptacion:** en vivo, un evento llega una vez al dataLayer y el campo fuera de la allowlist se descarta; la barra sticky se ve en las 12 fichas de app; la pagina de la oferta pendiente no esta indexada y no tiene contador.
-- **Evidencia:** `docs/herramientas-gratis-2026-10-21.md` (secciones 11 a 13), `projects/scripts/rewrite-snippets.py`, `projects/scripts/version-assets.py`, `projects/scripts/add-analytics-bridge.py`.
+- **Evidencia:** `docs/plans-completados.md` (secciones 11 a 13), `projects/scripts/rewrite-snippets.py`, `projects/scripts/version-assets.py`, `projects/scripts/add-analytics-bridge.py`.
 
 ### [x] P1-15 — Estacionalidad programada, embudos en español y un bundle por idioma
 

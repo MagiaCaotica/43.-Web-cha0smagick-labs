@@ -1,6 +1,6 @@
 # Entity map
 
-**Version:** 1.0.0 · **Generated:** scripts/seo/build-entity-map.mjs · **Decision:** [geo-surface-decision.md](geo-surface-decision.md)
+**Version:** 1.0.0 · **Generated:** scripts/seo/build-entity-map.mjs · **Decision:** [plans-completados.md](plans-completados.md)
 **Catalog source:** `scripts/bots/data/offers.json` (reconciled 2026-10-03) · **Totals:** 90 entities
 
 > Local evidence only. A row here proves a reconciled local record — not external publication, availability, sales, or ranking.
