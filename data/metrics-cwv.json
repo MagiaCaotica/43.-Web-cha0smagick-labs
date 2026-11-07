@@ -8,62 +8,62 @@
     {
       "url": "/",
       "strategy": "mobile",
-      "performance": 47,
+      "performance": 87,
       "accessibility": 96,
       "seo": 100,
       "best_practices": 100,
-      "lcp_s": "7.75",
+      "lcp_s": "2.43",
       "cls": "0.000",
-      "tbt_ms": 637,
-      "fcp_s": "4.01"
+      "tbt_ms": 444,
+      "fcp_s": "1.09"
     },
     {
       "url": "/tools/sigil-generator.html",
       "strategy": "mobile",
-      "performance": 90,
+      "performance": 88,
       "accessibility": 93,
       "seo": 100,
       "best_practices": 96,
-      "lcp_s": "1.96",
+      "lcp_s": "1.95",
       "cls": "0.000",
-      "tbt_ms": 389,
-      "fcp_s": "0.82"
+      "tbt_ms": 432,
+      "fcp_s": "0.81"
     },
     {
       "url": "/blog/chaos-magick-beginners-complete-guide.html",
       "strategy": "mobile",
-      "performance": 59,
+      "performance": 54,
       "accessibility": 84,
       "seo": 100,
       "best_practices": 100,
-      "lcp_s": "7.74",
+      "lcp_s": "8.01",
       "cls": "0.000",
-      "tbt_ms": 321,
-      "fcp_s": "3.90"
+      "tbt_ms": 406,
+      "fcp_s": "3.94"
     },
     {
       "url": "/apps/chaos-sigil-generator.html",
       "strategy": "mobile",
-      "performance": 59,
+      "performance": 92,
       "accessibility": 100,
       "seo": 100,
       "best_practices": 96,
-      "lcp_s": "6.47",
-      "cls": "0.000",
-      "tbt_ms": 514,
-      "fcp_s": "2.79"
+      "lcp_s": "1.79",
+      "cls": "0.003",
+      "tbt_ms": 322,
+      "fcp_s": "1.12"
     },
     {
       "url": "/books/tarot-chaos-pdf.html",
       "strategy": "mobile",
-      "performance": 60,
+      "performance": 92,
       "accessibility": 96,
       "seo": 100,
       "best_practices": 92,
-      "lcp_s": "6.40",
-      "cls": "0.000",
-      "tbt_ms": 501,
-      "fcp_s": "2.69"
+      "lcp_s": "1.10",
+      "cls": "0.006",
+      "tbt_ms": 334,
+      "fcp_s": "1.10"
     }
   ]
 }
