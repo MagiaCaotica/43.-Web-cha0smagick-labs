@@ -301,7 +301,7 @@ Si responde `403` es que falta este paso. Si responde, imprime por sitemap `envi
 
 ### 6.5 GEO (cierra parte de P1-02)
 
-Ya está escrito `docs/geo-surface-decision.md` con la recomendación de **no** publicar `llms-full.txt` automáticamente. Necesito tu **aprobación o rechazo** de esa decisión. Si la apruebas, el siguiente paso es medir de verdad: 20 consultas reales a LLMs, registradas con fecha y respuesta, y ver si el sitio aparece citado. Eso son 20 capturas de pantalla en tu nombre.
+Ya está escrito `docs/plans-completados.md` con la recomendación de **no** publicar `llms-full.txt` automáticamente. Necesito tu **aprobación o rechazo** de esa decisión. Si la apruebas, el siguiente paso es medir de verdad: 20 consultas reales a LLMs, registradas con fecha y respuesta, y ver si el sitio aparece citado. Eso son 20 capturas de pantalla en tu nombre.
 
 ---
 

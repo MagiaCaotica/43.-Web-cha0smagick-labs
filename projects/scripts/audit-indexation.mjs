@@ -129,6 +129,10 @@ const byTitle = new Map(), byText = new Map()
 let thin = 0, palabras = []
 for (const rel of htmlFiles) {
   const h = read(rel)
+  /* Una pagina noindex no compite en el indice: su grosor o su titulo repetido
+     no es un defecto de SEO. Contarla hacia que el informe marcara las 42
+     galerias como problema y escondiera los duplicados reales del contenido. */
+  if (isNoindex(h)) continue
   const t = visible(h)
   const n = t.split(' ').length
   palabras.push(n)

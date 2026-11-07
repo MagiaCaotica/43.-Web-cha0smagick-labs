@@ -4,7 +4,14 @@
 > histórico queda en `git log`. Lo que **no** está aquí sigue vivo en
 > [`PLAN-UNICO.md`](PLAN-UNICO.md), que es el único plan que se sigue.
 >
-> Fecha del corte: 2026-10-22.
+> Fecha del corte: 2026-11-07.
+
+> **Verificación de este corte:** los cuatro audits de abajo se volvieron a
+> ejecutar antes de borrar sus `.md`. `projects/scripts/audit-indexation.mjs`
+> sale con 0 contradicciones y 0 huérfanas (1.034 URLs), `audit-hreflang.py`
+> con 0 pares rotos, `audit-eeat.mjs` con exit 0. Los cinco documentos cuyo
+> contenido ya estaba verificado se eliminaron: la evidencia queda aquí y en
+> `git log`.
 
 ## A. Completados y verificados
 
