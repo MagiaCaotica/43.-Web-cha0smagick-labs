@@ -15,7 +15,7 @@ const appsData = [
     {
         id: "psi-gym",
         name: "PSI GYM: Zener Cards & ESP",
-        price: "$3.99 USD",
+        price: "$2.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.zenercards&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_psi_gym",
         status: "available",
         description: "Train your intuition and extrasensory perception with professional Zener cards and advanced statistical tracking. 👁️",
@@ -696,7 +696,7 @@ const appsData = [
     {
         id: "lucid-dream",
         name: "Lucid Dream: Astral Projection",
-        price: "$9.99 USD",
+        price: "$8.99 USD",
         url: "https://play.google.com/store/apps/details?id=com.cha0smagicklabs.luciddreamer&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=app_lucid_dream",
         status: "available",
         description: "Learn to have lucid dreams, keep a dream journal, and master astral projection. 🌙",
