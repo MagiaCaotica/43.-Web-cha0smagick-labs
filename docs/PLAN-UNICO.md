@@ -219,6 +219,8 @@ Con el embudo instrumentado, aquí es donde se mueve la aguja.
 
 > **Progreso 2026-11-07 — Plan de contenido escrito en `.opencode/plans/contenido-p1-03.md`.** Decisión: no se reescriben las 48 herramientas (ya tienen ≥480 palabras, FAQ, schema y rampa; las 48 eran las que no enlazaban a su app, ya corregido 70/70). La segunda capa se aplica solo a las 12 con más sesiones orgánicas. Los 145 artículos se producen por cluster (servitors 59 → goetia 31 → sigil 22 → astrología 18 → lunar 15), máximo 10/semana, con freno si la serie diaria de GSC vuelve a caer. Aprobado y en ejecucion: lote 1 publicado el 2026-11-07 (3 articulos de servitors, 1.434-1.663 palabras, con Article+FAQ+Breadcrumb y QA de escritura).
 
+> **Progreso 2026-11-07 (cierre de turno) — Segunda capa 12/12.** Las 12 herramientas con mas sesiones organicas tienen ya el bloque que faltaba: un caso concreto y el criterio para leer lo que devuelve. Verificado en vivo tras el deploy (`rune-drawer`, `gnosis-timer`) y con `audit-jsonld` 0 problemas, `audit-indexation` 0 contrasentidos, `alt-audit` 0 faltantes. En el mismo turno se corrigieron 853 CTAs del bundle que apuntaban a `../books/https://pay.hotmart.com/...` (ruta inexistente) y 39 enlaces internos rotos: 72.810 enlaces revisados, 0 rotos. Articulos: 15/59 del cluster servitors.
+
 
 ### [ ] P1-04 — Implementar CRO controlado en landing pages y checkout
 
