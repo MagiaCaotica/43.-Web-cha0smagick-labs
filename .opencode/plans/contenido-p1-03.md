@@ -125,3 +125,20 @@ de golpe). Medible en GSC por cluster, no por número de artículos.
   "best ... apps, Tested & Reviewed" (sobre todo `best-esp-training-apps-android`)
   usan la misma plantilla y puntuaciones (9.2/10, 7.5/10) cuya metodologia no
   consta. Regla: si no hay prueba registrada, la pagina no puede decir "tested".
+
+- 2026-11-07 (pasada de integridad, ejecutada): confirmado que no hay log de
+  pruebas de dispositivo. Cambios:
+  - `best-esp-training-apps-android`: titulo/H1/schema "Tested & Reviewed" ->
+    "Compared"; intro declara que no hay log y que la pagina no puntua; fuera
+    las 8 notas de encabezados y tabla; PSI GYM $3.99 -> $2.99; seccion
+    "#1 Pick" -> "Why we built PSI GYM this way" con propiedad declarada.
+  - `best-lucid-dreaming-apps-android-2026` y `best-tarot-apps-android-2026`:
+    "Tested"/"we tested each app" -> comparacion de fichas de Play Store.
+  - 7 reviews propias: "Rating: 9.x/10" -> "Verdict:", sin nota numerica.
+  - `how-we-test-occult-apps-our-methodology`: parrafo que separa revision de
+    ficha de prueba de dispositivo; regla "a page that cannot show a log does
+    not get to use the word tested".
+  - 50 archivos con crossrefs actualizados.
+  Pendiente: verificar una a una las apps listadas en el articulo de tarot
+  (los nombres parecen reales: Galaxy Tarot, Labyrinthos, Golden Thread,
+  Fool's Dog) y confirmar el precio de PSI GYM en Play Console.
