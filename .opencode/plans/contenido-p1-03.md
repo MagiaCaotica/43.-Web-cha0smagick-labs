@@ -113,3 +113,15 @@ de golpe). Medible en GSC por cluster, no por número de artículos.
   disposal, enlaces a herramientas en espanol retirados del articulo ingles,
   FAQ reducida a preguntas nuevas y bibliografia citada en texto. Verificado:
   1050 URLs, 0 huerfanas, JSON-LD 0, alt 0, 72.848 enlaces 0 rotos.
+
+- 2026-11-07 (integridad, hallazgo grave): al verificar la lista de "5 best
+  ghost hunting apps" para fusionarla en la pagina indexada, Play Store no
+  devuelve ninguna app llamada "Ghost Detector - Radar Spirit", "Ghost Tracker
+  - Paranormal Investigation" ni "Spirit Box - Ghost Communication Tool". La
+  pagina afirmaba "We tested the most popular...". No se fusiono: se retiraron
+  los tres bloques inventados y la frase "We tested"; la pagina indexada gano
+  un snapshot fechado de Play Store (9 apps reales con rating a 7-nov-2026) en
+  vez de un ranking. Pendiente de revisar con el dueno: las paginas
+  "best ... apps, Tested & Reviewed" (sobre todo `best-esp-training-apps-android`)
+  usan la misma plantilla y puntuaciones (9.2/10, 7.5/10) cuya metodologia no
+  consta. Regla: si no hay prueba registrada, la pagina no puede decir "tested".
