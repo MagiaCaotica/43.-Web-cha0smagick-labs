@@ -94,3 +94,22 @@ de golpe). Medible en GSC por cluster, no por número de artículos.
   en aprendizaje, duplicado literal creatividad/habito, contradiccion en etica
   y encabezado Checklist repetido. Total del cluster: 15 de 59. Los seis
   quedan por debajo de 1.200 palabras; deuda registrada.
+
+- 2026-11-07 (cierre del cluster servitor, con datos): GSC de 16 meses
+  (2025-07-13 a 2026-11-05) da 97 impresiones y 6 clics para TODAS las queries
+  que contienen "servitor". Las 15 paginas publicadas ya cubren esas queries
+  (la principal, `how-to-create-magickal-servitor`, recibe el 40 %). Escribir
+  los 44 restantes no responde a demanda medida: se congela el cluster y se
+  eligen los siguientes articulos por query con impresiones y sin pagina.
+  El plan ya lo preveia en Riesgos: "si un cluster no tiene impresiones, no se
+  escribe".
+
+- 2026-11-07 (articulo 1 por demanda): `blog/ritual-scrolls-how-to-write.html`
+  (1.560 palabras visibles, 8 enlaces internos, Article + FAQPage +
+  BreadcrumbList, imagen 800x420). Query objetivo: "online ritual scrolls"
+  (26 impresiones/28 d, posicion 16,8, aterrizaba en /tools/ sin pagina).
+  Pasado por `qa/ai-writing-auditor`: dos cifras inventadas eliminadas, error
+  de la tinta ferrocalica corregido, ejemplo completado con direccion y
+  disposal, enlaces a herramientas en espanol retirados del articulo ingles,
+  FAQ reducida a preguntas nuevas y bibliografia citada en texto. Verificado:
+  1050 URLs, 0 huerfanas, JSON-LD 0, alt 0, 72.848 enlaces 0 rotos.
