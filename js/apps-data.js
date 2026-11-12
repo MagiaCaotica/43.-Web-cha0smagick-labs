@@ -806,6 +806,52 @@ const appsData = [
 
 const booksData = [
     {
+        id: "chaos-magick-for-absolute-beginners-pdf",
+        name: "Chaos Magick for Absolute Beginners",
+        author: "Frater Alek0s",
+        language: "English / Spanish",
+        languageFlag: "us,es",
+        price: "$9.99 USD",
+        type: "book",
+        status: "available",
+        image: "assets/images/chaosmagick-beginners.webp",
+        description: "The Practitioner's Manual: 176 pages, 20 chapters and a 15-minute field mission at the end of each one. Sigils, gnosis, servitors, banishing and timing.",
+        hotmartLink: "https://pay.hotmart.com/T108463145B?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_chaos_magick_absolute_beginners",
+        seo: {
+            title: "Chaos Magick for Absolute Beginners: The Practitioner's Manual | PDF",
+            description: "A 176-page manual for the person who has never cast a circle: the Spare sigil method, six gates to gnosis, servitors, banishing and grounding, lunar and planetary timing, a 60+ term glossary and six ritual scripts. PDF, $9.99.",
+            keywords: "chaos magick for beginners, chaos magic book, sigil magic, spare method, gnosis, servitors, banishing, grounding, lunar timing, beginner occult book, chaos magick pdf"
+        },
+        detailedDescription: `
+            <h1>Chaos Magick for Absolute Beginners: The Practitioner's Manual</h1>
+            <p>You don't need a lineage, a robe or permission. You need a method that works, and the discipline to test it. Twenty chapters, four parts, one rule: if it works, keep it; if it doesn't, throw it away.</p>
+
+            <h2>What the book teaches</h2>
+            <ul>
+                <li><strong>Sigil magick, the Spare method, step by step:</strong> write the intent, reduce it, charge it, fire it, forget it.</li>
+                <li><strong>Gnosis:</strong> six gates into the state where the work happens, plus the markers that tell you that you are there.</li>
+                <li><strong>Servitors and thoughtforms:</strong> design one, feed it and dismiss it without haunting yourself.</li>
+                <li><strong>Banishing and grounding:</strong> the daily firewall and the panic button.</li>
+                <li><strong>Timing and divination:</strong> lunar and planetary timing, divination as pattern recognition, cut-ups, egregores and pop-culture godforms.</li>
+            </ul>
+
+            <h2>What comes with it</h2>
+            <ul>
+                <li>A 15-minute Field Mission at the end of every chapter.</li>
+                <li>A glossary of more than 60 terms, correspondence tables and six ready-to-use ritual scripts.</li>
+                <li>A troubleshooting guide for the weeks when nothing happens.</li>
+                <li>Real QR codes to twelve companion apps for sigil generation, dream work, lunar timing and a magical diary.</li>
+                <li>A chapter on safety, contraindications and grounding. This is a technology, not a religion.</li>
+            </ul>
+
+            <h3>Who it is for</h3>
+            <p>Absolute beginners, lapsed occultists who want a system instead of a vibe, and practitioners who want a repeatable protocol they can test and drop when it stops working.</p>
+
+            <p><strong>Format:</strong> A5 PDF, 176 pages, set for print and for screen. English edition; the official listing is bilingual (EN/ES) and states the Spanish edition is also available.</p>
+            <p>One-time purchase. Lifetime access. Instant download.</p>
+        `
+    },
+    {
         id: "manual-activacion-servidores-magicos-pdf",
         name: "Magical Servitors Manual",
         author: "Frater Alek0s",

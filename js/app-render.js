@@ -207,7 +207,7 @@ function renderBooksSection() {
                     ${buildPictureHtml(book.image, book.name, 'app-image', 'lazy', '300', '220')}
                 </div>
                 <div class="card-content">
-                    <h3>${book.name}${(book.id === 'codex-chaoticus-pdf' || book.id === 'tarot-chaos-pdf' || book.id === 'mind-the-gap-pdf' || book.id === 'complete-practical-treatise-magical-servitors-pdf') ? ' <span class="discount-badge">NEW!</span>' : ''}</h3>
+                    <h3>${book.name}${(book.id === 'chaos-magick-for-absolute-beginners-pdf' || book.id === 'codex-chaoticus-pdf' || book.id === 'tarot-chaos-pdf' || book.id === 'mind-the-gap-pdf' || book.id === 'complete-practical-treatise-magical-servitors-pdf') ? ' <span class="discount-badge">NEW!</span>' : ''}</h3>
                     <p>${book.description}</p>
                     ${book.author ? `<div class="author-info">AUTHOR: ${book.author}</div>` : ''}
                     ${book.language ? `

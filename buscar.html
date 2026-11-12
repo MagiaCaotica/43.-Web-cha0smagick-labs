@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=2.0">
 <title>Buscador del Sitio — Cha0smagick Labs en Español</title>
 <meta name="description" content="Busca entre las 900+ páginas de Cha0smagick Labs: guías de magia del caos, sigilos, runas, tarot, I Ching, apps y herramientas. Con vista previa de cada resultado.">
 <meta name="robots" content="noindex,follow">
@@ -14,27 +14,27 @@
    sitio (antes esta pagina traia su propia paleta y se veía distinta). */
 *{box-sizing:border-box}
 .wrap{max-width:var(--max-width);margin:0 auto;padding:0 20px}
-.hero{background:var(--bg-header);border-bottom:1px solid var(--border-subtle);padding:46px 0 32px;text-align:center}
-h1{font-family:var(--font-mono);font-size:32px;letter-spacing:.5px;margin:0 0 10px;color:var(--text-primary)}
+.hero{background:var(--bg-header);border-bottom:2px solid var(--border-subtle);padding:46px 0 32px;text-align:center}
+h2{font-family:var(--font-mono);font-size:32px;letter-spacing:.5px;margin:0 0 20px;color:var(--text-primary)}
 .lede{color:var(--text-body);margin:0}
-.searchbox input{width:100%;background:var(--bg-card);border:1px solid var(--border-mid);border-radius:var(--radius-md);padding:14px 18px;color:var(--text-primary);font-family:var(--font-main);font-size:17px;outline:none}
+.searchbox input{width:200%;background:var(--bg-card);border:2px solid var(--border-mid);border-radius:var(--radius-md);padding:24px 28px;color:var(--text-primary);font-family:var(--font-main);font-size:27px;outline:none}
 .searchbox input:focus{border-color:var(--accent-gold)}
-#search-count{color:var(--text-secondary);font-size:14px;margin:14px 0 0}
+#search-count{color:var(--text-secondary);font-size:24px;margin:24px 0 0}
 main{padding:26px 0 48px}
-footer{border-top:1px solid var(--border-subtle);padding:24px 0 40px;color:var(--text-secondary);font-size:14px}
-footer a{margin-right:14px;color:var(--text-body)}
+footer{border-top:2px solid var(--border-subtle);padding:24px 0 40px;color:var(--text-secondary);font-size:24px}
+footer a{margin-right:24px;color:var(--text-body)}
 
-.result{display:block;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:16px 18px;margin:10px 0;text-decoration:none;color:var(--text-primary);transition:border-color var(--transition-fast),transform var(--transition-fast)}
-.result:hover{border-color:var(--accent-gold);transform:translateY(-1px)}
+.result{display:block;background:var(--bg-card);border:2px solid var(--border-subtle);border-radius:var(--radius-lg);padding:26px 28px;margin:20px 0;text-decoration:none;color:var(--text-primary);transition:border-color var(--transition-fast),transform var(--transition-fast)}
+.result:hover{border-color:var(--accent-gold);transform:translateY(-2px)}
 .result b{color:var(--accent-gold)}
-.result p{margin:6px 0 0;color:var(--text-secondary);font-size:14px}
-.badge{display:inline-block;background:rgba(192,160,96,.08);border:1px solid var(--accent-gold);color:var(--accent-gold);border-radius:999px;padding:1px 10px;font-size:12px;margin-left:8px;vertical-align:middle}
+.result p{margin:6px 0 0;color:var(--text-secondary);font-size:24px}
+.badge{display:inline-block;background:rgba(292,260,96,.08);border:2px solid var(--accent-gold);color:var(--accent-gold);border-radius:999px;padding:2px 20px;font-size:22px;margin-left:8px;vertical-align:middle}
   </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="https://cha0smagicklabs.com/buscar.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Search — Cha0smagick Labs">
-<meta property="og:description" content="Search the 850+ articles, 12 apps, 9 books and 70 free tools of Cha0smagick Labs.">
+<meta property="og:description" content="Search the 850+ articles, 22 apps, 9 books and 70 free tools of Cha0smagick Labs.">
 <meta property="og:image" content="https://cha0smagicklabs.com/assets/images/Banner.webp">
   <link rel="stylesheet" href="css/style.min.css?v=305788b32d">
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
@@ -55,7 +55,7 @@ footer a{margin-right:14px;color:var(--text-body)}
 </head>
 <body>
 <div class="hero"><div class="wrap">
-<h1>🔍 Buscador del sitio</h1>
+<h2>🔍 Buscador del sitio</h2>
 <p class="lede">Busca en las 900+ páginas: guías, herramientas, apps y libros.</p>
 <div class="searchbox"><input type="search" id="search-input" placeholder="sigilos, runas, tarot, I Ching, sueño lúcido…" autofocus aria-label="Buscar"></div>
 <p id="search-count">Cargando índice…</p>
@@ -63,7 +63,7 @@ footer a{margin-right:14px;color:var(--text-body)}
 <main class="wrap"><div id="search-results"></div></main>
 <footer class="wrap"><a href="/es/">Inicio ES</a><a href="/tools/">Herramientas</a><a href="/apps/">Apps</a><a href="/landing-pages/books-bundle.html">Libros Bundle $29.99</a><a href="/search.html">English search</a><br>© Cha0smagick Labs · Frater Alek0s<div class="footer-section"><h2>Trust</h2><ul><li><a href="pages/frater-alek0s.html">About the author</a></li><li><a href="pages/editorial-policy.html">Editorial policy</a></li><li><a href="contact.html">Contact</a></li></ul></div></footer>
 <script src="/js/search.js"></script>
-<script src="/js/shared.min.js?v=b003b45ce1" defer></script>
+<script src="/js/shared.min.js?v=b003b45ce2" defer></script>
 <script src="js/analytics-bridge.js?v=f884dad930" defer></script>
 </body>
 </html>
