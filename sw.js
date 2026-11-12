@@ -4,7 +4,7 @@
  * v1.1.0
  */
 
-const CACHE_NAME = 'cha0smagick-v5';
+const CACHE_NAME = 'cha0smagick-v6';
 
 const PRECACHE_URLS = [
   '/',
@@ -13,8 +13,8 @@ const PRECACHE_URLS = [
   '/manifest.json',
   '/assets/icons/icon-192.png',
   '/assets/icons/icon-512.png',
-  '/js/apps-data.min.js?v=20260724',
-  '/js/app-render.min.js?v=20260724'
+  '/js/apps-data.min.js?v=20261112',
+  '/js/app-render.min.js?v=20261112'
 ];
 
 // Install: precache static assets
