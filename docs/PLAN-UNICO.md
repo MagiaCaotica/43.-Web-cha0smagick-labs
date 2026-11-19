@@ -176,7 +176,7 @@ Aceptación = cómo se comprueba, no cómo se siente.
 | # | Tarea | Resp. | Aceptación |
 |---|---|---|---|
 | 0.1 | **Revocar el JWT de MailerLite y rotar sesiones** (Google, MailerLite, Pinterest, Stripe, X, Reddit, LinkedIn) + decidir purga del historial o repo privado | SEC/DIR | tokens viejos devuelven 401; sesiones cerradas; decisión escrita |
-| 0.2 | 301 de `/index.html` a `/` (hoy 43 sesiones duplicadas) | SEO | una sola home en GA4 |
+| 0.2 | ~~301 de `/index.html` a `/`~~ **HECHO 2026-11-19**: Pages no permite 301; la URL se reescribe con `history.replaceState` antes de configurar GA4 | SEO | una sola home en GA4 |
 | 0.3 | ~~CTA de producto en la primera pantalla de la guía de iniciación~~ **HECHO 2026-11-19**: banda con botón a Play y enlace a la herramienta, bajo el segundo párrafo | CRO | `purchase_click` desde esa URL > 0 en 14 días |
 | 0.4 | ~~Sustituir el iframe goético por un generador de sigilos caóticos~~ **HECHO 2026-11-19**: generador SVG determinista en `tools/sigil-generator.html`, sin dependencias, con descarga | CRO/DIR | la herramienta dibuja lo que promete el H1 |
 | 0.5 | Revisar que ninguna página prometa bundle de apps ni plazos de reembolso distintos | LEG | `grep` de claims = 0 |
