@@ -1,0 +1,194 @@
+/* CRO blocks — offer bands, badges, steps and Hotmart button.
+   Kept out of style.min.css on purpose: these pages link this file
+   directly, so no minify step is needed to ship a change. */
+
+.cm-band {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 1.7rem;
+  background: #0b0b0b;
+  border: 1px solid #232323;
+  border-radius: 12px;
+}
+
+.cm-band h2 {
+  color: #e0c98a;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cm-band p { color: #a8a8a8; }
+
+.cm-cards,
+.cm-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.cm-card {
+  background: #0f0f0f;
+  border: 1px solid #1f1f1f;
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+}
+
+.cm-card h3 {
+  color: #f0f0f0;
+  font-size: 1rem;
+  margin-bottom: .4rem;
+}
+
+.cm-card p {
+  font-size: .92rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cm-step-n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #c9a84c;
+  color: #c9a84c;
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  margin-bottom: .5rem;
+}
+
+.cm-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.cm-badge {
+  border: 1px solid #2a2a2a;
+  background: #0f0f0f;
+  color: #cfcfcf;
+  padding: .35rem .85rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  white-space: nowrap;
+}
+
+.cm-quote {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  border-left: 2px solid #c9a84c;
+  color: #d8d8d8;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.cm-stars { color: #c9a84c; text-align: center; letter-spacing: 3px; margin-bottom: .7rem; }
+
+.cm-attrib {
+  text-align: center;
+  font-size: .85rem;
+  color: #8a8a8a;
+  margin-top: .8rem;
+}
+
+.cm-covers {
+  display: flex;
+  gap: .8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.2rem 0;
+}
+
+.cm-covers img {
+  width: 96px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #222;
+}
+
+.cm-btns {
+  display: flex;
+  gap: .8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.btn-hotmart,
+a.btn-hotmart {
+  display: inline-block;
+  background: #8f2431;
+  color: #fff !important;
+  border: 1px solid #ad2f40;
+  border-radius: 6px;
+  padding: .8rem 1.6rem;
+  font-weight: 700;
+  font-size: .95rem;
+  text-decoration: none;
+}
+
+.btn-hotmart:hover { background: #a52a3a; }
+
+.cm-note {
+  text-align: center;
+  font-size: .8rem;
+  color: #7f7f7f;
+  margin-top: .8rem;
+}
+
+.cm-tagline {
+  margin: 0 0 .8rem;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c9a84c;
+}
+
+/* The masthead was 500px tall, so the offer never reached the first screen.
+   Cap it here instead of touching the shared stylesheet every page uses. */
+header { padding: 1rem 1rem .8rem; }
+header .header-logo,
+header img { width: auto; height: 64px; max-height: 64px; }
+header .site-title,
+header h1 { font-size: 1.35rem; letter-spacing: 3px; }
+header p { margin: .3rem 0 0; font-size: .7rem; letter-spacing: 1.5px; }
+
+/* Both pages that load this file end with a fixed bar; leave room for it so it
+   never sits on top of the last button. */
+body { padding-bottom: 84px; }
+
+/* App-detail template: price and buy button must meet in the same screen. */
+main { padding-top: 12px; }
+.detail-header-layout { gap: 16px; padding-bottom: 12px; }
+.detail-header-layout h2 { font-size: 1.5rem; line-height: 1.25; }
+.detail-header-info .lead-text { font-size: 1rem; line-height: 1.5; }
+
+/* Homepage only: pull the offer into the first viewport. */
+.home main { padding-top: .5rem; }
+.home main .hero { padding-top: .5rem; margin-bottom: 1rem; }
+.home nav ul li a { padding: 12px 14px; }
+
+/* The sticky bar already wraps to two rows on phones; drop the proof line
+   there so it never covers the price or the button. */
+@media (max-width: 640px) {
+  .cm-sticky-extra { display: none; }
+
+  header { padding: .6rem .8rem; }
+  header img { height: 44px; max-height: 44px; }
+  header .site-title,
+  header h1 { font-size: 1rem; letter-spacing: 2px; }
+  header p { display: none; }
+  .home nav ul li a { padding: 9px 10px; font-size: .7rem; }
+  .home nav ul { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; max-width: 100%; scrollbar-width: none; }
+  .home nav ul::-webkit-scrollbar { display: none; }
+  .home nav ul li { flex: 0 0 auto; }
+  .home .hero h1 { font-size: 1.6rem; line-height: 1.25; }
+  .home .breadcrumb-nav { display: none; }
+}

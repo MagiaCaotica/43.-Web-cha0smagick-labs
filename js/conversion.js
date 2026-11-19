@@ -1423,8 +1423,12 @@
       showPopup(trigger);
     }
 
-    // (a1) dwell timer
-    var timer = setTimeout(function () { fire('timer_30s'); }, CONFIG.popupDelayMs);
+    // (a1) dwell timer — never on the homepage: the hero *is* the offer, and a
+    // modal at 30s covers the CTA before the visitor has read it.
+    var timer = null;
+    if (getPageType() !== 'homepage') {
+      timer = setTimeout(function () { fire('timer_30s'); }, CONFIG.popupDelayMs);
+    }
 
     // (a2) scroll depth
     function onScroll() {
