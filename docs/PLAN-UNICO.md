@@ -143,8 +143,12 @@ Detalle por app en docs/aso-12-apps.md.
 
 ### 2.8 Seguridad, legal y confianza
 
-- Se publicaron con HTTP 200 `projects/clientes/*` (CSV/XLSX con datos de clientes) y `projects/cookies*.json`. Retirados del árbol; **siguen en el historial** y hay que decidir purga y rotación.
+- **El repositorio es público** (`private: false`) y la raíz del repo se sirve tal cual. Eso convierte cualquier fichero trackeado en una URL pública.
+- Expuesto y retirado hoy (verificado 404 tras el deploy): `projects/clientes/*` (CSV/XLSX con datos de clientes), `projects/cookies*.json` (sesiones de Google, MailerLite, Pinterest, Stripe, X, Reddit, LinkedIn), **11 archivos con un JWT de MailerLite embebido**, exports de Play con ciudad/estado/CP del comprador, `reviews.csv`, `stats.csv` y métricas internas.
+- Los blobs **siguen en el historial**: cualquiera puede clonarlos. La única respuesta completa es revocar los tokens y rotar las sesiones, además de purgar el historial (`git filter-repo`) o pasar el repo a privado.
 - Cabeceras del dominio (comprobadas 19-nov): `strict-transport-security`, `content-security-policy`, `x-frame-options`, `referrer-policy` y `x-content-type-options` **ausentes**. GitHub Pages no permite cabeceras propias: el `_headers` del repo solo lo respeta Cloudflare. Ver `docs/action-cloudflare-headers.md`.
+- 349 páginas embeben YouTube sin `youtube-nocookie`, y las fuentes de Google se cargan antes del consentimiento.
+- Se publica superficie interna que no debería estar en el dominio: `package.json`, `ecosystem.config.js`, código de bots, `deploy/` y `docs/`.
 - El sitio promete «7 días de garantía» y hasta esta semana también «48 horas» en una página.
 - Consentimiento por defecto denegado y banner funcional; sin CSP ni HSTS comprobados (ver informe de seguridad adjunto en la conversación).
 
@@ -171,11 +175,12 @@ Aceptación = cómo se comprueba, no cómo se siente.
 
 | # | Tarea | Resp. | Aceptación |
 |---|---|---|---|
-| 0.1 | Rotar sesiones y credenciales afectadas por los ficheros retirados; decidir purga del historial | SEC/DIR | sesiones viejas invalidadas; decisión escrita |
+| 0.1 | **Revocar el JWT de MailerLite y rotar sesiones** (Google, MailerLite, Pinterest, Stripe, X, Reddit, LinkedIn) + decidir purga del historial o repo privado | SEC/DIR | tokens viejos devuelven 401; sesiones cerradas; decisión escrita |
 | 0.2 | 301 de `/index.html` a `/` (hoy 43 sesiones duplicadas) | SEO | una sola home en GA4 |
 | 0.3 | CTA de producto en la primera pantalla de la guía de iniciación | CRO | `purchase_click` desde esa URL > 0 en 14 días |
 | 0.4 | Sustituir el iframe goético por un generador de sigilos caóticos en la propia página | CRO/DIR | la herramienta dibuja lo que promete el H1 |
 | 0.5 | Revisar que ninguna página prometa bundle de apps ni plazos de reembolso distintos | LEG | `grep` de claims = 0 |
+| 0.6 | Evaluar obligación GDPR por los exports de ventas con ciudad/CP publicados | LEG | decisión documentada |
 
 ### Fase 1 — Monetizar el tráfico que ya existe (días 8-30)
 
