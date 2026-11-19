@@ -97,3 +97,17 @@ scripts/finance/.hotmart-*
 projects/clientes/
 projects/cookies.json
 projects/cookies_temp.json
+
+# --- Publicado por error (detectado 2026-11-19): tokens, ventas y datos de compradores
+projects/ventas*.csv
+projects/ventas*.zip
+projects/earn.csv
+projects/earn.zip
+projects/reviews.csv
+projects/stats.csv
+projects/temp_api.ps1
+projects/scripts/_ml-*.js
+projects/scripts/_mailerlite-*.js
+projects/scripts/_test-groq.js
+data/metrics-google-play.json
+data/social-performance.json
