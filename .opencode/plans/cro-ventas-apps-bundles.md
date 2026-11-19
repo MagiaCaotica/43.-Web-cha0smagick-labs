@@ -270,3 +270,21 @@ ine grimorios -> 7 libros.
 - P5.1 GA4 y ventas Hotmart: bloqueado por credenciales (GA4_PROPERTY_ID + service account). Sin eso no hay informe semanal ni verificación de ingresos.
 - Deuda preexistente: las 3 páginas de blog con más tráfico tienen HTML mal cerrado (`</li>` sobre `<a>` abierto). No se tocó; no lo introdujo este plan.
 - La barra sticky tapa ~20px del CTA inline en pantallas de 844px; el botón sigue visible y la barra repite la misma acción.
+
+### Desbloqueado 2026-11-19 (P5)
+
+GA4 y Hotmart quedaron operativos sin credenciales nuevas:
+- GA4 Data API responde con la service account existente (cha0smagick-labs@cha0smagick-labs.iam.gserviceaccount.com). Se anadio `GA4_PROPERTY_ID=521860259` al `.env`.
+- La API de Hotmart responde; el `HOTMART_BASIC_TOKEN` guardado estaba caducado y se recalculo desde `CLIENT_ID:SECRET`.
+
+**Linea base real (22-oct -> 18-nov-2026, comando `python scripts/cro-weekly.py`):**
+`
+GSC     180 clics / 4.365 impr en top5
+GA4     607 sesiones (299 organico, 256 directo)
+Embudo  app_store_click=10 · purchase_click=12 · begin_checkout=12 · popup_view=100 · popup_close=68
+Hotmart 1 venta: 3,99 USD (Ouija Cazadora, 26-oct)
+`
+
+Con eso, el objetivo del plan se mide asi: 12 clics de compra -> 1 venta (8,3%). Duplicar la tasa de clic es mas barato que duplicar el trafico.
+
+**Deuda de datos:** GA4 no registra purchase del checkout de Hotmart (no hay webhook). Las ventas se leen de la API de Hotmart, que es la fuente de verdad.
