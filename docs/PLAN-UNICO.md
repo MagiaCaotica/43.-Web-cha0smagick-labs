@@ -200,16 +200,16 @@ Aceptación = cómo se comprueba, no cómo se siente.
 | # | Tarea | Resp. | Aceptación |
 |---|---|---|---|
 | 2.1 | ~~Secuencia de bienvenida~~ **REESCRITA 2026-11-19**: `email-sequences/quickstart-to-buyer.json`, 3 correos honestos (fuera el «4,5★/221 reseñas», el precio en COP y el experimento inventado). Falta activarla en MailerLite | CONT/DAT | 100 suscriptores y ≥2 ventas atribuidas |
-| 2.2 | Oferta única en Telegram con enlace UTM propio | CRO | clics medidos; ≥1 venta atribuida |
+| 2.2 | **Preparado**: \email-sequences/telegram-offer-2026-11.md\ con el mensaje y UTM separados. Falta publicarlo | CRO | clics medidos; ≥1 venta atribuida |
 | 2.3 | Publicación diaria de resultado compartible (la tarjeta 1080×1080 ya existe) | CONT | 30 piezas/mes |
 | 2.4 | Webhook Hotmart → GA4 (purchase real) | DAT | `purchase` visible en GA4 con producto y valor |
-| 2.5 | Consolidar o noindex las páginas con 0 clics (criterio: 0 clics y 0 impresiones en 90 días) | SEO | sitemap ≤ 700 URLs útiles |
+| 2.5 | **Medido y listo**: \scripts/seo/zero-click-pages.py\ → 343 de 1.052 URLs sin clic ni impresión en 90 días. No se aplica noindex hasta la fase 2 | SEO | sitemap ≤ 700 URLs útiles |
 
 ### Fase 3 — Escalar lo que funcione (días 61-90)
 
 | # | Tarea | Resp. | Aceptación |
 |---|---|---|---|
-| 3.1 | Reescribir títulos y metas de las 10 consultas en posición 4-15 | SEO | CTR global ≥ 3 % |
+| 3.1 | ~~Reescribir títulos y metas~~ **PARCIAL 2026-11-19**: 4 páginas con truncamiento o intención desalineada (goetia, iniciación, ghost hunting, astrología). El resto espera 14 días de datos | SEO | CTR global ≥ 3 % |
 | 3.2 | Freemium en 1 app (la segunda mejor valorada) para entrar en el ranking de Play | ASO/DIR | instalaciones ×10 en 60 días |
 | 3.3 | Export mensual de finanzas de Play y anexo al informe | DAT | ingresos de apps auditados |
 | 3.4 | Solo si el embudo supera el 4 %: probar paid con presupuesto de 100 $ | DIR | CAC < 30 % del ticket |
