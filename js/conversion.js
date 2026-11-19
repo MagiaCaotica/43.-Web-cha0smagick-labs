@@ -49,7 +49,7 @@
     // Email popup behaviour
     popupDelayMs: 30000,      // (a) 30s dwell
     popupScrollPct: 50,       // (a) or 50% scroll depth
-    popupPages: ['homepage', 'blog', 'tools', 'apps', 'books', 'es-page']
+    popupPages: ['homepage', 'blog', 'apps', 'books', 'es-page']
   };
 
   /* ============================================================
@@ -615,11 +615,11 @@
         <span class="cm-stat-label">PDF Books</span>\
       </div>\
       <div class="cm-stat">\
-        <span class="cm-stat-num">4.7 ★</span>\
-        <span class="cm-stat-label">128+ Reviews</span>\
+        <span class="cm-stat-num">5.0 &#9733;</span>\
+        <span class="cm-stat-label">23 reviews</span>\
       </div>\
     </div>\
-    <a href="/#products" class="cm-collection-btn">' + cta + '</a>\
+    <a href="https://play.google.com/store/apps/dev?id=5224914033326414083" class="cm-collection-btn" target="_blank" rel="noopener">' + cta + '</a>\
   </div>\
 </section>';
 
@@ -1180,7 +1180,7 @@
   <h3 class="cm-testimonials-heading">' + (isSpanish() ? 'Lo Que Dicen Nuestros Usuarios' : 'What Our Users Say') + '</h3>\
   <div class="cm-testimonials-stats">\
     <div class="cm-tstat">\
-      <span class="cm-tstat-num">4.7</span>\
+      <span class="cm-tstat-num">5.0</span>\
       <span class="cm-tstat-label">' + (isSpanish() ? 'Estrellas' : 'Stars') + '</span>\
       <div class="cm-tstat-stars">\
         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>\
@@ -1188,9 +1188,9 @@
     </div>\
     <div class="cm-tstat-sep"></div>\
     <div class="cm-tstat">\
-      <span class="cm-tstat-num">128+</span>\
+      <span class="cm-tstat-num">23</span>\
       <span class="cm-tstat-label">' + (isSpanish() ? 'Rese\u00F1as' : 'Reviews') + '</span>\
-      <span class="cm-tstat-sub">' + (isSpanish() ? 'En Google Play' : 'Across Google Play') + '</span>\
+      <span class="cm-tstat-sub">' + (isSpanish() ? 'En Sigil Maker' : 'On Sigil Maker') + '</span>\
     </div>\
     <div class="cm-tstat-sep"></div>\
     <div class="cm-tstat">\
@@ -1204,7 +1204,7 @@
     <p style="color:#bbb;margin:6px 0 0;font-size:0.9em">' + (isSpanish() ? 'Si no quedas satisfecho, te devolvemos tu dinero. Sin preguntas. Compra con confianza.' : 'Not satisfied? Get a full refund. No questions asked. Buy with confidence.') + '</p>\
   </div>\
   <div class="cm-testimonials-cta" style="margin-top:12px">\
-    <a href="/" class="cm-collection-btn">' + (isSpanish() ? 'Ver la Colecci\u00F3n Completa' : 'View the Complete Collection') + '</a>\
+    <a href="https://play.google.com/store/apps/dev?id=5224914033326414083" class="cm-collection-btn" target="_blank" rel="noopener">' + (isSpanish() ? 'Ver las 12 apps en Google Play' : 'See all 12 apps on Google Play') + '</a>\
   </div>\
 </section>';
 
