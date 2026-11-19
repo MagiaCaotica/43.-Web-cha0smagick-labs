@@ -2822,6 +2822,53 @@
     run();                      // page-type specific CTA injection
     initEmailPopup();           // 30s / 50% scroll / exit-intent capture
     initProductView();          // GA4 view_item on app / book pages
+    initStickyCtaGuard();       // never cover an inline buy button with the fixed bar
+  }
+
+  /* A fixed buy bar that sits on top of the inline buy button is two CTAs
+   * fighting for one tap, and on a 844px phone it clips the button itself.
+   * While an inline CTA is on screen, the bar steps out; it returns as soon as
+   * the visitor scrolls past the offer. Mobile only, no CSS dependency. */
+  function initStickyCtaGuard() {
+    if (!window.matchMedia || !window.matchMedia('(max-width: 760px)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+
+    var bars = document.querySelectorAll('.sticky-conversion-bar, .cm-sticky-buy');
+    if (!bars.length) {
+      // The bar can still be further down the document when this runs.
+      window.addEventListener('load', initStickyCtaGuard, { once: true });
+      return;
+    }
+
+    var targets = document.querySelectorAll('.cta-centered-wrapper, .hero-cta-row, .cm-btns, .cta-box, .play-store-btn');
+    if (!targets.length) return;
+
+    var onScreen = [];
+    var setState = function (hidden) {
+      for (var i = 0; i < bars.length; i++) {
+        var bar = bars[i];
+        bar.style.transition = 'transform .2s ease, opacity .2s ease';
+        bar.style.transform = hidden ? 'translateY(120%)' : '';
+        bar.style.opacity = hidden ? '0' : '';
+        bar.style.pointerEvents = hidden ? 'none' : '';
+        bar.setAttribute('aria-hidden', hidden ? 'true' : 'false');
+      }
+    };
+
+    var io = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        var target = entries[i].target;
+        var at = onScreen.indexOf(target);
+        if (entries[i].isIntersecting) {
+          if (at === -1) onScreen.push(target);
+        } else if (at !== -1) {
+          onScreen.splice(at, 1);
+        }
+      }
+      setState(onScreen.length > 0);
+    }, { rootMargin: '0px 0px -56px 0px' });
+
+    for (var j = 0; j < targets.length; j++) io.observe(targets[j]);
   }
 
   init();
