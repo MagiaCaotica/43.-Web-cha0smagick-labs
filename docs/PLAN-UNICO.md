@@ -193,6 +193,7 @@ Aceptación = cómo se comprueba, no cómo se siente.
 | 1.4 | Módulo de oferta en las 3 páginas con más clics (guía, goetia, ghost hunting) | CRO | `purchase_click` por sesión ≥ 2 % en cada una |
 | 1.5 | **Preparado**: `pages/leave-a-review.html` con las 12 apps y sus enlaces. Falta enviarlo a compradores (lista de Hotmart) | ASO | de 23 a 35 reseñas |
 | 1.6 | Unificar el nombre comercial entre web y Play | ASO | mismo nombre en ficha, home y CTA |
+| 1.6b | **Diferido con motivo**: cambiar el H1 de `apps/chaos-sigil-generator.html` (pos 8,5 y 70 clics/28d) sin datos de prueba puede costar la página. Se hará cuando haya un test con muestra suficiente | SEO/ASO | decisión escrita |
 
 ### Fase 2 — Construir la audiencia propia (días 31-60)
 
