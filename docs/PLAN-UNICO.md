@@ -1,529 +1,297 @@
-# PLAN ÚNICO — Cha0smagick Labs
+# PLAN ÚNICO — Cha0smagick Labs (v3, 19-nov-2026)
 
-> **Este es el único plan que se sigue.** Absorbe el backlog del antiguo
-> `MASTER_EXECUTION_PLAN.md` y los planes de venta, SEO/funnel, legal, MailerLite,
-> tráfico y Telegram. Los absorbidos se borraron (histórico en `git log`).
-> Los planes ya completados están en [`plans-completados.md`](plans-completados.md).
+> **Este es el único plan.** Absorbe y sustituye a: `.opencode/plans/seo-top1.md`,
+> `.opencode/plans/contenido-p1-03.md`, `.opencode/plans/cro-ventas-apps-bundles.md`,
+> `docs/plan-guerrilla-2026-10.md`, `docs/audit-5000-usd-gap-2026-10-01.md`,
+> `docs/plans-completados.md`, `docs/ASO-play-titles.md`, `docs/aso-audit-checklist.md`
+> y la versión anterior de este mismo fichero. Los absorbidos se borraron; su
+> histórico queda en `git log`.
+>
+> **Cómo se usa:** cada tarea es atómica, tiene un responsable y una condición de
+> aceptación que se puede comprobar. Se marca `[x]` aquí mismo con la evidencia
+> (commit, URL, salida de comando). Un fichero local no prueba que algo funcione
+> en producción.
 
-**Cómo se usa:** cada tarea es atómica, tiene un único responsable y una
-condición de aceptación verificable. Se marca `[x]` en este mismo fichero cuando
-está hecha, y se anota la evidencia (fichero, commit, captura o URL).
-Nada se da por hecho sin evidencia en producción: **un fichero local no prueba
-que algo funcione en vivo.**
-
----
-
-## 0. Puertas externas (bloquean casi todo lo demás)
-
-Estas acciones dependen de una credencial o de una plataforma externa. **No se
-pueden hacer desde el repo.** El detalle exacto de cada una (dónde, qué se pide,
-qué se necesita de vuelta) está en [`OWNER-MANUAL-CHECKLIST.md`](OWNER-MANUAL-CHECKLIST.md).
-
-| # | Puerta | Bloquea | Qué hace falta |
-|---|---|---|---|
-| G1 | **IDs de Hotmart** de Complete Access y Flash Sale | P0-03, P0-04, P0-05 | la lista `producto → URL de checkout`, verificada abriendo cada URL |
-| G2 | **Transacción de prueba** + refund en Hotmart | P0-03, P0-05 | ID de transacción, marca de tiempo y confirmación del refund |
-| G3 | **CSV financieros crudos** de Hotmart | P0-04, P0-05 | los CSV sin editar, para calcular el neto real |
-| G4 | **GA4: comprobar que los eventos llegan** | P0-07, P1-07 | acceso a la propiedad; hoy hay 19 eventos instrumentados y ninguno ha llegado nunca |
-| G5 | **Service account / app OAuth en GCP** para GSC | P1-01, P2-01 | el token de GSC muere cada 7 días sin esto |
-| G6 | **MailerLite**: grupos,forms y automatizaciones | P0-08 | API key válida (**la de `.env` devuelve 401**), grupos `leads-es`/`leads-en`/`compradores` |
-| G7 | **Hotmart → MailerLite/GA4 webhook** | P0-08 | el comprador no entra a la lista de email sin esto |
-| G8 | **Meta Pixel ID y Google Ads ID** | P2-04 | rellenar los `PONER_..._AQUI` de `js/conversion.js` |
-| G9 | **Play Console**: listings, precio real por país, disponibilidad | P0-09, P1-05 | verificación por app |
-| G10 | **Código promo de Google Play** | campaña de email | para que la app gratis sea inmediata; hoy el email la pide por respuesta |
-| G11 | **Añadir el bot de Telegram** a `@magiacaotica` y a los dos grupos | Telegram | 1 acción por destino; después el bot publica solo |
-| G12 | **Consentimiento legal** (matriz de proveedores) | P0-06 | decidir y firmar los 9 puntos de la matriz legal |
-| G13 | ~~Acceso de la service account a la propiedad de GSC~~ **CERRADO 2026-10-21** (siteOwner de sc-domain:cha0smagicklabs.com) | P1-01, P1-11 | anadir `cha0smagick-labs@cha0smagick-labs.iam.gserviceaccount.com` como usuario (LECTURA) en Search Console > Configuracion > Usuarios y permisos; verificar con `python projects/scripts/gsc-indexation.py` |
+**Fecha de corte de datos:** 2026-11-19. Todo lo que sigue está medido, no estimado,
+salvo lo que lleva la etiqueta *(estimación)*.
 
 ---
 
-## Fase A — Desbloqueo de oferta, confianza y medición (días 0–14)
+## 0. Resumen para dirección
 
-Sin esto, las fases siguientes no se pueden medir ni cerrar.
+La empresa tiene producto y empieza a tener distribución. No tiene conversión.
 
-### [x] P0-01 — Congelar la superficie canónica y el ledger de evidencia — DONE 2026-09-25 (`docs/canonical-asset-inventory.md` v1.2.0, HEAD `f219f9d`)
-
-- **Responsable:** Revenue Ops / Web.
-- **Depende de:** ninguna.
-- **Entregable:** inventario versionado de URLs públicas, páginas, apps, offers, package IDs, precios, checkout, owners y estado.
-- **Debe hacer:** elegir tracked/public o filesystem como superficie canónica; listar cada URL como live, draft, noindex, retired o pending; registrar fecha, commit, fuente y responsable.
-- **No debe hacer:** cambiar precios, publicar URLs, borrar páginas o corregir el working tree preexistente como parte de esta tarea.
-- **Aceptación:** cada activo tiene un `asset_id`, una URL canónica, un owner, un estado y una fecha de verificación; las discrepancias históricas 524/577 y el estado actual 529/582 quedan resueltos o explícitamente excluidos.
-- **Evidencia:** archivo de inventario, export de URLs, commit y `git status` que pruebe que los cambios ajenos siguen intactos.
-
-### [x] P0-02 — Reconciliar catálogo de apps, páginas y Play
-
-> **HECHO 2026-10-21 — Matriz de las 12 apps y 9 libros entre js/apps-data.js, scripts/bots/data/offers.json, data/play-catalog.json y las paginas: 0 discrepancias. Corregidos 2 bugs reales del bot (le faltaban 2 libros y cotizaba el bundle a \.99/7 libros cuando son \.99/9). Salida: data/catalog-reconciliation.json y docs/reconciliacion-catalogo.md**
-
-- **Responsable:** ASO / Android.
-- **Depende de:** P0-01.
-- **Entregable:** matriz `app slug → nombre → package ID → Play URL → precio → estado → listing URL → owner`.
-- **Debe hacer:** mantener reconciliada la matriz local de 12 páginas de `apps/` con las 12 entradas de `offers.json`; resolver y verificar externamente `noctem-tools`, duplicados/variantes, precios, URLs y todos los package IDs; separar build, submission, testing, live y retired.
-- **No debe hacer:** inventar una URL, cambiar el nombre comercial o publicar un paquete bajo un package ID distinto sin aprobación.
-- **Aceptación:** cada página y oferta tiene un estado único; cada oferta live tiene una URL de Play verificable; el bot y las páginas no apuntan a productos diferentes.
-- **Evidencia:** matriz, export de Play Console, comparación reproducible con `offers.json` y screenshots de cada CTA.
-
-### [ ] P0-03 — Resolver rutas de venta y placeholders de Hotmart
-
-- **Responsable:** Revenue / Web.
-- **Depende de:** P0-01.
-- **Entregable:** registro de oferta con URL de checkout real por producto y decisión explícita para cada página no vendible.
-- **Debe hacer:** mantener las dos páginas sin href placeholder y con estado `BLOCKED_EXTERNAL_ID`; obtener y verificar los IDs reales de Complete Access y Flash Sale; verificar `V107097103W`; revisar `complete-access`, `flash-sale`, `books-bundle`, `apps-bundle` y CTAs de libros y apps.
-- **No debe hacer:** inventar IDs, mandar a un checkout roto, tratar una colección de Play como checkout de un bundle ni ocultar una oferta no disponible.
-- **Aceptación:** cada página live contiene una URL real, sandbox explícito o estado de retirada; cada oferta live tiene prueba de apertura y, cuando aplique, transacción de prueba.
-- **Evidencia:** matriz local en `docs/plans-completados.md`, HTML renderizado, enlaces extraídos, transaction IDs, resultado de checkout y decisión de retiro/noindex.
-
-### [ ] P0-04 — Reconstruir el baseline financiero y el Gap-to-5k
-
-- **Responsable:** Finance / Revenue.
-- **Depende de:** P0-01, P0-03.
-- **Entregable:** cierre de los últimos 30 días con net collected por oferta, canal y campaña.
-- **Debe hacer:** exportar Hotmart, Play, pagos y otras fuentes; conciliar cobros, refunds, fees, impuestos/withholding, commissions, moneda y fecha de cobro; calcular Gap-to-5k por fórmula, no por feel.
-- **No debe hacer:** mezclar gross sales con net cash, omitir refunds ni usar una estimación como cierre.
-- **Aceptación:** el informe reproduce el total de cada fuente y deja una diferencia explicada; `Gap-to-5k` se puede recalcular con los mismos datos.
-- **Evidencia:** export original, hoja de conciliación, query reproducible, timestamp y decisión sobre fuentes faltantes.
-
-### [ ] P0-05 — Diseñar oferta mínima, precio neto y escenarios
-
-- **Responsable:** Product / Revenue / Finance.
-- **Depende de:** P0-02, P0-03, P0-04.
-- **Entregable:** tabla de oferta con `gross_price`, fees, refunds, `net_price`, margen de contribución, órdenes requeridas, owner y fecha de revisión.
-- **Debe hacer:** comparar bundle, libros individuales, acceso, apps, flash y membresía; modelar escenarios conservative/base/qualified sin llamarlos forecast; decidir qué oferta puede cobrarse primero.
-- **No debe hacer:** cambiar el precio real de Hotmart/Play sin registro, ofrecer descuento que destruya margen ni esconder uncertainty.
-- **Aceptación:** cada oferta live tiene `net_price` reproducible; la suma de oportunidades puede cerrar US$5.000 o muestra exactamente el Gap-to-5k y su dependencia.
-- **Evidencia:** pricing table, sensitivity analysis, approved price source y cálculo de órdenes.
-
-> **Progreso 2026-11-07 — Baseline real de Hotmart (API oficial).** `scripts/finance/hotmart-report.py` lee la API con las credenciales del repo y pagina correctamente. Resultado 2026-01-01 → 2026-11-08: **9 ventas, todas COMPLETE**. Por mes: marzo 1 (MXN 219,24), junio 2 (MXN 171,68), septiembre 2 (MXN 103,24 + USD 4,99), octubre 4 (USD 28,98 + BRL 22 + AUD 7,70). Neto de comisión: MXN 493,96 · USD 29,41 · BRL 21,50 · AUD 7,14. Productos: 3× Manual de servidores, 2× Codex Chaoticus, y uno de Tratado de runas, Liber LVXinux, bundle ES y Ouija. Con Play (~97,5 USD brutos/28d a 19-oct) el negocio está en el orden de **100–150 USD/mes**, no en 5.000. El gap ya no es una estimación.
-
-
-### [ ] P0-06 — Cerrar legal, consent y trust antes de capturar leads
-
-- **Responsable:** Legal/Privacy + Web.
-- **Depende de:** P0-01, P0-03.
-- **Entregable:** páginas públicas de privacy, terms, cookies, refund, disclaimer y affiliate disclosure; matriz de vendors, data flows y consent.
-- **Debe hacer:** revisar `privacy-policy.html`; cubrir GA4, píxeles, email, pago y Play; validar claims de garantía/refund; adaptar por país sólo con revisión; añadir privacy/data-safety por app cuando aplique.
-- **No debe hacer:** copiar una plantilla genérica, publicar tracking no autorizado, afirmar revisión legal sin owner ni prometer una política que el checkout no cumple.
-- **Aceptación:** páginas enlazadas desde footer y checkout; reject/accept/withdrawal probados; claims de refund, garantía y tracking coinciden con la política y con la plataforma.
-- **Evidencia:** URLs live, matriz vendor/data-flow, revisión legal fechada, screenshots de consent y prueba de no-track antes de accept.
-
-### [x] P0-07 — Instrumentar el funnel y reconciliar purchase
-
-> **HECHO 2026-10-21 — la instrumentacion era el problema, no los eventos.** Los 19 eventos
-> estaban en el codigo pero **419 paginas desplegadas no inicializaban GA4**: 350 paginas del
-> blog cargaban la libreria gtag y nunca llamaban a `gtag('config', 'G-V6LHCPN9TK')`, y otras 69
-> (las 40 tools atomicas, 25 articulos, 3 de la raiz, 1 de compare/) ni siquiera cargaban la
-> libreria. Se restauro el bloque que ya funciona en index.html: ahora **997 de 1011 paginas
-> desplegadas tienen GA4 operativo** (antes 556). Instrumentos: `audit-ga4-coverage.mjs`,
-> `fix-ga4-init.mjs`, `fix-ga4-dup-consent.mjs`.
-> **PROBADO EN PRODUCCION (2026-10-21):** en `tools/tarot-journal.html` se ven las peticiones
-> `page_view` **y `tool_funnel_view`** a `google-analytics.com/g/collect` con `tid=G-V6LHCPN9TK`;
-> en `blog/abraxas-annunaki.html`, `page_view` y `scroll`. Antes no salia ninguna.
-
-### [ ] P0-07b — Reconciliar purchase contra los exports de Hotmart y Play
-
-- **Responsable:** Analytics / Revenue.
-- **Depende de:** P0-07, G3 (CSV de Hotmart), G4 (acceso a GA4).
-- **Entregable:** tabla por pedido con `transaction_id`, importe, moneda y evento GA4 asociado.
-- **Debe hacer:** cruzar los eventos `purchase`/`conversion_import` que ya emite `js/conversion.js`
-  con los CSV crudos de Hotmart y Play Console; dejar la discrepancia medida, no supuesta.
-- **No debe hacer:** dar por buena una cifra de ingresos que no viene de un export.
-- **Aceptacion:** el total reconciliado cuadra con el export dentro del margen de impuestos y
-  comisiones; las diferencias quedan escritas con su causa.
-- **Evidencia:** la tabla de reconciliacion y el export usado, con fecha.
-
-- **Responsable:** Analytics / Web.
-- **Depende de:** P0-01, P0-03, P0-06.
-- **Entregable:** contrato de eventos con nombres, triggers, parámetros, owner, política de PII y pruebas.
-- **Debe hacer:** cubrir `view_item`, `begin_checkout`, `add_payment_info`, `purchase`, `lead_submit`, `app_download` y `affiliate_click`; incluir `offer_id`, `transaction_id`, `value`, `currency`, `source`, `medium`, `campaign`, `landing_page`, `device` y `consent_state` donde corresponda.
-- **No debe hacer:** inferir compra desde pageview, duplicar purchase, enviar PII en URL/event name ni medir un click como revenue.
-- **Aceptación:** cada etapa produce un evento único en una prueba end-to-end; purchase se reconcilia con Hotmart/Play en una muestra; el consent reject no genera tracking no autorizado.
-- **Evidencia:** event dictionary, payloads sanitizados, debug logs/screenshots y reconciliation report.
-
-### [ ] P0-08 — Activar y verificar CRM, email y webhooks
-
-- **Responsable:** Lifecycle / Automation.
-- **Depende de:** P0-03, P0-06, P0-07.
-- **Entregable:** mapa Lead → Subscriber → Customer → Recovered Customer con owner, tags, reglas, retries, dead-letter y suppression.
-- **Debe hacer:** configurar welcome, nurture, browse/cart, post-purchase, cross-sell y winback; conectar Hotmart/Make/MailerLite sólo mediante endpoints reales; probar alta, compra, refund y unsubscribe.
-- **No debe hacer:** activar desde un JSON de ejemplo, contar un dashboard como automatización ni duplicar clientes por reintentos.
-- **Aceptación:** lead de prueba recorre cada flujo; compra crea customer/tag correctos; webhook responde, es idempotente, no duplica y suprime bajas.
-- **Evidencia:** IDs de automatización, logs de entrega, transaction de prueba, payload sanitizado y reconciliación de estados.
-
-> **Progreso 2026-11-07 — MailerLite responde 200 con la key del repo (antes daba 401).** Estado real de la cuenta: 2 grupos (Lead Magnet EN/ES), 8 campos, 2 automatizaciones, 0 campañas y **7 suscriptores, todos `unconfirmed`**. No hay lista de 843 leads: esa cifra no existe en esta cuenta. Sin contactos confirmados no se puede ejecutar la campaña ni medir entrega; el bloqueo ya no es la API sino la lista.
-
-> **Importación 2026-11-07 (orden del dueño).** Se cargaron **298 de 843** contactos de `leads.csv` en el grupo propio "Partners YouTube (outreach)" con `autoresponders: false`. El resto no entra porque la cuenta está en **plan Free (máximo 250 suscriptores)** y porque 28 direcciones fueron rechazadas (role-based o formato sospechoso). No se envió ningún correo: `double_optin` está desactivado, hay 0 campañas y las 2 automatizaciones pertenecen a los grupos de lead magnet. Pero eso dejo la cuenta en 305 suscriptores sobre un maximo de 250, lo que puede bloquear las altas reales del lead magnet: se borraron los 298 y el grupo, y la cuenta vuelve a 7 con 243 plazas libres. Para alojar los 843 sin tocar el lead magnet hay que subir de plan o usar un canal de outreach aparte.
-
-
-
-### [x] P0-09 — Verificar listings y disponibilidad de Google Play
-
-> **HECHO 2026-10-21 — Las 12 fichas de Play verificadas EN VIVO (BrowserOS, sesion del owner, hl=es&gl=US): titulo, boton de compra, nota y tier de instalaciones. Detectadas 2 promociones activas que el sitio no refleja (PSI GYM \.99, Lucidez \.99). Corregido el precio de Astral Lab en data/play-catalog.json (\.99 -> \.99) y refresh de todo el catalogo con fecha. Queda solo el export de Play Console (puerta G9)**
-
-> **Progreso 2026-11-07 — API de Play (`androidpublisher`) operativa con la service account del repo.** Leídas las 24 fichas (12 apps × en-US/es-ES) y corregidas 4 descripciones cortas con errores objetivos: "a entropy engine" → "an entropy engine" (sigilo), "One-time buy" → "One-time purchase" (tarot y lúcido), "sinastría" sin tilde (Astral Lab ES), y reescrita la de Lucid Dream (frase rota y minúscula tras punto). Los tres edits se commitearon y se verificaron releyendo la ficha. Pendiente de decisión del dueño: los títulos "Rider-Waite Tarot AI Reader" y "Dreamachine: Lucidez con IA" afirman IA sin que el sitio lo respalde; no se tocan sin confirmación.
-
-
-- **Responsable:** ASO / Android.
-- **Depende de:** P0-02, P0-06, P0-07.
-- **Entregable:** inventario de publicación con estado por app: live, internal, closed, submitted, suspended o retired.
-- **Debe hacer:** confirmar package ID, título, descripción, screenshots, icon, categoría, price, privacy URL, Data safety, content rating, release notes y URL real; separar artefacto de publicación.
-- **No debe hacer:** subir un paquete con otro package ID, usar screenshots falsos o llamar live a un listing sólo porque existe un `.aab`.
-- **Aceptación:** cada app live tiene listing verificable, CTA correcto, owner y fecha; las no publicadas no se usan en bots, ads o forecasts.
-- **Evidencia:** export de Play Console, URL pública, screenshots del listing, reporte de instalación o smoke de CTA.
-
-### [ ] P0-10 — Ejecutar release y smoke test de producción
-
-- **Responsable:** Web / DevOps.
-- **Depende de:** P0-03, P0-06, P0-07, P0-08, P0-09.
-- **Entregable:** release candidate desplegado y verificado en el dominio real.
-- **Debe hacer:** ejecutar build y tests; revisar canonical, robots, sitemap, consent, navegación, CTA, checkout, email, deep links, 404, mobile y status del hosting; guardar commit y timestamp.
-- **No debe hacer:** declarar deploy successful sólo porque existe un workflow o porque CI pasó en otro entorno.
-- **Aceptación:** `npm run build` y `npm test` pasan; smoke externo de rutas críticas pasa; no hay 5xx/404 en CTAs; el reporte distingue fallos preexistentes de fallos del cambio.
-- **Evidencia:** logs de CI, URL live, reporte de smoke, Lighthouse de superficie canónica y registro de rollback.
-
----
-
-## Fase B — Conversión, adquisición y optimización (días 15–45)
-
-Con el embudo instrumentado, aquí es donde se mueve la aguja.
-
-### [ ] P1-01 — Ejecutar el remediation loop de SEO técnico
-
-- **Responsable:** SEO / Web.
-- **Depende de:** P0-01, P0-10.
-- **Entregable:** registro de remediación para canonical, hreflang, robots, title, description, headings, indexability, sitemap, OG/Twitter, imágenes y Core Web Vitals.
-- **Debe hacer:** validar reciprocidad, aislar duplicados intencionales, corregir sólo URLs canónicas, mantener la cobertura local de description/hreflang/canonical, remediar los 180 missing alt y 270 empty alt sólo con revisión de accesibilidad, corregir heading skips y medir plantillas representativas.
-- **No debe hacer:** regenerar todo sin revisar impacto, canonicalizar a una URL incorrecta ni llamar “SEO completo” a JSON-LD válido.
-- **Aceptación:** todas las URLs indexables tienen canonical y description coherentes; no quedan errores elegibles de rich-results; existe baseline y budget de CWV.
-- **Evidencia:** export de GSC/Bing, rich-results test, Lighthouse CI, before/after y registro de excepciones.
-- **Progreso 2026-11-07 (parcial, en producción):** un solo generador de sitemap (`scripts/generate_sitemap.py`); eliminado el duplicado que excluía `tools/`; sitemap en 1.055 URLs con 70 herramientas EN + 6 ES. Titles y descripciones reescritos en las páginas de consultas con 842 impresiones y 0 clics. `availability` corregido en JSON-LD de producto. Pendiente: alt text, heading skips y baseline de CWV.
-
-### [ ] P1-02 — Construir la superficie GEO/AI verificable
-
-- **Responsable:** GEO / SEO / Editorial.
-- **Depende de:** P0-01, P1-01.
-- **Entregable:** decisión documentada sobre `llms.txt`/`llms-full.txt`, mapa de entidades, fuentes autoritativas y páginas de respuesta citable.
-- **Debe hacer:** mantener sincronizados marca, autores, libros, apps, precios, fechas, canonical URLs y política editorial; registrar crawler output, consultas de prueba y citas/referrals cuando sean observables.
-- **No debe hacer:** prometer ranking o citations, publicar statements de precio desactualizados ni ocultar pages en robots/sitemap sin una decisión.
-- **Aceptación:** un crawler puede identificar oferta, precio, autor y respuesta sin ambigüedad; cada entidad tiene `source_url`, owner y `last_reviewed`.
-- **Evidencia:** archivos live, mapa de entidades, 20 consultas reproducibles, registro de citations/referrals y revisión manual.
-
-### [ ] P1-03 — Convertir contenido existente en superficies de ingreso
-
-- **Responsable:** Editorial / SEO.
-- **Depende de:** P0-04, P0-05, P1-01, P1-02.
-- **Entregable:** registry de clusters con intención, oferta, CTA, owner, baseline y target.
-- **Debe hacer:** clasificar los artículos 800–1500; refrescar sólo los que tengan demanda, intent mismatch o potencial de venta; conectar cada money page con un libro, app u oferta reconciliada; revisar fuentes, author, date, updated y links.
-- **No debe hacer:** publicar más volumen para superar contadores, enlazar a un producto incorrecto ni llamar calidad a un simple word count.
-- **Aceptación:** cada cluster incluido tiene QA editorial, oferta/CTA válidos, owner y método para medir assisted conversion.
-- **Evidencia:** content registry, export de queries, muestra revisada y before/after de engagement y revenue.
-
-> **Progreso 2026-11-07 — Plan de contenido escrito en `.opencode/plans/contenido-p1-03.md`.** Decisión: no se reescriben las 48 herramientas (ya tienen ≥480 palabras, FAQ, schema y rampa; las 48 eran las que no enlazaban a su app, ya corregido 70/70). La segunda capa se aplica solo a las 12 con más sesiones orgánicas. Los 145 artículos se producen por cluster (servitors 59 → goetia 31 → sigil 22 → astrología 18 → lunar 15), máximo 10/semana, con freno si la serie diaria de GSC vuelve a caer. Aprobado y en ejecucion: lote 1 publicado el 2026-11-07 (3 articulos de servitors, 1.434-1.663 palabras, con Article+FAQ+Breadcrumb y QA de escritura).
-
-> **Progreso 2026-11-07 (cierre de turno) — Segunda capa 12/12.** Las 12 herramientas con mas sesiones organicas tienen ya el bloque que faltaba: un caso concreto y el criterio para leer lo que devuelve. Verificado en vivo tras el deploy (`rune-drawer`, `gnosis-timer`) y con `audit-jsonld` 0 problemas, `audit-indexation` 0 contrasentidos, `alt-audit` 0 faltantes. En el mismo turno se corrigieron 853 CTAs del bundle que apuntaban a `../books/https://pay.hotmart.com/...` (ruta inexistente) y 39 enlaces internos rotos: 72.810 enlaces revisados, 0 rotos. Articulos: 15/59 del cluster servitors.
-
-
-### [ ] P1-04 — Implementar CRO controlado en landing pages y checkout
-
-- **Responsable:** Growth / Web.
-- **Depende de:** P0-03, P0-05, P0-06, P0-07.
-- **Entregable:** experiment log con variantes de hero, oferta, pricing, proof, CTA, bundle, upsell, FAQ y checkout.
-- **Debe hacer:** separar tráfico de artículo, direct y paid; alinear mensaje y oferta; medir cada paso; incluir móvil, decline, duplicate click, recovery y trust.
-- **No debe hacer:** usar scarcity, testimonios o claims no demostrados, declarar ganador por CTR ni lanzar sin baseline y stop rule.
-- **Aceptación:** cada experimento tiene hypothesis, primary metric, guardrail, muestra o criterio de decisión; conversion, AOV, refunds y net revenue se reportan juntos.
-- **Evidencia:** experiment log, funnel report, screenshots, transaction QA y recomendación go/no-go.
-- **Progreso 2026-11-07 (parcial, en producción):** hero de portada reescrito a "Occult Apps That Don't Charge You Monthly"; bloque "Why not the free one?" y garantía de 7 días en las 12 fichas de apps (`css/ui.css`); CTA del bundle en español en fichas ES y herramientas ES; corregido "9 libros" → 6 libros ($29.99) en fichas, comparativas y Black Friday. Sin A/B: cambios monotónicos, no experimento. Pendiente el experiment log con baseline.
-
-### [ ] P1-05 — Completar ASO y experimentación por app
-
-- **Responsable:** ASO / Android.
-- **Depende de:** P0-02, P0-09, P1-04.
-- **Entregable:** listing QA y backlog de experimentos por app.
-- **Debe hacer:** revisar title, short/long description, icon, screenshots, category, price, privacy/Data safety, release notes, rating prompt y deep links; ejecutar una hipótesis por app, métrica primaria, guardrail y fecha.
-- **No debe hacer:** cambiar 12 listings en bloque, atribuir instalaciones a una campaña sin tracking o llamar revenue a installs.
-- **Aceptación:** cada listing tiene baseline, owner, versión de screenshots, CTA verificable y review date; cada experimento tiene stop rule.
-- **Evidencia:** listing export, experiment log, installs, purchase/upgrade, retention, refunds y review notes.
-
-### [ ] P1-06 — Diseñar captura y nurture de leads
-
-- **Responsable:** Lifecycle / Content.
-- **Depende de:** P0-06, P0-07, P0-08, P1-03.
-- **Entregable:** lead magnet, landing, thank-you page y secuencias welcome/activation/segmentation.
-- **Debe hacer:** elegir un magnet alineado con una oferta; definir signup → activation → purchase; medir cohorte, consent, unsubscribe y exit criteria.
-- **No debe hacer:** blasts masivos, prometer un resultado que el producto no entrega ni capturar PII fuera de la base legal.
-- **Aceptación:** cada email tiene trigger, goal, CTA, owner, exit criteria y suppression; la cohorte se puede consultar sin datos inventados.
-- **Evidencia:** campaign IDs, landing QA, cohort report, delivery/open/click metrics y muestra de replies.
-
-### [ ] P1-07 — Construir dashboard de acquisition, revenue y cohorts
-
-- **Responsable:** Analytics / Growth.
-- **Depende de:** P0-04, P0-07, P1-01, P1-02, P1-05.
-- **Entregable:** dashboard con source of truth, data dictionary, timezone y reconciliación mensual.
-- **Debe hacer:** combinar GSC/Bing, organic assisted revenue, AI referrals/citations cuando sea observable, Play installs/purchases, email cohorts, affiliates, AOV, refunds y CAC.
-- **No debe hacer:** sumar GA4 y Hotmart sin reconciliar IDs, llamar conversión a una sesión ni usar datos de schema como eventos.
-- **Aceptación:** el dashboard se refresca, permite explicar Gap-to-5k por canal/oferta y entrega un export mensual auditable.
-- **Evidencia:** dashboard URL o query reproducible, data dictionary, sample reconciliation y monthly close.
-
-### [ ] P1-08 — Pilotear partnerships y afiliados con tracking reversible
-
-- **Responsable:** Partnerships / Revenue.
-- **Depende de:** P0-03, P0-05, P0-07, P0-08.
-- **Entregable:** registry de partners, newsletters, affiliates, offers, links, commissions y estados de payout.
-- **Debe hacer:** definir commission, attribution window, threshold, disclosure, creative approval, refund reversal, tracking, link único y calendario de review.
-- **No debe hacer:** pagar por clicks sin evidencia de compra, usar links archivados o entregar acceso sin acuerdo/disclosure.
-- **Aceptación:** cada partner tiene Signed terms, link único, click event, conversion match, payout status y fecha de renovación.
-- **Evidencia:** agreement/terms, link registry, attribution report, payout sample y prueba de reverso.
-
-### [ ] P1-09 — Validar pricing, AOV y retención
-
-- **Responsable:** Product / Revenue / Finance.
-- **Depende de:** P0-04, P0-05, P1-04, P1-06, P1-08.
-- **Entregable:** decision memo de pricing, bundle, cross-sell, upsell, reorder/renewal y refund threshold.
-- **Debe hacer:** comparar bundle vs individual, medir elasticity cuando haya muestra suficiente, calcular contribution margin y recalcular Gap-to-5k.
-- **No debe hacer:** cambiar precio global por una semana de tráfico, esconder fees o llamar retention a una métrica de visitas.
-- **Aceptación:** margin, AOV, refund, repeat/retention y baseline/target están explícitos; el escenario tiene supuestos trazables.
-- **Evidencia:** price experiment o cohort analysis, contribution model y decisión aprobada.
-
-### [ ] P1-10 — Construir trust y social proof verificable
-
-- **Responsable:** Product / Editorial.
-- **Depende de:** P0-06, P1-03, P1-04.
-- **Entregable:** proof registry con authorship, editorial policy, authorized testimonials, case studies, screenshots, samples y customer FAQ.
-- **Debe hacer:** pedir permiso, fechar, atribuir y distinguir experiencia propia de testimonio; alinear claims con privacy, refund y terms.
-- **No debe hacer:** fabricar reviews, citas, awards, resultados o scarcity.
-- **Aceptación:** cada proof tiene source, date, approval, scope y review date; ningún claim queda sin evidencia.
-- **Evidencia:** proof registry, autorizaciones, links live y revisión editorial fechada.
-
-### [x] P1-11 — Auditar y desbloquear la indexación de las URLs del sitemap
-
-> **HECHO 2026-10-21 — auditoria completa en docs/plans-completados.md: sitemap 1002->994 URLs, 0 noindex, 0 duplicadas, 0 404, 0 canonical contradictorio, 0 huerfanas, 994/994 alcanzables en <=3 clics (41,8 inlinks/URL); 5 bugs corregidos (noindex y 404 fuera del sitemap, canonical /blog/ y /es/, lastmod con fecha real de commit, IndexNow con el host correcto); gate G13 para medir en GSC**
-
-> **MEDIDO en Search Console (2026-10-21, gate G13 cerrado):** 261 URLs inspeccionadas una a una
-> con la API de inspeccion: **199 indexadas (76,2 %)** -> ~760 de las 994. Las 380 URLs con
-> impresiones en 28 dias (225 clics, 7.060 impresiones) lo corroboran. El '163' era un dato
-> rancio de antes del reenvio del sitemap del 19/10. Lo que queda: 38 URLs que Google aun no ha
-> rastreado (prioridad) y 9 con veredicto 'noindex' RANCIOS de agosto, cuyo HTML ya dice
-> 'index, follow'. Sin ningun bloqueo tecnico pendiente.
-
-- **Responsable:** SEO / Web.
-- **Depende de:** P0-01.
-- **Entregable:** auditoría reproducible de indexación + sitemap coherente + señales de rastreo vivas (`docs/plans-completados.md`).
-- **Debe hacer:** quitar del sitemap lo que sea `noindex` o no se publique; anunciar exactamente la URL que la página declara como canonical; `lastmod` = fecha real del último commit; IndexNow con el host correcto y solo de lo que cambió; medir con Search Console.
-- **No debe hacer:** llamar «SEO completo» a un JSON-LD válido, usar la Indexing API para páginas de blog (es para empleo/eventos y puede abrir un procedimiento manual) ni añadir URLs al sitemap sin comprobar que existen en producción.
-- **Aceptación:** `node projects/scripts/audit-indexation.mjs` sale con 0 contradicciones y 0 huérfanas; el sitemap no repite URLs ni anuncia páginas `noindex` o inexistentes; GSC muestra las URLs descubiertas.
-- **Evidencia:** `docs/plans-completados.md`, salida de `audit-indexation.mjs`, `projects/scripts/gsc-indexation.py`.
-
-
-### [x] P1-12 — Auditar y elevar E-E-A-T, confianza y calidad de contenido
-
-- **Responsable:** SEO / Editorial.
-- **Depende de:** P0-01, P1-11.
-- **Entregable:** señales de confianza measures y contenido nuevo decidido con datos de Search Console (`docs/plans-completados.md`).
-- **Debe hacer:** página de autor, política editorial y contacto; `Person` y `Organization` con entidad definida una vez y referenciada por `@id`; fecha de revisión visible solo donde existe; hreflang coherente y recíproco; contenido nuevo donde hay demanda medida y no hay página.
-- **No debe hacer:** publicar afirmaciones que no se puedan sostener (la dirección física es decisión del propietario), escribir comparativas de apps que no tienen la función, ni llamar "revisado" a lo que no se ha revisado.
-- **Aceptación:** `audit-eeat.mjs` y `audit-hreflang.py` sin hallazgos; JSON-LD válido en todas las páginas; artículos nuevos enlazados desde la página que ya posiciona para esa sección.
-- **Evidencia:** `docs/plans-completados.md`, `projects/scripts/audit-eeat.mjs`, `projects/scripts/audit-hreflang.py`, `projects/scripts/gsc-queries.py`.
-
----
-
-
-### [x] P1-13 — Auditar y elevar las herramientas gratuitas: valor, E-E-A-T y diseño
-
-- **Responsable:** SEO / Web / Editorial.
-- **Depende de:** P1-12.
-- **Entregable:** capa de valor común para las 58 herramientas nativas, con bloque de confianza por herramienta y sistema visual propio (`docs/plans-completados.md`).
-- **Debe hacer:** que el resultado se pueda copiar, descargar e imprimir; que lo guardado se pueda recuperar; un camino honesto a la versión de pago con la ventaja concreta; declarar el conflicto de intereses; decir qué es y qué NO es cada herramienta; señalar quién la hizo, la política editorial y la fecha de revisión; y que el resultado no se quede dentro de la página.
-- **No debe hacer:** prometer resultados, ocultar que la app recomendada es nuestra, ni rellenar con texto genérico que podría decir cualquier herramienta.
-- **Aceptación:** auditoría `audit-tools-eeat.py` sin hallazgos en visual, práctico ni E-E-A-T; valor propio (límites, expectativa y siguiente paso) en las 58; nada de desbordamiento horizontal.
-- **Evidencia:** `docs/plans-completados.md`, `projects/scripts/audit-tools-eeat.py`, `projects/scripts/bump-toolkit-version.py`.
-
-
-### [x] P1-14 - Cerrar el embudo: snippets que clicquean, precio visible y analitica con allowlist real
-
-- **Responsable:** SEO / Web / Growth.
-- **Depende de:** P1-12.
-- **Entregable:** snippets reescritos en las paginas que ya rankean en pagina 1 sin clics; barra de precio fija en las 12 fichas de app y en la landing del bundle; oferta no disponible sin escasez fabricada y fuera del indice; allowlist de eventos aplicada en las 1.011 paginas; assets versionados por hash.
-- **Debe hacer:** reescribir titulo y descripcion con la intencion real de la query y los nombres de las entidades; no prometer en el titulo lo que la pagina no sostiene; mantener el precio a la vista; que ningun evento llegue a GA4 sin pasar la allowlist y sin duplicarse.
-- **No debe hacer:** escribir 'we tested' si no se ha probado; dejar una cuenta atras que se reinicie con cada recarga; anadir el bridge sin quitar antes el envio duplicado por gtag; tocar el precio a mano en vez de tomarlo de la ficha verificada.
-- **Aceptacion:** en vivo, un evento llega una vez al dataLayer y el campo fuera de la allowlist se descarta; la barra sticky se ve en las 12 fichas de app; la pagina de la oferta pendiente no esta indexada y no tiene contador.
-- **Evidencia:** `docs/plans-completados.md` (secciones 11 a 13), `projects/scripts/rewrite-snippets.py`, `projects/scripts/version-assets.py`, `projects/scripts/add-analytics-bridge.py`.
-
-### [x] P1-15 — Estacionalidad programada, embudos en español y un bundle por idioma
-
-- **Responsable:** SEO / Editorial / Web.
-- **Depende de:** P1-11, P1-13, P1-14.
-- **Entregable:** un calendario estacional que decide qué se publica y cuándo (`blog/calendario-estacional-magia-caos.html` + `data/seasonal-calendar.json`); dos artículos de temporada en inglés y dos en español con 4–6 semanas de antelación a Black Friday (27 nov 2026) y Navidad (25 dic); tres embudos en español escritos para LATAM y no traducidos (apps de astrología, carta natal, magia del caos para principiantes); `dashboard-colombia` aislado del índice y del catálogo de herramientas; un bundle por idioma en toda la web.
-- **Debe hacer:** publicar con antelación real, no la semana del pico; que cada página en español diga lo que solo un lector hispanohablante necesita; que el enlace de compra apunte al producto en el idioma de la página (EN → `N108147778I`, ES → `V107097103W`); unificar cifras contra la fuente de verdad (`data/toolkit.json`, `scripts/bots/data/offers.json`).
-- **No debe hacer:** inventar una fecha de fin de rebaja, un descuento o una escasez que el checkout no sostiene; traducir un artículo del inglés y llamarlo local; dejar una experimento ocupando una URL del catálogo principal; mandar tráfico inglés a una página de venta en español.
-- **Aceptación:** `python projects/scripts/check-seasonal-claims.py` → 0 afirmaciones sin fuente; `python projects/scripts/fix-bundle-lang.py --check` → 0 páginas inglesas con el producto español; `python projects/scripts/audit-hreflang.py` y `node projects/scripts/audit-indexation.mjs` sin hallazgos; los 4 artículos nuevos indexables, con FAQ y enlaces internos sin roturas.
-- **Evidencia:** `projects/scripts/es_article_builder.py`, `projects/scripts/gen-seasonal-hub.py`, `projects/scripts/fix-acentos-es.py`, `projects/scripts/fix-toc-es.py`, `projects/scripts/fix-bundle-lang.py`, `projects/scripts/fix-bundle-en-copy.py`, `projects/scripts/fix-bundle-links.py`, `projects/scripts/check-seasonal-claims.py`, `projects/scripts/fix-counts.py`. Precios leídos en el checkout el 2026-10-22: `N108147778I` = US$29.99 («BUNDLE: All PDFs in ENGLISH»), `V107097103W` = US$29.99 («BUNDLE Todos Los Libros ESP»).
-- **Corrección posterior (2026-10-22):** el bundle son **6 libros** (3 títulos descatalogados, su contenido vive en esos 6: manual de servidores, tratado de runas, ouija cazadora). El precio del bundle ES sube a US$29.99 (igual que el EN); descuento real 39% (US$48,94 → US$29,99). Scripts: `fix-books-six.py`, `fix-bundle-price-29.py`, `fix-catalog-six.py`. Auditoría UX móvil: header 384→261 px, overflow eliminado en `books/index.html` y `gnosis-timer` (EN/ES), bloque social fuera de las fichas, botones de acción fuera del timer, breadcrumb oculto en móvil. Verificación: `audit-hreflang.py` 0 hallazgos, `audit-indexation.mjs` 1008 URLs / 0 huérfanas / 0 contradicciones, 38 pytest + 230 vitest verdes.
-
----
-
----
-
-## Fase C — Escala, diversificación y eficiencia (días 46–90)
-
-Solo con unit economics cerradas.
-
-### [ ] P2-01 — Escalar clusters SEO de alta intención
-
-- **Responsable:** SEO / Editorial.
-- **Depende de:** P1-03, P1-07.
-- **Entregable:** backlog de 3–5 clusters priorizados por revenue potential, no por número de palabras.
-- **Debe hacer:** seleccionar queries transaccionales, actualizar páginas existentes, link internally, añadir proof y medir assisted revenue.
-- **No debe hacer:** crear páginas sin demanda, duplicar keywords en paths o comprar backlinks.
-- **Aceptación:** cada cluster tiene target de ranking, CTR, assisted revenue, owner y review date.
-- **Evidencia:** GSC before/after, content registry, backlink report y revenue attribution.
-
-### [ ] P2-02 — Ejecutar digital PR y link earning ético
-
-- **Responsable:** Partnerships / Editorial.
-- **Depende de:** P1-08, P2-01.
-- **Entregable:** prospect list, outreach assets, quality criteria y backlink log.
-- **Debe hacer:** priorizar recursos y audiencia relevantes; evaluar follow/nofollow, relevancia, editor y fecha; medir referral y assisted revenue.
-- **No debe hacer:** PBNs, link exchanges masivas, anchor text manipulative o guest posts sin disclosure.
-- **Aceptación:** cada backlink tiene URL, editor, follow/nofollow, relevance, fecha, approval y resultado.
-- **Evidencia:** prospect tracker, outreach log, link audit y referral report.
-
-### [ ] P2-03 — Evaluar expansión o salida de apps del portfolio
-
-- **Responsable:** Product / ASO.
-- **Depende de:** P0-02, P0-09, P1-05, P1-09.
-- **Entregable:** business case por app para invertir, mantener, mejorar o retirar.
-- **Debe hacer:** comparar effort, CAC, installs, retention, ARPDAU, uninstalls, reviews, soporte y maintenance cost; definir kill criteria.
-- **No debe hacer:** lanzar una app para llenar catálogo o inflar el número de apps.
-- **Aceptación:** cada app tiene decisión, owner, budget, review date y métrica que justifica la siguiente acción.
-- **Evidencia:** Play metrics, cohort report, cost ledger y memo de decisión.
-
-### [ ] P2-04 — Habilitar paid acquisition sólo con unit economics
-
-- **Responsable:** Growth / Finance.
-- **Depende de:** P0-05, P0-06, P0-07, P1-04, P1-05, P1-07, P1-09.
-- **Entregable:** test plan de Meta/Google con budget cap, creative matrix, landing variants, consent y kill rule.
-- **Debe hacer:** probar una oferta y un canal a la vez; validar IDs, conversion values, spend reconciliation, frequency cap, contribution margin y payback.
-- **No debe hacer:** aumentar budget sin margen, sin consent, sin tracking o sin medir refunds.
-- **Aceptación:** p95 tracking match, CPA/CAC ceiling, payback rule, budget cap y stop condition están documentados; escala sólo con cohortes verdes.
-- **Evidencia:** campaign IDs, spend/click/conversion report, net revenue attribution y decision log.
-
-### [ ] P2-05 — Probar membresía, Inner Circle o acceso recurrente
-
-- **Responsable:** Product / Lifecycle / Finance.
-- **Depende de:** P0-05, P1-06, P1-09.
-- **Entregable:** propuesta de oferta recurrente con precio, beneficios, billing, cancelación, refund, contenido y retention plan.
-- **Debe hacer:** validar con cohort actual; definir activation, trial → paid, churn, expansion, payback y delivery calendar.
-- **No debe hacer:** llamar suscripción a un pago único, prometer contenido inexistente o lanzar sin soporte de cancelación.
-- **Aceptación:** margen, billing, cancellation, refund, content calendar y target de retención están documentados.
-- **Evidencia:** offer page, checkout test, cohort report y feedback de clientes.
-
-### [ ] P2-06 — Probar expansión multi-idioma o de segmentos
-
-- **Responsable:** Growth / Product.
-- **Depende de:** P1-01, P1-03, P1-07.
-- **Entregable:** test de un mercado prioritario con landing, legal, support, pricing y analytics localizados.
-- **Debe hacer:** elegir idioma/segmento por demanda; mantener canonical/hreflang correcto; medir conversión, CAC, refund y carga de soporte.
-- **No debe hacer:** traducción automática sin revisión, duplicar páginas sin señal o prometer soporte no disponible.
-- **Aceptación:** el test tiene mercado, owner, presupuesto, ventana de medición, legal QA y decisión de escalar/parar.
-- **Evidencia:** market decision, localized QA, funnel report y learning memo.
-
-### [ ] P2-07 — Automatizar operaciones, alertas y cumplimiento
-
-- **Responsable:** DevOps / Automation.
-- **Depende de:** P0-07, P0-08, P0-10.
-- **Entregable:** runbooks de deploy, rollback, webhook failure, payment mismatch, consent breach, listing takedown y content revert.
-- **Debe hacer:** definir owner/on-call, threshold, severidad, retry/backoff, dead-letter, log retention, backup, rollback y drill; separar secrets por environment.
-- **No debe hacer:** exponer secrets en HTML, workflows, docs o logs ni depender de una sola persona.
-- **Aceptación:** cada alerta tiene threshold, severidad, destinatario, runbook y prueba; un tabletop exercise cierra con acciones.
-- **Evidencia:** runbooks, alert test, access review, backup/restore test y postmortem del drill.
-
-### [ ] P2-08 — Convertir learnings en decisiones de portfolio
-
-- **Responsable:** Founder / Revenue / Finance.
-- **Depende de:** P1-07, P1-09, P2-03, P2-04.
-- **Entregable:** dashboard ejecutivo mensual con Gap-to-5k, contribution margin, retention, cash collection y decisión de inversión.
-- **Debe hacer:** separar revenue, margen, collection, retention y forecast; asignar budget al canal con mejor payback; registrar stop/scale decisions.
-- **No debe hacer:** usar sesiones, followers, installs o artículos como sustitutos de cash collected.
-- **Aceptación:** el dashboard responde qué canal aporta US$5.000, qué margen deja, qué riesgo tiene y qué tarea se cancela.
-- **Evidencia:** monthly close, forecast versionado y decision log con owner/fecha.
-
----
-
-## Residuales absorbidos (venían de planes ya consolidados)
-
-Cada punto estaba pendiente en un plan que se ha absorbido aquí. La columna
-"Va en" dice en qué tarea del plan entra, para que no se pierda nada.
-
-| Pendiente | Va en |
+| | |
 |---|---|
-| F-8 · reforzar la home con keywords y links a las 6 de striking distance | **PENDIENTE** | **HECHO (2026-10-21)** — la home ya enlazaba 5 de 6; falta anadido el enlace al articulo goetic-magic-beginners-guide.html
-| F-10 · `books/mind-the-gap-pdf.html` description de 232 ch → 160 | **PENDIENTE** | **HECHO (2026-10-21)** — desc de mind-the-gap-pdf.html a 141 chars (ya estaba, verificado)
-| F-16 · `checklist-ventas.html`: decidir si es interna, noindex o se retira (está en `.gitignore`) | **PENDIENTE** | **HECHO (2026-10-21)** — checklist-ventas.html ya con noindex,nofollow y en .gitignore (decision tomada: interno, no indexable)
-| F-24 · aplicar los 12 títulos ASO de `docs/ASO-play-titles.md` en Play Console | **P0-09** |
-| F-28 · CNAME y canonicals consistentes (sin `www`, https) | **PENDIENTE** | **HECHO (2026-10-21)** — 1017 canonicals revisados, 0 con www o http
-| F-4 · secuencia "Quickstart to Buyer" activada (0 emails enviados hoy) | **P0-08** |
-| F-5 · Meta Pixel + Google Ads IDs reales | **P2-04** |
-| GSC · conectar GA4 y token de GSC que no muere a los 7 días | **P1-01** |
-| Homepage: bundle $29.99 arriba, garantía Hotmart visible, OTO de complete-access | **P1-04** |
-| Pedir testimonios reales a compradores previos → `data/social-proof.json` (mínimo 3) | **P1-10** |
-| `flash-sale.html` conectado como destino de los emails de oferta, mensual | **P1-04** |
-| Eventos de conversión de compra (`purchase`, `checkout_click`) activos y reconciliados | **P0-07** |
-| 5 landing pages de herramientas top con SEO long-tail en español | **P1-03** |
-| 5 pins/día en Pinterest hacia su herramienta + primer score en `data/social-performance.json` | **P1-03** |
-| 3 páginas "vs" nuevas en `compare/` | **P1-03** |
-| Lista de 20 creadores ES del nicho y contacto de 5 con propuesta + material listo | **P1-08** |
-| Posts en foros/reddits con la herramienta gratis (solo donde las reglas lo permitan) | **P1-08** |
-| Duplicar la producción del canal con mejor score | **P1-03** |
-| Piloto de paid acquisition a $5/día solo si la orgánica pasa del 2% | **P2-04** |
-| Dashboard de KPI (6 pestañas: DASHBOARD, RAW_MAILERLITE, RAW_HOTMART, RAW_PLAY_CONSOLE, RAW_GA4, LOG) | **P1-07** |
-| Trigger de alerta del dashboard + `/kpi` y `/flash` en el bot de Telegram | **P2-07** |
-| 145 artículos que faltan (59 del cluster `servitors` = 40% del hueco) → subbloque de P1-03 | **P1-03** |
-| Aftermarket kit: 8 plantillas de Canva, guía PDF de 1 página, `swipe-emails` y `swipe-social` con disclosure y UTM por plataforma | **P1-08** |
-| Especificación de artículos para YouTube (spec: `projects/plans/YT_ARTICLES_ATOMIC_PLAN.md`; aún sin ejecutar) | **P1-03** |
-| Matriz legal de proveedores: 9 puntos de consentimiento y propiedad (owner firma) | **P0-06** |
-| MailerLite: 6 grupos/forms/automaciones del checklist (owner) | **P0-08** |
-| Traffic autopilot: 4 jobs registrados en el scheduler (código ya listo) | **P2-07** |
-| Decidir el canal Telegram canónico — RESUELTO: hay 2 canales y 2 grupos, todos en los emails | **P1-08** |
-| T3 · oferta "Inner Circle" sin ID externo: fuera del canal hasta tener ID | **P0-03** |
+| Catálogo | 12 apps Android, 7 libros PDF (EN/ES), 71 herramientas web |
+| Superficie | 1.051 URLs en sitemap, 1.157 HTML, 882 artículos |
+| Tráfico | 607 sesiones/28d · 420 clics orgánicos · 15.050 impresiones en octubre |
+| Audiencia | Telegram 1.998 + 717 · correo 7 (2 activos) · YouTube sin verificar |
+| Ingresos verificados 2026 | 9 ventas Hotmart · ≈70 USD · ticket medio 8,30 USD |
+| Embudo | 1,98 % sesión→clic de compra · 0,16 % sesión→venta |
+| Decisión | Subir el 1,98 % a 4 % en 90 días y multiplicar el tráfico útil, no el número de páginas |
 
 ---
 
-## Ya en marcha (no rehacer)
+## 1. Estado verificado (19-nov-2026)
 
-| Qué | Estado | Dónde |
+### 1.1 Lo que ya está resuelto
+
+| Cambio | Evidencia |
+|---|---|
+| Checkout de Hotmart identificado y abierto (EN `N108147778I`, ES `V107097103W`, Codex `W106595764X`, Servidores `U108075109V`) | apertura real en navegador; API de ventas devuelve pedidos |
+| GA4 consultable (propiedad 521860259) y eventos llegando | 993 `page_view`, 12 `purchase_click`, 10 `app_store_click` en 28d |
+| API de Hotmart operativa | `python scripts/cro-weekly.py` imprime 9 ventas |
+| MailerLite operativo | 7 suscriptores (2 activos) vía API |
+| Promesa imposible del bundle de apps eliminada | `landing-pages/apps-bundle.html`, `apps/index.html` |
+| Ofertas muertas cerradas | `flash-sale.html` → redirect; `complete-access.html` con las dos compras reales |
+| Prueba social fabricada eliminada | «David S.» y «4,7★/128+» fuera; queda la reseña real con enlace |
+| Contadores unificados | 7 libros, 23 reseñas, 12 apps, 100+ instalaciones |
+| PII y cookies fuera del sitio público | `projects/clientes/`, `projects/cookies*.json` → 404 |
+
+### 1.2 Lo que sigue roto
+
+| Problema | Evidencia |
+|---|---|
+| 84 % de las páginas con impresiones no reciben un clic | 568 de 680 páginas, GSC 28d |
+| La página con más tráfico orgánico no produce ni un clic de compra | guía de iniciación: 46 sesiones, 0 `purchase_click` |
+| 191 consultas tienen más de una URL compitiendo | GSC, dimensión query+page |
+| La herramienta gratuita dibuja sellos goéticos, no sigilos caóticos | `tools/sigil-generator.html` + iframe externo |
+| El correo no existe como canal | 7 suscriptores con 607 sesiones/mes |
+| La app estrella tiene 23 reseñas; las otras 11, ninguna | fichas de Play |
+| El historial de git conserva los datos de clientes retirados | `git log -- projects/clientes` |
+
+---
+
+## 2. Mega-auditoría
+
+Cada dominio termina con un veredicto. La evidencia manda; las hipótesis van marcadas.
+
+### 2.1 Producto y catálogo
+
+- 12 apps de pago único, 2,99–14,99 $. **Solo Sigil Maker tiene valoraciones** (5,0 · 23 · 100+ instalaciones). El resto: 0–50 instalaciones y ninguna opinión.
+- 7 libros, 3,99–9,99 $, bundle a 29,99 $ (suma 58,93 $). El bundle es la única compra conjunta posible: Play prohíbe empaquetar apps.
+- La app estrella y la herramienta gratuita **no hacen lo mismo**, y el sitio no lo dice hasta la mitad de la página.
+
+**Veredicto:** el catálogo no necesita más producto. Necesita que el producto existente se vea y se entienda. Toda app nueva antes de arreglar el embudo es capital inmovilizado.
+
+### 2.2 Web y SEO técnico
+
+- 680 páginas reciben alguna impresión; **568 (84 %) tienen cero clics** y 631 (93 %) menos de dos.
+- El 56 % de los clics se concentra en 10 URLs.
+- CTR global 2,18 % con posición media 19,9. En octubre, 15.050 impresiones y 407 clics (2,7 %).
+- 191 consultas con más de una URL del sitio compitiendo. Ejemplo: «sigil maker» reparte impresiones entre la herramienta (6 clics) y tres artículos con 0.
+- Deuda estructural: 758 páginas con etiquetas desbalanceadas. Los navegadores lo toleran; los parsers y algunos rastreadores, no siempre.
+
+**Veredicto:** el problema no es publicar menos, es publicar sin intención. 84 % de páginas sin un clic es un almacén, no un activo.
+
+### 2.3 CRO y embudo
+
+Datos de 28 días (GA4 + Hotmart):
+
+| Paso | Personas | Tasa sobre el paso anterior |
 |---|---|---|
-| Campaña de email ad-hoc | 50/día, 783 en cola, tope diario persistente, watchdog de quejas | `projects/scripts/guerrilla-*.mjs` |
-| Posts de Telegram | 10 publicados en el canal oficial, con botón al grupo | `guerrilla-telegram-auto.mjs` |
-| Respuestas automáticas en el grupo | servicio listo, espera a que el bot entre (G11) | `guerrilla-telegram-auto.mjs listen` |
-| Auditoría de estilo del sitio | 994 páginas revisadas, 42 remapeadas a la paleta, 167 duplicados de CSS quitados | `projects/scripts/style-*.mjs` |
-| Email→Telegram | los 2 canales y los 2 grupos en los 783 emails | `guerrilla-copy2.mjs` |
-| Build de tools y funnels | 71 tools, motor atómico, 331/331 comprobaciones | `scripts/test-tool-funnels.mjs` |
+| Sesiones | 607 | — |
+| Vio un producto | 129 | 21,3 % |
+| Abrió ficha | 82 | 63,6 % |
+| Clic de salida | 26 | 31,7 % |
+| Clic de compra | 12 | 46,2 % |
+| Venta | 1 | 8,3 % |
+
+Por página, los clics de compra se reparten así: home 5 (de 69 sesiones, **7,2 %**), `best-occult-apps` 2 (de 16, 12,5 %), `books/` 2, y **1 o 0** en cada ficha y en cada artículo.
+
+Es decir: **la home convierte 3,6 veces mejor que el resto del sitio**, y las páginas de blog que traen el tráfico orgánico no convierten nada. El embudo no está roto en el checkout; está roto en el salto de «leer» a «ver el producto».
+
+Tres fugas verificadas y ya corregidas esta semana (testimonio inventado, 4,7/128 falso, política de reembolso doble) y una cuarta pendiente: el CTA del artículo principal aparece tras el 40 % del texto.
+
+**Veredicto:** el 1,98 % es un problema de ubicación y de oferta, no de precio. Con la misma audiencia, mover el CTA a la primera pantalla es la intervención más barata del año.
+
+### 2.4 Contenido
+
+- 882 artículos; 568 páginas sin un clic. La cola larga produce impresiones, no dinero.
+- El contenido que sí funciona es el que responde a una intención concreta: «sigil maker», «goetic magic», «ghost hunting apps».
+- El contenido genérico («what is chaos magick» repetido en 30 variantes) infla el índice y diluye la autoridad.
+
+**Veredicto:** no escribir más hasta consolidar. Regla nueva: una URL nueva solo si responde a una consulta con demanda demostrada y enlaza a un producto.
+
+### 2.5 ASO (Google Play)
+
+- Sigil Maker: nombre comercial distinto al del sitio («Sigil Maker: Chaos Magick» vs «Magick Chaos Sigil Generator»). Rompe el reconocimiento y la atribución.
+- 11 fichas sin reseñas: Play ordena por instalaciones y valoraciones; sin ninguna, no aparecen.
+- Precios entre 2,99 y 14,99 $: coherentes con el sitio; NOCTEM es la más cara y la de mayor margen por unidad.
+
+Detalle por app en docs/aso-12-apps.md.
+
+**Veredicto:** el ASO no es cosmético: con 23 reseñas en una app y 0 en once, la tienda no puede recomendar el catálogo. Pedir reseña tras la compra es la acción de mayor retorno por hora.
+
+### 2.6 Libros y Hotmart
+
+- 9 ventas en 2026, 4 monedas. Ticket medio 8,30 USD. La única venta del bundle fue a 24,99 $ (precio anterior; hoy 29,99 $).
+- La landing ES existe y funciona; la EN va directa al checkout sin portada, índice ni autor.
+- El comprador ve «US$29.99» en la web y la moneda local en el checkout: sin aviso, parece un error.
+- El bundle se ofrece como **única** puerta. No hay escalera: nadie compra 29,99 $ como primera compra de un autor que no conoce.
+
+**Veredicto:** el bundle no es una oferta de entrada. Es una oferta de segunda compra. Primero el Codex de 4,99 $.
+
+### 2.7 Datos y medición
+
+- GA4 registra el embudo, pero **no registra `purchase`**: el checkout vive en Hotmart. Las ventas se leen de la API, que es la fuente de verdad.
+- No hay ingresos de Play en ningún informe: la consola no los expone por API y la Reporting API solo da estabilidad (crashes, ANR), no instalaciones. Verificado contra el discovery de `playdeveloperreporting v1beta1`.
+- El informe semanal existe y se ejecuta: `python scripts/cro-weekly.py`.
+
+**Veredicto:** se puede decidir con lo que hay. Falta cerrar el círculo venta↔campaña, y eso depende del webhook de Hotmart.
+
+### 2.8 Seguridad, legal y confianza
+
+- Se publicaron con HTTP 200 `projects/clientes/*` (CSV/XLSX con datos de clientes) y `projects/cookies*.json`. Retirados del árbol; **siguen en el historial** y hay que decidir purga y rotación.
+- El sitio promete «7 días de garantía» y hasta esta semana también «48 horas» en una página.
+- Consentimiento por defecto denegado y banner funcional; sin CSP ni HSTS comprobados (ver informe de seguridad adjunto en la conversación).
+
+**Veredicto:** la confianza es el activo más frágil del nicho. Una reseña falsa o un CSV de clientes expuesto valen más que cualquier campaña, en negativo.
 
 ---
 
-## Automatización ya montada
+## 3. El objetivo, en una línea
 
-| Qué | Cómo | Dónde |
+> **Pasar de 12 clics de compra por 607 sesiones a 60 clics por 1.500 sesiones en 90 días**
+> — de 1,98 % a 4 % de conversión y 2,5× de tráfico útil, con el mismo catálogo.
+
+Traducido a dinero, con el ticket medio actual: de ~8 $/mes en libros a 40–60 $/mes, más apps.
+
+---
+
+## 4. Plan de 90 días
+
+Responsables: **DIR** dirección, **CRO** copy y embudo, **SEO** buscadores, **ASO** Play,
+**CONT** contenido, **DAT** datos, **SEC** seguridad, **LEG** legal.
+Aceptación = cómo se comprueba, no cómo se siente.
+
+### Fase 0 — Cerrar brechas (días 0-7)
+
+| # | Tarea | Resp. | Aceptación |
+|---|---|---|---|
+| 0.1 | Rotar sesiones y credenciales afectadas por los ficheros retirados; decidir purga del historial | SEC/DIR | sesiones viejas invalidadas; decisión escrita |
+| 0.2 | 301 de `/index.html` a `/` (hoy 43 sesiones duplicadas) | SEO | una sola home en GA4 |
+| 0.3 | CTA de producto en la primera pantalla de la guía de iniciación | CRO | `purchase_click` desde esa URL > 0 en 14 días |
+| 0.4 | Sustituir el iframe goético por un generador de sigilos caóticos en la propia página | CRO/DIR | la herramienta dibuja lo que promete el H1 |
+| 0.5 | Revisar que ninguna página prometa bundle de apps ni plazos de reembolso distintos | LEG | `grep` de claims = 0 |
+
+### Fase 1 — Monetizar el tráfico que ya existe (días 8-30)
+
+| # | Tarea | Resp. | Aceptación |
+|---|---|---|---|
+| 1.1 | Escalera de precios: Codex 4,99 $ como oferta de entrada en las páginas de sigilos; bundle como segundo paso | CRO | ≥3 ventas de Codex/mes |
+| 1.2 | Landing EN del bundle con portada, índice, autor y muestra de 4 páginas sin email | CONT | la home EN deja de mandar al checkout |
+| 1.3 | Nota de moneda local en todos los CTA de Hotmart | CRO | 0 páginas con precio sin aviso |
+| 1.4 | Módulo de oferta en las 3 páginas con más clics (guía, goetia, ghost hunting) | CRO | `purchase_click` por sesión ≥ 2 % en cada una |
+| 1.5 | Pedir reseña a compradores verificados de Sigil Maker (email + enlace directo) | ASO | de 23 a 35 reseñas |
+| 1.6 | Unificar el nombre comercial entre web y Play | ASO | mismo nombre en ficha, home y CTA |
+
+### Fase 2 — Construir la audiencia propia (días 31-60)
+
+| # | Tarea | Resp. | Aceptación |
+|---|---|---|---|
+| 2.1 | Secuencia de bienvenida (3 correos) con el Codex como oferta | CONT/DAT | 100 suscriptores y ≥2 ventas atribuidas |
+| 2.2 | Oferta única en Telegram con enlace UTM propio | CRO | clics medidos; ≥1 venta atribuida |
+| 2.3 | Publicación diaria de resultado compartible (la tarjeta 1080×1080 ya existe) | CONT | 30 piezas/mes |
+| 2.4 | Webhook Hotmart → GA4 (purchase real) | DAT | `purchase` visible en GA4 con producto y valor |
+| 2.5 | Consolidar o noindex las páginas con 0 clics (criterio: 0 clics y 0 impresiones en 90 días) | SEO | sitemap ≤ 700 URLs útiles |
+
+### Fase 3 — Escalar lo que funcione (días 61-90)
+
+| # | Tarea | Resp. | Aceptación |
+|---|---|---|---|
+| 3.1 | Reescribir títulos y metas de las 10 consultas en posición 4-15 | SEO | CTR global ≥ 3 % |
+| 3.2 | Freemium en 1 app (la segunda mejor valorada) para entrar en el ranking de Play | ASO/DIR | instalaciones ×10 en 60 días |
+| 3.3 | Export mensual de finanzas de Play y anexo al informe | DAT | ingresos de apps auditados |
+| 3.4 | Solo si el embudo supera el 4 %: probar paid con presupuesto de 100 $ | DIR | CAC < 30 % del ticket |
+
+---
+
+## 5. Backlog absorbido (de los planes eliminados)
+
+Estos puntos vienen de los planes anteriores y siguen vigentes, con su estado corregido:
+
+| Origen | Punto | Estado hoy |
 |---|---|---|
-| Campaña diaria | Tarea programada de Windows **"Cha0smagick Campana"**, 09:00 cada día, límites de la tarea | `%USERPROFILE%\bin\cha0smagick-campaign.cmd` |
-| Política de envío | 50/día con rampa (20 → 30 → 40 → 50), pausa 3-8 min, 1 por dominio, ventana 09:00-20:00, watchdog de quejas y rebotes | `projects/scripts/guerrilla-policy.mjs` |
-| Preflight | Si BrowserOS no responde, el runner lo arranca; si no puede, sale sin hacer nada | `guerrilla-run.mjs` |
-| Auditoría de entregabilidad | Comprueba los 783 emails contra los criterios de spam (asunto, cuerpo, dirección, opt-out, links, duplicados) | `projects/scripts/audit-deliverability.mjs` |
-
-La tarea corre a las 09:00 y va hasta ~14:00 (50 correos a 3-8 min cada uno), muy
-dentro de la ventana. El presupuesto diario rota solo por fecha, así que mañana
-empieza con el tope de la rampa sin intervention.
+| guerrilla 4.1 | listmonk autoalojado para volumen de correo | **Pendiente**; MailerLite ya funciona con 7 suscriptores. Decidir cuando la lista pase de 500 |
+| guerrilla 4.2 | astronomy-engine para el ascendente en herramientas web | **Pendiente**; afecta a `tools/full-birth-chart.html` y a Astral Lab (fuera del repo) |
+| guerrilla 4.3 | Bundle EN | **Hecho** (`N108147778I`); falta landing propia |
+| guerrilla 4.4 | Freemium en 1-2 apps | **Pendiente**; pasa a Fase 3 |
+| guerrilla 4.6 | Lista de correo propia | **Desbloqueado**: API operativa, 7 suscriptores, sin secuencia |
+| guerrilla 4.7 | Ritmo en Telegram + tarjeta compartible | **Pendiente**; la tarjeta ya está implementada |
+| audit-5000 §5.1 | Checkout verificado | **Hecho** (abrir + ventas reales) |
+| audit-5000 §5.2 | Reconciliación financiera | **Parcial**: Hotmart sí (API), Play no |
+| audit-5000 §5.3 | Eventos GA4 probados | **Hecho**: ≈970 page_view y 12 purchase_click en 28d |
+| seo-top1 | Estabilizar el sitio antes de perseguir top-3 | **Vigente**: 84 % de páginas sin clic |
+| seo-top1 | Cluster de sigilos a top-3 | **Vigente**: hoy pos 10-12, CTR 2 % |
+| contenido-p1-03 | 145 artículos pendientes del cluster servitors | **Congelado**: no se escribe hasta consolidar |
+| contenido-p1-03 | 12 herramientas de segunda capa | **Congelado** por la misma razón |
+| ASO-play-titles | Títulos ≤30 caracteres y consistencia | **Vigente**: pasa a tarea 1.6 |
 
 ---
 
-## Reglas de ejecución
+## 6. Puertas externas (actualizadas)
 
-1. **Una tarea a la vez.** Depende de la anterior si dice que depende.
-2. **La evidencia es en producción**, no local: URL, commit o captura.
-3. **Si una tarea necesita una puerta externa**, se pide y se para: no se
-   marca hecha por estar "preparada".
-4. **Nada de URLs inventadas.** Si un checkout no está verificado, la página
-   queda en estado bloqueado, como ya se hizo con Complete Access y Flash Sale.
-5. **El self-check manda:** `node projects/scripts/guerrilla-selfcheck.mjs` (16 checks).
-   Y `node scripts/test-tool-funnels.mjs` (331 checks).
-6. **Si una tarea resulta estar ya hecha**, se marca `[x]` con la evidencia y
-   no se vuelve a trabajar. La lista de lo cerrado está en `plans-completados.md`.
+| # | Puerta | Estado | Qué falta |
+|---|---|---|---|
+| G1 | IDs de checkout de Hotmart | **Cerrada** (4 IDs verificados) | — |
+| G2 | Transacción de prueba + refund | **Parcial** | hacer una compra real de 3,99 $ y su refund |
+| G3 | CSV financieros de Play | **Abierta** | export mensual desde Play Console |
+| G4 | GA4 | **Cerrada** (API operativa) | — |
+| G5 | Service account GSC | **Cerrada** | — |
+| G6 | MailerLite | **Cerrada** (API responde) | — |
+| G7 | Webhook Hotmart → GA4/MailerLite | **Abierta** | URL del receptor + secreto |
+| G8 | Meta Pixel / Google Ads | **Abierta** | IDs reales (hoy `PONER_...`) |
+| G9 | Play Console | **Parcial** | precios por país y disponibilidad |
+| G10 | Código promo de Play | **Abierta** | crear el código |
+| G11 | Bot en Telegram | **Abierta** | añadirlo a canal y grupos |
+| G12 | Consentimiento legal | **Abierta** | matriz de proveedores firmada |
+| G13 | Acceso GSC | **Cerrada 2026-10-21** | — |
+
+---
+
+## 7. Histórico cerrado (absorbe `plans-completados.md`)
+
+- Inventario canónico de URLs (`docs/canonical-asset-inventory.md`, v1.2.0).
+- Reconciliación catálogo apps/páginas/Play (`docs/reconciliacion-catalogo.md`).
+- Instrumentación del embudo y allowlist de analítica (`docs/event-contract.md`).
+- Auditoría de indexación, E-E-A-T y herramientas gratuitas (P1-11 a P1-15).
+- Corrección de la oferta: apps-bundle sin promesa imposible, flash-sale retirada, complete-access con compras reales.
+- Corrección de prueba social: reseña real, contadores unificados, claims de reembolso unificados.
+- Retirada de datos de clientes y cookies del árbol público.
+- Referencias vivas: docs/canonical-asset-inventory.md, docs/event-contract.md, docs/reconciliacion-catalogo.md, docs/aso-12-apps.md, docs/OWNER-MANUAL-CHECKLIST.md, docs/ecosistema-telegram-2026-10.md.
+- Informe público 2026 en PDF (`projects/informe-2026/`).
+
+---
+
+## 8. Medición
+
+Un comando: `python scripts/cro-weekly.py [días]` → GSC + GA4 + ventas Hotmart.
+Revisión semanal. Un cambio sin métrica asociada no se considera hecho.
+
+| Métrica | Hoy | 30 días | 90 días |
+|---|---|---|---|
+| Sesiones/mes | 607 | 900 | 1.500 |
+| Clic de compra / sesión | 1,98 % | 3 % | 4 % |
+| Venta / sesión | 0,16 % | 0,35 % | 0,5 % |
+| Reseñas de la app estrella | 23 | 30 | 40 |
+| Suscriptores de correo | 7 | 100 | 300 |
+| Ventas Hotmart/mes | 1 | 3 | 6 |
+
+## 9. Reglas de ejecución
+
+1. Nada se declara hecho sin evidencia en producción (URL, commit o salida de comando).
+2. Un cambio que no se puede medir no se hace, salvo que sea un defecto de confianza o legal.
+3. No se publican testimonios sin enlace verificable, ni urgencias con fecha falsa.
+4. No se prometen bundles de apps: Play no los permite.
+5. Cada URL nueva responde a una consulta con demanda y enlaza a un producto.
+6. Antes de escalar tráfico, el embudo debe superar el 3 %.
+
+## 10. Registro de cambios
+
+| Fecha | Cambio |
+|---|---|
+| 2026-10-01 | v1: plan único tras absorber el backlog de ventas, SEO, legal y Telegram |
+| 2026-11-07 | v2: se añaden los planes de contenido y de top-3 del cluster de sigilos |
+| 2026-11-19 | v3: mega-auditoría con datos frescos (GSC/GA4/Hotmart/Play), cierre de 6 puertas, corrección de estados obsoletos, plan 90 días orientado a conversión |
