@@ -2665,7 +2665,7 @@
           '<h3>' + (es ? 'Otros grimorios del mismo sistema' : 'More grimoires from the same system') + '</h3>' +
           '<ul class="cm-xlist">' + rows + '</ul>' +
           '<div class="cm-funnel-btns" style="margin-top:14px;">' +
-          '<a class="cm-btn cm-btn-book" href="../landing-pages/books-bundle.html" data-funnel-step="book" data-product-id="books-bundle">' +
+          '<a class="cm-btn cm-btn-book" href="../landing-pages/' + (es ? 'books-bundle.html' : 'books-bundle-en.html') + '" data-funnel-step="book" data-product-id="books-bundle">' +
           (es ? 'VER EL BUNDLE COMPLETO' : 'SEE THE FULL BUNDLE') + '</a></div></div>';
       }
     } else {

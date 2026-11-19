@@ -179,8 +179,8 @@ Aceptación = cómo se comprueba, no cómo se siente.
 | 0.2 | ~~301 de `/index.html` a `/`~~ **HECHO 2026-11-19**: Pages no permite 301; la URL se reescribe con `history.replaceState` antes de configurar GA4 | SEO | una sola home en GA4 |
 | 0.3 | ~~CTA de producto en la primera pantalla de la guía de iniciación~~ **HECHO 2026-11-19**: banda con botón a Play y enlace a la herramienta, bajo el segundo párrafo | CRO | `purchase_click` desde esa URL > 0 en 14 días |
 | 0.4 | ~~Sustituir el iframe goético por un generador de sigilos caóticos~~ **HECHO 2026-11-19**: generador SVG determinista en `tools/sigil-generator.html`, sin dependencias, con descarga | CRO/DIR | la herramienta dibuja lo que promete el H1 |
-| 0.5 | Revisar que ninguna página prometa bundle de apps ni plazos de reembolso distintos | LEG | `grep` de claims = 0 |
-| 0.6 | Evaluar obligación GDPR por los exports de ventas con ciudad/CP publicados | LEG | decisión documentada |
+| 0.5 | ~~Claims~~ **HECHO 2026-11-19**: 12 tarjetas «All 12 apps — $29.99» sustituidas por el enlace al desarrollador; reembolso unificado en `best-occult-apps-android.html` | LEG | `grep` de claims = 0 |
+| 0.6 | **Registro abierto**: `docs/decision-gdpr-2026-11.md` con hechos, riesgo y decisiones. La notificación a la AEPD la decide dirección | LEG | decisión firmada |
 | 0.7 | ~~Purgar el historial de git~~ **HECHO 2026-11-19**: `git filter-repo` sobre `.env`, `projects/clientes/`, cookies, tokens de MailerLite, ventas, reviews y métricas; force-push. Los SHA antiguos pueden seguir accesibles hasta que GitHub recoja basura: pedir purga a soporte si se quiere garantía | SEC | `git log --all -- .env` vacío |
 
 ### Fase 1 — Monetizar el tráfico que ya existe (días 8-30)
@@ -188,17 +188,17 @@ Aceptación = cómo se comprueba, no cómo se siente.
 | # | Tarea | Resp. | Aceptación |
 |---|---|---|---|
 | 1.1 | Escalera de precios: Codex 4,99 $ como oferta de entrada en las páginas de sigilos; bundle como segundo paso | CRO | ≥3 ventas de Codex/mes |
-| 1.2 | Landing EN del bundle con portada, índice, autor y muestra de 4 páginas sin email | CONT | la home EN deja de mandar al checkout |
-| 1.3 | Nota de moneda local en todos los CTA de Hotmart | CRO | 0 páginas con precio sin aviso |
+| 1.2 | ~~Landing EN del bundle~~ **HECHO 2026-11-19**: `landing-pages/books-bundle-en.html` con las 7 portadas, precios, FAQ y aviso de moneda; la home EN ya no manda al checkout. Muestra de 4 páginas pendiente (requiere el PDF) | CONT | la home EN deja de mandar al checkout |
+| 1.3 | ~~Nota de moneda local~~ **HECHO 2026-11-19** en home, landing EN, landing ES y escalera de la herramienta | CRO | 0 páginas con precio sin aviso |
 | 1.4 | Módulo de oferta en las 3 páginas con más clics (guía, goetia, ghost hunting) | CRO | `purchase_click` por sesión ≥ 2 % en cada una |
-| 1.5 | Pedir reseña a compradores verificados de Sigil Maker (email + enlace directo) | ASO | de 23 a 35 reseñas |
+| 1.5 | **Preparado**: `pages/leave-a-review.html` con las 12 apps y sus enlaces. Falta enviarlo a compradores (lista de Hotmart) | ASO | de 23 a 35 reseñas |
 | 1.6 | Unificar el nombre comercial entre web y Play | ASO | mismo nombre en ficha, home y CTA |
 
 ### Fase 2 — Construir la audiencia propia (días 31-60)
 
 | # | Tarea | Resp. | Aceptación |
 |---|---|---|---|
-| 2.1 | Secuencia de bienvenida (3 correos) con el Codex como oferta | CONT/DAT | 100 suscriptores y ≥2 ventas atribuidas |
+| 2.1 | ~~Secuencia de bienvenida~~ **REESCRITA 2026-11-19**: `email-sequences/quickstart-to-buyer.json`, 3 correos honestos (fuera el «4,5★/221 reseñas», el precio en COP y el experimento inventado). Falta activarla en MailerLite | CONT/DAT | 100 suscriptores y ≥2 ventas atribuidas |
 | 2.2 | Oferta única en Telegram con enlace UTM propio | CRO | clics medidos; ≥1 venta atribuida |
 | 2.3 | Publicación diaria de resultado compartible (la tarjeta 1080×1080 ya existe) | CONT | 30 piezas/mes |
 | 2.4 | Webhook Hotmart → GA4 (purchase real) | DAT | `purchase` visible en GA4 con producto y valor |
