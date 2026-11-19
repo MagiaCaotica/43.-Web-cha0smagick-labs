@@ -92,3 +92,8 @@ data/guerrilla/
 # credenciales temporales de scripts
 .hotmart-*
 scripts/finance/.hotmart-*
+
+# Datos de clientes y sesiones: nunca publicados. Detectado expuesto el 2026-11-19.
+projects/clientes/
+projects/cookies.json
+projects/cookies_temp.json
