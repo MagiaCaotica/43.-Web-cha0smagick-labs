@@ -67,7 +67,7 @@
       "name": "Is the free sigil generator fully functional?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! You can generate all 72 Goetic spirit seals with cryptographic entropy. The premium Chaos Sigil Generator app (cha0smagicklabs.com/apps/chaos-sigil-generator.html) adds a sigil library, ritual timer with flash gnosis, and full offline access."
+        "text": "Yes. The free web tool turns a sentence into a chaos sigil in your browser, without an account. The Android app (cha0smagicklabs.com/apps/chaos-sigil-generator.html) adds 6 occult alphabets, 7 planetary kameas, a sigil library, intent journaling and full offline use."
       }
     },
     {
@@ -134,7 +134,7 @@
     <div class="container">
         <section class="hero">
             <h1>Free Online Sigil Maker & Generator</h1>
-<p class="lead" style="max-width:720px;margin:0 auto 1rem;color:#bbb">This free tool draws the <strong>72 Goetic spirit seals</strong>. The Android app does something different: it turns <strong>your own sentence</strong> into a chaos sigil, with 6 occult alphabets and 7 planetary kameas, offline. <a href="../apps/chaos-sigil-generator.html">See the difference</a>.</p>
+<p class="lead" style="max-width:720px;margin:0 auto 1rem;color:#bbb">Type one sentence and get a <strong>chaos sigil</strong> drawn from it, free and in your browser. The Android app does the same and adds <strong>6 occult alphabets, 7 planetary kameas, a sigil library</strong> and full offline use. <a href="../apps/chaos-sigil-generator.html">See what the app adds</a>.</p>
             <p>Create powerful sigils using cryptographic entropy. Choose from Goetic seals, ancient alphabets, or design your own custom sigil for chaos magick.</p>
         </section>
 
@@ -193,17 +193,125 @@
             <p>Sigils are not usually summoned at random. Traditional timing puts fire and solar work in the Sun's hour, water and lunar work in the Moon's, and air work in the hours of Mercury. <a href="../blog/planetary-magic-hours-guide.html">Planetary magic hours</a> sets out the hour table, and <a href="../blog/planetary-magic-squares-sigil-creation.html">planetary magic squares</a> covers the specific squares used for this kind of work. Getting the timing wrong is the most common reason a beginner's sigil work produces nothing.</p>
         </article>
 
-        <section class="tool-frame">
-            <iframe src="https://cha0smagick-generador-de-sellos-goeticos.hf.space" frameborder="0" title="Free Goetic Sigil Generator Online Tool" loading="eager" allow="clipboard-read; clipboard-write"></iframe>
-            <div class="label">Free Online Tool — Try it now</div>
+        <section class="tool-frame" id="sigil-tool" style="background:#0b0b0b;border:1px solid #262626;border-radius:12px;padding:1.5rem 1.2rem;margin:2rem 0">
+            <h2 style="margin:0 0 .4rem;text-align:center;color:#e0c98a">Make your sigil</h2>
+            <p style="text-align:center;color:#a8a8a8;margin:0 0 1rem;font-size:.95rem">One sentence, present tense, no negatives. The same sentence always returns the same sigil.</p>
+            <form id="sigil-form" style="display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center" autocomplete="off">
+                <label for="sigil-intent" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Your statement of intent</label>
+                <input id="sigil-intent" type="text" maxlength="140" placeholder="I am paid for my work" style="flex:1 1 320px;min-width:0;padding:.75rem .9rem;background:#050505;border:1px solid #333;border-radius:6px;color:#f0f0f0;font-size:1rem">
+                <button type="submit" style="padding:.75rem 1.4rem;background:#c9a84c;color:#0a0a0a;border:none;border-radius:6px;font-weight:700;font-size:.95rem;cursor:pointer">Draw my sigil</button>
+            </form>
+            <div id="sigil-output" style="display:flex;justify-content:center;margin-top:1rem" aria-live="polite"></div>
+            <p id="sigil-note" style="text-align:center;color:#8a8a8a;font-size:.85rem;margin:.8rem 0 0">Your sigil is drawn in your browser. Nothing is sent anywhere.</p>
+            <p id="sigil-actions" style="text-align:center;margin:.6rem 0 0;display:none">
+                <a id="sigil-download" download="sigil.svg" href="#" style="color:#c9a84c;font-size:.9rem">Download the SVG</a>
+                <span style="color:#444">&middot;</span>
+                <a href="../apps/chaos-sigil-generator.html" style="color:#c9a84c;font-size:.9rem">Get the app for alphabets, kameas and offline use &rarr;</a>
+            </p>
+            <p style="text-align:center;color:#6f6f6f;font-size:.8rem;margin:.8rem 0 0">Looking for the 72 Goetic seals instead? <a href="https://cha0smagick-generador-de-sellos-goeticos.hf.space" target="_blank" rel="noopener" style="color:#9a9a9a">Open the Goetic seal generator</a>.</p>
         </section>
+        <script>
+        (function () {
+            var form = document.getElementById('sigil-form');
+            var input = document.getElementById('sigil-intent');
+            var out = document.getElementById('sigil-output');
+            var note = document.getElementById('sigil-note');
+            var actions = document.getElementById('sigil-actions');
+            var dl = document.getElementById('sigil-download');
+            if (!form) return;
+
+            function normalise(text) {
+                return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                    .toUpperCase().replace(/[^A-Z]/g, '');
+            }
+
+            function reduce(letters) {
+                var noVowels = letters.replace(/[AEIOU]/g, '');
+                var base = noVowels.length >= 3 ? noVowels : letters;
+                var seen = {};
+                var kept = '';
+                for (var i = 0; i < base.length; i++) {
+                    var ch = base[i];
+                    if (!seen[ch]) { seen[ch] = 1; kept += ch; }
+                }
+                return kept.length >= 3 ? kept : base;
+            }
+
+            function hash(text) {
+                var h = 2166136261;
+                for (var i = 0; i < text.length; i++) {
+                    h ^= text.charCodeAt(i);
+                    h = Math.imul(h, 16777619);
+                }
+                return h >>> 0;
+            }
+
+            function point(ch, rotation, radius, cx, cy) {
+                var idx = ch.charCodeAt(0) - 65;
+                var angle = (idx / 26) * Math.PI * 2 - Math.PI / 2 + rotation;
+                return [cx + Math.cos(angle) * radius, cy + Math.sin(angle) * radius];
+            }
+
+            function pathFrom(letters, rotation, mirror) {
+                var d = '';
+                for (var i = 0; i < letters.length; i++) {
+                    var p = point(letters[i], rotation, 92, 100, 100);
+                    if (mirror) p[0] = 200 - p[0];
+                    d += (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ' ' + p[1].toFixed(1) + ' ';
+                }
+                return d + 'Z';
+            }
+
+            function draw(intent) {
+                var letters = normalise(intent);
+                if (letters.length < 2) {
+                    note.textContent = 'Write at least two letters so there is something to draw.';
+                    actions.style.display = 'none';
+                    return;
+                }
+                var reduced = reduce(letters);
+                var h = hash(intent.trim().toLowerCase());
+                var rotation = ((h % 360) * Math.PI) / 180;
+                var ticks = 6 + (h % 7);
+                var primary = pathFrom(reduced, rotation, false);
+                var mirrored = pathFrom(reduced, rotation, true);
+
+                var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="300" height="300" role="img" aria-label="Sigil generated from your statement">'
+                    + '<circle cx="100" cy="100" r="96" fill="none" stroke="#c9a84c" stroke-width="0.6" opacity="0.5"/>'
+                    + '<circle cx="100" cy="100" r="90" fill="none" stroke="#c9a84c" stroke-width="0.3" opacity="0.3"/>';
+                for (var t = 0; t < ticks; t++) {
+                    var a = (t / ticks) * Math.PI * 2;
+                    var x1 = 100 + Math.cos(a) * 96, y1 = 100 + Math.sin(a) * 96;
+                    var x2 = 100 + Math.cos(a) * 90, y2 = 100 + Math.sin(a) * 90;
+                    svg += '<line x1="' + x1.toFixed(1) + '" y1="' + y1.toFixed(1) + '" x2="' + x2.toFixed(1) + '" y2="' + y2.toFixed(1) + '" stroke="#c9a84c" stroke-width="0.8"/>';
+                }
+                svg += '<path d="' + primary + '" fill="none" stroke="#e8cf8a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'
+                    + '<path d="' + mirrored + '" fill="none" stroke="#c9a84c" stroke-width="1.1" opacity="0.55" stroke-linejoin="round"/>'
+                    + '<circle cx="100" cy="100" r="2" fill="#e8cf8a"/>'
+                    + '</svg>';
+
+                out.innerHTML = svg;
+                note.textContent = 'Reduced to ' + reduced.split('').join(' \u00b7 ') + '. The same sentence always draws the same mark.';
+                actions.style.display = 'block';
+                dl.href = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+                dl.setAttribute('download', 'sigil-' + reduced.toLowerCase().slice(0, 12) + '.svg');
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                draw(input.value);
+            });
+
+            draw('I am paid for my work');
+        })();
+        </script>
 
         <!-- FUNNEL: Comparison Table -->
         <section class="compare-section">
             <h2 class="section-title compare-section" style="text-align:center;margin-bottom:1rem;">Free Web Tool vs Premium Android App</h2>
             <table class="compare-table">
                 <tr><th>Feature</th><th>Free Web Tool</th><th>Android App</th></tr>
-                <tr><td>What it draws</td><td>72 Goetic spirit seals</td><td>Chaos sigils from your own sentence</td></tr>
+                <tr><td>What it draws</td><td>Chaos sigil from your sentence</td><td>The same, with 6 alphabets and 7 kameas</td></tr>
                 <tr><td>Cryptographic entropy engine</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
                 <tr><td>High-resolution export</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
                 <tr><td>6 occult alphabets and 7 planetary kameas</td><td class="cross">&#10007;</td><td class="check">&#10003;</td></tr>
@@ -227,7 +335,7 @@
             <h2 class="section-title funnel-faq" style="text-align:center;margin-bottom:1rem;">Free Sigil Maker FAQ</h2>
             <details>
                 <summary>Is the free sigil generator fully functional?</summary>
-                <div class="faq-answer">Yes. The web tool draws the 72 Goetic spirit seals for free. The <a href="../apps/chaos-sigil-generator.html">Android app</a> is a different tool: it turns your own sentence into a chaos sigil, with 6 occult alphabets, 7 planetary kameas, intent journaling, a sigil library and offline access.</div>
+                <div class="faq-answer">Yes. The web tool turns your sentence into a chaos sigil in the browser, free and without an account. The <a href="../apps/chaos-sigil-generator.html">Android app</a> adds 6 occult alphabets, 7 planetary kameas, a sigil library, intent journaling and full offline use.</div>
             </details>
             <details>
                 <summary>What if I buy and it's not for me?</summary>
