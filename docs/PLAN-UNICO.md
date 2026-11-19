@@ -144,6 +144,7 @@ Detalle por app en docs/aso-12-apps.md.
 ### 2.8 Seguridad, legal y confianza
 
 - Se publicaron con HTTP 200 `projects/clientes/*` (CSV/XLSX con datos de clientes) y `projects/cookies*.json`. Retirados del árbol; **siguen en el historial** y hay que decidir purga y rotación.
+- Cabeceras del dominio (comprobadas 19-nov): `strict-transport-security`, `content-security-policy`, `x-frame-options`, `referrer-policy` y `x-content-type-options` **ausentes**. GitHub Pages no permite cabeceras propias: el `_headers` del repo solo lo respeta Cloudflare. Ver `docs/action-cloudflare-headers.md`.
 - El sitio promete «7 días de garantía» y hasta esta semana también «48 horas» en una página.
 - Consentimiento por defecto denegado y banner funcional; sin CSP ni HSTS comprobados (ver informe de seguridad adjunto en la conversación).
 
