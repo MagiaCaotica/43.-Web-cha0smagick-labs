@@ -230,6 +230,19 @@ Decisión y evidencia en `docs/posicionamiento-goetia-2026-11.md`. La app está 
 | G5 | Pedir reseña a compradores de Arcana Goetia (hoy 0 con 50+ instalaciones) usando `pages/leave-a-review.html` | ASO | ≥ 5 reseñas en 60 días |
 | G6 | Segunda campaña: Tarot con IA en el dispositivo (MiniLM 23 MB, sin nube) | CRO | prueba de hero A/B con muestra suficiente |
 
+### Fase C — Pertenencia y comunidad (aplicada 2026-11-22)
+
+Base: identidad social (Tajfel), rito de paso (van Gennep/Turner), don y reciprocidad (Mauss), efervescencia colectiva (Durkheim).
+La hipótesis: el visitante no compra una app, se afilia a una práctica. La comunidad no es un adorno del embudo, es el motivo para volver.
+
+| # | Tarea | Resp. | Aceptación |
+|---|---|---|---|
+| C1 | ~~Página `/community.html`~~ **HECHA**: qué es el círculo, tres salas, calendario compartido, reglas y rito de entrada | CRO | sesiones a `/community.html` > 0 y clics salientes a Telegram medidos |
+| C2 | ~~Banda de pertenencia en la home~~ **HECHA**: 1.998 / 717 / 72 + dos CTA (entrar, protocolo) | CRO | clic en la banda ≥ 3 % de las sesiones de home |
+| C3 | ~~Rito de entrada~~: el protocolo de 7 días es la puerta, no un PDF suelto | CONT | descargas del protocolo y paso al grupo |
+| C4 | ~~Correo de reseña~~ (`email-sequences/review-request.md`): a los 3 días, una sola vez, sin pedir 5 estrellas | ASO | ≥ 5 reseñas en 60 días |
+| C5 | Identidad visual esotérica: ornamento reutilizable y lenguaje de "círculo" en las páginas de producto | DIS/CRO | coherente en home, comunidad y fichas |
+
 ---
 
 ## 5. Backlog absorbido (de los planes eliminados)

@@ -176,8 +176,7 @@ main { padding-top: 12px; }
 .home nav ul li a { padding: 12px 14px; }
 
 /* The sticky bar already wraps to two rows on phones; drop the proof line
-   there so it never covers the price or the button. */
-@media (max-width: 640px) {
+   there so it never covers the price or the button. */@media (max-width: 640px) {
   .cm-sticky-extra { display: none; }
 
   header { padding: .6rem .8rem; }
@@ -192,3 +191,12 @@ main { padding-top: 12px; }
   .home .hero h1 { font-size: 1.6rem; line-height: 1.25; }
   .home .breadcrumb-nav { display: none; }
 }
+
+/* Community / belonging block */
+.cm-ornament { text-align:center; color:#c9a84c; opacity:.55; letter-spacing:.7rem; margin:0 0 .6rem; font-size:.85rem; }
+.cm-proof-row { display:flex; gap:1.4rem; justify-content:center; flex-wrap:wrap; margin:1rem 0 1.2rem; }
+.cm-proof { text-align:center; min-width:100px; }
+.cm-proof b { display:block; font-size:1.45rem; color:#f0f0f0; font-family:var(--font-mono); font-weight:400; }
+.cm-proof span { font-size:.72rem; color:#8a8a8a; text-transform:uppercase; letter-spacing:1px; }
+.cm-btn-gold { display:inline-block; background:#c9a84c; color:#0a0a0a !important; border:1px solid #c9a84c; border-radius:6px; padding:.75rem 1.3rem; font-weight:700; font-size:.92rem; text-decoration:none; }
+.cm-btn-gold:hover { background:#e0c98a; border-color:#e0c98a; }
