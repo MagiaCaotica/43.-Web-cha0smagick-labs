@@ -228,7 +228,7 @@ Decisión y evidencia en `docs/posicionamiento-goetia-2026-11.md`. La app está 
 | G3 | **Liberar rastreo**: sacar del sitemap y marcar `noindex` las URLs con 0 clics y 0 impresiones en 90 días (`scripts/seo/zero-click-pages.py`) | SEO | 0 URLs muertas en sitemap; el hub de los 72 pasa a indexada |
 | G4 | **Protocolo de 7 días** en PDF + landing de captación, con la app como paso diario | CONT | 100 suscriptores y ≥ 1 venta atribuida |
 | G5 | Pedir reseña a compradores de Arcana Goetia (hoy 0 con 50+ instalaciones) usando `pages/leave-a-review.html` | ASO | ≥ 5 reseñas en 60 días |
-| G6 | Segunda campaña: Tarot con IA en el dispositivo (MiniLM 23 MB, sin nube) | CRO | prueba de hero A/B con muestra suficiente |
+| G6 | ~~Segunda campaña: Tarot con IA en el dispositivo~~ **PARCIAL 2026-11-22**: landing `landing-pages/tarot-on-device.html` con comparativa nube/local, límites y CTA; enlazada desde la ficha. Falta el A/B de hero | CRO | clics a Play desde la landing |
 
 ### Fase C — Pertenencia y comunidad (aplicada 2026-11-22)
 
