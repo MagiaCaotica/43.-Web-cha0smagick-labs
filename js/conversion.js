@@ -2823,6 +2823,35 @@
     initEmailPopup();           // 30s / 50% scroll / exit-intent capture
     initProductView();          // GA4 view_item on app / book pages
     initStickyCtaGuard();       // never cover an inline buy button with the fixed bar
+    injectCircleStrip();        // four rooms + the entry rite, on pages that lack them
+  }
+
+  /* Belonging belongs on every page, not only in the footer list. Pages that
+   * already carry the four Telegram links are left alone; the rest get a
+   * compact strip before the footer: the circle, the studio, the entry rite. */
+  function injectCircleStrip() {
+    if (document.getElementById('cm-circle')) return;
+    if (document.querySelector('a[href*="t.me/cha0smagicklabs"]')) return;
+
+    var html = '<section id="cm-circle" aria-label="The circle" style="max-width:760px;margin:2.5rem auto;padding:1.3rem 1.4rem;background:#0b0b0b;border:1px solid #232323;border-radius:12px;text-align:center">' +
+      '<p style="margin:0 0 .4rem;color:#c9a84c;letter-spacing:.6rem;opacity:.6;font-size:.8rem">&#10022; &#10022; &#10022;</p>' +
+      '<h2 style="margin:0 0 .5rem;font-size:1.15rem;color:#eee;font-weight:500">You are not practicing alone</h2>' +
+      '<p style="margin:0 auto 1rem;max-width:560px;color:#a8a8a8;font-size:.92rem">A technomancy studio and a circle of practitioners. The tools run on your phone; the practice does not have to run alone.</p>' +
+      '<p style="margin:0 0 .8rem;font-size:.88rem;line-height:2">' +
+        '<a href="https://t.me/magiacaotica" style="color:#c9a84c;margin:0 .5rem">Magia del Caos (channel)</a>' +
+        '<a href="https://t.me/magiacaoticacoven" style="color:#c9a84c;margin:0 .5rem">Magia del Caos (coven)</a>' +
+        '<a href="https://t.me/cha0smagicklabs" style="color:#a8a8a8;margin:0 .5rem">Cha0smagick Labs (channel)</a>' +
+        '<a href="https://t.me/+krfQJgro4hBkNTE5" style="color:#a8a8a8;margin:0 .5rem">Cha0smagick Labs (group)</a>' +
+      '</p>' +
+      '<p style="margin:0;font-size:.85rem;color:#8a8a8a">New? Start with the <a href="/lead-magnet/goetia-7-day-protocol.html" style="color:#c9a84c">seven-day protocol</a> or read <a href="/community.html" style="color:#c9a84c">the rules of the circle</a>.</p>' +
+      '</section>';
+
+    var footer = document.querySelector('footer');
+    if (footer) {
+      footer.insertAdjacentHTML('beforebegin', html);
+    } else if (document.querySelector('main')) {
+      document.querySelector('main').insertAdjacentHTML('afterend', html);
+    }
   }
 
   /* A fixed buy bar that sits on top of the inline buy button is two CTAs
