@@ -216,6 +216,20 @@ Aceptación = cómo se comprueba, no cómo se siente.
 | 3.3 | Export mensual de finanzas de Play y anexo al informe | DAT | ingresos de apps auditados |
 | 3.4 | Solo si el embudo supera el 4 %: probar paid con presupuesto de 100 $ | DIR | CAC < 30 % del ticket |
 
+### Fase G — Goetia como ancla (paralela a 0-3, días 0-30)
+
+Decisión y evidencia en `docs/posicionamiento-goetia-2026-11.md`. La app está verificada en código:
+72 entidades con `invocation_command`, altar, hora planetaria y registro de operaciones.
+
+| # | Tarea | Resp. | Aceptación |
+|---|---|---|---|
+| G1 | ~~Hero y ficha vendiendo lo que la app entrega~~ **HECHO 2026-11-22**: home, barra fija y ficha de Arcana Goetia con comando, altar, hora planetaria y registro | CRO | clic de compra por sesión en `/apps/arcana-goetia.html` ≥ 4 % |
+| G2 | **10 páginas de espíritu** (Paimon, Bael, Astaroth, Asmoday, Buer, Sitri, Vassago, Marbas, Amon, Valefor) generadas desde `entities.json`: rango, legiones, correspondencias, comando, protocolo y CTA | SEO/CONT | 10 URLs publicadas, enlazadas desde el hub, indexadas en 30 días |
+| G3 | **Liberar rastreo**: sacar del sitemap y marcar `noindex` las URLs con 0 clics y 0 impresiones en 90 días (`scripts/seo/zero-click-pages.py`) | SEO | 0 URLs muertas en sitemap; el hub de los 72 pasa a indexada |
+| G4 | **Protocolo de 7 días** en PDF + landing de captación, con la app como paso diario | CONT | 100 suscriptores y ≥ 1 venta atribuida |
+| G5 | Pedir reseña a compradores de Arcana Goetia (hoy 0 con 50+ instalaciones) usando `pages/leave-a-review.html` | ASO | ≥ 5 reseñas en 60 días |
+| G6 | Segunda campaña: Tarot con IA en el dispositivo (MiniLM 23 MB, sin nube) | CRO | prueba de hero A/B con muestra suficiente |
+
 ---
 
 ## 5. Backlog absorbido (de los planes eliminados)
