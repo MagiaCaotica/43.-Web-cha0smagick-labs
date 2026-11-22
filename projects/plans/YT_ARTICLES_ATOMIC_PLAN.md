@@ -351,7 +351,7 @@ Total = 349 files.
 | ID | Assertion | Fail action |
 |---|---|---|
 | 4.1 | File is valid UTF-8, **no BOM** | abort write |
-| 4.2 | Zero mojibake sequences (`Ã¢`, `â€`, `Ã³`, U+FFFD) | abort write — **this is the bug that already affects 152 legacy files** |
+| 4.2 | Zero mojibake sequences (`â`, `â€`, `ó`, U+FFFD) | abort write — **this is the bug that already affects 152 legacy files** |
 | 4.3 | `<html>…</html>`, `<body>…</body>`, `<article>…</article>`, `<main>…</main>`, `<footer>…</footer>` all balanced | abort write |
 | 4.4 | Exactly one `<h1>`; H1 count 1, H2 8–11, H3 0–30 | warn |
 | 4.5 | Word count ≥ 1800, ≤ 4500 | abort write |

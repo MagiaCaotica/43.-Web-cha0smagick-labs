@@ -50,7 +50,16 @@
 
     window.initVisitorMap = initVisitorMap;
 
-    document.addEventListener('DOMContentLoaded', function () {
+    /* lazy-map.js carga este fichero DESPUES de DOMContentLoaded, asi que el
+       evento nunca llega y el mapa quedaba vacio. Arrancar tambien cuando el
+       documento ya esta listo. */
+    function boot() {
         initVisitorMap(window.VISITOR_DATA || DEFAULT_VISITORS, DEFAULT_MAX_VISITS);
-    });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', boot);
+    } else {
+        boot();
+    }
 })();
