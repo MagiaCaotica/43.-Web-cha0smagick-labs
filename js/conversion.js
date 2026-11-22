@@ -2844,7 +2844,7 @@
         '<a href="https://t.me/cha0smagicklabs" style="color:#a8a8a8;margin:0 .5rem">' + (es ? 'Cha0smagick Labs (canal)' : 'Cha0smagick Labs (channel)') + '</a>' +
         '<a href="https://t.me/+krfQJgro4hBkNTE5" style="color:#a8a8a8;margin:0 .5rem">' + (es ? 'Cha0smagick Labs (grupo)' : 'Cha0smagick Labs (group)') + '</a>' +
       '</p>' +
-      '<p style="margin:0;font-size:.85rem;color:#8a8a8a">' + (es ? 'Si empiezas: el <a href="/lead-magnet/guia-rapida-magia-caos-es.html" style="color:#c9a84c">protocolo de siete d\u00edas</a> o las <a href="/es/comunidad.html" style="color:#c9a84c">reglas del c\u00edrculo</a>.' : 'New? Start with the <a href="/lead-magnet/goetia-7-day-protocol.html" style="color:#c9a84c">seven-day protocol</a> or read <a href="/community.html" style="color:#c9a84c">the rules of the circle</a>.') + '</p>' +
+      '<p style="margin:0;font-size:.85rem;color:#8a8a8a">' + (es ? 'Si empiezas: el <a href="/lead-magnet/protocolo-7-dias-goetia-es.html" style="color:#c9a84c">protocolo de siete d\u00edas</a> o las <a href="/es/comunidad.html" style="color:#c9a84c">reglas del c\u00edrculo</a>.' : 'New? Start with the <a href="/lead-magnet/goetia-7-day-protocol.html" style="color:#c9a84c">seven-day protocol</a> or read <a href="/community.html" style="color:#c9a84c">the rules of the circle</a>.') + '</p>' +
       '</section>';
 
     var footer = document.querySelector('footer');
