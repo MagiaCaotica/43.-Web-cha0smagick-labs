@@ -2833,17 +2833,18 @@
     if (document.getElementById('cm-circle')) return;
     if (document.querySelector('a[href*="t.me/cha0smagicklabs"]')) return;
 
-    var html = '<section id="cm-circle" aria-label="The circle" style="max-width:760px;margin:2.5rem auto;padding:1.3rem 1.4rem;background:#0b0b0b;border:1px solid #232323;border-radius:12px;text-align:center">' +
+    var es = isSpanish();
+    var html = '<section id="cm-circle" aria-label="' + (es ? 'El c\u00edrculo' : 'The circle') + '" style="max-width:760px;margin:2.5rem auto;padding:1.3rem 1.4rem;background:#0b0b0b;border:1px solid #232323;border-radius:12px;text-align:center">' +
       '<p style="margin:0 0 .4rem;color:#c9a84c;letter-spacing:.6rem;opacity:.6;font-size:.8rem">&#10022; &#10022; &#10022;</p>' +
-      '<h2 style="margin:0 0 .5rem;font-size:1.15rem;color:#eee;font-weight:500">You are not practicing alone</h2>' +
-      '<p style="margin:0 auto 1rem;max-width:560px;color:#a8a8a8;font-size:.92rem">A technomancy studio and a circle of practitioners. The tools run on your phone; the practice does not have to run alone.</p>' +
+      '<h2 style="margin:0 0 .5rem;font-size:1.15rem;color:#eee;font-weight:500">' + (es ? 'No practicas solo' : 'You are not practicing alone') + '</h2>' +
+      '<p style="margin:0 auto 1rem;max-width:560px;color:#a8a8a8;font-size:.92rem">' + (es ? 'Un estudio de tecnomancia y un c\u00edrculo de practicantes. Las herramientas corren en tu tel\u00e9fono; la pr\u00e1ctica no tiene por qu\u00e9 correr sola.' : 'A technomancy studio and a circle of practitioners. The tools run on your phone; the practice does not have to run alone.') + '</p>' +
       '<p style="margin:0 0 .8rem;font-size:.88rem;line-height:2">' +
-        '<a href="https://t.me/magiacaotica" style="color:#c9a84c;margin:0 .5rem">Magia del Caos (channel)</a>' +
-        '<a href="https://t.me/magiacaoticacoven" style="color:#c9a84c;margin:0 .5rem">Magia del Caos (coven)</a>' +
-        '<a href="https://t.me/cha0smagicklabs" style="color:#a8a8a8;margin:0 .5rem">Cha0smagick Labs (channel)</a>' +
-        '<a href="https://t.me/+krfQJgro4hBkNTE5" style="color:#a8a8a8;margin:0 .5rem">Cha0smagick Labs (group)</a>' +
+        '<a href="https://t.me/magiacaotica" style="color:#c9a84c;margin:0 .5rem">' + (es ? 'Magia del Caos (canal)' : 'Magia del Caos (channel)') + '</a>' +
+        '<a href="https://t.me/magiacaoticacoven" style="color:#c9a84c;margin:0 .5rem">' + (es ? 'Magia del Caos (coven)' : 'Magia del Caos (coven)') + '</a>' +
+        '<a href="https://t.me/cha0smagicklabs" style="color:#a8a8a8;margin:0 .5rem">' + (es ? 'Cha0smagick Labs (canal)' : 'Cha0smagick Labs (channel)') + '</a>' +
+        '<a href="https://t.me/+krfQJgro4hBkNTE5" style="color:#a8a8a8;margin:0 .5rem">' + (es ? 'Cha0smagick Labs (grupo)' : 'Cha0smagick Labs (group)') + '</a>' +
       '</p>' +
-      '<p style="margin:0;font-size:.85rem;color:#8a8a8a">New? Start with the <a href="/lead-magnet/goetia-7-day-protocol.html" style="color:#c9a84c">seven-day protocol</a> or read <a href="/community.html" style="color:#c9a84c">the rules of the circle</a>.</p>' +
+      '<p style="margin:0;font-size:.85rem;color:#8a8a8a">' + (es ? 'Si empiezas: el <a href="/lead-magnet/guia-rapida-magia-caos-es.html" style="color:#c9a84c">protocolo de siete d\u00edas</a> o las <a href="/es/comunidad.html" style="color:#c9a84c">reglas del c\u00edrculo</a>.' : 'New? Start with the <a href="/lead-magnet/goetia-7-day-protocol.html" style="color:#c9a84c">seven-day protocol</a> or read <a href="/community.html" style="color:#c9a84c">the rules of the circle</a>.') + '</p>' +
       '</section>';
 
     var footer = document.querySelector('footer');
