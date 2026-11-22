@@ -12,7 +12,7 @@ La app ancla pasa a ser **Arcana Goetia (72 espíritus)**, no Sigil Maker.
 Motivo: la intención de compra del nicho está en «invocar», «72 demonios», «sello de X», no en «hacer un sigilo».
 Sigil Maker sigue siendo el **activo de confianza** (5,0 · 23 reseñas · 100+ instalaciones): se usa como prueba de que el estudio entrega, no como oferta principal.
 
-Lo que se vende no es «una app que invoca demonios» —eso no es verificable— sino **el protocolo, el sello y el altar en un solo sitio**, que es exactamente lo que la app declara en Play.
+Lo que se vende no es «una app que invoca demonios» —eso no es verificable— sino **el ritual completo en el bolsillo: el sello, el comando de invocación, la hora planetaria, el altar y el registro de cada operación**. Eso es exactamente lo que hay en el código y lo que declara Play.
 
 ---
 
@@ -58,7 +58,15 @@ Comprobado sobre `AndroidManifest.xml`, dependencias de Gradle y llamadas de red
 
 **Riesgo detectado y ya mitigado:** el sitio afirmaba «no internet permission» y «100% offline» de forma global. Tres apps publicadas no lo cumplen. Eso alimenta reembolsos, reseñas de una estrella y desajustes con la declaración de Data Safety de Play.
 
-**No verificable:** Arcana Goetia, Sigil Maker y Tarot no están en el directorio. La ficha de Play de Arcana Goetia declara: generador de sellos de los 72, lore completa, **guía de invocación paso a paso** y **altar integrado**, 100 % offline. Es suficiente para vender «protocolo + altar», no para prometer resultados.
+**Verificado después en `D:\Aplicaciones Android`** (solo lectura):
+
+| App | Package | Permisos | Qué hay realmente en el código |
+|---|---|---|---|
+| **Arcana Goetia** | `com.cha0smagick.sigilgeneratorfinal` | Ubicación aproximada, notificaciones, almacenamiento. **Sin INTERNET** | `entities.json` con **72 entidades**: nombre, rango, legiones, historia, `invocation_command`, `encryption_key`, planeta, elemento, dirección, metal, color, incienso, rango zodiacal y hora planetaria. Pantallas: Library, Summoning Motor, Guide, History, Suite. `SunCalculator` + `PlanetaryTime` calculan la hora desde tu ubicación; `RitualRecord` (Room) guarda cada operación; recordatorio diario; audio y háptica. |
+| **Sigil Maker** | `Magickal Seals Generator` | Notificaciones, almacenamiento, vibración. Sin INTERNET | `SealCanvas`, `SealPalette`, `SatorArepo`, `GamificationModule`, `SigilAudio`: generador de sellos con módulo de gamificación y cuadrado Sator. |
+| **Tarot** | `Unoficcial Rider Waite` | Notificaciones, alarmas, vibración. Sin INTERNET | **IA en el dispositivo**: MiniLM `int8.tflite` de 23 MB + Gemini Nano opcional vía AICore, con fallback a un oráculo local. Lexicones en 7 idiomas. |
+
+Conclusión: **el nuevo ancla está justificada por el producto**, no solo por la demanda. La app entrega protocolo, altar, cálculo de hora planetaria y registro de operaciones. Es más de lo que la web contaba.
 
 ---
 

@@ -48,6 +48,8 @@ La empresa tiene producto y empieza a tener distribución. No tiene conversión.
 | Prueba social fabricada eliminada | «David S.» y «4,7★/128+» fuera; queda la reseña real con enlace |
 | Contadores unificados | 7 libros, 23 reseñas, 12 apps, 100+ instalaciones |
 | PII y cookies fuera del sitio público | `projects/clientes/`, `projects/cookies*.json` → 404 |
+| **Ancla de producto cambiada a Arcana Goetia** (72 espíritus), verificada en código: 72 entidades con comando de invocación, altar, hora planetaria y registro | `docs/posicionamiento-goetia-2026-11.md` |
+| Claims de offline corregidos en Moon, Lucid Dream y Eerie Roads (usan red/ubicación) | fichas de las tres apps |
 
 ### 1.2 Lo que sigue roto
 
