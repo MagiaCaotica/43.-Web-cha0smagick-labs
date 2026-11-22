@@ -102,7 +102,7 @@ Lectura: el embudo goetia no falla por falta de producto ni de contenido, falla 
 | # | Acción | Métrica |
 |---|---|---|
 | 1 | Reducir el sitemap a las URLs vivas (sacar las 343 sin impresión, noindex o consolidar) para liberar rastreo | la página de los 72 pasa a «Indexada» |
-| 2 | 10 páginas de espíritu con intención de compra (Paimon, Bael, Astaroth, Asmoday, Buer, Sitri, Vassago, Marbas, Amon, Valefor): sello, oficio, correspondencias, protocolo y CTA a la app | 10 páginas indexadas, 100 clics/mes |
+| 2 | ~~10 páginas~~ **las 72 páginas de espíritu** (hecho 2026-11-22): sello, oficio, correspondencias, comando, protocolo y CTA a la app, agrupadas por rango en el hub | 72 publicadas; medir indexación y clics a 30 días |
 | 3 | Reescribir títulos de las 5 consultas goetias en posición 5-15 | CTR ≥ 4 % en el clúster |
 | 4 | Lead magnet «Protocolo de primera invocación (7 días)» en PDF, captado en el hub y en la guía | 100 suscriptores |
 | 5 | Pedir reseña a compradores de la app (hoy 0 reseñas con 50+ instalaciones) | 5 reseñas |
