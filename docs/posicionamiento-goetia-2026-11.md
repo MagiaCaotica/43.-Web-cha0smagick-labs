@@ -110,10 +110,11 @@ Lectura: el embudo goetia no falla por falta de producto ni de contenido, falla 
 
 ## 7. Retención
 
-La app es pago único: retener significa **volver a usarla**. Tres palancas:
-- Protocolo de 7 días que obliga a abrir la app una vez al día (email + PDF).
-- Diario de operaciones (si la app guarda historial, exponerlo en la portada de la app; si no, es la siguiente función a construir).
-- Reseña y comunidad: pedir la opinión en el día 3 del protocolo, no al comprar.
+La app es pago único: retener significa **volver a usarla**. Y ya trae las dos piezas que suelen faltar:
+- **Ritual chronicle**: cada operación queda registrada en el dispositivo. Es el motivo para volver (comparar antes/después), y hoy no se comunica en la web.
+- **Recordatorio diario** opcional, ya implementado en la app.
+
+Lo que falta es el puente: un protocolo de 7 días (PDF + correo) que dé una razón para abrir la app cada día, y pedir la reseña en el día 3, no al comprar.
 
 ## 8. Riesgos
 
