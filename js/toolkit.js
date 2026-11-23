@@ -74,7 +74,7 @@
       var r = $(meta.result);
       if (r) return r;
     }
-    var cand = $('#atomic-result, .tool-result, .result-panel, .results-panel, .result, .output');
+    var cand = $$('#atomic-result, .tool-result, .result-panel, .results-panel, .result, .output');
     for (var i = 0; i < cand.length; i++) {
       if (cand[i] && cand[i].offsetParent !== null) return cand[i];
     }
