@@ -806,6 +806,53 @@ const appsData = [
 
 const booksData = [
     {
+        id: "technomancy-complete-treatise-pdf",
+        name: "TECHNOMANCY: The Complete Treatise of Magic, Code and Machine",
+        author: "Frater Alek0s",
+        language: "English / Spanish",
+        languageFlag: "us,es",
+        price: "$9.99 USD",
+        type: "book",
+        status: "available",
+        image: "assets/images/technomancy.webp",
+        description: "399 pages, 45 chapters, 7 parts: magic operated with technology and technology read as magic. Every claim carries an evidence mark; six complete projects with code that runs.",
+        hotmartLink: "https://pay.hotmart.com/V108625258J?checkoutMode=2&utm_source=cha0smagicklabs&utm_medium=website&utm_campaign=book_technomancy",
+        seo: {
+            title: "TECHNOMANCY: The Complete Treatise of Magic, Code and Machine | PDF",
+            description: "A 399-page treatise, 45 chapters in 7 parts, on operating magic with technology. Every factual claim carries an evidence mark. Six complete projects with working code, bilingual edition. PDF, $9.99.",
+            keywords: "technomancy, technomancy book, magic and code, sigil generator python, iching rust, arduino talisman, chaos magick, cybermagic, statistical journal, PDF book"
+        },
+        detailedDescription: `
+            <h1>TECHNOMANCY: The Complete Treatise of Magic, Code and Machine</h1>
+            <p>Most books about magic ask you to believe. This one asks you to run it, log the results, and catch yourself cheating.</p>
+
+            <h2>What it is</h2>
+            <p>399 pages, 45 chapters in 7 parts, on operating magic with technology and reading technology as magic, without giving up rigor. Every factual claim carries an evidence mark: documented fact, working model, experimental evidence, declared conjecture, or operational fiction. You always know what you are standing on.</p>
+
+            <h2>The seven parts</h2>
+            <ul>
+                <li><strong>Foundations:</strong> Llull to Kircher to Jacquard, Babbage to Turing to ELIZA, chaos magic to cyberculture to LLMs.</li>
+                <li><strong>The apparatus:</strong> altar as workstation, manufactured randomness, planetary hours, protocols and egregores.</li>
+                <li><strong>The language:</strong> pseudocode, Python, Rust, Arduino, HTML/CSS/JS. Every listing is a real file that runs or compiles.</li>
+                <li><strong>Operations:</strong> sigils, servitors, divination, glamour, electronic talismans, defence and dream work.</li>
+                <li><strong>The laboratory:</strong> experimental design, measurement, minimal statistics, the skeptic technomancer.</li>
+                <li><strong>Six complete projects:</strong> sigil generator in Python, I Ching oracle in Rust, Arduino talisman, web grimoire, statistical journal, autonomous servitor.</li>
+                <li><strong>Appendices:</strong> bilingual glossary, annotated bibliography, I Ching and planetary hour tables, printable templates.</li>
+            </ul>
+
+            <h2>What you get</h2>
+            <ul>
+                <li>Both editions in one purchase: Spanish PDF (391 pages) and English PDF (399 pages).</li>
+                <li>Fully hyperlinked, dark high-contrast screen edition, 170x240 mm.</li>
+                <li>An analytical index of more than 500 entries.</li>
+                <li>Every source verified against an external registry, and every code listing with its real output.</li>
+            </ul>
+
+            <p>No promise of supernatural results. The book teaches you to record, to test, and to catch yourself cheating.</p>
+            <p>One-time purchase. Lifetime access. Instant download.</p>
+        `
+    },
+    {
         id: "chaos-magick-for-absolute-beginners-pdf",
         name: "Chaos Magick for Absolute Beginners",
         author: "Frater Alek0s",
