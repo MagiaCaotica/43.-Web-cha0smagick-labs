@@ -1,0 +1,42 @@
+{
+  "name": "Campana de libros - 5 correos (ES)",
+  "trigger": "group_lead_magnet_es",
+  "note": "Escrita 2026-11-24. Cada cifra de este archivo es verificable: precios y paginas en /books/, 7 dias de Hotmart en /es/politica-de-reembolso.html, 48 horas de Google Play en la politica de Play. Sin escasez inventada: no hay cuenta atras ni plazas. El objetivo es que el que ya descargo la guia vea que hay un siguiente paso concreto y cuanto cuesta.",
+  "emails": [
+    {
+      "id": "b1_dia0",
+      "delay_hours": 0,
+      "subject": "El siguiente paso despues de la guia",
+      "preheader": "Ocho libros en PDF, desde 4,99; el pack completo son 29,99",
+      "body_html": "<p>Hola,</p><p>Ya tienes la guia. El paso que sigue no es leer mas gratis: es elegir un libro y hacer las misiones.</p><p>Si empiezas de cero, el manual es <strong>Magia del Caos para Principiantes Absolutos</strong>: 176 paginas, 20 capitulos y una mision de campo de 15 minutos al final de cada uno. 9,99.</p><p>Si ya practicas, <strong>Codex Chaoticus</strong> es el tratado general y la primera compra habitual: 4,99.</p><p style=\"text-align:center;margin:28px 0\"><a href=\"https://cha0smagicklabs.com/books/\" style=\"background:#c0a060;color:#0b0b0b;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700\">Ver los ocho libros</a></p><p>Los ocho juntos son 29,99 en vez de 68,92. Si compras uno y luego quieres el pack, escribe y lo miramos.</p><p>Frater Alek0s</p>"
+    },
+    {
+      "id": "b2_dia2",
+      "delay_hours": 48,
+      "subject": "Cual de los ocho libros te sirve (y cual no)",
+      "preheader": "Una decision por perfil, sin listas de diez",
+      "body_html": "<p>Hola,</p><p>Tres puertas, una decision:</p><ul><li><strong>Nunca has trazado un circulo:</strong> Magia del Caos para Principiantes. 176 paginas, 9,99.</li><li><strong>Ya practicas y quieres el sistema completo:</strong> Codex Chaoticus (4,99) y, si trabajas con servidores, el Tratado Practico Completo: 368 paginas, 9,99.</li><li><strong>Te interesa la parte tecnica:</strong> TECNOMANCIA. 399 paginas, 45 capitulos, seis proyectos con codigo que corre. 9,99.</li></ul><p>Ninguno promete un resultado sobrenatural. El tratado mas largo incluye diecisiete contraindicaciones y una seccion sobre que hacer cuando no pasa nada; eso tambien es parte del metodo.</p><p style=\"text-align:center;margin:28px 0\"><a href=\"https://cha0smagicklabs.com/books/\" style=\"background:#c0a060;color:#0b0b0b;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700\">Ver cual encaja</a></p><p>Frater Alek0s</p>"
+    },
+    {
+      "id": "b3_dia5",
+      "delay_hours": 120,
+      "subject": "El pack: 10 libros por 29,99, y que pasa con el dinero",
+      "preheader": "La aritmetica del pack y la garantia de 7 dias",
+      "body_html": "<p>Hola,</p><p>El pack en espanol entrega <strong>diez libros</strong> por 29,99. Los ocho de esta guia suman 68,92 comprados por separado; el pack anade dos titulos anteriores. Son 38,93 menos.</p><p>Dos cosas que conviene saber antes de pagar:</p><ul><li>Hotmart da <strong>7 dias</strong> para pedir reembolso. No hay que justificarlo.</li><li>No es una suscripcion: un pago y los archivos son tuyos.</li></ul><p style=\"text-align:center;margin:28px 0\"><a href=\"https://pay.hotmart.com/V107097103W?checkoutMode=2\" style=\"background:#c0a060;color:#0b0b0b;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700\">Ver el pack</a></p><p>Si 29,99 es mucho este mes, Codex Chaoticus cuesta 4,99 y es por donde empieza la mayoria.</p><p>Frater Alek0s</p>"
+    },
+    {
+      "id": "b4_dia9",
+      "delay_hours": 216,
+      "subject": "Lo que hacen los que siguen despues de la primera semana",
+      "preheader": "Siete dias, una entrada por noche, y el coven",
+      "body_html": "<p>Hola,</p><p>El patron que funciona es simple: siete dias, diez minutos al dia, una entrada registrada por noche. Siete entradas comparables valen mas que siete impresiones.</p><p>Si quieres el registro hecho, el <a href=\"https://cha0smagicklabs.com/lead-magnet/protocolo-7-dias-goetia-es.html\">protocolo de siete dias</a> es gratis y no pide nada.</p><p>Y si ya has hecho la primera semana, el sitio natural del registro es el coven: <a href=\"https://cha0smagicklabs.com/es/comunidad.html\">que es el circulo</a>.</p><p>Los libros, cuando los quieras: <a href=\"https://cha0smagicklabs.com/books/\">ocho titulos desde 4,99</a>.</p><p>Frater Alek0s</p>"
+    },
+    {
+      "id": "b5_dia14",
+      "delay_hours": 336,
+      "subject": "Ultimo correo sobre esto (y el unico dato que importa)",
+      "preheader": "Si no es el momento, no lo es; aqui queda la puerta abierta",
+      "body_html": "<p>Hola,</p><p>Este es el ultimo correo de esta serie. Si no has comprado, probablemente sea porque no es el momento, y eso es una respuesta valida.</p><p>Dos cosas que no caducan:</p><ul><li>Las <a href=\"https://cha0smagicklabs.com/tools/\">70 herramientas gratis</a> siguen ahi.</li><li>Los <a href=\"https://cha0smagicklabs.com/books/\">ocho libros</a> siguen a 4,99-9,99 y el pack a 29,99, sin cuenta atras ni plazas limitadas.</li></ul><p>Cuando quieras seguir, escribenos y te decimos por donde.</p><p>Frater Alek0s</p>"
+    }
+  ]
+}

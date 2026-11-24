@@ -283,5 +283,57 @@
   <g:mpn>CHAOS-BOOK-009</g:mpn>
   <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
+<item>
+  <g:id>CHAOS-BOOK-010</g:id>
+  <g:title>Chaos Magick for Absolute Beginners - The Practitioner's Manual (PDF)</g:title>
+  <g:description>A 176-page manual for the person who has never cast a circle: the Spare sigil method, gnosis, servitors, banishing and lunar timing. Each chapter ends with a 15-minute field mission.</g:description>
+  <g:link>https://cha0smagicklabs.com/books/chaos-magick-for-absolute-beginners-pdf.html</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/chaosmagick-beginners.png</g:image_link>
+  <g:price>9.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-010</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-011</g:id>
+  <g:title>Magia del Caos para Principiantes Absolutos - Manual del Practicante (PDF)</g:title>
+  <g:description>Manual de 176 páginas para quien nunca ha trazado un círculo: método de Spare, gnosis, servidores, destierro y timing lunar. Cada capítulo termina con una misión de campo de 15 minutos.</g:description>
+  <g:link>https://cha0smagicklabs.com/books/chaos-magick-for-absolute-beginners-es-pdf.html</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/chaosmagick-beginners.png</g:image_link>
+  <g:price>9.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-011</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-012</g:id>
+  <g:title>TECHNOMANCY - The Complete Treatise of Magic, Code and Machine (PDF)</g:title>
+  <g:description>399 pages, 45 chapters in 7 parts, on operating magic with technology. Every factual claim carries an evidence mark, and six complete projects ship with code that runs.</g:description>
+  <g:link>https://cha0smagicklabs.com/books/technomancy-complete-treatise-pdf.html</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/technomancy.png</g:image_link>
+  <g:price>9.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-012</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
+<item>
+  <g:id>CHAOS-BOOK-013</g:id>
+  <g:title>TECNOMANCIA - Tratado Completo de Magia, Código y Máquina (PDF)</g:title>
+  <g:description>399 páginas, 45 capítulos en 7 partes, sobre operar la magia con tecnología. Cada afirmación lleva su marca de evidencia y seis proyectos completos con código que corre.</g:description>
+  <g:link>https://cha0smagicklabs.com/books/technomancy-complete-treatise-es-pdf.html</g:link>
+  <g:image_link>https://cha0smagicklabs.com/assets/images/technomancy.png</g:image_link>
+  <g:price>9.99 USD</g:price>
+  <g:condition>new</g:condition>
+  <g:availability>in stock</g:availability>
+  <g:brand>Cha0smagick Labs</g:brand>
+  <g:mpn>CHAOS-BOOK-013</g:mpn>
+  <g:shipping_cost>0.00 USD</g:shipping_cost>
+</item>
 </channel>
 </rss>

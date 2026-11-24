@@ -1,0 +1,42 @@
+{
+  "name": "Book campaign - 5 emails (EN)",
+  "trigger": "group_lead_magnet_en",
+  "note": "Written 2026-11-24. Every number here is checkable: prices and page counts on /books/, the 7-day Hotmart window on /refund-policy.html, the 48-hour Play window in Google's own policy. No invented scarcity: no countdown, no limited seats. The point is to give the person who already downloaded the guide a concrete next step and its price.",
+  "emails": [
+    {
+      "id": "b1_day0",
+      "delay_hours": 0,
+      "subject": "The next step after the guide",
+      "preheader": "Eight books in PDF from $4.99; the whole pack is $29.99",
+      "body_html": "<p>Hi,</p><p>You have the guide. The next step is not more free reading: it is picking one book and doing the field missions.</p><p>If you are starting from zero, the manual is <strong>Chaos Magick for Absolute Beginners</strong>: 176 pages, 20 chapters and a 15-minute field mission at the end of each. $9.99.</p><p>If you already practise, <strong>Codex Chaoticus</strong> is the general treatise and the usual first purchase: $4.99.</p><p style=\"text-align:center;margin:28px 0\"><a href=\"https://cha0smagicklabs.com/books/\" style=\"background:#c0a060;color:#0b0b0b;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700\">See the eight books</a></p><p>All eight together are $29.99 instead of $68.92. If you buy one and later want the pack, write to us and we will look at it.</p><p>Frater Alek0s</p>"
+    },
+    {
+      "id": "b2_day2",
+      "delay_hours": 48,
+      "subject": "Which of the eight books is yours (and which is not)",
+      "preheader": "One decision per profile, not a list of ten",
+      "body_html": "<p>Hi,</p><p>Three doors, one decision:</p><ul><li><strong>Never cast a circle:</strong> Chaos Magick for Absolute Beginners. 176 pages, $9.99.</li><li><strong>Already practising and want the system:</strong> Codex Chaoticus ($4.99) and, if you work with servitors, the 368-page treatise: $9.99.</li><li><strong>The technical side:</strong> TECHNOMANCY. 399 pages, 45 chapters, six projects with code that runs. $9.99.</li></ul><p>None of them promises a supernatural result. The longest treatise ships with seventeen contraindications and a section on what to do when nothing happens; that is part of the method too.</p><p style=\"text-align:center;margin:28px 0\"><a href=\"https://cha0smagicklabs.com/books/\" style=\"background:#c0a060;color:#0b0b0b;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700\">See which one fits</a></p><p>Frater Alek0s</p>"
+    },
+    {
+      "id": "b3_day5",
+      "delay_hours": 120,
+      "subject": "The pack: 8 books for $29.99, and what happens with the money",
+      "preheader": "The arithmetic of the pack and the 7-day window",
+      "body_html": "<p>Hi,</p><p>The English pack delivers <strong>eight books</strong> for $29.99. Bought one by one they add up to $68.92, so the difference is $38.93.</p><p>Two things worth knowing before paying:</p><ul><li>Hotmart gives <strong>7 days</strong> to request a refund. You do not have to justify it.</li><li>It is not a subscription: one payment and the files are yours.</li></ul><p style=\"text-align:center;margin:28px 0\"><a href=\"https://pay.hotmart.com/N108147778I?checkoutMode=2\" style=\"background:#c0a060;color:#0b0b0b;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700\">See the pack</a></p><p>If $29.99 is a lot this month, Codex Chaoticus is $4.99 and it is where most people start.</p><p>Frater Alek0s</p>"
+    },
+    {
+      "id": "b4_day9",
+      "delay_hours": 216,
+      "subject": "What the people who stay do after week one",
+      "preheader": "Seven days, one entry a night, and the coven",
+      "body_html": "<p>Hi,</p><p>The pattern that works is boring: seven days, ten minutes a day, one logged entry per night. Seven comparable entries beat seven impressions.</p><p>If you want the log already built, the <a href=\"https://cha0smagicklabs.com/lead-magnet/goetia-7-day-protocol.html\">seven-day protocol</a> is free and asks for nothing.</p><p>And if you have done the first week, the natural home for the log is the coven: <a href=\"https://cha0smagicklabs.com/community.html\">what the circle is</a>.</p><p>The books, whenever you want them: <a href=\"https://cha0smagicklabs.com/books/\">eight titles from $4.99</a>.</p><p>Frater Alek0s</p>"
+    },
+    {
+      "id": "b5_day14",
+      "delay_hours": 336,
+      "subject": "Last email about this (and the only number that matters)",
+      "preheader": "If it is not the moment, it is not; the door stays open",
+      "body_html": "<p>Hi,</p><p>This is the last email in the series. If you have not bought, it is probably because it is not the moment, and that is a valid answer.</p><p>Two things that do not expire:</p><ul><li>The <a href=\"https://cha0smagicklabs.com/tools/\">70 free tools</a> stay where they are.</li><li>The <a href=\"https://cha0smagicklabs.com/books/\">eight books</a> stay at $4.99-$9.99 and the pack at $29.99, with no countdown and no limited seats.</li></ul><p>When you want to continue, write to us and we will tell you where to start.</p><p>Frater Alek0s</p>"
+    }
+  ]
+}
