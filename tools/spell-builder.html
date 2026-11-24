@@ -385,14 +385,14 @@ document.getElementById('buildBtn').onclick = function() {
     document.getElementById('recipeSubtitle').textContent = selected.size + ' intention' + (selected.size > 1 ? 's combined' : '');
     
     document.getElementById('recipeGrid').innerHTML = `
-        <div class="recipe-item"><h4>✦ Candle Color</h4><p class="value">${combine('color')}</p></div>
-        <div class="recipe-item"><h4>✦ Herbs</h4><p class="value">${combine('herb')}</p></div>
-        <div class="recipe-item"><h4>✦ Crystals</h4><p class="value">${combine('crystal')}</p></div>
-        <div class="recipe-item"><h4>✦ Incense</h4><p class="value">${combine('incense')}</p></div>
-        <div class="recipe-item"><h4>✦ Best Day</h4><p class="value">${combine('day')}</p></div>
-        <div class="recipe-item"><h4>🌐 Planet</h4><p class="value">${combine('planet')}</p></div>
-        <div class="recipe-item"><h4>🌙 Moon Phase</h4><p class="value">${combine('moon')}</p></div>
-        <div class="recipe-item"><h4>⏰ Timing</h4><p class="value">${combine('day')} — ${combine('moon').split(',')[0]}</p></div>
+        <div class="recipe-item"><h3>✦ Candle Color</h3><p class="value">${combine('color')}</p></div>
+        <div class="recipe-item"><h3>✦ Herbs</h3><p class="value">${combine('herb')}</p></div>
+        <div class="recipe-item"><h3>✦ Crystals</h3><p class="value">${combine('crystal')}</p></div>
+        <div class="recipe-item"><h3>✦ Incense</h3><p class="value">${combine('incense')}</p></div>
+        <div class="recipe-item"><h3>✦ Best Day</h3><p class="value">${combine('day')}</p></div>
+        <div class="recipe-item"><h3>🌐 Planet</h3><p class="value">${combine('planet')}</p></div>
+        <div class="recipe-item"><h3>🌙 Moon Phase</h3><p class="value">${combine('moon')}</p></div>
+        <div class="recipe-item"><h3>⏰ Timing</h3><p class="value">${combine('day')} — ${combine('moon').split(',')[0]}</p></div>
     `;
     
     document.getElementById('stepsList').innerHTML = `
