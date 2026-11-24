@@ -556,8 +556,10 @@
       ? 'Sin spam. Puedes darte de baja cuando quieras.'
       : 'No spam. Unsubscribe anytime.';
 
-    // Don't inject if form already present on page
-    if (document.querySelector('.ml-embedded[data-form="' + formSlug + '"]')) return;
+    // Una sola captura por pagina: si ya hay un formulario incrustado, no se
+    // anade otro. Antes solo se comparaba el slug, asi que una pagina con el
+    // formulario EN escrito a mano recibia ademas el ES inyectado al pie.
+    if (document.querySelector('.ml-embedded')) return;
     if (document.getElementById('cm-cta-lead-magnet')) return;
 
     var html = '\
