@@ -111,3 +111,14 @@ projects/scripts/_mailerlite-*.js
 projects/scripts/_test-groq.js
 data/metrics-google-play.json
 data/social-performance.json
+
+# ---------------------------------------------------------------------------
+# Tope de 1 GB de GitHub Pages: lo que no necesita estar en la rama.
+# 2026-11-24: el arbol versionado pesaba 975 MB. Los PNG de pins son 330 MB
+# generados cada dia (el estado que da idempotencia a pins-hourly son los .json
+# y los .published, que siguen versionados). projects/ son 226 MB de trabajo
+# local que ninguna pagina del sitio referencia.
+# Los archivos siguen en disco: solo salen del repositorio.
+# ---------------------------------------------------------------------------
+pins/output/daily/*.png
+/projects/
