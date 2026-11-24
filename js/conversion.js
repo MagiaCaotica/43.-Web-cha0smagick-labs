@@ -544,6 +544,10 @@
     var target = document.querySelector(targetSelector);
     if (!target) return;
 
+    // El script tiene que cargarse aunque la pagina ya traiga su propio
+    // formulario escrito a mano: si no, el hueco se queda vacio para siempre.
+    loadMailerLite();
+
     var lang = isSpanish();
     var headline = lang
       ? '📩 ¡Obtén Tu Guía Rápida de Magia del Caos GRATIS!'
