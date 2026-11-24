@@ -559,7 +559,10 @@
     // Una sola captura por pagina: si ya hay un formulario incrustado, no se
     // anade otro. Antes solo se comparaba el slug, asi que una pagina con el
     // formulario EN escrito a mano recibia ademas el ES inyectado al pie.
-    if (document.querySelector('.ml-embedded')) return;
+    // El formulario del popup no cuenta: vive en un overlay y no sustituye a
+    // la captura de la pagina.
+    var existingForm = document.querySelector('.ml-embedded');
+    if (existingForm && !existingForm.closest('#cm-email-popup')) return;
     if (document.getElementById('cm-cta-lead-magnet')) return;
 
     var html = '\
