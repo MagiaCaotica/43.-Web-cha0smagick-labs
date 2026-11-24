@@ -1,4 +1,4 @@
-﻿/* Carga Leaflet y el mapa de visitantes solo cuando el mapa se acerca a la
+/* Carga Leaflet y el mapa de visitantes solo cuando el mapa se acerca a la
    pantalla. Antes, 51 paginas descargaban 41 KB de Leaflet al inicio aunque
    el mapa estuviera muy por debajo del pliegue.
 

@@ -99,6 +99,12 @@ const EXCLUSIONS = {
     'post-mortem. This exclusion was added because CI caught exactly that: ' +
     'section 11.4 was written listing the bad ids, and the guard failed on ' +
     'the commit that documented the fix.',
+  'docs/posicionamiento-goetia-2026-11.md':
+    'strategy note that names three proposed app ids (archeokit, omnidice, ' +
+    'ufotoolkit) as candidates, not as published apps. Same reason as ' +
+    'PLAN-UNICO.md: the guard cannot tell a roadmap from a shipped package, ' +
+    'and failing CI on a proposal is how you teach people to stop writing ' +
+    'proposals down.',
   'app-ads.txt':
     'template comment showing the ads.txt wildcard format, not a real id; ' +
     'the publisher id in that file is a separate owner action',
