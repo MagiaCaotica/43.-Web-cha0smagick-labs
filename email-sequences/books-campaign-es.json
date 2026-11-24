@@ -1,7 +1,7 @@
 {
   "name": "Campana de libros - 5 correos (ES)",
   "trigger": "group_lead_magnet_es",
-  "note": "Escrita 2026-11-24. Cada cifra de este archivo es verificable: precios y paginas en /books/, 7 dias de Hotmart en /es/politica-de-reembolso.html, 48 horas de Google Play en la politica de Play. Sin escasez inventada: no hay cuenta atras ni plazas. El objetivo es que el que ya descargo la guia vea que hay un siguiente paso concreto y cuanto cuesta.",
+  "note": "Estado 2026-11-24: publicado en la automatizacion de MailerLite 194262410018686857, activa, con 5 emails: bienvenida/PDF (dia 0) + b2, b3, b4 y b5 con retardos acumulados 2, 3, 4 y 5 dias (48, 120, 216 y 336 h). b1 (dia 0) NO se usa: el email de bienvenida que entrega el PDF ya ocupa el dia 0 y repetir un segundo correo el mismo dia solo resta entregabilidad. Cada email se monto con el editor HTML personalizado de MailerLite: cabecera de 600 px, pie con enlace de baja {$unsubscribe} y el mismo texto que este body_html.",
   "emails": [
     {
       "id": "b1_dia0",
@@ -13,30 +13,31 @@
     {
       "id": "b2_dia2",
       "delay_hours": 48,
-      "subject": "Cual de los ocho libros te sirve (y cual no)",
-      "preheader": "Una decision por perfil, sin listas de diez",
-      "body_html": "<p>Hola,</p><p>Tres puertas, una decision:</p><ul><li><strong>Nunca has trazado un circulo:</strong> Magia del Caos para Principiantes. 176 paginas, 9,99.</li><li><strong>Ya practicas y quieres el sistema completo:</strong> Codex Chaoticus (4,99) y, si trabajas con servidores, el Tratado Practico Completo: 368 paginas, 9,99.</li><li><strong>Te interesa la parte tecnica:</strong> TECNOMANCIA. 399 paginas, 45 capitulos, seis proyectos con codigo que corre. 9,99.</li></ul><p>Ninguno promete un resultado sobrenatural. El tratado mas largo incluye diecisiete contraindicaciones y una seccion sobre que hacer cuando no pasa nada; eso tambien es parte del metodo.</p><p style=\"text-align:center;margin:28px 0\"><a href=\"https://cha0smagicklabs.com/books/\" style=\"background:#c0a060;color:#0b0b0b;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700\">Ver cual encaja</a></p><p>Frater Alek0s</p>"
+      "subject": "Cuál de los ocho libros te sirve (y cuál no)",
+      "preheader": "Una decisión por perfil, sin listas de diez",
+      "body_html": "<p style=\"margin:0 0 16px;\">Hola,</p>\n<p style=\"margin:0 0 16px;\">Tres puertas, una decisión:</p>\n<ul style=\"margin:0 0 18px;padding-left:22px;\">\n<li style=\"margin:0 0 10px;\"><strong>Nunca has trazado un círculo:</strong> Magia del Caos para Principiantes. 176 páginas, 9,99.</li>\n<li style=\"margin:0 0 10px;\"><strong>Ya practicas y quieres el sistema completo:</strong> Codex Chaoticus (4,99) y, si trabajas con servidores, el Tratado Práctico Completo: 368 páginas, 9,99.</li>\n<li style=\"margin:0 0 10px;\"><strong>Te interesa la parte técnica:</strong> TECNOMANCIA. 399 páginas, 45 capítulos, seis proyectos con código que corre. 9,99.</li>\n</ul>\n<p style=\"margin:0 0 16px;\">Ninguno promete un resultado sobrenatural. El tratado más largo incluye diecisiete contraindicaciones y una sección sobre qué hacer cuando no pasa nada; eso también es parte del método.</p>\n<p style=\"text-align:center;margin:28px 0;\"><a href=\"https://cha0smagicklabs.com/books/\" style=\"background:#c0a060;color:#0b0b0b;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700;font-family:Arial,Helvetica,sans-serif;display:inline-block;\">Ver cuál encaja</a></p>\n<p style=\"margin:0;\">Frater Alek0s</p>"
     },
     {
       "id": "b3_dia5",
       "delay_hours": 120,
-      "subject": "El pack: 10 libros por 29,99, y que pasa con el dinero",
-      "preheader": "La aritmetica del pack y la garantia de 7 dias",
-      "body_html": "<p>Hola,</p><p>El pack en espanol entrega <strong>diez libros</strong> por 29,99. Los ocho de esta guia suman 68,92 comprados por separado; el pack anade dos titulos anteriores. Son 38,93 menos.</p><p>Dos cosas que conviene saber antes de pagar:</p><ul><li>Hotmart da <strong>7 dias</strong> para pedir reembolso. No hay que justificarlo.</li><li>No es una suscripcion: un pago y los archivos son tuyos.</li></ul><p style=\"text-align:center;margin:28px 0\"><a href=\"https://pay.hotmart.com/V107097103W?checkoutMode=2\" style=\"background:#c0a060;color:#0b0b0b;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700\">Ver el pack</a></p><p>Si 29,99 es mucho este mes, Codex Chaoticus cuesta 4,99 y es por donde empieza la mayoria.</p><p>Frater Alek0s</p>"
+      "subject": "El pack: 10 libros por 29,99, y qué pasa con el dinero",
+      "preheader": "La aritmética del pack y la garantía de 7 días",
+      "body_html": "<p style=\"margin:0 0 16px;\">Hola,</p>\n<p style=\"margin:0 0 16px;\">El pack en español entrega <strong>diez libros</strong> por 29,99. Los ocho de esta guía suman 68,92 comprados por separado; el pack añade dos títulos anteriores. Son 38,93 menos.</p>\n<p style=\"margin:0 0 12px;\">Dos cosas que conviene saber antes de pagar:</p>\n<ul style=\"margin:0 0 18px;padding-left:22px;\">\n<li style=\"margin:0 0 10px;\">Hotmart da <strong>7 días</strong> para pedir reembolso. No hay que justificarlo.</li>\n<li style=\"margin:0 0 10px;\">No es una suscripción: un pago y los archivos son tuyos.</li>\n</ul>\n<p style=\"text-align:center;margin:28px 0;\"><a href=\"https://pay.hotmart.com/V107097103W?checkoutMode=2\" style=\"background:#c0a060;color:#0b0b0b;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700;font-family:Arial,Helvetica,sans-serif;display:inline-block;\">Ver el pack</a></p>\n<p style=\"margin:0 0 16px;\">Si 29,99 es mucho este mes, Codex Chaoticus cuesta 4,99 y es por donde empieza la mayoría.</p>\n<p style=\"margin:0;\">Frater Alek0s</p>"
     },
     {
       "id": "b4_dia9",
       "delay_hours": 216,
-      "subject": "Lo que hacen los que siguen despues de la primera semana",
-      "preheader": "Siete dias, una entrada por noche, y el coven",
-      "body_html": "<p>Hola,</p><p>El patron que funciona es simple: siete dias, diez minutos al dia, una entrada registrada por noche. Siete entradas comparables valen mas que siete impresiones.</p><p>Si quieres el registro hecho, el <a href=\"https://cha0smagicklabs.com/lead-magnet/protocolo-7-dias-goetia-es.html\">protocolo de siete dias</a> es gratis y no pide nada.</p><p>Y si ya has hecho la primera semana, el sitio natural del registro es el coven: <a href=\"https://cha0smagicklabs.com/es/comunidad.html\">que es el circulo</a>.</p><p>Los libros, cuando los quieras: <a href=\"https://cha0smagicklabs.com/books/\">ocho titulos desde 4,99</a>.</p><p>Frater Alek0s</p>"
+      "subject": "Lo que hacen los que siguen después de la primera semana",
+      "preheader": "Siete días, una entrada por noche, y el coven",
+      "body_html": "<p style=\"margin:0 0 16px;\">Hola,</p>\n<p style=\"margin:0 0 16px;\">El patrón que funciona es simple: siete días, diez minutos al día, una entrada registrada por noche. Siete entradas comparables valen más que siete impresiones.</p>\n<p style=\"margin:0 0 16px;\">Si quieres el registro hecho, el <a href=\"https://cha0smagicklabs.com/lead-magnet/protocolo-7-dias-goetia-es.html\" style=\"color:#8a6d2f;\">protocolo de siete días</a> es gratis y no pide nada.</p>\n<p style=\"margin:0 0 16px;\">Y si ya has hecho la primera semana, el sitio natural del registro es el coven: <a href=\"https://cha0smagicklabs.com/es/comunidad.html\" style=\"color:#8a6d2f;\">qué es el círculo</a>.</p>\n<p style=\"margin:0 0 16px;\">Los libros, cuando los quieras: <a href=\"https://cha0smagicklabs.com/books/\" style=\"color:#8a6d2f;\">ocho títulos desde 4,99</a>.</p>\n<p style=\"margin:0;\">Frater Alek0s</p>"
     },
     {
       "id": "b5_dia14",
       "delay_hours": 336,
-      "subject": "Ultimo correo sobre esto (y el unico dato que importa)",
-      "preheader": "Si no es el momento, no lo es; aqui queda la puerta abierta",
-      "body_html": "<p>Hola,</p><p>Este es el ultimo correo de esta serie. Si no has comprado, probablemente sea porque no es el momento, y eso es una respuesta valida.</p><p>Dos cosas que no caducan:</p><ul><li>Las <a href=\"https://cha0smagicklabs.com/tools/\">70 herramientas gratis</a> siguen ahi.</li><li>Los <a href=\"https://cha0smagicklabs.com/books/\">ocho libros</a> siguen a 4,99-9,99 y el pack a 29,99, sin cuenta atras ni plazas limitadas.</li></ul><p>Cuando quieras seguir, escribenos y te decimos por donde.</p><p>Frater Alek0s</p>"
+      "subject": "Último correo sobre esto (y el único dato que importa)",
+      "preheader": "Si no es el momento, no lo es; aquí queda la puerta abierta",
+      "body_html": "<p style=\"margin:0 0 16px;\">Hola,</p>\n<p style=\"margin:0 0 16px;\">Este es el último correo de esta serie. Si no has comprado, probablemente sea porque no es el momento, y eso es una respuesta válida.</p>\n<p style=\"margin:0 0 12px;\">Dos cosas que no caducan:</p>\n<ul style=\"margin:0 0 18px;padding-left:22px;\">\n<li style=\"margin:0 0 10px;\">Las <a href=\"https://cha0smagicklabs.com/tools/\" style=\"color:#8a6d2f;\">70 herramientas gratis</a> siguen ahí.</li>\n<li style=\"margin:0 0 10px;\">Los <a href=\"https://cha0smagicklabs.com/books/\" style=\"color:#8a6d2f;\">ocho libros</a> siguen a 4,99-9,99 y el pack a 29,99, sin cuenta atrás ni plazas limitadas.</li>\n</ul>\n<p style=\"margin:0 0 16px;\">Cuando quieras seguir, escríbenos y te decimos por dónde.</p>\n<p style=\"margin:0;\">Frater Alek0s</p>"
     }
-  ]
+  ],
+  "mailerlite_automation_id": "194262410018686857"
 }
