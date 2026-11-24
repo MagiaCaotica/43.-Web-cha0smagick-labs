@@ -529,7 +529,7 @@
       n = d.getElementsByTagName(e)[0];
       if (n && n.parentNode) n.parentNode.insertBefore(l, n);
       else d.head.appendChild(l);
-    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+    })(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
 
     try { window.ml('account', CONFIG.mlAccount); } catch (e) { /* non-fatal */ }
   }
