@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Feed de Google Merchant Center. Fuente: schema Product de cada pagina del sitio.
-     Los 12 productos APP- enlazan a su ficha real de Google Play.
-     Los 9 productos BOOK- enlazan a su checkout de Hotmart: un PDF no tiene ficha en Play.
+     Los 12 productos APP- y los 13 BOOK- enlazan a su ficha dentro de
+     cha0smagicklabs.com, el unico dominio verificado en la cuenta: ahi se ve
+     el precio y el boton de compra (Play o Hotmart).
      gtin: omitido. Solo GS1 lo emite y no existen para software ni PDF,
      asi que declararlo seria inventar un identificador falso.
-     shipping: 0 USD porque son productos digitales (descarga inmediata). -->
+     shipping: sin atributo por item; la cuenta usa la politica de envio
+     "Entrega digital inmediata" para todos los paises. -->
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
 <channel>
 <title>Cha0smagick Labs</title>
@@ -21,7 +23,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-001</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-APP-002</g:id>
@@ -34,7 +35,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-002</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-APP-003</g:id>
@@ -47,7 +47,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-003</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-APP-004</g:id>
@@ -60,7 +59,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-004</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-APP-005</g:id>
@@ -73,7 +71,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-005</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-APP-006</g:id>
@@ -86,7 +83,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-006</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-APP-007</g:id>
@@ -99,7 +95,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-007</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-APP-008</g:id>
@@ -112,7 +107,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-008</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-APP-009</g:id>
@@ -125,7 +119,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-009</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-APP-010</g:id>
@@ -138,7 +131,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-010</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-APP-011</g:id>
@@ -151,7 +143,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-011</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-APP-012</g:id>
@@ -164,7 +155,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-APP-012</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-001</g:id>
@@ -177,7 +167,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-001</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-002</g:id>
@@ -190,7 +179,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-002</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-003</g:id>
@@ -203,7 +191,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-003</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-004</g:id>
@@ -216,7 +203,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-004</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-005</g:id>
@@ -229,7 +215,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-005</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-006</g:id>
@@ -242,7 +227,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-006</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-007</g:id>
@@ -255,7 +239,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-007</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-008</g:id>
@@ -268,7 +251,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-008</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-009</g:id>
@@ -281,7 +263,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-009</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-010</g:id>
@@ -294,7 +275,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-010</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-011</g:id>
@@ -307,7 +287,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-011</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-012</g:id>
@@ -320,7 +299,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-012</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 <item>
   <g:id>CHAOS-BOOK-013</g:id>
@@ -333,7 +311,6 @@
   <g:availability>in stock</g:availability>
   <g:brand>Cha0smagick Labs</g:brand>
   <g:mpn>CHAOS-BOOK-013</g:mpn>
-  <g:shipping_cost>0.00 USD</g:shipping_cost>
 </item>
 </channel>
 </rss>
