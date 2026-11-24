@@ -141,11 +141,11 @@
     <div class="filter-bar">
         <label style="color:var(--gold);font-size:0.85rem;font-weight:600">Filter by Purpose:</label>
         <select class="filter-select" id="purposeFilter">
-            <option value="">All Purposes</option>
+            <option value=">All Purposes</option>
         </select>
         <label style="color:var(--gold);font-size:0.85rem;font-weight:600">Rank:</label>
         <select class="filter-select" id="rankFilter">
-            <option value="">All Ranks</option>
+            <option value=">All Ranks</option>
             <option value="King">King</option>
             <option value="Duke">Duke</option>
             <option value="Prince">Prince</option>
@@ -156,7 +156,7 @@
         </select>
         <label style="color:var(--gold);font-size:0.85rem;font-weight:600">Element:</label>
         <select class="filter-select" id="elementFilter">
-            <option value="">All Elements</option>
+            <option value=">All Elements</option>
             <option value="Fire">Fire</option>
             <option value="Water">Water</option>
             <option value="Air">Air</option>
@@ -164,7 +164,7 @@
         </select>
         <label style="color:var(--gold);font-size:0.85rem;font-weight:600">Planet:</label>
         <select class="filter-select" id="planetFilter">
-            <option value="">All Planets</option>
+            <option value=">All Planets</option>
             <option value="Saturn">Saturn</option>
             <option value="Jupiter">Jupiter</option>
             <option value="Mars">Mars</option>
@@ -378,13 +378,13 @@ const grid = document.getElementById('spiritGrid');
 const resultsCount = document.getElementById('resultsCount');
 
 function populateFilters() {
-    document.getElementById('purposeFilter').innerHTML = '<option value="">All Purposes</option>' + 
+    document.getElementById('purposeFilter').innerHTML = '<option value=">All Purposes</option>' + 
         PURPOSES.map(p => `<option value="${p}">${p}</option>`).join('');
-    document.getElementById('rankFilter').innerHTML = '<option value="">All Ranks</option>' + 
+    document.getElementById('rankFilter').innerHTML = '<option value=">All Ranks</option>' + 
         RANKS.map(r => `<option value="${r}">${r}</option>`).join('');
-    document.getElementById('elementFilter').innerHTML = '<option value="">All Elements</option>' + 
+    document.getElementById('elementFilter').innerHTML = '<option value=">All Elements</option>' + 
         ELEMENTS.map(e => `<option value="${e}">${e}</option>`).join('');
-    document.getElementById('planetFilter').innerHTML = '<option value="">All Planets</option>' + 
+    document.getElementById('planetFilter').innerHTML = '<option value=">All Planets</option>' + 
         PLANETS.map(p => `<option value="${p}">${p}</option>`).join('');
 }
 
