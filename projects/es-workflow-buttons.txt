@@ -1,1 +1,0 @@
-"{\"text\":\"Test\",\"ariaLabel\":\"\",\"title\":\"\"}\n{\"text\":\"Activate\",\"ariaLabel\":\"\",\"title\":\"\"}"
