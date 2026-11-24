@@ -6,7 +6,10 @@
      gtin: omitido. Solo GS1 lo emite y no existen para software ni PDF,
      asi que declararlo seria inventar un identificador falso.
      shipping: sin atributo por item; la cuenta usa la politica de envio
-     "Entrega digital inmediata" para todos los paises. -->
+     "Entrega digital inmediata" para todos los paises.
+     Corea del Sur esta fuera de los paises de la fuente: Google exige KRW
+     alli y el feed declara un unico precio en USD. Si algun dia se vende en
+     won, hay que anadir los items con <g:price> en KRW y volver a incluirla. -->
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
 <channel>
 <title>Cha0smagick Labs</title>
