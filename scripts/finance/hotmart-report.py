@@ -44,7 +44,7 @@ token_body = "grant_type=client_credentials&client_id=%s&client_secret=%s" % (
 token = json.loads(subprocess.run(
     ["curl.exe", "-s", "--max-time", "60", "-X", "POST",
      "https://api-sec-vlc.hotmart.com/security/oauth/token",
-     "-H", "Authorization: " + env("HOTMART_BASIC_TOKEN"),
+     "-H", "Authorization: Basic " + env("HOTMART_BASIC_TOKEN"),
      "-H", "Content-Type: application/x-www-form-urlencoded",
      "--data", token_body],
     capture_output=True, text=True).stdout)["access_token"]
