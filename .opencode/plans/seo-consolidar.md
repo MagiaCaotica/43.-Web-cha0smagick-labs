@@ -70,3 +70,30 @@ Dos CTA que ofrecen el producto equivocado:
 - Backlinks: sin ellos, consolidar mejora la distribución de la señal, no la autoridad del dominio. Es el techo real del sitio y no se puede fabricar.
 - Google Merchant: el canal nuevo (25 productos) hay que medirlo 7 días antes de tocar nada.
 - El bloque `linkgraph:refs` con anclas repetidas: candidato a eliminar en fase 2, cuando las familias estén consolidadas.
+
+## Ejecutado (2026-11-25)
+
+Fase 1, familia `chaos-magic-fundamentals-what-is-chaos-magic-guide`:
+
+- 866 enlaces internos de 162 archivos reescritos a la superviviente.
+- 26 copias con `noindex, follow` y `canonical` a la superviviente. Los archivos siguen dando 200.
+- 26 entradas fuera del sitemap (1.105 → 1.079 URLs). El generador `scripts/generate_sitemap.py` ya respeta noindex, así que el refresco automático no las repone.
+- 26 tarjetas duplicadas retiradas de `blog/index.html` (842 → 816 tarjetas).
+- `vnu`: 0 errores en los archivos tocados y en `blog/index.html`.
+- Herramienta reutilizable: `node scripts/seo/consolidate-family.cjs <prefijo> [--write]`.
+
+Fase 3:
+
+- `blog/spirit-box-frequency-settings.html`: CTA pasa de Mind The Gap + Dream Machine a NOCTEM (EVP, SLS, temporizador) + Ouija Cazadora.
+- `blog/iching-changing-lines-guide.html`: fuera PSI GYM del CTA, dentro el simulador gratuito de líneas cambiantes.
+
+## Cómo se mide
+
+A 3-4 semanas en Search Console, por URL:
+
+- `blog/chaos-magic-fundamentals-what-is-chaos-magic-guide.html`: impresiones y posición media para las consultas de la familia (hoy repartidas entre 27 URLs, 0 clics).
+- CTR del sitio: no debe bajar.
+- Clics de salida hacia `/apps/noctem-tools.html` y `/tools/iching-changing-lines.html` (GA4 o el `purchase_click` que ya emite conversion.js).
+
+Si la superviviente no se mueve, la hipótesis de canibalización es falsa y el problema es autoridad: entonces la fase 2 no se hace y el foco pasa a enlaces externos.
+
