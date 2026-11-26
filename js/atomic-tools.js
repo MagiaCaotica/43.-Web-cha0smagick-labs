@@ -2,7 +2,12 @@
 (function () {
   'use strict';
 
-  var DATA_URL = '../data/atomic-tools.json';
+  /* i18n: la pagina declara <html lang>; sin declaracion, espanol. */
+  var LANG = (document.documentElement.getAttribute('lang') || 'es').toLowerCase().slice(0, 2);
+  var EN = LANG === 'en';
+  function T(es, en) { return EN ? en : es; }
+
+  var DATA_URL = '/data/atomic-tools.json';
   var host = document.querySelector('[data-atomic-tool]');
   if (!host) return;
   var toolId = host.getAttribute('data-atomic-tool') || '';
@@ -36,10 +41,10 @@
   }
   function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
   function fromYmd(s) { var p = String(s).split('-'); return new Date(+p[0], (+p[1] || 1) - 1, +p[2] || 1); }
-  var MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  var MESES = EN ? ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] : ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
   function fmtDate(s) {
     var d = fromYmd(s); if (isNaN(d.getTime())) return '';
-    return d.getDate() + ' de ' + MESES[d.getMonth()] + ' de ' + d.getFullYear();
+    return EN ? (MESES[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear()) : (d.getDate() + ' de ' + MESES[d.getMonth()] + ' de ' + d.getFullYear());
   }
   function track(name, props) {
     try { if (window.Cha0Analytics && typeof window.Cha0Analytics.track === 'function') window.Cha0Analytics.track(name, props); } catch (e) {}
@@ -52,14 +57,14 @@
   function moonLongitude(date) { return ((218.316 + 13.176396 * daysSinceJ2000(date)) % 360 + 360) % 360; }
   function phaseAngle(date) { return ((moonLongitude(date) - sunLongitude(date)) % 360 + 360) % 360; }
   function phaseName(deg) {
-    if (deg < 11.25 || deg >= 348.75) return 'Luna Nueva';
-    if (deg < 78.75) return 'Creciente inicial';
-    if (deg < 101.25) return 'Cuarto Creciente';
-    if (deg < 168.75) return 'Gibosa Creciente';
-    if (deg < 191.25) return 'Luna Llena';
-    if (deg < 258.75) return 'Gibosa Menguante';
-    if (deg < 281.25) return 'Cuarto Menguante';
-    return 'Menguante inicial';
+    if (deg < 11.25 || deg >= 348.75) return T('Luna Nueva', 'New Moon');
+    if (deg < 78.75) return T('Creciente inicial', 'Waxing Crescent');
+    if (deg < 101.25) return T('Cuarto Creciente', 'First Quarter');
+    if (deg < 168.75) return T('Gibosa Creciente', 'Waxing Gibbous');
+    if (deg < 191.25) return T('Luna Llena', 'Full Moon');
+    if (deg < 258.75) return T('Gibosa Menguante', 'Waning Gibbous');
+    if (deg < 281.25) return T('Cuarto Menguante', 'Last Quarter');
+    return T('Menguante inicial', 'Waning Crescent');
   }
   function illum(deg) { return Math.round((1 - Math.cos(deg * Math.PI / 180)) / 2 * 100); }
 
@@ -77,6 +82,13 @@
     { n: 'Acuario', e: 'Aire', m: 'Fijo', r: 'Urano', ini: [1, 20], fin: [2, 18] },
     { n: 'Piscis', e: 'Agua', m: 'Mutable', r: 'Neptuno', ini: [2, 19], fin: [3, 20] }
   ];
+  if (EN) {
+    var S_EN = { Tauro: 'Taurus', 'Géminis': 'Gemini', 'Cáncer': 'Cancer', Escorpio: 'Scorpio', Sagitario: 'Sagittarius', Capricornio: 'Capricorn', Acuario: 'Aquarius', Piscis: 'Pisces' };
+    var E_EN = { Fuego: 'Fire', Tierra: 'Earth', Aire: 'Air', Agua: 'Water' };
+    var M_EN = { Fijo: 'Fixed', Mutable: 'Mutable', Cardinal: 'Cardinal' };
+    var R_EN = { Marte: 'Mars', Sol: 'Sun', Luna: 'Moon', Mercurio: 'Mercury', Venus: 'Venus', 'Plutón': 'Pluto', 'Júpiter': 'Jupiter', Saturno: 'Saturn', Urano: 'Uranus', Neptuno: 'Neptune' };
+    SIGNS.forEach(function (s) { s.n = S_EN[s.n] || s.n; s.e = E_EN[s.e] || s.e; s.m = M_EN[s.m] || s.m; s.r = R_EN[s.r] || s.r; });
+  }
   function signOf(lon) { return SIGNS[Math.floor((((lon % 360) + 360) % 360) / 30) % 12]; }
   function sunSign(date) {
     var m = date.getMonth() + 1, d = date.getDate();
@@ -285,19 +297,23 @@
   KINDS['birth-chart'] = function (v) {
     var d = fromYmd(v.date); if (isNaN(d.getTime())) return null;
     var s = sunSign(d), moon = signOf(moonLongitude(d)), ph = phaseAngle(d);
-    var mode = {
-      Fuego: 'con impulso y convicción', Tierra: 'con método y sentido práctico',
-      Aire: 'con curiosidad y palabra', Agua: 'con emoción y memoria'
-    }[s.e];
-    var r = R('Carta natal en lectura de síntesis', 'Sol en ' + s.n + ', Luna en ' + moon.n + ', regente ' + s.r + '.');
-    r.rows.push({ label: 'Fecha', value: fmtDate(v.date) });
-    r.rows.push({ label: 'Sol', value: s.n + ' (' + s.e + ', ' + s.m + ')' });
-    r.rows.push({ label: 'Luna', value: moon.n + ' (' + moon.e + ')' });
-    r.rows.push({ label: 'Fase lunar', value: phaseName(ph) + ', ' + illum(ph) + '% iluminada' });
-    r.rows.push({ label: 'Regente', value: accent(s.r) });
-    r.blocks.push({ h: 'Qué dice tu Sol', p: ['Tu energía vital sale de ' + s.n + ' (' + norm(s.e) + '): actúas ' + mode + '.', 'El regente ' + accent(s.r) + ' es el planeta que más pesa en tu vida.'] });
-    r.blocks.push({ h: 'Cómo integrarlo', p: ['Lee tu Luna (' + moon.n + ') como la parte emocional que necesita cuidado.', 'Hoy tu fase es ' + norm(phaseName(ph)) + ': tu umbral interno pide ' + (illum(ph) > 50 ? 'soltar y revisar' : 'sembrar y empezar') + '.'] });
-    r.tips.push('Es una aproximación sin efemérides: el ascendente y las casas exactas los calcula la app Astral Lab.');
+    var mode = EN
+      ? { Fire: 'with drive and conviction', Earth: 'with method and practical sense', Air: 'with curiosity and words', Water: 'with emotion and memory' }[s.e]
+      : { Fuego: 'con impulso y convicción', Tierra: 'con método y sentido práctico', Aire: 'con curiosidad y palabra', Agua: 'con emoción y memoria' }[s.e];
+    var r = R(T('Carta natal en lectura de síntesis', 'Natal chart, read as a synthesis'),
+      T('Sol en ' + s.n + ', Luna en ' + moon.n + ', regente ' + s.r + '.', 'Sun in ' + s.n + ', Moon in ' + moon.n + ', ruler ' + s.r + '.'));
+    r.rows.push({ label: T('Fecha', 'Date'), value: fmtDate(v.date) });
+    r.rows.push({ label: T('Sol', 'Sun'), value: s.n + ' (' + s.e + ', ' + s.m + ')' });
+    r.rows.push({ label: T('Luna', 'Moon'), value: moon.n + ' (' + moon.e + ')' });
+    r.rows.push({ label: T('Fase lunar', 'Moon phase'), value: phaseName(ph) + ', ' + illum(ph) + T('% iluminada', '% illuminated') });
+    r.rows.push({ label: T('Regente', 'Ruler'), value: accent(s.r) });
+    r.blocks.push({ h: T('Qué dice tu Sol', 'What your Sun says'), p: [
+      T('Tu energía vital sale de ' + s.n + ' (' + norm(s.e) + '): actúas ' + mode + '.', 'Your vital energy comes from ' + s.n + ' (' + String(s.e).toLowerCase() + '): you act ' + mode + '.'),
+      T('El regente ' + accent(s.r) + ' es el planeta que más pesa en tu vida.', 'The ruler ' + accent(s.r) + ' is the planet that weighs most in your life.')] });
+    r.blocks.push({ h: T('Cómo integrarlo', 'How to work with it'), p: [
+      T('Lee tu Luna (' + moon.n + ') como la parte emocional que necesita cuidado.', 'Read your Moon (' + moon.n + ') as the emotional part that needs care.'),
+      T('Hoy tu fase es ' + norm(phaseName(ph)) + ': tu umbral interno pide ' + (illum(ph) > 50 ? 'soltar y revisar' : 'sembrar y empezar') + '.', 'The phase today is ' + phaseName(ph).toLowerCase() + ': your inner threshold asks you to ' + (illum(ph) > 50 ? 'release and review' : 'plant and begin') + '.')] });
+    r.tips.push(T('Es una aproximación sin efemérides: el ascendente y las casas exactas los calcula la app Astral Lab.', 'An approximation without ephemerides. Astral Lab computes the exact ascendant and houses.'));
     return r;
   };
 
@@ -338,13 +354,16 @@
   KINDS['cusp'] = function (v) {
     var d = fromYmd(v.date); if (isNaN(d.getTime())) return null;
     var s = sunSign(d), next = SIGNS[(SIGNS.indexOf(s) + 1) % 12], prev = SIGNS[(SIGNS.indexOf(s) + 11) % 12];
-    var r = R('Cúspide solar', 'Tu Sol está en ' + s.n + ' el ' + fmtDate(v.date) + '.');
-    r.rows.push({ label: 'Signo solar', value: s.n });
-    r.rows.push({ label: 'Entra', value: next.n + ' desde el ' + next.ini[0] + ' de ' + MESES[next.ini[1] - 1] });
-    r.rows.push({ label: 'Sale', value: prev.n });
-    r.rows.push({ label: 'Tu fecha', value: d.getDate() + '/' + (d.getMonth() + 1) });
-    r.blocks.push({ h: 'Cómo leer un borde solar', p: ['Sol en ' + s.n + ' significa que esa expresión se hace más visible en la segunda mitad de ' + next.n + '.', 'En las primeras semanas de ' + s.n + ' sueles sentirte más ' + norm(prev.n) + '.', 'A tres días del cambio la lectura es bisagra: mezcla de ambos signos.'] });
-    r.blocks.push({ h: 'Uso práctico', p: ['Si tu fecha coincide con el cambio, enfócate en el signo de grado que tengas, no solo en el nombre.'] });
+    var r = R(T('Cúspide solar', 'Solar cusp'), T('Tu Sol está en ' + s.n + ' el ' + fmtDate(v.date) + '.', 'Your Sun is in ' + s.n + ' on ' + fmtDate(v.date) + '.'));
+    r.rows.push({ label: T('Signo solar', 'Sun sign'), value: s.n });
+    r.rows.push({ label: T('Entra', 'Starts'), value: next.n + T(' desde el ', ' from ') + next.ini[0] + T(' de ', ' ') + MESES[next.ini[1] - 1] });
+    r.rows.push({ label: T('Sale', 'Leaves'), value: prev.n });
+    r.rows.push({ label: T('Tu fecha', 'Your date'), value: d.getDate() + '/' + (d.getMonth() + 1) });
+    r.blocks.push({ h: T('Cómo leer un borde solar', 'How to read a solar edge'), p: [
+      T('Sol en ' + s.n + ' significa que esa expresión se hace más visible en la segunda mitad de ' + next.n + '.', 'Sun in ' + s.n + ' means that expression becomes more visible in the second half of ' + next.n + '.'),
+      T('En las primeras semanas de ' + s.n + ' sueles sentirte más ' + norm(prev.n) + '.', 'In the first weeks of ' + s.n + ' you usually feel more ' + prev.n.toLowerCase() + '.'),
+      T('A tres días del cambio la lectura es bisagra: mezcla de ambos signos.', 'Within three days of the change the reading is a hinge: a mix of both signs.')] });
+    r.blocks.push({ h: T('Uso práctico', 'Practical use'), p: [T('Si tu fecha coincide con el cambio, enfócate en el signo de grado que tengas, no solo en el nombre.', 'If your date falls on the change, work from the degree of the sign you actually have, not only from the name.')] });
     return r;
   };
 
@@ -581,7 +600,7 @@
   KINDS['calendar'] = function (v) {
     var p = String(v.month || '2025-01').split('-'), year = +p[0], mon = (+p[1] || 1) - 1;
     if (!year) return null;
-    var r = R('Calendario lunar de ' + MESES[mon], 'Cambios de fase del mes por longitud media de la Luna.');
+    var r = R(T('Calendario lunar de ' + MESES[mon], 'Lunar calendar for ' + MESES[mon]), T('Cambios de fase del mes por longitud media de la Luna.', 'Phase changes this month, by mean lunar longitude.'));
     var lines = [], last = '';
     var cur = new Date(year, mon, 1), guard = 0;
     while (cur.getMonth() === mon && guard++ < 40) {
@@ -589,11 +608,11 @@
       if (pn !== last) { lines.push(pad(cur.getDate()) + ' - ' + pn + ' (' + illum(phaseAngle(cur)) + '%)'); last = pn; }
       cur.setDate(cur.getDate() + 1);
     }
-    r.rows.push({ label: 'Mes', value: mon + 1 + '/' + year });
-    r.rows.push({ label: 'Cambios de fase', value: String(lines.length) });
-    r.blocks.push({ h: 'Fases', p: lines });
-    r.blocks.push({ h: 'Cómo usar', p: ['Empieza en Luna Nueva, expande en creciente, consolida en Llena y suelta en menguante.'] });
-    r.tips.push('La app Lunar Phase te da la hora exacta y el signo lunar de cada día.');
+    r.rows.push({ label: T('Mes', 'Month'), value: mon + 1 + '/' + year });
+    r.rows.push({ label: T('Cambios de fase', 'Phase changes'), value: String(lines.length) });
+    r.blocks.push({ h: T('Fases', 'Phases'), p: lines });
+    r.blocks.push({ h: T('Cómo usar', 'How to use it'), p: [T('Empieza en Luna Nueva, expande en creciente, consolida en Llena y suelta en menguante.', 'Begin at the New Moon, expand through the waxing phase, consolidate at the Full Moon and release while waning.')] });
+    r.tips.push(T('La app Lunar Phase te da la hora exacta y el signo lunar de cada día.', 'The Lunar Phase app gives the exact time and the Moon sign for every day.'));
     return r;
   };
 
@@ -884,7 +903,7 @@
     var r = document.getElementById('atomic-result');
     if (!r) return;
     r.hidden = false;
-    var html = '<p class="atomic-kicker">Resultado' + (toolName ? ' · ' + esc(toolName) : '') + '</p><h2>' + esc(res.title) + '</h2><p class="atomic-lead">' + esc(res.lead) + '</p>';
+    var html = '<p class="atomic-kicker">' + T('Resultado', 'Result') + (toolName ? ' · ' + esc(toolName) : '') + '</p><h2>' + esc(res.title) + '</h2><p class="atomic-lead">' + esc(res.lead) + '</p>';
     if (res.rows.length) {
       html += '<div class="atomic-result-grid">' + res.rows.map(function (x) {
         return '<div><span>' + esc(x.label) + '</span><strong>' + esc(x.value) + '</strong></div>';
@@ -894,16 +913,16 @@
       html += '<h3>' + esc(b.h) + '</h3><ul class="atomic-steps">' + b.p.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>';
     });
     if (res.tips.length) {
-      html += '<div class="atomic-notice"><strong>Nota</strong><span> ' + res.tips.map(esc).join(' ') + '</span></div>';
+      html += '<div class="atomic-notice"><strong>' + T('Nota', 'Note') + '</strong><span> ' + res.tips.map(esc).join(' ') + '</span></div>';
     }
-    html += '<div class="atomic-actions"><button id="atomic-save" class="atomic-button atomic-button-secondary" type="button">Guardar resumen local</button>' +
-      '<button id="atomic-print" class="atomic-button atomic-button-secondary" type="button">Imprimir</button></div>' +
+    html += '<div class="atomic-actions"><button id="atomic-save" class="atomic-button atomic-button-secondary" type="button">' + T('Guardar resumen local', 'Save summary locally') + '</button>' +
+      '<button id="atomic-print" class="atomic-button atomic-button-secondary" type="button">' + T('Imprimir', 'Print') + '</button></div>' +
       '<span id="atomic-save-status" class="atomic-status" role="status" aria-live="polite"></span>';
     r.innerHTML = html;
     document.getElementById('atomic-save').addEventListener('click', function () {
       var ok = store('atomic-tool:' + toolId, { savedAt: new Date().toISOString(), title: res.title, values: labels });
       var s = document.getElementById('atomic-save-status');
-      s.textContent = ok ? 'Resumen guardado en este navegador.' : 'No se pudo guardar localmente: puedes imprimir o copiar.';
+      s.textContent = ok ? T('Resumen guardado en este navegador.', 'Summary saved in this browser.') : T('No se pudo guardar localmente: puedes imprimir o copiar.', 'Could not save locally: you can print or copy instead.');
     });
     document.getElementById('atomic-print').addEventListener('click', function () { window.print(); });
   }
@@ -914,9 +933,9 @@
     var base = 'id="field-' + id + '" name="' + id + '" aria-describedby="help-' + id + '"';
     var control = '';
     switch (field.type) {
-      case 'textarea': control = '<textarea ' + base + req + ' rows="5" placeholder="Escribe con tus propias palabras"></textarea>'; break;
-      case 'select': control = '<select ' + base + req + '><option value="">Selecciona una opción</option>' + list(field.options).map(function (o) { return '<option value="' + esc(o) + '">' + esc(o) + '</option>'; }).join('') + '</select>'; break;
-      case 'checkbox': control = '<input ' + base + ' type="checkbox" value="Sí">'; break;
+      case 'textarea': control = '<textarea ' + base + req + ' rows="5" placeholder="' + T('Escribe con tus propias palabras', 'Write in your own words') + '"></textarea>'; break;
+      case 'select': control = '<select ' + base + req + '><option value="">' + T('Selecciona una opción', 'Choose an option') + '</option>' + list(field.options).map(function (o) { return '<option value="' + esc(o) + '">' + esc(o) + '</option>'; }).join('') + '</select>'; break;
+      case 'checkbox': control = '<input ' + base + ' type="checkbox" value="' + T('Sí', 'Yes') + '">'; break;
       case 'number': control = '<input ' + base + req + ' type="number" inputmode="decimal" step="any" min="0" placeholder="Escribe un número">'; break;
       case 'date': control = '<input ' + base + req + ' type="date">'; break;
       case 'time': control = '<input ' + base + req + ' type="time">'; break;
@@ -936,24 +955,38 @@
     return typeof input.value === 'string' ? input.value.trim() : '';
   }
 
+  /* Traduce nombre, descripcion, metodo y etiquetas de campo si el JSON trae bloque `en`. */
+  function localize(tool) {
+    if (!EN || !tool || !tool.en) return tool;
+    var e = tool.en, out = {};
+    Object.keys(tool).forEach(function (k) { out[k] = tool[k]; });
+    ['name', 'category', 'description', 'result', 'safety', 'method'].forEach(function (k) { if (e[k]) out[k] = e[k]; });
+    if (e.fields) out.fields = list(tool.fields).map(function (f) {
+      var c = {}; Object.keys(f).forEach(function (k) { c[k] = f[k]; });
+      if (e.fields[f.id]) c.label = e.fields[f.id];
+      return c;
+    });
+    return out;
+  }
+
   function renderForm(tool) {
     var fields = list(tool.fields);
     mount.innerHTML =
-      '<div class="atomic-hero"><p class="atomic-kicker">' + esc(tool.category || 'Herramienta simbólica') + '</p>' +
+      '<div class="atomic-hero"><p class="atomic-kicker">' + esc(tool.category || T('Herramienta simbólica', 'Symbolic tool')) + '</p>' +
       '<h1>' + esc(tool.name) + '</h1><p class="atomic-lead">' + esc(tool.description || '') + '</p>' +
-      '<div class="atomic-notice"><strong>Herramienta gratuita</strong><span> Usa esta página como herramienta de reflexión y registro. No sustituye atención médica, psicológica, legal o financiera.</span></div></div>' +
-      '<section class="atomic-card"><h2>Configura tu lectura</h2><p class="atomic-muted">Completa los campos y obtén una lectura simbólica reproducible en este dispositivo.</p>' +
+      '<div class="atomic-notice"><strong>' + T('Herramienta gratuita', 'Free tool') + '</strong><span> ' + T('Usa esta página como herramienta de reflexión y registro. No sustituye atención médica, psicológica, legal o financiera.', 'Use this page as a tool for reflection and record-keeping. It does not replace medical, psychological, legal or financial advice.') + '</span></div></div>' +
+      '<section class="atomic-card"><h2>' + T('Configura tu lectura', 'Set up your reading') + '</h2><p class="atomic-muted">' + T('Completa los campos y obtén una lectura simbólica reproducible en este dispositivo.', 'Fill in the fields and get a symbolic reading you can reproduce on this device.') + '</p>' +
       '<form id="atomic-form" novalidate>' + fields.map(fieldMarkup).join('') +
-      '<div class="atomic-actions"><button class="atomic-button" type="submit">Generar resultado</button><button class="atomic-button atomic-button-secondary" type="reset">Limpiar</button></div>' +
+      '<div class="atomic-actions"><button class="atomic-button" type="submit">' + T('Generar resultado', 'Generate result') + '</button><button class="atomic-button atomic-button-secondary" type="reset">' + T('Limpiar', 'Clear') + '</button></div>' +
       '<p id="atomic-form-status" class="atomic-status" role="status" aria-live="polite"></p></form></section>' +
       '<section id="atomic-result" class="atomic-card atomic-result" hidden></section>' +
-      '<section class="atomic-card"><h2>Cómo usar esta herramienta</h2><ol class="atomic-steps">' +
+      '<section class="atomic-card"><h2>' + T('Cómo usar esta herramienta', 'How to use this tool') + '</h2><ol class="atomic-steps">' +
       list(tool.method).map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>' +
-      '<h3>Qué esperar</h3><p>' + esc(tool.result || 'Obtendrás una guía práctica para reflexionar y registrar tu proceso.') + '</p>' +
-      '<h3>Uso responsable</h3><p>' + esc(tool.safety || 'No uses esta herramienta para sustituir decisiones importantes ni para obtener datos de terceros sin consentimiento.') + '</p></section>' +
-      '<section class="atomic-card atomic-faq"><h2>Preguntas frecuentes</h2>' +
-      '<details><summary>¿La lectura es una predicción?</summary><p>No. Es una interpretación simbólica y de autoconocimiento; las decisiones importantes deben apoyarse en información y contexto reales.</p></details>' +
-      '<details><summary>¿Se envía mi información a un servidor?</summary><p>El motor funciona en el navegador. La página no necesita cuenta y solo guarda lo que elijas guardar localmente en este dispositivo.</p></details></section>';
+      '<h3>' + T('Qué esperar', 'What to expect') + '</h3><p>' + esc(tool.result || T('Obtendrás una guía práctica para reflexionar y registrar tu proceso.', 'You get a practical guide to reflect on and record your process.')) + '</p>' +
+      '<h3>' + T('Uso responsable', 'Responsible use') + '</h3><p>' + esc(tool.safety || T('No uses esta herramienta para sustituir decisiones importantes ni para obtener datos de terceros sin consentimiento.', 'Do not use this tool to replace important decisions or to obtain third-party data without consent.')) + '</p></section>' +
+      '<section class="atomic-card atomic-faq"><h2>' + T('Preguntas frecuentes', 'Frequently asked questions') + '</h2>' +
+      '<details><summary>' + T('¿La lectura es una predicción?', 'Is the reading a prediction?') + '</summary><p>' + T('No. Es una interpretación simbólica y de autoconocimiento; las decisiones importantes deben apoyarse en información y contexto reales.', 'No. It is a symbolic reading for self-knowledge; important decisions need real information and context.') + '</p></details>' +
+      '<details><summary>' + T('¿Se envía mi información a un servidor?', 'Is my information sent to a server?') + '</summary><p>' + T('El motor funciona en el navegador. La página no necesita cuenta y solo guarda lo que elijas guardar localmente en este dispositivo.', 'Everything runs in the browser. No account is needed, and the only thing stored is what you choose to save on this device.') + '</p></details></section>';
 
     var form = document.getElementById('atomic-form');
     var status = document.getElementById('atomic-form-status');
@@ -1016,16 +1049,16 @@
   }
 
   function showError(error) {
-    mount.innerHTML = '<section class="atomic-card atomic-error"><h1>No se pudo cargar la herramienta</h1><p>Actualiza la página o comprueba la conexión. No se han enviado tus datos.</p></section>';
+    mount.innerHTML = '<section class="atomic-card atomic-error"><h1>' + T('No se pudo cargar la herramienta', 'The tool could not load') + '</h1><p>' + T('Actualiza la página o comprueba la conexión. No se han enviado tus datos.', 'Reload the page or check your connection. No data was sent.') + '</p></section>';
     console.error('[atomic-tools]', error);
   }
 
   fetch(DATA_URL)
     .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
     .then(function (catalog) {
-      var tool = catalog.tools && catalog.tools[toolId];
+      var tool = localize(catalog.tools && catalog.tools[toolId]);
       if (!tool) throw new Error('Unknown tool ' + toolId);
-      document.title = tool.name + ' | Herramientas gratuitas | Cha0smagick Labs';
+      if (!EN) document.title = tool.name + ' | Herramientas gratuitas | Cha0smagick Labs';
       renderForm(tool);
     })
     .catch(showError);

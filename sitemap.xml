@@ -5570,7 +5570,7 @@
   </url>
   <url>
     <loc>https://cha0smagicklabs.com/tools/full-birth-chart.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -5648,7 +5648,7 @@
   </url>
   <url>
     <loc>https://cha0smagicklabs.com/tools/moon-phase-calendar.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -5900,7 +5900,7 @@
   </url>
   <url>
     <loc>https://cha0smagicklabs.com/tools/zodiac-cusp-calculator.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -5939,6 +5939,24 @@
     <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cha0smagicklabs.com/es/tools/full-birth-chart.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cha0smagicklabs.com/es/tools/zodiac-cusp-calculator.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cha0smagicklabs.com/es/tools/moon-phase-calendar.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cha0smagicklabs.com/blog/servitor-names-and-feeding.html</loc>
